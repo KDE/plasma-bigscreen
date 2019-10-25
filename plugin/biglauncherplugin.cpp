@@ -18,25 +18,15 @@
 
 #include "biglauncherplugin.h"
 #include "biglauncher_dbus.h"
-#include "notify.h"
 #include "applicationlistmodel.h"
 #include "voiceapplistmodel.h"
 #include <QtQml>
 #include <QtDebug>
 #include <QtDBus>
 
-static QObject *notify_singleton(QQmlEngine *engine, QJSEngine *scriptEngine)
-{
-    Q_UNUSED(engine)
-    Q_UNUSED(scriptEngine)
-
-    return new Notify;
-}
-
 void BigLauncherPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("org.kde.private.biglauncher"));
-    qmlRegisterSingletonType<Notify>(uri, 1, 0, "Notify", notify_singleton);
     qmlRegisterType<ApplicationListModel>(uri, 1, 0, "ApplicationListModel");
     qmlRegisterType<VoiceAppListModel>(uri, 1, 0, "VoiceAppListModel");
 }
