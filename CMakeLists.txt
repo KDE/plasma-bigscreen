@@ -40,4 +40,4 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
 
 add_subdirectory(plugin)
 
-plasma_install_package(plasmoid org.kde.plasma.biglauncher)
+plasma_install_package(containment org.kde.plasma.biglauncher)
