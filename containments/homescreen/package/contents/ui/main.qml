@@ -41,7 +41,9 @@ PlasmaCore.ColorScope {
     signal activateAppView
     signal activateTopNavBar
     signal activateSettingsView
-    
+
+    MycroftWindow {}
+
     Launcher.ApplicationListModel {
         id: applicationListModel
     }
