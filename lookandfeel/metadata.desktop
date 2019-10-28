@@ -1,0 +1,17 @@
+[Desktop Entry]
+Comment=Plasma Mycroft Big Screen look and feel
+
+Name=Mycroft Big Screen
+
+Type=Service
+
+X-KDE-ServiceTypes=Plasma/LookAndFeel
+X-KDE-ParentApp=
+X-KDE-PluginInfo-Author=Marco Martin
+X-KDE-PluginInfo-Category=
+X-KDE-PluginInfo-Email=mart@kde.org
+X-KDE-PluginInfo-License=GPLv2+
+X-KDE-PluginInfo-Name=org.kde.plasma.mycroft.bigscreen
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Website=http://www.kde.org
+X-Plasma-MainScript=defaults
