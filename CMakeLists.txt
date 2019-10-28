@@ -38,6 +38,5 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     WebSockets
 )
 
-add_subdirectory(plugin)
+add_subdirectory(containments)
 
-plasma_install_package(containment org.kde.plasma.biglauncher)

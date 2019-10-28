@@ -1,0 +1,19 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Mycroft Bigscreen
+Comment=Homescreen for Plasma and Mycroft based TVs
+
+Type=Service
+X-KDE-ParentApp=
+X-KDE-PluginInfo-Author=Aditya Mehra
+X-KDE-PluginInfo-Email=aix.m@outlook.com
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=org.kde.mycroft.bigscreen.homescreen
+X-KDE-PluginInfo-Version=0.1
+X-KDE-PluginInfo-Website=plasma.kde.org
+X-KDE-ServiceTypes=Plasma/Applet,Plasma/Containment
+X-Plasma-API=declarativeappletscript
+X-Plasma-MainScript=ui/main.qml
+X-Plasma-RemoteLocation=
+X-KDE-PluginInfo-Category=Utilities
+Icon=mycroft
