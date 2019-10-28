@@ -163,7 +163,7 @@ PlasmaCore.ColorScope {
             }
 
             Item {
-                LauncherSettingPage{}
+                PlaceHolderPage{}
             }
 
             Component.onCompleted: {
