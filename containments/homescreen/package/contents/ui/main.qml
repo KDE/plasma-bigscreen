@@ -22,155 +22,109 @@ import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.3 as Controls
 import QtQuick.Window 2.3
 import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.kquickcontrolsaddons 2.0
-import org.kde.private.biglauncher 1.0 as Launcher
-import org.kde.kirigami 2.5 as Kirigami
 
-PlasmaCore.ColorScope {
+import org.kde.kquickcontrolsaddons 2.0
+import org.kde.kirigami 2.5 as Kirigami
+import Mycroft 1.0 as Mycroft
+
+import "launcher"
+import "indicators" as Indicators
+
+Item {
     id: root
     Layout.minimumWidth: Screen.desktopAvailableWidth
     Layout.minimumHeight: Screen.desktopAvailableHeight * 0.6
-    Plasmoid.backgroundHints: "NoBackground"
 
-    readonly property int reservedSpaceForLabel: metrics.height
-    property var appsModel: applicationListModel
-    property var voiceAppsModel: voiceAppListModel
-    signal activateAppView
-    signal activateTopNavBar
-    signal activateSettingsView
 
-    MycroftWindow {}
-
-    Launcher.ApplicationListModel {
-        id: applicationListModel
+    MycroftWindow {
+        id: mycroftWindow
     }
 
-    Launcher.VoiceAppListModel {
-        id: voiceAppListModel
-    }
-    
-    Component.onCompleted: {
-        root.forceActiveFocus();
-        applicationListModel.loadApplications();
-        voiceAppListModel.loadApplications();
-        root.activateAppView();
-    }
-
-    Connections {
-        target: applicationListModel
-        onAppOrderChanged: {
-            root.activateAppView()
+    Rectangle {
+        anchors {
+            left: parent.left
+            top: parent.top
+            right: parent.right
         }
-    }
-    
-    Connections {
-        target: root
-        onActivateTopNavBar: {
-            topButtonBar.focus = true
+        height: units.iconSizes.medium + units.smallSpacing * 2
+        opacity: !mycroftWindow.visible
+
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: Qt.rgba(0, 0, 0, 0.6) }
+            GradientStop { position: 1; color: "transparent" }
         }
-    }
-
-    Controls.Label {
-        id: metrics
-        text: "M\nM"
-        visible: false
-    }
-
-    ColumnLayout {
-        anchors.fill: parent
+        Behavior on opacity {
+            OpacityAnimator {
+                duration: units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
 
         RowLayout {
-            id: topButtonBar
-            Layout.fillWidth: true
-            Layout.preferredHeight: Kirigami.Units.iconSizes.medium
-            
-            PlasmaComponents3.Button {
-                text: "Home"
-                Layout.fillWidth: true
-                focus: false
-                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
-                flat: topBarLoader.currentIndex !== 0 ? 1 : 0
-                onClicked: {
-                    topBarLoader.currentIndex = 0
-                    root.activateAppView()
-                }
-                
-                Rectangle {
-                    id: homeBtnHighLighter
-                    visible: topButtonBar.focus && topBarLoader.currentIndex == 0 ? 1 : 0
-                    color: Kirigami.Theme.linkColor
-                    height: Kirigami.Units.smallSpacing * 0.5
-                    anchors.left: parent.left
-                    anchors.leftMargin: Kirigami.Units.smallSpacing
-                    anchors.right: parent.right
-                    anchors.rightMargin: Kirigami.Units.smallSpacing
-                    anchors.bottom: parent.bottom
-                    anchors.bottomMargin: Kirigami.Units.smallSpacing
-                }
+            anchors {
+                right: parent.right
+                top: parent.top
+                bottom: parent.bottom
+                margins: units.smallSpacing
             }
-
-            PlasmaComponents3.Button {
-                text: "Settings"
-                Layout.fillWidth: true
-                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
-                focus: false
-                flat: topBarLoader.currentIndex !== 1 ? 1 : 0
-                onClicked: {
-                    topBarLoader.currentIndex = 1
-                }
-                
-                Rectangle {
-                    id: settingsBtnHighLighter
-                    visible: topButtonBar.focus && topBarLoader.currentIndex == 1 ? 1 : 0
-                    color: Kirigami.Theme.linkColor
-                    height: Kirigami.Units.smallSpacing * 0.5
-                    anchors.left: parent.left
-                    anchors.leftMargin: Kirigami.Units.smallSpacing
-                    anchors.right: parent.right
-                    anchors.rightMargin: Kirigami.Units.smallSpacing
-                    anchors.bottom: parent.bottom
-                    anchors.bottomMargin: Kirigami.Units.smallSpacing
-                }
-            }
-            
-            Keys.onRightPressed: {
-                topBarLoader.currentIndex = 1
-            }
-            
-            Keys.onLeftPressed: {
-                topBarLoader.currentIndex = 0
-            }
-            
-            Keys.onDownPressed: {
-                if(topBarLoader.currentIndex == 0) {
-                    root.activateAppView();
-                } else if (topBarLoader.currentIndex == 1) {
-                    root.activateSettingsView();
-                }
+            Indicators.Wifi {
+                Layout.fillHeight: true
+                implicitWidth: height
+                anchors.centerIn: mycroftIndicator
             }
         }
+    }
 
-        StackLayout {
-            id: topBarLoader
-            Layout.fillWidth: true
-            Layout.preferredHeight: parent.height - (topButtonBar.height + Kirigami.Units.largeSpacing)
-            currentIndex: 0
-            clip: true
+    LauncherMenu {
+        id: launcher
+        width: parent.width
+        height: parent.height
+    
 
-            Item {
-                LauncherHome{}
+        states: [
+            State {
+                when: !mycroftWindow.visible
+                PropertyChanges {
+                    target: launcher
+                    opacity: 1
+                    y: 0
+                }
+            },
+            State {
+                when: mycroftWindow.visible
+                PropertyChanges {
+                    target: launcher
+                    opacity: 0
+                    y: root.height / 4
+                }
             }
+        ]
 
-            Item {
-                PlaceHolderPage{}
+        transitions: [
+            Transition {
+                ParallelAnimation {
+                    OpacityAnimator {
+                        duration: units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                    YAnimator {
+                        duration: units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                }
             }
+        ]
+    }
 
-            Component.onCompleted: {
-                root.activateAppView();
-            }
+    Mycroft.StatusIndicator {
+        id: mycroftIndicator
+        z: 2
+        visible: !mycroftWindow.visible
+        anchors {
+            right: parent.right
+            top: parent.top
+            margins: Kirigami.Units.largeSpacing
+            topMargin: Kirigami.Units.largeSpacing + plasmoid.availableScreenRect.y
         }
     }
 }

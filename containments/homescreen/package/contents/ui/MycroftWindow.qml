@@ -49,20 +49,18 @@ Window {
             margins: Kirigami.Units.largeSpacing
             topMargin: Kirigami.Units.largeSpacing + plasmoid.availableScreenRect.y
         }
-        onStateChanged: {
-            if (state != "idle") {
-                skillView.open = true;
-            }
-        }
     }
 
     Mycroft.SkillView {
         id: skillView
         anchors.fill: parent
         open: false
+        Keys.onEscapePressed: window.visible = false;
         onOpenChanged: {
             if (open) {
                 window.showMaximized();
+            } else {
+                window.visible = false;
             }
         }
     }
