@@ -28,6 +28,8 @@ import org.kde.kquickcontrolsaddons 2.0
 import org.kde.private.biglauncher 1.0 as Launcher
 import org.kde.kirigami 2.5 as Kirigami
 
+import "delegates" as Delegates
+
 ColumnLayout {
     id: launcherHomeColumn
     anchors.fill: parent
@@ -73,7 +75,7 @@ ColumnLayout {
                 currentIndex: 0
                 property var vAppId
                 property int lastItemIndex
-                delegate: RowDelegateVoiceApps {
+                delegate: Delegates.VoiceAppDelegate {
                     property var modelData: typeof model !== "undefined" ? model : null
                 }
                 
@@ -177,7 +179,7 @@ ColumnLayout {
                 enabled: false
                 property var appId
                 property int lastItemIndex
-                delegate: RowDelegateApps {
+                delegate: Delegates.AppDelegate {
                     property var modelData: typeof model !== "undefined" ? model : null
                 }
                 
@@ -282,7 +284,7 @@ ColumnLayout {
                 keyNavigationEnabled: true
                 currentIndex: 0
                 property int lastItemIndex
-                delegate: RowSettingsDelegate {
+                delegate: Delegates.SettingDelegate {
                     property var modelData: typeof model !== "undefined" ? model : null
                 }
                 
