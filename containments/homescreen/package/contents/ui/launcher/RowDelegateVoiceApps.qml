@@ -18,75 +18,14 @@
  */
 
 import QtQuick 2.9
-import QtQuick.Layouts 1.3
-import QtQuick.Controls 2.3 as Controls
 
-import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.kquickcontrolsaddons 2.0
-import org.kde.kirigami 2.5 as Kirigami
+AbstractDelegate {
+    readonly property var vAppStorageIdRole: modelData.ApplicationStorageIdRole
 
-Controls.Control {
-    width: gridView.cellWidth
-    height: gridView.cellHeight
-    property var vAppStorageIdRole: modelData.ApplicationStorageIdRole
-        
-    background: PlasmaCore.FrameSvgItem {
-        id: frame
-        imagePath: "widgets/background"
-        anchors.fill: parent
-    }
-    
-    contentItem: Item {
-        ColumnLayout {
-            width: gridView.cellWidth
-            anchors.centerIn: parent
-        
-            Kirigami.Icon {
-                id: icon
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                Layout.fillWidth: true
-                Layout.preferredHeight: gridView.cellHeight - (root.reservedSpaceForLabel + Kirigami.Units.largeSpacing)
-                source: modelData ? modelData.ApplicationIconRole : ""
-                //scale: 1 //root.reorderingApps //&& dragDelegate && !dragging ? 0.6 : 1
-                Behavior on scale {
-                    NumberAnimation {
-                        duration: units.longDuration
-                        easing.type: Easing.InOutQuad
-                    }
-                }
-            }
+    icon.name: modelData ? modelData.ApplicationIconRole : ""
+    text: modelData ? modelData.ApplicationNameRole : ""
 
-            PlasmaComponents.Label {
-                id: label
-                visible: text.length > 0
-        
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                wrapMode: Text.WordWrap
-                horizontalAlignment: Text.AlignHCenter
-                verticalAlignment: Text.AlignTop
-                maximumLineCount: 2
-                elide: Text.ElideRight
-        
-                text: modelData ? modelData.ApplicationNameRole : ""
-                font.pixelSize: theme.defaultFont.pixelSize
-                color: PlasmaCore.ColorScope.textColor
-            }
-        }
-    
-        MouseArea {
-            anchors.fill: parent
-            propagateComposedEvents: true
-            //preventStealing: true
-            onClicked: {
-                gridView2.forceActiveFocus()
-                console.log(index)
-                gridView2.currentIndex = index
-                console.log(gridView2.currentIndex)
-                root.appsModel.runApplication(modelData.ApplicationStorageIdRole)
-            }
-        }
+    onClicked: {
+        root.appsModel.runApplication(modelData.ApplicationStorageIdRole)
     }
 }
