@@ -16,17 +16,45 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-import QtQuick 2.9
-import QtQuick.Layouts 1.3
-import QtQuick.Controls 2.3 as Controls
-import QtQuick.Window 2.2
-import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.kquickcontrolsaddons 2.0
+import QtQuick 2.12
+import QtQuick.Layouts 1.4
+import QtQuick.Controls 2.4 as Controls
+
 import org.kde.private.biglauncher 1.0 as Launcher
 import org.kde.kirigami 2.5 as Kirigami
-    
+
+
+ListView {
+    id: view
+    property int columns: 3
+
+    readonly property int cellWidth: width / columns
+
+    Layout.fillWidth: true
+    Layout.fillHeight: true
+
+    keyNavigationEnabled: true
+    keyNavigationWraps: true
+    highlightRangeMode: ListView.ApplyRange
+    highlightFollowsCurrentItem: true
+    snapMode: ListView.SnapToItem
+
+    preferredHighlightBegin: width/view.columns
+    preferredHighlightEnd: width/view.columns * 2
+
+    highlightMoveDuration: Kirigami.Units.longDuration
+
+    spacing: 0
+    orientation: ListView.Horizontal
+
+    move: Transition {
+        SmoothedAnimation {
+            property: "x"
+            duration: Kirigami.Units.longDuration
+        }
+    }
+}
+/*
 GridView {
     Layout.fillWidth: true
     Layout.preferredHeight: parent.height / 3 - launcherHomeColumn.columnLabelHeight
@@ -45,3 +73,4 @@ GridView {
         NumberAnimation { properties: "x,y"; duration: 0 }
     }
 }
+*/

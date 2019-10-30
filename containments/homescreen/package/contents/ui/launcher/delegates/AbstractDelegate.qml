@@ -28,29 +28,56 @@ import org.kde.kirigami 2.5 as Kirigami
 PlasmaComponents.ItemDelegate {
     id: delegate
 
-    width: gridView.cellWidth
-    height: gridView.cellHeight
+    implicitWidth: listView.cellWidth
+    implicitHeight: listView.height
 
-    readonly property GridView gridView: GridView.view
+    readonly property ListView listView: ListView.view
 
     onClicked: {
-        gridView.forceActiveFocus()
+        listView.forceActiveFocus()
         console.log(index)
-        gridView.currentIndex = index
-        console.log(gridView.currentIndex)
+        listView.currentIndex = index
+        console.log(listView.currentIndex)
     }
 
-    background: PlasmaCore.FrameSvgItem {
-        id: frame
-        imagePath: "widgets/background"
+    leftPadding: frame.margins.left + background.extraMargin
+    topPadding: frame.margins.top + background.extraMargin
+    rightPadding: frame.margins.right + background.extraMargin
+    bottomPadding: frame.margins.bottom + background.extraMargin
+
+    Keys.onReturnPressed: {
+        clicked();
+    }
+
+    background: Item {
+        id: background
+        property real extraMargin: listView.currentIndex == index && delegate.activeFocus ? 0 : units.gridUnit
+        Behavior on extraMargin {
+            NumberAnimation {
+                duration: Kirigami.Units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
+        
+        PlasmaCore.FrameSvgItem {
+            id: frame
+            anchors {
+                fill: parent
+                margins: background.extraMargin
+            }
+            imagePath: "widgets/background"
+            
+            width: listView.currentIndex == index && delegate.activeFocus ? parent.width : parent.width - units.gridUnit
+            height: listView.currentIndex == index && delegate.activeFocus ? parent.height : parent.height - units.gridUnit
+        }
     }
     
     contentItem: ColumnLayout {
+        spacing: 0
         Kirigami.Icon {
             id: icon
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             Layout.fillWidth: true
-            Layout.preferredHeight: gridView.cellHeight - (root.reservedSpaceForLabel + Kirigami.Units.largeSpacing)
+            Layout.fillHeight: true
             source: delegate.icon.name || delegate.icon.source
         }
 
@@ -59,10 +86,9 @@ PlasmaComponents.ItemDelegate {
             visible: text.length > 0
     
             Layout.fillWidth: true
-            Layout.fillHeight: true
+            Layout.preferredHeight: root.reservedSpaceForLabel
             wrapMode: Text.WordWrap
             horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignTop
             maximumLineCount: 2
             elide: Text.ElideRight
             color: PlasmaCore.ColorScope.textColor

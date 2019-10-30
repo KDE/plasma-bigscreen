@@ -55,38 +55,9 @@ FocusScope {
             focus: true
             delegate: Delegates.VoiceAppDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
+                
             }
-            
-            Keys.onReturnPressed: {
-                if (gridView.focus) {
-                    root.voiceAppsModel.moveItem(currentIndex, 0)
-                    root.appsModel.runApplication(gridView.appId)
-                    gridView.forceActiveFocus()
-                    lastItemIndex = gridView.currentIndex
-                }
-            }
-            
-            Keys.onRightPressed: {
-                if (gridView.currentIndex < gridView.count) {
-                    gridView.positionViewAtIndex(gridView.currentIndex+1, GridView.Center)
-                    gridView.currentIndex = Math.min(gridView.currentIndex+1, gridView.count)
-                } 
-                if(gridView.currentIndex == gridView.count) {
-                    gridView.currentIndex = 0
-                }
-                lastItemIndex = gridView.currentIndex
-            }
-            
-            Keys.onLeftPressed: {
-                if (gridView.currentIndex == 0) {
-                    gridView.currentIndex = gridView.count -1
-                } else {
-                    gridView.positionViewAtIndex(gridView.currentIndex-1, GridView.Center)
-                    gridView.currentIndex = gridView.currentIndex - 1
-                }
-                lastItemIndex = gridView.currentIndex
-            }
-            
+
             Keys.onUpPressed: { 
                 activateTopNavBar()
             }
@@ -95,17 +66,12 @@ FocusScope {
                 gridView2.forceActiveFocus()
                 gridView.focus = false
             }
-            
-            onCurrentItemChanged: {
-                gridView.appId = currentItem.vAppStorageIdRole
-            }
         }
 
         Views.ColumnLabelView {
             id: appsColumnLabelBox
             text: "My Apps & Games"  
         }
-        
 
         Views.TileView {
             id: gridView2
@@ -116,34 +82,6 @@ FocusScope {
                 property var modelData: typeof model !== "undefined" ? model : null
             }
             
-            Keys.onReturnPressed: {
-                if (gridView2.focus) {
-                    root.appsModel.moveItem(currentIndex, 0)
-                    root.appsModel.runApplication(gridView2.appId)
-                    gridView2.forceActiveFocus()
-                    lastItemIndex = gridView2.currentIndex
-                }
-            }
-            
-            Keys.onRightPressed: {
-                if (gridView2.currentIndex < gridView2.count) {
-                    gridView2.positionViewAtIndex(gridView2.currentIndex+1, GridView.Center)
-                    gridView2.currentIndex = Math.min(gridView2.currentIndex+1, gridView2.count)
-                } 
-                if(gridView2.currentIndex == gridView2.count) {
-                    gridView2.currentIndex = 0
-                }
-                lastItemIndex = gridView2.currentIndex
-            }
-            Keys.onLeftPressed:  { 
-                if (gridView2.currentIndex == 0) {
-                    gridView2.currentIndex = gridView2.count -1
-                } else {
-                    gridView2.positionViewAtIndex(gridView2.currentIndex-1, GridView.Center)
-                    gridView2.currentIndex = gridView2.currentIndex - 1
-                }
-                lastItemIndex = gridView2.currentIndex
-            }
             Keys.onUpPressed:    { 
                 gridView.forceActiveFocus()
                 gridView.currentIndex = gridView.lastItemIndex
@@ -152,10 +90,6 @@ FocusScope {
             Keys.onDownPressed:  {  
                 gridView3.forceActiveFocus()
                 gridView2.focus = false
-            }
-            
-            onCurrentItemChanged: {
-                gridView2.appId = currentItem.appStorageIdRole
             }
         }
         
@@ -167,47 +101,16 @@ FocusScope {
         Views.TileView {
             id: gridView3
             model: ListModel {
-            ListElement { name: "Wireless"; icon: "network-wireless-connected-100"}
-            ListElement { name: "Preferences"; icon: "dialog-scripts"}
-            ListElement { name: "Mycroft"; icon: "mycroft"}
+                ListElement { name: "Wireless"; icon: "network-wireless-connected-100"}
+                ListElement { name: "Preferences"; icon: "dialog-scripts"}
+                ListElement { name: "Mycroft"; icon: "mycroft"}
             }
-            focus: false
+
             delegate: Delegates.SettingDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
             }
-                                
-            Keys.onEnterPressed: {
-                if (gridView3.focus) {
-                    root.appsModel.runApplication(gridView2.appId)
-                }
-            }
             
-            Keys.onReturnPressed: {
-                if (gridView3.focus) {
-                    console.log("Not Implemented")
-                }
-            }
-            
-            Keys.onRightPressed: {
-                if (gridView3.currentIndex < gridView3.count) {
-                    gridView3.positionViewAtIndex(gridView3.currentIndex+1, GridView.Center)
-                    gridView3.currentIndex = Math.min(gridView3.currentIndex+1, gridView3.count)
-                } 
-                if(gridView3.currentIndex == gridView3.count) {
-                    gridView3.currentIndex = 0
-                }
-                lastItemIndex = gridView3.currentIndex
-            }
-            Keys.onLeftPressed:  { 
-                if (gridView3.currentIndex == 0) {
-                    gridView3.currentIndex = gridView3.count -1
-                } else {
-                    gridView3.positionViewAtIndex(gridView3.currentIndex-1, GridView.Center)
-                    gridView3.currentIndex = gridView3.currentIndex - 1
-                }
-                lastItemIndex = gridView3.currentIndex
-            }
-            Keys.onUpPressed:    { 
+            Keys.onUpPressed: { 
                 gridView2.forceActiveFocus()
                 gridView2.currentIndex = gridView2.lastItemIndex
                 gridView3.focus = false
@@ -219,9 +122,9 @@ FocusScope {
         }
 
         Connections {
-        target: root
-        onActivateAppView: {
-            gridView.forceActiveFocus();
+            target: root
+            onActivateAppView: {
+                gridView.forceActiveFocus();
             }
         }
     }
