@@ -58,14 +58,8 @@ FocusScope {
                 
             }
 
-            Keys.onUpPressed: { 
-                activateTopNavBar()
-            }
-            
-            Keys.onDownPressed: {
-                gridView2.forceActiveFocus()
-                gridView.focus = false
-            }
+            navigationUp: gridView3
+            navigationDown: gridView2
         }
 
         Views.ColumnLabelView {
@@ -82,15 +76,8 @@ FocusScope {
                 property var modelData: typeof model !== "undefined" ? model : null
             }
             
-            Keys.onUpPressed:    { 
-                gridView.forceActiveFocus()
-                gridView.currentIndex = gridView.lastItemIndex
-                gridView2.focus = false
-            }
-            Keys.onDownPressed:  {  
-                gridView3.forceActiveFocus()
-                gridView2.focus = false
-            }
+            navigationUp: gridView
+            navigationDown: gridView3
         }
         
         Views.ColumnLabelView {
@@ -110,11 +97,8 @@ FocusScope {
                 property var modelData: typeof model !== "undefined" ? model : null
             }
             
-            Keys.onUpPressed: { 
-                gridView2.forceActiveFocus()
-                gridView2.currentIndex = gridView2.lastItemIndex
-                gridView3.focus = false
-            }
+            navigationUp: gridView2
+            navigationDown: gridView
         }
 
         Component.onCompleted: {

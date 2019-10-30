@@ -30,6 +30,9 @@ ListView {
 
     readonly property int cellWidth: width / columns
 
+    property Item navigationUp
+    property Item navigationDown
+
     Layout.fillWidth: true
     Layout.fillHeight: true
 
@@ -53,24 +56,28 @@ ListView {
             duration: Kirigami.Units.longDuration
         }
     }
-}
-/*
-GridView {
-    Layout.fillWidth: true
-    Layout.preferredHeight: parent.height / 3 - launcherHomeColumn.columnLabelHeight
-    layoutDirection: Qt.LeftToRight
-    flow: GridView.FlowTopToBottom
-    cellWidth: width / 3
-    cellHeight: height / 1
-    clip: true
-    keyNavigationEnabled: false
-    highlight: focus == true ? launcherHomeColumn.activeHighlightItem : launcherHomeColumn.disabledHighlightItem
-    highlightFollowsCurrentItem: true
-    property var appId
-    property int lastItemIndex
-    
-    move: Transition {
-        NumberAnimation { properties: "x,y"; duration: 0 }
+
+    Keys.onDownPressed:  {
+        if (!navigationDown) {
+            return;
+        }
+
+        if (navigationDown instanceof TileView) {
+            navigationDown.currentIndex = navigationDown.indexAt(navigationDown.contentItem.mapFromItem(currentItem, cellWidth/2, height/2).x, height/2);
+        }
+
+        navigationDown.forceActiveFocus();
+    }
+
+    Keys.onUpPressed:  {
+        if (!navigationUp) {
+            return;
+        }
+
+        if (navigationUp instanceof TileView) {
+            navigationUp.currentIndex = navigationUp.indexAt(navigationUp.contentItem.mapFromItem(currentItem, cellWidth/2, height/2).x, height/2);
+        }
+
+        navigationUp.forceActiveFocus();
     }
 }
-*/
