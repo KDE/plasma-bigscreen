@@ -20,6 +20,7 @@ import QtQuick 2.12
 import QtQuick.Layouts 1.4
 import QtQuick.Controls 2.4 as Controls
 
+import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.private.biglauncher 1.0 as Launcher
 import org.kde.kirigami 2.5 as Kirigami
 
@@ -49,6 +50,25 @@ ListView {
 
     spacing: 0
     orientation: ListView.Horizontal
+
+    onContentXChanged: PlasmaComponents.ScrollBar.horizontal.opacity = 1
+    PlasmaComponents.ScrollBar.horizontal: PlasmaComponents.ScrollBar {
+        id: scrollBar
+        opacity: 0
+        interactive: false
+        onOpacityChanged: disappearTimer.restart()
+        Timer {
+            id: disappearTimer
+            interval: 1000
+            onTriggered: scrollBar.opacity = 0;
+        }
+        Behavior on opacity {
+            OpacityAnimator {
+                duration: Kirigami.Units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
+    }
 
     move: Transition {
         SmoothedAnimation {
