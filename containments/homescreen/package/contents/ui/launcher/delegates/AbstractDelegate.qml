@@ -69,6 +69,7 @@ PlasmaComponents.ItemDelegate {
             
             width: listView.currentIndex == index && delegate.activeFocus ? parent.width : parent.width - units.gridUnit
             height: listView.currentIndex == index && delegate.activeFocus ? parent.height : parent.height - units.gridUnit
+            opacity: 0.8
         }
     }
     

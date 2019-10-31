@@ -27,7 +27,8 @@ import org.kde.kirigami 2.5 as Kirigami
 
 ListView {
     id: view
-    property int columns: 3
+    //TODO:dynamic
+    property int columns: Math.max(3, Math.floor(width / (units.gridUnit * 20)))
 
     readonly property int cellWidth: width / columns
 
@@ -38,13 +39,13 @@ ListView {
     Layout.fillHeight: true
 
     keyNavigationEnabled: true
-    keyNavigationWraps: true
-    highlightRangeMode: ListView.ApplyRange
+    //Centering disabled as experiment
+    //highlightRangeMode: ListView.ApplyRange
     highlightFollowsCurrentItem: true
     snapMode: ListView.SnapToItem
 
-    preferredHighlightBegin: width/view.columns
-    preferredHighlightEnd: width/view.columns * 2
+    //preferredHighlightBegin: width/view.columns
+    //preferredHighlightEnd: width/view.columns * 2
 
     highlightMoveDuration: Kirigami.Units.longDuration
 

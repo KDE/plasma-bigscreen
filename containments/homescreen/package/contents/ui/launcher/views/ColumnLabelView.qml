@@ -17,26 +17,33 @@
  */
 
 import QtQuick 2.9
+import QtGraphicalEffects 1.12
 import QtQuick.Layouts 1.3
-import QtQuick.Controls 2.3 as Controls
-import QtQuick.Window 2.2
-import org.kde.plasma.plasmoid 2.0
+
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.kquickcontrolsaddons 2.0
-import org.kde.private.biglauncher 1.0 as Launcher
+import org.kde.plasma.components 3.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
+
 import org.kde.kirigami 2.5 as Kirigami
 
-Rectangle {
+Item {
     Layout.preferredWidth: appslabel.contentWidth + Kirigami.Units.largeSpacing * 3
     Layout.preferredHeight: Kirigami.Units.iconSizes.small
-    color: Kirigami.Theme.backgroundColor
     property alias text: appslabel.text
     
-    PlasmaComponents.Label {
+    PlasmaExtras.Heading {
         id: appslabel
         anchors.centerIn: parent
-        font.pointSize: Kirigami.Units.iconSizes.small - Kirigami.Units.largeSpacing
-        font.capitalization: Font.SmallCaps
+        //font.capitalization: Font.SmallCaps
+        color: theme.complementaryTextColor
+    }
+    DropShadow {
+        anchors.fill: appslabel
+        horizontalOffset: 0
+        verticalOffset: 2
+        radius: 8.0
+        samples: 17
+        color: Qt.rgba(0,0,0,0.6)
+        source: appslabel
     }
 }
