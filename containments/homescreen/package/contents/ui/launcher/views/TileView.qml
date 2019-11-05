@@ -38,6 +38,7 @@ ListView {
     Layout.fillWidth: true
     Layout.fillHeight: true
 
+    z: activeFocus ? 10: 1
     keyNavigationEnabled: true
     //Centering disabled as experiment
     //highlightRangeMode: ListView.ApplyRange
@@ -47,12 +48,55 @@ ListView {
     //preferredHighlightBegin: width/view.columns
     //preferredHighlightEnd: width/view.columns * 2
 
+    displayMarginBeginning: rotation.angle != 0 ? width*2 : 0
+    displayMarginEnd: rotation.angle != 0 ? width*2 : 0
     highlightMoveDuration: Kirigami.Units.longDuration
+    transform: Rotation {
+        id: rotation
+        axis { x: 0; y: 1; z: 0 }
+        angle: 0
+        property real targetAngle: 45
+        Behavior on angle {
+            SmoothedAnimation {
+                duration: Kirigami.Units.longDuration * 10
+            }
+        }
+        origin.x: width/2
+    }
 
+    Timer {
+        id: rotateTimeOut
+        interval: 100
+    }
+    Timer {
+        id: rotateTimer
+        interval: 500
+        onTriggered: {
+            if (rotateTimeOut.running) {
+                rotation.angle = rotation.targetAngle;
+                restart();
+            } else {
+                rotation.angle = 0;
+            }
+        }
+    }
     spacing: 0
     orientation: ListView.Horizontal
 
-    onContentXChanged: PlasmaComponents.ScrollBar.horizontal.opacity = 1
+    property real oldContentX
+    onContentXChanged: {
+        if (oldContentX < contentX) {
+            rotation.targetAngle = 45;
+        } else {
+            rotation.targetAngle = -45;
+        }
+        PlasmaComponents.ScrollBar.horizontal.opacity = 1;
+        if (!rotateTimeOut.running) {
+            rotateTimer.restart();
+        }
+        rotateTimeOut.restart();
+        oldContentX = contentX;
+    }
     PlasmaComponents.ScrollBar.horizontal: PlasmaComponents.ScrollBar {
         id: scrollBar
         opacity: 0
