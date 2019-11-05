@@ -26,5 +26,8 @@ AbstractDelegate {
     icon.name: modelData ? modelData.ApplicationIconRole : ""
     text: modelData ? modelData.ApplicationNameRole : ""
 
-    onClicked: root.appsModel.runApplication(modelData.ApplicationStorageIdRole)
+    onClicked: {
+        root.appsModel.runApplication(modelData.ApplicationStorageIdRole)
+        root.appsModel.moveItem(index, 0);
+    }
 }

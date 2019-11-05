@@ -27,5 +27,6 @@ AbstractDelegate {
 
     onClicked: {
         root.appsModel.runApplication(modelData.ApplicationStorageIdRole)
+        root.appsModel.moveItem(index, 0);
     }
 }
