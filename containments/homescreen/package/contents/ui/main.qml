@@ -36,6 +36,8 @@ Item {
     Layout.minimumHeight: Screen.desktopAvailableHeight * 0.6
 
 
+    property Item wallpaper
+
     MycroftWindow {
         id: mycroftWindow
     }

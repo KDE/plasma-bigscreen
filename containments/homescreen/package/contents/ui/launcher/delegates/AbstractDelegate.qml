@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.3
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami 2.11 as Kirigami
 
 PlasmaComponents.ItemDelegate {
     id: delegate
@@ -51,21 +51,99 @@ PlasmaComponents.ItemDelegate {
 
     background: Item {
         id: background
-        property real extraMargin: listView.currentIndex == index && delegate.activeFocus ? 0 : units.gridUnit
+        property real extraMargin: listView.currentIndex == index && delegate.activeFocus ? 0 : units.gridUnit/2
         Behavior on extraMargin {
             NumberAnimation {
                 duration: Kirigami.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
-        
+
+        ShaderEffect {
+            id: shader
+            anchors.fill: frame
+            property variant source: ShaderEffectSource {
+                width: frame.width
+                height: frame.height
+                sourceItem: root.wallpaper
+                sourceRect: Qt.rect(shader.Kirigami.ScenePosition.x, shader.Kirigami.ScenePosition.y, shader.width, shader.height)
+            }
+            property real xUnit: -1/width
+            property real yUnit: -1/height
+            property real radius: 32
+
+            property real contrast: 0.5
+            property real saturation: 1.3
+            property real intensity: theme.backgroundColor.hslLightness > 0.5 ? 1.8 : 0.8
+
+            readonly property real transl: (1.0 - contrast) / 2.0;
+            readonly property real rval: (1.0 - saturation) * 0.2126;
+            readonly property real gval: (1.0 - saturation) * 0.7152;
+            readonly property real bval: (1.0 - saturation) * 0.0722;
+            property var colorMatrix: Qt.matrix4x4(
+                    contrast, 0,        0,        0.0,
+                    0,        contrast, 0,        0.0,
+                    0,        0,        contrast, 0.0,
+                    transl,   transl,   transl,   1.0).times(Qt.matrix4x4(
+                        rval + saturation, rval,     rval,     0.0,
+                        gval,     gval + saturation, gval,     0.0,
+                        bval,     bval,     bval + saturation, 0.0,
+                        0,        0,        0,        1.0)).times(Qt.matrix4x4(
+                            intensity, 0,         0,         0,
+                            0,         intensity, 0,         0,
+                            0,         0,         intensity, 0,
+                            0,         0,         0,         1
+                ));
+
+           
+            fragmentShader: "
+                uniform mediump sampler2D source;
+                uniform lowp float qt_Opacity;
+                uniform highp float xUnit;
+                uniform highp float yUnit;
+                uniform lowp float radius;
+                uniform mediump mat4 colorMatrix;
+
+                varying mediump vec2 qt_TexCoord0;
+                void main() {
+                    vec2 uv = vec2(qt_TexCoord0.xy);
+                    vec4 sum = vec4(0.0, 0.0, 0.0, 0.0);
+                    for(float offset = 1.0; offset < radius; ++offset) {
+                        sum += texture2D(source, uv + vec2(-xUnit/2.0 * 2.0, 0.0) * offset);
+                        sum += texture2D(source, uv + vec2(-xUnit/2.0, yUnit/2.0) * offset) * 2.0;
+                        sum += texture2D(source, uv + vec2(0.0, yUnit/2.0 * 2.0) * offset);
+                        sum += texture2D(source, uv + vec2(xUnit/2.0, yUnit/2.0) * offset) * 2.0;
+                        sum += texture2D(source, uv + vec2(xUnit/2.0 * 2.0, 0.0) * offset);
+                        sum += texture2D(source, uv + vec2(xUnit/2.0, -yUnit/2.0) * offset) * 2.0;
+                        sum += texture2D(source, uv + vec2(0.0, -yUnit/2.0 * 2.0) * offset);
+                        sum += texture2D(source, uv + vec2(-xUnit/2.0, -yUnit/2.0) * offset) * 2.0;
+                    }
+
+
+                    sum = (sum / (12.0 * radius));
+
+                    gl_FragColor = sum  * colorMatrix ;//* qt_Opacity;
+                }"
+
+        }
+        PlasmaCore.FrameSvgItem {
+            anchors {
+                fill: frame
+                leftMargin: -margins.left
+                topMargin: -margins.top
+                rightMargin: -margins.right
+                bottomMargin: -margins.bottom
+            }
+            imagePath: Qt.resolvedUrl("./background.svg")
+            prefix: "shadow"
+        }
         PlasmaCore.FrameSvgItem {
             id: frame
             anchors {
                 fill: parent
                 margins: background.extraMargin
             }
-            imagePath: "widgets/background"
+            imagePath: Qt.resolvedUrl("./background.svg")
             
             width: listView.currentIndex == index && delegate.activeFocus ? parent.width : parent.width - units.gridUnit
             height: listView.currentIndex == index && delegate.activeFocus ? parent.height : parent.height - units.gridUnit

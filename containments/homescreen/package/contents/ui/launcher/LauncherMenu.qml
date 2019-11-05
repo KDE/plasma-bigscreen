@@ -39,6 +39,15 @@ PlasmaCore.ColorScope {
     signal activateTopNavBar
     signal activateSettingsView
 
+    property Item wallpaper: {
+        for (var i in plasmoid.children) {
+            if (plasmoid.children[i].toString().indexOf("WallpaperInterface") === 0) {
+                return plasmoid.children[i];
+            }
+        }
+        return null;
+    }
+
     Launcher.ApplicationListModel {
         id: applicationListModel
     }
