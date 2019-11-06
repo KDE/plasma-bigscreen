@@ -28,7 +28,7 @@ import org.kde.kirigami 2.5 as Kirigami
 ListView {
     id: view
     //TODO:dynamic
-    property int columns: Math.max(3, Math.floor(width / (units.gridUnit * 25)))
+    property int columns: Math.max(3, Math.floor(width / (units.gridUnit * 12)))
 
     readonly property int cellWidth: width / columns
 

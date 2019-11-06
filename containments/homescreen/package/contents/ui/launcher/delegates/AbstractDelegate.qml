@@ -33,6 +33,7 @@ PlasmaComponents.ItemDelegate {
 
     readonly property ListView listView: ListView.view
 
+    z: listView.currentIndex == index ? 2 : 0
     onClicked: {
         listView.forceActiveFocus()
         console.log(index)
@@ -51,7 +52,7 @@ PlasmaComponents.ItemDelegate {
 
     background: Item {
         id: background
-        property real extraMargin: listView.currentIndex == index && delegate.activeFocus ? 0 : units.gridUnit/2
+        property real extraMargin:  Math.round(listView.currentIndex == index && delegate.activeFocus ? -units.gridUnit/2 : units.gridUnit/2)
         Behavior on extraMargin {
             NumberAnimation {
                 duration: Kirigami.Units.longDuration

@@ -34,7 +34,7 @@ import "views" as Views
 FocusScope {
     anchors {
         fill: parent
-        margins: units.smallSpacing
+        margins: units.smallSpacing * 2
     }
     
     ColumnLayout {
