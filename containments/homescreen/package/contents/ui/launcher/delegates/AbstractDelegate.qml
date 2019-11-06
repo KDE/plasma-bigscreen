@@ -59,58 +59,6 @@ PlasmaComponents.ItemDelegate {
             }
         }
 
-        ShaderEffect {
-            id: shader
-            anchors.fill: frame
-            property variant source: ShaderEffectSource {
-                width: frame.width
-                height: frame.height
-                sourceItem: root.wallpaper
-                sourceRect: Qt.rect(shader.Kirigami.ScenePosition.x, shader.Kirigami.ScenePosition.y, shader.width, shader.height)
-            }
-            property real xUnit: -1/width
-            property real yUnit: -1/height
-            property real radius: 32
-
-            property real contrast: 0.5
-            property real saturation: 1.3
-            property real intensity: theme.backgroundColor.hslLightness > 0.5 ? 1.8 : 0.8
-
-            readonly property real transl: (1.0 - contrast) / 2.0;
-            readonly property real rval: (1.0 - saturation) * 0.2126;
-            readonly property real gval: (1.0 - saturation) * 0.7152;
-            readonly property real bval: (1.0 - saturation) * 0.0722;
-            property var colorMatrix: Qt.matrix4x4(
-                    contrast, 0,        0,        0.0,
-                    0,        contrast, 0,        0.0,
-                    0,        0,        contrast, 0.0,
-                    transl,   transl,   transl,   1.0).times(Qt.matrix4x4(
-                        rval + saturation, rval,     rval,     0.0,
-                        gval,     gval + saturation, gval,     0.0,
-                        bval,     bval,     bval + saturation, 0.0,
-                        0,        0,        0,        1.0)).times(Qt.matrix4x4(
-                            intensity, 0,         0,         0,
-                            0,         intensity, 0,         0,
-                            0,         0,         intensity, 0,
-                            0,         0,         0,         1
-                ));
-
-           
-            fragmentShader: "
-                uniform mediump sampler2D source;
-                uniform lowp float qt_Opacity;
-                uniform highp float xUnit;
-                uniform highp float yUnit;
-                uniform lowp float radius;
-                uniform mediump mat4 colorMatrix;
-
-                varying mediump vec2 qt_TexCoord0;
-                void main() {
-
-                    gl_FragColor = texture2D(source, qt_TexCoord0)  * colorMatrix ;//* qt_Opacity;
-                }"
-
-        }
         PlasmaCore.FrameSvgItem {
             anchors {
                 fill: frame
