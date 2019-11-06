@@ -44,6 +44,7 @@ ListView {
     //highlightRangeMode: ListView.ApplyRange
     highlightFollowsCurrentItem: true
     snapMode: ListView.SnapToItem
+    cacheBuffer: width
 
     //preferredHighlightBegin: width/view.columns
     //preferredHighlightEnd: width/view.columns * 2
