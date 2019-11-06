@@ -29,7 +29,7 @@ import org.kde.kquickcontrolsaddons 2.0
 import org.kde.private.biglauncher 1.0 as Launcher
 import org.kde.kirigami 2.5 as Kirigami
 
-PlasmaCore.ColorScope {
+FocusScope {
     id: root
 
     readonly property int reservedSpaceForLabel: metrics.height
@@ -83,98 +83,5 @@ PlasmaCore.ColorScope {
         visible: false
     }
 
-    ColumnLayout {
-        anchors.fill: parent
-
-        RowLayout {
-            id: topButtonBar
-            Layout.fillWidth: true
-            Layout.preferredHeight: Kirigami.Units.iconSizes.medium
-            
-            PlasmaComponents3.Button {
-                text: "Home"
-                Layout.fillWidth: true
-                focus: false
-                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
-                flat: topBarLoader.currentIndex !== 0 ? 1 : 0
-                onClicked: {
-                    topBarLoader.currentIndex = 0
-                    root.activateAppView()
-                }
-                
-                Rectangle {
-                    id: homeBtnHighLighter
-                    visible: topButtonBar.focus && topBarLoader.currentIndex == 0 ? 1 : 0
-                    color: Kirigami.Theme.linkColor
-                    height: Kirigami.Units.smallSpacing * 0.5
-                    anchors.left: parent.left
-                    anchors.leftMargin: Kirigami.Units.smallSpacing
-                    anchors.right: parent.right
-                    anchors.rightMargin: Kirigami.Units.smallSpacing
-                    anchors.bottom: parent.bottom
-                    anchors.bottomMargin: Kirigami.Units.smallSpacing
-                }
-            }
-
-            PlasmaComponents3.Button {
-                text: "Settings"
-                Layout.fillWidth: true
-                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
-                focus: false
-                flat: topBarLoader.currentIndex !== 1 ? 1 : 0
-                onClicked: {
-                    topBarLoader.currentIndex = 1
-                }
-                
-                Rectangle {
-                    id: settingsBtnHighLighter
-                    visible: topButtonBar.focus && topBarLoader.currentIndex == 1 ? 1 : 0
-                    color: Kirigami.Theme.linkColor
-                    height: Kirigami.Units.smallSpacing * 0.5
-                    anchors.left: parent.left
-                    anchors.leftMargin: Kirigami.Units.smallSpacing
-                    anchors.right: parent.right
-                    anchors.rightMargin: Kirigami.Units.smallSpacing
-                    anchors.bottom: parent.bottom
-                    anchors.bottomMargin: Kirigami.Units.smallSpacing
-                }
-            }
-            
-            Keys.onRightPressed: {
-                topBarLoader.currentIndex = 1
-            }
-            
-            Keys.onLeftPressed: {
-                topBarLoader.currentIndex = 0
-            }
-            
-            Keys.onDownPressed: {
-                if(topBarLoader.currentIndex == 0) {
-                    root.activateAppView();
-                } else if (topBarLoader.currentIndex == 1) {
-                    root.activateSettingsView();
-                }
-            }
-        }
-
-        StackLayout {
-            id: topBarLoader
-            Layout.fillWidth: true
-            Layout.preferredHeight: parent.height - (topButtonBar.height + Kirigami.Units.largeSpacing)
-            currentIndex: 0
-            clip: true
-
-            Item {
-                LauncherHome{}
-            }
-
-            Item {
-                PlaceHolderPage{}
-            }
-
-            Component.onCompleted: {
-                root.activateAppView();
-            }
-        }
-    }
+    LauncherHome {}
 }

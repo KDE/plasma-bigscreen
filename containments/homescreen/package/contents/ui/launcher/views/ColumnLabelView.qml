@@ -27,8 +27,9 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.5 as Kirigami
 
 Item {
-    Layout.preferredWidth: appslabel.contentWidth + Kirigami.Units.largeSpacing * 3
-    Layout.preferredHeight: Kirigami.Units.iconSizes.small
+    implicitWidth: appslabel.implicitWidth
+    implicitHeight: appslabel.implicitHeight
+
     property alias text: appslabel.text
     
     PlasmaExtras.Heading {

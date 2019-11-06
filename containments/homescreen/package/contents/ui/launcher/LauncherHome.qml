@@ -32,12 +32,14 @@ import "delegates" as Delegates
 import "views" as Views
 
 FocusScope {
-    anchors.fill: parent
+    anchors {
+        fill: parent
+        margins: units.smallSpacing
+    }
     
     ColumnLayout {
         id: launcherHomeColumn
-        width: parent.width
-        height: parent.height
+        anchors.fill: parent
         spacing: 1
         property Component activeHighlightItem: PlasmaComponents.Highlight{}
         property Component disabledHighlightItem: Item {}
@@ -58,7 +60,7 @@ FocusScope {
                 
             }
 
-            navigationUp: gridView3
+            navigationUp: shutdownButton
             navigationDown: gridView2
         }
 
@@ -98,7 +100,7 @@ FocusScope {
             }
             
             navigationUp: gridView2
-            navigationDown: gridView
+            navigationDown: null
         }
 
         Component.onCompleted: {

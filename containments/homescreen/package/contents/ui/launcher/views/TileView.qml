@@ -28,7 +28,7 @@ import org.kde.kirigami 2.5 as Kirigami
 ListView {
     id: view
     //TODO:dynamic
-    property int columns: Math.max(3, Math.floor(width / (units.gridUnit * 20)))
+    property int columns: Math.max(3, Math.floor(width / (units.gridUnit * 25)))
 
     readonly property int cellWidth: width / columns
 
@@ -55,7 +55,7 @@ ListView {
         id: rotation
         axis { x: 0; y: 1; z: 0 }
         angle: 0
-        property real targetAngle: 45
+        property real targetAngle: 30
         Behavior on angle {
             SmoothedAnimation {
                 duration: Kirigami.Units.longDuration * 10
@@ -66,7 +66,7 @@ ListView {
 
     Timer {
         id: rotateTimeOut
-        interval: 100
+        interval: 25
     }
     Timer {
         id: rotateTimer
@@ -86,9 +86,9 @@ ListView {
     property real oldContentX
     onContentXChanged: {
         if (oldContentX < contentX) {
-            rotation.targetAngle = 45;
+            rotation.targetAngle = 30;
         } else {
-            rotation.targetAngle = -45;
+            rotation.targetAngle = -30;
         }
         PlasmaComponents.ScrollBar.horizontal.opacity = 1;
         if (!rotateTimeOut.running) {
