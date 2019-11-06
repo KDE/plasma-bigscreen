@@ -52,7 +52,7 @@ FocusScope {
                 
         Views.TileView {
             id: gridView
-            model: root.voiceAppsModel
+            model: plasmoid.nativeInterface.voiceAppListModel
             currentIndex: 0
             focus: true
             delegate: Delegates.VoiceAppDelegate {
@@ -60,7 +60,7 @@ FocusScope {
                 
             }
 
-            navigationUp: shutdownButton
+            navigationUp: shutdownIndicator
             navigationDown: gridView2
         }
 
@@ -71,7 +71,7 @@ FocusScope {
 
         Views.TileView {
             id: gridView2
-            model: root.appsModel
+            model: plasmoid.nativeInterface.applicationListModel
             currentIndex: 0
             focus: false
             delegate: Delegates.AppDelegate {

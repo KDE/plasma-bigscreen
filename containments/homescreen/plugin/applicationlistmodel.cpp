@@ -253,6 +253,12 @@ Q_INVOKABLE void ApplicationListModel::moveItem(int row, int destination)
     endMoveRows();
 }
 
+void ApplicationListModel::executeCommand(const QString &command)
+{
+    qWarning()<<"Executing"<<command;
+    QProcess::startDetached(command);
+}
+
 void ApplicationListModel::runApplication(const QString &storageId)
 {
     if (storageId.isEmpty()) {

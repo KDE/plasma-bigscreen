@@ -33,8 +33,6 @@ FocusScope {
     id: root
 
     readonly property int reservedSpaceForLabel: metrics.height
-    property var appsModel: applicationListModel
-    property var voiceAppsModel: voiceAppListModel
     signal activateAppView
     signal activateTopNavBar
     signal activateSettingsView
@@ -48,23 +46,15 @@ FocusScope {
         return null;
     }
 
-    Launcher.ApplicationListModel {
-        id: applicationListModel
-    }
-
-    Launcher.VoiceAppListModel {
-        id: voiceAppListModel
-    }
-    
     Component.onCompleted: {
         root.forceActiveFocus();
-        applicationListModel.loadApplications();
-        voiceAppListModel.loadApplications();
+        plasmoid.nativeInterface.applicationListModel.loadApplications();
+        plasmoid.nativeInterface.voiceAppListModel.loadApplications();
         root.activateAppView();
     }
 
     Connections {
-        target: applicationListModel
+        target: plasmoid.applicationListModel
         onAppOrderChanged: {
             root.activateAppView()
         }

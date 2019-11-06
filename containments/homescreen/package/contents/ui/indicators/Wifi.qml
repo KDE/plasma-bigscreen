@@ -25,14 +25,10 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.networkmanagement 0.2 as PlasmaNM
 
-PlasmaCore.IconItem {
+AbstractIndicator {
     id: connectionIcon
 
-    source: connectionIconProvider.connectionIcon
-    colorGroup: PlasmaCore.ColorScope.colorGroup
-
-    Layout.fillHeight: true
-    Layout.preferredWidth: height
+    icon.name: connectionIconProvider.connectionIcon
 
     PlasmaComponents.BusyIndicator {
         id: connectingIndicator
@@ -48,5 +44,8 @@ PlasmaCore.IconItem {
 
     PlasmaNM.ConnectionIcon {
         id: connectionIconProvider
+    }
+    onClicked: {
+        plasmoid.nativeInterface.executeCommand("plasma-settings -m kcm_mobile_wifi")
     }
 }

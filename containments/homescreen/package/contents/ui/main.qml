@@ -108,15 +108,22 @@ Item {
                 margins: units.smallSpacing
             }
             Indicators.Wifi {
+                id: wifiIndicator
                 Layout.fillHeight: true
                 implicitWidth: height
+                KeyNavigation.down: launcher
+                KeyNavigation.right: shutdownIndicator
+                KeyNavigation.tab: shutdownIndicator
+                KeyNavigation.backtab: launcher
+                KeyNavigation.left: launcher
             }
             Indicators.Shutdown {
-                id: shutdownButton
+                id: shutdownIndicator
                 KeyNavigation.down: launcher
                 KeyNavigation.right: launcher
                 KeyNavigation.tab: launcher
-                KeyNavigation.backtab: launcher
+                KeyNavigation.backtab: wifiIndicator
+                KeyNavigation.left: wifiIndicator
             }
         }
 

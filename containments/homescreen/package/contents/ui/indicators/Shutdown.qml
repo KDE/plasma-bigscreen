@@ -25,44 +25,20 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 
 
-PlasmaComponents.Button {
+AbstractIndicator {
     id: button
-    Layout.fillHeight: true
-    Layout.preferredWidth: height
 
-    leftPadding: 0
-    topPadding: 0
-    rightPadding: 0
-    bottomPadding: 0
+    icon.name: "system-shutdown"
 
-    background: PlasmaCore.FrameSvgItem {
-        id: frame
-        imagePath: "widgets/viewitem"
-        prefix: "hover"
-        
-        visible: button.activeFocus
-    }
-
-    contentItem: PlasmaCore.IconItem {
-        source: "system-shutdown"
-        colorGroup: PlasmaCore.ColorScope.colorGroup
-
-        Layout.fillHeight: true
-        Layout.preferredWidth: height
-
-        PlasmaCore.DataSource {
-            id: dataEngine
-            engine: "powermanagement"
-            connectedSources: ["PowerDevil"]
-        }
+    PlasmaCore.DataSource {
+        id: dataEngine
+        engine: "powermanagement"
+        connectedSources: ["PowerDevil"]
     }
 
     onClicked: {
         var service = dataEngine.serviceForSource("PowerDevil");
         var operation = service.operationDescription("requestShutDown");
         service.startOperationCall(operation);
-    }
-    Keys.onReturnPressed: {
-        clicked();
     }
 }

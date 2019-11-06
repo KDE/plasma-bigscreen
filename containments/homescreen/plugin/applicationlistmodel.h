@@ -77,6 +77,8 @@ public:
 
     Q_INVOKABLE void loadApplications();
 
+    Q_INVOKABLE void executeCommand(const QString &command);
+
 public Q_SLOTS:
      void sycocaDbChanged(const QStringList &change);
 

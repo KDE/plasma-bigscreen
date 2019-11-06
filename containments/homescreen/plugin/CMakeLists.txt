@@ -1,13 +1,18 @@
 kde_enable_exceptions()
 
-add_definitions(-DTRANSLATION_DOMAIN=\"biglauncherplugin\")
+add_definitions(-DTRANSLATION_DOMAIN=\"biglauncherhomescreen\")
 
-set(biglauncherplugin_SRCS biglauncherplugin.cpp biglauncher_dbus.cpp applicationlistmodel.cpp voiceapplistmodel.cpp)
+set(biglauncherhomescreen_SRCS
+    biglauncherhomescreen.cpp
+    biglauncher_dbus.cpp
+    applicationlistmodel.cpp
+    voiceapplistmodel.cpp)
 
-add_library(biglauncherplugin SHARED ${biglauncherplugin_SRCS})
+add_library(plasma_containment_biglauncherhomescreen MODULE ${biglauncherhomescreen_SRCS})
 
-target_link_libraries(biglauncherplugin Qt5::Gui Qt5::Core Qt5::Qml Qt5::DBus Qt5::Network KF5::Plasma KF5::I18n KF5::Notifications KF5::Service KF5::KIOWidgets)
+kcoreaddons_desktop_to_json(plasma_containment_biglauncherhomescreen ../package/metadata.desktop)
 
-install(TARGETS biglauncherplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/private/biglauncher)
+target_link_libraries(plasma_containment_biglauncherhomescreen Qt5::Gui Qt5::Core Qt5::Qml Qt5::DBus Qt5::Network KF5::Plasma KF5::I18n KF5::Notifications KF5::Service KF5::KIOWidgets)
 
-install(FILES qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/private/biglauncher)
+install(TARGETS plasma_containment_biglauncherhomescreen DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/applets)
+
