@@ -106,23 +106,8 @@ PlasmaComponents.ItemDelegate {
 
                 varying mediump vec2 qt_TexCoord0;
                 void main() {
-                    vec2 uv = vec2(qt_TexCoord0.xy);
-                    vec4 sum = vec4(0.0, 0.0, 0.0, 0.0);
-                    for(float offset = 1.0; offset < radius; ++offset) {
-                        sum += texture2D(source, uv + vec2(-xUnit/2.0 * 2.0, 0.0) * offset);
-                        sum += texture2D(source, uv + vec2(-xUnit/2.0, yUnit/2.0) * offset) * 2.0;
-                        sum += texture2D(source, uv + vec2(0.0, yUnit/2.0 * 2.0) * offset);
-                        sum += texture2D(source, uv + vec2(xUnit/2.0, yUnit/2.0) * offset) * 2.0;
-                        sum += texture2D(source, uv + vec2(xUnit/2.0 * 2.0, 0.0) * offset);
-                        sum += texture2D(source, uv + vec2(xUnit/2.0, -yUnit/2.0) * offset) * 2.0;
-                        sum += texture2D(source, uv + vec2(0.0, -yUnit/2.0 * 2.0) * offset);
-                        sum += texture2D(source, uv + vec2(-xUnit/2.0, -yUnit/2.0) * offset) * 2.0;
-                    }
 
-
-                    sum = (sum / (12.0 * radius));
-
-                    gl_FragColor = sum  * colorMatrix ;//* qt_Opacity;
+                    gl_FragColor = texture2D(source, qt_TexCoord0)  * colorMatrix ;//* qt_Opacity;
                 }"
 
         }
