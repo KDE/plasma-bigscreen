@@ -67,6 +67,11 @@ AppletConfiguration {
         implicitHeight: units.gridUnit * 8
         width: root.horizontal ? implicitWidth : root.width
         height: root.horizontal ? root.height : implicitHeight
+        leftPadding: units.smallSpacing * 2
+        rightPadding: units.smallSpacing * 2
+        topPadding: units.smallSpacing * 2
+        bottomPadding: units.smallSpacing * 2
+        
         Wallpaper.Image {
             id: imageWallpaper
         }
@@ -83,9 +88,13 @@ AppletConfiguration {
             onCountChanged: currentIndex =  Math.min(model.indexOf(configDialog.wallpaperConfiguration["Image"]), model.rowCount()-1)
 
             delegate: Controls.ItemDelegate {
-                width: root.horizontal ? parent.width : height * 1.6
-                height: root.horizontal ? width / 1.6 : parent.height
-                
+                width: wallpapersView.width / Math.floor(wallpapersView.width / (units.gridUnit * 12))
+                height: width / 1.6
+
+                leftPadding: frame.margins.left + background.extraMargin
+                topPadding: frame.margins.top + background.extraMargin
+                rightPadding: frame.margins.right + background.extraMargin
+                bottomPadding: frame.margins.bottom + background.extraMargin
 
                 property bool isCurrent: configDialog.wallpaperConfiguration["Image"] == model.path
                 onIsCurrentChanged: {
@@ -95,30 +104,23 @@ AppletConfiguration {
                 }
                 
                 z: wallpapersView.currentIndex === index ? 2 : 0
-                Addons.QIconItem {
-                    anchors.centerIn: parent
-                    width: units.iconSizes.large
-                    height: width
-                    icon: "view-preview"
-                    visible: !walliePreview.visible
-                }
-
-                Addons.QPixmapItem {
-                    id: walliePreview
-                    anchors {
-                        fill: parent
-                        margins: wallpapersView.currentIndex === index ? -units.gridUnit : 0
-                        Behavior on margins {
-                            NumberAnimation {
-                                duration: units.longDuration
-                                easing.type: Easing.InOutQuad
-                            }
-                        }
+                contentItem: Item {
+                    Addons.QIconItem {
+                        anchors.centerIn: parent
+                        width: units.iconSizes.large
+                        height: width
+                        icon: "view-preview"
+                        visible: !walliePreview.visible
                     }
-                    visible: model.screenshot != null
-                    smooth: true
-                    pixmap: model.screenshot
-                    fillMode: Image.PreserveAspectCrop
+
+                    Addons.QPixmapItem {
+                        id: walliePreview
+                        anchors.fill: parent
+                        visible: model.screenshot != null
+                        smooth: true
+                        pixmap: model.screenshot
+                        fillMode: Image.PreserveAspectCrop
+                    }
                 }
                 onClicked: {
                     configDialog.currentWallpaper = "org.kde.image";
@@ -128,9 +130,39 @@ AppletConfiguration {
                 Keys.onReturnPressed: {
                     clicked();
                 }
-                background: Rectangle {
-                    color: "lightGray"
-                    opacity: 0.8
+                background: Item {
+                    id: background
+                    property real extraMargin:  Math.round(wallpapersView.currentIndex == index ? -units.gridUnit/2 : units.gridUnit/2)
+                    Behavior on extraMargin {
+                        NumberAnimation {
+                            duration: Kirigami.Units.longDuration
+                            easing.type: Easing.InOutQuad
+                        }
+                    }
+
+                    PlasmaCore.FrameSvgItem {
+                        anchors {
+                            fill: frame
+                            leftMargin: -margins.left
+                            topMargin: -margins.top
+                            rightMargin: -margins.right
+                            bottomMargin: -margins.bottom
+                        }
+                        imagePath: Qt.resolvedUrl("./background.svg")
+                        prefix: "shadow"
+                    }
+                    PlasmaCore.FrameSvgItem {
+                        id: frame
+                        anchors {
+                            fill: parent
+                            margins: background.extraMargin
+                        }
+                        imagePath: Qt.resolvedUrl("./background.svg")
+                        
+                        width: wallpapersView.currentIndex == index && delegate.activeFocus ? parent.width : parent.width - units.gridUnit
+                        height: wallpapersView.currentIndex == index && delegate.activeFocus ? parent.height : parent.height - units.gridUnit
+                        opacity: 0.8
+                    }
                 }
             }
         }
