@@ -98,14 +98,15 @@ FocusScope {
                     onTriggered: print("Wireless Clicked")
                 },
                 Controls.Action {
-                    text: i18n("Preferences")
-                    icon.name: "systemsettings"
-                    onTriggered: print("Preferences Clicked")
+                    text: i18n("Audio")
+                    icon.name: "audio-volume-high"
+                    onTriggered: plasmoid.nativeInterface.executeCommand("audio-device-chooser")
+
                 },
                 Controls.Action {
                     text: i18n("Wallpaper")
                     icon.name: "preferences-desktop-vallpaper"
-                    onTriggered: print("Wallpaper Clicked")
+                    onTriggered: plasmoid.action("configure").trigger();
                 },
                 Controls.Action {
                     text: i18n("Mycroft")

@@ -1,0 +1,11 @@
+[kdeglobals][KDE]
+LookAndFeelPackage=org.kde.plasma.mycroft.bigscreen
+
+[Desktop]
+Containment=org.kde.mycroft.bigscreen.homescreen
+ToolBox=
+
+[Desktop][ContainmentActions]
+
+[plasmarc][Theme]
+name=default
