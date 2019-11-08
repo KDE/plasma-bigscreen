@@ -27,6 +27,7 @@ import org.kde.plasma.configuration 2.0
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.kquickcontrolsaddons 2.0 as Addons
 import org.kde.kcm 1.1 as KCM
+import org.kde.kirigami 2.11 as Kirigami
 
 AppletConfiguration {
     id: root
@@ -64,7 +65,7 @@ AppletConfiguration {
             wallpapersView.forceActiveFocus()
         }
         implicitWidth: units.gridUnit * 10
-        implicitHeight: units.gridUnit * 8
+        implicitHeight: wallpapersView.cellHeight + topPadding + bottomPadding
         width: root.horizontal ? implicitWidth : root.width
         height: root.horizontal ? root.height : implicitHeight
         leftPadding: units.smallSpacing * 2
@@ -80,21 +81,75 @@ AppletConfiguration {
         ListView {
             id: wallpapersView
             anchors.fill: parent
+            readonly property real cellWidth: width / Math.floor(width / (units.gridUnit * 12))
+            readonly property int cellHeight: cellWidth / 1.6
+
             orientation: root.horizontal ? ListView.Vertical : ListView.Horizontal
             keyNavigationEnabled: true
             highlightFollowsCurrentItem: true
             snapMode: ListView.SnapToItem
             model: imageWallpaper.wallpaperModel
             onCountChanged: currentIndex =  Math.min(model.indexOf(configDialog.wallpaperConfiguration["Image"]), model.rowCount()-1)
+            KeyNavigation.left: headerItem
 
-            delegate: Controls.ItemDelegate {
-                width: wallpapersView.width / Math.floor(wallpapersView.width / (units.gridUnit * 12))
-                height: width / 1.6
+            header: WallpaperDelegate {
+                id: delegate
+                width: wallpapersView.cellWidth
+                height: wallpapersView.cellHeight
 
-                leftPadding: frame.margins.left + background.extraMargin
-                topPadding: frame.margins.top + background.extraMargin
-                rightPadding: frame.margins.right + background.extraMargin
-                bottomPadding: frame.margins.bottom + background.extraMargin
+                highlight: activeFocus
+                property bool isCurrent: configDialog.currentWallpaper = "org.kde.slideshow"
+                onIsCurrentChanged: {
+                    if (isCurrent) {
+                        forceActiveFocus();
+                        wallpapersView.currentIndex = -1;
+                    }
+                }
+                onActiveFocusChanged: {
+                    if (activeFocus) {
+                        wallpapersView.currentIndex = -1;
+                    }
+                }
+                onClicked: {
+                    forceActiveFocus();
+                    configDialog.currentWallpaper = "org.kde.slideshow";
+                    configDialog.applyWallpaper();
+                }
+                Keys.onReturnPressed: clicked()
+
+                contentItem: Rectangle {
+                    ColumnLayout {
+                        anchors.centerIn: parent
+                        Item {
+                            width: childrenRect.width
+                            height: childrenRect.height
+                            Repeater {
+                                model: 4
+                                Addons.QIconItem {
+                                    x: modelData * 10 * (delegate.highlight ? 2 : 1)
+                                    y: modelData * 10 * (delegate.highlight ? 2 : 1)
+                                    z: 4 - modelData
+                                    width: units.iconSizes.large
+                                    height: width
+                                    icon: "image-jpeg"
+                                }
+                            }
+                        }
+                        Controls.Label {
+                            text: i18n("Slideshow")
+                        }
+                    }
+                }
+
+                Keys.onRightPressed: {
+                    wallpapersView.currentIndex = 0
+                    print(wallpapersView.itemAt(1, 1))
+                    wallpapersView.itemAt(1, 1).forceActiveFocus()
+                }
+            }
+    
+            delegate: WallpaperDelegate {
+                id: delegate
 
                 property bool isCurrent: configDialog.wallpaperConfiguration["Image"] == model.path
                 onIsCurrentChanged: {
@@ -103,7 +158,6 @@ AppletConfiguration {
                     }
                 }
                 
-                z: wallpapersView.currentIndex === index ? 2 : 0
                 contentItem: Item {
                     Addons.QIconItem {
                         anchors.centerIn: parent
@@ -129,40 +183,6 @@ AppletConfiguration {
                 }
                 Keys.onReturnPressed: {
                     clicked();
-                }
-                background: Item {
-                    id: background
-                    property real extraMargin:  Math.round(wallpapersView.currentIndex == index ? -units.gridUnit/2 : units.gridUnit/2)
-                    Behavior on extraMargin {
-                        NumberAnimation {
-                            duration: Kirigami.Units.longDuration
-                            easing.type: Easing.InOutQuad
-                        }
-                    }
-
-                    PlasmaCore.FrameSvgItem {
-                        anchors {
-                            fill: frame
-                            leftMargin: -margins.left
-                            topMargin: -margins.top
-                            rightMargin: -margins.right
-                            bottomMargin: -margins.bottom
-                        }
-                        imagePath: Qt.resolvedUrl("./background.svg")
-                        prefix: "shadow"
-                    }
-                    PlasmaCore.FrameSvgItem {
-                        id: frame
-                        anchors {
-                            fill: parent
-                            margins: background.extraMargin
-                        }
-                        imagePath: Qt.resolvedUrl("./background.svg")
-                        
-                        width: wallpapersView.currentIndex == index && delegate.activeFocus ? parent.width : parent.width - units.gridUnit
-                        height: wallpapersView.currentIndex == index && delegate.activeFocus ? parent.height : parent.height - units.gridUnit
-                        opacity: 0.8
-                    }
                 }
             }
         }
