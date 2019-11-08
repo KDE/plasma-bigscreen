@@ -92,6 +92,7 @@ FocusScope {
             model: ListModel {
                 ListElement { name: "Wireless"; icon: "network-wireless-connected-100"}
                 ListElement { name: "Preferences"; icon: "dialog-scripts"}
+                ListElement { name: "Wallpaper"; icon: "preferences-desktop-wallpaper"}
                 ListElement { name: "Mycroft"; icon: "mycroft"}
             }
 

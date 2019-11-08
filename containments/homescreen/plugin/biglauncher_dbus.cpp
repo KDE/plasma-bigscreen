@@ -17,7 +17,6 @@
  */
 
 #include "biglauncher_dbus.h"
-#include "biglauncherplugin.h"
 #include <QMetaObject>
 #include <QByteArray>
 #include <QList>
