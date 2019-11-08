@@ -89,12 +89,30 @@ FocusScope {
                     
         Views.TileView {
             id: gridView3
-            model: ListModel {
-                ListElement { name: "Wireless"; icon: "network-wireless-connected-100"}
-                ListElement { name: "Preferences"; icon: "dialog-scripts"}
-                ListElement { name: "Wallpaper"; icon: "preferences-desktop-wallpaper"}
-                ListElement { name: "Mycroft"; icon: "mycroft"}
-            }
+            model: actions
+
+            property list<Controls.Action> actions: [
+                Controls.Action {
+                    text: i18n("Wireless")
+                    icon.name: "network-wireless-connected-100"
+                    onTriggered: print("Wireless Clicked")
+                },
+                Controls.Action {
+                    text: i18n("Preferences")
+                    icon.name: "systemsettings"
+                    onTriggered: print("Preferences Clicked")
+                },
+                Controls.Action {
+                    text: i18n("Wallpaper")
+                    icon.name: "preferences-desktop-vallpaper"
+                    onTriggered: print("Wallpaper Clicked")
+                },
+                Controls.Action {
+                    text: i18n("Mycroft")
+                    icon.name: "mycroft"
+                    onTriggered: print("Mycroft Clicked")
+                }
+            ]
 
             delegate: Delegates.SettingDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null

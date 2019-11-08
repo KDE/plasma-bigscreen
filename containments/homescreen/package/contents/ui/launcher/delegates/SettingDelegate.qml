@@ -20,10 +20,8 @@ import QtQuick 2.9
 
 
 AbstractDelegate {
-    icon.name: model.icon
-    text: model.name
+    icon.name: model.icon.name
+    text: model.text
 
-    onClicked: {
-        //TODO
-    }
+    onClicked: trigger();
 }
