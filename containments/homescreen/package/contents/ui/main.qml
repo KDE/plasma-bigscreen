@@ -67,6 +67,10 @@ Item {
         }
     }
 
+    FeedbackWindow {
+        id: feedbackWindow
+    }
+
     MycroftWindow {
         id: mycroftWindow
     }

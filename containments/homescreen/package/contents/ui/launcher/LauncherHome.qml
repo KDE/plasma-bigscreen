@@ -36,7 +36,7 @@ FocusScope {
         fill: parent
         margins: units.smallSpacing * 2
     }
-    
+
     ColumnLayout {
         id: launcherHomeColumn
         anchors {

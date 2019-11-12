@@ -46,6 +46,7 @@ AbstractIndicator {
         id: connectionIconProvider
     }
     onClicked: {
+        feedbackWindow.open(i18n("Network"), connectionIconProvider.connectionIcon);
         plasmoid.nativeInterface.executeCommand("plasma-settings -m kcm_mobile_wifi")
     }
 }

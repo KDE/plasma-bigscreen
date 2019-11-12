@@ -23,5 +23,8 @@ AbstractDelegate {
     icon.name: model.icon.name
     text: model.text
 
-    onClicked: trigger();
+    onClicked: {
+        feedbackWindow.open(model.text, model.icon.name);
+        trigger();
+    }
 }
