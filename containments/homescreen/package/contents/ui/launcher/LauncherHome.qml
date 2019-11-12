@@ -53,7 +53,7 @@ FocusScope {
             }
         }
         height: parent.height
-        spacing: units.largeSpacing
+        spacing: 0
         
         Views.ColumnLabelView {
             id: voiceAppsLabelColumnBox
