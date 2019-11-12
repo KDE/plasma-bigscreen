@@ -39,11 +39,21 @@ FocusScope {
     
     ColumnLayout {
         id: launcherHomeColumn
-        anchors.fill: parent
-        spacing: 1
-        property Component activeHighlightItem: PlasmaComponents.Highlight{}
-        property Component disabledHighlightItem: Item {}
-        property alias columnLabelHeight: voiceAppsLabelColumnBox.height
+        anchors {
+            left: parent.left
+            right: parent.right
+        }
+        property Views.ColumnLabelView currentSection
+        y: currentSection ? -currentSection.y : 0
+        Behavior on y {
+            //Can't be an Animator
+            NumberAnimation {
+                duration: Kirigami.Units.longDuration * 2
+                easing.type: Easing.InOutQuad
+            }
+        }
+        height: parent.height
+        spacing: units.largeSpacing
         
         Views.ColumnLabelView {
             id: voiceAppsLabelColumnBox
@@ -55,6 +65,7 @@ FocusScope {
             model: plasmoid.nativeInterface.voiceAppListModel
             currentIndex: 0
             focus: true
+            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = voiceAppsLabelColumnBox
             delegate: Delegates.VoiceAppDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
                 
@@ -74,6 +85,7 @@ FocusScope {
             model: plasmoid.nativeInterface.applicationListModel
             currentIndex: 0
             focus: false
+            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = appsColumnLabelBox
             delegate: Delegates.AppDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
             }
@@ -115,6 +127,7 @@ FocusScope {
                 }
             ]
 
+            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = settingsLabelColumnBox
             delegate: Delegates.SettingDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
             }
