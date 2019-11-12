@@ -1,6 +1,8 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>DeviceListItem.qml</file>
+        <file>delegates/AudioDelegate.qml</file>
+        <file>delegates/background.svg</file>
+        <file>views/TileView.qml</file>
     </qresource>
 </RCC>

@@ -8,7 +8,7 @@
     accepted by the membership of KDE e.V. (or its successor approved
     by the membership of KDE e.V.), which shall act as a proxy
     defined in Section 14 of version 3 of the license.
-  
+
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -22,28 +22,30 @@ import QtQuick 2.9
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.10 as Kirigami
 import org.kde.plasma.core 2.1 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.private.volume 0.1
+import QtQuick.Window 2.2
 
-Kirigami.ApplicationWindow {
+import "delegates" as Delegates
+import "views" as Views
+
+Window {
     title: "Audio Device Chooser"
-    reachableModeEnabled: false
     visibility: "Maximized"
-    width: 640
-    height: 800
+    color: Qt.rgba(0, 0, 0, 0.4)
+    property Component highlighter: PlasmaComponents.Highlight{}
+    property Component emptyHighlighter: Item{}
 
-    pageStack.initialPage: mainPage
-
-    Kirigami.Page {
+    Item {
         id: mainPage
-
-        title: "Audio Device Chooser"
+        anchors.fill: parent
 
         SourceModel {
             id: paSourceModel
         }
 
         SinkModel {
-                id: paSinkModel
+            id: paSinkModel
         }
 
         RowLayout {
@@ -51,36 +53,43 @@ Kirigami.ApplicationWindow {
             anchors.fill: parent
             anchors.margins: Kirigami.Units.largeSpacing
 
-
-            Rectangle {
+            Item {
                 id: mainRectLeft
                 Layout.preferredWidth: Kirigami.Units.gridUnit * 10
                 Layout.fillHeight: true
-                color: Qt.darker(Kirigami.Theme.backgroundColor, 1.2)
 
                 ColumnLayout{
                     id: playbackItemLayout
                     anchors.fill: parent
 
-                    Kirigami.Heading {
-                        id: pbackDeviceHeading
-                        enabled: sinkView.count > 0
-                        Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
-                        text: qsTr("Playback Devices")
-                        level: 3
+                    Rectangle {
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        color: sinkView.activeFocus ? Kirigami.Theme.linkColor : Qt.darker(Kirigami.Theme.backgroundColor, 1.2)
+                        Kirigami.Heading {
+                            id: pbackDeviceHeading
+                            enabled: sinkView.count > 0
+                            anchors.centerIn: parent
+                            text: qsTr("Playback Devices")
+                            level: 3
+                        }
                     }
-
                     Kirigami.Separator {
                         Layout.fillWidth: true
                         Layout.preferredHeight: 1
                     }
-
-                    Kirigami.Heading {
-                        id: recDeviceHeading
-                        enabled: sourceView.count > 0
-                        Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
-                        text: qsTr("Recording Devices")
-                        level: 3
+                    Rectangle{
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        color: sourceView.activeFocus ? Kirigami.Theme.linkColor : Qt.darker(Kirigami.Theme.backgroundColor, 1.2)
+                        Kirigami.Heading {
+                            id: recDeviceHeading
+                            enabled: sourceView.count > 0
+                            //Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
+                            anchors.centerIn: parent
+                            text: qsTr("Recording Devices")
+                            level: 3
+                        }
                     }
                 }
             }
@@ -88,69 +97,33 @@ Kirigami.ApplicationWindow {
             Kirigami.Separator {
                 Layout.fillHeight: true
                 Layout.preferredWidth: 1
+                Layout.rightMargin: Kirigami.Units.largeSpacing
             }
 
-
-            Rectangle {
+            Item {
                 id: mainRectRight
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                color: Qt.darker(Kirigami.Theme.backgroundColor, 1.2)
 
                 ColumnLayout {
                     id: recordItemLayout
                     anchors.fill: parent
 
-                    Rectangle {
-                        color: Kirigami.Theme.linkColor
-                        Layout.preferredHeight: Kirigami.Units.gridUnit * 2
-                        Layout.fillWidth: true
-                        RowLayout {
-                            id: pbLabelsBar
-                            anchors.fill: parent
-                            Kirigami.Heading {
-                                Layout.alignment: Qt.AlignLeft
-                                Layout.leftMargin: Kirigami.Units.largeSpacing
-                                text: "Output Devices"
-                                level: 3
-                            }
-                            Kirigami.Separator {
-                                Layout.fillHeight: true
-                                Layout.preferredWidth: 1
-                            }
-                            Kirigami.Heading {
-                                Layout.alignment: Qt.AlignLeft
-                                Layout.leftMargin: Kirigami.Units.largeSpacing
-                                text: "Default"
-                                level: 3
-                            }
+                    Views.TileView {
+                        id: sinkView
+                        model: paSinkModel
+                        clip: true
+                        focus: true
+                        highlight: focus ? highlighter : emptyHighlighter
+                        highlightMoveDuration: 0
+                        delegate: Delegates.AudioDelegate {
+                            isPlayback: true
+                            anchors.verticalCenter: parent.verticalCenter
+                            type: "sink"
                         }
-                    }
-
-                    Item {
-                        Layout.fillHeight: true
-                        Layout.fillWidth: true
-
-                        ListView {
-                            id: sinkView
-                            model: paSinkModel
-                            anchors.fill: parent
-                            interactive: true
-                            clip: true
-                            keyNavigationEnabled: true
-                            highlightFollowsCurrentItem: true
-                            snapMode: ListView.SnapToItem
-                            focus: true
-                            delegate: DeviceListItem {
-                                isPlayback: true
-                                type: "sink"
-                                height: Kirigami.Units.gridUnit * 2.5
-                            }
-                            onModelChanged: console.log(model)
-                            KeyNavigation.down: sourceView
-                            Keys.onReturnPressed: {
-                                currentItem.setDefault()
-                            }
+                        KeyNavigation.down: sourceView
+                        Keys.onReturnPressed: {
+                            currentItem.setDefault()
                         }
                     }
 
@@ -159,55 +132,20 @@ Kirigami.ApplicationWindow {
                         Layout.preferredHeight: 1
                     }
 
-                    Rectangle {
-                        color: Kirigami.Theme.linkColor
-                        Layout.preferredHeight: Kirigami.Units.gridUnit * 2
-                        Layout.fillWidth: true
-                        RowLayout {
-                            id: rbLabelsBar
-                            anchors.fill: parent
-                            Kirigami.Heading {
-                                Layout.alignment: Qt.AlignLeft
-                                Layout.leftMargin: Kirigami.Units.largeSpacing
-                                text: "Input Devices"
-                                level: 3
-                            }
-                            Kirigami.Separator {
-                                Layout.fillHeight: true
-                                Layout.preferredWidth: 1
-                            }
-                            Kirigami.Heading {
-                                Layout.alignment: Qt.AlignLeft
-                                Layout.leftMargin: Kirigami.Units.largeSpacing
-                                text: "Default"
-                                level: 3
-                            }
+                    Views.TileView {
+                        id: sourceView
+                        clip: true
+                        model: paSourceModel
+                        highlight: focus ? highlighter : emptyHighlighter
+                        highlightMoveDuration: 0
+                        delegate: Delegates.AudioDelegate {
+                            isPlayback: false
+                            anchors.verticalCenter: parent.verticalCenter
+                            type: "source"
                         }
-                    }
-
-                    Item {
-                        Layout.fillHeight: true
-                        Layout.fillWidth: true
-
-                        ListView {
-                            id: sourceView
-                            clip: true
-                            model: paSourceModel
-                            anchors.fill: parent
-                            interactive: true
-                            keyNavigationEnabled: true
-                            highlightFollowsCurrentItem: true
-                            snapMode: ListView.SnapToItem
-                            delegate: DeviceListItem {
-                                isPlayback: false
-                                type: "source"
-                                height: Kirigami.Units.gridUnit * 2.5
-                                Component.onCompleted: console.log(sourceView.count)
-                            }
-                            KeyNavigation.up: sinkView
-                            Keys.onReturnPressed: {
-                                currentItem.setDefault()
-                            }
+                        KeyNavigation.up: sinkView
+                        Keys.onReturnPressed: {
+                            currentItem.setDefault()
                         }
                     }
                 }
