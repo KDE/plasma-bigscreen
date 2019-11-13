@@ -22,6 +22,7 @@ include(ECMInstallIcons)
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Plasma
     I18n
+    Kirigami2
     Notifications
     PlasmaQuick
     KIO
@@ -35,7 +36,6 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Qml
     DBus
     Network
-    WebSockets
 )
 
 add_subdirectory(containments)
