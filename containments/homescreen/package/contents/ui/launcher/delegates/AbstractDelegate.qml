@@ -87,7 +87,7 @@ PlasmaComponents.ItemDelegate {
     
     contentItem: ColumnLayout {
         spacing: 0
-        Kirigami.Icon {
+        PlasmaCore.IconItem {
             id: icon
             Layout.fillWidth: true
             Layout.fillHeight: true
