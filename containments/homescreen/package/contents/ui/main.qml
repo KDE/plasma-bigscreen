@@ -43,6 +43,12 @@ Item {
         addApplet(applet, x, y);
     }
 
+    Component.onCompleted: {
+        for (var i in plasmoid.applets) {
+            root.addApplet(plasmoid.applets[i], -1, -1)
+        }
+    }
+
     function addApplet(applet, x, y) {
         var container = appletContainerComponent.createObject(appletsLayout)
         print("Applet added: " + applet + " " + applet.title)
