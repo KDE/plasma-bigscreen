@@ -18,6 +18,7 @@
 
 import QtQuick 2.12
 import QtQuick.Layouts 1.4
+import QtQuick.Window 2.2
 import QtQuick.Controls 2.4 as Controls
 
 import org.kde.plasma.components 3.0 as PlasmaComponents
@@ -28,7 +29,7 @@ import org.kde.kirigami 2.5 as Kirigami
 ListView {
     id: view
     //TODO:dynamic
-    property int columns: Math.max(3, Math.floor(width / (units.gridUnit * 12)))
+    property int columns: Math.max(3, Math.floor(width / (units.gridUnit * 15)))
 
     readonly property int cellWidth: Math.floor(width / columns)
 
@@ -37,7 +38,8 @@ ListView {
 
     Layout.fillWidth: true
     //Layout.fillHeight: true
-    Layout.preferredHeight: cellWidth/1.6
+    Layout.preferredHeight: Math.floor(cellWidth/screenRatio)
+    readonly property real screenRatio: view.Window.window ? view.Window.window.width / view.Window.window.height : 1.6
 
     z: activeFocus ? 10: 1
     keyNavigationEnabled: true

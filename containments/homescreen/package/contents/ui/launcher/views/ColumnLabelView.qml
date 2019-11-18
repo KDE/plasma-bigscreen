@@ -35,6 +35,7 @@ Item {
     PlasmaExtras.Heading {
         id: appslabel
         anchors.centerIn: parent
+        level: 2
         //font.capitalization: Font.SmallCaps
         color: theme.complementaryTextColor
     }
