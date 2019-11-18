@@ -62,7 +62,7 @@ Item {
             property Item applet
             visible: applet && applet.status !== PlasmaCore.Types.HiddenStatus && applet.status !== PlasmaCore.Types.PassiveStatus
             Layout.fillHeight: true
-            Layout.minimumWidth: Math.max(applet.implicitWidth, applet.Layout.preferredWidth, applet.Layout.minimumWidth)
+            Layout.minimumWidth: Math.max(applet.implicitWidth, applet.Layout.preferredWidth, applet.Layout.minimumWidth) + units.gridUnit
             Layout.maximumWidth: Layout.minimumWidth
         }
     }
