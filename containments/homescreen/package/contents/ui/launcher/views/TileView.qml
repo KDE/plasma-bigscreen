@@ -30,13 +30,14 @@ ListView {
     //TODO:dynamic
     property int columns: Math.max(3, Math.floor(width / (units.gridUnit * 12)))
 
-    readonly property int cellWidth: width / columns
+    readonly property int cellWidth: Math.floor(width / columns)
 
     property Item navigationUp
     property Item navigationDown
 
     Layout.fillWidth: true
-    Layout.fillHeight: true
+    //Layout.fillHeight: true
+    Layout.preferredHeight: cellWidth/1.6
 
     z: activeFocus ? 10: 1
     keyNavigationEnabled: true
