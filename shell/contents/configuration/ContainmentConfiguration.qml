@@ -83,7 +83,7 @@ AppletConfiguration {
             anchors.fill: parent
             readonly property real cellWidth: width / Math.floor(width / (units.gridUnit * 12))
             readonly property int cellHeight: cellWidth / screenRatio
-            readonly property real screenRatio: view.Window.window ? view.Window.window.width / view.Window.window.height : 1.6
+            readonly property real screenRatio: root.Window.window ? root.Window.window.width / root.Window.window.height : 1.6
 
             orientation: root.horizontal ? ListView.Vertical : ListView.Horizontal
             keyNavigationEnabled: true
