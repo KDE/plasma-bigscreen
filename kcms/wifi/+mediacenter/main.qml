@@ -16,7 +16,7 @@
  */
 
 import QtQuick.Layouts 1.4
-import QtQuick 2.4
+import QtQuick 2.12
 import QtQuick.Controls 2.3
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -36,7 +36,14 @@ KCM.SimpleKCM {
     property string pathToRemove
     property string nameToRemove
     property bool isStartUp: false
-    
+
+
+    onActiveFocusChanged: {
+       if (activeFocus) {
+           connectionView.forceActiveFocus();
+       }
+    }
+
     function removeConnection() {
         handler.removeConnection(pathToRemove)
     }
@@ -95,10 +102,14 @@ KCM.SimpleKCM {
             ListView {
                 id: connectionView
 
+                activeFocusOnTab: true
+                keyNavigationEnabled: true
+                keyNavigationWraps: false
+                focus: true
                 model: appletProxyModel
                 currentIndex: -1
-                //boundsBehavior: Flickable.StopAtBounds
-                delegate: NetworkItem{}
+                delegate: NetworkItem {}
+                KeyNavigation.down: reloadButton
             }
         }
 
@@ -112,22 +123,12 @@ KCM.SimpleKCM {
         }
 
         RowLayout {
-            Kirigami.BasicListItem {
-                Layout.fillWidth: false
-                separatorVisible: false
-                visible: networkStatus.networkStatus !== "Disconnected"
-                icon: "go-previous-symbolic"
-                text: i18n("Back")
-                Layout.preferredWidth: implicitWidth + height
-                onClicked: {
-                    networkingLoader.clear()
-                    Mark2SystemAccess.networkConfigurationVisible = false;
-                }
-            }
             Item {
                 Layout.fillWidth: true
             }
             Kirigami.BasicListItem {
+                id: reloadButton
+                KeyNavigation.up: connectionView
                 Layout.fillWidth: false
                 separatorVisible: false
                 icon: "view-refresh"

@@ -15,7 +15,7 @@
  *
  */
 
-import QtQuick 2.2
+import QtQuick 2.12
 import QtQuick.Layouts 1.2
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -31,6 +31,7 @@ Kirigami.AbstractListItem {
                                                (model.SecurityType == PlasmaNM.Enums.StaticWep || model.SecurityType == PlasmaNM.Enums.WpaPsk ||
                                                 model.SecurityType == PlasmaNM.Enums.Wpa2Psk)
 
+    checked: connectionView.currentIndex === index && connectionView.activeFocus
     contentItem: Item {
         implicitWidth: delegateLayout.implicitWidth;
         implicitHeight: delegateLayout.implicitHeight;
@@ -119,6 +120,7 @@ Kirigami.AbstractListItem {
         }
     }
 
+    Keys.onReturnPressed: clicked()
     onClicked: {
         if (!model.ConnectionPath) {
             networkingLoader.devicePath = model.DevicePath
