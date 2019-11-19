@@ -26,6 +26,8 @@ import org.kde.kcm 1.1 as KCM
 
 import Mycroft.Private.Mark2SystemAccess 1.0
 
+import "+mediacenter"
+
 KCM.SimpleKCM {
     id: networkSelectionView
 
