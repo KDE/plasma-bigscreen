@@ -103,6 +103,7 @@ Kirigami.Page {
     contentItem: ListView {
         id: listView
         focus: true
+        spacing: 0
         orientation: ListView.Horizontal
         activeFocusOnTab: true
         keyNavigationEnabled: true
