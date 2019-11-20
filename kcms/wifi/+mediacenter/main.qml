@@ -105,13 +105,15 @@ KCM.SimpleKCM {
         }
     }
 
-     Kirigami.OverlaySheet {
+     Dialog {
         id: passwordLayer
         parent: networkSelectionView
-        showCloseButton: false
 
-        onSheetOpenChanged: {
-            if (sheetOpen) {
+        x: parent.width/2 - width/2
+        y: Kirigami.Units.gridUnit
+        dim: true
+        onVisibleChanged: {
+            if (visible) {
                 passField.forceActiveFocus();
             } else {
                 connectionView.forceActiveFocus();
