@@ -36,6 +36,10 @@ KCM.SimpleKCM {
     property string pathToRemove
     property string nameToRemove
     property bool isStartUp: false
+    property var securityType
+    property var connectionName
+    property var devicePath
+    property var specificPath
 
 
     onActiveFocusChanged: {
@@ -73,131 +77,63 @@ KCM.SimpleKCM {
         sourceModel: connectionModel
     }
 
-    contentItem: ColumnLayout {
-        spacing: 0
-        anchors {
-            fill: parent
-            margins: Kirigami.Units.largeSpacing
+    onRefreshingChanged: {
+        if (refreshing) {
+            refreshTimer.restart()
+            handler.requestScan();
         }
+    }
+    Timer {
+        id: refreshTimer
+        interval: 3000
+        onTriggered: networkSelectionView.refreshing = false
+    }
 
-        Kirigami.ScrollablePage {
-            id: page
-            supportsRefreshing: true
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            clip: true
-
-            onRefreshingChanged: {
-                if (refreshing) {
-                    refreshTimer.restart()
-                    handler.requestScan();
-                }
-            }
-            Timer {
-                id: refreshTimer
-                interval: 3000
-                onTriggered: page.refreshing = false
-            }
-
-            ListView {
-                id: connectionView
-
-                activeFocusOnTab: true
-                keyNavigationEnabled: true
-                keyNavigationWraps: false
-                focus: true
-                model: appletProxyModel
-                currentIndex: -1
-                delegate: NetworkItem {}
-                KeyNavigation.down: reloadButton
-            }
-        }
-
-        Kirigami.Separator {
-            Layout.preferredHeight: 1
-            Layout.fillWidth: true
-        }
-
+    footer: RowLayout {
         Item {
-            Layout.preferredHeight: Kirigami.Units.largeSpacing
+            Layout.fillWidth: true
         }
-
-        RowLayout {
-            Item {
-                Layout.fillWidth: true
-            }
-            Kirigami.BasicListItem {
-                id: reloadButton
-                KeyNavigation.up: connectionView
-                Layout.fillWidth: false
-                separatorVisible: false
-                icon: "view-refresh"
-                text: i18n("Refresh")
-                Layout.preferredWidth: implicitWidth + height
-                onClicked: {
-                    page.refreshing = true;
-                    connectionView.contentY = -Kirigami.Units.gridUnit * 4;
-                }
+        Button {
+            id: reloadButton
+            KeyNavigation.up: connectionView
+            icon.name: "view-refresh"
+            text: i18n("Refresh")
+            onClicked: {
+                networkSelectionView.refreshing = true;
+                connectionView.contentY = -Kirigami.Units.gridUnit * 4;
             }
         }
     }
 
-
-    Control {
+     Kirigami.OverlaySheet {
         id: passwordLayer
-        anchors.fill: parent
-        z: 999999
-        opacity: 0
-        enabled: opacity > 0
-        
-        function open() {
-            passField.text = "";
-            passField.forceActiveFocus();
-            if (securityType > PlasmaNM.Enums.UnknownSecurity) {
-                passField.text = "";
+        parent: networkSelectionView
+        showCloseButton: false
+
+        onSheetOpenChanged: {
+            if (sheetOpen) {
                 passField.forceActiveFocus();
             } else {
-                close();
-                handler.addAndActivateConnection(devicePath, specificPath);
-            }
-            opacity = 1;
-        }
-
-        function close() {
-            opacity = 0;
-            passField.text = "";
-        }
-
-        Behavior on opacity {
-            OpacityAnimator {
-                duration: Kirigami.Units.longDuration
-                easing.type: Easing.InOutQuad
+                connectionView.forceActiveFocus();
             }
         }
-        background: Rectangle {
-            color: Qt.rgba(0, 0, 0, 0.8)
-            MouseArea {
-                anchors.fill: parent
-                onClicked: passwordLayer.close()
-            }
-        }
-
         contentItem: ColumnLayout {
             implicitWidth: Kirigami.Units.gridUnit * 25
 
+            Keys.onEscapePressed: passwordLayer.close()
             Kirigami.Heading {
-                level: 1
+                level: 2
                 wrapMode: Text.WordWrap
                 Layout.fillWidth: true
                 horizontalAlignment: Text.AlignHCenter
-                font.bold: true
                 text: i18n("Enter Password For %1", connectionName)
-                color: Kirigami.Theme.highlightColor
             }
 
             Kirigami.PasswordField {
                 id: passField
 
+                KeyNavigation.down: connectButton
+                KeyNavigation.up: closeButton
                 Layout.fillWidth: true
                 placeholderText: i18n("Password...")
                 validator: RegExpValidator {
@@ -217,12 +153,22 @@ KCM.SimpleKCM {
             RowLayout {
                 Layout.fillWidth: true
                 Button {
+                    id: connectButton
+                    KeyNavigation.up: passField
+                    KeyNavigation.down: passField
+                    KeyNavigation.left: passField
+                    KeyNavigation.right: closeButton
                     Layout.fillWidth: true
                     text: i18n("Connect")
 
                     onClicked: passField.accepted();
                 }
                 Button {
+                    id: closeButton
+                    KeyNavigation.up: passField
+                    KeyNavigation.down: passField
+                    KeyNavigation.left: connectButton
+                    KeyNavigation.right: passField
                     Layout.fillWidth: true
                     text: i18n("Cancel")
 
@@ -238,7 +184,7 @@ KCM.SimpleKCM {
     Kirigami.OverlaySheet {
         id: networkActions
         parent: networkSelectionView
-        showCloseButton: true
+        showCloseButton: false
 
         onSheetOpenChanged: {
             if (sheetOpen) {
@@ -275,5 +221,18 @@ KCM.SimpleKCM {
                 }
             }
         }
+    }
+
+    ListView {
+        id: connectionView
+
+        activeFocusOnTab: true
+        keyNavigationEnabled: true
+        keyNavigationWraps: false
+        focus: true
+        model: appletProxyModel
+        currentIndex: -1
+        delegate: NetworkItem {}
+        KeyNavigation.down: reloadButton
     }
 }

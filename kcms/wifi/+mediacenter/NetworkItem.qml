@@ -123,13 +123,12 @@ Kirigami.AbstractListItem {
     Keys.onReturnPressed: clicked()
     onClicked: {
         if (!model.ConnectionPath) {
-            networkingLoader.devicePath = model.DevicePath
-            networkingLoader.specificPath = model.SpecificPath
-            networkingLoader.connectionName = connectionNameLabel.text
-            networkingLoader.securityType = model.SecurityType
+            networkSelectionView.devicePath = model.DevicePath
+            networkSelectionView.specificPath = model.SpecificPath
+            networkSelectionView.connectionName = connectionNameLabel.text
+            networkSelectionView.securityType = model.SecurityType
             passwordLayer.open();
         } else if (model.ConnectionState == PlasmaNM.Enums.Deactivated) {
-            networkingLoader.push(Qt.resolvedUrl("../networking/Connecting.qml"))
             handler.activateConnection(model.ConnectionPath, model.DevicePath, model.SpecificPath)
         } else {
             handler.deactivateConnection(model.ConnectionPath, model.DevicePath)
