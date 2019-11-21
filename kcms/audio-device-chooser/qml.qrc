@@ -4,5 +4,8 @@
         <file>delegates/AudioDelegate.qml</file>
         <file>delegates/background.svg</file>
         <file>views/TileView.qml</file>
+        <file>delegates/VolumeObject.qml</file>
+        <file>DeviceChooserPage.qml</file>
+        <file>views/RowLabelView.qml</file>
     </qresource>
 </RCC>

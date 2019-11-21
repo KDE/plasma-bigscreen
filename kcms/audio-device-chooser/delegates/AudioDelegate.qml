@@ -19,18 +19,28 @@
 
 import QtQuick 2.9
 import QtQuick.Layouts 1.3
+import QtQuick.Controls 2.3
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents2
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami 2.11 as Kirigami
+import QtGraphicalEffects 1.0
 import org.kde.plasma.private.volume 0.1
 
-PlasmaComponents.ItemDelegate {
+Item {
     id: delegate
     property bool isPlayback: type.substring(0, 4) == "sink"
     property bool onlyOne: false
     readonly property var currentPort: Ports[ActivePortIndex]
     property string type
+    property bool isDefaultDevice: icon.visible
     signal setDefault
+
+    property var hasVolume: HasVolume
+    property bool volumeWritable: VolumeWritable
+    property var muted: Muted
+    property var vol: Volume
+    property var pObject: PulseObject
 
     implicitWidth: listView.cellWidth
     implicitHeight: listView.height
@@ -38,88 +48,258 @@ PlasmaComponents.ItemDelegate {
     readonly property ListView listView: ListView.view
 
     z: listView.currentIndex == index ? 2 : 0
-    onClicked: {
-        PulseObject.default = true;
-        listView.currentIndex = index
-    }
-
-    leftPadding: frame.margins.left + background.extraMargin
-    topPadding: frame.margins.top + background.extraMargin
-    rightPadding: frame.margins.right + background.extraMargin
-    bottomPadding: frame.margins.bottom + background.extraMargin
 
     Keys.onReturnPressed: {
-        clicked();
+        //PulseObject.default = true;
+        listView.currentIndex = index
+        deviceSettingDialog.open()
+        deviceSettingDialog.forceActiveFocus()
     }
 
-    background: Item {
-        id: background
-        property real extraMargin:  Math.round(listView.currentIndex == index && delegate.activeFocus ? units.gridUnit/10 : units.gridUnit/2)
-        Behavior on extraMargin {
-            NumberAnimation {
-                duration: Kirigami.Units.longDuration
-                easing.type: Easing.InOutQuad
+    PlasmaComponents.ItemDelegate {
+        id: itemDel
+        implicitWidth: listView.cellWidth
+        implicitHeight: listView.height
+
+        onClicked: {
+            PulseObject.default = true;
+            listView.currentIndex = index
+        }
+
+        leftPadding: frame.margins.left + background.extraMargin
+        topPadding: frame.margins.top + background.extraMargin
+        rightPadding: frame.margins.right + background.extraMargin
+        bottomPadding: frame.margins.bottom + background.extraMargin
+
+        background: Item {
+            id: background
+            property real extraMargin:  Math.round(listView.currentIndex == index && delegate.activeFocus ? -units.gridUnit/2 : units.gridUnit/2)
+            Behavior on extraMargin {
+                NumberAnimation {
+                    duration: Kirigami.Units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
+
+            PlasmaCore.FrameSvgItem {
+                anchors {
+                    fill: frame
+                    leftMargin: -margins.left
+                    topMargin: -margins.top
+                    rightMargin: -margins.right
+                    bottomMargin: -margins.bottom
+                }
+                imagePath: ":/delegates/background.svg"
+                prefix: "shadow"
+            }
+            PlasmaCore.FrameSvgItem {
+                id: frame
+                anchors {
+                    fill: parent
+                    margins: background.extraMargin
+                }
+                imagePath: ":/delegates/background.svg"
+
+                width: listView.currentIndex == index && delegate.activeFocus ? parent.width : parent.width - units.gridUnit
+                height: listView.currentIndex == index && delegate.activeFocus ? parent.height : parent.height - units.gridUnit
+                opacity: 0.8
+            }
+            PlasmaComponents2.Highlight {
+                z: -1
+                anchors.fill: parent
+                anchors.margins: background.extraMargin
+                visible: delegate.activeFocus ? 1 : 0
             }
         }
 
-        PlasmaCore.FrameSvgItem {
-            anchors {
-                fill: frame
-                leftMargin: -margins.left
-                topMargin: -margins.top
-                rightMargin: -margins.right
-                bottomMargin: -margins.bottom
-            }
-            imagePath: ":/delegates/background.svg"
-            prefix: "shadow"
-        }
-        PlasmaCore.FrameSvgItem {
-            id: frame
-            anchors {
-                fill: parent
-                margins: background.extraMargin
-            }
-            imagePath: ":/delegates/background.svg"
+        contentItem: ColumnLayout {
+            spacing: 0
 
-            width: listView.currentIndex == index && delegate.activeFocus ? parent.width : parent.width - units.gridUnit
-            height: listView.currentIndex == index && delegate.activeFocus ? parent.height : parent.height - units.gridUnit
-            opacity: 0.8
+            PlasmaComponents.Label {
+                id: label
+                visible: text.length > 0
+
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                wrapMode: Text.WordWrap
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                maximumLineCount: 2
+                elide: Text.ElideRight
+                color: PlasmaCore.ColorScope.textColor
+
+                text: !currentPort ? Description : i18ndc("kcm_pulseaudio", "label of device items", "%1 (%2)", currentPort.description, Description)
+            }
+
+            Kirigami.Separator {
+                Layout.fillWidth: true
+                Layout.preferredHeight: 1
+                color: Kirigami.Theme.textColor
+                visible: PulseObject.default ? 1 : 0
+            }
+
+            Kirigami.Icon {
+                id: icon
+                Layout.preferredWidth: Kirigami.Units.iconSizes.large
+                Layout.preferredHeight: Kirigami.Units.iconSizes.large
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
+                source: "answer-correct"
+                visible: PulseObject.default ? 1 : 0
+            }
         }
     }
 
-    contentItem: ColumnLayout {
-        spacing: 0
+    Popup {
+        id: deviceSettingDialog
+        parent: Overlay.overlay
 
-        PlasmaComponents.Label {
-            id: label
-            visible: text.length > 0
+        x: Math.round((parent.width - width) / 2)
+        y: Math.round((parent.height - height) / 2)
+        width: root.width / 3
+        height: root.height  / 2
+        dim: true
+        Overlay.modeless: Rectangle {
+              color: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.8)
+          }
+        //edge: Qt.RightEdge
+        property color iconBgColorLeft: "#de6262"
+        property color iconBgColorRight: "#ffb850"
 
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            wrapMode: Text.WordWrap
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-            maximumLineCount: 2
-            elide: Text.ElideRight
-            color: PlasmaCore.ColorScope.textColor
-
-            text: !currentPort ? Description : i18ndc("kcm_pulseaudio", "label of device items", "%1 (%2)", currentPort.description, Description)
+        background: Item {
+            id: popupBg
+            PlasmaCore.FrameSvgItem {
+                anchors {
+                    fill: drawframe
+                    leftMargin: -margins.left
+                    topMargin: -margins.top
+                    rightMargin: -margins.right
+                    bottomMargin: -margins.bottom
+                }
+                imagePath: ":/delegates/background.svg"
+                prefix: "shadow"
+            }
+            Rectangle {
+                id: drawframe
+                anchors {
+                    fill: parent
+                }
+                color: Kirigami.Theme.backgroundColor
+                width: parent.width
+                height: parent.height
+                opacity: 0.9
+            }
         }
 
-        Kirigami.Separator {
-            Layout.fillWidth: true
-            Layout.preferredHeight: 1
-            color: Kirigami.Theme.textColor
-            visible: PulseObject.default ? 1 : 0
+        ColumnLayout {
+            anchors.margins: Kirigami.Units.largeSpacing
+            anchors.fill: parent
+
+
+            Kirigami.Icon {
+                id: devIcon
+                Layout.alignment: Qt.AlignHCenter
+                Layout.preferredWidth: Kirigami.Units.iconSizes.huge
+                Layout.preferredHeight: width
+                source: "audio-card"
+            }
+
+            Label {
+                id: label2
+                Layout.alignment: Qt.AlignHCenter
+                wrapMode: Text.WordWrap
+                maximumLineCount: 2
+                elide: Text.ElideRight
+                color: PlasmaCore.ColorScope.textColor
+                text: Description
+            }
+
+            Kirigami.Separator {
+                Layout.fillWidth: true
+                Layout.preferredHeight: 1
+                Layout.alignment: Qt.AlignTop
+            }
+
+            PlasmaComponents.Button {
+                id: setDefBtn
+                text: PulseObject.default ? "Is Default" : "Set Default"
+                Layout.fillWidth: true
+                enabled: PulseObject.default ? 0 : 1
+                Layout.preferredHeight: Kirigami.Units.gridUnit * 3
+                KeyNavigation.down: volObj
+                Keys.onReturnPressed: {
+                    PulseObject.default = true;
+                    listView.currentIndex = index
+                    volObj.forceActiveFocus()
+                }
+                onClicked:  {
+                    PulseObject.default = true;
+                    listView.currentIndex = index
+                }
+                PlasmaComponents2.Highlight {
+                    z: -2
+                    anchors.fill: parent
+                    anchors.margins: -units.gridUnit / 4
+                    visible: setDefBtn.activeFocus ? 1 : 0
+                }
+            }
+
+            Item {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                Layout.margins: Kirigami.Units.largeSpacing
+
+                VolumeObject {
+                    id: volObj
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    anchors.verticalCenter: parent.verticalCenter
+
+                    Keys.onRightPressed: {
+                        increaseVal()
+                    }
+                    Keys.onLeftPressed: {
+                        decreaseVal()
+                    }
+
+                    KeyNavigation.down: clseBtn
+                }
+
+                PlasmaComponents2.Highlight {
+                    z: -2
+                    anchors.fill: parent
+                    anchors.margins: -units.gridUnit / 4
+                    visible: volObj.activeFocus ? 1 : 0
+                }
+            }
+
+            Kirigami.Separator {
+                Layout.fillWidth: true
+                Layout.preferredHeight: 1
+            }
+
+            PlasmaComponents.Button {
+                id: clseBtn
+                Layout.fillWidth: true
+                text: "Close"
+                onClicked: deviceSettingDialog.close()
+                Keys.onReturnPressed: deviceSettingDialog.close()
+
+                PlasmaComponents2.Highlight {
+                    z: -2
+                    anchors.fill: parent
+                    anchors.margins: -units.gridUnit / 4
+                    visible: clseBtn.activeFocus ? 1 : 0
+                }
+            }
         }
 
-        Kirigami.Icon {
-            id: icon
-            Layout.preferredWidth: Kirigami.Units.iconSizes.large
-            Layout.preferredHeight: Kirigami.Units.iconSizes.large
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
-            source: "answer-correct"
-            visible: PulseObject.default ? 1 : 0
+        onOpenedChanged: {
+            if(setDefBtn.enabled){
+                setDefBtn.forceActiveFocus()
+            } else {
+                volObj.forceActiveFocus()
+            }
         }
+        onClosed: delegate.forceActiveFocus()
     }
 }
