@@ -22,7 +22,6 @@ import QtQuick.Layouts 1.4
 import QtQuick.Controls 2.4 as Controls
 import QtQuick.Window 2.2
 import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.private.biglauncher 1.0 as Launcher
 import org.kde.kirigami 2.5 as Kirigami
 
 
