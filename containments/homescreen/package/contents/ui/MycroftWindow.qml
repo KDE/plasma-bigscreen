@@ -63,6 +63,33 @@ Window {
                 window.visible = false;
             }
         }
+        
+        Rectangle {
+            id: closeButton
+            anchors.top: parent.top
+            anchors.left: parent.left
+            width: Kirigami.Units.iconSizes.huge
+            height: Kirigami.Units.iconSizes.huge
+            color: focus ? Kirigami.Theme.highlightColor :"transparent"
+            
+            Kirigami.Icon {
+                anchors.centerIn: parent
+                width: Kirigami.Units.iconSizes.large
+                height: Kirigami.Units.iconSizes.large
+                source: "tab-close"
+            }
+            
+            Keys.onReturnPressed: {
+                window.visible = false;
+            }
+            
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    window.visible = false;
+                }
+            }
+        }
     }
         //FIXME: find a better way for timeouts
         //onActiveSkillClosed: open = false;
