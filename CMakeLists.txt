@@ -43,5 +43,5 @@ add_subdirectory(kcms)
 
 plasma_install_package(shell org.kde.plasma.mycroft.bigscreen shells)
 plasma_install_package(lookandfeel org.kde.plasma.mycroft.bigscreen look-and-feel lookandfeel)
-install(DIRECTORY kirigami-style/ DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/kirigami.2/styles/Plasma.MediaCenter)
+install(DIRECTORY kirigami-style/ DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/kirigami.2/+mediacenter)
 
