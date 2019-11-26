@@ -99,7 +99,7 @@ AppletConfiguration {
                 width: wallpapersView.cellWidth
                 height: wallpapersView.cellHeight
 
-                highlight: activeFocus
+                checked: activeFocus
                 property bool isCurrent: configDialog.currentWallpaper = "org.kde.slideshow"
                 onIsCurrentChanged: {
                     if (isCurrent) {

@@ -29,52 +29,12 @@ import org.kde.kquickcontrolsaddons 2.0 as Addons
 import org.kde.kcm 1.1 as KCM
 import org.kde.kirigami 2.11 as Kirigami
 
-Controls.ItemDelegate {
+Kirigami.AbstractCard {
     id: delegate
     width: wallpapersView.cellWidth
     height: wallpapersView.cellHeight
 
-    leftPadding: frame.margins.left + background.extraMargin
-    topPadding: frame.margins.top + background.extraMargin
-    rightPadding: frame.margins.right + background.extraMargin
-    bottomPadding: frame.margins.bottom + background.extraMargin
+    checked: wallpapersView.currentIndex === index
 
-    property bool highlight: wallpapersView.currentIndex === index
-
-    z: highlight ? 2 : 0
-
-    background: Item {
-        id: background
-        property real extraMargin:  Math.round(delegate.highlight ? -units.gridUnit/2 : units.gridUnit/2)
-        Behavior on extraMargin {
-            NumberAnimation {
-                duration: Kirigami.Units.longDuration
-                easing.type: Easing.InOutQuad
-            }
-        }
-
-        PlasmaCore.FrameSvgItem {
-            anchors {
-                fill: frame
-                leftMargin: -margins.left
-                topMargin: -margins.top
-                rightMargin: -margins.right
-                bottomMargin: -margins.bottom
-            }
-            imagePath: Qt.resolvedUrl("./background.svg")
-            prefix: "shadow"
-        }
-        PlasmaCore.FrameSvgItem {
-            id: frame
-            anchors {
-                fill: parent
-                margins: background.extraMargin
-            }
-            imagePath: Qt.resolvedUrl("./background.svg")
-            
-            width: delegate.highlight && delegate.activeFocus ? parent.width : parent.width - units.gridUnit
-            height: delegate.highlight && delegate.activeFocus ? parent.height : parent.height - units.gridUnit
-            opacity: 0.8
-        }
-    }
+    z: checked ? 2 : 0
 }
