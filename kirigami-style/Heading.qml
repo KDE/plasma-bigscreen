@@ -61,7 +61,6 @@ QQC2.Label {
     }
     layer.enabled: true
     layer.effect: DropShadow {
-        anchors.fill: parent
         horizontalOffset: 0
         verticalOffset: 2
         radius: 8.0

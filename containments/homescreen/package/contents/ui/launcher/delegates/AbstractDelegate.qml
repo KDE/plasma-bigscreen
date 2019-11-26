@@ -25,14 +25,16 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami 2.11 as Kirigami
 
-PlasmaComponents.ItemDelegate {
+Kirigami.AbstractCard {
     id: delegate
 
     implicitWidth: listView.cellWidth
     implicitHeight: listView.height
+    property string icon
 
     readonly property ListView listView: ListView.view
 
+    checked: listView.currentIndex == index
     z: listView.currentIndex == index ? 2 : 0
     onClicked: {
         listView.forceActiveFocus()
@@ -41,49 +43,6 @@ PlasmaComponents.ItemDelegate {
         console.log(listView.currentIndex)
     }
 
-    leftPadding: frame.margins.left + background.extraMargin
-    topPadding: frame.margins.top + background.extraMargin
-    rightPadding: frame.margins.right + background.extraMargin
-    bottomPadding: frame.margins.bottom + background.extraMargin
-
-    Keys.onReturnPressed: {
-        clicked();
-    }
-
-    background: Item {
-        id: background
-        property real extraMargin:  Math.round(listView.currentIndex == index && delegate.activeFocus ? -units.gridUnit/2 : units.gridUnit/2)
-        Behavior on extraMargin {
-            NumberAnimation {
-                duration: Kirigami.Units.longDuration
-                easing.type: Easing.InOutQuad
-            }
-        }
-
-        PlasmaCore.FrameSvgItem {
-            anchors {
-                fill: frame
-                leftMargin: -margins.left
-                topMargin: -margins.top
-                rightMargin: -margins.right
-                bottomMargin: -margins.bottom
-            }
-            imagePath: Qt.resolvedUrl("./background.svg")
-            prefix: "shadow"
-        }
-        PlasmaCore.FrameSvgItem {
-            id: frame
-            anchors {
-                fill: parent
-                margins: background.extraMargin
-            }
-            imagePath: Qt.resolvedUrl("./background.svg")
-            
-            width: listView.currentIndex == index && delegate.activeFocus ? parent.width : parent.width - units.gridUnit
-            height: listView.currentIndex == index && delegate.activeFocus ? parent.height : parent.height - units.gridUnit
-            opacity: 0.8
-        }
-    }
     
     contentItem: ColumnLayout {
         spacing: 0
@@ -91,7 +50,7 @@ PlasmaComponents.ItemDelegate {
             id: icon
             Layout.fillWidth: true
             Layout.fillHeight: true
-            source: delegate.icon.name || delegate.icon.source
+            source: delegate.icon
         }
 
         PlasmaComponents.Label {

@@ -26,7 +26,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.private.biglauncher 1.0 as Launcher
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami 2.11 as Kirigami
 
 import "delegates" as Delegates
 import "views" as Views
@@ -43,7 +43,7 @@ FocusScope {
             left: parent.left
             right: parent.right
         }
-        property Views.ColumnLabelView currentSection
+        property Kirigami.Heading currentSection
         y: currentSection ? -currentSection.y : 0
         Behavior on y {
             //Can't be an Animator
@@ -55,7 +55,7 @@ FocusScope {
         height: parent.height
         spacing: 0
         
-        Views.ColumnLabelView {
+        Kirigami.Heading {
             id: voiceAppsLabelColumnBox
             text: "My Voice Apps"  
         }
@@ -75,7 +75,7 @@ FocusScope {
             navigationDown: gridView2
         }
 
-        Views.ColumnLabelView {
+        Kirigami.Heading {
             id: appsColumnLabelBox
             text: "My Apps & Games"  
         }
@@ -94,7 +94,7 @@ FocusScope {
             navigationDown: gridView3
         }
         
-        Views.ColumnLabelView {
+        Kirigami.Heading {
             id: settingsLabelColumnBox
             text: "My Settings"  
         }

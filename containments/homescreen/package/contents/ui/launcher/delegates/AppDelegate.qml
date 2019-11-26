@@ -23,7 +23,7 @@ import QtQuick 2.9
 AbstractDelegate {
     readonly property var appStorageIdRole: modelData.ApplicationStorageIdRole
 
-    icon.name: modelData ? modelData.ApplicationIconRole : ""
+    icon: modelData ? modelData.ApplicationIconRole : ""
     text: modelData ? modelData.ApplicationNameRole : ""
 
     onClicked: {

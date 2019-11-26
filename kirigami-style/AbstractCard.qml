@@ -21,7 +21,7 @@ import QtQuick 2.6
 import QtGraphicalEffects 1.0
 import org.kde.kirigami 2.11 as Kirigami
 import org.kde.plasma.core 2.0 as PlasmaCore
-import "../../templates" as T
+import "templates" as T
 
 T.AbstractCard {
     id: root

@@ -20,7 +20,7 @@ import QtQuick 2.9
 
 
 AbstractDelegate {
-    icon.name: model.icon.name
+    icon: model.icon.name
     text: model.text
 
     onClicked: {
