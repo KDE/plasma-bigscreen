@@ -117,6 +117,13 @@ Item {
                 bottom: parent.bottom
                 margins: units.smallSpacing
             }
+
+            Indicators.Volume {
+                id: volumeIndicator
+                Layout.fillHeight: true
+                implicitWidth: height
+            }
+
             Indicators.Wifi {
                 id: wifiIndicator
                 Layout.fillHeight: true
