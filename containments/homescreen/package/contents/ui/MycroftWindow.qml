@@ -19,6 +19,7 @@
 
 import QtQuick 2.9
 import QtQuick.Window 2.3
+import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.2 as Controls
 import org.kde.kirigami 2.11 as Kirigami
 import Mycroft 1.0 as Mycroft
@@ -51,9 +52,69 @@ Window {
         }
     }
 
+    Rectangle {
+        id: skillStatusArea
+        height: Kirigami.Units.iconSizes.huge
+        anchors.left: parent.left
+        anchors.right: parent.right
+        color: Kirigami.Theme.backgroundColor
+        
+        RowLayout {
+            anchors.fill: parent
+            
+            Kirigami.Heading {
+                id: inputQuery
+                Layout.leftMargin: Kirigami.Units.largeSpacing
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+                font.capitalization: Font.Capitalize
+                level: 3
+                Connections {
+                target: Mycroft.MycroftController
+                onIntentRecevied: { 
+                    if(type == "recognizer_loop:utterance") {
+                        inputQuery.text = data.utterances[0]
+                        }
+                    }
+                }
+            }
+            
+            Rectangle {
+                id: closeButton
+                Layout.alignment: Qt.AlignRight
+                Layout.preferredWidth: Kirigami.Units.iconSizes.huge
+                Layout.fillHeight: true
+                color: focus ? Kirigami.Theme.highlightColor :"transparent"
+                
+                Kirigami.Icon {
+                    anchors.centerIn: parent
+                    width: Kirigami.Units.iconSizes.large
+                    height: Kirigami.Units.iconSizes.large
+                    source: "tab-close"
+                }
+                
+                Keys.onReturnPressed: {
+                    window.visible = false;
+                }
+                
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+                        window.visible = false;
+                    }
+                }
+            }
+        }
+    }
+    
     Mycroft.SkillView {
         id: skillView
-        anchors.fill: parent
+        anchors {
+            top: skillStatusArea.bottom
+            left: parent.left
+            right: parent.right
+            bottom: parent.bottom
+        }
         open: false
         Keys.onEscapePressed: window.visible = false;
         onOpenChanged: {
@@ -61,33 +122,6 @@ Window {
                 window.showMaximized();
             } else {
                 window.visible = false;
-            }
-        }
-        
-        Rectangle {
-            id: closeButton
-            anchors.top: parent.top
-            anchors.left: parent.left
-            width: Kirigami.Units.iconSizes.huge
-            height: Kirigami.Units.iconSizes.huge
-            color: focus ? Kirigami.Theme.highlightColor :"transparent"
-            
-            Kirigami.Icon {
-                anchors.centerIn: parent
-                width: Kirigami.Units.iconSizes.large
-                height: Kirigami.Units.iconSizes.large
-                source: "tab-close"
-            }
-            
-            Keys.onReturnPressed: {
-                window.visible = false;
-            }
-            
-            MouseArea {
-                anchors.fill: parent
-                onClicked: {
-                    window.visible = false;
-                }
             }
         }
     }
