@@ -26,7 +26,6 @@ AbstractDelegate {
     text: modelData ? modelData.ApplicationNameRole : ""
 
     onClicked: {
-        feedbackWindow.open(modelData.ApplicationNameRole, modelData.ApplicationIconRole);
         plasmoid.nativeInterface.voiceAppListModel.runApplication(modelData.ApplicationStorageIdRole)
         plasmoid.nativeInterface.voiceAppListModel.moveItem(index, 0);
     }
