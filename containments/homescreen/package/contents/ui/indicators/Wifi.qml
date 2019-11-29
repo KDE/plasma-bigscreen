@@ -42,6 +42,10 @@ AbstractIndicator {
         id: networkStatus
     }
 
+    PlasmaNM.NetworkModel {
+        id: connectionModel
+    }
+
     PlasmaNM.ConnectionIcon {
         id: connectionIconProvider
     }
