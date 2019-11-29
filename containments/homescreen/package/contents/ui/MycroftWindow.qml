@@ -30,6 +30,7 @@ Window {
 
     width: screen.availableGeometry.width
     height: screen.availableGeometry.height
+
     Timer {
         interval: 10000
         running: Mycroft.MycroftController.status != Mycroft.MycroftController.Open
@@ -50,73 +51,38 @@ Window {
             margins: Kirigami.Units.largeSpacing
             topMargin: Kirigami.Units.largeSpacing + plasmoid.availableScreenRect.y
         }
-    }
-
-    Rectangle {
-        id: skillStatusArea
-        height: Kirigami.Units.iconSizes.huge
-        anchors.left: parent.left
-        anchors.right: parent.right
-        color: Kirigami.Theme.backgroundColor
         
-        RowLayout {
-            anchors.fill: parent
-            
-            Kirigami.Heading {
-                id: inputQuery
-                Layout.leftMargin: Kirigami.Units.largeSpacing
-                Layout.fillHeight: true
-                Layout.fillWidth: true
-                font.capitalization: Font.Capitalize
-                level: 3
-                Connections {
-                target: Mycroft.MycroftController
-                onIntentRecevied: { 
-                    if(type == "recognizer_loop:utterance") {
-                        inputQuery.text = data.utterances[0]
-                        }
-                    }
-                }
-            }
-            
-            Rectangle {
-                id: closeButton
-                Layout.alignment: Qt.AlignRight
-                Layout.preferredWidth: Kirigami.Units.iconSizes.huge
-                Layout.fillHeight: true
-                color: focus ? Kirigami.Theme.highlightColor :"transparent"
-                
-                Kirigami.Icon {
-                    anchors.centerIn: parent
-                    width: Kirigami.Units.iconSizes.large
-                    height: Kirigami.Units.iconSizes.large
-                    source: "tab-close"
-                }
-                
-                Keys.onReturnPressed: {
-                    window.visible = false;
-                }
-                
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: {
-                        window.visible = false;
+        Kirigami.Heading {
+            id: inputQuery
+            anchors.right: parent.left
+            anchors.rightMargin: Kirigami.Units.largeSpacing
+            anchors.verticalCenter: parent.verticalCenter
+            font.capitalization: Font.Capitalize
+            level: 3
+            Connections {
+            target: Mycroft.MycroftController
+            onIntentRecevied: { 
+                if(type == "recognizer_loop:utterance") {
+                    inputQuery.text = data.utterances[0]
                     }
                 }
             }
         }
+        
+        onOpacityChanged: {
+            if(state == "idle"){
+                inputQuery.text = ""
+            }
+        }
     }
-    
+        
     Mycroft.SkillView {
         id: skillView
-        anchors {
-            top: skillStatusArea.bottom
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
-        }
+        anchors.fill: parent
         open: false
         Keys.onEscapePressed: window.visible = false;
+        KeyNavigation.up: closeButton
+        
         onOpenChanged: {
             if (open) {
                 window.showMaximized();
@@ -124,7 +90,39 @@ Window {
                 window.visible = false;
             }
         }
+        
+        Rectangle {
+            id: closeButton
+            anchors.top: parent.top
+            anchors.left: parent.left
+            width: Kirigami.Units.iconSizes.huge
+            height: Kirigami.Units.iconSizes.huge
+            opacity: focus ? 1 : 0
+            color: focus ? Kirigami.Theme.highlightColor :"transparent"
+            Keys.onDownPressed: {
+                skillView.currentItem.contentItem.forceActiveFocus()
+            }
+            
+            Kirigami.Icon {
+                anchors.centerIn: parent
+                width: Kirigami.Units.iconSizes.large
+                height: Kirigami.Units.iconSizes.large
+                source: "tab-close"
+            }
+            
+            Keys.onReturnPressed: {
+                window.visible = false;
+            }
+            
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    window.visible = false;
+                }
+            }
+        }
     }
+    
         //FIXME: find a better way for timeouts
         //onActiveSkillClosed: open = false;
 /*
