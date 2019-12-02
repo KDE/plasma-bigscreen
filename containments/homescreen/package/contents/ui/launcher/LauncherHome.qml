@@ -107,7 +107,7 @@ FocusScope {
                 Controls.Action {
                     text: i18n("Wireless")
                     icon.name: "network-wireless-connected-100"
-                    onTriggered: print("Wireless Clicked")
+                    onTriggered: plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mobile_wifi")
                 },
                 Controls.Action {
                     text: i18n("Audio")
