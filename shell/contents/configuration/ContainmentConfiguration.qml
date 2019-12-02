@@ -89,10 +89,12 @@ AppletConfiguration {
             orientation: root.horizontal ? ListView.Vertical : ListView.Horizontal
             keyNavigationEnabled: true
             highlightFollowsCurrentItem: true
+            highlightMoveDuration: Kirigami.Units.longDuration
             snapMode: ListView.SnapToItem
             model: imageWallpaper.wallpaperModel
             onCountChanged: currentIndex =  Math.min(model.indexOf(configDialog.wallpaperConfiguration["Image"]), model.rowCount()-1)
             KeyNavigation.left: headerItem
+            Keys.onUpPressed: imageWallpaperDrawer.close()
 
             header: WallpaperDelegate {
                 id: delegate
