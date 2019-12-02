@@ -108,6 +108,7 @@ Kirigami.Page {
         activeFocusOnTab: true
         keyNavigationEnabled: true
         highlightFollowsCurrentItem: true
+        highlightMoveDuration: Kirigami.Units.longDuration
         snapMode: ListView.SnapToItem
         model: ModulesModel{}
         delegate: settingsModuleDelegate
