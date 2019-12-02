@@ -24,8 +24,6 @@ import org.kde.kirigami 2.8 as Kirigami
 import org.kde.plasma.networkmanagement 0.2 as PlasmaNM
 import org.kde.kcm 1.1 as KCM
 
-import Mycroft.Private.Mark2SystemAccess 1.0
-
 import "+mediacenter"
 
 KCM.SimpleKCM {
