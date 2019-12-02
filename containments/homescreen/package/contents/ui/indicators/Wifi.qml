@@ -46,6 +46,10 @@ AbstractIndicator {
         id: connectionModel
     }
 
+    PlasmaNM.Handler {
+        id: handler
+    }
+
     PlasmaNM.ConnectionIcon {
         id: connectionIconProvider
     }
