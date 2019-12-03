@@ -173,7 +173,10 @@ AppletConfiguration {
 
                     Addons.QPixmapItem {
                         id: walliePreview
-                        anchors.fill: parent
+                        anchors {
+                            fill: parent
+                            margins: units.smallSpacing
+                        }
                         visible: model.screenshot != null
                         smooth: true
                         pixmap: model.screenshot

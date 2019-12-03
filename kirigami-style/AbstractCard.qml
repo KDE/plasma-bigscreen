@@ -26,18 +26,44 @@ import "templates" as T
 T.AbstractCard {
     id: root
 
-    leftPadding: frame.margins.left + background.extraMargin
-    topPadding: frame.margins.top + background.extraMargin
-    rightPadding: frame.margins.right + background.extraMargin
-    bottomPadding: frame.margins.bottom + background.extraMargin
+    leftPadding: frame.margins.left
+    topPadding: frame.margins.top
+    rightPadding: frame.margins.right
+    bottomPadding: frame.margins.bottom
 
     Keys.onReturnPressed: {
         clicked();
     }
-
+Component.onCompleted: {
+    background.startupCompleted= true
+}
     background: Item {
         id: background
-        property real extraMargin:  Math.round(root.checked && root.activeFocus ? -Kirigami.Units.gridUnit/2 : Kirigami.Units.gridUnit/2)
+        property bool startupCompleted: false
+        property real extraMargin: startupCompleted ? Math.round(root.checked && root.activeFocus ? -Kirigami.Units.gridUnit/2 : Kirigami.Units.gridUnit/2) : 0
+        // FIXME: assumption of abstractcard internal structure
+        property Item _mainLayout: root.children[0]
+
+        Binding {
+            target: background._mainLayout.anchors
+            property: "leftMargin"
+            value: background.extraMargin
+        }
+        Binding {
+            target: background._mainLayout.anchors
+            property: "topMargin"
+            value: background.extraMargin
+        }
+        Binding {
+            target: background._mainLayout.anchors
+            property: "rightMargin"
+            value: background.extraMargin
+        }
+        Binding {
+            target: background._mainLayout.anchors
+            property: "bottomMargin"
+            value: background.extraMargin
+        }
         Behavior on extraMargin {
             NumberAnimation {
                 duration: Kirigami.Units.longDuration

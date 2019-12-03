@@ -43,7 +43,6 @@ Kirigami.AbstractCard {
         console.log(listView.currentIndex)
     }
 
-    
     contentItem: ColumnLayout {
         spacing: 0
         PlasmaCore.IconItem {
