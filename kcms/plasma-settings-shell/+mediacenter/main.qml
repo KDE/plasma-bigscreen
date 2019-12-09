@@ -25,6 +25,8 @@ import org.kde.kirigami 2.5 as Kirigami
 
 import org.kde.plasma.settings 0.1
 
+import "+mediacenter" as MC
+
 Kirigami.ApplicationWindow {
     id: rootItem
 
@@ -83,5 +85,13 @@ Kirigami.ApplicationWindow {
         id: kcmContainer
 
         KCMContainer {}
+    }
+
+    MC.VirtualKeyboardLoader {
+        id: virtualKeyboard
+        parent: rootItem.overlay
+        z: 1000
+        width: parent.width/2
+        height: parent.height/3
     }
 }

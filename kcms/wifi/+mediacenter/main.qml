@@ -103,7 +103,7 @@ KCM.SimpleKCM {
         }
     }
 
-     Dialog {
+    Dialog {
         id: passwordLayer
         parent: networkSelectionView
 
