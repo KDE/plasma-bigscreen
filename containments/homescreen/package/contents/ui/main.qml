@@ -202,7 +202,7 @@ Item {
             right: parent.right
             top: parent.top
             margins: Kirigami.Units.largeSpacing
-            topMargin: Kirigami.Units.largeSpacing + plasmoid.availableScreenRect.y
+            topMargin: Kirigami.Units.largeSpacing * 3 + plasmoid.availableScreenRect.y
         }
     }
 }
