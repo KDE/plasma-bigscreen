@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="80"
+   height="80"
+   viewBox="0 0 80 80"
+   id="svg4935"
+   version="1.1"
+   inkscape:version="0.92.3 (unknown)"
+   sodipodi:docname="rocket.svg">
+  <defs
+     id="defs4937">
+    <linearGradient
+       id="linearGradient4326"
+       inkscape:collect="always">
+      <stop
+         id="stop4328" />
+      <stop
+         id="stop4330"
+         style="stop-opacity:0"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       x2="429.57144"
+       y2="512.79803"
+       x1="439.57144"
+       y1="502.798"
+       id="linearGradient4434"
+       xlink:href="#linearGradient4326"
+       inkscape:collect="always"
+       gradientTransform="translate(-401.57142,522.56415)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="8.1883518"
+     inkscape:cx="55.613653"
+     inkscape:cy="29.778306"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="2560"
+     inkscape:window-height="1378"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     borderlayer="true"
+     inkscape:showpageshadow="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     showguides="false"
+     showborder="true"
+     inkscape:pagecheckerboard="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1505"
+       originx="25"
+       originy="24.999983" />
+    <sodipodi:guide
+       position="0,39.999997"
+       orientation="40,0"
+       id="guide1545"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,-2.6171874e-06"
+       orientation="0,40"
+       id="guide1547"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="40,-2.6171874e-06"
+       orientation="-40,0"
+       id="guide1549"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="40,39.999997"
+       orientation="0,-40"
+       id="guide1551"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata4940">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(25,-997.36218)">
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#3b3f42;fill-rule:evenodd"
+       id="path4422"
+       d="m 24.00001,1011.3622 -6,6 11,11 -11,11 6,6 17,-17 z" />
+    <rect
+       width="6.2500191"
+       x="-1.2500088"
+       y="1012.3621"
+       rx="3.12501"
+       height="6.2500191"
+       style="fill:#fa8865"
+       id="rect4119" />
+    <flowRoot
+       line-height="125%"
+       style="font-size:32.50000381px;line-height:125%;font-family:sans-serif"
+       id="flowRoot4170"
+       transform="translate(-401.57142,522.56415)">
+      <flowRegion
+         id="flowRegion4172">
+        <rect
+           width="87.750008"
+           x="452.32144"
+           y="489.79807"
+           height="48.750004"
+           id="rect4174" />
+      </flowRegion>
+      <flowPara
+         id="flowPara4176">Plasm</flowPara>
+    </flowRoot>
+    <rect
+       width="9.00002"
+       x="-11.000009"
+       y="1031.8629"
+       rx="4.4999952"
+       height="8.9999914"
+       style="fill:#63c605"
+       id="rect4308" />
+    <rect
+       width="12.999995"
+       x="2.0000217"
+       y="1051.3622"
+       rx="6.4999981"
+       height="12.999995"
+       style="fill:#1b89f3"
+       id="rect4312" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:0.9;fill:url(#linearGradient4434);fill-rule:evenodd"
+       id="path4426"
+       d="m 22.00001,1035.3622 6,6 7,-7 -6,-6 z" />
+  </g>
+</svg>
