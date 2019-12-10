@@ -66,6 +66,5 @@ QQC2.Label {
         radius: 8.0
         samples: 17
         color: Qt.rgba(0,0,0,0.6)
-        source: appslabel
     }
 }
