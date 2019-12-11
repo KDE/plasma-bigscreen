@@ -172,8 +172,8 @@ FocusScope {
             }
         }
 
-        KeyNavigation.left: navigationUp
-        KeyNavigation.right: navigationDown
+        KeyNavigation.left: root
+        KeyNavigation.right: root
 
         Keys.onDownPressed:  {
             if (!navigationDown) {
