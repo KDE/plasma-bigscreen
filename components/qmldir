@@ -1,3 +1,4 @@
 module org.kde.mycroft.bigscreen
 
 TileView 1.0 TileView.qml
+AbstractDelegate 1.0 AbstractDelegate.qml

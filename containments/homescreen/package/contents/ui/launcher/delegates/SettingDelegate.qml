@@ -17,10 +17,10 @@
  */
 
 import QtQuick 2.9
+import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
-
-AbstractDelegate {
-    icon: model.icon.name
+BigScreen.AbstractDelegate {
+    icon.name: model.icon.name
     text: model.text
 
     onClicked: {

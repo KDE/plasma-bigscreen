@@ -18,12 +18,12 @@
  */
 
 import QtQuick 2.9
+import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
-
-AbstractDelegate {
+BigScreen.AbstractDelegate {
     readonly property var appStorageIdRole: modelData.ApplicationStorageIdRole
 
-    icon: modelData ? modelData.ApplicationIconRole : ""
+    icon.name: modelData ? modelData.ApplicationIconRole : ""
     text: modelData ? modelData.ApplicationNameRole : ""
 
     onClicked: {
