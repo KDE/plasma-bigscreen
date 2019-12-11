@@ -150,4 +150,9 @@ AbstractIndicator {
         }
 
     }
+
+    onClicked: {
+        feedbackWindow.open(i18n("Audio Device chooser"), "headphone");
+        plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_audiodevice")
+    }
 }

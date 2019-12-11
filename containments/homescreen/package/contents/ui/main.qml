@@ -122,6 +122,11 @@ Item {
                 id: volumeIndicator
                 Layout.fillHeight: true
                 implicitWidth: height
+                KeyNavigation.down: launcher
+                KeyNavigation.right: wifiIndicator
+                KeyNavigation.tab: wifiIndicator
+                KeyNavigation.backtab: launcher
+                KeyNavigation.left: volumeIndicator
             }
 
             Indicators.Wifi {
@@ -131,8 +136,8 @@ Item {
                 KeyNavigation.down: launcher
                 KeyNavigation.right: shutdownIndicator
                 KeyNavigation.tab: shutdownIndicator
-                KeyNavigation.backtab: launcher
-                KeyNavigation.left: launcher
+                KeyNavigation.backtab: volumeIndicator
+                KeyNavigation.left: volumeIndicator
             }
             Indicators.Shutdown {
                 id: shutdownIndicator

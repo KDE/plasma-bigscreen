@@ -112,7 +112,7 @@ FocusScope {
                 Controls.Action {
                     text: i18n("Audio")
                     icon.name: "audio-volume-high"
-                    onTriggered: plasmoid.nativeInterface.executeCommand("audio-device-chooser")
+                    onTriggered: plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_audiodevice")
 
                 },
                 Controls.Action {
