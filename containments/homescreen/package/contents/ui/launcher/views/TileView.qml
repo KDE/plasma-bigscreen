@@ -144,6 +144,9 @@ ListView {
 
         if (navigationDown instanceof TileView) {
             navigationDown.currentIndex = navigationDown.indexAt(navigationDown.contentItem.mapFromItem(currentItem, cellWidth/2, height/2).x, height/2);
+            if (navigationDown.currentIndex < 0) {
+                navigationDown.currentIndex = view.currentIndex > 0 ? navigationDown.count - 1 : 0
+            }
         }
 
         navigationDown.forceActiveFocus();
