@@ -26,21 +26,23 @@ import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.private.volume 0.1
 import QtQuick.Window 2.2
+import org.kde.kcm 1.1 as KCM
 
 import "delegates" as Delegates
 import "views" as Views
 
-Window {
+Kirigami.Page {
     id: root
     title: "Audio Device Chooser"
-    visibility: "Maximized"
-    color: Qt.rgba(0, 0, 0, 0.4)
+    
     signal activateDeviceView
 
+    background: null
     Component.onCompleted: {
         root.activateDeviceView
     }
 
-    DeviceChooserPage{}
+    DeviceChooserPage {
+    }
 }
 

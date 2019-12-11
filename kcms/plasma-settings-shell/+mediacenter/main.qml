@@ -33,6 +33,7 @@ Kirigami.ApplicationWindow {
     pageStack.visible: pageStack.depth > 0
     pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.None
 
+    color: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.5)
     contextDrawer: Kirigami.ContextDrawer {
         id: contextDrawer
     }

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Language
+
+Icon=headphone
+Type=Service
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=kcm_audiodevice
+X-KDE-ServiceTypes=Plasma/Generic
+X-Plasma-API=declarativeappletscript
+X-KDE-FormFactors=tablet,handset,desktop,mediacenter
+
+X-Plasma-MainScript=ui/main.qml

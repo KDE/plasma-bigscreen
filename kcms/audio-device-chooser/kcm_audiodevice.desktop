@@ -1,0 +1,18 @@
+[Desktop Entry]
+Exec=plasma-settings audiodevice
+Icon=headphone
+Type=Service
+X-KDE-ServiceTypes=KCModule
+X-DocPath=kcontrol/audiodevice/index.html
+
+X-KDE-Library=kcm_audiodevice
+X-KDE-ParentApp=kcontrol
+
+X-KDE-System-Settings-Parent-Category=regionalsettings
+X-KDE-Weight=40
+X-KDE-FormFactors=tablet,handset,desktop
+
+Name=Language
+Comment=Change workspace and application languages
+
+Categories=Qt;KDE;X-KDE-settings-audiodevice;

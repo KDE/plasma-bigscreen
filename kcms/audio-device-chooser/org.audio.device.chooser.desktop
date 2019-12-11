@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Name=Audio Device Chooser
-Comment=Select Default Audio Devices
-TryExec=audio-device-chooser
-Exec=audio-device-chooser
-Icon=headphone
-Terminal=false
-Type=Application

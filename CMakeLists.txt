@@ -23,6 +23,8 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Plasma
     I18n
     Kirigami2
+    Declarative
+    KCMUtils
     Notifications
     PlasmaQuick
     KIO

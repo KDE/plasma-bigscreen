@@ -134,6 +134,9 @@ ListView {
         }
     }
 
+    KeyNavigation.left: navigationUp
+    KeyNavigation.right: navigationDown
+
     Keys.onDownPressed:  {
         if (!navigationDown) {
             return;
