@@ -30,6 +30,8 @@ import org.kde.kirigami 2.11 as Kirigami
 
 import "delegates" as Delegates
 import "views" as Views
+import org.kde.mycroft.bigscreen 1.0 as BigScreen
+
 
 FocusScope {
     anchors {
@@ -43,7 +45,7 @@ FocusScope {
             left: parent.left
             right: parent.right
         }
-        property Kirigami.Heading currentSection
+        property Item currentSection
         y: currentSection ? -currentSection.y : 0
         Behavior on y {
             //Can't be an Animator
@@ -55,17 +57,14 @@ FocusScope {
         height: parent.height
         spacing: 0
         
-        Kirigami.Heading {
-            id: voiceAppsLabelColumnBox
-            text: "Voice Apps"  
-        }
-                
-        Views.TileView {
+
+        BigScreen.TileView {
             id: gridView
+            title: i18n("Voice Apps")
             model: plasmoid.nativeInterface.voiceAppListModel
             currentIndex: 0
             focus: true
-            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = voiceAppsLabelColumnBox
+            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = gridView
             delegate: Delegates.VoiceAppDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
                 
@@ -75,17 +74,13 @@ FocusScope {
             navigationDown: gridView2
         }
 
-        Kirigami.Heading {
-            id: appsColumnLabelBox
-            text: "Apps & Games"  
-        }
-
-        Views.TileView {
+        BigScreen.TileView {
             id: gridView2
+            title: i18n("Apps & Games")
             model: plasmoid.nativeInterface.applicationListModel
             currentIndex: 0
             focus: false
-            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = appsColumnLabelBox
+            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = gridView2
             delegate: Delegates.AppDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
             }
@@ -94,13 +89,9 @@ FocusScope {
             navigationDown: gridView3
         }
         
-        Kirigami.Heading {
-            id: settingsLabelColumnBox
-            text: "Settings"  
-        }
-                    
-        Views.TileView {
+        BigScreen.TileView {
             id: gridView3
+            title: i18n("Settings")
             model: actions
 
             property list<Controls.Action> actions: [
@@ -127,7 +118,7 @@ FocusScope {
                 }
             ]
 
-            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = settingsLabelColumnBox
+            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = gridView3
             delegate: Delegates.SettingDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
             }

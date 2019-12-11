@@ -47,5 +47,7 @@ plasma_install_package(shell org.kde.plasma.mycroft.bigscreen shells)
 plasma_install_package(lookandfeel org.kde.plasma.mycroft.bigscreen look-and-feel lookandfeel)
 install(DIRECTORY kirigami-style/ DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/kirigami.2/+mediacenter)
 
+install(DIRECTORY components/ DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/mycroft/bigscreen)
+
 install(FILES bin/mycroft-skill-launcher.py DESTINATION ${BIN_INSTALL_DIR})
 

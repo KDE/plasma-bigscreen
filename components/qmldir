@@ -1,0 +1,3 @@
+module org.kde.mycroft.bigscreen
+
+TileView 1.0 TileView.qml
