@@ -6,7 +6,8 @@ set(biglauncherhomescreen_SRCS
     biglauncherhomescreen.cpp
     biglauncher_dbus.cpp
     applicationlistmodel.cpp
-    voiceapplistmodel.cpp)
+    voiceapplistmodel.cpp
+    gamesapplistmodel.cpp)
 
 add_library(plasma_containment_biglauncherhomescreen MODULE ${biglauncherhomescreen_SRCS})
 

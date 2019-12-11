@@ -50,6 +50,7 @@ FocusScope {
         root.forceActiveFocus();
         plasmoid.nativeInterface.applicationListModel.loadApplications();
         plasmoid.nativeInterface.voiceAppListModel.loadApplications();
+        plasmoid.nativeInterface.gamesAppListModel.loadApplications();
         root.activateAppView();
     }
 

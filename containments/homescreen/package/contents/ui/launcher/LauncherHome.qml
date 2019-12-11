@@ -75,7 +75,7 @@ FocusScope {
 
         BigScreen.TileView {
             id: gridView2
-            title: i18n("Apps & Games")
+            title: i18n("Applications")
             model: plasmoid.nativeInterface.applicationListModel
             currentIndex: 0
             focus: false
@@ -90,6 +90,21 @@ FocusScope {
         
         BigScreen.TileView {
             id: gridView3
+            title: i18n("Games")
+            model: plasmoid.nativeInterface.gamesAppListModel
+            currentIndex: 0
+            focus: false
+            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = gridView2
+            delegate: Delegates.AppDelegate {
+                property var modelData: typeof model !== "undefined" ? model : null
+            }
+            
+            navigationUp: gridView2
+            navigationDown: gridView4
+        }
+        
+        BigScreen.TileView {
+            id: gridView4
             title: i18n("Settings")
             model: actions
 
@@ -111,9 +126,9 @@ FocusScope {
                     onTriggered: plasmoid.action("configure").trigger();
                 },
                 Controls.Action {
-                    text: i18n("Mycroft")
-                    icon.name: "mycroft"
-                    onTriggered: print("Mycroft Clicked")
+                    text: i18n("Mycroft Skill Installer")
+                    icon.name: "download"
+                    onTriggered: plasmoid.nativeInterface.executeCommand("MycroftSkillInstaller")
                 }
             ]
 
@@ -122,7 +137,7 @@ FocusScope {
                 property var modelData: typeof model !== "undefined" ? model : null
             }
             
-            navigationUp: gridView2
+            navigationUp: gridView3
             navigationDown: null
         }
 

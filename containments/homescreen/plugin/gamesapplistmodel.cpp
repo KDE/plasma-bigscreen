@@ -18,7 +18,7 @@
  */
 
 // Self
-#include "applicationlistmodel.h"
+#include "gamesapplistmodel.h"
 
 // Qt
 #include <QByteArray>
@@ -37,7 +37,7 @@
 #include <KIOWidgets/KRun>
 #include <QDebug>
 
-ApplicationListModel::ApplicationListModel(QObject *parent)
+GamesAppListModel::GamesAppListModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     //can't use the new syntax as this signal is overloaded
@@ -45,10 +45,10 @@ ApplicationListModel::ApplicationListModel(QObject *parent)
             this, SLOT(sycocaDbChanged(const QStringList &)));
 }
 
-ApplicationListModel::~ApplicationListModel()
+GamesAppListModel::~GamesAppListModel()
 = default;
 
-QHash<int, QByteArray> ApplicationListModel::roleNames() const
+QHash<int, QByteArray> GamesAppListModel::roleNames() const
 {
     QHash<int, QByteArray> roleNames;
     roleNames[ApplicationNameRole] = "ApplicationNameRole";
@@ -62,7 +62,7 @@ QHash<int, QByteArray> ApplicationListModel::roleNames() const
     return roleNames;
 }
 
-void ApplicationListModel::sycocaDbChanged(const QStringList &changes)
+void GamesAppListModel::sycocaDbChanged(const QStringList &changes)
 {
     if (!changes.contains("apps") && !changes.contains("xdgdata-apps")) {
         return;
@@ -73,12 +73,12 @@ void ApplicationListModel::sycocaDbChanged(const QStringList &changes)
     loadApplications();
 }
 
-bool appNameLessThan(const ApplicationData &a1, const ApplicationData &a2)
+bool appNameLessThan(const GapplicationData &a1, const GapplicationData &a2)
 {
     return a1.name.toLower() < a2.name.toLower();
 }
 
-void ApplicationListModel::loadApplications()
+void GamesAppListModel::loadApplications()
 {
     auto cfg = KSharedConfig::openConfig("applications-blacklistrc");
     auto blgroup = KConfigGroup(cfg, QStringLiteral("Applications"));
@@ -98,8 +98,8 @@ void ApplicationListModel::loadApplications()
     if (!group || !group->isValid()) return;
     KServiceGroup::List subGroupList = group->entries(true);
 
-    QMap<int, ApplicationData> orderedList;
-    QList<ApplicationData> unorderedList;
+    QMap<int, GapplicationData> orderedList;
+    QList<GapplicationData> unorderedList;
 
     // Iterate over all entries in the group
     while (!subGroupList.isEmpty()) {
@@ -118,9 +118,9 @@ void ApplicationListModel::loadApplications()
                     if (entry->isType(KST_KServiceGroup)) {
                         KServiceGroup::Ptr serviceGroup(static_cast<KServiceGroup* >(entry.data()));
                         subGroupList << serviceGroup;
-
-                    } else if (entry->property("Exec").isValid() && entry->property("Categories") != "VoiceApp" && !entry->property("Categories").toStringList().contains("Game")) {
-                         qDebug() << entry->property("Categories");
+                        
+                    } else if (entry->property("Categories").toStringList().contains("Game")) {
+                         qDebug() << entry->property("Categories").toStringList();
                          KService::Ptr service(static_cast<KService* >(entry.data()));
                          qDebug() << " desktopEntryName: " << service->desktopEntryName();                        
                     
@@ -136,7 +136,7 @@ void ApplicationListModel::loadApplications()
 
                             bl << service->desktopEntryName();
 
-                            ApplicationData data;
+                            GapplicationData data;
                             data.name = service->name();
                             data.icon = service->icon();
                             data.storageId = service->storageId();
@@ -169,7 +169,7 @@ void ApplicationListModel::loadApplications()
     emit countChanged();
 }
 
-QVariant ApplicationListModel::data(const QModelIndex &index, int role) const
+QVariant GamesAppListModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
         return QVariant();
@@ -197,14 +197,14 @@ QVariant ApplicationListModel::data(const QModelIndex &index, int role) const
     }
 }
 
-Qt::ItemFlags ApplicationListModel::flags(const QModelIndex &index) const
+Qt::ItemFlags GamesAppListModel::flags(const QModelIndex &index) const
 {
     if (!index.isValid())
         return nullptr;
     return Qt::ItemIsDragEnabled|QAbstractItemModel::flags(index);
 }
 
-int ApplicationListModel::rowCount(const QModelIndex &parent) const
+int GamesAppListModel::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid()) {
         return 0;
@@ -213,12 +213,12 @@ int ApplicationListModel::rowCount(const QModelIndex &parent) const
     return m_applicationList.count();
 }
 
-void ApplicationListModel::moveRow(const QModelIndex& /* sourceParent */, int sourceRow, const QModelIndex& /* destinationParent */, int destinationChild)
+void GamesAppListModel::moveRow(const QModelIndex& /* sourceParent */, int sourceRow, const QModelIndex& /* destinationParent */, int destinationChild)
 {
     moveItem(sourceRow, destinationChild);
 }
 
-Q_INVOKABLE void ApplicationListModel::moveItem(int row, int destination)
+Q_INVOKABLE void GamesAppListModel::moveItem(int row, int destination)
 {
     if (row < 0 || destination < 0 || row >= m_applicationList.length() ||
         destination >= m_applicationList.length() || row == destination) {
@@ -230,11 +230,11 @@ Q_INVOKABLE void ApplicationListModel::moveItem(int row, int destination)
 
     beginMoveRows(QModelIndex(), row, row, QModelIndex(), destination);
     if (destination > row) {
-        ApplicationData data = m_applicationList.at(row);
+        GapplicationData data = m_applicationList.at(row);
         m_applicationList.insert(destination, data);
         m_applicationList.takeAt(row);
     } else {
-        ApplicationData data = m_applicationList.takeAt(row);
+        GapplicationData data = m_applicationList.takeAt(row);
         m_applicationList.insert(destination, data);
     }
 
@@ -253,13 +253,7 @@ Q_INVOKABLE void ApplicationListModel::moveItem(int row, int destination)
     endMoveRows();
 }
 
-void ApplicationListModel::executeCommand(const QString &command)
-{
-    qWarning()<<"Executing"<<command;
-    QProcess::startDetached(command);
-}
-
-void ApplicationListModel::runApplication(const QString &storageId)
+void GamesAppListModel::runApplication(const QString &storageId)
 {
     if (storageId.isEmpty()) {
         return;
@@ -270,12 +264,12 @@ void ApplicationListModel::runApplication(const QString &storageId)
     KRun::runService(*service, QList<QUrl>(), nullptr);
 }
 
-QStringList ApplicationListModel::appOrder() const
+QStringList GamesAppListModel::appOrder() const
 {
     return m_appOrder;
 }
 
-void ApplicationListModel::setAppOrder(const QStringList &order)
+void GamesAppListModel::setAppOrder(const QStringList &order)
 {
     if (m_appOrder == order) {
         return;
