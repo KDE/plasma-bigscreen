@@ -29,7 +29,6 @@ import org.kde.private.biglauncher 1.0 as Launcher
 import org.kde.kirigami 2.11 as Kirigami
 
 import "delegates" as Delegates
-import "views" as Views
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
 
