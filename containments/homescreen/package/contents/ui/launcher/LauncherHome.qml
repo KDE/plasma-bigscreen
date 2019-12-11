@@ -57,7 +57,7 @@ FocusScope {
         
         Kirigami.Heading {
             id: voiceAppsLabelColumnBox
-            text: "My Voice Apps"  
+            text: "Voice Apps"  
         }
                 
         Views.TileView {
@@ -77,7 +77,7 @@ FocusScope {
 
         Kirigami.Heading {
             id: appsColumnLabelBox
-            text: "My Apps & Games"  
+            text: "Apps & Games"  
         }
 
         Views.TileView {
@@ -96,7 +96,7 @@ FocusScope {
         
         Kirigami.Heading {
             id: settingsLabelColumnBox
-            text: "My Settings"  
+            text: "Settings"  
         }
                     
         Views.TileView {
