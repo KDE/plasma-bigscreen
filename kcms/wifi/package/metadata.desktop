@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Wifi
+
+Icon=network-wireless-signal-exellent
+Type=Service
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=kcm_mediacenter_wifi
+X-KDE-ServiceTypes=Plasma/Generic
+X-Plasma-API=declarativeappletscript
+X-KDE-FormFactors=mediacenter
+
+X-Plasma-MainScript=ui/main.qml

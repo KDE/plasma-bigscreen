@@ -1,0 +1,18 @@
+[Desktop Entry]
+Exec=plasma-settings -s -m kcm_mobile_wifi
+Icon=network-wireless-signal-exellent
+Type=Service
+X-KDE-ServiceTypes=KCModule
+X-DocPath=kcontrol/wifi/index.html
+
+X-KDE-Library=kcm_mediacenter_wifi
+X-KDE-ParentApp=kcontrol
+
+X-KDE-System-Settings-Parent-Category=hardware
+X-KDE-Weight=40
+X-KDE-FormFactors=mediacenter
+
+Name=Wifi
+Comment=Connect to Wifi networks
+
+Categories=Qt;KDE;X-KDE-settings-wifi;
