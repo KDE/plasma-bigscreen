@@ -61,7 +61,11 @@ Window {
             level: 3
             Connections {
             target: Mycroft.MycroftController
-            onIntentRecevied: { 
+            onIntentRecevied: {
+                if(type == "mycroft.skill.handler.start"){
+                    window.showMaximized();
+                    window.visible = true;
+                }
                 if(type == "recognizer_loop:utterance") {
                     inputQuery.text = data.utterances[0]
                     }
@@ -99,6 +103,13 @@ Window {
             height: Kirigami.Units.iconSizes.huge
             opacity: focus ? 1 : 0
             color: focus ? Kirigami.Theme.highlightColor :"transparent"
+            
+            onFocusChanged: {
+                if(focus){
+                    skillView.currentItem.contentItem.focus = false;
+                }
+            }
+
             Keys.onDownPressed: {
                 skillView.currentItem.contentItem.forceActiveFocus()
             }
