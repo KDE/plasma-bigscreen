@@ -62,10 +62,6 @@ Window {
             Connections {
             target: Mycroft.MycroftController
             onIntentRecevied: {
-                if(type == "mycroft.skill.handler.start"){
-                    window.showMaximized();
-                    window.visible = true;
-                }
                 if(type == "recognizer_loop:utterance") {
                     inputQuery.text = data.utterances[0]
                     }
@@ -87,9 +83,10 @@ Window {
         Keys.onEscapePressed: window.visible = false;
         KeyNavigation.up: closeButton
         activeSkills.blackList: ["youtube-skill.aiix"]
-        activeSkills.onSkillBlackListed: {
+        activeSkills.onBlacklistedSkillActivated: {
             plasmoid.nativeInterface.executeCommand("mycroft-gui-app --hideTextInput --skill=" + skillId);
         }
+       // activeSkills.onSkillActivated: window.showMaximized();
 
         onOpenChanged: {
             if (open) {
