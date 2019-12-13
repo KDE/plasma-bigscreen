@@ -87,7 +87,7 @@ Window {
         Keys.onEscapePressed: window.visible = false;
         KeyNavigation.up: closeButton
         activeSkills.blackList: ["youtube-skill.aiix"]
-        activeSkills.onBlackListed: {
+        activeSkills.onSkillBlackListed: {
             plasmoid.nativeInterface.executeCommand("mycroft-gui-app --hideTextInput --skill=" + skillId);
         }
 
