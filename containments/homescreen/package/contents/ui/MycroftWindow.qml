@@ -86,7 +86,10 @@ Window {
         open: false
         Keys.onEscapePressed: window.visible = false;
         KeyNavigation.up: closeButton
-        
+        activeSkills.onBlackListed: {
+            plasmoid.nativeInterface.executeCommand("mycroft-gui-app --hideTextInput --skill=" + skillId);
+        }
+
         onOpenChanged: {
             if (open) {
                 window.showMaximized();
