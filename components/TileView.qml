@@ -23,7 +23,6 @@ import QtQuick.Controls 2.4 as Controls
 import QtGraphicalEffects 1.12
 
 import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.private.biglauncher 1.0 as Launcher
 import org.kde.kirigami 2.5 as Kirigami
 
 FocusScope {
