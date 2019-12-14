@@ -60,8 +60,8 @@ Window {
             font.capitalization: Font.Capitalize
             level: 3
             Connections {
-            target: Mycroft.MycroftController
-            onIntentRecevied: {
+                target: Mycroft.MycroftController
+                onIntentRecevied: {
                 if(type == "recognizer_loop:utterance") {
                     inputQuery.text = data.utterances[0]
                     }

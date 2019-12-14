@@ -24,7 +24,7 @@ import org.kde.kirigami 2.8 as Kirigami
 import org.kde.plasma.networkmanagement 0.2 as PlasmaNM
 import org.kde.kcm 1.1 as KCM
 
-import "+mediacenter"
+import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
 KCM.SimpleKCM {
     id: networkSelectionView
