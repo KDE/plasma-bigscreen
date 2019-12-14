@@ -1,3 +1,9 @@
+# Requirements
+
+- Mycroft Plasma (and its components) - kde:plasma-mycroft
+- Mycroft (development branch) - as described in the instructions for the above, but switch to the dev branch immediately after the cloning step
+- MycroftSkillInstaller - https://github.com/AIIX/MycroftSkillInstaller
+
 # Plasma Big Launcher
   + cd plasma-big-launcher
   + mkdir build
