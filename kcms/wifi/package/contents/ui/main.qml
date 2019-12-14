@@ -23,14 +23,15 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kirigami 2.8 as Kirigami
 import org.kde.plasma.networkmanagement 0.2 as PlasmaNM
 import org.kde.kcm 1.1 as KCM
-
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import "views" as Views
+import "delegates" as Delegates
 
 KCM.SimpleKCM {
     id: networkSelectionView
-
+    
     title: i18n("Network")
-
+    
     property string pathToRemove
     property string nameToRemove
     property bool isStartUp: false
@@ -39,7 +40,10 @@ KCM.SimpleKCM {
     property var devicePath
     property var specificPath
 
-
+    function connectToOpenNetwork(){
+        handler.addAndActivateConnection(devicePath, specificPath, passField.text)
+    }
+    
     onActiveFocusChanged: {
        if (activeFocus) {
            connectionView.forceActiveFocus();
@@ -70,6 +74,11 @@ KCM.SimpleKCM {
         id: connectionModel
     }
 
+    Component {
+        id: networkModelComponent
+        PlasmaNM.NetworkModel {}
+    }
+
     PlasmaNM.AppletProxyModel {
         id: appletProxyModel
         sourceModel: connectionModel
@@ -87,28 +96,25 @@ KCM.SimpleKCM {
         onTriggered: networkSelectionView.refreshing = false
     }
 
-    footer: RowLayout {
-        Item {
-            Layout.fillWidth: true
-        }
-        Button {
-            id: reloadButton
-            KeyNavigation.up: connectionView
-            icon.name: "view-refresh"
-            text: i18n("Refresh")
-            onClicked: {
-                networkSelectionView.refreshing = true;
-                connectionView.contentY = -Kirigami.Units.gridUnit * 4;
+    footer: Button {
+                id: reloadButton
+                KeyNavigation.up: connectionView
+                anchors.left: parent.left
+                anchors.right: parent.right
+                icon.name: "view-refresh"
+                text: i18n("Refresh")
+                onClicked: {
+                    networkSelectionView.refreshing = true;
+                    connectionView.contentY = -Kirigami.Units.gridUnit * 4;
+                }
             }
-        }
-    }
 
     Dialog {
         id: passwordLayer
         parent: networkSelectionView
 
-        x: parent.width/2 - width/2
-        y: Kirigami.Units.gridUnit
+        x: (parent.width - width) / 2
+        y: (parent.height - height) / 2
         dim: true
         onVisibleChanged: {
             if (visible) {
@@ -162,7 +168,11 @@ KCM.SimpleKCM {
                     text: i18n("Connect")
 
                     onClicked: passField.accepted();
+                    Keys.onReturnPressed: {
+                        passField.accepted();
+                    }
                 }
+                
                 Button {
                     id: closeButton
                     KeyNavigation.up: passField
@@ -173,6 +183,9 @@ KCM.SimpleKCM {
                     text: i18n("Cancel")
 
                     onClicked: passwordLayer.close();
+                    Keys.onReturnPressed: {
+                        passwordLayer.close();
+                    }
                 }
             }
             Item {
@@ -188,7 +201,7 @@ KCM.SimpleKCM {
 
         onSheetOpenChanged: {
             if (sheetOpen) {
-                Qt.inputMethod.show();
+                forgetBtn.forceActiveFocus()
             }
         }
 
@@ -201,38 +214,103 @@ KCM.SimpleKCM {
                 wrapMode: Text.WordWrap
                 text: i18n("Are you sure you want to forget the network %1?", nameToRemove)
             }
+            
             RowLayout {
                 Button {
+                    id: forgetBtn
                     Layout.fillWidth: true
                     text: i18n("Forget")
-
+                    
                     onClicked: {
                         removeConnection()
                         networkActions.close()
+                        connectionView.forceActiveFocus()
+                    }
+                    
+                    KeyNavigation.right: cancelBtn
+                    
+                    Keys.onReturnPressed: {
+                        removeConnection()
+                        networkActions.close()
+                        connectionView.forceActiveFocus()
+                    }
+                    
+                    Rectangle {
+                        anchors.fill: parent
+                        anchors.margins: -Kirigami.Units.smallSpacing * 0.5
+                        color: Kirigami.Theme.linkColor
+                        visible: forgetBtn.focus ? 1 : 0
+                        z: -10
                     }
                 }
                 Button {
+                    id: cancelBtn
                     Layout.fillWidth: true
                     text: i18n("Cancel")
+                    
+                    KeyNavigation.left: forgetBtn
 
                     onClicked: {
                         networkActions.close()
+                        connectionView.forceActiveFocus()
+                    }
+                    
+                    Keys.onReturnPressed: {
+                        networkActions.close()
+                        connectionView.forceActiveFocus()
+                    }
+                    
+                    Rectangle {
+                        anchors.fill: parent
+                        anchors.margins: -Kirigami.Units.smallSpacing * 0.5
+                        color: Kirigami.Theme.linkColor
+                        visible: cancelBtn.focus ? 1 : 0
+                        z: -10
                     }
                 }
             }
         }
     }
-
-    ListView {
-        id: connectionView
-
-        activeFocusOnTab: true
-        keyNavigationEnabled: true
-        keyNavigationWraps: false
-        focus: true
-        model: appletProxyModel
-        currentIndex: -1
-        delegate: NetworkItem {}
-        KeyNavigation.down: reloadButton
+    
+    ColumnLayout {
+        width: parent.width
+        height: children.height
+        
+        Item {
+            Layout.fillWidth: true
+            Layout.preferredHeight: networkSelectionView.height / 3
+        }
+        
+        RowLayout {
+            Layout.fillWidth: true
+            Layout.alignment: Qt.AlignCenter
+                            
+            Views.RowLabelView {
+                id: rowLbl
+                text: qsTr("All Connections")
+                color: Kirigami.Theme.linkColor
+            }
+            
+            BigScreen.TileView {
+                id: connectionView
+                focus: true
+                model: appletProxyModel
+                currentIndex: 0
+                delegate: Delegates.NetworkDelegate {}
+                navigationDown: reloadButton
+                property bool availableConnectionsVisible: true
+                Behavior on x {
+                    NumberAnimation {
+                        duration: Kirigami.Units.longDuration * 2
+                        easing.type: Easing.InOutQuad
+                    }
+                }
+            }   
+        }
+        
+        Item {
+            Layout.fillWidth: true
+            Layout.preferredHeight: networkSelectionView.height / 3
+        }
     }
 }
