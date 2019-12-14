@@ -71,7 +71,7 @@ FocusScope {
         anchors {
             left: parent.left
             right: parent.right
-            top: heder.bottom
+            top: header.bottom
             bottom: parent.bottom
         }
         focus: true
