@@ -187,7 +187,7 @@ PlasmaComponents.ItemDelegate {
         }
     }
 
-    Keys.onDeletePressed: {
+    Keys.onMenuPressed: {
         pathToRemove = model.ConnectionPath
         nameToRemove = model.ItemUniqueName
         networkActions.open()
