@@ -209,5 +209,22 @@ Item {
             margins: Kirigami.Units.largeSpacing
             topMargin: Kirigami.Units.largeSpacing * 3 + plasmoid.availableScreenRect.y
         }
+        
+        Kirigami.Heading {
+            id: inputQuery
+            anchors.right: parent.left
+            anchors.rightMargin: Kirigami.Units.largeSpacing
+            anchors.verticalCenter: parent.verticalCenter
+            font.capitalization: Font.Capitalize
+            level: 3
+            Connections {
+                target: Mycroft.MycroftController
+                onIntentRecevied: {
+                if(type == "recognizer_loop:utterance") {
+                    inputQuery.text = data.utterances[0]
+                    }
+                }
+            }
+        }
     }
 }
