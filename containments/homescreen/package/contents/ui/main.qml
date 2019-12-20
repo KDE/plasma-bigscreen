@@ -200,7 +200,7 @@ Item {
     }
 
     Mycroft.StatusIndicator {
-        id: mycroftIndicator
+        id: si
         z: 2
         visible: !mycroftWindow.visible
         anchors {
@@ -209,20 +209,40 @@ Item {
             margins: Kirigami.Units.largeSpacing
             topMargin: Kirigami.Units.largeSpacing * 3 + plasmoid.availableScreenRect.y
         }
-        
-        Kirigami.Heading {
-            id: inputQuery
-            anchors.right: parent.left
-            anchors.rightMargin: Kirigami.Units.largeSpacing
-            anchors.verticalCenter: parent.verticalCenter
-            font.capitalization: Font.Capitalize
-            level: 3
-            Connections {
-                target: Mycroft.MycroftController
-                onIntentRecevied: {
+    }
+
+    Kirigami.Heading {
+        id: inputQuery
+        Kirigami.Theme.colorSet: mainView.Kirigami.Theme.colorSet
+        anchors.right: si.left
+        anchors.rightMargin: Kirigami.Units.largeSpacing
+        anchors.verticalCenter: si.verticalCenter
+        level: 3
+        opacity: 0
+        onTextChanged: {
+            opacity = 1;
+            utteranceTimer.restart();
+        }
+        Timer {
+            id: utteranceTimer
+            interval: 3000
+            onTriggered: {
+                inputQuery.text = "";
+                inputQuery.opacity = 0
+            }
+        }
+        Behavior on opacity {
+            OpacityAnimator {
+                duration: Kirigami.units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
+
+        Connections {
+            target: Mycroft.MycroftController
+            onIntentRecevied: {
                 if(type == "recognizer_loop:utterance") {
                     inputQuery.text = data.utterances[0]
-                    }
                 }
             }
         }
