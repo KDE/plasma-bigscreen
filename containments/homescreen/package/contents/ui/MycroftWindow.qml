@@ -83,6 +83,15 @@ Window {
         Connections {
             target: Mycroft.MycroftController
             onIntentRecevied: {
+                if(type == "recognizer_loop:wakeword") {
+                    inputQuery.text = "Hey Mycroft"
+                }
+                if(type == "recognizer_loop:record_begin") {
+                    inputQuery.text = "Recording Speech"
+                }
+                if(type == "recognizer_loop:record_end") {
+                    inputQuery.text = "Converting Speech To Text"
+                }
                 if(type == "recognizer_loop:utterance") {
                     inputQuery.text = data.utterances[0]
                 }
@@ -96,7 +105,7 @@ Window {
         open: false
         Keys.onEscapePressed: window.visible = false;
         KeyNavigation.up: closeButton
-        activeSkills.blackList: ["youtube-skill.aiix"]
+        activeSkills.blackList: ["youtube-skill.aiix", "skill-wikidata.aiix", "soundcloud-audio-player.aiix", "food-wizard.aiix", "unsplash-wallpaper-plasma-skill.aiix"]
         activeSkills.onBlacklistedSkillActivated: {
             plasmoid.nativeInterface.executeCommand("mycroft-gui-app --hideTextInput --skill=" + skillId);
         }
