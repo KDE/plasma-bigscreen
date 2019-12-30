@@ -17,6 +17,7 @@
 
 import QtQuick.Layouts 1.4
 import QtQuick 2.12
+import QtQuick.Window 2.3
 import QtQuick.Controls 2.3
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -96,18 +97,44 @@ KCM.SimpleKCM {
         onTriggered: networkSelectionView.refreshing = false
     }
 
-    footer: Button {
-                id: reloadButton
-                KeyNavigation.up: connectionView
-                anchors.left: parent.left
-                anchors.right: parent.right
-                icon.name: "view-refresh"
-                text: i18n("Refresh")
-                onClicked: {
-                    networkSelectionView.refreshing = true;
-                    connectionView.contentY = -Kirigami.Units.gridUnit * 4;
-                }
+    footer: RowLayout {
+            anchors.left: parent.left
+            anchors.right: parent.right
+                    
+        Button {
+            id: reloadButton
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            KeyNavigation.up: connectionView
+            KeyNavigation.right: kcmcloseButton
+            icon.name: "view-refresh"
+            text: i18n("Refresh")
+            onClicked: {
+                networkSelectionView.refreshing = true;
+                connectionView.contentY = -Kirigami.Units.gridUnit * 4;
             }
+            Keys.onReturnPressed: {
+                networkSelectionView.refreshing = true;
+                connectionView.contentY = -Kirigami.Units.gridUnit * 4;
+            }
+        }
+        
+        Button {
+            id: kcmcloseButton
+            KeyNavigation.up: connectionView
+            KeyNavigation.left: reloadButton
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            icon.name: "window-close"
+            text: i18n("Exit")
+            onClicked: {
+                Window.window.close()
+            }
+            Keys.onReturnPressed: {
+                Window.window.close()
+            }
+        }
+    }
 
     Dialog {
         id: passwordLayer
