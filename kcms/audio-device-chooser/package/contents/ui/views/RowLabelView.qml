@@ -26,28 +26,44 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import org.kde.kirigami 2.5 as Kirigami
 
-Rectangle {
+Item {
     id: rowLabel
     Layout.leftMargin: -Kirigami.Units.gridUnit * 1
     Layout.preferredWidth: parent.width / 5
     Layout.fillHeight: true
     z: 100
     property alias text: deviceTypeHeading.text
+    property alias color: rowLabelBg.color
+    
+    Rectangle {
+        id: rowLabelBg
+        anchors.fill: parent
 
-    Kirigami.Heading {
-        id: deviceTypeHeading
-        enabled: sinkView.count > 0
-        anchors.centerIn: parent
-        level: 3
+        Kirigami.Heading {
+            id: deviceTypeHeading
+            //enabled: sinkView.count > 0
+            anchors.centerIn: parent
+            level: 3
+        }
+
+        DropShadow {
+            anchors.fill: deviceTypeHeading
+            horizontalOffset: 0
+            verticalOffset: 2
+            radius: 8.0
+            samples: 17
+            color: Qt.rgba(0,0,0,0.6)
+            source: deviceTypeHeading
+        }
     }
-
+    
     DropShadow {
-        anchors.fill: deviceTypeHeading
+        anchors.fill: rowLabelBg
         horizontalOffset: 0
         verticalOffset: 2
         radius: 8.0
         samples: 17
         color: Qt.rgba(0,0,0,0.6)
-        source: deviceTypeHeading
+        source: rowLabelBg
     }
 }

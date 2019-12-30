@@ -43,7 +43,7 @@ Item {
     property var pObject: PulseObject
 
     implicitWidth: listView.cellWidth
-    implicitHeight: listView.height
+    implicitHeight: listView.height + Kirigami.Units.gridUnit * 5
 
     readonly property ListView listView: ListView.view
 
@@ -59,7 +59,7 @@ Item {
     PlasmaComponents.ItemDelegate {
         id: itemDel
         implicitWidth: listView.cellWidth
-        implicitHeight: listView.height
+        implicitHeight: listView.height + Kirigami.Units.gridUnit * 5
 
         onClicked: {
             PulseObject.default = true;
@@ -89,7 +89,7 @@ Item {
                     rightMargin: -margins.right
                     bottomMargin: -margins.bottom
                 }
-                imagePath: ":/delegates/background.svg"
+                imagePath: Qt.resolvedUrl("./background.svg")
                 prefix: "shadow"
             }
             PlasmaCore.FrameSvgItem {
@@ -98,7 +98,7 @@ Item {
                     fill: parent
                     margins: background.extraMargin
                 }
-                imagePath: ":/delegates/background.svg"
+                imagePath: Qt.resolvedUrl("./background.svg")
 
                 width: listView.currentIndex == index && delegate.activeFocus ? parent.width : parent.width - units.gridUnit
                 height: listView.currentIndex == index && delegate.activeFocus ? parent.height : parent.height - units.gridUnit
@@ -114,23 +114,33 @@ Item {
 
         contentItem: ColumnLayout {
             spacing: 0
-
-            PlasmaComponents.Label {
+            
+            Item {
+                Layout.fillWidth: true
+                Layout.preferredHeight: Kirigami.Units.gridUnit * 2
+            }
+            
+            Kirigami.Heading {
                 id: label
                 visible: text.length > 0
-
-                Layout.fillWidth: true
-                Layout.fillHeight: true
+                level: 2
+                Layout.maximumWidth: parent.width
+                height: parent.height
                 wrapMode: Text.WordWrap
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 horizontalAlignment: Text.AlignHCenter
-                verticalAlignment: Text.AlignVCenter
-                maximumLineCount: 2
+                maximumLineCount: 3
                 elide: Text.ElideRight
                 color: PlasmaCore.ColorScope.textColor
 
                 text: !currentPort ? Description : i18ndc("kcm_pulseaudio", "label of device items", "%1 (%2)", currentPort.description, Description)
             }
-
+            
+            Item {
+                Layout.fillWidth: true
+                Layout.preferredHeight: Kirigami.Units.gridUnit * 2
+            }
+            
             Kirigami.Separator {
                 Layout.fillWidth: true
                 Layout.preferredHeight: 1
@@ -151,42 +161,36 @@ Item {
 
     Popup {
         id: deviceSettingDialog
-        //parent: Overlay.overlay
-
+        parent: Overlay.overlay
         x: Math.round((parent.width - width) / 2)
         y: Math.round((parent.height - height) / 2)
         width: root.width / 3
         height: root.height  / 2
         dim: true
-        Overlay.modeless: Rectangle {
-              color: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.8)
-          }
-        //edge: Qt.RightEdge
         property color iconBgColorLeft: "#de6262"
         property color iconBgColorRight: "#ffb850"
 
         background: Item {
             id: popupBg
+            property real extraMargin: Math.round(units.gridUnit * 0.5)
             PlasmaCore.FrameSvgItem {
                 anchors {
-                    fill: drawframe
+                    fill: framePop
                     leftMargin: -margins.left
                     topMargin: -margins.top
                     rightMargin: -margins.right
                     bottomMargin: -margins.bottom
                 }
-                imagePath: ":/delegates/background.svg"
+                imagePath: Qt.resolvedUrl("./background.svg")
                 prefix: "shadow"
             }
             Rectangle {
-                id: drawframe
+                id: framePop
                 anchors {
                     fill: parent
+                    margins: popupBg.extraMargin
                 }
-                color: Kirigami.Theme.backgroundColor
-                width: parent.width
-                height: parent.height
-                opacity: 0.9
+                color: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.95)
             }
         }
 

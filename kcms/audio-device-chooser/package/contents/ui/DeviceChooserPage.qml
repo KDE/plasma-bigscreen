@@ -7,6 +7,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.plasma.private.volume 0.1
+import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
 import "delegates" as Delegates
 import "views" as Views
@@ -14,7 +15,9 @@ import "views" as Views
 FocusScope {
     id: mainFlick
     anchors.fill: parent
-    anchors.margins: units.smallSpacing * 2
+    anchors.topMargin: units.smallSpacing * 2
+    anchors.rightMargin: units.smallSpacing * 2
+    anchors.bottomMargin: units.smallSpacing * 2
 
     SourceModel {
         id: paSourceModel
@@ -52,13 +55,17 @@ FocusScope {
                 color: sinkView.activeFocus ? Kirigami.Theme.linkColor : Kirigami.Theme.backgroundColor
             }
 
-            Views.TileView {
+            BigScreen.TileView {
                 id: sinkView
                 model: paSinkModel
                 focus: true
-                x: -currentItem.x + rowLbl1.width + Kirigami.Units.gridUnit * 1
+                x: -currentItem.x + Math.round(rowLbl1.width + Kirigami.Units.gridUnit * 1)
                 currentIndex: 0
-                onActiveFocusChanged: if (activeFocus) contentLayout.currentSection = rLayoutPlayback
+                onActiveFocusChanged: { 
+                    if(activeFocus){ 
+                        contentLayout.currentSection = rLayoutPlayback
+                    }
+                }
                 delegate: Delegates.AudioDelegate {
                     isPlayback: true
                     anchors.verticalCenter: parent.verticalCenter
@@ -80,12 +87,16 @@ FocusScope {
                 color: sourceView.activeFocus ? Kirigami.Theme.linkColor : Kirigami.Theme.backgroundColor
             }
 
-            Views.TileView {
+            BigScreen.TileView {
                 id: sourceView
                 model: paSourceModel
                 currentIndex: 0
-                x: -currentItem.x + rowLbl2.width + Kirigami.Units.gridUnit * 1
-                onActiveFocusChanged: if (activeFocus) contentLayout.currentSection = rLayoutRecord
+                x: -currentItem.x + Math.round(rowLbl2.width + Kirigami.Units.gridUnit * 1)
+                onActiveFocusChanged: {
+                    if(activeFocus){
+                        contentLayout.currentSection = rLayoutRecord
+                    }
+                }
                 delegate: Delegates.AudioDelegate {
                     isPlayback: false
                     anchors.verticalCenter: parent.verticalCenter

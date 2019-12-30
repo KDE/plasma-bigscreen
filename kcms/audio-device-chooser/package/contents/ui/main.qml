@@ -31,7 +31,7 @@ import org.kde.kcm 1.1 as KCM
 import "delegates" as Delegates
 import "views" as Views
 
-Kirigami.Page {
+KCM.SimpleKCM {
     id: root
     title: "Audio Device Chooser"
     
