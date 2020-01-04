@@ -14,9 +14,9 @@
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    version="1.1"
    id="svg4351"
-   viewBox="0 0 64 32.000001"
-   height="32"
-   width="64">
+   viewBox="0 0 362.06198 121.00001"
+   height="121.00001"
+   width="362.06198">
   <defs
      id="defs4353">
     <style
@@ -161,7 +161,7 @@
          id="stop4231" />
     </linearGradient>
     <filter
-       style="color-interpolation-filters:sRGB"
+       style="color-interpolation-filters:sRGB;"
        inkscape:label="Diffuse Light"
        id="filter864">
       <feColorMatrix
@@ -182,7 +182,7 @@
          id="feDiffuseLighting1323"
          diffuseConstant="1"
          surfaceScale="10"
-         lighting-color="#ffffff"
+         lighting-color="rgb(255,255,255)"
          result="diffuse">
         <feDistantLight
            id="feDistantLight1325"
@@ -195,10 +195,7 @@
          in="diffuse"
          operator="arithmetic"
          k1="1"
-         result="composite1"
-         k2="0"
-         k3="0"
-         k4="0" />
+         result="composite1" />
       <feComposite
          in2="fbSourceGraphic"
          id="feComposite1329"
@@ -206,9 +203,7 @@
          k1="1"
          operator="arithmetic"
          k3="1"
-         result="fbSourceGraphic"
-         k2="0"
-         k4="0" />
+         result="fbSourceGraphic" />
       <feColorMatrix
          result="fbSourceGraphicAlpha"
          in="fbSourceGraphic"
@@ -223,7 +218,7 @@
          id="feDiffuseLighting1335"
          diffuseConstant="1"
          surfaceScale="10"
-         lighting-color="#ffffff"
+         lighting-color="rgb(255,255,255)"
          result="diffuse">
         <feDistantLight
            id="feDistantLight1337"
@@ -236,10 +231,7 @@
          in="diffuse"
          operator="arithmetic"
          k1="1"
-         result="composite1"
-         k2="0"
-         k3="0"
-         k4="0" />
+         result="composite1" />
       <feComposite
          in2="fbSourceGraphic"
          id="feComposite1341"
@@ -247,12 +239,10 @@
          k1="1"
          operator="arithmetic"
          k3="1"
-         result="composite2"
-         k2="0"
-         k4="0" />
+         result="composite2" />
     </filter>
     <filter
-       style="color-interpolation-filters:sRGB"
+       style="color-interpolation-filters:sRGB;"
        inkscape:menu-tooltip="Fades hue progressively to white"
        inkscape:menu="Color"
        inkscape:label="Colorize"
@@ -330,10 +320,7 @@
          result="qminpc"
          in="qminp"
          in2="qminp"
-         id="feComposite914"
-         k1="0"
-         k2="0"
-         k4="0" />
+         id="feComposite914" />
       <feBlend
          result="result2"
          in2="SourceGraphic"
@@ -368,9 +355,7 @@
          k1="10"
          k2="10"
          result="composite1"
-         in="fbSourceGraphic"
-         k3="0"
-         k4="0" />
+         in="fbSourceGraphic" />
       <feColorMatrix
          id="feColorMatrix1010"
          in="composite1"
@@ -404,10 +389,11 @@
          id="feComposite1020"
          in="colormatrix2"
          operator="in"
+         k2="1"
          result="composite2" />
     </filter>
     <filter
-       style="color-interpolation-filters:sRGB"
+       style="color-interpolation-filters:sRGB;"
        inkscape:menu-tooltip="Fades hue progressively to white"
        inkscape:menu="Color"
        inkscape:label="Colorize"
@@ -485,10 +471,7 @@
          result="qminpc"
          in="qminp"
          in2="qminp"
-         id="feComposite1206"
-         k1="0"
-         k2="0"
-         k4="0" />
+         id="feComposite1206" />
       <feBlend
          result="result2"
          in2="SourceGraphic"
@@ -523,9 +506,7 @@
          k1="10"
          k2="10"
          result="composite1"
-         in="fbSourceGraphic"
-         k3="0"
-         k4="0" />
+         in="fbSourceGraphic" />
       <feColorMatrix
          id="feColorMatrix1222"
          in="composite1"
@@ -559,6 +540,7 @@
          id="feComposite1232"
          in="colormatrix2"
          operator="in"
+         k2="1"
          result="composite2" />
     </filter>
   </defs>
@@ -580,11 +562,11 @@
      fit-margin-left="0"
      fit-margin-top="0"
      showgrid="true"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g1045"
      inkscape:document-units="px"
-     inkscape:cy="27.22836"
-     inkscape:cx="17.909507"
-     inkscape:zoom="8"
+     inkscape:cy="83.512607"
+     inkscape:cx="196.80459"
+     inkscape:zoom="4"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -594,15 +576,15 @@
     <inkscape:grid
        type="xygrid"
        id="grid4168"
-       originx="94.660756"
-       originy="38.000018" />
+       originx="100.39295"
+       originy="45.999993" />
     <sodipodi:guide
-       position="94.660756,53.000017"
+       position="100.39295,60.999993"
        orientation="0,1"
        id="guide1052"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="174.66076,53.000017"
+       position="180.39295,60.999993"
        orientation="1,0"
        id="guide1054"
        inkscape:locked="false" />
@@ -623,10 +605,11 @@
      inkscape:label="Capa 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(429.66076,-452.79079)">
+     transform="translate(435.39295,-371.79076)">
     <g
        id="g1050"
-       transform="matrix(1.1136218,0,0,1.4500004,-119.23271,-154.85603)">
+       transform="matrix(5.2263673,0,0,6.3684223,1074.7063,-2310.351)"
+       style="">
       <rect
          inkscape:export-ydpi="96"
          inkscape:export-xdpi="96"
@@ -637,26 +620,26 @@
          height="9.9999971"
          width="35"
          id="rect1034"
-         style="opacity:1;fill:#f49a2b;fill-opacity:0.00392157;stroke:none;stroke-width:0.8301909;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:#f49a2b;fill-opacity:0.00392157;stroke:none;stroke-width:0.8301909;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;" />
       <text
          transform="scale(0.98832942,1.0118084)"
          inkscape:export-ydpi="96"
          inkscape:export-xdpi="96"
          inkscape:export-filename="/home/uri/pbs_logo.png"
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:7.09403229px;line-height:0px;font-family:Oxygen;-inkscape-font-specification:'Oxygen Light';letter-spacing:0px;word-spacing:0px;fill:#263238;fill-opacity:1;stroke:none;stroke-width:0.28636053"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:7.09403229px;line-height:0px;font-family:Oxygen;-inkscape-font-specification:'Oxygen Light';letter-spacing:0px;word-spacing:0px;fill:#263238;fill-opacity:1;stroke:none;stroke-width:0.28636053;"
          x="-262.26376"
          y="432.66876"
          id="text1044"><tspan
            sodipodi:role="line"
            x="-262.26376"
            y="432.66876"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:8.3200388px;line-height:0px;font-family:Oxygen;-inkscape-font-specification:'Oxygen Light';fill:#ffffff;fill-opacity:1;stroke-width:0.28636053"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:8.32003866px;line-height:0px;font-family:Oxygen;-inkscape-font-specification:'Oxygen Light';fill:#ffffff;fill-opacity:1;stroke-width:0.28636053"
            id="tspan1042">BigScreen</tspan></text>
     </g>
     <g
        id="g1070"
-       transform="matrix(0.83333333,0,0,1,-189.57973,37.084263)">
+       transform="matrix(5.2263673,0,0,6.3684223,1079.0272,-2320.7194)">
       <path
          inkscape:export-ydpi="96"
          inkscape:export-xdpi="96"
@@ -732,32 +715,33 @@
     </g>
     <g
        id="g1045"
-       transform="matrix(5.3832035,0,0,3.1510419,1110.0642,-902.49278)">
+       transform="matrix(5.2263673,0,0,6.3684223,1074.7063,-2310.351)"
+       style="">
       <rect
          inkscape:export-ydpi="96"
          inkscape:export-xdpi="96"
          inkscape:export-filename="/home/uri/pbs_logo.png"
-         style="opacity:1;fill:#f49a2b;fill-opacity:0.00392157;stroke:none;stroke-width:0.26604208;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="opacity:1;fill:#f49a2b;fill-opacity:0.00392157;stroke:none;stroke-width:0.84852815;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;"
          id="rect1036"
-         width="6.5049143"
-         height="4.7603302"
-         x="-281.93713"
-         y="430.74118"
+         width="35"
+         height="9"
+         x="-259"
+         y="421.79077"
          ry="0" />
       <text
-         transform="scale(0.76328782,1.3101218)"
+         transform="scale(1.0084055,0.99166456)"
          inkscape:export-ydpi="96"
          inkscape:export-xdpi="96"
          inkscape:export-filename="/home/uri/pbs_logo.png"
          id="text1040"
-         y="332.25391"
-         x="-369.47934"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:2.9778192px;line-height:0px;font-family:Oxygen;-inkscape-font-specification:'Oxygen Light';letter-spacing:0px;word-spacing:0px;fill:#263238;fill-opacity:1;stroke:none;stroke-width:0.11293677"
+         y="433.9816"
+         x="-257.12488"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.61124992px;line-height:0px;font-family:Oxygen;-inkscape-font-specification:'Oxygen Light';letter-spacing:0px;word-spacing:0px;fill:#263238;fill-opacity:1;stroke:none;stroke-width:0.40244243;"
          xml:space="preserve"><tspan
            id="tspan1038"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.11311913px;line-height:0px;font-family:Oxygen;-inkscape-font-specification:Oxygen;fill:#ffffff;fill-opacity:1;stroke-width:0.11293677"
-           y="332.25391"
-           x="-369.47934"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.09338495px;line-height:0px;font-family:Oxygen;-inkscape-font-specification:Oxygen;fill:#ffffff;fill-opacity:1;stroke-width:0.40244243"
+           y="433.9816"
+           x="-257.12488"
            sodipodi:role="line">Plasma</tspan></text>
     </g>
   </g>
