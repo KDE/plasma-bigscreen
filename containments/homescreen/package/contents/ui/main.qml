@@ -91,7 +91,7 @@ Item {
         colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
         height: units.iconSizes.medium + units.smallSpacing * 2
-        opacity: !mycroftWindow.visible
+        opacity: root.Window.active
 
         Behavior on opacity {
             OpacityAnimator {
@@ -166,7 +166,7 @@ Item {
 
         states: [
             State {
-                when: !mycroftWindow.visible
+                when: root.Window.active
                 PropertyChanges {
                     target: launcher
                     opacity: 1
@@ -174,7 +174,7 @@ Item {
                 }
             },
             State {
-                when: mycroftWindow.visible
+                when: !root.Window.active
                 PropertyChanges {
                     target: launcher
                     opacity: 0
