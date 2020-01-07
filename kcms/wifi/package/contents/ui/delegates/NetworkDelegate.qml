@@ -68,7 +68,7 @@ PlasmaComponents.ItemDelegate {
                 rightMargin: -margins.right
                 bottomMargin: -margins.bottom
             }
-            imagePath: Qt.resolvedUrl("./background.svg")
+            imagePath: "dialogs/background"
             prefix: "shadow"
         }
         PlasmaCore.FrameSvgItem {
@@ -77,7 +77,7 @@ PlasmaComponents.ItemDelegate {
                 fill: parent
                 margins: background.extraMargin
             }
-            imagePath: Qt.resolvedUrl("./background.svg")
+            imagePath: "dialogs/background"
             
             width: listView.currentIndex == index && delegate.activeFocus ? parent.width : parent.width - units.gridUnit
             height: listView.currentIndex == index && delegate.activeFocus ? parent.height : parent.height - units.gridUnit
