@@ -28,7 +28,7 @@ BigScreen.AbstractDelegate {
 
     onClicked: {
         feedbackWindow.open(modelData.ApplicationNameRole, modelData.ApplicationIconRole);
-        plasmoid.nativeInterface.applicationListModel.runApplication(modelData.ApplicationStorageIdRole)
-        plasmoid.nativeInterface.applicationListModel.moveItem(index, 0);
+        ListView.view.model.runApplication(modelData.ApplicationStorageIdRole)
+        ListView.view.model.moveItem(index, 0);
     }
 }
