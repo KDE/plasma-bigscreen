@@ -180,7 +180,8 @@ FocusScope {
             }
 
             if (navigationDown instanceof TileView) {
-                navigationDown.currentIndex = navigationDown.view.indexAt(navigationDown.view.mapFromItem(currentItem, cellWidth/2, height/2).x, height/2);
+                navigationDown.currentIndex = Math.min(Math.floor(navigationDown.view.indexAt(navigationDown.view.contentX + cellWidth/2, height/2)) + (view.currentIndex - view.indexAt(view.contentX + cellWidth/2, height/2)), navigationDown.view.count - 1);
+
                 if (navigationDown.currentIndex < 0) {
                     navigationDown.currentIndex = view.currentIndex > 0 ? navigationDown.view.count - 1 : 0
                 }
@@ -195,7 +196,8 @@ FocusScope {
             }
 
             if (navigationUp instanceof TileView) {
-                navigationUp.view.currentIndex = navigationUp.view.indexAt(navigationUp.view.contentItem.mapFromItem(currentItem, cellWidth/2, height/2).x, height/2);
+                navigationUp.currentIndex = Math.min(Math.floor(navigationUp.view.indexAt(navigationUp.view.contentX + cellWidth/2, height/2)) + (view.currentIndex - view.indexAt(view.contentX + cellWidth/2, height/2)), navigationUp.view.count - 1);
+
                 if (navigationUp.currentIndex < 0) {
                     navigationUp.currentIndex = view.currentIndex > 0 ? navigationUp.view.count - 1 : 0
                 }
