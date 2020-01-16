@@ -47,6 +47,8 @@ Item {
         for (var i in plasmoid.applets) {
             root.addApplet(plasmoid.applets[i], -1, -1)
         }
+
+        Mycroft.MycroftController.start();
     }
 
     function addApplet(applet, x, y) {
@@ -244,6 +246,19 @@ Item {
                 if(type == "recognizer_loop:utterance") {
                     inputQuery.text = data.utterances[0]
                 }
+            }
+            onStatusChanged: {
+                switch (Mycroft.MycroftController.status) {
+                case Mycroft.MycroftController.Connecting:
+                case Mycroft.MycroftController.Error:
+                case Mycroft.MycroftController.Stopped:
+                    inputQuery.text = i18n("Not Ready");
+                    break;
+                default:
+                    inputQuery.text = "";
+                    break;
+                }
+
             }
         }
     }
