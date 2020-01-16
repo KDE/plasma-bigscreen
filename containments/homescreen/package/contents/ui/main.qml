@@ -247,15 +247,26 @@ Item {
                     inputQuery.text = data.utterances[0]
                 }
             }
+            onServerReadyChanged: {
+                if (Mycroft.MycroftController.serverReady) {
+                    inputQuery.text = "";
+                } else {
+                    inputQuery.text = i18n("Not Ready");
+                    utteranceTimer.running = false;
+                }
+            }
             onStatusChanged: {
                 switch (Mycroft.MycroftController.status) {
                 case Mycroft.MycroftController.Connecting:
                 case Mycroft.MycroftController.Error:
                 case Mycroft.MycroftController.Stopped:
                     inputQuery.text = i18n("Not Ready");
+                    utteranceTimer.running = false;
                     break;
                 default:
-                    inputQuery.text = "";
+                    if (Mycroft.MycroftController.serverReady) {
+                        inputQuery.text = "";
+                    }
                     break;
                 }
 
