@@ -105,22 +105,6 @@ FocusScope {
             origin.x: width/2
         }
 
-        Timer {
-            id: rotateTimeOut
-            interval: 25
-        }
-        Timer {
-            id: rotateTimer
-            interval: 500
-            onTriggered: {
-                if (rotateTimeOut.running) {
-                    rotation.angle = rotation.targetAngle;
-                    restart();
-                } else {
-                    rotation.angle = 0;
-                }
-            }
-        }
         spacing: 0
         orientation: ListView.Horizontal
 
@@ -129,38 +113,6 @@ FocusScope {
             OpacityAnimator {
                 duration: Kirigami.Units.longDuration * 2
                 easing.type: Easing.InOutQuad
-            }
-        }
-
-        property real oldContentX
-        onContentXChanged: {
-            if (oldContentX < contentX) {
-                rotation.targetAngle = 30;
-            } else {
-                rotation.targetAngle = -30;
-            }
-            PlasmaComponents.ScrollBar.horizontal.opacity = 1;
-            if (!rotateTimeOut.running) {
-                rotateTimer.restart();
-            }
-            rotateTimeOut.restart();
-            oldContentX = contentX;
-        }
-        PlasmaComponents.ScrollBar.horizontal: PlasmaComponents.ScrollBar {
-            id: scrollBar
-            opacity: 0
-            interactive: false
-            onOpacityChanged: disappearTimer.restart()
-            Timer {
-                id: disappearTimer
-                interval: 1000
-                onTriggered: scrollBar.opacity = 0;
-            }
-            Behavior on opacity {
-                OpacityAnimator {
-                    duration: Kirigami.Units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
             }
         }
 
