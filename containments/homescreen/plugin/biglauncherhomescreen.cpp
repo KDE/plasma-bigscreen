@@ -34,7 +34,7 @@ HomeScreen::HomeScreen(QObject *parent, const QVariantList &args)
     qmlRegisterUncreatableType<ApplicationListModel>(uri, 1, 0, "ApplicationListModel", QStringLiteral("Cannot create an item of type ApplicationListModel"));
     qmlRegisterUncreatableType<VoiceAppListModel>(uri, 1, 0, "VoiceAppListModel", QStringLiteral("Cannot create an item of type VoiceAppListModel"));
     qmlRegisterUncreatableType<GamesAppListModel>(uri, 1, 0, "GamesAppListModel", QStringLiteral("Cannot create an item of type GamesAppListModel"));
-qWarning()<<"££££££££ghjgjg£££££££££££££";
+
     //setHasConfigurationInterface(true);
     auto bigLauncherDbusAdapterInterface = new BigLauncherDbusAdapterInterface(this);
     m_applicationListModel = new ApplicationListModel(this);
@@ -46,7 +46,7 @@ HomeScreen::~HomeScreen()
 {}
 
 ApplicationListModel *HomeScreen::applicationListModel() const
-{qWarning()<<"$$$$$$$$$$$$$$";
+{
     return m_applicationListModel;
 }
 
