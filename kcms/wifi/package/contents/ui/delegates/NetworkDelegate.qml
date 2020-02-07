@@ -35,6 +35,7 @@ PlasmaComponents.ItemDelegate {
     property bool predictableWirelessPassword: !model.Uuid && model.Type == PlasmaNM.Enums.Wireless &&
                                                (model.SecurityType == PlasmaNM.Enums.StaticWep || model.SecurityType == PlasmaNM.Enums.WpaPsk ||
                                                 model.SecurityType == PlasmaNM.Enums.Wpa2Psk)
+    property alias connectionStatusLabelText: connectionStatusLabel.text
 
     checked: connectionView.currentIndex === index && connectionView.activeFocus
 
@@ -49,7 +50,7 @@ PlasmaComponents.ItemDelegate {
     topPadding: frame.margins.top + background.extraMargin
     rightPadding: frame.margins.right + background.extraMargin
     bottomPadding: frame.margins.bottom + background.extraMargin
-
+    
     background: Item {
         id: background
         property real extraMargin:  Math.round(listView.currentIndex == index && delegate.activeFocus ? -units.gridUnit/2 : units.gridUnit/2)

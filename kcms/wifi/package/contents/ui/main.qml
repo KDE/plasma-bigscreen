@@ -32,6 +32,7 @@ KCM.SimpleKCM {
     id: networkSelectionView
     
     title: i18n("Network")
+    background: null
     
     property string pathToRemove
     property string nameToRemove
@@ -53,6 +54,10 @@ KCM.SimpleKCM {
 
     function removeConnection() {
         handler.removeConnection(pathToRemove)
+    }
+    
+    PlasmaNM.EnabledConnections {
+        id: enabledConnections
     }
 
     PlasmaNM.NetworkStatus {
@@ -82,6 +87,11 @@ KCM.SimpleKCM {
 
     PlasmaNM.AppletProxyModel {
         id: appletProxyModel
+        sourceModel: connectionModel
+    }
+    
+    PlasmaNM.AppletProxyModel {
+        id: connectedProxyModel
         sourceModel: connectionModel
     }
 
@@ -302,42 +312,21 @@ KCM.SimpleKCM {
     ColumnLayout {
         width: parent.width
         height: children.height
-        
-        Item {
-            Layout.fillWidth: true
-            Layout.preferredHeight: networkSelectionView.height / 3
-        }
-        
-        RowLayout {
-            Layout.fillWidth: true
-            Layout.alignment: Qt.AlignCenter
-                            
-            Views.RowLabelView {
-                id: rowLbl
-                text: qsTr("All Connections")
-                color: Kirigami.Theme.linkColor
-            }
-            
-            BigScreen.TileView {
-                id: connectionView
-                focus: true
-                model: appletProxyModel
-                currentIndex: 0
-                delegate: Delegates.NetworkDelegate {}
-                navigationDown: reloadButton
-                property bool availableConnectionsVisible: true
-                Behavior on x {
-                    NumberAnimation {
-                        duration: Kirigami.Units.longDuration * 2
-                        easing.type: Easing.InOutQuad
-                    }
+    
+        BigScreen.TileView {
+            id: connectionView
+            focus: true
+            model: appletProxyModel
+            title: i18n("Connections")
+            currentIndex: 0
+            delegate: Delegates.NetworkDelegate{}
+            navigationDown: reloadButton
+            Behavior on x {
+                NumberAnimation {
+                    duration: Kirigami.Units.longDuration * 2
+                    easing.type: Easing.InOutQuad
                 }
-            }   
-        }
-        
-        Item {
-            Layout.fillWidth: true
-            Layout.preferredHeight: networkSelectionView.height / 3
+            }
         }
     }
 }
