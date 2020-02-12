@@ -22,12 +22,14 @@
 #include <QColor>
 #include <QImage>
 #include <QQuickItem>
+#include <QQuickItemGrabResult>
 #include <QPointer>
 
 class ImagePalette : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QQuickItem *sourceItem READ sourceItem WRITE setSourceItem NOTIFY sourceItemChanged)
+    Q_PROPERTY(QVariantList palette MEMBER m_palette NOTIFY paletteChanged)
 
 public:
     explicit ImagePalette(QObject* parent = nullptr);
@@ -36,11 +38,23 @@ public:
     void setSourceItem(QQuickItem *source);
     QQuickItem *sourceItem() const;
 
+    Q_INVOKABLE void update();
+
 Q_SIGNALS:
     void sourceItemChanged();
+    void paletteChanged();
 
 private:
+    void generatePalette2();
+    void generatePalette();
+
     QPointer<QQuickItem> m_source;
+    QSharedPointer<QQuickItemGrabResult> m_grabResult;
     QImage m_sourceImage;
+    int m_numColors = 5;
+    int m_sampleNumber = 1000;
+    QVector<QRgb> m_samples = QVector<QRgb>(m_sampleNumber);
+    QVector<QList<QRgb>> m_clusters = QVector<QList<QRgb>>(m_numColors);
+    QVariantList m_palette;
 };
 
