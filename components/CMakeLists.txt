@@ -12,6 +12,6 @@ install(TARGETS bigscreenplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma
 
 install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/mycroft/bigscreen)
 
-install(DIRECTORY qml DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/mycroft/bigscreen)
+install(DIRECTORY qml/ DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/mycroft/bigscreen)
 
 
