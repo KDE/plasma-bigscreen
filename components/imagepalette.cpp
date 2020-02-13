@@ -170,4 +170,9 @@ void ImagePalette::generatePalette()
     emit paletteChanged();
 }
 
+QVariantList ImagePalette::palette() const
+{
+    return m_palette;
+}
+
 #include "moc_imagepalette.cpp"

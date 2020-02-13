@@ -30,7 +30,7 @@ class ImagePalette : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QQuickItem *sourceItem READ sourceItem WRITE setSourceItem NOTIFY sourceItemChanged)
-    Q_PROPERTY(QVariantList palette MEMBER m_palette NOTIFY paletteChanged)
+    Q_PROPERTY(QVariantList palette READ palette NOTIFY paletteChanged)
 
 public:
     explicit ImagePalette(QObject* parent = nullptr);
@@ -40,6 +40,9 @@ public:
     QQuickItem *sourceItem() const;
 
     Q_INVOKABLE void update();
+
+    QVariantList palette() const;
+
 Q_SIGNALS:
     void sourceItemChanged();
     void paletteChanged();
