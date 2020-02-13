@@ -31,6 +31,9 @@ class ImagePalette : public QObject
     Q_OBJECT
     Q_PROPERTY(QQuickItem *sourceItem READ sourceItem WRITE setSourceItem NOTIFY sourceItemChanged)
     Q_PROPERTY(QVariantList palette READ palette NOTIFY paletteChanged)
+    Q_PROPERTY(QColor mostSaturated READ mostSaturated NOTIFY mostSaturatedChanged)
+    Q_PROPERTY(QColor closestToWhite READ closestToWhite NOTIFY closestToWhiteChanged)
+    Q_PROPERTY(QColor closestToBlack READ closestToBlack NOTIFY closestToBlackChanged)
 
 public:
     explicit ImagePalette(QObject* parent = nullptr);
@@ -42,10 +45,16 @@ public:
     Q_INVOKABLE void update();
 
     QVariantList palette() const;
+    QColor mostSaturated() const;
+    QColor closestToWhite() const;
+    QColor closestToBlack() const;
 
 Q_SIGNALS:
     void sourceItemChanged();
     void paletteChanged();
+    void mostSaturatedChanged();
+    void closestToBlackChanged();
+    void closestToWhiteChanged();
 
 private:
     inline void positionColor(QRgb rgb);
@@ -57,6 +66,7 @@ private:
         qreal ratio = 0;
     };
 
+    const int s_minimumSquareDistance = 22000;
     QPointer<QQuickWindow> m_window;
     QPointer<QQuickItem> m_source;
     QSharedPointer<QQuickItemGrabResult> m_grabResult;
@@ -64,5 +74,9 @@ private:
     QList<QRgb> m_samples;
     QList<colorStat> m_clusters;
     QVariantList m_palette;
+
+    QColor m_mostSaturated;
+    QColor m_closestToBlack;
+    QColor m_closestToWhite;
 };
 

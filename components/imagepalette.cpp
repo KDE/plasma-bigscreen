@@ -92,15 +92,22 @@ void ImagePalette::update()
 
 inline int squareDistance(QRgb color1, QRgb color2)
 {
-    return pow(qRed(color1) - qRed(color2), 2) +
-           pow(qGreen(color1) - qGreen(color2), 2) +
-           pow(qBlue(color1) - qBlue(color2), 2);
+    // https://en.wikipedia.org/wiki/Color_difference
+    if (qRed(color1) - qRed(color2) < 128) {
+        return 2 * pow(qRed(color1) - qRed(color2), 2) +
+            4 * pow(qGreen(color1) - qGreen(color2), 2) +
+            3 * pow(qBlue(color1) - qBlue(color2), 2);
+    } else {
+        return 3 * pow(qRed(color1) - qRed(color2), 2) +
+            4 * pow(qGreen(color1) - qGreen(color2), 2) +
+            2 * pow(qBlue(color1) - qBlue(color2), 2);
+    }
 }
 
 void ImagePalette::positionColor(QRgb rgb)
 {
     for (auto &stat : m_clusters) {
-        if (squareDistance(rgb, stat.centroid) < 8000) {
+        if (squareDistance(rgb, stat.centroid) < s_minimumSquareDistance) {
             stat.colors.append(rgb);
             return;
         }
@@ -155,24 +162,90 @@ void ImagePalette::generatePalette()
         }
     }
 
+    // compress blocks that became too similar
+    auto sourceIt = m_clusters.end();
+    QList<QList<colorStat>::iterator> itemsToDelete;
+    while (sourceIt != m_clusters.begin()) {
+        sourceIt--;
+        for (auto destIt = m_clusters.begin(); destIt != m_clusters.end() && destIt != sourceIt; destIt++) {
+            if (squareDistance((*sourceIt).centroid, (*destIt).centroid) < s_minimumSquareDistance) {
+                const qreal ratio = (*sourceIt).ratio / (*destIt).ratio;
+                const int r = ratio * qreal(qRed((*sourceIt).centroid)) +
+                    (1 - ratio) * qreal(qRed((*destIt).centroid));
+                const int g = ratio * qreal(qGreen((*sourceIt).centroid)) +
+                    (1 - ratio) * qreal(qGreen((*destIt).centroid));
+                const int b = ratio * qreal(qBlue((*sourceIt).centroid)) +
+                    (1 - ratio) * qreal(qBlue((*destIt).centroid));
+                (*destIt).ratio += (*sourceIt).ratio;
+                (*destIt).centroid = qRgb(r, g, b);
+                itemsToDelete << sourceIt;
+                break;
+            }
+        }
+    }
+    for (const auto &i : itemsToDelete) {
+        m_clusters.erase(i);
+    }
+
+
     std::sort(m_clusters.begin(), m_clusters.end(), [](const colorStat &a, const colorStat &b) {
         return a.colors.size() > b.colors.size();   
     });
 
 
+    m_mostSaturated = QColor();
+    m_closestToBlack = Qt::white;
+    m_closestToWhite = Qt::black;
+
     m_palette.clear();
     for (const auto &stat : m_clusters) {
         QVariantMap entry;
-        entry["color"] = QColor(stat.centroid);
+        const QColor color(stat.centroid);
+        entry["color"] = color;
         entry["ratio"] = stat.ratio;
+        QColor complementary(255 - qRed(stat.centroid), 255 - qGreen(stat.centroid), 255 - qBlue(stat.centroid));
+        entry["complementary"] = complementary;
+        for (const auto &stat : m_clusters) {
+            if (squareDistance(complementary.rgb(), stat.centroid) < s_minimumSquareDistance) {
+                entry["complementary"] = QColor(stat.centroid);
+                break;
+            }
+        }
+        if (color.saturation() + (128-qAbs(128-color.value())) > m_mostSaturated.saturation() + (128-qAbs(128-m_mostSaturated.value()))) {
+            m_mostSaturated = color;
+        }
+        if (qGray(color.rgb()) > qGray(m_closestToWhite.rgb())) {
+            m_closestToWhite = color;
+        }
+        if (qGray(color.rgb()) < qGray(m_closestToBlack.rgb())) {
+            m_closestToBlack = color;
+        }
         m_palette << entry;
     }
     emit paletteChanged();
+    emit mostSaturatedChanged();
+    emit closestToBlackChanged();
+    emit closestToWhiteChanged();
 }
 
 QVariantList ImagePalette::palette() const
 {
     return m_palette;
+}
+
+QColor ImagePalette::mostSaturated() const
+{
+    return m_mostSaturated;
+}
+
+QColor ImagePalette::closestToWhite() const
+{
+   return m_closestToWhite;
+}
+
+QColor ImagePalette::closestToBlack() const
+{
+    return m_closestToBlack;
 }
 
 #include "moc_imagepalette.cpp"
