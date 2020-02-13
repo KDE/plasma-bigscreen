@@ -135,6 +135,9 @@ void ImagePalette::generatePalette()
             positionColor(sampleColor.rgb());
         }
     }
+    if (m_samples.isEmpty()) {
+        return;
+    }
 
     for (int iteration = 0; iteration < 5; ++iteration) {
         for (auto &stat : m_clusters) {
@@ -194,9 +197,12 @@ void ImagePalette::generatePalette()
 
 
     m_mostSaturated = QColor();
+    m_dominant = QColor(m_clusters.first().centroid);
+    m_suggestedContrast = QColor (255 - m_dominant.red(), 255 - m_dominant.green(), 255 - m_dominant.blue());
     m_closestToBlack = Qt::white;
     m_closestToWhite = Qt::black;
 
+    QColor tempContrast;
     m_palette.clear();
     for (const auto &stat : m_clusters) {
         QVariantMap entry;
@@ -211,7 +217,10 @@ void ImagePalette::generatePalette()
                 break;
             }
         }
-        if (color.saturation() + (128-qAbs(128-color.value())) > m_mostSaturated.saturation() + (128-qAbs(128-m_mostSaturated.value()))) {
+        if (squareDistance(m_suggestedContrast.rgb(), stat.centroid) < s_minimumSquareDistance) {
+            tempContrast = QColor(stat.centroid);
+        }
+        if (color.saturation() + (158-qAbs(158-color.value())) > m_mostSaturated.saturation() + (158-qAbs(158-m_mostSaturated.value()))) {
             m_mostSaturated = color;
         }
         if (qGray(color.rgb()) > qGray(m_closestToWhite.rgb())) {
@@ -222,15 +231,28 @@ void ImagePalette::generatePalette()
         }
         m_palette << entry;
     }
+
+    if (tempContrast.isValid()) {
+        m_suggestedContrast = tempContrast;
+    } else {
+        m_suggestedContrast = QColor(m_clusters.last().centroid);
+    }
+    
     emit paletteChanged();
     emit mostSaturatedChanged();
     emit closestToBlackChanged();
     emit closestToWhiteChanged();
+    emit suggestedContrastChanged();
 }
 
 QVariantList ImagePalette::palette() const
 {
     return m_palette;
+}
+
+QColor ImagePalette::suggestedContrast() const
+{
+    return m_suggestedContrast;
 }
 
 QColor ImagePalette::mostSaturated() const

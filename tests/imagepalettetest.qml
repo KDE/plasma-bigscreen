@@ -11,6 +11,7 @@ RowLayout {
     height: 500
 
     property var icons: ["desktop", "firefox", "vlc", "blender", "applications-games", "blinken", "view-left-close", "adjustlevels", "adjustrgb", "cuttlefish", "folder-games", "applications-network", "applications-utilities", "multimedia-player", "accessories-dictionary", "calligraflow", "calligrakrita", "calligraauthor"]
+    property int i
 
     BigScreen.ImagePalette {
         id: palette

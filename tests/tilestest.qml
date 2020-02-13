@@ -18,12 +18,12 @@ GridView {
         id: delegate
         width: root.cellWidth
         height: root.cellHeight
-        Rectangle{
+        Rectangle {
             anchors {
                 fill: parent
                 margins: 10
             }
-            color: palette.palette[0].complementary
+            color: palette.suggestedContrast
             BigScreen.ImagePalette {
                 id: palette
                 sourceItem: icon

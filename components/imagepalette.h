@@ -31,6 +31,8 @@ class ImagePalette : public QObject
     Q_OBJECT
     Q_PROPERTY(QQuickItem *sourceItem READ sourceItem WRITE setSourceItem NOTIFY sourceItemChanged)
     Q_PROPERTY(QVariantList palette READ palette NOTIFY paletteChanged)
+
+    Q_PROPERTY(QColor suggestedContrast READ suggestedContrast NOTIFY suggestedContrastChanged)
     Q_PROPERTY(QColor mostSaturated READ mostSaturated NOTIFY mostSaturatedChanged)
     Q_PROPERTY(QColor closestToWhite READ closestToWhite NOTIFY closestToWhiteChanged)
     Q_PROPERTY(QColor closestToBlack READ closestToBlack NOTIFY closestToBlackChanged)
@@ -45,6 +47,7 @@ public:
     Q_INVOKABLE void update();
 
     QVariantList palette() const;
+    QColor suggestedContrast() const;
     QColor mostSaturated() const;
     QColor closestToWhite() const;
     QColor closestToBlack() const;
@@ -52,6 +55,7 @@ public:
 Q_SIGNALS:
     void sourceItemChanged();
     void paletteChanged();
+    void suggestedContrastChanged();
     void mostSaturatedChanged();
     void closestToBlackChanged();
     void closestToWhiteChanged();
@@ -75,6 +79,8 @@ private:
     QList<colorStat> m_clusters;
     QVariantList m_palette;
 
+    QColor m_dominant;
+    QColor m_suggestedContrast;
     QColor m_mostSaturated;
     QColor m_closestToBlack;
     QColor m_closestToWhite;
