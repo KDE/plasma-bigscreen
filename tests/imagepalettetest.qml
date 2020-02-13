@@ -10,7 +10,7 @@ RowLayout {
     width: 500
     height: 500
 
-    property var icons: ["desktop", "firefox", "vlc", "applications-games", "blinken", "view-left-close",  "cuttlefish"]
+    property var icons: ["desktop", "firefox", "vlc", "applications-games", "blinken", "view-left-close", "adjustlevels", "adjustrgb", "cuttlefish"]
     property int i: 0
     BigScreen.ImagePalette {
         id: palette
@@ -35,12 +35,7 @@ RowLayout {
                 palette.update()
             }
         }
-        Controls.Button {
-            text: "Grab"
-            onClicked: {
-                palette.update()
-            }
-        }
+
         Repeater {
             model: palette.palette
             delegate: Rectangle {

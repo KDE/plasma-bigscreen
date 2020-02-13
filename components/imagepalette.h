@@ -24,6 +24,7 @@
 #include <QQuickItem>
 #include <QQuickItemGrabResult>
 #include <QPointer>
+#include <QQuickWindow>
 
 class ImagePalette : public QObject
 {
@@ -53,6 +54,7 @@ private:
         qreal ratio = 0;
     };
 
+    QPointer<QQuickWindow> m_window;
     QPointer<QQuickItem> m_source;
     QSharedPointer<QQuickItemGrabResult> m_grabResult;
     QImage m_sourceImage;

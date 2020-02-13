@@ -20,7 +20,6 @@
 
 #include <QColor>
 #include <QDebug>
-
 #include <cmath>
 
 
@@ -38,8 +37,29 @@ void ImagePalette::setSourceItem(QQuickItem *source)
         return;
     }
 
+    if (m_window) {
+        disconnect(m_window.data(), nullptr, this, nullptr);
+    }
     m_source = source;
     update();
+
+    if (m_source) {
+        auto syncWindow = [this] () {
+            if (m_window) {
+                disconnect(m_window.data(), nullptr, this, nullptr);
+            }
+            m_window = m_source->window();
+            if (m_window) {
+                connect(m_window, &QWindow::visibleChanged,
+                        this, &ImagePalette::update);
+            }
+        };
+
+        connect(m_source, &QQuickItem::windowChanged,
+                this, syncWindow);
+        syncWindow();
+    }
+
     emit sourceItemChanged();
 }
 
@@ -50,22 +70,23 @@ QQuickItem *ImagePalette::sourceItem() const
 
 void ImagePalette::update()
 {
-    if (m_source) {
-        if (m_grabResult) {
-            disconnect(m_grabResult.data(), nullptr, this, nullptr);
+    if (!m_source || !m_window) {
+        return;
+    }
+
+    if (m_grabResult) {
+        disconnect(m_grabResult.data(), nullptr, this, nullptr);
+        m_grabResult.clear();
+    }
+
+    m_grabResult = m_source->grabToImage(QSize(32,32));
+
+    if (m_grabResult) {
+        connect(m_grabResult.data(), &QQuickItemGrabResult::ready, this, [this]() {
+            m_sourceImage = m_grabResult->image();
             m_grabResult.clear();
-        }
-
-
-        m_grabResult = m_source->grabToImage(QSize(32,32));
-
-        if (m_grabResult) {
-            connect(m_grabResult.data(), &QQuickItemGrabResult::ready, this, [this]() {
-                m_sourceImage = m_grabResult->image();
-                m_grabResult.clear();
-                generatePalette();
-            });
-        }
+            generatePalette();
+        });
     }
 }
 
@@ -79,7 +100,7 @@ inline int squareDistance(QRgb color1, QRgb color2)
 void ImagePalette::positionColor(QRgb rgb)
 {
     for (auto &stat : m_clusters) {
-        if (squareDistance(rgb, stat.centroid) < 7000) {
+        if (squareDistance(rgb, stat.centroid) < 8000) {
             stat.colors.append(rgb);
             return;
         }
@@ -108,7 +129,7 @@ void ImagePalette::generatePalette()
         }
     }
 
-    for (int iteration = 0; iteration < 15; ++iteration) {
+    for (int iteration = 0; iteration < 5; ++iteration) {
         for (auto &stat : m_clusters) {
             int r = 0;
             int g = 0;
