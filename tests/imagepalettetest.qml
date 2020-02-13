@@ -5,29 +5,13 @@ import QtQuick.Controls 2.12 as Controls
 import org.kde.kirigami 2.10 as Kirigami
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
-GridView {
+RowLayout {
     id: root
     width: 500
     height: 500
 
-    model: ["desktop", "firefox", "vlc", "blender", "applications-games", "blinken", "view-left-close", "adjustlevels", "adjustrgb", "cuttlefish", "folder-games", "applications-network", "applications-utilities", "multimedia-player", "accessories-dictionary", "calligraflow", "calligrakrita", "calligraauthor"]
+    property var icons: ["desktop", "firefox", "vlc", "blender", "applications-games", "blinken", "view-left-close", "adjustlevels", "adjustrgb", "cuttlefish", "folder-games", "applications-network", "applications-utilities", "multimedia-player", "accessories-dictionary", "calligraflow", "calligrakrita", "calligraauthor"]
 
-    delegate: Rectangle{
-        width: 300
-        height width/1.6
-        color: palette.palette[0].complementary
-        BigScreen.ImagePalette {
-            id: palette
-            sourceItem: icon
-        }
-        Kirigami.Icon {
-            id: icon
-            anchors.centerIn: parent
-            width: 128
-            height: 128
-            source: "desktop"
-        }
-    }
     BigScreen.ImagePalette {
         id: palette
         sourceItem: icon
