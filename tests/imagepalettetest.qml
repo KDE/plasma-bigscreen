@@ -5,13 +5,20 @@ import QtQuick.Controls 2.12 as Controls
 import org.kde.kirigami 2.10 as Kirigami
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
-Item {
+RowLayout {
+    id: root
     width: 500
     height: 500
 
+    property var icons: ["desktop", "firefox", "vlc", "applications-games", "blinken", "view-left-close",  "cuttlefish"]
+    property int i: 0
     BigScreen.ImagePalette {
         id: palette
         sourceItem: icon
+    }
+    BigScreen.ImagePalette {
+        id: imgPalette
+        sourceItem: image
     }
     ColumnLayout {
         Kirigami.Icon {
@@ -21,15 +28,47 @@ Item {
             source: "desktop"
         }
         Controls.Button {
-            text: "grab"
-            onClicked: palette.update()
+            text: "Next"
+            onClicked: {
+                i = (i+1)%icons.length
+                icon.source = icons[i]
+                palette.update()
+            }
+        }
+        Controls.Button {
+            text: "Grab"
+            onClicked: {
+                palette.update()
+            }
         }
         Repeater {
             model: palette.palette
             delegate: Rectangle {
-                implicitWidth: 30
+                implicitWidth: 10 + 300 * modelData.ratio
                 implicitHeight: 30
-                color: modelData
+                color: modelData.color
+            }
+        }
+    }
+    Image {
+        id: image
+        source: "https://source.unsplash.com/random"
+        Layout.preferredWidth: 500
+        Layout.preferredHeight: 500/(sourceSize.width/sourceSize.height)
+        ColumnLayout {
+            Controls.Button {
+                text: "Grab"
+                onClicked: {
+                    imgPalette.update()
+                }
+            }
+            Repeater {
+                model: imgPalette.palette
+                delegate: Rectangle {
+                    implicitWidth: 10 + 300 * modelData.ratio
+                    implicitHeight: 30
+                    color: modelData.color
+                }
             }
         }
     }
