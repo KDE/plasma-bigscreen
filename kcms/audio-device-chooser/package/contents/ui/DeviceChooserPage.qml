@@ -14,10 +14,10 @@ import "views" as Views
 
 FocusScope {
     id: mainFlick
-    anchors.fill: parent
-    anchors.topMargin: units.smallSpacing * 2
-    anchors.rightMargin: units.smallSpacing * 2
-    anchors.bottomMargin: units.smallSpacing * 2
+    anchors {
+        fill: parent
+        margins: units.smallSpacing * 2
+    }
 
     SourceModel {
         id: paSourceModel
@@ -31,12 +31,9 @@ FocusScope {
         id: contentLayout
         anchors.left: parent.left
         anchors.right: parent.right
-        anchors.margins: Kirigami.Units.largeSpacing
-        spacing: Kirigami.Units.largeSpacing
-        property RowLayout currentSection
-        y: currentSection ? -currentSection.y : 10
+        property Item currentSection
+        y: currentSection ? -currentSection.y : 0
         Behavior on y {
-            //Can't be an Animator
             NumberAnimation {
                 duration: Kirigami.Units.longDuration * 2
                 easing.type: Easing.InOutQuad
@@ -44,67 +41,40 @@ FocusScope {
         }
         height: parent.height
 
-        RowLayout {
-            id: rLayoutPlayback
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-
-            Views.RowLabelView {
-                id: rowLbl1
-                text: qsTr("Playback Devices")
-                color: sinkView.activeFocus ? Kirigami.Theme.linkColor : Kirigami.Theme.backgroundColor
-            }
-
-            BigScreen.TileView {
-                id: sinkView
-                model: paSinkModel
-                focus: true
-                x: -currentItem.x + Math.round(rowLbl1.width + Kirigami.Units.gridUnit * 1)
-                currentIndex: 0
-                onActiveFocusChanged: { 
-                    if(activeFocus){ 
-                        contentLayout.currentSection = rLayoutPlayback
-                    }
+        BigScreen.TileView {
+            id: sinkView
+            model: paSinkModel
+            focus: true
+            title: i18n("Playback Devices")
+            currentIndex: 0
+            onActiveFocusChanged: { 
+                if(activeFocus){ 
+                    contentLayout.currentSection = sinkView
                 }
-                delegate: Delegates.AudioDelegate {
-                    isPlayback: true
-                    anchors.verticalCenter: parent.verticalCenter
-                    type: "sink"
-                }
-                navigationDown: sourceView
             }
+            delegate: Delegates.AudioDelegate {
+                isPlayback: true
+                type: "sink"
+            }
+            navigationDown: sourceView
         }
 
-
-        RowLayout{
-            id: rLayoutRecord
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-
-            Views.RowLabelView {
-                id: rowLbl2
-                text: qsTr("Recording Devices")
-                color: sourceView.activeFocus ? Kirigami.Theme.linkColor : Kirigami.Theme.backgroundColor
-            }
-
-            BigScreen.TileView {
-                id: sourceView
-                model: paSourceModel
-                currentIndex: 0
-                x: -currentItem.x + Math.round(rowLbl2.width + Kirigami.Units.gridUnit * 1)
-                onActiveFocusChanged: {
-                    if(activeFocus){
-                        contentLayout.currentSection = rLayoutRecord
-                    }
+        BigScreen.TileView {
+            id: sourceView
+            model: paSourceModel
+            title: i18n("Recording Devices")
+            currentIndex: 0
+            focus: false
+            onActiveFocusChanged: {
+                if(activeFocus){
+                    contentLayout.currentSection = sourceView
                 }
-                delegate: Delegates.AudioDelegate {
-                    isPlayback: false
-                    anchors.verticalCenter: parent.verticalCenter
-                    type: "source"
-                }
-                navigationUp: sinkView
             }
-
+            delegate: Delegates.AudioDelegate {
+                isPlayback: false
+                type: "source"
+            }
+            navigationUp: sinkView
         }
 
         Component.onCompleted: {
