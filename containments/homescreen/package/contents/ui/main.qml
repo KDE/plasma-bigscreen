@@ -84,11 +84,37 @@ Item {
         id: mycroftWindow
     }
 
+    LinearGradient {
+        anchors {
+            top: parent.top
+            bottom: parent.bottom
+        }
+        x: root.Window.active ? 0 : -width
+        Behavior on x {
+            XAnimator {
+                duration: units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
+        width: units.gridUnit * 15
+        start: Qt.point(0, 0)
+        end: Qt.point(width, 0)
+        gradient: Gradient {
+            GradientStop {
+                position: 0.0
+                color: Qt.rgba(0, 0, 0, 0.6)
+            }
+            GradientStop {
+                position: 1.0
+                color:  "transparent"
+            }
+        }
+    }
+
     PlasmaCore.ColorScope {
         id: topBar
         anchors {
             left: parent.left
-            top: parent.top
             right: parent.right
         }
         colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
@@ -96,6 +122,13 @@ Item {
         height: units.iconSizes.medium + units.smallSpacing * 2
         opacity: root.Window.active
 
+        y: root.Window.active ? 0 : -height
+        Behavior on y {
+            YAnimator {
+                duration: units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
         Behavior on opacity {
             OpacityAnimator {
                 duration: units.longDuration
@@ -103,6 +136,10 @@ Item {
             }
         }
 
+        Rectangle {
+            anchors.fill: parent
+            color: PlasmaCore.ColorScope.backgroundColor
+        }
         RowLayout {
             id: appletsLayout
             anchors {
@@ -152,12 +189,36 @@ Item {
             }
         }
 
-        layer.enabled: true
-        layer.effect: DropShadow {
-            verticalOffset: 2
-            color: Qt.rgba(0, 0, 0, 0.6)
-            radius: 8.0
-            samples: 17
+        LinearGradient {
+            property int radius: units.gridUnit
+            implicitWidth: radius
+            implicitHeight: radius
+            anchors {
+                left: parent.left
+                right: parent.right
+                top: parent.bottom
+            }
+
+            start: Qt.point(0, 0)
+            end: Qt.point(0, height)
+            gradient: Gradient {
+                GradientStop {
+                    position: 0.0
+                    color: Qt.rgba(0, 0, 0, 0.25)
+                }
+                GradientStop {
+                    position: 0.20
+                    color: Qt.rgba(0, 0, 0, 0.1)
+                }
+                GradientStop {
+                    position: 0.35
+                    color: Qt.rgba(0, 0, 0, 0.02)
+                }
+                GradientStop {
+                    position: 1.0
+                    color:  "transparent"
+                }
+            }
         }
     }
 
