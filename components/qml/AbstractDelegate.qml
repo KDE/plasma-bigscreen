@@ -28,12 +28,14 @@ import org.kde.kirigami 2.11 as Kirigami
 PlasmaComponents.ItemDelegate {
     id: delegate
 
-    implicitWidth: listView.cellWidth
+    implicitWidth: isCurrent ? listView.cellWidth * 2 : listView.cellWidth
     implicitHeight: listView.height
 
     readonly property ListView listView: ListView.view
+    readonly property bool isCurrent: listView.currentIndex == index && activeFocus
+    property string comment
 
-    z: listView.currentIndex == index ? 2 : 0
+    z: isCurrent ? 2 : 0
     onClicked: {
         listView.forceActiveFocus()
         console.log(index)
@@ -41,10 +43,17 @@ PlasmaComponents.ItemDelegate {
         console.log(listView.currentIndex)
     }
 
-    leftPadding: frame.margins.left + background.extraMargin
-    topPadding: frame.margins.top + background.extraMargin
-    rightPadding: frame.margins.right + background.extraMargin
-    bottomPadding: frame.margins.bottom + background.extraMargin
+    leftPadding: units.largeSpacing*2
+    topPadding: units.largeSpacing*2
+    rightPadding: units.largeSpacing*2
+    bottomPadding: units.largeSpacing*2
+
+    Behavior on implicitWidth {
+        NumberAnimation {
+            duration: Kirigami.Units.longDuration
+            easing.type: Easing.InOutQuad
+        }
+    }
 
     Keys.onReturnPressed: {
         clicked();
@@ -52,13 +61,6 @@ PlasmaComponents.ItemDelegate {
 
     background: Item {
         id: background
-        property real extraMargin:  Math.round(listView.currentIndex == index && delegate.activeFocus ? -units.gridUnit/2 : units.gridUnit/2)
-        Behavior on extraMargin {
-            NumberAnimation {
-                duration: Kirigami.Units.longDuration
-                easing.type: Easing.InOutQuad
-            }
-        }
 
         PlasmaCore.FrameSvgItem {
             anchors {
@@ -68,45 +70,98 @@ PlasmaComponents.ItemDelegate {
                 rightMargin: -margins.right
                 bottomMargin: -margins.bottom
             }
-            imagePath: "dialogs/background"
+            imagePath: Qt.resolvedUrl("./background.svg")
             prefix: "shadow"
         }
-        PlasmaCore.FrameSvgItem {
+        Rectangle {
             id: frame
             anchors {
                 fill: parent
-                margins: background.extraMargin
+                margins: units.largeSpacing
             }
-            imagePath: "dialogs/background"
-            
-            width: listView.currentIndex == index && delegate.activeFocus ? parent.width : parent.width - units.gridUnit
-            height: listView.currentIndex == index && delegate.activeFocus ? parent.height : parent.height - units.gridUnit
-            opacity: 0.8
+            radius: units.gridUnit/5
+            color: delegate.isCurrent ? theme.highlightColor : theme.backgroundColor
+            Behavior on color {
+                ColorAnimation {
+                    duration: Kirigami.Units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
+            Rectangle {
+                anchors {
+                    fill: parent
+                    margins: units.smallSpacing
+                }
+                radius: units.gridUnit/5
+                color: theme.backgroundColor
+            }
         }
     }
     
-    contentItem: ColumnLayout {
-        spacing: 0
+    contentItem: Item {
+        id: content
         PlasmaCore.IconItem {
             id: icon
-            Layout.fillWidth: true
-            Layout.fillHeight: true
+            width: listView.cellWidth - delegate.leftPadding - (delegate.isCurrent ? 0 : delegate.rightPadding)
+            height: width
             source: delegate.icon.name || delegate.icon.source
+            Behavior on width {
+                NumberAnimation {
+                    duration: Kirigami.Units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
         }
 
-        PlasmaComponents.Label {
-            id: label
-            visible: text.length > 0
-    
-            Layout.fillWidth: true
-            Layout.preferredHeight: root.reservedSpaceForLabel
-            wrapMode: Text.WordWrap
-            horizontalAlignment: Text.AlignHCenter
-            maximumLineCount: 2
-            elide: Text.ElideRight
-            color: PlasmaCore.ColorScope.textColor
+        ColumnLayout {
+            width: listView.cellWidth - delegate.leftPadding -  delegate.rightPadding
+            anchors.right: parent.right
+            y: delegate.isCurrent ? content.height/2 - height/2 : content.height - label.height
+            Behavior on x {
+                XAnimator {
+                    duration: Kirigami.Units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
+            Behavior on y {
+                YAnimator {
+                    duration: Kirigami.Units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
 
-            text: delegate.text
+            PlasmaComponents.Label {
+                id: label
+                visible: text.length > 0
+                Layout.fillWidth: true
+
+                wrapMode: Text.WordWrap
+                horizontalAlignment: Text.AlignHCenter
+                maximumLineCount: 2
+                elide: Text.ElideRight
+                //color: PlasmaCore.ColorScope.textColor
+
+                text: delegate.text
+            }
+            PlasmaComponents.Label {
+                visible: text.length > 0
+                Layout.fillWidth: true
+
+                opacity: delegate.isCurrent
+                Behavior on opacity {
+                    OpacityAnimator {
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                }
+                wrapMode: Text.WordWrap
+                horizontalAlignment: Text.AlignHCenter
+                maximumLineCount: 2
+                elide: Text.ElideRight
+                //color: PlasmaCore.ColorScope.textColor
+
+                text: delegate.comment
+            }
         }
     }
 }

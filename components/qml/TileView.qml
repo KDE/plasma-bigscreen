@@ -22,6 +22,7 @@ import QtQuick.Window 2.2
 import QtQuick.Controls 2.4 as Controls
 import QtGraphicalEffects 1.12
 
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami 2.5 as Kirigami
 
@@ -39,7 +40,7 @@ FocusScope {
     implicitHeight: view.implicitHeight + header.implicitHeight
 
     //TODO:dynamic
-    property int columns: Math.max(3, Math.floor(width / (units.gridUnit * 15)))
+    property int columns: Math.max(3, Math.floor(width / (units.gridUnit * 8)))
 
     property alias cellWidth: view.cellWidth
     readonly property real screenRatio: view.Window.window ? view.Window.window.width / view.Window.window.height : 1.6
@@ -57,6 +58,7 @@ FocusScope {
         }
         text: title
         layer.enabled: true
+        color: Plasmacore.ColorScope.textColor
         layer.effect: DropShadow {
             horizontalOffset: 0
             verticalOffset: 2
@@ -79,15 +81,15 @@ FocusScope {
         z: activeFocus ? 10: 1
         keyNavigationEnabled: true
         //Centering disabled as experiment
-        //highlightRangeMode: ListView.ApplyRange
+        highlightRangeMode: ListView.ApplyRange
         highlightFollowsCurrentItem: true
         snapMode: ListView.SnapToItem
         cacheBuffer: width
-        implicitHeight: Math.floor(cellWidth/screenRatio)
-
+        implicitHeight: cellWidth + units.gridUnit * 3
+        rightMargin: width
         readonly property int cellWidth: Math.floor(width / columns)
-        //preferredHighlightBegin: width/view.columns
-        //preferredHighlightEnd: width/view.columns * 2
+        preferredHighlightBegin: cellWidth
+        preferredHighlightEnd: cellWidth
 
         displayMarginBeginning: rotation.angle != 0 ? width*2 : 0
         displayMarginEnd: rotation.angle != 0 ? width*2 : 0

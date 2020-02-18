@@ -29,6 +29,7 @@ class QString;
 
 struct ApplicationData {
     QString name;
+    QString comment;
     QString icon;
     QString storageId;
     QString entryPath;
@@ -60,6 +61,7 @@ public:
 
     enum Roles {
         ApplicationNameRole = Qt::UserRole + 1,
+        ApplicationCommentRole,
         ApplicationIconRole,
         ApplicationStorageIdRole,
         ApplicationEntryPathRole,

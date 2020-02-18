@@ -52,6 +52,7 @@ QHash<int, QByteArray> ApplicationListModel::roleNames() const
 {
     QHash<int, QByteArray> roleNames;
     roleNames[ApplicationNameRole] = "ApplicationNameRole";
+    roleNames[ApplicationCommentRole] = "ApplicationCommentRole";
     roleNames[ApplicationIconRole] = "ApplicationIconRole";
     roleNames[ApplicationStorageIdRole] = "ApplicationStorageIdRole";
     roleNames[ApplicationEntryPathRole] = "ApplicationEntryPathRole";
@@ -138,6 +139,7 @@ void ApplicationListModel::loadApplications()
 
                             ApplicationData data;
                             data.name = service->name();
+                            data.comment = service->comment();
                             data.icon = service->icon();
                             data.storageId = service->storageId();
                             data.entryPath = service->exec();
@@ -179,6 +181,8 @@ QVariant ApplicationListModel::data(const QModelIndex &index, int role) const
     case Qt::DisplayRole:
     case ApplicationNameRole:
         return m_applicationList.at(index.row()).name;
+    case ApplicationCommentRole:
+        return m_applicationList.at(index.row()).comment;
     case ApplicationIconRole:
         return m_applicationList.at(index.row()).icon;
     case ApplicationStorageIdRole:

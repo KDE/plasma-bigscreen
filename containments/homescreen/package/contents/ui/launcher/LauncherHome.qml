@@ -82,6 +82,7 @@ FocusScope {
             onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = gridView2
             delegate: Delegates.AppDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
+                comment: model.ApplicationCommentRole
             }
             
             navigationUp: gridView
