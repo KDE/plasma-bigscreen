@@ -51,7 +51,6 @@ RowLayout {
                 implicitWidth: 10 + 300 * modelData.ratio
                 implicitHeight: 30
                 color: modelData.color
-                Text{text:modelData.distance}
             }
         }
     }

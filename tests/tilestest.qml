@@ -33,6 +33,12 @@ Image {
                 BigScreen.ImagePalette {
                     id: palette
                     sourceItem: icon
+                    readonly property bool inView: view.height - delegate.y - icon.y < view.contentY
+                    onInViewChanged: {
+                        if (inView) {
+                            palette.update();
+                        }
+                    }
                 }
                 RowLayout {
                     anchors.fill: parent

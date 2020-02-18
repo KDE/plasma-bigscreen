@@ -30,14 +30,24 @@ import Mycroft 1.0 as Mycroft
 
 import "launcher"
 import "indicators" as Indicators
+import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
 Item {
     id: root
     Layout.minimumWidth: Screen.desktopAvailableWidth
     Layout.minimumHeight: Screen.desktopAvailableHeight * 0.6
 
-
     property Item wallpaper
+    Controls.CheckBox {
+        z: 999
+        anchors {
+            top: topBar.bottom
+            right: parent.right
+        }
+        text: "Use Colored Tiles"
+        checked: BigScreen.Hack.coloredTiles
+        onCheckedChanged: BigScreen.Hack.coloredTiles = checked
+    }
 
     Containment.onAppletAdded: {
         addApplet(applet, x, y);
@@ -158,6 +168,70 @@ Item {
                 margins: units.smallSpacing
             }
 
+            Kirigami.Heading {
+                id: inputQuery
+                Kirigami.Theme.colorSet: mainView.Kirigami.Theme.colorSet
+                level: 3
+                opacity: 0
+                onTextChanged: {
+                    opacity = 1;
+                    utteranceTimer.restart();
+                }
+                Timer {
+                    id: utteranceTimer
+                    interval: 8000
+                    onTriggered: {
+                        inputQuery.text = "";
+                        inputQuery.opacity = 0
+                    }
+                }
+                Behavior on opacity {
+                    OpacityAnimator {
+                        duration: Kirigami.units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                }
+
+                Connections {
+                    target: Mycroft.MycroftController
+                    onIntentRecevied: {
+                        if(type == "recognizer_loop:utterance") {
+                            inputQuery.text = data.utterances[0]
+                        }
+                    }
+                    onServerReadyChanged: {
+                        if (Mycroft.MycroftController.serverReady) {
+                            inputQuery.text = "";
+                        } else {
+                            inputQuery.text = i18n("Not Ready");
+                            utteranceTimer.running = false;
+                        }
+                    }
+                    onStatusChanged: {
+                        switch (Mycroft.MycroftController.status) {
+                        case Mycroft.MycroftController.Connecting:
+                        case Mycroft.MycroftController.Error:
+                        case Mycroft.MycroftController.Stopped:
+                            inputQuery.text = i18n("Not Ready");
+                            utteranceTimer.running = false;
+                            break;
+                        default:
+                            if (Mycroft.MycroftController.serverReady) {
+                                inputQuery.text = "";
+                            }
+                            break;
+                        }
+
+                    }
+                }
+            }
+            Mycroft.StatusIndicator {
+                id: si
+                z: 2
+                visible: !mycroftWindow.visible
+                Layout.preferredWidth: height
+                Layout.fillHeight: true
+            }
             Indicators.Volume {
                 id: volumeIndicator
                 Layout.fillHeight: true
@@ -261,78 +335,5 @@ Item {
                 }
             }
         ]
-    }
-
-    Mycroft.StatusIndicator {
-        id: si
-        z: 2
-        visible: !mycroftWindow.visible
-        anchors {
-            right: parent.right
-            top: parent.top
-            margins: Kirigami.Units.largeSpacing
-            topMargin: Kirigami.Units.largeSpacing * 3 + plasmoid.availableScreenRect.y
-        }
-    }
-
-    Kirigami.Heading {
-        id: inputQuery
-        Kirigami.Theme.colorSet: mainView.Kirigami.Theme.colorSet
-        anchors.right: si.left
-        anchors.rightMargin: Kirigami.Units.largeSpacing
-        anchors.verticalCenter: si.verticalCenter
-        level: 3
-        opacity: 0
-        onTextChanged: {
-            opacity = 1;
-            utteranceTimer.restart();
-        }
-        Timer {
-            id: utteranceTimer
-            interval: 8000
-            onTriggered: {
-                inputQuery.text = "";
-                inputQuery.opacity = 0
-            }
-        }
-        Behavior on opacity {
-            OpacityAnimator {
-                duration: Kirigami.units.longDuration
-                easing.type: Easing.InOutQuad
-            }
-        }
-
-        Connections {
-            target: Mycroft.MycroftController
-            onIntentRecevied: {
-                if(type == "recognizer_loop:utterance") {
-                    inputQuery.text = data.utterances[0]
-                }
-            }
-            onServerReadyChanged: {
-                if (Mycroft.MycroftController.serverReady) {
-                    inputQuery.text = "";
-                } else {
-                    inputQuery.text = i18n("Not Ready");
-                    utteranceTimer.running = false;
-                }
-            }
-            onStatusChanged: {
-                switch (Mycroft.MycroftController.status) {
-                case Mycroft.MycroftController.Connecting:
-                case Mycroft.MycroftController.Error:
-                case Mycroft.MycroftController.Stopped:
-                    inputQuery.text = i18n("Not Ready");
-                    utteranceTimer.running = false;
-                    break;
-                default:
-                    if (Mycroft.MycroftController.serverReady) {
-                        inputQuery.text = "";
-                    }
-                    break;
-                }
-
-            }
-        }
     }
 }

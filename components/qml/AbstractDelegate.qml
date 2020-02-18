@@ -24,6 +24,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami 2.11 as Kirigami
+import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
 PlasmaComponents.ItemDelegate {
     id: delegate
@@ -59,6 +60,23 @@ PlasmaComponents.ItemDelegate {
         clicked();
     }
 
+    BigScreen.ImagePalette {
+        id: imagePalette
+        sourceItem: icon
+        property bool useColors: BigScreen.Hack.coloredTiles
+        property color backgroundColor: useColors ? suggestedContrast : PlasmaCore.ColorScope.backgroundColor
+        property color accentColor: useColors ? mostSaturated : PlasmaCore.ColorScope.highlightColor
+        property color textColor: useColors
+            ? (0.2126 * suggestedContrast.r + 0.7152 * suggestedContrast.g + 0.0722 * suggestedContrast.b > 0.6 ? Qt.rgba(0.2,0.2,0.2,1) : Qt.rgba(0.9,0.9,0.9,1))
+            : PlasmaCore.ColorScope.textColor
+
+        readonly property bool inView: listView.width - delegate.x - icon.x < listView.contentX
+        onInViewChanged: {
+            if (inView) {
+                imagePalette.update();
+            }
+        }
+    }
     background: Item {
         id: background
 
@@ -80,7 +98,7 @@ PlasmaComponents.ItemDelegate {
                 margins: units.largeSpacing
             }
             radius: units.gridUnit/5
-            color: delegate.isCurrent ? theme.highlightColor : theme.backgroundColor
+            color: delegate.isCurrent ? imagePalette.accentColor : imagePalette.backgroundColor
             Behavior on color {
                 ColorAnimation {
                     duration: Kirigami.Units.longDuration
@@ -93,7 +111,7 @@ PlasmaComponents.ItemDelegate {
                     margins: units.smallSpacing
                 }
                 radius: units.gridUnit/5
-                color: theme.backgroundColor
+                color: imagePalette.backgroundColor
             }
         }
     }
@@ -139,7 +157,7 @@ PlasmaComponents.ItemDelegate {
                 horizontalAlignment: Text.AlignHCenter
                 maximumLineCount: 2
                 elide: Text.ElideRight
-                //color: PlasmaCore.ColorScope.textColor
+                color: imagePalette.textColor
 
                 text: delegate.text
             }
@@ -158,7 +176,7 @@ PlasmaComponents.ItemDelegate {
                 horizontalAlignment: Text.AlignHCenter
                 maximumLineCount: 2
                 elide: Text.ElideRight
-                //color: PlasmaCore.ColorScope.textColor
+                color: imagePalette.textColor
 
                 text: delegate.comment
             }

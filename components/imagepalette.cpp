@@ -40,8 +40,13 @@ void ImagePalette::setSourceItem(QQuickItem *source)
     if (m_window) {
         disconnect(m_window.data(), nullptr, this, nullptr);
     }
+    if (m_source) {
+        disconnect(m_source, nullptr, this, nullptr);
+        m_source->removeEventFilter(this);
+    }
     m_source = source;
     update();
+    m_source->installEventFilter(this);
 
     if (m_source) {
         auto syncWindow = [this] () {
@@ -66,6 +71,12 @@ void ImagePalette::setSourceItem(QQuickItem *source)
 QQuickItem *ImagePalette::sourceItem() const
 {
     return m_source;
+}
+
+bool ImagePalette::eventFilter(QObject *watched, QEvent *event)
+{
+    qWarning()<<event;
+    return QObject::eventFilter(watched, event);
 }
 
 void ImagePalette::update()
@@ -214,8 +225,8 @@ void ImagePalette::generatePalette()
         entry["color"] = color;
         entry["ratio"] = stat.ratio;
 
-        const int distance = squareDistance(m_suggestedContrast.rgb(), stat.centroid);qWarning()<<distance;
-    entry["distance"] = distance;
+        const int distance = squareDistance(m_suggestedContrast.rgb(), stat.centroid);
+
         if (distance < minimumDistance) {
             tempContrast = QColor(stat.centroid);
             minimumDistance = distance;

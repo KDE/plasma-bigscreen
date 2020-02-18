@@ -60,6 +60,9 @@ Q_SIGNALS:
     void closestToBlackChanged();
     void closestToWhiteChanged();
 
+protected:
+    bool eventFilter(QObject *watched, QEvent *event) override;
+
 private:
     inline void positionColor(QRgb rgb);
     void generatePalette();
