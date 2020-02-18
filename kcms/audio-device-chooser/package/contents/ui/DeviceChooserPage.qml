@@ -56,7 +56,7 @@ FocusScope {
                 isPlayback: true
                 type: "sink"
             }
-            navigationDown: sourceView
+            navigationDown: sourceView.visible ? sourceView : kcmcloseButton
         }
 
         BigScreen.TileView {
@@ -65,6 +65,7 @@ FocusScope {
             title: i18n("Recording Devices")
             currentIndex: 0
             focus: false
+            visible: sourceView.view.count > 0 ? 1 : 0 
             onActiveFocusChanged: {
                 if(activeFocus){
                     contentLayout.currentSection = sourceView
@@ -75,6 +76,7 @@ FocusScope {
                 type: "source"
             }
             navigationUp: sinkView
+            navigationDown: kcmcloseButton
         }
 
         Component.onCompleted: {

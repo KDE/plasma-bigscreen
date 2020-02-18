@@ -41,8 +41,43 @@ KCM.SimpleKCM {
     Component.onCompleted: {
         root.activateDeviceView
     }
+    
+    footer: Button {
+        id: kcmcloseButton
+        anchors.left: parent.left
+        anchors.right: parent.right
+        
+        background: Rectangle {
+            color: kcmcloseButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
+        }
+        
+        contentItem: Item {
+            RowLayout {
+                anchors.centerIn: parent
+                Kirigami.Icon {
+                    Layout.preferredWidth: Kirigami.Units.iconSizes.small
+                    Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                    source: "window-close"
+                }
+                Label {
+                    text: i18n("Exit")
+                }
+            }
+        } 
 
-    DeviceChooserPage {
+        Keys.onUpPressed: root.activateDeviceView()
+        
+        onClicked: {
+            Window.window.close()
+        }
+        
+        Keys.onReturnPressed: {
+            Window.window.close()
+        }
+    }
+
+    contentItem: DeviceChooserPage {
+        id: deviceChooserView
     }
 }
 
