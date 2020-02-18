@@ -10,7 +10,7 @@ RowLayout {
     width: 500
     height: 500
 
-    property var icons: ["desktop", "firefox", "vlc", "blender", "applications-games", "blinken", "view-left-close", "adjustlevels", "adjustrgb", "cuttlefish", "folder-games", "applications-network", "applications-utilities", "multimedia-player", "accessories-dictionary", "calligraflow", "calligrakrita", "calligraauthor"]
+    property var icons: ["desktop", "firefox", "vlc", "blender", "applications-games", "blinken", "adjustlevels", "adjustrgb", "cuttlefish", "folder-games", "applications-network", "multimedia-player", "applications-utilities", "accessories-dictionary", "calligraflow", "calligrakrita", "view-left-close","calligraauthor"]
     property int i
 
     BigScreen.ImagePalette {
@@ -27,12 +27,12 @@ RowLayout {
             Layout.preferredWidth: 200
             Layout.preferredHeight: 200
             z: -1
-            color: palette.palette[0].complementary
+            color: palette.suggestedContrast
             Kirigami.Icon {
                 id: icon
                 anchors.centerIn: parent
-                width: 128
-                height: 128
+                width: 120
+                height: 120
                 source: "desktop"
             }
         }
@@ -47,21 +47,11 @@ RowLayout {
 
         Repeater {
             model: palette.palette
-            delegate: RowLayout {
-                Layout.fillWidth: true
-                Rectangle {
-                    implicitWidth: 10 + 300 * modelData.ratio
-                    implicitHeight: 30
-                    color: modelData.color
-                }
-                Item {
-                    Layout.fillWidth: true
-                }
-                Rectangle {
-                    implicitWidth: 30
-                    implicitHeight: 30
-                    color: modelData.complementary
-                }
+            delegate: Rectangle {
+                implicitWidth: 10 + 300 * modelData.ratio
+                implicitHeight: 30
+                color: modelData.color
+                Text{text:modelData.distance}
             }
         }
     }

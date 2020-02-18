@@ -198,9 +198,13 @@ void ImagePalette::generatePalette()
 
     m_mostSaturated = QColor();
     m_dominant = QColor(m_clusters.first().centroid);
-    m_suggestedContrast = QColor (255 - m_dominant.red(), 255 - m_dominant.green(), 255 - m_dominant.blue());
+    m_suggestedContrast = QColor(255 - m_dominant.red(), 255 - m_dominant.green(), 255 - m_dominant.blue());
+    m_suggestedContrast.setHsl(m_suggestedContrast.hslHue(),
+                               m_suggestedContrast.hslSaturation(),
+                               128 + (128 - m_suggestedContrast.lightness()));
     m_closestToBlack = Qt::white;
     m_closestToWhite = Qt::black;
+    int minimumDistance = 4681800; //max distance: 4*3*2*3*255*255
 
     QColor tempContrast;
     m_palette.clear();
@@ -209,16 +213,12 @@ void ImagePalette::generatePalette()
         const QColor color(stat.centroid);
         entry["color"] = color;
         entry["ratio"] = stat.ratio;
-        QColor complementary(255 - qRed(stat.centroid), 255 - qGreen(stat.centroid), 255 - qBlue(stat.centroid));
-        entry["complementary"] = complementary;
-        for (const auto &stat : m_clusters) {
-            if (squareDistance(complementary.rgb(), stat.centroid) < s_minimumSquareDistance) {
-                entry["complementary"] = QColor(stat.centroid);
-                break;
-            }
-        }
-        if (squareDistance(m_suggestedContrast.rgb(), stat.centroid) < s_minimumSquareDistance) {
+
+        const int distance = squareDistance(m_suggestedContrast.rgb(), stat.centroid);qWarning()<<distance;
+    entry["distance"] = distance;
+        if (distance < minimumDistance) {
             tempContrast = QColor(stat.centroid);
+            minimumDistance = distance;
         }
         if (color.saturation() + (158-qAbs(158-color.value())) > m_mostSaturated.saturation() + (158-qAbs(158-m_mostSaturated.value()))) {
             m_mostSaturated = color;
@@ -232,10 +232,22 @@ void ImagePalette::generatePalette()
         m_palette << entry;
     }
 
-    if (tempContrast.isValid()) {
+    // TODO: replace m_clusters.size() > 3 with entropy calculation
+    if (m_clusters.size() > 3 && squareDistance(m_suggestedContrast.rgb(), tempContrast.rgb()) < s_minimumSquareDistance * 1.5) {
         m_suggestedContrast = tempContrast;
+    } else if (m_clusters.size() > 2) {
+        m_suggestedContrast = QColor(m_clusters[1].centroid);
+    } else if (m_clusters.size() > 1) {
+        m_suggestedContrast = QColor(m_clusters[1].centroid);
+        m_suggestedContrast.setHsl(m_suggestedContrast.hslHue(),
+                               m_suggestedContrast.hslSaturation(),
+                               m_suggestedContrast.lightness() > 128
+                                  ? m_suggestedContrast.lightness()+20
+                                  : m_suggestedContrast.lightness()-20);
+    } else if (qGray(m_dominant.rgb()) < 120) {
+        m_suggestedContrast = QColor(230, 230, 230);
     } else {
-        m_suggestedContrast = QColor(m_clusters.last().centroid);
+        m_suggestedContrast = QColor(20, 20, 20);
     }
     
     emit paletteChanged();

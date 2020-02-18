@@ -70,7 +70,8 @@ private:
         qreal ratio = 0;
     };
 
-    const int s_minimumSquareDistance = 22000;
+    // Arbitrary number that seems to work well
+    const int s_minimumSquareDistance = 32000;
     QPointer<QQuickWindow> m_window;
     QPointer<QQuickItem> m_source;
     QSharedPointer<QQuickItemGrabResult> m_grabResult;
