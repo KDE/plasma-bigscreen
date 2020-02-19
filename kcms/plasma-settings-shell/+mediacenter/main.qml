@@ -87,12 +87,4 @@ Kirigami.ApplicationWindow {
 
         KCMContainer {}
     }
-
-    MC.VirtualKeyboardLoader {
-        id: virtualKeyboard
-        parent: rootItem.overlay
-        z: 1000
-        width: parent.width/2
-        height: parent.height/3
-    }
 }
