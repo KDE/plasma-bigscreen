@@ -24,6 +24,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents2
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami 2.11 as Kirigami
+import org.kde.mycroft.bigscreen 1.0 as BigScreen
 import QtGraphicalEffects 1.0
 import org.kde.plasma.networkmanagement 0.2 as PlasmaNM
 
@@ -39,27 +40,47 @@ PlasmaComponents.ItemDelegate {
 
     checked: connectionView.currentIndex === index && connectionView.activeFocus
 
-    implicitWidth: listView.cellWidth
+    implicitWidth: isCurrent ? listView.cellWidth * 2 : listView.cellWidth
     implicitHeight: listView.height + Kirigami.Units.largeSpacing
 
     readonly property ListView listView: ListView.view
+    readonly property bool isCurrent: listView.currentIndex == index && activeFocus
 
-    z: listView.currentIndex == index ? 2 : 0
+    z: isCurrent ? 2 : 0
 
-    leftPadding: frame.margins.left + background.extraMargin
-    topPadding: frame.margins.top + background.extraMargin
-    rightPadding: frame.margins.right + background.extraMargin
-    bottomPadding: frame.margins.bottom + background.extraMargin
+    leftPadding: Kirigami.Units.largeSpacing * 3
+    topPadding: Kirigami.Units.largeSpacing * 3
+    rightPadding: Kirigami.Units.largeSpacing * 3
+    bottomPadding: Kirigami.Units.largeSpacing * 3
+    
+    Behavior on implicitWidth {
+        NumberAnimation {
+            duration: Kirigami.Units.longDuration
+            easing.type: Easing.InOutQuad
+        }
+    }
+
+    
+     BigScreen.ImagePalette {
+        id: imagePalette
+        sourceItem: connectionSvgIcon
+        property bool useColors: BigScreen.Hack.coloredTiles
+        property color backgroundColor: useColors ? suggestedContrast : PlasmaCore.ColorScope.backgroundColor
+        property color accentColor: useColors ? mostSaturated : PlasmaCore.ColorScope.highlightColor
+        property color textColor: useColors
+            ? (0.2126 * suggestedContrast.r + 0.7152 * suggestedContrast.g + 0.0722 * suggestedContrast.b > 0.6 ? Qt.rgba(0.2,0.2,0.2,1) : Qt.rgba(0.9,0.9,0.9,1))
+            : PlasmaCore.ColorScope.textColor
+
+        readonly property bool inView: listView.width - delegate.x - connectionSvgIcon.x < listView.contentX
+        onInViewChanged: {
+            if (inView) {
+                imagePalette.update();
+            }
+        }
+    }
     
     background: Item {
         id: background
-        property real extraMargin:  Math.round(listView.currentIndex == index && delegate.activeFocus ? -units.gridUnit/2 : units.gridUnit/2)
-        Behavior on extraMargin {
-            NumberAnimation {
-                duration: Kirigami.Units.longDuration
-                easing.type: Easing.InOutQuad
-            }
-        }
 
         PlasmaCore.FrameSvgItem {
             anchors {
@@ -69,63 +90,84 @@ PlasmaComponents.ItemDelegate {
                 rightMargin: -margins.right
                 bottomMargin: -margins.bottom
             }
-            imagePath: "dialogs/background"
+            imagePath: Qt.resolvedUrl("./background.svg")
             prefix: "shadow"
         }
-        PlasmaCore.FrameSvgItem {
+        Rectangle {
             id: frame
             anchors {
                 fill: parent
-                margins: background.extraMargin
+                margins: Kirigami.Units.largeSpacing
             }
-            imagePath: "dialogs/background"
-            
-            width: listView.currentIndex == index && delegate.activeFocus ? parent.width : parent.width - units.gridUnit
-            height: listView.currentIndex == index && delegate.activeFocus ? parent.height : parent.height - units.gridUnit
-            opacity: 0.8
+            radius: Kirigami.Units.gridUnit / 5
+            color: delegate.isCurrent ? imagePalette.accentColor : imagePalette.backgroundColor
+            Behavior on color {
+                ColorAnimation {
+                    duration: Kirigami.Units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
+            Rectangle {
+                anchors {
+                    fill: parent
+                    margins: Kirigami.Units.smallSpacing
+                }
+                radius: Kirigami.Units.gridUnit / 5
+                color: imagePalette.backgroundColor
+            }
         }
     }
 
-    contentItem: ColumnLayout {
+    contentItem: Item {
         id: connectionItemLayout
-        anchors {
-            left: parent.left;
-            top: parent.top;
-            right: parent.right;
-        }
-            
-        ColumnLayout {
-            Layout.fillWidth: true
-            spacing: Math.round(units.gridUnit / 2)
-            Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
-                        
-            Kirigami.Icon {
-                id: connectionSvgIcon
-                Layout.topMargin: Kirigami.Units.largeSpacing
-                Layout.preferredWidth: Kirigami.Units.iconSizes.huge
-                Layout.preferredHeight: width
-                Layout.alignment: Qt.AlignHCenter
-                source: itemSignalIcon(model.Signal)
+        
+        PlasmaCore.IconItem {
+            id: connectionSvgIcon
+            width: listView.cellWidth - delegate.leftPadding - (delegate.isCurrent ? 0 : delegate.rightPadding)
+            height: isCurrent ? width : width - Kirigami.Units.largeSpacing * 4
+            source: itemSignalIcon(model.Signal)
+            Behavior on width {
+                NumberAnimation {
+                    duration: Kirigami.Units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
             }
+        }
+                    
+        ColumnLayout {
+            width: listView.cellWidth - delegate.leftPadding -  delegate.rightPadding
+            anchors.right: parent.right
+            y: delegate.isCurrent ? connectionItemLayout.height / 2 - height / 2 : connectionItemLayout.height - (connectionNameLabel.height + connectionStatusLabel.height + Kirigami.Units.largeSpacing)
 
             Kirigami.Heading {
                 id: connectionNameLabel
-                Layout.alignment: Qt.AlignHCenter
+                Layout.fillWidth: true
+                visible: text.length > 0
                 level: 2
                 elide: Text.ElideRight
+                wrapMode: Text.Wrap
+                horizontalAlignment: Text.AlignHCenter
                 font.weight: model.ConnectionState == PlasmaNM.Enums.Activated ? Font.DemiBold : Font.Normal
                 font.italic: model.ConnectionState == PlasmaNM.Enums.Activating ? true : false
                 text: model.ItemUniqueName
+                maximumLineCount: 2
+                color: imagePalette.textColor
                 textFormat: Text.PlainText
             }
 
             Kirigami.Heading {
                 id: connectionStatusLabel
-                Layout.alignment: Qt.AlignHCenter
                 level: 3
                 elide: Text.ElideRight
+                Layout.fillWidth: true
+                visible: text.length > 0
+                maximumLineCount: 2
+                wrapMode: Text.WordWrap
+                horizontalAlignment: Text.AlignHCenter
                 opacity: 0.6
                 text: itemText()
+                color: imagePalette.textColor
+                textFormat: Text.PlainText
             }
         }
     }
