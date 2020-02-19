@@ -16,7 +16,7 @@ FocusScope {
     id: mainFlick
     anchors {
         fill: parent
-        margins: units.smallSpacing * 2
+        margins: Kirigami.Units.smallSpacing * 2
     }
 
     SourceModel {

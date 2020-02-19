@@ -43,7 +43,7 @@ PlasmaComponents.ItemDelegate {
     property var muted: Muted
     property var vol: Volume
     property var pObject: PulseObject
-    property int focusMarginWidth: listView.currentIndex == index && delegate.activeFocus ? contentLayout.width : contentLayout.width - units.gridUnit
+    property int focusMarginWidth: listView.currentIndex == index && delegate.activeFocus ? contentLayout.width : contentLayout.width - Kirigami.Units.gridUnit
 
     implicitWidth: isCurrent ? listView.cellWidth * 2 : listView.cellWidth
     implicitHeight: listView.height + Kirigami.Units.largeSpacing
@@ -198,7 +198,7 @@ PlasmaComponents.ItemDelegate {
 
     Popup {
         id: deviceSettingDialog
-        parent: Overlay.overlay
+        parent: mainFlick
         x: Math.round((parent.width - width) / 2)
         y: Math.round((parent.height - height) / 2)
         width: root.width / 3
@@ -209,7 +209,7 @@ PlasmaComponents.ItemDelegate {
 
         background: Item {
             id: popupBg
-            property real extraMargin: Math.round(units.gridUnit * 0.5)
+            property real extraMargin: Math.round(Kirigami.Units.gridUnit * 0.5)
             PlasmaCore.FrameSvgItem {
                 anchors {
                     fill: framePop
@@ -260,7 +260,7 @@ PlasmaComponents.ItemDelegate {
                 Layout.alignment: Qt.AlignTop
             }
 
-            PlasmaComponents.Button {
+            PlasmaComponents2.Button {
                 id: setDefBtn
                 text: PulseObject.default ? "Is Default" : "Set Default"
                 Layout.fillWidth: true
@@ -279,7 +279,7 @@ PlasmaComponents.ItemDelegate {
                 PlasmaComponents2.Highlight {
                     z: -2
                     anchors.fill: parent
-                    anchors.margins: -units.gridUnit / 4
+                    anchors.margins: -Kirigami.Units.gridUnit / 4
                     visible: setDefBtn.activeFocus ? 1 : 0
                 }
             }
@@ -308,7 +308,7 @@ PlasmaComponents.ItemDelegate {
                 PlasmaComponents2.Highlight {
                     z: -2
                     anchors.fill: parent
-                    anchors.margins: -units.gridUnit / 4
+                    anchors.margins: -Kirigami.Units.gridUnit / 4
                     visible: volObj.activeFocus ? 1 : 0
                 }
             }
@@ -318,7 +318,7 @@ PlasmaComponents.ItemDelegate {
                 Layout.preferredHeight: 1
             }
 
-            PlasmaComponents.Button {
+            PlasmaComponents2.Button {
                 id: clseBtn
                 Layout.fillWidth: true
                 text: "Close"
@@ -328,7 +328,7 @@ PlasmaComponents.ItemDelegate {
                 PlasmaComponents2.Highlight {
                     z: -2
                     anchors.fill: parent
-                    anchors.margins: -units.gridUnit / 4
+                    anchors.margins: -Kirigami.Units.gridUnit / 4
                     visible: clseBtn.activeFocus ? 1 : 0
                 }
             }
