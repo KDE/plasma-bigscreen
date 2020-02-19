@@ -176,6 +176,10 @@ void ImagePalette::generatePalette()
         }
     }
 
+    std::sort(m_clusters.begin(), m_clusters.end(), [](const colorStat &a, const colorStat &b) {
+        return a.colors.size() > b.colors.size();   
+    });
+
     // compress blocks that became too similar
     auto sourceIt = m_clusters.end();
     QList<QList<colorStat>::iterator> itemsToDelete;
@@ -200,12 +204,6 @@ void ImagePalette::generatePalette()
     for (const auto &i : itemsToDelete) {
         m_clusters.erase(i);
     }
-
-
-    std::sort(m_clusters.begin(), m_clusters.end(), [](const colorStat &a, const colorStat &b) {
-        return a.colors.size() > b.colors.size();   
-    });
-
 
     m_mostSaturated = QColor();
     m_dominant = QColor(m_clusters.first().centroid);
