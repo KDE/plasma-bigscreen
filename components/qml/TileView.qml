@@ -58,14 +58,7 @@ FocusScope {
         }
         text: title
         layer.enabled: true
-        color: Plasmacore.ColorScope.textColor
-        layer.effect: DropShadow {
-            horizontalOffset: 0
-            verticalOffset: 2
-            radius: 8.0
-            samples: 17
-            color: Qt.rgba(0,0,0,0.6)
-        }
+        color: "white"
     }
     
     ListView {
