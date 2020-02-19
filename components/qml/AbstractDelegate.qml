@@ -80,17 +80,26 @@ PlasmaComponents.ItemDelegate {
     background: Item {
         id: background
 
-        PlasmaCore.FrameSvgItem {
+        Rectangle {
+            id: shadowSource
             anchors {
                 fill: frame
-                leftMargin: -margins.left
-                topMargin: -margins.top
-                rightMargin: -margins.right
-                bottomMargin: -margins.bottom
+                margins: units.largeSpacing
             }
-            imagePath: Qt.resolvedUrl("./background.svg")
-            prefix: "shadow"
+            color: "black"
         }
+
+        FastBlur {
+            anchors {
+                fill: frame
+                margins: delegate.isCurrent ? -units.smallSpacing : units.smallSpacing
+            }
+            transparentBorder: true 
+            source: shadowSource
+            radius: 64
+            cached: true
+        }
+
         Rectangle {
             id: frame
             anchors {
