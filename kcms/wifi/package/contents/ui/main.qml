@@ -149,7 +149,8 @@ KCM.SimpleKCM {
     Dialog {
         id: passwordLayer
         parent: networkSelectionView
-
+        
+	closePolicy: Popup.CloseOnEscape
         x: (parent.width - width) / 2
         y: (parent.height - height) / 2
         dim: true
