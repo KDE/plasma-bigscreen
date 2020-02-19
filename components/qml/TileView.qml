@@ -75,17 +75,23 @@ FocusScope {
         keyNavigationEnabled: true
         //Centering disabled as experiment
         highlightRangeMode: ListView.ApplyRange
+
         highlightFollowsCurrentItem: true
         snapMode: ListView.SnapToItem
         cacheBuffer: width
         implicitHeight: cellWidth + units.gridUnit * 3
-        rightMargin: width
+        rightMargin: width-cellWidth*3
         readonly property int cellWidth: Math.floor(width / columns)
         preferredHighlightBegin: cellWidth
         preferredHighlightEnd: cellWidth
 
         highlightMoveDuration: Kirigami.Units.longDuration
 
+        onContentWidthChanged: if (view.currentIndex === 0) view.contentX = view.originX
+
+        onMovementEnded: flickEnded()
+        onFlickEnded: currentIndex = indexAt(mapToItem(contentItem, cellWidth, 0).x, 0)
+        
         spacing: 0
         orientation: ListView.Horizontal
 

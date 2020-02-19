@@ -34,7 +34,7 @@ PlasmaComponents.ItemDelegate {
     implicitHeight: listView.height
 
     readonly property ListView listView: ListView.view
-    readonly property bool isCurrent: listView.currentIndex == index && activeFocus
+    readonly property bool isCurrent: listView.currentIndex == index && activeFocus && !listView.moving
     property string comment
 
     z: isCurrent ? 2 : 0
