@@ -24,11 +24,13 @@ InputPanel {
     visible: active
     width: parent.width
 
-    onHeightChanged: resizeKeyboard();
-    onWidthChanged: resizeKeyboard();
-    function resizeKeyboard() {
-        keyboard.style.keyboardDesignWidth = width*3
-        keyboard.style.keyboardDesignHeight = height*3
-    }
-    Component.onCompleted: resizeKeyboard()
+    //keep the default keyboard size
+
+    //onHeightChanged: resizeKeyboard();
+    //onWidthChanged: resizeKeyboard();
+    //function resizeKeyboard() {
+        //keyboard.style.keyboardDesignWidth = width*3
+        //keyboard.style.keyboardDesignHeight = height*3
+    //}
+    //Component.onCompleted: resizeKeyboard()
 }
