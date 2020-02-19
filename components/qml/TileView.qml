@@ -84,21 +84,7 @@ FocusScope {
         preferredHighlightBegin: cellWidth
         preferredHighlightEnd: cellWidth
 
-        displayMarginBeginning: rotation.angle != 0 ? width*2 : 0
-        displayMarginEnd: rotation.angle != 0 ? width*2 : 0
         highlightMoveDuration: Kirigami.Units.longDuration
-        transform: Rotation {
-            id: rotation
-            axis { x: 0; y: 1; z: 0 }
-            angle: 0
-            property real targetAngle: 30
-            Behavior on angle {
-                SmoothedAnimation {
-                    duration: Kirigami.Units.longDuration * 10
-                }
-            }
-            origin.x: width/2
-        }
 
         spacing: 0
         orientation: ListView.Horizontal
