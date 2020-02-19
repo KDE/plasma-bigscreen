@@ -24,6 +24,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents2
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami 2.11 as Kirigami
+import org.kde.mycroft.bigscreen 1.0 as BigScreen
 import QtGraphicalEffects 1.0
 import org.kde.plasma.private.volume 0.1
 import "../code/icon.js" as Icon
@@ -44,13 +45,44 @@ PlasmaComponents.ItemDelegate {
     property var pObject: PulseObject
     property int focusMarginWidth: listView.currentIndex == index && delegate.activeFocus ? contentLayout.width : contentLayout.width - units.gridUnit
 
-    implicitWidth: listView.cellWidth
-    implicitHeight: listView.height + Kirigami.Units.gridUnit * 2.5
+    implicitWidth: isCurrent ? listView.cellWidth * 2 : listView.cellWidth
+    implicitHeight: listView.height + Kirigami.Units.largeSpacing
 
     readonly property ListView listView: ListView.view
+    readonly property bool isCurrent: listView.currentIndex == index && activeFocus
 
-    z: listView.currentIndex == index ? 2 : 0
+    z: isCurrent ? 2 : 0
+    
+    leftPadding: Kirigami.Units.largeSpacing * 3
+    topPadding: Kirigami.Units.largeSpacing * 3
+    rightPadding: Kirigami.Units.largeSpacing * 3
+    bottomPadding: Kirigami.Units.largeSpacing * 3    
 
+    BigScreen.ImagePalette {
+        id: imagePalette
+        sourceItem: deviceAudioSvgIcon
+        property bool useColors: BigScreen.Hack.coloredTiles
+        property color backgroundColor: useColors ? suggestedContrast : PlasmaCore.ColorScope.backgroundColor
+        property color accentColor: useColors ? mostSaturated : PlasmaCore.ColorScope.highlightColor
+        property color textColor: useColors
+            ? (0.2126 * suggestedContrast.r + 0.7152 * suggestedContrast.g + 0.0722 * suggestedContrast.b > 0.6 ? Qt.rgba(0.2,0.2,0.2,1) : Qt.rgba(0.9,0.9,0.9,1))
+            : PlasmaCore.ColorScope.textColor
+
+        readonly property bool inView: listView.width - delegate.x - deviceAudioSvgIcon.x < listView.contentX
+        onInViewChanged: {
+            if (inView) {
+                imagePalette.update();
+            }
+        }
+    }
+    
+    Behavior on implicitWidth {
+        NumberAnimation {
+            duration: Kirigami.Units.longDuration
+            easing.type: Easing.InOutQuad
+        }
+    }
+    
     Keys.onReturnPressed: {
         //PulseObject.default = true;
         listView.currentIndex = index
@@ -64,15 +96,8 @@ PlasmaComponents.ItemDelegate {
         deviceSettingDialog.forceActiveFocus()
     }
         
-background: Item {
+    background: Item {
         id: background
-        property real extraMargin:  Math.round(listView.currentIndex == index && delegate.activeFocus ? -units.gridUnit/2 : units.gridUnit/2)
-        Behavior on extraMargin {
-            NumberAnimation {
-                duration: Kirigami.Units.longDuration
-                easing.type: Easing.InOutQuad
-            }
-        }
 
         PlasmaCore.FrameSvgItem {
             anchors {
@@ -82,96 +107,93 @@ background: Item {
                 rightMargin: -margins.right
                 bottomMargin: -margins.bottom
             }
-            imagePath: "dialogs/background"
+            imagePath: Qt.resolvedUrl("./background.svg")
             prefix: "shadow"
         }
-        PlasmaCore.FrameSvgItem {
+        Rectangle {
             id: frame
             anchors {
                 fill: parent
-                margins: background.extraMargin
+                margins: Kirigami.Units.largeSpacing
             }
-            imagePath: "dialogs/background"
-            
-            width: listView.currentIndex == index && delegate.activeFocus ? parent.width : parent.width - units.gridUnit
-            height: listView.currentIndex == index && delegate.activeFocus ? parent.height : parent.height - units.gridUnit
-            opacity: 0.8
+            radius: Kirigami.Units.gridUnit / 5
+            color: delegate.isCurrent ? imagePalette.accentColor : imagePalette.backgroundColor
+            Behavior on color {
+                ColorAnimation {
+                    duration: Kirigami.Units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
+            Rectangle {
+                anchors {
+                    fill: parent
+                    margins: Kirigami.Units.smallSpacing
+                }
+                radius: Kirigami.Units.gridUnit / 5
+                color: imagePalette.backgroundColor
+            }
         }
     }
 
-    contentItem: ColumnLayout {
-        id: contentLayout
-        Layout.fillWidth: true
-        Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
-
-        Item {
-            id: topMrgn
-            Layout.preferredHeight: Kirigami.Units.largeSpacing
-            Layout.fillWidth: true
-        }
+    contentItem: Item {
+        id: contentItemLayout
         
-        Kirigami.Icon {
+        PlasmaCore.IconItem {
             id: deviceAudioSvgIcon
-            Layout.alignment: Qt.AlignHCenter
-            Layout.preferredWidth: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.huge : Kirigami.Units.iconSizes.large
-            Layout.preferredHeight: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.huge : Kirigami.Units.iconSizes.large
+            width: listView.cellWidth - delegate.leftPadding - (delegate.isCurrent ? 0 : delegate.rightPadding)
+            height: isCurrent ? width : width - Kirigami.Units.largeSpacing * 4
             source: Icon.name(Volume, Muted, isPlayback ? "audio-volume" : "microphone-sensitivity")
+            Behavior on width {
+                NumberAnimation {
+                    duration: Kirigami.Units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
         }
         
-        Kirigami.Heading {
-            id: deviceNameLabel
-            visible: text.length > 0
-            level: 2
-            elide: Text.ElideRight
-            wrapMode: Text.WordWrap
-            Layout.alignment: Qt.AlignHCenter
-            horizontalAlignment: Text.AlignHCenter
-            Layout.maximumWidth: focusMarginWidth
-            maximumLineCount: deviceDefaultIcon.visible ? 2 : 3 
-            textFormat: Text.PlainText
-            text: !currentPort ? Description : i18ndc("kcm_pulseaudio", "label of device items", "%1 (%2)", currentPort.description, Description)
-        }
-                
-        Kirigami.Separator {
-            Layout.fillWidth: true 
-            Layout.preferredHeight: 1
-            Layout.leftMargin: units.gridUnit
-            Layout.rightMargin: units.gridUnit
-            color: Kirigami.Theme.textColor
-            visible: PulseObject.default ? 1 : 0
-        }
-
-        RowLayout {
-            id: deviceDefaultRepresentationLayout
-            Layout.fillWidth: true
-            Layout.preferredHeight: Kirigami.Units.iconSizes.large
-            Layout.alignment: Qt.AlignHCenter
-            visible: PulseObject.default ? 1 : 0
-            
-            Kirigami.Icon {
-                id: deviceDefaultIcon
-                Layout.leftMargin: Kirigami.Units.smallSpacing
-                Layout.preferredWidth: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.large : Kirigami.Units.iconSizes.medium
-                Layout.preferredHeight: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.large : Kirigami.Units.iconSizes.medium
-                source: "answer-correct"
-                visible: PulseObject.default ? 1 : 0
-            }
+        ColumnLayout {
+            width: listView.cellWidth - delegate.leftPadding -  delegate.rightPadding
+            anchors.right: parent.right
+            y: delegate.isCurrent ? contentItemLayout.height / 2 - height / 2 : contentItemLayout.height - (deviceNameLabel.height + deviceDefaultRepresentationLayout.height)
             
             Kirigami.Heading {
-                id: deviceDefaultLabel
-                Layout.rightMargin: Kirigami.Units.smallSpacing
+                id: deviceNameLabel
+                Layout.fillWidth: true
+                visible: text.length > 0
                 level: 2
-                text: "Default"
+                elide: Text.ElideRight
+                wrapMode: Text.WordWrap
+                horizontalAlignment: Text.AlignHCenter
+                maximumLineCount: delegate.isCurrent ? 3 : 2 
+                textFormat: Text.PlainText
+                color: imagePalette.textColor
+                text: delegate.isCurrent ? !currentPort ? Description : i18ndc("kcm_pulseaudio", "label of device items", "%1 (%2)", currentPort.description, Description) : !currentPort ? Description.split("(")[0] : i18ndc("kcm_pulseaudio", "label of device items", "%1 (%2)", currentPort.description, Description).split("(")[0]
+            }
+            
+            RowLayout {
+                id: deviceDefaultRepresentationLayout
+                Layout.fillWidth: true
+                Layout.alignment: Qt.AlignHCenter
                 visible: PulseObject.default ? 1 : 0
+                
+                Kirigami.Icon {
+                    id: deviceDefaultIcon
+                    Layout.leftMargin: Kirigami.Units.smallSpacing
+                    Layout.preferredWidth: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
+                    Layout.preferredHeight: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
+                    source: "answer-correct"
+                    visible: PulseObject.default ? 1 : 0
+                }
+                
+                Kirigami.Heading {
+                    id: deviceDefaultLabel
+                    Layout.rightMargin: Kirigami.Units.smallSpacing
+                    level: 2
+                    text: "Default"
+                    visible: PulseObject.default ? 1 : 0
+                }
             }
         }
-        
-        Item {
-            id: btmMrgn
-            Layout.preferredHeight: Kirigami.Units.largeSpacing
-            Layout.fillWidth: true
-        }
-
     }
 
     Popup {
