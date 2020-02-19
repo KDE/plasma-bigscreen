@@ -106,13 +106,17 @@ Item {
                 easing.type: Easing.InOutQuad
             }
         }
-        width: units.gridUnit * 15
+        width: parent.width/2
         start: Qt.point(0, 0)
         end: Qt.point(width, 0)
         gradient: Gradient {
             GradientStop {
                 position: 0.0
-                color: Qt.rgba(0, 0, 0, 0.6)
+                color: Qt.rgba(0, 0, 0, 0.75)
+            }
+            GradientStop {
+                position: 0.5
+                color: Qt.rgba(0, 0, 0, 0.5)
             }
             GradientStop {
                 position: 1.0
