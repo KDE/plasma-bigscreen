@@ -41,6 +41,11 @@ AbstractDelegate {
         }
     }
 
+    leftPadding: units.largeSpacing*2
+    topPadding: units.largeSpacing*2
+    rightPadding: units.largeSpacing*2
+    bottomPadding: units.largeSpacing*2
+
     Kirigami.Theme.inherit: !imagePalette.useColors
     Kirigami.Theme.textColor: imagePalette.textColor
     Kirigami.Theme.backgroundColor: imagePalette.backgroundColor

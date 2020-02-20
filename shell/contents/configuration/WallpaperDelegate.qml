@@ -17,19 +17,12 @@
  */
 
 import QtQuick 2.12
-import QtQuick.Layouts 1.0
-import QtQuick.Controls 2.3 as Controls
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.configuration 2.0
 
-//for the "simple mode"
-import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
-import org.kde.kquickcontrolsaddons 2.0 as Addons
-import org.kde.kcm 1.1 as KCM
 import org.kde.kirigami 2.11 as Kirigami
+import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
-Kirigami.AbstractCard {
+BigScreen.AbstractDelegate {
     id: delegate
     width: wallpapersView.cellWidth
     height: wallpapersView.cellHeight
