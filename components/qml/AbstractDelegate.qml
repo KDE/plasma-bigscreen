@@ -78,7 +78,7 @@ PlasmaComponents.ItemDelegate {
                 fill: parent
                 margins: units.largeSpacing
             }
-            radius: units.gridUnit/5
+            radius: 3
             color: delegate.isCurrent ? delegate.Kirigami.Theme.highlightColor : delegate.Kirigami.Theme.backgroundColor
             Behavior on color {
                 ColorAnimation {
@@ -91,7 +91,7 @@ PlasmaComponents.ItemDelegate {
                     fill: parent
                     margins: units.smallSpacing
                 }
-                radius: units.gridUnit/5
+                radius: frame.radius/2
                 color: delegate.Kirigami.Theme.backgroundColor
             }
         }
