@@ -76,7 +76,7 @@ PlasmaComponents.ItemDelegate {
             id: frame
             anchors {
                 fill: parent
-                margins: units.largeSpacing
+                margins: delegate.isCurrent ? Kirigami.Units.largeSpacing - innerFrame.anchors.margins : Kirigami.Units.largeSpacing
             }
             radius: 3
             color: delegate.isCurrent ? delegate.Kirigami.Theme.highlightColor : delegate.Kirigami.Theme.backgroundColor
@@ -87,6 +87,7 @@ PlasmaComponents.ItemDelegate {
                 }
             }
             Rectangle {
+                id: innerFrame
                 anchors {
                     fill: parent
                     margins: units.smallSpacing
