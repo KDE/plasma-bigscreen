@@ -78,7 +78,7 @@ PlasmaComponents.ItemDelegate {
                 fill: parent
                 margins: delegate.isCurrent ? Kirigami.Units.largeSpacing - innerFrame.anchors.margins : Kirigami.Units.largeSpacing
             }
-            radius: 3
+            radius: delegate.isCurrent ? 6 : 3
             color: delegate.isCurrent ? delegate.Kirigami.Theme.highlightColor : delegate.Kirigami.Theme.backgroundColor
             Behavior on color {
                 ColorAnimation {
