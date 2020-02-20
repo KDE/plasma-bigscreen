@@ -3,4 +3,5 @@ plugin bigscreenplugin
 
 TileView 1.0 TileView.qml
 AbstractDelegate 1.0 AbstractDelegate.qml
+IconDelegate 1.0 IconDelegate.qml
 singleton Hack 1.0 Hack.qml

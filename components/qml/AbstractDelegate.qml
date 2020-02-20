@@ -30,19 +30,14 @@ import org.kde.mycroft.bigscreen 1.0 as BigScreen
 PlasmaComponents.ItemDelegate {
     id: delegate
 
-    implicitWidth: isCurrent ? listView.cellWidth * 2 : listView.cellWidth
-    implicitHeight: listView.height
-
     readonly property ListView listView: ListView.view
     readonly property bool isCurrent: listView.currentIndex == index && activeFocus && !listView.moving
-    property string comment
 
     z: isCurrent ? 2 : 0
+
     onClicked: {
         listView.forceActiveFocus()
-        console.log(index)
         listView.currentIndex = index
-        console.log(listView.currentIndex)
     }
 
     leftPadding: units.largeSpacing*2
@@ -50,34 +45,12 @@ PlasmaComponents.ItemDelegate {
     rightPadding: units.largeSpacing*2
     bottomPadding: units.largeSpacing*2
 
-    Behavior on implicitWidth {
-        NumberAnimation {
-            duration: Kirigami.Units.longDuration
-            easing.type: Easing.InOutQuad
-        }
-    }
-
     Keys.onReturnPressed: {
         clicked();
     }
 
-    BigScreen.ImagePalette {
-        id: imagePalette
-        sourceItem: icon
-        property bool useColors: BigScreen.Hack.coloredTiles
-        property color backgroundColor: useColors ? suggestedContrast : PlasmaCore.ColorScope.backgroundColor
-        property color accentColor: useColors ? mostSaturated : PlasmaCore.ColorScope.highlightColor
-        property color textColor: useColors
-            ? (0.2126 * suggestedContrast.r + 0.7152 * suggestedContrast.g + 0.0722 * suggestedContrast.b > 0.6 ? Qt.rgba(0.2,0.2,0.2,1) : Qt.rgba(0.9,0.9,0.9,1))
-            : PlasmaCore.ColorScope.textColor
+    contentItem: Item {}
 
-        readonly property bool inView: listView.width - delegate.x - icon.x < listView.contentX
-        onInViewChanged: {
-            if (inView) {
-                imagePalette.update();
-            }
-        }
-    }
     background: Item {
         id: background
 
@@ -108,7 +81,7 @@ PlasmaComponents.ItemDelegate {
                 margins: units.largeSpacing
             }
             radius: units.gridUnit/5
-            color: delegate.isCurrent ? imagePalette.accentColor : imagePalette.backgroundColor
+            color: delegate.isCurrent ? delegate.Kirigami.Theme.highlightColor : delegate.Kirigami.Theme.backgroundColor
             Behavior on color {
                 ColorAnimation {
                     duration: Kirigami.Units.longDuration
@@ -121,74 +94,7 @@ PlasmaComponents.ItemDelegate {
                     margins: units.smallSpacing
                 }
                 radius: units.gridUnit/5
-                color: imagePalette.backgroundColor
-            }
-        }
-    }
-    
-    contentItem: Item {
-        id: content
-        PlasmaCore.IconItem {
-            id: icon
-            width: listView.cellWidth - delegate.leftPadding - (delegate.isCurrent ? 0 : delegate.rightPadding)
-            height: width
-            source: delegate.icon.name || delegate.icon.source
-            Behavior on width {
-                NumberAnimation {
-                    duration: Kirigami.Units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-        }
-
-        ColumnLayout {
-            width: listView.cellWidth - delegate.leftPadding -  delegate.rightPadding
-            anchors.right: parent.right
-            y: delegate.isCurrent ? content.height/2 - height/2 : content.height - label.height
-            Behavior on x {
-                XAnimator {
-                    duration: Kirigami.Units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-            Behavior on y {
-                YAnimator {
-                    duration: Kirigami.Units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-
-            PlasmaComponents.Label {
-                id: label
-                visible: text.length > 0
-                Layout.fillWidth: true
-
-                wrapMode: Text.WordWrap
-                horizontalAlignment: Text.AlignHCenter
-                maximumLineCount: 2
-                elide: Text.ElideRight
-                color: imagePalette.textColor
-
-                text: delegate.text
-            }
-            PlasmaComponents.Label {
-                visible: text.length > 0
-                Layout.fillWidth: true
-
-                opacity: delegate.isCurrent
-                Behavior on opacity {
-                    OpacityAnimator {
-                        duration: Kirigami.Units.longDuration
-                        easing.type: Easing.InOutQuad
-                    }
-                }
-                wrapMode: Text.WordWrap
-                horizontalAlignment: Text.AlignHCenter
-                maximumLineCount: 2
-                elide: Text.ElideRight
-                color: imagePalette.textColor
-
-                text: delegate.comment
+                color: delegate.Kirigami.Theme.backgroundColor
             }
         }
     }
