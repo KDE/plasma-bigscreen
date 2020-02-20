@@ -55,21 +55,20 @@ PlasmaComponents.ItemDelegate {
 
         Rectangle {
             id: shadowSource
-            anchors {
-                fill: frame
-                margins: units.largeSpacing
-            }
+            anchors.fill: frame
             color: "black"
+            radius: frame.radius
+            visible: false
         }
 
         FastBlur {
+            id: shadowBlur
             anchors {
                 fill: frame
-                margins: delegate.isCurrent ? -units.smallSpacing : units.smallSpacing
             }
-            transparentBorder: true 
+            transparentBorder: true
             source: shadowSource
-            radius: 64
+            radius: Kirigami.Units.largeSpacing*2
             cached: true
         }
 
