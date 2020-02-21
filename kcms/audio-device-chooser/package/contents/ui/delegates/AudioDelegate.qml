@@ -92,7 +92,7 @@ BigScreen.AbstractDelegate {
                 visible: text.length > 0
                 level: 2
                 elide: Text.ElideRight
-                wrapMode: Text.WordWrap
+                wrapMode: Text.Wrap
                 horizontalAlignment: Text.AlignHCenter
                 maximumLineCount: delegate.isCurrent ? 3 : 2 
                 textFormat: Text.PlainText
@@ -104,7 +104,6 @@ BigScreen.AbstractDelegate {
                 id: deviceDefaultRepresentationLayout
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignHCenter
-                visible: PulseObject.default ? 1 : 0
                 
                 Kirigami.Icon {
                     id: deviceDefaultIcon
@@ -112,7 +111,7 @@ BigScreen.AbstractDelegate {
                     Layout.preferredWidth: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
                     Layout.preferredHeight: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
                     source: Qt.resolvedUrl("../images/green-tick.png")
-                    visible: PulseObject.default ? 1 : 0
+                    opacity: PulseObject.default ? 1 : 0
                 }
                 
 //                 Kirigami.Heading {
