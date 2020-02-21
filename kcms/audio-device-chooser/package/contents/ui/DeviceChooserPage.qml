@@ -51,7 +51,7 @@ FocusScope {
                     contentLayout.currentSection = sinkView
                     settingsView.model = sinkView.model
                     settingsView.positionViewAtIndex(currentIndex, ListView.Center);
-                    settingsView.currentIndex = sinkView.currentIndex
+                    //settingsView.currentIndex = sinkView.currentIndex
                     settingsView.checkPlayBack = true
                     settingsView.typeDevice = "sink"
                 }
@@ -63,9 +63,8 @@ FocusScope {
             navigationDown: sourceView.visible ? sourceView : kcmcloseButton
             
             onCurrentItemChanged: {
-                if(activeFocus) {
-                    settingsView.positionViewAtIndex(currentIndex, ListView.Center);
-                }
+                settingsView.currentIndex = sinkView.currentIndex
+                settingsView.positionViewAtIndex(sinkView.currentIndex, ListView.Center);
             }
         }
 
@@ -93,9 +92,8 @@ FocusScope {
             navigationDown: kcmcloseButton
             
             onCurrentItemChanged: {
-                if(activeFocus) {
+                    settingsView.currentIndex = sourceView.currentIndex
                     settingsView.positionViewAtIndex(currentIndex, ListView.Center);
-                }
             }
         }
 
