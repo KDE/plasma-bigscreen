@@ -29,7 +29,7 @@ import QtGraphicalEffects 1.0
 import org.kde.plasma.private.volume 0.1
 import "../code/icon.js" as Icon
 
-PlasmaComponents.ItemDelegate {
+BigScreen.AbstractDelegate {
     id: delegate
     property bool isPlayback: type.substring(0, 4) == "sink"
     property bool onlyOne: false
@@ -47,34 +47,6 @@ PlasmaComponents.ItemDelegate {
 
     implicitWidth: isCurrent ? listView.cellWidth * 2 : listView.cellWidth
     implicitHeight: listView.height + Kirigami.Units.largeSpacing
-
-    readonly property ListView listView: ListView.view
-    readonly property bool isCurrent: listView.currentIndex == index && activeFocus
-
-    z: isCurrent ? 2 : 0
-    
-    leftPadding: Kirigami.Units.largeSpacing * 3
-    topPadding: Kirigami.Units.largeSpacing * 3
-    rightPadding: Kirigami.Units.largeSpacing * 3
-    bottomPadding: Kirigami.Units.largeSpacing * 3    
-
-    BigScreen.ImagePalette {
-        id: imagePalette
-        sourceItem: deviceAudioSvgIcon
-        property bool useColors: BigScreen.Hack.coloredTiles
-        property color backgroundColor: useColors ? suggestedContrast : PlasmaCore.ColorScope.backgroundColor
-        property color accentColor: useColors ? mostSaturated : PlasmaCore.ColorScope.highlightColor
-        property color textColor: useColors
-            ? (0.2126 * suggestedContrast.r + 0.7152 * suggestedContrast.g + 0.0722 * suggestedContrast.b > 0.6 ? Qt.rgba(0.2,0.2,0.2,1) : Qt.rgba(0.9,0.9,0.9,1))
-            : PlasmaCore.ColorScope.textColor
-
-        readonly property bool inView: listView.width - delegate.x - deviceAudioSvgIcon.x < listView.contentX
-        onInViewChanged: {
-            if (inView) {
-                imagePalette.update();
-            }
-        }
-    }
     
     Behavior on implicitWidth {
         NumberAnimation {
@@ -84,55 +56,13 @@ PlasmaComponents.ItemDelegate {
     }
     
     Keys.onReturnPressed: {
-        //PulseObject.default = true;
         listView.currentIndex = index
-        deviceSettingDialog.open()
-        deviceSettingDialog.forceActiveFocus()
+        settingsView.currentItem.forceActiveFocus()
     }
     
     onClicked: {
         listView.currentIndex = index
-        deviceSettingDialog.open()
-        deviceSettingDialog.forceActiveFocus()
-    }
-        
-    background: Item {
-        id: background
-
-        PlasmaCore.FrameSvgItem {
-            anchors {
-                fill: frame
-                leftMargin: -margins.left
-                topMargin: -margins.top
-                rightMargin: -margins.right
-                bottomMargin: -margins.bottom
-            }
-            imagePath: Qt.resolvedUrl("./background.svg")
-            prefix: "shadow"
-        }
-        Rectangle {
-            id: frame
-            anchors {
-                fill: parent
-                margins: Kirigami.Units.largeSpacing
-            }
-            radius: Kirigami.Units.gridUnit / 5
-            color: delegate.isCurrent ? imagePalette.accentColor : imagePalette.backgroundColor
-            Behavior on color {
-                ColorAnimation {
-                    duration: Kirigami.Units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-            Rectangle {
-                anchors {
-                    fill: parent
-                    margins: Kirigami.Units.smallSpacing
-                }
-                radius: Kirigami.Units.gridUnit / 5
-                color: imagePalette.backgroundColor
-            }
-        }
+        settingsView.forceActiveFocus()
     }
 
     contentItem: Item {
@@ -152,7 +82,7 @@ PlasmaComponents.ItemDelegate {
         }
         
         ColumnLayout {
-            width: listView.cellWidth - delegate.leftPadding -  delegate.rightPadding
+            width: isCurrent ? listView.cellWidth - delegate.leftPadding : listView.cellWidth - delegate.leftPadding -  delegate.rightPadding 
             anchors.right: parent.right
             y: delegate.isCurrent ? contentItemLayout.height / 2 - height / 2 : contentItemLayout.height - (deviceNameLabel.height + deviceDefaultRepresentationLayout.height)
             
@@ -166,7 +96,7 @@ PlasmaComponents.ItemDelegate {
                 horizontalAlignment: Text.AlignHCenter
                 maximumLineCount: delegate.isCurrent ? 3 : 2 
                 textFormat: Text.PlainText
-                color: imagePalette.textColor
+                color: Kirigami.Theme.textColor
                 text: delegate.isCurrent ? !currentPort ? Description : i18ndc("kcm_pulseaudio", "label of device items", "%1 (%2)", currentPort.description, Description) : !currentPort ? Description.split("(")[0] : i18ndc("kcm_pulseaudio", "label of device items", "%1 (%2)", currentPort.description, Description).split("(")[0]
             }
             
@@ -181,166 +111,18 @@ PlasmaComponents.ItemDelegate {
                     Layout.leftMargin: Kirigami.Units.smallSpacing
                     Layout.preferredWidth: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
                     Layout.preferredHeight: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
-                    source: "answer-correct"
+                    source: Qt.resolvedUrl("../images/green-tick.png")
                     visible: PulseObject.default ? 1 : 0
                 }
                 
-                Kirigami.Heading {
-                    id: deviceDefaultLabel
-                    Layout.rightMargin: Kirigami.Units.smallSpacing
-                    level: 2
-                    text: "Default"
-                    visible: PulseObject.default ? 1 : 0
-                }
+//                 Kirigami.Heading {
+//                     id: deviceDefaultLabel
+//                     Layout.rightMargin: Kirigami.Units.smallSpacing
+//                     level: 2
+//                     text: "Default"
+//                     visible: PulseObject.default ? 1 : 0
+//                 }
             }
         }
-    }
-
-    Popup {
-        id: deviceSettingDialog
-        parent: mainFlick
-        x: Math.round((parent.width - width) / 2)
-        y: Math.round((parent.height - height) / 2)
-        width: root.width / 3
-        height: root.height  / 2
-        dim: true
-        property color iconBgColorLeft: "#de6262"
-        property color iconBgColorRight: "#ffb850"
-
-        background: Item {
-            id: popupBg
-            property real extraMargin: Math.round(Kirigami.Units.gridUnit * 0.5)
-            PlasmaCore.FrameSvgItem {
-                anchors {
-                    fill: framePop
-                    leftMargin: -margins.left
-                    topMargin: -margins.top
-                    rightMargin: -margins.right
-                    bottomMargin: -margins.bottom
-                }
-                imagePath: "dialogs/background"
-                prefix: "shadow"
-            }
-            Rectangle {
-                id: framePop
-                anchors {
-                    fill: parent
-                    margins: popupBg.extraMargin
-                }
-                color: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.95)
-            }
-        }
-
-        ColumnLayout {
-            anchors.margins: Kirigami.Units.largeSpacing
-            anchors.fill: parent
-
-
-            Kirigami.Icon {
-                id: devIcon
-                Layout.alignment: Qt.AlignHCenter
-                Layout.preferredWidth: Kirigami.Units.iconSizes.huge
-                Layout.preferredHeight: width
-                source: Icon.name(Volume, Muted, isPlayback ? "audio-volume" : "microphone-sensitivity")
-            }
-
-            Label {
-                id: label2
-                Layout.alignment: Qt.AlignHCenter
-                wrapMode: Text.WordWrap
-                maximumLineCount: 2
-                elide: Text.ElideRight
-                color: PlasmaCore.ColorScope.textColor
-                text: Description
-            }
-
-            Kirigami.Separator {
-                Layout.fillWidth: true
-                Layout.preferredHeight: 1
-                Layout.alignment: Qt.AlignTop
-            }
-
-            PlasmaComponents2.Button {
-                id: setDefBtn
-                text: PulseObject.default ? "Is Default" : "Set Default"
-                Layout.fillWidth: true
-                enabled: PulseObject.default ? 0 : 1
-                Layout.preferredHeight: Kirigami.Units.gridUnit * 3
-                KeyNavigation.down: volObj
-                Keys.onReturnPressed: {
-                    PulseObject.default = true;
-                    listView.currentIndex = index
-                    volObj.forceActiveFocus()
-                }
-                onClicked:  {
-                    PulseObject.default = true;
-                    listView.currentIndex = index
-                }
-                PlasmaComponents2.Highlight {
-                    z: -2
-                    anchors.fill: parent
-                    anchors.margins: -Kirigami.Units.gridUnit / 4
-                    visible: setDefBtn.activeFocus ? 1 : 0
-                }
-            }
-
-            Item {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                Layout.margins: Kirigami.Units.largeSpacing
-
-                VolumeObject {
-                    id: volObj
-                    anchors.left: parent.left
-                    anchors.right: parent.right
-                    anchors.verticalCenter: parent.verticalCenter
-
-                    Keys.onRightPressed: {
-                        increaseVal()
-                    }
-                    Keys.onLeftPressed: {
-                        decreaseVal()
-                    }
-
-                    KeyNavigation.down: clseBtn
-                }
-
-                PlasmaComponents2.Highlight {
-                    z: -2
-                    anchors.fill: parent
-                    anchors.margins: -Kirigami.Units.gridUnit / 4
-                    visible: volObj.activeFocus ? 1 : 0
-                }
-            }
-
-            Kirigami.Separator {
-                Layout.fillWidth: true
-                Layout.preferredHeight: 1
-            }
-
-            PlasmaComponents2.Button {
-                id: clseBtn
-                Layout.fillWidth: true
-                text: "Close"
-                onClicked: deviceSettingDialog.close()
-                Keys.onReturnPressed: deviceSettingDialog.close()
-
-                PlasmaComponents2.Highlight {
-                    z: -2
-                    anchors.fill: parent
-                    anchors.margins: -Kirigami.Units.gridUnit / 4
-                    visible: clseBtn.activeFocus ? 1 : 0
-                }
-            }
-        }
-
-        onOpenedChanged: {
-            if(setDefBtn.enabled){
-                setDefBtn.forceActiveFocus()
-            } else {
-                volObj.forceActiveFocus()
-            }
-        }
-        onClosed: delegate.forceActiveFocus()
     }
 }

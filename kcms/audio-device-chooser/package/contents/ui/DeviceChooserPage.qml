@@ -29,8 +29,7 @@ FocusScope {
 
     ColumnLayout {
         id: contentLayout
-        anchors.left: parent.left
-        anchors.right: parent.right
+        width: parent.width - settingsView.width
         property Item currentSection
         y: currentSection ? -currentSection.y : 0
         Behavior on y {
@@ -50,6 +49,11 @@ FocusScope {
             onActiveFocusChanged: { 
                 if(activeFocus){ 
                     contentLayout.currentSection = sinkView
+                    settingsView.model = sinkView.model
+                    settingsView.positionViewAtIndex(currentIndex, ListView.Center);
+                    settingsView.currentIndex = sinkView.currentIndex
+                    settingsView.checkPlayBack = true
+                    settingsView.typeDevice = "sink"
                 }
             }
             delegate: Delegates.AudioDelegate {
@@ -57,6 +61,12 @@ FocusScope {
                 type: "sink"
             }
             navigationDown: sourceView.visible ? sourceView : kcmcloseButton
+            
+            onCurrentItemChanged: {
+                if(activeFocus) {
+                    settingsView.positionViewAtIndex(currentIndex, ListView.Center);
+                }
+            }
         }
 
         BigScreen.TileView {
@@ -69,6 +79,10 @@ FocusScope {
             onActiveFocusChanged: {
                 if(activeFocus){
                     contentLayout.currentSection = sourceView
+                    settingsView.model = sourceView.model
+                    settingsView.positionViewAtIndex(currentIndex, ListView.Center);
+                    settingsView.checkPlayBack = false
+                    settingsView.typeDevice = "source"
                 }
             }
             delegate: Delegates.AudioDelegate {
@@ -77,6 +91,12 @@ FocusScope {
             }
             navigationUp: sinkView
             navigationDown: kcmcloseButton
+            
+            onCurrentItemChanged: {
+                if(activeFocus) {
+                    settingsView.positionViewAtIndex(currentIndex, ListView.Center);
+                }
+            }
         }
 
         Component.onCompleted: {
@@ -87,6 +107,51 @@ FocusScope {
             target: root
             onActivateDeviceView: {
                 sinkView.forceActiveFocus();
+            }
+        }
+    }
+    
+    Kirigami.Separator {
+        id: viewSept
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        anchors.right: settingsView.left
+    }
+    
+    ListView {
+        id: settingsView
+        //model: sinkView.activeFocus ? sinkView.model : sourceView.model
+        anchors.top: parent.top
+        anchors.topMargin: -Kirigami.Units.smallSpacing * 2
+        anchors.right: parent.right
+        anchors.rightMargin: -Kirigami.Units.smallSpacing * 2
+        height: parent.height
+        width: parent.width / 3.5
+        layoutDirection: Qt.LeftToRight
+        orientation: ListView.Horizontal
+        snapMode: ListView.SnapOneItem;
+        highlightRangeMode: ListView.StrictlyEnforceRange
+        highlightFollowsCurrentItem: true
+        spacing: Kirigami.Units.largeSpacing
+        clip: true
+        interactive: false
+        implicitHeight: settingsView.implicitHeight
+        currentIndex: 0
+        property bool checkPlayBack
+        property string typeDevice
+        delegate: SettingsItem {
+                isPlayback: settingsView.checkPlayBack
+                type: settingsView.typeDevice
+        }
+        
+        onActiveFocusChanged: {
+            console.log(activeFocus)
+        }
+        
+        move: Transition {
+            SmoothedAnimation {
+                property: "x"
+                duration: 0
             }
         }
     }
