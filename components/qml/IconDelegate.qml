@@ -41,11 +41,6 @@ AbstractDelegate {
         }
     }
 
-    leftPadding: units.largeSpacing*2
-    topPadding: units.largeSpacing*2
-    rightPadding: units.largeSpacing*2
-    bottomPadding: units.largeSpacing*2
-
     Kirigami.Theme.inherit: !imagePalette.useColors
     Kirigami.Theme.textColor: imagePalette.textColor
     Kirigami.Theme.backgroundColor: imagePalette.backgroundColor
@@ -73,9 +68,16 @@ AbstractDelegate {
         id: content
         PlasmaCore.IconItem {
             id: icon
-            width: listView.cellWidth - delegate.leftPadding - (delegate.isCurrent ? 0 : delegate.rightPadding)
+            width: delegate.isCurrent ? Kirigami.Units.iconSizes.huge + Kirigami.Units.largeSpacing*2 : Kirigami.Units.iconSizes.huge
             height: width
+            y: delegate.isCurrent ? content.height/2 - height/2 : 0
             source: delegate.icon.name || delegate.icon.source
+            Behavior on y {
+                YAnimator {
+                    duration: Kirigami.Units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
             Behavior on width {
                 NumberAnimation {
                     duration: Kirigami.Units.longDuration
@@ -85,8 +87,11 @@ AbstractDelegate {
         }
 
         ColumnLayout {
-            width: listView.cellWidth - delegate.leftPadding -  delegate.rightPadding
-            anchors.right: parent.right
+            anchors {
+                left: delegate.isCurrent ? icon.right : parent.left
+                right: content.right
+                leftMargin: delegate.isCurrent ? Kirigami.Units.largeSpacing : 0
+            }
             y: delegate.isCurrent ? content.height/2 - height/2 : content.height - label.height
             Behavior on x {
                 XAnimator {
@@ -105,9 +110,10 @@ AbstractDelegate {
                 id: label
                 visible: text.length > 0
                 Layout.fillWidth: true
-
+                Layout.fillHeight: true
                 wrapMode: Text.WordWrap
-                horizontalAlignment: Text.AlignHCenter
+                horizontalAlignment: delegate.isCurrent ? Text.AlignLeft : Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
                 maximumLineCount: 2
                 elide: Text.ElideRight
                 color: imagePalette.textColor
@@ -117,16 +123,17 @@ AbstractDelegate {
             PlasmaComponents.Label {
                 visible: text.length > 0
                 Layout.fillWidth: true
-
+                Layout.fillHeight: true
                 opacity: delegate.isCurrent
                 Behavior on opacity {
                     OpacityAnimator {
-                        duration: Kirigami.Units.longDuration
+                        duration: Kirigami.Units.longDuration*2
                         easing.type: Easing.InOutQuad
                     }
                 }
                 wrapMode: Text.WordWrap
-                horizontalAlignment: Text.AlignHCenter
+                horizontalAlignment: Text.AlignLeft
+                verticalAlignment: Text.AlignVCenter
                 maximumLineCount: 2
                 elide: Text.ElideRight
                 color: imagePalette.textColor

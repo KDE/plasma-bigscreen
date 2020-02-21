@@ -35,7 +35,7 @@ import org.kde.mycroft.bigscreen 1.0 as BigScreen
 FocusScope {
     anchors {
         fill: parent
-        margins: units.smallSpacing * 2
+        margins: Kirigami.Units.largeSpacing * 3
     }
 
     ColumnLayout {
@@ -43,6 +43,7 @@ FocusScope {
         anchors {
             left: parent.left
             right: parent.right
+            leftMargin: Kirigami.Units.largeSpacing
         }
         property Item currentSection
         y: currentSection ? -currentSection.y : 0
@@ -54,7 +55,7 @@ FocusScope {
             }
         }
         height: parent.height
-        spacing: 0
+        spacing: Kirigami.Units.largeSpacing*4
         
 
         BigScreen.TileView {

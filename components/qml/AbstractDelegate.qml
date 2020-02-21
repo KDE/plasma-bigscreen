@@ -76,7 +76,10 @@ PlasmaComponents.ItemDelegate {
             id: frame
             anchors {
                 fill: parent
-                margins: delegate.isCurrent ? Kirigami.Units.largeSpacing - innerFrame.anchors.margins : Kirigami.Units.largeSpacing
+                leftMargin: delegate.isCurrent ? Kirigami.Units.largeSpacing - innerFrame.anchors.margins : Kirigami.Units.largeSpacing
+                rightMargin: delegate.isCurrent ? Kirigami.Units.largeSpacing - innerFrame.anchors.margins : Kirigami.Units.largeSpacing
+                topMargin: delegate.isCurrent ? -Kirigami.Units.smallSpacing : Kirigami.Units.largeSpacing
+                bottomMargin: delegate.isCurrent ? -Kirigami.Units.smallSpacing : Kirigami.Units.largeSpacing
             }
             radius: delegate.isCurrent ? 6 : 3
             color: delegate.isCurrent ? delegate.Kirigami.Theme.highlightColor : delegate.Kirigami.Theme.backgroundColor
