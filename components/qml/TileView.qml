@@ -48,7 +48,6 @@ FocusScope {
     property Item navigationUp
     property Item navigationDown
 
-
     Kirigami.Heading {
         id: header
         anchors {
@@ -56,6 +55,7 @@ FocusScope {
             right: parent.right
             top: parent.top
         }
+        bottomPadding: Kirigami.Units.largeSpacing
         text: title
         layer.enabled: true
         color: "white"
@@ -68,6 +68,7 @@ FocusScope {
             right: parent.right
             top: header.bottom
             bottom: parent.bottom
+            leftMargin: -Kirigami.Units.largeSpacing
         }
         focus: true
 
@@ -81,7 +82,7 @@ FocusScope {
         cacheBuffer: width
         implicitHeight: cellWidth + units.gridUnit * 3
         rightMargin: width-cellWidth*3
-        readonly property int cellWidth: Math.floor(width / columns)
+        readonly property int cellWidth: (Kirigami.Units.iconSizes.huge + Kirigami.Units.largeSpacing*4)
         preferredHighlightBegin: cellWidth
         preferredHighlightEnd: cellWidth
 

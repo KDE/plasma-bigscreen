@@ -55,21 +55,20 @@ PlasmaComponents.ItemDelegate {
 
         Rectangle {
             id: shadowSource
-            anchors {
-                fill: frame
-                margins: units.largeSpacing
-            }
+            anchors.fill: frame
             color: "black"
+            radius: frame.radius
+            visible: false
         }
 
         FastBlur {
+            id: shadowBlur
             anchors {
                 fill: frame
-                margins: delegate.isCurrent ? -units.smallSpacing : units.smallSpacing
             }
-            transparentBorder: true 
+            transparentBorder: true
             source: shadowSource
-            radius: 64
+            radius: Kirigami.Units.largeSpacing*2
             cached: true
         }
 
@@ -77,9 +76,12 @@ PlasmaComponents.ItemDelegate {
             id: frame
             anchors {
                 fill: parent
-                margins: units.largeSpacing
+                leftMargin: delegate.isCurrent ? Kirigami.Units.largeSpacing - innerFrame.anchors.margins : Kirigami.Units.largeSpacing
+                rightMargin: delegate.isCurrent ? Kirigami.Units.largeSpacing - innerFrame.anchors.margins : Kirigami.Units.largeSpacing
+                topMargin: delegate.isCurrent ? -Kirigami.Units.smallSpacing : Kirigami.Units.largeSpacing
+                bottomMargin: delegate.isCurrent ? -Kirigami.Units.smallSpacing : Kirigami.Units.largeSpacing
             }
-            radius: units.gridUnit/5
+            radius: delegate.isCurrent ? 6 : 3
             color: delegate.isCurrent ? delegate.Kirigami.Theme.highlightColor : delegate.Kirigami.Theme.backgroundColor
             Behavior on color {
                 ColorAnimation {
@@ -88,11 +90,12 @@ PlasmaComponents.ItemDelegate {
                 }
             }
             Rectangle {
+                id: innerFrame
                 anchors {
                     fill: parent
                     margins: units.smallSpacing
                 }
-                radius: units.gridUnit/5
+                radius: frame.radius/2
                 color: delegate.Kirigami.Theme.backgroundColor
             }
         }
