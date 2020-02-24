@@ -131,6 +131,7 @@ Item {
             left: parent.left
             right: parent.right
         }
+        z: launcher.z + 1
         colorGroup: PlasmaCore.Theme.WindowColorGroup
         Kirigami.Theme.colorSet: Kirigami.Theme.Window
         height: units.iconSizes.medium + units.smallSpacing * 2
