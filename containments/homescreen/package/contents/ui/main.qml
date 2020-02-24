@@ -131,8 +131,8 @@ Item {
             left: parent.left
             right: parent.right
         }
-        colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
-        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+        colorGroup: PlasmaCore.Theme.WindowColorGroup
+        Kirigami.Theme.colorSet: Kirigami.Theme.Window
         height: units.iconSizes.medium + units.smallSpacing * 2
         opacity: root.Window.active
 
