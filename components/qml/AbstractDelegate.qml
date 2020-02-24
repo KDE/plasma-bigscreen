@@ -76,11 +76,19 @@ PlasmaComponents.ItemDelegate {
             id: frame
             anchors {
                 fill: parent
+                //margins: delegate.isCurrent ? -Kirigami.Units.smallSpacing : Kirigami.Units.largeSpacing
+                Behavior on margins {
+                    NumberAnimation {
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                }
                 leftMargin: delegate.isCurrent ? Kirigami.Units.largeSpacing - innerFrame.anchors.margins : Kirigami.Units.largeSpacing
                 rightMargin: delegate.isCurrent ? Kirigami.Units.largeSpacing - innerFrame.anchors.margins : Kirigami.Units.largeSpacing
                 topMargin: delegate.isCurrent ? -Kirigami.Units.smallSpacing : Kirigami.Units.largeSpacing
                 bottomMargin: delegate.isCurrent ? -Kirigami.Units.smallSpacing : Kirigami.Units.largeSpacing
             }
+
             radius: delegate.isCurrent ? 6 : 3
             color: delegate.isCurrent ? delegate.Kirigami.Theme.highlightColor : delegate.Kirigami.Theme.backgroundColor
             Behavior on color {
@@ -97,6 +105,52 @@ PlasmaComponents.ItemDelegate {
                 }
                 radius: frame.radius/2
                 color: delegate.Kirigami.Theme.backgroundColor
+            }
+            states: [
+                State {
+                    when: delegate.isCurrent
+                    PropertyChanges {
+                        target: frame.anchors
+                        leftMargin: Kirigami.Units.largeSpacing - innerFrame.anchors.margins
+                        rightMargin: Kirigami.Units.largeSpacing - innerFrame.anchors.margins
+                        topMargin: -Kirigami.Units.smallSpacing 
+                        bottomMargin: -Kirigami.Units.smallSpacing
+                    }
+                },
+                State {
+                    when: !delegate.isCurrent
+                    PropertyChanges {
+                        target: frame.anchors
+                        leftMargin: Kirigami.Units.largeSpacing
+                        rightMargin: Kirigami.Units.largeSpacing
+                        topMargin: Kirigami.Units.largeSpacing
+                        bottomMargin: Kirigami.Units.largeSpacing
+                    }
+                }
+            ]
+            transitions: Transition {
+                ParallelAnimation {
+                    NumberAnimation {
+                        property: "leftMargin"
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                    NumberAnimation {
+                        property: "rightMargin"
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                    NumberAnimation {
+                        property: "topMargin"
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                    NumberAnimation {
+                        property: "bottomMargin"
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                }
             }
         }
     }

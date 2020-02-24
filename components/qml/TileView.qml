@@ -85,7 +85,10 @@ FocusScope {
         readonly property int cellWidth: (Kirigami.Units.iconSizes.huge + Kirigami.Units.largeSpacing*4)
         preferredHighlightBegin: cellWidth
         preferredHighlightEnd: cellWidth
+        displayMarginBeginning: cellWidth
+        displayMarginEnd: cellWidth
 
+        highlightMoveVelocity: -1
         highlightMoveDuration: Kirigami.Units.longDuration
 
         onContentWidthChanged: if (view.currentIndex === 0) view.contentX = view.originX

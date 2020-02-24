@@ -34,12 +34,12 @@ AbstractDelegate {
 
     property string comment
 
-    Behavior on implicitWidth {
+   /* Behavior on implicitWidth {
         NumberAnimation {
             duration: Kirigami.Units.longDuration
             easing.type: Easing.InOutQuad
         }
-    }
+    }*/
 
     Kirigami.Theme.inherit: !imagePalette.useColors
     Kirigami.Theme.textColor: imagePalette.textColor
@@ -48,7 +48,7 @@ AbstractDelegate {
 
     BigScreen.ImagePalette {
         id: imagePalette
-        sourceItem: icon
+        sourceItem: iconItem
         property bool useColors: BigScreen.Hack.coloredTiles
         property color backgroundColor: useColors ? suggestedContrast : PlasmaCore.ColorScope.backgroundColor
         property color accentColor: useColors ? mostSaturated : PlasmaCore.ColorScope.highlightColor
@@ -56,7 +56,7 @@ AbstractDelegate {
             ? (0.2126 * suggestedContrast.r + 0.7152 * suggestedContrast.g + 0.0722 * suggestedContrast.b > 0.6 ? Qt.rgba(0.2,0.2,0.2,1) : Qt.rgba(0.9,0.9,0.9,1))
             : PlasmaCore.ColorScope.textColor
 
-        readonly property bool inView: listView.width - delegate.x - icon.x < listView.contentX
+        readonly property bool inView: listView.width - delegate.x - iconItem.x < listView.contentX
         onInViewChanged: {
             if (inView) {
                 imagePalette.update();
@@ -66,45 +66,20 @@ AbstractDelegate {
     
     contentItem: Item {
         id: content
+
         PlasmaCore.IconItem {
-            id: icon
-            width: delegate.isCurrent ? Kirigami.Units.iconSizes.huge + Kirigami.Units.largeSpacing*2 : Kirigami.Units.iconSizes.huge
+            id: iconItem
+            //Icon should cover text during animation
+            z: 1
             height: width
-            y: delegate.isCurrent ? content.height/2 - height/2 : 0
             source: delegate.icon.name || delegate.icon.source
-            Behavior on y {
-                YAnimator {
-                    duration: Kirigami.Units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-            Behavior on width {
-                NumberAnimation {
-                    duration: Kirigami.Units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
         }
 
         ColumnLayout {
-            anchors {
-                left: delegate.isCurrent ? icon.right : parent.left
-                right: content.right
-                leftMargin: delegate.isCurrent ? Kirigami.Units.largeSpacing : 0
-            }
-            y: delegate.isCurrent ? content.height/2 - height/2 : content.height - label.height
-            Behavior on x {
-                XAnimator {
-                    duration: Kirigami.Units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-            Behavior on y {
-                YAnimator {
-                    duration: Kirigami.Units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
+            id: textLayout
+            anchors.right: content.right
+
+            width: parent.width - x
 
             PlasmaComponents.Label {
                 id: label
@@ -121,16 +96,11 @@ AbstractDelegate {
                 text: delegate.text
             }
             PlasmaComponents.Label {
+                id: commentLabel
                 visible: text.length > 0
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                opacity: delegate.isCurrent
-                Behavior on opacity {
-                    OpacityAnimator {
-                        duration: Kirigami.Units.longDuration*2
-                        easing.type: Easing.InOutQuad
-                    }
-                }
+
                 wrapMode: Text.WordWrap
                 horizontalAlignment: Text.AlignLeft
                 verticalAlignment: Text.AlignVCenter
@@ -141,5 +111,79 @@ AbstractDelegate {
                 text: delegate.comment
             }
         }
+        states: [
+            State {
+                when: delegate.isCurrent
+                PropertyChanges {
+                    target: delegate
+                    implicitWidth: listView.cellWidth * 2 
+                }
+                PropertyChanges {
+                    target: iconItem
+                    width: Kirigami.Units.iconSizes.huge + Kirigami.Units.largeSpacing*2
+                    y: content.height/2 - iconItem.height/2
+                }
+                PropertyChanges {
+                    target: textLayout
+                    x: iconItem.width + Kirigami.Units.largeSpacing
+                    y: content.height/2 - textLayout.height/2
+                }
+                PropertyChanges {
+                    target: commentLabel
+                    opacity: 1
+                }
+            },
+            State {
+                when: !delegate.isCurrent
+                PropertyChanges {
+                    target: delegate
+                    implicitWidth: listView.cellWidth
+                }
+                PropertyChanges {
+                    target: iconItem
+                    width: Kirigami.Units.iconSizes.huge
+                    y: 0
+                }
+                PropertyChanges {
+                    target: textLayout
+                    x: 0
+                    y: content.height - label.height
+                }
+                PropertyChanges {
+                    target: commentLabel
+                    opacity: 0
+                }
+            }
+        ]
+        transitions: [
+            Transition {
+                ParallelAnimation {
+                    XAnimator {
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                    OpacityAnimator {
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                    // FIXME: why a YAnimator doesn't work?
+                    NumberAnimation {
+                        property: "y"
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                    NumberAnimation {
+                        property: "width"
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                    NumberAnimation {
+                        property: "implicitWidth"
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                }
+            }
+        ]
     }
 }
