@@ -28,7 +28,8 @@ BigScreen.IconDelegate {
 
     onClicked: {
         feedbackWindow.open(modelData.ApplicationNameRole, modelData.ApplicationIconRole);
-        ListView.view.model.runApplication(modelData.ApplicationStorageIdRole)
-        ListView.view.model.moveItem(index, 0);
+        plasmoid.nativeInterface.applicationListModel.runApplication(modelData.ApplicationStorageIdRole)
+        plasmoid.nativeInterface.applicationListModel.moveItem(modelData.ApplicationOriginalRowRole, 0);
+        ListView.view.currentIndex = 0
     }
 }

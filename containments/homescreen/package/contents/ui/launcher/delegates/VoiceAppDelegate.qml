@@ -27,7 +27,8 @@ BigScreen.IconDelegate {
     text: modelData ? modelData.ApplicationNameRole : ""
 
     onClicked: {
-        plasmoid.nativeInterface.voiceAppListModel.runApplication(modelData.ApplicationStorageIdRole)
-        plasmoid.nativeInterface.voiceAppListModel.moveItem(index, 0);
+        plasmoid.nativeInterface.applicationListModel.runApplication(modelData.ApplicationStorageIdRole)
+        plasmoid.nativeInterface.applicationListModel.moveItem(modelData.ApplicationOriginalRowRole, 0);
+        ListView.view.currentIndex = 0
     }
 }

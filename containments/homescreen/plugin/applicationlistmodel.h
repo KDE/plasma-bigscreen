@@ -31,6 +31,7 @@ struct ApplicationData {
     QString name;
     QString comment;
     QString icon;
+    QStringList categories;
     QString storageId;
     QString entryPath;
     QString desktopPath;
@@ -63,12 +64,14 @@ public:
         ApplicationNameRole = Qt::UserRole + 1,
         ApplicationCommentRole,
         ApplicationIconRole,
+        ApplicationCategoriesRole,
         ApplicationStorageIdRole,
         ApplicationEntryPathRole,
         ApplicationDesktopRole,
         ApplicationStartupNotifyRole,
         ApplicationOriginalRowRole
     };
+    Q_ENUM(Roles)
 
     QStringList appOrder() const;
     void setAppOrder(const QStringList &order);

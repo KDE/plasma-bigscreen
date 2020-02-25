@@ -27,10 +27,11 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.private.biglauncher 1.0 as Launcher
 import org.kde.kirigami 2.11 as Kirigami
+import org.kde.kitemmodels 1.0 as KItemModels
 
 import "delegates" as Delegates
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
-
+import org.kde.private.biglauncher 1.0
 
 FocusScope {
     anchors {
@@ -61,7 +62,14 @@ FocusScope {
         BigScreen.TileView {
             id: gridView
             title: i18n("Voice Apps")
-            model: plasmoid.nativeInterface.voiceAppListModel
+            model: KItemModels.KSortFilterProxyModel {
+                sourceModel: plasmoid.nativeInterface.applicationListModel
+                filterRole: "ApplicationCategoriesRole"
+                filterRowCallback: function(source_row, source_parent) {
+                    return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("VoiceApp") !== -1;
+                }
+            }
+
             currentIndex: 0
             focus: true
             onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = gridView
@@ -77,7 +85,15 @@ FocusScope {
         BigScreen.TileView {
             id: gridView2
             title: i18n("Applications")
-            model: plasmoid.nativeInterface.applicationListModel
+            model: KItemModels.KSortFilterProxyModel {
+                sourceModel: plasmoid.nativeInterface.applicationListModel
+                filterRole: "ApplicationCategoriesRole"
+                filterRowCallback: function(source_row, source_parent) {
+                    var cats = sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole);
+                    return cats.indexOf("Game") === -1 && cats.indexOf("VoiceApp") === -1;
+                }
+            }
+
             currentIndex: 0
             focus: false
             onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = gridView2
@@ -93,7 +109,14 @@ FocusScope {
         BigScreen.TileView {
             id: gridView3
             title: i18n("Games")
-            model: plasmoid.nativeInterface.gamesAppListModel
+            model: KItemModels.KSortFilterProxyModel {
+                sourceModel: plasmoid.nativeInterface.applicationListModel
+                filterRole: "ApplicationCategoriesRole"
+                filterRowCallback: function(source_row, source_parent) {
+                    return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("Game") !== -1;
+                }
+            }
+
             currentIndex: 0
             focus: false
             onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = gridView2

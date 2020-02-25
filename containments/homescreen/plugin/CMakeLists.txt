@@ -5,9 +5,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"biglauncherhomescreen\")
 set(biglauncherhomescreen_SRCS
     biglauncherhomescreen.cpp
     biglauncher_dbus.cpp
-    applicationlistmodel.cpp
-    voiceapplistmodel.cpp
-    gamesapplistmodel.cpp)
+    applicationlistmodel.cpp)
 
 add_library(plasma_containment_biglauncherhomescreen MODULE ${biglauncherhomescreen_SRCS})
 

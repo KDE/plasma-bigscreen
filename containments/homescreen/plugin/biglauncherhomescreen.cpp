@@ -20,8 +20,6 @@
 #include "biglauncherhomescreen.h"
 #include "biglauncher_dbus.h"
 #include "applicationlistmodel.h"
-#include "voiceapplistmodel.h"
-#include "gamesapplistmodel.h"
 
 #include <QDebug>
 #include <QProcess>
@@ -32,14 +30,10 @@ HomeScreen::HomeScreen(QObject *parent, const QVariantList &args)
 {
     const QByteArray uri("org.kde.private.biglauncher");
     qmlRegisterUncreatableType<ApplicationListModel>(uri, 1, 0, "ApplicationListModel", QStringLiteral("Cannot create an item of type ApplicationListModel"));
-    qmlRegisterUncreatableType<VoiceAppListModel>(uri, 1, 0, "VoiceAppListModel", QStringLiteral("Cannot create an item of type VoiceAppListModel"));
-    qmlRegisterUncreatableType<GamesAppListModel>(uri, 1, 0, "GamesAppListModel", QStringLiteral("Cannot create an item of type GamesAppListModel"));
 
     //setHasConfigurationInterface(true);
     auto bigLauncherDbusAdapterInterface = new BigLauncherDbusAdapterInterface(this);
     m_applicationListModel = new ApplicationListModel(this);
-    m_voiceAppListModel = new VoiceAppListModel(this);
-    m_gamesAppListModel = new GamesAppListModel(this);
 }
 
 HomeScreen::~HomeScreen()
@@ -48,16 +42,6 @@ HomeScreen::~HomeScreen()
 ApplicationListModel *HomeScreen::applicationListModel() const
 {
     return m_applicationListModel;
-}
-
-VoiceAppListModel *HomeScreen::voiceAppListModel() const
-{
-    return m_voiceAppListModel;
-}
-
-GamesAppListModel *HomeScreen::gamesAppListModel() const
-{
-    return m_gamesAppListModel;
 }
 
 void HomeScreen::executeCommand(const QString &command)

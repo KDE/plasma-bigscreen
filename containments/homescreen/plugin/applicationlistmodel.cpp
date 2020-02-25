@@ -54,6 +54,7 @@ QHash<int, QByteArray> ApplicationListModel::roleNames() const
     roleNames[ApplicationNameRole] = "ApplicationNameRole";
     roleNames[ApplicationCommentRole] = "ApplicationCommentRole";
     roleNames[ApplicationIconRole] = "ApplicationIconRole";
+    roleNames[ApplicationCategoriesRole] = "ApplicationCategoriesRole";
     roleNames[ApplicationStorageIdRole] = "ApplicationStorageIdRole";
     roleNames[ApplicationEntryPathRole] = "ApplicationEntryPathRole";
     roleNames[ApplicationDesktopRole] = "ApplicationDesktopRole";
@@ -120,7 +121,7 @@ void ApplicationListModel::loadApplications()
                         KServiceGroup::Ptr serviceGroup(static_cast<KServiceGroup* >(entry.data()));
                         subGroupList << serviceGroup;
 
-                    } else if (entry->property("Exec").isValid() && entry->property("Categories") != "VoiceApp" && !entry->property("Categories").toStringList().contains("Game")) {
+                    } else if (entry->property("Exec").isValid()) {
                          qDebug() << entry->property("Categories");
                          KService::Ptr service(static_cast<KService* >(entry.data()));
                          qDebug() << " desktopEntryName: " << service->desktopEntryName();                        
@@ -141,6 +142,7 @@ void ApplicationListModel::loadApplications()
                             data.name = service->name();
                             data.comment = service->comment();
                             data.icon = service->icon();
+                            data.categories = service->categories();
                             data.storageId = service->storageId();
                             data.entryPath = service->exec();
                             data.desktopPath = service->entryPath();
@@ -185,6 +187,8 @@ QVariant ApplicationListModel::data(const QModelIndex &index, int role) const
         return m_applicationList.at(index.row()).comment;
     case ApplicationIconRole:
         return m_applicationList.at(index.row()).icon;
+    case ApplicationCategoriesRole:
+        return m_applicationList.at(index.row()).categories;
     case ApplicationStorageIdRole:
         return m_applicationList.at(index.row()).storageId;
     case ApplicationEntryPathRole:
@@ -271,7 +275,7 @@ void ApplicationListModel::runApplication(const QString &storageId)
 
     KService::Ptr service = KService::serviceByStorageId(storageId);
 
-    KRun::runService(*service, QList<QUrl>(), nullptr);
+    KRun::runApplication(*service, QList<QUrl>(), nullptr);
 }
 
 QStringList ApplicationListModel::appOrder() const

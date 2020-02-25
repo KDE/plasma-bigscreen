@@ -24,31 +24,23 @@
 #include <Plasma/Containment>
 
 class ApplicationListModel;
-class VoiceAppListModel;
-class GamesAppListModel;
 
 class HomeScreen : public Plasma::Containment
 {
     Q_OBJECT
     Q_PROPERTY(ApplicationListModel *applicationListModel READ applicationListModel CONSTANT)
-    Q_PROPERTY(VoiceAppListModel *voiceAppListModel READ voiceAppListModel CONSTANT)
-    Q_PROPERTY(GamesAppListModel *gamesAppListModel READ gamesAppListModel CONSTANT)
 
 public:
     HomeScreen( QObject *parent, const QVariantList &args );
     ~HomeScreen() override;
 
     ApplicationListModel *applicationListModel() const;
-    VoiceAppListModel *voiceAppListModel() const;
-    GamesAppListModel *gamesAppListModel() const;
 
 public Q_SLOTS:
     void executeCommand(const QString &command);
 
 private:
     ApplicationListModel *m_applicationListModel;
-    VoiceAppListModel *m_voiceAppListModel;
-    GamesAppListModel *m_gamesAppListModel;
 };
 
 
