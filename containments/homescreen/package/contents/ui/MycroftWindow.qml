@@ -96,7 +96,7 @@ Window {
         open: false
         Keys.onEscapePressed: window.visible = false;
         KeyNavigation.up: closeButton
-        activeSkills.blackList: ["youtube-skill.aiix", "skill-wikidata.aiix", "soundcloud-audio-player.aiix", "food-wizard.aiix", "unsplash-wallpaper-plasma-skill.aiix"]
+        activeSkills.blackList: ["youtube-skill.aiix", "skill-wikidata.aiix", "soundcloud-audio-player.aiix", "food-wizard.aiix", "unsplash-wallpaper-plasma-skill.aiix", "bitchute-skill.aiix"]
         activeSkills.onBlacklistedSkillActivated: {
             plasmoid.nativeInterface.executeCommand("mycroft-gui-app --hideTextInput --skill=" + skillId);
         }
