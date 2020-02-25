@@ -36,7 +36,8 @@ import org.kde.private.biglauncher 1.0
 FocusScope {
     anchors {
         fill: parent
-        margins: Kirigami.Units.largeSpacing * 3
+        leftMargin: Kirigami.Units.largeSpacing * 4
+        topMargin: Kirigami.Units.largeSpacing * 3
     }
 
     ColumnLayout {
@@ -44,7 +45,6 @@ FocusScope {
         anchors {
             left: parent.left
             right: parent.right
-            leftMargin: Kirigami.Units.largeSpacing
         }
         property Item currentSection
         y: currentSection ? -currentSection.y : 0
@@ -56,7 +56,7 @@ FocusScope {
             }
         }
         height: parent.height
-        spacing: Kirigami.Units.largeSpacing*4
+        spacing: Kirigami.Units.largeSpacing*3
         
 
         BigScreen.TileView {
