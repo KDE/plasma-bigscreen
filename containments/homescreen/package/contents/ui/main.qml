@@ -132,7 +132,7 @@ Item {
             right: parent.right
         }
         z: launcher.z + 1
-        colorGroup: PlasmaCore.Theme.WindowColorGroup
+        colorGroup: PlasmaCore.Theme.NormalColorGroup
         Kirigami.Theme.colorSet: Kirigami.Theme.Window
         height: units.iconSizes.medium + units.smallSpacing * 2
         opacity: root.Window.active
