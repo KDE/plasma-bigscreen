@@ -53,7 +53,7 @@ Item {
         addApplet(applet, x, y);
     }
 
-    PlasmaCore.ColorScope.colorGroup: Plasmacore.Theme.ComplementaryColorGroup
+    PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
     Component.onCompleted: {
         for (var i in plasmoid.applets) {
             root.addApplet(plasmoid.applets[i], -1, -1)
