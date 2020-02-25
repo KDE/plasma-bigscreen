@@ -192,7 +192,7 @@ Item {
                 }
                 Behavior on opacity {
                     OpacityAnimator {
-                        duration: Kirigami.units.longDuration
+                        duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
                     }
                 }
