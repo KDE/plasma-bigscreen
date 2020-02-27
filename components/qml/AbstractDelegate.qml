@@ -39,10 +39,10 @@ PlasmaComponents.ItemDelegate {
         listView.currentIndex = index
     }
 
-    leftPadding: units.largeSpacing
-    topPadding: units.largeSpacing
-    rightPadding: units.largeSpacing
-    bottomPadding: units.largeSpacing
+    leftPadding: Kirigami.Units.largeSpacing*2
+    topPadding: Kirigami.Units.largeSpacing*2
+    rightPadding: Kirigami.Units.largeSpacing*2
+    bottomPadding: Kirigami.Units.largeSpacing*2
 
     Keys.onReturnPressed: {
         clicked();
