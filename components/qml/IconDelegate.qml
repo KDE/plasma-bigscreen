@@ -34,13 +34,6 @@ AbstractDelegate {
 
     property string comment
 
-   /* Behavior on implicitWidth {
-        NumberAnimation {
-            duration: Kirigami.Units.longDuration
-            easing.type: Easing.InOutQuad
-        }
-    }*/
-
     Kirigami.Theme.inherit: !imagePalette.useColors
     Kirigami.Theme.textColor: imagePalette.textColor
     Kirigami.Theme.backgroundColor: imagePalette.backgroundColor
@@ -85,7 +78,6 @@ AbstractDelegate {
                 id: label
                 visible: text.length > 0
                 Layout.fillWidth: true
-                Layout.fillHeight: true
                 wrapMode: Text.WordWrap
                 horizontalAlignment: delegate.isCurrent ? Text.AlignLeft : Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
@@ -99,14 +91,21 @@ AbstractDelegate {
                 id: commentLabel
                 visible: text.length > 0
                 Layout.fillWidth: true
-                Layout.fillHeight: true
-
                 wrapMode: Text.WordWrap
                 horizontalAlignment: Text.AlignLeft
                 verticalAlignment: Text.AlignVCenter
                 maximumLineCount: 2
                 elide: Text.ElideRight
                 color: imagePalette.textColor
+                opacity: (textLayout.y + textLayout.height < content.height) && delegate.isCurrent ? 1 : 0
+
+                Behavior on opacity {
+                    enabled: delegate.isCurrent
+                    OpacityAnimator {
+                        duration: Kirigami.Units.longDuration/2
+                        easing.type: Easing.InOutQuad
+                    }
+                }
 
                 text: delegate.comment
             }
@@ -129,10 +128,6 @@ AbstractDelegate {
                     x: iconItem.width + Kirigami.Units.largeSpacing
                     y: content.height/2 - textLayout.height/2
                 }
-                PropertyChanges {
-                    target: commentLabel
-                    opacity: 1
-                }
             },
             State {
                 name: "normal"
@@ -150,10 +145,6 @@ AbstractDelegate {
                     target: textLayout
                     x: 0
                     y: content.height - label.height
-                }
-                PropertyChanges {
-                    target: commentLabel
-                    opacity: 0
                 }
             }
         ]
