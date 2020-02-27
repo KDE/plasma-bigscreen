@@ -99,14 +99,6 @@ FocusScope {
         spacing: 0
         orientation: ListView.Horizontal
 
-        opacity: Kirigami.ScenePosition.y >= 0
-        Behavior on opacity {
-            OpacityAnimator {
-                duration: Kirigami.Units.longDuration * 2
-                easing.type: Easing.InOutQuad
-            }
-        }
-
         move: Transition {
             SmoothedAnimation {
                 property: "x"
