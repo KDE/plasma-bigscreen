@@ -113,6 +113,7 @@ AbstractDelegate {
         }
         states: [
             State {
+                name: "selected"
                 when: delegate.isCurrent
                 PropertyChanges {
                     target: delegate
@@ -134,6 +135,7 @@ AbstractDelegate {
                 }
             },
             State {
+                name: "normal"
                 when: !delegate.isCurrent
                 PropertyChanges {
                     target: delegate
@@ -157,12 +159,9 @@ AbstractDelegate {
         ]
         transitions: [
             Transition {
+                to: "selected"
                 ParallelAnimation {
                     XAnimator {
-                        duration: Kirigami.Units.longDuration
-                        easing.type: Easing.InOutQuad
-                    }
-                    OpacityAnimator {
                         duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
                     }
@@ -180,6 +179,47 @@ AbstractDelegate {
                     NumberAnimation {
                         property: "implicitWidth"
                         duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                    SequentialAnimation {
+                        PauseAnimation {
+                            duration: Kirigami.Units.longDuration/2
+                        }
+                        OpacityAnimator {
+                            target: commentLabel
+                            duration: Kirigami.Units.longDuration/2
+                            easing.type: Easing.InOutQuad
+                        }
+                    }
+                }
+            },
+            Transition {
+                to: "normal"
+                ParallelAnimation {
+                    XAnimator {
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                    // FIXME: why a YAnimator doesn't work?
+                    NumberAnimation {
+                        property: "y"
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                    NumberAnimation {
+                        property: "width"
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                    NumberAnimation {
+                        property: "implicitWidth"
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+
+                    OpacityAnimator {
+                        target: commentLabel
+                        duration: Kirigami.Units.longDuration/2
                         easing.type: Easing.InOutQuad
                     }
                 }
