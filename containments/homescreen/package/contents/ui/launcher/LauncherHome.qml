@@ -49,7 +49,6 @@ FocusScope {
         property Item currentSection
         y: currentSection ? -currentSection.y : 0
         Behavior on y {
-            //Can't be an Animator
             YAnimator {
                 duration: Kirigami.Units.longDuration * 2
                 easing.type: Easing.InOutQuad

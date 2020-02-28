@@ -156,7 +156,6 @@ AbstractDelegate {
                         duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
                     }
-                    // FIXME: why a YAnimator doesn't work?
                     NumberAnimation {
                         property: "y"
                         duration: Kirigami.Units.longDuration
