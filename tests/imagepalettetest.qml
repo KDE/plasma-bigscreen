@@ -15,11 +15,11 @@ RowLayout {
 
     BigScreen.ImagePalette {
         id: palette
-        sourceItem: icon
+        source: icon
     }
     BigScreen.ImagePalette {
         id: imgPalette
-        sourceItem: image
+        source: image
     }
 
     ColumnLayout {

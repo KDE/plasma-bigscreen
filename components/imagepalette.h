@@ -26,10 +26,12 @@
 #include <QPointer>
 #include <QQuickWindow>
 
+class QTimer;
+
 class ImagePalette : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QQuickItem *sourceItem READ sourceItem WRITE setSourceItem NOTIFY sourceItemChanged)
+    Q_PROPERTY(QVariant source READ source WRITE setSource NOTIFY sourceChanged)
     Q_PROPERTY(QVariantList palette READ palette NOTIFY paletteChanged)
 
     Q_PROPERTY(QColor suggestedContrast READ suggestedContrast NOTIFY suggestedContrastChanged)
@@ -40,7 +42,13 @@ class ImagePalette : public QObject
 public:
     explicit ImagePalette(QObject* parent = nullptr);
     ~ImagePalette();
-    
+
+    void setSource(const QVariant &source);
+    QVariant source() const;
+
+    void setSourceImage(const QImage &image);
+    QImage sourceImage() const;
+
     void setSourceItem(QQuickItem *source);
     QQuickItem *sourceItem() const;
 
@@ -53,7 +61,7 @@ public:
     QColor closestToBlack() const;
 
 Q_SIGNALS:
-    void sourceItemChanged();
+    void sourceChanged();
     void paletteChanged();
     void suggestedContrastChanged();
     void mostSaturatedChanged();
@@ -73,12 +81,14 @@ private:
     // Arbitrary number that seems to work well
     const int s_minimumSquareDistance = 32000;
     QPointer<QQuickWindow> m_window;
-    QPointer<QQuickItem> m_source;
+    QVariant m_source;
+    QPointer<QQuickItem> m_sourceItem;
     QSharedPointer<QQuickItemGrabResult> m_grabResult;
     QImage m_sourceImage;
     QList<QRgb> m_samples;
     QList<colorStat> m_clusters;
     QVariantList m_palette;
+    QTimer *m_imageSyncTimer;
 
     QColor m_dominant;
     QColor m_suggestedContrast;

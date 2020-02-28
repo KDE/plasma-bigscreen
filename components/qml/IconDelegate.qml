@@ -41,7 +41,7 @@ AbstractDelegate {
 
     BigScreen.ImagePalette {
         id: imagePalette
-        sourceItem: iconItem
+        source: iconItem.source
         property bool useColors: BigScreen.Hack.coloredTiles
         property color backgroundColor: useColors ? suggestedContrast : PlasmaCore.ColorScope.backgroundColor
         property color accentColor: useColors ? mostSaturated : PlasmaCore.ColorScope.highlightColor

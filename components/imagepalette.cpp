@@ -20,60 +20,115 @@
 
 #include <QColor>
 #include <QDebug>
+#include <QTimer>
 #include <cmath>
 
 
 ImagePalette::ImagePalette(QObject *parent)
     : QObject(parent)
 {
+    m_imageSyncTimer = new QTimer(this);
+    m_imageSyncTimer->setSingleShot(true);
+    m_imageSyncTimer->setInterval(100);
+    connect(m_imageSyncTimer, &QTimer::timeout, this, [this]() {
+       generatePalette();
+    });
 }
 
 ImagePalette::~ImagePalette()
 {}
 
+void ImagePalette::setSource(const QVariant &source)
+{
+    if (source.canConvert<QQuickItem *>()) {
+        setSourceItem(source.value<QQuickItem *>());
+    } else if (source.canConvert<QImage>()) {
+        setSourceImage(source.value<QImage>());
+    } else if (source.canConvert<QString>()) {
+        setSourceImage(QIcon::fromTheme(source.toString()).pixmap(32,32).toImage());
+    } else {
+        return;
+    }
+
+    m_source = source;
+    emit sourceChanged();
+}
+
+QVariant ImagePalette::source() const
+{
+    return m_source;
+}
+
+void ImagePalette::setSourceImage(const QImage &image)
+{
+    if (m_window) {
+        disconnect(m_window.data(), nullptr, this, nullptr);
+    }
+    if (m_sourceItem) {
+        disconnect(m_sourceItem.data(), nullptr, this, nullptr);
+    }
+    if (m_grabResult) {
+        disconnect(m_grabResult.data(), nullptr, this, nullptr);
+        m_grabResult.clear();
+    }
+
+    m_sourceItem.clear();
+
+    if (m_sourceImage.isNull()) {
+        m_sourceImage = image;
+        generatePalette();
+    } else {
+        m_sourceImage = image;
+        m_imageSyncTimer->start();
+    }
+}
+
+QImage ImagePalette::sourceImage() const
+{
+    return m_sourceImage;
+}
+
 void ImagePalette::setSourceItem(QQuickItem *source)
 {
-    if (m_source == source) {
+    if (m_sourceItem == source) {
         return;
     }
 
     if (m_window) {
         disconnect(m_window.data(), nullptr, this, nullptr);
     }
-    if (m_source) {
-        disconnect(m_source, nullptr, this, nullptr);
+    if (m_sourceItem) {
+        disconnect(m_sourceItem, nullptr, this, nullptr);
     }
-    m_source = source;
+    m_sourceItem = source;
     update();
 
-    if (m_source) {
+    if (m_sourceItem) {
         auto syncWindow = [this] () {
             if (m_window) {
                 disconnect(m_window.data(), nullptr, this, nullptr);
             }
-            m_window = m_source->window();
+            m_window = m_sourceItem->window();
             if (m_window) {
                 connect(m_window, &QWindow::visibleChanged,
                         this, &ImagePalette::update);
             }
         };
 
-        connect(m_source, &QQuickItem::windowChanged,
+        connect(m_sourceItem, &QQuickItem::windowChanged,
                 this, syncWindow);
         syncWindow();
     }
-
-    emit sourceItemChanged();
 }
 
 QQuickItem *ImagePalette::sourceItem() const
 {
-    return m_source;
+    return m_sourceItem;
 }
 
 void ImagePalette::update()
 {
-    if (!m_source || !m_window) {
+    if (!m_sourceItem || !m_window) {
         return;
     }
 
@@ -82,7 +137,7 @@ void ImagePalette::update()
         m_grabResult.clear();
     }
 
-    m_grabResult = m_source->grabToImage(QSize(32,32));
+    m_grabResult = m_sourceItem->grabToImage(QSize(32,32));
 
     if (m_grabResult) {
         connect(m_grabResult.data(), &QQuickItemGrabResult::ready, this, [this]() {
