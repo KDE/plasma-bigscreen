@@ -40,9 +40,8 @@ Column {
             }
             height: Math.max(detailNameLabel.height, detailValueLabel.height)
 
-            Kirigami.Heading {
+            PlasmaComponents.Label {
                 id: detailNameLabel
-                level: 3
                 anchors {
                     left: parent.left
                     leftMargin: repeater.longestString - paintedWidth + Math.round(Kirigami.Units.gridUnit / 2)
@@ -58,9 +57,8 @@ Column {
                 }
             }
 
-            Kirigami.Heading {
+            PlasmaComponents.Label {
                 id: detailValueLabel
-                level: 3
                 anchors {
                     left: parent.left
                     right: parent.right

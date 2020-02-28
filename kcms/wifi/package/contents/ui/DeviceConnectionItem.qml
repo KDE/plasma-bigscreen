@@ -189,7 +189,7 @@ Rectangle {
                 height: 1
                 width: parent.width
             }
-         
+    
             DetailsText {
                 id: detailsTxtArea
                 visible: true
@@ -198,24 +198,22 @@ Rectangle {
                     left: parent.left
                     right: parent.right
                     top: lblSept2.bottom
-                    bottom: lblSept3.top
                 }
             }
             
             Kirigami.Separator {
                 id: lblSept3
-                anchors.bottom: label3.top
-                anchors.bottomMargin: Kirigami.Units.smallSpacing
+                anchors.top: detailsTxtArea.bottom
+                anchors.topMargin: Kirigami.Units.smallSpacing
                 height: 1
                 width: parent.width
-                visible: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0
             }
             
             RowLayout {
                 id: label3
                 width: parent.width
-                anchors.bottom: lblSept4.top
-                anchors.bottomMargin: Kirigami.Units.smallSpacing
+                anchors.top: lblSept3.bottom
+                anchors.topMargin: Kirigami.Units.smallSpacing
                 visible: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0
                                 
                 Kirigami.Heading {
@@ -245,31 +243,17 @@ Rectangle {
             
             Kirigami.Separator {
                 id: lblSept4
-                anchors.bottom: trafficMonitor.top
-                anchors.bottomMargin: Kirigami.Units.smallSpacing
-                visible: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0
+                anchors.top: label3.bottom
+                anchors.topMargin: Kirigami.Units.smallSpacing
                 height: 1
                 width: parent.width
-            }
-            
-            TrafficMonitor {
-                id: trafficMonitor
                 visible: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                    bottom: parent.bottom
-                }
-                rxBytes: RxBytes
-                txBytes: TxBytes
-                interval: 500
             }
         }
-        
+            
         Item {
             Layout.fillWidth: true
             Layout.preferredHeight: Kirigami.Units.gridUnit
         }
     }
 }
- 
