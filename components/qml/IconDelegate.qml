@@ -97,15 +97,6 @@ AbstractDelegate {
                 maximumLineCount: 2
                 elide: Text.ElideRight
                 color: imagePalette.textColor
-                opacity: (textLayout.y + textLayout.height < content.height) && delegate.isCurrent ? 1 : 0
-
-                Behavior on opacity {
-                    enabled: delegate.isCurrent
-                    OpacityAnimator {
-                        duration: Kirigami.Units.longDuration/2
-                        easing.type: Easing.InOutQuad
-                    }
-                }
 
                 text: delegate.comment
             }
@@ -128,6 +119,10 @@ AbstractDelegate {
                     x: iconItem.width + Kirigami.Units.largeSpacing
                     y: content.height/2 - textLayout.height/2
                 }
+                PropertyChanges {
+                    target: commentLabel
+                    opacity: 1
+                }
             },
             State {
                 name: "normal"
@@ -145,6 +140,10 @@ AbstractDelegate {
                     target: textLayout
                     x: 0
                     y: content.height - label.height
+                }
+                PropertyChanges {
+                    target: commentLabel
+                    opacity: 0
                 }
             }
         ]
