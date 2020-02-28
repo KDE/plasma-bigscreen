@@ -29,7 +29,7 @@ import org.kde.mycroft.bigscreen 1.0 as BigScreen
 AbstractDelegate {
     id: delegate
 
-    implicitWidth: isCurrent ? listView.cellWidth * 2 : listView.cellWidth
+    implicitWidth: listView.cellWidth
     implicitHeight: listView.height
 
     property string comment
@@ -64,6 +64,7 @@ AbstractDelegate {
             id: iconItem
             //Icon should cover text during animation
             z: 1
+            width: Kirigami.Units.iconSizes.huge
             height: width
             source: delegate.icon.name || delegate.icon.source
         }
@@ -72,6 +73,8 @@ AbstractDelegate {
             id: textLayout
             anchors.right: content.right
 
+            x: 0
+            y: content.height - label.height
             width: parent.width - x
 
             PlasmaComponents.Label {
@@ -97,6 +100,7 @@ AbstractDelegate {
                 maximumLineCount: 2
                 elide: Text.ElideRight
                 color: imagePalette.textColor
+                opacity: 0
 
                 text: delegate.comment
             }
@@ -205,7 +209,6 @@ AbstractDelegate {
                         duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
                     }
-
                     OpacityAnimator {
                         target: commentLabel
                         duration: Kirigami.Units.longDuration/2
