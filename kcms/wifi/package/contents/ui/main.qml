@@ -48,6 +48,7 @@ KCM.SimpleKCM {
     
     onActiveFocusChanged: {
        if (activeFocus) {
+           handler.requestScan();
            connectionView.forceActiveFocus();
        }
     }
@@ -108,6 +109,8 @@ KCM.SimpleKCM {
     }
 
     footer: RowLayout {
+            id: footerArea
+            height: Kirigami.Units.gridUnit * 4
             anchors.left: parent.left
             anchors.right: parent.right
                     
@@ -310,24 +313,66 @@ KCM.SimpleKCM {
         }
     }
     
-    ColumnLayout {
-        width: parent.width
-        height: children.height
     
-        BigScreen.TileView {
-            id: connectionView
-            focus: true
-            model: appletProxyModel
-            title: i18n("Connections")
-            currentIndex: 0
-            delegate: Delegates.NetworkDelegate{}
-            navigationDown: reloadButton
-            Behavior on x {
-                NumberAnimation {
-                    duration: Kirigami.Units.longDuration * 2
-                    easing.type: Easing.InOutQuad
+    contentItem: FocusScope {
+        width: parent.width
+        height: parent.height - footerArea.height
+    
+        ColumnLayout {
+            anchors.left: parent.left
+            anchors.top: parent.top
+            anchors.leftMargin: Kirigami.Units.largeSpacing
+            anchors.topMargin: Kirigami.Units.largeSpacing
+            width: parent.width
+            height: children.height
+        
+            BigScreen.TileView {
+                id: connectionView
+                focus: true
+                model: appletProxyModel
+                title: i18n("Connections")
+                currentIndex: 0
+                delegate: Delegates.NetworkDelegate{}
+                navigationDown: reloadButton
+                Behavior on x {
+                    NumberAnimation {
+                        duration: Kirigami.Units.longDuration * 2
+                        easing.type: Easing.InOutQuad
+                    }
+                }
+                
+            onCurrentItemChanged: {
+                    deviceConnectionView.currentIndex = connectionView.currentIndex
+                    deviceConnectionView.positionViewAtIndex(currentIndex, ListView.Center);
                 }
             }
         }
-    }
+        
+        Kirigami.Separator {
+            id: viewSept
+            anchors.right: deviceConnectionView.left
+        }
+        
+        ListView {
+            id: deviceConnectionView
+            anchors.top: parent.top
+            anchors.topMargin: -Kirigami.Units.largeSpacing
+            anchors.right: parent.right
+            anchors.rightMargin: -Kirigami.Units.largeSpacing
+            model: connectionView.model
+            height: parent.height + Kirigami.Units.largeSpacing
+            width: parent.width / 3.5
+            layoutDirection: Qt.LeftToRight
+            orientation: ListView.Horizontal
+            snapMode: ListView.SnapOneItem;
+            highlightRangeMode: ListView.StrictlyEnforceRange
+            highlightFollowsCurrentItem: true
+            spacing: Kirigami.Units.largeSpacing
+            clip: true
+            interactive: false
+            implicitHeight: deviceConnectionView.implicitHeight
+            currentIndex: 0
+            delegate: DeviceConnectionItem{}
+        }
+   }
 }

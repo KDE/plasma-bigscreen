@@ -28,93 +28,25 @@ import org.kde.mycroft.bigscreen 1.0 as BigScreen
 import QtGraphicalEffects 1.0
 import org.kde.plasma.networkmanagement 0.2 as PlasmaNM
 
-PlasmaComponents.ItemDelegate {
+BigScreen.AbstractDelegate {
     id: delegate
 
     property bool activating: model.ConnectionState == PlasmaNM.Enums.Activating
     property bool deactivating: model.ConnectionState == PlasmaNM.Enums.Deactivating
     property bool predictableWirelessPassword: !model.Uuid && model.Type == PlasmaNM.Enums.Wireless &&
                                                (model.SecurityType == PlasmaNM.Enums.StaticWep || model.SecurityType == PlasmaNM.Enums.WpaPsk ||
-                                                model.SecurityType == PlasmaNM.Enums.Wpa2Psk)
+                                                model.SecurityType == PlasmaNM.Enums.Wpa2Psk || model.SecurityType == PlasmaNM.Enums.SAE)
     property alias connectionStatusLabelText: connectionStatusLabel.text
 
     checked: connectionView.currentIndex === index && connectionView.activeFocus
 
     implicitWidth: isCurrent ? listView.cellWidth * 2 : listView.cellWidth
     implicitHeight: listView.height + Kirigami.Units.largeSpacing
-
-    readonly property ListView listView: ListView.view
-    readonly property bool isCurrent: listView.currentIndex == index && activeFocus
-
-    z: isCurrent ? 2 : 0
-
-    leftPadding: Kirigami.Units.largeSpacing * 3
-    topPadding: Kirigami.Units.largeSpacing * 3
-    rightPadding: Kirigami.Units.largeSpacing * 3
-    bottomPadding: Kirigami.Units.largeSpacing * 3
     
     Behavior on implicitWidth {
         NumberAnimation {
             duration: Kirigami.Units.longDuration
             easing.type: Easing.InOutQuad
-        }
-    }
-
-    
-     BigScreen.ImagePalette {
-        id: imagePalette
-        sourceItem: connectionSvgIcon
-        property bool useColors: BigScreen.Hack.coloredTiles
-        property color backgroundColor: useColors ? suggestedContrast : PlasmaCore.ColorScope.backgroundColor
-        property color accentColor: useColors ? mostSaturated : PlasmaCore.ColorScope.highlightColor
-        property color textColor: useColors
-            ? (0.2126 * suggestedContrast.r + 0.7152 * suggestedContrast.g + 0.0722 * suggestedContrast.b > 0.6 ? Qt.rgba(0.2,0.2,0.2,1) : Qt.rgba(0.9,0.9,0.9,1))
-            : PlasmaCore.ColorScope.textColor
-
-        readonly property bool inView: listView.width - delegate.x - connectionSvgIcon.x < listView.contentX
-        onInViewChanged: {
-            if (inView) {
-                imagePalette.update();
-            }
-        }
-    }
-    
-    background: Item {
-        id: background
-
-        PlasmaCore.FrameSvgItem {
-            anchors {
-                fill: frame
-                leftMargin: -margins.left
-                topMargin: -margins.top
-                rightMargin: -margins.right
-                bottomMargin: -margins.bottom
-            }
-            imagePath: Qt.resolvedUrl("./background.svg")
-            prefix: "shadow"
-        }
-        Rectangle {
-            id: frame
-            anchors {
-                fill: parent
-                margins: Kirigami.Units.largeSpacing
-            }
-            radius: Kirigami.Units.gridUnit / 5
-            color: delegate.isCurrent ? imagePalette.accentColor : imagePalette.backgroundColor
-            Behavior on color {
-                ColorAnimation {
-                    duration: Kirigami.Units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-            Rectangle {
-                anchors {
-                    fill: parent
-                    margins: Kirigami.Units.smallSpacing
-                }
-                radius: Kirigami.Units.gridUnit / 5
-                color: imagePalette.backgroundColor
-            }
         }
     }
 
@@ -143,7 +75,7 @@ PlasmaComponents.ItemDelegate {
                 id: connectionNameLabel
                 Layout.fillWidth: true
                 visible: text.length > 0
-                level: 2
+                level: 3
                 elide: Text.ElideRight
                 wrapMode: Text.Wrap
                 horizontalAlignment: Text.AlignHCenter
@@ -151,7 +83,7 @@ PlasmaComponents.ItemDelegate {
                 font.italic: model.ConnectionState == PlasmaNM.Enums.Activating ? true : false
                 text: model.ItemUniqueName
                 maximumLineCount: 2
-                color: imagePalette.textColor
+                color: Kirigami.Theme.textColor
                 textFormat: Text.PlainText
             }
 
@@ -161,12 +93,12 @@ PlasmaComponents.ItemDelegate {
                 elide: Text.ElideRight
                 Layout.fillWidth: true
                 visible: text.length > 0
-                maximumLineCount: 2
+                maximumLineCount: 1
                 wrapMode: Text.WordWrap
                 horizontalAlignment: Text.AlignHCenter
                 opacity: 0.6
                 text: itemText()
-                color: imagePalette.textColor
+                color: Kirigami.Theme.textColor
                 textFormat: Text.PlainText
             }
         }
