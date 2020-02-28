@@ -50,7 +50,7 @@ FocusScope {
         y: currentSection ? -currentSection.y : 0
         Behavior on y {
             //Can't be an Animator
-            NumberAnimation {
+            YAnimator {
                 duration: Kirigami.Units.longDuration * 2
                 easing.type: Easing.InOutQuad
             }
