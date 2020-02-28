@@ -34,13 +34,6 @@ AbstractDelegate {
 
     property string comment
 
-   /* Behavior on implicitWidth {
-        NumberAnimation {
-            duration: Kirigami.Units.longDuration
-            easing.type: Easing.InOutQuad
-        }
-    }*/
-
     Kirigami.Theme.inherit: !imagePalette.useColors
     Kirigami.Theme.textColor: imagePalette.textColor
     Kirigami.Theme.backgroundColor: imagePalette.backgroundColor
@@ -85,7 +78,6 @@ AbstractDelegate {
                 id: label
                 visible: text.length > 0
                 Layout.fillWidth: true
-                Layout.fillHeight: true
                 wrapMode: Text.WordWrap
                 horizontalAlignment: delegate.isCurrent ? Text.AlignLeft : Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
@@ -99,8 +91,6 @@ AbstractDelegate {
                 id: commentLabel
                 visible: text.length > 0
                 Layout.fillWidth: true
-                Layout.fillHeight: true
-
                 wrapMode: Text.WordWrap
                 horizontalAlignment: Text.AlignLeft
                 verticalAlignment: Text.AlignVCenter
@@ -165,7 +155,6 @@ AbstractDelegate {
                         duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
                     }
-                    // FIXME: why a YAnimator doesn't work?
                     NumberAnimation {
                         property: "y"
                         duration: Kirigami.Units.longDuration

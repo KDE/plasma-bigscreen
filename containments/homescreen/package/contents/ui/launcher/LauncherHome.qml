@@ -36,7 +36,8 @@ import org.kde.private.biglauncher 1.0
 FocusScope {
     anchors {
         fill: parent
-        margins: Kirigami.Units.largeSpacing * 3
+        leftMargin: Kirigami.Units.largeSpacing * 4
+        topMargin: Kirigami.Units.largeSpacing * 3
     }
 
     ColumnLayout {
@@ -44,19 +45,17 @@ FocusScope {
         anchors {
             left: parent.left
             right: parent.right
-            leftMargin: Kirigami.Units.largeSpacing
         }
         property Item currentSection
         y: currentSection ? -currentSection.y : 0
         Behavior on y {
-            //Can't be an Animator
-            NumberAnimation {
+            YAnimator {
                 duration: Kirigami.Units.longDuration * 2
                 easing.type: Easing.InOutQuad
             }
         }
         height: parent.height
-        spacing: Kirigami.Units.largeSpacing*4
+        spacing: Kirigami.Units.largeSpacing*3
         
 
         BigScreen.TileView {

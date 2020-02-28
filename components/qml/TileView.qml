@@ -55,7 +55,6 @@ FocusScope {
             right: parent.right
             top: parent.top
         }
-        bottomPadding: Kirigami.Units.largeSpacing
         text: title
         layer.enabled: true
         color: "white"
@@ -66,8 +65,9 @@ FocusScope {
         anchors {
             left: parent.left
             right: parent.right
-            top: header.bottom
+            top: header.baseline
             bottom: parent.bottom
+            topMargin: Kirigami.Units.largeSpacing*2
             leftMargin: -Kirigami.Units.largeSpacing
         }
         focus: true
@@ -98,14 +98,6 @@ FocusScope {
         
         spacing: 0
         orientation: ListView.Horizontal
-
-        opacity: Kirigami.ScenePosition.y >= 0
-        Behavior on opacity {
-            OpacityAnimator {
-                duration: Kirigami.Units.longDuration * 2
-                easing.type: Easing.InOutQuad
-            }
-        }
 
         move: Transition {
             SmoothedAnimation {

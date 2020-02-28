@@ -53,7 +53,7 @@ Item {
         addApplet(applet, x, y);
     }
 
-    PlasmaCore.ColorScope.colorGroup: Plasmacore.Theme.ComplementaryColorGroup
+    PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
     Component.onCompleted: {
         for (var i in plasmoid.applets) {
             root.addApplet(plasmoid.applets[i], -1, -1)
@@ -131,8 +131,9 @@ Item {
             left: parent.left
             right: parent.right
         }
-        colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
-        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+        z: launcher.z + 1
+        colorGroup: PlasmaCore.Theme.NormalColorGroup
+        Kirigami.Theme.colorSet: Kirigami.Theme.Window
         height: units.iconSizes.medium + units.smallSpacing * 2
         opacity: root.Window.active
 
@@ -191,7 +192,7 @@ Item {
                 }
                 Behavior on opacity {
                     OpacityAnimator {
-                        duration: Kirigami.units.longDuration
+                        duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
                     }
                 }
