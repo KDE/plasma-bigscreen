@@ -13,6 +13,20 @@ X-KDE-Weight=40
 X-KDE-FormFactors=tablet,handset,desktop
 
 Name=Language
+Name[ca]=Idioma
+Name[nl]=Taal
+Name[pt]=Língua
+Name[sv]=Språk
+Name[uk]=Мова
+Name[x-test]=xxLanguagexx
+Name[zh_TW]=語言
 Comment=Change workspace and application languages
+Comment[ca]=Canvi dels idiomes de l'espai de treball i les aplicacions
+Comment[nl]=Werkruimte en talen van toepassingen wijzigen
+Comment[pt]=Mudar as línguas da área de trabalho e da aplicação
+Comment[sv]=Ändra arbetsområde och programspråk
+Comment[uk]=Зміна мови перекладу робочого простору і програм
+Comment[x-test]=xxChange workspace and application languagesxx
+Comment[zh_TW]=變更工作區及應用程式語言
 
 Categories=Qt;KDE;X-KDE-settings-audiodevice;

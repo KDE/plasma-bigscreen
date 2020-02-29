@@ -1,5 +1,12 @@
 [Desktop Entry]
 Name=Wifi
+Name[ca]=Wi-Fi
+Name[nl]=Wi-Fi
+Name[pt]=Wi-Fi
+Name[sv]=WIFI
+Name[uk]=Wi-Fi
+Name[x-test]=xxWifixx
+Name[zh_TW]=Wi-Fi
 
 Icon=network-wireless-signal-exellent
 Type=Service
