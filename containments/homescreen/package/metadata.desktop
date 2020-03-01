@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Name=Mycroft Bigscreen
 Name[ca]=Pantalla gran del Mycroft
+Name[ca@valencia]=Pantalla gran del Mycroft
 Name[nl]=Mycroft Bigscreen
 Name[pt]=Mycroft de Grande Ecrã
 Name[sv]=Mycroft storbildsskärm
@@ -10,6 +11,7 @@ Name[x-test]=xxMycroft Bigscreenxx
 Name[zh_TW]=Mycroft Bigscreen
 Comment=Homescreen for Plasma and Mycroft based TVs
 Comment[ca]=Pantalla d'inici del Plasma i Mycroft per a televisors
+Comment[ca@valencia]=Pantalla d'inici del Plasma i Mycroft per a televisors
 Comment[nl]=Standaardscherm voor Plasma en op Mycroft gebaseerde TV's
 Comment[pt]=Ecrã inicial para TV's baseadas no Plasma e Mycroft
 Comment[sv]=Hemskärm för Plasma- och Mycroft-baserade tv-apparater

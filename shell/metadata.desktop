@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Name=Plasma Big Screen
 Name[ca]=Pantalla gran del Plasma
+Name[ca@valencia]=Pantalla gran del Plasma
 Name[nl]=Plasma Big Screen
 Name[pt]=Plasma para Grande Ecrã
 Name[sv]=Plasma storbildsskärm
@@ -10,6 +11,7 @@ Name[x-test]=xxPlasma Big Screenxx
 Name[zh_TW]=Plasma 大螢幕
 Comment=Plasma shell for TVs
 Comment[ca]=Espai de treball Plasma per a televisors
+Comment[ca@valencia]=Espai de treball Plasma per a televisors
 Comment[nl]=Plasma-shell voor TV's
 Comment[pt]=Consola do Plasma para TV's
 Comment[sv]=Plasma skal för tv-apparater

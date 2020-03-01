@@ -14,6 +14,7 @@ X-KDE-FormFactors=tablet,handset,desktop
 
 Name=Language
 Name[ca]=Idioma
+Name[ca@valencia]=Idioma
 Name[nl]=Taal
 Name[pt]=Língua
 Name[sv]=Språk
@@ -22,6 +23,7 @@ Name[x-test]=xxLanguagexx
 Name[zh_TW]=語言
 Comment=Change workspace and application languages
 Comment[ca]=Canvi dels idiomes de l'espai de treball i les aplicacions
+Comment[ca@valencia]=Canvi dels idiomes de l'espai de treball i les aplicacions
 Comment[nl]=Werkruimte en talen van toepassingen wijzigen
 Comment[pt]=Mudar as línguas da área de trabalho e da aplicação
 Comment[sv]=Ändra arbetsområde och programspråk
