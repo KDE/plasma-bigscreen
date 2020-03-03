@@ -29,8 +29,19 @@ import org.kde.mycroft.bigscreen 1.0 as BigScreen
 PlasmaComponents.ItemDelegate {
     id: delegate
 
-    readonly property ListView listView: ListView.view
-    readonly property bool isCurrent: listView.currentIndex == index && activeFocus && !listView.moving
+    readonly property Flickable listView: {
+        var candidate = parent;
+        while (candidate) {
+            if (candidate instanceof Flickable) {
+                return candidate;
+            }
+            candidate = candidate.parent;
+        }
+        return null;
+    }
+    readonly property bool isCurrent: {//print(text+index+" "+listView.currentIndex+activeFocus+" "+listView.moving)
+        listView.currentIndex == index && activeFocus && !listView.moving
+    }
 
     z: isCurrent ? 2 : 0
 

@@ -20,6 +20,8 @@ include(ECMInstallIcons)
 
 # Locate plasma_install_package macro.
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
+    Activities
+    ActivitiesStats
     Plasma
     I18n
     Kirigami2

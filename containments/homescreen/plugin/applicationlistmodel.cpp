@@ -24,6 +24,7 @@
 #include <QByteArray>
 #include <QModelIndex>
 #include <QProcess>
+#include <QDebug>
 
 // KDE
 #include <KPluginInfo>
@@ -35,7 +36,7 @@
 #include <KSycocaEntry>
 #include <KShell>
 #include <KIOWidgets/KRun>
-#include <QDebug>
+#include <KActivities/ResourceInstance>
 
 ApplicationListModel::ApplicationListModel(QObject *parent)
     : QAbstractListModel(parent)
@@ -276,6 +277,9 @@ void ApplicationListModel::runApplication(const QString &storageId)
     KService::Ptr service = KService::serviceByStorageId(storageId);
 
     KRun::runApplication(*service, QList<QUrl>(), nullptr);
+
+    KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()),
+            QStringLiteral("org.kde.plasma.kicker"));
 }
 
 QStringList ApplicationListModel::appOrder() const

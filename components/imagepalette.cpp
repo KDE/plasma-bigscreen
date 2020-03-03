@@ -44,6 +44,8 @@ void ImagePalette::setSource(const QVariant &source)
         setSourceItem(source.value<QQuickItem *>());
     } else if (source.canConvert<QImage>()) {
         setSourceImage(source.value<QImage>());
+    } else if (source.canConvert<QIcon>()) {
+        setSourceImage(source.value<QIcon>().pixmap(32,32).toImage());
     } else if (source.canConvert<QString>()) {
         setSourceImage(QIcon::fromTheme(source.toString()).pixmap(32,32).toImage());
     } else {

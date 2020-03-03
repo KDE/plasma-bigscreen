@@ -32,6 +32,7 @@ AbstractDelegate {
     implicitWidth: listView.cellWidth
     implicitHeight: listView.height
 
+    property var iconImage
     property string comment
 
     Kirigami.Theme.inherit: !imagePalette.useColors
@@ -66,7 +67,7 @@ AbstractDelegate {
             z: 1
             width: Kirigami.Units.iconSizes.huge
             height: width
-            source: delegate.icon.name || delegate.icon.source
+            source: delegate.iconImage || delegate.icon.name || delegate.icon.source
         }
 
         ColumnLayout {

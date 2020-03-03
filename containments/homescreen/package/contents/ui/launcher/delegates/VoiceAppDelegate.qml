@@ -23,12 +23,10 @@ import org.kde.mycroft.bigscreen 1.0 as BigScreen
 BigScreen.IconDelegate {
     readonly property var vAppStorageIdRole: modelData.ApplicationStorageIdRole
 
-    icon.name: modelData ? modelData.ApplicationIconRole : ""
+    icon.name: modelData && modelData.ApplicationIconRole ? modelData.ApplicationIconRole : ""
     text: modelData ? modelData.ApplicationNameRole : ""
 
     onClicked: {
         plasmoid.nativeInterface.applicationListModel.runApplication(modelData.ApplicationStorageIdRole)
-        plasmoid.nativeInterface.applicationListModel.moveItem(modelData.ApplicationOriginalRowRole, 0);
-        ListView.view.currentIndex = 0
     }
 }

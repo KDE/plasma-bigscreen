@@ -32,6 +32,7 @@ import org.kde.kitemmodels 1.0 as KItemModels
 import "delegates" as Delegates
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 import org.kde.private.biglauncher 1.0
+import org.kde.plasma.private.kicker 0.1 as Kicker
 
 FocusScope {
     anchors {
@@ -58,8 +59,31 @@ FocusScope {
         spacing: Kirigami.Units.largeSpacing*3
         
 
-        BigScreen.TileView {
-            id: gridView
+        BigScreen.TileRepeater {
+            id: recentView
+            title: i18n("Recent Apps")
+            model: Kicker.RecentUsageModel {
+                shownItems: Kicker.RecentUsageModel.OnlyApps
+            }
+
+            visible: count > 0
+            currentIndex: 0
+            focus: true
+            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = recentView
+            delegate: Delegates.AppDelegate {
+                property var modelData: typeof model !== "undefined" ? model : null
+                iconImage: model.decoration
+                text: model.display
+                comment: model.description
+                onClicked: recentView.model.trigger(index, "", null);
+            }
+
+            navigationUp: shutdownIndicator
+            navigationDown: voiceAppsView
+        }
+
+        BigScreen.TileRepeater {
+            id: voiceAppsView
             title: i18n("Voice Apps")
             model: KItemModels.KSortFilterProxyModel {
                 sourceModel: plasmoid.nativeInterface.applicationListModel
@@ -70,19 +94,19 @@ FocusScope {
             }
 
             currentIndex: 0
-            focus: true
-            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = gridView
+            focus: false
+            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = voiceAppsView
             delegate: Delegates.VoiceAppDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
                 
             }
 
-            navigationUp: shutdownIndicator
-            navigationDown: gridView2
+            navigationUp: recentView
+            navigationDown: appsView
         }
 
-        BigScreen.TileView {
-            id: gridView2
+        BigScreen.TileRepeater {
+            id: appsView
             title: i18n("Applications")
             model: KItemModels.KSortFilterProxyModel {
                 sourceModel: plasmoid.nativeInterface.applicationListModel
@@ -95,18 +119,18 @@ FocusScope {
 
             currentIndex: 0
             focus: false
-            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = gridView2
+            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = appsView
             delegate: Delegates.AppDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
                 comment: model.ApplicationCommentRole
             }
             
-            navigationUp: gridView
-            navigationDown: gridView3
+            navigationUp: voiceAppsView
+            navigationDown: gamesView
         }
         
-        BigScreen.TileView {
-            id: gridView3
+        BigScreen.TileRepeater {
+            id: gamesView
             title: i18n("Games")
             model: KItemModels.KSortFilterProxyModel {
                 sourceModel: plasmoid.nativeInterface.applicationListModel
@@ -118,17 +142,17 @@ FocusScope {
 
             currentIndex: 0
             focus: false
-            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = gridView2
+            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = appsView
             delegate: Delegates.AppDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
             }
             
-            navigationUp: gridView2
-            navigationDown: gridView4
+            navigationUp: appsView
+            navigationDown: settingsView
         }
         
-        BigScreen.TileView {
-            id: gridView4
+        BigScreen.TileRepeater {
+            id: settingsView
             title: i18n("Settings")
             model: actions
 
@@ -156,23 +180,27 @@ FocusScope {
                 }
             ]
 
-            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = gridView3
+            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = gamesView
             delegate: Delegates.SettingDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
             }
             
-            navigationUp: gridView3
+            navigationUp: gamesView
             navigationDown: null
         }
 
         Component.onCompleted: {
-            gridView.forceActiveFocus();
+            if (recentView.visible) {
+                recentView.forceActiveFocus();
+            } else {
+                voiceAppsView.forceActiveFocus();
+            }
         }
 
         Connections {
             target: root
             onActivateAppView: {
-                gridView.forceActiveFocus();
+                voiceAppsView.forceActiveFocus();
             }
         }
     }
