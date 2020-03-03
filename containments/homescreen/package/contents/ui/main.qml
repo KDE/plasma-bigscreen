@@ -208,7 +208,7 @@ Item {
                         if (Mycroft.MycroftController.serverReady) {
                             inputQuery.text = "";
                         } else {
-                            inputQuery.text = i18n("Not Ready");
+                            inputQuery.text = i18n("Getting Ready... Please Wait");
                             utteranceTimer.running = false;
                         }
                     }
@@ -217,7 +217,7 @@ Item {
                         case Mycroft.MycroftController.Connecting:
                         case Mycroft.MycroftController.Error:
                         case Mycroft.MycroftController.Stopped:
-                            inputQuery.text = i18n("Not Ready");
+                            inputQuery.text = i18n("Getting Ready... Please Wait");
                             utteranceTimer.running = false;
                             break;
                         default:
