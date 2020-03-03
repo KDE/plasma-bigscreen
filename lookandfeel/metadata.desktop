@@ -2,6 +2,8 @@
 Comment=Plasma Mycroft Big Screen look and feel
 Comment[ca]=Aparença i comportament de la pantalla gran del Mycroft per a Plasma
 Comment[ca@valencia]=Aparença i comportament de la pantalla gran del Mycroft per a Plasma
+Comment[es]=Aspecto de Plasma Mycroft Big Screen
+Comment[et]=Plasma Mycrofti suurekraani välimus
 Comment[nl]=Plasma uiterlijk en gedrag van Mycroft Big Screen
 Comment[pt]=Aparência e comportamento do Plasma Mycroft para Grande Ecrã
 Comment[sv]=Utseende och känsla för Plasma Mycroft storbildsskärm
@@ -12,6 +14,8 @@ Comment[zh_TW]=Plasma Mycroft 大螢幕外觀及感覺
 Name=Mycroft Big Screen
 Name[ca]=Pantalla gran del Mycroft
 Name[ca@valencia]=Pantalla gran del Mycroft
+Name[es]=Mycroft Big Screen
+Name[et]=Mycrofti suurekraan
 Name[nl]=Mycroft Big Screen
 Name[pt]=Mycroft para Grande Ecrã
 Name[sv]=Mycroft storbildsskärm
