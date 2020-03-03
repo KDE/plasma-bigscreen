@@ -236,6 +236,7 @@ Item {
                 visible: !mycroftWindow.visible
                 Layout.preferredWidth: height
                 Layout.fillHeight: true
+                hasShadow: false
             }
             Indicators.Volume {
                 id: volumeIndicator
