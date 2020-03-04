@@ -34,14 +34,14 @@ ColumnLayout {
 
     function increaseVal(){
         var l = 0
-        l = slider.position + 0.1
+        l = slider.position + 0.05
         slider.value = slider.valueAt(l);
 
     }
 
     function decreaseVal(){
         var l = 0
-        l = slider.position - 0.1
+        l = slider.position - 0.05
         slider.value = slider.valueAt(l);
     }
 
@@ -130,11 +130,12 @@ ColumnLayout {
         }
 
         PlasmaComponents.Label {
-            id: hundredPercentLabel
+            id: percentLabel
+            readonly property real value: PulseObject.volume > slider.maximumValue ? PulseObject.volume : slider.value
             Layout.preferredWidth: contentWidth + Kirigami.Units.largeSpacing
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
-            text: i18nd("kcm_pulseaudio", "100%")
+            text: i18nc("volume percentage", "%1%", Math.round(value / PulseAudio.NormalVolume * 100.0))
         }
     }
 }

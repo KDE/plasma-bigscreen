@@ -41,15 +41,17 @@ Rectangle {
     height: listView.height
 
     onActiveFocusChanged: {
-        console.log("InThere2")
         if(activeFocus){
-            console.log("InThere")
             if(PulseObject.default){
                 volObj.forceActiveFocus()
             } else {
                 setDefBtn.forceActiveFocus()   
             }
         }
+    }
+    
+    Keys.onBackPressed: {
+        backBtnSettingsItem.clicked()
     }
 
     ColumnLayout {
