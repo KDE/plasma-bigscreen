@@ -17,7 +17,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-import QtQuick 2.9
+import QtQuick 2.12
 import QtQuick.Layouts 1.3
 import QtGraphicalEffects 1.12
 
@@ -50,10 +50,15 @@ PlasmaComponents.ItemDelegate {
         listView.currentIndex = index
     }
 
-    leftPadding: Kirigami.Units.largeSpacing*2
-    topPadding: Kirigami.Units.largeSpacing*2
-    rightPadding: Kirigami.Units.largeSpacing*2
-    bottomPadding: Kirigami.Units.largeSpacing*2
+    leftPadding: Kirigami.Units.largeSpacing * 2
+    topPadding: Kirigami.Units.largeSpacing * 2
+    rightPadding: Kirigami.Units.largeSpacing * 2
+    bottomPadding: Kirigami.Units.largeSpacing * 2
+
+    leftInset: Kirigami.Units.largeSpacing
+    topInset: Kirigami.Units.largeSpacing
+    rightInset: Kirigami.Units.largeSpacing
+    bottomInset: Kirigami.Units.largeSpacing
 
     Keys.onReturnPressed: {
         clicked();
@@ -66,22 +71,39 @@ PlasmaComponents.ItemDelegate {
 
         Rectangle {
             id: shadowSource
-            anchors.fill: frame
+            anchors {
+                fill: frame
+                margins: units.largeSpacing
+            }
             color: "black"
             radius: frame.radius
             visible: false
         }
 
         FastBlur {
-            id: shadowBlur
-            anchors {
-                fill: frame
-            }
+            anchors.fill: frame
             transparentBorder: true
             source: shadowSource
-            radius: Kirigami.Units.largeSpacing*2
+            radius: Kirigami.Units.largeSpacing * 2
             cached: true
+            readonly property bool inView: delegate.x <= listView.contentX + listView.width && delegate.x + delegate.width >= listView.contentX
+            visible: inView
         }
+/*
+        PlasmaCore.FrameSvgItem {
+            anchors {
+                fill: frame
+                leftMargin: -margins.left
+                topMargin: -margins.top
+                rightMargin: -margins.right
+                bottomMargin: -margins.bottom
+            }
+            imagePath: Qt.resolvedUrl("./background.svg")
+            prefix: "shadow"
+            onWidthChanged: print(this+width)
+            readonly property bool inView: delegate.x <= listView.contentX + listView.width && delegate.x + delegate.width >= listView.contentX
+            visible: inView
+        }*/
 
         Rectangle {
             id: frame
@@ -117,22 +139,28 @@ PlasmaComponents.ItemDelegate {
                 State {
                     when: delegate.isCurrent
                     PropertyChanges {
+                        target: delegate
+                        leftInset: Kirigami.Units.largeSpacing - innerFrame.anchors.margins
+                        rightInset: Kirigami.Units.largeSpacing - innerFrame.anchors.margins
+                        topInset: -Kirigami.Units.smallSpacing 
+                        bottomInset: -Kirigami.Units.smallSpacing
+                    }
+                    PropertyChanges {
                         target: frame
-                        anchors.leftMargin: Kirigami.Units.largeSpacing - innerFrame.anchors.margins
-                        anchors.rightMargin: Kirigami.Units.largeSpacing - innerFrame.anchors.margins
-                        anchors.topMargin: -Kirigami.Units.smallSpacing 
-                        anchors.bottomMargin: -Kirigami.Units.smallSpacing
                         radius: 6
                     }
                 },
                 State {
                     when: !delegate.isCurrent
                     PropertyChanges {
+                        target: delegate
+                        leftInset: Kirigami.Units.largeSpacing
+                        rightInset: Kirigami.Units.largeSpacing
+                        topInset: Kirigami.Units.largeSpacing
+                        bottomInset: Kirigami.Units.largeSpacing
+                    }
+                    PropertyChanges {
                         target: frame
-                        anchors.leftMargin: Kirigami.Units.largeSpacing
-                        anchors.rightMargin: Kirigami.Units.largeSpacing
-                        anchors.topMargin: Kirigami.Units.largeSpacing
-                        anchors.bottomMargin: Kirigami.Units.largeSpacing
                         radius: 3
                     }
                 }
@@ -141,22 +169,22 @@ PlasmaComponents.ItemDelegate {
             transitions: Transition {
                 ParallelAnimation {
                     NumberAnimation {
-                        property: "leftMargin"
+                        property: "leftInset"
                         duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
                     }
                     NumberAnimation {
-                        property: "rightMargin"
+                        property: "rightInset"
                         duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
                     }
                     NumberAnimation {
-                        property: "topMargin"
+                        property: "topInset"
                         duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
                     }
                     NumberAnimation {
-                        property: "bottomMargin"
+                        property: "bottomInset"
                         duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
                     }

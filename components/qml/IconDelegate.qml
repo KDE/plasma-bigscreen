@@ -49,13 +49,6 @@ AbstractDelegate {
         property color textColor: useColors
             ? (0.2126 * suggestedContrast.r + 0.7152 * suggestedContrast.g + 0.0722 * suggestedContrast.b > 0.6 ? Qt.rgba(0.2,0.2,0.2,1) : Qt.rgba(0.9,0.9,0.9,1))
             : PlasmaCore.ColorScope.textColor
-
-        readonly property bool inView: listView.width - delegate.x - iconItem.x < listView.contentX
-        onInViewChanged: {
-            if (inView) {
-                imagePalette.update();
-            }
-        }
     }
     
     contentItem: Item {
