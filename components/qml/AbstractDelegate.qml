@@ -89,21 +89,6 @@ PlasmaComponents.ItemDelegate {
             readonly property bool inView: delegate.x <= listView.contentX + listView.width && delegate.x + delegate.width >= listView.contentX
             visible: inView
         }
-/*
-        PlasmaCore.FrameSvgItem {
-            anchors {
-                fill: frame
-                leftMargin: -margins.left
-                topMargin: -margins.top
-                rightMargin: -margins.right
-                bottomMargin: -margins.bottom
-            }
-            imagePath: Qt.resolvedUrl("./background.svg")
-            prefix: "shadow"
-            onWidthChanged: print(this+width)
-            readonly property bool inView: delegate.x <= listView.contentX + listView.width && delegate.x + delegate.width >= listView.contentX
-            visible: inView
-        }*/
 
         Rectangle {
             id: frame
