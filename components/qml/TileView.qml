@@ -82,7 +82,7 @@ FocusScope {
         cacheBuffer: width
         implicitHeight: cellWidth + units.gridUnit * 3
         rightMargin: width-cellWidth*3
-        readonly property int cellWidth: (Kirigami.Units.iconSizes.huge + Kirigami.Units.largeSpacing*4)
+        property int cellWidth: (Kirigami.Units.iconSizes.huge + Kirigami.Units.largeSpacing*4)
         preferredHighlightBegin: cellWidth
         preferredHighlightEnd: cellWidth
         displayMarginBeginning: cellWidth
