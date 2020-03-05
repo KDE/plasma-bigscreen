@@ -32,6 +32,7 @@ FocusScope {
     property alias model: view.model
     property alias currentIndex: view.currentIndex
     property alias currentItem: view.currentItem
+    property alias count: view.count
     Layout.fillWidth: true
     
     implicitHeight: view.implicitHeight + header.implicitHeight
