@@ -170,7 +170,7 @@ FocusScope {
                 },
                 Controls.Action {
                     text: i18n("Wallpaper")
-                    icon.name: "preferences-desktop-vallpaper"
+                    icon.name: "preferences-desktop-wallpaper"
                     onTriggered: plasmoid.action("configure").trigger();
                 },
                 Controls.Action {
