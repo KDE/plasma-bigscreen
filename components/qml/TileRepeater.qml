@@ -47,9 +47,17 @@ FocusScope {
     property Item navigationDown
 
     onActiveFocusChanged: {
-        if (!activeFocus || !currentItem) {
+        if (!activeFocus) {
             return;
         }
+
+        // Update currentItem if needed
+        view.currentIndexChanged();
+
+        if (!currentItem) {
+            return;
+        }
+
         currentItem.forceActiveFocus();
     }
 
@@ -127,6 +135,8 @@ FocusScope {
 
             Repeater {
                 id: repeater
+                // Update currentItem if needed
+                onChildrenChanged: view.currentIndexChanged();
             }
 
             // Spacer
