@@ -46,6 +46,13 @@ FocusScope {
     property Item navigationUp
     property Item navigationDown
 
+    onActiveFocusChanged: {
+        if (!activeFocus || !currentItem) {
+            return;
+        }
+        currentItem.forceActiveFocus();
+    }
+
     Kirigami.Heading {
         id: header
         anchors {
@@ -84,19 +91,13 @@ FocusScope {
         implicitHeight: cellWidth + units.gridUnit * 3
         contentWidth: layout.width
         contentHeight: height
-        onCurrentIndexChanged: {
+        onCurrentItemChanged: {
             if (!currentItem) {
                 return;
             }
-            // currentItem didn't update yet
-            layout.children[currentIndex].forceActiveFocus();
-            slideAnim.slideToIndex(currentIndex);
-        }
-        onActiveFocusChanged: {
-            if (!activeFocus || !currentItem) {
-                return;
-            }
+
             currentItem.forceActiveFocus();
+            slideAnim.slideToIndex(currentIndex);
         }
 
         onMovementEnded: currentIndex = Math.min(count-1, Math.round((contentX + cellWidth) / cellWidth))
