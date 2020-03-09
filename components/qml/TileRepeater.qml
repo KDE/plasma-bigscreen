@@ -85,6 +85,7 @@ FocusScope {
             leftMargin: -Kirigami.Units.largeSpacing
         }
         readonly property int cellWidth: (Kirigami.Units.iconSizes.huge + Kirigami.Units.largeSpacing*4)
+        property int cellHeight: cellWidth + units.gridUnit * 3
         property int cellHeight: view.height
         property int currentIndex: 0
         property alias count: repeater.count
@@ -98,7 +99,7 @@ FocusScope {
 
         focus: true
 
-        implicitHeight: cellWidth + units.gridUnit * 3
+        implicitHeight: cellHeight
         contentWidth: layout.width
         contentHeight: height
         onCurrentItemChanged: {
