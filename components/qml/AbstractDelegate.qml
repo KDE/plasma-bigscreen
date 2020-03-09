@@ -125,10 +125,10 @@ PlasmaComponents.ItemDelegate {
                     when: delegate.isCurrent
                     PropertyChanges {
                         target: delegate
-                        leftInset: Kirigami.Units.largeSpacing - innerFrame.anchors.margins
-                        rightInset: Kirigami.Units.largeSpacing - innerFrame.anchors.margins
-                        topInset: -Kirigami.Units.smallSpacing 
-                        bottomInset: -Kirigami.Units.smallSpacing
+                        leftInset: 0
+                        rightInset: 0
+                        topInset: 0
+                        bottomInset: 0
                     }
                     PropertyChanges {
                         target: frame

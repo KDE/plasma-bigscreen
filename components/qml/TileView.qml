@@ -43,6 +43,7 @@ FocusScope {
     property int columns: Math.max(3, Math.floor(width / (units.gridUnit * 8)))
 
     property alias cellWidth: view.cellWidth
+    property alias cellHeight: view.cellHeight
     readonly property real screenRatio: view.Window.window ? view.Window.window.width / view.Window.window.height : 1.6
 
     property Item navigationUp
@@ -83,6 +84,7 @@ FocusScope {
         implicitHeight: cellWidth + units.gridUnit * 3
         rightMargin: width-cellWidth*3
         property int cellWidth: (Kirigami.Units.iconSizes.huge + Kirigami.Units.largeSpacing*4)
+        property int cellHeight: view.height
         preferredHighlightBegin: cellWidth
         preferredHighlightEnd: cellWidth
         displayMarginBeginning: cellWidth
