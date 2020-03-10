@@ -110,7 +110,7 @@ BigScreen.AbstractDelegate {
                     Layout.leftMargin: Kirigami.Units.smallSpacing
                     Layout.preferredWidth: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
                     Layout.preferredHeight: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
-                    source: Qt.resolvedUrl("../images/green-tick.png")
+                    source: Qt.resolvedUrl("../images/green-tick.svg")
                     opacity: PulseObject.default ? 1 : 0
                 }
                 

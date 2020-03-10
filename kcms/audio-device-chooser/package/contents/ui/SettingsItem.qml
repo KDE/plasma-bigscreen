@@ -178,7 +178,7 @@ Rectangle {
                         Kirigami.Icon {
                             Layout.preferredWidth: Kirigami.Units.iconSizes.medium
                             Layout.preferredHeight: Kirigami.Units.iconSizes.medium
-                            source: Qt.resolvedUrl("images/green-tick.png")
+                            source: Qt.resolvedUrl("images/green-tick.svg")
                             enabled: PulseObject.default ? 1 : 0
                         }
 //                         Kirigami.Heading {
