@@ -86,7 +86,6 @@ FocusScope {
         }
         readonly property int cellWidth: (Kirigami.Units.iconSizes.huge + Kirigami.Units.largeSpacing*4)
         property int cellHeight: cellWidth + units.gridUnit * 3
-        property int cellHeight: view.height
         property int currentIndex: 0
         property alias count: repeater.count
         property alias model: repeater.model
