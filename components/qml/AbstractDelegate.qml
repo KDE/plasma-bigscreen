@@ -43,7 +43,6 @@ PlasmaComponents.ItemDelegate {
         listView.currentIndex == index && activeFocus && !listView.moving
     }
 
-    property int borderSize: units.smallSpacing
     z: isCurrent ? 2 : 0
 
     onClicked: {
@@ -115,7 +114,7 @@ PlasmaComponents.ItemDelegate {
                 id: innerFrame
                 anchors {
                     fill: parent
-                    margins: delegate.borderSize
+                    margins: units.smallSpacing
                 }
                 radius: frame.radius/2
                 color: delegate.Kirigami.Theme.backgroundColor
