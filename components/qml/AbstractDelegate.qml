@@ -43,6 +43,7 @@ PlasmaComponents.ItemDelegate {
         listView.currentIndex == index && activeFocus && !listView.moving
     }
 
+    property int borderSize: units.smallSpacing
     z: isCurrent ? 2 : 0
 
     onClicked: {
@@ -73,7 +74,7 @@ PlasmaComponents.ItemDelegate {
             id: shadowSource
             anchors {
                 fill: frame
-                margins: units.largeSpacing
+                margins: delegate.borderSize
             }
             color: "black"
             radius: frame.radius
