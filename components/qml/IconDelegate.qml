@@ -76,7 +76,7 @@ AbstractDelegate {
                 visible: text.length > 0
                 Layout.fillWidth: true
                 wrapMode: Text.WordWrap
-                horizontalAlignment: delegate.isCurrent ? Text.AlignLeft : Text.AlignHCenter
+                horizontalAlignment: delegate.isCurrent || !Hack.compactTiles ? Text.AlignLeft : Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 maximumLineCount: 2
                 elide: Text.ElideRight
@@ -102,10 +102,10 @@ AbstractDelegate {
         states: [
             State {
                 name: "selected"
-                when: delegate.isCurrent
+                when: delegate.isCurrent || !Hack.compactTiles
                 PropertyChanges {
                     target: delegate
-                    implicitWidth: listView.cellWidth * 2 
+                    implicitWidth: Hack.compactTiles ? listView.cellWidth * 2 : listView.cellWidth
                 }
                 PropertyChanges {
                     target: iconItem
@@ -124,7 +124,7 @@ AbstractDelegate {
             },
             State {
                 name: "normal"
-                when: !delegate.isCurrent
+                when: !delegate.isCurrent || !Hack.compactTiles
                 PropertyChanges {
                     target: delegate
                     implicitWidth: listView.cellWidth

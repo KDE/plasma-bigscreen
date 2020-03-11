@@ -23,4 +23,5 @@ pragma Singleton
 
 QtObject {
     property bool coloredTiles: false
+    property bool compactTiles: true
 }
