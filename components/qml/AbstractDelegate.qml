@@ -44,6 +44,8 @@ PlasmaComponents.ItemDelegate {
     }
 
     property int borderSize: units.smallSpacing
+    property int baseRadius: 3
+    
     z: isCurrent ? 2 : 0
 
     onClicked: {
@@ -81,6 +83,7 @@ PlasmaComponents.ItemDelegate {
                 bottomMargin: delegate.bottomInset
             }
             color: "transparent"
+            radius: frame.radius
             border {
                 width: delegate.borderSize
                 color: delegate.Kirigami.Theme.highlightColor
@@ -120,7 +123,7 @@ PlasmaComponents.ItemDelegate {
             anchors {
                 fill: parent
             }
-
+            radius: delegate.baseRadius
             color: delegate.Kirigami.Theme.backgroundColor
 
             states: [
@@ -135,11 +138,7 @@ PlasmaComponents.ItemDelegate {
                     }
                     PropertyChanges {
                         target: frame
-                        radius: 6
-                    }
-                    PropertyChanges {
-                        target: background.highlight
-                        radius: 6
+                        radius: delegate.baseRadius * 2
                     }
                 },
                 State {
@@ -153,11 +152,7 @@ PlasmaComponents.ItemDelegate {
                     }
                     PropertyChanges {
                         target: frame
-                        radius: 3
-                    }
-                    PropertyChanges {
-                        target: background.highlight
-                        radius: 3
+                        radius: delegate.baseRadius
                     }
                 }
             ]
