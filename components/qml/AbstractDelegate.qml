@@ -42,7 +42,7 @@ PlasmaComponents.ItemDelegate {
     readonly property bool isCurrent: {//print(text+index+" "+listView.currentIndex+activeFocus+" "+listView.moving)
         listView.currentIndex == index && activeFocus && !listView.moving
     }
-
+Component.onCompleted: Kirigami.Units.longDuration=1000
     property int borderSize: units.smallSpacing
     z: isCurrent ? 2 : 0
 
@@ -69,6 +69,30 @@ PlasmaComponents.ItemDelegate {
 
     background: Item {
         id: background
+
+        readonly property Item highlight: Rectangle {
+            parent: delegate
+            z: 1
+            anchors {
+                fill: parent
+                leftMargin: delegate.leftInset
+                topMargin: delegate.topInset
+                rightMargin: delegate.rightInset
+                bottomMargin: delegate.bottomInset
+            }
+            color: "transparent"
+            border {
+                width: delegate.borderSize
+                color: delegate.Kirigami.Theme.highlightColor
+            }
+            opacity: delegate.isCurrent
+            Behavior on opacity {
+                OpacityAnimator {
+                    duration: Kirigami.Units.longDuration/2
+                    easing.type: Easing.InOutQuad
+                }
+            }
+        }
 
         Rectangle {
             id: shadowSource
@@ -97,29 +121,7 @@ PlasmaComponents.ItemDelegate {
                 fill: parent
             }
 
-            /* For some reason, putting the colors and animation in the states
-             * and transition makes the color not load until the animations finish
-             * during the startup of the homescreen containment.
-             * Also for some reason, frame starts out white and fades into the correct color while
-             * innerFrame starts out transparent (maybe?) and fades into the correct color.
-             */
-            color: delegate.isCurrent ? delegate.Kirigami.Theme.highlightColor : delegate.Kirigami.Theme.backgroundColor
-            Behavior on color {
-                ColorAnimation {
-                    duration: Kirigami.Units.longDuration/2
-                    easing.type: Easing.InOutQuad
-                }
-            }
-
-            Rectangle {
-                id: innerFrame
-                anchors {
-                    fill: parent
-                    margins: units.smallSpacing
-                }
-                radius: frame.radius/2
-                color: delegate.Kirigami.Theme.backgroundColor
-            }
+            color: delegate.Kirigami.Theme.backgroundColor
 
             states: [
                 State {
@@ -135,6 +137,10 @@ PlasmaComponents.ItemDelegate {
                         target: frame
                         radius: 6
                     }
+                    PropertyChanges {
+                        target: background.highlight
+                        radius: 6
+                    }
                 },
                 State {
                     when: !delegate.isCurrent
@@ -147,6 +153,10 @@ PlasmaComponents.ItemDelegate {
                     }
                     PropertyChanges {
                         target: frame
+                        radius: 3
+                    }
+                    PropertyChanges {
+                        target: background.highlight
                         radius: 3
                     }
                 }
