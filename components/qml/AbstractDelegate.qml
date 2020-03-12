@@ -138,7 +138,8 @@ PlasmaComponents.ItemDelegate {
                     }
                     PropertyChanges {
                         target: frame
-                        radius: delegate.baseRadius * 2
+                        // baseRadius + borderSize preserves the original radius for the visible part of frame
+                        radius: delegate.baseRadius + delegate.borderSize
                     }
                 },
                 State {
