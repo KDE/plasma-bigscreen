@@ -42,7 +42,7 @@ PlasmaComponents.ItemDelegate {
     readonly property bool isCurrent: {//print(text+index+" "+listView.currentIndex+activeFocus+" "+listView.moving)
         listView.currentIndex == index && activeFocus && !listView.moving
     }
-Component.onCompleted: Kirigami.Units.longDuration=1000
+
     property int borderSize: units.smallSpacing
     z: isCurrent ? 2 : 0
 
