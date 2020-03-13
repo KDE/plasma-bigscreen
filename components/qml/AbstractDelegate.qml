@@ -103,6 +103,11 @@ PlasmaComponents.ItemDelegate {
             shadow {
                 size: Kirigami.Units.largeSpacing * 2
             }
+            Rectangle {
+                anchors.fill:parent
+                margins: 20
+                color: parent.color
+            }
 
             states: [
                 State {
