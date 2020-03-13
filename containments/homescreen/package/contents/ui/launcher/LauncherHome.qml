@@ -159,15 +159,9 @@ FocusScope {
 
             property list<Controls.Action> actions: [
                 Controls.Action {
-                    text: i18n("Wireless")
-                    icon.name: "network-wireless-connected-100"
-                    onTriggered: plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_wifi")
-                },
-                Controls.Action {
                     text: i18n("Audio")
                     icon.name: "audio-volume-high"
                     onTriggered: plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_audiodevice")
-
                 },
                 Controls.Action {
                     text: i18n("Home Screen")
@@ -177,14 +171,19 @@ FocusScope {
                     }
                 },
                 Controls.Action {
+                    text: i18n("Mycroft Skill Installer")
+                    icon.name: "download"
+                    onTriggered: plasmoid.nativeInterface.executeCommand("MycroftSkillInstaller")
+                },
+                Controls.Action {
                     text: i18n("Wallpaper")
                     icon.name: "preferences-desktop-wallpaper"
                     onTriggered: plasmoid.action("configure").trigger();
                 },
                 Controls.Action {
-                    text: i18n("Mycroft Skill Installer")
-                    icon.name: "download"
-                    onTriggered: plasmoid.nativeInterface.executeCommand("MycroftSkillInstaller")
+                    text: i18n("Wireless")
+                    icon.name: "network-wireless-connected-100"
+                    onTriggered: plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_wifi")
                 }
             ]
 
