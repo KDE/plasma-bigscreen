@@ -38,24 +38,6 @@ Item {
     Layout.minimumHeight: Screen.desktopAvailableHeight * 0.6
 
     property Item wallpaper
-    Column {
-        anchors {
-            top: topBar.bottom
-            right: parent.right
-        }
-        Controls.CheckBox {
-            z: 999
-            text: "Use Colored Tiles"
-            checked: BigScreen.Hack.coloredTiles
-            onCheckedChanged: BigScreen.Hack.coloredTiles = checked
-        }
-        Controls.CheckBox {
-            z: 999
-            text: "Use Compact Tiles"
-            checked: BigScreen.Hack.compactTiles
-            onCheckedChanged: BigScreen.Hack.compactTiles = checked
-        }
-    }
 
     Containment.onAppletAdded: {
         addApplet(applet, x, y);
