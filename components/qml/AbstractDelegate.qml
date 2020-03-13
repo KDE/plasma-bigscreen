@@ -23,7 +23,7 @@ import QtGraphicalEffects 1.12
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.kirigami 2.11 as Kirigami
+import org.kde.kirigami 2.12 as Kirigami
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
 PlasmaComponents.ItemDelegate {
@@ -43,7 +43,7 @@ PlasmaComponents.ItemDelegate {
         listView.currentIndex == index && activeFocus && !listView.moving
     }
 
-    property int borderSize: units.smallSpacing
+    property int borderSize: Kirigami.Units.smallSpacing
     property int baseRadius: 3
     
     z: isCurrent ? 2 : 0
@@ -63,6 +63,7 @@ PlasmaComponents.ItemDelegate {
     rightInset: Kirigami.Units.largeSpacing
     bottomInset: Kirigami.Units.largeSpacing
 
+
     Keys.onReturnPressed: {
         clicked();
     }
@@ -77,13 +78,8 @@ PlasmaComponents.ItemDelegate {
             z: 1
             anchors {
                 fill: parent
-                leftMargin: delegate.leftInset
-                topMargin: delegate.topInset
-                rightMargin: delegate.rightInset
-                bottomMargin: delegate.bottomInset
             }
             color: "transparent"
-            radius: frame.radius
             border {
                 width: delegate.borderSize
                 color: delegate.Kirigami.Theme.highlightColor
@@ -97,34 +93,16 @@ PlasmaComponents.ItemDelegate {
             }
         }
 
-        Rectangle {
-            id: shadowSource
-            anchors {
-                fill: frame
-                margins: delegate.borderSize
-            }
-            color: "black"
-            radius: frame.radius
-            visible: false
-        }
-
-        FastBlur {
-            anchors.fill: frame
-            transparentBorder: true
-            source: shadowSource
-            radius: Kirigami.Units.largeSpacing * 2
-            cached: true
-            readonly property bool inView: delegate.x <= listView.contentX + listView.width && delegate.x + delegate.width >= listView.contentX
-            visible: inView
-        }
-
-        Rectangle {
+        Kirigami.ShadowedRectangle {
             id: frame
             anchors {
                 fill: parent
             }
             radius: delegate.baseRadius
             color: delegate.Kirigami.Theme.backgroundColor
+            shadow {
+                size: Kirigami.Units.largeSpacing * 2
+            }
 
             states: [
                 State {
@@ -137,7 +115,16 @@ PlasmaComponents.ItemDelegate {
                         bottomInset: 0
                     }
                     PropertyChanges {
+                        target: background.highlight.anchors
+                        margins: 0
+                    }
+                    PropertyChanges {
                         target: frame
+                        // baseRadius + borderSize preserves the original radius for the visible part of frame
+                        radius: delegate.baseRadius + delegate.borderSize
+                    }
+                    PropertyChanges {
+                        target: background.highlight
                         // baseRadius + borderSize preserves the original radius for the visible part of frame
                         radius: delegate.baseRadius + delegate.borderSize
                     }
@@ -152,7 +139,15 @@ PlasmaComponents.ItemDelegate {
                         bottomInset: Kirigami.Units.largeSpacing
                     }
                     PropertyChanges {
+                        target: background.highlight.anchors
+                        margins: Kirigami.Units.largeSpacing
+                    }
+                    PropertyChanges {
                         target: frame
+                        radius: delegate.baseRadius
+                    }
+                    PropertyChanges {
+                        target: background.highlight
                         radius: delegate.baseRadius
                     }
                 }
@@ -182,6 +177,11 @@ PlasmaComponents.ItemDelegate {
                     }
                     NumberAnimation {
                         property: "radius"
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                    NumberAnimation {
+                        property: "margins"
                         duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
                     }
