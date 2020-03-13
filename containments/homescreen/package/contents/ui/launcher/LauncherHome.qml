@@ -48,14 +48,15 @@ FocusScope {
             right: parent.right
         }
         property Item currentSection
-        y: currentSection ? -currentSection.y : 0
+        y: currentSection ? -currentSection.y + parent.height/2 - currentSection.height/2 : parent.height/2
+
         Behavior on y {
             YAnimator {
                 duration: Kirigami.Units.longDuration * 2
                 easing.type: Easing.InOutQuad
             }
         }
-        height: parent.height
+        //height: parent.height
         spacing: Kirigami.Units.largeSpacing*3
         
 
@@ -142,7 +143,7 @@ FocusScope {
 
             currentIndex: 0
             focus: false
-            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = appsView
+            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = gamesView
             delegate: Delegates.AppDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
             }
@@ -180,7 +181,7 @@ FocusScope {
                 }
             ]
 
-            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = gamesView
+            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = settingsView
             delegate: Delegates.SettingDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
             }
