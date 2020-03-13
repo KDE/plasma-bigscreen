@@ -170,6 +170,13 @@ FocusScope {
 
                 },
                 Controls.Action {
+                    text: i18n("Home Screen")
+                    icon.name: "view-grid-symbolic"
+                    onTriggered: {
+                        plasmoidConfig.showMaximized();
+                    }
+                },
+                Controls.Action {
                     text: i18n("Wallpaper")
                     icon.name: "preferences-desktop-wallpaper"
                     onTriggered: plasmoid.action("configure").trigger();

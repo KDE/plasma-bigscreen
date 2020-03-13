@@ -34,6 +34,7 @@ AbstractDelegate {
 
     property var iconImage
     property string comment
+    property bool useIconColors: true
 
     Kirigami.Theme.inherit: !imagePalette.useColors
     Kirigami.Theme.textColor: imagePalette.textColor
@@ -43,7 +44,7 @@ AbstractDelegate {
     BigScreen.ImagePalette {
         id: imagePalette
         source: iconItem.source
-        property bool useColors: BigScreen.Hack.coloredTiles
+        property bool useColors: useIconColors
         property color backgroundColor: useColors ? suggestedContrast : PlasmaCore.ColorScope.backgroundColor
         property color accentColor: useColors ? mostSaturated : PlasmaCore.ColorScope.highlightColor
         property color textColor: useColors

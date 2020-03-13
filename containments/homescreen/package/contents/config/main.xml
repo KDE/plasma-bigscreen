@@ -24,5 +24,8 @@
     <entry name="enableRemoteSTT" type="Bool">
         <default>false</default>
     </entry>
+    <entry name="coloredTiles" type="Bool">
+        <default>true</default>
+    </entry>
 </group>
 </kcfg>

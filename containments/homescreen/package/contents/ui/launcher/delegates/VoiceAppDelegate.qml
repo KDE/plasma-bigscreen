@@ -25,6 +25,7 @@ BigScreen.IconDelegate {
 
     icon.name: modelData && modelData.ApplicationIconRole ? modelData.ApplicationIconRole : ""
     text: modelData ? modelData.ApplicationNameRole : ""
+    useIconColors: plasmoid.configuration.coloredTiles
 
     onClicked: {
         plasmoid.nativeInterface.applicationListModel.runApplication(modelData.ApplicationStorageIdRole)

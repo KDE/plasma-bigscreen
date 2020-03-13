@@ -102,6 +102,10 @@ Item {
         id: mycroftWindow
     }
 
+    ConfigWindow {
+        id: plasmoidConfig
+    }
+
     LinearGradient {
         anchors {
             top: parent.top
