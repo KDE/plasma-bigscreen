@@ -29,5 +29,7 @@ BigScreen.IconDelegate {
 
     onClicked: {
         plasmoid.nativeInterface.applicationListModel.runApplication(modelData.ApplicationStorageIdRole)
+        recentView.forceActivefocus();
+        recentView.currentIndex = 0;
     }
 }

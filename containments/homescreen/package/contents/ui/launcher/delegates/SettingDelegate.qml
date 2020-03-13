@@ -27,5 +27,7 @@ BigScreen.IconDelegate {
     onClicked: {
         //feedbackWindow.open(model.text, model.icon.name);
         trigger();
+        recentView.forceActivefocus();
+        recentView.currentIndex = 0;
     }
 }

@@ -30,5 +30,7 @@ BigScreen.IconDelegate {
     onClicked: {
         feedbackWindow.open(modelData.ApplicationNameRole, modelData.ApplicationIconRole);
         plasmoid.nativeInterface.applicationListModel.runApplication(modelData.ApplicationStorageIdRole)
+        recentView.forceActivefocus();
+        recentView.currentIndex = 0;
     }
 }
