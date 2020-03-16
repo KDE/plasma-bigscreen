@@ -105,7 +105,7 @@ BigScreen.AbstractDelegate {
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignHCenter
                 
-                Kirigami.Icon {
+                PlasmaCore.IconItem {
                     id: deviceDefaultIcon
                     Layout.leftMargin: Kirigami.Units.smallSpacing
                     Layout.preferredWidth: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium

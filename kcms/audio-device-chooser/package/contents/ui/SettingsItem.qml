@@ -175,7 +175,7 @@ Rectangle {
                 contentItem: Item {
                     RowLayout {
                         anchors.centerIn: parent
-                        Kirigami.Icon {
+                        PlasmaCore.IconItem {
                             Layout.preferredWidth: Kirigami.Units.iconSizes.medium
                             Layout.preferredHeight: Kirigami.Units.iconSizes.medium
                             source: Qt.resolvedUrl("images/green-tick.svg")
