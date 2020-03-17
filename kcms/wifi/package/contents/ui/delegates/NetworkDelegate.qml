@@ -154,6 +154,7 @@ BigScreen.AbstractDelegate {
                 networkSelectionView.connectToOpenNetwork()
             } else {
                 passwordLayer.open();
+                passField.forceActiveFocus();
             }
         } else if (model.ConnectionState == PlasmaNM.Enums.Deactivated) {
             handler.activateConnection(model.ConnectionPath, model.DevicePath, model.SpecificPath)
