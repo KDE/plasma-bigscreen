@@ -95,14 +95,21 @@ AppletConfiguration {
             onCountChanged: currentIndex =  Math.min(model.indexOf(configDialog.wallpaperConfiguration["Image"]), model.rowCount()-1)
             KeyNavigation.left: headerItem
             Keys.onUpPressed: imageWallpaperDrawer.close()
+            highlightRangeMode: ListView.ApplyRange
+            
+            preferredHighlightBegin: cellWidth
+            preferredHighlightEnd: cellWidth
+            displayMarginBeginning: cellWidth*2
+            displayMarginEnd: cellWidth
 
             header: WallpaperDelegate {
                 id: delegate
                 width: wallpapersView.cellWidth
                 height: wallpapersView.cellHeight
 
+                readonly property int index: -1
                 checked: activeFocus
-                property bool isCurrent: configDialog.currentWallpaper = "org.kde.slideshow"
+                highlighted: configDialog.currentWallpaper = "org.kde.slideshow"
                 onIsCurrentChanged: {
                     if (isCurrent) {
                         forceActiveFocus();
@@ -121,41 +128,32 @@ AppletConfiguration {
                 }
                 Keys.onReturnPressed: clicked()
 
-                contentItem: Rectangle {
-                    ColumnLayout {
-                        anchors.centerIn: parent
-                        Item {
-                            width: childrenRect.width
-                            height: childrenRect.height
-                            Repeater {
-                                model: 4
-                                Addons.QIconItem {
-                                    x: modelData * 10 * (delegate.highlight ? 2 : 1)
-                                    y: modelData * 10 * (delegate.highlight ? 2 : 1)
-                                    z: 4 - modelData
-                                    width: units.iconSizes.large
-                                    height: width
-                                    icon: "image-jpeg"
-                                }
-                            }
+                contentItem: Image {
+                    source: Qt.resolvedUrl("SlideshowThumbnail.png")
+                    fillMode: Image.PreserveAspectCrop
+                    sourceSize.width: width
+                    sourceSize.height: height
+                    Controls.Label {
+                        anchors {
+                            bottom: parent.bottom
+                            horizontalCenter: parent.horizontalCenter
                         }
-                        Controls.Label {
-                            text: i18n("Slideshow")
-                        }
+                        color: "white"
+                        text: i18n("Slideshow")
                     }
                 }
 
                 Keys.onRightPressed: {
-                    wallpapersView.currentIndex = 0
                     print(wallpapersView.itemAt(1, 1))
                     wallpapersView.itemAt(1, 1).forceActiveFocus()
+                    wallpapersView.currentIndex = 0
                 }
             }
     
             delegate: WallpaperDelegate {
                 id: delegate
 
-                property bool isCurrent: configDialog.wallpaperConfiguration["Image"] == model.path
+                highlighted: configDialog.wallpaperConfiguration["Image"] == model.path
                 onIsCurrentChanged: {
                     if (isCurrent) {
                         wallpapersView.currentIndex = index;
@@ -173,10 +171,7 @@ AppletConfiguration {
 
                     Addons.QPixmapItem {
                         id: walliePreview
-                        anchors {
-                            fill: parent
-                            margins: units.smallSpacing
-                        }
+                        anchors.fill: parent
                         visible: model.screenshot != null
                         smooth: true
                         pixmap: model.screenshot

@@ -43,6 +43,7 @@ PlasmaComponents.ItemDelegate {
         listView.currentIndex == index && activeFocus && !listView.moving
     }
 
+    highlighted: isCurrent
     property int borderSize: Kirigami.Units.smallSpacing
     property int baseRadius: 3
     
@@ -84,7 +85,7 @@ PlasmaComponents.ItemDelegate {
                 width: delegate.borderSize
                 color: delegate.Kirigami.Theme.highlightColor
             }
-            opacity: delegate.isCurrent
+            opacity: delegate.isCurrent || delegate.highlighted
             Behavior on opacity {
                 OpacityAnimator {
                     duration: Kirigami.Units.longDuration/2
