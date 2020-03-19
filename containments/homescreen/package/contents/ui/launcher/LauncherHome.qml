@@ -164,7 +164,7 @@ FocusScope {
                     onTriggered: plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_audiodevice")
                 },
                 Controls.Action {
-                    text: i18n("Home Screen")
+                    text: i18n("Bigscreen Settings")
                     icon.name: "view-grid-symbolic"
                     onTriggered: {
                         plasmoidConfig.showMaximized();
