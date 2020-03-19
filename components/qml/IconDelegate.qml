@@ -66,19 +66,20 @@ AbstractDelegate {
 
         ColumnLayout {
             id: textLayout
-            anchors.right: content.right
-
-            x: 0
-            y: content.height - label.height
-            width: parent.width - x
+            anchors {
+                left: content.left
+                right: content.right
+                top: iconItem.bottom
+                bottom: content.bottom
+                leftMargin: 0
+            }
 
             PlasmaComponents.Label {
                 id: label
                 visible: text.length > 0
                 Layout.fillWidth: true
                 wrapMode: Text.WordWrap
-                horizontalAlignment: delegate.isCurrent ? Text.AlignLeft : Text.AlignHCenter
-                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignHCenter
                 maximumLineCount: 2
                 elide: Text.ElideRight
                 color: imagePalette.textColor
@@ -87,11 +88,10 @@ AbstractDelegate {
             }
             PlasmaComponents.Label {
                 id: commentLabel
-                visible: text.length > 0
+                visible: false
                 Layout.fillWidth: true
                 wrapMode: Text.WordWrap
-                horizontalAlignment: Text.AlignLeft
-                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignHCenter
                 maximumLineCount: 2
                 elide: Text.ElideRight
                 color: imagePalette.textColor
@@ -110,13 +110,18 @@ AbstractDelegate {
                 }
                 PropertyChanges {
                     target: iconItem
-                    width: Kirigami.Units.iconSizes.huge + Kirigami.Units.largeSpacing*2
                     y: content.height/2 - iconItem.height/2
+                }
+                AnchorChanges {
+                    target: textLayout
+                    anchors.left: iconItem.right
+                    anchors.right: content.right
+                    anchors.top: iconItem.top
+                    anchors.bottom: iconItem.bottom
                 }
                 PropertyChanges {
                     target: textLayout
-                    x: iconItem.width + Kirigami.Units.largeSpacing
-                    y: content.height/2 - textLayout.height/2
+                    anchors.leftMargin: Kirigami.Units.smallSpacing
                 }
                 PropertyChanges {
                     target: commentLabel
@@ -132,13 +137,18 @@ AbstractDelegate {
                 }
                 PropertyChanges {
                     target: iconItem
-                    width: Kirigami.Units.iconSizes.huge
                     y: 0
+                }
+                AnchorChanges {
+                    target: textLayout
+                    anchors.left: content.left
+                    anchors.right: content.right
+                    anchors.top: iconItem.bottom
+                    anchors.bottom: content.bottom
                 }
                 PropertyChanges {
                     target: textLayout
-                    x: 0
-                    y: content.height - label.height
+                    anchors.leftMargin: 0
                 }
                 PropertyChanges {
                     target: commentLabel
@@ -148,6 +158,10 @@ AbstractDelegate {
         ]
         transitions: [
             Transition {
+                onRunningChanged: {
+                    // keeps commentLabel from affecting the vertical center of label when not selected
+                    commentLabel.visible = delegate.comment.length > 0 && (running || delegate.isCurrent)
+                }
                 to: "selected"
                 ParallelAnimation {
                     XAnimator {
@@ -169,6 +183,10 @@ AbstractDelegate {
                         duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
                     }
+                    AnchorAnimation {
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
                     SequentialAnimation {
                         PauseAnimation {
                             duration: Kirigami.Units.longDuration/2
@@ -182,15 +200,17 @@ AbstractDelegate {
                 }
             },
             Transition {
+                onRunningChanged: {
+                    // keeps commentLabel from affecting the vertical center of label when not selected
+                    commentLabel.visible = delegate.comment.length > 0 && (running || delegate.isCurrent)
+                }
                 to: "normal"
                 ParallelAnimation {
                     XAnimator {
                         duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
                     }
-                    // FIXME: why a YAnimator doesn't work?
-                    NumberAnimation {
-                        property: "y"
+                    YAnimator {
                         duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
                     }
@@ -201,6 +221,10 @@ AbstractDelegate {
                     }
                     NumberAnimation {
                         property: "implicitWidth"
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                    AnchorAnimation {
                         duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
                     }
