@@ -26,6 +26,7 @@ BigScreen.IconDelegate {
     icon.name: modelData ? modelData.ApplicationIconRole : ""
     text: modelData ? modelData.ApplicationNameRole : ""
     useIconColors: plasmoid.configuration.coloredTiles
+    compactMode: plasmoid.configuration.expandingTiles
 
     onClicked: {
         feedbackWindow.open(modelData.ApplicationNameRole, modelData.ApplicationIconRole);

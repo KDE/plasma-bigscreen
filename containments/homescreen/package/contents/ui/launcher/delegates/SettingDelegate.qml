@@ -23,6 +23,7 @@ BigScreen.IconDelegate {
     icon.name: model.icon.name
     text: model.text
     useIconColors: plasmoid.configuration.coloredTiles
+    compactMode: plasmoid.configuration.expandingTiles
 
     onClicked: {
         //feedbackWindow.open(model.text, model.icon.name);

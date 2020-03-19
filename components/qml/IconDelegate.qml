@@ -35,6 +35,7 @@ AbstractDelegate {
     property var iconImage
     property string comment
     property bool useIconColors: true
+    property bool compactMode: false
 
     Kirigami.Theme.inherit: !imagePalette.useColors
     Kirigami.Theme.textColor: imagePalette.textColor
@@ -89,7 +90,7 @@ AbstractDelegate {
             PlasmaComponents.Label {
                 id: commentLabel
                 // keeps commentLabel from affecting the vertical center of label when not selected
-                visible: text.length > 0 && (toSelectedTransition.running || toNormalTransition.running || delegate.isCurrent)
+                visible: !delegate.compactMode || (text.length > 0 && (toSelectedTransition.running || toNormalTransition.running || delegate.isCurrent))
                 Layout.fillWidth: true
                 wrapMode: Text.WordWrap
                 horizontalAlignment: Text.AlignHCenter
@@ -104,10 +105,10 @@ AbstractDelegate {
         states: [
             State {
                 name: "selected"
-                when: delegate.isCurrent
+                when: delegate.isCurrent || !delegate.compactMode
                 PropertyChanges {
                     target: delegate
-                    implicitWidth: listView.cellWidth * 2
+                    implicitWidth: delegate.compactMode ? (listView.cellWidth * 2) : listView.cellWidth
                 }
                 PropertyChanges {
                     target: iconItem
@@ -131,7 +132,7 @@ AbstractDelegate {
             },
             State {
                 name: "normal"
-                when: !delegate.isCurrent
+                when: !delegate.isCurrent && delegate.compactMode
                 PropertyChanges {
                     target: delegate
                     implicitWidth: listView.cellWidth

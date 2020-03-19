@@ -38,16 +38,26 @@ Window {
             fill: parent
             margins: Kirigami.Units.largeSpacing
         }
-        Controls.CheckBox {
-            id: backgroundCheckbox
-            z: 999
-            text: i18n("Use Colored Tiles")
-            checked: plasmoid.configuration.coloredTiles
-            onCheckedChanged: plasmoid.configuration.coloredTiles = checked
-            focus: true
-            Keys.onEnterPressed: checked = !checked
-            Keys.onReturnPressed: checked = !checked
-            KeyNavigation.down: closeButton
+        ColumnLayout {
+            Controls.CheckBox {
+                id: backgroundCheckbox
+                text: i18n("Use Colored Tiles")
+                checked: plasmoid.configuration.coloredTiles
+                onCheckedChanged: plasmoid.configuration.coloredTiles = checked
+                focus: true
+                Keys.onEnterPressed: checked = !checked
+                Keys.onReturnPressed: checked = !checked
+                KeyNavigation.down: expandingCheckbox
+            }
+            Controls.CheckBox {
+                id: expandingCheckbox
+                text: i18n("Use Expanding Tiles")
+                checked: plasmoid.configuration.expandingTiles
+                onCheckedChanged: plasmoid.configuration.expandingTiles = checked
+                Keys.onEnterPressed: checked = !checked
+                Keys.onReturnPressed: checked = !checked
+                KeyNavigation.down: closeButton
+            }
         }
     }
     Controls.Button {

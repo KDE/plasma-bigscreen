@@ -44,6 +44,7 @@ FocusScope {
     property alias cellHeight: view.cellHeight
     readonly property real screenRatio: view.Window.window ? view.Window.window.width / view.Window.window.height : 1.6
 
+    property bool compactMode: false
     property Item navigationUp
     property Item navigationDown
 
@@ -84,8 +85,8 @@ FocusScope {
             topMargin: Kirigami.Units.largeSpacing*2
             leftMargin: -Kirigami.Units.largeSpacing
         }
-        readonly property int cellWidth: (Kirigami.Units.iconSizes.huge + Kirigami.Units.largeSpacing*4)
-        property int cellHeight: cellWidth + units.gridUnit * 3
+        readonly property int cellWidth: (Kirigami.Units.iconSizes.huge + Kirigami.Units.largeSpacing*4) * (root.compactMode ? 1 : 2)
+        property int cellHeight: root.compactMode ? cellWidth + units.gridUnit * 3 : cellWidth / 1.6
         property int currentIndex: 0
         property alias count: repeater.count
         property alias model: repeater.model

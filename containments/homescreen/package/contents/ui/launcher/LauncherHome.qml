@@ -63,6 +63,7 @@ FocusScope {
         BigScreen.TileRepeater {
             id: recentView
             title: i18n("Recent Apps")
+            compactMode: plasmoid.configuration.expandingTiles
             model: Kicker.RecentUsageModel {
                 shownItems: Kicker.RecentUsageModel.OnlyApps
             }
@@ -86,6 +87,7 @@ FocusScope {
         BigScreen.TileRepeater {
             id: voiceAppsView
             title: i18n("Voice Apps")
+            compactMode: plasmoid.configuration.expandingTiles
             model: KItemModels.KSortFilterProxyModel {
                 sourceModel: plasmoid.nativeInterface.applicationListModel
                 filterRole: "ApplicationCategoriesRole"
@@ -109,6 +111,7 @@ FocusScope {
         BigScreen.TileRepeater {
             id: appsView
             title: i18n("Applications")
+            compactMode: plasmoid.configuration.expandingTiles
             model: KItemModels.KSortFilterProxyModel {
                 sourceModel: plasmoid.nativeInterface.applicationListModel
                 filterRole: "ApplicationCategoriesRole"
@@ -133,6 +136,7 @@ FocusScope {
         BigScreen.TileRepeater {
             id: gamesView
             title: i18n("Games")
+            compactMode: plasmoid.configuration.expandingTiles
             model: KItemModels.KSortFilterProxyModel {
                 sourceModel: plasmoid.nativeInterface.applicationListModel
                 filterRole: "ApplicationCategoriesRole"
@@ -156,6 +160,7 @@ FocusScope {
             id: settingsView
             title: i18n("Settings")
             model: actions
+            compactMode: plasmoid.configuration.expandingTiles
 
             property list<Controls.Action> actions: [
                 Controls.Action {
