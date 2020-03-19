@@ -40,8 +40,8 @@ BigScreen.AbstractDelegate {
 
     checked: connectionView.currentIndex === index && connectionView.activeFocus
 
-    implicitWidth: listView.cellWidth * 2
-    implicitHeight: listView.height
+    implicitWidth: isCurrent ? listView.cellWidth * 2 : listView.cellWidth
+    implicitHeight: listView.height + Kirigami.Units.largeSpacing
     
     Behavior on implicitWidth {
         NumberAnimation {
@@ -55,50 +55,51 @@ BigScreen.AbstractDelegate {
         
         PlasmaCore.IconItem {
             id: connectionSvgIcon
-            width: Kirigami.Units.iconSizes.huge
-            height: width
-            y: connectionItemLayout.height/2 - connectionSvgIcon.height/2            
+            width: listView.cellWidth - delegate.leftPadding - (delegate.isCurrent ? 0 : delegate.rightPadding)
+            height: isCurrent ? width : width - Kirigami.Units.largeSpacing * 4
             source: itemSignalIcon(model.Signal)
+            Behavior on width {
+                NumberAnimation {
+                    duration: Kirigami.Units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
         }
                     
         ColumnLayout {
-            id: textLayout
-                        
-            anchors {
-                left: connectionSvgIcon.right
-                right: connectionItemLayout.right
-                top: connectionSvgIcon.top
-                bottom: connectionSvgIcon.bottom
-                leftMargin: Kirigami.Units.smallSpacing
-            }
+            width: listView.cellWidth - delegate.leftPadding -  delegate.rightPadding
+            anchors.right: parent.right
+            y: delegate.isCurrent ? connectionItemLayout.height / 2 - height / 2 : connectionItemLayout.height - (connectionNameLabel.height + connectionStatusLabel.height + Kirigami.Units.largeSpacing)
 
-            PlasmaComponents.Label {
+            Kirigami.Heading {
                 id: connectionNameLabel
                 Layout.fillWidth: true
                 visible: text.length > 0
+                level: 3
                 elide: Text.ElideRight
-                wrapMode: Text.WordWrap
+                wrapMode: Text.Wrap
                 horizontalAlignment: Text.AlignHCenter
-                maximumLineCount: 2
-                color: Kirigami.Theme.textColor
-                textFormat: Text.PlainText
                 font.weight: model.ConnectionState == PlasmaNM.Enums.Activated ? Font.DemiBold : Font.Normal
                 font.italic: model.ConnectionState == PlasmaNM.Enums.Activating ? true : false
                 text: model.ItemUniqueName
-            }
-
-            PlasmaComponents.Label {
-                id: connectionStatusLabel
-                Layout.fillWidth: true
-                visible: text.length > 0
-                elide: Text.ElideRight
-                wrapMode: Text.WordWrap
-                horizontalAlignment: Text.AlignHCenter
-                maximumLineCount: 3
+                maximumLineCount: 2
                 color: Kirigami.Theme.textColor
                 textFormat: Text.PlainText
+            }
+
+            Kirigami.Heading {
+                id: connectionStatusLabel
+                level: 3
+                elide: Text.ElideRight
+                Layout.fillWidth: true
+                visible: text.length > 0
+                maximumLineCount: 1
+                wrapMode: Text.WordWrap
+                horizontalAlignment: Text.AlignHCenter
                 opacity: 0.6
                 text: itemText()
+                color: Kirigami.Theme.textColor
+                textFormat: Text.PlainText
             }
         }
     }

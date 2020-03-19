@@ -120,8 +120,25 @@ KCM.SimpleKCM {
             Layout.fillHeight: true
             KeyNavigation.up: connectionView
             KeyNavigation.right: kcmcloseButton
-            icon.name: "view-refresh"
-            text: i18n("Refresh")
+
+            background: Rectangle {
+                color: reloadButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
+            }
+            
+            contentItem: Item {
+                RowLayout {
+                    anchors.centerIn: parent
+                    Kirigami.Icon {
+                        Layout.preferredWidth: Kirigami.Units.iconSizes.small
+                        Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                        source: "view-refresh"
+                    }
+                    Label {
+                        text: i18n("Refresh")
+                    }
+                }
+            }
+            
             onClicked: {
                 networkSelectionView.refreshing = true;
                 connectionView.contentY = -Kirigami.Units.gridUnit * 4;
@@ -138,8 +155,25 @@ KCM.SimpleKCM {
             KeyNavigation.left: reloadButton
             Layout.fillWidth: true
             Layout.fillHeight: true
-            icon.name: "window-close"
-            text: i18n("Exit")
+            
+            background: Rectangle {
+                color: kcmcloseButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
+            }
+            
+            contentItem: Item {
+                RowLayout {
+                    anchors.centerIn: parent
+                    Kirigami.Icon {
+                        Layout.preferredWidth: Kirigami.Units.iconSizes.small
+                        Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                        source: "window-close"
+                    }
+                    Label {
+                        text: i18n("Exit")
+                    }
+                }
+            }
+            
             onClicked: {
                 Window.window.close()
             }
@@ -317,14 +351,15 @@ KCM.SimpleKCM {
     contentItem: FocusScope {
         width: parent.width
         height: parent.height - footerArea.height
+        anchors.top: parent.top
+        anchors.topMargin: Kirigami.Units.largeSpacing
     
         ColumnLayout {
             anchors.left: parent.left
-            anchors.top: parent.top
             anchors.leftMargin: Kirigami.Units.largeSpacing
-            anchors.topMargin: Kirigami.Units.largeSpacing
-            width: parent.width
-            height: children.height
+            anchors.top: parent.top
+            width: parent.width - deviceConnectionView.width
+            height: parent.height
         
             BigScreen.TileView {
                 id: connectionView
@@ -341,7 +376,7 @@ KCM.SimpleKCM {
                     }
                 }
                 
-            onCurrentItemChanged: {
+                onCurrentItemChanged: {
                     deviceConnectionView.currentIndex = connectionView.currentIndex
                     deviceConnectionView.positionViewAtIndex(currentIndex, ListView.Center);
                 }
@@ -351,6 +386,9 @@ KCM.SimpleKCM {
         Kirigami.Separator {
             id: viewSept
             anchors.right: deviceConnectionView.left
+            anchors.top: deviceConnectionView.top
+            anchors.bottom: deviceConnectionView.bottom
+            width: 1
         }
         
         ListView {
@@ -359,8 +397,8 @@ KCM.SimpleKCM {
             anchors.topMargin: -Kirigami.Units.largeSpacing
             anchors.right: parent.right
             anchors.rightMargin: -Kirigami.Units.largeSpacing
+            height: parent.height + Kirigami.Units.smallSpacing            
             model: connectionView.model
-            height: parent.height + Kirigami.Units.largeSpacing
             width: parent.width / 3.5
             layoutDirection: Qt.LeftToRight
             orientation: ListView.Horizontal
@@ -374,5 +412,5 @@ KCM.SimpleKCM {
             currentIndex: 0
             delegate: DeviceConnectionItem{}
         }
-   }
+    }
 }
