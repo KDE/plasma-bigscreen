@@ -198,13 +198,14 @@ Rectangle {
                     left: parent.left
                     right: parent.right
                     top: lblSept2.bottom
+                    topMargin: Kirigami.Units.largeSpacing
                 }
             }
             
             Kirigami.Separator {
                 id: lblSept3
                 anchors.top: detailsTxtArea.bottom
-                anchors.topMargin: Kirigami.Units.smallSpacing
+                anchors.topMargin: Kirigami.Units.largeSpacing
                 height: 1
                 width: parent.width
             }

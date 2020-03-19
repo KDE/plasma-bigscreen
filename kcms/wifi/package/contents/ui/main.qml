@@ -351,13 +351,12 @@ KCM.SimpleKCM {
     contentItem: FocusScope {
         width: parent.width
         height: parent.height - footerArea.height
-        anchors.top: parent.top
-        anchors.topMargin: Kirigami.Units.largeSpacing
     
         ColumnLayout {
             anchors.left: parent.left
             anchors.leftMargin: Kirigami.Units.largeSpacing
             anchors.top: parent.top
+            anchors.topMargin: Kirigami.Units.largeSpacing
             width: parent.width - deviceConnectionView.width
             height: parent.height
         
@@ -365,6 +364,7 @@ KCM.SimpleKCM {
                 id: connectionView
                 focus: true
                 model: appletProxyModel
+                Layout.alignment: Qt.AlignTop
                 title: i18n("Connections")
                 currentIndex: 0
                 delegate: Delegates.NetworkDelegate{}
@@ -396,7 +396,7 @@ KCM.SimpleKCM {
             anchors.top: parent.top
             anchors.topMargin: -Kirigami.Units.largeSpacing
             anchors.right: parent.right
-            anchors.rightMargin: -Kirigami.Units.largeSpacing
+            anchors.rightMargin: -Kirigami.Units.smallSpacing
             height: parent.height + Kirigami.Units.smallSpacing            
             model: connectionView.model
             width: parent.width / 3.5
