@@ -14,6 +14,8 @@ import "views" as Views
 
 FocusScope {
     id: mainFlick
+    anchors.top: parent.top
+    anchors.topMargin: Kirigami.Units.largeSpacing
 
     SourceModel {
         id: paSourceModel
@@ -121,7 +123,7 @@ FocusScope {
         anchors.topMargin: -Kirigami.Units.largeSpacing
         anchors.right: parent.right
         anchors.rightMargin: -Kirigami.Units.largeSpacing
-        height: parent.height + Kirigami.Units.largeSpacing
+        height: parent.height + Kirigami.Units.smallSpacing
         width: parent.width / 3.5
         layoutDirection: Qt.LeftToRight
         orientation: ListView.Horizontal
