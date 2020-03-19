@@ -90,7 +90,7 @@ AbstractDelegate {
             PlasmaComponents.Label {
                 id: commentLabel
                 // keeps commentLabel from affecting the vertical center of label when not selected
-                visible: text.length > 0 && (toSelectedTransition.running || toNormalTransition.running || delegate.isCurrent)
+                visible: text.length > 0 && (toSelectedTransition.running || toNormalTransition.running || delegate.isCurrent || !delegate.compactMode)
                 Layout.fillWidth: true
                 wrapMode: Text.WordWrap
                 horizontalAlignment: Text.AlignHCenter
