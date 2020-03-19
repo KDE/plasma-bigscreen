@@ -78,6 +78,7 @@ KCM.SimpleKCM {
 
     contentItem: DeviceChooserPage {
         id: deviceChooserView
+        width: parent.width
+        height: parent.height - footerArea.height
     }
 }
-

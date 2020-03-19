@@ -116,7 +116,7 @@ Rectangle {
             Kirigami.Separator {
                 id: headrSept
                 anchors.top: headerAreaSettingsItem.bottom
-                anchors.topMargin: Kirigami.Units.largeSpacing
+                anchors.topMargin: Kirigami.Units.largeSpacing * 2
                 width: parent.width
                 height: 1
             }

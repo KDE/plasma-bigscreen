@@ -14,10 +14,6 @@ import "views" as Views
 
 FocusScope {
     id: mainFlick
-    anchors {
-        fill: parent
-        margins: Kirigami.Units.smallSpacing * 2
-    }
 
     SourceModel {
         id: paSourceModel
@@ -32,6 +28,8 @@ FocusScope {
         width: parent.width - settingsView.width
         property Item currentSection
         y: currentSection ? -currentSection.y : 0
+        anchors.left: parent.left
+        anchors.leftMargin: Kirigami.Units.largeSpacing
         Behavior on y {
             NumberAnimation {
                 duration: Kirigami.Units.longDuration * 2
@@ -111,19 +109,19 @@ FocusScope {
     
     Kirigami.Separator {
         id: viewSept
-        anchors.top: parent.top
-        anchors.bottom: parent.bottom
         anchors.right: settingsView.left
+        anchors.top: settingsView.top
+        anchors.bottom: settingsView.bottom
+        width: 1
     }
     
     ListView {
         id: settingsView
-        //model: sinkView.activeFocus ? sinkView.model : sourceView.model
         anchors.top: parent.top
-        anchors.topMargin: -Kirigami.Units.smallSpacing * 2
+        anchors.topMargin: -Kirigami.Units.largeSpacing
         anchors.right: parent.right
-        anchors.rightMargin: -Kirigami.Units.smallSpacing * 2
-        height: parent.height
+        anchors.rightMargin: -Kirigami.Units.largeSpacing
+        height: parent.height + Kirigami.Units.largeSpacing
         width: parent.width / 3.5
         layoutDirection: Qt.LeftToRight
         orientation: ListView.Horizontal
@@ -140,17 +138,6 @@ FocusScope {
         delegate: SettingsItem {
                 isPlayback: settingsView.checkPlayBack
                 type: settingsView.typeDevice
-        }
-        
-        onActiveFocusChanged: {
-            console.log(activeFocus)
-        }
-        
-        move: Transition {
-            SmoothedAnimation {
-                property: "x"
-                duration: 0
-            }
         }
     }
 }

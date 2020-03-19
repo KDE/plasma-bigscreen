@@ -45,7 +45,7 @@ BigScreen.AbstractDelegate {
     property var pObject: PulseObject
     property int focusMarginWidth: listView.currentIndex == index && delegate.activeFocus ? contentLayout.width : contentLayout.width - Kirigami.Units.gridUnit
 
-    implicitWidth: listView.cellWidth * 2
+    implicitWidth: isCurrent ? listView.cellWidth * 2 : listView.cellWidth
     implicitHeight: listView.height + Kirigami.Units.largeSpacing
     
     Behavior on implicitWidth {
@@ -70,50 +70,59 @@ BigScreen.AbstractDelegate {
         
         PlasmaCore.IconItem {
             id: deviceAudioSvgIcon
-            width: Kirigami.Units.iconSizes.huge
-            height: width
-            y: contentItemLayout.height/2 - deviceAudioSvgIcon.height/2
+            width: listView.cellWidth - delegate.leftPadding - (delegate.isCurrent ? 0 : delegate.rightPadding)
+            height: isCurrent ? width : width - Kirigami.Units.largeSpacing * 4
             source: Icon.name(Volume, Muted, isPlayback ? "audio-volume" : "microphone-sensitivity")
+            Behavior on width {
+                NumberAnimation {
+                    duration: Kirigami.Units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
         }
         
         ColumnLayout {
-            id: textLayout
+            width: isCurrent ? listView.cellWidth - delegate.leftPadding : listView.cellWidth - delegate.leftPadding -  delegate.rightPadding 
+            anchors.right: parent.right
+            y: delegate.isCurrent ? contentItemLayout.height / 2 - height / 2 : contentItemLayout.height - (deviceNameLabel.height + deviceDefaultRepresentationLayout.height)
             
-            anchors {
-                left: deviceAudioSvgIcon.right
-                right: contentItemLayout.right
-                top: deviceAudioSvgIcon.top
-                bottom: deviceAudioSvgIcon.bottom
-                leftMargin: Kirigami.Units.smallSpacing
-            } 
-            
-            PlasmaComponents.Label {
+            Kirigami.Heading {
                 id: deviceNameLabel
                 Layout.fillWidth: true
                 visible: text.length > 0
+                level: 2
                 elide: Text.ElideRight
-                wrapMode: Text.WordWrap
+                wrapMode: Text.Wrap
                 horizontalAlignment: Text.AlignHCenter
-                maximumLineCount: 2
+                maximumLineCount: delegate.isCurrent ? 3 : 2 
                 textFormat: Text.PlainText
                 color: Kirigami.Theme.textColor
                 text: delegate.isCurrent ? !currentPort ? Description : i18ndc("kcm_pulseaudio", "label of device items", "%1 (%2)", currentPort.description, Description) : !currentPort ? Description.split("(")[0] : i18ndc("kcm_pulseaudio", "label of device items", "%1 (%2)", currentPort.description, Description).split("(")[0]
             }
             
-            Item {
+            RowLayout {
                 id: deviceDefaultRepresentationLayout
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignHCenter
                 
                 PlasmaCore.IconItem {
                     id: deviceDefaultIcon
-                    anchors.centerIn: parent
-                    width: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
-                    height: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
+                    Layout.leftMargin: Kirigami.Units.smallSpacing
+                    Layout.preferredWidth: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
+                    Layout.preferredHeight: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
                     source: Qt.resolvedUrl("../images/green-tick.svg")
                     opacity: PulseObject.default ? 1 : 0
                 }
+                
+//                 Kirigami.Heading {
+//                     id: deviceDefaultLabel
+//                     Layout.rightMargin: Kirigami.Units.smallSpacing
+//                     level: 2
+//                     text: "Default"
+//                     visible: PulseObject.default ? 1 : 0
+//                 }
             }
         }
     }
 }
+ 
