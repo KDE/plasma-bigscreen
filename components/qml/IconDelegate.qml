@@ -88,7 +88,8 @@ AbstractDelegate {
             }
             PlasmaComponents.Label {
                 id: commentLabel
-                visible: false
+                // keeps commentLabel from affecting the vertical center of label when not selected
+                visible: text.length > 0 && (toSelectedTransition.running || toNormalTransition.running || delegate.isCurrent)
                 Layout.fillWidth: true
                 wrapMode: Text.WordWrap
                 horizontalAlignment: Text.AlignHCenter
@@ -158,10 +159,7 @@ AbstractDelegate {
         ]
         transitions: [
             Transition {
-                onRunningChanged: {
-                    // keeps commentLabel from affecting the vertical center of label when not selected
-                    commentLabel.visible = delegate.comment.length > 0 && (running || delegate.isCurrent)
-                }
+                id: toSelectedTransition
                 to: "selected"
                 ParallelAnimation {
                     XAnimator {
@@ -200,10 +198,7 @@ AbstractDelegate {
                 }
             },
             Transition {
-                onRunningChanged: {
-                    // keeps commentLabel from affecting the vertical center of label when not selected
-                    commentLabel.visible = delegate.comment.length > 0 && (running || delegate.isCurrent)
-                }
+                id: toNormalTransition
                 to: "normal"
                 ParallelAnimation {
                     XAnimator {
