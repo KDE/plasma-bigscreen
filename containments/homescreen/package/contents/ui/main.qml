@@ -304,7 +304,7 @@ Item {
 
         states: [
             State {
-                when: root.Window.active
+                when: root.Window.activeFocusItem !== null
                 PropertyChanges {
                     target: launcher
                     opacity: 1
@@ -312,7 +312,7 @@ Item {
                 }
             },
             State {
-                when: !root.Window.active
+                when: root.Window.activeFocusItem === null
                 PropertyChanges {
                     target: launcher
                     opacity: 0
