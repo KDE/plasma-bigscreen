@@ -82,10 +82,10 @@ FocusScope {
         snapMode: ListView.SnapToItem
         cacheBuffer: width
         implicitHeight: cellHeight
-        rightMargin: width-cellWidth*3
+        rightMargin: width-cellWidth
         property int cellWidth: (Kirigami.Units.iconSizes.huge + Kirigami.Units.largeSpacing*4)
         property int cellHeight: cellWidth + units.gridUnit * 3
-        preferredHighlightBegin: cellWidth
+        preferredHighlightBegin: 0
         preferredHighlightEnd: cellWidth
         displayMarginBeginning: cellWidth
         displayMarginEnd: cellWidth
