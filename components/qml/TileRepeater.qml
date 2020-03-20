@@ -123,7 +123,7 @@ FocusScope {
             function slideToIndex(index) {
                 slideAnim.running = false;
                 slideAnim.from = view.contentX;
-                slideAnim.to = Math.max(0, view.cellWidth * (view.currentIndex-1));
+                slideAnim.to = Math.max(0, view.cellWidth * view.currentIndex);
                 slideAnim.restart();
             }
         }
@@ -159,7 +159,7 @@ FocusScope {
 
             if (root.navigationDown instanceof TileView ||
                 root.navigationDown instanceof TileRepeater) {
-                root.navigationDown.currentIndex = Math.min(Math.floor(root.navigationDown.view.indexAt(root.navigationDown.view.contentX + cellWidth/2, height/2)) + (view.currentIndex - view.indexAt(view.contentX + cellWidth/2, height/2)), root.navigationDown.view.count - 1);
+                root.navigationDown.currentIndex = Math.min(Math.floor(root.navigationDown.view.indexAt(root.navigationDown.view.contentX, height/2)), root.navigationDown.view.count - 1);
 
                 if (root.navigationDown.currentIndex < 0) {
                     root.navigationDown.currentIndex = view.currentIndex > 0 ? root.navigationDown.view.count - 1 : 0
@@ -176,7 +176,7 @@ FocusScope {
 
             if (root.navigationUp instanceof TileView ||
                 root.navigationUp instanceof TileRepeater) {
-                root.navigationUp.currentIndex = Math.min(Math.floor(root.navigationUp.view.indexAt(root.navigationUp.view.contentX + cellWidth/2, height/2)) + (view.currentIndex - view.indexAt(view.contentX + cellWidth/2, height/2)), root.navigationUp.view.count - 1);
+                root.navigationUp.currentIndex = Math.min(Math.floor(root.navigationUp.view.indexAt(root.navigationUp.view.contentX, height/2)), root.navigationUp.view.count - 1);
 
                 if (root.navigationUp.currentIndex < 0) {
                     root.navigationUp.currentIndex = view.currentIndex > 0 ? root.navigationUp.view.count - 1 : 0
