@@ -178,7 +178,7 @@ Rectangle {
                         PlasmaCore.IconItem {
                             Layout.preferredWidth: Kirigami.Units.iconSizes.medium
                             Layout.preferredHeight: Kirigami.Units.iconSizes.medium
-                            source: Qt.resolvedUrl("images/green-tick.svg")
+                            source: Qt.resolvedUrl("images/green-tick-thick.svg")
                             enabled: PulseObject.default ? 1 : 0
                         }
 //                         Kirigami.Heading {

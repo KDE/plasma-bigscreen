@@ -99,20 +99,22 @@ BigScreen.AbstractDelegate {
                 color: Kirigami.Theme.textColor
                 text: delegate.isCurrent ? !currentPort ? Description : i18ndc("kcm_pulseaudio", "label of device items", "%1 (%2)", currentPort.description, Description) : !currentPort ? Description.split("(")[0] : i18ndc("kcm_pulseaudio", "label of device items", "%1 (%2)", currentPort.description, Description).split("(")[0]
             }
-            
-            Item {
-                id: deviceDefaultRepresentationLayout
-                Layout.fillWidth: true
-                Layout.alignment: Qt.AlignHCenter
+        }
+        
+        Item {
+            id: deviceDefaultRepresentationLayout
+            anchors.right: parent.right
+            anchors.bottom: parent.bottom
+            anchors.rightMargin: Kirigami.Units.largeSpacing
+            anchors.bottomMargin: Kirigami.Units.largeSpacing
                 
-                PlasmaCore.IconItem {
-                    id: deviceDefaultIcon
-                    anchors.centerIn: parent
-                    width: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
-                    height: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
-                    source: Qt.resolvedUrl("../images/green-tick.svg")
-                    opacity: PulseObject.default ? 1 : 0
-                }
+            PlasmaCore.IconItem {
+                id: deviceDefaultIcon
+                anchors.centerIn: parent
+                width: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
+                height: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
+                source: Qt.resolvedUrl("../images/green-tick-thick.svg")
+                opacity: PulseObject.default ? 1 : 0
             }
         }
     }
