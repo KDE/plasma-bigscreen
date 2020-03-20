@@ -62,7 +62,7 @@ FocusScope {
 
         BigScreen.TileRepeater {
             id: recentView
-            title: i18n("Recent Apps")
+            title: i18n("Recent")
             compactMode: plasmoid.configuration.expandingTiles
             model: Kicker.RecentUsageModel {
                 shownItems: Kicker.RecentUsageModel.OnlyApps
