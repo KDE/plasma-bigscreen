@@ -55,6 +55,15 @@ void HomeScreen::executeCommand(const QString &command)
 
 void HomeScreen::requestShutdown()
 {
+    if (m_session->state() == SessionManagement::State::Loading) {
+        connect(m_session, &SessionManagement::stateChanged,
+                this, [this]() {
+            if (m_session->state() == SessionManagement::State::Ready) {
+                m_session->requestShutdown();
+                disconnect(m_session, nullptr, this, nullptr);
+            }
+        });
+    }
     m_session->requestShutdown();
 }
 
