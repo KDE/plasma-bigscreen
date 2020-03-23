@@ -37,8 +37,6 @@ AbstractIndicator {
     }
 
     onClicked: {
-        var service = dataEngine.serviceForSource("PowerDevil");
-        var operation = service.operationDescription("requestShutDown");
-        service.startOperationCall(operation);
+        plasmoid.nativeInterface.requestShutdown();
     }
 }

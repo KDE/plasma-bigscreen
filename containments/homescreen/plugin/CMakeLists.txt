@@ -22,6 +22,7 @@ target_link_libraries(plasma_containment_biglauncherhomescreen
                       KF5::Notifications
                       KF5::Service KF5::KIOWidgets
                       KF5::Activities
+                      PW::KWorkspace
                       KF5::ActivitiesStats)
 
 install(TARGETS plasma_containment_biglauncherhomescreen DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/applets)

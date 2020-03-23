@@ -34,6 +34,9 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     WindowSystem
 )
 
+find_package(LibKWorkspace 5.15 CONFIG REQUIRED)
+
+
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Quick
     Core

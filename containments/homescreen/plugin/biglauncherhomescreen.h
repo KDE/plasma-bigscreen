@@ -24,6 +24,7 @@
 #include <Plasma/Containment>
 
 class ApplicationListModel;
+class SessionManagement;
 
 class HomeScreen : public Plasma::Containment
 {
@@ -38,9 +39,11 @@ public:
 
 public Q_SLOTS:
     void executeCommand(const QString &command);
+    void requestShutdown();
 
 private:
     ApplicationListModel *m_applicationListModel;
+    SessionManagement *m_session;
 };
 
 

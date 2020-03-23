@@ -25,8 +25,11 @@
 #include <QProcess>
 #include <QtQml>
 
+#include <sessionmanagement.h>
+
 HomeScreen::HomeScreen(QObject *parent, const QVariantList &args)
-    : Plasma::Containment(parent, args)
+    : Plasma::Containment(parent, args),
+      m_session(new SessionManagement(this))
 {
     const QByteArray uri("org.kde.private.biglauncher");
     qmlRegisterUncreatableType<ApplicationListModel>(uri, 1, 0, "ApplicationListModel", QStringLiteral("Cannot create an item of type ApplicationListModel"));
@@ -48,6 +51,11 @@ void HomeScreen::executeCommand(const QString &command)
 {
     qWarning()<<"Executing"<<command;
     QProcess::startDetached(command);
+}
+
+void HomeScreen::requestShutdown()
+{
+    m_session->requestShutdown();
 }
 
 K_EXPORT_PLASMA_APPLET_WITH_JSON(homescreen, HomeScreen, "metadata.json")
