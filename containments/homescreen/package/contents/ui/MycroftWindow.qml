@@ -31,6 +31,8 @@ Window {
     width: screen.availableGeometry.width
     height: screen.availableGeometry.height
 
+    Component.onCompleted: Mycroft.MycroftController.start()
+
     Timer {
         interval: 10000
         running: Mycroft.MycroftController.status != Mycroft.MycroftController.Open

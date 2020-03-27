@@ -26,7 +26,6 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kirigami 2.5 as Kirigami
-import Mycroft 1.0 as Mycroft
 
 import "launcher"
 import "indicators" as Indicators
@@ -48,8 +47,6 @@ Item {
         for (var i in plasmoid.applets) {
             root.addApplet(plasmoid.applets[i], -1, -1)
         }
-
-        Mycroft.MycroftController.start();
     }
 
     function addApplet(applet, x, y) {
