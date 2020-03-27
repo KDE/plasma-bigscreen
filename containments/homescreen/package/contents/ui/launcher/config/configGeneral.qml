@@ -26,7 +26,6 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.5 as Kirigami
-import Mycroft 1.0 as Mycroft
 
 Item {
     id: page
@@ -43,9 +42,7 @@ Item {
             id: websocketAddress
             Layout.fillWidth: true
             Kirigami.FormData.label: i18n("Websocket Address:")       
-            Component.onCompleted: {
-                websocketAddress.text = Mycroft.GlobalSettings.webSocketAddress
-            }
+            text: cfg_websocketAddress
         }
         
         CheckBox {
@@ -58,8 +55,6 @@ Item {
         CheckBox {
             id: enableRemoteTTS
             text: i18n("Enable Remote TTS")
-            checked: Mycroft.GlobalSettings.usesRemoteTTS
-            onCheckedChanged: Mycroft.GlobalSettings.usesRemoteTTS = checked
         }
         
         CheckBox {

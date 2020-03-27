@@ -22,7 +22,6 @@ import QtQuick.Window 2.3
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.2 as Controls
 import org.kde.kirigami 2.11 as Kirigami
-import Mycroft 1.0 as Mycroft
 
 Window {
     id: window
