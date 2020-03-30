@@ -1,0 +1,1 @@
+install(DIRECTORY plasma-bigscreen DESTINATION ${SOUND_INSTALL_DIR})
