@@ -8,26 +8,26 @@
   + sudo make install
   
 # List of Dependencies
-- KDE KF5 Dependencies: * Most dependencies require the latest git master *
-  -- Activities
-  -- ActivitiesStats
-  -- Plasma
-  -- I18n
-  -- Kirigami2
-  -- Declarative
-  -- KCMUtils
-  -- Notifications
-  -- PlasmaQuick
-  -- KIO
-  -- Wayland
-  -- WindowSystem
+- KDE KF5 Dependencies: (**Most dependencies require the latest git master**)
+  - Activities
+  - ActivitiesStats
+  - Plasma
+  - I18n
+  - Kirigami2
+  - Declarative
+  - KCMUtils
+  - Notifications
+  - PlasmaQuick
+  - KIO
+  - Wayland
+  - WindowSystem
   
 - QT Dependencies:
-  -- Quick
-  -- Core
-  -- Qml
-  -- DBus
-  -- Network
+  - Quick
+  - Core
+  - Qml
+  - DBus
+  - Network
 
 # Additional Requirements
 - Mycroft-Core (development branch) https://github.com/MycroftAI/Mycroft-Core
