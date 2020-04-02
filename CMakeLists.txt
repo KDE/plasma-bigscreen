@@ -13,6 +13,7 @@ find_package(ECM REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${CMAKE_MODULE_PATH})
 set(VERSION 2.1.0)
 
+include(ECMQMLModules)
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
@@ -44,6 +45,12 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     DBus
     Network
 )
+
+ecm_find_qmlmodule(Mycroft 1.0)
+
+if(NOT ${Mycroft-QMLModule_FOUND})
+    message(WARNING "Could not find the Mycroft QML module. Voice interaction features will not be available.")
+endif()
 
 add_subdirectory(containments)
 add_subdirectory(kcms)
