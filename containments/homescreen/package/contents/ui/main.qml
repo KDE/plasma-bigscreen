@@ -77,8 +77,9 @@ Item {
         id: feedbackWindow
     }
 
-    MycroftWindow {
-        id: mycroftWindow
+    // Loader to make Mycroft completely optional
+    Loader {
+        sourceComponent: MycroftWindow {}
     }
 
     ConfigWindow {
@@ -164,7 +165,11 @@ Item {
                 margins: units.smallSpacing
             }
 
-            MycroftIndicator {}
+            // Loader to make Mycroft completely optional
+            Loader {
+                Layout.fillHeight: true
+                sourceComponent: MycroftIndicator {}
+            }
 
             Indicators.Volume {
                 id: volumeIndicator
