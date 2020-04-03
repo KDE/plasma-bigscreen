@@ -32,6 +32,7 @@ AbstractIndicator {
                     } else {
                         window = component.createObject("root", {currentDevice: device})
                         window.show()
+                        window.requestActivate()
                     }
                 } else {
                     console.log("pairing request timedout/closed")

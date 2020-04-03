@@ -9,6 +9,7 @@ Window {
     id: root
     property QtObject currentDevice
     color: Qt.rgba(0, 0, 0, 0.8)
+    flags: Qt.WindowStaysOnTopHint
 
     Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
     
