@@ -61,7 +61,7 @@ KCM.SimpleKCM {
             }
         } 
 
-        Keys.onUpPressed: root.activateDeviceView()
+        Keys.onUpPressed: connectionView.forceActiveFocus()
         
         onClicked: {
             Window.window.close()
@@ -96,6 +96,7 @@ KCM.SimpleKCM {
                 title: allDevicesModel.count > 0 ? "Found Devices" : "No Devices Found"
                 currentIndex: 0
                 delegate: Delegates.DeviceDelegate{}
+                navigationDown: kcmcloseButton
                 Behavior on x {
                     NumberAnimation {
                         duration: Kirigami.Units.longDuration * 2
@@ -113,6 +114,7 @@ KCM.SimpleKCM {
             anchors.top: parent.top
             anchors.topMargin: -Kirigami.Units.smallSpacing
             anchors.bottom: parent.bottom
+            anchors.bottomMargin: -Kirigami.Units.smallSpacing
             anchors.right: parent.right
             visible: allDevicesModel.count > 0 ? 1 : 0
             anchors.rightMargin: -Kirigami.Units.smallSpacing

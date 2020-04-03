@@ -189,6 +189,11 @@ FocusScope {
                     text: i18n("Wireless")
                     icon.name: "network-wireless-connected-100"
                     onTriggered: plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_wifi")
+                },
+                Controls.Action {
+                    text: i18n("KDE Connect")
+                    icon.name: "kdeconnect"
+                    onTriggered: plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_kdeconnect")
                 }
             ]
 
