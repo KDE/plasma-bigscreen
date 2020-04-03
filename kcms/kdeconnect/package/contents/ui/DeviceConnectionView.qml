@@ -59,9 +59,11 @@ Rectangle {
     }
     
     function checkCurrentStatus() {
-        if (deviceView.currentDevice.hasPairingRequests) {
-            deviceStatView.currentIndex = 1
-        } else if (deviceView.currentDevice.isReachable) {
+        //if (deviceView.currentDevice.hasPairingRequests) {
+        //    deviceStatView.currentIndex = 1
+        //} else
+        // disable pairing request handler in kcm as indicator handles pairing in bigscreen
+        if (deviceView.currentDevice.isReachable) {
             if (deviceView.currentDevice.isTrusted) {
                 deviceIconStatus.source = deviceView.currentDevice.statusIconName
                 deviceStatView.currentIndex = 2
