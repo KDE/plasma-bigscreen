@@ -171,6 +171,17 @@ Item {
                 sourceComponent: MycroftIndicator {}
             }
 
+            Indicators.KdeConnect {
+                id: kdeconnectIndicator
+                Layout.fillHeight: true
+                implicitWidth: height
+                KeyNavigation.down: launcher
+                KeyNavigation.right: volumeIndicator
+                KeyNavigation.tab: volumeIndicator
+                KeyNavigation.backtab: launcher
+                KeyNavigation.left: kdeconnectIndicator
+            }
+
             Indicators.Volume {
                 id: volumeIndicator
                 Layout.fillHeight: true
@@ -179,7 +190,7 @@ Item {
                 KeyNavigation.right: wifiIndicator
                 KeyNavigation.tab: wifiIndicator
                 KeyNavigation.backtab: launcher
-                KeyNavigation.left: volumeIndicator
+                KeyNavigation.left: kdeconnectIndicator
             }
 
             Indicators.Wifi {

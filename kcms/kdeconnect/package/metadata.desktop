@@ -1,0 +1,25 @@
+[Desktop Entry]
+Name=KDE Connect
+Name[ca]=KDE-Connect
+Name[ca@valencia]=KDE-Connect
+Name[cs]=KDE Connect
+Name[es]=KDE Connect
+Name[et]=KDE Connect
+Name[it]=KDE Connect
+Name[nl]=KDE-Connect
+Name[pt]=KDE-Connect
+Name[sk]=KDE Connect
+Name[sv]=WIFI
+Name[uk]=KDE-Connect
+Name[x-test]=xxKDE Connectxx
+Name[zh_TW]=KDE-Connect
+
+Icon=kdeconnect
+Type=Service
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=kcm_mediacenter_kdeconnect
+X-KDE-ServiceTypes=Plasma/Generic
+X-Plasma-API=declarativeappletscript
+X-KDE-FormFactors=mediacenter
+
+X-Plasma-MainScript=ui/main.qml

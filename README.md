@@ -21,6 +21,7 @@
   - KIO
   - Wayland
   - WindowSystem
+  - KDEConnect
   
 - QT Dependencies:
   - Quick
