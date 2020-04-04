@@ -1,18 +1,5 @@
 [Desktop Entry]
 Name=KDE Connect
-Name[ca]=KDE-Connect
-Name[ca@valencia]=KDE-Connect
-Name[cs]=KDE Connect
-Name[es]=KDE Connect
-Name[et]=KDE Connect
-Name[it]=KDE Connect
-Name[nl]=KDE-Connect
-Name[pt]=KDE-Connect
-Name[sk]=KDE Connect
-Name[sv]=WIFI
-Name[uk]=KDE-Connect
-Name[x-test]=xxKDE Connectxx
-Name[zh_TW]=KDE-Connect
 
 Icon=kdeconnect
 Type=Service
