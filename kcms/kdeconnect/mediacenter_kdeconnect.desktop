@@ -13,6 +13,22 @@ X-KDE-Weight=40
 X-KDE-FormFactors=mediacenter
 
 Name=KDE Connect
+Name[ca]=KDE Connect
+Name[et]=KDE Connect
+Name[it]=KDE Connect
+Name[ko]=KDE Connect
+Name[nl]=KDE Connect
+Name[sv]=KDE-anslut
+Name[uk]=KDE Connect
+Name[x-test]=xxKDE Connectxx
 Comment=Connect and sync your devices
+Comment[ca]=Connecta i sincronitza els vostres dispositius
+Comment[et]=Seadmete ühendamine ja sünkroonimine
+Comment[it]=Connetti e sincronizza i tuoi dispositivi
+Comment[ko]=내 장치에 연결하고 동기화
+Comment[nl]=Uw apparaten verbinden en synchroniseren
+Comment[sv]=Anslut och synkronisera dina apparater
+Comment[uk]=З'єднання і синхронізація ваших пристроїв
+Comment[x-test]=xxConnect and sync your devicesxx
 
 Categories=Qt;KDE;X-KDE-settings-wifi;
