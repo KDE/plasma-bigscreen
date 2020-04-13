@@ -103,6 +103,11 @@ Window {
             plasmoid.nativeInterface.executeCommand("mycroft-gui-app --hideTextInput --skill=" + skillId);
         }
        // activeSkills.onSkillActivated: window.showMaximized();
+        activeSkills.onActiveIndexChanged: {
+            if (activeSkills.activeIndex > 0) {
+                window.visible = false;
+            }
+        }
 
         onOpenChanged: {
             if (open) {
