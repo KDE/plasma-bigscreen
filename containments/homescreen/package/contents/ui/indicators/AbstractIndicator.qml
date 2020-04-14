@@ -23,6 +23,7 @@ import QtQuick 2.2
 import QtQuick.Layouts 1.4
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
+import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
 
 PlasmaComponents.Button {
@@ -53,5 +54,21 @@ PlasmaComponents.Button {
 
     Keys.onReturnPressed: {
         clicked();
+    }
+
+    onClicked: BigScreen.NavigationSoundEffects.playClickedSound()
+
+    Keys.onPressed: {
+        switch (event.key) {
+            case Qt.Key_Down:
+            case Qt.Key_Right:
+            case Qt.Key_Left:
+            case Qt.Key_Tab:
+            case Qt.Key_Backtab:
+                BigScreen.NavigationSoundEffects.playMovingSound();
+                break;
+            default:
+                break;
+        }
     }
 }
