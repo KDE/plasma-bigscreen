@@ -31,4 +31,12 @@ void BigScreenPlugin::registerTypes(const char *uri)
     Q_ASSERT(uri == QLatin1String("org.kde.mycroft.bigscreen"));
 
     qmlRegisterType<ImagePalette>(uri, 1, 0, "ImagePalette");
+    qmlRegisterSingletonType(componentUrl(QStringLiteral("NavigationSoundEffects.qml")), uri, 1, 0, "NavigationSoundEffects");
+}
+
+QUrl BigScreenPlugin::componentUrl(const QString &fileName)
+{
+    auto url = baseUrl();
+    url.setPath(url.path() % QLatin1Char('/'));
+    return url.resolved(QUrl{fileName});
 }

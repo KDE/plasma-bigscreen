@@ -44,6 +44,7 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Qml
     DBus
     Network
+    Multimedia
 )
 
 ecm_find_qmlmodule(Mycroft 1.0)
