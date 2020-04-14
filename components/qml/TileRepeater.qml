@@ -149,13 +149,25 @@ FocusScope {
             }
         }
 
-        Keys.onLeftPressed: currentIndex = Math.max(0, currentIndex - 1)
-        Keys.onRightPressed: currentIndex = Math.min(count - 1, currentIndex + 1)
+        Keys.onLeftPressed: {
+            if (currentIndex > 0) {
+                BigScreen.NavigationSoundEffects.playMovingSound();
+                currentIndex = Math.max(0, currentIndex - 1);
+            }
+        }
+        Keys.onRightPressed: {
+            if (currentIndex < count - 1) {
+                BigScreen.NavigationSoundEffects.playMovingSound();
+                currentIndex = Math.min(count - 1, currentIndex + 1);
+            }
+        }
 
         Keys.onDownPressed:  {
             if (!root.navigationDown) {
                 return;
             }
+
+            BigScreen.NavigationSoundEffects.playMovingSound();
 
             if (root.navigationDown instanceof TileView ||
                 root.navigationDown instanceof TileRepeater) {
@@ -173,6 +185,8 @@ FocusScope {
             if (!root.navigationUp) {
                 return;
             }
+
+            BigScreen.NavigationSoundEffects.playMovingSound();
 
             if (root.navigationUp instanceof TileView ||
                 root.navigationUp instanceof TileRepeater) {
