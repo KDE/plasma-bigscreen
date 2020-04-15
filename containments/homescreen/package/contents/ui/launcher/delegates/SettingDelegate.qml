@@ -26,6 +26,7 @@ BigScreen.IconDelegate {
     compactMode: plasmoid.configuration.expandingTiles
 
     onClicked: {
+        BigScreen.NavigationSoundEffects.playClickedSound()
         //feedbackWindow.open(model.text, model.icon.name);
         trigger();
         recentView.forceActivefocus();

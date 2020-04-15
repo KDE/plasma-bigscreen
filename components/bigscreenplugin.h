@@ -30,5 +30,8 @@ class BigScreenPlugin : public QQmlExtensionPlugin
 
 public:
     void registerTypes(const char *uri) override;
+
+private:
+    QUrl componentUrl(const QString &fileName);
 };
 

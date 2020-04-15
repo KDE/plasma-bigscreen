@@ -44,6 +44,7 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Qml
     DBus
     Network
+    Multimedia
 )
 
 ecm_find_qmlmodule(Mycroft 1.0)
@@ -55,6 +56,7 @@ endif()
 add_subdirectory(containments)
 add_subdirectory(kcms)
 add_subdirectory(components)
+add_subdirectory(sounds)
 
 plasma_install_package(shell org.kde.plasma.mycroft.bigscreen shells)
 plasma_install_package(lookandfeel org.kde.plasma.mycroft.bigscreen look-and-feel lookandfeel)

@@ -29,6 +29,7 @@ BigScreen.IconDelegate {
     compactMode: plasmoid.configuration.expandingTiles
 
     onClicked: {
+        BigScreen.NavigationSoundEffects.playClickedSound()
         plasmoid.nativeInterface.applicationListModel.runApplication(modelData.ApplicationStorageIdRole)
         recentView.forceActiveFocus();
         recentView.currentIndex = 0;
