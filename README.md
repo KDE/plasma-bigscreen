@@ -6,7 +6,8 @@
   + cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release -DKDE_INSTALL_LIBDIR=lib -DKDE_INSTALL_USE_QT_SYS_PATHS=ON
   + make
   + sudo make install
-  
+  + plasmashell --replace -p org.kde.plasma.mycroft.bigscreen
+
 # List of Dependencies
 - KDE KF5 Dependencies: (**Most dependencies require the latest git master**)
   - Activities
@@ -23,7 +24,7 @@
   - WindowSystem
   - KDEConnect
   
-- QT Dependencies:
+- Qt Dependencies:
   - Quick
   - Core
   - Qml
