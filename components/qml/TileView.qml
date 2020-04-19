@@ -116,8 +116,6 @@ FocusScope {
                 return;
             }
 
-            BigScreen.NavigationSoundEffects.playMovingSound();
-            
             if (navigationDown instanceof TileView) {
                 navigationDown.currentIndex = Math.min(Math.floor(navigationDown.view.indexAt(navigationDown.view.contentX + cellWidth/2, height/2)) + (view.currentIndex - view.indexAt(view.contentX + cellWidth/2, height/2)), navigationDown.view.count - 1);
 
@@ -134,8 +132,6 @@ FocusScope {
                 return;
             }
 
-            BigScreen.NavigationSoundEffects.playMovingSound();
-            
             if (navigationUp instanceof TileView) {
                 navigationUp.currentIndex = Math.min(Math.floor(navigationUp.view.indexAt(navigationUp.view.contentX + cellWidth/2, height/2)) + (view.currentIndex - view.indexAt(view.contentX + cellWidth/2, height/2)), navigationUp.view.count - 1);
 
