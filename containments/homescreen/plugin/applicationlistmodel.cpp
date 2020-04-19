@@ -108,7 +108,7 @@ void ApplicationListModel::loadApplications()
     while (!subGroupList.isEmpty()) {
         KSycocaEntry::Ptr groupEntry = subGroupList.first();
         subGroupList.pop_front();
-        
+
         if (groupEntry->isType(KST_KServiceGroup)) {
             KServiceGroup::Ptr serviceGroup(static_cast<KServiceGroup* >(groupEntry.data()));
 
@@ -125,13 +125,13 @@ void ApplicationListModel::loadApplications()
                     } else if (entry->property("Exec").isValid()) {
                          qDebug() << entry->property("Categories");
                          KService::Ptr service(static_cast<KService* >(entry.data()));
-                         qDebug() << " desktopEntryName: " << service->desktopEntryName();                        
-                    
+                         qDebug() << " desktopEntryName: " << service->desktopEntryName();
+
                       //else if (entry->property("Exec").isValid()) {
                       //  KService::Ptr service(static_cast<KService* >(entry.data()));
 
                       //  qDebug() << " desktopEntryName: " << service->desktopEntryName();
-                        
+
                         if (service->isApplication() &&
                             !blacklist.contains(service->desktopEntryName()) &&
                             service->showOnCurrentPlatform() &&
@@ -301,4 +301,4 @@ void ApplicationListModel::setAppOrder(const QStringList &order)
         ++i;
     }
     emit appOrderChanged();
-} 
+}

@@ -50,8 +50,6 @@ FocusScope {
     Component.onCompleted: {
         root.forceActiveFocus();
         plasmoid.nativeInterface.applicationListModel.loadApplications();
-        plasmoid.nativeInterface.voiceAppListModel.loadApplications();
-        plasmoid.nativeInterface.gamesAppListModel.loadApplications();
         root.activateAppView();
     }
 
@@ -61,7 +59,7 @@ FocusScope {
             root.activateAppView()
         }
     }
-    
+
     Connections {
         target: root
         onActivateTopNavBar: {
