@@ -57,7 +57,6 @@ Window {
     }
     Kirigami.Heading {
         id: inputQuery
-        Kirigami.Theme.colorSet: mainView.Kirigami.Theme.colorSet
         anchors.right: si.left
         anchors.rightMargin: Kirigami.Units.largeSpacing
         anchors.verticalCenter: si.verticalCenter

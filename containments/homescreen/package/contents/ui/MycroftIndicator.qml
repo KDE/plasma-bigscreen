@@ -27,7 +27,6 @@ import Mycroft 1.0 as Mycroft
 RowLayout {
     Kirigami.Heading {
         id: inputQuery
-        Kirigami.Theme.colorSet: mainView.Kirigami.Theme.colorSet
         level: 3
         opacity: 0
         onTextChanged: {
@@ -85,7 +84,6 @@ RowLayout {
     Mycroft.StatusIndicator {
         id: si
         z: 2
-        visible: !mycroftWindow.visible
         Layout.preferredWidth: height
         Layout.fillHeight: true
         hasShadow: false
