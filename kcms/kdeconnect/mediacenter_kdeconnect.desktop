@@ -25,6 +25,7 @@ Name[pt]=KDE Connect
 Name[sv]=KDE-anslut
 Name[uk]=KDE Connect
 Name[x-test]=xxKDE Connectxx
+Name[zh_TW]=KDE 連線
 Comment=Connect and sync your devices
 Comment[ca]=Connecta i sincronitza els vostres dispositius
 Comment[ca@valencia]=Connecta i sincronitza els vostres dispositius
@@ -38,5 +39,6 @@ Comment[pt]=Ligue e sincronize os seus dispositivos
 Comment[sv]=Anslut och synkronisera dina apparater
 Comment[uk]=З'єднання і синхронізація ваших пристроїв
 Comment[x-test]=xxConnect and sync your devicesxx
+Comment[zh_TW]=連線並同步您的裝置
 
 Categories=Qt;KDE;X-KDE-settings-wifi;
