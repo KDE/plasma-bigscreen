@@ -6,7 +6,7 @@ set(bigscreen_SRCS
     )
 
 add_library(bigscreenplugin SHARED ${bigscreen_SRCS})
-target_link_libraries(bigscreenplugin Qt5::Core Qt5::Qml Qt5::Quick)
+target_link_libraries(bigscreenplugin Qt5::Core Qt5::Qml Qt5::Quick Qt5::Concurrent)
 
 install(TARGETS bigscreenplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/mycroft/bigscreen)
 

@@ -25,8 +25,27 @@
 #include <QQuickItemGrabResult>
 #include <QPointer>
 #include <QQuickWindow>
+#include <QFuture>
 
 class QTimer;
+
+struct ImageData {
+    struct colorStat {
+        QList<QRgb> colors;
+        QRgb centroid = 0;
+        qreal ratio = 0;
+    };
+
+    QList<QRgb> m_samples;
+    QList<colorStat> m_clusters;
+    QVariantList m_palette;
+
+    QColor m_dominant;
+    QColor m_suggestedContrast;
+    QColor m_mostSaturated;
+    QColor m_closestToBlack;
+    QColor m_closestToWhite;
+};
 
 class ImagePalette : public QObject
 {
@@ -69,14 +88,8 @@ Q_SIGNALS:
     void closestToWhiteChanged();
 
 private:
-    inline void positionColor(QRgb rgb);
-    void generatePalette();
-
-    struct colorStat {
-        QList<QRgb> colors;
-        QRgb centroid = 0;
-        qreal ratio = 0;
-    };
+    inline void positionColor(QRgb rgb, QList<ImageData::colorStat> &clusters);
+    ImageData generatePalette(const QImage &sourceImage);
 
     // Arbitrary number that seems to work well
     const int s_minimumSquareDistance = 32000;
@@ -85,15 +98,11 @@ private:
     QPointer<QQuickItem> m_sourceItem;
     QSharedPointer<QQuickItemGrabResult> m_grabResult;
     QImage m_sourceImage;
-    QList<QRgb> m_samples;
-    QList<colorStat> m_clusters;
-    QVariantList m_palette;
+
+
     QTimer *m_imageSyncTimer;
 
-    QColor m_dominant;
-    QColor m_suggestedContrast;
-    QColor m_mostSaturated;
-    QColor m_closestToBlack;
-    QColor m_closestToWhite;
+    QFutureWatcher<ImageData> *m_futureImageData = nullptr;
+    ImageData m_imageData;
 };
 
