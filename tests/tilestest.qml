@@ -2,7 +2,7 @@
 import QtQuick 2.12
 import QtQuick.Layouts 1.4
 import QtQuick.Controls 2.12 as Controls
-import org.kde.kirigami 2.10 as Kirigami
+import org.kde.kirigami 2.13 as Kirigami
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
 Image {
@@ -29,8 +29,8 @@ Image {
                     margins: 10
                 }
                 radius: 5
-                color: palette.suggestedContrast
-                BigScreen.ImagePalette {
+                color: palette.dominantContrast
+                Kirigami.ImageColors {
                     id: palette
                     source: modelData
                 }
@@ -48,7 +48,10 @@ Image {
                         Layout.fillWidth: true
                         horizontalAlignment: Text.AlignHCenter
                         text: "Lorem"
-                        color: 0.2126 * palette.suggestedContrast.r + 0.7152 * palette.suggestedContrast.g + 0.0722 * palette.suggestedContrast.b > 0.6 ? "black" : "white"
+                        //color: 0.2126 * palette.suggestedContrast.r + 0.7152 * palette.suggestedContrast.g + 0.0722 * palette.suggestedContrast.b > 0.6 ? "black" : "white"
+                        color: useColors
+                            ? Kirigami.ColorUtils.brightness(palette.dominantContrast) === Kirigami.ColorUtils.Light ? imagePalette.closestToBlack : imagePalette.closestToWhite
+                            : PlasmaCore.ColorScope.textColor
                     }
                 }
             }

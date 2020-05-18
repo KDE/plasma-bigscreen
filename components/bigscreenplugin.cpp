@@ -21,7 +21,6 @@
 */
 
 #include "bigscreenplugin.h"
-#include "imagepalette.h"
 
 #include <QtQml>
 
@@ -30,7 +29,6 @@ void BigScreenPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("org.kde.mycroft.bigscreen"));
 
-    qmlRegisterType<ImagePalette>(uri, 1, 0, "ImagePalette");
     qmlRegisterSingletonType(componentUrl(QStringLiteral("NavigationSoundEffects.qml")), uri, 1, 0, "NavigationSoundEffects");
 }
 

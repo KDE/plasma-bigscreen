@@ -2,7 +2,6 @@ project(bigscreen)
 
 set(bigscreen_SRCS
     bigscreenplugin.cpp
-    imagepalette.cpp
     )
 
 add_library(bigscreenplugin SHARED ${bigscreen_SRCS})
