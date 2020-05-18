@@ -25,13 +25,12 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.private.biglauncher 1.0 as Launcher
+import org.kde.mycroft.bigscreen 1.0 as Launcher
 import org.kde.kirigami 2.11 as Kirigami
 import org.kde.kitemmodels 1.0 as KItemModels
 
 import "delegates" as Delegates
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
-import org.kde.private.biglauncher 1.0
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
 FocusScope {

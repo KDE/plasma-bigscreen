@@ -23,7 +23,7 @@ import QtGraphicalEffects 1.12
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.kirigami 2.11 as Kirigami
+import org.kde.kirigami 2.13 as Kirigami
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
 AbstractDelegate {
@@ -42,14 +42,14 @@ AbstractDelegate {
     Kirigami.Theme.backgroundColor: imagePalette.backgroundColor
     Kirigami.Theme.highlightColor: imagePalette.accentColor
 
-    BigScreen.ImagePalette {
+    Kirigami.ImageColors {
         id: imagePalette
         source: iconItem.source
         property bool useColors: useIconColors
-        property color backgroundColor: useColors ? suggestedContrast : PlasmaCore.ColorScope.backgroundColor
-        property color accentColor: useColors ? mostSaturated : PlasmaCore.ColorScope.highlightColor
+        property color backgroundColor: useColors ? dominantContrast : PlasmaCore.ColorScope.backgroundColor
+        property color accentColor: useColors ? highlight : PlasmaCore.ColorScope.highlightColor
         property color textColor: useColors
-            ? (0.2126 * suggestedContrast.r + 0.7152 * suggestedContrast.g + 0.0722 * suggestedContrast.b > 0.6 ? Qt.rgba(0.2,0.2,0.2,1) : Qt.rgba(0.9,0.9,0.9,1))
+            ? Kirigami.ColorUtils.brightness(dominantContrast) === Kirigami.ColorUtils.Light ? imagePalette.closestToBlack : imagePalette.closestToWhite
             : PlasmaCore.ColorScope.textColor
     }
     
