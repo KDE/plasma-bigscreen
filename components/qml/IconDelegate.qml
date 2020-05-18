@@ -49,7 +49,7 @@ AbstractDelegate {
         property color backgroundColor: useColors ? dominantContrast : PlasmaCore.ColorScope.backgroundColor
         property color accentColor: useColors ? highlight : PlasmaCore.ColorScope.highlightColor
         property color textColor: useColors
-            ? Kirigami.ColorUtils.brightness(dominantContrast) === Kirigami.ColorUtils.Light ? imagePalette.closestToBlack : imagePalette.closestToWhite
+            ? (Kirigami.ColorUtils.brightnessForColor(dominantContrast) === Kirigami.ColorUtils.Light ? imagePalette.closestToBlack : imagePalette.closestToWhite)
             : PlasmaCore.ColorScope.textColor
     }
     
