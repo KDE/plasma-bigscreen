@@ -9,7 +9,11 @@
   + plasmashell --replace -p org.kde.plasma.mycroft.bigscreen
 
 # List of Dependencies
-- KDE KF5 Dependencies: (**Most dependencies require the latest git master**)
+
+- KDE Plasma Dependencies:
+  - plasma-nano - https://invent.kde.org/plasma/plasma-nano
+
+- KDE KF5 Dependencies:
   - Activities
   - ActivitiesStats
   - Plasma
