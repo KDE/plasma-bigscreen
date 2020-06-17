@@ -79,7 +79,7 @@ Item {
 
     // Loader to make Mycroft completely optional
     Loader {
-        sourceComponent: MycroftWindow {}
+        source: Qt.resolvedUrl("MycroftWindow.qml") ? Qt.resolvedUrl("MycroftWindow.qml") : null
     }
 
     ConfigWindow {
@@ -168,7 +168,7 @@ Item {
             // Loader to make Mycroft completely optional
             Loader {
                 Layout.fillHeight: true
-                sourceComponent: MycroftIndicator {}
+                source: Qt.resolvedUrl("MycroftIndicator.qml") ? Qt.resolvedUrl("MycroftIndicator.qml") : null
             }
 
             Indicators.KdeConnect {
