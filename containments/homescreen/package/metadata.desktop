@@ -14,7 +14,6 @@ Name[sk]=Mycroft Bigscreen
 Name[sl]=Mycroft Bigscreen
 Name[sv]=Mycroft storbildsskärm
 Name[uk]=Mycroft для великих екранів
-Name[x-test]=xxMycroft Bigscreenxx
 Name[zh_TW]=Mycroft Bigscreen
 Comment=Homescreen for Plasma and Mycroft based TVs
 Comment[ca]=Pantalla d'inici del Plasma i Mycroft per a televisors
@@ -30,7 +29,6 @@ Comment[sk]=Domovská obrazovka pre televízory s Plasma a Mycroft
 Comment[sl]=Domači zaslon za Plasmo in televizorje Mycroft
 Comment[sv]=Hemskärm för Plasma- och Mycroft-baserade tv-apparater
 Comment[uk]=Домашнє вікно для телевізорів на основі Плазми і Mycroft
-Comment[x-test]=xxHomescreen for Plasma and Mycroft based TVsxx
 Comment[zh_TW]=適用於 Plasma 跟基於 Mycroft 的電視的主畫面
 
 Type=Service

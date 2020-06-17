@@ -13,7 +13,6 @@ Comment[sk]=Vzhľad pre Plasma Mycroft Big Screen
 Comment[sl]=Izgled in občutek Plasme na velikem zaslonu Mycroft
 Comment[sv]=Utseende och känsla för Plasma Mycroft storbildsskärm
 Comment[uk]=Вигляд і поведінка Плазми Mycroft для великих екранів
-Comment[x-test]=xxPlasma Mycroft Big Screen look and feelxx
 Comment[zh_TW]=Plasma Mycroft 大螢幕外觀及感覺
 
 Name=Mycroft Big Screen
@@ -30,7 +29,6 @@ Name[sk]=Mycroft Big Screen
 Name[sl]=Veliki zaslon Mycroft
 Name[sv]=Mycroft storbildsskärm
 Name[uk]=Mycroft для великих екранів
-Name[x-test]=xxMycroft Big Screenxx
 Name[zh_TW]=Mycroft 大螢幕
 
 Type=Service
