@@ -28,6 +28,7 @@ Name[sk]=Jazyk
 Name[sl]=Jezik
 Name[sv]=Språk
 Name[uk]=Мова
+Name[x-test]=xxLanguagexx
 Name[zh_TW]=語言
 Comment=Change workspace and application languages
 Comment[ca]=Canvi dels idiomes de l'espai de treball i les aplicacions
@@ -45,6 +46,7 @@ Comment[sk]=Zmeniť jazyky pracovného priestoru a aplikácií
 Comment[sl]=Spremenite jezike delovnega prostora in aplikacij
 Comment[sv]=Ändra arbetsområde och programspråk
 Comment[uk]=Зміна мови перекладу робочого простору і програм
+Comment[x-test]=xxChange workspace and application languagesxx
 Comment[zh_TW]=變更工作區及應用程式語言
 
 Categories=Qt;KDE;X-KDE-settings-audiodevice;

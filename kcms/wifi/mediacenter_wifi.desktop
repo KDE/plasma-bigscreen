@@ -28,6 +28,7 @@ Name[sk]=Wifi
 Name[sl]=Wifi
 Name[sv]=WIFI
 Name[uk]=Wi-Fi
+Name[x-test]=xxWifixx
 Name[zh_TW]=Wi-Fi
 Comment=Connect to Wifi networks
 Comment[ca]=Connecta a les xarxes Wi-Fi
@@ -44,6 +45,7 @@ Comment[sk]=Pripojiť sa na Wifi siete
 Comment[sl]=Povežite se z omrežji Wifi
 Comment[sv]=Anslut till WIFI-nätverk
 Comment[uk]=З'єднання із мережами Wi-Fi
+Comment[x-test]=xxConnect to Wifi networksxx
 Comment[zh_TW]=連線至 Wi-Fi 網路
 
 Categories=Qt;KDE;X-KDE-settings-wifi;
