@@ -19,13 +19,23 @@ AbstractIndicator {
         model: allDevicesModel
         delegate: Item {
             property bool pairingRequest: device.hasPairingRequests
+            property var bigscreenIface: KDEConnect.BigscreenDbusInterfaceFactory.create(device.id())
 
+            Connections {
+                target: bigscreenIface
+                onMessageReceived: message => {
+                    if (mycroftLoader.item) {
+                        mycroftLoader.item.sendText(message);
+                    }
+                }
+            }
+            
             onPairingRequestChanged: {
-                if(pairingRequest) {
+                if (pairingRequest) {
                     var component = Qt.createComponent("PairWindow.qml");
-                    if(component.status != Component.Ready)
+                    if (component.status != Component.Ready)
                     {
-                        if(component.status == Component.Error) {
+                        if (component.status == Component.Error) {
                             console.debug("Error: "+ component.errorString());
                         }
                         return;
@@ -39,7 +49,14 @@ AbstractIndicator {
                     window.close()
                 }
             }
+            
+            
         }
+    }
+    
+    Loader {
+        id: mycroftLoader
+        source: Qt.resolvedUrl("MycroftConnect.qml") ? Qt.resolvedUrl("MycroftConnect.qml") : null
     }
     
     onClicked: {
