@@ -72,6 +72,7 @@ void ApplicationListModel::sycocaDbChanged(const QStringList &changes)
     }
 
     m_applicationList.clear();
+    m_voiceAppSkills.clear();
 
     loadApplications();
 }
@@ -79,6 +80,11 @@ void ApplicationListModel::sycocaDbChanged(const QStringList &changes)
 bool appNameLessThan(const ApplicationData &a1, const ApplicationData &a2)
 {
     return a1.name.toLower() < a2.name.toLower();
+}
+
+QStringList ApplicationListModel::voiceAppSkills() const
+{
+    return m_voiceAppSkills;
 }
 
 void ApplicationListModel::loadApplications()
@@ -136,6 +142,15 @@ void ApplicationListModel::loadApplications()
                             !blacklist.contains(service->desktopEntryName()) &&
                             service->showOnCurrentPlatform() &&
                             !service->property("Terminal", QVariant::Bool).toBool()) {
+                            QRegularExpression voiceExpr(QStringLiteral("mycroft-gui-app .* --skill=(.*)\\.home"));
+
+                            if (service->categories().contains(QStringLiteral("VoiceApp")) && voiceExpr.match(service->exec()).hasMatch()) {
+                                QString exec = service->exec();
+                                exec.replace (voiceExpr, QStringLiteral("\\1"));
+                                if (!exec.isEmpty()) {
+                                    m_voiceAppSkills << exec;
+                                }
+                            }
 
                             bl << service->desktopEntryName();
 
@@ -161,6 +176,8 @@ void ApplicationListModel::loadApplications()
             }
         }
     }
+
+    emit voiceAppSkillsChanged();
 
     blgroup.writeEntry("allapps", bl);
     blgroup.writeEntry("blacklist", blacklist);

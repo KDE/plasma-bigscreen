@@ -43,6 +43,7 @@ class ApplicationListModel : public QAbstractListModel {
 
     Q_PROPERTY(int count READ count NOTIFY countChanged)
     Q_PROPERTY(QStringList appOrder READ appOrder WRITE setAppOrder NOTIFY appOrderChanged)
+    Q_PROPERTY(QStringList voiceAppSkills READ voiceAppSkills NOTIFY voiceAppSkillsChanged)
 
 public:
     ApplicationListModel(QObject *parent = nullptr);
@@ -59,6 +60,8 @@ public:
     Qt::ItemFlags flags(const QModelIndex &index) const override;
 
     QHash<int, QByteArray> roleNames() const Q_DECL_OVERRIDE;
+
+    QStringList voiceAppSkills() const;
 
     enum Roles {
         ApplicationNameRole = Qt::UserRole + 1,
@@ -90,8 +93,10 @@ public Q_SLOTS:
 Q_SIGNALS:
     void countChanged();
     void appOrderChanged();
+    void voiceAppSkillsChanged();
 
 private:
+    QStringList m_voiceAppSkills;
     QList<ApplicationData> m_applicationList;
 
     QStringList m_appOrder;
