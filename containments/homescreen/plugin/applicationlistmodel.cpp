@@ -25,6 +25,7 @@
 #include <QModelIndex>
 #include <QProcess>
 #include <QDebug>
+#include <QRegularExpression>
 
 // KDE
 #include <KPluginInfo>
