@@ -31,6 +31,7 @@ AbstractIndicator {
     id: paIcon
     property bool volumeFeedback: true
     property int maxVolumeValue: Math.round(100 * PulseAudio.NormalVolume / 100.0)
+    property int currentMaxVolumePercent: 100
     property int volumeStep: Math.round(5 * PulseAudio.NormalVolume / 100.0)
     readonly property string dummyOutputName: "auto_null"
     icon.name: paSinkModel.preferredSink && !isDummyOutput(paSinkModel.preferredSink) ? Icon.name(paSinkModel.preferredSink.volume, paSinkModel.preferredSink.muted)
@@ -70,7 +71,7 @@ AbstractIndicator {
         var percent = volumePercent(volume, maxVolumeValue);
         paSinkModel.preferredSink.muted = percent == 0;
         paSinkModel.preferredSink.volume = volume;
-        osd.show(percent);
+        osd.show(percent, currentMaxVolumePercent);
         playFeedback();
 
     }
@@ -84,7 +85,7 @@ AbstractIndicator {
         var percent = volumePercent(volume, maxVolumeValue);
         paSinkModel.preferredSink.muted = percent == 0;
         paSinkModel.preferredSink.volume = volume;
-        osd.show(percent);
+        osd.show(percent, currentMaxVolumePercent);
         playFeedback();
     }
 
