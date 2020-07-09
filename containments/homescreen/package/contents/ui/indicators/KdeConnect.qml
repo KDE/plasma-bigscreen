@@ -24,33 +24,37 @@ AbstractIndicator {
             Connections {
                 target: bigscreenIface
                 onMessageReceived: message => {
-                    if (mycroftLoader.item) {
-                        mycroftLoader.item.sendText(message);
-                    }
-                }
+                                       if (mycroftLoader.item) {
+                                           mycroftLoader.item.sendText(message);
+                                       }
+                                   }
             }
             
             onPairingRequestChanged: {
                 if (pairingRequest) {
-                    var component = Qt.createComponent("PairWindow.qml");
-                    if (component.status != Component.Ready)
-                    {
-                        if (component.status == Component.Error) {
-                            console.debug("Error: "+ component.errorString());
+                    if(device.name.length > 0){
+                        var component = Qt.createComponent("PairWindow.qml");
+                        if (component.status != Component.Ready)
+                        {
+                            if (component.status == Component.Error) {
+                                console.debug("Error: "+ component.errorString());
+                            }
+                            return;
+                        } else {
+                            window = component.createObject("root", {currentDevice: device})
+                            window.show()
+                            window.requestActivate()
                         }
-                        return;
+
                     } else {
-                        window = component.createObject("root", {currentDevice: device})
-                        window.show()
-                        window.requestActivate()
+                        console.log("Unknown Request")
                     }
+
                 } else {
                     console.log("pairing request timedout/closed")
                     window.close()
                 }
             }
-            
-            
         }
     }
     
