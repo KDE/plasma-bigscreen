@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Plasma Big Screen
+Name[az]=Plasma Böyük Ekran
 Name[ca]=Pantalla gran del Plasma
 Name[ca@valencia]=Pantalla gran del Plasma
 Name[da]=Plasma Big Screen
@@ -20,6 +21,7 @@ Name[uk]=Плазма для великих екранів
 Name[x-test]=xxPlasma Big Screenxx
 Name[zh_TW]=Plasma 大螢幕
 Comment=Plasma shell for TVs
+Comment[az]=TV-lər üçün Plasma örtüyü
 Comment[ca]=Espai de treball Plasma per a televisors
 Comment[ca@valencia]=Espai de treball Plasma per a televisors
 Comment[da]=Plasma-skal til fjernsyn

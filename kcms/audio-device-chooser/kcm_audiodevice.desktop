@@ -13,6 +13,7 @@ X-KDE-Weight=40
 X-KDE-FormFactors=tablet,handset,desktop
 
 Name=Language
+Name[az]=Dil
 Name[ca]=Idioma
 Name[ca@valencia]=Idioma
 Name[cs]=Jazyk
@@ -34,6 +35,7 @@ Name[uk]=Мова
 Name[x-test]=xxLanguagexx
 Name[zh_TW]=語言
 Comment=Change workspace and application languages
+Comment[az]=İş mühiti və tətbiq dillərini seçin
 Comment[ca]=Canvi dels idiomes de l'espai de treball i les aplicacions
 Comment[ca@valencia]=Canvi dels idiomes de l'espai de treball i les aplicacions
 Comment[cs]=Změnit pracovní prostředí a jazyk aplikace
