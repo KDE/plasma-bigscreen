@@ -48,6 +48,8 @@ FocusScope {
     property Item navigationUp
     property Item navigationDown
 
+    visible: model.count > 0
+
     onActiveFocusChanged: {
         if (!activeFocus) {
             return;
