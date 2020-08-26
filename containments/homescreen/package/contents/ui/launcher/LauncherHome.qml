@@ -103,6 +103,7 @@ FocusScope {
                 property var modelData: typeof model !== "undefined" ? model : null
                 
             }
+            visible: model.count > 0
 
             navigationUp: recentView
             navigationDown: appsView
