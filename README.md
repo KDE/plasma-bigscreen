@@ -1,41 +1,74 @@
-# Plasma Bigscreen Build Instructions
-  + git clone https://invent.kde.org/KDE/plasma-bigscreen
-  + cd plasma-bigscreen
-  + mkdir build
-  + cd build
-  + cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release -DKDE_INSTALL_LIBDIR=lib -DKDE_INSTALL_USE_QT_SYS_PATHS=ON
-  + make
-  + sudo make install
-  + plasmashell --replace -p org.kde.plasma.mycroft.bigscreen
+# ![Logo](https://plasma-bigscreen.org/wp-content/uploads/sites/3/2020/03/bigscreen-logo.png)
 
-# List of Dependencies
+A big launcher giving you easy access to any installed apps and skills.
+Controllable via voice or TV remote.
 
-- KDE Plasma Dependencies:
-  - plasma-nano - https://invent.kde.org/plasma/plasma-nano
+This project is using various open-source components like Plasma Bigscreen, Mycroft AI and libcec.
 
-- KDE KF5 Dependencies:
-  - Activities
-  - ActivitiesStats
-  - Plasma
-  - I18n
-  - Kirigami2
-  - Declarative
-  - KCMUtils
-  - Notifications
-  - PlasmaQuick
-  - KIO
-  - Wayland
-  - WindowSystem
-  - KDEConnect
+### Voice Control
+
+Bigscreen supports Mycroft AI, a free and open-source voice assistant that can be run completely decentralized on your own server.
+
+### Remote control your TV via CEC
+
+CEC (Consumer Electronics Control) is a standard to control devices over HDMI.
+Use your normal TV remote control, or a RC with built-in microphone for voice control and optional mouse simulation.
+
+### Voice apps
+
+Download new apps (aka skills) for your Bigscreen or add your own ones for others to enjoy.
+
+## Build Instructions
+
+```
+$ git clone https://invent.kde.org/plasma/plasma-bigscreen
+$ cd plasma-bigscreen
+$ cmake -B build \
+      -DCMAKE_INSTALL_PREFIX=/usr \
+      -DCMAKE_BUILD_TYPE=Release 
+$ cmake --build build
+# cmake --build build --target install
+$ plasmashell --replace -p org.kde.plasma.mycroft.bigscreen
+```
+
+<details>
+<summary><b>Click here to see dependencies</b></summary>
+
+### KDE Plasma Dependencies
+
+- plasma-nano - https://invent.kde.org/plasma/plasma-nano
+
+### KDE KF5 dependencies
+
+- Activities
+- ActivitiesStats
+- Plasma
+- I18n
+- Kirigami2
+- Declarative
+- KCMUtils
+- Notifications
+- PlasmaQuick
+- KIO
+- Wayland
+- WindowSystem
+- KDEConnect
   
-- Qt Dependencies:
-  - Quick
-  - Core
-  - Qml
-  - DBus
-  - Network
+### Qt dependencies
 
-# Additional Requirements
+- Quick
+- Core
+- Qml
+- DBus
+- Network
+
+### Optional dependencies
+
+The following can be installed for extra functionality but are not required to build or run:
+
 - Mycroft-Core (development branch) https://github.com/MycroftAI/Mycroft-Core
 - Mycroft-GUI - https://github.com/MycroftAI/Mycroft-GUI
 - MycroftSkillInstaller - https://github.com/AIIX/MycroftSkillInstaller
+
+</details>
+
