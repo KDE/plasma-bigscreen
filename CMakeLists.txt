@@ -53,6 +53,7 @@ if(NOT ${Mycroft-QMLModule_FOUND})
     message(WARNING "Could not find the Mycroft QML module. Voice interaction features will not be available.")
 endif()
 
+add_subdirectory(bin)
 add_subdirectory(containments)
 add_subdirectory(kcms)
 add_subdirectory(components)
@@ -63,4 +64,3 @@ plasma_install_package(lookandfeel org.kde.plasma.mycroft.bigscreen look-and-fee
 
 
 install(FILES bin/mycroft-skill-launcher.py DESTINATION ${BIN_INSTALL_DIR})
-
