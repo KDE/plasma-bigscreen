@@ -39,8 +39,8 @@ Kirigami.ApplicationWindow {
     }
 
     Component.onCompleted: {
-        if (startModule.length > 0) {
-            module.name = startModule
+        if (SettingsApp.startModule.length > 0) {
+            module.name = SettingsApp.startModule
             var container = kcmContainer.createObject(pageStack, {"kcm": module.kcm, "internalPage": module.kcm.mainUi});
             pageStack.push(container);
         }
@@ -51,7 +51,7 @@ Kirigami.ApplicationWindow {
     }
 
     Connections {
-        target: settingsApp
+        target: SettingsApp
         onModuleRequested: {
             module.name = moduleName
 
@@ -70,7 +70,7 @@ Kirigami.ApplicationWindow {
 
     header: ModulesList {
         id: modulesList
-        visible: !singleModule
+        visible: !SettingsApp.singleModule
         height: pageStack.depth > 0 ? Kirigami.Units.gridUnit * 15 : rootItem.height
         KeyNavigation.down: root.pageStack.visible ? root.pageStack : null
         Behavior on height {
