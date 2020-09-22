@@ -40,6 +40,7 @@ KCM.SimpleKCM {
     
     footer: Button {
         id: kcmcloseButton
+        implicitHeight: Kirigami.Units.gridUnit * 2
         anchors.left: parent.left
         anchors.right: parent.right
         
@@ -77,8 +78,9 @@ KCM.SimpleKCM {
     }
         
     contentItem: FocusScope {
-        width: parent.width
-        height: parent.height - kcmcloseButton.height
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
     
         ColumnLayout {
             anchors.left: parent.left
@@ -112,9 +114,7 @@ KCM.SimpleKCM {
         DeviceConnectionView {
             id: deviceConnectionView
             anchors.top: parent.top
-            anchors.topMargin: -Kirigami.Units.smallSpacing
             anchors.bottom: parent.bottom
-            anchors.bottomMargin: -Kirigami.Units.smallSpacing
             anchors.right: parent.right
             visible: allDevicesModel.count > 0 ? 1 : 0
             anchors.rightMargin: -Kirigami.Units.smallSpacing

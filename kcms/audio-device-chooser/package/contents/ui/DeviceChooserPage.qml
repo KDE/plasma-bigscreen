@@ -11,11 +11,12 @@ import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
 import "delegates" as Delegates
 import "views" as Views
-
+    
 FocusScope {
     id: mainFlick
     anchors.top: parent.top
-    anchors.topMargin: Kirigami.Units.largeSpacing
+    anchors.left: parent.left
+    anchors.right: parent.right
 
     SourceModel {
         id: paSourceModel
@@ -30,8 +31,11 @@ FocusScope {
         width: parent.width - settingsView.width
         property Item currentSection
         y: currentSection ? -currentSection.y : 0
+        anchors.top: parent.top
+        anchors.topMargin: Kirigami.Units.largeSpacing
         anchors.left: parent.left
         anchors.leftMargin: Kirigami.Units.largeSpacing
+        
         Behavior on y {
             NumberAnimation {
                 duration: Kirigami.Units.longDuration * 2
@@ -44,6 +48,7 @@ FocusScope {
             id: sinkView
             model: paSinkModel
             focus: true
+            Layout.alignment: Qt.AlignTop
             title: i18n("Playback Devices")
             currentIndex: 0
             onActiveFocusChanged: { 
@@ -74,6 +79,7 @@ FocusScope {
             title: i18n("Recording Devices")
             currentIndex: 0
             focus: false
+            Layout.alignment: Qt.AlignTop
             visible: sourceView.view.count > 0 ? 1 : 0 
             onActiveFocusChanged: {
                 if(activeFocus){
@@ -120,10 +126,8 @@ FocusScope {
     ListView {
         id: settingsView
         anchors.top: parent.top
-        anchors.topMargin: -Kirigami.Units.largeSpacing
         anchors.right: parent.right
-        anchors.rightMargin: -Kirigami.Units.largeSpacing
-        height: parent.height + Kirigami.Units.smallSpacing
+        height: parent.height
         width: parent.width / 3.5
         layoutDirection: Qt.LeftToRight
         orientation: ListView.Horizontal

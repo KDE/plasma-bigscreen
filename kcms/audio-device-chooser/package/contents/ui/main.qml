@@ -44,6 +44,7 @@ KCM.SimpleKCM {
     
     footer: Button {
         id: kcmcloseButton
+        implicitHeight: Kirigami.Units.gridUnit * 2
         anchors.left: parent.left
         anchors.right: parent.right
         
@@ -78,7 +79,5 @@ KCM.SimpleKCM {
 
     contentItem: DeviceChooserPage {
         id: deviceChooserView
-        width: parent.width
-        height: parent.height - footerArea.height
     }
 }

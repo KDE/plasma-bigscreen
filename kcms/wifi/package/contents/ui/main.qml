@@ -110,7 +110,7 @@ KCM.SimpleKCM {
 
     footer: RowLayout {
             id: footerArea
-            height: Kirigami.Units.gridUnit * 4
+            implicitHeight: Kirigami.Units.gridUnit * 2
             anchors.left: parent.left
             anchors.right: parent.right
                     
@@ -350,7 +350,7 @@ KCM.SimpleKCM {
     
     contentItem: FocusScope {
         width: parent.width
-        height: parent.height - footerArea.height
+        height: parent.height
     
         ColumnLayout {
             anchors.left: parent.left
@@ -394,10 +394,9 @@ KCM.SimpleKCM {
         ListView {
             id: deviceConnectionView
             anchors.top: parent.top
-            anchors.topMargin: -Kirigami.Units.largeSpacing
             anchors.right: parent.right
             anchors.rightMargin: -Kirigami.Units.smallSpacing
-            height: parent.height + Kirigami.Units.smallSpacing            
+            height: parent.height     
             model: connectionView.model
             width: parent.width / 3.5
             layoutDirection: Qt.LeftToRight

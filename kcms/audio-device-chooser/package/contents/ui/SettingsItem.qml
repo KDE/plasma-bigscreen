@@ -64,11 +64,6 @@ Rectangle {
         Item {
             Layout.fillWidth: true
             Layout.preferredHeight: parent.height / 3
-        }
-        
-        Item {
-            Layout.fillWidth: true
-            Layout.preferredHeight: parent.height / 3
             Layout.alignment: Qt.AlignTop
             
             RowLayout {
@@ -116,7 +111,7 @@ Rectangle {
             Kirigami.Separator {
                 id: headrSept
                 anchors.top: headerAreaSettingsItem.bottom
-                anchors.topMargin: Kirigami.Units.largeSpacing * 2
+                anchors.topMargin: Kirigami.Units.largeSpacing * 3
                 width: parent.width
                 height: 1
             }
