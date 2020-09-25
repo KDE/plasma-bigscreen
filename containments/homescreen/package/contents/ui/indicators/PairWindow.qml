@@ -2,6 +2,7 @@ import QtQuick 2.9
 import QtQuick.Window 2.3
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.2 as Controls
+import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami 2.11 as Kirigami
 import org.kde.kdeconnect 1.0 as KDEConnect
 
@@ -35,10 +36,12 @@ Window {
 
             RowLayout {
                 Layout.fillWidth: true
+                Layout.minimumHeight: Kirigami.Units.gridUnit * 3
 
-                Controls.Button {
+                PlasmaComponents.Button {
                     id: acceptButton
                     Layout.fillWidth: true
+                    Layout.minimumHeight: Kirigami.Units.gridUnit * 3
                     KeyNavigation.right: rejectButton
                     KeyNavigation.left: acceptButton
                     
@@ -71,9 +74,10 @@ Window {
 
                 }
 
-                Controls.Button {
+                PlasmaComponents.Button {
                     id: rejectButton
                     Layout.fillWidth: true
+                    Layout.minimumHeight: Kirigami.Units.gridUnit * 3
                     KeyNavigation.right: rejectButton
                     KeyNavigation.left: acceptButton
                     
