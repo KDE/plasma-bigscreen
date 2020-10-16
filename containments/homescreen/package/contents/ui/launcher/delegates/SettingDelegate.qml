@@ -18,8 +18,11 @@
 
 import QtQuick 2.9
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import org.kde.kirigami 2.11 as Kirigami
+import org.kde.plasma.private.nanoshell 2.0 as NanoShell
 
 BigScreen.IconDelegate {
+    id: delegate
     icon.name: model.icon.name
     text: model.text
     useIconColors: plasmoid.configuration.coloredTiles
@@ -27,7 +30,12 @@ BigScreen.IconDelegate {
 
     onClicked: {
         BigScreen.NavigationSoundEffects.playClickedSound()
-        //feedbackWindow.open(model.text, model.icon.name);
+        NanoShell.StartupFeedback.open(
+                            delegate.icon.name,
+                            delegate.text,
+                            delegate.Kirigami.ScenePosition.x + delegate.width/2,
+                            delegate.Kirigami.ScenePosition.y + delegate.height/2,
+                            Math.min(delegate.width, delegate.height), delegate.Kirigami.Theme.backgroundColor);
         trigger();
         recentView.forceActivefocus();
         recentView.currentIndex = 0;

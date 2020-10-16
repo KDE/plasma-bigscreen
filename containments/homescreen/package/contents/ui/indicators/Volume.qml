@@ -24,11 +24,13 @@ import QtQuick.Layouts 1.4
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.private.volume 0.1
+import org.kde.kirigami 2.11 as Kirigami
+import org.kde.plasma.private.nanoshell 2.0 as NanoShell
 import "code/icon.js" as Icon
 
 AbstractIndicator {
-
     id: paIcon
+
     property bool volumeFeedback: true
     property int maxVolumeValue: Math.round(100 * PulseAudio.NormalVolume / 100.0)
     property int currentMaxVolumePercent: 100
@@ -153,7 +155,12 @@ AbstractIndicator {
     }
 
     onClicked: {
-        feedbackWindow.open(i18n("Audio Device chooser"), "headphone");
+        NanoShell.StartupFeedback.open(
+                            "headphone",
+                            i18n("Audio Device chooser"),
+                            paIcon.Kirigami.ScenePosition.x + paIcon.width/2,
+                            paIcon.Kirigami.ScenePosition.y + paIcon.height/2,
+                            Math.min(paIcon.width, paIcon.height));
         plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_audiodevice")
     }
 }

@@ -5,6 +5,7 @@ import QtQml.Models 2.2
 import QtQuick.Controls 2.2 as Controls
 import org.kde.kirigami 2.11 as Kirigami
 import org.kde.kdeconnect 1.0 as KDEConnect
+import org.kde.plasma.private.nanoshell 2.0 as NanoShell
 
 AbstractIndicator {
     id: connectionIcon
@@ -64,7 +65,12 @@ AbstractIndicator {
     }
     
     onClicked: {
-        feedbackWindow.open(i18n("KDE Connect"), "kdeconnect");
+        NanoShell.StartupFeedback.open(
+                            "kdeconnect",
+                            i18n("KDE Connect"),
+                            connectionIcon.Kirigami.ScenePosition.x + connectionIcon.width/2,
+                            connectionIcon.Kirigami.ScenePosition.y + connectionIcon.height/2,
+                            Math.min(connectionIcon.width, connectionIcon.height));
         plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_kdeconnect")
     }
 }

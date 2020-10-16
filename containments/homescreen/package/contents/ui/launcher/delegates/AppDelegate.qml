@@ -19,8 +19,11 @@
 
 import QtQuick 2.9
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import org.kde.kirigami 2.11 as Kirigami
+import org.kde.plasma.private.nanoshell 2.0 as NanoShell
 
 BigScreen.IconDelegate {
+    id: delegate
     readonly property var appStorageIdRole: modelData.ApplicationStorageIdRole
 
     icon.name: modelData ? modelData.ApplicationIconRole : ""
@@ -30,7 +33,12 @@ BigScreen.IconDelegate {
 
     onClicked: {
         BigScreen.NavigationSoundEffects.playClickedSound()
-        feedbackWindow.open(modelData.ApplicationNameRole, modelData.ApplicationIconRole);
+        NanoShell.StartupFeedback.open(
+                            delegate.icon.name.length > 0 ? delegate.icon.name : model.decoration,
+                            delegate.text,
+                            delegate.Kirigami.ScenePosition.x + delegate.width/2,
+                            delegate.Kirigami.ScenePosition.y + delegate.height/2,
+                            Math.min(delegate.width, delegate.height), delegate.Kirigami.Theme.backgroundColor);
         plasmoid.nativeInterface.applicationListModel.runApplication(modelData.ApplicationStorageIdRole)
         recentView.forceActiveFocus();
         recentView.currentIndex = 0;

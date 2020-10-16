@@ -24,6 +24,8 @@ import QtQuick.Layouts 1.4
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.networkmanagement 0.2 as PlasmaNM
+import org.kde.kirigami 2.11 as Kirigami
+import org.kde.plasma.private.nanoshell 2.0 as NanoShell
 
 AbstractIndicator {
     id: connectionIcon
@@ -54,7 +56,12 @@ AbstractIndicator {
         id: connectionIconProvider
     }
     onClicked: {
-        feedbackWindow.open(i18n("Network"), connectionIconProvider.connectionIcon);
+        NanoShell.StartupFeedback.open(
+                            connectionIconProvider.connectionIcon,
+                            i18n("Network"),
+                            connectionIcon.Kirigami.ScenePosition.x + connectionIcon.width/2,
+                            connectionIcon.Kirigami.ScenePosition.y + connectionIcon.height/2,
+                            Math.min(connectionIcon.width, connectionIcon.height));
         plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_wifi")
     }
 }
