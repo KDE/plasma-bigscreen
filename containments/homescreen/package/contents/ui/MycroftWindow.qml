@@ -88,6 +88,12 @@ Window {
                     inputQuery.text = data.utterances[0]
                 }
             }
+            
+            onSkillTimeoutReceived: {
+                if(skillView.currentItem.contentItem.skillId() == skillidleid) {
+                    window.close()
+                }
+            }
         }
     }
         
