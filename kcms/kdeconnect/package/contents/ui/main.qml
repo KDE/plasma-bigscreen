@@ -32,6 +32,10 @@ KCM.SimpleKCM {
     
     title: i18n("KDE Connect")
     background: null
+    leftPadding: Kirigami.Units.smallSpacing
+    topPadding: 0
+    rightPadding: Kirigami.Units.smallSpacing
+    bottomPadding: 0
     
     Component.onCompleted: {
         connectionView.forceActiveFocus();
@@ -77,11 +81,7 @@ KCM.SimpleKCM {
         id: allDevicesModel
     }
         
-    contentItem: FocusScope {
-        anchors.top: parent.top
-        anchors.left: parent.left
-        anchors.right: parent.right
-    
+    contentItem: FocusScope {    
         ColumnLayout {
             anchors.left: parent.left
             anchors.leftMargin: Kirigami.Units.largeSpacing

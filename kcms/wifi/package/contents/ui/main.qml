@@ -34,6 +34,11 @@ KCM.SimpleKCM {
     title: i18n("Network")
     background: null
     
+    leftPadding: Kirigami.Units.smallSpacing
+    topPadding: 0
+    rightPadding: Kirigami.Units.smallSpacing
+    bottomPadding: 0
+    
     property string pathToRemove
     property string nameToRemove
     property bool isStartUp: false
@@ -351,9 +356,6 @@ KCM.SimpleKCM {
     
     
     contentItem: FocusScope {
-        width: parent.width
-        height: parent.height
-
         ColumnLayout {
             anchors.left: parent.left
             anchors.leftMargin: Kirigami.Units.largeSpacing

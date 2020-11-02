@@ -14,9 +14,6 @@ import "views" as Views
     
 FocusScope {
     id: mainFlick
-    anchors.top: parent.top
-    anchors.left: parent.left
-    anchors.right: parent.right
 
     SourceModel {
         id: paSourceModel
@@ -127,6 +124,7 @@ FocusScope {
         id: settingsView
         anchors.top: parent.top
         anchors.right: parent.right
+        anchors.rightMargin: -Kirigami.Units.smallSpacing
         height: parent.height
         width: parent.width / 3.5
         layoutDirection: Qt.LeftToRight

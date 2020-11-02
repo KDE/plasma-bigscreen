@@ -38,6 +38,11 @@ KCM.SimpleKCM {
     signal activateDeviceView
 
     background: null
+    leftPadding: Kirigami.Units.smallSpacing
+    topPadding: 0
+    rightPadding: Kirigami.Units.smallSpacing
+    bottomPadding: 0
+    
     Component.onCompleted: {
         root.activateDeviceView
     }
