@@ -214,7 +214,7 @@ Rectangle {
                     maximumLineCount: 1
                     elide: Text.ElideRight
                     color: PlasmaCore.ColorScope.textColor
-                    text: "Speed"
+                    text: i18n("Speed")
                 }
                 
                 PlasmaComponents.Label {

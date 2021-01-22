@@ -85,7 +85,7 @@ BigScreen.AbstractDelegate {
                 maximumLineCount: 2
                 textFormat: Text.PlainText
                 color: Kirigami.Theme.textColor
-                text: delegate.isCurrent ? !currentPort ? Description : i18ndc("kcm_pulseaudio", "label of device items", "%1 (%2)", currentPort.description, Description) : !currentPort ? Description.split("(")[0] : i18ndc("kcm_pulseaudio", "label of device items", "%1 (%2)", currentPort.description, Description).split("(")[0]
+                text: delegate.isCurrent ? !currentPort ? Description : i18ndc("kcm_audiodevice", "label of device items", "%1 (%2)", currentPort.description, Description) : !currentPort ? Description.split("(")[0] : i18ndc("kcm_audiodevice", "label of device items", "%1 (%2)", currentPort.description, Description).split("(")[0]
             }
         }
         

@@ -35,7 +35,7 @@ Item {
         
         CheckBox {
             id: notificationSwitch
-            Kirigami.FormData.label: i18n ("Additional Settings:")
+            Kirigami.FormData.label: i18n("Additional Settings:")
             text: i18n("Enable Notifications")
             checked: true
         }

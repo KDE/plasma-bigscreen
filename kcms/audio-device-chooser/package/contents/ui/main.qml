@@ -20,7 +20,7 @@ import "views" as Views
 
 KCM.SimpleKCM {
     id: root
-    title: "Audio Device Chooser"
+    title: i18n("Audio Device Chooser")
     
     signal activateDeviceView
 

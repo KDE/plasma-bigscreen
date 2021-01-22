@@ -110,7 +110,7 @@ Rectangle {
         
                 Label {
                     id: backbtnlabelHeading
-                    text: "Press the [←] Back button to return to device selection"
+                    text: i18n("Press the [←] Back button to return to device selection")
                     wrapMode: Text.WordWrap
                     maximumLineCount: 2
                     Layout.fillWidth: true

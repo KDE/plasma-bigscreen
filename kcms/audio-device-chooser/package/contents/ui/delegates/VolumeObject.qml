@@ -56,7 +56,7 @@ ColumnLayout {
         maximumLineCount: 1
         elide: Text.ElideRight
         color: PlasmaCore.ColorScope.textColor
-        text: "Adjust Volume"
+        text: i18n("Adjust Volume")
     }
 
     RowLayout {

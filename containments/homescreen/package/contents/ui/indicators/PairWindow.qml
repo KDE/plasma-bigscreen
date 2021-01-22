@@ -38,7 +38,7 @@ Window {
 
             Kirigami.Heading {
                 level: 3
-                text: "Pairing Request From " + currentDevice.name
+                text: i18n("Pairing Request From %1", currentDevice.name)
             }
 
             RowLayout {
@@ -98,7 +98,7 @@ Window {
                             Kirigami.Icon {
                                 Layout.preferredWidth: Kirigami.Units.iconSizes.small
                                 Layout.preferredHeight: Kirigami.Units.iconSizes.small
-                                source: "dialog-canel"
+                                source: "dialog-cancel"
                             }
                             Controls.Label {
                                 text: i18n("Reject")
