@@ -2,7 +2,7 @@
  *   SPDX-FileCopyrightText: 2013-2017 Jan Grulich <jgrulich@redhat.com>
  *   SPDX-FileCopyrightText: 2019-2020 Aditya Mehra <aix.m@outlook.com>
  *
- *   SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
+ *   SPDX-License-Identifier: LGPL-2.1-or-later OR LGPL-3.0-or-later OR LicenseRef-KDE-Accepted-LGPL
  */
 
 import QtQuick 2.9

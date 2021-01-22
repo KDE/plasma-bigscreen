@@ -2,7 +2,7 @@
  *   SPDX-FileCopyrightText: 2019-2020 Aditya Mehra <aix.m@outlook.com>
  *   SPDX-FileCopyrightText: 2019-2020 Marco Martin <mart@kde.org>
  *
- *   SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ *   SPDX-License-Identifier: GPL-2.0-or-later OR GPL-3.0-or-later OR LicenseRef-KDE-Accepted-GPL
  */
 
 import QtQuick 2.9
