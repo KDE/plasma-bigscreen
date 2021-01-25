@@ -4,7 +4,7 @@
  *   SPDX-License-Identifier: GPL-2.0-or-later OR GPL-3.0-or-later OR LicenseRef-KDE-Accepted-GPL
  */
 
-import QtQuick 2.6
+import QtQuick 2.14
 import QtQuick.VirtualKeyboard 2.2
 
 InputPanel {

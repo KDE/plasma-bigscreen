@@ -4,8 +4,8 @@
  *   SPDX-License-Identifier: GPL-2.0-or-later OR GPL-3.0-or-later OR LicenseRef-KDE-Accepted-GPL
  */
 
-import QtQuick 2.6
-import org.kde.kirigami 2.5 as Kirigami
+import QtQuick 2.14
+import org.kde.kirigami 2.12 as Kirigami
 
 Loader {
         id: inputPanel

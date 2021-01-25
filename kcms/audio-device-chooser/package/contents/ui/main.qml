@@ -5,14 +5,14 @@
 */
 
 
-import QtQuick 2.9
-import QtQuick.Layouts 1.3
-import org.kde.kirigami 2.10 as Kirigami
-import QtQuick.Controls 2.12
+import QtQuick 2.14
+import QtQuick.Layouts 1.14
+import org.kde.kirigami 2.12 as Kirigami
+import QtQuick.Controls 2.14
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.private.volume 0.1
-import QtQuick.Window 2.2
+import QtQuick.Window 2.14
 import org.kde.kcm 1.1 as KCM
 
 import "delegates" as Delegates

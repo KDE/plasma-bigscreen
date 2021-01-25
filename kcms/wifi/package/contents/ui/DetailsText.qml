@@ -5,9 +5,9 @@
  *   SPDX-License-Identifier: LGPL-2.1-or-later OR LGPL-3.0-or-later OR LicenseRef-KDE-Accepted-LGPL
  */
 
-import QtQuick 2.9
+import QtQuick 2.14
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.kirigami 2.11 as Kirigami
+import org.kde.kirigami 2.12 as Kirigami
 
 Column {
     property var details: []
