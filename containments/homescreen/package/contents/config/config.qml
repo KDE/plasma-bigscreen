@@ -4,7 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.9
+import QtQuick 2.14
 import org.kde.plasma.configuration 2.0
 
 ConfigModel {

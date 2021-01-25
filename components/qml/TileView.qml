@@ -4,15 +4,15 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.12
-import QtQuick.Layouts 1.4
-import QtQuick.Window 2.2
-import QtQuick.Controls 2.4 as Controls
-import QtGraphicalEffects 1.12
+import QtQuick 2.14
+import QtQuick.Layouts 1.14
+import QtQuick.Window 2.14
+import QtQuick.Controls 2.14 as Controls
+import QtGraphicalEffects 1.14
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami 2.12 as Kirigami
 
 FocusScope {
     id: root

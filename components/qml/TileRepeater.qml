@@ -4,11 +4,11 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
  
-import QtQuick 2.12
-import QtQuick.Layouts 1.4
-import QtQuick.Window 2.2
-import QtQuick.Controls 2.12 as Controls
-import org.kde.kirigami 2.10 as Kirigami
+import QtQuick 2.14
+import QtQuick.Layouts 1.14
+import QtQuick.Window 2.14
+import QtQuick.Controls 2.14 as Controls
+import org.kde.kirigami 2.12 as Kirigami
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
 FocusScope {

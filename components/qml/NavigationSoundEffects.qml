@@ -4,8 +4,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.12
-import QtMultimedia 5.12
+import QtQuick 2.14
+import QtMultimedia 5.14
 import Qt.labs.platform 1.1
 
 pragma Singleton

@@ -5,11 +5,11 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.9
-import QtQuick.Window 2.3
-import QtQuick.Layouts 1.3
-import QtQuick.Controls 2.2 as Controls
-import org.kde.kirigami 2.11 as Kirigami
+import QtQuick 2.14
+import QtQuick.Window 2.14
+import QtQuick.Layouts 1.14
+import QtQuick.Controls 2.14 as Controls
+import org.kde.kirigami 2.12 as Kirigami
 import Mycroft 1.0 as Mycroft
 
 RowLayout {
