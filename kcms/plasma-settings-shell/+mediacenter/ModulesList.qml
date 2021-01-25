@@ -14,7 +14,6 @@ import org.kde.plasma.settings 0.1
 Kirigami.Page {
     id: settingsRoot
 
-    title: i18n("Settings")
     property alias currentIndex: listView.currentIndex
 
     Kirigami.Theme.colorSet: Kirigami.Theme.View
