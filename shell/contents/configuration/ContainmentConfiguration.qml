@@ -34,7 +34,7 @@ AppletConfiguration {
     ConfigModel {
         id: globalContainmentConfigModel
         ConfigCategory {
-            name: i18nd("plasma_shell_org.kde.plasma.desktop", "Wallpaper")
+            name: i18nd("org.kde.plasma.mycroft.bigscreen", "Wallpaper")
             icon: "preferences-desktop-wallpaper"
             source: "ConfigurationContainmentAppearance.qml"
         }
@@ -127,7 +127,7 @@ AppletConfiguration {
                             horizontalCenter: parent.horizontalCenter
                         }
                         color: "white"
-                        text: i18n("Slideshow")
+                        text: i18nd("org.kde.plasma.mycroft.bigscreen", "Slideshow")
                     }
                 }
 
