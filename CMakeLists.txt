@@ -64,3 +64,5 @@ plasma_install_package(lookandfeel org.kde.plasma.mycroft.bigscreen look-and-fee
 
 
 install(FILES bin/mycroft-skill-launcher.py DESTINATION ${BIN_INSTALL_DIR})
+
+feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
