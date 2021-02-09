@@ -4,7 +4,7 @@ cmake_policy(SET CMP0048 NEW)
 project(plasma-big-launcher VERSION "2.0.0")
 
 set(QT_MIN_VERSION "5.14.0")
-set(KF5_MIN_VERSION "5.0.0")
+set(KF5_MIN_VERSION "5.70.0")
  
 # Use Extra CMake Modules (ECM) for common functionality.
 # See http://api.kde.org/ecm/manual/ecm.7.html
