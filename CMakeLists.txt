@@ -1,5 +1,5 @@
 # Set minimum CMake version (required for CMake 3.0 or later)
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.16)
 cmake_policy(SET CMP0048 NEW)
 project(plasma-big-launcher VERSION "2.0.0")
 
