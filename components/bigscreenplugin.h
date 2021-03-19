@@ -18,4 +18,3 @@ public:
 private:
     QUrl componentUrl(const QString &fileName);
 };
-

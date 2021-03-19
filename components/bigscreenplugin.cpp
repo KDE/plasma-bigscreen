@@ -8,7 +8,6 @@
 
 #include <QtQml>
 
-
 void BigScreenPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("org.kde.mycroft.bigscreen"));

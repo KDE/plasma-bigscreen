@@ -17,9 +17,11 @@ static const QString lcLanguage = QStringLiteral("LANGUAGE");
 Wifi::Wifi(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
 {
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_mediacenter_wifi"),
-        i18n("Configure Plasma wifi"),
-        QStringLiteral("2.0"), QString(), KAboutLicense::LGPL);
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_mediacenter_wifi"), //
+                                       i18n("Configure Plasma wifi"),
+                                       QStringLiteral("2.0"),
+                                       QString(),
+                                       KAboutLicense::LGPL);
     setAboutData(about);
 
     setButtons(Apply | Default);

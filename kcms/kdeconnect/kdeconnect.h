@@ -12,13 +12,12 @@
 
 #include <KConfigGroup>
 
-
 class KdeConnect : public KQuickAddons::ConfigModule
 {
-Q_OBJECT
+    Q_OBJECT
 
 public:
-    explicit KdeConnect(QObject* parent = nullptr, const QVariantList &list = QVariantList());
+    explicit KdeConnect(QObject *parent = nullptr, const QVariantList &list = QVariantList());
     ~KdeConnect() override;
 
 public Q_SLOTS:
@@ -26,9 +25,7 @@ public Q_SLOTS:
     void save() override;
     void defaults() override;
 
-
 private:
-    
 };
 
 #endif
