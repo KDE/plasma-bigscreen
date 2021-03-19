@@ -5,7 +5,6 @@
  *   SPDX-License-Identifier: GPL-2.0-or-later OR GPL-3.0-or-later OR LicenseRef-KDE-Accepted-GPL
  */
 
-
 #include "kdeconnect.h"
 
 #include <KAboutData>
@@ -19,9 +18,11 @@ static const QString lcLanguage = QStringLiteral("LANGUAGE");
 KdeConnect::KdeConnect(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
 {
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_mediacenter_kdeconnect"),
-        i18n("Configure KDE Connect"),
-        QStringLiteral("2.0"), QString(), KAboutLicense::LGPL);
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_mediacenter_kdeconnect"), //
+                                       i18n("Configure KDE Connect"),
+                                       QStringLiteral("2.0"),
+                                       QString(),
+                                       KAboutLicense::LGPL);
     setAboutData(about);
 
     setButtons(Apply | Default);

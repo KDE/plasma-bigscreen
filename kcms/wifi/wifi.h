@@ -11,13 +11,12 @@
 
 #include <KConfigGroup>
 
-
 class Wifi : public KQuickAddons::ConfigModule
 {
-Q_OBJECT
+    Q_OBJECT
 
 public:
-    explicit Wifi(QObject* parent = nullptr, const QVariantList &list = QVariantList());
+    explicit Wifi(QObject *parent = nullptr, const QVariantList &list = QVariantList());
     ~Wifi() override;
 
 public Q_SLOTS:
@@ -25,9 +24,7 @@ public Q_SLOTS:
     void save() override;
     void defaults() override;
 
-
 private:
-    
 };
 
 #endif

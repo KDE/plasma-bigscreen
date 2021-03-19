@@ -11,13 +11,12 @@
 
 #include <KConfigGroup>
 
-
 class AudioDevice : public KQuickAddons::ConfigModule
 {
-Q_OBJECT
+    Q_OBJECT
 
 public:
-    explicit AudioDevice(QObject* parent = nullptr, const QVariantList &list = QVariantList());
+    explicit AudioDevice(QObject *parent = nullptr, const QVariantList &list = QVariantList());
     ~AudioDevice() override;
 
 public Q_SLOTS:
@@ -25,9 +24,7 @@ public Q_SLOTS:
     void save() override;
     void defaults() override;
 
-
 private:
-    
 };
 
 #endif

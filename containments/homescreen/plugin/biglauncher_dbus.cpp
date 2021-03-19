@@ -17,10 +17,10 @@
  */
 
 #include "biglauncher_dbus.h"
-#include <QMetaObject>
 #include <QByteArray>
 #include <QList>
 #include <QMap>
+#include <QMetaObject>
 #include <QString>
 #include <QStringList>
 #include <QVariant>
@@ -85,4 +85,3 @@ Q_INVOKABLE QString BigLauncherDbusAdapterInterface::getMethod(const QString &me
     QString str = method;
     return str;
 }
-

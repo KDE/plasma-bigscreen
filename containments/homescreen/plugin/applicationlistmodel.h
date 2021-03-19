@@ -21,9 +21,9 @@
 #define APPLICATIONLISTMODEL_H
 
 // Qt
-#include <QObject>
 #include <QAbstractListModel>
 #include <QList>
+#include <QObject>
 
 class QString;
 
@@ -38,7 +38,8 @@ struct ApplicationData {
     bool startupNotify = true;
 };
 
-class ApplicationListModel : public QAbstractListModel {
+class ApplicationListModel : public QAbstractListModel
+{
     Q_OBJECT
 
     Q_PROPERTY(int count READ count NOTIFY countChanged)
@@ -53,7 +54,10 @@ public:
 
     void moveRow(const QModelIndex &sourceParent, int sourceRow, const QModelIndex &destinationParent, int destinationChild);
 
-    int count() { return m_applicationList.count(); }
+    int count()
+    {
+        return m_applicationList.count();
+    }
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
 
@@ -88,7 +92,7 @@ public:
     Q_INVOKABLE void executeCommand(const QString &command);
 
 public Q_SLOTS:
-     void sycocaDbChanged(const QStringList &change);
+    void sycocaDbChanged(const QStringList &change);
 
 Q_SIGNALS:
     void countChanged();
@@ -103,4 +107,4 @@ private:
     QHash<QString, int> m_appPositions;
 };
 
-#endif // APPLICATIONLISTMODEL_H 
+#endif // APPLICATIONLISTMODEL_H

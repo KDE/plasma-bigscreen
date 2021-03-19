@@ -20,7 +20,6 @@
 
 #pragma once
 
-
 #include <Plasma/Containment>
 
 class ApplicationListModel;
@@ -32,7 +31,7 @@ class HomeScreen : public Plasma::Containment
     Q_PROPERTY(ApplicationListModel *applicationListModel READ applicationListModel CONSTANT)
 
 public:
-    HomeScreen( QObject *parent, const QVariantList &args );
+    HomeScreen(QObject *parent, const QVariantList &args);
     ~HomeScreen() override;
 
     ApplicationListModel *applicationListModel() const;
@@ -45,5 +44,3 @@ private:
     ApplicationListModel *m_applicationListModel;
     SessionManagement *m_session;
 };
-
-

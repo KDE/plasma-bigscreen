@@ -22,33 +22,31 @@
 
 // Qt
 #include <QByteArray>
+#include <QDebug>
 #include <QModelIndex>
 #include <QProcess>
-#include <QDebug>
 #include <QRegularExpression>
 
 // KDE
+#include <KActivities/ResourceInstance>
+#include <KIOWidgets/KRun>
 #include <KPluginInfo>
 #include <KService>
 #include <KServiceGroup>
 #include <KServiceTypeTrader>
 #include <KSharedConfig>
+#include <KShell>
 #include <KSycoca>
 #include <KSycocaEntry>
-#include <KShell>
-#include <KIOWidgets/KRun>
-#include <KActivities/ResourceInstance>
 
 ApplicationListModel::ApplicationListModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    //can't use the new syntax as this signal is overloaded
-    connect(KSycoca::self(), SIGNAL(databaseChanged(const QStringList &)),
-            this, SLOT(sycocaDbChanged(const QStringList &)));
+    // can't use the new syntax as this signal is overloaded
+    connect(KSycoca::self(), SIGNAL(databaseChanged(const QStringList &)), this, SLOT(sycocaDbChanged(const QStringList &)));
 }
 
-ApplicationListModel::~ApplicationListModel()
-= default;
+ApplicationListModel::~ApplicationListModel() = default;
 
 QHash<int, QByteArray> ApplicationListModel::roleNames() const
 {
@@ -99,13 +97,13 @@ void ApplicationListModel::loadApplications()
 
     QStringList blacklist = blgroup.readEntry("blacklist", QStringList());
 
-
     beginResetModel();
 
     m_applicationList.clear();
 
     KServiceGroup::Ptr group = KServiceGroup::root();
-    if (!group || !group->isValid()) return;
+    if (!group || !group->isValid())
+        return;
     KServiceGroup::List subGroupList = group->entries(true);
 
     QMap<int, ApplicationData> orderedList;
@@ -117,37 +115,35 @@ void ApplicationListModel::loadApplications()
         subGroupList.pop_front();
 
         if (groupEntry->isType(KST_KServiceGroup)) {
-            KServiceGroup::Ptr serviceGroup(static_cast<KServiceGroup* >(groupEntry.data()));
+            KServiceGroup::Ptr serviceGroup(static_cast<KServiceGroup *>(groupEntry.data()));
 
             if (!serviceGroup->noDisplay()) {
                 KServiceGroup::List entryGroupList = serviceGroup->entries(true);
 
-                for(KServiceGroup::List::ConstIterator it = entryGroupList.constBegin();  it != entryGroupList.constEnd(); it++) {
+                for (KServiceGroup::List::ConstIterator it = entryGroupList.constBegin(); it != entryGroupList.constEnd(); it++) {
                     KSycocaEntry::Ptr entry = (*it);
 
                     if (entry->isType(KST_KServiceGroup)) {
-                        KServiceGroup::Ptr serviceGroup(static_cast<KServiceGroup* >(entry.data()));
+                        KServiceGroup::Ptr serviceGroup(static_cast<KServiceGroup *>(entry.data()));
                         subGroupList << serviceGroup;
 
                     } else if (entry->property("Exec").isValid()) {
-                         qDebug() << entry->property("Categories");
-                         KService::Ptr service(static_cast<KService* >(entry.data()));
-                         qDebug() << " desktopEntryName: " << service->desktopEntryName();
+                        qDebug() << entry->property("Categories");
+                        KService::Ptr service(static_cast<KService *>(entry.data()));
+                        qDebug() << " desktopEntryName: " << service->desktopEntryName();
 
-                      //else if (entry->property("Exec").isValid()) {
-                      //  KService::Ptr service(static_cast<KService* >(entry.data()));
+                        // else if (entry->property("Exec").isValid()) {
+                        //  KService::Ptr service(static_cast<KService* >(entry.data()));
 
-                      //  qDebug() << " desktopEntryName: " << service->desktopEntryName();
+                        //  qDebug() << " desktopEntryName: " << service->desktopEntryName();
 
-                        if (service->isApplication() &&
-                            !blacklist.contains(service->desktopEntryName()) &&
-                            service->showOnCurrentPlatform() &&
-                            !service->property("Terminal", QVariant::Bool).toBool()) {
+                        if (service->isApplication() && !blacklist.contains(service->desktopEntryName()) && service->showOnCurrentPlatform()
+                            && !service->property("Terminal", QVariant::Bool).toBool()) {
                             QRegularExpression voiceExpr(QStringLiteral("mycroft-gui-app .* --skill=(.*)\\.home"));
 
                             if (service->categories().contains(QStringLiteral("VoiceApp")) && voiceExpr.match(service->exec()).hasMatch()) {
                                 QString exec = service->exec();
-                                exec.replace (voiceExpr, QStringLiteral("\\1"));
+                                exec.replace(voiceExpr, QStringLiteral("\\1"));
                                 if (!exec.isEmpty()) {
                                     m_voiceAppSkills << exec;
                                 }
@@ -228,7 +224,7 @@ Qt::ItemFlags ApplicationListModel::flags(const QModelIndex &index) const
 {
     if (!index.isValid())
         return nullptr;
-    return Qt::ItemIsDragEnabled|QAbstractItemModel::flags(index);
+    return Qt::ItemIsDragEnabled | QAbstractItemModel::flags(index);
 }
 
 int ApplicationListModel::rowCount(const QModelIndex &parent) const
@@ -240,15 +236,14 @@ int ApplicationListModel::rowCount(const QModelIndex &parent) const
     return m_applicationList.count();
 }
 
-void ApplicationListModel::moveRow(const QModelIndex& /* sourceParent */, int sourceRow, const QModelIndex& /* destinationParent */, int destinationChild)
+void ApplicationListModel::moveRow(const QModelIndex & /* sourceParent */, int sourceRow, const QModelIndex & /* destinationParent */, int destinationChild)
 {
     moveItem(sourceRow, destinationChild);
 }
 
 Q_INVOKABLE void ApplicationListModel::moveItem(int row, int destination)
 {
-    if (row < 0 || destination < 0 || row >= m_applicationList.length() ||
-        destination >= m_applicationList.length() || row == destination) {
+    if (row < 0 || destination < 0 || row >= m_applicationList.length() || destination >= m_applicationList.length() || row == destination) {
         return;
     }
     if (destination > row) {
@@ -265,7 +260,6 @@ Q_INVOKABLE void ApplicationListModel::moveItem(int row, int destination)
         m_applicationList.insert(destination, data);
     }
 
-
     m_appOrder.clear();
     m_appPositions.clear();
     int i = 0;
@@ -275,14 +269,13 @@ Q_INVOKABLE void ApplicationListModel::moveItem(int row, int destination)
         ++i;
     }
 
-
     emit appOrderChanged();
     endMoveRows();
 }
 
 void ApplicationListModel::executeCommand(const QString &command)
 {
-    qWarning()<<"Executing"<<command;
+    qWarning() << "Executing" << command;
     QProcess::startDetached(command);
 }
 
@@ -296,8 +289,7 @@ void ApplicationListModel::runApplication(const QString &storageId)
 
     KRun::runApplication(*service, QList<QUrl>(), nullptr);
 
-    KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()),
-            QStringLiteral("org.kde.plasma.kicker"));
+    KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()), QStringLiteral("org.kde.plasma.kicker"));
 }
 
 QStringList ApplicationListModel::appOrder() const
