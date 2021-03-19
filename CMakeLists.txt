@@ -65,4 +65,12 @@ plasma_install_package(lookandfeel org.kde.plasma.mycroft.bigscreen look-and-fee
 
 install(FILES bin/mycroft-skill-launcher.py DESTINATION ${BIN_INSTALL_DIR})
 
+if(ECM_VERSION VERSION_GREATER_EQUAL 5.79)
+    include(KDEClangFormat)
+    include(KDEGitCommitHooks)
+    file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)
+    kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
+    kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
+endif()
+
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
