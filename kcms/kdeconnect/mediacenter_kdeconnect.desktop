@@ -70,6 +70,7 @@ Comment[sl]=Povežite in sinhronizirajte svoje naprave
 Comment[sv]=Anslut och synkronisera dina apparater
 Comment[uk]=З'єднання і синхронізація ваших пристроїв
 Comment[x-test]=xxConnect and sync your devicesxx
+Comment[zh_CN]=连接并同步您的设备
 Comment[zh_TW]=連線並同步您的裝置
 
 Categories=Qt;KDE;X-KDE-settings-wifi;
