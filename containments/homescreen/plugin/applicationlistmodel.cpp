@@ -28,7 +28,7 @@
 #include <QRegularExpression>
 
 // KDE
-#include <KPluginInfo>
+#include <KConfigGroup>
 #include <KService>
 #include <KServiceGroup>
 #include <KServiceTypeTrader>
