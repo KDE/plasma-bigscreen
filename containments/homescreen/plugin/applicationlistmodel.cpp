@@ -31,7 +31,6 @@
 #include <KConfigGroup>
 #include <KService>
 #include <KServiceGroup>
-#include <KServiceTypeTrader>
 #include <KSharedConfig>
 #include <KSycoca>
 #include <KSycocaEntry>
