@@ -129,8 +129,8 @@ BigScreen.AbstractDelegate {
     Keys.onReturnPressed: clicked()
     
     onClicked: {
-        listView.currentIndex = index
-        listView.positionViewAtIndex(index, ListView.Contain)
+        listView.currentIndex = 0
+        listView.positionViewAtBeginning()
         if (!model.ConnectionPath) {
             networkSelectionView.devicePath = model.DevicePath
             networkSelectionView.specificPath = model.SpecificPath
