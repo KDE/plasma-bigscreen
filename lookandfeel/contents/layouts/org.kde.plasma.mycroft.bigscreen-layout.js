@@ -1,3 +1,8 @@
+/*
+    SPDX-FileCopyrightText: 2020 Marco Martin <mart@kde.org>
+
+    SPDX-License-Identifier: LGPL-2.0-or-later
+*/
 
 var desktopsArray = desktopsForActivity(currentActivity());
 for (var j = 0; j < desktopsArray.length; j++) {
