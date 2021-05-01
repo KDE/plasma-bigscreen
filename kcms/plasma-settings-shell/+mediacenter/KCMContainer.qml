@@ -1,8 +1,8 @@
 /*
- *   SPDX-FileCopyrightText: 2019-2020 Marco Martin <mart@kde.org>
- *
- *   SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
- */
+    SPDX-FileCopyrightText: 2019-2020 Marco Martin <mart@kde.org>
+
+    SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+*/
 
 import QtQuick 2.14
 import QtQuick.Controls 2.14 as Controls
