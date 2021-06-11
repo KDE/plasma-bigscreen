@@ -30,7 +30,7 @@ BigScreen.AbstractDelegate {
 
     implicitWidth: listView.cellWidth * 2
     implicitHeight: listView.height
-    
+
     Behavior on implicitWidth {
         NumberAnimation {
             duration: Kirigami.Units.longDuration
@@ -40,18 +40,23 @@ BigScreen.AbstractDelegate {
 
     contentItem: Item {
         id: connectionItemLayout
-        
+
         PlasmaCore.IconItem {
             id: connectionSvgIcon
             width: Kirigami.Units.iconSizes.huge
             height: width
-            y: connectionItemLayout.height/2 - connectionSvgIcon.height/2            
-            source: itemSignalIcon(model.Signal)
+            y: connectionItemLayout.height/2 - connectionSvgIcon.height/2
+            source: switch(model.Type){
+                    case PlasmaNM.Enums.Wireless:
+                        return itemSignalIcon(model.Signal)
+                    case PlasmaNM.Enums.Wired:
+                        return "network-wired-activated"
+                    }
         }
-                    
+
         ColumnLayout {
             id: textLayout
-                        
+
             anchors {
                 left: connectionSvgIcon.right
                 right: connectionItemLayout.right
@@ -108,10 +113,10 @@ BigScreen.AbstractDelegate {
                 result += ", " + model.SecurityTypeString
             return result
         } else if (model.ConnectionState == PlasmaNM.Enums.Activated) {
-                return i18n("Connected")
+            return i18n("Connected")
         }
     }
-    
+
     function itemSignalIcon(signalState) {
         if (signalState <= 25){
             return "network-wireless-connected-25"
@@ -125,9 +130,9 @@ BigScreen.AbstractDelegate {
             return "network-wireless-connected-00"
         }
     }
-    
+
     Keys.onReturnPressed: clicked()
-    
+
     onClicked: {
         listView.currentIndex = 0
         listView.positionViewAtBeginning()
@@ -155,7 +160,7 @@ BigScreen.AbstractDelegate {
         nameToRemove = model.ItemUniqueName
         networkActions.open()
     }
-    
+
     onPressAndHold: {
         pathToRemove = model.ConnectionPath
         nameToRemove = model.ItemUniqueName

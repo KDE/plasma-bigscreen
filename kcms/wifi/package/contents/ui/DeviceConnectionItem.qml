@@ -59,7 +59,7 @@ Rectangle {
                 result += ", " + model.SecurityTypeString
             return result
         } else if (model.ConnectionState == PlasmaNM.Enums.Activated) {
-                return i18n("Connected")
+            return i18n("Connected")
         }
     }
     
@@ -106,7 +106,7 @@ Rectangle {
             fill: parent
             margins: Kirigami.Units.largeSpacing
         }
-                
+
         Item {
             Layout.fillWidth: true
             Layout.preferredHeight: model.ConnectionState == PlasmaNM.Enums.Activated ? parent.height : parent.height / 3
@@ -118,7 +118,12 @@ Rectangle {
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: parent.width
                 height: width / 3
-                source: itemSignalIcon(model.Signal)
+                source: switch(model.Type){
+                        case PlasmaNM.Enums.Wireless:
+                            return itemSignalIcon(model.Signal)
+                        case PlasmaNM.Enums.Wired:
+                            return "network-wired-activated"
+                        }
             }
             
             Kirigami.Heading {
@@ -177,7 +182,7 @@ Rectangle {
                 height: 1
                 width: parent.width
             }
-    
+
             DetailsText {
                 id: detailsTxtArea
                 visible: true
@@ -204,7 +209,7 @@ Rectangle {
                 anchors.top: lblSept3.bottom
                 anchors.topMargin: Kirigami.Units.smallSpacing
                 visible: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0
-                                
+
                 Kirigami.Heading {
                     Layout.fillWidth: true
                     Layout.alignment: Qt.AlignLeft
@@ -220,13 +225,13 @@ Rectangle {
                 PlasmaComponents.Label {
                     Layout.alignment: Qt.AlignRight
                     Layout.maximumWidth: Kirigami.Units.gridUnit * 4
-                    text: "⬇ " + KCoreAddons.Format.formatByteSize(rxBytes) 
+                    text: "⬇ " + KCoreAddons.Format.formatByteSize(rxBytes)
                 }
                 
                 PlasmaComponents.Label {
                     Layout.alignment: Qt.AlignRight
                     Layout.maximumWidth: Kirigami.Units.gridUnit * 4
-                    text: "⬆ " + KCoreAddons.Format.formatByteSize(txBytes) 
+                    text: "⬆ " + KCoreAddons.Format.formatByteSize(txBytes)
                 }
             }
             
@@ -239,7 +244,7 @@ Rectangle {
                 visible: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0
             }
         }
-            
+
         Item {
             Layout.fillWidth: true
             Layout.preferredHeight: Kirigami.Units.gridUnit
