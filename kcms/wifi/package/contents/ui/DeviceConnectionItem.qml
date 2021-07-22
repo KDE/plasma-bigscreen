@@ -17,7 +17,7 @@ import QtGraphicalEffects 1.0
 import org.kde.plasma.networkmanagement 0.2 as PlasmaNM
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 
-Rectangle {
+Item {
     id: delegateSettingsItem
     property bool activating: model.ConnectionState == PlasmaNM.Enums.Activating
     property bool deactivating: model.ConnectionState == PlasmaNM.Enums.Deactivating
@@ -32,7 +32,6 @@ Rectangle {
                               Type == PlasmaNM.Enums.Wireless ||
                               Type == PlasmaNM.Enums.Gsm ||
                               Type == PlasmaNM.Enums.Cdma)
-    color: Kirigami.Theme.backgroundColor
     width: listView.width
     height: listView.height
     
@@ -145,7 +144,10 @@ Rectangle {
                 anchors.top: label2.bottom
                 anchors.topMargin: Kirigami.Units.largeSpacing
                 height: 1
-                width: parent.width
+                anchors.left: parent.left
+                anchors.leftMargin: Kirigami.Units.largeSpacing
+                anchors.right: parent.right
+                anchors.rightMargin: Kirigami.Units.largeSpacing
             }
             
             Rectangle {
@@ -180,34 +182,44 @@ Rectangle {
                 anchors.top: setCntStatus.bottom
                 anchors.topMargin: Kirigami.Units.smallSpacing
                 height: 1
-                width: parent.width
+                anchors.left: parent.left
+                anchors.leftMargin: Kirigami.Units.largeSpacing
+                anchors.right: parent.right
+                anchors.rightMargin: Kirigami.Units.largeSpacing
             }
 
             DetailsText {
                 id: detailsTxtArea
                 visible: true
                 details: ConnectionDetails
+                connected: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0
+                connectionType: model.Type
                 anchors {
                     left: parent.left
                     right: parent.right
                     top: lblSept2.bottom
                     topMargin: Kirigami.Units.largeSpacing
+                    bottom: lblSept3.top
                 }
             }
             
             Kirigami.Separator {
                 id: lblSept3
-                anchors.top: detailsTxtArea.bottom
-                anchors.topMargin: Kirigami.Units.largeSpacing
+                anchors.bottom: label3.top
+                anchors.bottomMargin: Kirigami.Units.smallSpacing
+                visible: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0
                 height: 1
-                width: parent.width
+                anchors.left: parent.left
+                anchors.leftMargin: Kirigami.Units.largeSpacing
+                anchors.right: parent.right
+                anchors.rightMargin: Kirigami.Units.largeSpacing
             }
             
             RowLayout {
                 id: label3
                 width: parent.width
-                anchors.top: lblSept3.bottom
-                anchors.topMargin: Kirigami.Units.smallSpacing
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: Kirigami.Units.smallSpacing
                 visible: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0
 
                 Kirigami.Heading {
@@ -233,15 +245,6 @@ Rectangle {
                     Layout.maximumWidth: Kirigami.Units.gridUnit * 4
                     text: "⬆ " + KCoreAddons.Format.formatByteSize(txBytes)
                 }
-            }
-            
-            Kirigami.Separator {
-                id: lblSept4
-                anchors.top: label3.bottom
-                anchors.topMargin: Kirigami.Units.smallSpacing
-                height: 1
-                width: parent.width
-                visible: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0
             }
         }
 

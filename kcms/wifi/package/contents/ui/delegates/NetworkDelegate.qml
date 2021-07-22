@@ -94,6 +94,18 @@ BigScreen.AbstractDelegate {
                 text: itemText()
             }
         }
+
+        Kirigami.Icon {
+            id: dIcon
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: -Kirigami.Units.largeSpacing
+            anchors.right: parent.right
+            anchors.rightMargin: -Kirigami.Units.largeSpacing
+            width: Kirigami.Units.iconSizes.smallMedium
+            height: width
+            source: Qt.resolvedUrl("../images/green-tick-thick.svg")
+            visible: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0
+        }
     }
 
     function itemText() {

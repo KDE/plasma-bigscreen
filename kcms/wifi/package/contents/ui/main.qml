@@ -103,83 +103,6 @@ KCM.SimpleKCM {
         onTriggered: networkSelectionView.refreshing = false
     }
 
-    footer: Item {
-        implicitHeight: Kirigami.Units.gridUnit * 2
-
-        RowLayout {
-            id: footerArea
-            anchors.fill: parent
-
-            Button {
-                id: reloadButton
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                KeyNavigation.up: connectionView
-                KeyNavigation.right: kcmcloseButton
-
-                background: Rectangle {
-                    color: reloadButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
-                }
-
-                contentItem: Item {
-                    RowLayout {
-                        anchors.centerIn: parent
-                        Kirigami.Icon {
-                            Layout.preferredWidth: Kirigami.Units.iconSizes.small
-                            Layout.preferredHeight: Kirigami.Units.iconSizes.small
-                            source: "view-refresh"
-                        }
-                        Label {
-                            text: i18n("Refresh")
-                        }
-                    }
-                }
-
-                onClicked: {
-                    networkSelectionView.refreshing = true;
-                    connectionView.contentY = -Kirigami.Units.gridUnit * 4;
-                }
-                Keys.onReturnPressed: {
-                    networkSelectionView.refreshing = true;
-                    connectionView.contentY = -Kirigami.Units.gridUnit * 4;
-                }
-            }
-            
-            Button {
-                id: kcmcloseButton
-                KeyNavigation.up: connectionView
-                KeyNavigation.left: reloadButton
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-
-                background: Rectangle {
-                    color: kcmcloseButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
-                }
-
-                contentItem: Item {
-                    RowLayout {
-                        anchors.centerIn: parent
-                        Kirigami.Icon {
-                            Layout.preferredWidth: Kirigami.Units.iconSizes.small
-                            Layout.preferredHeight: Kirigami.Units.iconSizes.small
-                            source: "window-close"
-                        }
-                        Label {
-                            text: i18n("Exit")
-                        }
-                    }
-                }
-
-                onClicked: {
-                    Window.window.close()
-                }
-                Keys.onReturnPressed: {
-                    Window.window.close()
-                }
-            }
-        }
-    }
-
     Dialog {
         id: passwordLayer
         parent: networkSelectionView
@@ -346,20 +269,127 @@ KCM.SimpleKCM {
     
     
     contentItem: FocusScope {
+
+        Rectangle {
+            id: headerAreaTop
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.leftMargin: -Kirigami.Units.largeSpacing
+            anchors.rightMargin: -Kirigami.Units.largeSpacing
+            height: parent.height * 0.075
+            z: 10
+            gradient: Gradient {
+                GradientStop { position: 0.1; color: Qt.rgba(0, 0, 0, 0.5) }
+                GradientStop { position: 0.9; color: Qt.rgba(0, 0, 0, 0.25) }
+            }
+
+            Kirigami.Heading {
+                level: 1
+                anchors.fill: parent
+                anchors.topMargin: Kirigami.Units.largeSpacing
+                anchors.leftMargin: Kirigami.Units.largeSpacing * 2
+                anchors.bottomMargin: Kirigami.Units.largeSpacing
+                color: Kirigami.Theme.textColor
+                text: "Networks"
+            }
+        }
+
+        Item {
+            id: footerMain
+            anchors.left: parent.left
+            anchors.right: deviceConnectionView.left
+            anchors.leftMargin: -Kirigami.Units.largeSpacing
+            anchors.bottom: parent.bottom
+            implicitHeight: Kirigami.Units.gridUnit * 2
+
+        RowLayout {
+            id: footerArea
+            anchors.fill: parent
+
+            Button {
+                id: reloadButton
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                KeyNavigation.up: connectionView
+                KeyNavigation.right: kcmcloseButton
+
+                background: Rectangle {
+                    color: reloadButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
+                }
+
+                contentItem: Item {
+                    RowLayout {
+                        anchors.centerIn: parent
+                        Kirigami.Icon {
+                            Layout.preferredWidth: Kirigami.Units.iconSizes.small
+                            Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                            source: "view-refresh"
+                        }
+                        Label {
+                            text: i18n("Refresh")
+                        }
+                    }
+                }
+
+                onClicked: {
+                    networkSelectionView.refreshing = true;
+                    connectionView.contentY = -Kirigami.Units.gridUnit * 4;
+                }
+                Keys.onReturnPressed: {
+                    networkSelectionView.refreshing = true;
+                    connectionView.contentY = -Kirigami.Units.gridUnit * 4;
+                }
+            }
+
+            Button {
+                id: kcmcloseButton
+                KeyNavigation.up: connectionView
+                KeyNavigation.left: reloadButton
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+
+                background: Rectangle {
+                    color: kcmcloseButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
+                }
+
+                contentItem: Item {
+                    RowLayout {
+                        anchors.centerIn: parent
+                        Kirigami.Icon {
+                            Layout.preferredWidth: Kirigami.Units.iconSizes.small
+                            Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                            source: "window-close"
+                        }
+                        Label {
+                            text: i18n("Exit")
+                        }
+                    }
+                }
+
+                onClicked: {
+                    Window.window.close()
+                }
+                Keys.onReturnPressed: {
+                    Window.window.close()
+                }
+            }
+        }
+    }
+
         ColumnLayout {
             anchors.left: parent.left
             anchors.leftMargin: Kirigami.Units.largeSpacing
-            anchors.top: parent.top
-            anchors.topMargin: Kirigami.Units.largeSpacing
+            anchors.top: headerAreaTop.bottom
+            anchors.topMargin: Kirigami.Units.largeSpacing * 2
+            anchors.bottom: footerMain.top
             width: parent.width - deviceConnectionView.width
-            height: parent.height
 
             BigScreen.TileView {
                 id: connectionView
                 focus: true
                 model: appletProxyModel
                 Layout.alignment: Qt.AlignTop
-                title: i18n("Connections")
+                title: i18n("Manage Connections")
                 currentIndex: 0
                 delegate: Delegates.NetworkDelegate{}
                 navigationDown: reloadButton
@@ -371,8 +401,8 @@ KCM.SimpleKCM {
                 }
                 
                 onCurrentItemChanged: {
-                    deviceConnectionView.currentIndex = connectionView.currentIndex
-                    deviceConnectionView.positionViewAtIndex(currentIndex, ListView.Center);
+                    deviceConnectionViewDetails.currentIndex = connectionView.currentIndex
+                    deviceConnectionViewDetails.positionViewAtIndex(currentIndex, ListView.Center);
                 }
             }
         }
@@ -385,25 +415,32 @@ KCM.SimpleKCM {
             width: 1
         }
         
-        ListView {
+        Rectangle {
             id: deviceConnectionView
             anchors.top: parent.top
             anchors.right: parent.right
             anchors.rightMargin: -Kirigami.Units.smallSpacing
             height: parent.height
-            model: connectionView.model
             width: parent.width / 3.5
-            layoutDirection: Qt.LeftToRight
-            orientation: ListView.Horizontal
-            snapMode: ListView.SnapOneItem;
-            highlightRangeMode: ListView.StrictlyEnforceRange
-            highlightFollowsCurrentItem: true
-            spacing: Kirigami.Units.largeSpacing
-            clip: true
-            interactive: false
-            implicitHeight: deviceConnectionView.implicitHeight
-            currentIndex: 0
-            delegate: DeviceConnectionItem{}
+            color: Kirigami.Theme.backgroundColor
+
+            ListView {
+                id: deviceConnectionViewDetails
+                model: connectionView.model
+                anchors.fill: parent
+                anchors.topMargin: parent.height * 0.075
+                layoutDirection: Qt.LeftToRight
+                orientation: ListView.Horizontal
+                snapMode: ListView.SnapOneItem;
+                highlightRangeMode: ListView.StrictlyEnforceRange
+                highlightFollowsCurrentItem: true
+                spacing: Kirigami.Units.largeSpacing
+                clip: true
+                interactive: false
+                implicitHeight: deviceConnectionView.implicitHeight
+                currentIndex: 0
+                delegate: DeviceConnectionItem{}
+            }
         }
     }
 }
