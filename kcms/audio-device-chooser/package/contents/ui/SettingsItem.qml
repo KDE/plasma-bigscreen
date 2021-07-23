@@ -19,21 +19,21 @@ import org.kde.plasma.private.volume 0.1
 import "delegates" as Delegates
 import "code/icon.js" as Icon
 
-Rectangle {
+Item {
     id: delegateSettingsItem
     property bool isPlayback: type.substring(0, 4) == "sink"
     property string type
+    readonly property var currentPort: Ports[ActivePortIndex]
     readonly property ListView listView: ListView.view
-    color: Kirigami.Theme.backgroundColor
     width: listView.width
     height: listView.height
 
     onActiveFocusChanged: {
         if(activeFocus){
-            if(PulseObject.default){
+            if(model.PulseObject.default){
                 volObj.forceActiveFocus()
             } else {
-                setDefBtn.forceActiveFocus()   
+                setDefBtn.forceActiveFocus()
             }
         }
     }
@@ -45,76 +45,34 @@ Rectangle {
     ColumnLayout {
         id: colLayoutSettingsItem
         anchors {
-            fill: parent
-            margins: Kirigami.Units.largeSpacing
+            top: parent.top
+            left: parent.left
+            right: parent.right
+            bottom: footerAreaSettingsSept.top
+            margins: Kirigami.Units.largeSpacing * 2
+        }
+
+        Item {
+            Layout.preferredHeight: Math.round(parent.height * 0.15)
+            Layout.fillWidth: true
         }
         
         Item {
             Layout.fillWidth: true
             Layout.preferredHeight: parent.height / 3
             Layout.alignment: Qt.AlignTop
-            
-            RowLayout {
-                id: headerAreaSettingsItem
-                anchors.top: parent.top
-                anchors.left: parent.left
-                anchors.right: parent.right
-                height: backBtnSettingsItem.height
-        
-                PlasmaComponents2.Button {
-                    id: backBtnSettingsItem
-                    iconSource: "arrow-left"
-                    Layout.alignment: Qt.AlignLeft
-                    
-                    PlasmaComponents2.Highlight {
-                        z: -2
-                        anchors.fill: parent
-                        anchors.margins: -Kirigami.Units.gridUnit / 4
-                        visible: backBtnSettingsItem.activeFocus ? 1 : 0
-                    }
-                    
-                    Keys.onReturnPressed: {
-                        clicked()
-                    }
-                    
-                    onClicked: {
-                        if(type == "sink"){
-                            sinkView.forceActiveFocus()
-                        } else if (type == "source") {
-                            sourceView.forceActiveFocus()
-                        }
-                    }
-                }
-        
-                Label {
-                    id: backbtnlabelHeading
-                    text: i18n("Press the [←] Back button to return to device selection")
-                    wrapMode: Text.WordWrap
-                    maximumLineCount: 2
-                    Layout.fillWidth: true
-                    Layout.alignment: Qt.AlignRight
-                }
-            }
-            
-            Kirigami.Separator {
-                id: headrSept
-                anchors.top: headerAreaSettingsItem.bottom
-                anchors.topMargin: Kirigami.Units.largeSpacing * 3
-                width: parent.width
-                height: 1
-            }
-            
+
             Kirigami.Icon {
                 id: dIcon
-                anchors.top: headrSept.bottom
+                anchors.top: parent.top
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: parent.width
                 height: width / 3
                 source: Icon.name(Volume, Muted, isPlayback ? "audio-volume" : "microphone-sensitivity")
             }
-            
+
             Kirigami.Heading {
-                id: label2
+                id: label1
                 width: parent.width
                 anchors.top: dIcon.bottom
                 anchors.topMargin: Kirigami.Units.largeSpacing
@@ -124,6 +82,22 @@ Rectangle {
                 maximumLineCount: 2
                 elide: Text.ElideRight
                 color: PlasmaCore.ColorScope.textColor
+                font.pixelSize: textMetrics.font.pixelSize * 1.25
+                text: currentPort.description
+            }
+            
+            Kirigami.Heading {
+                id: label2
+                width: parent.width
+                anchors.top: label1.bottom
+                anchors.topMargin: Kirigami.Units.largeSpacing
+                horizontalAlignment: Text.AlignHCenter
+                wrapMode: Text.WordWrap
+                level: 2
+                maximumLineCount: 2
+                elide: Text.ElideRight
+                color: PlasmaCore.ColorScope.textColor
+                font.pixelSize: textMetrics.font.pixelSize * 0.9
                 text: Description
             }
             
@@ -146,7 +120,7 @@ Rectangle {
                 anchors.topMargin: Kirigami.Units.smallSpacing
                 
                 Keys.onReturnPressed: {
-                    PulseObject.default = true;
+                    model.PulseObject.default = true;
                     listView.currentIndex = index
                     volObj.forceActiveFocus()
                 }
@@ -162,17 +136,13 @@ Rectangle {
                             Layout.preferredWidth: Kirigami.Units.iconSizes.medium
                             Layout.preferredHeight: Kirigami.Units.iconSizes.medium
                             source: Qt.resolvedUrl("images/green-tick-thick.svg")
-                            enabled: PulseObject.default ? 1 : 0
+                            enabled: model.PulseObject.default  ? 1 : 0
                         }
-//                         Kirigami.Heading {
-//                             level: 3
-//                             text: PulseObject.default ? "Default" : "Set Default"
-//                         }
                     }
                 }
                 
                 onClicked:  {
-                    PulseObject.default = true;
+                    model.PulseObject.default = true;
                     listView.currentIndex = index
                 }
             }
@@ -190,7 +160,7 @@ Rectangle {
                 anchors.topMargin: Kirigami.Units.largeSpacing
                 width: parent.width
                 height: volObj.height
-    
+
                 Delegates.VolumeObject {
                     id: volObj
                     anchors.left: parent.left
@@ -202,6 +172,10 @@ Rectangle {
                     }
                     Keys.onLeftPressed: {
                         decreaseVal()
+                    }
+
+                    Keys.onDownPressed: {
+                        backBtnSettingsItem.forceActiveFocus()
                     }
                 }
 
@@ -219,5 +193,60 @@ Rectangle {
             Layout.preferredHeight: parent.height / 3
         }
     }
+
+    Kirigami.Separator {
+        id: footerAreaSettingsSept
+        anchors.bottom: footerAreaSettingsItem.top
+        anchors.bottomMargin: Kirigami.Units.largeSpacing
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.leftMargin: Kirigami.Units.largeSpacing * 2
+        anchors.rightMargin: Kirigami.Units.largeSpacing * 2
+        height: 1
+    }
+
+    RowLayout {
+        id: footerAreaSettingsItem
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.margins: Kirigami.Units.largeSpacing * 2
+        height: Kirigami.Units.gridUnit * 2
+
+        PlasmaComponents2.Button {
+            id: backBtnSettingsItem
+            iconSource: "arrow-left"
+            Layout.alignment: Qt.AlignLeft
+            KeyNavigation.up: volObj
+
+            PlasmaComponents2.Highlight {
+                z: -2
+                anchors.fill: parent
+                anchors.margins: -Kirigami.Units.gridUnit / 4
+                visible: backBtnSettingsItem.activeFocus ? 1 : 0
+            }
+
+            Keys.onReturnPressed: {
+                clicked()
+            }
+
+            onClicked: {
+                if(type == "sink"){
+                    sinkView.forceActiveFocus()
+                } else if (type == "source") {
+                    sourceView.forceActiveFocus()
+                }
+            }
+        }
+
+        Label {
+            id: backbtnlabelHeading
+            text: i18n("Press the [←] Back button to return to device selection")
+            wrapMode: Text.WordWrap
+            maximumLineCount: 2
+            Layout.fillWidth: true
+            Layout.alignment: Qt.AlignRight
+        }
+    }
 }
- 
+

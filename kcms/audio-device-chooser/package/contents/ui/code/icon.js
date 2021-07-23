@@ -10,7 +10,6 @@ function name(volume, muted, prefix) {
     }
     var icon = null;
     var percent = volume / PulseAudio.NormalVolume;
-    console.log(percent)
     if (percent <= 0.0 || muted) {
         icon = prefix + "-muted";
     } else if (percent <= 0.25) {

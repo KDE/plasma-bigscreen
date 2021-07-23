@@ -28,44 +28,15 @@ KCM.SimpleKCM {
     topPadding: 0
     rightPadding: Kirigami.Units.smallSpacing
     bottomPadding: 0
+
+    Label {
+        id: textMetrics
+        visible: false
+        text: "/II/"
+    }
     
     Component.onCompleted: {
         root.activateDeviceView
-    }
-    
-    footer: Button {
-        id: kcmcloseButton
-        implicitHeight: Kirigami.Units.gridUnit * 2
-        anchors.left: parent.left
-        anchors.right: parent.right
-        
-        background: Rectangle {
-            color: kcmcloseButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
-        }
-        
-        contentItem: Item {
-            RowLayout {
-                anchors.centerIn: parent
-                Kirigami.Icon {
-                    Layout.preferredWidth: Kirigami.Units.iconSizes.small
-                    Layout.preferredHeight: Kirigami.Units.iconSizes.small
-                    source: "window-close"
-                }
-                Label {
-                    text: i18n("Exit")
-                }
-            }
-        } 
-
-        Keys.onUpPressed: root.activateDeviceView()
-        
-        onClicked: {
-            Window.window.close()
-        }
-        
-        Keys.onReturnPressed: {
-            Window.window.close()
-        }
     }
 
     contentItem: DeviceChooserPage {

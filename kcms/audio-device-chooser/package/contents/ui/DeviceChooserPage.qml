@@ -17,9 +17,78 @@ import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
 import "delegates" as Delegates
 import "views" as Views
-    
+
 FocusScope {
     id: mainFlick
+
+    Rectangle {
+        id: headerAreaTop
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.leftMargin: -Kirigami.Units.largeSpacing
+        anchors.rightMargin: -Kirigami.Units.largeSpacing
+        height: parent.height * 0.075
+        z: 10
+        gradient: Gradient {
+            GradientStop { position: 0.1; color: Qt.rgba(0, 0, 0, 0.5) }
+            GradientStop { position: 0.9; color: Qt.rgba(0, 0, 0, 0.25) }
+        }
+
+        Kirigami.Heading {
+            level: 1
+            anchors.fill: parent
+            anchors.topMargin: Kirigami.Units.largeSpacing
+            anchors.leftMargin: Kirigami.Units.largeSpacing * 2
+            anchors.bottomMargin: Kirigami.Units.largeSpacing
+            color: Kirigami.Theme.textColor
+            text: "Audio Settings"
+        }
+    }
+
+    Item {
+        id: footerMain
+        anchors.left: parent.left
+        anchors.right: settingsView.left
+        anchors.leftMargin: -Kirigami.Units.largeSpacing
+        anchors.bottom: parent.bottom
+        implicitHeight: Kirigami.Units.gridUnit * 2
+
+        Controls.Button {
+            id: kcmcloseButton
+            implicitHeight: Kirigami.Units.gridUnit * 2
+            anchors.left: parent.left
+            anchors.right: parent.right
+
+            background: Rectangle {
+                color: kcmcloseButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
+            }
+
+            contentItem: Item {
+                RowLayout {
+                    anchors.centerIn: parent
+                    Kirigami.Icon {
+                        Layout.preferredWidth: Kirigami.Units.iconSizes.small
+                        Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                        source: "window-close"
+                    }
+                    Controls.Label {
+                        text: i18n("Exit")
+                    }
+                }
+            }
+
+            Keys.onUpPressed: root.activateDeviceView()
+
+            onClicked: {
+                Window.window.close()
+            }
+
+            Keys.onReturnPressed: {
+                Window.window.close()
+            }
+        }
+    }
+
 
     SourceModel {
         id: paSourceModel
@@ -34,8 +103,8 @@ FocusScope {
         width: parent.width - settingsView.width
         property Item currentSection
         y: currentSection ? -currentSection.y : 0
-        anchors.top: parent.top
-        anchors.topMargin: Kirigami.Units.largeSpacing
+        anchors.top: headerAreaTop.bottom
+        anchors.topMargin: Kirigami.Units.largeSpacing * 2
         anchors.left: parent.left
         anchors.leftMargin: Kirigami.Units.largeSpacing
         
@@ -54,14 +123,13 @@ FocusScope {
             Layout.alignment: Qt.AlignTop
             title: i18n("Playback Devices")
             currentIndex: 0
-            onActiveFocusChanged: { 
-                if(activeFocus){ 
+            onActiveFocusChanged: {
+                if(activeFocus){
                     contentLayout.currentSection = sinkView
-                    settingsView.model = sinkView.model
-                    settingsView.positionViewAtIndex(currentIndex, ListView.Center);
-                    //settingsView.currentIndex = sinkView.currentIndex
-                    settingsView.checkPlayBack = true
-                    settingsView.typeDevice = "sink"
+                    settingsViewDetails.model = sinkView.model
+                    settingsViewDetails.positionViewAtIndex(currentIndex, ListView.Center);
+                    settingsViewDetails.checkPlayBack = true
+                    settingsViewDetails.typeDevice = "sink"
                 }
             }
             delegate: Delegates.AudioDelegate {
@@ -71,8 +139,8 @@ FocusScope {
             navigationDown: sourceView.visible ? sourceView : kcmcloseButton
             
             onCurrentItemChanged: {
-                settingsView.currentIndex = sinkView.currentIndex
-                settingsView.positionViewAtIndex(sinkView.currentIndex, ListView.Center);
+                settingsViewDetails.currentIndex = sinkView.currentIndex
+                settingsViewDetails.positionViewAtIndex(sinkView.currentIndex, ListView.Center);
             }
         }
 
@@ -83,14 +151,14 @@ FocusScope {
             currentIndex: 0
             focus: false
             Layout.alignment: Qt.AlignTop
-            visible: sourceView.view.count > 0 ? 1 : 0 
+            visible: sourceView.view.count > 0 ? 1 : 0
             onActiveFocusChanged: {
                 if(activeFocus){
                     contentLayout.currentSection = sourceView
-                    settingsView.model = sourceView.model
-                    settingsView.positionViewAtIndex(currentIndex, ListView.Center);
-                    settingsView.checkPlayBack = false
-                    settingsView.typeDevice = "source"
+                    settingsViewDetails.model = sourceView.model
+                    settingsViewDetails.positionViewAtIndex(currentIndex, ListView.Center);
+                    settingsViewDetails.checkPlayBack = false
+                    settingsViewDetails.typeDevice = "source"
                 }
             }
             delegate: Delegates.AudioDelegate {
@@ -101,8 +169,8 @@ FocusScope {
             navigationDown: kcmcloseButton
             
             onCurrentItemChanged: {
-                    settingsView.currentIndex = sourceView.currentIndex
-                    settingsView.positionViewAtIndex(currentIndex, ListView.Center);
+                settingsViewDetails.currentIndex = sourceView.currentIndex
+                settingsViewDetails.positionViewAtIndex(currentIndex, ListView.Center);
             }
         }
 
@@ -116,6 +184,10 @@ FocusScope {
                 sinkView.forceActiveFocus();
             }
         }
+
+        Item {
+            Layout.preferredHeight: Kirigami.Units.gridUnit * 5
+        }
     }
     
     Kirigami.Separator {
@@ -126,28 +198,35 @@ FocusScope {
         width: 1
     }
     
-    ListView {
+    Rectangle {
         id: settingsView
         anchors.top: parent.top
         anchors.right: parent.right
         anchors.rightMargin: -Kirigami.Units.smallSpacing
         height: parent.height
         width: parent.width / 3.5
-        layoutDirection: Qt.LeftToRight
-        orientation: ListView.Horizontal
-        snapMode: ListView.SnapOneItem;
-        highlightRangeMode: ListView.StrictlyEnforceRange
-        highlightFollowsCurrentItem: true
-        spacing: Kirigami.Units.largeSpacing
-        clip: true
-        interactive: false
-        implicitHeight: settingsView.implicitHeight
-        currentIndex: 0
-        property bool checkPlayBack
-        property string typeDevice
-        delegate: SettingsItem {
-                isPlayback: settingsView.checkPlayBack
-                type: settingsView.typeDevice
+        color: Kirigami.Theme.backgroundColor
+
+        ListView {
+            id: settingsViewDetails
+            anchors.fill: parent
+            anchors.topMargin: parent.height * 0.075
+            layoutDirection: Qt.LeftToRight
+            orientation: ListView.Horizontal
+            snapMode: ListView.SnapOneItem;
+            highlightRangeMode: ListView.StrictlyEnforceRange
+            highlightFollowsCurrentItem: true
+            spacing: Kirigami.Units.largeSpacing
+            clip: true
+            interactive: false
+            implicitHeight: settingsView.implicitHeight
+            currentIndex: 0
+            property bool checkPlayBack
+            property string typeDevice
+            delegate: SettingsItem {
+                isPlayback: settingsViewDetails.checkPlayBack
+                type: settingsViewDetails.typeDevice
+            }
         }
     }
 }

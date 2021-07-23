@@ -33,7 +33,7 @@ BigScreen.AbstractDelegate {
     property var pObject: PulseObject
     property int focusMarginWidth: listView.currentIndex == index && delegate.activeFocus ? contentLayout.width : contentLayout.width - Kirigami.Units.gridUnit
 
-    implicitWidth: listView.cellWidth * 2
+    implicitWidth: listView.cellWidth * 2.5
     implicitHeight: listView.height + Kirigami.Units.largeSpacing
     
     Behavior on implicitWidth {
@@ -45,12 +45,12 @@ BigScreen.AbstractDelegate {
     
     Keys.onReturnPressed: {
         listView.currentIndex = index
-        settingsView.currentItem.forceActiveFocus()
+        settingsViewDetails.currentItem.forceActiveFocus()
     }
     
     onClicked: {
         listView.currentIndex = index
-        settingsView.forceActiveFocus()
+        settingsViewDetails.forceActiveFocus()
     }
 
     contentItem: Item {
@@ -73,7 +73,21 @@ BigScreen.AbstractDelegate {
                 top: deviceAudioSvgIcon.top
                 bottom: deviceAudioSvgIcon.bottom
                 leftMargin: Kirigami.Units.smallSpacing
-            } 
+            }
+
+            PlasmaComponents.Label {
+                id: deviceTypeLabel
+                Layout.fillWidth: true
+                visible: text.length > 0
+                elide: Text.ElideRight
+                wrapMode: Text.WordWrap
+                horizontalAlignment: Text.AlignHCenter
+                maximumLineCount: 2
+                textFormat: Text.PlainText
+                color: Kirigami.Theme.textColor
+                font.pixelSize: textMetrics.font.pixelSize * 1.1
+                text: currentPort.description
+            }
             
             PlasmaComponents.Label {
                 id: deviceNameLabel
@@ -85,7 +99,8 @@ BigScreen.AbstractDelegate {
                 maximumLineCount: 2
                 textFormat: Text.PlainText
                 color: Kirigami.Theme.textColor
-                text: delegate.isCurrent ? !currentPort ? Description : i18ndc("kcm_audiodevice", "label of device items", "%1 (%2)", currentPort.description, Description) : !currentPort ? Description.split("(")[0] : i18ndc("kcm_audiodevice", "label of device items", "%1 (%2)", currentPort.description, Description).split("(")[0]
+                font.pixelSize: textMetrics.font.pixelSize * 0.9
+                text: Description
             }
         }
         
@@ -95,14 +110,14 @@ BigScreen.AbstractDelegate {
             anchors.bottom: parent.bottom
             anchors.rightMargin: Kirigami.Units.largeSpacing
             anchors.bottomMargin: Kirigami.Units.largeSpacing
-                
+
             PlasmaCore.IconItem {
                 id: deviceDefaultIcon
                 anchors.centerIn: parent
                 width: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
                 height: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
                 source: Qt.resolvedUrl("../images/green-tick-thick.svg")
-                opacity: PulseObject.default ? 1 : 0
+                opacity: model.PulseObject.default ? 1 : 0
             }
         }
     }
