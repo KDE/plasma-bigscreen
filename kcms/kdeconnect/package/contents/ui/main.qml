@@ -29,57 +29,89 @@ KCM.SimpleKCM {
     
     Component.onCompleted: {
         connectionView.forceActiveFocus();
-        console.log(DevicesModel.rowCount);
-    }
-    
-    footer: Button {
-        id: kcmcloseButton
-        implicitHeight: Kirigami.Units.gridUnit * 2
-        anchors.left: parent.left
-        anchors.right: parent.right
-        
-        background: Rectangle {
-            color: kcmcloseButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
-        }
-        
-        contentItem: Item {
-            RowLayout {
-                anchors.centerIn: parent
-                Kirigami.Icon {
-                    Layout.preferredWidth: Kirigami.Units.iconSizes.small
-                    Layout.preferredHeight: Kirigami.Units.iconSizes.small
-                    source: "window-close"
-                }
-                Label {
-                    text: i18n("Exit")
-                }
-            }
-        } 
-
-        Keys.onUpPressed: connectionView.forceActiveFocus()
-        
-        onClicked: {
-            Window.window.close()
-        }
-        
-        Keys.onReturnPressed: {
-            Window.window.close()
-        }
     }
 
     DevicesModel {
         id: allDevicesModel
     }
-        
-    contentItem: FocusScope {    
+
+    contentItem: FocusScope {
+
+        Rectangle {
+            id: headerAreaTop
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.leftMargin: -Kirigami.Units.largeSpacing
+            anchors.rightMargin: -Kirigami.Units.largeSpacing
+            height: parent.height * 0.075
+            z: 10
+            gradient: Gradient {
+                GradientStop { position: 0.1; color: Qt.rgba(0, 0, 0, 0.5) }
+                GradientStop { position: 0.9; color: Qt.rgba(0, 0, 0, 0.25) }
+            }
+
+            Kirigami.Heading {
+                level: 1
+                anchors.fill: parent
+                anchors.topMargin: Kirigami.Units.largeSpacing
+                anchors.leftMargin: Kirigami.Units.largeSpacing * 2
+                anchors.bottomMargin: Kirigami.Units.largeSpacing
+                color: Kirigami.Theme.textColor
+                text: "KDE Connect"
+            }
+        }
+
+        Item {
+            id: footerMain
+            anchors.left: parent.left
+            anchors.right: deviceConnectionView.left
+            anchors.leftMargin: -Kirigami.Units.largeSpacing
+            anchors.bottom: parent.bottom
+            implicitHeight: Kirigami.Units.gridUnit * 2
+
+            Button {
+                id: kcmcloseButton
+                implicitHeight: Kirigami.Units.gridUnit * 2
+                width: allDevicesModel.count > 0 ? parent.width : (root.width + Kirigami.Units.largeSpacing)
+
+                background: Rectangle {
+                    color: kcmcloseButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
+                }
+
+                contentItem: Item {
+                    RowLayout {
+                        anchors.centerIn: parent
+                        Kirigami.Icon {
+                            Layout.preferredWidth: Kirigami.Units.iconSizes.small
+                            Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                            source: "window-close"
+                        }
+                        Label {
+                            text: i18n("Exit")
+                        }
+                    }
+                }
+
+                Keys.onUpPressed: connectionView.forceActiveFocus()
+
+                onClicked: {
+                    Window.window.close()
+                }
+
+                Keys.onReturnPressed: {
+                    Window.window.close()
+                }
+            }
+        }
+
         ColumnLayout {
             anchors.left: parent.left
             anchors.leftMargin: Kirigami.Units.largeSpacing
-            anchors.top: parent.top
-            anchors.topMargin: Kirigami.Units.largeSpacing
+            anchors.top: headerAreaTop.bottom
+            anchors.topMargin: Kirigami.Units.largeSpacing * 2
+            anchors.bottom: footerMain.top
             width: parent.width - deviceConnectionView.width
-            height: parent.height
-        
+
             BigScreen.TileView {
                 id: connectionView
                 focus: true
@@ -100,7 +132,7 @@ KCM.SimpleKCM {
                 }
             }
         }
-                
+
         DeviceConnectionView {
             id: deviceConnectionView
             anchors.top: parent.top

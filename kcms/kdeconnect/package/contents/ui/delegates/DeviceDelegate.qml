@@ -29,9 +29,9 @@ BigScreen.AbstractDelegate {
         }
     }
     
-//     Keys.onReturnPressed: {
-//         clicked();
-//     }
+    Keys.onReturnPressed: {
+        clicked();
+    }
     
     onClicked: {
         listView.currentIndex = index
@@ -41,11 +41,10 @@ BigScreen.AbstractDelegate {
     contentItem: Item {
         id: deviceItemLayout
         
-        Rectangle {
+        Item {
             id: deviceSvgIcon
             width: Kirigami.Units.iconSizes.huge
             height: width
-            radius: 100
             y: deviceItemLayout.height / 2 - deviceSvgIcon.height / 2
             
             PlasmaCore.IconItem {
@@ -65,7 +64,7 @@ BigScreen.AbstractDelegate {
                 top: deviceSvgIcon.top
                 bottom: deviceSvgIcon.bottom
                 leftMargin: Kirigami.Units.smallSpacing
-            } 
+            }
 
             PlasmaComponents.Label {
                 id: deviceNameLabel

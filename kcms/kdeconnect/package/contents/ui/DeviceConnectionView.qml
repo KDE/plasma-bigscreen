@@ -61,7 +61,7 @@ Rectangle {
         } else {
             deviceStatView.currentIndex = 3
         }
-    }    
+    }
     
     ColumnLayout {
         id: colLayoutSettingsItem
@@ -69,63 +69,20 @@ Rectangle {
             top: parent.top
             left: parent.left
             right: parent.right
-            bottom: parent.bottom
-            margins: Kirigami.Units.largeSpacing
+            bottom: headerAreaSettingsItem.top
+            margins: Kirigami.Units.largeSpacing * 2
+        }
+
+        Item {
+            Layout.fillWidth: true
+            Layout.preferredHeight: parent.height * 0.20
         }
         
         Item {
             Layout.fillWidth: true
             Layout.preferredHeight: parent.height / 3
             Layout.alignment: Qt.AlignTop
-            
-            RowLayout {
-                id: headerAreaSettingsItem
-                anchors.top: parent.top
-                anchors.left: parent.left
-                anchors.right: parent.right
-                height: backBtnSettingsItem.height
-        
-                PlasmaComponents2.Button {
-                    id: backBtnSettingsItem
-                    iconSource: "arrow-left"
-                    Layout.alignment: Qt.AlignLeft
-                    
-                    KeyNavigation.down: deviceStatView
-                    
-                    PlasmaComponents2.Highlight {
-                        z: -2
-                        anchors.fill: parent
-                        anchors.margins: -Kirigami.Units.gridUnit / 4
-                        visible: backBtnSettingsItem.activeFocus ? 1 : 0
-                    }
-                    
-                    Keys.onReturnPressed: {
-                        clicked()
-                    }
-                    
-                    onClicked: {
-                        connectionView.forceActiveFocus()
-                    }
-                }
-        
-                Label {
-                    id: backbtnlabelHeading
-                    text: i18n("Press the [←] Back button to return to device selection")
-                    wrapMode: Text.WordWrap
-                    maximumLineCount: 2
-                    Layout.fillWidth: true
-                    Layout.alignment: Qt.AlignRight
-                }
-            }
-            
-            Kirigami.Separator {
-                id: headrSept
-                anchors.top: headerAreaSettingsItem.bottom
-                anchors.topMargin: Kirigami.Units.largeSpacing * 3
-                width: parent.width
-                height: 1
-            }
-            
+
             Rectangle {
                 id: dIcon
                 anchors.top: headrSept.bottom
@@ -134,7 +91,7 @@ Rectangle {
                 width: Kirigami.Units.iconSizes.huge
                 height: width
                 radius: 100
-                color: Kirigami.Theme.textColor
+                color: Kirigami.Theme.backgroundColor
                 
                 PlasmaCore.IconItem {
                     id: deviceIconStatus
@@ -158,7 +115,7 @@ Rectangle {
                 color: PlasmaCore.ColorScope.textColor
                 text: currentDevice.name
             }
-        
+
             Kirigami.Separator {
                 id: lblSept2
                 anchors.top: label2.bottom
@@ -198,6 +155,47 @@ Rectangle {
                     id: unreachableView
                 }
             }
+        }
+    }
+
+    RowLayout {
+        id: headerAreaSettingsItem
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.margins: Kirigami.Units.largeSpacing * 2
+        height: Kirigami.Units.gridUnit * 2
+
+        PlasmaComponents2.Button {
+            id: backBtnSettingsItem
+            iconSource: "arrow-left"
+            Layout.alignment: Qt.AlignLeft
+
+            KeyNavigation.down: deviceStatView
+
+            PlasmaComponents2.Highlight {
+                z: -2
+                anchors.fill: parent
+                anchors.margins: -Kirigami.Units.gridUnit / 4
+                visible: backBtnSettingsItem.activeFocus ? 1 : 0
+            }
+
+            Keys.onReturnPressed: {
+                clicked()
+            }
+
+            onClicked: {
+                connectionView.forceActiveFocus()
+            }
+        }
+
+        Label {
+            id: backbtnlabelHeading
+            text: i18n("Press the [←] Back button to return to device selection")
+            wrapMode: Text.WordWrap
+            maximumLineCount: 2
+            Layout.fillWidth: true
+            Layout.alignment: Qt.AlignRight
         }
     }
 }
