@@ -1,4 +1,5 @@
 /*
+    SPDX-FileCopyrightText: 2021 Aditya Mehra <aix.m@outlook.com>
     SPDX-FileCopyrightText: 2015 Marco Martin <mart@kde.org>
 
 
@@ -8,26 +9,33 @@
 #pragma once
 
 #include <Plasma/Containment>
+#include "biglauncher_dbus.h"
 
 class ApplicationListModel;
 class SessionManagement;
+class BigLauncherDbusAdapterInterface;
 
 class HomeScreen : public Plasma::Containment
 {
     Q_OBJECT
     Q_PROPERTY(ApplicationListModel *applicationListModel READ applicationListModel CONSTANT)
+    Q_PROPERTY(BigLauncherDbusAdapterInterface *bigLauncherDbusAdapterInterface READ bigLauncherDbusAdapterInterface CONSTANT)
 
 public:
     HomeScreen(QObject *parent, const QVariantList &args);
     ~HomeScreen() override;
 
     ApplicationListModel *applicationListModel() const;
+    BigLauncherDbusAdapterInterface *bigLauncherDbusAdapterInterface() const;
 
 public Q_SLOTS:
     void executeCommand(const QString &command);
     void requestShutdown();
+    void setUseColoredTiles(bool coloredTiles);
+    void setUseExpandableTiles(bool expandableTiles);
 
 private:
     ApplicationListModel *m_applicationListModel;
     SessionManagement *m_session;
+    BigLauncherDbusAdapterInterface* m_bigLauncherDbusAdapterInterface;
 };

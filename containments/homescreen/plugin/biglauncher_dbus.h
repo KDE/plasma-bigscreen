@@ -8,6 +8,8 @@
 
 #include <QObject>
 #include <QtDBus>
+#include "biglauncherhomescreen.h"
+
 QT_BEGIN_NAMESPACE
 class QByteArray;
 template<class T>
@@ -29,30 +31,24 @@ class BigLauncherDbusAdapterInterface : public QDBusAbstractAdaptor
     Q_CLASSINFO("D-Bus Introspection",
                 ""
                 "  <interface name=\"org.kde.biglauncher\">\n"
-                "    <signal name=\"sendShowMycroft\">\n"
-                "      <arg direction=\"out\" type=\"s\" name=\"msgShowMycroft\"/>\n"
+                "    <signal name=\"useColoredTilesChanged\">\n"
+                "      <arg direction=\"out\" type=\"b\" name=\"msgUseColoredTiles\"/>\n"
                 "    </signal>\n"
-                "    <signal name=\"sendShowSkills\">\n"
-                "      <arg direction=\"out\" type=\"s\" name=\"msgShowSkills\"/>\n"
+                "    <signal name=\"useExpandableTilesChanged\">\n"
+                "      <arg direction=\"out\" type=\"b\" name=\"msgUseExpandableTiles\"/>\n"
                 "    </signal>\n"
-                "    <signal name=\"installList\">\n"
-                "      <arg direction=\"out\" type=\"s\" name=\"msgShowInstallSkills\"/>\n"
-                "    </signal>\n"
-                "    <signal name=\"recipeMethod\">\n"
-                "      <arg direction=\"out\" type=\"s\" name=\"msgRecipeMethod\"/>\n"
-                "    </signal>\n"
-                "    <signal name=\"kioMethod\">\n"
-                "      <arg direction=\"out\" type=\"s\" name=\"msgKioMethod\"/>\n"
-                "    </signal>\n"
-                "    <method name=\"showMycroft\"/>\n"
-                "    <method name=\"showSkills\"/>\n"
-                "    <method name=\"showSkillsInstaller\"/>\n"
-                "    <method name=\"showRecipeMethod\">\n"
-                "      <arg direction=\"in\" type=\"s\" name=\"recipeName\"/>\n"
-                "     </method>\n"
-                "    <method name=\"sendKioMethod\">\n"
-                "      <arg direction=\"in\" type=\"s\" name=\"kioString\"/>\n"
-                "     </method>\n"
+                "    <method name=\"useColoredTiles\">\n"
+                "      <arg direction=\"in\" type=\"b\" name=\"coloredTiles\"/>\n"
+                "    </method>\n"
+                "    <method name=\"useExpandableTiles\">\n"
+                "      <arg direction=\"in\" type=\"b\" name=\"expandableTiles\"/>\n"
+                "    </method>\n"
+                "    <method name=\"coloredTilesActive\">\n"
+                "      <arg direction=\"out\" type=\"b\"/>\n"
+                "    </method>\n"
+                "    <method name=\"expandableTilesActive\">\n"
+                "      <arg direction=\"out\" type=\"b\"/>\n"
+                "    </method>\n"
                 "  </interface>\n"
                 "")
 public:
@@ -62,17 +58,23 @@ public:
 
 public: // PROPERTIES
 public Q_SLOTS: // METHODS
-    void showMycroft();
-    void showSkills();
-    void showSkillsInstaller();
-    void showRecipeMethod(const QString &recipeName);
-    void sendKioMethod(const QString &kioString);
+    void useColoredTiles(const bool &coloredTiles);
+    void useExpandableTiles(const bool &expandableTiles);
+    bool coloredTilesActive();
+    bool expandableTilesActive();
+
+    void setColoredTilesActive(const bool &coloredTilesActive);
+    void setExpandableTilesActive(const bool &expandableTilesActive);
+
 Q_SIGNALS: // SIGNALS
-    void sendShowMycroft(const QString &msgShowMycroft);
-    void sendShowSkills(const QString &msgShowSkills);
-    void installList(const QString &msgShowInstallSkills);
-    void recipeMethod(const QString &msgRecipeMethod);
-    void kioMethod(const QString &msgKioMethod);
+    void useColoredTilesChanged(const bool &msgUseColoredTiles);
+    void useExpandableTilesChanged(const bool &msgUseExpandableTiles);
+    void coloredTilesActiveRequested();
+    void expandableTilesActiveRequested();
+
+private:
+    bool m_useColoredTiles;
+    bool m_useExpandableTiles;
 };
 
 #endif

@@ -1,4 +1,5 @@
 /*
+    SPDX-FileCopyrightText: 2021 Aditya Mehra <aix.m@outlook.com>
     SPDX-FileCopyrightText: 2019 Marco Martin <mart@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
@@ -20,10 +21,12 @@ HomeScreen::HomeScreen(QObject *parent, const QVariantList &args)
 {
     const QByteArray uri("org.kde.private.biglauncher");
     qmlRegisterUncreatableType<ApplicationListModel>(uri, 1, 0, "ApplicationListModel", QStringLiteral("Cannot create an item of type ApplicationListModel"));
+    qmlRegisterUncreatableType<BigLauncherDbusAdapterInterface>(uri, 1, 0, "BigLauncherDbusAdapterInterface", QStringLiteral("Cannot create an item of type BigLauncherDbusAdapterInterface"));
 
     // setHasConfigurationInterface(true);
-    auto bigLauncherDbusAdapterInterface = new BigLauncherDbusAdapterInterface(this);
+    m_bigLauncherDbusAdapterInterface = new BigLauncherDbusAdapterInterface(this);
     m_applicationListModel = new ApplicationListModel(this);
+
 }
 
 HomeScreen::~HomeScreen()
@@ -33,6 +36,11 @@ HomeScreen::~HomeScreen()
 ApplicationListModel *HomeScreen::applicationListModel() const
 {
     return m_applicationListModel;
+}
+
+BigLauncherDbusAdapterInterface *HomeScreen::bigLauncherDbusAdapterInterface() const
+{
+    return m_bigLauncherDbusAdapterInterface;
 }
 
 void HomeScreen::executeCommand(const QString &command)
@@ -52,6 +60,16 @@ void HomeScreen::requestShutdown()
         });
     }
     m_session->requestShutdown();
+}
+
+void HomeScreen::setUseColoredTiles(bool coloredTiles)
+{
+    m_bigLauncherDbusAdapterInterface->setColoredTilesActive(coloredTiles);
+}
+
+void HomeScreen::setUseExpandableTiles(bool expandableTiles)
+{
+    m_bigLauncherDbusAdapterInterface->setExpandableTilesActive(expandableTiles);
 }
 
 K_PLUGIN_CLASS_WITH_JSON(HomeScreen, "metadata.json")

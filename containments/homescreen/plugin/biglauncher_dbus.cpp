@@ -22,8 +22,8 @@ BigLauncherDbusAdapterInterface::BigLauncherDbusAdapterInterface(QObject *parent
 {
     // constructor
     QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.registerObject("/mycroftapplet", this, QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportNonScriptableSlots);
-    dbus.registerService("org.kde.mycroftapplet");
+    dbus.registerObject("/BigLauncher", this, QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportNonScriptableSlots);
+    dbus.registerService("org.kde.biglauncher");
     setAutoRelaySignals(true);
 }
 
@@ -32,39 +32,42 @@ BigLauncherDbusAdapterInterface::~BigLauncherDbusAdapterInterface()
     // destructor
 }
 
-void BigLauncherDbusAdapterInterface::showMycroft()
+void BigLauncherDbusAdapterInterface::useColoredTiles(const bool &coloredTiles)
 {
-    // handle method call org.kde.mycroft.showMycroft
-    emit sendShowMycroft("Show");
-    QMetaObject::invokeMethod(this, "getMethod", Qt::DirectConnection, Q_ARG(QString, "Show"));
+    emit useColoredTilesChanged(coloredTiles);
 }
 
-void BigLauncherDbusAdapterInterface::showSkills()
+void BigLauncherDbusAdapterInterface::useExpandableTiles(const bool &expandableTiles)
 {
-    // handle method call org.kde.mycroft.showSkills
-    emit sendShowSkills("ShowSkills");
-    QMetaObject::invokeMethod(this, "getMethod", Qt::DirectConnection, Q_ARG(QString, "ShowSkills"));
+    emit useExpandableTilesChanged(expandableTiles);
 }
 
-void BigLauncherDbusAdapterInterface::showSkillsInstaller()
+bool BigLauncherDbusAdapterInterface::coloredTilesActive()
 {
-    // handle method call org.kde.mycroft.showSkillsInstaller
-    emit installList("ShowInstallSkills");
-    QMetaObject::invokeMethod(this, "getMethod", Qt::DirectConnection, Q_ARG(QString, "ShowInstallSkills"));
+    if(m_useColoredTiles) {
+        return 1;
+    } else {
+        return 0;
+    }
 }
 
-void BigLauncherDbusAdapterInterface::showRecipeMethod(const QString &recipeName)
+bool BigLauncherDbusAdapterInterface::expandableTilesActive()
 {
-    // handle method call org.kde.mycroft.showRecipeMethod
-    emit recipeMethod(recipeName);
-    QMetaObject::invokeMethod(this, "getMethod", Qt::DirectConnection, Q_ARG(QString, recipeName));
+    if(m_useExpandableTiles) {
+         return 1;
+    } else {
+        return 0;
+    }
 }
 
-void BigLauncherDbusAdapterInterface::sendKioMethod(const QString &kioString)
+void BigLauncherDbusAdapterInterface::setColoredTilesActive(const bool &coloredTilesActive)
 {
-    // handle method call org.kde.mycroft.showRecipeMethod
-    emit kioMethod(kioString);
-    QMetaObject::invokeMethod(this, "getMethod", Qt::DirectConnection, Q_ARG(QString, kioString));
+    m_useColoredTiles = coloredTilesActive;
+}
+
+void BigLauncherDbusAdapterInterface::setExpandableTilesActive(const bool &expandableTilesActive)
+{
+    m_useExpandableTiles = expandableTilesActive;
 }
 
 Q_INVOKABLE QString BigLauncherDbusAdapterInterface::getMethod(const QString &method)

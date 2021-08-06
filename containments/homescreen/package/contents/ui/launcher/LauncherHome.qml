@@ -159,9 +159,7 @@ FocusScope {
                 Controls.Action {
                     text: i18n("Bigscreen Settings")
                     icon.name: "view-grid-symbolic"
-                    onTriggered: {
-                        plasmoidConfig.showMaximized();
-                    }
+                    onTriggered: plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_bigscreen_settings")
                 },
                 Controls.Action {
                     text: i18n("Mycroft Skill Installer")

@@ -16,6 +16,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.mycroft.bigscreen 1.0 as Launcher
+import org.kde.private.biglauncher 1.0
 import org.kde.kirigami 2.12 as Kirigami
 
 FocusScope {
@@ -39,12 +40,26 @@ FocusScope {
         root.forceActiveFocus();
         plasmoid.nativeInterface.applicationListModel.loadApplications();
         root.activateAppView();
+        plasmoid.nativeInterface.setUseColoredTiles(plasmoid.configuration.coloredTiles);
+        plasmoid.nativeInterface.setUseExpandableTiles(plasmoid.configuration.expandingTiles);
     }
 
     Connections {
         target: plasmoid.applicationListModel
         onAppOrderChanged: {
             root.activateAppView()
+        }
+    }
+
+    Connections {
+        target: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface
+        onUseColoredTilesChanged: {
+            plasmoid.configuration.coloredTiles = msgUseColoredTiles;
+            plasmoid.nativeInterface.setUseColoredTiles(plasmoid.configuration.coloredTiles);
+        }
+        onUseExpandableTilesChanged: {
+            plasmoid.configuration.expandingTiles = msgUseExpandableTiles;
+            plasmoid.nativeInterface.setUseExpandableTiles(plasmoid.configuration.expandingTiles);
         }
     }
 
