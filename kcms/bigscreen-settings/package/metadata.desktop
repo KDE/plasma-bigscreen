@@ -1,6 +1,22 @@
 [Desktop Entry]
 Name=Appearance
+Name[az]=Xarici görünüş
+Name[ca]=Aparença
+Name[cs]=Vzhled
+Name[eu]=Itxura
+Name[nl]=Uiterlijk
+Name[sv]=Utseende
+Name[uk]=Вигляд
+Name[x-test]=xxAppearancexx
 Comment=Font and Theme
+Comment[az]=Şrift və Mövzu
+Comment[ca]=Tipus de lletra i tema
+Comment[cs]=Písmo a motiv
+Comment[eu]=Letra-tipoa eta gaia
+Comment[nl]=Lettertype en thema
+Comment[sv]=Teckensnitt och tema
+Comment[uk]=Шрифт і тема
+Comment[x-test]=xxFont and Themexx
 Encoding=UTF-8
 Type=Service
 Icon=view-grid-symbolic
