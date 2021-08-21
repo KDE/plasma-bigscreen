@@ -367,7 +367,7 @@ Rectangle {
 
                     delegate: Kirigami.BasicListItem {
                         width: parent.width
-                        text: model.timeZoneId == "Local" ? "Your local timezone is " + city : i18n("%1, %2", city, region)
+                        text: model.timeZoneId == "Local" ? i18n("Your local timezone is %1", city) : i18n("%1, %2", city, region)
                         enabled: model.timeZoneId != "Local" ? 1 : 0
 
                         Keys.onReturnPressed: clicked()
