@@ -48,7 +48,7 @@ AbstractDelegate {
             id: iconItem
             //Icon should cover text during animation
             z: 1
-            width: Kirigami.Units.iconSizes.huge
+            width: BigScreen.Units.iconSizes.huge
             height: width
             source: delegate.iconImage || delegate.icon.name || delegate.icon.source
         }

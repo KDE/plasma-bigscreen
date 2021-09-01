@@ -13,6 +13,7 @@ import QtGraphicalEffects 1.14
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami 2.12 as Kirigami
+import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
 FocusScope {
     id: root
@@ -71,7 +72,7 @@ FocusScope {
         cacheBuffer: width
         implicitHeight: cellHeight
         rightMargin: width-cellWidth
-        property int cellWidth: (Kirigami.Units.iconSizes.huge + Kirigami.Units.largeSpacing*4)
+        property int cellWidth: (BigScreen.Units.iconSizes.huge + Kirigami.Units.largeSpacing*4)
         property int cellHeight: cellWidth + units.gridUnit * 3
         preferredHighlightBegin: 0
         preferredHighlightEnd: cellWidth

@@ -13,6 +13,7 @@ void BigScreenPlugin::registerTypes(const char *uri)
     Q_ASSERT(uri == QLatin1String("org.kde.mycroft.bigscreen"));
 
     qmlRegisterSingletonType(componentUrl(QStringLiteral("NavigationSoundEffects.qml")), uri, 1, 0, "NavigationSoundEffects");
+    qmlRegisterSingletonType(componentUrl(QStringLiteral("Units.qml")), uri, 1, 0, "Units");
 }
 
 QUrl BigScreenPlugin::componentUrl(const QString &fileName)
