@@ -43,14 +43,14 @@ BigScreen.AbstractDelegate {
         
         Item {
             id: deviceSvgIcon
-            width: Kirigami.Units.iconSizes.huge
+            width: BigScreen.Units.iconSizes.huge
             height: width
             y: deviceItemLayout.height / 2 - deviceSvgIcon.height / 2
             
             PlasmaCore.IconItem {
                 anchors.centerIn: parent
                 source: model.iconName
-                width: Kirigami.Units.iconSizes.large
+                width: BigScreen.Units.iconSizes.large
                 height: width
             }
         }

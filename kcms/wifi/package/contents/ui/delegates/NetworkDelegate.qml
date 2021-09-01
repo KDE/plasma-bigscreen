@@ -43,7 +43,7 @@ BigScreen.AbstractDelegate {
 
         PlasmaCore.IconItem {
             id: connectionSvgIcon
-            width: Kirigami.Units.iconSizes.huge
+            width: BigScreen.Units.iconSizes.huge
             height: width
             y: connectionItemLayout.height/2 - connectionSvgIcon.height/2
             source: switch(model.Type){
@@ -101,7 +101,7 @@ BigScreen.AbstractDelegate {
             anchors.bottomMargin: -Kirigami.Units.largeSpacing
             anchors.right: parent.right
             anchors.rightMargin: -Kirigami.Units.largeSpacing
-            width: Kirigami.Units.iconSizes.smallMedium
+            width: BigScreen.Units.iconSizes.smallMedium
             height: width
             source: Qt.resolvedUrl("../images/green-tick-thick.svg")
             visible: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0

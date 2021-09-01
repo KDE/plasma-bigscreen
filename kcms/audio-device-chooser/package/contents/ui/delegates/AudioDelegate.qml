@@ -58,7 +58,7 @@ BigScreen.AbstractDelegate {
         
         PlasmaCore.IconItem {
             id: deviceAudioSvgIcon
-            width: Kirigami.Units.iconSizes.huge
+            width: BigScreen.Units.iconSizes.huge
             height: width
             y: contentItemLayout.height/2 - deviceAudioSvgIcon.height/2
             source: Icon.name(Volume, Muted, isPlayback ? "audio-volume" : "microphone-sensitivity")
@@ -114,8 +114,8 @@ BigScreen.AbstractDelegate {
             PlasmaCore.IconItem {
                 id: deviceDefaultIcon
                 anchors.centerIn: parent
-                width: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
-                height: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
+                width: listView.currentIndex == index && delegate.activeFocus ? BigScreen.Units.iconSizes.medium : BigScreen.Units.iconSizes.smallMedium
+                height: listView.currentIndex == index && delegate.activeFocus ? BigScreen.Units.iconSizes.medium : BigScreen.Units.iconSizes.smallMedium
                 source: Qt.resolvedUrl("../images/green-tick-thick.svg")
                 opacity: model.PulseObject.default ? 1 : 0
             }

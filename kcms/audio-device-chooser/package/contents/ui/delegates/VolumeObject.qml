@@ -12,6 +12,7 @@ import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.plasma.private.volume 0.1
+import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
 ColumnLayout {
     //Layout.fillWidth: true
@@ -65,7 +66,7 @@ ColumnLayout {
 
         Kirigami.Icon {
             Layout.alignment: Qt.AlignHCenter
-            Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+            Layout.preferredHeight: BigScreen.Units.iconSizes.medium
             Layout.preferredWidth: Layout.preferredHeight
             source: "audio-card"
         }

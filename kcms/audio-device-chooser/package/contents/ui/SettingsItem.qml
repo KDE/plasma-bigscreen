@@ -133,8 +133,8 @@ Item {
                     RowLayout {
                         anchors.centerIn: parent
                         PlasmaCore.IconItem {
-                            Layout.preferredWidth: Kirigami.Units.iconSizes.medium
-                            Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+                            Layout.preferredWidth: BigScreen.Units.iconSizes.medium
+                            Layout.preferredHeight: BigScreen.Units.iconSizes.medium
                             source: Qt.resolvedUrl("images/green-tick-thick.svg")
                             enabled: model.PulseObject.default  ? 1 : 0
                         }

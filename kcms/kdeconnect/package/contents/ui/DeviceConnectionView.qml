@@ -88,7 +88,7 @@ Rectangle {
                 anchors.top: headrSept.bottom
                 anchors.topMargin: Kirigami.Units.largeSpacing
                 anchors.horizontalCenter: parent.horizontalCenter
-                width: Kirigami.Units.iconSizes.huge
+                width: BigScreen.Units.iconSizes.huge
                 height: width
                 radius: 100
                 color: Kirigami.Theme.backgroundColor
@@ -96,7 +96,7 @@ Rectangle {
                 PlasmaCore.IconItem {
                     id: deviceIconStatus
                     anchors.centerIn: parent
-                    width: Kirigami.Units.iconSizes.large
+                    width: BigScreen.Units.iconSizes.large
                     height: width
                     source: currentDevice.iconName
                 }

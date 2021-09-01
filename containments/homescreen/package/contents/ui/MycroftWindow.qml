@@ -11,6 +11,7 @@ import QtQuick.Layouts 1.14
 import QtQuick.Controls 2.14 as Controls
 import org.kde.kirigami 2.12 as Kirigami
 import Mycroft 1.0 as Mycroft
+import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
 Window {
     id: window
@@ -115,8 +116,8 @@ Window {
             id: closeButton
             anchors.top: parent.top
             anchors.left: parent.left
-            width: Kirigami.Units.iconSizes.huge
-            height: Kirigami.Units.iconSizes.huge
+            width: BigScreen.Units.iconSizes.huge
+            height: BigScreen.Units.iconSizes.huge
             opacity: focus ? 1 : 0
             color: focus ? Kirigami.Theme.highlightColor :"transparent"
             
@@ -132,8 +133,8 @@ Window {
             
             Kirigami.Icon {
                 anchors.centerIn: parent
-                width: Kirigami.Units.iconSizes.large
-                height: Kirigami.Units.iconSizes.large
+                width: BigScreen.Units.iconSizes.large
+                height: BigScreen.Units.iconSizes.large
                 source: "tab-close"
             }
             

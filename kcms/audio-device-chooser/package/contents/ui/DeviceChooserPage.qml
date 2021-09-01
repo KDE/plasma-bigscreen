@@ -67,8 +67,8 @@ FocusScope {
                 RowLayout {
                     anchors.centerIn: parent
                     Kirigami.Icon {
-                        Layout.preferredWidth: Kirigami.Units.iconSizes.small
-                        Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                        Layout.preferredWidth: BigScreen.Units.iconSizes.small
+                        Layout.preferredHeight: BigScreen.Units.iconSizes.small
                         source: "window-close"
                     }
                     Controls.Label {

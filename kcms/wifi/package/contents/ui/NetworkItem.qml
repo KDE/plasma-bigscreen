@@ -11,6 +11,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.networkmanagement 0.2 as PlasmaNM
 import org.kde.kirigami 2.12 as Kirigami
+import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
 Kirigami.AbstractListItem {
     id: connectionItem

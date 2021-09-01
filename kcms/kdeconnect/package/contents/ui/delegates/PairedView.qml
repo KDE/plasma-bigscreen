@@ -10,6 +10,7 @@ import QtQuick.Controls 2.14
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.kdeconnect 1.0
+import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
 Item {
     id: trustedDevice
@@ -54,8 +55,8 @@ Item {
                     anchors.centerIn: parent
                 
                     Kirigami.Icon {
-                        Layout.preferredWidth: Kirigami.Units.iconSizes.small
-                        Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                        Layout.preferredWidth: BigScreen.Units.iconSizes.small
+                        Layout.preferredHeight: BigScreen.Units.iconSizes.small
                         source: "network-disconnect"
                     }
                     PlasmaComponents.Label {
