@@ -24,3 +24,6 @@ LayoutName=org.kde.breeze.desktop
 
 [kwinrc][org.kde.kdecoration2]
 library=org.kde.breeze
+
+[plasmashellrc][Shell]
+ShellPackage=org.kde.plasma.mycroft.bigscreen
