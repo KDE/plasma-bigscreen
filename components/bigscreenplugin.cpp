@@ -1,10 +1,12 @@
 /*
+    SPDX-FileCopyrightText: 2021 Aditya Mehra <aix.m@outlook.com>
     SPDX-FileCopyrightText: 2015 Marco Martin <mart@kde.org>
 
     SPDX-License-Identifier: MIT
 */
 
 #include "bigscreenplugin.h"
+#include "envreader.h"
 
 #include <QtQml>
 
@@ -13,6 +15,7 @@ void BigScreenPlugin::registerTypes(const char *uri)
     Q_ASSERT(uri == QLatin1String("org.kde.mycroft.bigscreen"));
 
     qmlRegisterSingletonType(componentUrl(QStringLiteral("NavigationSoundEffects.qml")), uri, 1, 0, "NavigationSoundEffects");
+    qmlRegisterType<EnvReader>(uri, 1, 0, "EnvReader");
 }
 
 QUrl BigScreenPlugin::componentUrl(const QString &fileName)
