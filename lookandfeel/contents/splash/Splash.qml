@@ -37,7 +37,6 @@ Rectangle {
     onStageChanged: {
         if (stage == 2) {
             introAnimation.running = true;
-            envReader.createInterface();
         } else if (stage == 5) {
             introAnimation.target = busyIndicator;
             introAnimation.from = 1;
