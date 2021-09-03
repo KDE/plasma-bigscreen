@@ -5,12 +5,13 @@
 */
 
 #include "envreader.h"
-#include <QtDBus>
-#include <QDBusInterface>
+#include "bigscreenplugin_dbus.h"
 
 EnvReader::EnvReader(QObject *parent)
     : QObject(parent)
 {
+    m_bigscreenDbusAdapterInterface = new BigscreenDbusAdapterInterface(this);
+    connect(m_bigscreenDbusAdapterInterface, &BigscreenDbusAdapterInterface::autoResolutionReceivedChange, this, &EnvReader::kScreenConfChange);
 }
 
 QString EnvReader::getValue(const QString &name)
@@ -21,14 +22,4 @@ QString EnvReader::getValue(const QString &name)
 void EnvReader::kScreenConfChange()
 {
     emit configChangeReceived();
-}
-
-void EnvReader::createInterface()
-{
-    if(QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.KScreen"))){
-        bool connection = QDBusConnection::sessionBus().connect("org.kde.KScreen", "/backend", "org.kde.kscreen.Backend", "configChanged", this, SLOT(kScreenConfChange()));
-        if (!connection){
-            qWarning() << "Connection Failed";
-        }
-    }
 }

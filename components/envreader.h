@@ -9,7 +9,7 @@
 
 #include <QObject>
 #include <QVariant>
-#include <QDBusConnection>
+#include "bigscreenplugin_dbus.h"
 
 class EnvReader : public QObject
 {
@@ -20,11 +20,13 @@ public:
 
 public Q_SLOTS:
         QString getValue(const QString &name);
-        void createInterface();
         void kScreenConfChange();
 
 Q_SIGNALS:
         void configChangeReceived();
+
+private:
+        BigscreenDbusAdapterInterface* m_bigscreenDbusAdapterInterface;
 };
 
 #endif // ENVREADER_H

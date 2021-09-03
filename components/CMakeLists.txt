@@ -3,6 +3,7 @@ project(bigscreen)
 set(bigscreen_SRCS
     envreader.cpp
     bigscreenplugin.cpp
+    bigscreenplugin_dbus.cpp
     )
 
 add_library(bigscreenplugin SHARED ${bigscreen_SRCS})

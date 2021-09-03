@@ -15,21 +15,22 @@ Rectangle {
     color: "black"
     anchors.fill: parent
     property int stage
+    property var envReader: BigScreen.EnvReader
 
     // Workaround For Devices Where We Don't Support 4K Scaling
-    // Using PLASMA_USE_QT_SCALING with QT_SCREEN_SCALE_FACTORS causes a bug where screen geometry does not change when applying 1980x1800 resolution via Kscreen-Doctor
+    // Using PLASMA_USE_QT_SCALING with QT_SCREEN_SCALE_FACTORS causes a bug where parent screen geometry does not change when applying 1980x1800 resolution via Kscreen-Doctor
     function disableScale(){
-            if(envReader.getValue("PLASMA_USE_QT_SCALING") == "true" && envReader.getValue("BIGSCREEN_HARDWARE_PLATFORM") == "RPI4" && root.width > 1920) {
-                content.width = root.width / 2
-                content.height = root.height / 2
-                content.visible = true
-            }
+        if(envReader.getValue("PLASMA_USE_QT_SCALING") == "true" && envReader.getValue("BIGSCREEN_HARDWARE_PLATFORM") == "RPI4" && root.width > 1920) {
+            content.width = root.width / 2
+            content.height = root.height / 2
+            content.visible = true
+        }
     }
 
-    BigScreen.EnvReader {
-        id: envReader
+    Connections {
+        target: BigScreen.EnvReader
         onConfigChangeReceived: {
-                disableScale();
+            disableScale();
         }
     }
 
@@ -38,21 +39,10 @@ Rectangle {
             introAnimation.running = true;
             envReader.createInterface();
         } else if (stage == 5) {
-            // Cannot Determine When The AutoResolution Script Will KickIn & Corrupt Display for 4K Resolutions
-            // Disable Content Visibility Till Workaround
-            if(envReader.getValue("PLASMA_USE_QT_SCALING") == "true" && envReader.getValue("BIGSCREEN_HARDWARE_PLATFORM") == "RPI4" && root.width > 1920){
-              content.visible = false;
-            }
-
             introAnimation.target = busyIndicator;
             introAnimation.from = 1;
             introAnimation.to = 0;
             introAnimation.running = true;
-        } else if (stage == 6) {
-            // Same As Above
-            if(envReader.getValue("PLASMA_USE_QT_SCALING") == "true" && envReader.getValue("BIGSCREEN_HARDWARE_PLATFORM") == "RPI4" && root.width > 1920){
-               content.visible = false;
-            }
         }
     }
 
@@ -68,18 +58,6 @@ Rectangle {
             property int gridUnit: boundingRect.height
             property int largeSpacing: units.gridUnit
             property int smallSpacing: Math.max(2, gridUnit/4)
-        }
-
-        Text {
-           id: debuginfo
-           width: parent.width
-           height: parent.height
-           anchors.top: parent.top
-           anchors.left: parent.left
-           font.pixelSize: 24
-           color: "white"
-           wrapMode: Text.WordWrap
-           text: " content.unit : " + units.gridUnit + " content.width : " + content.width + " content.height : " + content.height + " root.width : " + root.width + " root.height : " + root.height + " Screen.width : " + Screen.width + " Screen.height : " + Screen.height + " welcomeMessage.x : " + welcomeMessage.x + " weclomeMessage.y : " + welcomeMessage.y + " root.Stage : " + root.stage
         }
 
         ColumnLayout {
