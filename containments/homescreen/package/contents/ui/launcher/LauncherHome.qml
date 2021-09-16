@@ -69,7 +69,7 @@ FocusScope {
             }
 
             navigationUp: shutdownIndicator
-            navigationDown: voiceAppsView
+            navigationDown: voiceAppsView.visible ? voiceAppsView : appsView
         }
 
         BigScreen.TileRepeater {
@@ -84,6 +84,7 @@ FocusScope {
                 }
             }
 
+            visible: count > 0
             currentIndex: 0
             focus: false
             onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = voiceAppsView
@@ -92,7 +93,7 @@ FocusScope {
                 
             }
 
-            navigationUp: recentView
+            navigationUp: recentView.visible ? recentView : shutdownIndicator
             navigationDown: appsView
         }
 
@@ -117,7 +118,7 @@ FocusScope {
                 comment: model.ApplicationCommentRole
             }
             
-            navigationUp: voiceAppsView
+            navigationUp: voiceAppsView.visible ? voiceAppsView : recentView.visible ? recentView : shutdownIndicator
             navigationDown: gamesView
         }
         
@@ -195,8 +196,10 @@ FocusScope {
         Component.onCompleted: {
             if (recentView.visible) {
                 recentView.forceActiveFocus();
-            } else {
+            } else if(voiceAppsView.visible) {
                 voiceAppsView.forceActiveFocus();
+            } else {
+                appsView.forceActiveFocus();
             }
         }
 
