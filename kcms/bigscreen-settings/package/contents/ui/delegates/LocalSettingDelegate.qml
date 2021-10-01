@@ -17,11 +17,21 @@ import QtGraphicalEffects 1.14
 
 BigScreen.AbstractDelegate {
     id: delegate
-    property alias isChecked: radioItem.checked
-    property alias name: radioItem.text
+    property bool isChecked
+    property alias name: textName.text
     property string customType
 
     highlighted: activeFocus
+
+    onIsCheckedChanged: {
+        setOption(customType, isChecked)
+    }
+
+    onFocusChanged: {
+        if(focus){
+            delegate.forceActiveFocus()
+        }
+    }
 
     Behavior on implicitWidth {
         NumberAnimation {
@@ -30,30 +40,29 @@ BigScreen.AbstractDelegate {
         }
     }
 
-    contentItem: Item {
-        id: localItemLayout
+    contentItem: RowLayout {
+        id: localItem
 
-        RadioDelegate {
-            id: radioItem
+        PlasmaComponents.Label {
+            id: textName
+            elide: Text.ElideRight
+            wrapMode: Text.WordWrap
+            horizontalAlignment: Text.AlignHCenter
+            maximumLineCount: 2
+            color: Kirigami.Theme.textColor
+            textFormat: Text.PlainText
+        }
 
-            anchors {
-                fill: parent
-                leftMargin: Kirigami.Units.smallSpacing
-            }
-
-            onCheckedChanged: {
-                setOption(customType, checked)
-            }
+        Kirigami.Icon {
+            Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
+            Layout.preferredHeight: width
+            enabled: isChecked
+            opacity: enabled ? 1 : 0.25
+            source: Qt.resolvedUrl("../images/green-tick-thick.svg")
         }
     }
 
-    Keys.onReturnPressed: clicked()
-
     onClicked: {
-        if(radioItem.checked){
-            radioItem.checked = false;
-        } else {
-            radioItem.checked = true;
-        }
+        isChecked = !isChecked ? 1 : 0
     }
 }
