@@ -1,0 +1,27 @@
+# SPDX-FileCopyrightText: None
+# SPDX-License-Identifier: CC0-1.0
+
+Dependencies:
+- 'on': ['@all']
+  'require':
+    'frameworks/kactivities': '@latest'
+    'frameworks/kactivities-stats': '@latest'
+    'frameworks/kauth': '@latest'
+    'frameworks/kcmutils': '@latest'
+    'frameworks/kcodecs': '@latest'
+    'frameworks/kcompletion': '@latest'
+    'frameworks/kconfig': '@latest'
+    'frameworks/kconfigwidgets': '@latest'
+    'frameworks/kcoreaddons': '@latest'
+    'frameworks/kdeclarative': '@latest'
+    'frameworks/ki18n': '@latest'
+    'frameworks/kio': '@latest'
+    'frameworks/kjobwidgets': '@latest'
+    'frameworks/knotifications': '@latest'
+    'frameworks/kpackage': '@latest'
+    'frameworks/kservice': '@latest'
+    'frameworks/kwidgetsaddons': '@latest'
+    'frameworks/kwindowsystem': '@latest'
+    'frameworks/plasma-framework': '@latest'
+    'frameworks/solid': '@latest'
+    'plasma/plasma-workspace': '@same'
