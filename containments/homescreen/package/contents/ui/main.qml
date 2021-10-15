@@ -24,7 +24,23 @@ Item {
     Layout.minimumWidth: Screen.desktopAvailableWidth
     Layout.minimumHeight: Screen.desktopAvailableHeight * 0.6
 
+    property bool mycroftIntegration: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegraionActive() ? 1 : 0
+
     property Item wallpaper
+
+    Connections {
+        target: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface
+        onEnableMycroftIntegraionChanged: {
+            mycroftIntegration = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegraionActive()
+            if(mycroftIntegration) {
+                mycroftIndicatorLoader.active = true
+                mycroftWindowLoader.active = true
+            } else {
+                mycroftIndicatorLoader.item.disconnectclose()
+                mycroftWindowLoader.item.disconnectclose()
+            }
+        }
+    }
 
     Containment.onAppletAdded: {
         addApplet(applet, x, y);
@@ -67,7 +83,8 @@ Item {
 
     // Loader to make Mycroft completely optional
     Loader {
-        source: Qt.resolvedUrl("MycroftWindow.qml") ? Qt.resolvedUrl("MycroftWindow.qml") : null
+        id: mycroftWindowLoader
+        source: mycroftIntegration && Qt.resolvedUrl("MycroftWindow.qml") ? Qt.resolvedUrl("MycroftWindow.qml") : null
     }
 
     ConfigWindow {
@@ -155,8 +172,9 @@ Item {
 
             // Loader to make Mycroft completely optional
             Loader {
+                id: mycroftIndicatorLoader
                 Layout.fillHeight: true
-                source: Qt.resolvedUrl("MycroftIndicator.qml") ? Qt.resolvedUrl("MycroftIndicator.qml") : null
+                source: mycroftIntegration && Qt.resolvedUrl("MycroftIndicator.qml") ? Qt.resolvedUrl("MycroftIndicator.qml") : null
             }
 
             Indicators.KdeConnect {

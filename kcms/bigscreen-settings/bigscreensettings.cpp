@@ -104,6 +104,14 @@ bool BigscreenSettings::useExpandingTiles() const
     return responseArg.at(0).toBool();
 }
 
+bool BigscreenSettings::mycroftIntegrationActive() const
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "mycroftIntegraionActive");
+    QDBusMessage response = QDBusConnection::sessionBus().call(msg);
+    QList<QVariant> responseArg = response.arguments();
+    return responseArg.at(0).toBool();
+}
+
 void BigscreenSettings::setUseColoredTiles(bool useColoredTiles)
 {
     QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "useColoredTiles");
@@ -115,6 +123,13 @@ void BigscreenSettings::setUseExpandingTiles(bool useExpandingTiles)
 {
     QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "useExpandableTiles");
     msg << useExpandingTiles;
+    QDBusConnection::sessionBus().send(msg);
+}
+
+void BigscreenSettings::setMycroftIntegrationActive(bool mycroftIntegrationActive)
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "enableMycroftIntegration");
+    msg << mycroftIntegrationActive;
     QDBusConnection::sessionBus().send(msg);
 }
 

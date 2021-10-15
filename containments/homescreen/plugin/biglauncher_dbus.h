@@ -37,16 +37,25 @@ class BigLauncherDbusAdapterInterface : public QDBusAbstractAdaptor
                 "    <signal name=\"useExpandableTilesChanged\">\n"
                 "      <arg direction=\"out\" type=\"b\" name=\"msgUseExpandableTiles\"/>\n"
                 "    </signal>\n"
+                "    <signal name=\"enableMycroftIntegraionChanged\">\n"
+                "      <arg direction=\"out\" type=\"b\" name=\"msgEnableMycroftIntegraion\"/>\n"
+                "    </signal>\n"
                 "    <method name=\"useColoredTiles\">\n"
                 "      <arg direction=\"in\" type=\"b\" name=\"coloredTiles\"/>\n"
                 "    </method>\n"
                 "    <method name=\"useExpandableTiles\">\n"
                 "      <arg direction=\"in\" type=\"b\" name=\"expandableTiles\"/>\n"
                 "    </method>\n"
+                "    <method name=\"enableMycroftIntegration\">\n"
+                "      <arg direction=\"in\" type=\"b\" name=\"mycroftIntegration\"/>\n"
+                "    </method>\n"
                 "    <method name=\"coloredTilesActive\">\n"
                 "      <arg direction=\"out\" type=\"b\"/>\n"
                 "    </method>\n"
                 "    <method name=\"expandableTilesActive\">\n"
+                "      <arg direction=\"out\" type=\"b\"/>\n"
+                "    </method>\n"
+                "    <method name=\"mycroftIntegraionActive\">\n"
                 "      <arg direction=\"out\" type=\"b\"/>\n"
                 "    </method>\n"
                 "  </interface>\n"
@@ -60,8 +69,10 @@ public: // PROPERTIES
 public Q_SLOTS: // METHODS
     void useColoredTiles(const bool &coloredTiles);
     void useExpandableTiles(const bool &expandableTiles);
+    void enableMycroftIntegration(const bool &mycroftIntegration);
     bool coloredTilesActive();
     bool expandableTilesActive();
+    bool mycroftIntegraionActive();
 
     void setColoredTilesActive(const bool &coloredTilesActive);
     void setExpandableTilesActive(const bool &expandableTilesActive);
@@ -69,8 +80,10 @@ public Q_SLOTS: // METHODS
 Q_SIGNALS: // SIGNALS
     void useColoredTilesChanged(const bool &msgUseColoredTiles);
     void useExpandableTilesChanged(const bool &msgUseExpandableTiles);
+    void enableMycroftIntegraionChanged(const bool &msgEnableMycroftIntegraion);
     void coloredTilesActiveRequested();
     void expandableTilesActiveRequested();
+    void enableMycroftIntegrationRequested();
 
 private:
     bool m_useColoredTiles;

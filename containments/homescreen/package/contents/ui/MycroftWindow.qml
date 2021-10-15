@@ -21,6 +21,12 @@ Window {
 
     Component.onCompleted: Mycroft.MycroftController.start()
 
+    function disconnectclose() {
+        Mycroft.MycroftController.disconnectSocket();
+        window.close();
+        mycroftWindowLoader.active = false;
+    }
+
     Timer {
         interval: 10000
         running: Mycroft.MycroftController.status != Mycroft.MycroftController.Open

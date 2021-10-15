@@ -13,6 +13,13 @@ import org.kde.kirigami 2.12 as Kirigami
 import Mycroft 1.0 as Mycroft
 
 RowLayout {
+    id: mycroftStatusIndicator
+
+    function disconnectclose() {
+        Mycroft.MycroftController.disconnectSocket();
+        mycroftIndicatorLoader.active = false;
+    }
+
     Kirigami.Heading {
         id: inputQuery
         level: 3

@@ -9,6 +9,7 @@ import QtQuick 2.14
 import QtQuick.Window 2.14
 import QtQuick.Layouts 1.14
 import QtQml.Models 2.14
+import org.kde.plasma.plasmoid 2.0
 import QtQuick.Controls 2.14 as Controls
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.kdeconnect 1.0 as KDEConnect
@@ -18,6 +19,19 @@ AbstractIndicator {
     id: connectionIcon
     icon.name: "kdeconnect"
     property var window
+    property bool mycroftIntegration: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegraionActive() ? 1 : 0
+
+    Connections {
+        target: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface
+        onEnableMycroftIntegraionChanged: {
+            mycroftIntegration = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegraionActive()
+            if(mycroftIntegration) {
+                mycroftLoader.active = true
+            } else {
+                mycroftLoader.item.disconnectclose()
+            }
+        }
+    }
 
     KDEConnect.DevicesModel {
         id: allDevicesModel

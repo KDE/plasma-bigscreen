@@ -9,6 +9,11 @@ import QtQuick 2.14
 import Mycroft 1.0 as Mycroft
 
 Item {
+    function disconnectclose() {
+        Mycroft.MycroftController.disconnectSocket();
+        mycroftLoader.active = false;
+    }
+
     function sendText(utterance) {
          Mycroft.MycroftController.sendText(utterance)
     }

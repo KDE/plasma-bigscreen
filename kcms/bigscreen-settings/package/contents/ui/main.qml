@@ -41,6 +41,9 @@ KCM.SimpleKCM {
         if(type == "exapandableTile"){
             kcm.setUseExpandingTiles(result);
         }
+        if(type == "mycroftIntegration"){
+            kcm.setMycroftIntegrationActive(result);
+        }
     }
 
     contentItem: FocusScope {
@@ -82,7 +85,7 @@ KCM.SimpleKCM {
                 implicitHeight: Kirigami.Units.gridUnit * 2
                 width: deviceTimeSettingsArea.opened ? (root.width + Kirigami.Units.largeSpacing) - deviceTimeSettingsArea.width : root.width + Kirigami.Units.largeSpacing
                 KeyNavigation.up: desktopThemeView
-                KeyNavigation.down: coloredTileDelegate
+                KeyNavigation.down: mycroftIntegrationDelegate
 
                 background: Rectangle {
                     color: kcmcloseButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
@@ -129,6 +132,17 @@ KCM.SimpleKCM {
 
             RowLayout {
                 Delegates.LocalSettingDelegate {
+                    id: mycroftIntegrationDelegate
+                    implicitWidth: desktopThemeView.view.cellWidth * 2
+                    implicitHeight: desktopThemeView.view.cellHeight
+                    isChecked: kcm.mycroftIntegrationActive() ? 1 : 0
+                    name: "Mycroft Integration"
+                    customType: "mycroftIntegration"
+                    KeyNavigation.up: kcmcloseButton
+                    KeyNavigation.right: coloredTileDelegate
+                    KeyNavigation.down: desktopThemeView
+                }
+                Delegates.LocalSettingDelegate {
                     id: coloredTileDelegate
                     implicitWidth: desktopThemeView.view.cellWidth * 2
                     implicitHeight: desktopThemeView.view.cellHeight
@@ -136,6 +150,7 @@ KCM.SimpleKCM {
                     name: "Colored Tiles"
                     customType: "coloredTile"
                     KeyNavigation.up: kcmcloseButton
+                    KeyNavigation.left: mycroftIntegrationDelegate
                     KeyNavigation.right: expandableTileDelegate
                     KeyNavigation.down: desktopThemeView
                 }
@@ -176,7 +191,7 @@ KCM.SimpleKCM {
                 model: kcm.themeListModel
                 view.cacheBuffer: parent.width * 2
                 title: "General Appearance"
-                navigationUp: expandableTileDelegate
+                navigationUp: mycroftIntegrationDelegate
                 navigationDown: kcmcloseButton
                 enabled: !deviceTimeSettingsArea.opened
                 delegate: Delegates.ThemeDelegate {

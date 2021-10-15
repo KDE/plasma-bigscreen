@@ -49,6 +49,9 @@ public Q_SLOTS:
     bool useExpandingTiles() const;
     void setUseExpandingTiles(bool useExpandingTiles);
 
+    bool mycroftIntegrationActive() const;
+    void setMycroftIntegrationActive(bool mycroftIntegrationActive);
+
     void saveTimeZone(const QString &newtimezone);
 
     bool useNtp() const;

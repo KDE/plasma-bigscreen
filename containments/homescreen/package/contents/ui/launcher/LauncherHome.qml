@@ -13,7 +13,6 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.mycroft.bigscreen 1.0 as Launcher
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.kitemmodels 1.0 as KItemModels
 
@@ -23,6 +22,21 @@ import org.kde.private.biglauncher 1.0
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
 FocusScope {
+    property bool mycroftIntegration: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegraionActive() ? 1 : 0
+
+    Connections {
+        target: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface
+
+        onEnableMycroftIntegraionChanged: {
+            mycroftIntegration = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegraionActive()
+            if(mycroftIntegration){
+                voiceAppsView.visible = voiceAppsView.count > 0 ? 1 : 0
+            } else {
+                voiceAppsView.visible = false
+            }
+        }
+    }
+
     anchors {
         fill: parent
         leftMargin: Kirigami.Units.largeSpacing * 4
@@ -84,7 +98,7 @@ FocusScope {
                 }
             }
 
-            visible: count > 0
+            visible: mycroftIntegration && count > 0
             currentIndex: 0
             focus: false
             onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = voiceAppsView
@@ -156,37 +170,44 @@ FocusScope {
                     text: i18n("Audio")
                     icon.name: "audio-volume-high"
                     onTriggered: plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_audiodevice")
+                    property bool active: true
                 },
                 Controls.Action {
                     text: i18n("Bigscreen Settings")
                     icon.name: "view-grid-symbolic"
                     onTriggered: plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_bigscreen_settings")
+                    property bool active: true
                 },
                 Controls.Action {
                     text: i18n("Mycroft Skill Installer")
                     icon.name: "download"
                     onTriggered: plasmoid.nativeInterface.executeCommand("MycroftSkillInstaller")
+                    property bool active: mycroftIntegration
                 },
                 Controls.Action {
                     text: i18n("Wallpaper")
                     icon.name: "preferences-desktop-wallpaper"
                     onTriggered: plasmoid.action("configure").trigger();
+                    property bool active: true
                 },
                 Controls.Action {
                     text: i18n("Wireless")
                     icon.name: "network-wireless-connected-100"
                     onTriggered: plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_wifi")
+                    property bool active: true
                 },
                 Controls.Action {
                     text: i18n("KDE Connect")
                     icon.name: "kdeconnect"
                     onTriggered: plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_kdeconnect")
+                    property bool active: true
                 }
             ]
 
             onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = settingsView
             delegate: Delegates.SettingDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
+                visible: model.active
             }
             
             navigationUp: gamesView

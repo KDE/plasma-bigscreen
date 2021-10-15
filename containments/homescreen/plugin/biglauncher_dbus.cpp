@@ -4,6 +4,7 @@
 */
 
 #include "biglauncher_dbus.h"
+#include "configuration.h"
 #include <QByteArray>
 #include <QList>
 #include <QMap>
@@ -42,6 +43,12 @@ void BigLauncherDbusAdapterInterface::useExpandableTiles(const bool &expandableT
     emit useExpandableTilesChanged(expandableTiles);
 }
 
+void BigLauncherDbusAdapterInterface::enableMycroftIntegration(const bool &mycroftIntegraion)
+{
+    Configuration::self().setMycroftEnabled(mycroftIntegraion);
+    emit enableMycroftIntegraionChanged(mycroftIntegraion);
+}
+
 bool BigLauncherDbusAdapterInterface::coloredTilesActive()
 {
     if(m_useColoredTiles) {
@@ -58,6 +65,11 @@ bool BigLauncherDbusAdapterInterface::expandableTilesActive()
     } else {
         return 0;
     }
+}
+
+bool BigLauncherDbusAdapterInterface::mycroftIntegraionActive()
+{
+    return Configuration::self().mycroftEnabled();
 }
 
 void BigLauncherDbusAdapterInterface::setColoredTilesActive(const bool &coloredTilesActive)
