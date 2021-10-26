@@ -179,12 +179,6 @@ FocusScope {
                     property bool active: true
                 },
                 Controls.Action {
-                    text: i18n("Mycroft Skill Installer")
-                    icon.name: "download"
-                    onTriggered: plasmoid.nativeInterface.executeCommand("MycroftSkillInstaller")
-                    property bool active: mycroftIntegration
-                },
-                Controls.Action {
                     text: i18n("Wallpaper")
                     icon.name: "preferences-desktop-wallpaper"
                     onTriggered: plasmoid.action("configure").trigger();
@@ -201,6 +195,12 @@ FocusScope {
                     icon.name: "kdeconnect"
                     onTriggered: plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_kdeconnect")
                     property bool active: true
+                },
+                Controls.Action {
+                    text: i18n("Mycroft Skill Installer")
+                    icon.name: "download"
+                    onTriggered: plasmoid.nativeInterface.executeCommand("MycroftSkillInstaller")
+                    property bool active: mycroftIntegration
                 }
             ]
 
@@ -208,6 +208,7 @@ FocusScope {
             delegate: Delegates.SettingDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
                 visible: model.active
+                enabled: model.active
             }
             
             navigationUp: gamesView
