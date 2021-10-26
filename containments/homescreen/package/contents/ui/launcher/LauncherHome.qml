@@ -158,51 +158,16 @@ FocusScope {
             navigationUp: appsView
             navigationDown: settingsView
         }
+
+        SettingActions {
+            id: settingActions
+        }
         
         BigScreen.TileRepeater {
             id: settingsView
             title: i18n("Settings")
-            model: actions
+            model: mycroftIntegration ? settingActions.actionWithIntegration : settingActions.actionWithoutIntegration
             compactMode: plasmoid.configuration.expandingTiles
-
-            property list<Controls.Action> actions: [
-                Controls.Action {
-                    text: i18n("Audio")
-                    icon.name: "audio-volume-high"
-                    onTriggered: plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_audiodevice")
-                    property bool active: true
-                },
-                Controls.Action {
-                    text: i18n("Bigscreen Settings")
-                    icon.name: "view-grid-symbolic"
-                    onTriggered: plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_bigscreen_settings")
-                    property bool active: true
-                },
-                Controls.Action {
-                    text: i18n("Wallpaper")
-                    icon.name: "preferences-desktop-wallpaper"
-                    onTriggered: plasmoid.action("configure").trigger();
-                    property bool active: true
-                },
-                Controls.Action {
-                    text: i18n("Wireless")
-                    icon.name: "network-wireless-connected-100"
-                    onTriggered: plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_wifi")
-                    property bool active: true
-                },
-                Controls.Action {
-                    text: i18n("KDE Connect")
-                    icon.name: "kdeconnect"
-                    onTriggered: plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_kdeconnect")
-                    property bool active: true
-                },
-                Controls.Action {
-                    text: i18n("Mycroft Skill Installer")
-                    icon.name: "download"
-                    onTriggered: plasmoid.nativeInterface.executeCommand("MycroftSkillInstaller")
-                    property bool active: mycroftIntegration
-                }
-            ]
 
             onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = settingsView
             delegate: Delegates.SettingDelegate {
