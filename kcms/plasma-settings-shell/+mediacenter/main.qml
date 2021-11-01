@@ -27,7 +27,7 @@ Kirigami.ApplicationWindow {
 
     Component.onCompleted: {
         if (SettingsApp.startModule.length > 0) {
-            module.name = SettingsApp.startModule
+            module.path = SettingsApp.startModule
             var container = kcmContainer.createObject(pageStack, {"kcm": module.kcm, "internalPage": module.kcm.mainUi});
             pageStack.push(container);
         }
@@ -40,7 +40,7 @@ Kirigami.ApplicationWindow {
     Connections {
         target: SettingsApp
         onModuleRequested: {
-            module.name = moduleName
+            module.path = path
 
             while (pageStack.depth > 1) {
                 pageStack.pop()
