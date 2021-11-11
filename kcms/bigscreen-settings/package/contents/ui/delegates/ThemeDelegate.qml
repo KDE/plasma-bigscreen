@@ -70,7 +70,7 @@ BigScreen.AbstractDelegate {
             anchors.bottomMargin: -Kirigami.Units.smallSpacing
             anchors.right: parent.right
             anchors.rightMargin: -Kirigami.Units.smallSpacing
-            width: Kirigami.Units.iconSizes.smallMedium
+            width: PlasmaCore.Units.iconSizes.smallMedium
             height: width
             source: Qt.resolvedUrl("../images/green-tick-thick.svg")
             visible:  kcm.themeName === model.packageNameRole

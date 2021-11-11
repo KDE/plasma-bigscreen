@@ -51,7 +51,7 @@ Window {
                 PlasmaCore.IconItem {
                     id: icon
                     colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
-                    Layout.preferredWidth: units.iconSizes.enormous
+                    Layout.preferredWidth: PlasmaCore.Units.iconSizes.enormous
                     Layout.preferredHeight: Layout.preferredWidth
                     Layout.alignment: Qt.AlignCenter
                 }

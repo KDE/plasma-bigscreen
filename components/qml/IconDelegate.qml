@@ -48,7 +48,7 @@ AbstractDelegate {
             id: iconItem
             //Icon should cover text during animation
             z: 1
-            width: Kirigami.Units.iconSizes.huge
+            width: PlasmaCore.Units.iconSizes.huge //Kirigami.Units.iconSizes.huge
             height: width
             source: delegate.iconImage || delegate.icon.name || delegate.icon.source
         }
@@ -82,7 +82,7 @@ AbstractDelegate {
                 Layout.fillWidth: true
                 wrapMode: Text.WordWrap
                 horizontalAlignment: Text.AlignHCenter
-                maximumLineCount: 2
+                maximumLineCount: delegate.isCurrent ? (label.lineCount == 2 ? 1 : 2) : 1
                 elide: Text.ElideRight
                 color: imagePalette.textColor
                 opacity: 0

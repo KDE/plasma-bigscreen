@@ -9,7 +9,7 @@ import QtQuick 2.14
 import QtQuick.Layouts 1.14
 import QtQuick.Controls 2.14 as Controls
 import org.kde.kirigami 2.12 as Kirigami
-
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.settings 0.1
 
 Kirigami.Page {
@@ -43,7 +43,7 @@ Kirigami.Page {
                         Layout.alignment: Qt.AlignCenter
                         selected: delegateItem.down
                         Layout.maximumWidth: Layout.preferredWidth
-                        Layout.preferredWidth: listView.currentIndex == index ? Kirigami.Units.iconSizes.enormous : Kirigami.Units.iconSizes.huge
+                        Layout.preferredWidth: listView.currentIndex == index ? PlasmaCore.Units.iconSizes.enormous : PlasmaCore.Units.iconSizes.huge
                         Layout.preferredHeight: Layout.preferredWidth
                         Behavior on Layout.preferredWidth {
                             NumberAnimation {

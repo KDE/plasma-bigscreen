@@ -10,6 +10,7 @@ import QtQuick.Window 2.14
 import QtQuick.Layouts 1.14
 import QtQuick.Controls 2.14 as Controls
 import org.kde.kirigami 2.12 as Kirigami
+import org.kde.plasma.core 2.0 as PlasmaCore
 import Mycroft 1.0 as Mycroft
 
 Window {
@@ -121,8 +122,8 @@ Window {
             id: closeButton
             anchors.top: parent.top
             anchors.left: parent.left
-            width: Kirigami.Units.iconSizes.huge
-            height: Kirigami.Units.iconSizes.huge
+            width: PlasmaCore.Units.iconSizes.huge
+            height: PlasmaCore.Units.iconSizes.huge
             opacity: focus ? 1 : 0
             color: focus ? Kirigami.Theme.highlightColor :"transparent"
             
@@ -138,8 +139,8 @@ Window {
             
             Kirigami.Icon {
                 anchors.centerIn: parent
-                width: Kirigami.Units.iconSizes.large
-                height: Kirigami.Units.iconSizes.large
+                width: PlasmaCore.Units.iconSizes.large
+                height: PlasmaCore.Units.iconSizes.large
                 source: "tab-close"
             }
             

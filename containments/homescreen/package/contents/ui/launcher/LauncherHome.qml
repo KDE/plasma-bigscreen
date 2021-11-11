@@ -108,13 +108,15 @@ FocusScope {
             }
 
             navigationUp: recentView.visible ? recentView : shutdownIndicator
-            navigationDown: appsView
+            navigationDown: appsView.visible ? appsView : (gamesView.visible ? gamesView : settingsView)
         }
 
         BigScreen.TileRepeater {
             id: appsView
             title: i18n("Applications")
             compactMode: plasmoid.configuration.expandingTiles
+            visible: count > 0
+            enabled: count > 0
             model: KItemModels.KSortFilterProxyModel {
                 sourceModel: plasmoid.nativeInterface.applicationListModel
                 filterRole: "ApplicationCategoriesRole"
@@ -133,13 +135,15 @@ FocusScope {
             }
             
             navigationUp: voiceAppsView.visible ? voiceAppsView : recentView.visible ? recentView : shutdownIndicator
-            navigationDown: gamesView
+            navigationDown: gamesView.visible ? gamesView : settingsView
         }
         
         BigScreen.TileRepeater {
             id: gamesView
             title: i18n("Games")
             compactMode: plasmoid.configuration.expandingTiles
+            visible: count > 0
+            enabled: count > 0
             model: KItemModels.KSortFilterProxyModel {
                 sourceModel: plasmoid.nativeInterface.applicationListModel
                 filterRole: "ApplicationCategoriesRole"
@@ -155,7 +159,7 @@ FocusScope {
                 property var modelData: typeof model !== "undefined" ? model : null
             }
             
-            navigationUp: appsView
+            navigationUp: appsView.visible ? appsView : (voiceAppsView.visible ? voiceAppsView : (recentView.visible ? recentView : shutdownIndicator))
             navigationDown: settingsView
         }
 
@@ -176,7 +180,7 @@ FocusScope {
                 enabled: model.active
             }
             
-            navigationUp: gamesView
+            navigationUp: gamesView.visible ? gamesView : (appsView.visible ? appsView : (voiceAppsView.visible ? voiceAppsView : (recentView.visible ? recentView : shutdownIndicator)))
             navigationDown: null
         }
 

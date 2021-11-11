@@ -54,7 +54,7 @@ BigScreen.AbstractDelegate {
         }
 
         Kirigami.Icon {
-            Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
+            Layout.preferredWidth: PlasmaCore.Units.iconSizes.smallMedium
             Layout.preferredHeight: width
             enabled: isChecked
             opacity: enabled ? 1 : 0.25

@@ -9,6 +9,7 @@ import QtQuick 2.14
 import QtQuick.Window 2.14
 import QtQuick.Layouts 1.14
 import QtQuick.Controls 2.14 as Controls
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.kdeconnect 1.0 as KDEConnect
@@ -60,8 +61,8 @@ Window {
                         RowLayout {
                             anchors.centerIn: parent
                             Kirigami.Icon {
-                                Layout.preferredWidth: Kirigami.Units.iconSizes.small
-                                Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                                Layout.preferredWidth: PlasmaCore.Units.iconSizes.small
+                                Layout.preferredHeight: PlasmaCore.Units.iconSizes.small
                                 source: "dialog-ok"
                             }
                             Controls.Label {
@@ -96,8 +97,8 @@ Window {
                         RowLayout {
                             anchors.centerIn: parent
                             Kirigami.Icon {
-                                Layout.preferredWidth: Kirigami.Units.iconSizes.small
-                                Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                                Layout.preferredWidth: PlasmaCore.Units.iconSizes.small
+                                Layout.preferredHeight: PlasmaCore.Units.iconSizes.small
                                 source: "dialog-cancel"
                             }
                             Controls.Label {

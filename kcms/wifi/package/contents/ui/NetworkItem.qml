@@ -41,8 +41,8 @@ Kirigami.AbstractListItem {
                 Kirigami.Icon {
                     id: connectionSvgIcon
                     Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
-                    Layout.preferredHeight: units.iconSizes.medium
-                    Layout.preferredWidth: units.iconSizes.medium
+                    Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
+                    Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
                     color: Kirigami.Theme.textColor
                     //elementId: model.ConnectionIcon
                     source: itemSignalIcon(model.Signal)

@@ -65,7 +65,7 @@ ColumnLayout {
 
         Kirigami.Icon {
             Layout.alignment: Qt.AlignHCenter
-            Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+            Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
             Layout.preferredWidth: Layout.preferredHeight
             source: "audio-card"
         }

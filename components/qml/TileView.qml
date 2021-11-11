@@ -71,7 +71,7 @@ FocusScope {
         cacheBuffer: width
         implicitHeight: cellHeight
         rightMargin: width-cellWidth
-        property int cellWidth: (Kirigami.Units.iconSizes.huge + Kirigami.Units.largeSpacing*4)
+        property int cellWidth: (PlasmaCore.Units.iconSizes.huge + Kirigami.Units.largeSpacing*4)
         property int cellHeight: cellWidth + units.gridUnit * 3
         preferredHighlightBegin: 0
         preferredHighlightEnd: cellWidth

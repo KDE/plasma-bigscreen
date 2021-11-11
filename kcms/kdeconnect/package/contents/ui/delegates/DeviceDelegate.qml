@@ -43,7 +43,7 @@ BigScreen.AbstractDelegate {
         
         Item {
             id: deviceSvgIcon
-            width: Kirigami.Units.iconSizes.huge
+            width: PlasmaCore.Units.iconSizes.huge
             height: width
             y: deviceItemLayout.height / 2 - deviceSvgIcon.height / 2
             

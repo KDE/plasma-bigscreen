@@ -8,6 +8,7 @@ import QtQuick 2.14
 import QtQuick.Layouts 1.14
 import QtQuick.Window 2.14
 import QtQuick.Controls 2.14 as Controls
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
@@ -73,7 +74,7 @@ FocusScope {
             topMargin: Kirigami.Units.largeSpacing*2
             leftMargin: -Kirigami.Units.largeSpacing
         }
-        readonly property int cellWidth: (Kirigami.Units.iconSizes.huge + Kirigami.Units.largeSpacing*4) * (root.compactMode ? 1 : 2)
+        readonly property int cellWidth: (PlasmaCore.Units.iconSizes.huge + Kirigami.Units.largeSpacing*4) * (root.compactMode ? 1 : 2)
         property int cellHeight: root.compactMode ? cellWidth + units.gridUnit * 3 : cellWidth / 1.6
         property int currentIndex: 0
         property alias count: repeater.count

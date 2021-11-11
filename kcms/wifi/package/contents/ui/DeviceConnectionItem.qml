@@ -164,8 +164,8 @@ Item {
                     RowLayout {
                         anchors.centerIn: parent
                         PlasmaCore.IconItem {
-                            Layout.preferredWidth: Kirigami.Units.iconSizes.medium
-                            Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+                            Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
+                            Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
                             source: Qt.resolvedUrl("images/green-tick-thick.svg")
                             visible: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0
                         }
