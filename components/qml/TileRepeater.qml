@@ -27,7 +27,7 @@ FocusScope {
     implicitHeight: view.implicitHeight + header.implicitHeight
 
     //TODO:dynamic
-    property int columns: Math.max(3, Math.floor(width / (units.gridUnit * 8)))
+    property int columns: Math.max(3.5, ((width/0.6250) / (25*25)))
 
     property alias cellWidth: view.cellWidth
     property alias cellHeight: view.cellHeight
@@ -74,7 +74,9 @@ FocusScope {
             topMargin: Kirigami.Units.largeSpacing*2
             leftMargin: -Kirigami.Units.largeSpacing
         }
-        readonly property int cellWidth: (PlasmaCore.Units.iconSizes.huge + Kirigami.Units.largeSpacing*4) * (root.compactMode ? 1 : 2)
+        readonly property int cellWidth: root.width / columns
+
+        //(PlasmaCore.Units.iconSizes.huge + Kirigami.Units.largeSpacing*10) * (root.compactMode ? 1 : 2)
         property int cellHeight: root.compactMode ? cellWidth + units.gridUnit * 3 : cellWidth / 1.6
         property int currentIndex: 0
         property alias count: repeater.count

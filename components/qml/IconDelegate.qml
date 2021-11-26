@@ -8,7 +8,7 @@
 import QtQuick 2.14
 import QtQuick.Layouts 1.14
 import QtGraphicalEffects 1.14
-
+import QtQuick.Controls 2.14
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami 2.13 as Kirigami
@@ -24,6 +24,7 @@ AbstractDelegate {
     property string comment
     property bool useIconColors: true
     property bool compactMode: false
+    property bool hasComment: commentLabel.text.length > 5 ? 1 : 0
 
     Kirigami.Theme.inherit: !imagePalette.useColors
     Kirigami.Theme.textColor: imagePalette.textColor
@@ -44,181 +45,101 @@ AbstractDelegate {
     contentItem: Item {
         id: content
 
-        PlasmaCore.IconItem {
-            id: iconItem
-            //Icon should cover text during animation
-            z: 1
-            width: PlasmaCore.Units.iconSizes.huge //Kirigami.Units.iconSizes.huge
-            height: width
-            source: delegate.iconImage || delegate.icon.name || delegate.icon.source
+        GridLayout {
+            id: topArea
+            width:  parent.width
+            height: parent.height * 0.25
+            anchors.top: parent.top
+            columns: 2
+
+            Kirigami.Icon {
+                id: iconItem
+                Layout.preferredWidth: parent.height
+                Layout.preferredHeight: width
+                source: delegate.iconImage || delegate.icon.name || delegate.icon.source
+            }
+
+
+            Rectangle {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                color: "transparent"
+
+                Label {
+                    id: textLabel
+                    width: parent.width
+                    height: parent.height
+                    wrapMode: Text.WordWrap
+                    verticalAlignment: Text.AlignVCenter
+                    font.pixelSize: height * 0.9
+                    font.bold: true
+                    fontSizeMode: Text.Fit
+                    minimumPixelSize: 2
+                    maximumLineCount: 1
+                    elide: Text.ElideRight
+                    text: delegate.text
+                    color: imagePalette.textColor
+                }
+            }
         }
 
-        ColumnLayout {
-            id: textLayout
-            anchors {
-                left: content.left
-                right: content.right
-                top: iconItem.bottom
-                bottom: content.bottom
-                leftMargin: 0
-            }
-
-            PlasmaComponents.Label {
-                id: label
-                visible: text.length > 0
-                Layout.fillWidth: true
-                wrapMode: Text.WordWrap
-                horizontalAlignment: Text.AlignHCenter
-                maximumLineCount: 2
-                elide: Text.ElideRight
-                color: imagePalette.textColor
-
-                text: delegate.text
-            }
-            PlasmaComponents.Label {
-                id: commentLabel
-                // keeps commentLabel from affecting the vertical center of label when not selected
-                visible: text.length > 0 && (toSelectedTransition.running || toNormalTransition.running || delegate.isCurrent || !delegate.compactMode)
-                Layout.fillWidth: true
-                wrapMode: Text.WordWrap
-                horizontalAlignment: Text.AlignHCenter
-                maximumLineCount: delegate.isCurrent ? (label.lineCount == 2 ? 1 : 2) : 1
-                elide: Text.ElideRight
-                color: imagePalette.textColor
-                opacity: 0
-
-                text: delegate.comment
-            }
+        Label {
+            id: commentLabel
+            anchors.top: topArea.bottom
+            anchors.bottom: parent.bottom
+            anchors.topMargin: Kirigami.Units.largeSpacing
+            verticalAlignment: Text.AlignTop
+            width: parent.width
+            height: parent.height
+            font.pixelSize: height * 0.25
+            maximumLineCount: 2
+            elide: Text.ElideRight
+            wrapMode: Text.WordWrap
+            text: delegate.comment
+            color: imagePalette.textColor
         }
-        states: [
-            State {
-                name: "selected"
-                when: delegate.isCurrent || !delegate.compactMode
-                PropertyChanges {
-                    target: delegate
-                    implicitWidth: delegate.compactMode ? (listView.cellWidth * 2) : listView.cellWidth
-                }
-                PropertyChanges {
-                    target: iconItem
-                    y: content.height/2 - iconItem.height/2
-                }
-                AnchorChanges {
-                    target: textLayout
-                    anchors.left: iconItem.right
-                    anchors.right: content.right
-                    anchors.top: iconItem.top
-                    anchors.bottom: iconItem.bottom
-                }
-                PropertyChanges {
-                    target: textLayout
-                    anchors.leftMargin: Kirigami.Units.smallSpacing
-                }
-                PropertyChanges {
-                    target: commentLabel
-                    opacity: 1
-                }
-            },
-            State {
-                name: "normal"
-                when: !delegate.isCurrent && delegate.compactMode
-                PropertyChanges {
-                    target: delegate
-                    implicitWidth: listView.cellWidth
-                }
-                PropertyChanges {
-                    target: iconItem
-                    y: 0
-                }
-                AnchorChanges {
-                    target: textLayout
-                    anchors.left: content.left
-                    anchors.right: content.right
-                    anchors.top: iconItem.bottom
-                    anchors.bottom: content.bottom
-                }
-                PropertyChanges {
-                    target: textLayout
-                    anchors.leftMargin: 0
-                }
-                PropertyChanges {
-                    target: commentLabel
-                    opacity: 0
-                }
-            }
-        ]
-        transitions: [
-            Transition {
-                id: toSelectedTransition
-                to: "selected"
-                ParallelAnimation {
-                    XAnimator {
-                        duration: Kirigami.Units.longDuration
-                        easing.type: Easing.InOutQuad
-                    }
-                    NumberAnimation {
-                        property: "y"
-                        duration: Kirigami.Units.longDuration
-                        easing.type: Easing.InOutQuad
-                    }
-                    NumberAnimation {
-                        property: "width"
-                        duration: Kirigami.Units.longDuration
-                        easing.type: Easing.InOutQuad
-                    }
-                    NumberAnimation {
-                        property: "implicitWidth"
-                        duration: Kirigami.Units.longDuration
-                        easing.type: Easing.InOutQuad
-                    }
-                    AnchorAnimation {
-                        duration: Kirigami.Units.longDuration
-                        easing.type: Easing.InOutQuad
-                    }
-                    SequentialAnimation {
-                        PauseAnimation {
-                            duration: Kirigami.Units.longDuration/2
-                        }
-                        OpacityAnimator {
-                            target: commentLabel
-                            duration: Kirigami.Units.longDuration/2
-                            easing.type: Easing.InOutQuad
-                        }
-                    }
-                }
-            },
-            Transition {
-                id: toNormalTransition
-                to: "normal"
-                ParallelAnimation {
-                    XAnimator {
-                        duration: Kirigami.Units.longDuration
-                        easing.type: Easing.InOutQuad
-                    }
-                    YAnimator {
-                        duration: Kirigami.Units.longDuration
-                        easing.type: Easing.InOutQuad
-                    }
-                    NumberAnimation {
-                        property: "width"
-                        duration: Kirigami.Units.longDuration
-                        easing.type: Easing.InOutQuad
-                    }
-                    NumberAnimation {
-                        property: "implicitWidth"
-                        duration: Kirigami.Units.longDuration
-                        easing.type: Easing.InOutQuad
-                    }
-                    AnchorAnimation {
-                        duration: Kirigami.Units.longDuration
-                        easing.type: Easing.InOutQuad
-                    }
-                    OpacityAnimator {
-                        target: commentLabel
-                        duration: Kirigami.Units.longDuration/2
-                        easing.type: Easing.InOutQuad
-                    }
-                }
-            }
-        ]
     }
+
+    states: [
+        State {
+            name: "selected"
+            when: delegate.isCurrent && hasComment
+
+            PropertyChanges {
+                target: topArea
+                height: parent.height * 0.25
+                columns: 2
+            }
+            PropertyChanges {
+                target: commentLabel
+                opacity: 1
+            }
+        },
+        State {
+            name: "normal"
+            when: !delegate.isCurrent || delegate.isCurrent && !hasComment
+
+            PropertyChanges {
+                target: topArea
+                height: content.height
+                columns: 1
+                rows: 2
+            }
+            PropertyChanges {
+                target: iconItem
+                Layout.preferredHeight: parent.height * 0.75
+                Layout.preferredWidth: height
+                Layout.alignment: Qt.AlignHCenter
+            }
+            PropertyChanges {
+                target: textLabel
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            PropertyChanges {
+                target: commentLabel
+                opacity: 0
+            }
+        }
+    ]
 }
