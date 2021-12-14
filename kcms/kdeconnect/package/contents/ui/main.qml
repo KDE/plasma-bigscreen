@@ -104,31 +104,36 @@ KCM.SimpleKCM {
             }
         }
 
-        ColumnLayout {
+        Item {
+            clip: true
             anchors.left: parent.left
-            anchors.leftMargin: Kirigami.Units.largeSpacing
             anchors.top: headerAreaTop.bottom
-            anchors.topMargin: Kirigami.Units.largeSpacing * 2
             anchors.bottom: footerMain.top
             width: parent.width - deviceConnectionView.width
 
-            BigScreen.TileView {
-                id: connectionView
-                focus: true
-                model:  allDevicesModel
-                Layout.alignment: Qt.AlignTop
-                title: allDevicesModel.count > 0 ? "Found Devices" : "No Devices Found"
-                currentIndex: 0
-                delegate: Delegates.DeviceDelegate{}
-                navigationDown: kcmcloseButton
-                Behavior on x {
-                    NumberAnimation {
-                        duration: Kirigami.Units.longDuration * 2
-                        easing.type: Easing.InOutQuad
+            ColumnLayout {
+                anchors.fill: parent
+                anchors.leftMargin: Kirigami.Units.largeSpacing
+                anchors.topMargin: Kirigami.Units.largeSpacing * 2
+
+                BigScreen.TileView {
+                    id: connectionView
+                    focus: true
+                    model:  allDevicesModel
+                    Layout.alignment: Qt.AlignTop
+                    title: allDevicesModel.count > 0 ? "Found Devices" : "No Devices Found"
+                    currentIndex: 0
+                    delegate: Delegates.DeviceDelegate{}
+                    navigationDown: kcmcloseButton
+                    Behavior on x {
+                        NumberAnimation {
+                            duration: Kirigami.Units.longDuration * 2
+                            easing.type: Easing.InOutQuad
+                        }
                     }
-                }
-                onCurrentItemChanged: {
-                    deviceConnectionView.currentDevice = currentItem.deviceObj
+                    onCurrentItemChanged: {
+                        deviceConnectionView.currentDevice = currentItem.deviceObj
+                    }
                 }
             }
         }
@@ -140,7 +145,7 @@ KCM.SimpleKCM {
             anchors.right: parent.right
             visible: allDevicesModel.count > 0 ? 1 : 0
             anchors.rightMargin: -Kirigami.Units.smallSpacing
-            width: parent.width / 3.5
+            width: Kirigami.Units.gridUnit * 15
         }
     }
 }

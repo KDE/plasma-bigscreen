@@ -194,12 +194,14 @@ Item {
                 details: ConnectionDetails
                 connected: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0
                 connectionType: model.Type
+                clip: true
                 anchors {
                     left: parent.left
                     right: parent.right
                     top: lblSept2.bottom
                     topMargin: Kirigami.Units.largeSpacing
                     bottom: lblSept3.top
+                    bottomMargin: Kirigami.Units.smallSpacing
                 }
             }
             

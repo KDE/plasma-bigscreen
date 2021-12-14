@@ -42,8 +42,9 @@ Item {
         backBtnSettingsItem.clicked()
     }
 
-    ColumnLayout {
+    Item {
         id: colLayoutSettingsItem
+        clip: true
         anchors {
             top: parent.top
             left: parent.left
@@ -51,23 +52,18 @@ Item {
             bottom: footerAreaSettingsSept.top
             margins: Kirigami.Units.largeSpacing * 2
         }
-
-        Item {
-            Layout.preferredHeight: Math.round(parent.height * 0.15)
-            Layout.fillWidth: true
-        }
         
         Item {
-            Layout.fillWidth: true
-            Layout.preferredHeight: parent.height / 3
-            Layout.alignment: Qt.AlignTop
+            anchors.centerIn: parent
+            width: parent.width
+            height: dIcon.height + label1.paintedHeight + label2.paintedHeight + lblSept.height + lblSept2.height + setDefBtn.height + (volObj.height * 2)
 
             Kirigami.Icon {
                 id: dIcon
                 anchors.top: parent.top
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: parent.width
-                height: width / 3
+                height: width / 4
                 source: Icon.name(Volume, Muted, isPlayback ? "audio-volume" : "microphone-sensitivity")
             }
 
@@ -186,11 +182,6 @@ Item {
                     visible: volObj.activeFocus ? 1 : 0
                 }
             }
-        }
-        
-        Item {
-            Layout.fillWidth: true
-            Layout.preferredHeight: parent.height / 3
         }
     }
 

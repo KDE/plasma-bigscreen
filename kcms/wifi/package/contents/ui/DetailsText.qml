@@ -5,6 +5,7 @@
 */
 
 import QtQuick 2.14
+import QtQuick.Layouts 1.12
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kirigami 2.12 as Kirigami
 
@@ -65,10 +66,10 @@ Item {
                     id: detailNameLabel
                     anchors {
                         left: parent.left
-                        leftMargin: ipAddressBlockRepeater.longestString - paintedWidth + Math.round(Kirigami.Units.gridUnit / 2)
+                        leftMargin: Kirigami.Units.largeSpacing
                     }
                     height: paintedHeight
-                    horizontalAlignment: Text.AlignRight
+                    horizontalAlignment: Text.AlignLeft
                     text: ipDetails[index*2] + ": "
 
                     Component.onCompleted: {
@@ -81,14 +82,14 @@ Item {
                 PlasmaComponents.Label {
                     id: detailValueLabel
                     anchors {
-                        left: parent.left
+                        left: detailNameLabel.right
                         right: parent.right
-                        leftMargin: ipAddressBlockRepeater.longestString + Math.round(Kirigami.Units.gridUnit / 2)
                     }
                     height: paintedHeight
                     elide: Text.ElideRight
                     text: ipDetails[(index*2)+1]
                     textFormat: Text.PlainText
+                    wrapMode: Text.WrapAnywhere
                 }
             }
         }
@@ -148,7 +149,7 @@ Item {
                     id: detailNameLabel
                     anchors {
                         left: parent.left
-                        leftMargin: ipAddressBlockRepeater.visible ? ipAddressBlockRepeater.longestString - paintedWidth + Math.round(Kirigami.Units.gridUnit / 2) : networkInformationRepeater.longestString - paintedWidth + Math.round(Kirigami.Units.gridUnit / 2)
+                        leftMargin: Kirigami.Units.largeSpacing
                     }
                     height: paintedHeight
                     horizontalAlignment: Text.AlignRight
@@ -164,14 +165,14 @@ Item {
                 PlasmaComponents.Label {
                     id: detailValueLabel
                     anchors {
-                        left: parent.left
+                        left: detailNameLabel.right
                         right: parent.right
-                        leftMargin: ipAddressBlockRepeater.visible ? ipAddressBlockRepeater.longestString + Math.round(Kirigami.Units.gridUnit / 2) : networkInformationRepeater.longestString + Math.round(Kirigami.Units.gridUnit / 2)
                     }
                     height: paintedHeight
                     elide: Text.ElideRight
                     text: networkDetails[(index*2)+1]
                     textFormat: Text.PlainText
+                    wrapMode: Text.Wrap
                 }
             }
         }
