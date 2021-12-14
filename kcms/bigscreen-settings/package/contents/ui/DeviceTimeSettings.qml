@@ -1,3 +1,10 @@
+/*
+    SPDX-FileCopyrightText: 2020 Aditya Mehra <aix.m@outlook.com>
+
+    SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
+
+*/
+
 import QtQuick.Layouts 1.14
 import QtQuick 2.14
 import QtQuick.Window 2.14
@@ -62,40 +69,61 @@ Rectangle {
         }
     }
 
-    ColumnLayout {
-        id: colLayoutSettingsItem
+
+    Item {
+        id: emptyArea
+        height: Kirigami.Units.gridUnit * 2
+        width: parent.width
+        anchors.top: parent.top
+    }
+
+    Flickable {
+        id: flickContentLayout
+        clip: true
         anchors {
-            top: parent.top
+            top: emptyArea.bottom
             left: parent.left
             right: parent.right
             bottom: footerAreaSettingsSept.top
             margins: Kirigami.Units.largeSpacing * 2
         }
+        contentWidth: width
+        contentHeight: colLayoutSettingsItem.implicitHeight
 
-        Item {
-            Layout.preferredHeight: Math.round(parent.height * 0.05)
-            Layout.fillWidth: true
+        function makeVisible(item) {
+            var startArea = item.mapToItem(contentItem, 0, 0).y
+            var endArea = item.height + startArea
+            if ( startArea < contentY || startArea > contentY + height || endArea < contentY || endArea > contentY + height) {
+                contentY = Math.max(0, Math.min(startArea - height + item.height, contentHeight - height))
+            }
         }
 
-        Item {
-            Layout.fillWidth: true
-            Layout.preferredHeight: parent.height / 3
-            Layout.alignment: Qt.AlignTop
+        Behavior on contentY {
+            NumberAnimation {
+                duration: Kirigami.Units.longDuration * 2
+                easing.type: Easing.InOutQuad
+            }
+        }
+
+        ColumnLayout {
+            id: colLayoutSettingsItem
+            width: parent.width
+            anchors.top: parent.top
+
 
             Kirigami.Icon {
                 id: dIcon
-                anchors.top: parent.top
-                anchors.horizontalCenter: parent.horizontalCenter
-                width: parent.width
-                height: width / 3
+                Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
+                Layout.preferredWidth: parent.width
+                Layout.preferredHeight: width / 3
                 source: "preferences-system-time"
             }
 
             Kirigami.Heading {
                 id: label1
-                width: parent.width
-                anchors.top: dIcon.bottom
-                anchors.topMargin: Kirigami.Units.largeSpacing
+                Layout.fillWidth: true
+                Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
+                Layout.topMargin: Kirigami.Units.largeSpacing
                 horizontalAlignment: Text.AlignHCenter
                 wrapMode: Text.WordWrap
                 level: 2
@@ -107,23 +135,23 @@ Rectangle {
 
             Kirigami.Separator {
                 id: lblSept
-                anchors.top: label1.bottom
-                anchors.topMargin: Kirigami.Units.largeSpacing
-                height: 1
-                width: parent.width
+                Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
+                Layout.topMargin: Kirigami.Units.largeSpacing
+                Layout.preferredHeight: 1
+                Layout.fillWidth: true
             }
 
             Kirigami.ListSectionHeader {
                 id: timeDisplaySectionHeader
-                anchors.top: lblSept.bottom
-                anchors.topMargin: Kirigami.Units.largeSpacing
+                Layout.alignment: Qt.AlignTop
+                Layout.topMargin: Kirigami.Units.largeSpacing
                 label: i18n("Time Display")
             }
 
             Kirigami.BasicListItem {
                 id: timeDisplayItemTwo
-                anchors.top: timeDisplaySectionHeader.bottom
-                anchors.topMargin: Kirigami.Units.largeSpacing
+                Layout.alignment: Qt.AlignTop
+                Layout.topMargin: Kirigami.Units.largeSpacing
                 label: i18n("Timezone:")
                 onClicked: timeZonePickerSheet.open()
                 Label {
@@ -133,16 +161,26 @@ Rectangle {
                 KeyNavigation.up: backBtnSettingsItem
                 KeyNavigation.down: timeDisplayItemThree
                 Keys.onReturnPressed: clicked()
+                onActiveFocusChanged: {
+                    if(activeFocus){
+                        flickContentLayout.makeVisible(timeDisplayItemTwo)
+                    }
+                }
             }
 
             Kirigami.BasicListItem {
                 id: timeDisplayItemThree
-                anchors.top: timeDisplayItemTwo.bottom
-                anchors.topMargin: Kirigami.Units.largeSpacing
+                Layout.alignment: Qt.AlignTop
+                Layout.topMargin: Kirigami.Units.largeSpacing
                 label: i18n("Set time automatically:")
                 KeyNavigation.up: timeDisplayItemTwo
                 KeyNavigation.down: timeDisplayItemFour
                 Keys.onReturnPressed: clicked()
+                onActiveFocusChanged: {
+                    if(activeFocus){
+                        flickContentLayout.makeVisible(timeDisplayItemThree)
+                    }
+                }
 
                 onClicked: {
                     ntpCheckBox.checked = !ntpCheckBox.checked
@@ -166,8 +204,8 @@ Rectangle {
 
             Kirigami.BasicListItem {
                 id: timeDisplayItemFour
-                anchors.top: timeDisplayItemThree.bottom
-                anchors.topMargin: Kirigami.Units.largeSpacing
+                Layout.alignment: Qt.AlignTop
+                Layout.topMargin: Kirigami.Units.largeSpacing
                 label: i18n("Time")
                 icon: "clock"
                 enabled: !ntpCheckBox.checked
@@ -175,6 +213,11 @@ Rectangle {
                 KeyNavigation.up: timeDisplayItemThree
                 KeyNavigation.down: timeDisplayItemFive
                 Keys.onReturnPressed: clicked()
+                onActiveFocusChanged: {
+                    if(activeFocus){
+                        flickContentLayout.makeVisible(timeDisplayItemFour)
+                    }
+                }
 
                 Label {
                     text: {
@@ -193,8 +236,8 @@ Rectangle {
 
             Kirigami.BasicListItem {
                 id: timeDisplayItemFive
-                anchors.top: timeDisplayItemFour.bottom
-                anchors.topMargin: Kirigami.Units.largeSpacing
+                Layout.alignment: Qt.AlignTop
+                Layout.topMargin: Kirigami.Units.largeSpacing
                 label: i18n("Date")
                 icon: "view-calendar"
                 enabled: !ntpCheckBox.checked
@@ -202,6 +245,11 @@ Rectangle {
                 KeyNavigation.up: timeDisplayItemFour
                 KeyNavigation.down: backBtnSettingsItem
                 Keys.onReturnPressed: clicked()
+                onActiveFocusChanged: {
+                    if(activeFocus){
+                        flickContentLayout.makeVisible(timeDisplayItemFive)
+                    }
+                }
 
                 Label {
                     text: {

@@ -21,7 +21,7 @@ import "delegates" as Delegates
 KCM.SimpleKCM {
     id: networkSelectionView
     
-    title: i18n("Network")
+    title: Screen.devicePixelRatio.toFixed(2) //i18n("Network")
     background: null
     
     leftPadding: Kirigami.Units.smallSpacing
@@ -421,7 +421,7 @@ KCM.SimpleKCM {
             anchors.right: parent.right
             anchors.rightMargin: -Kirigami.Units.smallSpacing
             height: parent.height
-            width: parent.width / 3.5
+            width: Kirigami.Units.gridUnit * 15
             color: Kirigami.Theme.backgroundColor
 
             ListView {

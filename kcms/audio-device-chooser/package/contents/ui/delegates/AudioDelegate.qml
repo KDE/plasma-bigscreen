@@ -85,7 +85,7 @@ BigScreen.AbstractDelegate {
                 maximumLineCount: 2
                 textFormat: Text.PlainText
                 color: Kirigami.Theme.textColor
-                font.pixelSize: textMetrics.font.pixelSize * 1.1
+                font.pixelSize: textMetrics.font.pixelSize * 1
                 text: currentPort.description
             }
             
@@ -99,7 +99,7 @@ BigScreen.AbstractDelegate {
                 maximumLineCount: 2
                 textFormat: Text.PlainText
                 color: Kirigami.Theme.textColor
-                font.pixelSize: textMetrics.font.pixelSize * 0.9
+                font.pixelSize: textMetrics.font.pixelSize * 0.8
                 text: Description
             }
         }

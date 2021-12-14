@@ -65,6 +65,8 @@ Rectangle {
     
     ColumnLayout {
         id: colLayoutSettingsItem
+        clip: true
+
         anchors {
             top: parent.top
             left: parent.left

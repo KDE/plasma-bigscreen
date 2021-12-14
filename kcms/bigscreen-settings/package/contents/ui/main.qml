@@ -115,92 +115,138 @@ KCM.SimpleKCM {
             }
         }
 
-        ColumnLayout {
+        Item {
             anchors.left: parent.left
             anchors.leftMargin: Kirigami.Units.largeSpacing
             anchors.top: headerAreaTop.bottom
             anchors.topMargin: Kirigami.Units.largeSpacing * 2
             anchors.bottom: footerMain.top
             width: deviceTimeSettingsArea.opened ? parent.width - deviceTimeSettingsArea.width : parent.width
+            clip: true
 
-            Kirigami.Heading {
-                id: launcherLookHeader
-                text: "Launcher Appearance"
-                layer.enabled: true
-                color: "white"
-            }
+            ColumnLayout {
+                id: contentLayout
+                width: parent.width
+                property Item currentSection
+                y: currentSection ? (currentSection.y > parent.height / 2 ? -currentSection.y + Kirigami.Units.gridUnit * 3 : 0) : 0
+                anchors.left: parent.left
+                anchors.leftMargin: Kirigami.Units.largeSpacing
 
-            RowLayout {
-                Delegates.LocalSettingDelegate {
-                    id: mycroftIntegrationDelegate
-                    implicitWidth: desktopThemeView.view.cellWidth * 2
-                    implicitHeight: desktopThemeView.view.cellHeight
-                    isChecked: kcm.mycroftIntegrationActive() ? 1 : 0
-                    name: "Mycroft Integration"
-                    customType: "mycroftIntegration"
-                    KeyNavigation.up: kcmcloseButton
-                    KeyNavigation.right: coloredTileDelegate
-                    KeyNavigation.down: desktopThemeView
-                }
-                Delegates.LocalSettingDelegate {
-                    id: coloredTileDelegate
-                    implicitWidth: desktopThemeView.view.cellWidth * 2
-                    implicitHeight: desktopThemeView.view.cellHeight
-                    isChecked: kcm.useColoredTiles() ? 1 : 0
-                    name: "Colored Tiles"
-                    customType: "coloredTile"
-                    KeyNavigation.up: kcmcloseButton
-                    KeyNavigation.left: mycroftIntegrationDelegate
-                    KeyNavigation.right: expandableTileDelegate
-                    KeyNavigation.down: desktopThemeView
-                }
-                Delegates.LocalSettingDelegate {
-                    id: expandableTileDelegate
-                    implicitWidth: desktopThemeView.cellWidth * 2
-                    implicitHeight: desktopThemeView.cellHeight
-                    isChecked: kcm.useExpandingTiles() ? 1 : 0
-                    name: "Expanding Tiles"
-                    customType: "exapandableTile"
-                    KeyNavigation.up: kcmcloseButton
-                    KeyNavigation.left: coloredTileDelegate
-                    KeyNavigation.right: timeDateSettingsDelegate
-                    KeyNavigation.down: desktopThemeView
-                }
-                Delegates.TimeDelegate {
-                    id: timeDateSettingsDelegate
-                    implicitWidth: desktopThemeView.cellWidth * 2
-                    implicitHeight: desktopThemeView.cellHeight
-                    name: "Adjust Date & Time"
-                    KeyNavigation.up: kcmcloseButton
-                    KeyNavigation.left: expandableTileDelegate
-                    KeyNavigation.down: desktopThemeView
-                }
-            }
-
-            Item {
-                Layout.fillWidth: true
-                Layout.preferredHeight: Kirigami.Units.largeSpacing * 2
-            }
-
-            BigScreen.TileView {
-                id: desktopThemeView
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                Layout.alignment: Qt.AlignTop
-                focus: true
-                model: kcm.themeListModel
-                view.cacheBuffer: parent.width * 2
-                title: "General Appearance"
-                navigationUp: mycroftIntegrationDelegate
-                navigationDown: kcmcloseButton
-                enabled: !deviceTimeSettingsArea.opened
-                delegate: Delegates.ThemeDelegate {
-                    text: model.display
-                }
-                Behavior on x {
+                Behavior on y {
                     NumberAnimation {
                         duration: Kirigami.Units.longDuration * 2
                         easing.type: Easing.InOutQuad
+                    }
+                }
+
+                Kirigami.Heading {
+                    id: launcherLookHeader
+                    text: "Launcher Appearance"
+                    layer.enabled: true
+                    color: "white"
+                }
+
+                RowLayout {
+                    id: topContentArea
+
+                    Delegates.LocalSettingDelegate {
+                        id: mycroftIntegrationDelegate
+                        implicitWidth: desktopThemeView.view.cellWidth * 2
+                        implicitHeight: desktopThemeView.view.cellHeight
+                        isChecked: kcm.mycroftIntegrationActive() ? 1 : 0
+                        name: "Mycroft Integration"
+                        customType: "mycroftIntegration"
+                        KeyNavigation.up: kcmcloseButton
+                        KeyNavigation.right: coloredTileDelegate
+                        KeyNavigation.down: desktopThemeView
+                        onActiveFocusChanged: {
+                            if(activeFocus){
+                                contentLayout.currentSection = topContentArea
+                            }
+                        }
+                    }
+                    Delegates.LocalSettingDelegate {
+                        id: coloredTileDelegate
+                        implicitWidth: desktopThemeView.view.cellWidth * 2
+                        implicitHeight: desktopThemeView.view.cellHeight
+                        isChecked: kcm.useColoredTiles() ? 1 : 0
+                        name: "Colored Tiles"
+                        customType: "coloredTile"
+                        KeyNavigation.up: kcmcloseButton
+                        KeyNavigation.left: mycroftIntegrationDelegate
+                        KeyNavigation.right: expandableTileDelegate
+                        KeyNavigation.down: desktopThemeView
+                        onActiveFocusChanged: {
+                            if(activeFocus){
+                                contentLayout.currentSection = topContentArea
+                            }
+                        }
+                    }
+                    Delegates.LocalSettingDelegate {
+                        id: expandableTileDelegate
+                        implicitWidth: desktopThemeView.cellWidth * 2
+                        implicitHeight: desktopThemeView.cellHeight
+                        isChecked: kcm.useExpandingTiles() ? 1 : 0
+                        name: "Expanding Tiles"
+                        customType: "exapandableTile"
+                        KeyNavigation.up: kcmcloseButton
+                        KeyNavigation.left: coloredTileDelegate
+                        KeyNavigation.right: timeDateSettingsDelegate
+                        KeyNavigation.down: desktopThemeView
+                        onActiveFocusChanged: {
+                            if(activeFocus){
+                                contentLayout.currentSection = topContentArea
+                            }
+                        }
+                    }
+                    Delegates.TimeDelegate {
+                        id: timeDateSettingsDelegate
+                        implicitWidth: desktopThemeView.cellWidth * 2
+                        implicitHeight: desktopThemeView.cellHeight
+                        name: "Adjust Date & Time"
+                        KeyNavigation.up: kcmcloseButton
+                        KeyNavigation.left: expandableTileDelegate
+                        KeyNavigation.down: desktopThemeView
+                        onActiveFocusChanged: {
+                            if(activeFocus){
+                                contentLayout.currentSection = topContentArea
+                            }
+                        }
+                    }
+                }
+
+                Item {
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: Kirigami.Units.largeSpacing * 2
+                }
+
+                BigScreen.TileView {
+                    id: desktopThemeView
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    Layout.alignment: Qt.AlignTop
+                    focus: true
+                    model: kcm.themeListModel
+                    view.cacheBuffer: parent.width * 2
+                    title: "General Appearance"
+                    navigationUp: mycroftIntegrationDelegate
+                    navigationDown: kcmcloseButton
+                    enabled: !deviceTimeSettingsArea.opened
+                    delegate: Delegates.ThemeDelegate {
+                        text: model.display
+                    }
+
+                    onActiveFocusChanged: {
+                        if(activeFocus){
+                            contentLayout.currentSection = desktopThemeView
+                        }
+                    }
+
+                    Behavior on x {
+                        NumberAnimation {
+                            duration: Kirigami.Units.longDuration * 2
+                            easing.type: Easing.InOutQuad
+                        }
                     }
                 }
             }

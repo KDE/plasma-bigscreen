@@ -98,95 +98,106 @@ FocusScope {
         id: paSinkModel
     }
 
-    ColumnLayout {
-        id: contentLayout
-        width: parent.width - settingsView.width
-        property Item currentSection
-        y: currentSection ? -currentSection.y : 0
+    Item {
         anchors.top: headerAreaTop.bottom
         anchors.topMargin: Kirigami.Units.largeSpacing * 2
-        anchors.left: parent.left
-        anchors.leftMargin: Kirigami.Units.largeSpacing
-        
-        Behavior on y {
-            NumberAnimation {
-                duration: Kirigami.Units.longDuration * 2
-                easing.type: Easing.InOutQuad
-            }
-        }
-        height: parent.height
+        width: parent.width - settingsView.width
+        anchors.bottom: footerMain.top
+        clip: true
 
-        BigScreen.TileView {
-            id: sinkView
-            model: paSinkModel
-            focus: true
-            Layout.alignment: Qt.AlignTop
-            title: i18n("Playback Devices")
-            currentIndex: 0
-            onActiveFocusChanged: {
-                if(activeFocus){
-                    contentLayout.currentSection = sinkView
-                    settingsViewDetails.model = sinkView.model
-                    settingsViewDetails.positionViewAtIndex(currentIndex, ListView.Center);
-                    settingsViewDetails.checkPlayBack = true
-                    settingsViewDetails.typeDevice = "sink"
+        ColumnLayout {
+            id: contentLayout
+            width: parent.width
+            property Item currentSection
+            y: currentSection ? (currentSection.y > parent.height / 2 ? -currentSection.y + Kirigami.Units.gridUnit * 3 : 0) : 0
+            anchors.left: parent.left
+            anchors.leftMargin: Kirigami.Units.largeSpacing
+
+            Behavior on y {
+                NumberAnimation {
+                    duration: Kirigami.Units.longDuration * 2
+                    easing.type: Easing.InOutQuad
                 }
             }
-            delegate: Delegates.AudioDelegate {
-                isPlayback: true
-                type: "sink"
-            }
-            navigationDown: sourceView.visible ? sourceView : kcmcloseButton
-            
-            onCurrentItemChanged: {
-                settingsViewDetails.currentIndex = sinkView.currentIndex
-                settingsViewDetails.positionViewAtIndex(sinkView.currentIndex, ListView.Center);
-            }
-        }
 
-        BigScreen.TileView {
-            id: sourceView
-            model: paSourceModel
-            title: i18n("Recording Devices")
-            currentIndex: 0
-            focus: false
-            Layout.alignment: Qt.AlignTop
-            visible: sourceView.view.count > 0 ? 1 : 0
-            onActiveFocusChanged: {
-                if(activeFocus){
-                    contentLayout.currentSection = sourceView
-                    settingsViewDetails.model = sourceView.model
-                    settingsViewDetails.positionViewAtIndex(currentIndex, ListView.Center);
-                    settingsViewDetails.checkPlayBack = false
-                    settingsViewDetails.typeDevice = "source"
+            BigScreen.TileView {
+                id: sinkView
+                model: paSinkModel
+                focus: true
+                Layout.alignment: Qt.AlignTop
+                title: i18n("Playback Devices")
+                currentIndex: 0
+                onActiveFocusChanged: {
+                    if(activeFocus){
+                        contentLayout.currentSection = sinkView
+                        settingsViewDetails.model = sinkView.model
+                        settingsViewDetails.positionViewAtIndex(currentIndex, ListView.Center);
+                        settingsViewDetails.checkPlayBack = true
+                        settingsViewDetails.typeDevice = "sink"
+                    }
+                }
+                delegate: Delegates.AudioDelegate {
+                    isPlayback: true
+                    type: "sink"
+                }
+                navigationDown: sourceView.visible ? sourceView : kcmcloseButton
+
+                onCurrentItemChanged: {
+                    settingsViewDetails.currentIndex = sinkView.currentIndex
+                    settingsViewDetails.positionViewAtIndex(sinkView.currentIndex, ListView.Center);
                 }
             }
-            delegate: Delegates.AudioDelegate {
-                isPlayback: false
-                type: "source"
-            }
-            navigationUp: sinkView
-            navigationDown: kcmcloseButton
-            
-            onCurrentItemChanged: {
-                settingsViewDetails.currentIndex = sourceView.currentIndex
-                settingsViewDetails.positionViewAtIndex(currentIndex, ListView.Center);
-            }
-        }
 
-        Component.onCompleted: {
-            sinkView.forceActiveFocus();
-        }
+            Item {
+                id: extraSpacing
+                Layout.preferredHeight: Kirigami.Units.largeSpacing
+                Layout.fillWidth: true
+            }
 
-        Connections {
-            target: root
-            onActivateDeviceView: {
+            BigScreen.TileView {
+                id: sourceView
+                model: paSourceModel
+                title: i18n("Recording Devices")
+                currentIndex: 0
+                focus: false
+                Layout.alignment: Qt.AlignTop
+                visible: sourceView.view.count > 0 ? 1 : 0
+                onActiveFocusChanged: {
+                    if(activeFocus){
+                        contentLayout.currentSection = sourceView
+                        settingsViewDetails.model = sourceView.model
+                        settingsViewDetails.positionViewAtIndex(currentIndex, ListView.Center);
+                        settingsViewDetails.checkPlayBack = false
+                        settingsViewDetails.typeDevice = "source"
+                    }
+                }
+                delegate: Delegates.AudioDelegate {
+                    isPlayback: false
+                    type: "source"
+                }
+                navigationUp: sinkView
+                navigationDown: kcmcloseButton
+
+                onCurrentItemChanged: {
+                    settingsViewDetails.currentIndex = sourceView.currentIndex
+                    settingsViewDetails.positionViewAtIndex(currentIndex, ListView.Center);
+                }
+            }
+
+            Component.onCompleted: {
                 sinkView.forceActiveFocus();
             }
-        }
 
-        Item {
-            Layout.preferredHeight: Kirigami.Units.gridUnit * 5
+            Connections {
+                target: root
+                onActivateDeviceView: {
+                    sinkView.forceActiveFocus();
+                }
+            }
+
+            Item {
+                Layout.preferredHeight: Kirigami.Units.gridUnit * 5
+            }
         }
     }
     
@@ -204,7 +215,7 @@ FocusScope {
         anchors.right: parent.right
         anchors.rightMargin: -Kirigami.Units.smallSpacing
         height: parent.height
-        width: parent.width / 3.5
+        width: Kirigami.Units.gridUnit * 15
         color: Kirigami.Theme.backgroundColor
 
         ListView {
