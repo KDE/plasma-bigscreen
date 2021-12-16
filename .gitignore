@@ -1,5 +1,3 @@
-/.clang-format
-
 # LSP & IDE
 /.clang-format
 /compile_commands.json
