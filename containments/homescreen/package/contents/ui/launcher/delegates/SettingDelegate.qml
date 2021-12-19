@@ -25,7 +25,7 @@ BigScreen.IconDelegate {
                             delegate.Kirigami.ScenePosition.y + delegate.height/2,
                             Math.min(delegate.width, delegate.height), delegate.Kirigami.Theme.backgroundColor);
         trigger();
-        recentView.forceActivefocus();
+        recentView.forceActiveFocus();
         recentView.currentIndex = 0;
     }
 }
