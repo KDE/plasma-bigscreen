@@ -1,0 +1,16 @@
+#!/bin/sh
+
+[ -f /etc/profile ] && . /etc/profile
+
+export QT_QPA_PLATFORMTHEME=KDE
+
+export QT_QUICK_CONTROLS_STYLE=Plasma
+export QT_ENABLE_GLYPH_CACHE_WORKAROUND=1
+export QT_QUICK_CONTROLS_MOBILE=true
+export PLASMA_PLATFORM=mediacenter
+export QT_IM_MODULE=qtvirtualkeyboard
+export QT_VIRTUALKEYBOARD_STYLE=Plasma
+export QT_FILE_SELECTORS=mediacenter
+
+export PLASMA_DEFAULT_SHELL=org.kde.plasma.mycroft.bigscreen
+startplasma-x11
