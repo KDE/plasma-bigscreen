@@ -19,12 +19,12 @@ AbstractIndicator {
     id: connectionIcon
     icon.name: "kdeconnect"
     property var window
-    property bool mycroftIntegration: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegraionActive() ? 1 : 0
+    property bool mycroftIntegration: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive() ? 1 : 0
 
     Connections {
         target: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface
-        onEnableMycroftIntegraionChanged: {
-            mycroftIntegration = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegraionActive()
+        onEnableMycroftIntegrationChanged: {
+            mycroftIntegration = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive()
             if(mycroftIntegration) {
                 mycroftLoader.active = true
             } else {

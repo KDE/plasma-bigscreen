@@ -106,7 +106,7 @@ bool BigscreenSettings::useExpandingTiles() const
 
 bool BigscreenSettings::mycroftIntegrationActive() const
 {
-    QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "mycroftIntegraionActive");
+    QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "mycroftIntegrationActive");
     QDBusMessage response = QDBusConnection::sessionBus().call(msg);
     QList<QVariant> responseArg = response.arguments();
     return responseArg.at(0).toBool();
