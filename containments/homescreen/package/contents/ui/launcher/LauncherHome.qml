@@ -22,13 +22,13 @@ import org.kde.private.biglauncher 1.0
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
 FocusScope {
-    property bool mycroftIntegration: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegraionActive() ? 1 : 0
+    property bool mycroftIntegration: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive() ? 1 : 0
 
     Connections {
         target: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface
 
-        onEnableMycroftIntegraionChanged: {
-            mycroftIntegration = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegraionActive()
+        onEnableMycroftIntegrationChanged: {
+            mycroftIntegration = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive()
             if(mycroftIntegration){
                 voiceAppsView.visible = voiceAppsView.count > 0 ? 1 : 0
             } else {

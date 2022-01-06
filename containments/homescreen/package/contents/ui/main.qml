@@ -24,14 +24,14 @@ Item {
     Layout.minimumWidth: Screen.desktopAvailableWidth
     Layout.minimumHeight: Screen.desktopAvailableHeight * 0.6
 
-    property bool mycroftIntegration: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegraionActive() ? 1 : 0
+    property bool mycroftIntegration: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive() ? 1 : 0
 
     property Item wallpaper
 
     Connections {
         target: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface
-        onEnableMycroftIntegraionChanged: {
-            mycroftIntegration = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegraionActive()
+        onEnableMycroftIntegrationChanged: {
+            mycroftIntegration = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive()
             if(mycroftIntegration) {
                 mycroftIndicatorLoader.active = true
                 mycroftWindowLoader.active = true
