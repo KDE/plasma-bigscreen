@@ -1,0 +1,17 @@
+[Desktop Entry]
+Exec=plasma-settings -s -m kcm_mediacenter_remotecontroller
+Icon=remotecontroller
+Type=Service
+X-KDE-ServiceTypes=KCModule
+X-DocPath=kcontrol/remotecontroller/index.html
+
+X-KDE-Library=kcm_mediacenter_remotecontroller
+X-KDE-ParentApp=kcontrol
+
+X-KDE-System-Settings-Parent-Category=hardware
+X-KDE-Weight=40
+X-KDE-FormFactors=mediacenter
+
+Name=Remote Controller
+
+Categories=Qt;KDE;X-KDE-settings-remotecontroller;

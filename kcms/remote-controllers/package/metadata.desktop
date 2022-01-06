@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Remote Controller
+
+Icon=input-mouse-symbolic
+Type=Service
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=kcm_mediacenter_remotecontroller
+X-KDE-ServiceTypes=Plasma/Generic
+X-KDE-FormFactors=mediacenter
+
+X-Plasma-MainScript=ui/main.qml
