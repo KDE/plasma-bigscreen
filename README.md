@@ -18,18 +18,11 @@ Use your normal TV remote control, or a RC with built-in microphone for voice co
 
 Download new apps (aka skills) for your Bigscreen or add your own ones for others to enjoy.
 
-## Build Instructions
+## Test on a development machine
 
-```
-$ git clone https://invent.kde.org/plasma/plasma-bigscreen
-$ cd plasma-bigscreen
-$ cmake -B build \
-      -DCMAKE_INSTALL_PREFIX=/usr \
-      -DCMAKE_BUILD_TYPE=Release 
-$ cmake --build build
-# cmake --build build --target install
-$ plasmashell --replace -p org.kde.plasma.mycroft.bigscreen
-```
+It is recommended to use `kdesrc-build` to build this from source.
+See [this page](https://community.kde.org/Get_Involved/development) in order to set it up.
+Note that `kdesrc-build` doesn't automatically build `plasma-nano` and `plasma-settings`, so make sure to also build that before you run the shell.
 
 <details>
 <summary><b>Click here to see dependencies</b></summary>
@@ -37,6 +30,7 @@ $ plasmashell --replace -p org.kde.plasma.mycroft.bigscreen
 ### KDE Plasma Dependencies
 
 - plasma-nano - https://invent.kde.org/plasma/plasma-nano
+- plasma-settings - https://invent.kde.org/plasma-mobile/plasma-settings
 
 ### KDE KF5 dependencies
 
@@ -71,4 +65,10 @@ The following can be installed for extra functionality but are not required to b
 - MycroftSkillInstaller - https://github.com/AIIX/MycroftSkillInstaller
 
 </details>
+
+To start the Bigscreen homescreen in a window, run:
+
+```
+QT_QPA_PLATFORM=wayland dbus-run-session kwin_wayland "plasmashell -p org.kde.plasma.mycroft.bigscreen"
+```
 
