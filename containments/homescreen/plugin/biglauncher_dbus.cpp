@@ -43,10 +43,10 @@ void BigLauncherDbusAdapterInterface::useExpandableTiles(const bool &expandableT
     emit useExpandableTilesChanged(expandableTiles);
 }
 
-void BigLauncherDbusAdapterInterface::enableMycroftIntegration(const bool &mycroftIntegraion)
+void BigLauncherDbusAdapterInterface::enableMycroftIntegration(const bool &mycroftIntegration)
 {
-    Configuration::self().setMycroftEnabled(mycroftIntegraion);
-    emit enableMycroftIntegraionChanged(mycroftIntegraion);
+    Configuration::self().setMycroftEnabled(mycroftIntegration);
+    emit enableMycroftIntegrationChanged(mycroftIntegration);
 }
 
 bool BigLauncherDbusAdapterInterface::coloredTilesActive()
@@ -67,7 +67,7 @@ bool BigLauncherDbusAdapterInterface::expandableTilesActive()
     }
 }
 
-bool BigLauncherDbusAdapterInterface::mycroftIntegraionActive()
+bool BigLauncherDbusAdapterInterface::mycroftIntegrationActive()
 {
     return Configuration::self().mycroftEnabled();
 }

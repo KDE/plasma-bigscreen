@@ -37,8 +37,8 @@ class BigLauncherDbusAdapterInterface : public QDBusAbstractAdaptor
                 "    <signal name=\"useExpandableTilesChanged\">\n"
                 "      <arg direction=\"out\" type=\"b\" name=\"msgUseExpandableTiles\"/>\n"
                 "    </signal>\n"
-                "    <signal name=\"enableMycroftIntegraionChanged\">\n"
-                "      <arg direction=\"out\" type=\"b\" name=\"msgEnableMycroftIntegraion\"/>\n"
+                "    <signal name=\"enableMycroftIntegrationChanged\">\n"
+                "      <arg direction=\"out\" type=\"b\" name=\"msgEnableMycroftIntegration\"/>\n"
                 "    </signal>\n"
                 "    <method name=\"useColoredTiles\">\n"
                 "      <arg direction=\"in\" type=\"b\" name=\"coloredTiles\"/>\n"
@@ -55,7 +55,7 @@ class BigLauncherDbusAdapterInterface : public QDBusAbstractAdaptor
                 "    <method name=\"expandableTilesActive\">\n"
                 "      <arg direction=\"out\" type=\"b\"/>\n"
                 "    </method>\n"
-                "    <method name=\"mycroftIntegraionActive\">\n"
+                "    <method name=\"mycroftIntegrationActive\">\n"
                 "      <arg direction=\"out\" type=\"b\"/>\n"
                 "    </method>\n"
                 "  </interface>\n"
@@ -72,7 +72,7 @@ public Q_SLOTS: // METHODS
     void enableMycroftIntegration(const bool &mycroftIntegration);
     bool coloredTilesActive();
     bool expandableTilesActive();
-    bool mycroftIntegraionActive();
+    bool mycroftIntegrationActive();
 
     void setColoredTilesActive(const bool &coloredTilesActive);
     void setExpandableTilesActive(const bool &expandableTilesActive);
@@ -80,7 +80,7 @@ public Q_SLOTS: // METHODS
 Q_SIGNALS: // SIGNALS
     void useColoredTilesChanged(const bool &msgUseColoredTiles);
     void useExpandableTilesChanged(const bool &msgUseExpandableTiles);
-    void enableMycroftIntegraionChanged(const bool &msgEnableMycroftIntegraion);
+    void enableMycroftIntegrationChanged(const bool &msgEnableMycroftIntegration);
     void coloredTilesActiveRequested();
     void expandableTilesActiveRequested();
     void enableMycroftIntegrationRequested();
