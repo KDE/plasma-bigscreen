@@ -40,6 +40,9 @@ class BigLauncherDbusAdapterInterface : public QDBusAbstractAdaptor
                 "    <signal name=\"enableMycroftIntegrationChanged\">\n"
                 "      <arg direction=\"out\" type=\"b\" name=\"msgEnableMycroftIntegration\"/>\n"
                 "    </signal>\n"
+                "    <signal name=\"enablePmInhibitionChanged\">\n"
+                "      <arg direction=\"out\" type=\"b\" name=\"msgEnablePmInhibition\"/>\n"
+                "    </signal>\n"
                 "    <method name=\"useColoredTiles\">\n"
                 "      <arg direction=\"in\" type=\"b\" name=\"coloredTiles\"/>\n"
                 "    </method>\n"
@@ -49,6 +52,9 @@ class BigLauncherDbusAdapterInterface : public QDBusAbstractAdaptor
                 "    <method name=\"enableMycroftIntegration\">\n"
                 "      <arg direction=\"in\" type=\"b\" name=\"mycroftIntegration\"/>\n"
                 "    </method>\n"
+                "    <method name=\"enablePmInhibition\">\n"
+                "      <arg direction=\"in\" type=\"b\" name=\"pmInhibition\"/>\n"
+                "    </method>\n"
                 "    <method name=\"coloredTilesActive\">\n"
                 "      <arg direction=\"out\" type=\"b\"/>\n"
                 "    </method>\n"
@@ -56,6 +62,9 @@ class BigLauncherDbusAdapterInterface : public QDBusAbstractAdaptor
                 "      <arg direction=\"out\" type=\"b\"/>\n"
                 "    </method>\n"
                 "    <method name=\"mycroftIntegrationActive\">\n"
+                "      <arg direction=\"out\" type=\"b\"/>\n"
+                "    </method>\n"
+                "    <method name=\"pmInhibitionActive\">\n"
                 "      <arg direction=\"out\" type=\"b\"/>\n"
                 "    </method>\n"
                 "  </interface>\n"
@@ -73,6 +82,8 @@ public Q_SLOTS: // METHODS
     bool coloredTilesActive();
     bool expandableTilesActive();
     bool mycroftIntegrationActive();
+    bool pmInhibitionActive();
+    void enablePmInhibition(const bool &pmInhibition);
 
     void setColoredTilesActive(const bool &coloredTilesActive);
     void setExpandableTilesActive(const bool &expandableTilesActive);
@@ -81,6 +92,7 @@ Q_SIGNALS: // SIGNALS
     void useColoredTilesChanged(const bool &msgUseColoredTiles);
     void useExpandableTilesChanged(const bool &msgUseExpandableTiles);
     void enableMycroftIntegrationChanged(const bool &msgEnableMycroftIntegration);
+    void enablePmInhibitionChanged(const bool &msgEnablePmInhibition);
     void coloredTilesActiveRequested();
     void expandableTilesActiveRequested();
     void enableMycroftIntegrationRequested();

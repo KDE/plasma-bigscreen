@@ -52,6 +52,9 @@ public Q_SLOTS:
     bool mycroftIntegrationActive() const;
     void setMycroftIntegrationActive(bool mycroftIntegrationActive);
 
+    bool pmInhibitionActive() const;
+    void setPmInhibitionActive(bool pmInhibitionActive);
+
     void saveTimeZone(const QString &newtimezone);
 
     bool useNtp() const;

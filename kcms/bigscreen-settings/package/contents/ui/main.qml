@@ -44,6 +44,9 @@ KCM.SimpleKCM {
         if(type == "mycroftIntegration"){
             kcm.setMycroftIntegrationActive(result);
         }
+        if(type == "pmInhibition"){
+            kcm.setPmInhibitionActive(result);
+        }
     }
 
     contentItem: FocusScope {
@@ -148,6 +151,7 @@ KCM.SimpleKCM {
 
                 RowLayout {
                     id: topContentArea
+                    height: parent.height
 
                     Delegates.LocalSettingDelegate {
                         id: mycroftIntegrationDelegate
@@ -157,7 +161,7 @@ KCM.SimpleKCM {
                         name: "Mycroft Integration"
                         customType: "mycroftIntegration"
                         KeyNavigation.up: kcmcloseButton
-                        KeyNavigation.right: coloredTileDelegate
+                        KeyNavigation.right: pmInhibitionDelegate
                         KeyNavigation.down: desktopThemeView
                         onActiveFocusChanged: {
                             if(activeFocus){
@@ -165,6 +169,25 @@ KCM.SimpleKCM {
                             }
                         }
                     }
+
+                    Delegates.LocalSettingDelegate {
+                        id: pmInhibitionDelegate
+                        implicitWidth: desktopThemeView.view.cellWidth * 2
+                        implicitHeight: desktopThemeView.view.cellHeight
+                        isChecked: kcm.pmInhibitionActive() ? 1 : 0
+                        name: "Power Inhibition"
+                        customType: "pmInhibition"
+                        KeyNavigation.up: kcmcloseButton
+                        KeyNavigation.right: coloredTileDelegate
+                        KeyNavigation.left: mycroftIntegrationDelegate
+                        KeyNavigation.down: desktopThemeView
+                        onActiveFocusChanged: {
+                            if(activeFocus){
+                                contentLayout.currentSection = topContentArea
+                            }
+                        }
+                    }
+
                     Delegates.LocalSettingDelegate {
                         id: coloredTileDelegate
                         implicitWidth: desktopThemeView.view.cellWidth * 2
@@ -173,7 +196,7 @@ KCM.SimpleKCM {
                         name: "Colored Tiles"
                         customType: "coloredTile"
                         KeyNavigation.up: kcmcloseButton
-                        KeyNavigation.left: mycroftIntegrationDelegate
+                        KeyNavigation.left: pmInhibitionDelegate
                         KeyNavigation.right: expandableTileDelegate
                         KeyNavigation.down: desktopThemeView
                         onActiveFocusChanged: {
@@ -182,6 +205,7 @@ KCM.SimpleKCM {
                             }
                         }
                     }
+
                     Delegates.LocalSettingDelegate {
                         id: expandableTileDelegate
                         implicitWidth: desktopThemeView.cellWidth * 2
@@ -199,6 +223,7 @@ KCM.SimpleKCM {
                             }
                         }
                     }
+
                     Delegates.TimeDelegate {
                         id: timeDateSettingsDelegate
                         implicitWidth: desktopThemeView.cellWidth * 2

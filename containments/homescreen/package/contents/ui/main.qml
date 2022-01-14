@@ -40,10 +40,23 @@ Item {
                 mycroftWindowLoader.item.disconnectclose()
             }
         }
+        onEnablePmInhibitionChanged: {
+            var powerInhibition = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.pmInhibitionActive()
+            if(powerInhibition) {
+                pmInhibitItem.inhibit = true
+            } else {
+                pmInhibitItem.inhibit = false
+            }
+        }
     }
 
     Containment.onAppletAdded: {
         addApplet(applet, x, y);
+    }
+
+    PowerManagementItem {
+        id: pmInhibitItem
+        //inhibit: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.pmInhibitionActive()
     }
 
     PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
@@ -51,6 +64,9 @@ Item {
         for (var i in plasmoid.applets) {
             root.addApplet(plasmoid.applets[i], -1, -1)
         }
+        console.log("checking for power inhibition")
+        console.log(plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.pmInhibitionActive())
+        pmInhibitItem.inhibit = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.pmInhibitionActive()
     }
 
     function addApplet(applet, x, y) {
