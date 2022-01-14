@@ -112,6 +112,14 @@ bool BigscreenSettings::mycroftIntegrationActive() const
     return responseArg.at(0).toBool();
 }
 
+bool BigscreenSettings::pmInhibitionActive() const
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "pmInhibitionActive");
+    QDBusMessage response = QDBusConnection::sessionBus().call(msg);
+    QList<QVariant> responseArg = response.arguments();
+    return responseArg.at(0).toBool();
+}
+
 void BigscreenSettings::setUseColoredTiles(bool useColoredTiles)
 {
     QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "useColoredTiles");
@@ -130,6 +138,13 @@ void BigscreenSettings::setMycroftIntegrationActive(bool mycroftIntegrationActiv
 {
     QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "enableMycroftIntegration");
     msg << mycroftIntegrationActive;
+    QDBusConnection::sessionBus().send(msg);
+}
+
+void BigscreenSettings::setPmInhibitionActive(bool pmInhibitionActive)
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "enablePmInhibition");
+    msg << pmInhibitionActive;
     QDBusConnection::sessionBus().send(msg);
 }
 

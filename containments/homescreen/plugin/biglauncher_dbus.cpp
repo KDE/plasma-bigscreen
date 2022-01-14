@@ -49,6 +49,12 @@ void BigLauncherDbusAdapterInterface::enableMycroftIntegration(const bool &mycro
     emit enableMycroftIntegrationChanged(mycroftIntegration);
 }
 
+void BigLauncherDbusAdapterInterface::enablePmInhibition(const bool &pmInhibition)
+{
+    Configuration::self().setPmInhibitionEnabled(pmInhibition);
+    emit enablePmInhibitionChanged(pmInhibition);
+}
+
 bool BigLauncherDbusAdapterInterface::coloredTilesActive()
 {
     if(m_useColoredTiles) {
@@ -70,6 +76,11 @@ bool BigLauncherDbusAdapterInterface::expandableTilesActive()
 bool BigLauncherDbusAdapterInterface::mycroftIntegrationActive()
 {
     return Configuration::self().mycroftEnabled();
+}
+
+bool BigLauncherDbusAdapterInterface::pmInhibitionActive()
+{
+    return Configuration::self().pmInhibitionEnabled();
 }
 
 void BigLauncherDbusAdapterInterface::setColoredTilesActive(const bool &coloredTilesActive)
