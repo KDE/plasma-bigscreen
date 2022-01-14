@@ -96,7 +96,7 @@ Kirigami.Page {
         highlightFollowsCurrentItem: true
         highlightMoveDuration: Kirigami.Units.longDuration
         snapMode: ListView.SnapToItem
-        model: ModulesModel{}
+        model: ModulesProxyModel{}
         delegate: settingsModuleDelegate
     }
 }

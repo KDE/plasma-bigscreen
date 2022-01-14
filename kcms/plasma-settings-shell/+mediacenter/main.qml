@@ -55,7 +55,7 @@ Kirigami.ApplicationWindow {
         id: module
     }
 
-    header: ModulesList {
+    header: ModulesListPage {
         id: modulesList
         visible: !SettingsApp.singleModule
         height: pageStack.depth > 0 ? Kirigami.Units.gridUnit * 15 : rootItem.height
