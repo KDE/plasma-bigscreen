@@ -27,6 +27,8 @@ public Q_SLOTS:
     QString getCecKeyConfig(const QString key);
     void setCecKeyConfig(const QString button, const QString key);
 
+    int getCecKeyFromRemotePress();
+
 Q_SIGNALS:
     void cecConfigChanged(const QString button);
 

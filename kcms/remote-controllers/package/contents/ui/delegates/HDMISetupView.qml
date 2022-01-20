@@ -14,6 +14,8 @@ Item {
     id: hdmiCecConfig
     Layout.fillWidth: true
     Layout.fillHeight: true
+    signal updateKeyValue(string targetname, int value)
+
 
     onFocusChanged: {
         if(focus) {
@@ -25,38 +27,38 @@ Item {
         target: kcm
         onCecConfigChanged: {
             if(button == "ButtonLeft"){
-                buttonLeftConfigValue.text = kcm.getCecKeyConfig("ButtonLeft")
+                updateKeyValue("buttonLeftConfigValue", kcm.getCecKeyConfig("ButtonLeft"))
             }
             if(button == "ButtonRight"){
-                buttonRightConfigValue.text = kcm.getCecKeyConfig("ButtonRight")
+                updateKeyValue("buttonRightConfigValue", kcm.getCecKeyConfig("ButtonRight"))
             }
             if(button == "ButtonUp"){
-                buttonUpConfigValue.text = kcm.getCecKeyConfig("ButtonUp")
+                updateKeyValue("buttonUpConfigValue", kcm.getCecKeyConfig("ButtonUp"))
             }
             if(button == "ButtonDown"){
-                buttonDownConfigValue.text = kcm.getCecKeyConfig("ButtonDown")
+                updateKeyValue("buttonDownConfigValue", kcm.getCecKeyConfig("ButtonDown"))
             }
             if(button == "ButtonEnter"){
-                buttonEnterConfigValue.text = kcm.getCecKeyConfig("ButtonEnter")
+                updateKeyValue("buttonEnterConfigValue", kcm.getCecKeyConfig("ButtonEnter"))
             }
             if(button == "ButtonBack"){
-                buttonBackConfigValue.text = kcm.getCecKeyConfig("ButtonBack")
+                updateKeyValue("buttonBackConfigValue", kcm.getCecKeyConfig("ButtonBack"))
             }
             if(button == "ButtonHomepage"){
-                buttonHomepageConfigValue.text = kcm.getCecKeyConfig("ButtonHomepage")
+                updateKeyValue("buttonHomepageConfigValue", kcm.getCecKeyConfig("ButtonHomepage"))
             }
         }
     }
 
     ListModel {
         id: buttonMapModel
-        ListElement {buttonDisplay: "Button Left"; buttonType: "ButtonLeft"}
-        ListElement {buttonDisplay: "Button Right"; buttonType: "ButtonRight"}
-        ListElement {buttonDisplay: "Button Up"; buttonType: "ButtonUp"}
-        ListElement {buttonDisplay: "Button Down"; buttonType: "ButtonDown"}
-        ListElement {buttonDisplay: "Button Ok/Select"; buttonType: "ButtonEnter"}
-        ListElement {buttonDisplay: "Button Back"; buttonType: "ButtonBack"}
-        ListElement {buttonDisplay: "Button Home"; buttonType: "ButtonHomepage"}
+        ListElement {buttonDisplay: "Button Left"; buttonType: "ButtonLeft"; objectName: "buttonLeftConfigValue"}
+        ListElement {buttonDisplay: "Button Right"; buttonType: "ButtonRight"; objectName: "buttonRightConfigValue"}
+        ListElement {buttonDisplay: "Button Up"; buttonType: "ButtonUp"; objectName: "buttonUpConfigValue"}
+        ListElement {buttonDisplay: "Button Down"; buttonType: "ButtonDown"; objectName: "buttonDownConfigValue"}
+        ListElement {buttonDisplay: "Button Ok/Select"; buttonType: "ButtonEnter"; objectName: "buttonEnterConfigValue"}
+        ListElement {buttonDisplay: "Button Back"; buttonType: "ButtonBack"; objectName: "buttonBackConfigValue"}
+        ListElement {buttonDisplay: "Button Home"; buttonType: "ButtonHomepage"; objectName: "buttonHomepageConfigValue"}
     }
 
     ColumnLayout {
@@ -85,8 +87,9 @@ Item {
                 spacing: Kirigami.Units.smallSpacing
                 delegate: MapButton {
                     id: mapButtonType
+                    objectName: model.objectName
                 }
             }
         }
     }
-} 
+}

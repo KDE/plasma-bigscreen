@@ -10,6 +10,8 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <KSharedConfig>
+#include <QDBusConnection>
+#include <QDBusMessage>
 
 static const QString configFile = QStringLiteral("plasma-localerc");
 static const QString lcLanguage = QStringLiteral("LANGUAGE");
@@ -65,6 +67,14 @@ void RemoteController::setCecKeyConfig(const QString button, const QString key)
         grp.sync();
         emit cecConfigChanged(button);
     }
+}
+
+int RemoteController::getCecKeyFromRemotePress()
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.plasma-remotecontrollers", "/CEC", "", "sendNextKey");
+    QDBusMessage response = QDBusConnection::sessionBus().call(msg);
+    QList<QVariant> responseArg = response.arguments();
+    return responseArg.at(0).toInt();
 }
 
 K_PLUGIN_CLASS_WITH_JSON(RemoteController, "mediacenter_remotecontroller.json")

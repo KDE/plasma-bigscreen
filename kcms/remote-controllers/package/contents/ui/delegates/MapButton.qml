@@ -10,6 +10,16 @@ PlasmaComponents3.Button {
     implicitWidth: parent.width
     padding: Kirigami.Units.largeSpacing
 
+    Connections {
+        target: hdmiCecConfig
+        onUpdateKeyValue: {
+            if (targetname == btnMap.objectName){
+                console.log(targetname, btnMap.objectName, value)
+                keyValue.text = value
+            }
+        }
+    }
+
     background: Rectangle {
         Kirigami.Theme.inherit: false
         Kirigami.Theme.colorSet: Kirigami.Theme.Button
@@ -27,7 +37,7 @@ PlasmaComponents3.Button {
             text: i18n(model.buttonDisplay)
         }
         PlasmaComponents.Label {
-            id: buttonLeftConfigValue
+            id: keyValue
             Layout.fillWidth: true
             horizontalAlignment: Text.AlignHCenter
             text: kcm.getCecKeyConfig(model.buttonType)

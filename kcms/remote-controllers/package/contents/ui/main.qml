@@ -18,14 +18,14 @@ import "delegates" as Delegates
 
 KCM.SimpleKCM {
     id: root
-    
+
     title: i18n("Remote Controllers")
     background: null
     leftPadding: Kirigami.Units.smallSpacing
     topPadding: 0
     rightPadding: Kirigami.Units.smallSpacing
     bottomPadding: 0
-    
+
     Component.onCompleted: {
         connectionView.forceActiveFocus();
     }
@@ -155,6 +155,16 @@ KCM.SimpleKCM {
             width: parent.width * 0.70
             height: parent.height * 0.10
             property var keyType
+
+            function keyCodeRecieved(keyCode) {
+                kcm.setCecKeyConfig(keyType[1], keyCode)
+                keySetupPopUp.close()
+            }
+
+            onOpened: {
+                var getCecKey = kcm.getCecKeyFromRemotePress()
+                keyCodeRecieved(getCecKey)
+            }
 
             contentItem: Item {
                 anchors.fill: parent
