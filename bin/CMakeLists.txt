@@ -9,6 +9,10 @@ configure_file(plasma-bigscreen-x11.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/pl
 
 install(FILES
 	${CMAKE_CURRENT_BINARY_DIR}/plasma-bigscreen-wayland.desktop
-	${CMAKE_CURRENT_BINARY_DIR}/plasma-bigscreen-x11.desktop
     DESTINATION ${KDE_INSTALL_DATADIR}/wayland-sessions
+)
+
+install(FILES
+	${CMAKE_CURRENT_BINARY_DIR}/plasma-bigscreen-x11.desktop
+    DESTINATION ${KDE_INSTALL_DATADIR}/xsessions
 )
