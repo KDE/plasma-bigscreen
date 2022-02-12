@@ -61,5 +61,5 @@ Comment[sv]=Plasma storbildsskärm av KDE
 Comment[tr]=KDE tarafından yapılan Plasma Büyük Ekran
 Comment[uk]=Плазма для великих екранів від KDE
 Comment[x-test]=xxPlasma Bigscreen by KDExx
-Comment[zh_CN]=KDE 的 Plasma 大屏幕
+Comment[zh_CN]=KDE Plasma 大屏幕
 X-KDE-PluginInfo-Version=${PROJECT_VERSION}
