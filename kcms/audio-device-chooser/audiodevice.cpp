@@ -17,8 +17,8 @@ static const QString lcLanguage = QStringLiteral("LANGUAGE");
 AudioDevice::AudioDevice(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
 {
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_audiodevice"), //
-                                       i18n("Configure Plasma audiodevice"),
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_mediacenter_audiodevice"), //
+                                       i18n("Configure Plasma Audio"),
                                        QStringLiteral("2.0"),
                                        QString(),
                                        KAboutLicense::LGPL);
@@ -43,6 +43,6 @@ void AudioDevice::defaults()
 {
 }
 
-K_PLUGIN_CLASS_WITH_JSON(AudioDevice, "kcm_audiodevice.json")
+K_PLUGIN_CLASS_WITH_JSON(AudioDevice, "kcm_mediacenter_audiodevice.json")
 
 #include "audiodevice.moc"

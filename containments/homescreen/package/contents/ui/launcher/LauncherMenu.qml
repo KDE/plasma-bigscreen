@@ -38,6 +38,7 @@ FocusScope {
 
     Component.onCompleted: {
         root.forceActiveFocus();
+        plasmoid.nativeInterface.kcmsListModel.loadKcms();
         plasmoid.nativeInterface.applicationListModel.loadApplications();
         root.activateAppView();
         plasmoid.nativeInterface.setUseColoredTiles(plasmoid.configuration.coloredTiles);

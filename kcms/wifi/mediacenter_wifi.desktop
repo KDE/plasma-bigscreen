@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=plasma-settings -s -m kcm_mobile_wifi
+Exec=plasma-settings -s -m kcm_mediacenter_wifi
 Icon=network-wireless-signal-exellent
 Type=Service
 X-KDE-ServiceTypes=KCModule

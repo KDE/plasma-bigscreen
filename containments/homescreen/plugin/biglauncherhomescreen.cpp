@@ -8,6 +8,7 @@
 #include "biglauncherhomescreen.h"
 #include "applicationlistmodel.h"
 #include "biglauncher_dbus.h"
+#include "kcmslistmodel.h"
 
 #include <QDebug>
 #include <QProcess>
@@ -20,17 +21,23 @@ HomeScreen::HomeScreen(QObject *parent, const QVariantList &args)
     , m_session(new SessionManagement(this))
 {
     const QByteArray uri("org.kde.private.biglauncher");
+    qmlRegisterUncreatableType<KcmsListModel>(uri, 1, 0, "KcmsListModel", QStringLiteral("KcmsListModel is uncreatable"));
     qmlRegisterUncreatableType<ApplicationListModel>(uri, 1, 0, "ApplicationListModel", QStringLiteral("Cannot create an item of type ApplicationListModel"));
     qmlRegisterUncreatableType<BigLauncherDbusAdapterInterface>(uri, 1, 0, "BigLauncherDbusAdapterInterface", QStringLiteral("Cannot create an item of type BigLauncherDbusAdapterInterface"));
 
     // setHasConfigurationInterface(true);
     m_bigLauncherDbusAdapterInterface = new BigLauncherDbusAdapterInterface(this);
     m_applicationListModel = new ApplicationListModel(this);
-
+    m_kcmsListModel = new KcmsListModel(this);
 }
 
 HomeScreen::~HomeScreen()
 {
+}
+
+KcmsListModel *HomeScreen::kcmsListModel() const
+{
+    return m_kcmsListModel;
 }
 
 ApplicationListModel *HomeScreen::applicationListModel() const

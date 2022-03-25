@@ -170,7 +170,7 @@ FocusScope {
         BigScreen.TileRepeater {
             id: settingsView
             title: i18n("Settings")
-            model: mycroftIntegration ? settingActions.actionWithIntegration : settingActions.actionWithoutIntegration
+            model: plasmoid.nativeInterface.kcmsListModel
             compactMode: plasmoid.configuration.expandingTiles
 
             onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = settingsView

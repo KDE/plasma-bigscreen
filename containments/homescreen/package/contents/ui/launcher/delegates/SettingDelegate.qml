@@ -11,8 +11,8 @@ import org.kde.plasma.private.nanoshell 2.0 as NanoShell
 
 BigScreen.IconDelegate {
     id: delegate
-    icon.name: model.icon.name
-    text: model.text
+    icon.name: modelData.kcmIconName
+    text: modelData.kcmName
     useIconColors: plasmoid.configuration.coloredTiles
     compactMode: plasmoid.configuration.expandingTiles
 
@@ -24,7 +24,7 @@ BigScreen.IconDelegate {
                             delegate.Kirigami.ScenePosition.x + delegate.width/2,
                             delegate.Kirigami.ScenePosition.y + delegate.height/2,
                             Math.min(delegate.width, delegate.height), delegate.Kirigami.Theme.backgroundColor);
-        trigger();
+        settingActions.launchSettings(modelData.kcmId)
         recentView.forceActiveFocus();
         recentView.currentIndex = 0;
     }
