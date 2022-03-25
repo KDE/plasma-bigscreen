@@ -1,0 +1,17 @@
+[Desktop Entry]
+Exec=plasma-settings -s -m kcm_mediacenter_audiodevice
+Icon=audio-volume-high
+Type=Service
+X-KDE-ServiceTypes=KCModule
+X-DocPath=kcontrol/audiodevice/index.html
+
+X-KDE-Library=kcm_mediacenter_audiodevice
+X-KDE-ParentApp=kcontrol
+
+X-KDE-System-Settings-Parent-Category=hardware
+X-KDE-Weight=40
+X-KDE-FormFactors=mediacenter
+
+Name=Audio
+Comment=Manage mediacenter audio devices
+Categories=Qt;KDE;X-KDE-settings-system;

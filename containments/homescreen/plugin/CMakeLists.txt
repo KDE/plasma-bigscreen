@@ -6,6 +6,7 @@ set(biglauncherhomescreen_SRCS
     biglauncherhomescreen.cpp
     biglauncher_dbus.cpp
     applicationlistmodel.cpp
+    kcmslistmodel.cpp
     configuration.cpp
     )
 

@@ -12,6 +12,7 @@
 #include "biglauncher_dbus.h"
 
 class ApplicationListModel;
+class KcmsListModel;
 class SessionManagement;
 class BigLauncherDbusAdapterInterface;
 
@@ -19,6 +20,7 @@ class HomeScreen : public Plasma::Containment
 {
     Q_OBJECT
     Q_PROPERTY(ApplicationListModel *applicationListModel READ applicationListModel CONSTANT)
+    Q_PROPERTY(KcmsListModel *kcmsListModel READ kcmsListModel CONSTANT)
     Q_PROPERTY(BigLauncherDbusAdapterInterface *bigLauncherDbusAdapterInterface READ bigLauncherDbusAdapterInterface CONSTANT)
 
 public:
@@ -26,6 +28,7 @@ public:
     ~HomeScreen() override;
 
     ApplicationListModel *applicationListModel() const;
+    KcmsListModel *kcmsListModel() const;
     BigLauncherDbusAdapterInterface *bigLauncherDbusAdapterInterface() const;
 
 public Q_SLOTS:
@@ -36,6 +39,7 @@ public Q_SLOTS:
 
 private:
     ApplicationListModel *m_applicationListModel;
+    KcmsListModel *m_kcmsListModel;
     SessionManagement *m_session;
     BigLauncherDbusAdapterInterface* m_bigLauncherDbusAdapterInterface;
 };
