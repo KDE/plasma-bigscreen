@@ -13,5 +13,17 @@ X-KDE-Weight=40
 X-KDE-FormFactors=mediacenter
 
 Name=Audio
+Name[ca]=Àudio
+Name[ca@valencia]=Àudio
+Name[nl]=Audio
+Name[pt]=Áudio
+Name[uk]=Звук
+Name[x-test]=xxAudioxx
 Comment=Manage mediacenter audio devices
+Comment[ca]=Gestiona els dispositius d'àudio del centre multimèdia
+Comment[ca@valencia]=Gestiona els dispositius d'àudio del centre multimèdia
+Comment[nl]=Audio-apparaten in mediacenter beheren
+Comment[pt]=Gerir os dispositivos de áudio do centro multimédia
+Comment[uk]=Керування звуковими пристроями медіацентру
+Comment[x-test]=xxManage mediacenter audio devicesxx
 Categories=Qt;KDE;X-KDE-settings-system;
