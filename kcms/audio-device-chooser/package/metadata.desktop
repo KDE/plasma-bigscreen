@@ -1,5 +1,11 @@
 [Desktop Entry]
 Name=Audio
+Name[ca]=Àudio
+Name[ca@valencia]=Àudio
+Name[nl]=Audio
+Name[pt]=Áudio
+Name[uk]=Звук
+Name[x-test]=xxAudioxx
 Icon=audio-volume-high
 Type=Service
 X-KDE-PluginInfo-License=GPL
