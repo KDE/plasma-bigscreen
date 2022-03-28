@@ -1,9 +1,11 @@
 [Desktop Entry]
 Name=Audio
+Name[az]=Səs
 Name[ca]=Àudio
 Name[ca@valencia]=Àudio
 Name[nl]=Audio
 Name[pt]=Áudio
+Name[sv]=Ljud
 Name[uk]=Звук
 Name[x-test]=xxAudioxx
 Icon=audio-volume-high
