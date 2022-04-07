@@ -52,13 +52,35 @@ AbstractDelegate {
             anchors.top: parent.top
             columns: 2
 
-            Kirigami.Icon {
-                id: iconItem
-                Layout.preferredWidth: parent.height
-                Layout.preferredHeight: width
-                source: delegate.iconImage || delegate.icon.name || delegate.icon.source
+            Behavior on columns {
+                PauseAnimation {
+                    duration: Kirigami.Units.longDuration / 2
+                }
             }
 
+            Kirigami.Icon {
+                id: iconItem
+                Layout.preferredWidth: topArea.columns > 1 ? parent.height * 0.75 : parent.height
+                Layout.preferredHeight: width
+                source: delegate.iconImage || delegate.icon.name || delegate.icon.source
+
+                Behavior on Layout.preferredWidth {
+                    ParallelAnimation {
+                        NumberAnimation {
+                            duration: Kirigami.Units.longDuration / 2; 
+                            easing.type: Easing.InOutQuad
+                        }
+                        NumberAnimation {
+                            target: textLabel
+                            from: 0
+                            to: 1
+                            properties: "opacity"
+                            duration: delegate.hasComment ? Kirigami.Units.longDuration * 3 : 0
+                            easing.type: Easing.InOutQuad
+                        }
+                    }
+                }
+            }
 
             Rectangle {
                 Layout.fillWidth: true
@@ -97,13 +119,53 @@ AbstractDelegate {
             wrapMode: Text.WordWrap
             text: delegate.comment
             color: imagePalette.textColor
+
+            Behavior on opacity  {
+                NumberAnimation { duration: Kirigami.Units.longDuration * 2.5; easing.type: Easing.InOutQuad }
+            }
         }
     }
 
     states: [
         State {
-            name: "selected"
+            name: "selectedNoComment"
+            when: delegate.isCurrent && !hasComment
+
+            PropertyChanges {
+                target: delegate
+                implicitWidth: delegate.compactMode ? listView.cellWidth + (listView.cellWidth  / 2) : listView.cellWidth
+            }
+
+            PropertyChanges {
+                target: topArea
+                height: content.height
+                columns: 1
+                rows: 2
+            }
+            PropertyChanges {
+                target: iconItem
+                Layout.preferredHeight: parent.height * 0.75
+                Layout.preferredWidth: height
+                Layout.alignment: Qt.AlignHCenter
+            }
+            PropertyChanges {
+                target: textLabel
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            PropertyChanges {
+                target: commentLabel
+                opacity: 0
+            }
+        },
+        State {
+            name: "selectedWithComment"
             when: delegate.isCurrent && hasComment
+
+            PropertyChanges {
+                    target: delegate
+                    implicitWidth: delegate.compactMode ? listView.cellWidth + (listView.cellWidth  / 1.5) : listView.cellWidth
+            }
 
             PropertyChanges {
                 target: topArea
@@ -117,7 +179,7 @@ AbstractDelegate {
         },
         State {
             name: "normal"
-            when: !delegate.isCurrent || delegate.isCurrent && !hasComment
+            when: !delegate.isCurrent
 
             PropertyChanges {
                 target: topArea
