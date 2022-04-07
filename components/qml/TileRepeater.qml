@@ -1,7 +1,8 @@
  /*
+ * SPDX-FileCopyrightText: 2022 Aditya Mehra <aix.m@outlook.com>
  * SPDX-FileCopyrightText: 2020 Marco Martin <mart@kde.org>
  *
- *  SPDX-License-Identifier: GPL-2.0-or-later
+ * SPDX-License-Identifier: GPL-2.0-or-later
  */
  
 import QtQuick 2.14
@@ -26,8 +27,17 @@ FocusScope {
     
     implicitHeight: view.implicitHeight + header.implicitHeight
 
-    //TODO:dynamic
-    property int columns: Math.max(3, Math.floor(width / (units.gridUnit * 8)))
+    property real columns: {
+        var v = root.compactMode ? 7.5 : 4.5
+        var n = Math.round(view.Window.window.width / Screen.width * v)
+        if (n % 1 === 0.5) {
+            console.log("n is " + n)
+            n = Math.floor(n) + 0.5
+        } else {
+            n = Math.ceil(n) + 0.5
+        }
+        return n
+    }
 
     property alias cellWidth: view.cellWidth
     property alias cellHeight: view.cellHeight
@@ -74,8 +84,8 @@ FocusScope {
             topMargin: Kirigami.Units.largeSpacing*2
             leftMargin: -Kirigami.Units.largeSpacing
         }
-        readonly property int cellWidth: (PlasmaCore.Units.iconSizes.huge + Kirigami.Units.largeSpacing*4) * (root.compactMode ? 1 : 2)
-        property int cellHeight: root.compactMode ? cellWidth + units.gridUnit * 3 : cellWidth / 1.6
+        readonly property int cellWidth: root.width / columns
+        property int cellHeight: root.compactMode ? cellWidth + units.gridUnit * 3 : cellWidth * 0.75
         property int currentIndex: 0
         property alias count: repeater.count
         property alias model: repeater.model
