@@ -41,7 +41,7 @@ AbstractDelegate {
             ? (Kirigami.ColorUtils.brightnessForColor(dominantContrast) === Kirigami.ColorUtils.Light ? imagePalette.closestToBlack : imagePalette.closestToWhite)
             : PlasmaCore.ColorScope.textColor
     }
-    
+
     contentItem: Item {
         id: content
 
@@ -58,16 +58,16 @@ AbstractDelegate {
                 }
             }
 
-            Kirigami.Icon {
+            PlasmaCore.IconItem {
                 id: iconItem
-                Layout.preferredWidth: topArea.columns > 1 ? parent.height * 0.75 : parent.height
+                Layout.preferredWidth: topArea.columns > 1 ? parent.height * 0.75 : (delegate.compactMode ? parent.height / 2 : parent.height)
                 Layout.preferredHeight: width
-                source: delegate.iconImage || delegate.icon.name || delegate.icon.source
+                source: delegate.iconImage || delegate.icon.name || delegate.icon.source ? delegate.iconImage || delegate.icon.name || delegate.icon.source : "application-x-executable"
 
                 Behavior on Layout.preferredWidth {
                     ParallelAnimation {
                         NumberAnimation {
-                            duration: Kirigami.Units.longDuration / 2; 
+                            duration: Kirigami.Units.longDuration / 2;
                             easing.type: Easing.InOutQuad
                         }
                         NumberAnimation {
@@ -93,7 +93,7 @@ AbstractDelegate {
                     height: parent.height
                     wrapMode: Text.WordWrap
                     verticalAlignment: Text.AlignVCenter
-                    font.pixelSize: height * 0.9
+                    font.pixelSize: delegate.compactMode ? width * 0.2 : height * 0.9
                     font.bold: true
                     fontSizeMode: Text.Fit
                     minimumPixelSize: 2
@@ -133,7 +133,7 @@ AbstractDelegate {
 
             PropertyChanges {
                 target: delegate
-                implicitWidth: delegate.compactMode ? listView.cellWidth + (listView.cellWidth  / 2) : listView.cellWidth
+                implicitWidth: delegate.compactMode ? listView.cellWidth + (listView.cellWidth  / 1.25) : listView.cellWidth
             }
 
             PropertyChanges {
@@ -164,7 +164,7 @@ AbstractDelegate {
 
             PropertyChanges {
                     target: delegate
-                    implicitWidth: delegate.compactMode ? listView.cellWidth + (listView.cellWidth  / 1.5) : listView.cellWidth
+                    implicitWidth: delegate.compactMode ? listView.cellWidth + (listView.cellWidth  / 1.25) : listView.cellWidth
             }
 
             PropertyChanges {
@@ -189,7 +189,7 @@ AbstractDelegate {
             }
             PropertyChanges {
                 target: iconItem
-                Layout.preferredHeight: parent.height * 0.75
+                Layout.preferredHeight: delegate.compactMode ? parent.height / 2 : parent.height * 0.75
                 Layout.preferredWidth: height
                 Layout.alignment: Qt.AlignHCenter
             }

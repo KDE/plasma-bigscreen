@@ -4,7 +4,7 @@
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
- 
+
 import QtQuick 2.14
 import QtQuick.Layouts 1.14
 import QtQuick.Window 2.14
@@ -24,19 +24,19 @@ FocusScope {
     property alias currentItem: view.currentItem
     property alias count: view.count
     Layout.fillWidth: true
-    
+
     implicitHeight: view.implicitHeight + header.implicitHeight
 
     property real columns: {
-        var v = root.compactMode ? 7.5 : 4.5
-        var n = Math.round(view.Window.window.width / Screen.width * v)
-        if (n % 1 === 0.5) {
-            console.log("n is " + n)
-            n = Math.floor(n) + 0.5
-        } else {
-            n = Math.ceil(n) + 0.5
+        var v = root.compactMode ? 7.5 : 5.5
+        if (view.Window.window.width <= 1280 && view.Window.window.width > 1024) {
+            v = root.compactMode ? 6.5 : 4.5
+        } else if (view.Window.window.width <= 1024 && view.Window.window.width > 800) {
+            v = root.compactMode ? 5.5 : 3.5
+        } else if (view.Window.window.width <= 800) {
+            v = root.compactMode ? 4.5 : 2.5
         }
-        return n
+        return v
     }
 
     property alias cellWidth: view.cellWidth
@@ -84,7 +84,7 @@ FocusScope {
             topMargin: Kirigami.Units.largeSpacing*2
             leftMargin: -Kirigami.Units.largeSpacing
         }
-        readonly property int cellWidth: root.width / columns
+        readonly property int cellWidth: root.width / columns + (PlasmaCore.Units.gridUnit / 2)
         property int cellHeight: root.compactMode ? cellWidth + units.gridUnit * 3 : cellWidth * 0.75
         property int currentIndex: 0
         property alias count: repeater.count
