@@ -82,7 +82,7 @@ AbstractIndicator {
     
     Loader {
         id: mycroftLoader
-        source: Qt.resolvedUrl("MycroftConnect.qml") ? Qt.resolvedUrl("MycroftConnect.qml") : null
+        source: connectionIcon.mycroftIntegration && Qt.resolvedUrl("MycroftConnect.qml") ? Qt.resolvedUrl("MycroftConnect.qml") : null
     }
     
     onClicked: {
