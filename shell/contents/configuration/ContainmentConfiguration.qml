@@ -62,7 +62,7 @@ AppletConfiguration {
         topPadding: units.smallSpacing * 2
         bottomPadding: units.smallSpacing * 2
         
-        Wallpaper.Image {
+        Wallpaper.ImageBackend {
             id: imageWallpaper
         }
         background: null
