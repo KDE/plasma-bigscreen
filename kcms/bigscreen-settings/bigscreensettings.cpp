@@ -88,7 +88,7 @@ ThemeListModel *BigscreenSettings::themeListModel()
     return m_themeListModel;
 }
 
-bool BigscreenSettings::useColoredTiles() const
+bool BigscreenSettings::useColoredTiles()
 {
     QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "coloredTilesActive");
     QDBusMessage response = QDBusConnection::sessionBus().call(msg);
@@ -96,7 +96,7 @@ bool BigscreenSettings::useColoredTiles() const
     return responseArg.at(0).toBool();
 }
 
-bool BigscreenSettings::useExpandingTiles() const
+bool BigscreenSettings::useExpandingTiles()
 {
     QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "expandableTilesActive");
     QDBusMessage response = QDBusConnection::sessionBus().call(msg);
@@ -104,7 +104,7 @@ bool BigscreenSettings::useExpandingTiles() const
     return responseArg.at(0).toBool();
 }
 
-bool BigscreenSettings::mycroftIntegrationActive() const
+bool BigscreenSettings::mycroftIntegrationActive()
 {
     QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "mycroftIntegrationActive");
     QDBusMessage response = QDBusConnection::sessionBus().call(msg);
@@ -112,7 +112,7 @@ bool BigscreenSettings::mycroftIntegrationActive() const
     return responseArg.at(0).toBool();
 }
 
-bool BigscreenSettings::pmInhibitionActive() const
+bool BigscreenSettings::pmInhibitionActive()
 {
     QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "pmInhibitionActive");
     QDBusMessage response = QDBusConnection::sessionBus().call(msg);
@@ -182,18 +182,18 @@ void BigscreenSettings::setCurrentDate(const QDate &currentDate)
     }
 }
 
-QTime BigscreenSettings::currentTime() const
+QTime BigscreenSettings::currentTime()
 {
     return m_currentTime;
 }
 
 
-QDate BigscreenSettings::currentDate() const
+QDate BigscreenSettings::currentDate()
 {
     return m_currentDate;
 }
 
-bool BigscreenSettings::useNtp() const
+bool BigscreenSettings::useNtp()
 {
     return m_useNtp;
 }

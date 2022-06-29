@@ -24,7 +24,7 @@ class HomeScreen : public Plasma::Containment
     Q_PROPERTY(BigLauncherDbusAdapterInterface *bigLauncherDbusAdapterInterface READ bigLauncherDbusAdapterInterface CONSTANT)
 
 public:
-    HomeScreen(QObject *parent, const QVariantList &args);
+    HomeScreen(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
     ~HomeScreen() override;
 
     ApplicationListModel *applicationListModel() const;

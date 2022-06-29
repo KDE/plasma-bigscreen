@@ -4,8 +4,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef WIFI_H
-#define WIFI_H
+#ifndef KDECONNECT_H
+#define KDECONNECT_H
 
 #include <KQuickAddons/ConfigModule>
 
@@ -27,4 +27,4 @@ public Q_SLOTS:
 private:
 };
 
-#endif
+#endif // KDECONNECT_H

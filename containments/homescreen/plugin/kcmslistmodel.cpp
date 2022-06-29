@@ -107,6 +107,8 @@ QVariant KcmsListModel::data(const QModelIndex &index, int role) const
 
 void KcmsListModel::moveRow(const QModelIndex &sourceParent, int sourceRow, const QModelIndex &destinationParent, int destinationChild)
 {
+    Q_UNUSED(sourceParent);
+    Q_UNUSED(destinationParent);
     moveItem(sourceRow, destinationChild);
 }
 
@@ -132,7 +134,7 @@ void KcmsListModel::moveItem(int row, int destination)
     m_appOrder.clear();
     m_appPositions.clear();
     int i = 0;
-    for (auto app : m_kcms) {
+    for (const auto &app : qAsConst(m_kcms)) {
         m_appOrder << app.id;
         m_appPositions[app.id] = i;
         ++i;
@@ -173,7 +175,7 @@ void KcmsListModel::setAppOrder(const QStringList &order)
     m_appOrder = order;
     m_appPositions.clear();
     int i = 0;
-    for (auto app : m_appOrder) {
+    for (const auto &app : qAsConst(m_appOrder)) {
         m_appPositions[app] = i;
         ++i;
     }

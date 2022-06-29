@@ -53,7 +53,6 @@ public:
 
 Q_SIGNALS:
     void countChanged();
-    void dataChanged();
     void appOrderChanged();
 
 private:

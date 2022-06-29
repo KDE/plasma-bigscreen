@@ -17,7 +17,8 @@
 // KDE
 #include <KActivities/ResourceInstance>
 #include <KConfigGroup>
-#include <KIOWidgets/KRun>
+#include <KIO/ApplicationLauncherJob>
+#include <KNotificationJobUiDelegate>
 #include <KService>
 #include <KServiceGroup>
 #include <KSharedConfig>
@@ -210,7 +211,7 @@ QVariant ApplicationListModel::data(const QModelIndex &index, int role) const
 Qt::ItemFlags ApplicationListModel::flags(const QModelIndex &index) const
 {
     if (!index.isValid()) {
-        return nullptr;
+        return Qt::NoItemFlags;
     }
     return Qt::ItemIsDragEnabled | QAbstractItemModel::flags(index);
 }
@@ -251,7 +252,7 @@ Q_INVOKABLE void ApplicationListModel::moveItem(int row, int destination)
     m_appOrder.clear();
     m_appPositions.clear();
     int i = 0;
-    for (auto app : m_applicationList) {
+    for ( const auto &app : qAsConst(m_applicationList)) {
         m_appOrder << app.storageId;
         m_appPositions[app.storageId] = i;
         ++i;
@@ -264,7 +265,9 @@ Q_INVOKABLE void ApplicationListModel::moveItem(int row, int destination)
 void ApplicationListModel::executeCommand(const QString &command)
 {
     qWarning() << "Executing" << command;
-    QProcess::startDetached(command);
+    QStringList args = command.split(QStringLiteral(" "));
+    QString app = args.takeFirst();
+    QProcess::startDetached(app, args);
 }
 
 void ApplicationListModel::runApplication(const QString &storageId)
@@ -275,7 +278,10 @@ void ApplicationListModel::runApplication(const QString &storageId)
 
     KService::Ptr service = KService::serviceByStorageId(storageId);
 
-    KRun::runApplication(*service, QList<QUrl>(), nullptr);
+    //KRun::runApplication(*service, QList<QUrl>(), nullptr);
+    KIO::ApplicationLauncherJob *job = new KIO::ApplicationLauncherJob(service);
+    job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
+    job->start();
 
     KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()), QStringLiteral("org.kde.plasma.kicker"));
 }
@@ -294,7 +300,7 @@ void ApplicationListModel::setAppOrder(const QStringList &order)
     m_appOrder = order;
     m_appPositions.clear();
     int i = 0;
-    for (auto app : m_appOrder) {
+    for (const auto &app : qAsConst(m_appOrder)) {
         m_appPositions[app] = i;
         ++i;
     }

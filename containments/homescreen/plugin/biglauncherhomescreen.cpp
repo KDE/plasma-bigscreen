@@ -16,8 +16,8 @@
 
 #include <sessionmanagement.h>
 
-HomeScreen::HomeScreen(QObject *parent, const QVariantList &args)
-    : Plasma::Containment(parent, args)
+HomeScreen::HomeScreen(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : Plasma::Containment(parent, data, args)
     , m_session(new SessionManagement(this))
 {
     const QByteArray uri("org.kde.private.biglauncher");
@@ -53,7 +53,10 @@ BigLauncherDbusAdapterInterface *HomeScreen::bigLauncherDbusAdapterInterface() c
 void HomeScreen::executeCommand(const QString &command)
 {
     qWarning() << "Executing" << command;
-    QProcess::startDetached(command);
+    QStringList parts = command.split(' ');
+    QString commandName = parts.takeFirst();
+    QStringList arguments = parts;
+    QProcess::startDetached(commandName, arguments);
 }
 
 void HomeScreen::requestShutdown()

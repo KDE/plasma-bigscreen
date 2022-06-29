@@ -43,27 +43,27 @@ public Q_SLOTS:
     void load() override;
     void applyPlasmaTheme(QQuickItem *item, const QString &themeName);
 
-    bool useColoredTiles() const;
+    bool useColoredTiles();
     void setUseColoredTiles(bool useColoredTiles);
 
-    bool useExpandingTiles() const;
+    bool useExpandingTiles();
     void setUseExpandingTiles(bool useExpandingTiles);
 
-    bool mycroftIntegrationActive() const;
+    bool mycroftIntegrationActive();
     void setMycroftIntegrationActive(bool mycroftIntegrationActive);
 
-    bool pmInhibitionActive() const;
+    bool pmInhibitionActive();
     void setPmInhibitionActive(bool pmInhibitionActive);
 
     void saveTimeZone(const QString &newtimezone);
 
-    bool useNtp() const;
+    bool useNtp();
     void setUseNtp(bool ntp);
 
-    QTime currentTime() const;
+    QTime currentTime();
     void setCurrentTime(const QTime &time);
 
-    QDate currentDate() const;
+    QDate currentDate();
     void setCurrentDate(const QDate &date);
 
     bool saveTime();

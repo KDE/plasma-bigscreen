@@ -100,6 +100,7 @@ void ThemeListModel::reload()
         info.pluginName = pluginName;
 
         bool hasPluginName = std::any_of(m_themes.begin(), m_themes.end(), [&](const ThemeInfo &item) {
+            Q_UNUSED (item)
             return info.pluginName == packageName;
         });
 

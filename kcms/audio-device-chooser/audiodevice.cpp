@@ -11,9 +11,6 @@
 #include <KPluginFactory>
 #include <KSharedConfig>
 
-static const QString configFile = QStringLiteral("plasma-localerc");
-static const QString lcLanguage = QStringLiteral("LANGUAGE");
-
 AudioDevice::AudioDevice(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
 {
