@@ -23,6 +23,8 @@
 
 #include <KConfigGroup>
 #include <KDesktopFile>
+#include <KPluginMetaData>
+#include <KAboutData>
 
 #include <KColorScheme>
 #include <QDebug>
@@ -67,8 +69,16 @@ void ThemeListModel::reload()
         const QDir cd(ppath);
         const QStringList &entries = cd.entryList(QDir::Dirs | QDir::Hidden);
         for (const QString &pack : entries) {
-            const QString _metadata = ppath + QLatin1Char('/') + pack + QStringLiteral("/metadata.desktop");
-            if ((pack != "." && pack != "..") && (QFile::exists(_metadata))) {
+            const QString prefix = QStringLiteral("%1%2%3%4metadata.").arg(ppath, QDir::separator(), pack, QDir::separator());
+
+            QString _metadata = QStringLiteral("%1json").arg(prefix);
+            if (QFile::exists(_metadata)) {
+                themes << _metadata;
+                continue;
+            }
+
+            _metadata = QStringLiteral("%1desktop").arg(prefix);
+            if (QFile::exists(_metadata)) {
                 themes << _metadata;
             }
         }
@@ -80,21 +90,37 @@ void ThemeListModel::reload()
         int themeNameSepIndex = themeRoot.lastIndexOf('/', -1);
         QString packageName = themeRoot.right(themeRoot.length() - themeNameSepIndex - 1);
 
-        KDesktopFile df(theme);
+        QString name;
+        QString comment;
+        QString author;
+        QString version;
+        QString pluginName;
 
-        if (df.noDisplay()) {
-            continue;
+        if (theme.endsWith(QLatin1String(".json"))) {
+            KPluginMetaData data = KPluginMetaData::fromJsonFile(theme);
+            name = data.name();
+            comment = data.description();
+            pluginName = data.pluginId();
+
+            QList<KAboutPerson> authors = data.authors();
+            author = authors.isEmpty() ? QString() : authors.first().name();
+
+        } else {
+            KDesktopFile df(theme);
+
+            if (df.noDisplay()) {
+                continue;
+            }
+
+            name = df.readName();
+            if (name.isEmpty()) {
+                name = packageName;
+            }
+            comment = df.readComment();
+            pluginName = df.desktopGroup().readEntry("X-KDE-PluginInfo-Name", QString());
+            author = df.desktopGroup().readEntry("X-KDE-PluginInfo-Author", QString());
+            version = df.desktopGroup().readEntry("X-KDE-PluginInfo-Version", QString());
         }
-
-        QString name = df.readName();
-        if (name.isEmpty()) {
-            name = packageName;
-        }
-
-        const QString comment = df.readComment();
-        const QString pluginName = df.desktopGroup().readEntry("X-KDE-PluginInfo-Name", QString());
-        const QString author = df.desktopGroup().readEntry("X-KDE-PluginInfo-Author", QString());
-        const QString version = df.desktopGroup().readEntry("X-KDE-PluginInfo-Version", QString());
 
         ThemeInfo info;
         info.pluginName = pluginName;
@@ -109,6 +135,7 @@ void ThemeListModel::reload()
             const QString colorsPath = themeRoot + QLatin1String("/colors");
             const bool followsSystemColors = !QFileInfo::exists(colorsPath);
             ColorType type = FollowsColorTheme;
+            Q_UNUSED(type);
             info.type = FollowsColorTheme;
             if (!followsSystemColors) {
                 const KSharedConfig::Ptr config = KSharedConfig::openConfig(colorsPath);
