@@ -79,7 +79,7 @@ public:
     Q_INVOKABLE void executeCommand(const QString &command);
 
 public Q_SLOTS:
-    void sycocaDbChanged(const QStringList &change);
+    void sycocaDbChanged();
 
 Q_SIGNALS:
     void countChanged();

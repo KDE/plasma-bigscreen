@@ -1,9 +1,8 @@
 set(bigscreensettings_SRCS
     bigscreensettings.cpp
     themelistmodel.cpp
+    timedated_interface.cpp
 )
-
-qt_add_dbus_interface(bigscreensettings_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/timedated1.xml timedated_interface)
 
 add_library(kcm_mediacenter_bigscreen_settings MODULE ${bigscreensettings_SRCS})
 

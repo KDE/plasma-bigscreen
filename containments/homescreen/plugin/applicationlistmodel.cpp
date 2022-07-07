@@ -29,8 +29,7 @@
 ApplicationListModel::ApplicationListModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    // can't use the new syntax as this signal is overloaded
-    connect(KSycoca::self(), SIGNAL(databaseChanged(const QStringList &)), this, SLOT(sycocaDbChanged(const QStringList &)));
+    connect(KSycoca::self(), static_cast<void (KSycoca::*)()>(&KSycoca::databaseChanged), this, &ApplicationListModel::sycocaDbChanged);
 }
 
 ApplicationListModel::~ApplicationListModel() = default;
@@ -51,12 +50,8 @@ QHash<int, QByteArray> ApplicationListModel::roleNames() const
     return roleNames;
 }
 
-void ApplicationListModel::sycocaDbChanged(const QStringList &changes)
+void ApplicationListModel::sycocaDbChanged()
 {
-    if (!changes.contains("apps") && !changes.contains("xdgdata-apps")) {
-        return;
-    }
-
     m_applicationList.clear();
     m_voiceAppSkills.clear();
 
