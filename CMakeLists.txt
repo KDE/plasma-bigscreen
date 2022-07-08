@@ -64,6 +64,7 @@ plasma_install_package(lookandfeel org.kde.plasma.mycroft.bigscreen look-and-fee
 
 
 install(FILES bin/mycroft-skill-launcher.py DESTINATION ${BIN_INSTALL_DIR})
+install(FILES org.kde.plasma.mycroft.bigscreen.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
 if(ECM_VERSION VERSION_GREATER_EQUAL 5.79)
     include(KDEClangFormat)

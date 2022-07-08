@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>org.kde.plasma.mycroft.bigscreen</id>
+
+  <name>KDE Plasma Bigscreen</name>
+  <summary>Plasma Shell for TVs</summary>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0-or-later</project_license>
+
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>gamepad</control>
+  </supports>
+
+  <description>
+    <p>
+      Plasma Bigscreen is an open-source user interface for TVs. Running on top of a Linux distribution, Plasma Bigscreen turns your TV or setup-box into a fully hackable device. A big launcher giving you easy access to any installed apps and skills. Controllable via voice or TV remote.
+    </p>
+  </description>
+  <project_group>KDE</project_group>
+  <url type="homepage">https://plasma-bigscreen.org</url>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=plasma-bigscreen</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://plasma-bigscreen.org/img/screenshot-1.png</image>
+    </screenshot>
+  </screenshots>
+</component>
