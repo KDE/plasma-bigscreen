@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Appearance
 Name[az]=Xarici görünüş
+Name[bg]=Външен вид
 Name[ca]=Aparença
 Name[ca@valencia]=Aparença
 Name[cs]=Vzhled
@@ -27,6 +28,7 @@ Name[x-test]=xxAppearancexx
 Name[zh_CN]=外观
 Comment=Look and Feel
 Comment[az]=Plasma Xarici Görünüşü
+Comment[bg]=Външен вид
 Comment[ca]=Aspecte i comportament
 Comment[ca@valencia]=Aspecte i comportament
 Comment[cs]=Vzhled a dojem
@@ -67,6 +69,7 @@ X-KDE-Weight=70
 
 X-KDE-Keywords=theme, look, feel
 X-KDE-Keywords[az]=theme, look, feel,mövzu,xarici görünüş,hissetmə,vidjetlər növü
+X-KDE-Keywords[bg]=тема,външен вид
 X-KDE-Keywords[ca]=tema, aspecte, comportament
 X-KDE-Keywords[ca@valencia]=tema, aspecte, comportament
 X-KDE-Keywords[cs]=motiv,vzhled,chování

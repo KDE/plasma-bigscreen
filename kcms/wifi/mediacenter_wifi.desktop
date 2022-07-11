@@ -14,6 +14,7 @@ X-KDE-FormFactors=mediacenter
 
 Name=Wifi
 Name[az]=Wifi
+Name[bg]=Wifi
 Name[ca]=Wi-Fi
 Name[ca@valencia]=Wi-Fi
 Name[cs]=WiFi
@@ -46,6 +47,7 @@ Name[zh_CN]=Wi-Fi
 Name[zh_TW]=Wi-Fi
 Comment=Connect to Wifi networks
 Comment[az]=Wifi şəbəkələrinə qoşulun
+Comment[bg]=Свързване с безжични мрежи
 Comment[ca]=Connecta amb les xarxes Wi-Fi
 Comment[ca@valencia]=Connecta amb les xarxes Wi-Fi
 Comment[da]=Forbind til wi-fi-netværk

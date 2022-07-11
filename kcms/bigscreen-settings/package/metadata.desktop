@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Appearance
 Name[az]=Xarici görünüş
+Name[bg]=Външен вид
 Name[ca]=Aparença
 Name[ca@valencia]=Aparença
 Name[cs]=Vzhled
@@ -27,6 +28,7 @@ Name[x-test]=xxAppearancexx
 Name[zh_CN]=外观
 Comment=Font and Theme
 Comment[az]=Şrift və Mövzu
+Comment[bg]=Шрифт и тема
 Comment[ca]=Tipus de lletra i tema
 Comment[ca@valencia]=Tipus de lletra i tema
 Comment[cs]=Písmo a motiv

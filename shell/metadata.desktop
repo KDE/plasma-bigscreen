@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Name=Plasma Big Screen
 Name[az]=Plasma Böyük Ekran
+Name[bg]=Plasma Big Screen
 Name[ca]=Pantalla gran del Plasma
 Name[ca@valencia]=Pantalla gran de Plasma
 Name[cs]=Plasma Big Screen
@@ -33,6 +34,7 @@ Name[zh_CN]=Plasma 大屏幕
 Name[zh_TW]=Plasma 大螢幕
 Comment=Plasma shell for TVs
 Comment[az]=TV-lər üçün Plasma örtüyü
+Comment[bg]=Обвивка на Plasma  за телевизори
 Comment[ca]=Espai de treball Plasma per a televisors
 Comment[ca@valencia]=Espai de treball Plasma per a televisors
 Comment[da]=Plasma-skal til fjernsyn

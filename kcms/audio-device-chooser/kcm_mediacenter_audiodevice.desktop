@@ -14,6 +14,7 @@ X-KDE-FormFactors=mediacenter
 
 Name=Audio
 Name[az]=Səs
+Name[bg]=Аудио
 Name[ca]=Àudio
 Name[ca@valencia]=Àudio
 Name[cs]=Audio
@@ -38,6 +39,7 @@ Name[x-test]=xxAudioxx
 Name[zh_CN]=音频
 Comment=Manage mediacenter audio devices
 Comment[az]=Medi mərkəzi səs cihazlarını idarə etmək
+Comment[bg]=Управление на медийни устройства
 Comment[ca]=Gestiona els dispositius d'àudio del centre multimèdia
 Comment[ca@valencia]=Gestiona els dispositius d'àudio del centre multimèdia
 Comment[cs]=Spravovat zařízení audio mediálního centra

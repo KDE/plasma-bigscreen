@@ -14,6 +14,7 @@ X-KDE-FormFactors=mediacenter
 
 Name=KDE Connect
 Name[az]=KDE Connect
+Name[bg]=KDE Connect
 Name[ca]=KDE Connect
 Name[ca@valencia]=KDE Connect
 Name[cs]=KDE Connect
@@ -46,6 +47,7 @@ Name[zh_CN]=KDE Connect
 Name[zh_TW]=KDE 連線
 Comment=Connect and sync your devices
 Comment[az]=Cihazlarınızı qoşun və eyniləşdirin
+Comment[bg]=Свържете и синхронизирайте вашите устройства
 Comment[ca]=Connecta i sincronitza els vostres dispositius
 Comment[ca@valencia]=Connecta i sincronitza els vostres dispositius
 Comment[cs]=Připojte a synchronizujte svá zařízení
