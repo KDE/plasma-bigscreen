@@ -1,7 +1,7 @@
 # Set minimum CMake version (required for CMake 3.0 or later)
 cmake_minimum_required(VERSION 3.16)
 cmake_policy(SET CMP0048 NEW)
-project(plasma-bigcreen)
+project(plasma-bigscreen)
 set(PROJECT_VERSION "5.25.80")
 set(PROJECT_VERSION_MAJOR 5)
 
