@@ -93,7 +93,8 @@
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=plasma-bigscreen</url>
   <screenshots>
     <screenshot type="default">
-      <image>https://plasma-bigscreen.org/img/screenshot-1.png</image>
+      <caption>Plasma Bigscreen</caption>
+      <image>https://cdn.kde.org/screenshots/plasma-bigscreen/plasma-bigscreen.png</image>
     </screenshot>
   </screenshots>
 </component>
