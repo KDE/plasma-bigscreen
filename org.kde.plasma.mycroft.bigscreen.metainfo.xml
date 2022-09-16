@@ -94,6 +94,13 @@
   <screenshots>
     <screenshot type="default">
       <caption>Plasma Bigscreen</caption>
+      <caption xml:lang="ca">Plasma Bigscreen</caption>
+      <caption xml:lang="eu">Plasma Bigscreen</caption>
+      <caption xml:lang="nl">Plasma Bigscreen</caption>
+      <caption xml:lang="pt">Plasma para Ecrãs Grandes</caption>
+      <caption xml:lang="tr">Plasma Büyük Ekran</caption>
+      <caption xml:lang="uk">Плазма для великих екранів</caption>
+      <caption xml:lang="x-test">xxPlasma Bigscreenxx</caption>
       <image>https://cdn.kde.org/screenshots/plasma-bigscreen/plasma-bigscreen.png</image>
     </screenshot>
   </screenshots>
