@@ -46,7 +46,7 @@
   <summary xml:lang="pt">Consola do Plasma para TV's</summary>
   <summary xml:lang="pt-BR">Shell do Plasma para TVs</summary>
   <summary xml:lang="sk">Plasma shell pre televízory</summary>
-  <summary xml:lang="sl">Plasma Shell za TV</summary>
+  <summary xml:lang="sl">Plasma Shell za TV zaslone</summary>
   <summary xml:lang="sv">Plasma skal för tv-apparater</summary>
   <summary xml:lang="tr">TV'ler için Plasma kabuğu</summary>
   <summary xml:lang="uk">Оболонка Плазми для телевізорів</summary>
@@ -99,6 +99,7 @@
       <caption xml:lang="eu">Plasma Bigscreen</caption>
       <caption xml:lang="fr">Logiciel Bigscreen de KDE Plasma</caption>
       <caption xml:lang="nl">Plasma Bigscreen</caption>
+      <caption xml:lang="sl">Plasma Bigscreen</caption>
       <caption xml:lang="tr">Plasma Büyük Ekran</caption>
       <caption xml:lang="uk">Плазма для великих екранів</caption>
       <caption xml:lang="x-test">xxPlasma Bigscreenxx</caption>
