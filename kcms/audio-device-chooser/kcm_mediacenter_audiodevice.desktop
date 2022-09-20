@@ -13,6 +13,7 @@ X-KDE-Weight=40
 X-KDE-FormFactors=mediacenter
 
 Name=Audio
+Name[ar]=الصوت
 Name[az]=Səs
 Name[bg]=Аудио
 Name[ca]=Àudio
@@ -39,6 +40,7 @@ Name[uk]=Звук
 Name[x-test]=xxAudioxx
 Name[zh_CN]=音频
 Comment=Manage mediacenter audio devices
+Comment[ar]=إدارة أجهزة الصوت في مركز الوسائط
 Comment[az]=Medi mərkəzi səs cihazlarını idarə etmək
 Comment[bg]=Управление на медийни устройства
 Comment[ca]=Gestiona els dispositius d'àudio del centre multimèdia

@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Mycroft Bigscreen
+Name[ar]=الشاشة الكبيرة ميكروفت
 Name[az]=Mycroft Böyük_ekran
 Name[bg]=Mycroft Bigscreen
 Name[ca]=Mycroft Bigscreen
@@ -34,6 +35,7 @@ Name[x-test]=xxMycroft Bigscreenxx
 Name[zh_CN]=Mycroft 大屏幕
 Name[zh_TW]=Mycroft Bigscreen
 Comment=Homescreen for Plasma and Mycroft based TVs
+Comment[ar]=الشاشة الرئيسية لأجهزة التلفاز المعتمدة على بلازما و ميكروفت
 Comment[az]=Plasma və Mycroft əsaslı TV-lər üçün Ev_ekranı
 Comment[bg]=Начален екран за Plasma и Mycroft базирани телевизори
 Comment[ca]=Pantalla d'inici del Plasma i Mycroft per a televisors

@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Appearance
+Name[ar]=المظهر
 Name[az]=Xarici görünüş
 Name[bg]=Външен вид
 Name[ca]=Aparença
@@ -28,6 +29,7 @@ Name[uk]=Вигляд
 Name[x-test]=xxAppearancexx
 Name[zh_CN]=外观
 Comment=Font and Theme
+Comment[ar]=الخط والسمة
 Comment[az]=Şrift və Mövzu
 Comment[bg]=Шрифт и тема
 Comment[ca]=Tipus de lletra i tema

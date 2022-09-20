@@ -1,5 +1,6 @@
 [Desktop Entry]
 Comment=Plasma Mycroft Big Screen look and feel
+Comment[ar]=مظهر  وشكل بلازما ميكروفت الشاشة الكبيرة
 Comment[az]=Plasma Mycroft Böyük Ekran xarici görünüşü
 Comment[bg]=Външен вид на Plasma Mycroft Big Screen
 Comment[ca]=Aparença i comportament de la pantalla gran del Mycroft per al Plasma
@@ -32,6 +33,7 @@ Comment[zh_CN]=Plasma Mycroft 大屏幕界面外观设置
 Comment[zh_TW]=Plasma Mycroft 大螢幕外觀及感覺
 
 Name=Mycroft Big Screen
+Name[ar]=ميكروفت الشاشة الكبيرة
 Name[az]=Mycroft Böyük Ekran
 Name[bg]=Mycroft Big Screen
 Name[ca]=Pantalla gran del Mycroft

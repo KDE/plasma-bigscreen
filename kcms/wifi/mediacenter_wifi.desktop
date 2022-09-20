@@ -13,6 +13,7 @@ X-KDE-Weight=40
 X-KDE-FormFactors=mediacenter
 
 Name=Wifi
+Name[ar]=الشبكة اللاسلكيّ
 Name[az]=Wifi
 Name[bg]=Wifi
 Name[ca]=Wi-Fi
@@ -46,6 +47,7 @@ Name[x-test]=xxWifixx
 Name[zh_CN]=Wi-Fi
 Name[zh_TW]=Wi-Fi
 Comment=Connect to Wifi networks
+Comment[ar]=اتصل بشبكات لاسلكية
 Comment[az]=Wifi şəbəkələrinə qoşulun
 Comment[bg]=Свързване с безжични мрежи
 Comment[ca]=Connecta amb les xarxes Wi-Fi

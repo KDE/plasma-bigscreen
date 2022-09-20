@@ -13,6 +13,7 @@ X-KDE-Weight=40
 X-KDE-FormFactors=mediacenter
 
 Name=KDE Connect
+Name[ar]=كدي المتّصل
 Name[az]=KDE Connect
 Name[bg]=KDE Connect
 Name[ca]=KDE Connect
@@ -46,6 +47,7 @@ Name[x-test]=xxKDE Connectxx
 Name[zh_CN]=KDE Connect
 Name[zh_TW]=KDE 連線
 Comment=Connect and sync your devices
+Comment[ar]=اتّصل وزامن أجهزتك
 Comment[az]=Cihazlarınızı qoşun və eyniləşdirin
 Comment[bg]=Свържете и синхронизирайте вашите устройства
 Comment[ca]=Connecta i sincronitza els vostres dispositius
