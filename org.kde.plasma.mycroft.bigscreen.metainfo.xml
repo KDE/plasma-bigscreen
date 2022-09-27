@@ -94,6 +94,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>Plasma Bigscreen</caption>
+      <caption xml:lang="bg">Plasma Bigscreen</caption>
       <caption xml:lang="ca">Plasma Bigscreen</caption>
       <caption xml:lang="ca-valencia">Plasma Bigscreen</caption>
       <caption xml:lang="en-GB">Plasma Bigscreen</caption>
