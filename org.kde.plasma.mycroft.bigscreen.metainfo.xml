@@ -14,6 +14,7 @@
   <name xml:lang="fi">KDE Plasma Bigscreen</name>
   <name xml:lang="fr">Bigscreen de KDE Plasma</name>
   <name xml:lang="it">Plasma Bigscreen di KDE</name>
+  <name xml:lang="ka">KDE Plasma დიდ ეკრანზე</name>
   <name xml:lang="ko">KDE Plasma 큰 화면</name>
   <name xml:lang="nl">KDE Plasma Bigscreen</name>
   <name xml:lang="nn">KDE Plasma Bigscreen</name>
@@ -42,6 +43,7 @@
   <summary xml:lang="fi">Plasmakäyttöliittymä TV:ille</summary>
   <summary xml:lang="fr">Un script de Plasma pour les téléviseurs</summary>
   <summary xml:lang="it">Shell Plasma per TV</summary>
+  <summary xml:lang="ka">Plasma Shell ტელევიზორებისთვის</summary>
   <summary xml:lang="ko">TV용 Plasma 셸</summary>
   <summary xml:lang="nl">Plasma-shell voor TV's</summary>
   <summary xml:lang="nn">Plasma-utforming for TV-ar</summary>
@@ -109,6 +111,7 @@
       <caption xml:lang="eu">Plasma Bigscreen</caption>
       <caption xml:lang="fr">Logiciel Bigscreen de KDE Plasma</caption>
       <caption xml:lang="it">Plasma Bigscreen</caption>
+      <caption xml:lang="ka">Plasma დიდ ეკრანზე</caption>
       <caption xml:lang="nl">Plasma Bigscreen</caption>
       <caption xml:lang="pl">Duży Ekran Plazmy</caption>
       <caption xml:lang="pt">Plasma para Ecrãs Grandes</caption>
