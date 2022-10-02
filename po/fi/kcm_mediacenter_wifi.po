@@ -1,0 +1,94 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# Tommi Nieminen <translator@legisign.org>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:49+0000\n"
+"PO-Revision-Date: 2021-08-02 19:48+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Tommi Nieminen"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "translator@legisign.org"
+
+#: package/contents/ui/delegates/CompactNetworkDelegate.qml:112
+#: package/contents/ui/delegates/NetworkDelegate.qml:128
+#: package/contents/ui/DeviceConnectionItem.qml:61
+#: package/contents/ui/NetworkItem.qml:95
+#, kde-format
+msgid "Connected"
+msgstr "Yhdistetty"
+
+#: package/contents/ui/DeviceConnectionItem.qml:236
+#, kde-format
+msgid "Speed"
+msgstr "Nopeus"
+
+#: package/contents/ui/main.qml:130
+#, kde-format
+msgid "Enter Password For %1"
+msgstr "Anna salasana kohteelle %1"
+
+#: package/contents/ui/main.qml:139
+#, kde-format
+msgid "Password..."
+msgstr "Salasana…"
+
+#: package/contents/ui/main.qml:163
+#, kde-format
+msgid "Connect"
+msgstr "Yhdistä"
+
+#: package/contents/ui/main.qml:178 package/contents/ui/main.qml:244
+#, kde-format
+msgid "Cancel"
+msgstr "Peru"
+
+#: package/contents/ui/main.qml:210
+#, kde-format
+msgid "Are you sure you want to forget the network %1?"
+msgstr "Haluatko varmasti unohtaa verkon %1?"
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgid "Forget"
+msgstr "Unohda"
+
+#: package/contents/ui/main.qml:329
+#, kde-format
+msgid "Refresh"
+msgstr "Virkistä"
+
+#: package/contents/ui/main.qml:364
+#, kde-format
+msgid "Exit"
+msgstr "Poistu"
+
+#: package/contents/ui/main.qml:392
+#, kde-format
+msgid "Manage Connections"
+msgstr "Hallitse yhteyksiä"
+
+#: wifi.cpp:18
+#, kde-format
+msgid "Configure Plasma wifi"
+msgstr "Plasman langattoman verkon asetukset"
+
+#~ msgid "Network"
+#~ msgstr "Verkko"

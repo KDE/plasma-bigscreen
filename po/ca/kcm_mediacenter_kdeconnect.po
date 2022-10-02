@@ -1,0 +1,95 @@
+# Translation of kcm_mediacenter_kdeconnect.po to Catalan
+# Copyright (C) 2020-2021 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Josep M. Ferrer <txemaq@gmail.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:49+0000\n"
+"PO-Revision-Date: 2021-01-23 12:08+0100\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Josep M. Ferrer"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "txemaq@gmail.com"
+
+#: kdeconnect.cpp:18
+#, kde-format
+msgid "Configure KDE Connect"
+msgstr "Configura el KDE Connect"
+
+#: package/contents/ui/delegates/PairedView.qml:29
+#, kde-format
+msgid "This device is paired"
+msgstr "Aquest dispositiu està aparellat"
+
+#: package/contents/ui/delegates/PairedView.qml:62
+#, kde-format
+msgid "Unpair"
+msgstr "Desaparella"
+
+#: package/contents/ui/delegates/PairRequest.qml:29
+#, kde-format
+msgid "This device is requesting to be paired"
+msgstr "Aquest dispositiu està sol·licitant aparellar-se"
+
+#: package/contents/ui/delegates/PairRequest.qml:63
+#, kde-format
+msgid "Accept"
+msgstr "Accepta"
+
+#: package/contents/ui/delegates/PairRequest.qml:99
+#, kde-format
+msgid "Reject"
+msgstr "Rebutja"
+
+#: package/contents/ui/delegates/UnpairedView.qml:40
+#, kde-format
+msgid "This device is not paired"
+msgstr "Aquest dispositiu no està aparellat"
+
+#: package/contents/ui/delegates/UnpairedView.qml:80
+#, kde-format
+msgid "Pair"
+msgstr "Aparella"
+
+#: package/contents/ui/delegates/UnpairedView.qml:91
+#, kde-format
+msgid "Pairing request sent to device"
+msgstr "S'ha enviat una sol·licitud d'aparellament al dispositiu"
+
+#: package/contents/ui/delegates/Unreachable.qml:19
+#, kde-format
+msgid "This device is not reachable"
+msgstr "No es pot accedir a aquest dispositiu"
+
+#: package/contents/ui/DeviceConnectionView.qml:196
+#, kde-format
+msgid "Press the [←] Back button to return to device selection"
+msgstr "Premeu el botó Enrere [←] per a tornar a la selecció de dispositius"
+
+#: package/contents/ui/main.qml:23
+#, kde-format
+msgid "KDE Connect"
+msgstr "KDE Connect"
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgid "Exit"
+msgstr "Surt"

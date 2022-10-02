@@ -1,0 +1,94 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# Vincenzo Reale <smart2128vr@gmail.com>, 2020, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:49+0000\n"
+"PO-Revision-Date: 2021-01-25 10:37+0100\n"
+"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.12.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Vincenzo Reale"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "smart2128vr@gmail.com"
+
+#: kdeconnect.cpp:18
+#, kde-format
+msgid "Configure KDE Connect"
+msgstr "Configura KDE Connect"
+
+#: package/contents/ui/delegates/PairedView.qml:29
+#, kde-format
+msgid "This device is paired"
+msgstr "Questo dispositivo è associato"
+
+#: package/contents/ui/delegates/PairedView.qml:62
+#, kde-format
+msgid "Unpair"
+msgstr "Disassocia"
+
+#: package/contents/ui/delegates/PairRequest.qml:29
+#, kde-format
+msgid "This device is requesting to be paired"
+msgstr "Questo dispositivo richiede di essere associato"
+
+#: package/contents/ui/delegates/PairRequest.qml:63
+#, kde-format
+msgid "Accept"
+msgstr "Accetta"
+
+#: package/contents/ui/delegates/PairRequest.qml:99
+#, kde-format
+msgid "Reject"
+msgstr "Rifiuta"
+
+#: package/contents/ui/delegates/UnpairedView.qml:40
+#, kde-format
+msgid "This device is not paired"
+msgstr "Questo dispositivo non è associato"
+
+#: package/contents/ui/delegates/UnpairedView.qml:80
+#, kde-format
+msgid "Pair"
+msgstr "Associa"
+
+#: package/contents/ui/delegates/UnpairedView.qml:91
+#, kde-format
+msgid "Pairing request sent to device"
+msgstr "Richiesta di associazione inviata al dispositivo"
+
+#: package/contents/ui/delegates/Unreachable.qml:19
+#, kde-format
+msgid "This device is not reachable"
+msgstr "Questo dispositivo non è raggiungibile"
+
+#: package/contents/ui/DeviceConnectionView.qml:196
+#, kde-format
+msgid "Press the [←] Back button to return to device selection"
+msgstr ""
+"Premi il pulsante [←] Indietro per tornare alla selezione del dispositivo"
+
+#: package/contents/ui/main.qml:23
+#, kde-format
+msgid "KDE Connect"
+msgstr "KDE Connect"
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgid "Exit"
+msgstr "Esci"

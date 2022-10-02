@@ -1,0 +1,93 @@
+# Translation of kcm_mediacenter_wifi to Norwegian Nynorsk
+#
+# Karl Ove Hufthammer <karl@huftis.org>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:49+0000\n"
+"PO-Revision-Date: 2022-01-15 18:20+0100\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.1\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Karl Ove Hufthammer"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "karl@huftis.org"
+
+#: package/contents/ui/delegates/CompactNetworkDelegate.qml:112
+#: package/contents/ui/delegates/NetworkDelegate.qml:128
+#: package/contents/ui/DeviceConnectionItem.qml:61
+#: package/contents/ui/NetworkItem.qml:95
+#, kde-format
+msgid "Connected"
+msgstr "Tilkopla"
+
+#: package/contents/ui/DeviceConnectionItem.qml:236
+#, kde-format
+msgid "Speed"
+msgstr "Fart"
+
+#: package/contents/ui/main.qml:130
+#, kde-format
+msgid "Enter Password For %1"
+msgstr "Skriv inn passord for %1"
+
+#: package/contents/ui/main.qml:139
+#, kde-format
+msgid "Password..."
+msgstr "Passord …"
+
+#: package/contents/ui/main.qml:163
+#, kde-format
+msgid "Connect"
+msgstr "Kopla til"
+
+#: package/contents/ui/main.qml:178 package/contents/ui/main.qml:244
+#, kde-format
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: package/contents/ui/main.qml:210
+#, kde-format
+msgid "Are you sure you want to forget the network %1?"
+msgstr "Er du sikker på at du vil gløyma nettverket %1?"
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgid "Forget"
+msgstr "Gløym"
+
+#: package/contents/ui/main.qml:329
+#, kde-format
+msgid "Refresh"
+msgstr "Oppdater"
+
+#: package/contents/ui/main.qml:364
+#, kde-format
+msgid "Exit"
+msgstr "Avslutt"
+
+#: package/contents/ui/main.qml:392
+#, kde-format
+msgid "Manage Connections"
+msgstr "Handsam tilkoplingar"
+
+#: wifi.cpp:18
+#, kde-format
+msgid "Configure Plasma wifi"
+msgstr "Set opp Plasma-Wi-Fi"

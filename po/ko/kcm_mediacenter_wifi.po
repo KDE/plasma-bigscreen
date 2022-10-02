@@ -1,0 +1,94 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# Shinjo Park <kde@peremen.name>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:49+0000\n"
+"PO-Revision-Date: 2021-07-28 02:38+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "박신조"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde@peremen.name"
+
+#: package/contents/ui/delegates/CompactNetworkDelegate.qml:112
+#: package/contents/ui/delegates/NetworkDelegate.qml:128
+#: package/contents/ui/DeviceConnectionItem.qml:61
+#: package/contents/ui/NetworkItem.qml:95
+#, kde-format
+msgid "Connected"
+msgstr "연결됨"
+
+#: package/contents/ui/DeviceConnectionItem.qml:236
+#, kde-format
+msgid "Speed"
+msgstr "속도"
+
+#: package/contents/ui/main.qml:130
+#, kde-format
+msgid "Enter Password For %1"
+msgstr "%1의 암호 입력"
+
+#: package/contents/ui/main.qml:139
+#, kde-format
+msgid "Password..."
+msgstr "암호..."
+
+#: package/contents/ui/main.qml:163
+#, kde-format
+msgid "Connect"
+msgstr "연결"
+
+#: package/contents/ui/main.qml:178 package/contents/ui/main.qml:244
+#, kde-format
+msgid "Cancel"
+msgstr "취소"
+
+#: package/contents/ui/main.qml:210
+#, kde-format
+msgid "Are you sure you want to forget the network %1?"
+msgstr "%1 네트워크를 삭제하시겠습니까?"
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgid "Forget"
+msgstr "잊어버리기"
+
+#: package/contents/ui/main.qml:329
+#, kde-format
+msgid "Refresh"
+msgstr "새로 고침"
+
+#: package/contents/ui/main.qml:364
+#, kde-format
+msgid "Exit"
+msgstr "끝내기"
+
+#: package/contents/ui/main.qml:392
+#, kde-format
+msgid "Manage Connections"
+msgstr "연결 관리"
+
+#: wifi.cpp:18
+#, kde-format
+msgid "Configure Plasma wifi"
+msgstr "Plasma Wi-Fi 설정"
+
+#~ msgid "Network"
+#~ msgstr "네트워크"

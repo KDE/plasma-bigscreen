@@ -1,0 +1,94 @@
+# Chinese translations for plasma-bigscreen package
+# plasma-bigscreen 套件的正體中文翻譯.
+# Copyright (C) 2022 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# Automatically generated, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:49+0000\n"
+"PO-Revision-Date: 2021-12-15 00:47+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: kdeconnect.cpp:18
+#, kde-format
+msgid "Configure KDE Connect"
+msgstr ""
+
+#: package/contents/ui/delegates/PairedView.qml:29
+#, kde-format
+msgid "This device is paired"
+msgstr ""
+
+#: package/contents/ui/delegates/PairedView.qml:62
+#, kde-format
+msgid "Unpair"
+msgstr ""
+
+#: package/contents/ui/delegates/PairRequest.qml:29
+#, kde-format
+msgid "This device is requesting to be paired"
+msgstr ""
+
+#: package/contents/ui/delegates/PairRequest.qml:63
+#, kde-format
+msgid "Accept"
+msgstr ""
+
+#: package/contents/ui/delegates/PairRequest.qml:99
+#, kde-format
+msgid "Reject"
+msgstr ""
+
+#: package/contents/ui/delegates/UnpairedView.qml:40
+#, kde-format
+msgid "This device is not paired"
+msgstr ""
+
+#: package/contents/ui/delegates/UnpairedView.qml:80
+#, kde-format
+msgid "Pair"
+msgstr ""
+
+#: package/contents/ui/delegates/UnpairedView.qml:91
+#, kde-format
+msgid "Pairing request sent to device"
+msgstr ""
+
+#: package/contents/ui/delegates/Unreachable.qml:19
+#, kde-format
+msgid "This device is not reachable"
+msgstr ""
+
+#: package/contents/ui/DeviceConnectionView.qml:196
+#, kde-format
+msgid "Press the [←] Back button to return to device selection"
+msgstr ""
+
+#: package/contents/ui/main.qml:23
+#, kde-format
+msgid "KDE Connect"
+msgstr ""
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgid "Exit"
+msgstr ""

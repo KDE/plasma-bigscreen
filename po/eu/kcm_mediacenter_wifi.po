@@ -1,0 +1,97 @@
+# Translation for kcm_mediacenter_wifi.po to Euskara/Basque (eu).
+# Copyright (C) 2021 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:49+0000\n"
+"PO-Revision-Date: 2021-07-26 01:00+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.04.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Iñigo Salvador Azurmendi"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "xalba@ni.eus"
+
+#: package/contents/ui/delegates/CompactNetworkDelegate.qml:112
+#: package/contents/ui/delegates/NetworkDelegate.qml:128
+#: package/contents/ui/DeviceConnectionItem.qml:61
+#: package/contents/ui/NetworkItem.qml:95
+#, kde-format
+msgid "Connected"
+msgstr "Konektatuta"
+
+#: package/contents/ui/DeviceConnectionItem.qml:236
+#, kde-format
+msgid "Speed"
+msgstr "Abiadura"
+
+#: package/contents/ui/main.qml:130
+#, kde-format
+msgid "Enter Password For %1"
+msgstr "Sartu %1(e)ko pasahitza"
+
+#: package/contents/ui/main.qml:139
+#, kde-format
+msgid "Password..."
+msgstr "Pasahitza..."
+
+#: package/contents/ui/main.qml:163
+#, kde-format
+msgid "Connect"
+msgstr "Konektatu"
+
+#: package/contents/ui/main.qml:178 package/contents/ui/main.qml:244
+#, kde-format
+msgid "Cancel"
+msgstr "Utzi"
+
+#: package/contents/ui/main.qml:210
+#, kde-format
+msgid "Are you sure you want to forget the network %1?"
+msgstr "Ziur zaude %1 sarea ahaztu nahi duzula?"
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgid "Forget"
+msgstr "Ahaztu"
+
+#: package/contents/ui/main.qml:329
+#, kde-format
+msgid "Refresh"
+msgstr "Freskatu"
+
+#: package/contents/ui/main.qml:364
+#, kde-format
+msgid "Exit"
+msgstr "Irten"
+
+#: package/contents/ui/main.qml:392
+#, kde-format
+msgid "Manage Connections"
+msgstr "Konexioak kudeatu"
+
+#: wifi.cpp:18
+#, kde-format
+msgid "Configure Plasma wifi"
+msgstr "Konfiguratu Plasmako Wi-Fia"
+
+#~ msgid "Network"
+#~ msgstr "Sarea"

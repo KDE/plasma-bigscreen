@@ -1,0 +1,154 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-26 00:45+0000\n"
+"PO-Revision-Date: 2022-01-29 09:30+0100\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: contents/ui/ConfigWindow.qml:31
+#, kde-format
+msgid "Use Colored Tiles"
+msgstr "Uporabite barvne ploščice"
+
+#: contents/ui/ConfigWindow.qml:41
+#, kde-format
+msgid "Use Expanding Tiles"
+msgstr "Uporabite razširitvene ploščice"
+
+#: contents/ui/ConfigWindow.qml:57
+#, kde-format
+msgid "close"
+msgstr "zapri"
+
+#: contents/ui/indicators/KdeConnect.qml:91
+#, kde-format
+msgid "KDE Connect"
+msgstr "KDE Connect"
+
+#: contents/ui/indicators/PairWindow.qml:42
+#, kde-format
+msgid "Pairing Request From %1"
+msgstr "Zahtevek za uparjanje od %1"
+
+#: contents/ui/indicators/PairWindow.qml:69
+#, kde-format
+msgid "Accept"
+msgstr "Sprejmi"
+
+#: contents/ui/indicators/PairWindow.qml:105
+#, kde-format
+msgid "Reject"
+msgstr "Zavrni"
+
+#: contents/ui/indicators/Volume.qml:122
+#, kde-format
+msgid "Increase Volume"
+msgstr "Povečaj glasnost"
+
+#: contents/ui/indicators/Volume.qml:129
+#, kde-format
+msgid "Decrease Volume"
+msgstr "Zmanjšaj glasnost"
+
+#: contents/ui/indicators/Volume.qml:136
+#, kde-format
+msgid "Mute"
+msgstr "Izklopi zvok"
+
+#: contents/ui/indicators/Volume.qml:146
+#, kde-format
+msgid "Audio Device chooser"
+msgstr "Izbirnik avdio naprave"
+
+#: contents/ui/indicators/Wifi.qml:47
+#, kde-format
+msgid "Network"
+msgstr "Omrežje"
+
+#: contents/ui/launcher/config/configGeneral.qml:31
+#, kde-format
+msgid "Websocket Address:"
+msgstr "Naslov spletne vtičnice:"
+
+#: contents/ui/launcher/config/configGeneral.qml:37
+#, kde-format
+msgid "Additional Settings:"
+msgstr "Dodatne nastavitve:"
+
+#: contents/ui/launcher/config/configGeneral.qml:38
+#, kde-format
+msgid "Enable Notifications"
+msgstr "Omogoči obvestila"
+
+#: contents/ui/launcher/config/configGeneral.qml:44
+#, kde-format
+msgid "Enable Remote TTS"
+msgstr "Omogoči oddaljen TTS"
+
+#: contents/ui/launcher/config/configGeneral.qml:49
+#, kde-format
+msgid "Enable Remote STT"
+msgstr "Omogoči oddaljen STT"
+
+#: contents/ui/launcher/LauncherHome.qml:67
+#, kde-format
+msgid "Recent"
+msgstr "Zadnje"
+
+#: contents/ui/launcher/LauncherHome.qml:91
+#, kde-format
+msgid "Voice Apps"
+msgstr "Glasovne aplikacije"
+
+#: contents/ui/launcher/LauncherHome.qml:116
+#, kde-format
+msgid "Applications"
+msgstr "Aplikacije"
+
+#: contents/ui/launcher/LauncherHome.qml:143
+#, kde-format
+msgid "Games"
+msgstr "Igre"
+
+#: contents/ui/launcher/LauncherHome.qml:172
+#, kde-format
+msgid "Settings"
+msgstr "Nastavitve"
+
+#: contents/ui/MycroftIndicator.qml:57 contents/ui/MycroftIndicator.qml:66
+#, kde-format
+msgid "Getting Ready... Please Wait"
+msgstr "Priprave so v teku ... Prosimo, počakajte"
+
+#: contents/ui/PowerManagementItem.qml:41
+#, kde-format
+msgid "Bigscreen has enabled system-wide inhibition"
+msgstr "Veliki zaslon je omogočil sistemsko inhibicijo"
+
+#~ msgid "Audio"
+#~ msgstr "Avdio"
+
+#~ msgid "Bigscreen Settings"
+#~ msgstr "Nastavitve velikega zaslona"
+
+#~ msgid "Wallpaper"
+#~ msgstr "Tapeta"
+
+#~ msgid "Wireless"
+#~ msgstr "Brezžično"
+
+#~ msgid "Mycroft Skill Installer"
+#~ msgstr "Namestilnik Mycroft Skill"

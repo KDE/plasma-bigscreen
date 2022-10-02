@@ -1,0 +1,139 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-26 00:45+0000\n"
+"PO-Revision-Date: 2022-09-30 15:18+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#: contents/ui/ConfigWindow.qml:31
+#, kde-format
+msgid "Use Colored Tiles"
+msgstr ""
+
+#: contents/ui/ConfigWindow.qml:41
+#, kde-format
+msgid "Use Expanding Tiles"
+msgstr ""
+
+#: contents/ui/ConfigWindow.qml:57
+#, kde-format
+msgid "close"
+msgstr "დახურვა"
+
+#: contents/ui/indicators/KdeConnect.qml:91
+#, kde-format
+msgid "KDE Connect"
+msgstr "KDE Connect"
+
+#: contents/ui/indicators/PairWindow.qml:42
+#, kde-format
+msgid "Pairing Request From %1"
+msgstr "დაწყვილების მოთხოვნა %1-დან"
+
+#: contents/ui/indicators/PairWindow.qml:69
+#, kde-format
+msgid "Accept"
+msgstr "დასტური"
+
+#: contents/ui/indicators/PairWindow.qml:105
+#, kde-format
+msgid "Reject"
+msgstr "უარყოფა"
+
+#: contents/ui/indicators/Volume.qml:122
+#, kde-format
+msgid "Increase Volume"
+msgstr "ხმის აწევა"
+
+#: contents/ui/indicators/Volume.qml:129
+#, kde-format
+msgid "Decrease Volume"
+msgstr "ხმის დაწევა"
+
+#: contents/ui/indicators/Volume.qml:136
+#, kde-format
+msgid "Mute"
+msgstr "დადუმება"
+
+#: contents/ui/indicators/Volume.qml:146
+#, kde-format
+msgid "Audio Device chooser"
+msgstr "აუდიო მოწყობილობის არჩევა"
+
+#: contents/ui/indicators/Wifi.qml:47
+#, kde-format
+msgid "Network"
+msgstr "ქსელი"
+
+#: contents/ui/launcher/config/configGeneral.qml:31
+#, kde-format
+msgid "Websocket Address:"
+msgstr "ვებსოკეტის მისამართი:"
+
+#: contents/ui/launcher/config/configGeneral.qml:37
+#, kde-format
+msgid "Additional Settings:"
+msgstr "დამატებითი პარამეტრები:"
+
+#: contents/ui/launcher/config/configGeneral.qml:38
+#, kde-format
+msgid "Enable Notifications"
+msgstr "გაფრთხილებების ჩართვა"
+
+#: contents/ui/launcher/config/configGeneral.qml:44
+#, kde-format
+msgid "Enable Remote TTS"
+msgstr "დაშორებული TTS-ის ჩართვა"
+
+#: contents/ui/launcher/config/configGeneral.qml:49
+#, kde-format
+msgid "Enable Remote STT"
+msgstr "დაშორებული STT-ის ჩართვა"
+
+#: contents/ui/launcher/LauncherHome.qml:67
+#, kde-format
+msgid "Recent"
+msgstr "ახლახანს"
+
+#: contents/ui/launcher/LauncherHome.qml:91
+#, kde-format
+msgid "Voice Apps"
+msgstr "ხმის აპები"
+
+#: contents/ui/launcher/LauncherHome.qml:116
+#, kde-format
+msgid "Applications"
+msgstr "აპლიკაციები"
+
+#: contents/ui/launcher/LauncherHome.qml:143
+#, kde-format
+msgid "Games"
+msgstr "თამაშები"
+
+#: contents/ui/launcher/LauncherHome.qml:172
+#, kde-format
+msgid "Settings"
+msgstr "პარამეტრები"
+
+#: contents/ui/MycroftIndicator.qml:57 contents/ui/MycroftIndicator.qml:66
+#, kde-format
+msgid "Getting Ready... Please Wait"
+msgstr "მომზადება.. გთხოვთ, მოითმინოთ"
+
+#: contents/ui/PowerManagementItem.qml:41
+#, kde-format
+msgid "Bigscreen has enabled system-wide inhibition"
+msgstr "Bigscreen -მა მთელი სისტემის კონტროლი აიღო"

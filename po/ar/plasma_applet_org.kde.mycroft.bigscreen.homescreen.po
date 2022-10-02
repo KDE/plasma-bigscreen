@@ -1,0 +1,139 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-26 00:45+0000\n"
+"PO-Revision-Date: 2022-09-19 19:48+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: contents/ui/ConfigWindow.qml:31
+#, kde-format
+msgid "Use Colored Tiles"
+msgstr "استعمل القطع الملونة"
+
+#: contents/ui/ConfigWindow.qml:41
+#, kde-format
+msgid "Use Expanding Tiles"
+msgstr "استعمل القطع المتوسعة"
+
+#: contents/ui/ConfigWindow.qml:57
+#, kde-format
+msgid "close"
+msgstr "أغلق"
+
+#: contents/ui/indicators/KdeConnect.qml:91
+#, kde-format
+msgid "KDE Connect"
+msgstr "كدي المتّصل"
+
+#: contents/ui/indicators/PairWindow.qml:42
+#, kde-format
+msgid "Pairing Request From %1"
+msgstr "طلب اقتران من %1"
+
+#: contents/ui/indicators/PairWindow.qml:69
+#, kde-format
+msgid "Accept"
+msgstr "اقبل"
+
+#: contents/ui/indicators/PairWindow.qml:105
+#, kde-format
+msgid "Reject"
+msgstr "ارفض"
+
+#: contents/ui/indicators/Volume.qml:122
+#, kde-format
+msgid "Increase Volume"
+msgstr "زد الصوت"
+
+#: contents/ui/indicators/Volume.qml:129
+#, kde-format
+msgid "Decrease Volume"
+msgstr "اخفض الصوت"
+
+#: contents/ui/indicators/Volume.qml:136
+#, kde-format
+msgid "Mute"
+msgstr "اكتم"
+
+#: contents/ui/indicators/Volume.qml:146
+#, kde-format
+msgid "Audio Device chooser"
+msgstr "منتقى جهاز الصوت"
+
+#: contents/ui/indicators/Wifi.qml:47
+#, kde-format
+msgid "Network"
+msgstr "الشبكة"
+
+#: contents/ui/launcher/config/configGeneral.qml:31
+#, kde-format
+msgid "Websocket Address:"
+msgstr "عنوان قابس الويب:"
+
+#: contents/ui/launcher/config/configGeneral.qml:37
+#, kde-format
+msgid "Additional Settings:"
+msgstr "إعدادات إضافيّة:"
+
+#: contents/ui/launcher/config/configGeneral.qml:38
+#, kde-format
+msgid "Enable Notifications"
+msgstr "مكّن الإخطارات"
+
+#: contents/ui/launcher/config/configGeneral.qml:44
+#, kde-format
+msgid "Enable Remote TTS"
+msgstr "مكّن خدمة تحويل النص إلى الصوت البعيدة"
+
+#: contents/ui/launcher/config/configGeneral.qml:49
+#, kde-format
+msgid "Enable Remote STT"
+msgstr "مكّن خدمة تحويل الصوت إلى نص البعيدة"
+
+#: contents/ui/launcher/LauncherHome.qml:67
+#, kde-format
+msgid "Recent"
+msgstr "الحديثة"
+
+#: contents/ui/launcher/LauncherHome.qml:91
+#, kde-format
+msgid "Voice Apps"
+msgstr "تطبيقات الصوت"
+
+#: contents/ui/launcher/LauncherHome.qml:116
+#, kde-format
+msgid "Applications"
+msgstr "التّطبيقات"
+
+#: contents/ui/launcher/LauncherHome.qml:143
+#, kde-format
+msgid "Games"
+msgstr "الألعاب"
+
+#: contents/ui/launcher/LauncherHome.qml:172
+#, kde-format
+msgid "Settings"
+msgstr "إعدادات"
+
+#: contents/ui/MycroftIndicator.qml:57 contents/ui/MycroftIndicator.qml:66
+#, kde-format
+msgid "Getting Ready... Please Wait"
+msgstr "يهيئ... فضلًا انتظر"
+
+#: contents/ui/PowerManagementItem.qml:41
+#, kde-format
+msgid "Bigscreen has enabled system-wide inhibition"
+msgstr "الشاشة الكبيرة مكنت السبات على مستوى النظام"

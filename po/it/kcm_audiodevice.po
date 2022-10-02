@@ -1,0 +1,106 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# Vincenzo Reale <smart2128vr@gmail.com>, 2020, 2021, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:49+0000\n"
+"PO-Revision-Date: 2022-03-28 19:03+0200\n"
+"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Vincenzo Reale"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "smart2128vr@gmail.com"
+
+#: audiodevice.cpp:18
+#, kde-format
+msgid "Configure Plasma Audio"
+msgstr "Configura Plasma Audio"
+
+#: package/contents/ui/delegates/CompactAudioDelegate.qml:88
+#, kde-format
+msgctxt "label of device items"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: package/contents/ui/delegates/VolumeObject.qml:59
+#, kde-format
+msgid "Adjust Volume"
+msgstr "Regola il volume"
+
+#: package/contents/ui/delegates/VolumeObject.qml:124
+#, kde-format
+msgctxt "volume percentage"
+msgid "%1%"
+msgstr "%1%"
+
+#: package/contents/ui/DeviceChooserPage.qml:75
+#, kde-format
+msgid "Exit"
+msgstr "Esci"
+
+#: package/contents/ui/DeviceChooserPage.qml:128
+#, kde-format
+msgid "Playback Devices"
+msgstr "Dispositivi di riproduzione"
+
+#: package/contents/ui/DeviceChooserPage.qml:160
+#, kde-format
+msgid "Recording Devices"
+msgstr "Dispositivi di registrazione"
+
+#: package/contents/ui/main.qml:22
+#, kde-format
+msgid "Audio Device Chooser"
+msgstr "Selettore del dispositivo audio"
+
+#: package/contents/ui/SettingsItem.qml:235
+#, kde-format
+msgid "Press the [←] Back button to return to device selection"
+msgstr ""
+"Premi il pulsante [←] Indietro per tornare alla selezione del dispositivo"
+
+#~ msgid "Connected"
+#~ msgstr "Connesso"
+
+#~ msgid "Network"
+#~ msgstr "Rete"
+
+#~ msgid "Refresh"
+#~ msgstr "Aggiorna"
+
+#~ msgid "Enter Password For %1"
+#~ msgstr "Digita la password per %1:"
+
+#~ msgid "Password..."
+#~ msgstr "Password..."
+
+#~ msgid "Connect"
+#~ msgstr "Connetti"
+
+#~ msgid "Cancel"
+#~ msgstr "Annulla"
+
+#~ msgid "Are you sure you want to forget the network %1?"
+#~ msgstr "Sei sicuro di voler dimenticare la rete %1?"
+
+#~ msgid "Forget"
+#~ msgstr "Dimentica"
+
+#~ msgid "Connections"
+#~ msgstr "Connessioni"

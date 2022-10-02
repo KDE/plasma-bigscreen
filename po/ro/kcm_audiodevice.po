@@ -1,0 +1,107 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# Sergiu Bivol <sergiu@cip.md>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:49+0000\n"
+"PO-Revision-Date: 2020-09-27 13:43+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Sergiu Bivol"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sergiu@cip.md"
+
+#: audiodevice.cpp:18
+#, fuzzy, kde-format
+#| msgid "Configure Plasma wifi"
+msgid "Configure Plasma Audio"
+msgstr "Configurează Plasma Wi-Fi"
+
+#: package/contents/ui/delegates/CompactAudioDelegate.qml:88
+#, kde-format
+msgctxt "label of device items"
+msgid "%1 (%2)"
+msgstr ""
+
+#: package/contents/ui/delegates/VolumeObject.qml:59
+#, kde-format
+msgid "Adjust Volume"
+msgstr ""
+
+#: package/contents/ui/delegates/VolumeObject.qml:124
+#, kde-format
+msgctxt "volume percentage"
+msgid "%1%"
+msgstr ""
+
+#: package/contents/ui/DeviceChooserPage.qml:75
+#, kde-format
+msgid "Exit"
+msgstr "Ieșire"
+
+#: package/contents/ui/DeviceChooserPage.qml:128
+#, kde-format
+msgid "Playback Devices"
+msgstr ""
+
+#: package/contents/ui/DeviceChooserPage.qml:160
+#, kde-format
+msgid "Recording Devices"
+msgstr ""
+
+#: package/contents/ui/main.qml:22
+#, kde-format
+msgid "Audio Device Chooser"
+msgstr ""
+
+#: package/contents/ui/SettingsItem.qml:235
+#, kde-format
+msgid "Press the [←] Back button to return to device selection"
+msgstr ""
+
+#~ msgid "Connected"
+#~ msgstr "Conectat"
+
+#~ msgid "Network"
+#~ msgstr "Rețea"
+
+#~ msgid "Refresh"
+#~ msgstr "Reîmprospătează"
+
+#~ msgid "Enter Password For %1"
+#~ msgstr "Introduceți parola pentru %1"
+
+#~ msgid "Password..."
+#~ msgstr "Parolă..."
+
+#~ msgid "Connect"
+#~ msgstr "Conectează"
+
+#~ msgid "Cancel"
+#~ msgstr "Renunță"
+
+#~ msgid "Are you sure you want to forget the network %1?"
+#~ msgstr "Sigur doriți să uitați rețeaua %1?"
+
+#~ msgid "Forget"
+#~ msgstr "Uită"
+
+#~ msgid "Connections"
+#~ msgstr "Conexiuni"

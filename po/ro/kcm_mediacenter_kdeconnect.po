@@ -1,0 +1,94 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# Sergiu Bivol <sergiu@cip.md>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:49+0000\n"
+"PO-Revision-Date: 2020-09-27 14:02+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Sergiu Bivol"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sergiu@cip.md"
+
+#: kdeconnect.cpp:18
+#, kde-format
+msgid "Configure KDE Connect"
+msgstr "Configurează KDE Connect"
+
+#: package/contents/ui/delegates/PairedView.qml:29
+#, kde-format
+msgid "This device is paired"
+msgstr "Acest dispozitiv e asociat"
+
+#: package/contents/ui/delegates/PairedView.qml:62
+#, kde-format
+msgid "Unpair"
+msgstr "Dezasociază"
+
+#: package/contents/ui/delegates/PairRequest.qml:29
+#, kde-format
+msgid "This device is requesting to be paired"
+msgstr "Acest dispozitiv cere asocierea"
+
+#: package/contents/ui/delegates/PairRequest.qml:63
+#, kde-format
+msgid "Accept"
+msgstr "Acceptă"
+
+#: package/contents/ui/delegates/PairRequest.qml:99
+#, kde-format
+msgid "Reject"
+msgstr "Respinge"
+
+#: package/contents/ui/delegates/UnpairedView.qml:40
+#, kde-format
+msgid "This device is not paired"
+msgstr "Acest dispozitiv nu e asociat"
+
+#: package/contents/ui/delegates/UnpairedView.qml:80
+#, kde-format
+msgid "Pair"
+msgstr "Asociază"
+
+#: package/contents/ui/delegates/UnpairedView.qml:91
+#, kde-format
+msgid "Pairing request sent to device"
+msgstr "Cerere de asociere trimisă la dispozitiv"
+
+#: package/contents/ui/delegates/Unreachable.qml:19
+#, kde-format
+msgid "This device is not reachable"
+msgstr "Acest dispozitiv nu e accesibil"
+
+#: package/contents/ui/DeviceConnectionView.qml:196
+#, kde-format
+msgid "Press the [←] Back button to return to device selection"
+msgstr ""
+
+#: package/contents/ui/main.qml:23
+#, kde-format
+msgid "KDE Connect"
+msgstr "KDE Connect"
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgid "Exit"
+msgstr "Ieșire"

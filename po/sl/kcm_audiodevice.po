@@ -1,0 +1,106 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:49+0000\n"
+"PO-Revision-Date: 2022-03-28 09:19+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.2\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Matjaž Jeran"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "matjaz.jeran@amis.net"
+
+#: audiodevice.cpp:18
+#, kde-format
+msgid "Configure Plasma Audio"
+msgstr "Sestavi Plasma zvočne naprave"
+
+#: package/contents/ui/delegates/CompactAudioDelegate.qml:88
+#, kde-format
+msgctxt "label of device items"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: package/contents/ui/delegates/VolumeObject.qml:59
+#, kde-format
+msgid "Adjust Volume"
+msgstr "Prilagodi glasnost"
+
+#: package/contents/ui/delegates/VolumeObject.qml:124
+#, kde-format
+msgctxt "volume percentage"
+msgid "%1%"
+msgstr "%1%"
+
+#: package/contents/ui/DeviceChooserPage.qml:75
+#, kde-format
+msgid "Exit"
+msgstr "Izhod"
+
+#: package/contents/ui/DeviceChooserPage.qml:128
+#, kde-format
+msgid "Playback Devices"
+msgstr "Naprava za playback"
+
+#: package/contents/ui/DeviceChooserPage.qml:160
+#, kde-format
+msgid "Recording Devices"
+msgstr "Naprave za snemanje"
+
+#: package/contents/ui/main.qml:22
+#, kde-format
+msgid "Audio Device Chooser"
+msgstr "Izbirnik zvočne naprave"
+
+#: package/contents/ui/SettingsItem.qml:235
+#, kde-format
+msgid "Press the [←] Back button to return to device selection"
+msgstr "Pritisnite gumb [←] Back za vrnitev na izbiro naprave"
+
+#~ msgid "Connected"
+#~ msgstr "Povezano"
+
+#~ msgid "Network"
+#~ msgstr "Omežje"
+
+#~ msgid "Refresh"
+#~ msgstr "Osveži"
+
+#~ msgid "Enter Password For %1"
+#~ msgstr "Vnesite geslo za %1"
+
+#~ msgid "Password..."
+#~ msgstr "Geslo..."
+
+#~ msgid "Connect"
+#~ msgstr "Poveži"
+
+#~ msgid "Cancel"
+#~ msgstr "Prekliči"
+
+#~ msgid "Are you sure you want to forget the network %1?"
+#~ msgstr "Ali ste prepričani, da želite pozabiti omrežje %1?"
+
+#~ msgid "Forget"
+#~ msgstr "Pozabi"
+
+#~ msgid "Connections"
+#~ msgstr "Povezave"

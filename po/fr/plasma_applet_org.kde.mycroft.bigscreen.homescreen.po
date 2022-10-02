@@ -1,0 +1,151 @@
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-26 00:45+0000\n"
+"PO-Revision-Date: 2022-01-15 22:13+0100\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.12.1\n"
+
+#: contents/ui/ConfigWindow.qml:31
+#, kde-format
+msgid "Use Colored Tiles"
+msgstr "Utiliser des tuiles colorées"
+
+#: contents/ui/ConfigWindow.qml:41
+#, kde-format
+msgid "Use Expanding Tiles"
+msgstr "Utiliser des tuiles étirables"
+
+#: contents/ui/ConfigWindow.qml:57
+#, kde-format
+msgid "close"
+msgstr "fermer"
+
+#: contents/ui/indicators/KdeConnect.qml:91
+#, kde-format
+msgid "KDE Connect"
+msgstr "KDE Connect"
+
+#: contents/ui/indicators/PairWindow.qml:42
+#, kde-format
+msgid "Pairing Request From %1"
+msgstr "Requête d'appairage de %1"
+
+#: contents/ui/indicators/PairWindow.qml:69
+#, kde-format
+msgid "Accept"
+msgstr "Accepter"
+
+#: contents/ui/indicators/PairWindow.qml:105
+#, kde-format
+msgid "Reject"
+msgstr "Rejeter"
+
+#: contents/ui/indicators/Volume.qml:122
+#, kde-format
+msgid "Increase Volume"
+msgstr "Accroître le volume"
+
+#: contents/ui/indicators/Volume.qml:129
+#, kde-format
+msgid "Decrease Volume"
+msgstr "Diminuer le volume"
+
+#: contents/ui/indicators/Volume.qml:136
+#, kde-format
+msgid "Mute"
+msgstr "Couper le son"
+
+#: contents/ui/indicators/Volume.qml:146
+#, kde-format
+msgid "Audio Device chooser"
+msgstr "Sélecteur de périphériques audio"
+
+#: contents/ui/indicators/Wifi.qml:47
+#, kde-format
+msgid "Network"
+msgstr "Réseau"
+
+#: contents/ui/launcher/config/configGeneral.qml:31
+#, kde-format
+msgid "Websocket Address:"
+msgstr "Adresse « Websocket » :"
+
+#: contents/ui/launcher/config/configGeneral.qml:37
+#, kde-format
+msgid "Additional Settings:"
+msgstr "Paramètres supplémentaires :"
+
+#: contents/ui/launcher/config/configGeneral.qml:38
+#, kde-format
+msgid "Enable Notifications"
+msgstr "Autoriser les notifications"
+
+#: contents/ui/launcher/config/configGeneral.qml:44
+#, kde-format
+msgid "Enable Remote TTS"
+msgstr "Autoriser la synthèse vocale à distance"
+
+#: contents/ui/launcher/config/configGeneral.qml:49
+#, kde-format
+msgid "Enable Remote STT"
+msgstr "Autoriser la reconnaissance vocale à distance"
+
+#: contents/ui/launcher/LauncherHome.qml:67
+#, kde-format
+msgid "Recent"
+msgstr "Récent"
+
+#: contents/ui/launcher/LauncherHome.qml:91
+#, kde-format
+msgid "Voice Apps"
+msgstr "Applications vocales"
+
+#: contents/ui/launcher/LauncherHome.qml:116
+#, kde-format
+msgid "Applications"
+msgstr "Applications"
+
+#: contents/ui/launcher/LauncherHome.qml:143
+#, kde-format
+msgid "Games"
+msgstr "Jeux"
+
+#: contents/ui/launcher/LauncherHome.qml:172
+#, kde-format
+msgid "Settings"
+msgstr "Configuration"
+
+#: contents/ui/MycroftIndicator.qml:57 contents/ui/MycroftIndicator.qml:66
+#, kde-format
+msgid "Getting Ready... Please Wait"
+msgstr "Soyez prêt... Veuillez attendre"
+
+#: contents/ui/PowerManagementItem.qml:41
+#, kde-format
+msgid "Bigscreen has enabled system-wide inhibition"
+msgstr ""
+"Le module « Bigscreen » a activé l'inhibition pour la totalité du système."
+
+#~ msgid "Audio"
+#~ msgstr "Audio"
+
+#~ msgid "Bigscreen Settings"
+#~ msgstr "Configuration de Bigscreen"
+
+#~ msgid "Wallpaper"
+#~ msgstr "Fond d'écran"
+
+#~ msgid "Wireless"
+#~ msgstr "Sans fil"
+
+#~ msgid "Mycroft Skill Installer"
+#~ msgstr "Installateur de thèmes pour Mycroft"

@@ -1,0 +1,93 @@
+# Translation of kcm_mediacenter_wifi.po to Catalan (Valencian)
+# Copyright (C) 2021-2022 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Josep M. Ferrer <txemaq@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:49+0000\n"
+"PO-Revision-Date: 2022-07-08 14:55+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca@valencia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Josep M. Ferrer"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "txemaq@gmail.com"
+
+#: package/contents/ui/delegates/CompactNetworkDelegate.qml:112
+#: package/contents/ui/delegates/NetworkDelegate.qml:128
+#: package/contents/ui/DeviceConnectionItem.qml:61
+#: package/contents/ui/NetworkItem.qml:95
+#, kde-format
+msgid "Connected"
+msgstr "Connectat"
+
+#: package/contents/ui/DeviceConnectionItem.qml:236
+#, kde-format
+msgid "Speed"
+msgstr "Velocitat"
+
+#: package/contents/ui/main.qml:130
+#, kde-format
+msgid "Enter Password For %1"
+msgstr "Introduïu la contrasenya per a %1"
+
+#: package/contents/ui/main.qml:139
+#, kde-format
+msgid "Password..."
+msgstr "Contrasenya..."
+
+#: package/contents/ui/main.qml:163
+#, kde-format
+msgid "Connect"
+msgstr "Connecta"
+
+#: package/contents/ui/main.qml:178 package/contents/ui/main.qml:244
+#, kde-format
+msgid "Cancel"
+msgstr "Cancel·la"
+
+#: package/contents/ui/main.qml:210
+#, kde-format
+msgid "Are you sure you want to forget the network %1?"
+msgstr "Segur que voleu oblidar la xarxa %1?"
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgid "Forget"
+msgstr "Oblida"
+
+#: package/contents/ui/main.qml:329
+#, kde-format
+msgid "Refresh"
+msgstr "Actualitza"
+
+#: package/contents/ui/main.qml:364
+#, kde-format
+msgid "Exit"
+msgstr "Ix"
+
+#: package/contents/ui/main.qml:392
+#, kde-format
+msgid "Manage Connections"
+msgstr "Gestiona les connexions"
+
+#: wifi.cpp:18
+#, kde-format
+msgid "Configure Plasma wifi"
+msgstr "Configura el Wi-Fi de Plasma"

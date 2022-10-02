@@ -1,0 +1,134 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-26 00:45+0000\n"
+"PO-Revision-Date: 2022-03-27 00:21+0000\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-POFile-SpellExtra: TTS STT Websocket Mycroft Connect\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: contents/ui/ConfigWindow.qml:31
+#, kde-format
+msgid "Use Colored Tiles"
+msgstr "Usar Mosaicos Coloridos"
+
+#: contents/ui/ConfigWindow.qml:41
+#, kde-format
+msgid "Use Expanding Tiles"
+msgstr "Usar Mosaicos Expandidos"
+
+#: contents/ui/ConfigWindow.qml:57
+#, kde-format
+msgid "close"
+msgstr "fechar"
+
+#: contents/ui/indicators/KdeConnect.qml:91
+#, kde-format
+msgid "KDE Connect"
+msgstr "KDE Connect"
+
+#: contents/ui/indicators/PairWindow.qml:42
+#, kde-format
+msgid "Pairing Request From %1"
+msgstr "Pedido de Emparelhamento de %1"
+
+#: contents/ui/indicators/PairWindow.qml:69
+#, kde-format
+msgid "Accept"
+msgstr "Aceitar"
+
+#: contents/ui/indicators/PairWindow.qml:105
+#, kde-format
+msgid "Reject"
+msgstr "Rejeitar"
+
+#: contents/ui/indicators/Volume.qml:122
+#, kde-format
+msgid "Increase Volume"
+msgstr "Aumentar o Volume"
+
+#: contents/ui/indicators/Volume.qml:129
+#, kde-format
+msgid "Decrease Volume"
+msgstr "Diminuir o Volume"
+
+#: contents/ui/indicators/Volume.qml:136
+#, kde-format
+msgid "Mute"
+msgstr "Silenciar"
+
+#: contents/ui/indicators/Volume.qml:146
+#, kde-format
+msgid "Audio Device chooser"
+msgstr "Selector de Dispositivos de Áudio"
+
+#: contents/ui/indicators/Wifi.qml:47
+#, kde-format
+msgid "Network"
+msgstr "Rede"
+
+#: contents/ui/launcher/config/configGeneral.qml:31
+#, kde-format
+msgid "Websocket Address:"
+msgstr "Endereço de Websocket:"
+
+#: contents/ui/launcher/config/configGeneral.qml:37
+#, kde-format
+msgid "Additional Settings:"
+msgstr "Configurações Adicionais:"
+
+#: contents/ui/launcher/config/configGeneral.qml:38
+#, kde-format
+msgid "Enable Notifications"
+msgstr "Activar as Notificações"
+
+#: contents/ui/launcher/config/configGeneral.qml:44
+#, kde-format
+msgid "Enable Remote TTS"
+msgstr "Activar o TTS Remoto"
+
+#: contents/ui/launcher/config/configGeneral.qml:49
+#, kde-format
+msgid "Enable Remote STT"
+msgstr "Activar o STT Remoto"
+
+#: contents/ui/launcher/LauncherHome.qml:67
+#, kde-format
+msgid "Recent"
+msgstr "Recente"
+
+#: contents/ui/launcher/LauncherHome.qml:91
+#, kde-format
+msgid "Voice Apps"
+msgstr "Aplicações de Voz"
+
+#: contents/ui/launcher/LauncherHome.qml:116
+#, kde-format
+msgid "Applications"
+msgstr "Aplicações"
+
+#: contents/ui/launcher/LauncherHome.qml:143
+#, kde-format
+msgid "Games"
+msgstr "Jogos"
+
+#: contents/ui/launcher/LauncherHome.qml:172
+#, kde-format
+msgid "Settings"
+msgstr "Configuração"
+
+#: contents/ui/MycroftIndicator.qml:57 contents/ui/MycroftIndicator.qml:66
+#, kde-format
+msgid "Getting Ready... Please Wait"
+msgstr "A Preparar-se... Espere por Favor"
+
+#: contents/ui/PowerManagementItem.qml:41
+#, kde-format
+msgid "Bigscreen has enabled system-wide inhibition"
+msgstr "O Grande Ecrã activou a inibição a nível do sistema"
