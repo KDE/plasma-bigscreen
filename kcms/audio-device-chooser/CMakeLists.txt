@@ -22,6 +22,6 @@ kcoreaddons_desktop_to_json(kcm_mediacenter_audiodevice "kcm_mediacenter_audiode
 ########### install files ###############
 
 install(TARGETS kcm_mediacenter_audiodevice DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
-install(FILES kcm_mediacenter_audiodevice.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_mediacenter_audiodevice.desktop  DESTINATION  ${KDE_INSTALL_KSERVICESDIR})
 kpackage_install_package(package kcm_mediacenter_audiodevice kcms)
 

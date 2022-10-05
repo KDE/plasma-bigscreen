@@ -6,9 +6,10 @@
 #ifndef BIGSCREENPLUGIN_DBUS_H
 #define BIGSCREENPLUGIN_DBUS_H
 
-#include <QObject>
-#include <QtDBus>
 #include "bigscreenplugin_dbus.h"
+#include <QObject>
+#include <QStringList>
+#include <QtDBus>
 
 QT_BEGIN_NAMESPACE
 class QByteArray;
@@ -17,7 +18,6 @@ class QList;
 template<class Key, class Value>
 class QMap;
 class QString;
-class QStringList;
 class QVariant;
 QT_END_NAMESPACE
 

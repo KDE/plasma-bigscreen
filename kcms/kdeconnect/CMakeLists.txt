@@ -22,6 +22,6 @@ kcoreaddons_desktop_to_json(kcm_mediacenter_kdeconnect "mediacenter_kdeconnect.d
 ########### install files ###############
 
 install(TARGETS kcm_mediacenter_kdeconnect DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
-install(FILES mediacenter_kdeconnect.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES mediacenter_kdeconnect.desktop  DESTINATION  ${KDE_INSTALL_KSERVICESDIR})
 kpackage_install_package(package kcm_mediacenter_kdeconnect kcms)
 

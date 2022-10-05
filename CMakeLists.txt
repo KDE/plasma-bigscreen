@@ -40,7 +40,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
 find_package(LibKWorkspace 5.19 CONFIG REQUIRED)
 
 
-find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
+find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Quick
     Core
     Qml
@@ -65,7 +65,7 @@ plasma_install_package(shell org.kde.plasma.mycroft.bigscreen shells)
 plasma_install_package(lookandfeel org.kde.plasma.mycroft.bigscreen look-and-feel lookandfeel)
 
 
-install(FILES bin/mycroft-skill-launcher.py DESTINATION ${BIN_INSTALL_DIR})
+install(FILES bin/mycroft-skill-launcher.py DESTINATION ${KDE_INSTALL_BINDIR})
 install(FILES org.kde.plasma.mycroft.bigscreen.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
 if(ECM_VERSION VERSION_GREATER_EQUAL 5.79)

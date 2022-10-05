@@ -1,1 +1,1 @@
-install(DIRECTORY plasma-bigscreen DESTINATION ${SOUND_INSTALL_DIR})
+install(DIRECTORY plasma-bigscreen DESTINATION ${KDE_INSTALL_SOUNDDIR})
