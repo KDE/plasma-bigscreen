@@ -24,18 +24,7 @@ namespace Plasma
 class FrameSvg;
 }
 
-// Theme selector code by Andre Duffeck (modified to add package description)
-class ThemeInfo
-{
-public:
-    QString package;
-    QString pluginName;
-    QString description;
-    QString author;
-    QString version;
-    QString themeRoot;
-    QString type;
-};
+class ThemeInfo;
 
 class ThemeListModel : public QAbstractListModel
 {
@@ -66,6 +55,19 @@ private:
     QHash<int, QByteArray> m_roleNames;
 
     QMap<QString, ThemeInfo> m_themes;
+};
+
+// Theme selector code by Andre Duffeck (modified to add package description)
+class ThemeInfo
+{
+public:
+    QString package;
+    QString pluginName;
+    QString description;
+    QString author;
+    QString version;
+    QString themeRoot;
+    ThemeListModel::ColorType type;
 };
 
 #endif
