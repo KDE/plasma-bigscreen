@@ -245,3 +245,4 @@ bool BigscreenSettings::saveTime()
 K_PLUGIN_FACTORY_WITH_JSON(BigscreenSettingsFactory, "bigscreensettings.json", registerPlugin<BigscreenSettings>();)
 
 #include "bigscreensettings.moc"
+#include "moc_bigscreensettings.cpp"

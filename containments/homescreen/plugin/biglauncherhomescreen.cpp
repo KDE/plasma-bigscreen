@@ -85,3 +85,4 @@ void HomeScreen::setUseExpandableTiles(bool expandableTiles)
 K_PLUGIN_CLASS_WITH_JSON(HomeScreen, "metadata.json")
 
 #include "biglauncherhomescreen.moc"
+#include "moc_biglauncherhomescreen.cpp"
