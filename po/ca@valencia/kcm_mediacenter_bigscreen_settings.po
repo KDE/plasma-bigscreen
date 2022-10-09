@@ -122,7 +122,7 @@ msgstr "Data"
 #: package/contents/ui/DeviceTimeSettings.qml:314
 #, kde-format
 msgid "Press the [←] Back button to return to appearance settings"
-msgstr "Premeu el botó Arrere [←] per tornar a la configuració de l'aparença"
+msgstr "Premeu el botó Arrere [←] per a tornar a la configuració de l'aparença"
 
 #: package/contents/ui/DeviceTimeSettings.qml:377
 #: package/contents/ui/DeviceTimeSettings.qml:502
