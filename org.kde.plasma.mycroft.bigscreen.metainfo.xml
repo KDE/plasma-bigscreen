@@ -21,7 +21,7 @@
   <name xml:lang="pl">Duży Ekran Plazmy KDE</name>
   <name xml:lang="pt">Plasma do KDE para Ecrãs Grandes</name>
   <name xml:lang="pt-BR">KDE Plasma Bigscreen</name>
-  <name xml:lang="ru">KDE Plasma Bigscreen</name>
+  <name xml:lang="ru">KDE Plasma для больших экранов</name>
   <name xml:lang="sk">KDE Plasma Bigscreen</name>
   <name xml:lang="sl">KDE Plasma Bigscreen</name>
   <name xml:lang="sv">KDE Plasma storbildsskärm</name>
@@ -87,7 +87,7 @@
     <p xml:lang="pl">Duży Ekran Plazmy to interfejs użytkownika o otwartym kodzie dla telewizorów Duży Ekran Plazmy działając na bazie dystrybucji Linuksa, zmienia twój telewizor lub przystawkę w urządzenie, które można w pełni dostosowywać. Duży program uruchamiający zapewnia łatwy dostęp do wszystkich wgranych aplikacji i możliwości. Możliwość  sterowania za pomocą głosu lub pilota telewizyjnego.</p>
     <p xml:lang="pt">O Plasma para Ecrãs Grandes é uma interface em código aberto para TV's. Correndo sobre uma distribuição de Linux, o Plasma para Ecrãs Grandes transforma a sua TV ou 'box' da operadora num dispositivo completamente apto para programar. Um grande lançador dá-lhe acesso rápido a quaisquer aplicações ou competências. É controlável por voz ou pelo comando da TV.</p>
     <p xml:lang="pt-BR">O Plasma Bigscreen é uma interface de usuário de código aberto para TVs. Rodando em cima de uma distribuição Linux, o Plasma Bigscreen transforma sua TV ou setup box em um dispositivo totalmente hackeável. Um grande lançador que oferece fácil acesso a qualquer aplicativo e habilidade instalados. Controlável por voz ou controle remoto da TV.</p>
-    <p xml:lang="ru">Plasma Bigscreen — пользовательский интерфейс для телевизоров с открытым исходным кодом. Запускаемый поверх дистрибутива Linux, Plasma Bigscreen превращает телевизор или приставку в полностью управляемое устройство. Графическая оболочка предоставляет быстрых доступ ко всем установленным приложениям и настраиваемым параметрам. Поддерживается голосовое управление и управление пультом от телевизора.</p>
+    <p xml:lang="ru">Plasma Bigscreen — пользовательский интерфейс с открытым кодом для телевизоров. Работая на основе дистрибутива Linux, Plasma Bigscreen превращает телевизор или телеприставку в устройство, которое можно программировать. Большое окно запуска предоставляет доступ ко всем установленным программам и возможностям. С системой можно работать с помощью голосового управления или пульта от телевизора.</p>
     <p xml:lang="sl">Plasma Bigscreen je odprtokodni uporabniški vmesnik za TV naprave. S tem, da se vrti na distribuciji Linuxa, program Plasma Bigscreen spremeni vašo TV napravo v popolnoma programabilno napravo. Zaganjalnik programov vam nudi lahek dostop do katerekoli nameščene aplikacije in veščine, ki jo upravljate z glasom ali TV daljincem.</p>
     <p xml:lang="sv">Plasma storbildsskärm är ett användargränssnitt för tv med öppen källkod Det kör med en Linux-distribution, och omvandlar din tv eller box till en fullständigt programmerbar apparat. Ett stort startprogram som gör att du enkelt kan komma åt alla installerade program och färdigheter. Går att styra med rösten eller tv-fjärrkontrollen.</p>
     <p xml:lang="tr">Plasma Büyük Ekran, TV'ler için bir açık kaynaklı kullanıcı arayüzüdür. Bir Linux dağıtımı üzerinde çalışan Plasma Büyük Ekran, televizyonunuzu veya ortam kutunuzu tümüyle üzerinde oynanabilir bir aygıta dönüştürür. Kocaman bir çalıştırıcı ile tüm kurulu uygulamalara ve yeteneklere ulaşabilirsiniz. Ses veya uzaktan kumanda ile denetlenebilirdir.</p>
