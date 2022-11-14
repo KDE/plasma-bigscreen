@@ -1,30 +1,32 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-#
 # Burkhard Lück <lueck@hube-lueck.de>, 2020, 2021.
+# Alois Spitzbart <spitz234@hotmail.com>, 2022.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-03-26 00:45+0000\n"
-"PO-Revision-Date: 2021-05-24 05:45+0200\n"
-"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"PO-Revision-Date: 2022-10-24 07:58+0200\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.08.1\n"
 
 #: contents/ui/ConfigWindow.qml:31
 #, kde-format
 msgid "Use Colored Tiles"
-msgstr ""
+msgstr "Farbige Kacheln verwenden"
 
 #: contents/ui/ConfigWindow.qml:41
 #, kde-format
 msgid "Use Expanding Tiles"
-msgstr ""
+msgstr "Sich ausdehnende Kacheln verwenden"
 
 #: contents/ui/ConfigWindow.qml:57
 #, kde-format
@@ -109,7 +111,7 @@ msgstr "Zuletzt verwendet"
 #: contents/ui/launcher/LauncherHome.qml:91
 #, kde-format
 msgid "Voice Apps"
-msgstr ""
+msgstr "Sprachanwendungen"
 
 #: contents/ui/launcher/LauncherHome.qml:116
 #, kde-format
@@ -129,12 +131,12 @@ msgstr "Einstellungen"
 #: contents/ui/MycroftIndicator.qml:57 contents/ui/MycroftIndicator.qml:66
 #, kde-format
 msgid "Getting Ready... Please Wait"
-msgstr ""
+msgstr "Wird vorbereitet ... Bitte warten"
 
 #: contents/ui/PowerManagementItem.qml:41
 #, kde-format
 msgid "Bigscreen has enabled system-wide inhibition"
-msgstr ""
+msgstr "Bigscreen hat eine systemweite Blockade aktiviert"
 
 #~ msgid "Audio"
 #~ msgstr "Audio"
