@@ -149,92 +149,112 @@ KCM.SimpleKCM {
                     color: "white"
                 }
 
-                RowLayout {
-                    id: topContentArea
-                    height: parent.height
+                Flickable {
+                    id: topContentAreaLayout
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: topContentArea.implicitHeight
+                    contentWidth: topContentArea.implicitWidth
+                    contentHeight: height
 
-                    Delegates.LocalSettingDelegate {
-                        id: mycroftIntegrationDelegate
-                        implicitWidth: desktopThemeView.view.cellWidth * 2
-                        implicitHeight: desktopThemeView.view.cellHeight
-                        isChecked: kcm.mycroftIntegrationActive() ? 1 : 0
-                        name: "Mycroft Integration"
-                        customType: "mycroftIntegration"
-                        KeyNavigation.up: kcmcloseButton
-                        KeyNavigation.right: pmInhibitionDelegate
-                        KeyNavigation.down: desktopThemeView
-                        onActiveFocusChanged: {
-                            if(activeFocus){
-                                contentLayout.currentSection = topContentArea
-                            }
+                    Behavior on contentX {
+                        NumberAnimation {
+                            duration: Kirigami.Units.longDuration * 2
+                            easing.type: Easing.InOutQuad
                         }
                     }
 
-                    Delegates.LocalSettingDelegate {
-                        id: pmInhibitionDelegate
-                        implicitWidth: desktopThemeView.view.cellWidth * 2
-                        implicitHeight: desktopThemeView.view.cellHeight
-                        isChecked: kcm.pmInhibitionActive() ? 1 : 0
-                        name: "Power Inhibition"
-                        customType: "pmInhibition"
-                        KeyNavigation.up: kcmcloseButton
-                        KeyNavigation.right: coloredTileDelegate
-                        KeyNavigation.left: mycroftIntegrationDelegate
-                        KeyNavigation.down: desktopThemeView
-                        onActiveFocusChanged: {
-                            if(activeFocus){
-                                contentLayout.currentSection = topContentArea
+                    RowLayout {
+                        id: topContentArea
+                        height: parent.height
+
+                        Delegates.LocalSettingDelegate {
+                            id: mycroftIntegrationDelegate
+                            implicitWidth: desktopThemeView.view.cellWidth * 3
+                            implicitHeight: desktopThemeView.view.cellHeight
+                            isChecked: kcm.mycroftIntegrationActive() ? 1 : 0
+                            name: "Mycroft Integration"
+                            customType: "mycroftIntegration"
+                            KeyNavigation.up: kcmcloseButton
+                            KeyNavigation.right: pmInhibitionDelegate
+                            KeyNavigation.down: desktopThemeView
+                            onActiveFocusChanged: {
+                                if(activeFocus){
+                                    contentLayout.currentSection = topContentArea
+                                    topContentAreaLayout.contentX = mycroftIntegrationDelegate.x
+                                }
                             }
                         }
-                    }
 
-                    Delegates.LocalSettingDelegate {
-                        id: coloredTileDelegate
-                        implicitWidth: desktopThemeView.view.cellWidth * 2
-                        implicitHeight: desktopThemeView.view.cellHeight
-                        isChecked: kcm.useColoredTiles() ? 1 : 0
-                        name: "Colored Tiles"
-                        customType: "coloredTile"
-                        KeyNavigation.up: kcmcloseButton
-                        KeyNavigation.left: pmInhibitionDelegate
-                        KeyNavigation.right: expandableTileDelegate
-                        KeyNavigation.down: desktopThemeView
-                        onActiveFocusChanged: {
-                            if(activeFocus){
-                                contentLayout.currentSection = topContentArea
+                        Delegates.LocalSettingDelegate {
+                            id: pmInhibitionDelegate
+                            implicitWidth: desktopThemeView.view.cellWidth * 3
+                            implicitHeight: desktopThemeView.view.cellHeight
+                            isChecked: kcm.pmInhibitionActive() ? 1 : 0
+                            name: "Power Inhibition"
+                            customType: "pmInhibition"
+                            KeyNavigation.up: kcmcloseButton
+                            KeyNavigation.right: coloredTileDelegate
+                            KeyNavigation.left: mycroftIntegrationDelegate
+                            KeyNavigation.down: desktopThemeView
+                            onActiveFocusChanged: {
+                                if(activeFocus){
+                                    contentLayout.currentSection = topContentArea
+                                    topContentAreaLayout.contentX = pmInhibitionDelegate.x
+                                }
                             }
                         }
-                    }
 
-                    Delegates.LocalSettingDelegate {
-                        id: expandableTileDelegate
-                        implicitWidth: desktopThemeView.cellWidth * 2
-                        implicitHeight: desktopThemeView.cellHeight
-                        isChecked: kcm.useExpandingTiles() ? 1 : 0
-                        name: "Expanding Tiles"
-                        customType: "exapandableTile"
-                        KeyNavigation.up: kcmcloseButton
-                        KeyNavigation.left: coloredTileDelegate
-                        KeyNavigation.right: timeDateSettingsDelegate
-                        KeyNavigation.down: desktopThemeView
-                        onActiveFocusChanged: {
-                            if(activeFocus){
-                                contentLayout.currentSection = topContentArea
+                        Delegates.LocalSettingDelegate {
+                            id: coloredTileDelegate
+                            implicitWidth: desktopThemeView.view.cellWidth * 3
+                            implicitHeight: desktopThemeView.view.cellHeight
+                            isChecked: kcm.useColoredTiles() ? 1 : 0
+                            name: "Colored Tiles"
+                            customType: "coloredTile"
+                            KeyNavigation.up: kcmcloseButton
+                            KeyNavigation.left: pmInhibitionDelegate
+                            KeyNavigation.right: expandableTileDelegate
+                            KeyNavigation.down: desktopThemeView
+                            onActiveFocusChanged: {
+                                if(activeFocus){
+                                    contentLayout.currentSection = topContentArea
+                                    topContentAreaLayout.contentX = coloredTileDelegate.x
+                                }
                             }
                         }
-                    }
 
-                    Delegates.TimeDelegate {
-                        id: timeDateSettingsDelegate
-                        implicitWidth: desktopThemeView.cellWidth * 2
-                        implicitHeight: desktopThemeView.cellHeight
-                        name: "Adjust Date & Time"
-                        KeyNavigation.up: kcmcloseButton
-                        KeyNavigation.left: expandableTileDelegate
-                        KeyNavigation.down: desktopThemeView
-                        onActiveFocusChanged: {
-                            if(activeFocus){
-                                contentLayout.currentSection = topContentArea
+                        Delegates.LocalSettingDelegate {
+                            id: expandableTileDelegate
+                            implicitWidth: desktopThemeView.cellWidth * 3
+                            implicitHeight: desktopThemeView.cellHeight
+                            isChecked: kcm.useExpandingTiles() ? 1 : 0
+                            name: "Expanding Tiles"
+                            customType: "exapandableTile"
+                            KeyNavigation.up: kcmcloseButton
+                            KeyNavigation.left: coloredTileDelegate
+                            KeyNavigation.right: timeDateSettingsDelegate
+                            KeyNavigation.down: desktopThemeView
+                            onActiveFocusChanged: {
+                                if(activeFocus){
+                                    contentLayout.currentSection = topContentArea
+                                    topContentAreaLayout.contentX = expandableTileDelegate.x
+                                }
+                            }
+                        }
+
+                        Delegates.TimeDelegate {
+                            id: timeDateSettingsDelegate
+                            implicitWidth: desktopThemeView.cellWidth * 3
+                            implicitHeight: desktopThemeView.cellHeight
+                            name: "Adjust Date & Time"
+                            KeyNavigation.up: kcmcloseButton
+                            KeyNavigation.left: expandableTileDelegate
+                            KeyNavigation.down: desktopThemeView
+                            onActiveFocusChanged: {
+                                if(activeFocus){
+                                    contentLayout.currentSection = topContentArea
+                                    topContentAreaLayout.contentX = timeDateSettingsDelegate.x
+                                }
                             }
                         }
                     }
@@ -292,3 +312,4 @@ KCM.SimpleKCM {
         }
     }
 }
+

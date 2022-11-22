@@ -147,6 +147,6 @@ AbstractIndicator {
                             paIcon.Kirigami.ScenePosition.x + paIcon.width/2,
                             paIcon.Kirigami.ScenePosition.y + paIcon.height/2,
                             Math.min(paIcon.width, paIcon.height));
-        plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_audiodevice")
+        plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_audiodevice")
     }
 }
