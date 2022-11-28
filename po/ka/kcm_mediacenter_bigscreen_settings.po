@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-01-15 00:45+0000\n"
-"PO-Revision-Date: 2022-09-30 15:14+0200\n"
+"PO-Revision-Date: 2022-11-27 11:15+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -121,7 +121,7 @@ msgstr "თარიღი"
 #: package/contents/ui/DeviceTimeSettings.qml:314
 #, kde-format
 msgid "Press the [←] Back button to return to appearance settings"
-msgstr ""
+msgstr "გარეგნობის პარამეტრებზე დასაბრუნებლად დააწექით [←] უკან გასვლას"
 
 #: package/contents/ui/DeviceTimeSettings.qml:377
 #: package/contents/ui/DeviceTimeSettings.qml:502
@@ -129,6 +129,8 @@ msgstr ""
 #, kde-format
 msgid "Press the [←] Back button to save configuration and return to settings"
 msgstr ""
+"კონფიგურაციის შესანახად და პარამეტრებზე დასაბრუნებლად დააწექით [←] უკან "
+"გასვლას"
 
 #: package/contents/ui/DeviceTimeSettings.qml:418
 #, kde-format

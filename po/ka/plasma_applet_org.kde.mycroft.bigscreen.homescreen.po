@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-03-26 00:45+0000\n"
-"PO-Revision-Date: 2022-09-30 15:18+0200\n"
+"PO-Revision-Date: 2022-11-27 11:16+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,17 +16,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #: contents/ui/ConfigWindow.qml:31
 #, kde-format
 msgid "Use Colored Tiles"
-msgstr ""
+msgstr "გაფერადებული ფილების გამოყენება"
 
 #: contents/ui/ConfigWindow.qml:41
 #, kde-format
 msgid "Use Expanding Tiles"
-msgstr ""
+msgstr "გაფართოებადი ფილების გამოყენება"
 
 #: contents/ui/ConfigWindow.qml:57
 #, kde-format
