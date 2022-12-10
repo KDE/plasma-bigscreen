@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:47+0000\n"
-"PO-Revision-Date: 2022-01-29 09:30+0100\n"
-"Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
+"PO-Revision-Date: 2022-12-09 09:14+0100\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: contents/config/config.qml:11
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "Splošno"
 
 #: contents/ui/ConfigWindow.qml:31
 #, kde-format
