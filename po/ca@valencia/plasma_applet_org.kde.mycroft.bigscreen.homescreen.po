@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:47+0000\n"
-"PO-Revision-Date: 2022-01-15 11:01+0100\n"
+"PO-Revision-Date: 2022-12-08 17:10+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -23,7 +23,7 @@ msgstr ""
 #: contents/config/config.qml:11
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "General"
 
 #: contents/ui/ConfigWindow.qml:31
 #, kde-format
