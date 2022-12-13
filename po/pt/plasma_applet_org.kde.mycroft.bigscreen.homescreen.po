@@ -16,7 +16,7 @@ msgstr ""
 #: contents/config/config.qml:11
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "Geral"
 
 #: contents/ui/ConfigWindow.qml:31
 #, kde-format
