@@ -1,5 +1,4 @@
 {
-    "Categories": "Qt;KDE;X-KDE-settings-system;",
     "KPlugin": {
         "Description": "Connect and sync your devices",
         "Description[ar]": "اتّصل وزامن أجهزتك",
@@ -74,13 +73,9 @@
         "Name[uk]": "KDE Connect",
         "Name[x-test]": "xxKDE Connectxx",
         "Name[zh_CN]": "KDE Connect",
-        "Name[zh_TW]": "KDE 連線",
-        "ServiceTypes": [
-            "KCModule"
-        ]
+        "Name[zh_TW]": "KDE 連線"
     },
     "X-DocPath": "kcontrol/kdeconnect/index.html",
-    "X-KDE-ParentApp": "kcontrol",
     "X-KDE-System-Settings-Parent-Category": "hardware",
     "X-KDE-Weight": 40
 }

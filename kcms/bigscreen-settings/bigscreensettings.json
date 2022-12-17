@@ -1,5 +1,4 @@
 {
-    "Categories": "Qt;KDE;X-KDE-settings-system;",
     "KPlugin": {
         "Description": "Look and Feel",
         "Description[ar]": "الشكل والمظهر",
@@ -68,10 +67,7 @@
         "Name[tr]": "Görünüş",
         "Name[uk]": "Вигляд",
         "Name[x-test]": "xxAppearancexx",
-        "Name[zh_CN]": "外观",
-        "ServiceTypes": [
-            "KCModule"
-        ]
+        "Name[zh_CN]": "外观"
     },
     "X-KDE-Keywords": "theme, look, feel",
     "X-KDE-Keywords[ar]": "سمة,منظر,الشكل",
@@ -104,7 +100,6 @@
     "X-KDE-Keywords[uk]": "theme,look,feel,тема,вигляд,поведінка",
     "X-KDE-Keywords[x-test]": "xxthemexx,xx lookxx,xx feelxx",
     "X-KDE-Keywords[zh_CN]": "theme, look, feel, 主题, 外观, 视觉效果, 显示效果",
-    "X-KDE-ParentApp": "kcontrol",
     "X-KDE-System-Settings-Parent-Category": "regionalsettings",
     "X-KDE-Weight": 70
 }

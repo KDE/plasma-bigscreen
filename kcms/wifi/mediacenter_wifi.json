@@ -1,5 +1,4 @@
 {
-    "Categories": "Qt;KDE;X-KDE-settings-wifi;",
     "KPlugin": {
         "Description": "Connect to Wifi networks",
         "Description[ar]": "اتصل بشبكات لاسلكية",
@@ -73,13 +72,9 @@
         "Name[uk]": "Wi-Fi",
         "Name[x-test]": "xxWifixx",
         "Name[zh_CN]": "Wi-Fi",
-        "Name[zh_TW]": "Wi-Fi",
-        "ServiceTypes": [
-            "KCModule"
-        ]
+        "Name[zh_TW]": "Wi-Fi"
     },
     "X-DocPath": "kcontrol/wifi/index.html",
-    "X-KDE-ParentApp": "kcontrol",
     "X-KDE-System-Settings-Parent-Category": "hardware",
     "X-KDE-Weight": 40
 }
