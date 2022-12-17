@@ -16,11 +16,8 @@ target_link_libraries(kcm_mediacenter_wifi
     KF5::QuickAddons
 )
 
-kcoreaddons_desktop_to_json(kcm_mediacenter_wifi "mediacenter_wifi.desktop")
-
 ########### install files ###############
 
 install(TARGETS kcm_mediacenter_wifi DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
-install(FILES mediacenter_wifi.desktop  DESTINATION  ${KDE_INSTALL_KSERVICESDIR})
 kpackage_install_package(package kcm_mediacenter_wifi kcms)
 

@@ -18,8 +18,6 @@ target_link_libraries(kcm_mediacenter_bigscreen_settings
     KF5::QuickAddons
     KF5::CoreAddons
     )
-kcoreaddons_desktop_to_json(kcm_mediacenter_bigscreen_settings "bigscreensettings.desktop")
 
-install(FILES bigscreensettings.desktop DESTINATION ${KDE_INSTALL_KSERVICESDIR})
 install(TARGETS kcm_mediacenter_bigscreen_settings DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 kpackage_install_package(package kcm_mediacenter_bigscreen_settings kcms)
