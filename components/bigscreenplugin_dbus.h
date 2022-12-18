@@ -6,7 +6,6 @@
 #ifndef BIGSCREENPLUGIN_DBUS_H
 #define BIGSCREENPLUGIN_DBUS_H
 
-#include "bigscreenplugin_dbus.h"
 #include <QObject>
 #include <QStringList>
 #include <QtDBus>

@@ -5,7 +5,6 @@
 */
 
 #include "envreader.h"
-#include "bigscreenplugin_dbus.h"
 
 EnvReader::EnvReader(QObject *parent)
     : QObject(parent)

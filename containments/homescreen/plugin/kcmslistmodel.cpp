@@ -1,5 +1,4 @@
 #include "kcmslistmodel.h"
-#include <KPluginMetaData>
 #include <QFile>
 
 KcmsListModel::KcmsListModel(QObject *parent)

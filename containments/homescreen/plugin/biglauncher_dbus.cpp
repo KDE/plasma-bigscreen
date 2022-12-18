@@ -10,9 +10,7 @@
 #include <QMap>
 #include <QMetaObject>
 #include <QString>
-#include <QStringList>
 #include <QVariant>
-#include <QtDBus>
 
 /*
  * Implementation of adaptor class BigLauncherDbusAdapterInterface

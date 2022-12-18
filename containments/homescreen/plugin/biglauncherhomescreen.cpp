@@ -7,7 +7,6 @@
 
 #include "biglauncherhomescreen.h"
 #include "applicationlistmodel.h"
-#include "biglauncher_dbus.h"
 #include "kcmslistmodel.h"
 
 #include <QDebug>
