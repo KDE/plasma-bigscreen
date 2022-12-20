@@ -121,7 +121,7 @@ void ApplicationListModel::loadApplications()
                         //  qDebug() << " desktopEntryName: " << service->desktopEntryName();
 
                         if (service->isApplication() && !blacklist.contains(service->desktopEntryName()) && service->showOnCurrentPlatform()
-                            && !service->property("Terminal", QVariant::Bool).toBool()) {
+                            && !service->property("Terminal", QMetaType::Bool).toBool()) {
                             QRegularExpression voiceExpr(QStringLiteral("mycroft-gui-app .* --skill=(.*)\\.home"));
 
                             if (service->categories().contains(QStringLiteral("VoiceApp")) && voiceExpr.match(service->exec()).hasMatch()) {
