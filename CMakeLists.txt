@@ -20,6 +20,7 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMInstallIcons)
+include(ECMDeprecationSettings)
 
 # Locate plasma_install_package macro.
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
@@ -54,6 +55,11 @@ ecm_find_qmlmodule(Mycroft 1.0)
 if(NOT ${Mycroft-QMLModule_FOUND})
     message(WARNING "Could not find the Mycroft QML module. Voice interaction features will not be available.")
 endif()
+
+ecm_set_disabled_deprecation_versions(QT 5.15.2
+    KF 5.101
+)
+
 
 add_subdirectory(bin)
 add_subdirectory(containments)
