@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Description": "Look and Feel",
+        "Description[bg]": "Погледни и почувствай",
+        "Description[ca]": "Aspecte i comportament",
+        "Description[nl]": "Uiterlijk en gedrag",
+        "Description[tr]": "Görünüm ve His",
+        "Description[uk]": "Вигляд і поведінка",
+        "Description[x-test]": "xxLook and Feelxx",
         "FormFactors": [
             "handset",
             "tablet",

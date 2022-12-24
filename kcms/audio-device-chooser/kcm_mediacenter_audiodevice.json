@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Description": "Manage mediacenter audio devices",
+        "Description[bg]": "Управление на медийни устройства",
+        "Description[ca]": "Gestiona els dispositius d'àudio del centre multimèdia",
+        "Description[nl]": "Audio-apparaten in mediacenter beheren",
+        "Description[tr]": "Ortam merkezi ses aygıtlarını yapılandır",
+        "Description[uk]": "Керування звуковими пристроями медіацентру",
+        "Description[x-test]": "xxManage mediacenter audio devicesxx",
         "FormFactors": [
             "mediacenter"
         ],

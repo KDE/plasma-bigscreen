@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Description": "Connect and sync your devices",
+        "Description[bg]": "Свържете и синхронизирайте вашите устройства",
+        "Description[ca]": "Connecta i sincronitza els vostres dispositius",
+        "Description[nl]": "Uw apparaten verbinden en synchroniseren",
+        "Description[tr]": "Aygıtlarınızı bağlayın ve eşzamanlayın",
+        "Description[uk]": "З'єднання і синхронізація ваших пристроїв",
+        "Description[x-test]": "xxConnect and sync your devicesxx",
         "FormFactors": [
             "mediacenter"
         ],

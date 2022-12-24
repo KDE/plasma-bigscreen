@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Description": "Connect to Wifi networks",
+        "Description[bg]": "Свързване с безжични мрежи",
+        "Description[ca]": "Connecta amb les xarxes Wi-Fi",
+        "Description[nl]": "Met WiFi-netwerken verbinden",
+        "Description[tr]": "Wi-Fi ağlarına bağlanın",
+        "Description[uk]": "З'єднання із мережами Wi-Fi",
+        "Description[x-test]": "xxConnect to Wifi networksxx",
         "FormFactors": [
             "mediacenter"
         ],
