@@ -1,9 +1,16 @@
 {
     "KPlugin": {
         "Description": "Manage mediacenter audio devices",
+        "Description[ar]": "إدارة أجهزة الصوت في مركز الوسائط",
         "Description[bg]": "Управление на медийни устройства",
+        "Description[ca@valencia]": "Gestiona els dispositius d'àudio del centre multimèdia",
         "Description[ca]": "Gestiona els dispositius d'àudio del centre multimèdia",
+        "Description[es]": "Administrar dispositivos de audio de mediatecas",
+        "Description[fr]": "Gérer les périphériques audio du centre multimédia",
+        "Description[ka]": "მედიაცენტრის აუდიო მოწყობილობების მართვა",
         "Description[nl]": "Audio-apparaten in mediacenter beheren",
+        "Description[pt]": "Gerir os dispositivos de áudio do centro multimédia",
+        "Description[sl]": "Upravljaj zvočne naprave media centra",
         "Description[tr]": "Ortam merkezi ses aygıtlarını yapılandır",
         "Description[uk]": "Керування звуковими пристроями медіацентру",
         "Description[x-test]": "xxManage mediacenter audio devicesxx",

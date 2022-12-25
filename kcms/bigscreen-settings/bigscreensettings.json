@@ -1,9 +1,16 @@
 {
     "KPlugin": {
         "Description": "Look and Feel",
+        "Description[ar]": "الشكل والمظهر",
         "Description[bg]": "Погледни и почувствай",
+        "Description[ca@valencia]": "Aspecte i comportament",
         "Description[ca]": "Aspecte i comportament",
+        "Description[es]": "Aspecto",
+        "Description[fr]": "Apparence et ergonomie",
+        "Description[ka]": "გარეგნობა",
         "Description[nl]": "Uiterlijk en gedrag",
+        "Description[pt]": "Aparência e Comportamento",
+        "Description[sl]": "Videz in občutek",
         "Description[tr]": "Görünüm ve His",
         "Description[uk]": "Вигляд і поведінка",
         "Description[x-test]": "xxLook and Feelxx",

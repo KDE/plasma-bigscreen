@@ -1,9 +1,16 @@
 {
     "KPlugin": {
         "Description": "Connect to Wifi networks",
+        "Description[ar]": "اتصل بشبكات لاسلكية",
         "Description[bg]": "Свързване с безжични мрежи",
+        "Description[ca@valencia]": "Connecta amb les xarxes Wi-Fi",
         "Description[ca]": "Connecta amb les xarxes Wi-Fi",
+        "Description[es]": "Conectar a redes Wifi",
+        "Description[fr]": "Se connecter aux réseaux Wifi",
+        "Description[ka]": "მიუერთდით Wifi ქსელებს",
         "Description[nl]": "Met WiFi-netwerken verbinden",
+        "Description[pt]": "Ligue-se às redes Wi-Fi",
+        "Description[sl]": "Poveži se z omrežji Wifi",
         "Description[tr]": "Wi-Fi ağlarına bağlanın",
         "Description[uk]": "З'єднання із мережами Wi-Fi",
         "Description[x-test]": "xxConnect to Wifi networksxx",

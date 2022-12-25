@@ -1,9 +1,16 @@
 {
     "KPlugin": {
         "Description": "Connect and sync your devices",
+        "Description[ar]": "اتّصل وزامن أجهزتك",
         "Description[bg]": "Свържете и синхронизирайте вашите устройства",
+        "Description[ca@valencia]": "Connecta i sincronitza els vostres dispositius",
         "Description[ca]": "Connecta i sincronitza els vostres dispositius",
+        "Description[es]": "Conecta y sincroniza tus dispositivos",
+        "Description[fr]": "Connecter et synchroniser vos périphériques",
+        "Description[ka]": "თქვენი მოწყობილობების მიერთება და სინქრონიზაცია",
         "Description[nl]": "Uw apparaten verbinden en synchroniseren",
+        "Description[pt]": "Ligue e sincronize os seus dispositivos",
+        "Description[sl]": "Poveži in sinhroniziraj svoje naprave",
         "Description[tr]": "Aygıtlarınızı bağlayın ve eşzamanlayın",
         "Description[uk]": "З'єднання і синхронізація ваших пристроїв",
         "Description[x-test]": "xxConnect and sync your devicesxx",
