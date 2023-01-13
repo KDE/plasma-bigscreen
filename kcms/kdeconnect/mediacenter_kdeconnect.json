@@ -17,6 +17,7 @@
         "Description[tr]": "Aygıtlarınızı bağlayın ve eşzamanlayın",
         "Description[uk]": "З'єднання і синхронізація ваших пристроїв",
         "Description[x-test]": "xxConnect and sync your devicesxx",
+        "Description[zh_CN]": "连接并同步您的设备",
         "FormFactors": [
             "mediacenter"
         ],

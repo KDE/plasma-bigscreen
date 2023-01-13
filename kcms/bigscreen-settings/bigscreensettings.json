@@ -17,6 +17,7 @@
         "Description[tr]": "Görünüm ve His",
         "Description[uk]": "Вигляд і поведінка",
         "Description[x-test]": "xxLook and Feelxx",
+        "Description[zh_CN]": "界面外观",
         "FormFactors": [
             "handset",
             "tablet",
