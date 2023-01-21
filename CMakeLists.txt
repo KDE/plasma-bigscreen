@@ -6,7 +6,7 @@ set(PROJECT_VERSION "5.26.90")
 set(PROJECT_VERSION_MAJOR 5)
 
 set(QT_MIN_VERSION "5.15.2")
-set(KF5_MIN_VERSION "5.98.0")
+set(KF5_MIN_VERSION "5.102.0")
  
 # Use Extra CMake Modules (ECM) for common functionality.
 # See http://api.kde.org/ecm/manual/ecm.7.html
