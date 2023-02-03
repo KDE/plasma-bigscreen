@@ -91,6 +91,3 @@ msgstr "Gestiona les connexions"
 #, kde-format
 msgid "Configure Plasma wifi"
 msgstr "Configura el Wi-Fi del Plasma"
-
-#~ msgid "Network"
-#~ msgstr "Xarxa"

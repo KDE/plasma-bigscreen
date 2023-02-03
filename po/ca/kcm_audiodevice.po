@@ -76,33 +76,3 @@ msgstr "Selector del dispositiu d'àudio"
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "Premeu el botó Enrere [←] per a tornar a la selecció de dispositius"
-
-#~ msgid "Connected"
-#~ msgstr "Connectat"
-
-#~ msgid "Network"
-#~ msgstr "Xarxa"
-
-#~ msgid "Refresh"
-#~ msgstr "Refresca"
-
-#~ msgid "Enter Password For %1"
-#~ msgstr "Introduïu la contrasenya per a %1"
-
-#~ msgid "Password..."
-#~ msgstr "Contrasenya..."
-
-#~ msgid "Connect"
-#~ msgstr "Connecta"
-
-#~ msgid "Cancel"
-#~ msgstr "Cancel·la"
-
-#~ msgid "Are you sure you want to forget the network %1?"
-#~ msgstr "De veres voleu oblidar la xarxa %1?"
-
-#~ msgid "Forget"
-#~ msgstr "Oblida"
-
-#~ msgid "Connections"
-#~ msgstr "Connexions"
