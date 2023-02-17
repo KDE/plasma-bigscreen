@@ -5,11 +5,11 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
-import QtQuick.Window 2.14
-import QtQuick.Layouts 1.14
-import QtQuick.Controls 2.14 as Controls
-import org.kde.kirigami 2.12 as Kirigami
+import QtQuick 2.15
+import QtQuick.Window 2.15
+import QtQuick.Layouts 1.15
+import QtQuick.Controls 2.15 as Controls
+import org.kde.kirigami 2.19 as Kirigami
 
 Window {
     id: window
@@ -32,8 +32,12 @@ Window {
                 checked: plasmoid.configuration.coloredTiles
                 onCheckedChanged: plasmoid.configuration.coloredTiles = checked
                 focus: true
-                Keys.onEnterPressed: checked = !checked
-                Keys.onReturnPressed: checked = !checked
+                Keys.onEnterPressed: (event)=> {
+                    checked = !checked
+                }
+                Keys.onReturnPressed: (event)=> {
+                    checked = !checked
+                }
                 KeyNavigation.down: expandingCheckbox
             }
             Controls.CheckBox {
@@ -41,8 +45,12 @@ Window {
                 text: i18n("Use Expanding Tiles")
                 checked: plasmoid.configuration.expandingTiles
                 onCheckedChanged: plasmoid.configuration.expandingTiles = checked
-                Keys.onEnterPressed: checked = !checked
-                Keys.onReturnPressed: checked = !checked
+                Keys.onEnterPressed: (event)=> {
+                    checked = !checked
+                }
+                Keys.onReturnPressed: (event)=> {
+                    checked = !checked
+                }
                 KeyNavigation.down: closeButton
             }
         }
@@ -55,9 +63,15 @@ Window {
         }
         icon.name: "window-close"
         text: i18n("close")
-        onClicked: window.close()
-        Keys.onEnterPressed: clicked()
-        Keys.onReturnPressed: clicked()
+        onClicked: (mouse)=> {
+            window.close()
+        }
+        Keys.onEnterPressed: (event)=> {
+            clicked()
+        }
+        Keys.onReturnPressed: (event)=> {
+            clicked()
+        }
         KeyNavigation.up: backgroundCheckbox
     }
 }

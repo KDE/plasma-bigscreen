@@ -4,10 +4,10 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.12
-import QtQuick.Window 2.12
-import QtQuick.Layouts 1.0
-import QtQuick.Controls 2.3 as Controls
+import QtQuick 2.15
+import QtQuick.Window 2.15
+import QtQuick.Layouts 1.15
+import QtQuick.Controls 2.15 as Controls
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.configuration 2.0
@@ -16,7 +16,7 @@ import org.kde.plasma.configuration 2.0
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.kquickcontrolsaddons 2.0 as Addons
 import org.kde.kcm 1.1 as KCM
-import org.kde.kirigami 2.11 as Kirigami
+import org.kde.kirigami 2.19 as Kirigami
 
 AppletConfiguration {
     id: root
@@ -82,7 +82,9 @@ AppletConfiguration {
             model: imageWallpaper.wallpaperModel
             onCountChanged: currentIndex =  Math.min(model.indexOf(configDialog.wallpaperConfiguration["Image"]), model.rowCount()-1)
             KeyNavigation.left: headerItem
-            Keys.onUpPressed: imageWallpaperDrawer.close()
+            Keys.onUpPressed: (event)=> {
+                imageWallpaperDrawer.close()
+            }
             highlightRangeMode: ListView.ApplyRange
             
             preferredHighlightBegin: cellWidth
@@ -109,12 +111,14 @@ AppletConfiguration {
                         wallpapersView.currentIndex = -1;
                     }
                 }
-                onClicked: {
+                onClicked: (mouse)=> {
                     forceActiveFocus();
                     configDialog.currentWallpaper = "org.kde.slideshow";
                     configDialog.applyWallpaper();
                 }
-                Keys.onReturnPressed: clicked()
+                Keys.onReturnPressed: (event)=> {
+                    clicked()
+                }
 
                 contentItem: Image {
                     source: Qt.resolvedUrl("SlideshowThumbnail.png")
@@ -131,7 +135,7 @@ AppletConfiguration {
                     }
                 }
 
-                Keys.onRightPressed: {
+                Keys.onRightPressed: (event)=> {
                     print(wallpapersView.itemAt(1, 1))
                     wallpapersView.itemAt(1, 1).forceActiveFocus()
                     wallpapersView.currentIndex = 0
@@ -166,12 +170,12 @@ AppletConfiguration {
                         fillMode: Image.PreserveAspectCrop
                     }
                 }
-                onClicked: {
+                onClicked: (mouse)=> {
                     configDialog.currentWallpaper = "org.kde.image";
                     configDialog.wallpaperConfiguration["Image"] = model.path;
                     configDialog.applyWallpaper()
                 }
-                Keys.onReturnPressed: {
+                Keys.onReturnPressed: (event)=> {
                     clicked();
                 }
             }

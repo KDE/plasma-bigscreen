@@ -5,16 +5,16 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.14
-import QtQuick.Layouts 1.14
-import QtQuick.Controls 2.14
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
+import QtQuick.Controls 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents2
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 import org.kde.kdeconnect 1.0
-import QtGraphicalEffects 1.14
+import Qt5Compat.GraphicalEffects
 
 import "delegates" as Delegates
 
@@ -168,25 +168,25 @@ Rectangle {
         anchors.margins: Kirigami.Units.largeSpacing * 2
         height: Kirigami.Units.gridUnit * 2
 
-        PlasmaComponents2.Button {
+        PlasmaComponents.Button {
             id: backBtnSettingsItem
             iconSource: "arrow-left"
             Layout.alignment: Qt.AlignLeft
 
             KeyNavigation.down: deviceStatView
 
-            PlasmaComponents2.Highlight {
+            PlasmaExtras.Highlight {
                 z: -2
                 anchors.fill: parent
                 anchors.margins: -Kirigami.Units.gridUnit / 4
                 visible: backBtnSettingsItem.activeFocus ? 1 : 0
             }
 
-            Keys.onReturnPressed: {
+            Keys.onReturnPressed: (event)=> {
                 clicked()
             }
 
-            onClicked: {
+            onClicked: (mouse)=> {
                 connectionView.forceActiveFocus()
             }
         }

@@ -5,11 +5,11 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
-import QtQuick.Window 2.14
+import QtQuick 2.15
+import QtQuick.Window 2.15
 import QtQuick.Layouts 1.14
-import QtQuick.Controls 2.14 as Controls
-import org.kde.kirigami 2.12 as Kirigami
+import QtQuick.Controls 2.15 as Controls
+import org.kde.kirigami 2.19 as Kirigami
 import Mycroft 1.0 as Mycroft
 
 RowLayout {
@@ -45,12 +45,12 @@ RowLayout {
 
         Connections {
             target: Mycroft.MycroftController
-            onIntentRecevied: {
+            function onIntentRecevied(type, data) {
                 if(type == "recognizer_loop:utterance") {
                     inputQuery.text = data.utterances[0]
                 }
             }
-            onServerReadyChanged: {
+            function onServerReadyChanged() {
                 if (Mycroft.MycroftController.serverReady) {
                     inputQuery.text = "";
                 } else {
@@ -58,7 +58,7 @@ RowLayout {
                     utteranceTimer.running = false;
                 }
             }
-            onStatusChanged: {
+            function onStatusChanged(status) {
                 switch (Mycroft.MycroftController.status) {
                 case Mycroft.MycroftController.Connecting:
                 case Mycroft.MycroftController.Error:
@@ -72,7 +72,6 @@ RowLayout {
                     }
                     break;
                 }
-
             }
         }
     }

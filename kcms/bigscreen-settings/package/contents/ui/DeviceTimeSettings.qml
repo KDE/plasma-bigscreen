@@ -5,13 +5,14 @@
 
 */
 
-import QtQuick.Layouts 1.14
-import QtQuick 2.14
-import QtQuick.Window 2.14
-import QtQuick.Controls 2.14
+import QtQuick.Layouts 1.15
+import QtQuick 2.15
+import QtQuick.Window 2.15
+import QtQuick.Controls 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.plasma.components 3.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami 2.19 as Kirigami
 import org.kde.kcm 1.2 as KCM
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 import "delegates" as Delegates
@@ -30,7 +31,7 @@ Rectangle {
         }
     }
 
-    Keys.onBackPressed: {
+    Keys.onBackPressed: (event)=> {
         backBtnSettingsItem.clicked()
     }
 
@@ -153,14 +154,18 @@ Rectangle {
                 Layout.alignment: Qt.AlignTop
                 Layout.topMargin: Kirigami.Units.largeSpacing
                 label: i18n("Timezone:")
-                onClicked: timeZonePickerSheet.open()
+                onClicked: (mouse)=> {
+                    timeZonePickerSheet.open()
+                }
                 Label {
                     id: timeZoneButton
                     text: dataSource.data["Local"]["Timezone"]
                 }
                 KeyNavigation.up: backBtnSettingsItem
                 KeyNavigation.down: timeDisplayItemThree
-                Keys.onReturnPressed: clicked()
+                Keys.onReturnPressed: (event)=> {
+                    clicked()
+                }
                 onActiveFocusChanged: {
                     if(activeFocus){
                         flickContentLayout.makeVisible(timeDisplayItemTwo)
@@ -175,14 +180,16 @@ Rectangle {
                 label: i18n("Set time automatically:")
                 KeyNavigation.up: timeDisplayItemTwo
                 KeyNavigation.down: timeDisplayItemFour
-                Keys.onReturnPressed: clicked()
+                Keys.onReturnPressed: (event)=> {
+                    clicked()
+                }
                 onActiveFocusChanged: {
                     if(activeFocus){
                         flickContentLayout.makeVisible(timeDisplayItemThree)
                     }
                 }
 
-                onClicked: {
+                onClicked: (mouse)=> {
                     ntpCheckBox.checked = !ntpCheckBox.checked
                     ntpCheckBox.clicked()
                 }
@@ -190,7 +197,7 @@ Rectangle {
                 Switch {
                     id: ntpCheckBox
                     checked: kcm.useNtp
-                    onClicked: {
+                    onClicked: (mouse)=> {
                         kcm.useNtp = checked;
                         if (!checked) {
                             kcm.ntpServer = ""
@@ -209,10 +216,14 @@ Rectangle {
                 label: i18n("Time")
                 icon: "clock"
                 enabled: !ntpCheckBox.checked
-                onClicked: timePickerSheet.open()
+                onClicked: (mouse)=> {
+                    timePickerSheet.open()
+                }
                 KeyNavigation.up: timeDisplayItemThree
                 KeyNavigation.down: timeDisplayItemFive
-                Keys.onReturnPressed: clicked()
+                Keys.onReturnPressed: (event)=> {
+                    clicked()
+                }
                 onActiveFocusChanged: {
                     if(activeFocus){
                         flickContentLayout.makeVisible(timeDisplayItemFour)
@@ -241,10 +252,14 @@ Rectangle {
                 label: i18n("Date")
                 icon: "view-calendar"
                 enabled: !ntpCheckBox.checked
-                onClicked: datePickerSheet.open()
+                onClicked: (mouse)=> {
+                    datePickerSheet.open()
+                }
                 KeyNavigation.up: timeDisplayItemFour
                 KeyNavigation.down: backBtnSettingsItem
-                Keys.onReturnPressed: clicked()
+                Keys.onReturnPressed: (event)=> {
+                    clicked()
+                }
                 onActiveFocusChanged: {
                     if(activeFocus){
                         flickContentLayout.makeVisible(timeDisplayItemFive)
@@ -292,18 +307,18 @@ Rectangle {
             iconSource: "arrow-left"
             Layout.alignment: Qt.AlignLeft
 
-            PlasmaComponents.Highlight {
+            PlasmaExtras.Highlight {
                 z: -2
                 anchors.fill: parent
                 anchors.margins: -Kirigami.Units.gridUnit / 4
                 visible: backBtnSettingsItem.activeFocus ? 1 : 0
             }
 
-            Keys.onReturnPressed: {
+            Keys.onReturnPressed: (event)=> {
                 clicked()
             }
 
-            onClicked: {
+            onClicked: (mouse)=> {
                 deviceTimeSettingsArea.opened = false
                 timeDateSettingsDelegate.forceActiveFocus()
             }
@@ -333,7 +348,7 @@ Rectangle {
             }
         }
 
-        Keys.onBackPressed: {
+        Keys.onBackPressed: (event)=> {
             backBtnTZPItem.clicked()
         }
 
@@ -355,18 +370,18 @@ Rectangle {
                         Layout.alignment: Qt.AlignLeft
                         KeyNavigation.down: searchBoxItem
 
-                        PlasmaComponents.Highlight {
+                        PlasmaExtras.Highlight {
                             z: -2
                             anchors.fill: parent
                             anchors.margins: -Kirigami.Units.gridUnit / 4
                             visible: backBtnTZPItem.activeFocus ? 1 : 0
                         }
 
-                        Keys.onReturnPressed: {
+                        Keys.onReturnPressed: (event)=> {
                             clicked()
                         }
 
-                        onClicked: {
+                        onClicked: (mouse)=> {
                             timeZonePickerSheet.close()
                             timeDisplayItemTwo.forceActiveFocus()
                         }
@@ -418,8 +433,10 @@ Rectangle {
                         text: model.timeZoneId == "Local" ? i18n("Your local timezone is %1", city) : i18n("%1, %2", city, region)
                         enabled: model.timeZoneId != "Local" ? 1 : 0
 
-                        Keys.onReturnPressed: clicked()
-                        onClicked: {
+                        Keys.onReturnPressed: (event)=> {
+                            clicked()
+                        }
+                        onClicked: (mouse)=> {
                             kcm.saveTimeZone(model.timeZoneId)
                         }
                         onFocusChanged: {
@@ -429,7 +446,7 @@ Rectangle {
                         }
                     }
 
-                    Keys.onUpPressed: {
+                    Keys.onUpPressed: (event)=> {
                         if(listView.currentIndex == 0 || listView.currentIndex == 1) {
                             searchBoxItem.forceActiveFocus()
                             listView.focus = false
@@ -461,7 +478,7 @@ Rectangle {
             timeDisplayItemThree.forceActiveFocus()
         }
 
-        Keys.onBackPressed: {
+        Keys.onBackPressed: (event)=> {
             backBtnTPItem.clicked()
         }
 
@@ -480,18 +497,18 @@ Rectangle {
                     Layout.alignment: Qt.AlignLeft
                     KeyNavigation.down: timePicker
 
-                    PlasmaComponents.Highlight {
+                    PlasmaExtras.Highlight {
                         z: -2
                         anchors.fill: parent
                         anchors.margins: -Kirigami.Units.gridUnit / 4
                         visible: backBtnTPItem.activeFocus ? 1 : 0
                     }
 
-                    Keys.onReturnPressed: {
+                    Keys.onReturnPressed: (event)=> {
                         clicked()
                     }
 
-                    onClicked: {
+                    onClicked: (mouse)=> {
                         timePickerSheet.close()
                         timeDisplayItemThree.forceActiveFocus()
                     }
@@ -532,7 +549,7 @@ Rectangle {
                 }
             }
 
-            Keys.onReturnPressed: {
+            Keys.onReturnPressed: (event)=> {
                 timePickerSheet.close()
                 timeDisplayItemThree.forceActiveFocus()
             }
@@ -558,7 +575,7 @@ Rectangle {
         }
 
 
-        Keys.onBackPressed: {
+        Keys.onBackPressed: (event)=> {
             backBtnDTItem.clicked()
         }
 
@@ -577,18 +594,18 @@ Rectangle {
                     Layout.alignment: Qt.AlignLeft
                     KeyNavigation.down: datePicker
 
-                    PlasmaComponents.Highlight {
+                    PlasmaExtras.Highlight {
                         z: -2
                         anchors.fill: parent
                         anchors.margins: -Kirigami.Units.gridUnit / 4
                         visible: backBtnDTItem.activeFocus ? 1 : 0
                     }
 
-                    Keys.onReturnPressed: {
+                    Keys.onReturnPressed: (event)=> {
                         clicked()
                     }
 
-                    onClicked: {
+                    onClicked: (mouse)=> {
                         datePickerSheet.close()
                         timeDisplayItemFour.forceActiveFocus()
                     }
@@ -628,7 +645,7 @@ Rectangle {
                     kcm.saveTime()
                 }
 
-                Keys.onReturnPressed: {
+                Keys.onReturnPressed: (event)=> {
                     datePickerSheet.close()
                     timeDisplayItemFour.forceActiveFocus()
                 }

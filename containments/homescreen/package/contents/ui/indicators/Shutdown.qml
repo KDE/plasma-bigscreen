@@ -5,8 +5,8 @@
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
 
-import QtQuick 2.14
-import QtQuick.Layouts 1.14
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 
@@ -22,7 +22,7 @@ AbstractIndicator {
         connectedSources: ["PowerDevil"]
     }
 
-    onClicked: {
+    onClicked: (mouse)=> {
         plasmoid.nativeInterface.requestShutdown();
     }
 }

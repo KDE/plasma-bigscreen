@@ -5,9 +5,9 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
+import QtQuick 2.15
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami 2.19 as Kirigami
 import org.kde.plasma.private.nanoshell 2.0 as NanoShell
 
 BigScreen.IconDelegate {
@@ -19,7 +19,7 @@ BigScreen.IconDelegate {
     useIconColors: plasmoid.configuration.coloredTiles
     compactMode: plasmoid.configuration.expandingTiles
 
-    onClicked: {
+    onClicked: (mouse)=> {
         BigScreen.NavigationSoundEffects.playClickedSound()
         NanoShell.StartupFeedback.open(
                             delegate.icon.name.length > 0 ? delegate.icon.name : model.decoration,

@@ -4,9 +4,9 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
-import QtMultimedia 5.14
+import QtQuick 2.15
 import Qt.labs.platform 1.1
+import QtMultimedia
 
 pragma Singleton
 

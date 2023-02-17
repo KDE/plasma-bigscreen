@@ -5,7 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
+import QtQuick 2.15
 import Mycroft 1.0 as Mycroft
 
 Item {

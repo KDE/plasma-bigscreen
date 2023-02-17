@@ -5,12 +5,12 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
-import QtQuick.Layouts 1.14
-import QtQuick.Controls 2.14 as Controls
-import QtQuick.Window 2.14
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
+import QtQuick.Controls 2.15 as Controls
+import QtQuick.Window 2.15
 import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami 2.19 as Kirigami
 
 
 ListView {
@@ -129,28 +129,27 @@ ListView {
     }
 
 
-    Keys.onDownPressed:  {
-            if (!navigationDown) {
-                return;
-            }
-
-            if (navigationDown instanceof TileView) {
-                navigationDown.currentIndex = navigationDown.indexAt(navigationDown.contentItem.mapFromItem(currentItem, cellWidth/2, height/2).x, height/2);
-            }
-
-            navigationDown.forceActiveFocus();
+    Keys.onDownPressed: (event)=> {
+        if (!navigationDown) {
+            return;
         }
 
-        Keys.onUpPressed:  {
-            if (!navigationUp) {
-                return;
-            }
-
-            if (navigationUp instanceof TileView) {
-                navigationUp.currentIndex = navigationUp.indexAt(navigationUp.contentItem.mapFromItem(currentItem, cellWidth/2, height/2).x, height/2);
-            }
-
-            navigationUp.forceActiveFocus();
+        if (navigationDown instanceof TileView) {
+            navigationDown.currentIndex = navigationDown.indexAt(navigationDown.contentItem.mapFromItem(currentItem, cellWidth/2, height/2).x, height/2);
         }
 
+        navigationDown.forceActiveFocus();
+    }
+
+    Keys.onUpPressed: (event)=> {
+        if (!navigationUp) {
+            return;
+        }
+
+        if (navigationUp instanceof TileView) {
+            navigationUp.currentIndex = navigationUp.indexAt(navigationUp.contentItem.mapFromItem(currentItem, cellWidth/2, height/2).x, height/2);
+        }
+
+        navigationUp.forceActiveFocus();
+    }
 }

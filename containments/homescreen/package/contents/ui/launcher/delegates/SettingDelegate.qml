@@ -16,7 +16,7 @@ BigScreen.IconDelegate {
     useIconColors: plasmoid.configuration.coloredTiles
     compactMode: plasmoid.configuration.expandingTiles
 
-    onClicked: {
+    onClicked: (mouse)=> {
         BigScreen.NavigationSoundEffects.playClickedSound()
         NanoShell.StartupFeedback.open(
                             delegate.icon.name,

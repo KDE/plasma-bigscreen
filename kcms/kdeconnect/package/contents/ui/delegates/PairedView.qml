@@ -4,11 +4,11 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.14
-import QtQuick.Layouts 1.14
-import QtQuick.Controls 2.14
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.kirigami 2.12 as Kirigami
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
+import QtQuick.Controls 2.15
+import org.kde.plasma.components 3.0 as PlasmaComponents
+import org.kde.kirigami 2.19 as Kirigami
 import org.kde.kdeconnect 1.0
 
 Item {
@@ -37,11 +37,13 @@ Item {
             
             KeyNavigation.up: backBtnSettingsItem
             
-            Keys.onReturnPressed: {
+            Keys.onReturnPressed: (event)=> {
                 clicked()
             }
             
-            onClicked: deviceView.currentDevice.unpair()
+            onClicked: (mouse)=> {
+                deviceView.currentDevice.unpair()
+            }
             
             background: Rectangle {
                 color: unpairBtn.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor

@@ -5,13 +5,13 @@
 
 */
 
-import QtQuick.Layouts 1.14
-import QtQuick 2.14
-import QtQuick.Window 2.14
-import QtQuick.Controls 2.14
+import QtQuick.Layouts 1.15
+import QtQuick 2.15
+import QtQuick.Window 2.15
+import QtQuick.Controls 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.plasma.components 3.0 as PlasmaComponents
+import org.kde.kirigami 2.19 as Kirigami
 import org.kde.plasma.networkmanagement 0.2 as PlasmaNM
 import org.kde.kcm 1.1 as KCM
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
@@ -162,8 +162,10 @@ KCM.SimpleKCM {
                     Layout.fillWidth: true
                     text: i18n("Connect")
 
-                    onClicked: passField.accepted();
-                    Keys.onReturnPressed: {
+                    onClicked: (mouse)=> { 
+                        passField.accepted();
+                    }
+                    Keys.onReturnPressed: (event)=> {
                         passField.accepted();
                     }
                 }
@@ -177,8 +179,10 @@ KCM.SimpleKCM {
                     Layout.fillWidth: true
                     text: i18n("Cancel")
 
-                    onClicked: passwordLayer.close();
-                    Keys.onReturnPressed: {
+                    onClicked: (mouse)=> {
+                        passwordLayer.close();
+                    }
+                    Keys.onReturnPressed: (event)=> {
                         passwordLayer.close();
                     }
                 }
@@ -216,7 +220,7 @@ KCM.SimpleKCM {
                     Layout.fillWidth: true
                     text: i18n("Forget")
                     
-                    onClicked: {
+                    onClicked: (mouse)=>) {
                         removeConnection()
                         networkActions.close()
                         connectionView.forceActiveFocus()
@@ -224,7 +228,7 @@ KCM.SimpleKCM {
                     
                     KeyNavigation.right: cancelBtn
                     
-                    Keys.onReturnPressed: {
+                    Keys.onReturnPressed: (event)=> {
                         removeConnection()
                         networkActions.close()
                         connectionView.forceActiveFocus()
@@ -245,12 +249,12 @@ KCM.SimpleKCM {
                     
                     KeyNavigation.left: forgetBtn
 
-                    onClicked: {
+                    onClicked: (mouse)=> {
                         networkActions.close()
                         connectionView.forceActiveFocus()
                     }
                     
-                    Keys.onReturnPressed: {
+                    Keys.onReturnPressed: (event)=> {
                         networkActions.close()
                         connectionView.forceActiveFocus()
                     }
@@ -331,11 +335,11 @@ KCM.SimpleKCM {
                     }
                 }
 
-                onClicked: {
+                onClicked: (mouse)=> {
                     networkSelectionView.refreshing = true;
                     connectionView.contentY = -Kirigami.Units.gridUnit * 4;
                 }
-                Keys.onReturnPressed: {
+                Keys.onReturnPressed: (event)=> {
                     networkSelectionView.refreshing = true;
                     connectionView.contentY = -Kirigami.Units.gridUnit * 4;
                 }
@@ -366,10 +370,10 @@ KCM.SimpleKCM {
                     }
                 }
 
-                onClicked: {
+                onClicked: (mouse)=> {
                     Window.window.close()
                 }
-                Keys.onReturnPressed: {
+                Keys.onReturnPressed: (event)=> {
                     Window.window.close()
                 }
             }

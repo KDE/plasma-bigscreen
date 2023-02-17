@@ -5,13 +5,13 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
-import QtQuick.Window 2.14
-import QtQuick.Layouts 1.14
-import QtQml.Models 2.14
+import QtQuick 2.15
+import QtQuick.Window 2.15
+import QtQuick.Layouts 1.15
+import QtQml.Models 2.15
 import org.kde.plasma.plasmoid 2.0
-import QtQuick.Controls 2.14 as Controls
-import org.kde.kirigami 2.12 as Kirigami
+import QtQuick.Controls 2.15 as Controls
+import org.kde.kirigami 2.19 as Kirigami
 import org.kde.kdeconnect 1.0 as KDEConnect
 import org.kde.plasma.private.nanoshell 2.0 as NanoShell
 
@@ -23,7 +23,7 @@ AbstractIndicator {
 
     Connections {
         target: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface
-        onEnableMycroftIntegrationChanged: {
+        function onEnableMycroftIntegrationChanged(mycroftIntegration) {
             mycroftIntegration = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive()
             if(mycroftIntegration) {
                 mycroftLoader.active = true
@@ -45,11 +45,11 @@ AbstractIndicator {
 
             Connections {
                 target: bigscreenIface
-                onMessageReceived: message => {
-                                       if (mycroftLoader.item) {
-                                           mycroftLoader.item.sendText(message);
-                                       }
-                                   }
+                function onMessageReceived(message) {
+                    if (mycroftLoader.item) {
+                        mycroftLoader.item.sendText(message);
+                    }
+                }
             }
             
             onPairingRequestChanged: {
@@ -85,7 +85,7 @@ AbstractIndicator {
         source: connectionIcon.mycroftIntegration && Qt.resolvedUrl("MycroftConnect.qml") ? Qt.resolvedUrl("MycroftConnect.qml") : null
     }
     
-    onClicked: {
+    onClicked: (mouse)=> {
         NanoShell.StartupFeedback.open(
                             "kdeconnect",
                             i18n("KDE Connect"),

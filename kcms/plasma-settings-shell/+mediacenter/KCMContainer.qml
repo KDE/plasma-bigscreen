@@ -4,10 +4,9 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.14
-import QtQuick.Controls 2.14 as Controls
-import org.kde.kirigami 2.12 as Kirigami
-
+import QtQuick 2.15
+import QtQuick.Controls 2.15 as Controls
+import org.kde.kirigami 2.19 as Kirigami
 import org.kde.plasma.settings 0.1
 
 Kirigami.Page {
@@ -42,14 +41,16 @@ Kirigami.Page {
     data: [
         Connections {
             target: kcm
-            onPagePushed: {
+            function onPagePushed(page) {
                 pageStack.push(kcmContainer.createObject(pageStack, {"internalPage": page}));
             }
-            onPageRemoved: pageStack.pop();
+            function onPageRemoved() {
+                 pageStack.pop();
+            }
         },
         Connections {
             target: pageStack
-            onPageRemoved: {
+            function onPageRemoved(page) {
                 if (kcm.needsSave) {
                     kcm.save()
                 }

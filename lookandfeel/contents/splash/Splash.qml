@@ -5,9 +5,9 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.5
-import QtQuick.Layouts 1.3
-import QtQuick.Window 2.2
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
+import QtQuick.Window 2.15
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
 Rectangle {
@@ -29,7 +29,7 @@ Rectangle {
 
     Connections {
         target: BigScreen.EnvReader
-        onConfigChangeReceived: {
+        function onConfigChangeReceived() {
             disableScale();
         }
     }

@@ -5,11 +5,11 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
-import QtQuick.Window 2.14
-import QtQuick.Layouts 1.14
-import QtQuick.Controls 2.14 as Controls
-import org.kde.kirigami 2.12 as Kirigami
+import QtQuick 2.15
+import QtQuick.Window 2.15
+import QtQuick.Layouts 1.15
+import QtQuick.Controls 2.15 as Controls
+import org.kde.kirigami 2.19 as Kirigami
 import org.kde.plasma.core 2.0 as PlasmaCore
 import Mycroft 1.0 as Mycroft
 
@@ -78,13 +78,13 @@ Window {
 
         Connections {
             target: Mycroft.MycroftController
-            onIntentRecevied: {
+            function onIntentRecevied(type, data) {
                 if(type == "recognizer_loop:utterance") {
                     inputQuery.text = data.utterances[0]
                 }
             }
             
-            onSkillTimeoutReceived: {
+            function onSkillTimeoutReceived(skillidleid): {
                 if(skillView.currentItem.contentItem.skillId() == skillidleid) {
                     window.close()
                 }
@@ -96,7 +96,9 @@ Window {
         id: skillView
         anchors.fill: parent
         open: false
-        Keys.onEscapePressed: window.visible = false;
+        Keys.onEscapePressed: (event)=> {
+            window.visible = false;
+        }
         KeyNavigation.up: closeButton
         activeSkills.blackList: plasmoid.nativeInterface.applicationListModel.voiceAppSkills
 
@@ -133,7 +135,7 @@ Window {
                 }
             }
 
-            Keys.onDownPressed: {
+            Keys.onDownPressed: (event)=> {
                 skillView.currentItem.contentItem.forceActiveFocus()
             }
             
@@ -144,13 +146,13 @@ Window {
                 source: "tab-close"
             }
             
-            Keys.onReturnPressed: {
+            Keys.onReturnPressed: (event)=> {
                 window.visible = false;
             }
             
             MouseArea {
                 anchors.fill: parent
-                onClicked: {
+                onClicked: (mouse)=> {
                     window.visible = false;
                 }
             }

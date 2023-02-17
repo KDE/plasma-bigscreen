@@ -4,13 +4,13 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.3 as QtControls
-import QtQuick.Window 2.2
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
+import QtQuick.Controls 2.15 as QtControls
+import QtQuick.Window 2.15
 
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami 2.19 as Kirigami
 
 MouseArea {
     id: delegate
@@ -48,7 +48,7 @@ MouseArea {
 //END functions
 
 //BEGIN connections
-    onPressed: {
+    onPressed: (mouse)=> {
         categoriesScroll.forceActiveFocus()
 
         if (current) {

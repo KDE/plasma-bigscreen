@@ -4,12 +4,12 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.6
-import QtQuick.Controls 2.3 as QtControls
-import QtQuick.Layouts 1.0
-import QtQuick.Window 2.2
+import QtQuick 2.15
+import QtQuick.Controls 2.15 as QtControls
+import QtQuick.Layouts 1.15
+import QtQuick.Window 2.15
 
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami 2.19 as Kirigami
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.configuration 2.0
 
@@ -310,7 +310,7 @@ Rectangle {
 
                 visible: (configDialog.configModel ? configDialog.configModel.count : 0) + globalConfigModel.count > 1
 
-                Keys.onLeftPressed: {
+                Keys.onLeftPressed: (event)=> {
                     var buttons = categories.children
 
                     var foundPrevious = false
@@ -330,7 +330,7 @@ Rectangle {
                     }
                 }
 
-                Keys.onRightPressed: {
+                Keys.onRightPressed: (event)=> {
                     var buttons = categories.children
 
                     var foundNext = false
