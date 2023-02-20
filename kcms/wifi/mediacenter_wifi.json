@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Connect to Wifi networks",
         "Description[ar]": "اتصل بشبكات لاسلكية",
+        "Description[az]": "Wifi şəbəkələrinə qoşulun",
         "Description[bg]": "Свързване с безжични мрежи",
         "Description[ca@valencia]": "Connecta amb les xarxes Wi-Fi",
         "Description[ca]": "Connecta amb les xarxes Wi-Fi",
