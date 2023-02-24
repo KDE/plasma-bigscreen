@@ -20,6 +20,15 @@ RowLayout {
         mycroftIndicatorLoader.active = false;
     }
 
+    Timer {
+        id: timeoutTimer
+        interval: 180000
+
+        onTriggered: {
+            disconnectclose();
+        }
+    }
+
     Kirigami.Heading {
         id: inputQuery
         level: 3
@@ -61,6 +70,11 @@ RowLayout {
             onStatusChanged: {
                 switch (Mycroft.MycroftController.status) {
                 case Mycroft.MycroftController.Connecting:
+                    timeoutTimer.restart();
+                    break;
+                case Mycroft.MycroftController.Open:
+                    timeoutTimer.stop();
+                    break;
                 case Mycroft.MycroftController.Error:
                 case Mycroft.MycroftController.Stopped:
                     inputQuery.text = i18n("Getting Ready... Please Wait");
@@ -68,14 +82,15 @@ RowLayout {
                     break;
                 default:
                     if (Mycroft.MycroftController.serverReady) {
+                        timeoutTimer.stop();
                         inputQuery.text = "";
                     }
                     break;
                 }
-
             }
         }
     }
+
     Mycroft.StatusIndicator {
         id: si
         z: 2
