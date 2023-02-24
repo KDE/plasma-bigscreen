@@ -14,7 +14,7 @@ import org.kde.kirigami 2.19 as Kirigami
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 import org.kde.plasma.private.volume 0.1
 import "../code/icon.js" as Icon
-import Qt5Compat.GraphicalEffects
+import QtGraphicalEffects 1.14
 
 BigScreen.AbstractDelegate {
     id: delegate

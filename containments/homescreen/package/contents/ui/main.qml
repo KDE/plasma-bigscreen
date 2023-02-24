@@ -17,7 +17,7 @@ import org.kde.kirigami 2.19 as Kirigami
 import "launcher"
 import "indicators" as Indicators
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
-import Qt5Compat.GraphicalEffects
+import QtGraphicalEffects 1.14
 
 Item {
     id: root

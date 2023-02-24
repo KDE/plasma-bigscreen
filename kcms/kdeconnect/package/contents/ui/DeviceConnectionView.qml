@@ -14,7 +14,7 @@ import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 import org.kde.kdeconnect 1.0
-import Qt5Compat.GraphicalEffects
+import QtGraphicalEffects 1.14
 
 import "delegates" as Delegates
 

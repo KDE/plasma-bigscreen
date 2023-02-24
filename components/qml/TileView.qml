@@ -12,7 +12,7 @@ import QtQuick.Controls 2.15 as Controls
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami 2.15 as Kirigami
-import Qt5Compat.GraphicalEffects
+import QtGraphicalEffects 1.14
 
 FocusScope {
     id: root
