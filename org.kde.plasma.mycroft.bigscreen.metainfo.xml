@@ -2,7 +2,7 @@
 <component type="desktop-application">
   <id>org.kde.plasma.mycroft.bigscreen</id>
   <name>KDE Plasma Bigscreen</name>
-  <name xml:lang="ar">كدي بلازما الشاشة الكبيرة</name>
+  <name xml:lang="ar">كِيدِي بلازما الشاشة الكبيرة</name>
   <name xml:lang="az">KDE Plasma böyük ekranı</name>
   <name xml:lang="bg">KDE Plasma Bigscreen</name>
   <name xml:lang="ca">Plasma Bigscreen de KDE</name>
