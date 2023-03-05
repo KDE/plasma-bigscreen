@@ -31,7 +31,7 @@ msgstr "zayed.alsaidi@gmail.com"
 #: kdeconnect.cpp:18
 #, kde-format
 msgid "Configure KDE Connect"
-msgstr "اضبط كدي المتّصل"
+msgstr "اضبط كِيدِي المتّصل"
 
 #: package/contents/ui/delegates/PairedView.qml:29
 #, kde-format
@@ -86,7 +86,7 @@ msgstr "اضغط على زر الخلف [←] لترجع تحديد جهاز"
 #: package/contents/ui/main.qml:23
 #, kde-format
 msgid "KDE Connect"
-msgstr "كدي المتّصل"
+msgstr "كِيدِي المتّصل"
 
 #: package/contents/ui/main.qml:90
 #, kde-format

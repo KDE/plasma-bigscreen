@@ -41,7 +41,7 @@ msgstr "أغلق"
 #: contents/ui/indicators/KdeConnect.qml:91
 #, kde-format
 msgid "KDE Connect"
-msgstr "كدي المتّصل"
+msgstr "كِيدِي المتّصل"
 
 #: contents/ui/indicators/PairWindow.qml:42
 #, kde-format
