@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-01-15 00:45+0000\n"
-"PO-Revision-Date: 2023-04-06 11:52+0200\n"
+"PO-Revision-Date: 2023-04-07 15:44+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 21.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -121,6 +121,7 @@ msgstr "Data"
 #, kde-format
 msgid "Press the [←] Back button to return to appearance settings"
 msgstr ""
+"Pressa le [←] button de Retro pro retornar al preferentias de apparentia"
 
 #: package/contents/ui/DeviceTimeSettings.qml:377
 #: package/contents/ui/DeviceTimeSettings.qml:502
@@ -128,11 +129,13 @@ msgstr ""
 #, kde-format
 msgid "Press the [←] Back button to save configuration and return to settings"
 msgstr ""
+"Pressa le [←] button de Retro pro salveguardar le configuation e retornar al "
+"preferentias"
 
 #: package/contents/ui/DeviceTimeSettings.qml:418
 #, kde-format
 msgid "Your local timezone is %1"
-msgstr ""
+msgstr "Tu fuso horari local es %1"
 
 #: package/contents/ui/DeviceTimeSettings.qml:418
 #, kde-format
