@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-02 00:49+0000\n"
-"PO-Revision-Date: 2023-04-06 11:26+0200\n"
+"PO-Revision-Date: 2023-04-07 15:03+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 21.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -30,12 +30,12 @@ msgstr "g.sora@tiscali.it"
 #: kdeconnect.cpp:18
 #, kde-format
 msgid "Configure KDE Connect"
-msgstr ""
+msgstr "Configura KDE Connect"
 
 #: package/contents/ui/delegates/PairedView.qml:29
 #, kde-format
 msgid "This device is paired"
-msgstr ""
+msgstr "Iste dispositivo es associate"
 
 #: package/contents/ui/delegates/PairedView.qml:62
 #, kde-format
@@ -45,7 +45,7 @@ msgstr "De-Associa"
 #: package/contents/ui/delegates/PairRequest.qml:29
 #, kde-format
 msgid "This device is requesting to be paired"
-msgstr ""
+msgstr "Iste dispositivo es requirente a esser associate"
 
 #: package/contents/ui/delegates/PairRequest.qml:63
 #, kde-format
@@ -70,7 +70,7 @@ msgstr "Associa"
 #: package/contents/ui/delegates/UnpairedView.qml:91
 #, kde-format
 msgid "Pairing request sent to device"
-msgstr ""
+msgstr "Requesta de associar inviate a dispositivo"
 
 #: package/contents/ui/delegates/Unreachable.qml:19
 #, kde-format
@@ -80,7 +80,7 @@ msgstr "Iste dispositivo non es attingibile"
 #: package/contents/ui/DeviceConnectionView.qml:196
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
-msgstr ""
+msgstr "Pressa le [←] button de Retro pro retornar al selection de dispositivo"
 
 #: package/contents/ui/main.qml:23
 #, kde-format
