@@ -22,7 +22,11 @@ HomeScreen::HomeScreen(QObject *parent, const KPluginMetaData &data, const QVari
     const QByteArray uri("org.kde.private.biglauncher");
     qmlRegisterUncreatableType<KcmsListModel>(uri, 1, 0, "KcmsListModel", QStringLiteral("KcmsListModel is uncreatable"));
     qmlRegisterUncreatableType<ApplicationListModel>(uri, 1, 0, "ApplicationListModel", QStringLiteral("Cannot create an item of type ApplicationListModel"));
-    qmlRegisterUncreatableType<BigLauncherDbusAdapterInterface>(uri, 1, 0, "BigLauncherDbusAdapterInterface", QStringLiteral("Cannot create an item of type BigLauncherDbusAdapterInterface"));
+    qmlRegisterUncreatableType<BigLauncherDbusAdapterInterface>(uri,
+                                                                1,
+                                                                0,
+                                                                "BigLauncherDbusAdapterInterface",
+                                                                QStringLiteral("Cannot create an item of type BigLauncherDbusAdapterInterface"));
 
     // setHasConfigurationInterface(true);
     m_bigLauncherDbusAdapterInterface = new BigLauncherDbusAdapterInterface(this);
@@ -81,7 +85,7 @@ void HomeScreen::setUseExpandableTiles(bool expandableTiles)
     m_bigLauncherDbusAdapterInterface->setExpandableTilesActive(expandableTiles);
 }
 
-K_PLUGIN_CLASS_WITH_JSON(HomeScreen, "metadata.json")
+K_PLUGIN_CLASS_WITH_JSON(HomeScreen, "../package/metadata.json")
 
 #include "biglauncherhomescreen.moc"
 #include "moc_biglauncherhomescreen.cpp"
