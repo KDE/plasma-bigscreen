@@ -6,7 +6,6 @@
                 "Name": "Marco Martin"
             }
         ],
-        "Category": "",
         "Description": "Plasma shell for TVs",
         "Description[ar]": "صدفة بلازما للتلفاز",
         "Description[az]": "TV-lər üçün Plasma örtüyü",
@@ -87,7 +86,6 @@
         "Version": "0.1",
         "Website": "https://plasma-mobile.org"
     },
-    "X-KDE-ParentApp": "",
     "X-Plasma-FallbackPackage": "org.kde.plasma.nano",
     "KPackageStructure": "Plasma/Shell"
 }
