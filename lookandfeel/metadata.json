@@ -84,12 +84,10 @@
         "Name[x-test]": "xxMycroft Big Screenxx",
         "Name[zh_CN]": "Mycroft 大屏幕",
         "Name[zh_TW]": "Mycroft 大螢幕",
-        "ServiceTypes": [
-            "Plasma/LookAndFeel"
-        ],
         "Version": "1.0",
         "Website": "http://www.kde.org"
     },
     "X-KDE-ParentApp": "",
-    "X-Plasma-MainScript": "defaults"
+    "X-Plasma-MainScript": "defaults",
+    "KPackageStructure": "Plasma/LookAndFeel"
 }

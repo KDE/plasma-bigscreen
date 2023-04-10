@@ -84,12 +84,10 @@
         "Name[x-test]": "xxPlasma Big Screenxx",
         "Name[zh_CN]": "Plasma 大屏幕",
         "Name[zh_TW]": "Plasma 大螢幕",
-        "ServiceTypes": [
-            "Plasma/Shell"
-        ],
         "Version": "0.1",
         "Website": "https://plasma-mobile.org"
     },
     "X-KDE-ParentApp": "",
-    "X-Plasma-FallbackPackage": "org.kde.plasma.nano"
+    "X-Plasma-FallbackPackage": "org.kde.plasma.nano",
+    "KPackageStructure": "Plasma/Shell"
 }

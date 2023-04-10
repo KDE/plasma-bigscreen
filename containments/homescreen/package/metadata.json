@@ -85,14 +85,9 @@
         "Name[x-test]": "xxMycroft Bigscreenxx",
         "Name[zh_CN]": "Mycroft 大屏幕",
         "Name[zh_TW]": "Mycroft Bigscreen",
-        "ServiceTypes": [
-            "Plasma/Applet",
-            "Plasma/Containment"
-        ],
         "Version": "0.1",
         "Website": "plasma.kde.org"
     },
-    "X-KDE-ParentApp": "",
-    "X-Plasma-API": "declarativeappletscript",
-    "X-Plasma-MainScript": "ui/main.qml"
+    "X-Plasma-RemoteLocation": "",
+    "KPackageStructure": "Plasma/Applet"
 }
