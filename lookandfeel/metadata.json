@@ -6,7 +6,6 @@
                 "Name": "Marco Martin"
             }
         ],
-        "Category": "",
         "Description": "Plasma Mycroft Big Screen look and feel",
         "Description[ar]": "مظهر  وشكل بلازما ميكروفت الشاشة الكبيرة",
         "Description[az]": "Plasma Mycroft Böyük Ekran xarici görünüşü",
@@ -87,7 +86,6 @@
         "Version": "1.0",
         "Website": "http://www.kde.org"
     },
-    "X-KDE-ParentApp": "",
     "X-Plasma-MainScript": "defaults",
     "KPackageStructure": "Plasma/LookAndFeel"
 }
