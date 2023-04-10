@@ -87,5 +87,6 @@
         "Name[zh_TW]": "Mycroft Bigscreen",
         "Website": "plasma.kde.org"
     },
+    "X-Plasma-ContainmentType": "Desktop",
     "KPackageStructure": "Plasma/Applet"
 }
