@@ -12,8 +12,6 @@ set(biglauncherhomescreen_SRCS
 
 add_library(plasma_containment_biglauncherhomescreen MODULE ${biglauncherhomescreen_SRCS})
 
-kcoreaddons_desktop_to_json(plasma_containment_biglauncherhomescreen ../package/metadata.desktop)
-
 target_link_libraries(plasma_containment_biglauncherhomescreen
                       Qt::Gui
                       Qt::Core
