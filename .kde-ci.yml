@@ -13,7 +13,6 @@ Dependencies:
     'frameworks/kconfig': '@latest'
     'frameworks/kconfigwidgets': '@latest'
     'frameworks/kcoreaddons': '@latest'
-    'frameworks/kdeclarative': '@latest'
     'frameworks/ki18n': '@latest'
     'frameworks/kio': '@latest'
     'frameworks/kjobwidgets': '@latest'
@@ -25,3 +24,4 @@ Dependencies:
     'frameworks/plasma-framework': '@latest'
     'frameworks/solid': '@latest'
     'plasma/plasma-workspace': '@same'
+    'plasma/plasma5support': '@same'
