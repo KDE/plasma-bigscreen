@@ -11,12 +11,12 @@ target_link_libraries(kcm_mediacenter_bigscreen_settings
     Qt::Gui
     Qt::Quick
     Qt::Qml
-    KF5::ConfigCore
-    KF5::Plasma
-    KF5::I18n
-    KF5::KCMUtils
-    KF5::QuickAddons
-    KF5::CoreAddons
+    KF6::ConfigCore
+    KF6::Plasma
+    KF6::I18n
+    KF6::KCMUtils
+    KF6::QuickAddons
+    KF6::CoreAddons
     )
 
 install(TARGETS kcm_mediacenter_bigscreen_settings DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)

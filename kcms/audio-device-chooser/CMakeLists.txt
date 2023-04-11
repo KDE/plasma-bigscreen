@@ -12,9 +12,9 @@ set(kcm_mediacenter_audiodevice_PART_SRCS audiodevice.cpp)
 add_library(kcm_mediacenter_audiodevice MODULE ${kcm_mediacenter_audiodevice_PART_SRCS})
 
 target_link_libraries(kcm_mediacenter_audiodevice
-    KF5::I18n
-    KF5::KCMUtils
-    KF5::QuickAddons
+    KF6::I18n
+    KF6::KCMUtils
+    KF6::QuickAddons
 )
 
 ########### install files ###############
