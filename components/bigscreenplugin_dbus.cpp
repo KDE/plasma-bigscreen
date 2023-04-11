@@ -32,7 +32,7 @@ BigscreenDbusAdapterInterface::~BigscreenDbusAdapterInterface()
 
 void BigscreenDbusAdapterInterface::autoResolutionChanged()
 {
-    emit autoResolutionReceivedChange();
+    Q_EMIT autoResolutionReceivedChange();
 }
 
 Q_INVOKABLE QString BigscreenDbusAdapterInterface::getMethod(const QString &method)

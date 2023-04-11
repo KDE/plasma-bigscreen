@@ -19,7 +19,7 @@ HomeScreen::HomeScreen(QObject *parent, const KPluginMetaData &data, const QVari
     : Plasma::Containment(parent, data, args)
     , m_session(new SessionManagement(this))
 {
-    const QByteArray uri("org.kde.private.biglauncher");
+    const char *uri = "org.kde.private.biglauncher";
     qmlRegisterUncreatableType<KcmsListModel>(uri, 1, 0, "KcmsListModel", QStringLiteral("KcmsListModel is uncreatable"));
     qmlRegisterUncreatableType<ApplicationListModel>(uri, 1, 0, "ApplicationListModel", QStringLiteral("Cannot create an item of type ApplicationListModel"));
     qmlRegisterUncreatableType<BigLauncherDbusAdapterInterface>(uri,

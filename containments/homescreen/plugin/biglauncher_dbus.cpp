@@ -33,24 +33,24 @@ BigLauncherDbusAdapterInterface::~BigLauncherDbusAdapterInterface()
 
 void BigLauncherDbusAdapterInterface::useColoredTiles(const bool &coloredTiles)
 {
-    emit useColoredTilesChanged(coloredTiles);
+    Q_EMIT useColoredTilesChanged(coloredTiles);
 }
 
 void BigLauncherDbusAdapterInterface::useExpandableTiles(const bool &expandableTiles)
 {
-    emit useExpandableTilesChanged(expandableTiles);
+    Q_EMIT useExpandableTilesChanged(expandableTiles);
 }
 
 void BigLauncherDbusAdapterInterface::enableMycroftIntegration(const bool &mycroftIntegration)
 {
     Configuration::self().setMycroftEnabled(mycroftIntegration);
-    emit enableMycroftIntegrationChanged(mycroftIntegration);
+    Q_EMIT enableMycroftIntegrationChanged(mycroftIntegration);
 }
 
 void BigLauncherDbusAdapterInterface::enablePmInhibition(const bool &pmInhibition)
 {
     Configuration::self().setPmInhibitionEnabled(pmInhibition);
-    emit enablePmInhibitionChanged(pmInhibition);
+    Q_EMIT enablePmInhibitionChanged(pmInhibition);
 }
 
 bool BigLauncherDbusAdapterInterface::coloredTilesActive()

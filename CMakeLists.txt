@@ -14,7 +14,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Use Extra CMake Modules (ECM) for common functionality.
 # See http://api.kde.org/ecm/manual/ecm.7.html
 # and http://api.kde.org/ecm/manual/ecm-kde-modules.7.html 
-find_package(ECM REQUIRED NO_MODULE)
+find_package(ECM 5.240 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_MODULE_PATH})
 set(VERSION 2.1.0)
 
@@ -24,6 +24,8 @@ include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMInstallIcons)
 include(ECMDeprecationSettings)
+
+remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 
 # Locate plasma_install_package macro.
 find_package(KF6 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
