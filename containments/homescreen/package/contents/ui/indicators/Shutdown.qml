@@ -7,8 +7,7 @@
 
 import QtQuick 2.14
 import QtQuick.Layouts 1.14
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents
+import org.kde.plasma.plasma5support 2.0 as P5Support
 
 
 AbstractIndicator {
@@ -16,7 +15,7 @@ AbstractIndicator {
 
     icon.name: "system-shutdown"
 
-    PlasmaCore.DataSource {
+    P5Support.DataSource {
         id: dataEngine
         engine: "powermanagement"
         connectedSources: ["PowerDevil"]

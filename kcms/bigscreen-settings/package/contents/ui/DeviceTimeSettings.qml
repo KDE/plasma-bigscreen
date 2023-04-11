@@ -10,6 +10,7 @@ import QtQuick 2.14
 import QtQuick.Window 2.14
 import QtQuick.Controls 2.14
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.kcm 1.2 as KCM
@@ -38,7 +39,7 @@ Rectangle {
         id: timeZones
     }
 
-    PlasmaCore.DataSource {
+    P5Support.DataSource {
         id: dataSource
         engine: "time"
         connectedSources: "Local"
