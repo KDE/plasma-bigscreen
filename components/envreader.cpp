@@ -20,5 +20,5 @@ QString EnvReader::getValue(const QString &name)
 
 void EnvReader::kScreenConfChange()
 {
-    emit configChangeReceived();
+    Q_EMIT configChangeReceived();
 }

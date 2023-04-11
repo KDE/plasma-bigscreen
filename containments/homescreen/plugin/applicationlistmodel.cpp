@@ -157,7 +157,7 @@ void ApplicationListModel::loadApplications()
         }
     }
 
-    emit voiceAppSkillsChanged();
+    Q_EMIT voiceAppSkillsChanged();
 
     blgroup.writeEntry("allapps", bl);
     blgroup.writeEntry("blacklist", blacklist);
@@ -168,7 +168,7 @@ void ApplicationListModel::loadApplications()
     m_applicationList << unorderedList;
 
     endResetModel();
-    emit countChanged();
+    Q_EMIT countChanged();
 }
 
 QVariant ApplicationListModel::data(const QModelIndex &index, int role) const
@@ -253,7 +253,7 @@ Q_INVOKABLE void ApplicationListModel::moveItem(int row, int destination)
         ++i;
     }
 
-    emit appOrderChanged();
+    Q_EMIT appOrderChanged();
     endMoveRows();
 }
 
@@ -299,5 +299,5 @@ void ApplicationListModel::setAppOrder(const QStringList &order)
         m_appPositions[app] = i;
         ++i;
     }
-    emit appOrderChanged();
+    Q_EMIT appOrderChanged();
 }

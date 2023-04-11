@@ -55,7 +55,7 @@ void BigscreenSettings::applyPlasmaTheme(QQuickItem *item, const QString &themeN
         m_themes[themeName] = theme;
     }
 
-    Q_FOREACH (Plasma::Svg *svg, item->findChildren<Plasma::Svg *>()) {
+    for (Plasma::Svg *svg : item->findChildren<Plasma::Svg *>()) {
         svg->setTheme(theme);
         svg->setUsingRenderingCache(false);
     }

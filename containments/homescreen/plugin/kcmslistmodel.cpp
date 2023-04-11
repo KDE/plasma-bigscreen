@@ -76,7 +76,7 @@ void KcmsListModel::loadKcms()
     m_kcms << unorderedList;
 
     endResetModel();
-    emit countChanged();
+    Q_EMIT countChanged();
 
     qDebug() << "KCM's discovered: " << m_kcms.size();
 }
@@ -139,7 +139,7 @@ void KcmsListModel::moveItem(int row, int destination)
         ++i;
     }
 
-    emit appOrderChanged();
+    Q_EMIT appOrderChanged();
     endMoveRows();
 }
 
@@ -178,5 +178,5 @@ void KcmsListModel::setAppOrder(const QStringList &order)
         m_appPositions[app] = i;
         ++i;
     }
-    emit appOrderChanged();
+    Q_EMIT appOrderChanged();
 }
