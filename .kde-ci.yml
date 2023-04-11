@@ -11,7 +11,6 @@ Dependencies:
     'frameworks/kconfig': '@latest'
     'frameworks/kconfigwidgets': '@latest'
     'frameworks/kcoreaddons': '@latest'
-    'frameworks/kdeclarative': '@latest'
     'frameworks/ki18n': '@latest'
     'frameworks/kio': '@latest'
     'frameworks/kjobwidgets': '@latest'
@@ -25,3 +24,4 @@ Dependencies:
     'plasma/plasma-workspace': '@same'
     'plasma/kactivities': '@latest' # Different versioning due to being a former Framework
     'plasma/kactivities-stats': '@latest' # Different versioning due to being a former Framework
+    'plasma/plasma5support': '@same'

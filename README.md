@@ -39,7 +39,6 @@ Note that `kdesrc-build` doesn't automatically build `plasma-nano` and `plasma-s
 - Plasma
 - I18n
 - Kirigami2
-- Declarative
 - KCMUtils
 - Notifications
 - PlasmaQuick
