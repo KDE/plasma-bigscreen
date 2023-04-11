@@ -8,7 +8,6 @@ import QtQuick 2.14
 import QtQuick.Layouts 1.14
 import QtQuick.Window 2.14
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Window {
@@ -59,9 +58,6 @@ Window {
                     text: window.title
                     Layout.alignment: Qt.AlignCenter
                 }
-               /* PlasmaComponents.BusyIndicator {
-                    Layout.alignment: Qt.AlignCenter
-                }*/
             }
         }
 

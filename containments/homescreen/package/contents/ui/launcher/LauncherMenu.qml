@@ -12,8 +12,6 @@ import QtQuick.Window 2.14
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.mycroft.bigscreen 1.0 as Launcher
 import org.kde.private.biglauncher 1.0
