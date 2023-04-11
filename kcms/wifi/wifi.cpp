@@ -11,16 +11,9 @@
 #include <KPluginFactory>
 #include <KSharedConfig>
 
-Wifi::Wifi(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args)
+Wifi::Wifi(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KQuickConfigModule(parent, data, args)
 {
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_mediacenter_wifi"), //
-                                       i18n("Configure Plasma wifi"),
-                                       QStringLiteral("2.0"),
-                                       QString(),
-                                       KAboutLicense::LGPL);
-    setAboutData(about);
-
     setButtons(Apply | Default);
 }
 

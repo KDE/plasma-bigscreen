@@ -7,16 +7,16 @@
 #ifndef AUDIODEVICE_H
 #define AUDIODEVICE_H
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickConfigModule>
 
 #include <KConfigGroup>
 
-class AudioDevice : public KQuickAddons::ConfigModule
+class AudioDevice : public KQuickConfigModule
 {
     Q_OBJECT
 
 public:
-    explicit AudioDevice(QObject *parent = nullptr, const QVariantList &list = QVariantList());
+    explicit AudioDevice(QObject *parent, const KPluginMetaData &data, const QVariantList &list);
     ~AudioDevice() override;
 
 public Q_SLOTS:

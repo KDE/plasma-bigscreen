@@ -14,8 +14,8 @@ target_link_libraries(kcm_mediacenter_bigscreen_settings
     KF6::ConfigCore
     KF6::Plasma
     KF6::I18n
-    KF6::KCMUtils
-    KF6::QuickAddons
+    KF6::KCMUtilsQuick
+    KF6::ConfigWidgets # KColorScheme
     KF6::CoreAddons
     )
 

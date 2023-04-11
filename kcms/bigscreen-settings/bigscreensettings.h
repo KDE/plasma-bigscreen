@@ -9,7 +9,7 @@
 #ifndef BIGSCREENSETTINGS_H
 #define BIGSCREENSETTINGS_H
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickConfigModule>
 #include <QObject>
 #include <QVariant>
 
@@ -20,7 +20,7 @@ class Theme;
 
 class ThemeListModel;
 
-class BigscreenSettings : public KQuickAddons::ConfigModule
+class BigscreenSettings : public KQuickConfigModule
 {
     Q_OBJECT
 
@@ -31,7 +31,7 @@ class BigscreenSettings : public KQuickAddons::ConfigModule
     Q_PROPERTY(bool useNtp READ useNtp WRITE setUseNtp NOTIFY useNtpChanged)
 
 public:
-    BigscreenSettings(QObject *parent, const QVariantList &args);
+    BigscreenSettings(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
     ~BigscreenSettings() override;
 
     QString themeName() const;

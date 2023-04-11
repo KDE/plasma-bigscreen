@@ -13,8 +13,7 @@ add_library(kcm_mediacenter_audiodevice MODULE ${kcm_mediacenter_audiodevice_PAR
 
 target_link_libraries(kcm_mediacenter_audiodevice
     KF6::I18n
-    KF6::KCMUtils
-    KF6::QuickAddons
+    KF6::KCMUtilsQuick
 )
 
 ########### install files ###############
