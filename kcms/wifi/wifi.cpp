@@ -4,34 +4,20 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "wifi.h"
-
-#include <KAboutData>
-#include <KLocalizedString>
 #include <KPluginFactory>
-#include <KSharedConfig>
+#include <KQuickConfigModule>
 
-Wifi::Wifi(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickConfigModule(parent, data, args)
+class Wifi : public KQuickConfigModule
 {
-    setButtons(Apply | Default);
-}
+    Q_OBJECT
 
-Wifi::~Wifi()
-{
-}
-
-void Wifi::load()
-{
-}
-
-void Wifi::save()
-{
-}
-
-void Wifi::defaults()
-{
-}
+public:
+    explicit Wifi(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+        : KQuickConfigModule(parent, data, args)
+    {
+        setButtons(Apply | Default);
+    }
+};
 
 K_PLUGIN_CLASS_WITH_JSON(Wifi, "mediacenter_wifi.json")
 
