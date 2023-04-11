@@ -4,34 +4,20 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "audiodevice.h"
-
-#include <KAboutData>
-#include <KLocalizedString>
 #include <KPluginFactory>
-#include <KSharedConfig>
+#include <KQuickConfigModule>
 
-AudioDevice::AudioDevice(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickConfigModule(parent, data, args)
+class AudioDevice : public KQuickConfigModule
 {
-    setButtons(Apply | Default);
-}
+    Q_OBJECT
 
-AudioDevice::~AudioDevice()
-{
-}
-
-void AudioDevice::load()
-{
-}
-
-void AudioDevice::save()
-{
-}
-
-void AudioDevice::defaults()
-{
-}
+public:
+    explicit AudioDevice(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+        : KQuickConfigModule(parent, data, args)
+    {
+        setButtons(Apply | Default);
+    }
+};
 
 K_PLUGIN_CLASS_WITH_JSON(AudioDevice, "kcm_mediacenter_audiodevice.json")
 

@@ -68,7 +68,7 @@ void BigscreenSettings::setThemeName(const QString &theme)
     if (theme != m_themeName) {
         m_themeName = theme;
         m_theme->setThemeName(theme);
-        emit themeNameChanged();
+        Q_EMIT themeNameChanged();
     }
 }
 
@@ -163,7 +163,7 @@ void BigscreenSettings::setCurrentTime(const QTime &currentTime)
 {
     if (m_currentTime != currentTime) {
         m_currentTime = currentTime;
-        emit currentTimeChanged();
+        Q_EMIT currentTimeChanged();
     }
 }
 
@@ -172,7 +172,7 @@ void BigscreenSettings::setCurrentDate(const QDate &currentDate)
 {
     if (m_currentDate != currentDate) {
         m_currentDate = currentDate;
-        emit currentDateChanged();
+        Q_EMIT currentDateChanged();
     }
 }
 
@@ -197,7 +197,7 @@ void BigscreenSettings::setUseNtp(bool ntp)
     if (m_useNtp != ntp) {
         m_useNtp = ntp;
         saveTime();
-        emit useNtpChanged();
+        Q_EMIT useNtpChanged();
     }
 }
 
