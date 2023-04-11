@@ -27,7 +27,6 @@ include(ECMDeprecationSettings)
 
 remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 
-# Locate plasma_install_package macro.
 find_package(KF6 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Activities
     ActivitiesStats
@@ -54,8 +53,8 @@ find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Multimedia
 )
 
+ecm_find_qmlmodule(org.kde.plasma.core 2.0)
 ecm_find_qmlmodule(Mycroft 1.0)
-
 if(NOT ${Mycroft-QMLModule_FOUND})
     message(WARNING "Could not find the Mycroft QML module. Voice interaction features will not be available.")
 endif()
