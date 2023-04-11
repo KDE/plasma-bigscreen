@@ -7,16 +7,16 @@
 #ifndef WIFI_H
 #define WIFI_H
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickConfigModule>
 
 #include <KConfigGroup>
 
-class Wifi : public KQuickAddons::ConfigModule
+class Wifi : public KQuickConfigModule
 {
     Q_OBJECT
 
 public:
-    explicit Wifi(QObject *parent = nullptr, const QVariantList &list = QVariantList());
+    explicit Wifi(QObject *parent, const KPluginMetaData &data, const QVariantList &list);
     ~Wifi() override;
 
 public Q_SLOTS:

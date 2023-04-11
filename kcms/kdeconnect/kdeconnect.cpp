@@ -11,16 +11,9 @@
 #include <KPluginFactory>
 #include <KSharedConfig>
 
-KdeConnect::KdeConnect(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args)
+KdeConnect::KdeConnect(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KQuickConfigModule(parent, data, args)
 {
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_mediacenter_kdeconnect"), //
-                                       i18n("Configure KDE Connect"),
-                                       QStringLiteral("2.0"),
-                                       QString(),
-                                       KAboutLicense::LGPL);
-    setAboutData(about);
-
     setButtons(Apply | Default);
 }
 

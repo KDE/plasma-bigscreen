@@ -13,8 +13,7 @@ add_library(kcm_mediacenter_kdeconnect MODULE ${kcm_mediacenter_kdeconnect_PART_
 
 target_link_libraries(kcm_mediacenter_kdeconnect
     KF6::I18n
-    KF6::KCMUtils
-    KF6::QuickAddons
+    KF6::KCMUtilsQuick
 )
 
 ########### install files ###############

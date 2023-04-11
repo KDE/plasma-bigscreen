@@ -11,16 +11,9 @@
 #include <KPluginFactory>
 #include <KSharedConfig>
 
-AudioDevice::AudioDevice(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args)
+AudioDevice::AudioDevice(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KQuickConfigModule(parent, data, args)
 {
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_mediacenter_audiodevice"), //
-                                       i18n("Configure Plasma Audio"),
-                                       QStringLiteral("2.0"),
-                                       QString(),
-                                       KAboutLicense::LGPL);
-    setAboutData(about);
-
     setButtons(Apply | Default);
 }
 

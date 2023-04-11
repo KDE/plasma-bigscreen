@@ -22,16 +22,10 @@
 
 #include "timedated_interface.h"
 
-BigscreenSettings::BigscreenSettings(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args)
+BigscreenSettings::BigscreenSettings(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KQuickConfigModule(parent, data, args)
     , m_themeListModel(new ThemeListModel(this))
 {
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_mediacenter_bigscreen_settings"), //
-                                       i18n("Appearance"),
-                                       QStringLiteral("2.0"),
-                                       QString(),
-                                       KAboutLicense::LGPL);
-    setAboutData(about);
     setButtons(Apply | Default);
 
     qmlRegisterAnonymousType<ThemeListModel>("ThemeListModel", 1);

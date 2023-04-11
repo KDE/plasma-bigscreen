@@ -7,16 +7,17 @@
 #ifndef KDECONNECT_H
 #define KDECONNECT_H
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickConfigModule>
 
 #include <KConfigGroup>
+#include <kpluginmetadata.h>
 
-class KdeConnect : public KQuickAddons::ConfigModule
+class KdeConnect : public KQuickConfigModule
 {
     Q_OBJECT
 
 public:
-    explicit KdeConnect(QObject *parent = nullptr, const QVariantList &list = QVariantList());
+    explicit KdeConnect(QObject *parent, const KPluginMetaData &data, const QVariantList &list);
     ~KdeConnect() override;
 
 public Q_SLOTS:
