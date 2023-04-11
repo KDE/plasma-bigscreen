@@ -5,7 +5,7 @@
 */
 
 import QtQuick 2.14
-import QtGraphicalEffects 1.14
+import Qt5Compat.GraphicalEffects
 import QtQuick.Layouts 1.14
 
 import org.kde.plasma.core 2.0 as PlasmaCore
