@@ -18,13 +18,13 @@ target_link_libraries(plasma_containment_biglauncherhomescreen
                       Qt::Qml
                       Qt::DBus
                       Qt::Network
-                      KF5::Plasma
-                      KF5::I18n
-                      KF5::Notifications
-                      KF5::Service KF5::KIOWidgets
-                      KF5::Activities
+                      KF6::Plasma
+                      KF6::I18n
+                      KF6::Notifications
+                      KF6::Service KF6::KIOWidgets
+                      KF6::Activities
                       PW::KWorkspace
-                      KF5::ActivitiesStats)
+                      KF6::ActivitiesStats)
 
 install(TARGETS plasma_containment_biglauncherhomescreen DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/applets)
 
