@@ -55,11 +55,9 @@ BigLauncherDbusAdapterInterface *HomeScreen::bigLauncherDbusAdapterInterface() c
 
 void HomeScreen::executeCommand(const QString &command)
 {
-    qWarning() << "Executing" << command;
-    QStringList parts = command.split(' ');
-    QString commandName = parts.takeFirst();
-    QStringList arguments = parts;
-    QProcess::startDetached(commandName, arguments);
+    qInfo() << "Executing" << command;
+    QStringList split = QProcess::splitCommand(command);
+    QProcess::startDetached(split.takeFirst(), split);
 }
 
 void HomeScreen::requestShutdown()
