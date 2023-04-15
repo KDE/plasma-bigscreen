@@ -5,8 +5,8 @@
 */
 
 import QtQuick 2.14
-import QtMultimedia 5.14
 import Qt.labs.platform 1.1
+import QtMultimedia
 
 pragma Singleton
 
