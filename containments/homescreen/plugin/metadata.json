@@ -45,7 +45,6 @@
         "Description[zh_CN]": "基于 Plasma 和 Mycroft 的电视主屏幕",
         "Description[zh_TW]": "適用於 Plasma 跟基於 Mycroft 的電視的主畫面",
         "Icon": "mycroft",
-        "Id": "org.kde.mycroft.bigscreen.homescreen",
         "License": "GPL",
         "Name": "Mycroft Bigscreen",
         "Name[ar]": "الشاشة الكبيرة ميكروفت",
