@@ -16,7 +16,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # and http://api.kde.org/ecm/manual/ecm-kde-modules.7.html 
 find_package(ECM 5.240 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_MODULE_PATH})
-set(VERSION 2.1.0)
 
 include(ECMFindQmlModule)
 include(KDEInstallDirs)
@@ -42,7 +41,6 @@ find_package(KF6 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
 )
 
 find_package(LibKWorkspace 5.19 CONFIG REQUIRED)
-
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Quick
