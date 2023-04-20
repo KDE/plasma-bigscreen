@@ -8,6 +8,9 @@ set(PROJECT_VERSION_MAJOR 5)
 set(QT_MIN_VERSION "5.15.2")
 set(KF5_MIN_VERSION "5.102.0")
  
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 # Use Extra CMake Modules (ECM) for common functionality.
 # See http://api.kde.org/ecm/manual/ecm.7.html
 # and http://api.kde.org/ecm/manual/ecm-kde-modules.7.html 
