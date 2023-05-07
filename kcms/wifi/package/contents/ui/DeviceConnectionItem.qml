@@ -14,7 +14,7 @@ import org.kde.kirigami 2.12 as Kirigami
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 import QtGraphicalEffects 1.0
 import org.kde.plasma.networkmanagement 0.2 as PlasmaNM
-import org.kde.kcoreaddons 1.0 as KCoreAddons
+import org.kde.coreaddons 1.0 as KCoreAddons
 
 Item {
     id: delegateSettingsItem
