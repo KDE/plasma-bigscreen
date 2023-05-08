@@ -12,7 +12,7 @@ import QtQuick.Controls 2.14
 import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kirigami 2.12 as Kirigami
-import org.kde.kcm 1.2 as KCM
+import org.kde.kcmutils as KCM
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
 Item {

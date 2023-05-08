@@ -11,7 +11,7 @@ import QtQuick.Controls 2.14
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.private.volume 0.1
 import QtQuick.Window 2.14
-import org.kde.kcm 1.1 as KCM
+import org.kde.kcmutils as KCM
 
 import "delegates" as Delegates
 import "views" as Views
