@@ -19,6 +19,6 @@ public:
     }
 };
 
-K_PLUGIN_CLASS_WITH_JSON(Wifi, "mediacenter_wifi.json")
+K_PLUGIN_CLASS_WITH_JSON(Wifi, "kcm_mediacenter_wifi.json")
 
 #include "wifi.moc"

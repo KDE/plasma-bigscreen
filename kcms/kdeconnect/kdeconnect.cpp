@@ -17,6 +17,6 @@ public:
         setButtons(Apply | Default);
     }
 };
-K_PLUGIN_CLASS_WITH_JSON(KdeConnect, "mediacenter_kdeconnect.json")
+K_PLUGIN_CLASS_WITH_JSON(KdeConnect, "kcm_mediacenter_kdeconnect.json")
 
 #include "kdeconnect.moc"
