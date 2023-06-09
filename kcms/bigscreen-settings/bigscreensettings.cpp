@@ -22,8 +22,8 @@
 
 #include "timedated_interface.h"
 
-BigscreenSettings::BigscreenSettings(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickConfigModule(parent, data, args)
+BigscreenSettings::BigscreenSettings(QObject *parent, const KPluginMetaData &data)
+    : KQuickConfigModule(parent, data)
     , m_themeListModel(new ThemeListModel(this))
 {
     setButtons(Apply | Default);

@@ -31,7 +31,7 @@ class BigscreenSettings : public KQuickConfigModule
     Q_PROPERTY(bool useNtp READ useNtp WRITE setUseNtp NOTIFY useNtpChanged)
 
 public:
-    BigscreenSettings(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
+    BigscreenSettings(QObject *parent, const KPluginMetaData &data);
     ~BigscreenSettings() override;
 
     QString themeName() const;
