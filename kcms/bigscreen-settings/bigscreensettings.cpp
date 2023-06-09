@@ -234,7 +234,7 @@ bool BigscreenSettings::saveTime()
     return rc;
 }
 
-K_PLUGIN_FACTORY_WITH_JSON(BigscreenSettingsFactory, "kcm_mediacenter_bigscreen_settings.json", registerPlugin<BigscreenSettings>();)
+K_PLUGIN_CLASS_WITH_JSON(BigscreenSettings, "kcm_mediacenter_bigscreen_settings.json")
 
 #include "bigscreensettings.moc"
 #include "moc_bigscreensettings.cpp"
