@@ -12,8 +12,8 @@ class Wifi : public KQuickConfigModule
     Q_OBJECT
 
 public:
-    explicit Wifi(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-        : KQuickConfigModule(parent, data, args)
+    explicit Wifi(QObject *parent, const KPluginMetaData &data)
+        : KQuickConfigModule(parent, data)
     {
         setButtons(Apply | Default);
     }

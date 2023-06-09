@@ -12,8 +12,8 @@ class AudioDevice : public KQuickConfigModule
     Q_OBJECT
 
 public:
-    explicit AudioDevice(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-        : KQuickConfigModule(parent, data, args)
+    explicit AudioDevice(QObject *parent, const KPluginMetaData &data)
+        : KQuickConfigModule(parent, data)
     {
         setButtons(Apply | Default);
     }

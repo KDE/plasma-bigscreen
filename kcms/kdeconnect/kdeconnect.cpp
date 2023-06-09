@@ -11,8 +11,8 @@ class KdeConnect : public KQuickConfigModule
 {
     Q_OBJECT
 public:
-    explicit KdeConnect(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-        : KQuickConfigModule(parent, data, args)
+    explicit KdeConnect(QObject *parent, const KPluginMetaData &data)
+        : KQuickConfigModule(parent, data)
     {
         setButtons(Apply | Default);
     }
