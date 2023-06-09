@@ -9,9 +9,9 @@
 #include "bigscreensettings.h"
 #include "themelistmodel.h"
 
-#include <QQuickItem>
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QQuickItem>
 
 #include <KAboutData>
 #include <KLocalizedString>
@@ -167,7 +167,6 @@ void BigscreenSettings::setCurrentTime(const QTime &currentTime)
     }
 }
 
-
 void BigscreenSettings::setCurrentDate(const QDate &currentDate)
 {
     if (m_currentDate != currentDate) {
@@ -180,7 +179,6 @@ QTime BigscreenSettings::currentTime()
 {
     return m_currentTime;
 }
-
 
 QDate BigscreenSettings::currentDate()
 {
@@ -236,7 +234,7 @@ bool BigscreenSettings::saveTime()
     return rc;
 }
 
-K_PLUGIN_FACTORY_WITH_JSON(BigscreenSettingsFactory, "bigscreensettings.json", registerPlugin<BigscreenSettings>();)
+K_PLUGIN_FACTORY_WITH_JSON(BigscreenSettingsFactory, "kcm_mediacenter_bigscreen_settings.json", registerPlugin<BigscreenSettings>();)
 
 #include "bigscreensettings.moc"
 #include "moc_bigscreensettings.cpp"
