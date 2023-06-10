@@ -84,6 +84,5 @@ X-KDE-PluginInfo-Website=plasma.kde.org
 X-KDE-ServiceTypes=Plasma/Applet,Plasma/Containment
 X-Plasma-API=declarativeappletscript
 X-Plasma-MainScript=ui/main.qml
-X-Plasma-RemoteLocation=
 X-KDE-PluginInfo-Category=Utilities
 Icon=mycroft
