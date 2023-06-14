@@ -144,7 +144,7 @@ KCM.SimpleKCM {
 
                 Kirigami.Heading {
                     id: launcherLookHeader
-                    text: "Launcher Appearance"
+                    text: i18n("Launcher Appearance")
                     layer.enabled: true
                     color: "white"
                 }
@@ -190,7 +190,7 @@ KCM.SimpleKCM {
                             implicitWidth: desktopThemeView.view.cellWidth * 3
                             implicitHeight: desktopThemeView.view.cellHeight
                             isChecked: kcm.pmInhibitionActive() ? 1 : 0
-                            name: "Power Inhibition"
+                            name: i18n("Power Inhibition")
                             customType: "pmInhibition"
                             KeyNavigation.up: kcmcloseButton
                             KeyNavigation.right: coloredTileDelegate
@@ -209,7 +209,7 @@ KCM.SimpleKCM {
                             implicitWidth: desktopThemeView.view.cellWidth * 3
                             implicitHeight: desktopThemeView.view.cellHeight
                             isChecked: kcm.useColoredTiles() ? 1 : 0
-                            name: "Colored Tiles"
+                            name: i18n("Colored Tiles")
                             customType: "coloredTile"
                             KeyNavigation.up: kcmcloseButton
                             KeyNavigation.left: pmInhibitionDelegate
@@ -228,7 +228,7 @@ KCM.SimpleKCM {
                             implicitWidth: desktopThemeView.cellWidth * 3
                             implicitHeight: desktopThemeView.cellHeight
                             isChecked: kcm.useExpandingTiles() ? 1 : 0
-                            name: "Expanding Tiles"
+                            name: i18n("Expanding Tiles")
                             customType: "exapandableTile"
                             KeyNavigation.up: kcmcloseButton
                             KeyNavigation.left: coloredTileDelegate
@@ -246,7 +246,7 @@ KCM.SimpleKCM {
                             id: timeDateSettingsDelegate
                             implicitWidth: desktopThemeView.cellWidth * 3
                             implicitHeight: desktopThemeView.cellHeight
-                            name: "Adjust Date & Time"
+                            name: i18n("Adjust Date & Time")
                             KeyNavigation.up: kcmcloseButton
                             KeyNavigation.left: expandableTileDelegate
                             KeyNavigation.down: desktopThemeView
@@ -273,7 +273,7 @@ KCM.SimpleKCM {
                     focus: true
                     model: kcm.themeListModel
                     view.cacheBuffer: parent.width * 2
-                    title: "General Appearance"
+                    title: i18n("General Appearance")
                     navigationUp: mycroftIntegrationDelegate
                     navigationDown: kcmcloseButton
                     enabled: !deviceTimeSettingsArea.opened
