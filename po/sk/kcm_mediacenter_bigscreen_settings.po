@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-15 00:45+0000\n"
+"POT-Creation-Date: 2023-06-15 00:48+0000\n"
 "PO-Revision-Date: 2022-01-07 14:57+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -142,3 +142,35 @@ msgstr "%1, %2"
 #, kde-format
 msgid "Exit"
 msgstr "Ukončiť"
+
+#: package/contents/ui/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Appearance"
+msgid "Launcher Appearance"
+msgstr "Vzhľad"
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Power Inhibition"
+msgstr ""
+
+#: package/contents/ui/main.qml:212
+#, kde-format
+msgid "Colored Tiles"
+msgstr ""
+
+#: package/contents/ui/main.qml:231
+#, kde-format
+msgid "Expanding Tiles"
+msgstr ""
+
+#: package/contents/ui/main.qml:249
+#, kde-format
+msgid "Adjust Date & Time"
+msgstr ""
+
+#: package/contents/ui/main.qml:276
+#, fuzzy, kde-format
+#| msgid "Appearance"
+msgid "General Appearance"
+msgstr "Vzhľad"

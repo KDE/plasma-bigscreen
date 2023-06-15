@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-15 00:45+0000\n"
+"POT-Creation-Date: 2023-06-15 00:48+0000\n"
 "PO-Revision-Date: 2022-10-24 07:46+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -151,3 +151,35 @@ msgstr "%1, %2"
 #, kde-format
 msgid "Exit"
 msgstr "Beenden"
+
+#: package/contents/ui/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Appearance"
+msgid "Launcher Appearance"
+msgstr "Erscheinungsbild"
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Power Inhibition"
+msgstr ""
+
+#: package/contents/ui/main.qml:212
+#, kde-format
+msgid "Colored Tiles"
+msgstr ""
+
+#: package/contents/ui/main.qml:231
+#, kde-format
+msgid "Expanding Tiles"
+msgstr ""
+
+#: package/contents/ui/main.qml:249
+#, kde-format
+msgid "Adjust Date & Time"
+msgstr ""
+
+#: package/contents/ui/main.qml:276
+#, fuzzy, kde-format
+#| msgid "Appearance"
+msgid "General Appearance"
+msgstr "Erscheinungsbild"
