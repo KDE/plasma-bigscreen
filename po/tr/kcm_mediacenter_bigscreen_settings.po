@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2022.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-15 00:48+0000\n"
-"PO-Revision-Date: 2022-11-14 14:12+0300\n"
+"PO-Revision-Date: 2023-06-15 22:49+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -147,33 +147,31 @@ msgid "Exit"
 msgstr "Çık"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgid "Launcher Appearance"
-msgstr "Görünüş"
+msgstr "Başlatıcı Görünüşü"
 
 #: package/contents/ui/main.qml:193
 #, kde-format
 msgid "Power Inhibition"
-msgstr ""
+msgstr "Güç Engellemeleri"
 
 #: package/contents/ui/main.qml:212
 #, kde-format
 msgid "Colored Tiles"
-msgstr ""
+msgstr "Renkli Döşemeler"
 
 #: package/contents/ui/main.qml:231
 #, kde-format
 msgid "Expanding Tiles"
-msgstr ""
+msgstr "Genişleyen Döşemeler"
 
 #: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Adjust Date & Time"
-msgstr ""
+msgstr "Tarih ve Zamanı Ayarla"
 
 #: package/contents/ui/main.qml:276
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgid "General Appearance"
-msgstr "Görünüş"
+msgstr "Genel Görünüş"

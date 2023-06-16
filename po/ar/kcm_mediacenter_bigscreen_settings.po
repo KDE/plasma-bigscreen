@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-15 00:48+0000\n"
-"PO-Revision-Date: 2022-09-19 19:00+0400\n"
+"PO-Revision-Date: 2023-06-15 09:42+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -146,33 +146,31 @@ msgid "Exit"
 msgstr "اخرج"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgid "Launcher Appearance"
-msgstr "المظهر"
+msgstr "مظهر المطلق"
 
 #: package/contents/ui/main.qml:193
 #, kde-format
 msgid "Power Inhibition"
-msgstr ""
+msgstr "تثبيط الطاقة"
 
 #: package/contents/ui/main.qml:212
 #, kde-format
 msgid "Colored Tiles"
-msgstr ""
+msgstr "قطع ملونة"
 
 #: package/contents/ui/main.qml:231
 #, kde-format
 msgid "Expanding Tiles"
-msgstr ""
+msgstr "قطع موسعة"
 
 #: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Adjust Date & Time"
-msgstr ""
+msgstr "اضبط التّاريخ والوقت"
 
 #: package/contents/ui/main.qml:276
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgid "General Appearance"
-msgstr "المظهر"
+msgstr "المظهر العام"

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2021.
+# Yuri Chornoivan <yurchor@ukr.net>, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-15 00:48+0000\n"
-"PO-Revision-Date: 2021-08-22 08:38+0300\n"
+"PO-Revision-Date: 2023-06-15 08:34+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -148,33 +148,31 @@ msgid "Exit"
 msgstr "Вийти"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgid "Launcher Appearance"
-msgstr "Вигляд"
+msgstr "Вигляд засобу запуску"
 
 #: package/contents/ui/main.qml:193
 #, kde-format
 msgid "Power Inhibition"
-msgstr ""
+msgstr "Придушення живлення"
 
 #: package/contents/ui/main.qml:212
 #, kde-format
 msgid "Colored Tiles"
-msgstr ""
+msgstr "Кольорові плитки"
 
 #: package/contents/ui/main.qml:231
 #, kde-format
 msgid "Expanding Tiles"
-msgstr ""
+msgstr "Розширювані плитки"
 
 #: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Adjust Date & Time"
-msgstr ""
+msgstr "Скоригувати дату і час"
 
 #: package/contents/ui/main.qml:276
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgid "General Appearance"
-msgstr "Вигляд"
+msgstr "Загальний вигляд"

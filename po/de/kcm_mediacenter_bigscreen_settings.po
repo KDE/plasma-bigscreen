@@ -2,7 +2,7 @@
 # German translation for plasma-bigscreen.
 # Copyright (C) 2021 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# Frederik Schwarzer <schwarzer@kde.org>, 2021.
+# Frederik Schwarzer <schwarzer@kde.org>, 2021, 2023.
 # Alois Spitzbart <spitz234@hotmail.com>, 2022.
 #
 # Automatically generated, 2021.
@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-15 00:48+0000\n"
-"PO-Revision-Date: 2022-10-24 07:46+0200\n"
-"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
+"PO-Revision-Date: 2023-06-15 13:52+0200\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -153,10 +153,9 @@ msgid "Exit"
 msgstr "Beenden"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgid "Launcher Appearance"
-msgstr "Erscheinungsbild"
+msgstr "Erscheinungsbild des Anwendungsstarters"
 
 #: package/contents/ui/main.qml:193
 #, kde-format
@@ -166,20 +165,19 @@ msgstr ""
 #: package/contents/ui/main.qml:212
 #, kde-format
 msgid "Colored Tiles"
-msgstr ""
+msgstr "Farbige Kacheln"
 
 #: package/contents/ui/main.qml:231
 #, kde-format
 msgid "Expanding Tiles"
-msgstr ""
+msgstr "Ausdehnende Kacheln"
 
 #: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Adjust Date & Time"
-msgstr ""
+msgstr "Datum & Uhrzeit einstellen"
 
 #: package/contents/ui/main.qml:276
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgid "General Appearance"
-msgstr "Erscheinungsbild"
+msgstr "Allgemeines Erscheinungsbild"
