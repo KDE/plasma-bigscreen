@@ -2,7 +2,7 @@
 # German translation for plasma-bigscreen.
 # Copyright (C) 2021 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# Frederik Schwarzer <schwarzer@kde.org>, 2021.
+# Frederik Schwarzer <schwarzer@kde.org>, 2021, 2023.
 # Alois Spitzbart <spitz234@hotmail.com>, 2022.
 #
 # Automatically generated, 2021.
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
