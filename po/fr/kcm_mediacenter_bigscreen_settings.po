@@ -1,4 +1,5 @@
 # Xavier Besnard <xavier.besnard@neuf.fr>, 2021.
+# Thomas Vergnaud <thomas.vergnaud@mailo.eu>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
@@ -12,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.08.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
