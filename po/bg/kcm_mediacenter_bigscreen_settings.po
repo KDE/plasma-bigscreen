@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
 # Automatically generated, 2022.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-15 00:48+0000\n"
-"PO-Revision-Date: 2022-07-10 15:12+0200\n"
+"PO-Revision-Date: 2023-06-22 21:19+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -149,33 +149,31 @@ msgid "Exit"
 msgstr "Изход"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgid "Launcher Appearance"
-msgstr "Външен вид"
+msgstr "Външен вид на стартера на приложения"
 
 #: package/contents/ui/main.qml:193
 #, kde-format
 msgid "Power Inhibition"
-msgstr ""
+msgstr "Инхибиране на захранването"
 
 #: package/contents/ui/main.qml:212
 #, kde-format
 msgid "Colored Tiles"
-msgstr ""
+msgstr "Цветни плочки"
 
 #: package/contents/ui/main.qml:231
 #, kde-format
 msgid "Expanding Tiles"
-msgstr ""
+msgstr "Разширяващи се плочки"
 
 #: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Adjust Date & Time"
-msgstr ""
+msgstr "Настройване на дата и час"
 
 #: package/contents/ui/main.qml:276
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgid "General Appearance"
-msgstr "Външен вид"
+msgstr "Общ външен вид"

@@ -145,10 +145,9 @@ msgid "Exit"
 msgstr "Ukončit"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgid "Launcher Appearance"
-msgstr "Vzhled"
+msgstr ""
 
 #: package/contents/ui/main.qml:193
 #, kde-format
@@ -171,7 +170,6 @@ msgid "Adjust Date & Time"
 msgstr ""
 
 #: package/contents/ui/main.qml:276
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgid "General Appearance"
-msgstr "Vzhled"
+msgstr ""
