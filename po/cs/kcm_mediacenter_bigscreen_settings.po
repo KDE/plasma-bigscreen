@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-15 00:48+0000\n"
-"PO-Revision-Date: 2023-01-05 11:33+0100\n"
+"PO-Revision-Date: 2023-06-23 12:40+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -147,7 +147,7 @@ msgstr "Ukončit"
 #: package/contents/ui/main.qml:147
 #, kde-format
 msgid "Launcher Appearance"
-msgstr ""
+msgstr "Vzhled spouštěče"
 
 #: package/contents/ui/main.qml:193
 #, kde-format
@@ -157,7 +157,7 @@ msgstr ""
 #: package/contents/ui/main.qml:212
 #, kde-format
 msgid "Colored Tiles"
-msgstr ""
+msgstr "Barevné dlaždice"
 
 #: package/contents/ui/main.qml:231
 #, kde-format
@@ -167,9 +167,9 @@ msgstr ""
 #: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Adjust Date & Time"
-msgstr ""
+msgstr "Upravit datum a čas"
 
 #: package/contents/ui/main.qml:276
 #, kde-format
 msgid "General Appearance"
-msgstr ""
+msgstr "Obecný vzhled"
