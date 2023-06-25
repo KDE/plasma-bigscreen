@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# Víctor Rodrigo Córdoba <vrcordoba@gmail.com>, 2021.
+# Víctor Rodrigo Córdoba <vrcordoba@gmail.com>, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-15 00:48+0000\n"
-"PO-Revision-Date: 2021-08-28 17:32+0200\n"
+"PO-Revision-Date: 2023-06-24 17:45+0200\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -148,33 +148,31 @@ msgid "Exit"
 msgstr "Salir"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgid "Launcher Appearance"
-msgstr "Apariencia"
+msgstr "Apariencia del lanzador"
 
 #: package/contents/ui/main.qml:193
 #, kde-format
 msgid "Power Inhibition"
-msgstr ""
+msgstr "Inhibición de energía"
 
 #: package/contents/ui/main.qml:212
 #, kde-format
 msgid "Colored Tiles"
-msgstr ""
+msgstr "Mosaicos coloreados"
 
 #: package/contents/ui/main.qml:231
 #, kde-format
 msgid "Expanding Tiles"
-msgstr ""
+msgstr "Expandir mosaico"
 
 #: package/contents/ui/main.qml:249
 #, kde-format
 msgid "Adjust Date & Time"
-msgstr ""
+msgstr "Ajustar fecha y hora"
 
 #: package/contents/ui/main.qml:276
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgid "General Appearance"
-msgstr "Apariencia"
+msgstr "Apariencia general"
