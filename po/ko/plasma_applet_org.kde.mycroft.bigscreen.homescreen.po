@@ -120,7 +120,7 @@ msgstr "음성 앱"
 #: contents/ui/launcher/LauncherHome.qml:116
 #, kde-format
 msgid "Applications"
-msgstr "프로그램"
+msgstr "앱"
 
 #: contents/ui/launcher/LauncherHome.qml:143
 #, kde-format
