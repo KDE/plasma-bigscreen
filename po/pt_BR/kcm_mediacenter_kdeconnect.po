@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2020, 2021.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-02 00:49+0000\n"
-"PO-Revision-Date: 2021-02-02 13:44-0300\n"
+"PO-Revision-Date: 2023-07-25 10:15-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.04.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -35,7 +35,7 @@ msgstr "Configurar KDE Connect"
 #: package/contents/ui/delegates/PairedView.qml:29
 #, kde-format
 msgid "This device is paired"
-msgstr "Este dispositivo está pareado"
+msgstr "Este dispositivo está emparelhado"
 
 #: package/contents/ui/delegates/PairedView.qml:62
 #, kde-format
@@ -45,7 +45,7 @@ msgstr "Desemparelhar"
 #: package/contents/ui/delegates/PairRequest.qml:29
 #, kde-format
 msgid "This device is requesting to be paired"
-msgstr "Este dispositivo está solicitando ser pareado"
+msgstr "Este dispositivo está solicitando ser emparelhado"
 
 #: package/contents/ui/delegates/PairRequest.qml:63
 #, kde-format
@@ -60,17 +60,17 @@ msgstr "Rejeitar"
 #: package/contents/ui/delegates/UnpairedView.qml:40
 #, kde-format
 msgid "This device is not paired"
-msgstr "Este dispositivo não está pareado"
+msgstr "Este dispositivo não está emparelhado"
 
 #: package/contents/ui/delegates/UnpairedView.qml:80
 #, kde-format
 msgid "Pair"
-msgstr "Parear"
+msgstr "Emparelhar"
 
 #: package/contents/ui/delegates/UnpairedView.qml:91
 #, kde-format
 msgid "Pairing request sent to device"
-msgstr "Solicitação de pareamento enviado ao dispositivo"
+msgstr "Solicitação de emparelhamento enviado ao dispositivo"
 
 #: package/contents/ui/delegates/Unreachable.qml:19
 #, kde-format
