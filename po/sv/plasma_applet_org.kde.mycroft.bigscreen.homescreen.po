@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2020, 2021, 2022.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:47+0000\n"
-"PO-Revision-Date: 2022-01-15 12:15+0100\n"
+"PO-Revision-Date: 2023-07-31 11:01+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: contents/config/config.qml:11
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "Allmänt"
 
 #: contents/ui/ConfigWindow.qml:31
 #, kde-format
