@@ -34,11 +34,13 @@ msgstr "txemaq@gmail.com"
 msgid "Appearance"
 msgstr "Aparença"
 
+# skip-rule: punctuation-period-no
 #: package/contents/ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Jan"
 msgstr "gen."
 
+# skip-rule: punctuation-period-no
 #: package/contents/ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Feb"
@@ -49,6 +51,7 @@ msgstr "febr."
 msgid "Mar"
 msgstr "març"
 
+# skip-rule: punctuation-period-no
 #: package/contents/ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Apr"
@@ -64,31 +67,37 @@ msgstr "maig"
 msgid "Jun"
 msgstr "juny"
 
+# skip-rule: punctuation-period-no
 #: package/contents/ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Jul"
 msgstr "jul."
 
+# skip-rule: punctuation-period-no
 #: package/contents/ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Aug"
 msgstr "ago."
 
+# skip-rule: punctuation-period-no
 #: package/contents/ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Sep"
 msgstr "set."
 
+# skip-rule: punctuation-period-no
 #: package/contents/ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Oct"
 msgstr "oct."
 
+# skip-rule: punctuation-period-no
 #: package/contents/ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Nov"
 msgstr "nov."
 
+# skip-rule: punctuation-period-no
 #: package/contents/ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Dec"
