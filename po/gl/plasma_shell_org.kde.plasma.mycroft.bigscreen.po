@@ -20,7 +20,7 @@ msgstr ""
 #: contents/configuration/ConfigurationContainmentAppearance.qml:49
 msgid "Layout cannot be changed while widgets are locked"
 msgstr ""
-"Non se pode cambiar a disposición mentres os trebellos estean bloqueados."
+"Non é posíbel cambiar a disposición mentres os trebellos estean bloqueados."
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:60
 msgid "Wallpaper Type:"
