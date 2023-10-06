@@ -5,6 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+import org.kde.plasma.plasmoid 2.0
 import QtQuick 2.14
 import QtQuick.Layouts 1.14
 import QtQuick.Controls 2.14 as Controls
@@ -24,14 +25,14 @@ Item {
     Layout.minimumWidth: Screen.desktopAvailableWidth
     Layout.minimumHeight: Screen.desktopAvailableHeight * 0.6
 
-    property bool mycroftIntegration: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive() ? 1 : 0
+    property bool mycroftIntegration: Plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive() ? 1 : 0
 
     property Item wallpaper
 
     Connections {
-        target: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface
+        target: Plasmoid.nativeInterface.bigLauncherDbusAdapterInterface
         onEnableMycroftIntegrationChanged: {
-            mycroftIntegration = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive()
+            mycroftIntegration = Plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive()
             if(mycroftIntegration) {
                 mycroftIndicatorLoader.active = true
                 mycroftWindowLoader.active = true
@@ -41,7 +42,7 @@ Item {
             }
         }
         onEnablePmInhibitionChanged: {
-            var powerInhibition = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.pmInhibitionActive()
+            var powerInhibition = Plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.pmInhibitionActive()
             if(powerInhibition) {
                 pmInhibitItem.inhibit = true
             } else {
@@ -56,17 +57,17 @@ Item {
 
     PowerManagementItem {
         id: pmInhibitItem
-        //inhibit: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.pmInhibitionActive()
+        //inhibit: Plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.pmInhibitionActive()
     }
 
     PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
     Component.onCompleted: {
-        for (var i in plasmoid.applets) {
-            root.addApplet(plasmoid.applets[i], -1, -1)
+        for (var i in Plasmoid.applets) {
+            root.addApplet(Plasmoid.applets[i], -1, -1)
         }
         console.log("checking for power inhibition")
-        console.log(plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.pmInhibitionActive())
-        pmInhibitItem.inhibit = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.pmInhibitionActive()
+        console.log(Plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.pmInhibitionActive())
+        pmInhibitItem.inhibit = Plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.pmInhibitionActive()
     }
 
     function addApplet(applet, x, y) {

@@ -5,6 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+import org.kde.plasma.plasmoid 2.0
 import QtQuick 2.14
 import QtQuick.Window 2.14
 import QtQuick.Layouts 1.14
@@ -47,7 +48,7 @@ Window {
             right: parent.right
             top: parent.top
             margins: Kirigami.Units.largeSpacing
-            topMargin: Kirigami.Units.largeSpacing + plasmoid.availableScreenRect.y
+            topMargin: Kirigami.Units.largeSpacing + Plasmoid.availableScreenRect.y
         }
     }
     Kirigami.Heading {
@@ -98,10 +99,10 @@ Window {
         open: false
         Keys.onEscapePressed: window.visible = false;
         KeyNavigation.up: closeButton
-        activeSkills.blackList: plasmoid.nativeInterface.applicationListModel.voiceAppSkills
+        activeSkills.blackList: Plasmoid.nativeInterface.applicationListModel.voiceAppSkills
 
         activeSkills.onBlacklistedSkillActivated: {
-            plasmoid.nativeInterface.executeCommand("mycroft-gui-app --hideTextInput --skill=" + skillId);
+            Plasmoid.nativeInterface.executeCommand("mycroft-gui-app --hideTextInput --skill=" + skillId);
         }
        // activeSkills.onSkillActivated: window.showMaximized();
         activeSkills.onActiveIndexChanged: {
@@ -160,9 +161,9 @@ Window {
         //FIXME: find a better way for timeouts
         //onActiveSkillClosed: open = false;
 /*
-        topPadding: plasmoid.availableScreenRect.y
-        bottomPadding: root.height - plasmoid.availableScreenRect.y - plasmoid.availableScreenRect.height
-        leftPadding: plasmoid.availableScreenRect.x
-        rightPadding: root.width - plasmoid.availableScreenRect.x - plasmoid.availableScreenRect.width
+        topPadding: Plasmoid.availableScreenRect.y
+        bottomPadding: root.height - Plasmoid.availableScreenRect.y - Plasmoid.availableScreenRect.height
+        leftPadding: Plasmoid.availableScreenRect.x
+        rightPadding: root.width - Plasmoid.availableScreenRect.x - Plasmoid.availableScreenRect.width
         */
 }

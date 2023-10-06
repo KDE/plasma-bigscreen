@@ -5,6 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+import org.kde.plasma.plasmoid 2.0
 import QtQuick 2.14
 import QtQuick.Window 2.14
 import QtQuick.Layouts 1.14
@@ -19,12 +20,12 @@ AbstractIndicator {
     id: connectionIcon
     icon.name: "kdeconnect"
     property var window
-    property bool mycroftIntegration: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive() ? 1 : 0
+    property bool mycroftIntegration: Plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive() ? 1 : 0
 
     Connections {
-        target: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface
+        target: Plasmoid.nativeInterface.bigLauncherDbusAdapterInterface
         onEnableMycroftIntegrationChanged: {
-            mycroftIntegration = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive()
+            mycroftIntegration = Plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive()
             if(mycroftIntegration) {
                 mycroftLoader.active = true
             } else {
@@ -92,6 +93,6 @@ AbstractIndicator {
                             connectionIcon.Kirigami.ScenePosition.x + connectionIcon.width/2,
                             connectionIcon.Kirigami.ScenePosition.y + connectionIcon.height/2,
                             Math.min(connectionIcon.width, connectionIcon.height));
-        plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_kdeconnect")
+        Plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_kdeconnect")
     }
 }

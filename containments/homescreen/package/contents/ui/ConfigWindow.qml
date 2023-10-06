@@ -5,6 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+import org.kde.plasma.plasmoid 2.0
 import QtQuick 2.14
 import QtQuick.Window 2.14
 import QtQuick.Layouts 1.14
@@ -29,8 +30,8 @@ Window {
             Controls.CheckBox {
                 id: backgroundCheckbox
                 text: i18n("Use Colored Tiles")
-                checked: plasmoid.configuration.coloredTiles
-                onCheckedChanged: plasmoid.configuration.coloredTiles = checked
+                checked: Plasmoid.configuration.coloredTiles
+                onCheckedChanged: Plasmoid.configuration.coloredTiles = checked
                 focus: true
                 Keys.onEnterPressed: checked = !checked
                 Keys.onReturnPressed: checked = !checked
@@ -39,8 +40,8 @@ Window {
             Controls.CheckBox {
                 id: expandingCheckbox
                 text: i18n("Use Expanding Tiles")
-                checked: plasmoid.configuration.expandingTiles
-                onCheckedChanged: plasmoid.configuration.expandingTiles = checked
+                checked: Plasmoid.configuration.expandingTiles
+                onCheckedChanged: Plasmoid.configuration.expandingTiles = checked
                 Keys.onEnterPressed: checked = !checked
                 Keys.onReturnPressed: checked = !checked
                 KeyNavigation.down: closeButton

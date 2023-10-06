@@ -5,6 +5,7 @@
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
 
+import org.kde.plasma.plasmoid 2.0
 import QtQuick 2.14
 import QtQuick.Layouts 1.14
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -48,6 +49,6 @@ AbstractIndicator {
                             connectionIcon.Kirigami.ScenePosition.x + connectionIcon.width/2,
                             connectionIcon.Kirigami.ScenePosition.y + connectionIcon.height/2,
                             Math.min(connectionIcon.width, connectionIcon.height));
-        plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_wifi")
+        Plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_wifi")
     }
 }

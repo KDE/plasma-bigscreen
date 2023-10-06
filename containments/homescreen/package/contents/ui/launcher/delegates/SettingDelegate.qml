@@ -4,6 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+import org.kde.plasma.plasmoid 2.0
 import QtQuick 2.14
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 import org.kde.kirigami 2.12 as Kirigami
@@ -13,8 +14,8 @@ BigScreen.IconDelegate {
     id: delegate
     icon.name: modelData.kcmIconName
     text: modelData.kcmName
-    useIconColors: plasmoid.configuration.coloredTiles
-    compactMode: plasmoid.configuration.expandingTiles
+    useIconColors: Plasmoid.configuration.coloredTiles
+    compactMode: Plasmoid.configuration.expandingTiles
 
     onClicked: {
         BigScreen.NavigationSoundEffects.playClickedSound()

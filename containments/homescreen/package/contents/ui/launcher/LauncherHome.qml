@@ -5,6 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+import org.kde.plasma.plasmoid 2.0
 import QtQuick 2.14
 import QtQuick.Layouts 1.14
 import QtQuick.Controls 2.14 as Controls
@@ -22,13 +23,13 @@ import org.kde.private.biglauncher 1.0
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
 FocusScope {
-    property bool mycroftIntegration: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive() ? 1 : 0
+    property bool mycroftIntegration: Plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive() ? 1 : 0
 
     Connections {
-        target: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface
+        target: Plasmoid.nativeInterface.bigLauncherDbusAdapterInterface
 
         onEnableMycroftIntegrationChanged: {
-            mycroftIntegration = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive()
+            mycroftIntegration = Plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive()
             if(mycroftIntegration){
                 voiceAppsView.visible = voiceAppsView.count > 0 ? 1 : 0
             } else {
@@ -65,7 +66,7 @@ FocusScope {
         BigScreen.TileRepeater {
             id: recentView
             title: i18n("Recent")
-            compactMode: plasmoid.configuration.expandingTiles
+            compactMode: Plasmoid.configuration.expandingTiles
             model: Kicker.RecentUsageModel {
                 shownItems: Kicker.RecentUsageModel.OnlyApps
             }
@@ -89,9 +90,9 @@ FocusScope {
         BigScreen.TileRepeater {
             id: voiceAppsView
             title: i18n("Voice Apps")
-            compactMode: plasmoid.configuration.expandingTiles
+            compactMode: Plasmoid.configuration.expandingTiles
             model: KItemModels.KSortFilterProxyModel {
-                sourceModel: plasmoid.nativeInterface.applicationListModel
+                sourceModel: Plasmoid.nativeInterface.applicationListModel
                 filterRole: "ApplicationCategoriesRole"
                 filterRowCallback: function(source_row, source_parent) {
                     return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("VoiceApp") !== -1;
@@ -114,11 +115,11 @@ FocusScope {
         BigScreen.TileRepeater {
             id: appsView
             title: i18n("Applications")
-            compactMode: plasmoid.configuration.expandingTiles
+            compactMode: Plasmoid.configuration.expandingTiles
             visible: count > 0
             enabled: count > 0
             model: KItemModels.KSortFilterProxyModel {
-                sourceModel: plasmoid.nativeInterface.applicationListModel
+                sourceModel: Plasmoid.nativeInterface.applicationListModel
                 filterRole: "ApplicationCategoriesRole"
                 filterRowCallback: function(source_row, source_parent) {
                     var cats = sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole);
@@ -141,11 +142,11 @@ FocusScope {
         BigScreen.TileRepeater {
             id: gamesView
             title: i18n("Games")
-            compactMode: plasmoid.configuration.expandingTiles
+            compactMode: Plasmoid.configuration.expandingTiles
             visible: count > 0
             enabled: count > 0
             model: KItemModels.KSortFilterProxyModel {
-                sourceModel: plasmoid.nativeInterface.applicationListModel
+                sourceModel: Plasmoid.nativeInterface.applicationListModel
                 filterRole: "ApplicationCategoriesRole"
                 filterRowCallback: function(source_row, source_parent) {
                     return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("Game") !== -1;
@@ -170,8 +171,8 @@ FocusScope {
         BigScreen.TileRepeater {
             id: settingsView
             title: i18n("Settings")
-            model: plasmoid.nativeInterface.kcmsListModel
-            compactMode: plasmoid.configuration.expandingTiles
+            model: Plasmoid.nativeInterface.kcmsListModel
+            compactMode: Plasmoid.configuration.expandingTiles
 
             onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = settingsView
             delegate: Delegates.SettingDelegate {

@@ -4,6 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+import org.kde.plasma.plasmoid 2.0
 import QtQuick 2.6
 import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Layouts 1.0
@@ -17,8 +18,8 @@ import org.kde.plasma.configuration 2.0
 //TODO: all of this will be done with desktop components
 Rectangle {
     id: root
-    Layout.minimumWidth:  plasmoid.availableScreenRect.width
-    Layout.minimumHeight: plasmoid.availableScreenRect.height
+    Layout.minimumWidth:  Plasmoid.availableScreenRect.width
+    Layout.minimumHeight: Plasmoid.availableScreenRect.height
     
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
@@ -51,25 +52,25 @@ Rectangle {
         if (pageStack.currentItem.saveConfig) {
             pageStack.currentItem.saveConfig()
         }
-        for (var key in plasmoid.configuration) {
+        for (var key in Plasmoid.configuration) {
             if (pageStack.currentItem["cfg_"+key] !== undefined) {
-                plasmoid.configuration[key] = pageStack.currentItem["cfg_"+key]
+                Plasmoid.configuration[key] = pageStack.currentItem["cfg_"+key]
             }
         }
     }
 
     function configurationHasChanged() {
-        for (var key in plasmoid.configuration) {
+        for (var key in Plasmoid.configuration) {
             if (pageStack.currentItem["cfg_"+key] !== undefined) {
                 //for objects == doesn't work
-                if (typeof plasmoid.configuration[key] == 'object') {
-                    for (var i in plasmoid.configuration[key]) {
-                        if (plasmoid.configuration[key][i] != pageStack.currentItem["cfg_"+key][i]) {
+                if (typeof Plasmoid.configuration[key] == 'object') {
+                    for (var i in Plasmoid.configuration[key]) {
+                        if (Plasmoid.configuration[key][i] != pageStack.currentItem["cfg_"+key][i]) {
                             return true;
                         }
                     }
                     return false;
-                } else if (pageStack.currentItem["cfg_"+key] != plasmoid.configuration[key]) {
+                } else if (pageStack.currentItem["cfg_"+key] != Plasmoid.configuration[key]) {
                     return true;
                 }
             }
@@ -220,9 +221,9 @@ Rectangle {
                                 //in a StackView pages need to be initialized with stackviews size, or have none
                                 var props = {"width": width, "height": height}
 
-                                var plasmoidConfig = plasmoid.configuration
+                                var plasmoidConfig = Plasmoid.configuration
                                 for (var key in plasmoidConfig) {
-                                    props["cfg_" + key] = plasmoid.configuration[key]
+                                    props["cfg_" + key] = Plasmoid.configuration[key]
                                 }
 
                                 var newItem = replace(Qt.resolvedUrl(sourceFile), props)
