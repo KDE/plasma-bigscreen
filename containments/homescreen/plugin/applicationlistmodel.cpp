@@ -247,7 +247,7 @@ Q_INVOKABLE void ApplicationListModel::moveItem(int row, int destination)
     m_appOrder.clear();
     m_appPositions.clear();
     int i = 0;
-    for ( const auto &app : qAsConst(m_applicationList)) {
+    for ( const auto &app : std::as_const(m_applicationList)) {
         m_appOrder << app.storageId;
         m_appPositions[app.storageId] = i;
         ++i;
@@ -295,7 +295,7 @@ void ApplicationListModel::setAppOrder(const QStringList &order)
     m_appOrder = order;
     m_appPositions.clear();
     int i = 0;
-    for (const auto &app : qAsConst(m_appOrder)) {
+    for (const auto &app : std::as_const(m_appOrder)) {
         m_appPositions[app] = i;
         ++i;
     }

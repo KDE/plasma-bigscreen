@@ -133,7 +133,7 @@ void KcmsListModel::moveItem(int row, int destination)
     m_appOrder.clear();
     m_appPositions.clear();
     int i = 0;
-    for (const auto &app : qAsConst(m_kcms)) {
+    for (const auto &app : std::as_const(m_kcms)) {
         m_appOrder << app.id;
         m_appPositions[app.id] = i;
         ++i;
@@ -174,7 +174,7 @@ void KcmsListModel::setAppOrder(const QStringList &order)
     m_appOrder = order;
     m_appPositions.clear();
     int i = 0;
-    for (const auto &app : qAsConst(m_appOrder)) {
+    for (const auto &app : std::as_const(m_appOrder)) {
         m_appPositions[app] = i;
         ++i;
     }

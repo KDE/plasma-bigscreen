@@ -84,7 +84,7 @@ void ThemeListModel::reload()
         }
     }
 
-    for (const QString &theme : qAsConst(themes)) {
+    for (const QString &theme : std::as_const(themes)) {
         int themeSepIndex = theme.lastIndexOf('/', -1);
         QString themeRoot = theme.left(themeSepIndex);
         int themeNameSepIndex = themeRoot.lastIndexOf('/', -1);
