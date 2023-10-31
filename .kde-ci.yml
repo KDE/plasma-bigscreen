@@ -23,5 +23,6 @@ Dependencies:
     'frameworks/kwindowsystem': '@latest'
     'frameworks/plasma-framework': '@latest'
     'frameworks/solid': '@latest'
+    'frameworks/ksvg': '@latest'
     'plasma/plasma-workspace': '@same'
     'plasma/plasma5support': '@same'
