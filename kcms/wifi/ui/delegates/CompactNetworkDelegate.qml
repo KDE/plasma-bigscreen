@@ -40,7 +40,7 @@ BigScreen.AbstractDelegate {
     contentItem: Item {
         id: connectionItemLayout
         
-        PlasmaCore.IconItem {
+        Kirigami.Icon {
             id: connectionSvgIcon
             width: listView.cellWidth - delegate.leftPadding - (delegate.isCurrent ? 0 : delegate.rightPadding)
             height: isCurrent ? width : width - Kirigami.Units.largeSpacing * 4

@@ -55,7 +55,7 @@ ColumnLayout {
         //verticalAlignment: Text.AlignVCenter
         maximumLineCount: 1
         elide: Text.ElideRight
-        color: PlasmaCore.ColorScope.textColor
+        color: Kirigami.Theme.textColor
         text: i18n("Adjust Volume")
     }
 

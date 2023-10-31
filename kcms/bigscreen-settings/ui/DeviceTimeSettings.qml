@@ -130,7 +130,7 @@ Rectangle {
                 level: 2
                 maximumLineCount: 2
                 elide: Text.ElideRight
-                color: PlasmaCore.ColorScope.textColor
+                color: Kirigami.Theme.textColor
                 text: "Adjust Date & Time Settings"
             }
 

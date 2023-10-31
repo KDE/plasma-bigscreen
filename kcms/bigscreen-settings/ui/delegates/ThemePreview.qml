@@ -65,19 +65,19 @@ Item {
             id: icons
             Layout.fillHeight: true
 
-            PlasmaCore.IconItem {
+            Kirigami.Icon {
                 id: computerIcon
                 Layout.fillHeight: true
                 source: "computer"
             }
 
-            PlasmaCore.IconItem {
+            Kirigami.Icon {
                 id: applicationsIcon
                 Layout.fillHeight: true
                 source: "applications-other"
             }
 
-            PlasmaCore.IconItem {
+            Kirigami.Icon {
                 id: logoutIcon
                 Layout.fillHeight: true
                 source: "system-log-out"

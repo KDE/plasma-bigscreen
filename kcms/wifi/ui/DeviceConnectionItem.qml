@@ -134,7 +134,7 @@ Item {
                 level: 2
                 maximumLineCount: 2
                 elide: Text.ElideRight
-                color: PlasmaCore.ColorScope.textColor
+                color: Kirigami.Theme.textColor
                 text: model.ItemUniqueName
             }
             
@@ -162,7 +162,7 @@ Item {
                     
                     RowLayout {
                         anchors.centerIn: parent
-                        PlasmaCore.IconItem {
+                        Kirigami.Icon {
                             Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
                             Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
                             source: Qt.resolvedUrl("images/green-tick-thick.svg")
@@ -231,7 +231,7 @@ Item {
                     level: 3
                     maximumLineCount: 1
                     elide: Text.ElideRight
-                    color: PlasmaCore.ColorScope.textColor
+                    color: Kirigami.Theme.textColor
                     text: i18n("Speed")
                 }
                 

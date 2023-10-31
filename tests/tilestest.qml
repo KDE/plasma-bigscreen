@@ -51,7 +51,7 @@ Image {
                         //color: 0.2126 * palette.suggestedContrast.r + 0.7152 * palette.suggestedContrast.g + 0.0722 * palette.suggestedContrast.b > 0.6 ? "black" : "white"
                         color: useColors
                             ? Kirigami.ColorUtils.brightness(palette.dominantContrast) === Kirigami.ColorUtils.Light ? imagePalette.closestToBlack : imagePalette.closestToWhite
-                            : PlasmaCore.ColorScope.textColor
+                            : Kirigami.Theme.textColor
                     }
                 }
             }

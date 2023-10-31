@@ -35,11 +35,11 @@ AbstractDelegate {
         id: imagePalette
         source: iconItem.source
         property bool useColors: useIconColors
-        property color backgroundColor: useColors ? dominantContrast : PlasmaCore.ColorScope.backgroundColor
-        property color accentColor: useColors ? highlight : PlasmaCore.ColorScope.highlightColor
+        property color backgroundColor: useColors ? dominantContrast : Kirigami.Theme.backgroundColor
+        property color accentColor: useColors ? highlight : Kirigami.Theme.highlightColor
         property color textColor: useColors
             ? (Kirigami.ColorUtils.brightnessForColor(dominantContrast) === Kirigami.ColorUtils.Light ? imagePalette.closestToBlack : imagePalette.closestToWhite)
-            : PlasmaCore.ColorScope.textColor
+            : Kirigami.Theme.textColor
     }
 
     contentItem: Item {
@@ -58,7 +58,7 @@ AbstractDelegate {
                 }
             }
 
-            PlasmaCore.IconItem {
+            Kirigami.Icon {
                 id: iconItem
                 Layout.preferredWidth: topArea.columns > 1 ? parent.height * 0.75 : (delegate.compactMode ? parent.height / 2 : parent.height)
                 Layout.preferredHeight: width
