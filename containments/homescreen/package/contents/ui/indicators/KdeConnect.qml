@@ -13,7 +13,7 @@ import org.kde.plasma.plasmoid 2.0
 import QtQuick.Controls 2.14 as Controls
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.kdeconnect 1.0 as KDEConnect
-import org.kde.plasma.private.nanoshell 2.0 as NanoShell
+import org.kde.plasma.private.nanoshell as NanoShell
 
 AbstractIndicator {
     id: connectionIcon
