@@ -42,7 +42,7 @@ Rectangle {
     PlasmaCore.SortFilterModel {
         id: configDialogFilterModel
         sourceModel: configDialog.configModel
-        filterRole: "visible"
+        filterRoleName: "visible"
         filterCallback: function(source_row, value) { return value; }
     }
 //END model

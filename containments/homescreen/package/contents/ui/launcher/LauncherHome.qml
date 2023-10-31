@@ -91,7 +91,7 @@ FocusScope {
             compactMode: plasmoid.configuration.expandingTiles
             model: KItemModels.KSortFilterProxyModel {
                 sourceModel: plasmoid.nativeInterface.applicationListModel
-                filterRole: "ApplicationCategoriesRole"
+                filterRoleName: "ApplicationCategoriesRole"
                 filterRowCallback: function(source_row, source_parent) {
                     return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("VoiceApp") !== -1;
                 }
@@ -118,7 +118,7 @@ FocusScope {
             enabled: count > 0
             model: KItemModels.KSortFilterProxyModel {
                 sourceModel: plasmoid.nativeInterface.applicationListModel
-                filterRole: "ApplicationCategoriesRole"
+                filterRoleName: "ApplicationCategoriesRole"
                 filterRowCallback: function(source_row, source_parent) {
                     var cats = sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole);
                     return cats.indexOf("Game") === -1 && cats.indexOf("VoiceApp") === -1;
@@ -145,7 +145,7 @@ FocusScope {
             enabled: count > 0
             model: KItemModels.KSortFilterProxyModel {
                 sourceModel: plasmoid.nativeInterface.applicationListModel
-                filterRole: "ApplicationCategoriesRole"
+                filterRoleName: "ApplicationCategoriesRole"
                 filterRowCallback: function(source_row, source_parent) {
                     return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("Game") !== -1;
                 }
