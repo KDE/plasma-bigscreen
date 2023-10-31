@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.14
 import QtQuick.Window 2.14
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami as Kirigami
 
 Window {
     id: window
@@ -47,9 +48,9 @@ Window {
 
             ColumnLayout {
                 anchors.centerIn: parent
-                PlasmaCore.IconItem {
+                Kirigami.Icon {
                     id: icon
-                    colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
+                    // FIXME colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
                     Layout.preferredWidth: PlasmaCore.Units.iconSizes.enormous
                     Layout.preferredHeight: Layout.preferredWidth
                     Layout.alignment: Qt.AlignCenter

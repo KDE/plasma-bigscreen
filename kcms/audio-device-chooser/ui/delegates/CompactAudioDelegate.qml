@@ -55,7 +55,7 @@ BigScreen.AbstractDelegate {
     contentItem: Item {
         id: contentItemLayout
         
-        PlasmaCore.IconItem {
+        Kirigami.Icon {
             id: deviceAudioSvgIcon
             width: listView.cellWidth - delegate.leftPadding - (delegate.isCurrent ? 0 : delegate.rightPadding)
             height: isCurrent ? width : width - Kirigami.Units.largeSpacing * 4
@@ -92,7 +92,7 @@ BigScreen.AbstractDelegate {
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignHCenter
                 
-                PlasmaCore.IconItem {
+                Kirigami.Icon {
                     id: deviceDefaultIcon
                     Layout.leftMargin: Kirigami.Units.smallSpacing
                     Layout.preferredWidth: listView.currentIndex == index && delegate.activeFocus ? PlasmaCore.Units.iconSizes.medium : PlasmaCore.Units.iconSizes.smallMedium

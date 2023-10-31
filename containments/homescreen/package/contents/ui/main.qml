@@ -59,7 +59,7 @@ Item {
         //inhibit: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.pmInhibitionActive()
     }
 
-    PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
+    Kirigami.Theme.colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
     Component.onCompleted: {
         for (var i in plasmoid.applets) {
             root.addApplet(plasmoid.applets[i], -1, -1)
@@ -138,7 +138,7 @@ Item {
         }
     }
 
-    PlasmaCore.ColorScope {
+    Kirigami.Theme {
         id: topBar
         anchors {
             left: parent.left
@@ -166,7 +166,7 @@ Item {
 
         Rectangle {
             anchors.fill: parent
-            color: PlasmaCore.ColorScope.backgroundColor
+            color: Kirigami.Theme.backgroundColor
         }
         RowLayout {
             id: appletsLayout

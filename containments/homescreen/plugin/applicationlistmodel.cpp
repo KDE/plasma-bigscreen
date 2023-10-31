@@ -110,9 +110,8 @@ void ApplicationListModel::loadApplications()
                         KServiceGroup::Ptr serviceGroup(static_cast<KServiceGroup *>(entry.data()));
                         subGroupList << serviceGroup;
 
-                    } else if (entry->property("Exec").isValid()) {
-                        qDebug() << entry->property("Categories");
-                        KService::Ptr service(static_cast<KService *>(entry.data()));
+                    } else if (const auto service = static_cast<KService *>(entry.data()); entry->isType(KST_KService) && !service->exec().isEmpty()) {
+                        qDebug() << service->property<QStringList>("Categories");
                         qDebug() << " desktopEntryName: " << service->desktopEntryName();
 
                         // else if (entry->property("Exec").isValid()) {
@@ -121,7 +120,7 @@ void ApplicationListModel::loadApplications()
                         //  qDebug() << " desktopEntryName: " << service->desktopEntryName();
 
                         if (service->isApplication() && !blacklist.contains(service->desktopEntryName()) && service->showOnCurrentPlatform()
-                            && !service->property("Terminal", QMetaType::Bool).toBool()) {
+                            && !service->property<bool>("Terminal")) {
                             QRegularExpression voiceExpr(QStringLiteral("mycroft-gui-app .* --skill=(.*)\\.home"));
 
                             if (service->categories().contains(QStringLiteral("VoiceApp")) && voiceExpr.match(service->exec()).hasMatch()) {
@@ -142,7 +141,7 @@ void ApplicationListModel::loadApplications()
                             data.storageId = service->storageId();
                             data.entryPath = service->exec();
                             data.desktopPath = service->entryPath();
-                            data.startupNotify = service->property("StartupNotify").toBool();
+                            data.startupNotify = service->property<bool>("StartupNotify");
 
                             auto it = m_appPositions.constFind(service->storageId());
                             if (it != m_appPositions.constEnd()) {
@@ -247,7 +246,7 @@ Q_INVOKABLE void ApplicationListModel::moveItem(int row, int destination)
     m_appOrder.clear();
     m_appPositions.clear();
     int i = 0;
-    for ( const auto &app : std::as_const(m_applicationList)) {
+    for (const auto &app : std::as_const(m_applicationList)) {
         m_appOrder << app.storageId;
         m_appPositions[app.storageId] = i;
         ++i;
@@ -273,7 +272,7 @@ void ApplicationListModel::runApplication(const QString &storageId)
 
     KService::Ptr service = KService::serviceByStorageId(storageId);
 
-    //KRun::runApplication(*service, QList<QUrl>(), nullptr);
+    // KRun::runApplication(*service, QList<QUrl>(), nullptr);
     KIO::ApplicationLauncherJob *job = new KIO::ApplicationLauncherJob(service);
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
     job->start();

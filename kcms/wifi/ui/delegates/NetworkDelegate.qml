@@ -40,7 +40,7 @@ BigScreen.AbstractDelegate {
     contentItem: Item {
         id: connectionItemLayout
 
-        PlasmaCore.IconItem {
+        Kirigami.Icon {
             id: connectionSvgIcon
             width: PlasmaCore.Units.iconSizes.huge
             height: width

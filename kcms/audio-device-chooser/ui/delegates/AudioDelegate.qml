@@ -55,7 +55,7 @@ BigScreen.AbstractDelegate {
     contentItem: Item {
         id: contentItemLayout
         
-        PlasmaCore.IconItem {
+        Kirigami.Icon {
             id: deviceAudioSvgIcon
             width: PlasmaCore.Units.iconSizes.huge
             height: width
@@ -110,7 +110,7 @@ BigScreen.AbstractDelegate {
             anchors.rightMargin: Kirigami.Units.largeSpacing
             anchors.bottomMargin: Kirigami.Units.largeSpacing
 
-            PlasmaCore.IconItem {
+            Kirigami.Icon {
                 id: deviceDefaultIcon
                 anchors.centerIn: parent
                 width: listView.currentIndex == index && delegate.activeFocus ? PlasmaCore.Units.iconSizes.medium : PlasmaCore.Units.iconSizes.smallMedium
