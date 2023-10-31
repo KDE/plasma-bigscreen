@@ -11,7 +11,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 import org.kde.kirigami as Kirigami
-
+import org.kde.ksvg as KSvg
 
 PlasmaComponents.Button {
     id: button
@@ -24,11 +24,11 @@ PlasmaComponents.Button {
     rightPadding: 0
     bottomPadding: 0
 
-    background: PlasmaCore.FrameSvgItem {
+    background: KSvg.FrameSvgItem {
         id: frame
         imagePath: "widgets/viewitem"
         prefix: "hover"
-        colorGroup: Kirigami.Theme.colorGroup
+        //  FIXME olorGroup: Kirigami.Theme.colorGroup
         
         visible: button.activeFocus
     }
@@ -36,7 +36,7 @@ PlasmaComponents.Button {
     contentItem: Kirigami.Icon {
         id: icon
         source: button.icon.name
-        colorGroup: Kirigami.Theme.colorGroup
+        // FIXME colorGroup: Kirigami.Theme.colorGroup
     }
 
     Keys.onReturnPressed: {

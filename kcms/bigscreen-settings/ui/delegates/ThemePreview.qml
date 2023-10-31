@@ -19,6 +19,7 @@ import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.4 as Kirigami
+import org.kde.ksvg as KSvg
 
 Item {
     id: root
@@ -29,7 +30,7 @@ Item {
         anchors.fill: parent
         clip: true
 
-        PlasmaCore.FrameSvgItem {
+        KSvg.FrameSvgItem {
             id: background
             // Normalize margins around background.
             // Some themes like "Air" have huge transparent margins which would result in too small container area.

@@ -8,7 +8,7 @@
 import QtQuick 2.14
 import QtQuick.Layouts 1.14
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.networkmanagement 0.2 as PlasmaNM
+import org.kde.plasma.networkmanagement as PlasmaNM
 import org.kde.kirigami 2.12 as Kirigami
 
 Kirigami.AbstractListItem {
