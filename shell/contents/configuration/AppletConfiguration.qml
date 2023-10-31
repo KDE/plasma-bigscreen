@@ -12,6 +12,7 @@ import QtQuick.Window 2.2
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.configuration 2.0
+import org.kde.ksvg as KSvg
 
 
 //TODO: all of this will be done with desktop components
@@ -126,9 +127,9 @@ Rectangle {
         topPadding: background.margins.top
         rightPadding: background.margins.right
         bottomPadding: 0
-        background: PlasmaCore.FrameSvgItem {
+        background: KSvg.FrameSvgItem {
             imagePath: "widgets/background"
-            enabledBorders: PlasmaCore.FrameSvgItem.LeftBorder | PlasmaCore.FrameSvgItem.TopBorder | PlasmaCore.FrameSvgItem.RightBorder
+            enabledBorders: KSvg.FrameSvgItem.LeftBorder | KSvg.FrameSvgItem.TopBorder | KSvg.FrameSvgItem.RightBorder
         }
         contentItem: ColumnLayout {
             id: dialogRootItem
