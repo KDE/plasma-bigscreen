@@ -38,6 +38,7 @@ find_package(KF6 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     KIO
     Wayland
     WindowSystem
+    Svg
 )
 
 find_package(LibKWorkspace 5.19 CONFIG REQUIRED)

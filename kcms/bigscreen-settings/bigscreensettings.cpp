@@ -17,7 +17,7 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 
-#include <Plasma/Svg>
+#include <KSvg/Svg>
 #include <Plasma/Theme>
 
 #include "timedated_interface.h"
@@ -55,8 +55,8 @@ void BigscreenSettings::applyPlasmaTheme(QQuickItem *item, const QString &themeN
         m_themes[themeName] = theme;
     }
 
-    for (Plasma::Svg *svg : item->findChildren<Plasma::Svg *>()) {
-        svg->setTheme(theme);
+    for (KSvg::Svg *svg : item->findChildren<KSvg::Svg *>()) {
+        // FIXME svg->setTheme(theme);
         svg->setUsingRenderingCache(false);
     }
 }

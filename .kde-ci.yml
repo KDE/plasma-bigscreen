@@ -21,6 +21,7 @@ Dependencies:
     'frameworks/kwindowsystem': '@latest'
     'frameworks/solid': '@latest'
     'plasma/plasma-framework': '@same'
+    'frameworks/ksvg': '@latest'
     'plasma/plasma-workspace': '@same'
     'plasma/kactivities': '@latest' # Different versioning due to being a former Framework
     'plasma/kactivities-stats': '@latest' # Different versioning due to being a former Framework
