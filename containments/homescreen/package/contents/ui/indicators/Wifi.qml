@@ -48,6 +48,6 @@ AbstractIndicator {
                             connectionIcon.Kirigami.ScenePosition.x + connectionIcon.width/2,
                             connectionIcon.Kirigami.ScenePosition.y + connectionIcon.height/2,
                             Math.min(connectionIcon.width, connectionIcon.height));
-        plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_wifi")
+        Plasmoid.executeCommand("plasma-settings -s -m kcm_mediacenter_wifi")
     }
 }

@@ -5,14 +5,15 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
-import QtQuick.Layouts 1.14
-import QtQuick.Controls 2.14 as Controls
-import QtQuick.Window 2.14
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
+import QtQuick.Controls 2.15 as Controls
+import QtQuick.Window 2.15
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami 2.19 as Kirigami
 import org.kde.kitemmodels 1.0 as KItemModels
 
 import "delegates" as Delegates
@@ -21,20 +22,21 @@ import org.kde.private.biglauncher 1.0
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
 FocusScope {
-    property bool mycroftIntegration: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive() ? 1 : 0
+    property bool mycroftIntegration: false
+    // property bool mycroftIntegration: Plasmoid.bigLauncherDbusAdapterInterface.mycroftIntegrationActive() ? 1 : 0
 
-    Connections {
-        target: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface
+    // Connections {
+    //     target: Plasmoid.bigLauncherDbusAdapterInterface
 
-        onEnableMycroftIntegrationChanged: {
-            mycroftIntegration = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive()
-            if(mycroftIntegration){
-                voiceAppsView.visible = voiceAppsView.count > 0 ? 1 : 0
-            } else {
-                voiceAppsView.visible = false
-            }
-        }
-    }
+    //     function onEnableMycroftIntegrationChanged(mycroftIntegration) {
+    //         mycroftIntegration = Plasmoid.bigLauncherDbusAdapterInterface.mycroftIntegrationActive()
+    //         if(mycroftIntegration){
+    //             voiceAppsView.visible = voiceAppsView.count > 0 ? 1 : 0
+    //         } else {
+    //             voiceAppsView.visible = false
+    //         }
+    //     }
+    // }
 
     anchors {
         fill: parent
@@ -64,7 +66,7 @@ FocusScope {
         BigScreen.TileRepeater {
             id: recentView
             title: i18n("Recent")
-            compactMode: plasmoid.configuration.expandingTiles
+            compactMode: Plasmoid.expandingTiles
             model: Kicker.RecentUsageModel {
                 shownItems: Kicker.RecentUsageModel.OnlyApps
             }
@@ -78,7 +80,9 @@ FocusScope {
                 iconImage: model.decoration
                 text: model.display
                 comment: model.description
-                onClicked: recentView.model.trigger(index, "", null);
+                onClicked: (mouse)=> {
+                    recentView.model.trigger(index, "", null);
+                }
             }
 
             navigationUp: shutdownIndicator
@@ -88,9 +92,9 @@ FocusScope {
         BigScreen.TileRepeater {
             id: voiceAppsView
             title: i18n("Voice Apps")
-            compactMode: plasmoid.configuration.expandingTiles
+            compactMode: Plasmoid.configuration.expandingTiles
             model: KItemModels.KSortFilterProxyModel {
-                sourceModel: plasmoid.nativeInterface.applicationListModel
+                sourceModel: Plasmoid.applicationListModel
                 filterRoleName: "ApplicationCategoriesRole"
                 filterRowCallback: function(source_row, source_parent) {
                     return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("VoiceApp") !== -1;
@@ -113,11 +117,11 @@ FocusScope {
         BigScreen.TileRepeater {
             id: appsView
             title: i18n("Applications")
-            compactMode: plasmoid.configuration.expandingTiles
+            compactMode: Plasmoid.configuration.expandingTiles
             visible: count > 0
             enabled: count > 0
             model: KItemModels.KSortFilterProxyModel {
-                sourceModel: plasmoid.nativeInterface.applicationListModel
+                sourceModel: Plasmoid.applicationListModel
                 filterRoleName: "ApplicationCategoriesRole"
                 filterRowCallback: function(source_row, source_parent) {
                     var cats = sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole);
@@ -140,11 +144,11 @@ FocusScope {
         BigScreen.TileRepeater {
             id: gamesView
             title: i18n("Games")
-            compactMode: plasmoid.configuration.expandingTiles
+            compactMode: Plasmoid.configuration.expandingTiles
             visible: count > 0
             enabled: count > 0
             model: KItemModels.KSortFilterProxyModel {
-                sourceModel: plasmoid.nativeInterface.applicationListModel
+                sourceModel: Plasmoid.applicationListModel
                 filterRoleName: "ApplicationCategoriesRole"
                 filterRowCallback: function(source_row, source_parent) {
                     return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("Game") !== -1;
@@ -162,26 +166,26 @@ FocusScope {
             navigationDown: settingsView
         }
 
-        SettingActions {
-            id: settingActions
-        }
+        // SettingActions {
+        //     id: settingActions
+        // }
         
-        BigScreen.TileRepeater {
-            id: settingsView
-            title: i18n("Settings")
-            model: plasmoid.nativeInterface.kcmsListModel
-            compactMode: plasmoid.configuration.expandingTiles
+        // BigScreen.TileRepeater {
+        //     id: settingsView
+        //     title: i18n("Settings")
+        //     model: Plasmoid.kcmsListModel
+        //     compactMode: plasmoid.configuration.expandingTiles
 
-            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = settingsView
-            delegate: Delegates.SettingDelegate {
-                property var modelData: typeof model !== "undefined" ? model : null
-                visible: model.active
-                enabled: model.active
-            }
+        //     onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = settingsView
+        //     delegate: Delegates.SettingDelegate {
+        //         property var modelData: typeof model !== "undefined" ? model : null
+        //         visible: model.active
+        //         enabled: model.active
+        //     }
             
-            navigationUp: gamesView.visible ? gamesView : (appsView.visible ? appsView : (voiceAppsView.visible ? voiceAppsView : (recentView.visible ? recentView : shutdownIndicator)))
-            navigationDown: null
-        }
+        //     navigationUp: gamesView.visible ? gamesView : (appsView.visible ? appsView : (voiceAppsView.visible ? voiceAppsView : (recentView.visible ? recentView : shutdownIndicator)))
+        //     navigationDown: null
+        // }
 
         Component.onCompleted: {
             if (recentView.visible) {
@@ -195,10 +199,9 @@ FocusScope {
 
         Connections {
             target: root
-            onActivateAppView: {
+            function onActivateAppView() {
                 voiceAppsView.forceActiveFocus();
             }
         }
     }
 }
-

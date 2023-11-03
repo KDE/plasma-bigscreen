@@ -5,43 +5,45 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
-import QtQuick.Layouts 1.14
-import QtQuick.Controls 2.14 as Controls
-import QtQuick.Window 2.14
-import Qt5Compat.GraphicalEffects
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
+import QtQuick.Controls 2.15 as Controls
+import QtQuick.Window 2.15
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami 2.19 as Kirigami
 
 import "launcher"
 import "indicators" as Indicators
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import Qt5Compat.GraphicalEffects
 
-Item {
+ContainmentItem {
     id: root
     Layout.minimumWidth: Screen.desktopAvailableWidth
     Layout.minimumHeight: Screen.desktopAvailableHeight * 0.6
 
-    property bool mycroftIntegration: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive() ? 1 : 0
+    //property bool mycroftIntegration: Plasmoid.bigLauncherDbusAdapterInterface.mycroftIntegrationActive() ? 1 : 0
+    property bool mycroftIntegration: false
 
     property Item wallpaper
 
     Connections {
-        target: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface
-        onEnableMycroftIntegrationChanged: {
-            mycroftIntegration = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive()
-            if(mycroftIntegration) {
-                mycroftIndicatorLoader.active = true
-                mycroftWindowLoader.active = true
-            } else {
-                mycroftIndicatorLoader.item.disconnectclose()
-                mycroftWindowLoader.item.disconnectclose()
-            }
-        }
-        onEnablePmInhibitionChanged: {
-            var powerInhibition = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.pmInhibitionActive()
+        target: Plasmoid.bigLauncherDbusAdapterInterface
+
+        // function onEnableMycroftIntegrationChanged(mycroftIntegration) {
+        //     mycroftIntegration = Plasmoid.bigLauncherDbusAdapterInterface.mycroftIntegrationActive()
+        //     if(mycroftIntegration) {
+        //         mycroftIndicatorLoader.active = true
+        //         mycroftWindowLoader.active = true
+        //     } else {
+        //         mycroftIndicatorLoader.item.disconnectclose()
+        //         mycroftWindowLoader.item.disconnectclose()
+        //     }
+        // }
+        function onEnablePmInhibitionChanged(pmInhibition) {
+            var powerInhibition = Plasmoid.bigLauncherDbusAdapterInterface.pmInhibitionActive()
             if(powerInhibition) {
                 pmInhibitItem.inhibit = true
             } else {
@@ -59,20 +61,20 @@ Item {
         //inhibit: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.pmInhibitionActive()
     }
 
-    Kirigami.Theme.colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
+    // PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
     Component.onCompleted: {
         for (var i in plasmoid.applets) {
             root.addApplet(plasmoid.applets[i], -1, -1)
         }
         console.log("checking for power inhibition")
-        console.log(plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.pmInhibitionActive())
-        pmInhibitItem.inhibit = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.pmInhibitionActive()
+        console.log(Plasmoid.bigLauncherDbusAdapterInterface.pmInhibitionActive())
+        pmInhibitItem.inhibit = Plasmoid.bigLauncherDbusAdapterInterface.pmInhibitionActive()
     }
 
     function addApplet(applet, x, y) {
         var container = appletContainerComponent.createObject(appletsLayout)
         print("Applet added: " + applet + " " + applet.title)
-        //container.width = units.iconSizes.medium
+        //container.width = Kirigami.Units.iconSizes.medium
         container.height = appletsLayout.height
 
         applet.parent = container;
@@ -88,7 +90,7 @@ Item {
             property Item applet
             visible: applet && applet.status !== PlasmaCore.Types.HiddenStatus && applet.status !== PlasmaCore.Types.PassiveStatus
             Layout.fillHeight: true
-            Layout.minimumWidth: Math.max(applet.implicitWidth, applet.Layout.preferredWidth, applet.Layout.minimumWidth) + units.gridUnit
+            Layout.minimumWidth: Math.max(applet.implicitWidth, applet.Layout.preferredWidth, applet.Layout.minimumWidth) + Kirigami.Units.gridUnit
             Layout.maximumWidth: Layout.minimumWidth
         }
     }
@@ -98,10 +100,11 @@ Item {
     }
 
     // Loader to make Mycroft completely optional
-    Loader {
-        id: mycroftWindowLoader
-        source: mycroftIntegration && Qt.resolvedUrl("MycroftWindow.qml") ? Qt.resolvedUrl("MycroftWindow.qml") : null
-    }
+    // Won't actually work disable it for now
+    // Loader {
+    //     id: mycroftWindowLoader
+    //     source: mycroftIntegration && Qt.resolvedUrl("MycroftWindow.qml") ? Qt.resolvedUrl("MycroftWindow.qml") : null
+    // }
 
     ConfigWindow {
         id: plasmoidConfig
@@ -115,7 +118,7 @@ Item {
         x: root.Window.active ? 0 : -width
         Behavior on x {
             XAnimator {
-                duration: units.longDuration
+                duration: Kirigami.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
@@ -138,28 +141,27 @@ Item {
         }
     }
 
-    Kirigami.Theme {
+    Item {
         id: topBar
         anchors {
             left: parent.left
             right: parent.right
         }
         z: launcher.z + 1
-        colorGroup: PlasmaCore.Theme.NormalColorGroup
         Kirigami.Theme.colorSet: Kirigami.Theme.Window
-        height: units.iconSizes.medium + units.smallSpacing * 2
+        height: Kirigami.Units.iconSizes.medium + Kirigami.Units.smallSpacing * 2
         opacity: root.Window.active
 
         y: root.Window.active ? 0 : -height
         Behavior on y {
             YAnimator {
-                duration: units.longDuration
+                duration: Kirigami.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
         Behavior on opacity {
             OpacityAnimator {
-                duration: units.longDuration
+                duration: Kirigami.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
@@ -174,7 +176,7 @@ Item {
                 left: parent.left
                 top: parent.top
                 bottom: parent.bottom
-                margins: units.smallSpacing
+                margins: Kirigami.Units.smallSpacing
             }
         }
 
@@ -183,26 +185,29 @@ Item {
                 right: parent.right
                 top: parent.top
                 bottom: parent.bottom
-                margins: units.smallSpacing
+                margins: Kirigami.Units.smallSpacing
             }
 
-            // Loader to make Mycroft completely optional
-            Loader {
-                id: mycroftIndicatorLoader
-                Layout.fillHeight: true
-                source: mycroftIntegration && Qt.resolvedUrl("MycroftIndicator.qml") ? Qt.resolvedUrl("MycroftIndicator.qml") : null
-            }
+            // Loader to make Mycroft completely optional 
+            // Won't actually work disable it for now
+            // Loader {
+            //     id: mycroftIndicatorLoader
+            //     Layout.fillHeight: true
+            //     source: mycroftIntegration && Qt.resolvedUrl("MycroftIndicator.qml") ? Qt.resolvedUrl("MycroftIndicator.qml") : null
+            // }
 
-            Indicators.KdeConnect {
-                id: kdeconnectIndicator
-                Layout.fillHeight: true
-                implicitWidth: height
-                KeyNavigation.down: launcher
-                KeyNavigation.right: volumeIndicator
-                KeyNavigation.tab: volumeIndicator
-                KeyNavigation.backtab: launcher
-                KeyNavigation.left: kdeconnectIndicator
-            }
+
+            // KF6 QML import missing ? 
+            // Indicators.KdeConnect {
+            //     id: kdeconnectIndicator
+            //     Layout.fillHeight: true
+            //     implicitWidth: height
+            //     KeyNavigation.down: launcher
+            //     KeyNavigation.right: volumeIndicator
+            //     KeyNavigation.tab: volumeIndicator
+            //     KeyNavigation.backtab: launcher
+            //     KeyNavigation.left: kdeconnectIndicator
+            // }
 
             Indicators.Volume {
                 id: volumeIndicator
@@ -236,7 +241,7 @@ Item {
         }
 
         LinearGradient {
-            property int radius: units.gridUnit
+            property int radius: Kirigami.Units.gridUnit
             implicitWidth: radius
             implicitHeight: radius
             anchors {
@@ -297,11 +302,11 @@ Item {
             Transition {
                 ParallelAnimation {
                     OpacityAnimator {
-                        duration: units.longDuration
+                        duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
                     }
                     YAnimator {
-                        duration: units.longDuration
+                        duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
                     }
                 }

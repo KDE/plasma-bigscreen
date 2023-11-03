@@ -39,6 +39,8 @@ Window {
         id: background
         anchors.fill: parent
         //colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
+        // Kirigami,Theme.inherit: false
+        // Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
         width: window.width
         height: window.height
         state: "closed"
@@ -51,6 +53,8 @@ Window {
                 Kirigami.Icon {
                     id: icon
                     // FIXME colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
+                    // Kirigami,Theme.inherit: false
+                    // Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                     Layout.preferredWidth: PlasmaCore.Units.iconSizes.enormous
                     Layout.preferredHeight: Layout.preferredWidth
                     Layout.alignment: Qt.AlignCenter

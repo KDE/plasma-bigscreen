@@ -20,8 +20,8 @@ BigscreenDbusAdapterInterface::BigscreenDbusAdapterInterface(QObject *parent)
 {
     // constructor
     QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.registerObject("/Plugin", this, QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportNonScriptableSlots);
-    dbus.registerService("org.kde.bigscreen");
+    // dbus.registerObject("/Plugin", this, QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportNonScriptableSlots);
+    // dbus.registerService("org.kde.bigscreen");
     setAutoRelaySignals(true);
 }
 
