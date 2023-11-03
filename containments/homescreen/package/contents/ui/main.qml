@@ -13,7 +13,7 @@ import Qt5Compat.GraphicalEffects
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami as Kirigami
 
 import "launcher"
 import "indicators" as Indicators
@@ -59,7 +59,6 @@ Item {
         //inhibit: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.pmInhibitionActive()
     }
 
-    Kirigami.Theme.colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
     Component.onCompleted: {
         for (var i in plasmoid.applets) {
             root.addApplet(plasmoid.applets[i], -1, -1)

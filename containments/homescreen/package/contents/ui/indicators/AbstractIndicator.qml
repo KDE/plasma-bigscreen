@@ -28,15 +28,12 @@ PlasmaComponents.Button {
         id: frame
         imagePath: "widgets/viewitem"
         prefix: "hover"
-        //  FIXME olorGroup: Kirigami.Theme.colorGroup
-        
         visible: button.activeFocus
     }
 
     contentItem: Kirigami.Icon {
         id: icon
         source: button.icon.name
-        // FIXME colorGroup: Kirigami.Theme.colorGroup
     }
 
     Keys.onReturnPressed: {
