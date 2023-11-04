@@ -29,7 +29,6 @@
         "Description[sv]": "Utseende och känsla",
         "Description[tr]": "Görünüm ve His",
         "Description[uk]": "Вигляд і поведінка",
-        "Description[x-test]": "xxLook and Feelxx",
         "Description[zh_CN]": "界面外观",
         "FormFactors": [
             "handset",
@@ -69,7 +68,6 @@
         "Name[sv]": "Utseende",
         "Name[tr]": "Görünüş",
         "Name[uk]": "Вигляд",
-        "Name[x-test]": "xxAppearancexx",
         "Name[zh_CN]": "外观"
     },
     "X-KDE-Keywords": "theme, look, feel",
