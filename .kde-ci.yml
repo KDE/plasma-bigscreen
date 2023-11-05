@@ -4,8 +4,6 @@
 Dependencies:
 - 'on': ['@all']
   'require':
-    'frameworks/kactivities': '@latest'
-    'frameworks/kactivities-stats': '@latest'
     'frameworks/kauth': '@latest'
     'frameworks/kcmutils': '@latest'
     'frameworks/kcodecs': '@latest'
@@ -25,3 +23,5 @@ Dependencies:
     'frameworks/plasma-framework': '@latest'
     'frameworks/solid': '@latest'
     'plasma/plasma-workspace': '@same'
+    'plasma/kactivities': '@latest' # Different versioning due to being a former Framework
+    'plasma/kactivities-stats': '@latest' # Different versioning due to being a former Framework
