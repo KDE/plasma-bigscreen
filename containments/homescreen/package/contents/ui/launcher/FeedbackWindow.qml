@@ -38,7 +38,7 @@ Window {
     Item {
         id: background
         anchors.fill: parent
-        Kirigami,Theme.inherit: false
+        Kirigami.Theme.inherit: false
         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
         width: window.width
         height: window.height
@@ -51,7 +51,7 @@ Window {
                 anchors.centerIn: parent
                 Kirigami.Icon {
                     id: icon
-                    Kirigami,Theme.inherit: false
+                    Kirigami.Theme.inherit: false
                     Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                     Layout.preferredWidth: PlasmaCore.Units.iconSizes.enormous
                     Layout.preferredHeight: Layout.preferredWidth
