@@ -27,18 +27,18 @@ include(ECMDeprecationSettings)
 remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 
 find_package(KF6 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
-    Activities
-    ActivitiesStats
-    Plasma
     I18n
     Kirigami2
     KCMUtils
     Notifications
-    PlasmaQuick
     KIO
-    Wayland
     WindowSystem
     Svg
+)
+find_package(KF6 REQUIRED COMPONENTS
+    Activities
+    ActivitiesStats
+    Plasma
 )
 
 find_package(LibKWorkspace 5.19 CONFIG REQUIRED)
