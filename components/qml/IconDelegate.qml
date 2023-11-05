@@ -11,7 +11,7 @@ import Qt5Compat.GraphicalEffects
 import QtQuick.Controls 2.14
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.kirigami 2.13 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
 AbstractDelegate {
@@ -26,21 +26,20 @@ AbstractDelegate {
     property bool compactMode: false
     property bool hasComment: commentLabel.text.length > 5 ? 1 : 0
 
-    Kirigami.Theme.inherit: false //!imagePalette.useColors
-    Kirigami.Theme.textColor: Kirigami.Theme.textColor //imagePalette.textColor
-    Kirigami.Theme.backgroundColor: Kirigami.Theme.backgroundColor //imagePalette.backgroundColor
+    Kirigami.Theme.inherit: !imagePalette.useColors
+    Kirigami.Theme.textColor: imagePalette.textColor
+    Kirigami.Theme.backgroundColor: imagePalette.backgroundColor
     Kirigami.Theme.highlightColor: Kirigami.Theme.accentColor
 
-    // Kirigami.ImageColors {
-    //     id: imagePalette
-    //     source: iconItem.source
-    //     property bool useColors: useIconColors
-    //     property color backgroundColor: useColors ? dominantContrast : Kirigami.Theme.backgroundColor
-    //     property color accentColor: useColors ? highlight : Kirigami.Theme.highlightColor
-    //     property color textColor: useColors
-    //         ? (Kirigami.ColorUtils.brightnessForColor(dominantContrast) === Kirigami.ColorUtils.Light ? imagePalette.closestToBlack : imagePalette.closestToWhite)
-    //         : Kirigami.Theme.textColor
-    // }
+    Kirigami.ImageColors {
+        id: imagePalette
+        property bool useColors: useIconColors
+        property color backgroundColor: useColors ? dominantContrast : Kirigami.Theme.backgroundColor
+        property color accentColor: useColors ? highlight : Kirigami.Theme.highlightColor
+        property color textColor: useColors
+            ? (Kirigami.ColorUtils.brightnessForColor(dominantContrast) === Kirigami.ColorUtils.Light ? imagePalette.closestToBlack : imagePalette.closestToWhite)
+            : Kirigami.Theme.textColor
+    }
 
     contentItem: Item {
         id: content
@@ -63,6 +62,11 @@ AbstractDelegate {
                 Layout.preferredWidth: topArea.columns > 1 ? parent.height * 0.75 : (delegate.compactMode ? parent.height / 2 : parent.height)
                 Layout.preferredHeight: width
                 source: delegate.iconImage || delegate.icon.name
+                onStatusChanged: {
+                    imagePalette.source = iconItem.source
+                    imagePalette.update()
+                }
+
 
                 Behavior on Layout.preferredWidth {
                     ParallelAnimation {
@@ -187,12 +191,12 @@ AbstractDelegate {
                 columns: 1
                 rows: 2
             }
-            // PropertyChanges {
-            //     target: iconItem
-            //     Layout.preferredHeight: delegate.compactMode ? parent.height / 2 : parent.height * 0.75
-            //     Layout.preferredWidth: height
-            //     Layout.alignment: Qt.AlignHCenter
-            // }
+            PropertyChanges {
+                target: iconItem
+                Layout.preferredHeight: delegate.compactMode ? parent.height / 2 : parent.height * 0.75
+                Layout.preferredWidth: height
+                Layout.alignment: Qt.AlignHCenter
+            }
             PropertyChanges {
                 target: textLabel
                 horizontalAlignment: Text.AlignHCenter

@@ -42,6 +42,7 @@ ContainmentItem {
         //         mycroftWindowLoader.item.disconnectclose()
         //     }
         // }
+
         function onEnablePmInhibitionChanged(pmInhibition) {
             var powerInhibition = Plasmoid.bigLauncherDbusAdapterInterface.pmInhibitionActive()
             if(powerInhibition) {
@@ -62,6 +63,9 @@ ContainmentItem {
     }
 
     // PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
+    Kirigami.Theme.inherit: false
+    Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+
     Component.onCompleted: {
         for (var i in plasmoid.applets) {
             root.addApplet(plasmoid.applets[i], -1, -1)
@@ -76,12 +80,13 @@ ContainmentItem {
         print("Applet added: " + applet + " " + applet.title)
         //container.width = Kirigami.Units.iconSizes.medium
         container.height = appletsLayout.height
-
-        applet.parent = container;
-        container.applet = applet;
-        applet.anchors.fill = container;
-        applet.visible = true;
-        applet.expanded = false;
+        
+        const appletItem = root.itemFor(applet);        
+        appletItem.parent = container;
+        container.applet = appletItem;
+        appletItem.anchors.fill = container;
+        appletItem.visible = true;
+        appletItem.expanded = false;
     }
 
     Component {
@@ -197,7 +202,8 @@ ContainmentItem {
             // }
 
 
-            // KF6 QML import missing ? 
+            // KF6 QML import org.kde.kdeconnect missing
+            // Indicator does not load without this
             // Indicators.KdeConnect {
             //     id: kdeconnectIndicator
             //     Layout.fillHeight: true
@@ -217,7 +223,6 @@ ContainmentItem {
                 KeyNavigation.right: wifiIndicator
                 KeyNavigation.tab: wifiIndicator
                 KeyNavigation.backtab: launcher
-                KeyNavigation.left: kdeconnectIndicator
             }
 
             Indicators.Wifi {
@@ -286,6 +291,11 @@ ContainmentItem {
                     target: launcher
                     opacity: 1
                     y: topBar.height
+                }
+                StateChangeScript {
+                    script: {
+                        launcher.activateAppView()
+                    }
                 }
             },
             State {

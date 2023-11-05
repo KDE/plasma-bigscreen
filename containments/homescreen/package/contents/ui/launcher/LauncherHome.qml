@@ -23,6 +23,8 @@ import org.kde.plasma.private.kicker 0.1 as Kicker
 
 FocusScope {
     property bool mycroftIntegration: false
+
+    // Mycroft Integration Is Disabled
     // property bool mycroftIntegration: Plasmoid.bigLauncherDbusAdapterInterface.mycroftIntegrationActive() ? 1 : 0
 
     // Connections {
@@ -166,26 +168,26 @@ FocusScope {
             navigationDown: settingsView
         }
 
-        // SettingActions {
-        //     id: settingActions
-        // }
+        SettingActions {
+            id: settingActions
+        }
         
-        // BigScreen.TileRepeater {
-        //     id: settingsView
-        //     title: i18n("Settings")
-        //     model: Plasmoid.kcmsListModel
-        //     compactMode: plasmoid.configuration.expandingTiles
+        BigScreen.TileRepeater {
+            id: settingsView
+            title: i18n("Settings")
+            model: Plasmoid.kcmsListModel
+            compactMode: plasmoid.configuration.expandingTiles
 
-        //     onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = settingsView
-        //     delegate: Delegates.SettingDelegate {
-        //         property var modelData: typeof model !== "undefined" ? model : null
-        //         visible: model.active
-        //         enabled: model.active
-        //     }
+            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = settingsView
+            delegate: Delegates.SettingDelegate {
+                property var modelData: typeof model !== "undefined" ? model : null
+                visible: model.active
+                enabled: model.active
+            }
             
-        //     navigationUp: gamesView.visible ? gamesView : (appsView.visible ? appsView : (voiceAppsView.visible ? voiceAppsView : (recentView.visible ? recentView : shutdownIndicator)))
-        //     navigationDown: null
-        // }
+            navigationUp: gamesView.visible ? gamesView : (appsView.visible ? appsView : (voiceAppsView.visible ? voiceAppsView : (recentView.visible ? recentView : shutdownIndicator)))
+            navigationDown: null
+        }
 
         Component.onCompleted: {
             if (recentView.visible) {
@@ -200,7 +202,13 @@ FocusScope {
         Connections {
             target: root
             function onActivateAppView() {
-                voiceAppsView.forceActiveFocus();
+                if (recentView.visible) {
+                recentView.forceActiveFocus();
+                } else if(voiceAppsView.visible) {
+                    voiceAppsView.forceActiveFocus();
+                } else {
+                    appsView.forceActiveFocus();
+                }
             }
         }
     }

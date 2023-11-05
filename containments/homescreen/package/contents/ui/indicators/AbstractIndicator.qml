@@ -39,13 +39,15 @@ PlasmaComponents.Button {
         // FIXME colorGroup: Kirigami.Theme.colorGroup
     }
 
-    Keys.onReturnPressed: {
+    Keys.onReturnPressed: (event)=> {
         clicked();
     }
 
-    onClicked: BigScreen.NavigationSoundEffects.playClickedSound()
+    onClicked: (event)=> {
+        BigScreen.NavigationSoundEffects.playClickedSound()
+    }
 
-    Keys.onPressed: {
+    Keys.onPressed: (event)=> {
         switch (event.key) {
             case Qt.Key_Down:
             case Qt.Key_Right:

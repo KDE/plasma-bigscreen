@@ -50,17 +50,17 @@ FocusScope {
         }
     }
 
-    // Connections {
-    //     target: Plasmoid.bigLauncherDbusAdapterInterface
-    //     function onUseColoredTilesChanged(msgUseColoredTiles) {
-    //         Plasmoid.configuration.coloredTiles = msgUseColoredTiles;
-    //         Plasmoid.setUseColoredTiles(plasmoid.configuration.coloredTiles);
-    //     }
-    //     function onUseExpandableTilesChanged(msgUseExpandableTiles) {
-    //         Plasmoid.configuration.expandingTiles = msgUseExpandableTiles;
-    //         Plasmoid.setUseExpandableTiles(plasmoid.configuration.expandingTiles);
-    //     }
-    // }
+    Connections {
+        target: Plasmoid.bigLauncherDbusAdapterInterface
+        function onUseColoredTilesChanged(msgUseColoredTiles) {
+            Plasmoid.configuration.coloredTiles = msgUseColoredTiles;
+            Plasmoid.setUseColoredTiles(plasmoid.configuration.coloredTiles);
+        }
+        function onUseExpandableTilesChanged(msgUseExpandableTiles) {
+            Plasmoid.configuration.expandingTiles = msgUseExpandableTiles;
+            Plasmoid.setUseExpandableTiles(plasmoid.configuration.expandingTiles);
+        }
+    }
 
     Connections {
         target: root
