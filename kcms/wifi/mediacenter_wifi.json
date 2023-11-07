@@ -29,6 +29,7 @@
         "Description[sv]": "Anslut till WIFI-nätverk",
         "Description[tr]": "Wi-Fi ağlarına bağlanın",
         "Description[uk]": "З'єднання із мережами Wi-Fi",
+        "Description[x-test]": "xxConnect to Wifi networksxx",
         "Description[zh_CN]": "连接到 Wi-Fi 网络",
         "FormFactors": [
             "mediacenter"
@@ -69,6 +70,7 @@
         "Name[sv]": "WIFI",
         "Name[tr]": "Wi-Fi",
         "Name[uk]": "Wi-Fi",
+        "Name[x-test]": "xxWifixx",
         "Name[zh_CN]": "Wi-Fi",
         "Name[zh_TW]": "Wi-Fi"
     },
