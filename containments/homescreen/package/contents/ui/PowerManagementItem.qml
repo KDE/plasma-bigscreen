@@ -25,11 +25,12 @@ Item {
         id: pmSource
         engine: "powermanagement"
         connectedSources: sources
-        onSourceAdded: {
+        
+        onSourceAdded: function(source) {
             disconnectSource(source);
             connectSource(source);
         }
-        onSourceRemoved: {
+        onSourceRemoved: function(source) {
             disconnectSource(source);
         }
     }

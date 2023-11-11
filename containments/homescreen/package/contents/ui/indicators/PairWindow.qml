@@ -5,13 +5,13 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
-import QtQuick.Window 2.14
-import QtQuick.Layouts 1.14
-import QtQuick.Controls 2.14 as Controls
+import QtQuick 2.15
+import QtQuick.Window 2.15
+import QtQuick.Layouts 1.15
+import QtQuick.Controls 2.15 as Controls
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami 2.19 as Kirigami
 import org.kde.kdeconnect 1.0 as KDEConnect
 
 Window {
@@ -71,12 +71,12 @@ Window {
                         }
                     }
                                         
-                    onClicked: {
+                    onClicked: (mouse)=> {
                         currentDevice.acceptPairing()
                         root.close()
                     }
                     
-                    Keys.onReturnPressed: {
+                    Keys.onReturnPressed: (event)=> {
                         clicked()
                     }
 
@@ -107,12 +107,12 @@ Window {
                         }
                     }
                     
-                    onClicked: {
+                    onClicked: (mouse)=> {
                         currentDevice.rejectPairing()
                         root.close()
                     }
                     
-                    Keys.onReturnPressed: {
+                    Keys.onReturnPressed: (event)=> {
                         clicked()
                     }
                 }

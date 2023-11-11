@@ -22,6 +22,6 @@ AbstractIndicator {
     }
 
     onClicked: {
-        plasmoid.nativeInterface.requestShutdown();
+        Plasmoid.requestShutdown();
     }
 }

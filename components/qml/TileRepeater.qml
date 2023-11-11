@@ -84,8 +84,8 @@ FocusScope {
             topMargin: Kirigami.Units.largeSpacing*2
             leftMargin: -Kirigami.Units.largeSpacing
         }
-        readonly property int cellWidth: root.width / columns + (PlasmaCore.Units.gridUnit / 2)
-        property int cellHeight: root.compactMode ? cellWidth + units.gridUnit * 3 : cellWidth * 0.75
+        readonly property int cellWidth: root.width / columns + (Kirigami.Units.gridUnit / 1)
+        property int cellHeight: root.compactMode ? cellWidth + Kirigami.Units.gridUnit * 2 : cellWidth * 0.75
         property int currentIndex: 0
         property alias count: repeater.count
         property alias model: repeater.model

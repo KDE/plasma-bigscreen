@@ -8,7 +8,7 @@
 import QtQuick 2.14
 import QtQuick.Layouts 1.14
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.private.volume 0.1
+import org.kde.plasma.private.volume
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.plasma.private.nanoshell as NanoShell
 import "code/icon.js" as Icon
@@ -146,6 +146,6 @@ AbstractIndicator {
                             paIcon.Kirigami.ScenePosition.x + paIcon.width/2,
                             paIcon.Kirigami.ScenePosition.y + paIcon.height/2,
                             Math.min(paIcon.width, paIcon.height));
-        plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_audiodevice")
+        Plasmoid.executeCommand("plasma-settings -s -m kcm_mediacenter_audiodevice")
     }
 }

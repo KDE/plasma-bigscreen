@@ -5,17 +5,17 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
-import QtQuick.Layouts 1.14
-import QtQuick.Controls 2.14 as Controls
-import QtQuick.Window 2.14
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
+import QtQuick.Controls 2.15 as Controls
+import QtQuick.Window 2.15
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.mycroft.bigscreen 1.0 as Launcher
 import org.kde.private.biglauncher 1.0
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami 2.19 as Kirigami
 
 FocusScope {
     id: root
@@ -26,8 +26,8 @@ FocusScope {
     signal activateSettingsView
 
     property Item wallpaper: {
-        for (var i in plasmoid.children) {
-            if (plasmoid.children[i].toString().indexOf("WallpaperInterface") === 0) {
+        for (var i in Plasmoid.children) {
+            if (Plasmoid.children[i].toString().indexOf("WallpaperInterface") === 0) {
                 return plasmoid.children[i];
             }
         }
@@ -36,35 +36,35 @@ FocusScope {
 
     Component.onCompleted: {
         root.forceActiveFocus();
-        plasmoid.nativeInterface.kcmsListModel.loadKcms();
-        plasmoid.nativeInterface.applicationListModel.loadApplications();
+        plasmoid.kcmsListModel.loadKcms();
+        plasmoid.applicationListModel.loadApplications();
         root.activateAppView();
-        plasmoid.nativeInterface.setUseColoredTiles(plasmoid.configuration.coloredTiles);
-        plasmoid.nativeInterface.setUseExpandableTiles(plasmoid.configuration.expandingTiles);
+        plasmoid.setUseColoredTiles(plasmoid.configuration.coloredTiles);
+        plasmoid.setUseExpandableTiles(plasmoid.configuration.expandingTiles);
     }
 
     Connections {
-        target: plasmoid.applicationListModel
-        onAppOrderChanged: {
+        target: Plasmoid.applicationListModel
+        function onAppOrderChanged() {
             root.activateAppView()
         }
     }
 
     Connections {
-        target: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface
-        onUseColoredTilesChanged: {
-            plasmoid.configuration.coloredTiles = msgUseColoredTiles;
-            plasmoid.nativeInterface.setUseColoredTiles(plasmoid.configuration.coloredTiles);
+        target: Plasmoid.bigLauncherDbusAdapterInterface
+        function onUseColoredTilesChanged(msgUseColoredTiles) {
+            Plasmoid.configuration.coloredTiles = msgUseColoredTiles;
+            Plasmoid.setUseColoredTiles(plasmoid.configuration.coloredTiles);
         }
-        onUseExpandableTilesChanged: {
-            plasmoid.configuration.expandingTiles = msgUseExpandableTiles;
-            plasmoid.nativeInterface.setUseExpandableTiles(plasmoid.configuration.expandingTiles);
+        function onUseExpandableTilesChanged(msgUseExpandableTiles) {
+            Plasmoid.configuration.expandingTiles = msgUseExpandableTiles;
+            Plasmoid.setUseExpandableTiles(plasmoid.configuration.expandingTiles);
         }
     }
 
     Connections {
         target: root
-        onActivateTopNavBar: {
+        function onActivateTopNavBar() {
             topButtonBar.focus = true
         }
     }
