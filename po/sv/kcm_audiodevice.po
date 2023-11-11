@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:36+0000\n"
+"POT-Creation-Date: 2023-11-11 00:43+0000\n"
 "PO-Revision-Date: 2022-03-27 10:36+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -17,62 +17,58 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.08.1\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Stefan Asserhäll"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "stefan.asserhall@bredband.net"
-
-#: audiodevice.cpp:18
-#, kde-format
-msgid "Configure Plasma Audio"
-msgstr "Anpassa Plasma ljud"
-
-#: package/contents/ui/delegates/CompactAudioDelegate.qml:88
+#: ui/delegates/CompactAudioDelegate.qml:87
 #, kde-format
 msgctxt "label of device items"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: package/contents/ui/delegates/VolumeObject.qml:59
+#: ui/delegates/VolumeObject.qml:59
 #, kde-format
 msgid "Adjust Volume"
 msgstr "Justera volym"
 
-#: package/contents/ui/delegates/VolumeObject.qml:124
+#: ui/delegates/VolumeObject.qml:124
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1 %"
 
-#: package/contents/ui/DeviceChooserPage.qml:75
+#: ui/DeviceChooserPage.qml:74
 #, kde-format
 msgid "Exit"
 msgstr "Avsluta"
 
-#: package/contents/ui/DeviceChooserPage.qml:128
+#: ui/DeviceChooserPage.qml:127
 #, kde-format
 msgid "Playback Devices"
 msgstr "Uppspelningsenheter"
 
-#: package/contents/ui/DeviceChooserPage.qml:160
+#: ui/DeviceChooserPage.qml:159
 #, kde-format
 msgid "Recording Devices"
 msgstr "Inspelningsenheter"
 
-#: package/contents/ui/main.qml:22
+#: ui/main.qml:21
 #, kde-format
 msgid "Audio Device Chooser"
 msgstr "Ljudenhetsväljare"
 
-#: package/contents/ui/SettingsItem.qml:235
+#: ui/SettingsItem.qml:235
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "Klicka på knappen Bakåt [←] för att återgå till enhetsval"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Stefan Asserhäll"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "stefan.asserhall@bredband.net"
+
+#~ msgid "Configure Plasma Audio"
+#~ msgstr "Anpassa Plasma ljud"
 
 #~ msgid "Connected"
 #~ msgstr "Ansluten"

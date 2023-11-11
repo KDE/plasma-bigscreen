@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:36+0000\n"
+"POT-Creation-Date: 2023-11-11 00:43+0000\n"
 "PO-Revision-Date: 2022-04-04 13:48+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -17,62 +17,58 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 20.04.2\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Tommi Nieminen"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "translator@legisign.org"
-
-#: audiodevice.cpp:18
-#, kde-format
-msgid "Configure Plasma Audio"
-msgstr "Plasman ääniasetukset"
-
-#: package/contents/ui/delegates/CompactAudioDelegate.qml:88
+#: ui/delegates/CompactAudioDelegate.qml:87
 #, kde-format
 msgctxt "label of device items"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: package/contents/ui/delegates/VolumeObject.qml:59
+#: ui/delegates/VolumeObject.qml:59
 #, kde-format
 msgid "Adjust Volume"
 msgstr "Säädä äänenvoimakkuutta"
 
-#: package/contents/ui/delegates/VolumeObject.qml:124
+#: ui/delegates/VolumeObject.qml:124
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1 %"
 
-#: package/contents/ui/DeviceChooserPage.qml:75
+#: ui/DeviceChooserPage.qml:74
 #, kde-format
 msgid "Exit"
 msgstr "Lopeta"
 
-#: package/contents/ui/DeviceChooserPage.qml:128
+#: ui/DeviceChooserPage.qml:127
 #, kde-format
 msgid "Playback Devices"
 msgstr "Toistolaitteet"
 
-#: package/contents/ui/DeviceChooserPage.qml:160
+#: ui/DeviceChooserPage.qml:159
 #, kde-format
 msgid "Recording Devices"
 msgstr "Tallentavat laitteet"
 
-#: package/contents/ui/main.qml:22
+#: ui/main.qml:21
 #, kde-format
 msgid "Audio Device Chooser"
 msgstr "Äänilaitevalinta"
 
-#: package/contents/ui/SettingsItem.qml:235
+#: ui/SettingsItem.qml:235
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "Palaa laitteen valintaan Takaisin-painikkeella [←]"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Tommi Nieminen"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "translator@legisign.org"
+
+#~ msgid "Configure Plasma Audio"
+#~ msgstr "Plasman ääniasetukset"
 
 #~ msgid "Connected"
 #~ msgstr "Yhdistetty"

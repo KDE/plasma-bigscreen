@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:36+0000\n"
+"POT-Creation-Date: 2023-11-11 00:43+0000\n"
 "PO-Revision-Date: 2021-05-16 23:56+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,77 +17,73 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 20.12.3\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "박신조"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "kde@peremen.name"
-
-#: kdeconnect.cpp:18
-#, kde-format
-msgid "Configure KDE Connect"
-msgstr "KDE Connect 설정"
-
-#: package/contents/ui/delegates/PairedView.qml:29
+#: ui/delegates/PairedView.qml:29
 #, kde-format
 msgid "This device is paired"
 msgstr "이 장치가 연결됨"
 
-#: package/contents/ui/delegates/PairedView.qml:62
+#: ui/delegates/PairedView.qml:62
 #, kde-format
 msgid "Unpair"
 msgstr "연결 해제"
 
-#: package/contents/ui/delegates/PairRequest.qml:29
+#: ui/delegates/PairRequest.qml:29
 #, kde-format
 msgid "This device is requesting to be paired"
 msgstr "장치에서 연결 요청을 보냄"
 
-#: package/contents/ui/delegates/PairRequest.qml:63
+#: ui/delegates/PairRequest.qml:63
 #, kde-format
 msgid "Accept"
 msgstr "수락"
 
-#: package/contents/ui/delegates/PairRequest.qml:99
+#: ui/delegates/PairRequest.qml:99
 #, kde-format
 msgid "Reject"
 msgstr "거부"
 
-#: package/contents/ui/delegates/UnpairedView.qml:40
+#: ui/delegates/UnpairedView.qml:40
 #, kde-format
 msgid "This device is not paired"
 msgstr "장치가 연결되지 않음"
 
-#: package/contents/ui/delegates/UnpairedView.qml:80
+#: ui/delegates/UnpairedView.qml:80
 #, kde-format
 msgid "Pair"
 msgstr "연결"
 
-#: package/contents/ui/delegates/UnpairedView.qml:91
+#: ui/delegates/UnpairedView.qml:91
 #, kde-format
 msgid "Pairing request sent to device"
 msgstr "장치에 연결 요청 보냄"
 
-#: package/contents/ui/delegates/Unreachable.qml:19
+#: ui/delegates/Unreachable.qml:18
 #, kde-format
 msgid "This device is not reachable"
 msgstr "이 장치에 접근할 수 없음"
 
-#: package/contents/ui/DeviceConnectionView.qml:196
+#: ui/DeviceConnectionView.qml:196
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "[←] 뒤로 단추를 누르면 장치 선택으로 돌아갑니다"
 
-#: package/contents/ui/main.qml:23
+#: ui/main.qml:22
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
 
-#: package/contents/ui/main.qml:90
+#: ui/main.qml:89
 #, kde-format
 msgid "Exit"
 msgstr "끝내기"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "박신조"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde@peremen.name"
+
+#~ msgid "Configure KDE Connect"
+#~ msgstr "KDE Connect 설정"

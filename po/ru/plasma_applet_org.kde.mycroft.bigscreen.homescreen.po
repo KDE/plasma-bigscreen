@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:36+0000\n"
+"POT-Creation-Date: 2023-11-11 00:43+0000\n"
 "PO-Revision-Date: 2023-01-28 22:16+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -59,22 +59,22 @@ msgstr "Принять"
 msgid "Reject"
 msgstr "Отклонить"
 
-#: contents/ui/indicators/Volume.qml:122
+#: contents/ui/indicators/Volume.qml:121
 #, kde-format
 msgid "Increase Volume"
 msgstr "Увеличить громкость"
 
-#: contents/ui/indicators/Volume.qml:129
+#: contents/ui/indicators/Volume.qml:128
 #, kde-format
 msgid "Decrease Volume"
 msgstr "Уменьшить громкость"
 
-#: contents/ui/indicators/Volume.qml:136
+#: contents/ui/indicators/Volume.qml:135
 #, kde-format
 msgid "Mute"
 msgstr "Выключить звук"
 
-#: contents/ui/indicators/Volume.qml:146
+#: contents/ui/indicators/Volume.qml:145
 #, kde-format
 msgid "Audio Device chooser"
 msgstr "Выбор звукового устройства"
@@ -109,27 +109,27 @@ msgstr "Включить удалённую систему преобразов�
 msgid "Enable Remote STT"
 msgstr "Включить удалённую систему преобразования речи в текст"
 
-#: contents/ui/launcher/LauncherHome.qml:67
+#: contents/ui/launcher/LauncherHome.qml:66
 #, kde-format
 msgid "Recent"
 msgstr "Недавние"
 
-#: contents/ui/launcher/LauncherHome.qml:91
+#: contents/ui/launcher/LauncherHome.qml:90
 #, kde-format
 msgid "Voice Apps"
 msgstr "Приложения с управлением голосом"
 
-#: contents/ui/launcher/LauncherHome.qml:116
+#: contents/ui/launcher/LauncherHome.qml:115
 #, kde-format
 msgid "Applications"
 msgstr "Приложения"
 
-#: contents/ui/launcher/LauncherHome.qml:143
+#: contents/ui/launcher/LauncherHome.qml:142
 #, kde-format
 msgid "Games"
 msgstr "Игры"
 
-#: contents/ui/launcher/LauncherHome.qml:172
+#: contents/ui/launcher/LauncherHome.qml:171
 #, kde-format
 msgid "Settings"
 msgstr "Параметры"
@@ -139,7 +139,7 @@ msgstr "Параметры"
 msgid "Getting Ready... Please Wait"
 msgstr "Подождите, выполняется подготовка..."
 
-#: contents/ui/PowerManagementItem.qml:41
+#: contents/ui/PowerManagementItem.qml:40
 #, kde-format
 msgid "Bigscreen has enabled system-wide inhibition"
 msgstr "Bigscreen было включено общесистемное состояние блокировки"

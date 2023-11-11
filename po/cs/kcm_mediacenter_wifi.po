@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:36+0000\n"
+"POT-Creation-Date: 2023-11-11 00:43+0000\n"
 "PO-Revision-Date: 2023-06-14 15:01+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -17,75 +17,70 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.2\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Vít Pelčák"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "vit@pelcak.org"
-
-#: package/contents/ui/delegates/CompactNetworkDelegate.qml:112
-#: package/contents/ui/delegates/NetworkDelegate.qml:128
-#: package/contents/ui/DeviceConnectionItem.qml:61
-#: package/contents/ui/NetworkItem.qml:95
+#: ui/delegates/CompactNetworkDelegate.qml:111
+#: ui/delegates/NetworkDelegate.qml:127 ui/DeviceConnectionItem.qml:60
+#: ui/NetworkItem.qml:94
 #, kde-format
 msgid "Connected"
 msgstr "Připojen"
 
-#: package/contents/ui/DeviceConnectionItem.qml:236
+#: ui/DeviceConnectionItem.qml:235
 #, kde-format
 msgid "Speed"
 msgstr "Rychlost"
 
-#: package/contents/ui/main.qml:130
+#: ui/main.qml:129
 #, kde-format
 msgid "Enter Password For %1"
 msgstr "Zadejte heslo pro %1"
 
-#: package/contents/ui/main.qml:139
+#: ui/main.qml:138
 #, kde-format
 msgid "Password..."
 msgstr "Heslo..."
 
-#: package/contents/ui/main.qml:163
+#: ui/main.qml:162
 #, kde-format
 msgid "Connect"
 msgstr "Připojit se"
 
-#: package/contents/ui/main.qml:178 package/contents/ui/main.qml:244
+#: ui/main.qml:177 ui/main.qml:243
 #, kde-format
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: package/contents/ui/main.qml:210
+#: ui/main.qml:209
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
 msgstr "Opravdu si přejete zapomenou síť %1?"
 
-#: package/contents/ui/main.qml:217
+#: ui/main.qml:216
 #, kde-format
 msgid "Forget"
 msgstr "Zapomenout"
 
-#: package/contents/ui/main.qml:329
+#: ui/main.qml:328
 #, kde-format
 msgid "Refresh"
 msgstr "Obnovit"
 
-#: package/contents/ui/main.qml:364
+#: ui/main.qml:363
 #, kde-format
 msgid "Exit"
 msgstr "Ukončit"
 
-#: package/contents/ui/main.qml:392
+#: ui/main.qml:391
 #, kde-format
 msgid "Manage Connections"
 msgstr "Spravovat spojení"
 
-#: wifi.cpp:18
-#, kde-format
-msgid "Configure Plasma wifi"
-msgstr "Nastavit v Plasma WiFi"
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Vít Pelčák"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "vit@pelcak.org"
+
+#~ msgid "Configure Plasma wifi"
+#~ msgstr "Nastavit v Plasma WiFi"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:36+0000\n"
+"POT-Creation-Date: 2023-11-11 00:43+0000\n"
 "PO-Revision-Date: 2023-06-15 22:49+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -28,150 +28,149 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "emir_sari@icloud.com"
 
-#: bigscreensettings.cpp:30 package/contents/ui/main.qml:22
-#, kde-format
-msgid "Appearance"
-msgstr "Görünüş"
-
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Jan"
 msgstr "Oca"
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Feb"
 msgstr "Şub"
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Mar"
 msgstr "Mar"
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Apr"
 msgstr "Nis"
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "May"
 msgstr "May"
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Jun"
 msgstr "Haz"
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Jul"
 msgstr "Tem"
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Aug"
 msgstr "Ağu"
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Sep"
 msgstr "Eyl"
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Oct"
 msgstr "Eki"
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Nov"
 msgstr "Kas"
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Dec"
 msgstr "Ara"
 
-#: package/contents/ui/DeviceTimeSettings.qml:148
+#: ui/DeviceTimeSettings.qml:149
 #, kde-format
 msgid "Time Display"
 msgstr "Zaman Görünümü"
 
-#: package/contents/ui/DeviceTimeSettings.qml:155
+#: ui/DeviceTimeSettings.qml:156
 #, kde-format
 msgid "Timezone:"
 msgstr "Zaman dilimi:"
 
-#: package/contents/ui/DeviceTimeSettings.qml:175
+#: ui/DeviceTimeSettings.qml:176
 #, kde-format
 msgid "Set time automatically:"
 msgstr "Zamanı otomatik olarak ayarla:"
 
-#: package/contents/ui/DeviceTimeSettings.qml:209
+#: ui/DeviceTimeSettings.qml:210
 #, kde-format
 msgid "Time"
 msgstr "Zaman"
 
-#: package/contents/ui/DeviceTimeSettings.qml:241
+#: ui/DeviceTimeSettings.qml:242
 #, kde-format
 msgid "Date"
 msgstr "Tarih"
 
-#: package/contents/ui/DeviceTimeSettings.qml:314
+#: ui/DeviceTimeSettings.qml:315
 #, kde-format
 msgid "Press the [←] Back button to return to appearance settings"
 msgstr "Görünüş ayarlarına geri dönmek için [←] Geri düğmesine basın"
 
-#: package/contents/ui/DeviceTimeSettings.qml:377
-#: package/contents/ui/DeviceTimeSettings.qml:502
-#: package/contents/ui/DeviceTimeSettings.qml:599
+#: ui/DeviceTimeSettings.qml:378 ui/DeviceTimeSettings.qml:503
+#: ui/DeviceTimeSettings.qml:600
 #, kde-format
 msgid "Press the [←] Back button to save configuration and return to settings"
 msgstr ""
 "Yapılandırmayı kaydedip ayarlara geri dönmek için [←] Geri düğmesine basın"
 
-#: package/contents/ui/DeviceTimeSettings.qml:418
+#: ui/DeviceTimeSettings.qml:419
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "Yerel zaman diliminiz %1"
 
-#: package/contents/ui/DeviceTimeSettings.qml:418
+#: ui/DeviceTimeSettings.qml:419
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:106
+#: ui/main.qml:21
+#, kde-format
+msgid "Appearance"
+msgstr "Görünüş"
+
+#: ui/main.qml:105
 #, kde-format
 msgid "Exit"
 msgstr "Çık"
 
-#: package/contents/ui/main.qml:147
+#: ui/main.qml:146
 #, kde-format
 msgid "Launcher Appearance"
 msgstr "Başlatıcı Görünüşü"
 
-#: package/contents/ui/main.qml:193
+#: ui/main.qml:192
 #, kde-format
 msgid "Power Inhibition"
 msgstr "Güç Engellemeleri"
 
-#: package/contents/ui/main.qml:212
+#: ui/main.qml:211
 #, kde-format
 msgid "Colored Tiles"
 msgstr "Renkli Döşemeler"
 
-#: package/contents/ui/main.qml:231
+#: ui/main.qml:230
 #, kde-format
 msgid "Expanding Tiles"
 msgstr "Genişleyen Döşemeler"
 
-#: package/contents/ui/main.qml:249
+#: ui/main.qml:248
 #, kde-format
 msgid "Adjust Date & Time"
 msgstr "Tarih ve Zamanı Ayarla"
 
-#: package/contents/ui/main.qml:276
+#: ui/main.qml:275
 #, kde-format
 msgid "General Appearance"
 msgstr "Genel Görünüş"

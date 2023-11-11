@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:36+0000\n"
+"POT-Creation-Date: 2023-11-11 00:43+0000\n"
 "PO-Revision-Date: 2023-02-01 21:20+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -58,22 +58,22 @@ msgstr "Kabul Et"
 msgid "Reject"
 msgstr "Reddet"
 
-#: contents/ui/indicators/Volume.qml:122
+#: contents/ui/indicators/Volume.qml:121
 #, kde-format
 msgid "Increase Volume"
 msgstr "Ses Düzeyini Artır"
 
-#: contents/ui/indicators/Volume.qml:129
+#: contents/ui/indicators/Volume.qml:128
 #, kde-format
 msgid "Decrease Volume"
 msgstr "Ses Düzeyini Azalt"
 
-#: contents/ui/indicators/Volume.qml:136
+#: contents/ui/indicators/Volume.qml:135
 #, kde-format
 msgid "Mute"
 msgstr "Sessiz"
 
-#: contents/ui/indicators/Volume.qml:146
+#: contents/ui/indicators/Volume.qml:145
 #, kde-format
 msgid "Audio Device chooser"
 msgstr "Ses Aygıtı Seçicisi"
@@ -108,27 +108,27 @@ msgstr "Uzaktan TTS'yi Etkinleştir"
 msgid "Enable Remote STT"
 msgstr "Uzaktan STT'yi Etkinleştir"
 
-#: contents/ui/launcher/LauncherHome.qml:67
+#: contents/ui/launcher/LauncherHome.qml:66
 #, kde-format
 msgid "Recent"
 msgstr "Son Kullanılan"
 
-#: contents/ui/launcher/LauncherHome.qml:91
+#: contents/ui/launcher/LauncherHome.qml:90
 #, kde-format
 msgid "Voice Apps"
 msgstr "Ses Uygulamaları"
 
-#: contents/ui/launcher/LauncherHome.qml:116
+#: contents/ui/launcher/LauncherHome.qml:115
 #, kde-format
 msgid "Applications"
 msgstr "Uygulamalar"
 
-#: contents/ui/launcher/LauncherHome.qml:143
+#: contents/ui/launcher/LauncherHome.qml:142
 #, kde-format
 msgid "Games"
 msgstr "Oyunlar"
 
-#: contents/ui/launcher/LauncherHome.qml:172
+#: contents/ui/launcher/LauncherHome.qml:171
 #, kde-format
 msgid "Settings"
 msgstr "Ayarlar"
@@ -138,7 +138,7 @@ msgstr "Ayarlar"
 msgid "Getting Ready... Please Wait"
 msgstr "Hazırlanıyor... Lütfen Bekleyin"
 
-#: contents/ui/PowerManagementItem.qml:41
+#: contents/ui/PowerManagementItem.qml:40
 #, kde-format
 msgid "Bigscreen has enabled system-wide inhibition"
 msgstr "Büyük Ekran, sistem genelinde engellemeyi etkinleştirdi"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_kdeconnect\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:36+0000\n"
+"POT-Creation-Date: 2023-11-11 00:43+0000\n"
 "PO-Revision-Date: 2021-01-30 16:38+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -19,78 +19,74 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.04.2\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Víctor Rodrigo Córdoba"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "vrcordoba@gmail.com"
-
-#: kdeconnect.cpp:18
-#, kde-format
-msgid "Configure KDE Connect"
-msgstr "Configure KDE Connect"
-
-#: package/contents/ui/delegates/PairedView.qml:29
+#: ui/delegates/PairedView.qml:29
 #, kde-format
 msgid "This device is paired"
 msgstr "Este dispositivo está vinculado"
 
-#: package/contents/ui/delegates/PairedView.qml:62
+#: ui/delegates/PairedView.qml:62
 #, kde-format
 msgid "Unpair"
 msgstr "Desvincular"
 
-#: package/contents/ui/delegates/PairRequest.qml:29
+#: ui/delegates/PairRequest.qml:29
 #, kde-format
 msgid "This device is requesting to be paired"
 msgstr "Este dispositivo está pidiendo vincularse"
 
-#: package/contents/ui/delegates/PairRequest.qml:63
+#: ui/delegates/PairRequest.qml:63
 #, kde-format
 msgid "Accept"
 msgstr "Aceptar"
 
-#: package/contents/ui/delegates/PairRequest.qml:99
+#: ui/delegates/PairRequest.qml:99
 #, kde-format
 msgid "Reject"
 msgstr "Rechazar"
 
-#: package/contents/ui/delegates/UnpairedView.qml:40
+#: ui/delegates/UnpairedView.qml:40
 #, kde-format
 msgid "This device is not paired"
 msgstr "Este dispositivo no está vinculado"
 
-#: package/contents/ui/delegates/UnpairedView.qml:80
+#: ui/delegates/UnpairedView.qml:80
 #, kde-format
 msgid "Pair"
 msgstr "Vincular"
 
-#: package/contents/ui/delegates/UnpairedView.qml:91
+#: ui/delegates/UnpairedView.qml:91
 #, kde-format
 msgid "Pairing request sent to device"
 msgstr "Petición de vinculación enviada al dispositivo"
 
-#: package/contents/ui/delegates/Unreachable.qml:19
+#: ui/delegates/Unreachable.qml:18
 #, kde-format
 msgid "This device is not reachable"
 msgstr "Este dispositivo no está presente"
 
-#: package/contents/ui/DeviceConnectionView.qml:196
+#: ui/DeviceConnectionView.qml:196
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr ""
 "Pulse la tecla retroceso [←] para retornar a la selección de dispositivo"
 
-#: package/contents/ui/main.qml:23
+#: ui/main.qml:22
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
 
-#: package/contents/ui/main.qml:90
+#: ui/main.qml:89
 #, kde-format
 msgid "Exit"
 msgstr "Salir"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Víctor Rodrigo Córdoba"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "vrcordoba@gmail.com"
+
+#~ msgid "Configure KDE Connect"
+#~ msgstr "Configure KDE Connect"

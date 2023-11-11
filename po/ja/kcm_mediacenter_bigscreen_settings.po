@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:36+0000\n"
+"POT-Creation-Date: 2023-11-11 00:43+0000\n"
 "PO-Revision-Date: 2021-08-12 22:31-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -24,149 +24,148 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: bigscreensettings.cpp:30 package/contents/ui/main.qml:22
-#, kde-format
-msgid "Appearance"
-msgstr ""
-
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Jan"
 msgstr ""
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Feb"
 msgstr ""
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Mar"
 msgstr ""
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Apr"
 msgstr ""
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "May"
 msgstr ""
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Jun"
 msgstr ""
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Jul"
 msgstr ""
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Aug"
 msgstr ""
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Sep"
 msgstr ""
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Oct"
 msgstr ""
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Nov"
 msgstr ""
 
-#: package/contents/ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Dec"
 msgstr ""
 
-#: package/contents/ui/DeviceTimeSettings.qml:148
+#: ui/DeviceTimeSettings.qml:149
 #, kde-format
 msgid "Time Display"
 msgstr ""
 
-#: package/contents/ui/DeviceTimeSettings.qml:155
+#: ui/DeviceTimeSettings.qml:156
 #, kde-format
 msgid "Timezone:"
 msgstr ""
 
-#: package/contents/ui/DeviceTimeSettings.qml:175
+#: ui/DeviceTimeSettings.qml:176
 #, kde-format
 msgid "Set time automatically:"
 msgstr ""
 
-#: package/contents/ui/DeviceTimeSettings.qml:209
+#: ui/DeviceTimeSettings.qml:210
 #, kde-format
 msgid "Time"
 msgstr ""
 
-#: package/contents/ui/DeviceTimeSettings.qml:241
+#: ui/DeviceTimeSettings.qml:242
 #, kde-format
 msgid "Date"
 msgstr ""
 
-#: package/contents/ui/DeviceTimeSettings.qml:314
+#: ui/DeviceTimeSettings.qml:315
 #, kde-format
 msgid "Press the [←] Back button to return to appearance settings"
 msgstr ""
 
-#: package/contents/ui/DeviceTimeSettings.qml:377
-#: package/contents/ui/DeviceTimeSettings.qml:502
-#: package/contents/ui/DeviceTimeSettings.qml:599
+#: ui/DeviceTimeSettings.qml:378 ui/DeviceTimeSettings.qml:503
+#: ui/DeviceTimeSettings.qml:600
 #, kde-format
 msgid "Press the [←] Back button to save configuration and return to settings"
 msgstr ""
 
-#: package/contents/ui/DeviceTimeSettings.qml:418
+#: ui/DeviceTimeSettings.qml:419
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr ""
 
-#: package/contents/ui/DeviceTimeSettings.qml:418
+#: ui/DeviceTimeSettings.qml:419
 #, kde-format
 msgid "%1, %2"
 msgstr ""
 
-#: package/contents/ui/main.qml:106
+#: ui/main.qml:21
+#, kde-format
+msgid "Appearance"
+msgstr ""
+
+#: ui/main.qml:105
 #, kde-format
 msgid "Exit"
 msgstr ""
 
-#: package/contents/ui/main.qml:147
+#: ui/main.qml:146
 #, kde-format
 msgid "Launcher Appearance"
 msgstr ""
 
-#: package/contents/ui/main.qml:193
+#: ui/main.qml:192
 #, kde-format
 msgid "Power Inhibition"
 msgstr ""
 
-#: package/contents/ui/main.qml:212
+#: ui/main.qml:211
 #, kde-format
 msgid "Colored Tiles"
 msgstr ""
 
-#: package/contents/ui/main.qml:231
+#: ui/main.qml:230
 #, kde-format
 msgid "Expanding Tiles"
 msgstr ""
 
-#: package/contents/ui/main.qml:249
+#: ui/main.qml:248
 #, kde-format
 msgid "Adjust Date & Time"
 msgstr ""
 
-#: package/contents/ui/main.qml:276
+#: ui/main.qml:275
 #, kde-format
 msgid "General Appearance"
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:36+0000\n"
+"POT-Creation-Date: 2023-11-11 00:43+0000\n"
 "PO-Revision-Date: 2022-04-15 04:47+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -18,62 +18,58 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Deutsches KDE-Übersetzerteam"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "kde-i18n-de@kde.org"
-
-#: audiodevice.cpp:18
-#, kde-format
-msgid "Configure Plasma Audio"
-msgstr "Plasma-Audio einrichten"
-
-#: package/contents/ui/delegates/CompactAudioDelegate.qml:88
+#: ui/delegates/CompactAudioDelegate.qml:87
 #, kde-format
 msgctxt "label of device items"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: package/contents/ui/delegates/VolumeObject.qml:59
+#: ui/delegates/VolumeObject.qml:59
 #, kde-format
 msgid "Adjust Volume"
 msgstr "Lautstärke anpassen"
 
-#: package/contents/ui/delegates/VolumeObject.qml:124
+#: ui/delegates/VolumeObject.qml:124
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/DeviceChooserPage.qml:75
+#: ui/DeviceChooserPage.qml:74
 #, kde-format
 msgid "Exit"
 msgstr "Beenden"
 
-#: package/contents/ui/DeviceChooserPage.qml:128
+#: ui/DeviceChooserPage.qml:127
 #, kde-format
 msgid "Playback Devices"
 msgstr "Wiedergabegeräte"
 
-#: package/contents/ui/DeviceChooserPage.qml:160
+#: ui/DeviceChooserPage.qml:159
 #, kde-format
 msgid "Recording Devices"
 msgstr "Aufnahmegeräte"
 
-#: package/contents/ui/main.qml:22
+#: ui/main.qml:21
 #, kde-format
 msgid "Audio Device Chooser"
 msgstr "Audiogerät auswählen"
 
-#: package/contents/ui/SettingsItem.qml:235
+#: ui/SettingsItem.qml:235
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "Drücken Sie den Knopf  [←]  „Zurück“ bringt Sie zur Geräteauswahl"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Deutsches KDE-Übersetzerteam"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde-i18n-de@kde.org"
+
+#~ msgid "Configure Plasma Audio"
+#~ msgstr "Plasma-Audio einrichten"
 
 #~ msgid "Connected"
 #~ msgstr "Verbunden"

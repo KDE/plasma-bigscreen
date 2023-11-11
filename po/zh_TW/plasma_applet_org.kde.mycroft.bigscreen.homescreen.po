@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:36+0000\n"
+"POT-Creation-Date: 2023-11-11 00:43+0000\n"
 "PO-Revision-Date: 2020-02-28 22:00+0800\n"
 "Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -60,22 +60,22 @@ msgstr ""
 msgid "Reject"
 msgstr ""
 
-#: contents/ui/indicators/Volume.qml:122
+#: contents/ui/indicators/Volume.qml:121
 #, kde-format
 msgid "Increase Volume"
 msgstr "增加音量"
 
-#: contents/ui/indicators/Volume.qml:129
+#: contents/ui/indicators/Volume.qml:128
 #, kde-format
 msgid "Decrease Volume"
 msgstr "降低音量"
 
-#: contents/ui/indicators/Volume.qml:136
+#: contents/ui/indicators/Volume.qml:135
 #, kde-format
 msgid "Mute"
 msgstr "靜音"
 
-#: contents/ui/indicators/Volume.qml:146
+#: contents/ui/indicators/Volume.qml:145
 #, kde-format
 msgid "Audio Device chooser"
 msgstr "音訊裝置選擇器"
@@ -110,28 +110,28 @@ msgstr "啟用遠端 TTS"
 msgid "Enable Remote STT"
 msgstr "啟用遠端 STT"
 
-#: contents/ui/launcher/LauncherHome.qml:67
+#: contents/ui/launcher/LauncherHome.qml:66
 #, fuzzy, kde-format
 #| msgid "Voice Apps"
 msgid "Recent"
 msgstr "語音 App"
 
-#: contents/ui/launcher/LauncherHome.qml:91
+#: contents/ui/launcher/LauncherHome.qml:90
 #, kde-format
 msgid "Voice Apps"
 msgstr "語音 App"
 
-#: contents/ui/launcher/LauncherHome.qml:116
+#: contents/ui/launcher/LauncherHome.qml:115
 #, kde-format
 msgid "Applications"
 msgstr "應用程式"
 
-#: contents/ui/launcher/LauncherHome.qml:143
+#: contents/ui/launcher/LauncherHome.qml:142
 #, kde-format
 msgid "Games"
 msgstr "遊戲"
 
-#: contents/ui/launcher/LauncherHome.qml:172
+#: contents/ui/launcher/LauncherHome.qml:171
 #, kde-format
 msgid "Settings"
 msgstr "設定"
@@ -141,7 +141,7 @@ msgstr "設定"
 msgid "Getting Ready... Please Wait"
 msgstr ""
 
-#: contents/ui/PowerManagementItem.qml:41
+#: contents/ui/PowerManagementItem.qml:40
 #, kde-format
 msgid "Bigscreen has enabled system-wide inhibition"
 msgstr ""

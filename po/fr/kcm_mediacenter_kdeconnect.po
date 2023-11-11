@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:36+0000\n"
+"POT-Creation-Date: 2023-11-11 00:43+0000\n"
 "PO-Revision-Date: 2021-01-24 11:16+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -15,79 +15,75 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 20.12.1\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Maxime Corteel"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "mcorteel@gmail.com"
-
-#: kdeconnect.cpp:18
-#, kde-format
-msgid "Configure KDE Connect"
-msgstr "Configurer KDE Connect"
-
-#: package/contents/ui/delegates/PairedView.qml:29
+#: ui/delegates/PairedView.qml:29
 #, kde-format
 msgid "This device is paired"
 msgstr "Ce périphérique est associé"
 
-#: package/contents/ui/delegates/PairedView.qml:62
+#: ui/delegates/PairedView.qml:62
 #, kde-format
 msgid "Unpair"
 msgstr "Dissocier"
 
-#: package/contents/ui/delegates/PairRequest.qml:29
+#: ui/delegates/PairRequest.qml:29
 #, kde-format
 msgid "This device is requesting to be paired"
 msgstr "Ce périphérique demande l'association"
 
-#: package/contents/ui/delegates/PairRequest.qml:63
+#: ui/delegates/PairRequest.qml:63
 #, kde-format
 msgid "Accept"
 msgstr "Accepter"
 
-#: package/contents/ui/delegates/PairRequest.qml:99
+#: ui/delegates/PairRequest.qml:99
 #, kde-format
 msgid "Reject"
 msgstr "Refuser"
 
-#: package/contents/ui/delegates/UnpairedView.qml:40
+#: ui/delegates/UnpairedView.qml:40
 #, kde-format
 msgid "This device is not paired"
 msgstr "Ce périphérique n'est pas associé"
 
-#: package/contents/ui/delegates/UnpairedView.qml:80
+#: ui/delegates/UnpairedView.qml:80
 #, kde-format
 msgid "Pair"
 msgstr "Associer"
 
-#: package/contents/ui/delegates/UnpairedView.qml:91
+#: ui/delegates/UnpairedView.qml:91
 #, kde-format
 msgid "Pairing request sent to device"
 msgstr "Requête d'association envoyée au périphérique"
 
-#: package/contents/ui/delegates/Unreachable.qml:19
+#: ui/delegates/Unreachable.qml:18
 #, kde-format
 msgid "This device is not reachable"
 msgstr "Ce périphérique est introuvable"
 
-#: package/contents/ui/DeviceConnectionView.qml:196
+#: ui/DeviceConnectionView.qml:196
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr ""
 "Appuyez sur le bouton [←] de retour pour revenir à la sélection de "
 "périphérique"
 
-#: package/contents/ui/main.qml:23
+#: ui/main.qml:22
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
 
-#: package/contents/ui/main.qml:90
+#: ui/main.qml:89
 #, kde-format
 msgid "Exit"
 msgstr "Quitter"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Maxime Corteel"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "mcorteel@gmail.com"
+
+#~ msgid "Configure KDE Connect"
+#~ msgstr "Configurer KDE Connect"

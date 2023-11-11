@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:36+0000\n"
+"POT-Creation-Date: 2023-11-11 00:43+0000\n"
 "PO-Revision-Date: 2021-07-26 01:00+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,78 +20,73 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.04.3\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Iñigo Salvador Azurmendi"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "xalba@ni.eus"
-
-#: package/contents/ui/delegates/CompactNetworkDelegate.qml:112
-#: package/contents/ui/delegates/NetworkDelegate.qml:128
-#: package/contents/ui/DeviceConnectionItem.qml:61
-#: package/contents/ui/NetworkItem.qml:95
+#: ui/delegates/CompactNetworkDelegate.qml:111
+#: ui/delegates/NetworkDelegate.qml:127 ui/DeviceConnectionItem.qml:60
+#: ui/NetworkItem.qml:94
 #, kde-format
 msgid "Connected"
 msgstr "Konektatuta"
 
-#: package/contents/ui/DeviceConnectionItem.qml:236
+#: ui/DeviceConnectionItem.qml:235
 #, kde-format
 msgid "Speed"
 msgstr "Abiadura"
 
-#: package/contents/ui/main.qml:130
+#: ui/main.qml:129
 #, kde-format
 msgid "Enter Password For %1"
 msgstr "Sartu %1(e)ko pasahitza"
 
-#: package/contents/ui/main.qml:139
+#: ui/main.qml:138
 #, kde-format
 msgid "Password..."
 msgstr "Pasahitza..."
 
-#: package/contents/ui/main.qml:163
+#: ui/main.qml:162
 #, kde-format
 msgid "Connect"
 msgstr "Konektatu"
 
-#: package/contents/ui/main.qml:178 package/contents/ui/main.qml:244
+#: ui/main.qml:177 ui/main.qml:243
 #, kde-format
 msgid "Cancel"
 msgstr "Utzi"
 
-#: package/contents/ui/main.qml:210
+#: ui/main.qml:209
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
 msgstr "Ziur zaude %1 sarea ahaztu nahi duzula?"
 
-#: package/contents/ui/main.qml:217
+#: ui/main.qml:216
 #, kde-format
 msgid "Forget"
 msgstr "Ahaztu"
 
-#: package/contents/ui/main.qml:329
+#: ui/main.qml:328
 #, kde-format
 msgid "Refresh"
 msgstr "Freskatu"
 
-#: package/contents/ui/main.qml:364
+#: ui/main.qml:363
 #, kde-format
 msgid "Exit"
 msgstr "Irten"
 
-#: package/contents/ui/main.qml:392
+#: ui/main.qml:391
 #, kde-format
 msgid "Manage Connections"
 msgstr "Konexioak kudeatu"
 
-#: wifi.cpp:18
-#, kde-format
-msgid "Configure Plasma wifi"
-msgstr "Konfiguratu Plasmako Wi-Fia"
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Iñigo Salvador Azurmendi"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "xalba@ni.eus"
+
+#~ msgid "Configure Plasma wifi"
+#~ msgstr "Konfiguratu Plasmako Wi-Fia"
 
 #~ msgid "Network"
 #~ msgstr "Sarea"

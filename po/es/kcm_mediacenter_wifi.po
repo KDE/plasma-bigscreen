@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:36+0000\n"
+"POT-Creation-Date: 2023-11-11 00:43+0000\n"
 "PO-Revision-Date: 2021-07-24 17:01+0200\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -17,78 +17,73 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.04.2\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Víctor Rodrigo Córdoba"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "vrcordoba@gmail.com"
-
-#: package/contents/ui/delegates/CompactNetworkDelegate.qml:112
-#: package/contents/ui/delegates/NetworkDelegate.qml:128
-#: package/contents/ui/DeviceConnectionItem.qml:61
-#: package/contents/ui/NetworkItem.qml:95
+#: ui/delegates/CompactNetworkDelegate.qml:111
+#: ui/delegates/NetworkDelegate.qml:127 ui/DeviceConnectionItem.qml:60
+#: ui/NetworkItem.qml:94
 #, kde-format
 msgid "Connected"
 msgstr "Conectado"
 
-#: package/contents/ui/DeviceConnectionItem.qml:236
+#: ui/DeviceConnectionItem.qml:235
 #, kde-format
 msgid "Speed"
 msgstr "Velocidad"
 
-#: package/contents/ui/main.qml:130
+#: ui/main.qml:129
 #, kde-format
 msgid "Enter Password For %1"
 msgstr "Introducir contraseña para %1"
 
-#: package/contents/ui/main.qml:139
+#: ui/main.qml:138
 #, kde-format
 msgid "Password..."
 msgstr "Contraseña..."
 
-#: package/contents/ui/main.qml:163
+#: ui/main.qml:162
 #, kde-format
 msgid "Connect"
 msgstr "Conectar"
 
-#: package/contents/ui/main.qml:178 package/contents/ui/main.qml:244
+#: ui/main.qml:177 ui/main.qml:243
 #, kde-format
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: package/contents/ui/main.qml:210
+#: ui/main.qml:209
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
 msgstr "¿Está seguro de que quiere olvidar la red %1?"
 
-#: package/contents/ui/main.qml:217
+#: ui/main.qml:216
 #, kde-format
 msgid "Forget"
 msgstr "Olvidar"
 
-#: package/contents/ui/main.qml:329
+#: ui/main.qml:328
 #, kde-format
 msgid "Refresh"
 msgstr "Refrescar"
 
-#: package/contents/ui/main.qml:364
+#: ui/main.qml:363
 #, kde-format
 msgid "Exit"
 msgstr "Salir"
 
-#: package/contents/ui/main.qml:392
+#: ui/main.qml:391
 #, kde-format
 msgid "Manage Connections"
 msgstr "Administrar conexiones"
 
-#: wifi.cpp:18
-#, kde-format
-msgid "Configure Plasma wifi"
-msgstr "Configurar wifi de Plasma"
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Víctor Rodrigo Córdoba"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "vrcordoba@gmail.com"
+
+#~ msgid "Configure Plasma wifi"
+#~ msgstr "Configurar wifi de Plasma"
 
 #~ msgid "Network"
 #~ msgstr "Red"

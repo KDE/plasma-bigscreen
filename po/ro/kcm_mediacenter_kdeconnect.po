@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:36+0000\n"
+"POT-Creation-Date: 2023-11-11 00:43+0000\n"
 "PO-Revision-Date: 2020-09-27 14:02+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -18,77 +18,73 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 19.12.3\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Sergiu Bivol"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "sergiu@cip.md"
-
-#: kdeconnect.cpp:18
-#, kde-format
-msgid "Configure KDE Connect"
-msgstr "Configurează KDE Connect"
-
-#: package/contents/ui/delegates/PairedView.qml:29
+#: ui/delegates/PairedView.qml:29
 #, kde-format
 msgid "This device is paired"
 msgstr "Acest dispozitiv e asociat"
 
-#: package/contents/ui/delegates/PairedView.qml:62
+#: ui/delegates/PairedView.qml:62
 #, kde-format
 msgid "Unpair"
 msgstr "Dezasociază"
 
-#: package/contents/ui/delegates/PairRequest.qml:29
+#: ui/delegates/PairRequest.qml:29
 #, kde-format
 msgid "This device is requesting to be paired"
 msgstr "Acest dispozitiv cere asocierea"
 
-#: package/contents/ui/delegates/PairRequest.qml:63
+#: ui/delegates/PairRequest.qml:63
 #, kde-format
 msgid "Accept"
 msgstr "Acceptă"
 
-#: package/contents/ui/delegates/PairRequest.qml:99
+#: ui/delegates/PairRequest.qml:99
 #, kde-format
 msgid "Reject"
 msgstr "Respinge"
 
-#: package/contents/ui/delegates/UnpairedView.qml:40
+#: ui/delegates/UnpairedView.qml:40
 #, kde-format
 msgid "This device is not paired"
 msgstr "Acest dispozitiv nu e asociat"
 
-#: package/contents/ui/delegates/UnpairedView.qml:80
+#: ui/delegates/UnpairedView.qml:80
 #, kde-format
 msgid "Pair"
 msgstr "Asociază"
 
-#: package/contents/ui/delegates/UnpairedView.qml:91
+#: ui/delegates/UnpairedView.qml:91
 #, kde-format
 msgid "Pairing request sent to device"
 msgstr "Cerere de asociere trimisă la dispozitiv"
 
-#: package/contents/ui/delegates/Unreachable.qml:19
+#: ui/delegates/Unreachable.qml:18
 #, kde-format
 msgid "This device is not reachable"
 msgstr "Acest dispozitiv nu e accesibil"
 
-#: package/contents/ui/DeviceConnectionView.qml:196
+#: ui/DeviceConnectionView.qml:196
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr ""
 
-#: package/contents/ui/main.qml:23
+#: ui/main.qml:22
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
 
-#: package/contents/ui/main.qml:90
+#: ui/main.qml:89
 #, kde-format
 msgid "Exit"
 msgstr "Ieșire"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Sergiu Bivol"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sergiu@cip.md"
+
+#~ msgid "Configure KDE Connect"
+#~ msgstr "Configurează KDE Connect"

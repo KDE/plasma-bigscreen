@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:36+0000\n"
+"POT-Creation-Date: 2023-11-11 00:43+0000\n"
 "PO-Revision-Date: 2020-10-17 02:30+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -58,22 +58,22 @@ msgstr ""
 msgid "Reject"
 msgstr ""
 
-#: contents/ui/indicators/Volume.qml:122
+#: contents/ui/indicators/Volume.qml:121
 #, kde-format
 msgid "Increase Volume"
 msgstr ""
 
-#: contents/ui/indicators/Volume.qml:129
+#: contents/ui/indicators/Volume.qml:128
 #, kde-format
 msgid "Decrease Volume"
 msgstr ""
 
-#: contents/ui/indicators/Volume.qml:136
+#: contents/ui/indicators/Volume.qml:135
 #, kde-format
 msgid "Mute"
 msgstr ""
 
-#: contents/ui/indicators/Volume.qml:146
+#: contents/ui/indicators/Volume.qml:145
 #, kde-format
 msgid "Audio Device chooser"
 msgstr ""
@@ -108,27 +108,27 @@ msgstr ""
 msgid "Enable Remote STT"
 msgstr ""
 
-#: contents/ui/launcher/LauncherHome.qml:67
+#: contents/ui/launcher/LauncherHome.qml:66
 #, kde-format
 msgid "Recent"
 msgstr ""
 
-#: contents/ui/launcher/LauncherHome.qml:91
+#: contents/ui/launcher/LauncherHome.qml:90
 #, kde-format
 msgid "Voice Apps"
 msgstr ""
 
-#: contents/ui/launcher/LauncherHome.qml:116
+#: contents/ui/launcher/LauncherHome.qml:115
 #, kde-format
 msgid "Applications"
 msgstr ""
 
-#: contents/ui/launcher/LauncherHome.qml:143
+#: contents/ui/launcher/LauncherHome.qml:142
 #, kde-format
 msgid "Games"
 msgstr ""
 
-#: contents/ui/launcher/LauncherHome.qml:172
+#: contents/ui/launcher/LauncherHome.qml:171
 #, kde-format
 msgid "Settings"
 msgstr ""
@@ -138,7 +138,7 @@ msgstr ""
 msgid "Getting Ready... Please Wait"
 msgstr ""
 
-#: contents/ui/PowerManagementItem.qml:41
+#: contents/ui/PowerManagementItem.qml:40
 #, kde-format
 msgid "Bigscreen has enabled system-wide inhibition"
 msgstr ""

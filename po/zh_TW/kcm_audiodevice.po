@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:36+0000\n"
+"POT-Creation-Date: 2023-11-11 00:43+0000\n"
 "PO-Revision-Date: 2020-02-28 22:03+0800\n"
 "Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -20,63 +20,60 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 19.12.2\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Yi-Jyun Pan"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "pan93412@gmail.com"
-
-#: audiodevice.cpp:18
-#, fuzzy, kde-format
-#| msgid "Configure Plasma wifi"
-msgid "Configure Plasma Audio"
-msgstr "設定 Plasma Wi-Fi"
-
-#: package/contents/ui/delegates/CompactAudioDelegate.qml:88
+#: ui/delegates/CompactAudioDelegate.qml:87
 #, kde-format
 msgctxt "label of device items"
 msgid "%1 (%2)"
 msgstr ""
 
-#: package/contents/ui/delegates/VolumeObject.qml:59
+#: ui/delegates/VolumeObject.qml:59
 #, kde-format
 msgid "Adjust Volume"
 msgstr ""
 
-#: package/contents/ui/delegates/VolumeObject.qml:124
+#: ui/delegates/VolumeObject.qml:124
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr ""
 
-#: package/contents/ui/DeviceChooserPage.qml:75
+#: ui/DeviceChooserPage.qml:74
 #, kde-format
 msgid "Exit"
 msgstr "離開"
 
-#: package/contents/ui/DeviceChooserPage.qml:128
+#: ui/DeviceChooserPage.qml:127
 #, kde-format
 msgid "Playback Devices"
 msgstr ""
 
-#: package/contents/ui/DeviceChooserPage.qml:160
+#: ui/DeviceChooserPage.qml:159
 #, kde-format
 msgid "Recording Devices"
 msgstr ""
 
-#: package/contents/ui/main.qml:22
+#: ui/main.qml:21
 #, kde-format
 msgid "Audio Device Chooser"
 msgstr ""
 
-#: package/contents/ui/SettingsItem.qml:235
+#: ui/SettingsItem.qml:235
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Yi-Jyun Pan"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "pan93412@gmail.com"
+
+#, fuzzy
+#~| msgid "Configure Plasma wifi"
+#~ msgid "Configure Plasma Audio"
+#~ msgstr "設定 Plasma Wi-Fi"
 
 #~ msgid "Connected"
 #~ msgstr "已連線"
