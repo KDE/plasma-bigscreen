@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-11 00:43+0000\n"
+"POT-Creation-Date: 2023-11-12 00:43+0000\n"
 "PO-Revision-Date: 2022-12-31 15:39+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -107,27 +107,27 @@ msgstr "Enable Remote TTS"
 msgid "Enable Remote STT"
 msgstr "Enable Remote STT"
 
-#: contents/ui/launcher/LauncherHome.qml:66
+#: contents/ui/launcher/LauncherHome.qml:70
 #, kde-format
 msgid "Recent"
 msgstr "Recent"
 
-#: contents/ui/launcher/LauncherHome.qml:90
+#: contents/ui/launcher/LauncherHome.qml:96
 #, kde-format
 msgid "Voice Apps"
 msgstr "Voice Apps"
 
-#: contents/ui/launcher/LauncherHome.qml:115
+#: contents/ui/launcher/LauncherHome.qml:121
 #, kde-format
 msgid "Applications"
 msgstr "Applications"
 
-#: contents/ui/launcher/LauncherHome.qml:142
+#: contents/ui/launcher/LauncherHome.qml:148
 #, kde-format
 msgid "Games"
 msgstr "Games"
 
-#: contents/ui/launcher/LauncherHome.qml:171
+#: contents/ui/launcher/LauncherHome.qml:177
 #, kde-format
 msgid "Settings"
 msgstr "Settings"
@@ -137,7 +137,7 @@ msgstr "Settings"
 msgid "Getting Ready... Please Wait"
 msgstr "Getting Ready... Please Wait"
 
-#: contents/ui/PowerManagementItem.qml:40
+#: contents/ui/PowerManagementItem.qml:41
 #, kde-format
 msgid "Bigscreen has enabled system-wide inhibition"
 msgstr "Bigscreen has enabled system-wide inhibition"

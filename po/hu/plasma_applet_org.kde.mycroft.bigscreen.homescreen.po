@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-11 00:43+0000\n"
+"POT-Creation-Date: 2023-11-12 00:43+0000\n"
 "PO-Revision-Date: 2022-01-15 11:46+0100\n"
 "Last-Translator: Kristóf Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -107,27 +107,27 @@ msgstr "Távoli TTS bekapcsolása"
 msgid "Enable Remote STT"
 msgstr "Távoli STT bekapcsolása"
 
-#: contents/ui/launcher/LauncherHome.qml:66
+#: contents/ui/launcher/LauncherHome.qml:70
 #, kde-format
 msgid "Recent"
 msgstr "Legutóbbiak"
 
-#: contents/ui/launcher/LauncherHome.qml:90
+#: contents/ui/launcher/LauncherHome.qml:96
 #, kde-format
 msgid "Voice Apps"
 msgstr "Beszédalkalmazások"
 
-#: contents/ui/launcher/LauncherHome.qml:115
+#: contents/ui/launcher/LauncherHome.qml:121
 #, kde-format
 msgid "Applications"
 msgstr "Alkalmazások"
 
-#: contents/ui/launcher/LauncherHome.qml:142
+#: contents/ui/launcher/LauncherHome.qml:148
 #, kde-format
 msgid "Games"
 msgstr "Játékok"
 
-#: contents/ui/launcher/LauncherHome.qml:171
+#: contents/ui/launcher/LauncherHome.qml:177
 #, kde-format
 msgid "Settings"
 msgstr "Beállítások"
@@ -137,7 +137,7 @@ msgstr "Beállítások"
 msgid "Getting Ready... Please Wait"
 msgstr "Felkészülés… Kérem várjon"
 
-#: contents/ui/PowerManagementItem.qml:40
+#: contents/ui/PowerManagementItem.qml:41
 #, kde-format
 msgid "Bigscreen has enabled system-wide inhibition"
 msgstr "A Bigscreen bekapcsolta a rendszerszintű tiltást"

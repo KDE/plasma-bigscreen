@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-11 00:43+0000\n"
+"POT-Creation-Date: 2023-11-12 00:43+0000\n"
 "PO-Revision-Date: 2022-12-12 07:24+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -108,27 +108,27 @@ msgstr "დაშორებული TTS-ის ჩართვა"
 msgid "Enable Remote STT"
 msgstr "დაშორებული STT-ის ჩართვა"
 
-#: contents/ui/launcher/LauncherHome.qml:66
+#: contents/ui/launcher/LauncherHome.qml:70
 #, kde-format
 msgid "Recent"
 msgstr "ახლახანს"
 
-#: contents/ui/launcher/LauncherHome.qml:90
+#: contents/ui/launcher/LauncherHome.qml:96
 #, kde-format
 msgid "Voice Apps"
 msgstr "ხმის აპები"
 
-#: contents/ui/launcher/LauncherHome.qml:115
+#: contents/ui/launcher/LauncherHome.qml:121
 #, kde-format
 msgid "Applications"
 msgstr "აპლიკაციები"
 
-#: contents/ui/launcher/LauncherHome.qml:142
+#: contents/ui/launcher/LauncherHome.qml:148
 #, kde-format
 msgid "Games"
 msgstr "თამაშები"
 
-#: contents/ui/launcher/LauncherHome.qml:171
+#: contents/ui/launcher/LauncherHome.qml:177
 #, kde-format
 msgid "Settings"
 msgstr "პარამეტრები"
@@ -138,7 +138,7 @@ msgstr "პარამეტრები"
 msgid "Getting Ready... Please Wait"
 msgstr "მომზადება.. გთხოვთ, მოითმინოთ"
 
-#: contents/ui/PowerManagementItem.qml:40
+#: contents/ui/PowerManagementItem.qml:41
 #, kde-format
 msgid "Bigscreen has enabled system-wide inhibition"
 msgstr "Bigscreen -მა მთელი სისტემის კონტროლი აიღო"
