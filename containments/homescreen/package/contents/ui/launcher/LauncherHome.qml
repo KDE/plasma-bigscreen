@@ -68,7 +68,7 @@ FocusScope {
         BigScreen.TileRepeater {
             id: recentView
             title: i18n("Recent")
-            compactMode: Plasmoid.expandingTiles
+            compactMode: plasmoid.expandingTiles
             model: Kicker.RecentUsageModel {
                 shownItems: Kicker.RecentUsageModel.OnlyApps
             }
@@ -94,9 +94,9 @@ FocusScope {
         BigScreen.TileRepeater {
             id: voiceAppsView
             title: i18n("Voice Apps")
-            compactMode: Plasmoid.configuration.expandingTiles
+            compactMode: plasmoid.configuration.expandingTiles
             model: KItemModels.KSortFilterProxyModel {
-                sourceModel: Plasmoid.applicationListModel
+                sourceModel: plasmoid.applicationListModel
                 filterRoleName: "ApplicationCategoriesRole"
                 filterRowCallback: function(source_row, source_parent) {
                     return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("VoiceApp") !== -1;
@@ -119,11 +119,11 @@ FocusScope {
         BigScreen.TileRepeater {
             id: appsView
             title: i18n("Applications")
-            compactMode: Plasmoid.configuration.expandingTiles
+            compactMode: plasmoid.configuration.expandingTiles
             visible: count > 0
             enabled: count > 0
             model: KItemModels.KSortFilterProxyModel {
-                sourceModel: Plasmoid.applicationListModel
+                sourceModel: plasmoid.applicationListModel
                 filterRoleName: "ApplicationCategoriesRole"
                 filterRowCallback: function(source_row, source_parent) {
                     var cats = sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole);
@@ -146,11 +146,11 @@ FocusScope {
         BigScreen.TileRepeater {
             id: gamesView
             title: i18n("Games")
-            compactMode: Plasmoid.configuration.expandingTiles
+            compactMode: plasmoid.configuration.expandingTiles
             visible: count > 0
             enabled: count > 0
             model: KItemModels.KSortFilterProxyModel {
-                sourceModel: Plasmoid.applicationListModel
+                sourceModel: plasmoid.applicationListModel
                 filterRoleName: "ApplicationCategoriesRole"
                 filterRowCallback: function(source_row, source_parent) {
                     return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("Game") !== -1;
@@ -175,14 +175,12 @@ FocusScope {
         BigScreen.TileRepeater {
             id: settingsView
             title: i18n("Settings")
-            model: Plasmoid.kcmsListModel
+            model: plasmoid.kcmsListModel
             compactMode: plasmoid.configuration.expandingTiles
 
             onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = settingsView
             delegate: Delegates.SettingDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
-                visible: model.active
-                enabled: model.active
             }
             
             navigationUp: gamesView.visible ? gamesView : (appsView.visible ? appsView : (voiceAppsView.visible ? voiceAppsView : (recentView.visible ? recentView : shutdownIndicator)))

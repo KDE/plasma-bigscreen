@@ -9,6 +9,7 @@ import QtQuick 2.14
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.plasma.private.nanoshell as NanoShell
+import org.kde.plasma.plasmoid 2.0
 
 BigScreen.IconDelegate {
     id: delegate
@@ -27,7 +28,7 @@ BigScreen.IconDelegate {
                             delegate.Kirigami.ScenePosition.x + delegate.width/2,
                             delegate.Kirigami.ScenePosition.y + delegate.height/2,
                             Math.min(delegate.width, delegate.height), delegate.Kirigami.Theme.backgroundColor);
-        plasmoid.nativeInterface.applicationListModel.runApplication(modelData.ApplicationStorageIdRole)
+        plasmoid.applicationListModel.runApplication(modelData.ApplicationStorageIdRole)
         recentView.forceActiveFocus();
         recentView.currentIndex = 0;
     }

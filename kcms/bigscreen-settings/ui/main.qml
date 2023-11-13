@@ -10,7 +10,7 @@ import QtQuick 2.14
 import QtQuick.Window 2.14
 import QtQuick.Controls 2.14
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 import "delegates" as Delegates
@@ -97,8 +97,8 @@ KCM.SimpleKCM {
                     RowLayout {
                         anchors.centerIn: parent
                         Kirigami.Icon {
-                            Layout.preferredWidth: PlasmaCore.Units.iconSizes.small
-                            Layout.preferredHeight: PlasmaCore.Units.iconSizes.small
+                            Layout.preferredWidth: Kirigami.Units.iconSizes.small
+                            Layout.preferredHeight: Kirigami.Units.iconSizes.small
                             source: "window-close"
                         }
                         Label {
@@ -145,7 +145,7 @@ KCM.SimpleKCM {
                     id: launcherLookHeader
                     text: i18n("Launcher Appearance")
                     layer.enabled: true
-                    color: "white"
+                    color: Kirigami.Theme.textColor
                 }
 
                 Flickable {

@@ -28,7 +28,7 @@ FocusScope {
     implicitHeight: view.implicitHeight + header.implicitHeight
 
     //TODO:dynamic
-    property int columns: Math.max(3, Math.floor(width / (units.gridUnit * 8)))
+    property int columns: Math.max(3, Math.floor(width / (Kirigami.Units.gridUnit * 8)))
 
     property alias cellWidth: view.cellWidth
     property alias cellHeight: view.cellHeight
@@ -46,7 +46,7 @@ FocusScope {
         }
         text: title
         layer.enabled: true
-        color: "white"
+        color: Kirigami.Theme.textColor
     }
     
     ListView {
@@ -71,8 +71,8 @@ FocusScope {
         cacheBuffer: width
         implicitHeight: cellHeight
         rightMargin: width-cellWidth
-        property int cellWidth: (PlasmaCore.Units.iconSizes.huge + Kirigami.Units.largeSpacing*4)
-        property int cellHeight: cellWidth + units.gridUnit * 3
+        property int cellWidth: (Kirigami.Units.iconSizes.huge + Kirigami.Units.largeSpacing*4)
+        property int cellHeight: cellWidth + Kirigami.Units.gridUnit * 3
         preferredHighlightBegin: 0
         preferredHighlightEnd: cellWidth
         displayMarginBeginning: cellWidth

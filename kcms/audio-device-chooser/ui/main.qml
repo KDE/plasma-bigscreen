@@ -6,12 +6,11 @@
 
 import QtQuick 2.14
 import QtQuick.Layouts 1.14
-import org.kde.kirigami 2.12 as Kirigami
 import QtQuick.Controls 2.14
-import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.private.volume 0.1
 import QtQuick.Window 2.14
 import org.kde.kcmutils as KCM
+import org.kde.kirigami as Kirigami
 
 import "delegates" as Delegates
 import "views" as Views

@@ -10,7 +10,7 @@ import QtQuick.Layouts 1.14
 import QtQuick.Controls 2.14
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 import Qt5Compat.GraphicalEffects
 import org.kde.plasma.networkmanagement as PlasmaNM
@@ -42,7 +42,7 @@ BigScreen.AbstractDelegate {
 
         Kirigami.Icon {
             id: connectionSvgIcon
-            width: PlasmaCore.Units.iconSizes.huge
+            width: Kirigami.Units.iconSizes.huge
             height: width
             y: connectionItemLayout.height/2 - connectionSvgIcon.height/2
             source: switch(model.Type){
@@ -100,7 +100,7 @@ BigScreen.AbstractDelegate {
             anchors.bottomMargin: -Kirigami.Units.largeSpacing
             anchors.right: parent.right
             anchors.rightMargin: -Kirigami.Units.largeSpacing
-            width: PlasmaCore.Units.iconSizes.smallMedium
+            width: Kirigami.Units.iconSizes.smallMedium
             height: width
             source: Qt.resolvedUrl("../images/green-tick-thick.svg")
             visible: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0

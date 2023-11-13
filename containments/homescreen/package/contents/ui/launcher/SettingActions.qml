@@ -7,6 +7,7 @@
 
 import QtQuick 2.14
 import QtQuick.Controls 2.14 as Controls
+import org.kde.plasma.plasmoid 2.0
 
 Item {
     id: settingActions
@@ -15,9 +16,9 @@ Item {
         if (kcm_id.indexOf("kcm_mediacenter_wallpaper") != -1) {
             plasmoid.action("configure").trigger();
         } else if (kcm_id.indexOf("kcm_mediacenter_mycroft_skill_installer") != -1) {
-            plasmoid.nativeInterface.executeCommand("MycroftSkillInstaller")
+            plasmoid.executeCommand("MycroftSkillInstaller")
         } else {
-            plasmoid.nativeInterface.executeCommand("plasma-settings -s -m " + kcm_id)
+            plasmoid.executeCommand("plasma-settings -s -m " + kcm_id)
         }
     }
 }

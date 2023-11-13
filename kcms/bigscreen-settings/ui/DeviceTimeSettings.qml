@@ -9,10 +9,10 @@ import QtQuick.Layouts 1.14
 import QtQuick 2.14
 import QtQuick.Window 2.14
 import QtQuick.Controls 2.14
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasma5support 2.0 as P5Support
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.plasma.components 3.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 import "delegates" as Delegates
@@ -149,11 +149,11 @@ Rectangle {
                 label: i18n("Time Display")
             }
 
-            Kirigami.BasicListItem {
+            AbstractButton {
                 id: timeDisplayItemTwo
                 Layout.alignment: Qt.AlignTop
                 Layout.topMargin: Kirigami.Units.largeSpacing
-                label: i18n("Timezone:")
+                text: i18n("Timezone:")
                 onClicked: timeZonePickerSheet.open()
                 Label {
                     id: timeZoneButton
@@ -169,11 +169,11 @@ Rectangle {
                 }
             }
 
-            Kirigami.BasicListItem {
+            AbstractButton {
                 id: timeDisplayItemThree
                 Layout.alignment: Qt.AlignTop
                 Layout.topMargin: Kirigami.Units.largeSpacing
-                label: i18n("Set time automatically:")
+                text: i18n("Set time automatically:")
                 KeyNavigation.up: timeDisplayItemTwo
                 KeyNavigation.down: timeDisplayItemFour
                 Keys.onReturnPressed: clicked()
@@ -203,12 +203,12 @@ Rectangle {
                 }
             }
 
-            Kirigami.BasicListItem {
+            AbstractButton {
                 id: timeDisplayItemFour
                 Layout.alignment: Qt.AlignTop
                 Layout.topMargin: Kirigami.Units.largeSpacing
-                label: i18n("Time")
-                icon: "clock"
+                text: i18n("Time")
+                icon.name: "clock"
                 enabled: !ntpCheckBox.checked
                 onClicked: timePickerSheet.open()
                 KeyNavigation.up: timeDisplayItemThree
@@ -235,12 +235,12 @@ Rectangle {
                 }
             }
 
-            Kirigami.BasicListItem {
+            AbstractButton {
                 id: timeDisplayItemFive
                 Layout.alignment: Qt.AlignTop
                 Layout.topMargin: Kirigami.Units.largeSpacing
-                label: i18n("Date")
-                icon: "view-calendar"
+                text: i18n("Date")
+                icon.name: "view-calendar"
                 enabled: !ntpCheckBox.checked
                 onClicked: datePickerSheet.open()
                 KeyNavigation.up: timeDisplayItemFour
@@ -290,10 +290,10 @@ Rectangle {
 
         PlasmaComponents.Button {
             id: backBtnSettingsItem
-            iconSource: "arrow-left"
+            icon.name: "arrow-left"
             Layout.alignment: Qt.AlignLeft
 
-            PlasmaComponents.Highlight {
+            PlasmaExtras.Highlight {
                 z: -2
                 anchors.fill: parent
                 anchors.margins: -Kirigami.Units.gridUnit / 4
@@ -352,11 +352,11 @@ Rectangle {
 
                     PlasmaComponents.Button {
                         id: backBtnTZPItem
-                        iconSource: "arrow-left"
+                        icon.name: "arrow-left"
                         Layout.alignment: Qt.AlignLeft
                         KeyNavigation.down: searchBoxItem
 
-                        PlasmaComponents.Highlight {
+                        PlasmaExtras.Highlight {
                             z: -2
                             anchors.fill: parent
                             anchors.margins: -Kirigami.Units.gridUnit / 4
@@ -414,7 +414,7 @@ Rectangle {
                         filterString: searchField.text
                     }
 
-                    delegate: Kirigami.BasicListItem {
+                    delegate: ItemDelegate {
                         width: parent.width
                         text: model.timeZoneId == "Local" ? i18n("Your local timezone is %1", city) : i18n("%1, %2", city, region)
                         enabled: model.timeZoneId != "Local" ? 1 : 0
@@ -477,11 +477,11 @@ Rectangle {
 
                 PlasmaComponents.Button {
                     id: backBtnTPItem
-                    iconSource: "arrow-left"
+                    icon.name: "arrow-left"
                     Layout.alignment: Qt.AlignLeft
                     KeyNavigation.down: timePicker
 
-                    PlasmaComponents.Highlight {
+                    PlasmaExtras.Highlight {
                         z: -2
                         anchors.fill: parent
                         anchors.margins: -Kirigami.Units.gridUnit / 4
@@ -574,11 +574,11 @@ Rectangle {
 
                 PlasmaComponents.Button {
                     id: backBtnDTItem
-                    iconSource: "arrow-left"
+                    icon.name: "arrow-left"
                     Layout.alignment: Qt.AlignLeft
                     KeyNavigation.down: datePicker
 
-                    PlasmaComponents.Highlight {
+                    PlasmaExtras.Highlight {
                         z: -2
                         anchors.fill: parent
                         anchors.margins: -Kirigami.Units.gridUnit / 4

@@ -8,9 +8,8 @@
 
 import QtQuick 2.14
 import QtQuick.Layouts 1.14
-import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.plasma.private.volume 0.1
 
 ColumnLayout {
@@ -65,7 +64,7 @@ ColumnLayout {
 
         Kirigami.Icon {
             Layout.alignment: Qt.AlignHCenter
-            Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
+            Layout.preferredHeight: Kirigami.Units.iconSizes.medium
             Layout.preferredWidth: Layout.preferredHeight
             source: "audio-card"
         }

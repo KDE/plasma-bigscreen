@@ -21,9 +21,10 @@
 
 import QtQuick 2.0
 
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami as Kirigami
+import org.kde.ksvg as KSvg
 
-PlasmaCore.SvgItem {
+KSvg.SvgItem {
     id: handRoot
 
     property alias rotation: rotation.angle
@@ -70,7 +71,7 @@ PlasmaCore.SvgItem {
         Behavior on angle {
             RotationAnimation {
                 id: anim
-                duration: PlasmaCore.Units.longDuration
+                duration: Kirigami.Units.longDuration
                 direction: RotationAnimation.Clockwise
                 easing.type: Easing.OutElastic
                 easing.overshoot: 0.5

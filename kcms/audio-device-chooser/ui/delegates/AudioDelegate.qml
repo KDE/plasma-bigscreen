@@ -8,7 +8,6 @@
 import QtQuick 2.14
 import QtQuick.Layouts 1.14
 import QtQuick.Controls 2.14
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
@@ -57,7 +56,7 @@ BigScreen.AbstractDelegate {
         
         Kirigami.Icon {
             id: deviceAudioSvgIcon
-            width: PlasmaCore.Units.iconSizes.huge
+            width: Kirigami.Units.iconSizes.huge
             height: width
             y: contentItemLayout.height/2 - deviceAudioSvgIcon.height/2
             source: Icon.name(Volume, Muted, isPlayback ? "audio-volume" : "microphone-sensitivity")
@@ -113,8 +112,8 @@ BigScreen.AbstractDelegate {
             Kirigami.Icon {
                 id: deviceDefaultIcon
                 anchors.centerIn: parent
-                width: listView.currentIndex == index && delegate.activeFocus ? PlasmaCore.Units.iconSizes.medium : PlasmaCore.Units.iconSizes.smallMedium
-                height: listView.currentIndex == index && delegate.activeFocus ? PlasmaCore.Units.iconSizes.medium : PlasmaCore.Units.iconSizes.smallMedium
+                width: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
+                height: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
                 source: Qt.resolvedUrl("../images/green-tick-thick.svg")
                 opacity: model.PulseObject.default ? 1 : 0
             }

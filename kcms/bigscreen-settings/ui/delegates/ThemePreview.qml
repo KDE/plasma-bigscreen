@@ -17,8 +17,7 @@
 */
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
 
 Item {
@@ -30,7 +29,7 @@ Item {
         anchors.fill: parent
         clip: true
 
-        KSvg.FrameSvgItem {
+        KSvg.FrameSvgItem { 
             id: background
             // Normalize margins around background.
             // Some themes like "Air" have huge transparent margins which would result in too small container area.
@@ -101,7 +100,7 @@ Item {
             readonly property double verticalShadowOffset:
                 Math.round(clockSvg.naturalVerticalHandShadowOffset * svgScale) + Math.round(clockSvg.naturalVerticalHandShadowOffset * svgScale) % 2
 
-            PlasmaCore.Svg {
+            KSvg.Svg {
                 id: clockSvg
                 imagePath: "widgets/clock"
                 function estimateHorizontalHandShadowOffset() {
@@ -134,7 +133,7 @@ Item {
                 }
             }
 
-            PlasmaCore.SvgItem {
+            KSvg.SvgItem {
                 id: face
                 anchors.centerIn: parent
                 width: Math.min(parent.width, parent.height)
@@ -157,7 +156,7 @@ Item {
                 svgScale: clock.svgScale
             }
 
-            PlasmaCore.SvgItem {
+            KSvg.SvgItem {
                 id: center
                 width: naturalSize.width * clock.svgScale
                 height: naturalSize.height * clock.svgScale
@@ -167,7 +166,7 @@ Item {
                 z: 1000
             }
 
-            PlasmaCore.SvgItem {
+            KSvg.SvgItem {
                 anchors.fill: face
                 svg: clockSvg
                 elementId: "Glass"

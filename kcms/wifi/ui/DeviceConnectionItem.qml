@@ -12,7 +12,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects
 import org.kde.plasma.networkmanagement as PlasmaNM
 import org.kde.coreaddons 1.0 as KCoreAddons
 
@@ -163,8 +163,8 @@ Item {
                     RowLayout {
                         anchors.centerIn: parent
                         Kirigami.Icon {
-                            Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
-                            Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
+                            Layout.preferredWidth: Kirigami.Units.iconSizes.medium
+                            Layout.preferredHeight: Kirigami.Units.iconSizes.medium
                             source: Qt.resolvedUrl("images/green-tick-thick.svg")
                             visible: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0
                         }

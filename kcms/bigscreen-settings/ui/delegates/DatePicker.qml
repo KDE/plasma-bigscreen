@@ -5,7 +5,7 @@
  */
 
 import QtQuick 2.14
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami as Kirigami
 
 Item {
     id: root

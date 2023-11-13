@@ -62,15 +62,18 @@ void KcmsListModel::loadKcms()
     wallpaperData.id = "kcm_mediacenter_wallpaper";
     unorderedList.append(wallpaperData);
 
-    KcmData mycroftSkillInstallerData;
-    mycroftSkillInstallerData.name = "Mycroft Skill Installer";
-    mycroftSkillInstallerData.iconName = "download";
-    mycroftSkillInstallerData.description = "Install Mycroft skills";
-    mycroftSkillInstallerData.id = "kcm_mediacenter_mycroft_skill_installer";
+    // Mycroft-Skill-Installer is no longer maintained or functional
+    // Disable forced entry
 
-    if (m_mycroftEnabled) {
-        unorderedList.append(mycroftSkillInstallerData);
-    }
+    // KcmData mycroftSkillInstallerData;
+    // mycroftSkillInstallerData.name = "Mycroft Skill Installer";
+    // mycroftSkillInstallerData.iconName = "download";
+    // mycroftSkillInstallerData.description = "Install Mycroft skills";
+    // mycroftSkillInstallerData.id = "kcm_mediacenter_mycroft_skill_installer";
+
+    // if (m_mycroftEnabled) {
+    //     unorderedList.append(mycroftSkillInstallerData);
+    // }
 
     m_kcms << orderedList.values();
     m_kcms << unorderedList;

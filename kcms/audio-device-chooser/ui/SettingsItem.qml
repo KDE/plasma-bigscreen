@@ -8,9 +8,8 @@
 import QtQuick 2.14
 import QtQuick.Layouts 1.14
 import QtQuick.Controls 2.14
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents2
 import org.kde.plasma.components 3.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 import Qt5Compat.GraphicalEffects
@@ -129,8 +128,8 @@ Item {
                     RowLayout {
                         anchors.centerIn: parent
                         Kirigami.Icon {
-                            Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
-                            Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
+                            Layout.preferredWidth: Kirigami.Units.iconSizes.medium
+                            Layout.preferredHeight: Kirigami.Units.iconSizes.medium
                             source: Qt.resolvedUrl("images/green-tick-thick.svg")
                             enabled: model.PulseObject.default  ? 1 : 0
                         }
@@ -175,7 +174,7 @@ Item {
                     }
                 }
 
-                PlasmaComponents2.Highlight {
+                PlasmaExtras.Highlight {
                     z: -2
                     anchors.fill: parent
                     anchors.margins: -Kirigami.Units.gridUnit / 4
@@ -204,13 +203,13 @@ Item {
         anchors.margins: Kirigami.Units.largeSpacing * 2
         height: Kirigami.Units.gridUnit * 2
 
-        PlasmaComponents2.Button {
+        PlasmaComponents.Button {
             id: backBtnSettingsItem
-            iconSource: "arrow-left"
+            icon.name: "arrow-left"
             Layout.alignment: Qt.AlignLeft
             KeyNavigation.up: volObj
 
-            PlasmaComponents2.Highlight {
+            PlasmaExtras.Highlight {
                 z: -2
                 anchors.fill: parent
                 anchors.margins: -Kirigami.Units.gridUnit / 4

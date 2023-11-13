@@ -43,9 +43,10 @@ Window {
         width: window.width
         height: window.height
         state: "closed"
+
         Rectangle {
             anchors.fill: parent
-            color: background.backgroundColor
+            color: Kirigami.Theme.backgroundColor
 
             ColumnLayout {
                 anchors.centerIn: parent
@@ -53,7 +54,7 @@ Window {
                     id: icon
                     Kirigami.Theme.inherit: false
                     Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-                    Layout.preferredWidth: PlasmaCore.Units.iconSizes.enormous
+                    Layout.preferredWidth: Kirigami.Units.iconSizes.enormous
                     Layout.preferredHeight: Layout.preferredWidth
                     Layout.alignment: Qt.AlignCenter
                 }

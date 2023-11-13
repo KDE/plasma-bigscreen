@@ -10,7 +10,7 @@ import QtQuick 2.14
 import QtQuick.Window 2.14
 import QtQuick.Controls 2.14
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.plasma.networkmanagement as PlasmaNM
 import org.kde.kcmutils as KCM
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
@@ -136,8 +136,8 @@ KCM.SimpleKCM {
                 KeyNavigation.up: closeButton
                 Layout.fillWidth: true
                 placeholderText: i18n("Password...")
-                validator: RegExpValidator {
-                    regExp: if (securityType == PlasmaNM.Enums.StaticWep) {
+                validator: RegularExpressionValidator {
+                    regularExpression: if (securityType == PlasmaNM.Enums.StaticWep) {
                                 /^(?:.{5}|[0-9a-fA-F]{10}|.{13}|[0-9a-fA-F]{26}){1}$/
                             } else {
                                 /^(?:.{8,64}){1}$/
@@ -193,8 +193,8 @@ KCM.SimpleKCM {
         parent: networkSelectionView
         showCloseButton: false
 
-        onSheetOpenChanged: {
-            if (sheetOpen) {
+        onVisibleChanged: {
+            if (visible) {
                 forgetBtn.forceActiveFocus()
             }
         }
@@ -320,8 +320,8 @@ KCM.SimpleKCM {
                     RowLayout {
                         anchors.centerIn: parent
                         Kirigami.Icon {
-                            Layout.preferredWidth: PlasmaCore.Units.iconSizes.small
-                            Layout.preferredHeight: PlasmaCore.Units.iconSizes.small
+                            Layout.preferredWidth: Kirigami.Units.iconSizes.small
+                            Layout.preferredHeight: Kirigami.Units.iconSizes.small
                             source: "view-refresh"
                         }
                         Label {
@@ -355,8 +355,8 @@ KCM.SimpleKCM {
                     RowLayout {
                         anchors.centerIn: parent
                         Kirigami.Icon {
-                            Layout.preferredWidth: PlasmaCore.Units.iconSizes.small
-                            Layout.preferredHeight: PlasmaCore.Units.iconSizes.small
+                            Layout.preferredWidth: Kirigami.Units.iconSizes.small
+                            Layout.preferredHeight: Kirigami.Units.iconSizes.small
                             source: "window-close"
                         }
                         Label {

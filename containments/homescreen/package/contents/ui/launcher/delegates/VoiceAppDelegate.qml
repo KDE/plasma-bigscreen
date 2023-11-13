@@ -7,6 +7,7 @@
 
 import QtQuick 2.14
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import org.kde.plasma.plasmoid 2.0
 
 BigScreen.IconDelegate {
     readonly property var vAppStorageIdRole: modelData.ApplicationStorageIdRole
@@ -18,7 +19,7 @@ BigScreen.IconDelegate {
 
     onClicked: {
         BigScreen.NavigationSoundEffects.playClickedSound()
-        plasmoid.nativeInterface.applicationListModel.runApplication(modelData.ApplicationStorageIdRole)
+        plasmoid.applicationListModel.runApplication(modelData.ApplicationStorageIdRole)
         recentView.forceActiveFocus();
         recentView.currentIndex = 0;
     }

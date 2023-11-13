@@ -26,8 +26,8 @@ FocusScope {
     signal activateSettingsView
 
     property Item wallpaper: {
-        for (var i in Plasmoid.children) {
-            if (Plasmoid.children[i].toString().indexOf("WallpaperInterface") === 0) {
+        for (var i in plasmoid.children) {
+            if (plasmoid.children[i].toString().indexOf("WallpaperInterface") === 0) {
                 return plasmoid.children[i];
             }
         }
@@ -44,21 +44,21 @@ FocusScope {
     }
 
     Connections {
-        target: Plasmoid.applicationListModel
+        target: plasmoid.applicationListModel
         function onAppOrderChanged() {
             root.activateAppView()
         }
     }
 
     Connections {
-        target: Plasmoid.bigLauncherDbusAdapterInterface
+        target: plasmoid.bigLauncherDbusAdapterInterface
         function onUseColoredTilesChanged(msgUseColoredTiles) {
-            Plasmoid.configuration.coloredTiles = msgUseColoredTiles;
-            Plasmoid.setUseColoredTiles(plasmoid.configuration.coloredTiles);
+            plasmoid.configuration.coloredTiles = msgUseColoredTiles;
+            plasmoid.setUseColoredTiles(plasmoid.configuration.coloredTiles);
         }
         function onUseExpandableTilesChanged(msgUseExpandableTiles) {
-            Plasmoid.configuration.expandingTiles = msgUseExpandableTiles;
-            Plasmoid.setUseExpandableTiles(plasmoid.configuration.expandingTiles);
+            plasmoid.configuration.expandingTiles = msgUseExpandableTiles;
+            plasmoid.setUseExpandableTiles(plasmoid.configuration.expandingTiles);
         }
     }
 

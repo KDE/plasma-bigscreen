@@ -114,7 +114,6 @@ AbstractIndicator {
         //   componentName: kmix
         //   actions: increase_volume, decrease_volume, mute
         name: "kmix"
-        displayName: main.displayName
 
         GlobalAction {
             objectName: "increase_volume"
