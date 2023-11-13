@@ -5,6 +5,7 @@
             {
                 "Email": "mart@kde.org",
                 "Name": "Marco Martin",
+                "Name[ca@valencia]": "Marco Martin",
                 "Name[ca]": "Marco Martin",
                 "Name[eo]": "Marco Martin",
                 "Name[gl]": "Marco Martin",
@@ -17,6 +18,7 @@
             }
         ],
         "Description": "Plasma Mycroft Big Screen look and feel",
+        "Description[ca@valencia]": "Aparença i comportament de la Big Screen amb Mycroft en Plasma",
         "Description[ca]": "Aparença i comportament de la Big Screen del Plasma del Mycroft",
         "Description[eo]": "Plasma Mycroft granekrana aspekto kaj sento",
         "Description[gl]": "Aparencia de Plasma Mycroft Bigscreen.",
@@ -31,6 +33,7 @@
         "Name": "Mycroft Big Screen",
         "Name[ar]": "ميكروفت الشاشة الكبيرة",
         "Name[az]": "Mycroft Böyük Ekran",
+        "Name[ca@valencia]": "Big Screen de Mycroft",
         "Name[ca]": "Big Screen del Mycroft",
         "Name[da]": "Mycroft Big Screen",
         "Name[de]": "Mycroft Big Screen",
@@ -40,6 +43,7 @@
         "Name[et]": "Mycrofti suurekraan",
         "Name[eu]": "Mycroft-en pantaila handia",
         "Name[fi]": "Mycroft Big Screen",
+        "Name[fr]": "Grand écran pour Mycroft",
         "Name[gl]": "Mycroft Bigscreen",
         "Name[hu]": "Mycroft Bigscreen",
         "Name[id]": "Mycroft Big Screen",

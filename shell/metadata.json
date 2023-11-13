@@ -5,6 +5,7 @@
             {
                 "Email": "mart@kde.org",
                 "Name": "Marco Martin",
+                "Name[ca@valencia]": "Marco Martin",
                 "Name[ca]": "Marco Martin",
                 "Name[eo]": "Marco Martin",
                 "Name[gl]": "Marco Martin",
@@ -17,6 +18,7 @@
             }
         ],
         "Description": "Plasma shell for TVs",
+        "Description[ca@valencia]": "Espai de treball Plasma per a televisors",
         "Description[ca]": "Espai de treball Plasma per a televisors",
         "Description[eo]": "Plasma-ŝeol for TVoj",
         "Description[gl]": "Interface de Plasma para teles.",
@@ -31,6 +33,7 @@
         "Name": "Plasma Big Screen",
         "Name[ar]": "بلازما الشاشة الكبيرة",
         "Name[az]": "Plasma Böyük Ekran",
+        "Name[ca@valencia]": "Big Screen de Plasma",
         "Name[ca]": "Big Screen del Plasma",
         "Name[da]": "Plasma Big Screen",
         "Name[de]": "Plasma Big Screen",
@@ -40,6 +43,7 @@
         "Name[et]": "Plasma suurekraan",
         "Name[eu]": "Plasmaren pantaila handia",
         "Name[fi]": "Plasma Big Screen",
+        "Name[fr]": "Grand écran pour Plasma",
         "Name[gl]": "Plasma Bigscreen",
         "Name[hu]": "Plasma Bigscreen",
         "Name[id]": "Plasma Big Screen",
