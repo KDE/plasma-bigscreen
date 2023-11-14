@@ -43,7 +43,7 @@ find_package(KF6 REQUIRED COMPONENTS
 
 find_package(LibKWorkspace 5.19 CONFIG REQUIRED)
 
-find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
+find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Quick
     Core
     Qml
