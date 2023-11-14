@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-12 00:43+0000\n"
+"POT-Creation-Date: 2023-11-14 00:43+0000\n"
 "PO-Revision-Date: 2022-01-17 14:34+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -57,22 +57,22 @@ msgstr "Přijmout"
 msgid "Reject"
 msgstr "Odmítnout"
 
-#: contents/ui/indicators/Volume.qml:121
+#: contents/ui/indicators/Volume.qml:120
 #, kde-format
 msgid "Increase Volume"
 msgstr "Zvýšit hlasitost"
 
-#: contents/ui/indicators/Volume.qml:128
+#: contents/ui/indicators/Volume.qml:127
 #, kde-format
 msgid "Decrease Volume"
 msgstr "Snížit hlasitost"
 
-#: contents/ui/indicators/Volume.qml:135
+#: contents/ui/indicators/Volume.qml:134
 #, kde-format
 msgid "Mute"
 msgstr "Ztlumit"
 
-#: contents/ui/indicators/Volume.qml:145
+#: contents/ui/indicators/Volume.qml:144
 #, kde-format
 msgid "Audio Device chooser"
 msgstr ""

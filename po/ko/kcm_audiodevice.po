@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-11 00:43+0000\n"
+"POT-Creation-Date: 2023-11-14 00:43+0000\n"
 "PO-Revision-Date: 2022-04-16 01:23+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -23,12 +23,12 @@ msgctxt "label of device items"
 msgid "%1 (%2)"
 msgstr "%1(%2)"
 
-#: ui/delegates/VolumeObject.qml:59
+#: ui/delegates/VolumeObject.qml:58
 #, kde-format
 msgid "Adjust Volume"
 msgstr "음량 조정"
 
-#: ui/delegates/VolumeObject.qml:124
+#: ui/delegates/VolumeObject.qml:123
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
@@ -49,12 +49,12 @@ msgstr "재생 장치"
 msgid "Recording Devices"
 msgstr "녹음 장치"
 
-#: ui/main.qml:21
+#: ui/main.qml:20
 #, kde-format
 msgid "Audio Device Chooser"
 msgstr "오디오 장치 선택기"
 
-#: ui/SettingsItem.qml:235
+#: ui/SettingsItem.qml:234
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "[←] 뒤로 단추를 누르면 장치 선택으로 돌아갑니다"

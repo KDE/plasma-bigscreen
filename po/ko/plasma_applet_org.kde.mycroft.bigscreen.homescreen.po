@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-12 00:43+0000\n"
+"POT-Creation-Date: 2023-11-14 00:43+0000\n"
 "PO-Revision-Date: 2023-03-01 01:37+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -57,22 +57,22 @@ msgstr "수락"
 msgid "Reject"
 msgstr "거부"
 
-#: contents/ui/indicators/Volume.qml:121
+#: contents/ui/indicators/Volume.qml:120
 #, kde-format
 msgid "Increase Volume"
 msgstr "음량 증가"
 
-#: contents/ui/indicators/Volume.qml:128
+#: contents/ui/indicators/Volume.qml:127
 #, kde-format
 msgid "Decrease Volume"
 msgstr "음량 감소"
 
-#: contents/ui/indicators/Volume.qml:135
+#: contents/ui/indicators/Volume.qml:134
 #, kde-format
 msgid "Mute"
 msgstr "음소거"
 
-#: contents/ui/indicators/Volume.qml:145
+#: contents/ui/indicators/Volume.qml:144
 #, kde-format
 msgid "Audio Device chooser"
 msgstr "오디오 장치 선택기"

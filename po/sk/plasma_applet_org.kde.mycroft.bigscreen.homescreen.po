@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.mycroft.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-12 00:43+0000\n"
+"POT-Creation-Date: 2023-11-14 00:43+0000\n"
 "PO-Revision-Date: 2022-01-07 14:58+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -56,22 +56,22 @@ msgstr "Prijať"
 msgid "Reject"
 msgstr "Odmietnuť"
 
-#: contents/ui/indicators/Volume.qml:121
+#: contents/ui/indicators/Volume.qml:120
 #, kde-format
 msgid "Increase Volume"
 msgstr "Zvýšiť hlasitosť"
 
-#: contents/ui/indicators/Volume.qml:128
+#: contents/ui/indicators/Volume.qml:127
 #, kde-format
 msgid "Decrease Volume"
 msgstr "Znížiť hlasitosť"
 
-#: contents/ui/indicators/Volume.qml:135
+#: contents/ui/indicators/Volume.qml:134
 #, kde-format
 msgid "Mute"
 msgstr "Stlmiť"
 
-#: contents/ui/indicators/Volume.qml:145
+#: contents/ui/indicators/Volume.qml:144
 #, kde-format
 msgid "Audio Device chooser"
 msgstr "Výber zvukových zariadení"

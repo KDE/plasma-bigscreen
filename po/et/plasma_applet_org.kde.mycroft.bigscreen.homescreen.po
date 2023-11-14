@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-12 00:43+0000\n"
+"POT-Creation-Date: 2023-11-14 00:43+0000\n"
 "PO-Revision-Date: 2020-04-04 12:28+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -57,22 +57,22 @@ msgstr "Nõustu"
 msgid "Reject"
 msgstr "Lükka tagasi"
 
-#: contents/ui/indicators/Volume.qml:121
+#: contents/ui/indicators/Volume.qml:120
 #, kde-format
 msgid "Increase Volume"
 msgstr "Helitugevus üles"
 
-#: contents/ui/indicators/Volume.qml:128
+#: contents/ui/indicators/Volume.qml:127
 #, kde-format
 msgid "Decrease Volume"
 msgstr "Helitugevus alla"
 
-#: contents/ui/indicators/Volume.qml:135
+#: contents/ui/indicators/Volume.qml:134
 #, kde-format
 msgid "Mute"
 msgstr "Heli tummaks"
 
-#: contents/ui/indicators/Volume.qml:145
+#: contents/ui/indicators/Volume.qml:144
 #, kde-format
 msgid "Audio Device chooser"
 msgstr "Heliseadme valija"

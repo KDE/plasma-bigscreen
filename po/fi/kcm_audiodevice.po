@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-11 00:43+0000\n"
+"POT-Creation-Date: 2023-11-14 00:43+0000\n"
 "PO-Revision-Date: 2022-04-04 13:48+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -23,12 +23,12 @@ msgctxt "label of device items"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: ui/delegates/VolumeObject.qml:59
+#: ui/delegates/VolumeObject.qml:58
 #, kde-format
 msgid "Adjust Volume"
 msgstr "Säädä äänenvoimakkuutta"
 
-#: ui/delegates/VolumeObject.qml:124
+#: ui/delegates/VolumeObject.qml:123
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
@@ -49,12 +49,12 @@ msgstr "Toistolaitteet"
 msgid "Recording Devices"
 msgstr "Tallentavat laitteet"
 
-#: ui/main.qml:21
+#: ui/main.qml:20
 #, kde-format
 msgid "Audio Device Chooser"
 msgstr "Äänilaitevalinta"
 
-#: ui/SettingsItem.qml:235
+#: ui/SettingsItem.qml:234
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "Palaa laitteen valintaan Takaisin-painikkeella [←]"

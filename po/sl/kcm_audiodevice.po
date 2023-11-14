@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-11 00:43+0000\n"
+"POT-Creation-Date: 2023-11-14 00:43+0000\n"
 "PO-Revision-Date: 2022-03-28 09:19+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -24,12 +24,12 @@ msgctxt "label of device items"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: ui/delegates/VolumeObject.qml:59
+#: ui/delegates/VolumeObject.qml:58
 #, kde-format
 msgid "Adjust Volume"
 msgstr "Prilagodi glasnost"
 
-#: ui/delegates/VolumeObject.qml:124
+#: ui/delegates/VolumeObject.qml:123
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
@@ -50,12 +50,12 @@ msgstr "Naprava za playback"
 msgid "Recording Devices"
 msgstr "Naprave za snemanje"
 
-#: ui/main.qml:21
+#: ui/main.qml:20
 #, kde-format
 msgid "Audio Device Chooser"
 msgstr "Izbirnik zvočne naprave"
 
-#: ui/SettingsItem.qml:235
+#: ui/SettingsItem.qml:234
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "Pritisnite gumb [←] Back za vrnitev na izbiro naprave"
