@@ -73,14 +73,3 @@ msgstr "Ukončit"
 #, kde-format
 msgid "Manage Connections"
 msgstr "Spravovat spojení"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Vít Pelčák"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "vit@pelcak.org"
-
-#~ msgid "Configure Plasma wifi"
-#~ msgstr "Nastavit v Plasma WiFi"

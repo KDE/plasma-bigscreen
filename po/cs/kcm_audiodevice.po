@@ -58,14 +58,3 @@ msgstr "Nástroj pro výběr hudebního zařízení"
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "Použijte tlačítko Zpět [←] k návratu na výběr zařízení"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Vít Pelčák"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "vit@pelcak.org"
-
-#~ msgid "Configure Plasma Audio"
-#~ msgstr "Nastavit hudbu Plasma"

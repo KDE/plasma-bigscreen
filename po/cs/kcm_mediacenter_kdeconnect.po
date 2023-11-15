@@ -76,14 +76,3 @@ msgstr "KDE Connect"
 #, kde-format
 msgid "Exit"
 msgstr "Ukončit"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Vít Pelčák"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "vit@pelcak.org"
-
-#~ msgid "Configure KDE Connect"
-#~ msgstr "Nastavit KDE Connect"
