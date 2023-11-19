@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-08 00:47+0000\n"
+"POT-Creation-Date: 2023-11-14 00:43+0000\n"
 "PO-Revision-Date: 2023-01-15 12:14+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -59,22 +59,22 @@ msgstr "Godta"
 msgid "Reject"
 msgstr "Avvis"
 
-#: contents/ui/indicators/Volume.qml:122
+#: contents/ui/indicators/Volume.qml:120
 #, kde-format
 msgid "Increase Volume"
 msgstr "Høgare lyd"
 
-#: contents/ui/indicators/Volume.qml:129
+#: contents/ui/indicators/Volume.qml:127
 #, kde-format
 msgid "Decrease Volume"
 msgstr "Lågare lyd"
 
-#: contents/ui/indicators/Volume.qml:136
+#: contents/ui/indicators/Volume.qml:134
 #, kde-format
 msgid "Mute"
 msgstr "Demp lyd"
 
-#: contents/ui/indicators/Volume.qml:146
+#: contents/ui/indicators/Volume.qml:144
 #, kde-format
 msgid "Audio Device chooser"
 msgstr "Vel lydeining"
@@ -109,27 +109,27 @@ msgstr "Slå på ekstern talesyntese"
 msgid "Enable Remote STT"
 msgstr "Slå på ekstern taleattkjenning"
 
-#: contents/ui/launcher/LauncherHome.qml:67
+#: contents/ui/launcher/LauncherHome.qml:70
 #, kde-format
 msgid "Recent"
 msgstr "Nylege"
 
-#: contents/ui/launcher/LauncherHome.qml:91
+#: contents/ui/launcher/LauncherHome.qml:96
 #, kde-format
 msgid "Voice Apps"
 msgstr "Stemmeappar"
 
-#: contents/ui/launcher/LauncherHome.qml:116
+#: contents/ui/launcher/LauncherHome.qml:121
 #, kde-format
 msgid "Applications"
 msgstr "Program"
 
-#: contents/ui/launcher/LauncherHome.qml:143
+#: contents/ui/launcher/LauncherHome.qml:148
 #, kde-format
 msgid "Games"
 msgstr "Spel"
 
-#: contents/ui/launcher/LauncherHome.qml:172
+#: contents/ui/launcher/LauncherHome.qml:177
 #, kde-format
 msgid "Settings"
 msgstr "Innstillingar"

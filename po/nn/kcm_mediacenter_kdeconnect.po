@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-02 00:49+0000\n"
+"POT-Creation-Date: 2023-11-11 00:43+0000\n"
 "PO-Revision-Date: 2021-02-06 14:17+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -19,77 +19,62 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Karl Ove Hufthammer"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "karl@huftis.org"
-
-#: kdeconnect.cpp:18
-#, kde-format
-msgid "Configure KDE Connect"
-msgstr "Set opp KDE Connect"
-
-#: package/contents/ui/delegates/PairedView.qml:29
+#: ui/delegates/PairedView.qml:29
 #, kde-format
 msgid "This device is paired"
 msgstr "Eininga er para"
 
-#: package/contents/ui/delegates/PairedView.qml:62
+#: ui/delegates/PairedView.qml:62
 #, kde-format
 msgid "Unpair"
 msgstr "Løys paring"
 
-#: package/contents/ui/delegates/PairRequest.qml:29
+#: ui/delegates/PairRequest.qml:29
 #, kde-format
 msgid "This device is requesting to be paired"
 msgstr "Eining ber om å verta para"
 
-#: package/contents/ui/delegates/PairRequest.qml:63
+#: ui/delegates/PairRequest.qml:63
 #, kde-format
 msgid "Accept"
 msgstr "Godta"
 
-#: package/contents/ui/delegates/PairRequest.qml:99
+#: ui/delegates/PairRequest.qml:99
 #, kde-format
 msgid "Reject"
 msgstr "Avvis"
 
-#: package/contents/ui/delegates/UnpairedView.qml:40
+#: ui/delegates/UnpairedView.qml:40
 #, kde-format
 msgid "This device is not paired"
 msgstr "Eininga er ikkje para"
 
-#: package/contents/ui/delegates/UnpairedView.qml:80
+#: ui/delegates/UnpairedView.qml:80
 #, kde-format
 msgid "Pair"
 msgstr "Par"
 
-#: package/contents/ui/delegates/UnpairedView.qml:91
+#: ui/delegates/UnpairedView.qml:91
 #, kde-format
 msgid "Pairing request sent to device"
 msgstr "Sende paringsførespurnad til eining"
 
-#: package/contents/ui/delegates/Unreachable.qml:19
+#: ui/delegates/Unreachable.qml:18
 #, kde-format
 msgid "This device is not reachable"
 msgstr "Får ikkje kontakt med eininga"
 
-#: package/contents/ui/DeviceConnectionView.qml:196
+#: ui/DeviceConnectionView.qml:196
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "Trykk «[←] Tilbake» for å velja ny eining"
 
-#: package/contents/ui/main.qml:23
+#: ui/main.qml:22
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
 
-#: package/contents/ui/main.qml:90
+#: ui/main.qml:89
 #, kde-format
 msgid "Exit"
 msgstr "Avslutt"
