@@ -81,5 +81,6 @@
         "Name[zh_TW]": "Mycroft Bigscreen",
         "Website": "plasma.kde.org"
     },
+    "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-ContainmentType": "Desktop"
 }
