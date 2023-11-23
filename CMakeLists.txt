@@ -35,11 +35,10 @@ find_package(KF6 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     WindowSystem
     Svg
 )
-find_package(KF6 REQUIRED COMPONENTS
-    Activities
-    ActivitiesStats
-    Plasma
-)
+
+find_package(Plasma ${PROJECT_VERSION} REQUIRED)
+find_package(PlasmaActivities ${PROJECT_VERSION} REQUIRED)
+find_package(PlasmaActivitiesStats ${PROJECT_VERSION} REQUIRED)
 
 find_package(LibKWorkspace 5.19 CONFIG REQUIRED)
 

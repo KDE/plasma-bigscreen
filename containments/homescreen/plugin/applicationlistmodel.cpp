@@ -15,7 +15,6 @@
 #include <QRegularExpression>
 
 // KDE
-#include <KActivities/ResourceInstance>
 #include <KConfigGroup>
 #include <KIO/ApplicationLauncherJob>
 #include <KNotificationJobUiDelegate>
@@ -25,6 +24,7 @@
 #include <KShell>
 #include <KSycoca>
 #include <KSycocaEntry>
+#include <PlasmaActivities/ResourceInstance>
 
 ApplicationListModel::ApplicationListModel(QObject *parent)
     : QAbstractListModel(parent)

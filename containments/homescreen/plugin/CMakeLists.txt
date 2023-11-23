@@ -17,11 +17,11 @@ target_link_libraries(org.kde.mycroft.bigscreen.homescreen
     Qt::Qml
     Qt::DBus
     Qt::Network
-    KF6::Plasma
+    Plasma::Plasma
     KF6::I18n
     KF6::Notifications
     KF6::Service KF6::KIOWidgets
-    KF6::Activities
+    Plasma::Activities
     PW::KWorkspace
-    KF6::ActivitiesStats
+    Plasma::ActivitiesStats
 )
