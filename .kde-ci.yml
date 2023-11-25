@@ -23,8 +23,8 @@ Dependencies:
     'frameworks/solid': '@latest-kf6'
     'frameworks/ksvg': '@latest-kf6'
     'plasma/kwayland': '@same'
-    'plasma/plasma-framework': '@same'
+    'plasma/libplasma': '@same'
     'plasma/plasma-workspace': '@same'
-    'plasma/kactivities': '@latest-kf6' # Different versioning due to being a former Framework
-    'plasma/kactivities-stats': '@latest-kf6' # Different versioning due to being a former Framework
+    'plasma/plasma-activities': '@latest-kf6' # Different versioning due to being a former Framework
+    'plasma/plasma-activities-stats': '@latest-kf6' # Different versioning due to being a former Framework
     'plasma/plasma5support': '@same'
