@@ -22,7 +22,8 @@
                 "Name[sv]": "Marco Martin",
                 "Name[tr]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
-                "Name[x-test]": "xxMarco Martinxx"
+                "Name[x-test]": "xxMarco Martinxx",
+                "Name[zh_CN]": "Marco Martin"
             }
         ],
         "Description": "Plasma Mycroft Big Screen look and feel",
@@ -43,6 +44,7 @@
         "Description[tr]": "Plasma Mycroft Büyük Ekran görünümü ve hissi",
         "Description[uk]": "Вигляд і поведінка Плазми Mycroft для великих екранів",
         "Description[x-test]": "xxPlasma Mycroft Big Screen look and feelxx",
+        "Description[zh_CN]": "Plasma Mycroft 大屏幕界面外观设置",
         "Id": "org.kde.plasma.mycroft.bigscreen",
         "License": "GPLv2+",
         "Name": "Mycroft Big Screen",
@@ -80,6 +82,7 @@
         "Name[tr]": "Mycroft Büyük Ekran",
         "Name[uk]": "Mycroft для великих екранів",
         "Name[x-test]": "xxMycroft Big Screenxx",
+        "Name[zh_CN]": "Mycroft 大屏幕",
         "Name[zh_TW]": "Mycroft 大螢幕",
         "Version": "1.0",
         "Website": "http://www.kde.org"

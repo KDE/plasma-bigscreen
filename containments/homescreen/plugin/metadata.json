@@ -22,7 +22,8 @@
                 "Name[sv]": "Aditya Mehra",
                 "Name[tr]": "Aditya Mehra",
                 "Name[uk]": "Aditya Mehra",
-                "Name[x-test]": "xxAditya Mehraxx"
+                "Name[x-test]": "xxAditya Mehraxx",
+                "Name[zh_CN]": "Aditya Mehra"
             }
         ],
         "Category": "Utilities",
@@ -44,6 +45,7 @@
         "Description[tr]": "Plasma ve Mycroft tabanlı TV'ler için Ana Ekran",
         "Description[uk]": "Домашнє вікно для телевізорів на основі Плазми і Mycroft",
         "Description[x-test]": "xxHomescreen for Plasma and Mycroft based TVsxx",
+        "Description[zh_CN]": "基于 Plasma 和 Mycroft 的电视主屏幕",
         "Icon": "mycroft",
         "License": "GPL",
         "Name": "Mycroft Bigscreen",
@@ -81,6 +83,7 @@
         "Name[tr]": "Mycroft Büyük Ekran",
         "Name[uk]": "Mycroft для великих екранів",
         "Name[x-test]": "xxMycroft Bigscreenxx",
+        "Name[zh_CN]": "Mycroft 大屏幕",
         "Name[zh_TW]": "Mycroft Bigscreen",
         "Website": "plasma.kde.org"
     },
