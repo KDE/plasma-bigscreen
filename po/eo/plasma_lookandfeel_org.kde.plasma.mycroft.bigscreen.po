@@ -22,12 +22,6 @@ msgid "Welcome"
 msgstr "Bonvenon"
 
 #: contents/splash/Splash.qml:116
-#, fuzzy
-#| msgctxt ""
-#| "This is the first text the user sees while starting in the splash screen, "
-#| "¦should be translated as something short, is a form that can be seen on a "
-#| "¦product. Plasma is the project name so shouldn't be translated."
-#| msgid "Plasma made by KDE"
 msgctxt ""
 "This is the first text the user sees while starting in the splash screen, "
 "should be translated as something short, is a form that can be seen on a "
