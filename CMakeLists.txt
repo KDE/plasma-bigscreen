@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.16)
 cmake_policy(SET CMP0048 NEW)
 project(plasma-bigscreen)
-set(PROJECT_VERSION "5.27.9")
+set(PROJECT_VERSION "5.27.10")
 set(PROJECT_VERSION_MAJOR 5)
 
 set(QT_MIN_VERSION "5.15.2")
