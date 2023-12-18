@@ -4,130 +4,132 @@
 # This file is distributed under the same license as the plasma-bigscreen package.
 # Automatically generated, 2022.
 #
+# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-11 00:43+0000\n"
-"PO-Revision-Date: 2022-01-15 00:45+0000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-12-17 17:19+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Kisaragi Hiu"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "mail@kisaragi-hiu.com"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Jan"
-msgstr ""
+msgstr "一月"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Feb"
-msgstr ""
+msgstr "二月"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Mar"
-msgstr ""
+msgstr "三月"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Apr"
-msgstr ""
+msgstr "四月"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "May"
-msgstr ""
+msgstr "五月"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Jun"
-msgstr ""
+msgstr "六月"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Jul"
-msgstr ""
+msgstr "七月"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Aug"
-msgstr ""
+msgstr "八月"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Sep"
-msgstr ""
+msgstr "九月"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Oct"
-msgstr ""
+msgstr "十月"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Nov"
-msgstr ""
+msgstr "十一月"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Dec"
-msgstr ""
+msgstr "十二月"
 
 #: ui/DeviceTimeSettings.qml:149
 #, kde-format
 msgid "Time Display"
-msgstr ""
+msgstr "時間顯示方式"
 
 #: ui/DeviceTimeSettings.qml:156
 #, kde-format
 msgid "Timezone:"
-msgstr ""
+msgstr "時區："
 
 #: ui/DeviceTimeSettings.qml:176
 #, kde-format
 msgid "Set time automatically:"
-msgstr ""
+msgstr "自動設定時間："
 
 #: ui/DeviceTimeSettings.qml:210
 #, kde-format
 msgid "Time"
-msgstr ""
+msgstr "時間"
 
 #: ui/DeviceTimeSettings.qml:242
 #, kde-format
 msgid "Date"
-msgstr ""
+msgstr "日期"
 
 #: ui/DeviceTimeSettings.qml:315
 #, kde-format
 msgid "Press the [←] Back button to return to appearance settings"
-msgstr ""
+msgstr "按下 [←] 返回按鈕來回到外觀設定"
 
 #: ui/DeviceTimeSettings.qml:378 ui/DeviceTimeSettings.qml:503
 #: ui/DeviceTimeSettings.qml:600
 #, kde-format
 msgid "Press the [←] Back button to save configuration and return to settings"
-msgstr ""
+msgstr "按下 [←] 返回按鈕來儲存選項並回到設定"
 
 #: ui/DeviceTimeSettings.qml:419
 #, kde-format
 msgid "Your local timezone is %1"
-msgstr ""
+msgstr "您的本地時區是 %1"
 
 #: ui/DeviceTimeSettings.qml:419
 #, kde-format
@@ -137,39 +139,39 @@ msgstr ""
 #: ui/main.qml:21
 #, kde-format
 msgid "Appearance"
-msgstr ""
+msgstr "外觀"
 
 #: ui/main.qml:105
 #, kde-format
 msgid "Exit"
-msgstr ""
+msgstr "離開"
 
 #: ui/main.qml:146
 #, kde-format
 msgid "Launcher Appearance"
-msgstr ""
+msgstr "啟動器外觀"
 
 #: ui/main.qml:192
 #, kde-format
 msgid "Power Inhibition"
-msgstr ""
+msgstr "電源總檔"
 
 #: ui/main.qml:211
 #, kde-format
 msgid "Colored Tiles"
-msgstr ""
+msgstr "多彩方塊"
 
 #: ui/main.qml:230
 #, kde-format
 msgid "Expanding Tiles"
-msgstr ""
+msgstr "擴張方塊"
 
 #: ui/main.qml:248
 #, kde-format
 msgid "Adjust Date & Time"
-msgstr ""
+msgstr "調整日期和時間"
 
 #: ui/main.qml:275
 #, kde-format
 msgid "General Appearance"
-msgstr ""
+msgstr "一般外觀"
