@@ -5,20 +5,21 @@
 #
 # Automatically generated, 2020.
 # Yi-Jyun Pan <pan93412@gmail.com>, 2020.
+# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-02 00:49+0000\n"
-"PO-Revision-Date: 2020-02-28 22:03+0800\n"
-"Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2023-12-17 17:17+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 19.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -40,18 +41,18 @@ msgstr "設定 Plasma Wi-Fi"
 #, kde-format
 msgctxt "label of device items"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: package/contents/ui/delegates/VolumeObject.qml:59
 #, kde-format
 msgid "Adjust Volume"
-msgstr ""
+msgstr "調整音量"
 
 #: package/contents/ui/delegates/VolumeObject.qml:124
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: package/contents/ui/DeviceChooserPage.qml:75
 #, kde-format
@@ -61,22 +62,22 @@ msgstr "離開"
 #: package/contents/ui/DeviceChooserPage.qml:128
 #, kde-format
 msgid "Playback Devices"
-msgstr ""
+msgstr "回放裝置"
 
 #: package/contents/ui/DeviceChooserPage.qml:160
 #, kde-format
 msgid "Recording Devices"
-msgstr ""
+msgstr "錄音裝置"
 
 #: package/contents/ui/main.qml:22
 #, kde-format
 msgid "Audio Device Chooser"
-msgstr ""
+msgstr "音效裝置選取工具"
 
 #: package/contents/ui/SettingsItem.qml:235
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
-msgstr ""
+msgstr "按下 [←] 返回按鈕來回到裝置選擇"
 
 #~ msgid "Connected"
 #~ msgstr "已連線"
