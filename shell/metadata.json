@@ -24,7 +24,8 @@
                 "Name[tr]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
                 "Name[x-test]": "xxMarco Martinxx",
-                "Name[zh_CN]": "Marco Martin"
+                "Name[zh_CN]": "Marco Martin",
+                "Name[zh_TW]": "Marco Martin"
             }
         ],
         "Description": "Plasma shell for TVs",
@@ -48,6 +49,7 @@
         "Description[uk]": "Оболонка Плазми для телевізорів",
         "Description[x-test]": "xxPlasma shell for TVsxx",
         "Description[zh_CN]": "适配电视的 Plasma 外壳程序",
+        "Description[zh_TW]": "電視用的 Plasma 殼層",
         "Id": "org.kde.plasma.mycroft.bigscreen",
         "License": "GPLv2+",
         "Name": "Plasma Big Screen",

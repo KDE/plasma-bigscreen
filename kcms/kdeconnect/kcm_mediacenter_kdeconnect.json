@@ -31,6 +31,7 @@
         "Description[uk]": "З'єднання і синхронізація ваших пристроїв",
         "Description[x-test]": "xxConnect and sync your devicesxx",
         "Description[zh_CN]": "连接并同步您的设备",
+        "Description[zh_TW]": "連線並同步您的裝置",
         "FormFactors": [
             "mediacenter"
         ],
