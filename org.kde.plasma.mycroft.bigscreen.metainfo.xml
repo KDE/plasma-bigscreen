@@ -33,7 +33,7 @@
   <name xml:lang="uk">Плазма KDE для великих екранів</name>
   <name xml:lang="x-test">xxKDE Plasma Bigscreenxx</name>
   <name xml:lang="zh-CN">Plasma 大屏幕</name>
-  <name xml:lang="zh-TW">KDE Plasma Bigscreen</name>
+  <name xml:lang="zh-TW">KDE Plasma 大螢幕</name>
   <summary>Plasma Shell for TVs</summary>
   <summary xml:lang="ar">صدفة بلازما للتلفاز</summary>
   <summary xml:lang="az">TV-lər üçün Plasma üz qabığı</summary>
@@ -66,7 +66,7 @@
   <summary xml:lang="uk">Оболонка Плазми для телевізорів</summary>
   <summary xml:lang="x-test">xxPlasma Shell for TVsxx</summary>
   <summary xml:lang="zh-CN">适配电视的 Plasma 外壳程序</summary>
-  <summary xml:lang="zh-TW">適合電視的 Plasma 殼層</summary>
+  <summary xml:lang="zh-TW">電視用的 Plasma 殼層</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0-or-later</project_license>
   <supports>
@@ -103,6 +103,7 @@
     <p xml:lang="uk">Plasma Bigscreen — інтерфейс з відкритим кодом для телевізорів Працюючи на основі дистрибутива Linux, Plasma Bigscreen перетворює ваш телевізор або телеприставку на пристрій із усіма придатними до програмування можливостями. Велике вікно запуску надає вам доступ до усіх встановлених програм і можливостей. Системою можна керувати за допомогою голосового керування або пульту до телевізора.</p>
     <p xml:lang="x-test">xxPlasma Bigscreen is an open-source user interface for TVs. Running on top of a Linux distribution, Plasma Bigscreen turns your TV or set-top box into a fully hackable device. A big launcher giving you easy access to any installed apps and skills. Controllable via voice or TV remote.xx</p>
     <p xml:lang="zh-CN">Plasma 大屏幕版是一款针对电视机设计的开源用户界面。它在 Linux 发行版的基础上运行，可以将电视机或者机顶盒变成完全可定制的设备。它的大型启动器让您可以轻松访问已安装的应用和功能。支持语音或遥控器控制。</p>
+    <p xml:lang="zh-TW">《Plasma 大螢幕》是款開放原始碼的電視用使用者介面。《Plasma 大螢幕》以 Linux 發行版為執行基礎，將您的電視或視訊盒，搖身一變成為完全可以自由改造的裝置。放大的啟動器，讓您可以輕鬆取用安裝的 Apps，和進行操作。可以使用語音或 TV 遙控器控制。</p>
   </description>
   <project_group>KDE</project_group>
   <url type="homepage">https://plasma-bigscreen.org</url>
@@ -140,6 +141,7 @@
       <caption xml:lang="uk">Плазма для великих екранів</caption>
       <caption xml:lang="x-test">xxPlasma Bigscreenxx</caption>
       <caption xml:lang="zh-CN">Plasma 大屏幕</caption>
+      <caption xml:lang="zh-TW">Plasma 大螢幕</caption>
       <image>https://cdn.kde.org/screenshots/plasma-bigscreen/plasma-bigscreen.png</image>
     </screenshot>
   </screenshots>
