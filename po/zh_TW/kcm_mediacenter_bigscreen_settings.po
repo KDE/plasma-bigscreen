@@ -4,13 +4,13 @@
 # This file is distributed under the same license as the plasma-bigscreen package.
 # Automatically generated, 2022.
 #
-# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-11 00:43+0000\n"
-"PO-Revision-Date: 2023-12-17 17:19+0900\n"
+"PO-Revision-Date: 2024-01-03 03:54+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -154,7 +154,7 @@ msgstr "啟動器外觀"
 #: ui/main.qml:192
 #, kde-format
 msgid "Power Inhibition"
-msgstr "電源總檔"
+msgstr "電源阻擋"
 
 #: ui/main.qml:211
 #, kde-format
