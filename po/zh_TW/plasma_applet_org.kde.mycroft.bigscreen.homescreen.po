@@ -5,60 +5,61 @@
 #
 # Automatically generated, 2020.
 # Yi-Jyun Pan <pan93412@gmail.com>, 2020.
+# SPDX-FileCopyrightText: 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:47+0000\n"
-"PO-Revision-Date: 2020-02-28 22:00+0800\n"
-"Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2024-01-03 03:56+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 19.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: contents/config/config.qml:11
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "一般"
 
 #: contents/ui/ConfigWindow.qml:31
 #, kde-format
 msgid "Use Colored Tiles"
-msgstr ""
+msgstr "使用多彩方塊"
 
 #: contents/ui/ConfigWindow.qml:41
 #, kde-format
 msgid "Use Expanding Tiles"
-msgstr ""
+msgstr "使用擴張方塊"
 
 #: contents/ui/ConfigWindow.qml:57
 #, kde-format
 msgid "close"
-msgstr ""
+msgstr "關閉"
 
 #: contents/ui/indicators/KdeConnect.qml:91
 #, kde-format
 msgid "KDE Connect"
-msgstr ""
+msgstr "KDE 連線"
 
 #: contents/ui/indicators/PairWindow.qml:42
 #, kde-format
 msgid "Pairing Request From %1"
-msgstr ""
+msgstr "來自 %1 的配對請求"
 
 #: contents/ui/indicators/PairWindow.qml:69
 #, kde-format
 msgid "Accept"
-msgstr ""
+msgstr "接受"
 
 #: contents/ui/indicators/PairWindow.qml:105
 #, kde-format
 msgid "Reject"
-msgstr ""
+msgstr "拒絕"
 
 #: contents/ui/indicators/Volume.qml:122
 #, kde-format
@@ -111,10 +112,9 @@ msgid "Enable Remote STT"
 msgstr "啟用遠端 STT"
 
 #: contents/ui/launcher/LauncherHome.qml:67
-#, fuzzy, kde-format
-#| msgid "Voice Apps"
+#, kde-format
 msgid "Recent"
-msgstr "語音 App"
+msgstr "最近"
 
 #: contents/ui/launcher/LauncherHome.qml:91
 #, kde-format
@@ -139,12 +139,12 @@ msgstr "設定"
 #: contents/ui/MycroftIndicator.qml:57 contents/ui/MycroftIndicator.qml:66
 #, kde-format
 msgid "Getting Ready... Please Wait"
-msgstr ""
+msgstr "準備中… 請稍候"
 
 #: contents/ui/PowerManagementItem.qml:41
 #, kde-format
 msgid "Bigscreen has enabled system-wide inhibition"
-msgstr ""
+msgstr "大螢幕已啟用全系統睡眠阻擋"
 
 #~ msgid "Audio"
 #~ msgstr "音訊"
