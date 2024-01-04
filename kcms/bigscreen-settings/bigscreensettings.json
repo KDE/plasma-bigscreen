@@ -31,6 +31,7 @@
         "Description[uk]": "Вигляд і поведінка",
         "Description[x-test]": "xxLook and Feelxx",
         "Description[zh_CN]": "界面外观",
+        "Description[zh_TW]": "外觀與感覺",
         "FormFactors": [
             "handset",
             "tablet",
@@ -70,7 +71,8 @@
         "Name[tr]": "Görünüş",
         "Name[uk]": "Вигляд",
         "Name[x-test]": "xxAppearancexx",
-        "Name[zh_CN]": "外观"
+        "Name[zh_CN]": "外观",
+        "Name[zh_TW]": "外觀"
     },
     "X-KDE-Keywords": "theme, look, feel",
     "X-KDE-Keywords[ar]": "سمة,منظر,الشكل",
