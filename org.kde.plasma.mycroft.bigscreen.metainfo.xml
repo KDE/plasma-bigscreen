@@ -33,7 +33,7 @@
   <name xml:lang="uk">Плазма KDE для великих екранів</name>
   <name xml:lang="x-test">xxKDE Plasma Bigscreenxx</name>
   <name xml:lang="zh-CN">Plasma 大屏幕</name>
-  <name xml:lang="zh-TW">KDE Plasma Bigscreen</name>
+  <name xml:lang="zh-TW">KDE Plasma 大螢幕</name>
   <summary>Plasma Shell for TVs</summary>
   <summary xml:lang="ar">صدفة بلازما للتلفاز</summary>
   <summary xml:lang="az">TV-lər üçün Plasma üz qabığı</summary>
@@ -66,7 +66,7 @@
   <summary xml:lang="uk">Оболонка Плазми для телевізорів</summary>
   <summary xml:lang="x-test">xxPlasma Shell for TVsxx</summary>
   <summary xml:lang="zh-CN">适配电视的 Plasma 外壳程序</summary>
-  <summary xml:lang="zh-TW">適合電視的 Plasma 殼層</summary>
+  <summary xml:lang="zh-TW">電視用的 Plasma 殼層</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0-or-later</project_license>
   <supports>
@@ -144,6 +144,7 @@
       <caption xml:lang="uk">Плазма для великих екранів</caption>
       <caption xml:lang="x-test">xxPlasma Bigscreenxx</caption>
       <caption xml:lang="zh-CN">Plasma 大屏幕</caption>
+      <caption xml:lang="zh-TW">Plasma 大螢幕</caption>
       <image>https://cdn.kde.org/screenshots/plasma-bigscreen/plasma-bigscreen.png</image>
     </screenshot>
   </screenshots>
