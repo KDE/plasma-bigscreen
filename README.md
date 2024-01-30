@@ -1,4 +1,4 @@
-# ![Logo](https://plasma-bigscreen.org/wp-content/uploads/sites/3/2020/03/bigscreen-logo.png)
+# ![Logo](https://plasma-bigscreen.org/img/logo.png)
 
 A big launcher giving you easy access to any installed apps and skills.
 Controllable via voice or TV remote.
