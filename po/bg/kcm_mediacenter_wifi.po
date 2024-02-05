@@ -75,14 +75,3 @@ msgstr "Изход"
 #, kde-format
 msgid "Manage Connections"
 msgstr "Управление на връзки"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Минчо Кондарев"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "mkondarev@yahoo.de"
-
-#~ msgid "Configure Plasma wifi"
-#~ msgstr "Конфигуриране на безжична мрежа"
