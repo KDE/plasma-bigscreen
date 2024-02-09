@@ -78,14 +78,3 @@ msgstr "KDE Connect"
 #, kde-format
 msgid "Exit"
 msgstr "Ix"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Josep M. Ferrer"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "txemaq@gmail.com"
-
-#~ msgid "Configure KDE Connect"
-#~ msgstr "Configura KDE Connect"

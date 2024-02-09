@@ -75,17 +75,3 @@ msgstr "Surt"
 #, kde-format
 msgid "Manage Connections"
 msgstr "Gestiona les connexions"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Josep M. Ferrer"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "txemaq@gmail.com"
-
-#~ msgid "Configure Plasma wifi"
-#~ msgstr "Configura el Wi-Fi del Plasma"
-
-#~ msgid "Network"
-#~ msgstr "Xarxa"

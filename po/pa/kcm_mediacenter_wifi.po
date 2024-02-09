@@ -1,77 +1,75 @@
-# Translation of kcm_mediacenter_wifi.po to Catalan (Valencian)
-# Copyright (C) 2021-2022 This_file_is_part_of_KDE
-# This file is distributed under the license LGPL version 2.1 or
-# version 3 or later versions approved by the membership of KDE e.V.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2024 A S Alam <aalam@punlinux.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-11 00:43+0000\n"
-"PO-Revision-Date: 2022-07-08 14:55+0200\n"
-"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
-"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
-"Language: ca@valencia\n"
+"PO-Revision-Date: 2024-02-07 21:28-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
+"Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: ui/delegates/CompactNetworkDelegate.qml:111
 #: ui/delegates/NetworkDelegate.qml:127 ui/DeviceConnectionItem.qml:60
 #: ui/NetworkItem.qml:94
 #, kde-format
 msgid "Connected"
-msgstr "Connectat"
+msgstr "ਕਨੈਕਟ ਹੈ"
 
 #: ui/DeviceConnectionItem.qml:235
 #, kde-format
 msgid "Speed"
-msgstr "Velocitat"
+msgstr "ਸਪੀਡ"
 
 #: ui/main.qml:129
 #, kde-format
 msgid "Enter Password For %1"
-msgstr "Introduïu la contrasenya per a %1"
+msgstr "%1 ਲਈ ਪਾਸਵਰਡ ਦਿਓ"
 
 #: ui/main.qml:138
 #, kde-format
 msgid "Password..."
-msgstr "Contrasenya..."
+msgstr "ਪਾਸਵਰਡ..."
 
 #: ui/main.qml:162
 #, kde-format
 msgid "Connect"
-msgstr "Connecta"
+msgstr "ਕਨੈਕਟ"
 
 #: ui/main.qml:177 ui/main.qml:243
 #, kde-format
 msgid "Cancel"
-msgstr "Cancel·la"
+msgstr "ਰੱਦ ਕਰੋ"
 
 #: ui/main.qml:209
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
-msgstr "Segur que voleu oblidar la xarxa %1?"
+msgstr "ਕੀ ਤੁਸੀਂ %1 ਨੈੱਟਵਰਕ ਨੂੰ ਭੁੱਲਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
 #: ui/main.qml:216
 #, kde-format
 msgid "Forget"
-msgstr "Oblida"
+msgstr "ਭੁੱਲੋ"
 
 #: ui/main.qml:328
 #, kde-format
 msgid "Refresh"
-msgstr "Actualitza"
+msgstr "ਤਾਜ਼ਾ ਕਰੋ"
 
 #: ui/main.qml:363
 #, kde-format
 msgid "Exit"
-msgstr "Ix"
+msgstr "ਬਾਹਰ"
 
 #: ui/main.qml:391
 #, kde-format
 msgid "Manage Connections"
-msgstr "Gestiona les connexions"
+msgstr "ਕਨੈਕਸ਼ਨਾਂ ਦਾ ਇੰਤਜ਼ਾਮ ਕਰੋ"

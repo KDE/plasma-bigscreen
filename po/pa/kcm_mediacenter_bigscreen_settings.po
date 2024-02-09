@@ -1,0 +1,174 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# SPDX-FileCopyrightText: 2024 A S Alam <aalam@punlinux.org>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-11 00:43+0000\n"
+"PO-Revision-Date: 2024-02-07 21:41-0600\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ (A S Alam) - ੨੦੨੪"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "aalam@punlinux.org"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Jan"
+msgstr "ਜਨ"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Feb"
+msgstr "ਫਰ"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Mar"
+msgstr "ਮਾਰ"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Apr"
+msgstr "ਅਪ"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "May"
+msgstr "ਮਈ"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Jun"
+msgstr "ਜੂਨ"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Jul"
+msgstr "ਜੁਲਾ"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Aug"
+msgstr "ਅਗ"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Sep"
+msgstr "ਸਤੰ"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Oct"
+msgstr "ਅਕਤੂ"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Nov"
+msgstr "ਨਵੰ"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Dec"
+msgstr "ਦਸੰ"
+
+#: ui/DeviceTimeSettings.qml:149
+#, kde-format
+msgid "Time Display"
+msgstr "ਸਮਾਂ ਵੇਖਾਓ"
+
+#: ui/DeviceTimeSettings.qml:156
+#, kde-format
+msgid "Timezone:"
+msgstr "ਸਮਾਂ-ਖੇਤਰ:"
+
+#: ui/DeviceTimeSettings.qml:176
+#, kde-format
+msgid "Set time automatically:"
+msgstr "ਆਪਣੇ-ਆਪ ਸੈੱਟ ਕਰੋ:"
+
+#: ui/DeviceTimeSettings.qml:210
+#, kde-format
+msgid "Time"
+msgstr "ਸਮਾਂ"
+
+#: ui/DeviceTimeSettings.qml:242
+#, kde-format
+msgid "Date"
+msgstr "ਤਾਰੀਖ"
+
+#: ui/DeviceTimeSettings.qml:315
+#, kde-format
+msgid "Press the [←] Back button to return to appearance settings"
+msgstr "ਦਿੱਖ ਸੈਟਿੰਗਾਂ ਉੱਤੇ ਵਾਪਸ ਜਾਣ ਵਾਸਤੇ [←] ਪਿੱਛੇ ਬਟਨ ਨੂੰ ਦਬਾਓ"
+
+#: ui/DeviceTimeSettings.qml:378 ui/DeviceTimeSettings.qml:503
+#: ui/DeviceTimeSettings.qml:600
+#, kde-format
+msgid "Press the [←] Back button to save configuration and return to settings"
+msgstr "ਸੰਰਚਨਾ ਸੰਭਾਲ ਕੇ ਸੈਟਿੰਗਾਂ ਉੱਤੇ ਵਾਪਸ ਜਾਣ ਵਾਸਤੇ [←] ਪਿੱਛੇ ਬਟਨ ਨੂੰ ਦਬਾਓ"
+
+#: ui/DeviceTimeSettings.qml:419
+#, kde-format
+msgid "Your local timezone is %1"
+msgstr "ਤੁਹਾਡਾ ਲੋਕਲ ਸਮਾਂ ਖੇਤਰ %1 ਹੈ"
+
+#: ui/DeviceTimeSettings.qml:419
+#, kde-format
+msgid "%1, %2"
+msgstr "%1, %2"
+
+#: ui/main.qml:21
+#, kde-format
+msgid "Appearance"
+msgstr "ਦਿੱਖ"
+
+#: ui/main.qml:105
+#, kde-format
+msgid "Exit"
+msgstr "ਬਾਹਰ"
+
+#: ui/main.qml:146
+#, kde-format
+msgid "Launcher Appearance"
+msgstr "ਲਾਂਚਰ ਦੀ ਦਿੱਖ"
+
+#: ui/main.qml:192
+#, kde-format
+msgid "Power Inhibition"
+msgstr "ਪਾਵਰ ਰੋਕ"
+
+#: ui/main.qml:211
+#, kde-format
+msgid "Colored Tiles"
+msgstr "ਰੰਗਦਾਰ ਟਾਈਲਾਂ"
+
+#: ui/main.qml:230
+#, kde-format
+msgid "Expanding Tiles"
+msgstr "ਟਾਈਲਾਂ ਨੂੰ ਫੈਲਾਇਆ ਜਾ ਰਿਹਾ ਹੈ"
+
+#: ui/main.qml:248
+#, kde-format
+msgid "Adjust Date & Time"
+msgstr "ਤਾਰੀਖ ਅਤੇ ਸਮੇਂ ਨੂੰ ਦਰੁਸਤ ਕਰੋ"
+
+#: ui/main.qml:275
+#, kde-format
+msgid "General Appearance"
+msgstr "ਆਮ ਦਿੱਖ"
