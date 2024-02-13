@@ -5,6 +5,7 @@
             {
                 "Email": "aix.m@outlook.com",
                 "Name": "Aditya Mehra",
+                "Name[ar]": "أديتيا ميهرا",
                 "Name[bg]": "Aditya Mehra",
                 "Name[ca@valencia]": "Aditya Mehra",
                 "Name[ca]": "Aditya Mehra",
@@ -34,6 +35,7 @@
         ],
         "Category": "Utilities",
         "Description": "Homescreen for Plasma and Mycroft based TVs",
+        "Description[ar]": "الشاشة الرئيسية لأجهزة التلفاز المعتمدة على بلازما و ميكروفت",
         "Description[bg]": "Начален екран за телевизори, базирани на Plasma и Mycroft based",
         "Description[ca@valencia]": "Pantalla d'inici de Plasma i Mycroft per a televisors",
         "Description[ca]": "Pantalla d'inici del Plasma i el Mycroft per a televisors",

@@ -5,6 +5,7 @@
             {
                 "Email": "mart@kde.org",
                 "Name": "Marco Martin",
+                "Name[ar]": "ماركو مارتن",
                 "Name[bg]": "Marco Martin",
                 "Name[ca@valencia]": "Marco Martin",
                 "Name[ca]": "Marco Martin",
@@ -33,6 +34,7 @@
             }
         ],
         "Description": "Plasma Mycroft Big Screen look and feel",
+        "Description[ar]": "مظهر  وشكل بلازما ميكروفت الشاشة الكبيرة",
         "Description[bg]": "Външен изглед  на Plasma Mycroft Big Screen",
         "Description[ca@valencia]": "Aparença i comportament de la Big Screen amb Mycroft en Plasma",
         "Description[ca]": "Aparença i comportament de la Big Screen del Plasma del Mycroft",

@@ -5,6 +5,7 @@
             {
                 "Email": "mart@kde.org",
                 "Name": "Marco Martin",
+                "Name[ar]": "ماركو مارتن",
                 "Name[bg]": "Marco Martin",
                 "Name[ca@valencia]": "Marco Martin",
                 "Name[ca]": "Marco Martin",
@@ -33,6 +34,7 @@
             }
         ],
         "Description": "Plasma shell for TVs",
+        "Description[ar]": "صدفة بلازما للتلفاز",
         "Description[bg]": "Обвивка на Plasma  за телевизори",
         "Description[ca@valencia]": "Espai de treball Plasma per a televisors",
         "Description[ca]": "Espai de treball Plasma per a televisors",
