@@ -25,6 +25,7 @@
   <name xml:lang="pl">Duży Ekran Plazmy KDE</name>
   <name xml:lang="pt">Plasma do KDE para Ecrãs Grandes</name>
   <name xml:lang="pt-BR">KDE Plasma Bigscreen</name>
+  <name xml:lang="ro">KDE Plasma Bigscreen</name>
   <name xml:lang="ru">KDE Plasma для больших экранов</name>
   <name xml:lang="sk">KDE Plasma Bigscreen</name>
   <name xml:lang="sl">KDE Plasma Bigscreen</name>
@@ -58,6 +59,7 @@
   <summary xml:lang="pl">Powłoka Plazmy dla telewizorów</summary>
   <summary xml:lang="pt">Consola do Plasma para TV's</summary>
   <summary xml:lang="pt-BR">Shell do Plasma para TVs</summary>
+  <summary xml:lang="ro">Înveliș Plasma pentru televizoare</summary>
   <summary xml:lang="ru">Оболочка Plasma для телевизоров</summary>
   <summary xml:lang="sk">Plasma shell pre televízory</summary>
   <summary xml:lang="sl">Plasma Shell za TV</summary>
@@ -136,6 +138,7 @@
       <caption xml:lang="pl">Duży Ekran Plazmy</caption>
       <caption xml:lang="pt">Plasma para Ecrãs Grandes</caption>
       <caption xml:lang="pt-BR">Plasma Bigscreen</caption>
+      <caption xml:lang="ro">Ecran mare Plasma</caption>
       <caption xml:lang="ru">Plasma Bigscreen</caption>
       <caption xml:lang="sk">Plasma Bigscreen</caption>
       <caption xml:lang="sl">Plasma Bigscreen</caption>
