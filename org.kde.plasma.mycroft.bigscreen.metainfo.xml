@@ -16,6 +16,7 @@
   <name xml:lang="fi">KDE Plasma Bigscreen</name>
   <name xml:lang="fr">Bigscreen de KDE Plasma</name>
   <name xml:lang="gl">KDE Plasma Bigscreen</name>
+  <name xml:lang="he">פלזמה מבית KDE למסכים גדולים</name>
   <name xml:lang="hu">KDE Plasma Bigscreen</name>
   <name xml:lang="ia">KDE Plasma Bigscreen</name>
   <name xml:lang="it">Plasma Bigscreen di KDE</name>
@@ -52,6 +53,7 @@
   <summary xml:lang="fi">Plasmakäyttöliittymä TV:ille</summary>
   <summary xml:lang="fr">Un script de Plasma pour les téléviseurs</summary>
   <summary xml:lang="gl">Interface de Plasma para teles.</summary>
+  <summary xml:lang="he">מעטפת KDE לטלוויזיות</summary>
   <summary xml:lang="hu">Plasma felület televíziókhoz</summary>
   <summary xml:lang="ia">Shell  de Plasma per TVs</summary>
   <summary xml:lang="it">Shell Plasma per TV</summary>
@@ -96,6 +98,7 @@
     <p xml:lang="fi">Plasma Bigscreen on avoimen lähdekoodin TV-käyttöliittymä. Linux-jakelusta käytettynä Plasma Bigscreen muuttaa TV:si tai digiboksisi täysin mukautettavaksi laitteeksi. Suuri käynnistin takaa helpon pääsyn asennettuihin sovelluksiin ja ominaisuuksiin. Hallinta onnistuu puheella tai TV:n kaukosäätimellä.</p>
     <p xml:lang="fr">Plasma Bigscreen est une interface utilisateur « open-source » pour téléviseurs. Fonctionnant au-dessus d'une distribution Linux, Plasma Bigscreen transforme votre téléviseur ou votre boîtier TV en un appareil entièrement modifiable. Un grand lanceur vous donne un accès facile à toutes les applications et habillages installés. Plasma Bigscreen est aussi contrôlable par la voix ou par la télécommande du téléviseur.</p>
     <p xml:lang="gl">Plasma Bigscreen é unha interface libre para teles. Execútase sobre unha distribución Linux, e converte a tele ou caixa multimedia nun dispositivo flexíbel. O grande iniciador de aplicacións facilita acceder ás aplicacións instaladas e funcionalidades. Pode controlarse por voz ou cun mando de tele.</p>
+    <p xml:lang="he">פלזמה למסכים גדולים הוא ממשק משתמש בקוד פתוח לטלוויזיות. הוא פועל על גבי הפצות לינוקס, פלזמה למסכים גדולים הופך את הטלוויזיה או את הסטרימר שלך למכשיר שזמין לשינויים נרחבים. משגר גדול מעניק לך גישה קלה ליישומונים ומיומנויות שמותקנים. אפשר לשלוט בו דרך קול או דרך השלט של הטלוויזיה.</p>
     <p xml:lang="hu">A Plasma Bigscreen egy nyílt forráskódú felhasználói felület televíziókhoz. Egy Linux disztribúción futtatva a Plasma Bigscreent televízióját vagy dekóderét egy teljesen hekkelhető eszközzé alakíthatja. A nagy indító egyszerű hozzáférést biztosít a telepített alkalmazásokhoz és képességekhez. Hanggal és távirányítóval is vezérelhető.</p>
     <p xml:lang="ia">Bigscreen de Plasma es un interfacie de usator a software aperite (i.e. open-source) per TVs. Executante al culmine de un distribution de Linux, Plasma Bigscreen transforma tu TV o dispositivo de set-top box in un dispositivo completemente hackerabile (hackable). Un grosse lanceator te dara un facilke accesso a ulle applicationes installate e habilitate. Controlabile via voce o dispositivo remote de TV.</p>
     <p xml:lang="it">Plasma Bigscreen è un'interfaccia utente open source per TV. In esecuzione su una distribuzione Linux, Plasma Bigscreen trasforma la tua TV o il tuo set-top box in un dispositivo completamente modificabile. Un grande lanciatore che ti offre un facile accesso a qualsiasi applicazione installata e funzionalità. Controllabile tramite comandi vocali o telecomando.</p>
@@ -134,6 +137,7 @@
       <caption xml:lang="fi">Plasma Bigscreen</caption>
       <caption xml:lang="fr">Logiciel Bigscreen de KDE Plasma</caption>
       <caption xml:lang="gl">Plasma Bigscreen.</caption>
+      <caption xml:lang="he">פלזמה למסכים גדולים</caption>
       <caption xml:lang="hu">Plasma Bigscreen</caption>
       <caption xml:lang="ia">Plasma Bigscreen</caption>
       <caption xml:lang="it">Plasma Bigscreen</caption>
