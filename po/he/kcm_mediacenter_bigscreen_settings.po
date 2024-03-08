@@ -1,0 +1,174 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-11 00:43+0000\n"
+"PO-Revision-Date: 2024-03-07 14:56+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "צוות התרגום של KDE ישראל"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde-l10n-he@kde.org"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Jan"
+msgstr "ינו"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Feb"
+msgstr "פבר"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Mar"
+msgstr "מרץ"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Apr"
+msgstr "אפר"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "May"
+msgstr "מאי"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Jun"
+msgstr "יונ"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Jul"
+msgstr "יול"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Aug"
+msgstr "אוג"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Sep"
+msgstr "ספט"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Oct"
+msgstr "אוק"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Nov"
+msgstr "נוב"
+
+#: ui/delegates/DatePicker.qml:110
+#, kde-format
+msgid "Dec"
+msgstr "דצמ"
+
+#: ui/DeviceTimeSettings.qml:149
+#, kde-format
+msgid "Time Display"
+msgstr "תצוגת שעה"
+
+#: ui/DeviceTimeSettings.qml:156
+#, kde-format
+msgid "Timezone:"
+msgstr "אזור זמן:"
+
+#: ui/DeviceTimeSettings.qml:176
+#, kde-format
+msgid "Set time automatically:"
+msgstr "הגדרת השעה אוטומטית:"
+
+#: ui/DeviceTimeSettings.qml:210
+#, kde-format
+msgid "Time"
+msgstr "שעה"
+
+#: ui/DeviceTimeSettings.qml:242
+#, kde-format
+msgid "Date"
+msgstr "תאריך"
+
+#: ui/DeviceTimeSettings.qml:315
+#, kde-format
+msgid "Press the [←] Back button to return to appearance settings"
+msgstr "יש לחזור על כפתור החזרה [→] כדי לחזור להגדרות המראה"
+
+#: ui/DeviceTimeSettings.qml:378 ui/DeviceTimeSettings.qml:503
+#: ui/DeviceTimeSettings.qml:600
+#, kde-format
+msgid "Press the [←] Back button to save configuration and return to settings"
+msgstr "יש לחזור על כפתור החזרה [→] כדי לשמור את התצורה ולחזור להגדרות"
+
+#: ui/DeviceTimeSettings.qml:419
+#, kde-format
+msgid "Your local timezone is %1"
+msgstr "אזור הזמן המקומי שלך הוא %1"
+
+#: ui/DeviceTimeSettings.qml:419
+#, kde-format
+msgid "%1, %2"
+msgstr "%1, %2"
+
+#: ui/main.qml:21
+#, kde-format
+msgid "Appearance"
+msgstr "מראה"
+
+#: ui/main.qml:105
+#, kde-format
+msgid "Exit"
+msgstr "יציאה"
+
+#: ui/main.qml:146
+#, kde-format
+msgid "Launcher Appearance"
+msgstr "מראה המשגר"
+
+#: ui/main.qml:192
+#, kde-format
+msgid "Power Inhibition"
+msgstr "מניעת צריכת חשמל"
+
+#: ui/main.qml:211
+#, kde-format
+msgid "Colored Tiles"
+msgstr "אריחים צבעוניים"
+
+#: ui/main.qml:230
+#, kde-format
+msgid "Expanding Tiles"
+msgstr "אריחים מתרחבים"
+
+#: ui/main.qml:248
+#, kde-format
+msgid "Adjust Date & Time"
+msgstr "כיוון התאריך והשעה"
+
+#: ui/main.qml:275
+#, kde-format
+msgid "General Appearance"
+msgstr "מראה כללי"
