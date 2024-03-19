@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-14 00:43+0000\n"
-"PO-Revision-Date: 2024-03-17 21:22+0300\n"
+"PO-Revision-Date: 2024-03-18 19:36+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -136,7 +136,7 @@ msgstr "Ayarlar"
 #: contents/ui/MycroftIndicator.qml:57 contents/ui/MycroftIndicator.qml:66
 #, kde-format
 msgid "Getting Ready... Please Wait"
-msgstr "Hazırlanıyor... Lütfen Bekleyin"
+msgstr "Hazırlanıyor… Lütfen Bekleyin"
 
 #: contents/ui/PowerManagementItem.qml:41
 #, kde-format
