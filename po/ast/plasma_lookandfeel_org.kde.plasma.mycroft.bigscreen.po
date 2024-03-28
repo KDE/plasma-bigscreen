@@ -1,26 +1,25 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# SPDX-FileCopyrightText: 2024 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:36+0000\n"
-"PO-Revision-Date: 2024-03-27 19:45\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2024-03-27 23:35+0100\n"
+"Last-Translator: Enol P. <enolp@softastur.org>\n"
+"Language-Team: Asturian <alministradores@softastur.org>\n"
+"Language: ast_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-bigscreen/plasma_lookandfeel_org."
-"kde.plasma.mycroft.bigscreen.pot\n"
-"X-Crowdin-File-ID: 49384\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: contents/splash/Splash.qml:70
 msgid "Welcome"
-msgstr "欢迎使用"
+msgstr ""
 
 #: contents/splash/Splash.qml:116
 msgctxt ""
@@ -28,4 +27,4 @@ msgctxt ""
 "should be translated as something short, is a form that can be seen on a "
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
-msgstr "KDE 社区编写的 Plasma 桌面环境"
+msgstr ""

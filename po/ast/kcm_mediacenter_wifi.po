@@ -1,76 +1,75 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# SPDX-FileCopyrightText: 2024 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-11 00:43+0000\n"
-"PO-Revision-Date: 2024-03-27 19:45\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2024-03-27 23:24+0100\n"
+"Last-Translator: Enol P. <enolp@softastur.org>\n"
+"Language-Team: Asturian <alministradores@softastur.org>\n"
+"Language: ast_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-bigscreen/kcm_mediacenter_wifi."
-"pot\n"
-"X-Crowdin-File-ID: 49410\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: ui/delegates/CompactNetworkDelegate.qml:111
 #: ui/delegates/NetworkDelegate.qml:127 ui/DeviceConnectionItem.qml:60
 #: ui/NetworkItem.qml:94
 #, kde-format
 msgid "Connected"
-msgstr "已连接"
+msgstr ""
 
 #: ui/DeviceConnectionItem.qml:235
 #, kde-format
 msgid "Speed"
-msgstr "速度"
+msgstr "Velocidá"
 
 #: ui/main.qml:129
 #, kde-format
 msgid "Enter Password For %1"
-msgstr "输入 %1 的密码"
+msgstr ""
 
 #: ui/main.qml:138
 #, kde-format
 msgid "Password..."
-msgstr "密码..."
+msgstr ""
 
 #: ui/main.qml:162
 #, kde-format
 msgid "Connect"
-msgstr "连接"
+msgstr ""
 
 #: ui/main.qml:177 ui/main.qml:243
 #, kde-format
 msgid "Cancel"
-msgstr "取消"
+msgstr ""
 
 #: ui/main.qml:209
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
-msgstr "您确定要忘记网络 %1 吗？"
+msgstr ""
 
 #: ui/main.qml:216
 #, kde-format
 msgid "Forget"
-msgstr "忘记"
+msgstr ""
 
 #: ui/main.qml:328
 #, kde-format
 msgid "Refresh"
-msgstr "刷新"
+msgstr ""
 
 #: ui/main.qml:363
 #, kde-format
 msgid "Exit"
-msgstr "退出"
+msgstr ""
 
 #: ui/main.qml:391
 #, kde-format
 msgid "Manage Connections"
-msgstr "管理连接"
+msgstr ""
