@@ -1,32 +1,32 @@
+# translation of kcm_mediacenter_wifi.pot to Esperanto
+# Copyright (C) 2024 Free Software Foundation, Inc.
+# This file is distributed under the same license as the plasma-bigscreen package.
+# Oliver Kellogg <okellogg.sourceforge.net>, 2024.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-02 00:49+0000\n"
-"PO-Revision-Date: 2024-03-28 19:25\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2024-02-09 22:05+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo.org>\n"
+"Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-stable/messages/plasma-bigscreen/kcm_mediacenter_wifi."
-"pot\n"
-"X-Crowdin-File-ID: 40870\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Tyson Tan"
+msgstr ""
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "tds00@qq.com"
+msgstr ""
 
 #: package/contents/ui/delegates/CompactNetworkDelegate.qml:112
 #: package/contents/ui/delegates/NetworkDelegate.qml:128
@@ -34,59 +34,59 @@ msgstr "tds00@qq.com"
 #: package/contents/ui/NetworkItem.qml:95
 #, kde-format
 msgid "Connected"
-msgstr "已连接"
+msgstr "Konektita"
 
 #: package/contents/ui/DeviceConnectionItem.qml:236
 #, kde-format
 msgid "Speed"
-msgstr "速度"
+msgstr "Rapido"
 
 #: package/contents/ui/main.qml:130
 #, kde-format
 msgid "Enter Password For %1"
-msgstr "输入 %1 的密码"
+msgstr "Enigu Pasvorton Por %1"
 
 #: package/contents/ui/main.qml:139
 #, kde-format
 msgid "Password..."
-msgstr "密码..."
+msgstr "Pasvorto..."
 
 #: package/contents/ui/main.qml:163
 #, kde-format
 msgid "Connect"
-msgstr "连接"
+msgstr "Konekti"
 
 #: package/contents/ui/main.qml:178 package/contents/ui/main.qml:244
 #, kde-format
 msgid "Cancel"
-msgstr "取消"
+msgstr "Nuligi"
 
 #: package/contents/ui/main.qml:210
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
-msgstr "您确定要忘记网络 %1 吗？"
+msgstr "Ĉu vi certas ke vi volas forgesi la reton %1?"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
 msgid "Forget"
-msgstr "忘记"
+msgstr "Forgesi"
 
 #: package/contents/ui/main.qml:329
 #, kde-format
 msgid "Refresh"
-msgstr "刷新"
+msgstr "Refreŝigi"
 
 #: package/contents/ui/main.qml:364
 #, kde-format
 msgid "Exit"
-msgstr "退出"
+msgstr "Eliri"
 
 #: package/contents/ui/main.qml:392
 #, kde-format
 msgid "Manage Connections"
-msgstr "管理连接"
+msgstr "Mastrumi Konektojn"
 
 #: wifi.cpp:18
 #, kde-format
 msgid "Configure Plasma wifi"
-msgstr "配置 Plasma Wi-Fi"
+msgstr ""

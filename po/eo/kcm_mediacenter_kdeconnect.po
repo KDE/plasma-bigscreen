@@ -1,87 +1,87 @@
+# translation of kcm_mediacenter_kdeconnect.pot to Esperanto
+# Copyright (C) 2024 Free Software Foundation, Inc.
+# This file is distributed under the same license as the plasma-bigscreen package.
+# Oliver Kellogg <okellogg.sourceforge.net>, 2024.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-02 00:49+0000\n"
-"PO-Revision-Date: 2024-03-28 19:25\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2024-02-09 22:05+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo.org>\n"
+"Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-stable/messages/plasma-bigscreen/"
-"kcm_mediacenter_kdeconnect.pot\n"
-"X-Crowdin-File-ID: 40866\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "KDE China, Guo Yunhe, Tyson Tan"
+msgstr ""
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kde-china@kde.org,i@guoyunhe.me, tds00@qq.com"
+msgstr ""
 
 #: kdeconnect.cpp:18
 #, kde-format
 msgid "Configure KDE Connect"
-msgstr "配置 KDE Connect"
+msgstr ""
 
 #: package/contents/ui/delegates/PairedView.qml:29
 #, kde-format
 msgid "This device is paired"
-msgstr "此设备已配对"
+msgstr "Ĉi aparato estas kuplita"
 
 #: package/contents/ui/delegates/PairedView.qml:62
 #, kde-format
 msgid "Unpair"
-msgstr "取消配对"
+msgstr "Malkupli"
 
 #: package/contents/ui/delegates/PairRequest.qml:29
 #, kde-format
 msgid "This device is requesting to be paired"
-msgstr "此设备正在请求配对"
+msgstr "Ĉi tiu aparato alpetas kupliĝi"
 
 #: package/contents/ui/delegates/PairRequest.qml:63
 #, kde-format
 msgid "Accept"
-msgstr "接受"
+msgstr "Akcepti"
 
 #: package/contents/ui/delegates/PairRequest.qml:99
 #, kde-format
 msgid "Reject"
-msgstr "拒绝"
+msgstr "Malakcepti"
 
 #: package/contents/ui/delegates/UnpairedView.qml:40
 #, kde-format
 msgid "This device is not paired"
-msgstr "此设备未配对"
+msgstr "Ĉi tiu aparato ne estas kuplita"
 
 #: package/contents/ui/delegates/UnpairedView.qml:80
 #, kde-format
 msgid "Pair"
-msgstr "配对"
+msgstr "Kupli"
 
 #: package/contents/ui/delegates/UnpairedView.qml:91
 #, kde-format
 msgid "Pairing request sent to device"
-msgstr "配对请求已发送到设备"
+msgstr "Sendis alpeton pri kupliĝo al aparato"
 
 #: package/contents/ui/delegates/Unreachable.qml:19
 #, kde-format
 msgid "This device is not reachable"
-msgstr "设备无法访问"
+msgstr "Ĉi tiu aparato ne estas atingebla"
 
 #: package/contents/ui/DeviceConnectionView.qml:196
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
-msgstr "点击 [←] 后退按钮返回设备选择列表"
+msgstr "Premu la butonon Reen [←] por reveni al aparata elekto"
 
 #: package/contents/ui/main.qml:23
 #, kde-format
@@ -91,4 +91,4 @@ msgstr "KDE Connect"
 #: package/contents/ui/main.qml:90
 #, kde-format
 msgid "Exit"
-msgstr "退出"
+msgstr "Eliri"
