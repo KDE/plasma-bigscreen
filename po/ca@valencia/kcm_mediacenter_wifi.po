@@ -39,7 +39,7 @@ msgstr "Introduïu la contrasenya per a %1"
 #: ui/main.qml:138
 #, kde-format
 msgid "Password..."
-msgstr "Contrasenya..."
+msgstr "Contrasenya…"
 
 #: ui/main.qml:162
 #, kde-format
