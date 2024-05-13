@@ -138,7 +138,7 @@ msgstr "Configuració"
 #: contents/ui/MycroftIndicator.qml:57 contents/ui/MycroftIndicator.qml:66
 #, kde-format
 msgid "Getting Ready... Please Wait"
-msgstr "S'està preparant... espereu"
+msgstr "S'està preparant… espereu"
 
 #: contents/ui/PowerManagementItem.qml:41
 #, kde-format
