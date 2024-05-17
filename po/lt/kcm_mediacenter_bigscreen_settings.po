@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-11 00:43+0000\n"
-"PO-Revision-Date: 2022-01-15 00:45+0000\n"
+"PO-Revision-Date: 2024-05-17 01:59+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,159 +17,162 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Moo"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "<>"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Jan"
-msgstr ""
+msgstr "Sau"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Feb"
-msgstr ""
+msgstr "Vas"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Mar"
-msgstr ""
+msgstr "Kov"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Apr"
-msgstr ""
+msgstr "Bal"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "May"
-msgstr ""
+msgstr "Geg"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Jun"
-msgstr ""
+msgstr "Bir"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Jul"
-msgstr ""
+msgstr "Lie"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Aug"
-msgstr ""
+msgstr "Rgp"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Sep"
-msgstr ""
+msgstr "Rgs"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Oct"
-msgstr ""
+msgstr "Spa"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Nov"
-msgstr ""
+msgstr "Lap"
 
 #: ui/delegates/DatePicker.qml:110
 #, kde-format
 msgid "Dec"
-msgstr ""
+msgstr "Gru"
 
 #: ui/DeviceTimeSettings.qml:149
 #, kde-format
 msgid "Time Display"
-msgstr ""
+msgstr "Laiko atvaizdavimas"
 
 #: ui/DeviceTimeSettings.qml:156
 #, kde-format
 msgid "Timezone:"
-msgstr ""
+msgstr "Laiko juosta:"
 
 #: ui/DeviceTimeSettings.qml:176
 #, kde-format
 msgid "Set time automatically:"
-msgstr ""
+msgstr "Nustatyti laiką automatiškai:"
 
 #: ui/DeviceTimeSettings.qml:210
 #, kde-format
 msgid "Time"
-msgstr ""
+msgstr "Laikas"
 
 #: ui/DeviceTimeSettings.qml:242
 #, kde-format
 msgid "Date"
-msgstr ""
+msgstr "Data"
 
 #: ui/DeviceTimeSettings.qml:315
 #, kde-format
 msgid "Press the [←] Back button to return to appearance settings"
-msgstr ""
+msgstr "Paspauskite mygtuką [←] „Atgal“ norėdami grįžti į išvaizdos nuostatas"
 
 #: ui/DeviceTimeSettings.qml:378 ui/DeviceTimeSettings.qml:503
 #: ui/DeviceTimeSettings.qml:600
 #, kde-format
 msgid "Press the [←] Back button to save configuration and return to settings"
 msgstr ""
+"Paspauskite mygtuką [←] „Atgal“ norėdami įrašyti konfigūraciją ir grįžti į "
+"nuostatas"
 
 #: ui/DeviceTimeSettings.qml:419
 #, kde-format
 msgid "Your local timezone is %1"
-msgstr ""
+msgstr "Jūsų vietinė laiko juosta yra %1"
 
 #: ui/DeviceTimeSettings.qml:419
 #, kde-format
 msgid "%1, %2"
-msgstr ""
+msgstr "%1, %2"
 
 #: ui/main.qml:21
 #, kde-format
 msgid "Appearance"
-msgstr ""
+msgstr "Išvaizda"
 
 #: ui/main.qml:105
 #, kde-format
 msgid "Exit"
-msgstr ""
+msgstr "Išeiti"
 
 #: ui/main.qml:146
 #, kde-format
 msgid "Launcher Appearance"
-msgstr ""
+msgstr "Paleidyklės išvaizda"
 
 #: ui/main.qml:192
 #, kde-format
 msgid "Power Inhibition"
-msgstr ""
+msgstr "Maitinimo slopinimas"
 
 #: ui/main.qml:211
 #, kde-format
 msgid "Colored Tiles"
-msgstr ""
+msgstr "Spalvotos plytelės"
 
 #: ui/main.qml:230
 #, kde-format
 msgid "Expanding Tiles"
-msgstr ""
+msgstr "Didėjančios plytelės"
 
 #: ui/main.qml:248
 #, kde-format
 msgid "Adjust Date & Time"
-msgstr ""
+msgstr "Reguliuoti datą ir laiką"
 
 #: ui/main.qml:275
 #, kde-format
 msgid "General Appearance"
-msgstr ""
+msgstr "Bendra išvaizda"
