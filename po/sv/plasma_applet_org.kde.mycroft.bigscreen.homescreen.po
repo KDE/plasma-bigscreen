@@ -45,7 +45,7 @@ msgstr "KDE-anslut"
 #: contents/ui/indicators/PairWindow.qml:42
 #, kde-format
 msgid "Pairing Request From %1"
-msgstr "Begäran om ihopparning från %1"
+msgstr "Förfrågan om parkoppling från %1"
 
 #: contents/ui/indicators/PairWindow.qml:69
 #, kde-format

@@ -35,17 +35,17 @@ msgstr "Anpassa KDE-anslut"
 #: package/contents/ui/delegates/PairedView.qml:29
 #, kde-format
 msgid "This device is paired"
-msgstr "Apparaten är ihopparad"
+msgstr "Apparaten är parkopplad"
 
 #: package/contents/ui/delegates/PairedView.qml:62
 #, kde-format
 msgid "Unpair"
-msgstr "Ta bort ihopparning"
+msgstr "Ta bort parkoppling"
 
 #: package/contents/ui/delegates/PairRequest.qml:29
 #, kde-format
 msgid "This device is requesting to be paired"
-msgstr "Apparaten begär att bli ihopparad"
+msgstr "Apparaten begär att bli parkopplad"
 
 #: package/contents/ui/delegates/PairRequest.qml:63
 #, kde-format
@@ -60,17 +60,17 @@ msgstr "Avslå"
 #: package/contents/ui/delegates/UnpairedView.qml:40
 #, kde-format
 msgid "This device is not paired"
-msgstr "Apparaten är inte ihopparad"
+msgstr "Apparaten är inte parkopplad"
 
 #: package/contents/ui/delegates/UnpairedView.qml:80
 #, kde-format
 msgid "Pair"
-msgstr "Para ihop"
+msgstr "Parkoppla"
 
 #: package/contents/ui/delegates/UnpairedView.qml:91
 #, kde-format
 msgid "Pairing request sent to device"
-msgstr "Begäran om att para ihop skickad till apparat"
+msgstr "Parkopplingsförfrågan skickad till apparat"
 
 #: package/contents/ui/delegates/Unreachable.qml:19
 #, kde-format
