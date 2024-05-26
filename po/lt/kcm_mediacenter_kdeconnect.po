@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-11 00:43+0000\n"
-"PO-Revision-Date: 2020-09-23 02:32+0200\n"
+"PO-Revision-Date: 2024-05-25 15:47+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,63 +17,65 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: ui/delegates/PairedView.qml:29
 #, kde-format
 msgid "This device is paired"
-msgstr ""
+msgstr "Šis įrenginys yra suporuotas"
 
 #: ui/delegates/PairedView.qml:62
 #, kde-format
 msgid "Unpair"
-msgstr ""
+msgstr "Išporuoti"
 
 #: ui/delegates/PairRequest.qml:29
 #, kde-format
 msgid "This device is requesting to be paired"
-msgstr ""
+msgstr "Šis įrenginys prašo būti suporuotas"
 
 #: ui/delegates/PairRequest.qml:63
 #, kde-format
 msgid "Accept"
-msgstr ""
+msgstr "Priimti"
 
 #: ui/delegates/PairRequest.qml:99
 #, kde-format
 msgid "Reject"
-msgstr ""
+msgstr "Atmesti"
 
 #: ui/delegates/UnpairedView.qml:40
 #, kde-format
 msgid "This device is not paired"
-msgstr ""
+msgstr "Šis įrenginys nėra suporuotas"
 
 #: ui/delegates/UnpairedView.qml:80
 #, kde-format
 msgid "Pair"
-msgstr ""
+msgstr "Suporuoti"
 
 #: ui/delegates/UnpairedView.qml:91
 #, kde-format
 msgid "Pairing request sent to device"
-msgstr ""
+msgstr "Suporavimo užklausa išsiųsta į įrenginį"
 
 #: ui/delegates/Unreachable.qml:18
 #, kde-format
 msgid "This device is not reachable"
-msgstr ""
+msgstr "Šis įrenginys yra nepasiekiamas"
 
 #: ui/DeviceConnectionView.qml:196
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr ""
+"Paspauskite mygtuką [←] „Atgal“ norėdami grįžti į įrenginio pasirinkimą"
 
 #: ui/main.qml:22
 #, kde-format
 msgid "KDE Connect"
-msgstr ""
+msgstr "KDE Connect"
 
 #: ui/main.qml:89
 #, kde-format
 msgid "Exit"
-msgstr ""
+msgstr "Išeiti"
