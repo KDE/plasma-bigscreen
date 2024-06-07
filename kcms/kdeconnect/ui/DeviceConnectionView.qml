@@ -9,7 +9,6 @@ import QtQuick 2.14
 import QtQuick.Layouts 1.14
 import QtQuick.Controls 2.14
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents2
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
@@ -168,19 +167,12 @@ Rectangle {
         anchors.margins: Kirigami.Units.largeSpacing * 2
         height: Kirigami.Units.gridUnit * 2
 
-        PlasmaComponents2.Button {
+        PlasmaComponents.Button {
             id: backBtnSettingsItem
-            iconSource: "arrow-left"
+            icon.name: "arrow-left"
             Layout.alignment: Qt.AlignLeft
 
             KeyNavigation.down: deviceStatView
-
-            PlasmaComponents2.Highlight {
-                z: -2
-                anchors.fill: parent
-                anchors.margins: -Kirigami.Units.gridUnit / 4
-                visible: backBtnSettingsItem.activeFocus ? 1 : 0
-            }
 
             Keys.onReturnPressed: {
                 clicked()

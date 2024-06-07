@@ -7,14 +7,14 @@
 
 import QtQuick 2.14
 import QtQuick.Layouts 1.14
+import QtQuick.Controls 2.14 as QQC2
 import Qt5Compat.GraphicalEffects
 
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.mycroft.bigscreen 1.0 as BigScreen
 
-PlasmaComponents.ItemDelegate {
+QQC2.ItemDelegate {
     id: delegate
 
     readonly property Flickable listView: {
@@ -33,7 +33,7 @@ PlasmaComponents.ItemDelegate {
 
     highlighted: isCurrent
     property int borderSize: Kirigami.Units.smallSpacing
-    property int baseRadius: 3
+    property int baseRadius: 8
     
     z: isCurrent ? 2 : 0
 

@@ -34,7 +34,10 @@
         "Description[zh_CN]": "管理媒体中心音频设备",
         "Description[zh_TW]": "管理媒體中心的音效裝置",
         "FormFactors": [
-            "mediacenter"
+            "mediacenter",
+            "desktop",
+            "handset",
+            "tablet"
         ],
         "Icon": "audio-volume-high",
         "Name": "Audio",

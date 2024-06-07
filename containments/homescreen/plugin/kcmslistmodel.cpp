@@ -1,5 +1,6 @@
 #include "kcmslistmodel.h"
 #include <QFile>
+#include <KPluginMetaData>
 
 KcmsListModel::KcmsListModel(QObject *parent)
     : QAbstractListModel(parent)
@@ -9,6 +10,21 @@ KcmsListModel::KcmsListModel(QObject *parent)
 
 KcmsListModel::~KcmsListModel() = default;
 
+QVariantMap KcmsListModel::get(int index) const
+{
+    if (index < 0 || index >= m_kcms.count()) {
+        return QVariantMap();
+    }
+    
+    QVariantMap map;
+    map["kcmId"] = m_kcms.at(index).id;
+    map["kcmIconName"] = m_kcms.at(index).iconName;
+    map["kcmDescription"] = m_kcms.at(index).description;
+    map["kcmName"] = m_kcms.at(index).name;
+    map["kcmPath"] = m_kcms.at(index).path;
+    return map;
+}
+
 QHash<int, QByteArray> KcmsListModel::roleNames() const
 {
     QHash<int, QByteArray> roles;
@@ -17,6 +33,7 @@ QHash<int, QByteArray> KcmsListModel::roleNames() const
     roles[KcmDescriptionRole] = "kcmDescription";
     roles[KcmNameRole] = "kcmName";
     roles[KcmRole] = "kcm";
+    roles[KcmPathRole] = "kcmMetaData";
     return roles;
 }
 
@@ -36,7 +53,8 @@ void KcmsListModel::loadKcms()
     QMap<int, KcmData> orderedList;
     QList<KcmData> unorderedList;
 
-    const auto kcmPlugins = KPluginMetaData::findPlugins("kcms");
+    const auto kcmPlugins = KPluginMetaData::findPlugins("kcms")
+            << KPluginMetaData::findPlugins("plasma/kcms") << KPluginMetaData::findPlugins("plasma/kcms/systemsettings");
     // only get the mediacenter kcms
     for (const auto &kcm : kcmPlugins) {
         if (kcm.pluginId().contains("mediacenter")) {
@@ -45,6 +63,9 @@ void KcmsListModel::loadKcms()
             kcmData.description = kcm.description();
             kcmData.iconName = kcm.iconName();
             kcmData.id = kcm.pluginId();
+            kcmData.path = kcm.fileName();
+
+            qDebug() << "Found kcm: " << kcmData.name << kcmData.path;
 
             auto it = m_appPositions.constFind(kcm.pluginId());
             if (it != m_appPositions.constEnd()) {
@@ -61,19 +82,6 @@ void KcmsListModel::loadKcms()
     wallpaperData.description = "Change the desktop wallpaper";
     wallpaperData.id = "kcm_mediacenter_wallpaper";
     unorderedList.append(wallpaperData);
-
-    // Mycroft-Skill-Installer is no longer maintained or functional
-    // Disable forced entry
-
-    // KcmData mycroftSkillInstallerData;
-    // mycroftSkillInstallerData.name = "Mycroft Skill Installer";
-    // mycroftSkillInstallerData.iconName = "download";
-    // mycroftSkillInstallerData.description = "Install Mycroft skills";
-    // mycroftSkillInstallerData.id = "kcm_mediacenter_mycroft_skill_installer";
-
-    // if (m_mycroftEnabled) {
-    //     unorderedList.append(mycroftSkillInstallerData);
-    // }
 
     m_kcms << orderedList.values();
     m_kcms << unorderedList;
@@ -102,6 +110,8 @@ QVariant KcmsListModel::data(const QModelIndex &index, int role) const
         return m_kcms.at(index.row()).name;
     case KcmRole:
         return m_kcms.at(index.row()).id;
+    case KcmPathRole:
+        return m_kcms.at(index.row()).path;
     default:
         return QVariant();
     }

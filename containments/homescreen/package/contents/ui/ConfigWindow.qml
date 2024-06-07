@@ -5,59 +5,387 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
-import QtQuick.Window 2.14
-import QtQuick.Layouts 1.14
-import QtQuick.Controls 2.14 as Controls
-import org.kde.kirigami 2.12 as Kirigami
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
+import QtQuick.Window 2.15
+import QtQuick.Controls 2.15 as Controls
+import org.kde.kirigami as Kirigami
+import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import org.kde.private.biglauncher 1.0 
+import org.kde.plasma.private.nanoshell as NanoShell
 
-Window {
-    id: window
-    color: Qt.rgba(0, 0, 0, 0.8)
+NanoShell.FullScreenOverlay {
+    id: overlay
+    width: Screen.desktopAvailableWidth
+    height: Screen.desktopAvailableHeight
+    visible: false
+    color: "transparent"
+    property var currentModuleName
+    property var loadedKCMPage: null
 
-    width: screen.availableGeometry.width
-    height: screen.availableGeometry.height
-
-    Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-    Item {
-        id: contentItem
-        anchors {
-            fill: parent
-            margins: Kirigami.Units.largeSpacing
-        }
-        ColumnLayout {
-            Controls.CheckBox {
-                id: backgroundCheckbox
-                text: i18n("Use Colored Tiles")
-                checked: plasmoid.configuration.coloredTiles
-                onCheckedChanged: plasmoid.configuration.coloredTiles = checked
-                focus: true
-                Keys.onEnterPressed: checked = !checked
-                Keys.onReturnPressed: checked = !checked
-                KeyNavigation.down: expandingCheckbox
-            }
-            Controls.CheckBox {
-                id: expandingCheckbox
-                text: i18n("Use Expanding Tiles")
-                checked: plasmoid.configuration.expandingTiles
-                onCheckedChanged: plasmoid.configuration.expandingTiles = checked
-                Keys.onEnterPressed: checked = !checked
-                Keys.onReturnPressed: checked = !checked
-                KeyNavigation.down: closeButton
-            }
+    // Delay timer to prevent flickering
+    Timer {
+        id: timer
+        function setTimeout(cb, delayTime) {
+            timer.interval = delayTime;
+            timer.repeat = false;
+            timer.triggered.connect(cb);
+            timer.triggered.connect(function release() {
+                timer.triggered.disconnect(cb); // This is important
+                timer.triggered.disconnect(release); // This is important as well
+            });
+            timer.start();
         }
     }
-    Controls.Button {
-        id: closeButton
-        anchors {
-            bottom: parent.bottom
-            right: parent.right
+
+    function showOverlay() {
+        if (!overlay.visible) {
+            overlay.visible = true;
+            console.log("showOverlay");
+            timer.setTimeout(function () {
+                menu.open();
+                settingsKCMMenu.children[0].forceActiveFocus();
+            }, 100);
         }
-        icon.name: "window-close"
-        text: i18n("close")
-        onClicked: window.close()
-        Keys.onEnterPressed: clicked()
-        Keys.onReturnPressed: clicked()
-        KeyNavigation.up: backgroundCheckbox
+
+        openModule(plasmoid.kcmsListModel.get(0).kcmId);
+    }
+
+    function hideOverlay() {
+        if (overlay.visible) {
+            timer.setTimeout(function () {
+                console.log("hideOverlay");
+                menu.close();
+            }, 200);
+            console.log("hideOverlay after 200ms");
+            overlay.visible = false;
+        }
+    }
+
+    function openModule(path) {
+        if (path.indexOf("kcm_mediacenter_wallpaper") != -1) {
+            hideOverlay();
+            root.configureWallpaper();
+        }
+        
+        module.path = path;
+        while (pageStack.count >= 1) {
+            pageStack.clear();
+        }
+        loadedKCMPage = kcmContainer.createObject(pageStack, {"kcm": module.kcm, "internalPage": module.kcm.mainUi});
+        pageStack.push(loadedKCMPage);
+        currentModuleName = module.name;
+    }
+
+    Module {
+        id: module
+    }
+
+
+    Item {
+        id: configContentItem
+        anchors.fill: parent
+
+        Kirigami.ShadowedRectangle {
+            id: menu
+            width: Screen.desktopAvailableWidth * 0.3
+            height: parent.height
+            color: Kirigami.Theme.backgroundColor
+            opacity: 0
+            x: -menu.width
+
+            shadow {
+                size: Kirigami.Units.largeSpacing * 2
+            }
+
+            function open() {
+                menu.opacity = 1;
+                menu.x = 0;
+            }
+            function close() {
+                menu.opacity = 0;
+                menu.x = -menu.width;
+            }
+
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: 50
+                }
+            }
+
+            Behavior on x {
+                NumberAnimation {
+                    duration: 50
+                }
+            }
+
+            Item {
+                id: settingsHeader
+                height: Kirigami.Units.gridUnit * 5
+                anchors.top: parent.top
+                anchors.left: parent.left
+                anchors.right: parent.right
+                anchors.margins: Kirigami.Units.largeSpacing
+
+                Kirigami.Heading {
+                    id: settingsTitle
+                    text: i18n("Settings")
+                    anchors.fill: parent
+                    anchors.margins: Kirigami.Units.largeSpacing
+                    verticalAlignment: Text.AlignBottom
+                    horizontalAlignment: Text.AlignLeft
+                    font.bold: true
+                    color: Kirigami.Theme.textColor
+                    level: 1
+                }
+            }
+
+            Kirigami.Separator {
+                id: settingsSeparator
+                anchors.top: settingsHeader.bottom
+                anchors.left: parent.left
+                anchors.right: parent.right
+                Kirigami.Theme.colorSet: Kirigami.Theme.Button
+                Kirigami.Theme.inherit: false
+                color: Kirigami.Theme.backgroundColor
+                height: 2
+            }
+
+            ColumnLayout {
+                id: settingsKCMMenu
+                anchors.top: settingsSeparator.bottom
+                anchors.left: parent.left
+                anchors.right: parent.right
+                anchors.margins: Kirigami.Units.largeSpacing
+
+                Repeater {
+                    id: settingsKCMMenuModel
+                    model: plasmoid.kcmsListModel
+
+                    delegate: Controls.Button {
+                        id: kcmButton
+                        property var modelData: typeof model !== "undefined" ? model : null
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: Kirigami.Units.gridUnit * 5
+                        Keys.onEscapePressed: hideOverlay()
+                        Keys.onDownPressed: {
+                            console.log(settingsKCMMenuModel.count, index);
+                            if (index < settingsKCMMenuModel.count - 1) {
+                                settingsKCMMenu.children[index + 1].forceActiveFocus();
+                            }
+                        }
+                        Keys.onUpPressed: {
+                            if (index > 0) {
+                                settingsKCMMenu.children[index - 1].forceActiveFocus();
+                            }
+                        }
+                        Keys.onReturnPressed: {
+                            openModule(modelData.kcmId);
+                        }
+
+                        background: Rectangle {
+                            id: kcmButtonBackground
+                            Kirigami.Theme.colorSet: Kirigami.Theme.Button
+                            Kirigami.Theme.inherit: false
+                            color: kcmButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
+                        }
+
+                        contentItem: Item {
+                            RowLayout {
+                                id: kcmButtonLayout
+                                anchors.fill: parent
+                                spacing: 5 // Adjust spacing between icon and text
+
+                                Kirigami.Icon {
+                                    id: kcmButtonIcon
+                                    source: modelData.kcmIconName
+                                    Layout.alignment: Qt.AlignLeft
+                                    Layout.fillHeight: true
+                                    Layout.preferredWidth: kcmButtonIcon.height // Set icon width same as height for square icon
+                                }
+
+                                Kirigami.Heading {
+                                    id: kcmButtonLabel
+                                    text: modelData.kcmName
+                                    wrapMode: Text.WordWrap
+                                    elide: Text.ElideRight
+                                    Layout.alignment: Qt.AlignLeft
+                                    Layout.fillWidth: true
+                                }
+                            }
+                        }
+
+
+                        // contentItem: Item {
+                        //     RowLayout {
+                        //         id: kcmButtonLayout
+                        //         anchors.centerIn: parent
+                        //         height: parent.height
+
+                        //         Kirigami.Icon {
+                        //             id: kcmButtonIcon
+                        //             Layout.fillHeight: true
+                        //             Layout.preferredWidth: height
+                        //             Layout.alignment: Qt.AlignVCenter
+                        //             source: modelData.kcmIconName
+                        //         }
+
+                        //         Kirigami.Heading {
+                        //             id: kcmButtonLabel
+                        //             level: 2
+                        //             Layout.fillHeight: true
+                        //             wrapMode: Text.WordWrap
+                        //             elide: Text.ElideRight
+                        //             color: Kirigami.Theme.textColor
+                        //             text: modelData.kcmName
+                        //             verticalAlignment: Text.AlignVCenter
+                        //             horizontalAlignment: Text.AlignLeft
+                        //         }
+                        //     }
+                        // }
+                    }
+                }
+            }
+        }
+
+        Kirigami.ShadowedRectangle {
+            id: kcmContainerHolder
+            anchors.left: menu.right
+            anchors.right: parent.right
+            anchors.margins: Kirigami.Units.largeSpacing
+            width: parent.width - menu.width
+            height: parent.height
+            color: Kirigami.Theme.backgroundColor
+            opacity: kcmPresent ? 1 : 0
+            property bool kcmPresent: true
+
+            shadow {
+                size: Kirigami.Units.largeSpacing * 2
+            }
+
+            Controls.StackView {
+                id: pageStack
+                anchors.fill: parent
+
+                pushEnter: Transition {
+                    PropertyAnimation {
+                        property: "opacity"
+                        from: 0
+                        to:1
+                        duration: 200
+                    }
+                }
+                pushExit: Transition {
+                    PropertyAnimation {
+                        property: "opacity"
+                        from: 1
+                        to:0
+                        duration: 200
+                    }
+                }
+                popEnter: Transition {
+                    PropertyAnimation {
+                        property: "opacity"
+                        from: 0
+                        to:1
+                        duration: 200
+                    }
+                }
+                popExit: Transition {
+                    PropertyAnimation {
+                        property: "opacity"
+                        from: 1
+                        to:0
+                        duration: 200
+                    }
+                }
+            }
+        }
+
+        Component {
+            id: kcmContainer
+            Kirigami.Page {
+                id: container
+                property QtObject kcm
+                property Item internalPage
+                property bool suppressDeletion: false
+
+                title: internalPage.title
+
+                topPadding: 0
+                leftPadding: 0
+                rightPadding: 0
+                bottomPadding: 0
+
+                flickable: internalPage.flickable
+                actions: [internalPage.actions.main, internalPage.contextualActions]
+
+                onInternalPageChanged: {
+                    internalPage.parent = contentItem;
+                    internalPage.anchors.fill = contentItem;
+                }
+                onActiveFocusChanged: {
+                    if (activeFocus) {
+                        internalPage.forceActiveFocus();
+                    }
+                }
+
+                Component.onCompleted: {
+                    // setting a binding seems to not work, add them manually
+                    for (let action of internalPage.actions) {
+                        actions.push(action);
+                    }
+                    if (kcm.load !== undefined) {
+                        kcm.load();
+                    }
+                }
+
+                data: [
+                    Connections {
+                        target: internalPage
+                        function onActionsChanged() {
+                            root.actions.clear();
+                            for (let action of internalPage.actions) {
+                                root.actions.push(action);
+                            }
+                        }
+                    },
+                    Connections {
+                        target: kcm
+                        function onPagePushed(page) {
+                            pageStack.push(kcmContainer.createObject(pageStack, {"internalPage": page}));
+                        }
+                        function onPageRemoved() {
+                            pageStack.pop();
+                        }
+                        function onNeedsSaveChanged() {
+                            if (kcm.needsSave) {
+                                kcm.save();
+                            }
+                        }
+                    },
+                    Connections {
+                        target: pageStack
+                        function onPageRemoved(page) {
+                            if (kcm.needsSave) {
+                                kcm.save();
+                            }
+                            if (page == container && !container.suppressDeletion) {
+                                page.destroy();
+                            }
+                        }
+                    },
+                    Connections {
+                        target: kcm
+                        function onCurrentIndexChanged(index) {
+                            const index_with_offset = index + 1;
+                            if (index_with_offset !== pageStack.currentIndex) {
+                                pageStack.currentIndex = index_with_offset;
+                            }
+                        }
+                    }
+                ]
+            }
+        }
     }
 }

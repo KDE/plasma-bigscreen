@@ -16,8 +16,8 @@ MouseArea {
     id: delegate
 
 //BEGIN properties
-    implicitWidth: delegateContents.implicitWidth + 4 * units.smallSpacing
-    implicitHeight: delegateContents.height + units.smallSpacing * 4
+    implicitWidth: delegateContents.implicitWidth + 4 * Kirigami.Units.smallSpacing
+    implicitHeight: delegateContents.height + Kirigami.Units.smallSpacing * 4
     Layout.fillWidth: true
     hoverEnabled: true
 
@@ -89,7 +89,7 @@ MouseArea {
         }
         Behavior on opacity {
             NumberAnimation {
-                duration: units.longDuration
+                duration: Kirigami.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
@@ -97,16 +97,16 @@ MouseArea {
 
     ColumnLayout {
         id: delegateContents
-        spacing: units.smallSpacing
+        spacing: Kirigami.Units.smallSpacing
         width: parent.width
         anchors.verticalCenter: parent.verticalCenter
 
-        QIconItem {
+        Kirigami.Icon {
             id: iconItem
             Layout.alignment: Qt.AlignHCenter
-            width: units.iconSizes.medium
+            width: Kirigami.Units.iconSizes.medium
             height: width
-            icon: model.icon
+            source: model.icon
             state: current && categoriesScroll.activeFocus ? QIconItem.SelectedState : QIconItem.DefaultState
         }
 

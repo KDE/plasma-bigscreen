@@ -8,6 +8,8 @@
 #include "biglauncherhomescreen.h"
 #include "applicationlistmodel.h"
 #include "kcmslistmodel.h"
+#include "settings/modulesmodel.h"
+#include "settings/module.h"
 
 #include <QDebug>
 #include <QProcess>
@@ -20,6 +22,8 @@ HomeScreen::HomeScreen(QObject *parent, const KPluginMetaData &data, const QVari
     , m_session(new SessionManagement(this))
 {
     const char *uri = "org.kde.private.biglauncher";
+    qmlRegisterType<Module>(uri, 1, 0, "Module");
+    qmlRegisterType<ModulesModel>(uri, 1, 0, "ModulesModel");
     qmlRegisterUncreatableType<KcmsListModel>(uri, 1, 0, "KcmsListModel", QStringLiteral("KcmsListModel is uncreatable"));
     qmlRegisterUncreatableType<ApplicationListModel>(uri, 1, 0, "ApplicationListModel", QStringLiteral("Cannot create an item of type ApplicationListModel"));
     qmlRegisterUncreatableType<BigLauncherDbusAdapterInterface>(uri,

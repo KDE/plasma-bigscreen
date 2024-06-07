@@ -53,18 +53,19 @@ FocusScope {
             right: parent.right
         }
         property Item currentSection
+
         y: currentSection ? -currentSection.y + parent.height/2 - currentSection.height/2 : parent.height/2
 
         Behavior on y {
             YAnimator {
                 duration: Kirigami.Units.longDuration * 2
                 easing.type: Easing.InOutQuad
+                
             }
         }
         //height: parent.height
-        spacing: Kirigami.Units.largeSpacing*3
+        spacing: Kirigami.Units.largeSpacing * 3
         
-
         BigScreen.TileRepeater {
             id: recentView
             title: i18n("Recent")
@@ -77,7 +78,9 @@ FocusScope {
             currentIndex: 0
             focus: true
             onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = recentView
+
             delegate: Delegates.AppDelegate {
+                property real sectionOpacity: 1.0
                 property var modelData: typeof model !== "undefined" ? model : null
                 iconImage: model.decoration
                 text: model.display
@@ -113,7 +116,7 @@ FocusScope {
             }
 
             navigationUp: recentView.visible ? recentView : shutdownIndicator
-            navigationDown: appsView.visible ? appsView : (gamesView.visible ? gamesView : settingsView)
+            //navigationDown: appsView.visible ? appsView : (gamesView.visible ? gamesView : settingsView)
         }
 
         BigScreen.TileRepeater {

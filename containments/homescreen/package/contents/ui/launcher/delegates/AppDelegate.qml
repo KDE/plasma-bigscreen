@@ -11,7 +11,7 @@ import org.kde.kirigami 2.12 as Kirigami
 import org.kde.plasma.private.nanoshell as NanoShell
 import org.kde.plasma.plasmoid 2.0
 
-BigScreen.IconDelegate {
+BigScreen.IconNewDelegate {
     id: delegate
     readonly property var appStorageIdRole: modelData.ApplicationStorageIdRole
 

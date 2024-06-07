@@ -21,6 +21,7 @@ struct KcmData {
     QString description;
     QString iconName;
     QString id;
+    QString path;
 };
 
 class KcmsListModel : public QAbstractListModel
@@ -29,7 +30,7 @@ class KcmsListModel : public QAbstractListModel
     Q_PROPERTY(int count READ count NOTIFY countChanged)
 
 public:
-    enum Roles { KcmIdRole = Qt::UserRole + 1, KcmIconNameRole, KcmDescriptionRole, KcmNameRole, KcmRole };
+    enum Roles { KcmIdRole = Qt::UserRole + 1, KcmIconNameRole, KcmDescriptionRole, KcmNameRole, KcmRole, KcmPathRole};
     Q_ENUM(Roles)
 
     KcmsListModel(QObject *parent = nullptr);
@@ -50,6 +51,8 @@ public:
 
     QStringList appOrder() const;
     void setAppOrder(const QStringList &order);
+
+    Q_INVOKABLE QVariantMap get(int index) const;
 
 Q_SIGNALS:
     void countChanged();

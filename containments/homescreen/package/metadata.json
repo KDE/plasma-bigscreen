@@ -1,0 +1,22 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "aix.m@outlook.com",
+                "Name": "Aditya Mehra"
+            }
+        ],
+        "Category": "Containments",
+        "Description": "Bigscreen homescreen with a focus on customizability.",
+        "Id": "org.kde.mycroft.bigscreen.homescreen",
+        "License": "GPLv2+",
+        "Name": "Plasma Bigscreen Homescreen",
+        "Website": "https://plasma-bigscreen.org"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-ContainmentType": "Desktop",
+    "X-Plasma-Provides": [
+        "org.kde.mycroft.bigscreen.homescreen"
+    ]
+}

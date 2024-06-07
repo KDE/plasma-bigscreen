@@ -14,7 +14,7 @@ import org.kde.kirigami 2.5 as Kirigami
 ColumnLayout {
     id: root
 
-    property int formAlignment: wallpaperComboBox.Kirigami.ScenePosition.x - root.Kirigami.ScenePosition.x + (units.largeSpacing/2)
+    property int formAlignment: wallpaperComboBox.Kirigami.ScenePosition.x - root.Kirigami.ScenePosition.x + (Kirigami.Units.largeSpacing/2)
     property string currentWallpaper: ""
     signal configurationChanged
 
