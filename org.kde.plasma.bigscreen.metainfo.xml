@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component type="desktop-application">
-  <id>org.kde.plasma.mycroft.bigscreen</id>
+  <id>org.kde.plasma.bigscreen</id>
   <name>KDE Plasma Bigscreen</name>
   <name xml:lang="ar">كِيدِي بلازما الشاشة الكبيرة</name>
   <name xml:lang="az">KDE Plasma böyük ekranı</name>

@@ -50,12 +50,6 @@ AbstractIndicator {
     }
 
     onClicked: {
-        NanoShell.StartupFeedback.open(
-                            "headphone",
-                            i18n("Audio Device chooser"),
-                            paIcon.Kirigami.ScenePosition.x + paIcon.width/2,
-                            paIcon.Kirigami.ScenePosition.y + paIcon.height/2,
-                            Math.min(paIcon.width, paIcon.height));
-        Plasmoid.executeCommand("plasma-settings -s -m kcm_mediacenter_audiodevice")
+        configWindow.showOverlay("kcm_mediacenter_audiodevice")
     }
 }

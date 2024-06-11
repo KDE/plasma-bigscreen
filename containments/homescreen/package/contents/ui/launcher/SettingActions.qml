@@ -14,11 +14,9 @@ Item {
 
     function launchSettings(kcm_id) {
         if (kcm_id.indexOf("kcm_mediacenter_wallpaper") != -1) {
-            plasmoid.action("configure").trigger();
-        } else if (kcm_id.indexOf("kcm_mediacenter_mycroft_skill_installer") != -1) {
-            plasmoid.executeCommand("MycroftSkillInstaller")
+            plasmoid.internalAction("configure").trigger();
         } else {
-            plasmoid.executeCommand("plasma-settings -s -m " + kcm_id)
+            configWindow.showOverlay(kcm_id)
         }
     }
 }

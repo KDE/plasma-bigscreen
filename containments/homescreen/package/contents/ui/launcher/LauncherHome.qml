@@ -17,28 +17,12 @@ import org.kde.kirigami 2.19 as Kirigami
 import org.kde.kitemmodels 1.0 as KItemModels
 
 import "delegates" as Delegates
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import org.kde.bigscreen 1.0 as BigScreen
 import org.kde.private.biglauncher 1.0 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
 FocusScope {
     property bool mycroftIntegration: false
-
-    // Mycroft Integration Is Disabled
-    // property bool mycroftIntegration: Plasmoid.bigLauncherDbusAdapterInterface.mycroftIntegrationActive() ? 1 : 0
-
-    // Connections {
-    //     target: Plasmoid.bigLauncherDbusAdapterInterface
-
-    //     function onEnableMycroftIntegrationChanged(mycroftIntegration) {
-    //         mycroftIntegration = Plasmoid.bigLauncherDbusAdapterInterface.mycroftIntegrationActive()
-    //         if(mycroftIntegration){
-    //             voiceAppsView.visible = voiceAppsView.count > 0 ? 1 : 0
-    //         } else {
-    //             voiceAppsView.visible = false
-    //         }
-    //     }
-    // }
 
     anchors {
         fill: parent
@@ -116,7 +100,7 @@ FocusScope {
             }
 
             navigationUp: recentView.visible ? recentView : shutdownIndicator
-            //navigationDown: appsView.visible ? appsView : (gamesView.visible ? gamesView : settingsView)
+            navigationDown: appsView.visible ? appsView : (gamesView.visible ? gamesView : settingsView)
         }
 
         BigScreen.TileRepeater {

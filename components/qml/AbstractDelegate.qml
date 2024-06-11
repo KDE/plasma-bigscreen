@@ -12,7 +12,7 @@ import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami 2.12 as Kirigami
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import org.kde.bigscreen 1.0 as BigScreen
 
 QQC2.ItemDelegate {
     id: delegate
@@ -32,6 +32,7 @@ QQC2.ItemDelegate {
     }
 
     highlighted: isCurrent
+    property int shadowSize: Kirigami.Units.largeSpacing * 2
     property int borderSize: Kirigami.Units.smallSpacing
     property int baseRadius: 8
     
@@ -90,7 +91,7 @@ QQC2.ItemDelegate {
             radius: delegate.baseRadius
             color: delegate.Kirigami.Theme.backgroundColor
             shadow {
-                size: Kirigami.Units.largeSpacing * 2
+                size: delegate.shadowSize
             }
 
             states: [

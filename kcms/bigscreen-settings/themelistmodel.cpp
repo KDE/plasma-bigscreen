@@ -39,6 +39,9 @@ ThemeListModel::ThemeListModel(QObject *parent)
     m_roleNames.insert(PackageVersionRole, "packageVersionRole");
     m_roleNames.insert(PluginNameRole, "pluginNameRole");
     m_roleNames.insert(ColorTypeRole, "colorTypeRole");
+    m_roleNames.insert(BackgroundColorRole, "backgroundColorRole");
+    m_roleNames.insert(TextColorRole, "textColorRole");
+    m_roleNames.insert(HighlightColorRole, "highlightColorRole");
 
     reload();
 }
@@ -150,6 +153,23 @@ void ThemeListModel::reload()
                 }
             }
         }
+        
+        const QString colorsPath = themeRoot + QLatin1String("/colors");
+        if (QFileInfo::exists(colorsPath)) {
+            const KSharedConfig::Ptr config = KSharedConfig::openConfig(colorsPath);
+            const KConfigGroup group = config->group("Colors:Window");
+            const QColor backgroundColor = group.readEntry("BackgroundNormal", QColor());
+            const QColor textColor = group.readEntry("ForegroundNormal", QColor());
+            const QColor highlightColor = group.readEntry("DecorationFocus", QColor());
+            info.backgroundColor = backgroundColor.name();
+            info.textColor = textColor.name();
+            info.highlightColor = highlightColor.name();
+        } else {
+            // Assume breeze light theme colors
+            info.backgroundColor = QColor(239,240,241).name();
+            info.textColor = QColor(35,38,41).name();
+            info.highlightColor = QColor(61,174,233).name();
+        }
 
         info.package = packageName;
         info.description = comment;
@@ -198,6 +218,12 @@ QVariant ThemeListModel::data(const QModelIndex &index, int role) const
         return (*it).pluginName;
     case ColorTypeRole:
         return (*it).type;
+    case BackgroundColorRole:
+        return (*it).backgroundColor;
+    case TextColorRole:
+        return (*it).textColor;
+    case HighlightColorRole:
+        return (*it).highlightColor;
     default:
         return QVariant();
     }
@@ -216,6 +242,9 @@ QVariantMap ThemeListModel::get(int row) const
     item["packageDescriptionRole"] = data(idx, PackageDescriptionRole);
     item["packageAuthorRole"] = data(idx, PackageAuthorRole);
     item["packageVersionRole"] = data(idx, PackageVersionRole);
+    item["backgroundColorRole"] = data(idx, BackgroundColorRole);
+    item["textColorRole"] = data(idx, TextColorRole);
+    item["highlightColorRole"] = data(idx, HighlightColorRole);
 
     return item;
 }

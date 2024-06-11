@@ -10,7 +10,7 @@ import QtQuick.Layouts 1.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15 as Controls
 import org.kde.kirigami as Kirigami
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import org.kde.bigscreen 1.0 as BigScreen
 import org.kde.private.biglauncher 1.0 
 import org.kde.plasma.private.nanoshell as NanoShell
 
@@ -38,7 +38,7 @@ NanoShell.FullScreenOverlay {
         }
     }
 
-    function showOverlay() {
+    function showOverlay(moduleName=undefined) {
         if (!overlay.visible) {
             overlay.visible = true;
             console.log("showOverlay");
@@ -48,7 +48,11 @@ NanoShell.FullScreenOverlay {
             }, 100);
         }
 
-        openModule(plasmoid.kcmsListModel.get(0).kcmId);
+        if (moduleName === undefined) {
+            openModule(plasmoid.kcmsListModel.get(0).kcmId);
+        } else {
+            openModule(moduleName);
+        }
     }
 
     function hideOverlay() {
@@ -121,7 +125,7 @@ NanoShell.FullScreenOverlay {
 
             Item {
                 id: settingsHeader
-                height: Kirigami.Units.gridUnit * 5
+                height: parent.height * 0.075
                 anchors.top: parent.top
                 anchors.left: parent.left
                 anchors.right: parent.right
@@ -136,7 +140,9 @@ NanoShell.FullScreenOverlay {
                     horizontalAlignment: Text.AlignLeft
                     font.bold: true
                     color: Kirigami.Theme.textColor
-                    level: 1
+                    fontSizeMode: Text.Fit
+                    minimumPixelSize: 16
+                    font.pixelSize: 32
                 }
             }
 
@@ -168,6 +174,7 @@ NanoShell.FullScreenOverlay {
                         Layout.fillWidth: true
                         Layout.preferredHeight: Kirigami.Units.gridUnit * 5
                         Keys.onEscapePressed: hideOverlay()
+
                         Keys.onDownPressed: {
                             console.log(settingsKCMMenuModel.count, index);
                             if (index < settingsKCMMenuModel.count - 1) {
@@ -179,6 +186,13 @@ NanoShell.FullScreenOverlay {
                                 settingsKCMMenu.children[index - 1].forceActiveFocus();
                             }
                         }
+
+                        KeyNavigation.right: loadedKCMPage
+
+                        onClicked: {
+                            openModule(modelData.kcmId);
+                        }
+
                         Keys.onReturnPressed: {
                             openModule(modelData.kcmId);
                         }
@@ -194,14 +208,14 @@ NanoShell.FullScreenOverlay {
                             RowLayout {
                                 id: kcmButtonLayout
                                 anchors.fill: parent
-                                spacing: 5 // Adjust spacing between icon and text
+                                spacing: 5
 
                                 Kirigami.Icon {
                                     id: kcmButtonIcon
                                     source: modelData.kcmIconName
                                     Layout.alignment: Qt.AlignLeft
                                     Layout.fillHeight: true
-                                    Layout.preferredWidth: kcmButtonIcon.height // Set icon width same as height for square icon
+                                    Layout.preferredWidth: kcmButtonIcon.height
                                 }
 
                                 Kirigami.Heading {
@@ -214,35 +228,6 @@ NanoShell.FullScreenOverlay {
                                 }
                             }
                         }
-
-
-                        // contentItem: Item {
-                        //     RowLayout {
-                        //         id: kcmButtonLayout
-                        //         anchors.centerIn: parent
-                        //         height: parent.height
-
-                        //         Kirigami.Icon {
-                        //             id: kcmButtonIcon
-                        //             Layout.fillHeight: true
-                        //             Layout.preferredWidth: height
-                        //             Layout.alignment: Qt.AlignVCenter
-                        //             source: modelData.kcmIconName
-                        //         }
-
-                        //         Kirigami.Heading {
-                        //             id: kcmButtonLabel
-                        //             level: 2
-                        //             Layout.fillHeight: true
-                        //             wrapMode: Text.WordWrap
-                        //             elide: Text.ElideRight
-                        //             color: Kirigami.Theme.textColor
-                        //             text: modelData.kcmName
-                        //             verticalAlignment: Text.AlignVCenter
-                        //             horizontalAlignment: Text.AlignLeft
-                        //         }
-                        //     }
-                        // }
                     }
                 }
             }
@@ -357,6 +342,7 @@ NanoShell.FullScreenOverlay {
                         }
                         function onPageRemoved() {
                             pageStack.pop();
+                            hideOverlay();
                         }
                         function onNeedsSaveChanged() {
                             if (kcm.needsSave) {

@@ -21,7 +21,7 @@ static QObject *envReaderSingletonProvider(QQmlEngine *engine, QJSEngine *script
 
 void BigScreenPlugin::registerTypes(const char *uri)
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.mycroft.bigscreen"));
+    Q_ASSERT(uri == QLatin1String("org.kde.bigscreen"));
 
     qmlRegisterSingletonType(componentUrl(QStringLiteral("NavigationSoundEffects.qml")), uri, 1, 0, "NavigationSoundEffects");
     qmlRegisterSingletonType<EnvReader>(uri, 1, 0, "EnvReader", envReaderSingletonProvider);

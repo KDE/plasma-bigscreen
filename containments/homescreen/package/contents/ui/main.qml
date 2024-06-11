@@ -16,7 +16,7 @@ import org.kde.kirigami 2.19 as Kirigami
 
 import "launcher"
 import "indicators" as Indicators
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import org.kde.bigscreen 1.0 as BigScreen
 import Qt5Compat.GraphicalEffects
 import org.kde.coreaddons 1.0 as KCoreAddons
 import org.kde.kirigamiaddons.components 1.0 as KirigamiComponents
@@ -26,7 +26,6 @@ ContainmentItem {
     Layout.minimumWidth: Screen.desktopAvailableWidth
     Layout.minimumHeight: Screen.desktopAvailableHeight * 0.6
 
-    property bool mycroftIntegration: false
     property Item wallpaper
 
     PlasmaCore.Action {

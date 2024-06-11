@@ -28,7 +28,7 @@ Item {
     opacity: enabled ? 1.0 : 0.5
 
     onFocusChanged: {
-        if(focus) {
+        if(focus) { 
             hoursDigit.forceActiveFocus()
         }
     }

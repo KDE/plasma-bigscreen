@@ -12,5 +12,5 @@ export QT_IM_MODULE=qtvirtualkeyboard
 export QT_VIRTUALKEYBOARD_STYLE=Plasma
 export QT_FILE_SELECTORS=mediacenter
 
-export PLASMA_DEFAULT_SHELL=org.kde.plasma.mycroft.bigscreen
+export PLASMA_DEFAULT_SHELL=org.kde.plasma.bigscreen
 startplasma-x11

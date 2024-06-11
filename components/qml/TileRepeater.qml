@@ -10,7 +10,7 @@ import QtQuick.Layouts 1.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15 as Controls
 import org.kde.kirigami 2.15 as Kirigami
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import org.kde.bigscreen 1.0 as BigScreen
 
 FocusScope {
     id: root

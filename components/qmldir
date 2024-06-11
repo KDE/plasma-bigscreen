@@ -1,4 +1,4 @@
-module org.kde.mycroft.bigscreen
+module org.kde.bigscreen
 plugin bigscreenplugin
 
 TileView 1.0 TileView.qml

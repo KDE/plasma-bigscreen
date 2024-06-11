@@ -30,7 +30,7 @@ class ThemeListModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
-    enum { PackageNameRole = Qt::UserRole, PluginNameRole = Qt::UserRole + 1, PackageDescriptionRole = Qt::UserRole + 2, PackageAuthorRole = Qt::UserRole + 3, PackageVersionRole = Qt::UserRole + 4, ColorTypeRole =  Qt::UserRole + 5 };
+    enum { PackageNameRole = Qt::UserRole, PluginNameRole = Qt::UserRole + 1, PackageDescriptionRole = Qt::UserRole + 2, PackageAuthorRole = Qt::UserRole + 3, PackageVersionRole = Qt::UserRole + 4, ColorTypeRole =  Qt::UserRole + 5, BackgroundColorRole = Qt::UserRole + 6, TextColorRole = Qt::UserRole + 7, HighlightColorRole = Qt::UserRole + 8};
 
     enum ColorType {
         LightTheme,
@@ -67,6 +67,9 @@ public:
     QString author;
     QString version;
     QString themeRoot;
+    QString backgroundColor;
+    QString textColor;
+    QString highlightColor;
     ThemeListModel::ColorType type;
 };
 

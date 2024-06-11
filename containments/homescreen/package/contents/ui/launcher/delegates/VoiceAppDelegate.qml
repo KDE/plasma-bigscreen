@@ -6,7 +6,7 @@
 */
 
 import QtQuick 2.14
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import org.kde.bigscreen 1.0 as BigScreen
 import org.kde.plasma.plasmoid 2.0
 
 BigScreen.IconDelegate {

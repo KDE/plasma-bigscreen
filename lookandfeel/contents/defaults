@@ -2,7 +2,7 @@
 widgetStyle=breeze
 
 [Desktop][org.kde.plasma.mini]
-Containment=org.kde.mycroft.bigscreen.homescreen
+Containment=org.kde.bigscreen.homescreen
 
 [kdeglobals][General]
 ColorScheme=BreezeDark
@@ -26,4 +26,4 @@ LayoutName=org.kde.breeze.desktop
 library=org.kde.breeze
 
 [plasmashellrc][Shell]
-ShellPackage=org.kde.plasma.mycroft.bigscreen
+ShellPackage=org.kde.plasma.bigscreen

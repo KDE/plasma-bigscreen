@@ -86,12 +86,6 @@ AbstractIndicator {
     }
     
     onClicked: {
-        NanoShell.StartupFeedback.open(
-                            "kdeconnect",
-                            i18n("KDE Connect"),
-                            connectionIcon.Kirigami.ScenePosition.x + connectionIcon.width/2,
-                            connectionIcon.Kirigami.ScenePosition.y + connectionIcon.height/2,
-                            Math.min(connectionIcon.width, connectionIcon.height));
-        plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_kdeconnect")
+        configWindow.showOverlay("kcm_mediacenter_kdeconnect")
     }
 }

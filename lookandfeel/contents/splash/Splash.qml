@@ -8,7 +8,7 @@
 import QtQuick 2.5
 import QtQuick.Layouts 1.3
 import QtQuick.Window 2.2
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import org.kde.bigscreen 1.0 as BigScreen
 
 Rectangle {
     id: root

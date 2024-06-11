@@ -3,11 +3,7 @@
 A big launcher giving you easy access to any installed apps and skills.
 Controllable via voice or TV remote.
 
-This project is using various open-source components like Plasma Bigscreen, Mycroft AI and libcec.
-
-### Voice Control
-
-Bigscreen supports Mycroft AI, a free and open-source voice assistant that can be run completely decentralized on your own server.
+This project is using various open-source components like Plasma Bigscreen and libcec.
 
 ### Remote control your TV via CEC
 
@@ -55,19 +51,11 @@ Note that `kdesrc-build` doesn't automatically build `plasma-nano` and `plasma-s
 - DBus
 - Network
 
-### Optional dependencies
-
-The following can be installed for extra functionality but are not required to build or run:
-
-- Mycroft-Core (development branch) https://github.com/MycroftAI/Mycroft-Core
-- Mycroft-GUI - https://github.com/MycroftAI/Mycroft-GUI
-- MycroftSkillInstaller - https://github.com/AIIX/MycroftSkillInstaller
-
 </details>
 
 To start the Bigscreen homescreen in a window, run:
 
 ```
-QT_QPA_PLATFORM=wayland dbus-run-session kwin_wayland "plasmashell -p org.kde.plasma.mycroft.bigscreen"
+QT_QPA_PLATFORM=wayland dbus-run-session kwin_wayland "plasmashell -p org.kde.plasma.bigscreen"
 ```
 

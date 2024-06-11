@@ -14,7 +14,7 @@ import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import org.kde.bigscreen 1.0 as BigScreen
 import "delegates" as Delegates
 import org.kde.plasma.private.digitalclock 1.0
 
@@ -42,17 +42,8 @@ Rectangle {
     P5Support.DataSource {
         id: dataSource
         engine: "time"
-        connectedSources: "Local"
+        connectedSources: ["Local"]
         interval: 1000
-        onDataChanged: {
-            var date = new Date(data["Local"]["DateTime"]);
-            var hours = date.getHours();
-            var minutes = date.getMinutes();
-            var seconds = date.getSeconds();
-        }
-        Component.onCompleted: {
-            onDataChanged();
-        }
     }
 
     Component.onCompleted: {

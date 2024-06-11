@@ -12,7 +12,7 @@ import QtQuick.Controls 2.14
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.kdeconnect 1.0
 import org.kde.kcmutils as KCM
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import org.kde.bigscreen 1.0 as BigScreen
 import "delegates" as Delegates
 
 KCM.SimpleKCM {
@@ -35,28 +35,38 @@ KCM.SimpleKCM {
 
     contentItem: FocusScope {
 
-        Rectangle {
+        Item {
             id: headerAreaTop
+            height: parent.height * 0.075
+            anchors.top: parent.top
             anchors.left: parent.left
             anchors.right: parent.right
-            anchors.leftMargin: -Kirigami.Units.largeSpacing
-            anchors.rightMargin: -Kirigami.Units.largeSpacing
-            height: parent.height * 0.075
-            z: 10
-            gradient: Gradient {
-                GradientStop { position: 0.1; color: Qt.rgba(0, 0, 0, 0.5) }
-                GradientStop { position: 0.9; color: Qt.rgba(0, 0, 0, 0.25) }
-            }
+            anchors.margins: Kirigami.Units.largeSpacing
 
             Kirigami.Heading {
-                level: 1
+                id: settingsTitle
+                text: i18n("KDE Connect")
                 anchors.fill: parent
-                anchors.topMargin: Kirigami.Units.largeSpacing
-                anchors.leftMargin: Kirigami.Units.largeSpacing * 2
-                anchors.bottomMargin: Kirigami.Units.largeSpacing
+                anchors.margins: Kirigami.Units.largeSpacing
+                verticalAlignment: Text.AlignBottom
+                horizontalAlignment: Text.AlignLeft
+                font.bold: true
                 color: Kirigami.Theme.textColor
-                text: "KDE Connect"
+                fontSizeMode: Text.Fit
+                minimumPixelSize: 16
+                font.pixelSize: 32
             }
+        }
+
+        Kirigami.Separator {
+            id: settingsSeparator
+            anchors.top: headerAreaTop.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+            Kirigami.Theme.colorSet: Kirigami.Theme.Button
+            Kirigami.Theme.inherit: false
+            color: Kirigami.Theme.backgroundColor
+            height: 2
         }
 
         Item {

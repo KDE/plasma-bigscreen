@@ -1,3 +1,5 @@
+# DEPRICIATED
+ 
 ## Plasma-Bigscreen Voice Application Development Guidelines
 
 - [Plasma-Bigscreen Voice Application Development Guidelines](#plasma-bigscreen-voice-application-development-guidelines)

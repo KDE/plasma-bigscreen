@@ -1,8 +1,8 @@
 [kdeglobals][KDE]
-LookAndFeelPackage=org.kde.plasma.mycroft.bigscreen
+LookAndFeelPackage=org.kde.plasma.bigscreen
 
 [Desktop]
-Containment=org.kde.mycroft.bigscreen.homescreen
+Containment=org.kde.bigscreen.homescreen
 ToolBox=
 
 [Desktop][ContainmentActions]

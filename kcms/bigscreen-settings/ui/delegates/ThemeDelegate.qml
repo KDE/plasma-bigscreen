@@ -10,13 +10,13 @@ import QtQuick.Layouts 1.14
 import QtQuick.Controls 2.14
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami as Kirigami
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import org.kde.bigscreen 1.0 as BigScreen
 import Qt5Compat.GraphicalEffects
 
 BigScreen.AbstractDelegate {
     id: delegate
-    implicitWidth: listView.cellWidth * 2
-    implicitHeight: textLayout.implicitHeight + nameLabel.height + Kirigami.Units.largeSpacing * 2
+    implicitWidth: listView.cellWidth * 4
+    implicitHeight: textLayout.implicitHeight + nameLabel.height + Kirigami.Units.largeSpacing * 4
 
 
     Behavior on implicitWidth {
@@ -45,6 +45,9 @@ BigScreen.AbstractDelegate {
                     id: preview
                     anchors.fill: parent
                     themeName: model.pluginNameRole
+                    themeBackgroundColor:  model.backgroundColorRole
+                    themeTextColor: model.textColorRole
+                    themeHighlightColor: model.highlightColorRole
                 }
             }
 

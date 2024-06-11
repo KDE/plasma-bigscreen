@@ -42,12 +42,6 @@ AbstractIndicator {
         id: connectionIconProvider
     }
     onClicked: {
-        NanoShell.StartupFeedback.open(
-                            connectionIconProvider.connectionIcon,
-                            i18n("Network"),
-                            connectionIcon.Kirigami.ScenePosition.x + connectionIcon.width/2,
-                            connectionIcon.Kirigami.ScenePosition.y + connectionIcon.height/2,
-                            Math.min(connectionIcon.width, connectionIcon.height));
-        Plasmoid.executeCommand("plasma-settings -s -m kcm_mediacenter_wifi")
+        configWindow.showOverlay("kcm_mediacenter_wifi")
     }
 }

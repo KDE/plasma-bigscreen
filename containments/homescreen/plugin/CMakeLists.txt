@@ -2,8 +2,8 @@ kde_enable_exceptions()
 
 add_definitions(-DTRANSLATION_DOMAIN=\"biglauncherhomescreen\")
 
-kcoreaddons_add_plugin(org.kde.mycroft.bigscreen.homescreen INSTALL_NAMESPACE "plasma/applets")
-target_sources(org.kde.mycroft.bigscreen.homescreen PRIVATE
+kcoreaddons_add_plugin(org.kde.bigscreen.homescreen INSTALL_NAMESPACE "plasma/applets")
+target_sources(org.kde.bigscreen.homescreen PRIVATE
     biglauncherhomescreen.cpp
     biglauncher_dbus.cpp
     applicationlistmodel.cpp
@@ -13,7 +13,7 @@ target_sources(org.kde.mycroft.bigscreen.homescreen PRIVATE
     settings/module.cpp
 )
 
-target_link_libraries(org.kde.mycroft.bigscreen.homescreen
+target_link_libraries(org.kde.bigscreen.homescreen
     Qt::Gui
     Qt::Core
     Qt::Qml
