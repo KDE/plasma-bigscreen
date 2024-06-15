@@ -1,0 +1,61 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-14 00:43+0000\n"
+"PO-Revision-Date: 2024-05-28 14:52+0300\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 24.02.2\n"
+
+#: ui/delegates/CompactAudioDelegate.qml:87
+#, kde-format
+msgctxt "label of device items"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: ui/delegates/VolumeObject.qml:58
+#, kde-format
+msgid "Adjust Volume"
+msgstr "Regulēt skaļumu"
+
+#: ui/delegates/VolumeObject.qml:123
+#, kde-format
+msgctxt "volume percentage"
+msgid "%1%"
+msgstr "%1 %"
+
+#: ui/DeviceChooserPage.qml:74
+#, kde-format
+msgid "Exit"
+msgstr "Iziet"
+
+#: ui/DeviceChooserPage.qml:127
+#, kde-format
+msgid "Playback Devices"
+msgstr "Atskaņojošās ierīces"
+
+#: ui/DeviceChooserPage.qml:159
+#, kde-format
+msgid "Recording Devices"
+msgstr "Ierakstošās ierīces"
+
+#: ui/main.qml:20
+#, kde-format
+msgid "Audio Device Chooser"
+msgstr "Audio ierīces izvēlētājs"
+
+#: ui/SettingsItem.qml:234
+#, kde-format
+msgid "Press the [←] Back button to return to device selection"
+msgstr "Spiediet [←] atpakaļ pogu, lai atgrieztos ierīču atlasē"

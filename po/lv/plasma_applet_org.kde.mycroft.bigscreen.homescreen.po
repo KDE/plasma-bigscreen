@@ -1,0 +1,144 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-14 00:43+0000\n"
+"PO-Revision-Date: 2024-05-28 16:27+0300\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 24.02.2\n"
+
+#: contents/config/config.qml:11
+#, kde-format
+msgid "General"
+msgstr "Pamata"
+
+#: contents/ui/ConfigWindow.qml:31
+#, kde-format
+msgid "Use Colored Tiles"
+msgstr "Izmantot krāsainas flīzes"
+
+#: contents/ui/ConfigWindow.qml:41
+#, kde-format
+msgid "Use Expanding Tiles"
+msgstr "Izmantot paplašināmas flīzes"
+
+#: contents/ui/ConfigWindow.qml:57
+#, kde-format
+msgid "close"
+msgstr "aizvērt"
+
+#: contents/ui/indicators/KdeConnect.qml:91
+#, kde-format
+msgid "KDE Connect"
+msgstr "KDE Connect"
+
+#: contents/ui/indicators/PairWindow.qml:42
+#, kde-format
+msgid "Pairing Request From %1"
+msgstr "Sapārošanas pieprasījums no „%1“"
+
+#: contents/ui/indicators/PairWindow.qml:69
+#, kde-format
+msgid "Accept"
+msgstr "Pieņemt"
+
+#: contents/ui/indicators/PairWindow.qml:105
+#, kde-format
+msgid "Reject"
+msgstr "Noraidīt"
+
+#: contents/ui/indicators/Volume.qml:120
+#, kde-format
+msgid "Increase Volume"
+msgstr "Palielināt skaļumu"
+
+#: contents/ui/indicators/Volume.qml:127
+#, kde-format
+msgid "Decrease Volume"
+msgstr "Samazināt skaļumu"
+
+#: contents/ui/indicators/Volume.qml:134
+#, kde-format
+msgid "Mute"
+msgstr "Apklusināt"
+
+#: contents/ui/indicators/Volume.qml:144
+#, kde-format
+msgid "Audio Device chooser"
+msgstr "Audio ierīces atlasītājs"
+
+#: contents/ui/indicators/Wifi.qml:47
+#, kde-format
+msgid "Network"
+msgstr "Tīkls"
+
+#: contents/ui/launcher/config/configGeneral.qml:31
+#, kde-format
+msgid "Websocket Address:"
+msgstr "Tīmekļa ligzdas adrese:"
+
+#: contents/ui/launcher/config/configGeneral.qml:37
+#, kde-format
+msgid "Additional Settings:"
+msgstr "Papildu iestatījumi:"
+
+#: contents/ui/launcher/config/configGeneral.qml:38
+#, kde-format
+msgid "Enable Notifications"
+msgstr "Ieslēgt paziņojumus"
+
+#: contents/ui/launcher/config/configGeneral.qml:44
+#, kde-format
+msgid "Enable Remote TTS"
+msgstr "Ieslēgt attāliāto TTS"
+
+#: contents/ui/launcher/config/configGeneral.qml:49
+#, kde-format
+msgid "Enable Remote STT"
+msgstr "Ieslēgt attālināto STT"
+
+#: contents/ui/launcher/LauncherHome.qml:70
+#, kde-format
+msgid "Recent"
+msgstr "Nesenie"
+
+#: contents/ui/launcher/LauncherHome.qml:96
+#, kde-format
+msgid "Voice Apps"
+msgstr "Balss programmas"
+
+#: contents/ui/launcher/LauncherHome.qml:121
+#, kde-format
+msgid "Applications"
+msgstr "Programmas"
+
+#: contents/ui/launcher/LauncherHome.qml:148
+#, kde-format
+msgid "Games"
+msgstr "Spēles"
+
+#: contents/ui/launcher/LauncherHome.qml:177
+#, kde-format
+msgid "Settings"
+msgstr "Iestatījumi"
+
+#: contents/ui/MycroftIndicator.qml:57 contents/ui/MycroftIndicator.qml:66
+#, kde-format
+msgid "Getting Ready... Please Wait"
+msgstr "Sagatavo... Uzgaidiet"
+
+#: contents/ui/PowerManagementItem.qml:41
+#, kde-format
+msgid "Bigscreen has enabled system-wide inhibition"
+msgstr "Lielais ekrāns ir ieslēdzis visas sistēmas iesnaudināšanas nomākšanu"
