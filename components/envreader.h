@@ -16,7 +16,7 @@ class EnvReader : public QObject
         Q_OBJECT
 
 public:
-        explicit EnvReader(QObject *parent = Q_NULLPTR);
+    explicit EnvReader(QObject *parent = nullptr);
 
 public Q_SLOTS:
         QString getValue(const QString &name);
