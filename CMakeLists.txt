@@ -57,8 +57,8 @@ if(NOT ${Mycroft-QMLModule_FOUND})
     message(WARNING "Could not find the Mycroft QML module. Voice interaction features will not be available.")
 endif()
 
-ecm_set_disabled_deprecation_versions(QT 5.15.2
-    KF 5.101
+ecm_set_disabled_deprecation_versions(QT 6.2.0
+    KF 6.4.0
 )
 
 
