@@ -8,7 +8,7 @@
 # Automatically generated, 2021.
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma-bigscreen\n"
+"Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-01-15 00:45+0000\n"
 "PO-Revision-Date: 2022-10-24 07:46+0200\n"
