@@ -5,7 +5,7 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2021.
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma-bigscreen\n"
+"Project-Id-Version: kcm_mediacenter_kdeconnect\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-11 00:43+0000\n"
 "PO-Revision-Date: 2021-04-17 10:08+0200\n"
