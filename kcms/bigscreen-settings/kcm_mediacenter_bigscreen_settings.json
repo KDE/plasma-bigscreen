@@ -88,6 +88,7 @@
     "X-KDE-Keywords[bg]": "тема, външен вид, облик",
     "X-KDE-Keywords[ca@valencia]": "tema,aspecte,comportament",
     "X-KDE-Keywords[ca]": "tema,aspecte,comportament",
+    "X-KDE-Keywords[cs]": "motiv,vzhled,chování",
     "X-KDE-Keywords[de]": "Design,Erscheinungsbild",
     "X-KDE-Keywords[en_GB]": "theme, look, feel",
     "X-KDE-Keywords[eu]": "gaia, itxura, izaera",
@@ -111,6 +112,7 @@
     "X-KDE-Keywords[tr]": "tema, görünüm, his",
     "X-KDE-Keywords[uk]": "theme,look,feel,тема,вигляд,поведінка",
     "X-KDE-Keywords[x-test]": "xxthemexx,xx lookxx,xx feelxx",
+    "X-KDE-Keywords[zh_TW]": "主題,外觀,感覺",
     "X-KDE-System-Settings-Parent-Category": "regionalsettings",
     "X-KDE-Weight": 70
 }
