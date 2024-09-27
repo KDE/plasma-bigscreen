@@ -40,7 +40,7 @@
             }
         ],
         "Category": "Utilities",
-        "Description": "Homescreen for Plasma and Mycroft based TVs",
+        "Description": "A homescreen by Plasma for TVs",
         "Description[ar]": "الشاشة الرئيسية لأجهزة التلفاز المعتمدة على بلازما و ميكروفت",
         "Description[bg]": "Начален екран за телевизори, базирани на Plasma и Mycroft based",
         "Description[ca@valencia]": "Pantalla d'inici de Plasma i Mycroft per a televisors",
@@ -75,7 +75,7 @@
         "Description[zh_TW]": "基於 Plasma 和 Mycroft 的電視用的主畫面",
         "Icon": "mycroft",
         "License": "GPL",
-        "Name": "Mycroft Bigscreen",
+        "Name": "Plasma Bigscreen",
         "Name[ar]": "الشاشة الكبيرة ميكروفت",
         "Name[az]": "Mycroft Böyük_ekran",
         "Name[bg]": "Mycroft Bigscreen",
