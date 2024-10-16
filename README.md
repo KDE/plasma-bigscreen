@@ -1,22 +1,6 @@
 # ![Logo](https://plasma-bigscreen.org/img/logo.png)
 
-A big launcher giving you easy access to any installed apps and skills.
-Controllable via voice or TV remote.
-
-This project is using various open-source components like Plasma Bigscreen, Mycroft AI and libcec.
-
-### Voice Control
-
-Bigscreen supports Mycroft AI, a free and open-source voice assistant that can be run completely decentralized on your own server.
-
-### Remote control your TV via CEC
-
-CEC (Consumer Electronics Control) is a standard to control devices over HDMI.
-Use your normal TV remote control, or a RC with built-in microphone for voice control and optional mouse simulation.
-
-### Voice apps
-
-Download new apps (aka skills) for your Bigscreen or add your own ones for others to enjoy.
+Plasma Bigscreen is a user-friendly, open-source interface designed for devices like HTPCs and SBCs connected to TVs and projectors. It provides an intuitive experience that allows for easy navigation from a distance using remote controls. Discover an engaging environment that adapts to your preferences, offering the safety and privacy protection that come with the Free and Open Source Software.
 
 ## Test on a development machine
 
@@ -29,25 +13,26 @@ Note that `kdesrc-build` doesn't automatically build `plasma-nano` and `plasma-s
 
 ### KDE Plasma Dependencies
 
-- plasma-nano - https://invent.kde.org/plasma/plasma-nano
-- plasma-settings - https://invent.kde.org/plasma-mobile/plasma-settings
+- Plasma Nano - https://invent.kde.org/plasma/plasma-nano
 
-### KDE KF5 dependencies
+### KDE Frameworks Dependencies
 
 - Activities
 - ActivitiesStats
 - Plasma
 - I18n
-- Kirigami2
+- Kirigami
 - KCMUtils
+- GlobalAccel
 - Notifications
 - PlasmaQuick
 - KIO
 - Wayland
 - WindowSystem
 - KDEConnect
+- SVG
   
-### Qt dependencies
+### QT dependencies
 
 - Quick
 - Core
@@ -55,19 +40,10 @@ Note that `kdesrc-build` doesn't automatically build `plasma-nano` and `plasma-s
 - DBus
 - Network
 
-### Optional dependencies
-
-The following can be installed for extra functionality but are not required to build or run:
-
-- Mycroft-Core (development branch) https://github.com/MycroftAI/Mycroft-Core
-- Mycroft-GUI - https://github.com/MycroftAI/Mycroft-GUI
-- MycroftSkillInstaller - https://github.com/AIIX/MycroftSkillInstaller
-
 </details>
 
 To start the Bigscreen homescreen in a window, run:
 
 ```
-QT_QPA_PLATFORM=wayland dbus-run-session kwin_wayland "plasmashell -p org.kde.plasma.mycroft.bigscreen"
+QT_QPA_PLATFORM=wayland dbus-run-session kwin_wayland "plasmashell -p org.kde.plasma.bigscreen"
 ```
-

@@ -1,6 +1,5 @@
 /*
-    SPDX-FileCopyrightText: 2014 Aditya Mehra <aix.m@outlook.com>
-
+    SPDX-FileCopyrightText: 2024 Aditya Mehra <aix.m@outlook.com>
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
@@ -21,6 +20,7 @@ struct KcmData {
     QString description;
     QString iconName;
     QString id;
+    QString path;
 };
 
 class KcmsListModel : public QAbstractListModel
@@ -29,7 +29,7 @@ class KcmsListModel : public QAbstractListModel
     Q_PROPERTY(int count READ count NOTIFY countChanged)
 
 public:
-    enum Roles { KcmIdRole = Qt::UserRole + 1, KcmIconNameRole, KcmDescriptionRole, KcmNameRole, KcmRole };
+    enum Roles { KcmIdRole = Qt::UserRole + 1, KcmIconNameRole, KcmDescriptionRole, KcmNameRole, KcmRole, KcmPathRole};
     Q_ENUM(Roles)
 
     KcmsListModel(QObject *parent = nullptr);
@@ -51,6 +51,8 @@ public:
     QStringList appOrder() const;
     void setAppOrder(const QStringList &order);
 
+    Q_INVOKABLE QVariantMap get(int index) const;
+
 Q_SIGNALS:
     void countChanged();
     void appOrderChanged();
@@ -62,7 +64,6 @@ private:
     QHash<QString, int> m_appPositions;
 
     Configuration m_configuration;
-    bool m_mycroftEnabled;
 };
 
 #endif // KCMSLISTMODEL_H

@@ -1,10 +1,10 @@
 set(bigscreensettings_SRCS
     bigscreensettings.cpp
-    themelistmodel.cpp
+    globalthemelistmodel.cpp
     timedated_interface.cpp
 )
 
-kcmutils_add_qml_kcm(kcm_mediacenter_bigscreen_settings SOURCES ${bigscreensettings_SRCS} INSTALL_NAMESPACE kcms)
+kcmutils_add_qml_kcm(kcm_mediacenter_bigscreen_settings SOURCES ${bigscreensettings_SRCS})
 
 target_link_libraries(kcm_mediacenter_bigscreen_settings
     Qt::DBus
@@ -18,4 +18,5 @@ target_link_libraries(kcm_mediacenter_bigscreen_settings
     KF6::KCMUtilsQuick
     KF6::ConfigWidgets # KColorScheme
     KF6::CoreAddons
+    KF6::Package
 )

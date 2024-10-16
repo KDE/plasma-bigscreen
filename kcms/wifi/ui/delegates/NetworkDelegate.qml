@@ -5,17 +5,13 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
-import QtQuick.Layouts 1.14
-import QtQuick.Controls 2.14
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents
+import QtQuick
+import QtQuick.Controls
 import org.kde.kirigami as Kirigami
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
-import Qt5Compat.GraphicalEffects
+import org.kde.bigscreen as BigScreen
 import org.kde.plasma.networkmanagement as PlasmaNM
 
-BigScreen.AbstractDelegate {
+BigScreen.KCMAbstractDelegate {
     id: delegate
 
     property bool activating: model.ConnectionState == PlasmaNM.Enums.Activating
@@ -23,88 +19,24 @@ BigScreen.AbstractDelegate {
     property bool predictableWirelessPassword: !model.Uuid && model.Type == PlasmaNM.Enums.Wireless &&
                                                (model.SecurityType == PlasmaNM.Enums.StaticWep || model.SecurityType == PlasmaNM.Enums.WpaPsk ||
                                                 model.SecurityType == PlasmaNM.Enums.Wpa2Psk || model.SecurityType == PlasmaNM.Enums.SAE)
-    property alias connectionStatusLabelText: connectionStatusLabel.text
 
     checked: connectionView.currentIndex === index && connectionView.activeFocus
 
-    implicitWidth: listView.cellWidth * 2
-    implicitHeight: listView.height
+    itemLabel: model.ItemUniqueName
+    itemLabelFont: Qt.font({
+        weight: model.ConnectionState == PlasmaNM.Enums.Activated ? Font.DemiBold : Font.Normal,
+        italic: model.ConnectionState == PlasmaNM.Enums.Activating ? true : false
+    })
 
-    Behavior on implicitWidth {
-        NumberAnimation {
-            duration: Kirigami.Units.longDuration
-            easing.type: Easing.InOutQuad
-        }
-    }
+    itemSubLabel: itemText()
+    itemTickSource: Qt.resolvedUrl("../images/green-tick-thick.svg")
+    itemTickOpacity: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0
 
-    contentItem: Item {
-        id: connectionItemLayout
-
-        Kirigami.Icon {
-            id: connectionSvgIcon
-            width: Kirigami.Units.iconSizes.huge
-            height: width
-            y: connectionItemLayout.height/2 - connectionSvgIcon.height/2
-            source: switch(model.Type){
-                    case PlasmaNM.Enums.Wireless:
-                        return itemSignalIcon(model.Signal)
-                    case PlasmaNM.Enums.Wired:
-                        return "network-wired-activated"
-                    }
-        }
-
-        ColumnLayout {
-            id: textLayout
-
-            anchors {
-                left: connectionSvgIcon.right
-                right: connectionItemLayout.right
-                top: connectionSvgIcon.top
-                bottom: connectionSvgIcon.bottom
-                leftMargin: Kirigami.Units.smallSpacing
-            }
-
-            PlasmaComponents.Label {
-                id: connectionNameLabel
-                Layout.fillWidth: true
-                visible: text.length > 0
-                elide: Text.ElideRight
-                wrapMode: Text.WordWrap
-                horizontalAlignment: Text.AlignHCenter
-                maximumLineCount: 2
-                color: Kirigami.Theme.textColor
-                textFormat: Text.PlainText
-                font.weight: model.ConnectionState == PlasmaNM.Enums.Activated ? Font.DemiBold : Font.Normal
-                font.italic: model.ConnectionState == PlasmaNM.Enums.Activating ? true : false
-                text: model.ItemUniqueName
-            }
-
-            PlasmaComponents.Label {
-                id: connectionStatusLabel
-                Layout.fillWidth: true
-                visible: text.length > 0
-                elide: Text.ElideRight
-                wrapMode: Text.WordWrap
-                horizontalAlignment: Text.AlignHCenter
-                maximumLineCount: 3
-                color: Kirigami.Theme.textColor
-                textFormat: Text.PlainText
-                opacity: 0.6
-                text: itemText()
-            }
-        }
-
-        Kirigami.Icon {
-            id: dIcon
-            anchors.bottom: parent.bottom
-            anchors.bottomMargin: -Kirigami.Units.largeSpacing
-            anchors.right: parent.right
-            anchors.rightMargin: -Kirigami.Units.largeSpacing
-            width: Kirigami.Units.iconSizes.smallMedium
-            height: width
-            source: Qt.resolvedUrl("../images/green-tick-thick.svg")
-            visible: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0
-        }
+    itemIcon: switch(model.Type) {
+        case PlasmaNM.Enums.Wireless:
+            return itemSignalIcon(model.Signal)
+        case PlasmaNM.Enums.Wired:
+            return "network-wired-activated"
     }
 
     function itemText() {
@@ -142,18 +74,15 @@ BigScreen.AbstractDelegate {
         }
     }
 
-    Keys.onReturnPressed: clicked()
-
     onClicked: {
         listView.currentIndex = 0
         listView.positionViewAtBeginning()
         if (!model.ConnectionPath) {
             networkSelectionView.devicePath = model.DevicePath
             networkSelectionView.specificPath = model.SpecificPath
-            networkSelectionView.connectionName = connectionNameLabel.text
+            networkSelectionView.connectionName = itemLabel
             networkSelectionView.securityType = model.SecurityType
             if(model.SecurityType == -1 ){
-                console.log("Open Network")
                 networkSelectionView.connectToOpenNetwork()
             } else {
                 passwordLayer.open();

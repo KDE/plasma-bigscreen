@@ -10,8 +10,9 @@ import QtQuick.Layouts 1.0
 import QtQuick.Window 2.2
 
 import org.kde.kirigami 2.5 as Kirigami
-import org.kde.plasma.core 2.1 as PlasmaCore
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.configuration 2.0
+import org.kde.kitemmodels as KItemModels
 import org.kde.ksvg as KSvg
 
 
@@ -39,11 +40,14 @@ Rectangle {
         id: globalAppletConfigModel
     }
 
-    PlasmaCore.SortFilterModel {
+    KItemModels.KSortFilterProxyModel {
         id: configDialogFilterModel
         sourceModel: configDialog.configModel
         filterRoleName: "visible"
-        filterCallback: function(source_row, value) { return value; }
+        filterRowCallback: function(source_row, source_parent) {
+            let value = sourceModel.data(sourceModel.index(source_row, 0, source_parent), filterRoleName)         
+            return value;
+        }
     }
 //END model
 
@@ -120,8 +124,8 @@ Rectangle {
         x: parent.width/2 - width/2
 
         opacity: position
-        width: Math.min(Math.max(units.gridUnit * 35, dialogRootItem.implicitWidth + leftPadding + rightPadding), root.width)
-        height: Math.min(root.height - units.gridUnit * 2, dialogRootItem.implicitHeight + topPadding + bottomPadding + units.gridUnit, root.height)
+        width: Math.min(Math.max(Kirigami.Units.gridUnit * 35, dialogRootItem.implicitWidth + leftPadding + rightPadding), root.width)
+        height: Math.min(root.height - Kirigami.Units.gridUnit * 2, dialogRootItem.implicitHeight + topPadding + bottomPadding + Kirigami.Units.gridUnit, root.height)
 
         leftPadding: background.margins.left
         topPadding: background.margins.top
@@ -165,7 +169,7 @@ Rectangle {
                         return;
                     }
 
-                    var padding = units.gridUnit * 2 // some padding to the top/bottom when we scroll
+                    var padding = Kirigami.Units.gridUnit * 2 // some padding to the top/bottom when we scroll
 
                     var yPos = item.mapToItem(scroll.contentItem, 0, 0).y;
                     if (yPos < flickable.contentY) {
@@ -184,13 +188,13 @@ Rectangle {
                     id: pageFlickable
                     anchors {
                         fill: parent
-                        margins: units.smallSpacing
+                        margins: Kirigami.Units.smallSpacing
                     }
                     contentHeight: pageColumn.height
                     contentWidth: width
                     ColumnLayout {
                         id: pageColumn
-                        spacing: units.largeSpacing / 2
+                        spacing: Kirigami.Units.largeSpacing / 2
                         width: pageFlickable.width
                         height: Math.max(implicitHeight, pageFlickable.height)
 
@@ -208,8 +212,8 @@ Rectangle {
 
                             Layout.fillWidth: true
                             Layout.fillHeight: true
-                            implicitWidth: Math.max(currentItem ? Math.max(currentItem.Layout.minimumWidth, currentItem.Layout.preferredWidth, currentItem.implicitWidth) : 0, units.gridUnit * 15)
-                            implicitHeight: Math.max(currentItem ? Math.max(currentItem.Layout.minimumHeight, currentItem.Layout.preferredHeight, currentItem.implicitHeight) : 0, units.gridUnit * 15)
+                            implicitWidth: Math.max(currentItem ? Math.max(currentItem.Layout.minimumWidth, currentItem.Layout.preferredWidth, currentItem.implicitWidth) : 0, Kirigami.Units.gridUnit * 15)
+                            implicitHeight: Math.max(currentItem ? Math.max(currentItem.Layout.minimumHeight, currentItem.Layout.preferredHeight, currentItem.implicitHeight) : 0, Kirigami.Units.gridUnit * 15)
 
                             property string sourceFile
 
@@ -257,13 +261,13 @@ Rectangle {
                                         property: "opacity"
                                         from: 0
                                         to: 1
-                                        duration: units.longDuration
+                                        duration: Kirigami.Units.longDuration
                                         easing.type: Easing.InOutQuad
                                     }
                                     XAnimator {
                                         from: pageStack.invertAnimations ? -scroll.width/3: scroll.width/3
                                         to: 0
-                                        duration: units.longDuration
+                                        duration: Kirigami.Units.longDuration
                                         easing.type: Easing.InOutQuad
                                     }
                                 }
@@ -273,13 +277,13 @@ Rectangle {
                                     OpacityAnimator {
                                         from: 1
                                         to: 0
-                                        duration: units.longDuration
+                                        duration: Kirigami.Units.longDuration
                                         easing.type: Easing.InOutQuad
                                     }
                                     XAnimator {
                                         from: 0
                                         to: pageStack.invertAnimations ? scroll.width/3 : -scroll.width/3
-                                        duration: units.longDuration
+                                        duration: Kirigami.Units.longDuration
                                         easing.type: Easing.InOutQuad
                                     }
                                 }
@@ -297,7 +301,7 @@ Rectangle {
                 visible: categoriesScroll.visible
                 Behavior on color {
                     ColorAnimation {
-                        duration: units.longDuration
+                        duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
                     }
                 }
@@ -337,7 +341,6 @@ Rectangle {
                     var foundNext = false
                     for (var i = 0, length = buttons.length; i < length; ++i) {
                         var button = buttons[i];
-                        console.log(button)
                         if (!button.hasOwnProperty("current")) {
                             continue;
                         }

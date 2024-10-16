@@ -1,11 +1,11 @@
 [kdeglobals][KDE]
-widgetStyle=breeze
+widgetStyle=Breeze
 
 [Desktop][org.kde.plasma.mini]
-Containment=org.kde.mycroft.bigscreen.homescreen
+Containment=org.kde.bigscreen.homescreen
 
 [kdeglobals][General]
-ColorScheme=BreezeDark
+ColorScheme=BreezeLight
 
 [kdeglobals][Icons]
 Theme=breeze
@@ -16,14 +16,11 @@ name=default
 [kcminputrc][Mouse]
 cursorTheme=breeze_cursors
 
-[kwinrc][WindowSwitcher]
-LayoutName=org.kde.breeze.desktop
-
-[kwinrc][DesktopSwitcher]
-LayoutName=org.kde.breeze.desktop
-
 [kwinrc][org.kde.kdecoration2]
 library=org.kde.breeze
 
 [plasmashellrc][Shell]
-ShellPackage=org.kde.plasma.mycroft.bigscreen
+ShellPackage=org.kde.plasma.bigscreen
+
+[KSplash]
+Theme=org.kde.plasma.bigscreen

@@ -5,22 +5,22 @@
 
 */
 
-import QtQuick.Layouts 1.14
-import QtQuick 2.14
-import QtQuick.Window 2.14
-import QtQuick.Controls 2.14
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick.Layouts
+import QtQuick
+import QtQuick.Window
+import QtQuick.Controls
+import org.kde.plasma.core as PlasmaCore
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.networkmanagement as PlasmaNM
 import org.kde.kcmutils as KCM
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import org.kde.bigscreen as BigScreen
 import "views" as Views
 import "delegates" as Delegates
 
 KCM.SimpleKCM {
     id: networkSelectionView
     
-    title: Screen.devicePixelRatio.toFixed(2) //i18n("Network")
+    title: i18n("Network")
     background: null
     
     leftPadding: Kirigami.Units.smallSpacing
@@ -35,6 +35,12 @@ KCM.SimpleKCM {
     property var connectionName
     property var devicePath
     property var specificPath
+
+    property Item settingMenuItem: networkSelectionView.parent.parent.lastSettingMenuItem
+
+    function settingMenuItemFocus() {
+        settingMenuItem.forceActiveFocus()
+    }
 
     function connectToOpenNetwork(){
         handler.addAndActivateConnection(devicePath, specificPath, passField.text)
@@ -269,28 +275,38 @@ KCM.SimpleKCM {
     
     contentItem: FocusScope {
 
-        Rectangle {
+        Item {
             id: headerAreaTop
+            height: parent.height * 0.075
+            anchors.top: parent.top
             anchors.left: parent.left
             anchors.right: parent.right
-            anchors.leftMargin: -Kirigami.Units.largeSpacing
-            anchors.rightMargin: -Kirigami.Units.largeSpacing
-            height: parent.height * 0.075
-            z: 10
-            gradient: Gradient {
-                GradientStop { position: 0.1; color: Qt.rgba(0, 0, 0, 0.5) }
-                GradientStop { position: 0.9; color: Qt.rgba(0, 0, 0, 0.25) }
-            }
+            anchors.margins: Kirigami.Units.largeSpacing
 
             Kirigami.Heading {
-                level: 1
+                id: settingsTitle
+                text: i18n("Network Settings")
                 anchors.fill: parent
-                anchors.topMargin: Kirigami.Units.largeSpacing
-                anchors.leftMargin: Kirigami.Units.largeSpacing * 2
-                anchors.bottomMargin: Kirigami.Units.largeSpacing
+                anchors.margins: Kirigami.Units.largeSpacing
+                verticalAlignment: Text.AlignBottom
+                horizontalAlignment: Text.AlignLeft
+                font.bold: true
                 color: Kirigami.Theme.textColor
-                text: "Networks"
+                fontSizeMode: Text.Fit
+                minimumPixelSize: 16
+                font.pixelSize: 32
             }
+        }
+
+        Kirigami.Separator {
+            id: settingsSeparator
+            anchors.top: headerAreaTop.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+            Kirigami.Theme.colorSet: Kirigami.Theme.Button
+            Kirigami.Theme.inherit: false
+            color: Kirigami.Theme.backgroundColor
+            height: 2
         }
 
         Item {
@@ -299,7 +315,7 @@ KCM.SimpleKCM {
             anchors.right: deviceConnectionView.left
             anchors.leftMargin: -Kirigami.Units.largeSpacing
             anchors.bottom: parent.bottom
-            implicitHeight: Kirigami.Units.gridUnit * 2
+            implicitHeight: Kirigami.Units.gridUnit * 4
 
         RowLayout {
             id: footerArea
@@ -310,7 +326,7 @@ KCM.SimpleKCM {
                 Layout.fillWidth: true
                 Layout.fillHeight: true
                 KeyNavigation.up: connectionView
-                KeyNavigation.right: kcmcloseButton
+                KeyNavigation.left: settingMenuItem
 
                 background: Rectangle {
                     color: reloadButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
@@ -320,12 +336,17 @@ KCM.SimpleKCM {
                     RowLayout {
                         anchors.centerIn: parent
                         Kirigami.Icon {
-                            Layout.preferredWidth: Kirigami.Units.iconSizes.small
-                            Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                            Layout.preferredWidth: Kirigami.Units.iconSizes.large
+                            Layout.preferredHeight: Kirigami.Units.iconSizes.large
                             source: "view-refresh"
                         }
                         Label {
                             text: i18n("Refresh")
+                            verticalAlignment: Text.AlignVCenter
+                            horizontalAlignment: Text.AlignLeft
+                            fontSizeMode: Text.Fit
+                            minimumPixelSize: 8
+                            font.pixelSize: 18
                         }
                     }
                 }
@@ -337,39 +358,6 @@ KCM.SimpleKCM {
                 Keys.onReturnPressed: {
                     networkSelectionView.refreshing = true;
                     connectionView.contentY = -Kirigami.Units.gridUnit * 4;
-                }
-            }
-
-            Button {
-                id: kcmcloseButton
-                KeyNavigation.up: connectionView
-                KeyNavigation.left: reloadButton
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-
-                background: Rectangle {
-                    color: kcmcloseButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
-                }
-
-                contentItem: Item {
-                    RowLayout {
-                        anchors.centerIn: parent
-                        Kirigami.Icon {
-                            Layout.preferredWidth: Kirigami.Units.iconSizes.small
-                            Layout.preferredHeight: Kirigami.Units.iconSizes.small
-                            source: "window-close"
-                        }
-                        Label {
-                            text: i18n("Exit")
-                        }
-                    }
-                }
-
-                onClicked: {
-                    Window.window.close()
-                }
-                Keys.onReturnPressed: {
-                    Window.window.close()
                 }
             }
         }

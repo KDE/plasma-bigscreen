@@ -4,15 +4,15 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.14
-import QtQuick.Layouts 1.14
-import QtQuick.Controls 2.14 as Controls
-import QtQuick.Window 2.14
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.kquickcontrolsaddons 2.0
-import org.kde.kirigami 2.12 as Kirigami
-import org.kde.plasma.private.volume 0.1
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import QtQuick.Window
+import org.kde.plasma.core as PlasmaCore
+import org.kde.kquickcontrolsaddons
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.private.volume
+import org.kde.bigscreen as BigScreen
 
 import "delegates" as Delegates
 import "views" as Views
@@ -20,74 +20,39 @@ import "views" as Views
 FocusScope {
     id: mainFlick
 
-    Rectangle {
+    Item {
         id: headerAreaTop
+        height: parent.height * 0.075
+        anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
-        anchors.leftMargin: -Kirigami.Units.largeSpacing
-        anchors.rightMargin: -Kirigami.Units.largeSpacing
-        height: parent.height * 0.075
-        z: 10
-        gradient: Gradient {
-            GradientStop { position: 0.1; color: Qt.rgba(0, 0, 0, 0.5) }
-            GradientStop { position: 0.9; color: Qt.rgba(0, 0, 0, 0.25) }
-        }
+        anchors.margins: Kirigami.Units.largeSpacing
 
         Kirigami.Heading {
-            level: 1
+            id: settingsTitle
+            text: i18n("Audio Settings")
             anchors.fill: parent
-            anchors.topMargin: Kirigami.Units.largeSpacing
-            anchors.leftMargin: Kirigami.Units.largeSpacing * 2
-            anchors.bottomMargin: Kirigami.Units.largeSpacing
+            anchors.margins: Kirigami.Units.largeSpacing
+            verticalAlignment: Text.AlignBottom
+            horizontalAlignment: Text.AlignLeft
+            font.bold: true
             color: Kirigami.Theme.textColor
-            text: "Audio Settings"
+            fontSizeMode: Text.Fit
+            minimumPixelSize: 16
+            font.pixelSize: 32
         }
     }
 
-    Item {
-        id: footerMain
+    Kirigami.Separator {
+        id: settingsSeparator
+        anchors.top: headerAreaTop.bottom
         anchors.left: parent.left
-        anchors.right: settingsView.left
-        anchors.leftMargin: -Kirigami.Units.largeSpacing
-        anchors.bottom: parent.bottom
-        implicitHeight: Kirigami.Units.gridUnit * 2
-
-        Controls.Button {
-            id: kcmcloseButton
-            implicitHeight: Kirigami.Units.gridUnit * 2
-            anchors.left: parent.left
-            anchors.right: parent.right
-
-            background: Rectangle {
-                color: kcmcloseButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
-            }
-
-            contentItem: Item {
-                RowLayout {
-                    anchors.centerIn: parent
-                    Kirigami.Icon {
-                        Layout.preferredWidth: PlasmaCore.Units.iconSizes.small
-                        Layout.preferredHeight: PlasmaCore.Units.iconSizes.small
-                        source: "window-close"
-                    }
-                    Controls.Label {
-                        text: i18n("Exit")
-                    }
-                }
-            }
-
-            Keys.onUpPressed: root.activateDeviceView()
-
-            onClicked: {
-                Window.window.close()
-            }
-
-            Keys.onReturnPressed: {
-                Window.window.close()
-            }
-        }
+        anchors.right: parent.right
+        Kirigami.Theme.colorSet: Kirigami.Theme.Button
+        Kirigami.Theme.inherit: false
+        color: Kirigami.Theme.backgroundColor
+        height: 2
     }
-
 
     SourceModel {
         id: paSourceModel
@@ -101,7 +66,7 @@ FocusScope {
         anchors.top: headerAreaTop.bottom
         anchors.topMargin: Kirigami.Units.largeSpacing * 2
         width: parent.width - settingsView.width
-        anchors.bottom: footerMain.top
+        anchors.bottom: parent.bottom
         clip: true
 
         ColumnLayout {

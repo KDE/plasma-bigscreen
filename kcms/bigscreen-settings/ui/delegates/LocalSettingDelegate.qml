@@ -5,12 +5,12 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
-import QtQuick.Layouts 1.14
-import QtQuick.Controls 2.14
-import org.kde.plasma.components 3.0 as PlasmaComponents
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls
+import org.kde.plasma.components as PlasmaComponents
 import org.kde.kirigami as Kirigami
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import org.kde.bigscreen as BigScreen
 import Qt5Compat.GraphicalEffects
 
 BigScreen.AbstractDelegate {
@@ -18,6 +18,7 @@ BigScreen.AbstractDelegate {
     property bool isChecked
     property alias name: textName.text
     property string customType
+    shadowSize: Kirigami.Units.largeSpacing
 
     highlighted: activeFocus
 
@@ -40,20 +41,24 @@ BigScreen.AbstractDelegate {
 
     contentItem: RowLayout {
         id: localItem
-
+              
         PlasmaComponents.Label {
             id: textName
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
             elide: Text.ElideRight
-            wrapMode: Text.WordWrap
-            horizontalAlignment: Text.AlignHCenter
-            maximumLineCount: 2
+            horizontalAlignment: Text.AlignLeft
+            verticalAlignment: Text.AlignVCenter
             color: Kirigami.Theme.textColor
-            textFormat: Text.PlainText
+            fontSizeMode: Text.Fit
+            minimumPixelSize: 14
+            font.pixelSize: 24
         }
 
         Kirigami.Icon {
-            Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
-            Layout.preferredHeight: width
+            Layout.fillHeight: true
+            Layout.preferredWidth: height
             enabled: isChecked
             opacity: enabled ? 1 : 0.25
             source: Qt.resolvedUrl("../images/green-tick-thick.svg")

@@ -1,7 +1,10 @@
-module org.kde.mycroft.bigscreen
+module org.kde.bigscreen
 plugin bigscreenplugin
 
 TileView 1.0 TileView.qml
 TileRepeater 1.0 TileRepeater.qml
 AbstractDelegate 1.0 AbstractDelegate.qml
 IconDelegate 1.0 IconDelegate.qml
+IconNewDelegate 1.0 IconNewDelegate.qml
+KCMAbstractDelegate 1.0 KCMAbstractDelegate.qml
+TaskDelegate 1.0 TaskDelegate.qml

@@ -9,7 +9,6 @@
 
 // Qt
 #include <QByteArray>
-#include <QDebug>
 #include <QModelIndex>
 #include <QProcess>
 #include <QRegularExpression>
@@ -111,21 +110,11 @@ void ApplicationListModel::loadApplications()
                         subGroupList << serviceGroup;
 
                     } else if (const auto service = static_cast<KService *>(entry.data()); entry->isType(KST_KService) && !service->exec().isEmpty()) {
-                        qDebug() << service->property<QStringList>("Categories");
-                        qDebug() << " desktopEntryName: " << service->desktopEntryName();
-
-                        // else if (entry->property("Exec").isValid()) {
-                        //  KService::Ptr service(static_cast<KService* >(entry.data()));
-
-                        //  qDebug() << " desktopEntryName: " << service->desktopEntryName();
-
                         if (service->isApplication() && !blacklist.contains(service->desktopEntryName()) && service->showOnCurrentPlatform()
                             && !service->property<bool>("Terminal")) {
-                            QRegularExpression voiceExpr(QStringLiteral("mycroft-gui-app .* --skill=(.*)\\.home"));
 
-                            if (service->categories().contains(QStringLiteral("VoiceApp")) && voiceExpr.match(service->exec()).hasMatch()) {
+                            if (service->categories().contains(QStringLiteral("VoiceApp"))) {
                                 QString exec = service->exec();
-                                exec.replace(voiceExpr, QStringLiteral("\\1"));
                                 if (!exec.isEmpty()) {
                                     m_voiceAppSkills << exec;
                                 }
@@ -299,4 +288,19 @@ void ApplicationListModel::setAppOrder(const QStringList &order)
         ++i;
     }
     Q_EMIT appOrderChanged();
+}
+
+QVariantMap ApplicationListModel::itemMap(int index)
+{
+    QVariantMap map;
+    map[QStringLiteral("name")] = m_applicationList.at(index).name;
+    map[QStringLiteral("comment")] = m_applicationList.at(index).comment;
+    map[QStringLiteral("icon")] = m_applicationList.at(index).icon;
+    map[QStringLiteral("categories")] = m_applicationList.at(index).categories;
+    map[QStringLiteral("storageId")] = m_applicationList.at(index).storageId;
+    map[QStringLiteral("entryPath")] = m_applicationList.at(index).entryPath;
+    map[QStringLiteral("desktopPath")] = m_applicationList.at(index).desktopPath;
+    map[QStringLiteral("startupNotify")] = m_applicationList.at(index).startupNotify;
+
+    return map;
 }

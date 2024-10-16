@@ -116,7 +116,7 @@
     "X-KDE-Keywords[tr]": "tema, görünüm, his",
     "X-KDE-Keywords[uk]": "theme,look,feel,тема,вигляд,поведінка",
     "X-KDE-Keywords[x-test]": "xxthemexx,xx lookxx,xx feelxx",
-    "X-KDE-Keywords[zh_TW]": "主題,外觀,感覺",
-    "X-KDE-System-Settings-Parent-Category": "regionalsettings",
+    "X-KDE-Keywords[zh_CN]": "theme, look, feel, 主题, 外观, 视觉效果, 显示效果",
+    "X-KDE-System-Settings-Parent-Category": "appearance",
     "X-KDE-Weight": 70
 }

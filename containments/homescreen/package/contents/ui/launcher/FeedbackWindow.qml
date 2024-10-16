@@ -4,11 +4,11 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.14
-import QtQuick.Layouts 1.14
-import QtQuick.Window 2.14
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Window
+import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
 
 Window {

@@ -8,20 +8,48 @@
 #include "biglauncherhomescreen.h"
 #include "applicationlistmodel.h"
 #include "kcmslistmodel.h"
+#include "favslistmodel.h"
+#include "shortcuts.h"
+#include "settings/modulesmodel.h"
+#include "settings/module.h"
 
-#include <QDebug>
 #include <QProcess>
-#include <QtQml>
-
+#include <QQmlEngine>
+#include <QQmlContext>
 #include <sessionmanagement.h>
+
+
+static QObject *favsManagerSingletonProvider(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(scriptEngine);
+
+    //singleton managed internally, qml should never delete it
+    engine->setObjectOwnership(FavsManager::instance(), QQmlEngine::CppOwnership);
+    return FavsManager::instance();
+}
+
+static QObject *shortcutsSingletonProvider(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(scriptEngine);
+
+    //singleton managed internally, qml should never delete it
+    engine->setObjectOwnership(Shortcuts::instance(), QQmlEngine::CppOwnership);
+    return Shortcuts::instance();
+}
+
 
 HomeScreen::HomeScreen(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : Plasma::Containment(parent, data, args)
     , m_session(new SessionManagement(this))
 {
     const char *uri = "org.kde.private.biglauncher";
+    qmlRegisterType<Module>(uri, 1, 0, "Module");
+    qmlRegisterType<ModulesModel>(uri, 1, 0, "ModulesModel");
+    qmlRegisterSingletonType<FavsManager>(uri, 1, 0, "FavsManager", favsManagerSingletonProvider);
+    qmlRegisterSingletonType<Shortcuts>(uri, 1, 0, "Shortcuts", shortcutsSingletonProvider);
     qmlRegisterUncreatableType<KcmsListModel>(uri, 1, 0, "KcmsListModel", QStringLiteral("KcmsListModel is uncreatable"));
     qmlRegisterUncreatableType<ApplicationListModel>(uri, 1, 0, "ApplicationListModel", QStringLiteral("Cannot create an item of type ApplicationListModel"));
+    qmlRegisterUncreatableType<FavsListModel>(uri, 1, 0, "FavsListModel", QStringLiteral("Cannot create an item of type FavsListModel"));
     qmlRegisterUncreatableType<BigLauncherDbusAdapterInterface>(uri,
                                                                 1,
                                                                 0,
@@ -32,6 +60,11 @@ HomeScreen::HomeScreen(QObject *parent, const KPluginMetaData &data, const QVari
     m_bigLauncherDbusAdapterInterface = new BigLauncherDbusAdapterInterface(this);
     m_applicationListModel = new ApplicationListModel(this);
     m_kcmsListModel = new KcmsListModel(this);
+
+    m_favsManager = FavsManager::instance();
+    m_favsListModel = new FavsListModel(m_favsManager, this);
+    m_shortcuts = Shortcuts::instance();
+    m_shortcuts->initializeShortcuts();
 }
 
 HomeScreen::~HomeScreen()
@@ -51,6 +84,11 @@ ApplicationListModel *HomeScreen::applicationListModel() const
 BigLauncherDbusAdapterInterface *HomeScreen::bigLauncherDbusAdapterInterface() const
 {
     return m_bigLauncherDbusAdapterInterface;
+}
+
+FavsListModel *HomeScreen::favsListModel() const
+{
+    return m_favsListModel;
 }
 
 void HomeScreen::executeCommand(const QString &command)

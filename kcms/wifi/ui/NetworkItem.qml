@@ -5,11 +5,10 @@
 
 */
 
-import QtQuick 2.14
-import QtQuick.Layouts 1.14
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick
+import QtQuick.Layouts
 import org.kde.plasma.networkmanagement as PlasmaNM
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami as Kirigami
 
 Kirigami.AbstractListItem {
     id: connectionItem
@@ -40,8 +39,8 @@ Kirigami.AbstractListItem {
                 Kirigami.Icon {
                     id: connectionSvgIcon
                     Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
-                    Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
-                    Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
+                    Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+                    Layout.preferredWidth: Kirigami.Units.iconSizes.medium
                     color: Kirigami.Theme.textColor
                     //elementId: model.ConnectionIcon
                     source: itemSignalIcon(model.Signal)

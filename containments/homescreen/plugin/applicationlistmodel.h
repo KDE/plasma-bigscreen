@@ -71,13 +71,11 @@ public:
     void setAppOrder(const QStringList &order);
 
     Q_INVOKABLE void moveItem(int row, int order);
-
     Q_INVOKABLE void runApplication(const QString &storageId);
-
     Q_INVOKABLE void loadApplications();
-
     Q_INVOKABLE void executeCommand(const QString &command);
-
+    Q_INVOKABLE QVariantMap itemMap(int index);
+    
 public Q_SLOTS:
     void sycocaDbChanged();
 

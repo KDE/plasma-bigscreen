@@ -5,15 +5,14 @@
 
 */
 
-import QtQuick.Layouts 1.14
-import QtQuick 2.14
-import QtQuick.Window 2.14
-import QtQuick.Controls 2.14
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.kirigami 2.12 as Kirigami
-import org.kde.kdeconnect 1.0
+import QtQuick.Layouts
+import QtQuick
+import QtQuick.Window
+import QtQuick.Controls
+import org.kde.kirigami as Kirigami
+import org.kde.kdeconnect
 import org.kde.kcmutils as KCM
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import org.kde.bigscreen as BigScreen
 import "delegates" as Delegates
 
 KCM.SimpleKCM {
@@ -25,9 +24,19 @@ KCM.SimpleKCM {
     topPadding: 0
     rightPadding: Kirigami.Units.smallSpacing
     bottomPadding: 0
+
+    property Item settingMenuItem: networkSelectionView.parent.parent.lastSettingMenuItem
+
+    function settingMenuItemFocus() {
+        settingMenuItem.forceActiveFocus()
+    }
     
     Component.onCompleted: {
-        connectionView.forceActiveFocus();
+        if(allDevicesModel.count > 0) {
+            connectionView.forceActiveFocus();
+        } else {
+            settingMenuItemFocus();
+        }
     }
 
     DevicesModel {
@@ -36,78 +45,45 @@ KCM.SimpleKCM {
 
     contentItem: FocusScope {
 
-        Rectangle {
+        Item {
             id: headerAreaTop
+            height: parent.height * 0.075
+            anchors.top: parent.top
             anchors.left: parent.left
             anchors.right: parent.right
-            anchors.leftMargin: -Kirigami.Units.largeSpacing
-            anchors.rightMargin: -Kirigami.Units.largeSpacing
-            height: parent.height * 0.075
-            z: 10
-            gradient: Gradient {
-                GradientStop { position: 0.1; color: Qt.rgba(0, 0, 0, 0.5) }
-                GradientStop { position: 0.9; color: Qt.rgba(0, 0, 0, 0.25) }
-            }
+            anchors.margins: Kirigami.Units.largeSpacing
 
             Kirigami.Heading {
-                level: 1
+                id: settingsTitle
+                text: i18n("KDE Connect")
                 anchors.fill: parent
-                anchors.topMargin: Kirigami.Units.largeSpacing
-                anchors.leftMargin: Kirigami.Units.largeSpacing * 2
-                anchors.bottomMargin: Kirigami.Units.largeSpacing
+                anchors.margins: Kirigami.Units.largeSpacing
+                verticalAlignment: Text.AlignBottom
+                horizontalAlignment: Text.AlignLeft
+                font.bold: true
                 color: Kirigami.Theme.textColor
-                text: "KDE Connect"
+                fontSizeMode: Text.Fit
+                minimumPixelSize: 16
+                font.pixelSize: 32
             }
         }
 
-        Item {
-            id: footerMain
+        Kirigami.Separator {
+            id: settingsSeparator
+            anchors.top: headerAreaTop.bottom
             anchors.left: parent.left
-            anchors.right: deviceConnectionView.left
-            anchors.leftMargin: -Kirigami.Units.largeSpacing
-            anchors.bottom: parent.bottom
-            implicitHeight: Kirigami.Units.gridUnit * 2
-
-            Button {
-                id: kcmcloseButton
-                implicitHeight: Kirigami.Units.gridUnit * 2
-                width: allDevicesModel.count > 0 ? parent.width : (root.width + Kirigami.Units.largeSpacing)
-
-                background: Rectangle {
-                    color: kcmcloseButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
-                }
-
-                contentItem: Item {
-                    RowLayout {
-                        anchors.centerIn: parent
-                        Kirigami.Icon {
-                            Layout.preferredWidth: PlasmaCore.Units.iconSizes.small
-                            Layout.preferredHeight: PlasmaCore.Units.iconSizes.small
-                            source: "window-close"
-                        }
-                        Label {
-                            text: i18n("Exit")
-                        }
-                    }
-                }
-
-                Keys.onUpPressed: connectionView.forceActiveFocus()
-
-                onClicked: {
-                    Window.window.close()
-                }
-
-                Keys.onReturnPressed: {
-                    Window.window.close()
-                }
-            }
+            anchors.right: parent.right
+            Kirigami.Theme.colorSet: Kirigami.Theme.Button
+            Kirigami.Theme.inherit: false
+            color: Kirigami.Theme.backgroundColor
+            height: 2
         }
 
         Item {
             clip: true
             anchors.left: parent.left
             anchors.top: headerAreaTop.bottom
-            anchors.bottom: footerMain.top
+            anchors.bottom: parent.bottom
             width: parent.width - deviceConnectionView.width
 
             ColumnLayout {

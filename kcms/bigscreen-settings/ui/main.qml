@@ -5,14 +5,14 @@
 
 */
 
-import QtQuick.Layouts 1.14
-import QtQuick 2.14
-import QtQuick.Window 2.14
-import QtQuick.Controls 2.14
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick.Layouts
+import QtQuick
+import QtQuick.Window
+import QtQuick.Controls
+import org.kde.plasma.core as PlasmaCore
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import org.kde.bigscreen as BigScreen
 import "delegates" as Delegates
 
 KCM.SimpleKCM {
@@ -25,12 +25,14 @@ KCM.SimpleKCM {
     rightPadding: Kirigami.Units.smallSpacing
     bottomPadding: 0
 
-    Component.onCompleted: {
-        desktopThemeView.forceActiveFocus();
+    property Item settingMenuItem: root.parent.parent.lastSettingMenuItem
+
+    function settingMenuItemFocus() {
+        settingMenuItem.forceActiveFocus()
     }
 
-    function setTheme(packageName){
-        kcm.themeName = packageName
+    Component.onCompleted: {
+        desktopThemeView.forceActiveFocus();
     }
 
     function setOption(type, result){
@@ -40,9 +42,6 @@ KCM.SimpleKCM {
         if(type == "exapandableTile"){
             kcm.setUseExpandingTiles(result);
         }
-        if(type == "mycroftIntegration"){
-            kcm.setMycroftIntegrationActive(result);
-        }
         if(type == "pmInhibition"){
             kcm.setPmInhibitionActive(result);
         }
@@ -50,71 +49,38 @@ KCM.SimpleKCM {
 
     contentItem: FocusScope {
 
-        Rectangle {
+        Item {
             id: headerAreaTop
+            height: parent.height * 0.075
+            anchors.top: parent.top
             anchors.left: parent.left
             anchors.right: parent.right
-            anchors.leftMargin: -Kirigami.Units.largeSpacing
-            anchors.rightMargin: -Kirigami.Units.largeSpacing
-            height: parent.height * 0.075
-            z: 10
-            gradient: Gradient {
-                GradientStop { position: 0.1; color: Qt.rgba(0, 0, 0, 0.5) }
-                GradientStop { position: 0.9; color: Qt.rgba(0, 0, 0, 0.25) }
-            }
+            anchors.margins: Kirigami.Units.largeSpacing
 
             Kirigami.Heading {
-                level: 1
+                id: settingsTitle
+                text: i18n("Appearance & Personalization")
                 anchors.fill: parent
-                anchors.topMargin: Kirigami.Units.largeSpacing
-                anchors.leftMargin: Kirigami.Units.largeSpacing * 2
-                anchors.bottomMargin: Kirigami.Units.largeSpacing
+                anchors.margins: Kirigami.Units.largeSpacing
+                verticalAlignment: Text.AlignBottom
+                horizontalAlignment: Text.AlignLeft
+                font.bold: true
                 color: Kirigami.Theme.textColor
-                text: "Bigscreen Settings"
+                fontSizeMode: Text.Fit
+                minimumPixelSize: 16
+                font.pixelSize: 32
             }
         }
 
-        Item {
-            id: footerMain
+        Kirigami.Separator {
+            id: settingsSeparator
+            anchors.top: headerAreaTop.bottom
             anchors.left: parent.left
             anchors.right: parent.right
-            anchors.leftMargin: -Kirigami.Units.largeSpacing
-            anchors.bottom: parent.bottom
-            implicitHeight: Kirigami.Units.gridUnit * 2
-
-            Button {
-                id: kcmcloseButton
-                implicitHeight: Kirigami.Units.gridUnit * 2
-                width: deviceTimeSettingsArea.opened ? (root.width + Kirigami.Units.largeSpacing) - deviceTimeSettingsArea.width : root.width + Kirigami.Units.largeSpacing
-                KeyNavigation.up: desktopThemeView
-                KeyNavigation.down: mycroftIntegrationDelegate
-
-                background: Rectangle {
-                    color: kcmcloseButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
-                }
-
-                contentItem: Item {
-                    RowLayout {
-                        anchors.centerIn: parent
-                        Kirigami.Icon {
-                            Layout.preferredWidth: Kirigami.Units.iconSizes.small
-                            Layout.preferredHeight: Kirigami.Units.iconSizes.small
-                            source: "window-close"
-                        }
-                        Label {
-                            text: i18n("Exit")
-                        }
-                    }
-                }
-
-                onClicked: {
-                    Window.window.close()
-                }
-
-                Keys.onReturnPressed: {
-                    Window.window.close()
-                }
-            }
+            Kirigami.Theme.colorSet: Kirigami.Theme.Button
+            Kirigami.Theme.inherit: false
+            color: Kirigami.Theme.backgroundColor
+            height: 2
         }
 
         Item {
@@ -122,17 +88,17 @@ KCM.SimpleKCM {
             anchors.leftMargin: Kirigami.Units.largeSpacing
             anchors.top: headerAreaTop.bottom
             anchors.topMargin: Kirigami.Units.largeSpacing * 2
-            anchors.bottom: footerMain.top
-            width: deviceTimeSettingsArea.opened ? parent.width - deviceTimeSettingsArea.width : parent.width
+            anchors.bottom: parent.bottom
+            anchors.right: parent.right
+            anchors.rightMargin: Kirigami.Units.largeSpacing
             clip: true
 
             ColumnLayout {
                 id: contentLayout
-                width: parent.width
-                property Item currentSection
-                y: currentSection ? (currentSection.y > parent.height / 2 ? -currentSection.y + Kirigami.Units.gridUnit * 3 : 0) : 0
                 anchors.left: parent.left
+                anchors.right: parent.right
                 anchors.leftMargin: Kirigami.Units.largeSpacing
+                anchors.rightMargin: Kirigami.Units.largeSpacing
 
                 Behavior on y {
                     NumberAnimation {
@@ -144,119 +110,94 @@ KCM.SimpleKCM {
                 Kirigami.Heading {
                     id: launcherLookHeader
                     text: i18n("Launcher Appearance")
-                    layer.enabled: true
                     color: Kirigami.Theme.textColor
                 }
 
-                Flickable {
-                    id: topContentAreaLayout
+                Delegates.LocalSettingDelegate {
+                    id: pmInhibitionDelegate
                     Layout.fillWidth: true
-                    Layout.preferredHeight: topContentArea.implicitHeight
-                    contentWidth: topContentArea.implicitWidth
-                    contentHeight: height
+                    Layout.preferredHeight: Kirigami.Units.gridUnit * 4
+                    isChecked: kcm.pmInhibitionActive() ? 1 : 0
+                    name: i18n("Power Inhibition")
+                    customType: "pmInhibition"
+                    KeyNavigation.left: settingMenuItem
+                    KeyNavigation.down: coloredTileDelegate
+                }
 
-                    Behavior on contentX {
-                        NumberAnimation {
-                            duration: Kirigami.Units.longDuration * 2
-                            easing.type: Easing.InOutQuad
-                        }
-                    }
+                Delegates.LocalSettingDelegate {
+                    id: coloredTileDelegate
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: Kirigami.Units.gridUnit * 4
+                    isChecked: kcm.useColoredTiles() ? 1 : 0
+                    name: i18n("Colored Tiles")
+                    customType: "coloredTile"
+                    KeyNavigation.left: settingMenuItem
+                    KeyNavigation.up: pmInhibitionDelegate
+                    KeyNavigation.down: expandableTileDelegate
+                }
 
-                    RowLayout {
-                        id: topContentArea
-                        height: parent.height
+                Delegates.LocalSettingDelegate {
+                    id: expandableTileDelegate
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: Kirigami.Units.gridUnit * 4
+                    isChecked: kcm.useExpandingTiles() ? 1 : 0
+                    name: i18n("Expanding Tiles")
+                    customType: "exapandableTile"
+                    KeyNavigation.left: settingMenuItem
+                    KeyNavigation.up: coloredTileDelegate
+                    KeyNavigation.down: timeDateSettingsDelegate
+                }
 
-                        Delegates.LocalSettingDelegate {
-                            id: mycroftIntegrationDelegate
-                            implicitWidth: desktopThemeView.view.cellWidth * 3
-                            implicitHeight: desktopThemeView.view.cellHeight
-                            isChecked: kcm.mycroftIntegrationActive() ? 1 : 0
-                            name: "Mycroft Integration"
-                            customType: "mycroftIntegration"
-                            KeyNavigation.up: kcmcloseButton
-                            KeyNavigation.right: pmInhibitionDelegate
-                            KeyNavigation.down: desktopThemeView
-                            onActiveFocusChanged: {
-                                if(activeFocus){
-                                    contentLayout.currentSection = topContentArea
-                                    topContentAreaLayout.contentX = mycroftIntegrationDelegate.x
-                                }
-                            }
-                        }
+                Delegates.TimeDelegate {
+                    id: timeDateSettingsDelegate
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: Kirigami.Units.gridUnit * 4
+                    name: i18n("Adjust Date & Time")
+                    KeyNavigation.left: settingMenuItem
+                    KeyNavigation.up: expandableTileDelegate
+                    KeyNavigation.down: settingsShortcutDelegate
+                }
 
-                        Delegates.LocalSettingDelegate {
-                            id: pmInhibitionDelegate
-                            implicitWidth: desktopThemeView.view.cellWidth * 3
-                            implicitHeight: desktopThemeView.view.cellHeight
-                            isChecked: kcm.pmInhibitionActive() ? 1 : 0
-                            name: i18n("Power Inhibition")
-                            customType: "pmInhibition"
-                            KeyNavigation.up: kcmcloseButton
-                            KeyNavigation.right: coloredTileDelegate
-                            KeyNavigation.left: mycroftIntegrationDelegate
-                            KeyNavigation.down: desktopThemeView
-                            onActiveFocusChanged: {
-                                if(activeFocus){
-                                    contentLayout.currentSection = topContentArea
-                                    topContentAreaLayout.contentX = pmInhibitionDelegate.x
-                                }
-                            }
-                        }
+                Kirigami.Heading {
+                    id: launcherShortcutsHeader
+                    text: i18n("Bigscreen Shortcuts")
+                    color: Kirigami.Theme.textColor
+                }
 
-                        Delegates.LocalSettingDelegate {
-                            id: coloredTileDelegate
-                            implicitWidth: desktopThemeView.view.cellWidth * 3
-                            implicitHeight: desktopThemeView.view.cellHeight
-                            isChecked: kcm.useColoredTiles() ? 1 : 0
-                            name: i18n("Colored Tiles")
-                            customType: "coloredTile"
-                            KeyNavigation.up: kcmcloseButton
-                            KeyNavigation.left: pmInhibitionDelegate
-                            KeyNavigation.right: expandableTileDelegate
-                            KeyNavigation.down: desktopThemeView
-                            onActiveFocusChanged: {
-                                if(activeFocus){
-                                    contentLayout.currentSection = topContentArea
-                                    topContentAreaLayout.contentX = coloredTileDelegate.x
-                                }
-                            }
-                        }
+                Delegates.ShortcutsDelegate {
+                    id: settingsShortcutDelegate
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: Kirigami.Units.gridUnit * 4
+                    description: i18n("Bigscreen Settings Shortcut")
+                    getActionPath: "activateSettingsShortcut"
+                    setActionPath: "setActivateSettingsShortcut"
+                    KeyNavigation.left: settingMenuItem
+                    KeyNavigation.up: timeDateSettingsDelegate
+                    KeyNavigation.down: tasksShortcutDelegate
+                }
 
-                        Delegates.LocalSettingDelegate {
-                            id: expandableTileDelegate
-                            implicitWidth: desktopThemeView.cellWidth * 3
-                            implicitHeight: desktopThemeView.cellHeight
-                            isChecked: kcm.useExpandingTiles() ? 1 : 0
-                            name: i18n("Expanding Tiles")
-                            customType: "exapandableTile"
-                            KeyNavigation.up: kcmcloseButton
-                            KeyNavigation.left: coloredTileDelegate
-                            KeyNavigation.right: timeDateSettingsDelegate
-                            KeyNavigation.down: desktopThemeView
-                            onActiveFocusChanged: {
-                                if(activeFocus){
-                                    contentLayout.currentSection = topContentArea
-                                    topContentAreaLayout.contentX = expandableTileDelegate.x
-                                }
-                            }
-                        }
+                Delegates.ShortcutsDelegate {
+                    id: tasksShortcutDelegate
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: Kirigami.Units.gridUnit * 4
+                    description: i18n("Bigscreen Tasks Shortcut")
+                    getActionPath: "activateTasksShortcut"
+                    setActionPath: "setActivateTasksShortcut"
+                    KeyNavigation.left: settingMenuItem
+                    KeyNavigation.up: settingsShortcutDelegate
+                    KeyNavigation.down: displayHomeScreenShortcutDelegate
+                }
 
-                        Delegates.TimeDelegate {
-                            id: timeDateSettingsDelegate
-                            implicitWidth: desktopThemeView.cellWidth * 3
-                            implicitHeight: desktopThemeView.cellHeight
-                            name: i18n("Adjust Date & Time")
-                            KeyNavigation.up: kcmcloseButton
-                            KeyNavigation.left: expandableTileDelegate
-                            KeyNavigation.down: desktopThemeView
-                            onActiveFocusChanged: {
-                                if(activeFocus){
-                                    contentLayout.currentSection = topContentArea
-                                    topContentAreaLayout.contentX = timeDateSettingsDelegate.x
-                                }
-                            }
-                        }
-                    }
+                Delegates.ShortcutsDelegate {
+                    id: displayHomeScreenShortcutDelegate
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: Kirigami.Units.gridUnit * 4
+                    description: i18n("Bigscreen Display Homescreen Shortcut")
+                    getActionPath: "displayHomeScreenShortcut"
+                    setActionPath: "setDisplayHomeScreenShortcut"
+                    KeyNavigation.left: settingMenuItem
+                    KeyNavigation.up: tasksShortcutDelegate
+                    KeyNavigation.down: desktopThemeView
                 }
 
                 Item {
@@ -270,20 +211,13 @@ KCM.SimpleKCM {
                     Layout.fillHeight: true
                     Layout.alignment: Qt.AlignTop
                     focus: true
-                    model: kcm.themeListModel
+                    model: kcm.globalThemeListModel
                     view.cacheBuffer: parent.width * 2
                     title: i18n("General Appearance")
-                    navigationUp: mycroftIntegrationDelegate
-                    navigationDown: kcmcloseButton
-                    enabled: !deviceTimeSettingsArea.opened
+                    navigationUp: displayHomeScreenShortcutDelegate
+                    enabled: !settingsAreaLoader.opened
                     delegate: Delegates.ThemeDelegate {
                         text: model.display
-                    }
-
-                    onActiveFocusChanged: {
-                        if(activeFocus){
-                            contentLayout.currentSection = desktopThemeView
-                        }
                     }
 
                     Behavior on x {
@@ -296,18 +230,22 @@ KCM.SimpleKCM {
             }
         }
 
-        DeviceTimeSettings {
-            id: deviceTimeSettingsArea
+        SettingsAreaLoader {
+            id: settingsAreaLoader
             anchors.top: parent.top
             anchors.bottom: parent.bottom
             anchors.right: parent.right
             anchors.rightMargin: -Kirigami.Units.smallSpacing
-
             property bool opened: false
-
-            width: parent.width / 3.5
             visible: opened
             enabled: opened
+            width: parent.width / 3.5
+
+            onOpenedChanged: {
+                if(opened){
+                    settingsAreaLoader.forceActiveFocus()
+                }
+            }
         }
     }
 }

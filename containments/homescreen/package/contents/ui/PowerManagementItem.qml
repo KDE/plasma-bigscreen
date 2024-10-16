@@ -5,15 +5,15 @@
 
 */
 
-import QtQuick.Layouts 1.14
-import QtQuick 2.14
-import QtQuick.Window 2.14
-import QtQuick.Controls 2.14
-import org.kde.plasma.plasma5support 2.0 as P5Support
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.kirigami 2.12 as Kirigami
+import QtQuick.Layouts
+import QtQuick
+import QtQuick.Window
+import QtQuick.Controls
+import org.kde.plasma.plasma5support as P5Support
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import org.kde.bigscreen as BigScreen
 
 Item {
     id: powerManagementItem

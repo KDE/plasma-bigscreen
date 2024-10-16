@@ -13,7 +13,10 @@
 
 class ApplicationListModel;
 class KcmsListModel;
+class FavsManager;
+class FavsListModel;
 class SessionManagement;
+class Shortcuts;
 class BigLauncherDbusAdapterInterface;
 
 class HomeScreen : public Plasma::Containment
@@ -22,6 +25,7 @@ class HomeScreen : public Plasma::Containment
     Q_PROPERTY(ApplicationListModel *applicationListModel READ applicationListModel CONSTANT)
     Q_PROPERTY(KcmsListModel *kcmsListModel READ kcmsListModel CONSTANT)
     Q_PROPERTY(BigLauncherDbusAdapterInterface *bigLauncherDbusAdapterInterface READ bigLauncherDbusAdapterInterface CONSTANT)
+    Q_PROPERTY(FavsListModel *favsListModel READ favsListModel CONSTANT)
 
 public:
     HomeScreen(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
@@ -30,6 +34,7 @@ public:
     ApplicationListModel *applicationListModel() const;
     KcmsListModel *kcmsListModel() const;
     BigLauncherDbusAdapterInterface *bigLauncherDbusAdapterInterface() const;
+    FavsListModel *favsListModel() const;
 
 public Q_SLOTS:
     void executeCommand(const QString &command);
@@ -42,4 +47,7 @@ private:
     KcmsListModel *m_kcmsListModel;
     SessionManagement *m_session;
     BigLauncherDbusAdapterInterface* m_bigLauncherDbusAdapterInterface;
+    FavsManager *m_favsManager;
+    FavsListModel *m_favsListModel;
+    Shortcuts *m_shortcuts;
 };

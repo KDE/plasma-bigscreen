@@ -5,19 +5,18 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
-import QtQuick.Layouts 1.14
-import QtQuick.Controls 2.14
-import org.kde.plasma.components 3.0 as PlasmaComponents
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls
+import org.kde.plasma.components as PlasmaComponents
 import org.kde.kirigami as Kirigami
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import org.kde.bigscreen as BigScreen
 import Qt5Compat.GraphicalEffects
 
 BigScreen.AbstractDelegate {
     id: delegate
-    implicitWidth: listView.cellWidth * 2
-    implicitHeight: textLayout.implicitHeight + nameLabel.height + Kirigami.Units.largeSpacing * 2
-
+    implicitWidth: listView.cellWidth * 3.2
+    implicitHeight: width
 
     Behavior on implicitWidth {
         NumberAnimation {
@@ -29,36 +28,33 @@ BigScreen.AbstractDelegate {
     contentItem: Item {
         id: connectionItemLayout
 
-        ColumnLayout {
-            id: textLayout
+        Image {
+            id: preview
+            anchors.fill: parent
+            fillMode: Image.PreserveAspectFit
+            source: Qt.resolvedUrl(model.previewPathRole)
 
-            anchors {
-                fill: parent
-                leftMargin: Kirigami.Units.smallSpacing
-            }
+            Rectangle {
+                anchors.top: parent.top
+                anchors.left: parent.left
+                anchors.right: parent.right
+                height: Kirigami.Units.gridUnit * 3
+                color: Kirigami.Theme.backgroundColor
+                opacity: 0.95
 
-            Item {
-                id: connectionSvgIcon
-                width: parent.width
-                height: width
-                ThemePreview {
-                    id: preview
+                PlasmaComponents.Label {
+                    id: nameLabel
                     anchors.fill: parent
-                    themeName: model.pluginNameRole
+                    visible: text.length > 0
+                    elide: Text.ElideRight
+                    wrapMode: Text.WordWrap
+                    maximumLineCount: 2
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                    color: Kirigami.Theme.textColor
+                    text: model.packageNameRole
+                    font.pixelSize: height * 0.4
                 }
-            }
-
-            PlasmaComponents.Label {
-                id: nameLabel
-                Layout.fillWidth: true
-                visible: text.length > 0
-                elide: Text.ElideRight
-                wrapMode: Text.WordWrap
-                horizontalAlignment: Text.AlignHCenter
-                maximumLineCount: 2
-                color: Kirigami.Theme.textColor
-                textFormat: Text.PlainText
-                text: model.display
             }
         }
 
@@ -78,6 +74,6 @@ BigScreen.AbstractDelegate {
     Keys.onReturnPressed: clicked()
 
     onClicked: {
-        setTheme(model.packageNameRole)
+        kcm.globalThemeListModel.setTheme(model.pluginIdRole)
     }
 }

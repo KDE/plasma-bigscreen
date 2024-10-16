@@ -5,9 +5,9 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
-import org.kde.plasma.plasmoid 2.0
+import QtQuick
+import org.kde.bigscreen as BigScreen
+import org.kde.plasma.plasmoid
 
 BigScreen.IconDelegate {
     readonly property var vAppStorageIdRole: modelData.ApplicationStorageIdRole

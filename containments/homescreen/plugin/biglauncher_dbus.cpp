@@ -11,6 +11,7 @@
 #include <QMetaObject>
 #include <QString>
 #include <QVariant>
+#include <QDBusMessage>
 
 /*
  * Implementation of adaptor class BigLauncherDbusAdapterInterface
@@ -24,6 +25,8 @@ BigLauncherDbusAdapterInterface::BigLauncherDbusAdapterInterface(QObject *parent
     dbus.registerObject("/BigLauncher", this, QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportNonScriptableSlots);
     dbus.registerService("org.kde.biglauncher");
     setAutoRelaySignals(true);
+
+    m_shortcuts = Shortcuts::instance();
 }
 
 BigLauncherDbusAdapterInterface::~BigLauncherDbusAdapterInterface()
@@ -39,12 +42,6 @@ void BigLauncherDbusAdapterInterface::useColoredTiles(const bool &coloredTiles)
 void BigLauncherDbusAdapterInterface::useExpandableTiles(const bool &expandableTiles)
 {
     Q_EMIT useExpandableTilesChanged(expandableTiles);
-}
-
-void BigLauncherDbusAdapterInterface::enableMycroftIntegration(const bool &mycroftIntegration)
-{
-    Configuration::self().setMycroftEnabled(mycroftIntegration);
-    Q_EMIT enableMycroftIntegrationChanged(mycroftIntegration);
 }
 
 void BigLauncherDbusAdapterInterface::enablePmInhibition(const bool &pmInhibition)
@@ -71,11 +68,6 @@ bool BigLauncherDbusAdapterInterface::expandableTilesActive()
     }
 }
 
-bool BigLauncherDbusAdapterInterface::mycroftIntegrationActive()
-{
-    return Configuration::self().mycroftEnabled();
-}
-
 bool BigLauncherDbusAdapterInterface::pmInhibitionActive()
 {
     return Configuration::self().pmInhibitionEnabled();
@@ -89,6 +81,39 @@ void BigLauncherDbusAdapterInterface::setColoredTilesActive(const bool &coloredT
 void BigLauncherDbusAdapterInterface::setExpandableTilesActive(const bool &expandableTilesActive)
 {
     m_useExpandableTiles = expandableTilesActive;
+}
+
+QString BigLauncherDbusAdapterInterface::activateSettingsShortcut()
+{
+    return m_shortcuts->activateSettingsShortcut().toString();
+}
+
+QString BigLauncherDbusAdapterInterface::activateTasksShortcut()
+{
+    return m_shortcuts->activateTasksShortcut().toString();
+}
+
+QString BigLauncherDbusAdapterInterface::displayHomeScreenShortcut()
+{
+    return m_shortcuts->displayHomeScreenShortcut().toString();
+}
+
+void BigLauncherDbusAdapterInterface::setActivateSettingsShortcut(const QString &shortcut)
+{
+    QKeySequence seq = QKeySequence::fromString(shortcut);
+    m_shortcuts->setActivateSettingsShortcut(seq);
+}
+
+void BigLauncherDbusAdapterInterface::setActivateTasksShortcut(const QString &shortcut)
+{
+    QKeySequence seq = QKeySequence::fromString(shortcut);
+    m_shortcuts->setActivateTasksShortcut(seq);
+}
+
+void BigLauncherDbusAdapterInterface::setDisplayHomeScreenShortcut(const QString &shortcut)
+{
+    QKeySequence seq = QKeySequence::fromString(shortcut);
+    m_shortcuts->setDisplayHomeScreenShortcut(seq);
 }
 
 Q_INVOKABLE QString BigLauncherDbusAdapterInterface::getMethod(const QString &method)

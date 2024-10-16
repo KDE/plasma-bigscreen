@@ -7,8 +7,8 @@
 
 #include "bigscreenplugin.h"
 #include "envreader.h"
+#include "global.h"
 
-#include <QtQml>
 #include <QQmlEngine>
 
 static QObject *envReaderSingletonProvider(QQmlEngine *engine, QJSEngine *scriptEngine)
@@ -19,12 +19,23 @@ static QObject *envReaderSingletonProvider(QQmlEngine *engine, QJSEngine *script
     return new EnvReader;
 }
 
+static QObject *globalSingletonProvider(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(engine)
+    Q_UNUSED(scriptEngine)
+
+    return new Global;
+}
+
+
+
 void BigScreenPlugin::registerTypes(const char *uri)
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.mycroft.bigscreen"));
+    Q_ASSERT(uri == QLatin1String("org.kde.bigscreen"));
 
     qmlRegisterSingletonType(componentUrl(QStringLiteral("NavigationSoundEffects.qml")), uri, 1, 0, "NavigationSoundEffects");
     qmlRegisterSingletonType<EnvReader>(uri, 1, 0, "EnvReader", envReaderSingletonProvider);
+    qmlRegisterSingletonType<Global>(uri, 1, 0, "Global", globalSingletonProvider);
 }
 
 QUrl BigScreenPlugin::componentUrl(const QString &fileName)

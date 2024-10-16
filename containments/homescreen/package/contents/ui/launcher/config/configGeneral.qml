@@ -4,15 +4,15 @@
 */
 
 
-import QtQuick 2.14
-import QtQml.Models 2.14
-import QtQuick.Controls 2.14
-import QtQuick.Layouts 1.14
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kirigami 2.12 as Kirigami
+import QtQuick
+import QtQml.Models
+import QtQuick.Controls
+import QtQuick.Layouts
+import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.plasmoid
+import org.kde.plasma.components as PlasmaComponents
+import org.kde.plasma.extras as PlasmaExtras
+import org.kde.kirigami as Kirigami
 
 Item {
     id: page

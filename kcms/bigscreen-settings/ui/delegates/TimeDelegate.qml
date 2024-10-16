@@ -5,12 +5,12 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
-import QtQuick.Layouts 1.14
-import QtQuick.Controls 2.14
-import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.kirigami 2.12 as Kirigami
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls
+import org.kde.plasma.components as PlasmaComponents
+import org.kde.kirigami as Kirigami
+import org.kde.bigscreen as BigScreen
 import Qt5Compat.GraphicalEffects
 
 BigScreen.AbstractDelegate {
@@ -26,37 +26,39 @@ BigScreen.AbstractDelegate {
         }
     }
 
-    contentItem: Item {
-        id: localItemLayout
+    contentItem: RowLayout {
+        id: localItem
+        anchors.fill: parent
+        anchors.margins: Kirigami.Units.largeSpacing
 
-        ColumnLayout {
-            id: textLayout
-            spacing: 0
+        Kirigami.Icon {
+            Layout.fillHeight: true
+            Layout.preferredWidth: height
+            Layout.alignment: Qt.AlignLeft
+            opacity: enabled ? 1 : 0.25
+            source: "preferences-system-time"
+        }
 
-            anchors {
-                fill: parent
-            }
-
-            Kirigami.Icon {
-                source: "preferences-system-time"
-                Layout.alignment: Qt.AlignHCenter
-                Layout.preferredWidth: parent.width - labelItem.contentWidth
-                Layout.preferredHeight: width
-            }
-
-            Label {
-                id: labelItem
-                Layout.alignment: Qt.AlignTop
-                Layout.fillWidth: true
-                horizontalAlignment: Text.AlignHCenter
-            }
+        PlasmaComponents.Label {
+            id: labelItem
+            Layout.fillWidth: true
+            Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
+            elide: Text.ElideRight
+            wrapMode: Text.WordWrap
+            horizontalAlignment: Text.AlignLeft
+            verticalAlignment: Text.AlignVCenter
+            color: Kirigami.Theme.textColor
+            textFormat: Text.PlainText
+            fontSizeMode: Text.Fit
+            minimumPixelSize: 14
+            font.pixelSize: 24
         }
     }
 
     Keys.onReturnPressed: clicked()
 
     onClicked: {
-        deviceTimeSettingsArea.opened = true
-        deviceTimeSettingsArea.forceActiveFocus()
+        settingsAreaLoader.opened = true
+        settingsAreaLoader.settingsAreaComponent = "delegates/DeviceTimeSettings.qml"
     }
 }

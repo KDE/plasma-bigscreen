@@ -5,17 +5,17 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Controls 2.15 as Controls
-import QtQuick.Window 2.15
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import QtQuick.Window
 
-import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.kquickcontrolsaddons 2.0
-import org.kde.mycroft.bigscreen 1.0 as Launcher
-import org.kde.private.biglauncher 1.0
-import org.kde.kirigami 2.19 as Kirigami
+import org.kde.plasma.plasmoid
+import org.kde.plasma.core as PlasmaCore
+import org.kde.kquickcontrolsaddons
+import org.kde.bigscreen as Launcher
+import org.kde.private.biglauncher
+import org.kde.kirigami as Kirigami
 
 FocusScope {
     id: root

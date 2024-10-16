@@ -5,39 +5,50 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-import QtQuick 2.14
-import QtQuick.Layouts 1.14
-import QtQuick.Window 2.14
-import QtQuick.Controls 2.14 as Controls
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.kirigami 2.12 as Kirigami
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Window
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
+import org.kde.bigscreen as BigScreen
 
 FocusScope {
     id: root
     signal activated
+
     property string title
+
     property alias view: view
     property alias delegate: view.delegate
     property alias model: view.model
     property alias currentIndex: view.currentIndex
     property alias currentItem: view.currentItem
     property alias count: view.count
-    Layout.fillWidth: true
+    property bool titleVisible: true
 
+    Layout.fillWidth: true
     implicitHeight: view.implicitHeight + header.implicitHeight
 
     property real columns: {
-        var v = root.compactMode ? 7.5 : 5.5
-        if (view.Window.window.width <= 1280 && view.Window.window.width > 1024) {
-            v = root.compactMode ? 6.5 : 4.5
-        } else if (view.Window.window.width <= 1024 && view.Window.window.width > 800) {
-            v = root.compactMode ? 5.5 : 3.5
-        } else if (view.Window.window.width <= 800) {
-            v = root.compactMode ? 4.5 : 2.5
+        if (view.Window && view.Window.window) {
+            var v = root.compactMode ? 7.5 : 5.5;
+            switch (true) {
+                case (view.Window.window.width <= 1280 && view.Window.window.width > 1024):
+                    v = root.compactMode ? 6.5 : 4.5;
+                    break;
+                case (view.Window.window.width <= 1024 && view.Window.window.width > 800):
+                    v = root.compactMode ? 5.5 : 3.5;
+                    break;
+                case (view.Window.window.width <= 800):
+                    v = root.compactMode ? 4.5 : 2.5;
+                    break;
+            }
+            return v;
+        } else {
+            return 0; // or any default value you prefer
         }
-        return v
     }
+
 
     property alias cellWidth: view.cellWidth
     property alias cellHeight: view.cellHeight
@@ -48,18 +59,27 @@ FocusScope {
     property Item navigationDown
 
     onActiveFocusChanged: {
-        if (!activeFocus) {
-            return;
-        }
-
-        // Update currentItem if needed
+        if (!activeFocus) return;
         view.currentIndexChanged();
-
-        if (!currentItem) {
-            return;
-        }
-
+        if (!currentItem) return;
         currentItem.forceActiveFocus();
+    }
+
+    Kirigami.ShadowedRectangle {
+        id: headerBackground
+        width: header.contentWidth + Kirigami.Units.largeSpacing * 2
+        height: header.implicitHeight
+        anchors {
+            left: parent.left
+            leftMargin: -Kirigami.Units.largeSpacing
+            top: parent.top
+        }
+        color: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.7)
+        radius: 6
+        shadow {
+            size: Kirigami.Units.largeSpacing
+        }
+        visible: root.titleVisible
     }
 
     Kirigami.Heading {
@@ -71,7 +91,9 @@ FocusScope {
         }
         text: title
         layer.enabled: true
-        color: "white"
+        font.pixelSize: 28
+        color: Kirigami.Theme.textColor
+        visible: root.titleVisible
     }
 
     Flickable {
@@ -81,7 +103,7 @@ FocusScope {
             right: parent.right
             top: header.baseline
             bottom: parent.bottom
-            topMargin: Kirigami.Units.largeSpacing*2
+            topMargin: Kirigami.Units.largeSpacing * 2
             leftMargin: -Kirigami.Units.largeSpacing
         }
         readonly property int cellWidth: root.width / columns + (Kirigami.Units.gridUnit / 1)
@@ -92,25 +114,22 @@ FocusScope {
         property alias delegate: repeater.delegate
         readonly property Item currentItem: layout.children[currentIndex]
 
-        function indexAt(x,y) {
-            return Math.max(0, Math.min(count - 1, Math.round(x/cellWidth)));
+        function indexAt(x, y) {
+            return Math.max(0, Math.min(count - 1, Math.round(x / cellWidth)));
         }
 
         focus: true
-
         implicitHeight: cellHeight
         contentWidth: layout.width
         contentHeight: height
-        onCurrentItemChanged: {
-            if (!currentItem) {
-                return;
-            }
 
+        onCurrentItemChanged: {
+            if (!currentItem) return;
             currentItem.forceActiveFocus();
             slideAnim.slideToIndex(currentIndex);
         }
 
-        onMovementEnded: currentIndex = Math.min(count-1, Math.round((contentX + cellWidth) / cellWidth))
+        onMovementEnded: currentIndex = Math.min(count - 1, Math.round((contentX + cellWidth) / cellWidth))
         onFlickEnded: movementEnded()
 
         NumberAnimation {
@@ -137,13 +156,12 @@ FocusScope {
 
             Repeater {
                 id: repeater
-                // Update currentItem if needed
                 onChildrenChanged: view.currentIndexChanged();
             }
 
             // Spacer
             Item {
-                width: view.width - view.cellWidth*2
+                width: view.width - view.cellWidth * 2
                 height: 1
             }
         }
@@ -154,6 +172,7 @@ FocusScope {
                 currentIndex = Math.max(0, currentIndex - 1);
             }
         }
+
         Keys.onRightPressed: {
             if (currentIndex < count - 1) {
                 BigScreen.NavigationSoundEffects.playMovingSound();
@@ -161,41 +180,23 @@ FocusScope {
             }
         }
 
-        Keys.onDownPressed:  {
-            if (!root.navigationDown) {
-                return;
-            }
-
+        Keys.onDownPressed: {
+            if (!root.navigationDown) return;
             BigScreen.NavigationSoundEffects.playMovingSound();
-
-            if (root.navigationDown instanceof TileView ||
-                root.navigationDown instanceof TileRepeater) {
-                root.navigationDown.currentIndex = Math.min(Math.floor(root.navigationDown.view.indexAt(root.navigationDown.view.contentX, height/2)), root.navigationDown.view.count - 1);
-
-                if (root.navigationDown.currentIndex < 0) {
-                    root.navigationDown.currentIndex = view.currentIndex > 0 ? root.navigationDown.view.count - 1 : 0
-                }
+            if (root.navigationDown instanceof TileView || root.navigationDown instanceof TileRepeater) {
+                root.navigationDown.currentIndex = Math.min(Math.floor(root.navigationDown.view.indexAt(root.navigationDown.view.contentX, height / 2)), root.navigationDown.view.count - 1);
+                if (root.navigationDown.currentIndex < 0) root.navigationDown.currentIndex = view.currentIndex > 0 ? root.navigationDown.view.count - 1 : 0;
             }
-
             root.navigationDown.forceActiveFocus();
         }
 
-        Keys.onUpPressed:  {
-            if (!root.navigationUp) {
-                return;
-            }
-
+        Keys.onUpPressed: {
+            if (!root.navigationUp) return;
             BigScreen.NavigationSoundEffects.playMovingSound();
-
-            if (root.navigationUp instanceof TileView ||
-                root.navigationUp instanceof TileRepeater) {
-                root.navigationUp.currentIndex = Math.min(Math.floor(root.navigationUp.view.indexAt(root.navigationUp.view.contentX, height/2)), root.navigationUp.view.count - 1);
-
-                if (root.navigationUp.currentIndex < 0) {
-                    root.navigationUp.currentIndex = view.currentIndex > 0 ? root.navigationUp.view.count - 1 : 0
-                }
+            if (root.navigationUp instanceof TileView || root.navigationUp instanceof TileRepeater) {
+                root.navigationUp.currentIndex = Math.min(Math.floor(root.navigationUp.view.indexAt(root.navigationUp.view.contentX, height / 2)), root.navigationUp.view.count - 1);
+                if (root.navigationUp.currentIndex < 0) root.navigationUp.currentIndex = view.currentIndex > 0 ? root.navigationUp.view.count - 1 : 0;
             }
-
             root.navigationUp.forceActiveFocus();
         }
     }

@@ -5,20 +5,18 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
-import QtQuick.Controls 2.14 as Controls
-import org.kde.plasma.plasmoid 2.0
+import QtQuick
+import QtQuick.Controls as Controls
+import org.kde.plasma.plasmoid
 
 Item {
     id: settingActions
 
     function launchSettings(kcm_id) {
         if (kcm_id.indexOf("kcm_mediacenter_wallpaper") != -1) {
-            plasmoid.action("configure").trigger();
-        } else if (kcm_id.indexOf("kcm_mediacenter_mycroft_skill_installer") != -1) {
-            plasmoid.executeCommand("MycroftSkillInstaller")
+            plasmoid.internalAction("configure").trigger();
         } else {
-            plasmoid.executeCommand("plasma-settings -s -m " + kcm_id)
+            configWindow.showOverlay(kcm_id)
         }
     }
 }

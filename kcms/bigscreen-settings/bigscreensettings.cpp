@@ -7,7 +7,7 @@
  ***************************************************************************/
 
 #include "bigscreensettings.h"
-#include "themelistmodel.h"
+#include "globalthemelistmodel.h"
 
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -24,11 +24,11 @@
 
 BigscreenSettings::BigscreenSettings(QObject *parent, const KPluginMetaData &data)
     : KQuickConfigModule(parent, data)
-    , m_themeListModel(new ThemeListModel(this))
+    , m_globalThemeListModel(new GlobalThemeListModel(this))
 {
     setButtons(Apply | Default);
 
-    qmlRegisterAnonymousType<ThemeListModel>("ThemeListModel", 1);
+    qmlRegisterAnonymousType<GlobalThemeListModel>("GlobalThemeListModel", 1);
     m_theme = new Plasma::Theme(this);
     m_theme->setUseGlobalSettings(true);
     m_themeName = m_theme->themeName();
@@ -41,24 +41,6 @@ BigscreenSettings::BigscreenSettings(QObject *parent, const KPluginMetaData &dat
 
 void BigscreenSettings::load()
 {
-}
-
-void BigscreenSettings::applyPlasmaTheme(QQuickItem *item, const QString &themeName)
-{
-    if (!item) {
-        return;
-    }
-
-    Plasma::Theme *theme = m_themes[themeName];
-    if (!theme) {
-        theme = new Plasma::Theme(themeName, this);
-        m_themes[themeName] = theme;
-    }
-
-    for (KSvg::Svg *svg : item->findChildren<KSvg::Svg *>()) {
-        // FIXME svg->setTheme(theme);
-        svg->setUsingRenderingCache(false);
-    }
 }
 
 BigscreenSettings::~BigscreenSettings() = default;
@@ -77,11 +59,6 @@ QString BigscreenSettings::themeName() const
     return m_themeName;
 }
 
-ThemeListModel *BigscreenSettings::themeListModel()
-{
-    return m_themeListModel;
-}
-
 bool BigscreenSettings::useColoredTiles()
 {
     QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "coloredTilesActive");
@@ -93,14 +70,6 @@ bool BigscreenSettings::useColoredTiles()
 bool BigscreenSettings::useExpandingTiles()
 {
     QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "expandableTilesActive");
-    QDBusMessage response = QDBusConnection::sessionBus().call(msg);
-    QList<QVariant> responseArg = response.arguments();
-    return responseArg.at(0).toBool();
-}
-
-bool BigscreenSettings::mycroftIntegrationActive()
-{
-    QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "mycroftIntegrationActive");
     QDBusMessage response = QDBusConnection::sessionBus().call(msg);
     QList<QVariant> responseArg = response.arguments();
     return responseArg.at(0).toBool();
@@ -128,13 +97,6 @@ void BigscreenSettings::setUseExpandingTiles(bool useExpandingTiles)
     QDBusConnection::sessionBus().send(msg);
 }
 
-void BigscreenSettings::setMycroftIntegrationActive(bool mycroftIntegrationActive)
-{
-    QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "enableMycroftIntegration");
-    msg << mycroftIntegrationActive;
-    QDBusConnection::sessionBus().send(msg);
-}
-
 void BigscreenSettings::setPmInhibitionActive(bool pmInhibitionActive)
 {
     QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "enablePmInhibition");
@@ -144,13 +106,11 @@ void BigscreenSettings::setPmInhibitionActive(bool pmInhibitionActive)
 
 void BigscreenSettings::saveTimeZone(const QString &newtimezone)
 {
-    qDebug() << "Saving timezone to config: " << newtimezone;
     OrgFreedesktopTimedate1Interface timedateIface(QStringLiteral("org.freedesktop.timedate1"),
                                                    QStringLiteral("/org/freedesktop/timedate1"),
                                                    QDBusConnection::systemBus());
 
     if (!newtimezone.isEmpty()) {
-        qDebug() << "Setting timezone: " << newtimezone;
         auto reply = timedateIface.SetTimezone(newtimezone, true);
         reply.waitForFinished();
         if (reply.isError()) {
@@ -222,7 +182,6 @@ bool BigscreenSettings::saveTime()
         QDateTime userTime;
         userTime.setTime(currentTime());
         userTime.setDate(currentDate());
-        qDebug() << "Setting userTime: " << userTime;
         qint64 timeDiff = userTime.toMSecsSinceEpoch() - QDateTime::currentMSecsSinceEpoch();
         auto reply = timedateIface.SetTime(timeDiff * 1000, true, true);
         reply.waitForFinished();
@@ -232,6 +191,26 @@ bool BigscreenSettings::saveTime()
         }
     }
     return rc;
+}
+
+QString BigscreenSettings::getShortcut(const QString &action)
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", action);
+    QDBusMessage response = QDBusConnection::sessionBus().call(msg);
+    QList<QVariant> responseArg = response.arguments();
+    return responseArg.at(0).toString();
+}
+
+void BigscreenSettings::setShortcut(const QString &action, const QKeySequence &shortcut)
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", action);
+    msg << shortcut.toString();
+    QDBusConnection::sessionBus().send(msg);
+}
+
+GlobalThemeListModel *BigscreenSettings::globalThemeListModel()
+{
+    return m_globalThemeListModel;
 }
 
 K_PLUGIN_CLASS_WITH_JSON(BigscreenSettings, "kcm_mediacenter_bigscreen_settings.json")

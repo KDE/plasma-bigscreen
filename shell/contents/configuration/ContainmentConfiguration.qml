@@ -23,8 +23,8 @@ AppletConfiguration {
     isContainment: true
 
     internalDialog.visible: false
-    internalDialog.width: Math.min(root.height - units.gridUnit * 2, Math.max(internalDialog.implicitWidth, units.gridUnit * 45))
-    internalDialog.height: Math.min(root.width, Math.max(internalDialog.implicitHeight, units.gridUnit * 29))
+    internalDialog.width: Math.min(root.height - Kirigami.Units.gridUnit * 2, Math.max(internalDialog.implicitWidth, Kirigami.Units.gridUnit * 45))
+    internalDialog.height: Math.min(root.width, Math.max(internalDialog.implicitHeight, Kirigami.Units.gridUnit * 29))
 
     readonly property bool horizontal: false
 
@@ -34,7 +34,7 @@ AppletConfiguration {
     ConfigModel {
         id: globalContainmentConfigModel
         ConfigCategory {
-            name: i18nd("org.kde.plasma.mycroft.bigscreen", "Wallpaper")
+            name: i18nd("org.kde.plasma.bigscreen", "Wallpaper")
             icon: "preferences-desktop-wallpaper"
             source: "ConfigurationContainmentAppearance.qml"
         }
@@ -53,14 +53,14 @@ AppletConfiguration {
         onOpened: {
             wallpapersView.forceActiveFocus()
         }
-        implicitWidth: units.gridUnit * 10
+        implicitWidth: Kirigami.Units.gridUnit * 10
         implicitHeight: wallpapersView.cellHeight + topPadding + bottomPadding
         width: root.horizontal ? implicitWidth : root.width
         height: root.horizontal ? root.height : implicitHeight
-        leftPadding: units.smallSpacing * 2
-        rightPadding: units.smallSpacing * 2
-        topPadding: units.smallSpacing * 2
-        bottomPadding: units.smallSpacing * 2
+        leftPadding: Kirigami.Units.smallSpacing * 2
+        rightPadding: Kirigami.Units.smallSpacing * 2
+        topPadding: Kirigami.Units.smallSpacing * 2
+        bottomPadding: Kirigami.Units.smallSpacing * 2
         
         Wallpaper.ImageBackend {
             id: imageWallpaper
@@ -70,7 +70,7 @@ AppletConfiguration {
         ListView {
             id: wallpapersView
             anchors.fill: parent
-            readonly property real cellWidth: width / Math.floor(width / (units.gridUnit * 12))
+            readonly property real cellWidth: width / Math.floor(width / (Kirigami.Units.gridUnit * 17))
             readonly property int cellHeight: cellWidth / screenRatio
             readonly property real screenRatio: root.Window.window ? root.Window.window.width / root.Window.window.height : 1.6
 
@@ -127,7 +127,7 @@ AppletConfiguration {
                             horizontalCenter: parent.horizontalCenter
                         }
                         color: "white"
-                        text: i18nd("org.kde.plasma.mycroft.bigscreen", "Slideshow")
+                        text: i18nd("org.kde.plasma.bigscreen", "Slideshow")
                     }
                 }
 
@@ -149,11 +149,11 @@ AppletConfiguration {
                 }
                 
                 contentItem: Item {
-                    Addons.QIconItem {
+                    Kirigami.Icon {
                         anchors.centerIn: parent
-                        width: units.iconSizes.large
+                        width: Kirigami.Units.iconSizes.large
                         height: width
-                        icon: "view-preview"
+                        source: "view-preview"
                         visible: !walliePreview.visible
                     }
 

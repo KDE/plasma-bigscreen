@@ -8,14 +8,11 @@
 #ifndef TIMEDATED_INTERFACE_H
 #define TIMEDATED_INTERFACE_H
 
-#include <QtCore/QObject>
-#include <QtCore/QByteArray>
-#include <QtCore/QList>
-#include <QtCore/QMap>
-#include <QtCore/QString>
-#include <QtCore/QStringList>
-#include <QtCore/QVariant>
-#include <QtDBus/QtDBus>
+#include <QObject>
+#include <QVariant>
+#include <QDBusAbstractInterface>
+#include <QDBusConnection>
+#include <QDBusPendingReply>
 
 class OrgFreedesktopTimedate1Interface : public QDBusAbstractInterface
 {

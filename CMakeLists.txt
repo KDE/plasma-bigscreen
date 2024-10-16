@@ -28,8 +28,9 @@ remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 
 find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     I18n
-    Kirigami2
+    Kirigami
     KCMUtils
+    GlobalAccel
     Notifications
     KIO
     WindowSystem
@@ -52,10 +53,6 @@ find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
 )
 
 ecm_find_qmlmodule(org.kde.plasma.core 2.0)
-ecm_find_qmlmodule(Mycroft 1.0)
-if(NOT ${Mycroft-QMLModule_FOUND})
-    message(WARNING "Could not find the Mycroft QML module. Voice interaction features will not be available.")
-endif()
 
 ecm_set_disabled_deprecation_versions(QT 6.2.0
     KF 6.4.0
@@ -68,12 +65,10 @@ add_subdirectory(kcms)
 add_subdirectory(components)
 add_subdirectory(sounds)
 
-plasma_install_package(shell org.kde.plasma.mycroft.bigscreen shells)
-plasma_install_package(lookandfeel org.kde.plasma.mycroft.bigscreen look-and-feel lookandfeel)
+plasma_install_package(shell org.kde.plasma.bigscreen shells)
+plasma_install_package(lookandfeel org.kde.plasma.bigscreen look-and-feel lookandfeel)
 
-
-install(FILES bin/mycroft-skill-launcher.py DESTINATION ${KDE_INSTALL_BINDIR})
-install(FILES org.kde.plasma.mycroft.bigscreen.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+install(FILES org.kde.plasma.bigscreen.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
 include(KDEClangFormat)
 include(KDEGitCommitHooks)

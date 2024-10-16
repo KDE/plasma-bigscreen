@@ -8,7 +8,8 @@
 
 #include <QObject>
 #include <QStringList>
-#include <QtDBus>
+#include <QDBusAbstractAdaptor>
+#include <QDBusConnection>
 
 QT_BEGIN_NAMESPACE
 class QByteArray;

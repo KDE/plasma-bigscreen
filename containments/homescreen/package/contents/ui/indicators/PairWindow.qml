@@ -5,22 +5,26 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Window 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Controls 2.15 as Controls
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.kirigami 2.19 as Kirigami
-import org.kde.kdeconnect 1.0 as KDEConnect
+import QtQuick
+import QtQuick.Window
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kdeconnect as KDEConnect
+import org.kde.plasma.components as PlasmaComponents
+import org.kde.kirigami as Kirigami
 
 Window {
     id: root
     property QtObject currentDevice
-    color: Qt.rgba(0, 0, 0, 0.8)
-    flags: Qt.WindowStaysOnTopHint
+    property bool pairingRequest: currentDevice.isPairRequested || currentDevice.isPairRequestedByPeer ? 1 : 0
+    color: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.7)
+    flags: Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint
 
-    Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+    onClosing: {
+        if(pairingRequest){
+            currentDevice.cancelPairing()
+        }
+    }
     
     onVisibleChanged: {
         if(visible){
@@ -36,33 +40,43 @@ Window {
         ColumnLayout {
             id: pairingDialogLayout
             anchors.centerIn: parent
+            width: parent.width * 0.5
 
             Kirigami.Heading {
-                level: 3
+                level: 1
+                color: Kirigami.Theme.textColor
                 text: i18n("Pairing Request From %1", currentDevice.name)
             }
 
             RowLayout {
                 Layout.fillWidth: true
-                Layout.minimumHeight: Kirigami.Units.gridUnit * 3
+                Layout.minimumHeight: Kirigami.Units.gridUnit * 5
+                spacing: Kirigami.Units.largeSpacing
 
                 PlasmaComponents.Button {
                     id: acceptButton
                     Layout.fillWidth: true
-                    Layout.minimumHeight: Kirigami.Units.gridUnit * 3
-                    KeyNavigation.right: rejectButton
-                    KeyNavigation.left: acceptButton
+                    Layout.minimumHeight: Kirigami.Units.gridUnit * 5
+
+                    Keys.onRightPressed: {
+                        rejectButton.forceActiveFocus()
+                    }
                     
-                    background: Rectangle {
+                    background: Kirigami.ShadowedRectangle {
                         color: acceptButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
+                        radius: 3
+
+                        shadow {
+                            size: Kirigami.Units.largeSpacing
+                        }
                     }
                     
                     contentItem: Item {
                         RowLayout {
                             anchors.centerIn: parent
                             Kirigami.Icon {
-                                Layout.preferredWidth: PlasmaCore.Units.iconSizes.small
-                                Layout.preferredHeight: PlasmaCore.Units.iconSizes.small
+                                Layout.preferredWidth: Kirigami.Units.iconSizes.medium
+                                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
                                 source: "dialog-ok"
                             }
                             Controls.Label {
@@ -73,6 +87,7 @@ Window {
                                         
                     onClicked: (mouse)=> {
                         currentDevice.acceptPairing()
+                        pairingRequest = false
                         root.close()
                     }
                     
@@ -85,30 +100,38 @@ Window {
                 PlasmaComponents.Button {
                     id: rejectButton
                     Layout.fillWidth: true
-                    Layout.minimumHeight: Kirigami.Units.gridUnit * 3
-                    KeyNavigation.right: rejectButton
-                    KeyNavigation.left: acceptButton
-                    
-                    background: Rectangle {
+                    Layout.minimumHeight: Kirigami.Units.gridUnit * 5
+
+                    Keys.onLeftPressed: {
+                        acceptButton.forceActiveFocus()
+                    }
+
+                    background: Kirigami.ShadowedRectangle {
                         color: rejectButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
+                        radius: 3
+
+                        shadow {
+                            size: Kirigami.Units.largeSpacing
+                        }
                     }
                     
                     contentItem: Item {
                         RowLayout {
                             anchors.centerIn: parent
                             Kirigami.Icon {
-                                Layout.preferredWidth: PlasmaCore.Units.iconSizes.small
-                                Layout.preferredHeight: PlasmaCore.Units.iconSizes.small
+                                Layout.preferredWidth: Kirigami.Units.iconSizes.medium
+                                Layout.preferredHeight: Kirigami.Units.iconSizes.medium
                                 source: "dialog-cancel"
                             }
                             Controls.Label {
-                                text: i18n("Reject")
+                                text: i18n("Cancel")
                             }
                         }
                     }
                     
                     onClicked: (mouse)=> {
-                        currentDevice.rejectPairing()
+                        currentDevice.cancelPairing()
+                        pairingRequest = false
                         root.close()
                     }
                     

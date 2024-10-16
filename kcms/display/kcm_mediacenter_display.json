@@ -1,0 +1,13 @@
+{
+    "KPlugin": {
+        "Description": "Display Settings",
+        "FormFactors": [
+            "mediacenter"
+        ],
+        "Icon": "preferences-desktop-display-symbolic",
+        "Name": "Display Settings"
+    },
+    "X-DocPath": "kcontrol/display/index.html",
+    "X-KDE-System-Settings-Parent-Category": "display",
+    "X-KDE-Weight": 40
+}

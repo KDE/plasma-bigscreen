@@ -5,190 +5,204 @@
  *   SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
-import QtQuick 2.14
-import org.kde.kirigami 2.12 as Kirigami
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
 
 Item {
-    id: root
-    clip: true
-
-    //////// API
-    property alias hours: clockRow.hours
-    property alias minutes: clockRow.minutes
-    property alias seconds: clockRow.seconds
-
+    id: timePicker
+    
+    property int hour
+    property int minute
+    property int second
+    property bool use12HourFormat: true
     property bool userConfiguring: visible
-    property bool twentyFour: true
-
-    property int fontSize: 14
-    property int _margin: Kirigami.Units.gridUnit
-
-    property string timeString: clockRow.twoDigitString(hours) + ":" + clockRow.twoDigitString(minutes) + ":" +  clockRow.twoDigitString(seconds)
-
     opacity: enabled ? 1.0 : 0.5
 
-    onFocusChanged: {
-        if(focus) {
-            hoursDigit.forceActiveFocus()
+    RowLayout {
+        id: timePickerHeader
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: parent.top
+        height: Kirigami.Units.gridUnit * 3
+        spacing: 0
+
+        Rectangle {
+            Layout.preferredWidth: hourTumbler.width
+            Layout.fillHeight: true
+            color: Kirigami.Theme.backgroundColor
+            border.color: Kirigami.Theme.disabledTextColor
+            border.width: 1
+
+            Label {
+                anchors.fill: parent
+                text: i18n("Hour")
+                color: Kirigami.Theme.textColor
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+            }
+        }
+
+        Rectangle {
+            Layout.preferredWidth: minuteTumbler.width
+            Layout.fillHeight: true
+            color: Kirigami.Theme.backgroundColor
+            border.color: Kirigami.Theme.disabledTextColor
+            border.width: 1
+
+            Label {
+                anchors.fill: parent
+                text: i18n("Minute")
+                color: Kirigami.Theme.textColor
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+            }
+        }
+
+        Rectangle {
+            Layout.preferredWidth: secondTumbler.width
+            Layout.fillHeight: true
+            color: Kirigami.Theme.backgroundColor
+            border.color: Kirigami.Theme.disabledTextColor
+            border.width: 1
+
+            Label {
+                anchors.fill: parent
+                text: i18n("Second")
+                color: Kirigami.Theme.textColor
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+            }
+        }
+
+        Rectangle {
+            Layout.preferredWidth: ampmTumbler.width
+            Layout.fillHeight: true
+            color: Kirigami.Theme.backgroundColor
+            border.color: Kirigami.Theme.disabledTextColor
+            border.width: 1
+            visible: use12HourFormat
+
+            Label {
+                anchors.fill: parent
+                text: i18n("AM/PM")
+                color: Kirigami.Theme.textColor
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+            }
         }
     }
 
-    Behavior on width {
-        SequentialAnimation {
-            PauseAnimation {
-                duration: 250
+    RowLayout {
+        anchors.top: timePickerHeader.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        spacing: 0
+
+        Tumbler {
+            id: hourTumbler
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            model: use12HourFormat ? 12 : 24
+            currentIndex: timePicker.hour
+            KeyNavigation.right: minuteTumbler
+            KeyNavigation.left: secondTumbler
+
+            background: Rectangle {
+                color: Kirigami.Theme.backgroundColor
+                border.color: hourTumbler.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.disabledTextColor
+                border.width: 1
             }
-            NumberAnimation {
-                duration: 250
-                easing.type: Easing.InOutQuad
+
+            delegate: Label {
+                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignHCenter
+                color: hourTumbler.currentIndex == index ? Kirigami.Theme.highlightColor : Kirigami.Theme.textColor
+                font.bold: hourTumbler.currentIndex == index
+                font.pixelSize: hourTumbler.currentIndex == index ? 24 : 16
+                text: use12HourFormat ? (index == 0 ? 12 : index) : index
             }
         }
-    }
 
-    Rectangle {
-        color: "transparent"
-        border.color: Kirigami.Theme.textColor
-        border.width: 1
-        anchors.fill: parent
-        anchors.margins: Kirigami.Units.largeSpacing
+        Tumbler {
+            id: minuteTumbler
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            model: 60
+            currentIndex: timePicker.minute
+            KeyNavigation.right: secondTumbler
+            KeyNavigation.left: hourTumbler
 
-        Row {
-            id: clockRow
-            anchors.fill: parent
-            anchors.margins: Kirigami.Units.smallSpacing
-
-            property int hours
-            property int minutes
-            property int seconds
-
-            function twoDigitString(number)
-            {
-                return number < 10 ? "0"+number : number
+            background: Rectangle {
+                color: Kirigami.Theme.backgroundColor
+                border.color: minuteTumbler.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.disabledTextColor
+                border.width: 1
             }
 
-            Digit {
-                id: hoursDigit
-                model: root.twentyFour ? 24 : 12
-                currentIndex: root.twentyFour || hours < 12 ? hours : hours - 12
-                KeyNavigation.right: minutesDigit
-                KeyNavigation.left: backBtnTPItem
-                delegate: Text {
-                    horizontalAlignment: Text.AlignHCenter
-                    width: hoursDigit.width
-                    property int ownIndex: index
-                    text: (!root.twentyFour && index == 0) ? "12" : clockRow.twoDigitString(index)
-                    font.pointSize: root.fontSize
-                    color: hoursDigit.focus && hoursDigit.currentIndex == index ? Kirigami.Theme.linkColor : Kirigami.Theme.textColor
-                    opacity: PathView.itemOpacity
-                }
-                onSelectedIndexChanged: {
-                    if (selectedIndex > -1) {
-                        if (root.twentyFour ||
-                            meridiaeDigit.isAm) {
-                            hours = selectedIndex
-                        } else {
-                            hours = selectedIndex + 12
-                        }
-                    }
-                }
+            delegate: Label {
+                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignHCenter
+                color: minuteTumbler.currentIndex == index ? Kirigami.Theme.highlightColor : Kirigami.Theme.textColor
+                font.bold: minuteTumbler.currentIndex == index
+                font.pixelSize: minuteTumbler.currentIndex == index ? 24 : 16
+                text: index
             }
-            Kirigami.Separator {
-                anchors {
-                    top: parent.top
-                    bottom: parent.bottom
-                }
-            }
-            Digit {
-                id: minutesDigit
-                model: 60
-                currentIndex: minutes
-                KeyNavigation.right: secondsDigit
-                KeyNavigation.left: hoursDigit
-                onSelectedIndexChanged: {
-                    if (selectedIndex > -1) {
-                        minutes = selectedIndex
-                    }
-                }
-            }
-            Kirigami.Separator {
-                anchors {
-                    top: parent.top
-                    bottom: parent.bottom
-                }
-            }
-            Digit {
-                id: secondsDigit
-                model: 60
-                currentIndex: seconds
-                KeyNavigation.right: backBtnTPItem
-                KeyNavigation.left: minutesDigit
-                onSelectedIndexChanged: {
-                    if (selectedIndex > -1) {
-                        seconds = selectedIndex
-                    }
-                }
-            }
-            Kirigami.Separator {
-                opacity: meridiaeDigit.opacity == 0 ? 0 : 1
+        }
 
-                anchors {
-                    top: parent.top
-                    bottom: parent.bottom
-                }
-                Behavior on opacity {
-                    NumberAnimation {
-                        duration: 250
-                        easing.type: Easing.InOutQuad
-                    }
-                }
+        Tumbler {
+            id: secondTumbler
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            model: 60
+            currentIndex: timePicker.second
+            KeyNavigation.left: minuteTumbler
+            KeyNavigation.right: use12HourFormat ? ampmTumbler : hourTumbler
+
+            background: Rectangle {
+                color: Kirigami.Theme.backgroundColor
+                border.color: secondTumbler.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.disabledTextColor
+                border.width: 1
             }
-            Digit {
-                id: meridiaeDigit
-                visible: opacity != 0
-                opacity: root.twentyFour ? 0 : 1
-                property bool isAm: (selectedIndex > -1) ? (selectedIndex < 1) : (currentIndex < 1)
-                model: ListModel {
-                    ListElement {
-                        meridiae: "AM"
-                    }
-                    ListElement {
-                        meridiae: "PM"
-                    }
-                }
-                delegate: Text {
-                    width: meridiaeDigit.width
-                    horizontalAlignment: Text.AlignLeft
-                    property int ownIndex: index
-                    text: meridiae
-                    color: Kirigami.Theme.textColor
-                    font.pointSize: root.fontSize
-                    //opacity: PathView.itemOpacity
-                }
-                currentIndex: hours > 12 ? 1 : 0
-                onSelectedIndexChanged: {
-                    if (selectedIndex > -1) {
-                        //AM
-                        if (selectedIndex == 0) {
-                            hours -= 12
-                        //PM
-                        } else {
-                            hours += 12
-                        }
-                    }
-                }
-                width: meridiaePlaceHolder.width + root._margin
-                Text {
-                    id: meridiaePlaceHolder
-                    visible: false
-                    font.pointSize: root.fontSize
-                    text: "00"
-                }
-                Behavior on opacity {
-                    NumberAnimation {
-                        duration: 250
-                        easing.type: Easing.InOutQuad
-                    }
-                }
+
+            delegate: Label {
+                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignHCenter
+                color: secondTumbler.currentIndex == index ? Kirigami.Theme.highlightColor : Kirigami.Theme.textColor
+                font.bold: secondTumbler.currentIndex == index
+                font.pixelSize: secondTumbler.currentIndex == index ? 24 : 16
+                text: index
+            }
+        }
+
+        Tumbler {
+            id: ampmTumbler
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            model: ListModel {
+                ListElement { text: "AM" }
+                ListElement { text: "PM" }
+            }
+            currentIndex: timePicker.hour >= 12 ? 1 : 0
+            visible: use12HourFormat
+            KeyNavigation.left: secondTumbler
+            KeyNavigation.right: hourTumbler
+
+
+            background: Rectangle {
+                color: Kirigami.Theme.backgroundColor
+                border.color: ampmTumbler.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.disabledTextColor
+                border.width: 1
+            }
+
+            delegate: Label {
+                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignHCenter
+                color: ampmTumbler.currentIndex == index ? Kirigami.Theme.highlightColor : Kirigami.Theme.textColor
+                font.bold: ampmTumbler.currentIndex == index
+                font.pixelSize: ampmTumbler.currentIndex == index ? 24 : 16
+                text: model.text
             }
         }
     }

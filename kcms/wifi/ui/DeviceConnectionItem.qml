@@ -5,16 +5,15 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
-import QtQuick.Layouts 1.14
-import QtQuick.Controls 2.14
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.kirigami 2.12 as Kirigami
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls
+import org.kde.plasma.components as PlasmaComponents
+import org.kde.kirigami as Kirigami
+import org.kde.bigscreen as BigScreen
 import Qt5Compat.GraphicalEffects
 import org.kde.plasma.networkmanagement as PlasmaNM
-import org.kde.coreaddons 1.0 as KCoreAddons
+import org.kde.coreaddons as KCoreAddons
 
 Item {
     id: delegateSettingsItem

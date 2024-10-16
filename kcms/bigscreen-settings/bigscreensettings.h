@@ -18,14 +18,14 @@ namespace Plasma
 class Theme;
 }
 
-class ThemeListModel;
+class GlobalThemeListModel;
 
 class BigscreenSettings : public KQuickConfigModule
 {
     Q_OBJECT
 
     Q_PROPERTY(QString themeName READ themeName WRITE setThemeName NOTIFY themeNameChanged)
-    Q_PROPERTY(ThemeListModel *themeListModel READ themeListModel CONSTANT)
+    Q_PROPERTY(GlobalThemeListModel *globalThemeListModel READ globalThemeListModel CONSTANT)
     Q_PROPERTY(QTime currentTime READ currentTime WRITE setCurrentTime NOTIFY currentTimeChanged)
     Q_PROPERTY(QDate currentDate READ currentDate WRITE setCurrentDate NOTIFY currentDateChanged)
     Q_PROPERTY(bool useNtp READ useNtp WRITE setUseNtp NOTIFY useNtpChanged)
@@ -37,20 +37,16 @@ public:
     QString themeName() const;
     void setThemeName(const QString &theme);
 
-    ThemeListModel *themeListModel();
+    GlobalThemeListModel *globalThemeListModel();
 
 public Q_SLOTS:
     void load() override;
-    void applyPlasmaTheme(QQuickItem *item, const QString &themeName);
-
+    
     bool useColoredTiles();
     void setUseColoredTiles(bool useColoredTiles);
 
     bool useExpandingTiles();
     void setUseExpandingTiles(bool useExpandingTiles);
-
-    bool mycroftIntegrationActive();
-    void setMycroftIntegrationActive(bool mycroftIntegrationActive);
 
     bool pmInhibitionActive();
     void setPmInhibitionActive(bool pmInhibitionActive);
@@ -68,6 +64,9 @@ public Q_SLOTS:
 
     bool saveTime();
 
+    QString getShortcut(const QString &action);
+    void setShortcut(const QString &action, const QKeySequence &shortcut);
+
 Q_SIGNALS:
     void themeNameChanged();
     void timeFormatChanged();
@@ -80,10 +79,7 @@ private:
     QHash<QString, Plasma::Theme *> m_themes;
     Plasma::Theme *m_theme;
     QString m_themeName;
-    ThemeListModel *m_themeListModel;
-
-    bool m_coloredTiles;
-    bool m_expandingTiles;
+    GlobalThemeListModel *m_globalThemeListModel;
 
     QTime m_currentTime;
     QDate m_currentDate;

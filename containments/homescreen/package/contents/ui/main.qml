@@ -5,47 +5,43 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Controls 2.15 as Controls
-import QtQuick.Window 2.15
-import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.kquickcontrolsaddons 2.0
-import org.kde.kirigami 2.19 as Kirigami
-
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import QtQuick.Window
+import org.kde.plasma.plasmoid
+import org.kde.plasma.core as PlasmaCore
+import org.kde.kquickcontrolsaddons
+import org.kde.kirigami as Kirigami
+import org.kde.bigscreen as BigScreen
+import Qt5Compat.GraphicalEffects
+import org.kde.coreaddons as KCoreAddons
+import org.kde.kirigamiaddons.components as KirigamiComponents
 import "launcher"
 import "indicators" as Indicators
-import org.kde.mycroft.bigscreen 1.0 as BigScreen
-import Qt5Compat.GraphicalEffects
 
 ContainmentItem {
     id: root
     Layout.minimumWidth: Screen.desktopAvailableWidth
     Layout.minimumHeight: Screen.desktopAvailableHeight * 0.6
 
-    //property bool mycroftIntegration: Plasmoid.bigLauncherDbusAdapterInterface.mycroftIntegrationActive() ? 1 : 0
-    property bool mycroftIntegration: false
-
     property Item wallpaper
+
+    PlasmaCore.Action {
+        id: configureAction
+        onTriggered: Plasmoid
+    }
+
+    function configureWallpaper() {
+        Plasmoid.internalAction("configure").trigger();
+    }
 
     Connections {
         target: Plasmoid.bigLauncherDbusAdapterInterface
 
-        // function onEnableMycroftIntegrationChanged(mycroftIntegration) {
-        //     mycroftIntegration = Plasmoid.bigLauncherDbusAdapterInterface.mycroftIntegrationActive()
-        //     if(mycroftIntegration) {
-        //         mycroftIndicatorLoader.active = true
-        //         mycroftWindowLoader.active = true
-        //     } else {
-        //         mycroftIndicatorLoader.item.disconnectclose()
-        //         mycroftWindowLoader.item.disconnectclose()
-        //     }
-        // }
-
         function onEnablePmInhibitionChanged(pmInhibition) {
             var powerInhibition = Plasmoid.bigLauncherDbusAdapterInterface.pmInhibitionActive()
-            if(powerInhibition) {
+            if (powerInhibition) {
                 pmInhibitItem.inhibit = true
             } else {
                 pmInhibitItem.inhibit = false
@@ -53,35 +49,26 @@ ContainmentItem {
         }
     }
 
-    Containment.onAppletAdded: {
+    Containment.onAppletAdded: (applet, x, y) => {
         addApplet(applet, x, y);
     }
 
     PowerManagementItem {
         id: pmInhibitItem
-        //inhibit: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.pmInhibitionActive()
     }
-
-    // PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
-    Kirigami.Theme.inherit: false
-    Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
 
     Component.onCompleted: {
         for (var i in plasmoid.applets) {
             root.addApplet(plasmoid.applets[i], -1, -1)
         }
-        console.log("checking for power inhibition")
-        console.log(Plasmoid.bigLauncherDbusAdapterInterface.pmInhibitionActive())
         pmInhibitItem.inhibit = Plasmoid.bigLauncherDbusAdapterInterface.pmInhibitionActive()
     }
 
     function addApplet(applet, x, y) {
         var container = appletContainerComponent.createObject(appletsLayout)
         print("Applet added: " + applet + " " + applet.title)
-        //container.width = Kirigami.Units.iconSizes.medium
-        container.height = appletsLayout.height
-        
-        const appletItem = root.itemFor(applet);        
+
+        const appletItem = root.itemFor(applet);
         appletItem.parent = container;
         container.applet = appletItem;
         appletItem.anchors.fill = container;
@@ -95,8 +82,8 @@ ContainmentItem {
             property Item applet
             visible: applet && applet.status !== PlasmaCore.Types.HiddenStatus && applet.status !== PlasmaCore.Types.PassiveStatus
             Layout.fillHeight: true
-            Layout.minimumWidth: Math.max(applet.implicitWidth, applet.Layout.preferredWidth, applet.Layout.minimumWidth) + Kirigami.Units.gridUnit
-            Layout.maximumWidth: Layout.minimumWidth
+            Layout.fillWidth: true 
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         }
     }
 
@@ -104,15 +91,16 @@ ContainmentItem {
         id: feedbackWindow
     }
 
-    // Loader to make Mycroft completely optional
-    // Won't actually work disable it for now
-    // Loader {
-    //     id: mycroftWindowLoader
-    //     source: mycroftIntegration && Qt.resolvedUrl("MycroftWindow.qml") ? Qt.resolvedUrl("MycroftWindow.qml") : null
-    // }
-
     ConfigWindow {
-        id: plasmoidConfig
+        id: configWindow
+    }
+
+    TaskWindowView {
+        id: taskWindowView
+    }
+
+    FavoritesManager {
+        id: favsManagerWindowView
     }
 
     LinearGradient {
@@ -127,7 +115,7 @@ ContainmentItem {
                 easing.type: Easing.InOutQuad
             }
         }
-        width: parent.width/2
+        width: parent.width / 2
         start: Qt.point(0, 0)
         end: Qt.point(width, 0)
         gradient: Gradient {
@@ -141,139 +129,7 @@ ContainmentItem {
             }
             GradientStop {
                 position: 1.0
-                color:  "transparent"
-            }
-        }
-    }
-
-    Item {
-        id: topBar
-        anchors {
-            left: parent.left
-            right: parent.right
-        }
-        z: launcher.z + 1
-        Kirigami.Theme.colorSet: Kirigami.Theme.Window
-        height: Kirigami.Units.iconSizes.medium + Kirigami.Units.smallSpacing * 2
-        opacity: root.Window.active
-
-        y: root.Window.active ? 0 : -height
-        Behavior on y {
-            YAnimator {
-                duration: Kirigami.Units.longDuration
-                easing.type: Easing.InOutQuad
-            }
-        }
-        Behavior on opacity {
-            OpacityAnimator {
-                duration: Kirigami.Units.longDuration
-                easing.type: Easing.InOutQuad
-            }
-        }
-
-        Rectangle {
-            anchors.fill: parent
-            color: Kirigami.Theme.backgroundColor
-        }
-        RowLayout {
-            id: appletsLayout
-            anchors {
-                left: parent.left
-                top: parent.top
-                bottom: parent.bottom
-                margins: Kirigami.Units.smallSpacing
-            }
-        }
-
-        RowLayout {
-            anchors {
-                right: parent.right
-                top: parent.top
-                bottom: parent.bottom
-                margins: Kirigami.Units.smallSpacing
-            }
-
-            // Loader to make Mycroft completely optional 
-            // Won't actually work disable it for now
-            // Loader {
-            //     id: mycroftIndicatorLoader
-            //     Layout.fillHeight: true
-            //     source: mycroftIntegration && Qt.resolvedUrl("MycroftIndicator.qml") ? Qt.resolvedUrl("MycroftIndicator.qml") : null
-            // }
-
-
-            // KF6 QML import org.kde.kdeconnect missing
-            // Indicator does not load without this
-            // Indicators.KdeConnect {
-            //     id: kdeconnectIndicator
-            //     Layout.fillHeight: true
-            //     implicitWidth: height
-            //     KeyNavigation.down: launcher
-            //     KeyNavigation.right: volumeIndicator
-            //     KeyNavigation.tab: volumeIndicator
-            //     KeyNavigation.backtab: launcher
-            //     KeyNavigation.left: kdeconnectIndicator
-            // }
-
-            Indicators.Volume {
-                id: volumeIndicator
-                Layout.fillHeight: true
-                implicitWidth: height
-                KeyNavigation.down: launcher
-                KeyNavigation.right: wifiIndicator
-                KeyNavigation.tab: wifiIndicator
-                KeyNavigation.backtab: launcher
-            }
-
-            Indicators.Wifi {
-                id: wifiIndicator
-                Layout.fillHeight: true
-                implicitWidth: height
-                KeyNavigation.down: launcher
-                KeyNavigation.right: shutdownIndicator
-                KeyNavigation.tab: shutdownIndicator
-                KeyNavigation.backtab: volumeIndicator
-                KeyNavigation.left: volumeIndicator
-            }
-            Indicators.Shutdown {
-                id: shutdownIndicator
-                KeyNavigation.down: launcher
-                KeyNavigation.right: launcher
-                KeyNavigation.tab: launcher
-                KeyNavigation.backtab: wifiIndicator
-                KeyNavigation.left: wifiIndicator
-            }
-        }
-
-        LinearGradient {
-            property int radius: Kirigami.Units.gridUnit
-            implicitWidth: radius
-            implicitHeight: radius
-            anchors {
-                left: parent.left
-                right: parent.right
-                top: parent.bottom
-            }
-
-            start: Qt.point(0, 0)
-            end: Qt.point(0, height)
-            gradient: Gradient {
-                GradientStop {
-                    position: 0.0
-                    color: Qt.rgba(0, 0, 0, 0.25)
-                }
-                GradientStop {
-                    position: 0.20
-                    color: Qt.rgba(0, 0, 0, 0.1)
-                }
-                GradientStop {
-                    position: 0.35
-                    color: Qt.rgba(0, 0, 0, 0.02)
-                }
-                GradientStop {
-                    position: 1.0
-                    color:  "transparent"
-                }
+                color: "transparent"
             }
         }
     }
@@ -282,7 +138,6 @@ ContainmentItem {
         id: launcher
         width: parent.width
         height: parent.height - topBar.height
-    
 
         states: [
             State {
@@ -322,5 +177,227 @@ ContainmentItem {
                 }
             }
         ]
+    }
+
+    KCoreAddons.KUser {
+        id: kuser
+    }
+
+    Indicators.AbstractIndicatorArea {
+        id: topBarFavsIndicatorArea
+        anchors.left: parent.left
+        anchors.leftMargin: Kirigami.Units.largeSpacing
+        anchors.verticalCenter: topBar.verticalCenter
+        width: favsIndicator.activeFocus ? Kirigami.Units.gridUnit * 9 : Kirigami.Units.gridUnit * 5
+        z: launcher.z + 1
+        opacity: root.Window.active
+        y: root.Window.active ? 0 : -height
+
+        Indicators.Favorites {
+            id: favsIndicator
+            anchors.fill: parent
+            anchors.margins: Kirigami.Units.smallSpacing
+            KeyNavigation.down: launcher
+            KeyNavigation.right: tasksIndicator.visible ? tasksIndicator : settingsIndicator
+            KeyNavigation.tab: tasksIndicator.visible ? tasksIndicator : settingsIndicator
+        }
+    }
+
+    Indicators.AbstractIndicatorArea {
+        id: topBarTaskIndicatorArea
+        anchors.right: topBar.left
+        anchors.rightMargin: Kirigami.Units.largeSpacing
+        anchors.verticalCenter: topBar.verticalCenter
+        z: launcher.z + 1
+        opacity: root.Window.active
+        y: root.Window.active ? 0 : -height
+        visible: taskWindowView.modelCount > 0
+
+        Indicators.Tasks {
+            id: tasksIndicator
+            anchors.fill: parent
+            anchors.margins: Kirigami.Units.smallSpacing
+            visible: taskWindowView.modelCount > 0
+            KeyNavigation.down: launcher
+            KeyNavigation.left: favsIndicator
+            KeyNavigation.right: settingsIndicator
+            KeyNavigation.tab: settingsIndicator
+        }
+    }
+
+    Controls.Control {
+        id: topBar
+
+        width: Kirigami.Units.gridUnit * 28
+
+        anchors {
+            right: parent.right
+        }
+
+        background: Item {
+            anchors.fill: parent
+            anchors.margins: Kirigami.Units.largeSpacing
+
+            Rectangle {
+                id: bgSourceItem
+                radius: 6
+                anchors.fill: parent
+                opacity: 0.3
+                clip: true
+            }
+
+            Kirigami.ShadowedRectangle {
+                anchors.fill: parent
+                color: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.9)
+                radius: 6
+                shadow {
+                    size: Kirigami.Units.largeSpacing * 1
+                }
+            }
+        }
+
+        z: launcher.z + 1
+        height: Kirigami.Units.gridUnit * 5
+        opacity: root.Window.active
+        y: root.Window.active ? 0 : -height
+
+        Behavior on y {
+            YAnimator {
+                duration: Kirigami.Units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
+        Behavior on opacity {
+            OpacityAnimator {
+                duration: Kirigami.Units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
+
+        Item {
+            id: appletsPanelArea
+            width: Kirigami.Units.gridUnit * 10
+            height: parent.height
+
+            anchors {
+                verticalCenter: parent.verticalCenter
+                left: parent.left
+                right: indicatorsPanelArea.left
+            }
+
+            Item {
+                anchors.fill: parent
+                anchors.margins: Kirigami.Units.largeSpacing * 2
+
+                RowLayout {
+                    id: appletsLayout
+                    anchors.centerIn: parent 
+                    width: parent.width 
+                    height: parent.height 
+                    spacing: Kirigami.Units.smallSpacing
+                }
+            }
+        }
+
+        Rectangle {
+            id: indicatorsPanelArea
+            width: indicatorsPanel.implicitWidth + Kirigami.Units.largeSpacing * 2
+            radius: Kirigami.Units.gridUnit / 2
+            height: Kirigami.Units.iconSizes.large + Kirigami.Units.smallSpacing * 2
+            color: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.3)
+
+            anchors {
+                verticalCenter: parent.verticalCenter
+                right: profilePanelArea.left
+                rightMargin: Kirigami.Units.largeSpacing * 2
+            }
+
+            RowLayout {
+                id: indicatorsPanel
+                anchors.top: parent.top
+                anchors.bottom: parent.bottom
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.margins: Kirigami.Units.smallSpacing
+
+                Indicators.Settings {
+                    id: settingsIndicator
+                    Layout.fillHeight: true
+                    implicitWidth: height
+                    KeyNavigation.left: taskWindowView.modelCount > 0 ? tasksIndicator : null
+                    KeyNavigation.down: launcher
+                    KeyNavigation.right: volumeIndicator
+                    KeyNavigation.tab: volumeIndicator
+                    KeyNavigation.backtab: taskWindowView.modelCount > 0 ? tasksIndicator : null
+                }
+
+                Indicators.Volume {
+                    id: volumeIndicator
+                    Layout.fillHeight: true
+                    implicitWidth: height
+                    KeyNavigation.down: launcher
+                    KeyNavigation.right: wifiIndicator
+                    KeyNavigation.tab: wifiIndicator
+                    KeyNavigation.backtab: settingsIndicator
+                    KeyNavigation.left: settingsIndicator
+                }
+
+                Indicators.Wifi {
+                    id: wifiIndicator
+                    Layout.fillHeight: true
+                    implicitWidth: height
+                    KeyNavigation.down: launcher
+                    KeyNavigation.right: kdeConnectIndicator
+                    KeyNavigation.tab: kdeConnectIndicator
+                    KeyNavigation.backtab: volumeIndicator
+                    KeyNavigation.left: volumeIndicator
+                }
+
+                Indicators.KdeConnect {
+                    id: kdeConnectIndicator
+                    Layout.fillHeight: true
+                    implicitWidth: height
+                    KeyNavigation.down: launcher
+                    KeyNavigation.right: shutdownIndicator
+                    KeyNavigation.tab: shutdownIndicator
+                    KeyNavigation.backtab: wifiIndicator
+                    KeyNavigation.left: wifiIndicator
+                }
+
+                Indicators.Shutdown {
+                    id: shutdownIndicator
+                    KeyNavigation.down: launcher
+                    KeyNavigation.right: launcher
+                    KeyNavigation.tab: launcher
+                    KeyNavigation.backtab: kdeConnectIndicator
+                    KeyNavigation.left: kdeConnectIndicator
+                }
+            }
+        }
+
+        Item {
+            id: profilePanelArea
+            width: Kirigami.Units.iconSizes.large + Kirigami.Units.smallSpacing * 2
+            height: parent.height - Kirigami.Units.smallSpacing * 2
+
+            anchors {
+                verticalCenter: parent.verticalCenter
+                right: parent.right
+                rightMargin: Kirigami.Units.largeSpacing * 2
+            }
+
+            KirigamiComponents.AvatarButton {
+                width: Kirigami.Units.iconSizes.large
+                height: Kirigami.Units.iconSizes.large
+                source: kuser.faceIconUrl + "?timestamp=" + Date.now()
+                name: kuser.fullName
+                anchors.centerIn: parent
+
+                onClicked: {
+                    BigScreen.Global.promptLogoutGreeter("promptAll")
+                }
+
+                Keys.onReturnPressed: onClicked()
+            }
+        }
     }
 }

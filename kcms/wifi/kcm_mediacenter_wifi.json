@@ -84,6 +84,6 @@
         "Name[zh_TW]": "Wi-Fi"
     },
     "X-DocPath": "kcontrol/wifi/index.html",
-    "X-KDE-System-Settings-Parent-Category": "hardware",
+    "X-KDE-System-Settings-Parent-Category": "networksettings",
     "X-KDE-Weight": 40
 }

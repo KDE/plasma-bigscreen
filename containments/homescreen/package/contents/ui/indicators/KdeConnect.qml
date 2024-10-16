@@ -5,33 +5,20 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.14
-import QtQuick.Window 2.14
-import QtQuick.Layouts 1.14
-import QtQml.Models 2.14
-import org.kde.plasma.plasmoid 2.0
-import QtQuick.Controls 2.14 as Controls
-import org.kde.kirigami 2.12 as Kirigami
-import org.kde.kdeconnect 1.0 as KDEConnect
+import QtQuick
+import QtQuick.Window
+import QtQuick.Layouts
+import QtQml.Models
+import org.kde.plasma.plasmoid
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
+import org.kde.kdeconnect as KDEConnect
 import org.kde.plasma.private.nanoshell as NanoShell
 
 AbstractIndicator {
     id: connectionIcon
     icon.name: "kdeconnect"
     property var window
-    property bool mycroftIntegration: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive() ? 1 : 0
-
-    Connections {
-        target: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface
-        onEnableMycroftIntegrationChanged: {
-            mycroftIntegration = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive()
-            if(mycroftIntegration) {
-                mycroftLoader.active = true
-            } else {
-                mycroftLoader.item.disconnectclose()
-            }
-        }
-    }
 
     KDEConnect.DevicesModel {
         id: allDevicesModel
@@ -40,17 +27,8 @@ AbstractIndicator {
     Repeater {
         model: allDevicesModel
         delegate: Item {
-            property bool pairingRequest: device.hasPairingRequests
-            property var bigscreenIface: KDEConnect.BigscreenDbusInterfaceFactory.create(device.id())
-
-            Connections {
-                target: bigscreenIface
-                onMessageReceived: message => {
-                                       if (mycroftLoader.item) {
-                                           mycroftLoader.item.sendText(message);
-                                       }
-                                   }
-            }
+            property bool pairingRequest: device.isPairRequested || device.isPairRequestedByPeer ? 1 : 0
+            property var bigscreenIface: KDEConnect.BigscreenDbusInterfaceFactory.create(model.deviceId)
             
             onPairingRequestChanged: {
                 if (pairingRequest) {
@@ -69,29 +47,17 @@ AbstractIndicator {
                         }
 
                     } else {
-                        console.log("Unknown Request")
+                        console.debug("Unknown Request")
                     }
 
                 } else {
-                    console.log("pairing request timedout/closed")
                     window.close()
                 }
             }
         }
     }
-    
-    Loader {
-        id: mycroftLoader
-        source: connectionIcon.mycroftIntegration && Qt.resolvedUrl("MycroftConnect.qml") ? Qt.resolvedUrl("MycroftConnect.qml") : null
-    }
-    
+        
     onClicked: {
-        NanoShell.StartupFeedback.open(
-                            "kdeconnect",
-                            i18n("KDE Connect"),
-                            connectionIcon.Kirigami.ScenePosition.x + connectionIcon.width/2,
-                            connectionIcon.Kirigami.ScenePosition.y + connectionIcon.height/2,
-                            Math.min(connectionIcon.width, connectionIcon.height));
-        plasmoid.nativeInterface.executeCommand("plasma-settings -s -m kcm_mediacenter_kdeconnect")
+        configWindow.showOverlay("kcm_mediacenter_kdeconnect")
     }
 }

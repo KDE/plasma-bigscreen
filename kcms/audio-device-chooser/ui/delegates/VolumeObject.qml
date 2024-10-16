@@ -6,11 +6,11 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.14
-import QtQuick.Layouts 1.14
-import org.kde.plasma.components 3.0 as PlasmaComponents
+import QtQuick
+import QtQuick.Layouts
+import org.kde.plasma.components as PlasmaComponents
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.private.volume 0.1
+import org.kde.plasma.private.volume
 
 ColumnLayout {
     //Layout.fillWidth: true

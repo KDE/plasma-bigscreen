@@ -1,151 +1,159 @@
 /*
- *   SPDX-FileCopyrightText: 2011 Marco Martin <mart@kde.org>
- *
- *   SPDX-License-Identifier: LGPL-2.0-or-later
- */
+    SPDX-FileCopyrightText: 2024 Aditya Mehra <aix.m@outlook.com>
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
 
-import QtQuick 2.14
+import QtQuick 2.15
+import QtQuick.Controls 2.15
+import QtQuick.Layouts 2.4
 import org.kde.kirigami as Kirigami
 
 Item {
-    id: root
-    clip: true
-    property int day
-    property int month
+    id: datePicker
+
     property int year
-
+    property int month
+    property int day
     property bool userConfiguring: visible
-
-    property int fontSize: 14
-    property int _margin: Kirigami.Units.gridUnit
 
     opacity: enabled ? 1.0 : 0.5
 
-    onVisibleChanged: {
-        if(visible){
-            dayDigit.model = getDaysInMonth()
+    RowLayout {
+        id: datePickerHeader
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: parent.top
+        height: Kirigami.Units.gridUnit * 3
+        spacing: 0
+
+        Rectangle {
+            Layout.preferredWidth: yearTumbler.width
+            Layout.fillHeight: true
+            color: Kirigami.Theme.backgroundColor
+            border.color: Kirigami.Theme.disabledTextColor
+            border.width: 1
+
+            Label {
+                anchors.fill: parent
+                text: i18n("Year")
+                color: Kirigami.Theme.textColor
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+            }
+        }
+
+        Rectangle {
+            Layout.preferredWidth: monthTumbler.width
+            Layout.fillHeight: true
+            color: Kirigami.Theme.backgroundColor
+            border.color: Kirigami.Theme.disabledTextColor
+            border.width: 1
+
+            Label {
+                anchors.fill: parent
+                text: i18n("Month")
+                color: Kirigami.Theme.textColor
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+            }
+        }
+
+        Rectangle {
+            Layout.preferredWidth: dayTumbler.width
+            Layout.fillHeight: true
+            color: Kirigami.Theme.backgroundColor
+            border.color: Kirigami.Theme.disabledTextColor
+            border.width: 1
+
+            Label {
+                anchors.fill: parent
+                text: i18n("Day")
+                color: Kirigami.Theme.textColor
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+            }
         }
     }
 
-    onFocusChanged: {
-        if(focus) {
-            dayDigit.forceActiveFocus()
+    RowLayout {
+        anchors.top: datePickerHeader.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        spacing: 0
+
+        Tumbler {
+            id: yearTumbler
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            model: 2100
+            currentIndex: year - 2000
+            KeyNavigation.right: monthTumbler
+            KeyNavigation.left: parent
+
+            background: Rectangle {
+                color: Kirigami.Theme.backgroundColor
+                border.color: yearTumbler.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.disabledTextColor
+                border.width: 1
+            }
+
+            delegate: Label {
+                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignHCenter
+                color: yearTumbler.currentIndex == index ? Kirigami.Theme.highlightColor : Kirigami.Theme.textColor
+                font.bold: yearTumbler.currentIndex == index
+                font.pixelSize: yearTumbler.currentIndex == index ? 24 : 16
+                text: 2000 + index
+            }
         }
-    }
 
-    function getDaysInMonth() {
-        // Here January is 1 based
-        //Day 0 is the last day in the previous month
-        //return new Date(year, month, 0).getDate();
-        // Here January is 0 based
-        var dt = new Date(root.year, root.month+1, 0).getDate()
-        return dt
-    }
+        Tumbler {
+            id: monthTumbler
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            model: 12  // Months are 0-indexed
+            currentIndex: month
+            KeyNavigation.right: dayTumbler
+            KeyNavigation.left: yearTumbler
 
-    Rectangle {
-        color: "transparent"
-        border.color: Kirigami.Theme.textColor
-        border.width: 1
-        anchors.fill: parent
-        anchors.margins: Kirigami.Units.largeSpacing
-
-        Row {
-            id: clockRow
-            spacing: 3
-            anchors.fill: parent
-            anchors.margins: Kirigami.Units.smallSpacing
-
-            property int day
-            property int month
-            property int year
-
-            function twoDigitString(number)
-            {
-                return number < 10 ? "0"+number : number
+            background: Rectangle {
+                color: Kirigami.Theme.backgroundColor
+                border.color: monthTumbler.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.disabledTextColor
+                border.width: 1
             }
 
-            Digit {
-                id: dayDigit
-                currentIndex: ((day - 1) < model) ? day-1 : 1
-                KeyNavigation.right: monthDigit
-                KeyNavigation.left: backBtnDTItem
+            delegate: Label {
+                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignHCenter
+                color: monthTumbler.currentIndex == index ? Kirigami.Theme.highlightColor : Kirigami.Theme.textColor
+                font.bold: monthTumbler.currentIndex == index
+                font.pixelSize: monthTumbler.currentIndex == index ? 24 : 16
+                text: i18n(Qt.locale().monthName(index))
+            }
+        }
 
-                onSelectedIndexChanged: {
-                    if (selectedIndex > -1) {
-                        day = selectedIndex+1
-                    }
-                }
-                delegate: Text {
-                    horizontalAlignment: Text.AlignHCenter
-                    width: dayDigit.width
-                    property int ownIndex: index
-                    text: clockRow.twoDigitString(index+1)
-                    color: dayDigit.focus && dayDigit.currentIndex == index ? Kirigami.Theme.linkColor : Kirigami.Theme.textColor
-                    font.pointSize: root.fontSize
-                    opacity: PathView.itemOpacity
-                }
-            }
-            Kirigami.Separator {
-                anchors {
-                    top: parent.top
-                    bottom: parent.bottom
-                }
-            }
-            Digit {
-                id: monthDigit
-                model: 12
-                currentIndex: month -1
-                KeyNavigation.right: yearDigit
-                KeyNavigation.left: dayDigit
+        Tumbler {
+            id: dayTumbler
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            model: 31  // Maximum days in a month
+            currentIndex: day - 1
+            KeyNavigation.right: yearTumbler
+            KeyNavigation.left: monthTumbler
 
-                onSelectedIndexChanged: {
-                    if (selectedIndex > -1) {
-                        month = selectedIndex + 1
-                    }
-                }
-                delegate: Text {
-                    horizontalAlignment: Text.AlignHCenter
-                    width: monthDigit.width
-                    property int ownIndex: index
-                    property variant months: Array(i18n("Jan"), i18n("Feb"), i18n("Mar"), i18n("Apr"), i18n("May"), i18n("Jun"), i18n("Jul"), i18n("Aug"), i18n("Sep"), i18n("Oct"), i18n("Nov"), i18n("Dec"))
-                    text: months[index]
-                    font.pointSize: root.fontSize
-                    color: monthDigit.focus && monthDigit.currentIndex == index ? Kirigami.Theme.linkColor : Kirigami.Theme.textColor
-                    opacity: PathView.itemOpacity
-                }
-                Text {
-                    id: monthPlaceHolder
-                    visible: false
-                    font.pointSize: root.fontSize
-                    text: "0000"
-                }
+            background: Rectangle {
+                color: Kirigami.Theme.backgroundColor
+                border.color: dayTumbler.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.disabledTextColor
+                border.width: 1
             }
-            Kirigami.Separator {
-                anchors {
-                    top: parent.top
-                    bottom: parent.bottom
-                }
-            }
-            Digit {
-                id: yearDigit
-                //FIXME: yes, this is a tad lame ;)
-                model: 3000
-                currentIndex: year
-                KeyNavigation.left: monthDigit
-                KeyNavigation.right: backBtnDTItem
 
-                onSelectedIndexChanged: {
-                    if (selectedIndex > -1) {
-                        year = selectedIndex
-                    }
-                }
-                Text {
-                    id: yearPlaceHolder
-                    visible: false
-                    font.pointSize: root.fontSize
-                    color: yearDigit.focus && yearDigit.currentIndex == index ? Kirigami.Theme.linkColor : Kirigami.Theme.textColor
-                    text: "0000"
-                }
+            delegate: Label {
+                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignHCenter
+                color: dayTumbler.currentIndex == index ? Kirigami.Theme.highlightColor : Kirigami.Theme.textColor
+                font.bold: dayTumbler.currentIndex == index
+                font.pixelSize: dayTumbler.currentIndex == index ? 24 : 16
+                text: index + 1
             }
         }
     }

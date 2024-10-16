@@ -7,36 +7,14 @@
 
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <QKeySequence>
+#include <KGlobalAccel>
 #include <KUser>
 
 Configuration &Configuration::self()
 {
     static Configuration c;
     return c;
-}
-
-bool Configuration::mycroftEnabled() const
-{
-    static KSharedConfigPtr config = KSharedConfig::openConfig(QLatin1String("bigscreen"));
-    static KConfigGroup grp(config, QLatin1String("General"));
-
-    if (grp.isValid()) {
-        return grp.readEntry(QLatin1String("MycroftEnabled"), true);
-    }
-
-    return true;
-}
-
-void Configuration::setMycroftEnabled(bool mycroftEnabled)
-{
-    KSharedConfigPtr config = KSharedConfig::openConfig(QLatin1String("bigscreen"));
-    KConfigGroup grp(config, QLatin1String("General"));
-
-    if (grp.isValid()) {
-        grp.writeEntry(QLatin1String("MycroftEnabled"), mycroftEnabled);
-        grp.sync();
-        Q_EMIT mycroftEnabledChanged();
-    }
 }
 
 bool Configuration::pmInhibitionEnabled() const
