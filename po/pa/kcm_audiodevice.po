@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 00:43+0000\n"
+"POT-Creation-Date: 2024-10-17 00:41+0000\n"
 "PO-Revision-Date: 2024-02-07 21:41-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -16,12 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.4\n"
-
-#: ui/delegates/CompactAudioDelegate.qml:87
-#, kde-format
-msgctxt "label of device items"
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
 
 #: ui/delegates/VolumeObject.qml:58
 #, kde-format
@@ -34,17 +28,17 @@ msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/DeviceChooserPage.qml:74
+#: ui/DeviceChooserPage.qml:33
 #, kde-format
-msgid "Exit"
-msgstr "ਬਾਹਰ"
+msgid "Audio Settings"
+msgstr ""
 
-#: ui/DeviceChooserPage.qml:127
+#: ui/DeviceChooserPage.qml:92
 #, kde-format
 msgid "Playback Devices"
 msgstr "ਪਲੇਅਬੈਕ ਡਿਵਾਈਸ"
 
-#: ui/DeviceChooserPage.qml:159
+#: ui/DeviceChooserPage.qml:124
 #, kde-format
 msgid "Recording Devices"
 msgstr "ਰਿਕਾਰਡਿੰਗ ਡਿਵਾਈਸ"
@@ -58,3 +52,10 @@ msgstr "ਆਡੀਓ ਡਿਵਾਈਸ ਚੋਣ"
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "ਡਿਵਾਇਸ ਚੁਣਨ ਲਈ ਵਾਪਸ ਜਾਣ ਵਾਸਤੇ [←] ਪਿੱਛੇ ਬਟਨ ਨੂੰ ਦਬਾਓ"
+
+#~ msgctxt "label of device items"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "Exit"
+#~ msgstr "ਬਾਹਰ"

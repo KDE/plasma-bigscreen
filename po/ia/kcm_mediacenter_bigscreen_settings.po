@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-11 00:43+0000\n"
+"POT-Creation-Date: 2024-10-17 00:41+0000\n"
 "PO-Revision-Date: 2023-06-21 16:13+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -27,151 +27,205 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "g.sora@tiscali.it"
 
-#: ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:38
 #, kde-format
-msgid "Jan"
-msgstr "Jan"
+msgid "Year"
+msgstr ""
 
-#: ui/delegates/DatePicker.qml:110
+#: ui/delegates/DatePicker.qml:54
 #, kde-format
-msgid "Feb"
-msgstr "Feb"
+msgid "Month"
+msgstr ""
 
-#: ui/delegates/DatePicker.qml:110
-#, kde-format
-msgid "Mar"
-msgstr "Mar"
-
-#: ui/delegates/DatePicker.qml:110
-#, kde-format
-msgid "Apr"
-msgstr "Apr"
-
-#: ui/delegates/DatePicker.qml:110
-#, kde-format
-msgid "May"
+#: ui/delegates/DatePicker.qml:70
+#, fuzzy, kde-format
+#| msgid "May"
+msgid "Day"
 msgstr "Maio"
 
-#: ui/delegates/DatePicker.qml:110
-#, kde-format
-msgid "Jun"
-msgstr "Jun"
-
-#: ui/delegates/DatePicker.qml:110
-#, kde-format
-msgid "Jul"
-msgstr "Jul"
-
-#: ui/delegates/DatePicker.qml:110
-#, kde-format
-msgid "Aug"
-msgstr "Aug"
-
-#: ui/delegates/DatePicker.qml:110
-#, kde-format
-msgid "Sep"
-msgstr "Sep"
-
-#: ui/delegates/DatePicker.qml:110
-#, kde-format
-msgid "Oct"
-msgstr "Oct"
-
-#: ui/delegates/DatePicker.qml:110
-#, kde-format
-msgid "Nov"
-msgstr "Nov"
-
-#: ui/delegates/DatePicker.qml:110
-#, kde-format
-msgid "Dec"
-msgstr "Dec"
-
-#: ui/DeviceTimeSettings.qml:149
+#: ui/delegates/DeviceTimeSettings.qml:136
 #, kde-format
 msgid "Time Display"
 msgstr "Monstrator de tempore"
 
-#: ui/DeviceTimeSettings.qml:156
+#: ui/delegates/DeviceTimeSettings.qml:145
 #, kde-format
 msgid "Timezone:"
 msgstr "Fuso horari:"
 
-#: ui/DeviceTimeSettings.qml:176
-#, kde-format
-msgid "Set time automatically:"
+#: ui/delegates/DeviceTimeSettings.qml:187
+#, fuzzy, kde-format
+#| msgid "Set time automatically:"
+msgid "Set time automatically"
 msgstr "Fixa automaticamente tempore:"
 
-#: ui/DeviceTimeSettings.qml:210
+#: ui/delegates/DeviceTimeSettings.qml:256
 #, kde-format
 msgid "Time"
 msgstr "Tempore"
 
-#: ui/DeviceTimeSettings.qml:242
+#: ui/delegates/DeviceTimeSettings.qml:318
 #, kde-format
 msgid "Date"
 msgstr "Data"
 
-#: ui/DeviceTimeSettings.qml:315
+#: ui/delegates/DeviceTimeSettings.qml:399 ui/delegates/ShortcutsPicker.qml:191
 #, kde-format
 msgid "Press the [←] Back button to return to appearance settings"
 msgstr ""
 "Pressa le [←] button de Retro pro retornar al preferentias de apparentia"
 
-#: ui/DeviceTimeSettings.qml:378 ui/DeviceTimeSettings.qml:503
-#: ui/DeviceTimeSettings.qml:600
+#: ui/delegates/DeviceTimeSettings.qml:460
+#: ui/delegates/DeviceTimeSettings.qml:583
+#: ui/delegates/DeviceTimeSettings.qml:678
 #, kde-format
 msgid "Press the [←] Back button to save configuration and return to settings"
 msgstr ""
 "Pressa le [←] button de Retro pro salveguardar le configuation e retornar al "
 "preferentias"
 
-#: ui/DeviceTimeSettings.qml:419
+#: ui/delegates/DeviceTimeSettings.qml:482
+#, kde-format
+msgid "Search City / Region"
+msgstr ""
+
+#: ui/delegates/DeviceTimeSettings.qml:501
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "Tu fuso horari local es %1"
 
-#: ui/DeviceTimeSettings.qml:419
+#: ui/delegates/DeviceTimeSettings.qml:501
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
+
+#: ui/delegates/ShortcutsPicker.qml:67
+#, kde-format
+msgid "Update Shortcut Keys"
+msgstr ""
+
+#: ui/delegates/ShortcutsPicker.qml:106
+#, kde-format
+msgid "Reset Default"
+msgstr ""
+
+#: ui/delegates/ShortcutsPicker.qml:120
+#, kde-format
+msgid "Set Shortcut"
+msgstr ""
+
+#: ui/delegates/TimePicker.qml:40
+#, kde-format
+msgid "Hour"
+msgstr ""
+
+#: ui/delegates/TimePicker.qml:56
+#, kde-format
+msgid "Minute"
+msgstr ""
+
+#: ui/delegates/TimePicker.qml:72
+#, kde-format
+msgid "Second"
+msgstr ""
+
+#: ui/delegates/TimePicker.qml:89
+#, kde-format
+msgid "AM/PM"
+msgstr ""
 
 #: ui/main.qml:21
 #, kde-format
 msgid "Appearance"
 msgstr "Apparentia"
 
-#: ui/main.qml:105
+#: ui/main.qml:62
 #, kde-format
-msgid "Exit"
-msgstr "Exi"
+msgid "Appearance & Personalization"
+msgstr ""
 
-#: ui/main.qml:146
+#: ui/main.qml:112
 #, kde-format
 msgid "Launcher Appearance"
 msgstr "Apparentia de Lanceator"
 
-#: ui/main.qml:192
+#: ui/main.qml:121
 #, kde-format
 msgid "Power Inhibition"
 msgstr "Inhibition de Potentia"
 
-#: ui/main.qml:211
+#: ui/main.qml:132
 #, kde-format
 msgid "Colored Tiles"
 msgstr "Tegulas (Tiles) colorate"
 
-#: ui/main.qml:230
+#: ui/main.qml:144
 #, kde-format
 msgid "Expanding Tiles"
 msgstr "Tegulas (Tiles) que expande"
 
-#: ui/main.qml:248
+#: ui/main.qml:155
 #, kde-format
 msgid "Adjust Date & Time"
 msgstr "Adjusta data & tempore"
 
-#: ui/main.qml:275
+#: ui/main.qml:163
+#, kde-format
+msgid "Bigscreen Shortcuts"
+msgstr ""
+
+#: ui/main.qml:171
+#, kde-format
+msgid "Bigscreen Settings Shortcut"
+msgstr ""
+
+#: ui/main.qml:183
+#, kde-format
+msgid "Bigscreen Tasks Shortcut"
+msgstr ""
+
+#: ui/main.qml:195
+#, kde-format
+msgid "Bigscreen Display Homescreen Shortcut"
+msgstr ""
+
+#: ui/main.qml:216
 #, kde-format
 msgid "General Appearance"
 msgstr "Apparentia General"
+
+#~ msgid "Jan"
+#~ msgstr "Jan"
+
+#~ msgid "Feb"
+#~ msgstr "Feb"
+
+#~ msgid "Mar"
+#~ msgstr "Mar"
+
+#~ msgid "Apr"
+#~ msgstr "Apr"
+
+#~ msgid "Jun"
+#~ msgstr "Jun"
+
+#~ msgid "Jul"
+#~ msgstr "Jul"
+
+#~ msgid "Aug"
+#~ msgstr "Aug"
+
+#~ msgid "Sep"
+#~ msgstr "Sep"
+
+#~ msgid "Oct"
+#~ msgstr "Oct"
+
+#~ msgid "Nov"
+#~ msgstr "Nov"
+
+#~ msgid "Dec"
+#~ msgstr "Dec"
+
+#~ msgid "Exit"
+#~ msgstr "Exi"

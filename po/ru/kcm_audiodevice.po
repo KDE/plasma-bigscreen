@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 00:43+0000\n"
+"POT-Creation-Date: 2024-10-17 00:41+0000\n"
 "PO-Revision-Date: 2022-05-03 22:26+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -17,12 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.08.3\n"
-
-#: ui/delegates/CompactAudioDelegate.qml:87
-#, kde-format
-msgctxt "label of device items"
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
 
 #: ui/delegates/VolumeObject.qml:58
 #, kde-format
@@ -35,17 +29,17 @@ msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/DeviceChooserPage.qml:74
+#: ui/DeviceChooserPage.qml:33
 #, kde-format
-msgid "Exit"
-msgstr "Выход"
+msgid "Audio Settings"
+msgstr ""
 
-#: ui/DeviceChooserPage.qml:127
+#: ui/DeviceChooserPage.qml:92
 #, kde-format
 msgid "Playback Devices"
 msgstr "Устройства воспроизведения"
 
-#: ui/DeviceChooserPage.qml:159
+#: ui/DeviceChooserPage.qml:124
 #, kde-format
 msgid "Recording Devices"
 msgstr "Устройства записи"
@@ -59,6 +53,13 @@ msgstr "Выбор звукового устройства"
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "Нажмите [←] чтобы вернуться к выбору устройства"
+
+#~ msgctxt "label of device items"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "Exit"
+#~ msgstr "Выход"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

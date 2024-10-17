@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-11 00:43+0000\n"
+"POT-Creation-Date: 2024-10-17 00:41+0000\n"
 "PO-Revision-Date: 2021-05-16 23:56+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -62,20 +62,18 @@ msgstr "장치에 연결 요청 보냄"
 msgid "This device is not reachable"
 msgstr "이 장치에 접근할 수 없음"
 
-#: ui/DeviceConnectionView.qml:196
+#: ui/DeviceConnectionView.qml:188
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "[←] 뒤로 단추를 누르면 장치 선택으로 돌아갑니다"
 
-#: ui/main.qml:22
+#: ui/main.qml:21 ui/main.qml:58
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
 
-#: ui/main.qml:89
-#, kde-format
-msgid "Exit"
-msgstr "끝내기"
+#~ msgid "Exit"
+#~ msgstr "끝내기"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

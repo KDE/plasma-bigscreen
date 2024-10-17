@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-11 00:43+0000\n"
+"POT-Creation-Date: 2024-10-17 00:41+0000\n"
 "PO-Revision-Date: 2024-03-07 15:04+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -63,17 +63,15 @@ msgstr "בקשת הצימוד נכשלה למכשיר"
 msgid "This device is not reachable"
 msgstr "המכשיר הזה לא נגיש"
 
-#: ui/DeviceConnectionView.qml:196
+#: ui/DeviceConnectionView.qml:188
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "יש לחזור על כפתור החזרה [→] כדי לחזור לבחירת מכשירים"
 
-#: ui/main.qml:22
+#: ui/main.qml:21 ui/main.qml:58
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
 
-#: ui/main.qml:89
-#, kde-format
-msgid "Exit"
-msgstr "יציאה"
+#~ msgid "Exit"
+#~ msgstr "יציאה"

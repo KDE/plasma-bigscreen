@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 00:43+0000\n"
+"POT-Creation-Date: 2024-10-17 00:41+0000\n"
 "PO-Revision-Date: 2022-04-10 17:35+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -19,12 +19,6 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: ui/delegates/CompactAudioDelegate.qml:87
-#, kde-format
-msgctxt "label of device items"
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
-
 #: ui/delegates/VolumeObject.qml:58
 #, kde-format
 msgid "Adjust Volume"
@@ -36,17 +30,17 @@ msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1 %"
 
-#: ui/DeviceChooserPage.qml:74
+#: ui/DeviceChooserPage.qml:33
 #, kde-format
-msgid "Exit"
-msgstr "Avslutt"
+msgid "Audio Settings"
+msgstr ""
 
-#: ui/DeviceChooserPage.qml:127
+#: ui/DeviceChooserPage.qml:92
 #, kde-format
 msgid "Playback Devices"
 msgstr "Avspelingseiningar"
 
-#: ui/DeviceChooserPage.qml:159
+#: ui/DeviceChooserPage.qml:124
 #, kde-format
 msgid "Recording Devices"
 msgstr "Opptakseiningar"
@@ -60,3 +54,10 @@ msgstr "Vel lydeining"
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "Trykk «[←] Tilbake» for å velja ny eining"
+
+#~ msgctxt "label of device items"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "Exit"
+#~ msgstr "Avslutt"

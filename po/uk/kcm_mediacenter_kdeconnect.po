@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_kdeconnect\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-11 00:43+0000\n"
+"POT-Creation-Date: 2024-10-17 00:41+0000\n"
 "PO-Revision-Date: 2021-01-22 13:21+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -65,20 +65,18 @@ msgstr "На пристрій надіслано запит щодо пов'яз
 msgid "This device is not reachable"
 msgstr "Цей пристрій є недоступним"
 
-#: ui/DeviceConnectionView.qml:196
+#: ui/DeviceConnectionView.qml:188
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "Натисніть кнопку «[←] Назад», щоб повернутися до вибору пристрою"
 
-#: ui/main.qml:22
+#: ui/main.qml:21 ui/main.qml:58
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
 
-#: ui/main.qml:89
-#, kde-format
-msgid "Exit"
-msgstr "Вийти"
+#~ msgid "Exit"
+#~ msgstr "Вийти"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

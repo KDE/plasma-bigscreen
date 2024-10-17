@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-11 00:43+0000\n"
+"POT-Creation-Date: 2024-10-17 00:41+0000\n"
 "PO-Revision-Date: 2021-01-23 12:17+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
@@ -62,20 +62,18 @@ msgstr "Verzoek om een paar te maken verzonden naar apparaat"
 msgid "This device is not reachable"
 msgstr "Dit apparaat is niet bereikbaar"
 
-#: ui/DeviceConnectionView.qml:196
+#: ui/DeviceConnectionView.qml:188
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "Druk op de knop [←] Terug om naar selectie van apparaat terug te keren"
 
-#: ui/main.qml:22
+#: ui/main.qml:21 ui/main.qml:58
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
 
-#: ui/main.qml:89
-#, kde-format
-msgid "Exit"
-msgstr "Afsluiten"
+#~ msgid "Exit"
+#~ msgstr "Afsluiten"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

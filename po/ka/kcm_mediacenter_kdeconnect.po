@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-11 00:43+0000\n"
+"POT-Creation-Date: 2024-10-17 00:41+0000\n"
 "PO-Revision-Date: 2022-09-30 15:15+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -63,20 +63,18 @@ msgstr "მოწყობილობაზე დაწყვილები�
 msgid "This device is not reachable"
 msgstr "ეს მოწყობილობა მიუწვდომელია"
 
-#: ui/DeviceConnectionView.qml:196
+#: ui/DeviceConnectionView.qml:188
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "მოწყობილობის არჩევანზე დასაბრუნებლად დააწექით [←] უკან გასვლას"
 
-#: ui/main.qml:22
+#: ui/main.qml:21 ui/main.qml:58
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
 
-#: ui/main.qml:89
-#, kde-format
-msgid "Exit"
-msgstr "გასვლა"
+#~ msgid "Exit"
+#~ msgstr "გასვლა"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

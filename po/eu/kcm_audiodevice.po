@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-14 00:43+0000\n"
+"POT-Creation-Date: 2024-10-17 00:41+0000\n"
 "PO-Revision-Date: 2022-07-05 12:38+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -19,12 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.04.2\n"
-
-#: ui/delegates/CompactAudioDelegate.qml:87
-#, kde-format
-msgctxt "label of device items"
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
 
 #: ui/delegates/VolumeObject.qml:58
 #, kde-format
@@ -37,17 +31,17 @@ msgctxt "volume percentage"
 msgid "%1%"
 msgstr "% %1"
 
-#: ui/DeviceChooserPage.qml:74
+#: ui/DeviceChooserPage.qml:33
 #, kde-format
-msgid "Exit"
-msgstr "Irten"
+msgid "Audio Settings"
+msgstr ""
 
-#: ui/DeviceChooserPage.qml:127
+#: ui/DeviceChooserPage.qml:92
 #, kde-format
 msgid "Playback Devices"
 msgstr "Atzera jotzeko gailuak"
 
-#: ui/DeviceChooserPage.qml:159
+#: ui/DeviceChooserPage.qml:124
 #, kde-format
 msgid "Recording Devices"
 msgstr "Grabatzeko gailuak"
@@ -61,6 +55,13 @@ msgstr "Audio-gailu hautatzailea"
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "Sakatu [←] Atzera botoia gailuen hautapenera itzultzeko"
+
+#~ msgctxt "label of device items"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "Exit"
+#~ msgstr "Irten"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
