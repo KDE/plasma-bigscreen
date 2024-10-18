@@ -1,11 +1,27 @@
 {
     "KPlugin": {
         "Description": "Display Settings",
+        "Description[ca]": "Configuració de la pantalla",
+        "Description[he]": "הגדרות תצוגה",
+        "Description[ka]": "ეკრანის მორგება",
+        "Description[nl]": "Beeldscherminstellingen",
+        "Description[sl]": "Nastavitve zaslona",
+        "Description[tr]": "Görüntü Ayarları",
+        "Description[uk]": "Параметри показу",
+        "Description[x-test]": "xxDisplay Settingsxx",
         "FormFactors": [
             "mediacenter"
         ],
         "Icon": "preferences-desktop-display-symbolic",
-        "Name": "Display Settings"
+        "Name": "Display Settings",
+        "Name[ca]": "Configuració de la pantalla",
+        "Name[he]": "הגדרות תצוגה",
+        "Name[ka]": "ეკრანის მორგება",
+        "Name[nl]": "Beeldscherminstellingen",
+        "Name[sl]": "Nastavitve zaslona",
+        "Name[tr]": "Görüntü Ayarları",
+        "Name[uk]": "Параметри показу",
+        "Name[x-test]": "xxDisplay Settingsxx"
     },
     "X-DocPath": "kcontrol/display/index.html",
     "X-KDE-System-Settings-Parent-Category": "display",
