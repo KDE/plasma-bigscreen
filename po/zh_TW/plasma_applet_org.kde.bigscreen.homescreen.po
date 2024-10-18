@@ -1,0 +1,193 @@
+# Chinese translations for plasma-bigscreen package
+# plasma-bigscreen 套件的正體中文翻譯.
+# Copyright (C) 2020 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# Automatically generated, 2020.
+# Yi-Jyun Pan <pan93412@gmail.com>, 2020.
+# SPDX-FileCopyrightText: 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"PO-Revision-Date: 2024-01-03 03:56+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 23.08.4\n"
+
+#: contents/config/config.qml:11
+#, kde-format
+msgid "General"
+msgstr "一般"
+
+#: contents/ui/ConfigWindow.qml:136 contents/ui/launcher/LauncherHome.qml:182
+#, kde-format
+msgid "Settings"
+msgstr "設定"
+
+#: contents/ui/ConfigWindow.qml:183 contents/ui/FavoritesManager.qml:232
+#: contents/ui/TaskWindowView.qml:217
+#, fuzzy, kde-format
+#| msgid "close"
+msgid "Close"
+msgstr "關閉"
+
+#: contents/ui/FavoritesManager.qml:67
+#, kde-format
+msgid "Favorites Manager"
+msgstr ""
+
+#: contents/ui/FavoritesManager.qml:99
+#, kde-format
+msgid "Add Favorites"
+msgstr ""
+
+#: contents/ui/FavoritesManager.qml:167
+#, kde-format
+msgid "Remove Favorites"
+msgstr ""
+
+#: contents/ui/indicators/Favorites.qml:51
+#, kde-format
+msgid "Manage Favorites"
+msgstr ""
+
+#: contents/ui/indicators/PairWindow.qml:48
+#, kde-format
+msgid "Pairing Request From %1"
+msgstr "來自 %1 的配對請求"
+
+#: contents/ui/indicators/PairWindow.qml:83
+#, kde-format
+msgid "Accept"
+msgstr "接受"
+
+#: contents/ui/indicators/PairWindow.qml:127
+#, kde-format
+msgid "Cancel"
+msgstr ""
+
+#: contents/ui/indicators/Volume.qml:25
+#, kde-format
+msgid "Audio Volume"
+msgstr ""
+
+#: contents/ui/launcher/config/configGeneral.qml:31
+#, kde-format
+msgid "Websocket Address:"
+msgstr "Websocket 地址："
+
+#: contents/ui/launcher/config/configGeneral.qml:37
+#, kde-format
+msgid "Additional Settings:"
+msgstr "額外設定："
+
+#: contents/ui/launcher/config/configGeneral.qml:38
+#, kde-format
+msgid "Enable Notifications"
+msgstr "啟用通知"
+
+#: contents/ui/launcher/config/configGeneral.qml:44
+#, kde-format
+msgid "Enable Remote TTS"
+msgstr "啟用遠端 TTS"
+
+#: contents/ui/launcher/config/configGeneral.qml:49
+#, kde-format
+msgid "Enable Remote STT"
+msgstr "啟用遠端 STT"
+
+#: contents/ui/launcher/LauncherHome.qml:54
+#, kde-format
+msgid "Favorites"
+msgstr ""
+
+#: contents/ui/launcher/LauncherHome.qml:72
+#, kde-format
+msgid "Recent"
+msgstr "最近"
+
+#: contents/ui/launcher/LauncherHome.qml:100
+#, fuzzy, kde-format
+#| msgid "Applications"
+msgid "Voice Applications"
+msgstr "應用程式"
+
+#: contents/ui/launcher/LauncherHome.qml:126
+#, kde-format
+msgid "Applications"
+msgstr "應用程式"
+
+#: contents/ui/launcher/LauncherHome.qml:153
+#, kde-format
+msgid "Games"
+msgstr "遊戲"
+
+#: contents/ui/PowerManagementItem.qml:41
+#, kde-format
+msgid "Bigscreen has enabled system-wide inhibition"
+msgstr "大螢幕已啟用全系統睡眠阻擋"
+
+#: contents/ui/TaskWindowView.qml:180
+#, kde-format
+msgid "Clear Tasks"
+msgstr ""
+
+#~ msgid "Use Colored Tiles"
+#~ msgstr "使用多彩方塊"
+
+#~ msgid "Use Expanding Tiles"
+#~ msgstr "使用擴張方塊"
+
+#~ msgid "KDE Connect"
+#~ msgstr "KDE 連線"
+
+#~ msgid "Reject"
+#~ msgstr "拒絕"
+
+#~ msgid "Increase Volume"
+#~ msgstr "增加音量"
+
+#~ msgid "Decrease Volume"
+#~ msgstr "降低音量"
+
+#~ msgid "Mute"
+#~ msgstr "靜音"
+
+#~ msgid "Audio Device chooser"
+#~ msgstr "音訊裝置選擇器"
+
+#~ msgid "Network"
+#~ msgstr "網路"
+
+#~ msgid "Voice Apps"
+#~ msgstr "語音 App"
+
+#~ msgid "Getting Ready... Please Wait"
+#~ msgstr "準備中… 請稍候"
+
+#~ msgid "Audio"
+#~ msgstr "音訊"
+
+#, fuzzy
+#~| msgid "Settings"
+#~ msgid "Bigscreen Settings"
+#~ msgstr "設定"
+
+#~ msgid "Wallpaper"
+#~ msgstr "桌布"
+
+#~ msgid "Wireless"
+#~ msgstr "無線網路"
+
+#~ msgid "Mycroft Skill Installer"
+#~ msgstr "Mycroft Skill 安裝工具"
+
+#~ msgid "Not Ready"
+#~ msgstr "尚未就緒"

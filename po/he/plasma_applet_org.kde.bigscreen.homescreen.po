@@ -1,0 +1,170 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"PO-Revision-Date: 2024-03-07 15:00+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Lokalize 23.08.4\n"
+
+#: contents/config/config.qml:11
+#, kde-format
+msgid "General"
+msgstr "כללי"
+
+#: contents/ui/ConfigWindow.qml:136 contents/ui/launcher/LauncherHome.qml:182
+#, kde-format
+msgid "Settings"
+msgstr "הגדרות"
+
+#: contents/ui/ConfigWindow.qml:183 contents/ui/FavoritesManager.qml:232
+#: contents/ui/TaskWindowView.qml:217
+#, fuzzy, kde-format
+#| msgid "close"
+msgid "Close"
+msgstr "סגירה"
+
+#: contents/ui/FavoritesManager.qml:67
+#, kde-format
+msgid "Favorites Manager"
+msgstr ""
+
+#: contents/ui/FavoritesManager.qml:99
+#, kde-format
+msgid "Add Favorites"
+msgstr ""
+
+#: contents/ui/FavoritesManager.qml:167
+#, kde-format
+msgid "Remove Favorites"
+msgstr ""
+
+#: contents/ui/indicators/Favorites.qml:51
+#, kde-format
+msgid "Manage Favorites"
+msgstr ""
+
+#: contents/ui/indicators/PairWindow.qml:48
+#, kde-format
+msgid "Pairing Request From %1"
+msgstr "בקשת צימוד מאת %1"
+
+#: contents/ui/indicators/PairWindow.qml:83
+#, kde-format
+msgid "Accept"
+msgstr "קבלה"
+
+#: contents/ui/indicators/PairWindow.qml:127
+#, kde-format
+msgid "Cancel"
+msgstr ""
+
+#: contents/ui/indicators/Volume.qml:25
+#, kde-format
+msgid "Audio Volume"
+msgstr ""
+
+#: contents/ui/launcher/config/configGeneral.qml:31
+#, kde-format
+msgid "Websocket Address:"
+msgstr "כתובת Websocket:"
+
+#: contents/ui/launcher/config/configGeneral.qml:37
+#, kde-format
+msgid "Additional Settings:"
+msgstr "הגדרות נוספות:"
+
+#: contents/ui/launcher/config/configGeneral.qml:38
+#, kde-format
+msgid "Enable Notifications"
+msgstr "הפעלת התראות"
+
+#: contents/ui/launcher/config/configGeneral.qml:44
+#, kde-format
+msgid "Enable Remote TTS"
+msgstr "הפעלת שליטה קולית מרחוק"
+
+#: contents/ui/launcher/config/configGeneral.qml:49
+#, kde-format
+msgid "Enable Remote STT"
+msgstr "הפעלת הכתבה מרחוק"
+
+#: contents/ui/launcher/LauncherHome.qml:54
+#, kde-format
+msgid "Favorites"
+msgstr ""
+
+#: contents/ui/launcher/LauncherHome.qml:72
+#, kde-format
+msgid "Recent"
+msgstr "אחרונים"
+
+#: contents/ui/launcher/LauncherHome.qml:100
+#, fuzzy, kde-format
+#| msgid "Applications"
+msgid "Voice Applications"
+msgstr "יישומונים"
+
+#: contents/ui/launcher/LauncherHome.qml:126
+#, kde-format
+msgid "Applications"
+msgstr "יישומונים"
+
+#: contents/ui/launcher/LauncherHome.qml:153
+#, kde-format
+msgid "Games"
+msgstr "משחקים"
+
+#: contents/ui/PowerManagementItem.qml:41
+#, kde-format
+msgid "Bigscreen has enabled system-wide inhibition"
+msgstr "המערכת למסכים גדולים הפעילה מניעה כלל מערכתית"
+
+#: contents/ui/TaskWindowView.qml:180
+#, kde-format
+msgid "Clear Tasks"
+msgstr ""
+
+#~ msgid "Use Colored Tiles"
+#~ msgstr "להשתמש באריחים צבעוניים"
+
+#~ msgid "Use Expanding Tiles"
+#~ msgstr "להשתמש באריחים מתרחבים"
+
+#~ msgid "KDE Connect"
+#~ msgstr "KDE Connect"
+
+#~ msgid "Reject"
+#~ msgstr "דחייה"
+
+#~ msgid "Increase Volume"
+#~ msgstr "הגברת עוצמת השמע"
+
+#~ msgid "Decrease Volume"
+#~ msgstr "הנמכת עוצמת השמע"
+
+#~ msgid "Mute"
+#~ msgstr "השתקה"
+
+#~ msgid "Audio Device chooser"
+#~ msgstr "בורר התקני שמע"
+
+#~ msgid "Network"
+#~ msgstr "רשת"
+
+#~ msgid "Voice Apps"
+#~ msgstr "יישומונים קוליים"
+
+#~ msgid "Getting Ready... Please Wait"
+#~ msgstr "ההכנות בעיצומן… נא להמתין"

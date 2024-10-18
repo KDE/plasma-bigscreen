@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2023-06-17 22:17+0200\n"
+"PO-Revision-Date: 2024-10-17 07:33+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,18 +31,17 @@ msgstr "matjaz.jeran@amis.net"
 #: ui/delegates/DatePicker.qml:38
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Leto"
 
 #: ui/delegates/DatePicker.qml:54
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Mesec"
 
 #: ui/delegates/DatePicker.qml:70
-#, fuzzy, kde-format
-#| msgid "May"
+#, kde-format
 msgid "Day"
-msgstr "Maj"
+msgstr "Dan"
 
 #: ui/delegates/DeviceTimeSettings.qml:136
 #, kde-format
@@ -55,10 +54,9 @@ msgid "Timezone:"
 msgstr "Časovni pas:"
 
 #: ui/delegates/DeviceTimeSettings.qml:187
-#, fuzzy, kde-format
-#| msgid "Set time automatically:"
+#, kde-format
 msgid "Set time automatically"
-msgstr "Samodejno nastavi čas:"
+msgstr "Samodejno nastavi čas"
 
 #: ui/delegates/DeviceTimeSettings.qml:256
 #, kde-format
@@ -86,7 +84,7 @@ msgstr ""
 #: ui/delegates/DeviceTimeSettings.qml:482
 #, kde-format
 msgid "Search City / Region"
-msgstr ""
+msgstr "Išči kraj / Regijo"
 
 #: ui/delegates/DeviceTimeSettings.qml:501
 #, kde-format
@@ -101,37 +99,37 @@ msgstr "%1, %2"
 #: ui/delegates/ShortcutsPicker.qml:67
 #, kde-format
 msgid "Update Shortcut Keys"
-msgstr ""
+msgstr "Posodobi tipke bližnjice"
 
 #: ui/delegates/ShortcutsPicker.qml:106
 #, kde-format
 msgid "Reset Default"
-msgstr ""
+msgstr "Ponovno nastavi privzeto"
 
 #: ui/delegates/ShortcutsPicker.qml:120
 #, kde-format
 msgid "Set Shortcut"
-msgstr ""
+msgstr "Nastavi bližnjico"
 
 #: ui/delegates/TimePicker.qml:40
 #, kde-format
 msgid "Hour"
-msgstr ""
+msgstr "Ura"
 
 #: ui/delegates/TimePicker.qml:56
 #, kde-format
 msgid "Minute"
-msgstr ""
+msgstr "Minuta"
 
 #: ui/delegates/TimePicker.qml:72
 #, kde-format
 msgid "Second"
-msgstr ""
+msgstr "Sekunda"
 
 #: ui/delegates/TimePicker.qml:89
 #, kde-format
 msgid "AM/PM"
-msgstr ""
+msgstr "Dop/Pop"
 
 #: ui/main.qml:21
 #, kde-format
@@ -141,7 +139,7 @@ msgstr "Videz"
 #: ui/main.qml:62
 #, kde-format
 msgid "Appearance & Personalization"
-msgstr ""
+msgstr "Videz in osebna prilagoditev"
 
 #: ui/main.qml:112
 #, kde-format
@@ -171,22 +169,22 @@ msgstr "Prilagodi datum in čas"
 #: ui/main.qml:163
 #, kde-format
 msgid "Bigscreen Shortcuts"
-msgstr ""
+msgstr "Bližnjice velikega zaslona"
 
 #: ui/main.qml:171
 #, kde-format
 msgid "Bigscreen Settings Shortcut"
-msgstr ""
+msgstr "Nastavitve bližnjic velikega zaslona"
 
 #: ui/main.qml:183
 #, kde-format
 msgid "Bigscreen Tasks Shortcut"
-msgstr ""
+msgstr "Bližnjice opravil velikega zaslona"
 
 #: ui/main.qml:195
 #, kde-format
 msgid "Bigscreen Display Homescreen Shortcut"
-msgstr ""
+msgstr "Bližnjica domačega zaslona velikega zaslona"
 
 #: ui/main.qml:216
 #, kde-format

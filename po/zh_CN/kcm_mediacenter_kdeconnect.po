@@ -72,6 +72,3 @@ msgstr "点击 [←] 后退按钮返回设备选择列表"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
-
-#~ msgid "Exit"
-#~ msgstr "退出"

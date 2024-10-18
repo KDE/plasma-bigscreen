@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2024-03-17 21:21+0300\n"
+"PO-Revision-Date: 2024-10-18 02:03+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,18 +31,17 @@ msgstr "emir_sari@icloud.com"
 #: ui/delegates/DatePicker.qml:38
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Yıl"
 
 #: ui/delegates/DatePicker.qml:54
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Ay"
 
 #: ui/delegates/DatePicker.qml:70
-#, fuzzy, kde-format
-#| msgid "May"
+#, kde-format
 msgid "Day"
-msgstr "May"
+msgstr "Gün"
 
 #: ui/delegates/DeviceTimeSettings.qml:136
 #, kde-format
@@ -55,10 +54,9 @@ msgid "Timezone:"
 msgstr "Zaman dilimi:"
 
 #: ui/delegates/DeviceTimeSettings.qml:187
-#, fuzzy, kde-format
-#| msgid "Set time automatically:"
+#, kde-format
 msgid "Set time automatically"
-msgstr "Zamanı kendiliğinden ayarla:"
+msgstr "Zamanı kendiliğinden ayarla"
 
 #: ui/delegates/DeviceTimeSettings.qml:256
 #, kde-format
@@ -86,7 +84,7 @@ msgstr ""
 #: ui/delegates/DeviceTimeSettings.qml:482
 #, kde-format
 msgid "Search City / Region"
-msgstr ""
+msgstr "Şehir/Bölge ara"
 
 #: ui/delegates/DeviceTimeSettings.qml:501
 #, kde-format
@@ -101,37 +99,37 @@ msgstr "%1, %2"
 #: ui/delegates/ShortcutsPicker.qml:67
 #, kde-format
 msgid "Update Shortcut Keys"
-msgstr ""
+msgstr "Kısayol Düğmelerini Güncelle"
 
 #: ui/delegates/ShortcutsPicker.qml:106
 #, kde-format
 msgid "Reset Default"
-msgstr ""
+msgstr "Öntanımlılara Sıfırla"
 
 #: ui/delegates/ShortcutsPicker.qml:120
 #, kde-format
 msgid "Set Shortcut"
-msgstr ""
+msgstr "Kısayol Ayarla"
 
 #: ui/delegates/TimePicker.qml:40
 #, kde-format
 msgid "Hour"
-msgstr ""
+msgstr "Saat"
 
 #: ui/delegates/TimePicker.qml:56
 #, kde-format
 msgid "Minute"
-msgstr ""
+msgstr "Dakika"
 
 #: ui/delegates/TimePicker.qml:72
 #, kde-format
 msgid "Second"
-msgstr ""
+msgstr "Saniye"
 
 #: ui/delegates/TimePicker.qml:89
 #, kde-format
 msgid "AM/PM"
-msgstr ""
+msgstr "ÖÖ/ÖS"
 
 #: ui/main.qml:21
 #, kde-format
@@ -141,7 +139,7 @@ msgstr "Görünüş"
 #: ui/main.qml:62
 #, kde-format
 msgid "Appearance & Personalization"
-msgstr ""
+msgstr "Görünüş ve Kişiselleştirme"
 
 #: ui/main.qml:112
 #, kde-format
@@ -171,22 +169,22 @@ msgstr "Tarih ve Zamanı Ayarla"
 #: ui/main.qml:163
 #, kde-format
 msgid "Bigscreen Shortcuts"
-msgstr ""
+msgstr "Büyük Ekran Kısayolları"
 
 #: ui/main.qml:171
 #, kde-format
 msgid "Bigscreen Settings Shortcut"
-msgstr ""
+msgstr "Büyük Ekran Ayarları Kısayolu"
 
 #: ui/main.qml:183
 #, kde-format
 msgid "Bigscreen Tasks Shortcut"
-msgstr ""
+msgstr "Büyük Ekran Görevler Kısayolu"
 
 #: ui/main.qml:195
 #, kde-format
 msgid "Bigscreen Display Homescreen Shortcut"
-msgstr ""
+msgstr "Büyük Ekran Ana Ekranı Kısayolu"
 
 #: ui/main.qml:216
 #, kde-format

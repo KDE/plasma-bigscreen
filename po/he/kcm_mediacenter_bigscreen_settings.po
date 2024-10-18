@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2024-03-07 14:56+0200\n"
+"PO-Revision-Date: 2024-10-17 23:02+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,18 +31,17 @@ msgstr "kde-l10n-he@kde.org"
 #: ui/delegates/DatePicker.qml:38
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "שנה"
 
 #: ui/delegates/DatePicker.qml:54
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "חודש"
 
 #: ui/delegates/DatePicker.qml:70
-#, fuzzy, kde-format
-#| msgid "May"
+#, kde-format
 msgid "Day"
-msgstr "מאי"
+msgstr "יום"
 
 #: ui/delegates/DeviceTimeSettings.qml:136
 #, kde-format
@@ -55,10 +54,9 @@ msgid "Timezone:"
 msgstr "אזור זמן:"
 
 #: ui/delegates/DeviceTimeSettings.qml:187
-#, fuzzy, kde-format
-#| msgid "Set time automatically:"
+#, kde-format
 msgid "Set time automatically"
-msgstr "הגדרת השעה אוטומטית:"
+msgstr "הגדרת השעה אוטומטית"
 
 #: ui/delegates/DeviceTimeSettings.qml:256
 #, kde-format
@@ -85,7 +83,7 @@ msgstr "יש לחזור על כפתור החזרה [→] כדי לשמור את 
 #: ui/delegates/DeviceTimeSettings.qml:482
 #, kde-format
 msgid "Search City / Region"
-msgstr ""
+msgstr "חיפוש עיר / אזור"
 
 #: ui/delegates/DeviceTimeSettings.qml:501
 #, kde-format
@@ -100,37 +98,37 @@ msgstr "%1, %2"
 #: ui/delegates/ShortcutsPicker.qml:67
 #, kde-format
 msgid "Update Shortcut Keys"
-msgstr ""
+msgstr "עדכון מקשי קיצור"
 
 #: ui/delegates/ShortcutsPicker.qml:106
 #, kde-format
 msgid "Reset Default"
-msgstr ""
+msgstr "איפוס ברירת המחדל"
 
 #: ui/delegates/ShortcutsPicker.qml:120
 #, kde-format
 msgid "Set Shortcut"
-msgstr ""
+msgstr "הגדרת קיצור דרך"
 
 #: ui/delegates/TimePicker.qml:40
 #, kde-format
 msgid "Hour"
-msgstr ""
+msgstr "שעה"
 
 #: ui/delegates/TimePicker.qml:56
 #, kde-format
 msgid "Minute"
-msgstr ""
+msgstr "דקה"
 
 #: ui/delegates/TimePicker.qml:72
 #, kde-format
 msgid "Second"
-msgstr ""
+msgstr "שנייה"
 
 #: ui/delegates/TimePicker.qml:89
 #, kde-format
 msgid "AM/PM"
-msgstr ""
+msgstr "AM/PM"
 
 #: ui/main.qml:21
 #, kde-format
@@ -140,7 +138,7 @@ msgstr "מראה"
 #: ui/main.qml:62
 #, kde-format
 msgid "Appearance & Personalization"
-msgstr ""
+msgstr "מראה והתאמה אישית"
 
 #: ui/main.qml:112
 #, kde-format
@@ -170,22 +168,22 @@ msgstr "כיוון התאריך והשעה"
 #: ui/main.qml:163
 #, kde-format
 msgid "Bigscreen Shortcuts"
-msgstr ""
+msgstr "קיצורי דרך למסכים גדולים"
 
 #: ui/main.qml:171
 #, kde-format
 msgid "Bigscreen Settings Shortcut"
-msgstr ""
+msgstr "קיצור דרך להגדרות למסכים גדולים"
 
 #: ui/main.qml:183
 #, kde-format
 msgid "Bigscreen Tasks Shortcut"
-msgstr ""
+msgstr "קיצור למשימות למסכים גדולים"
 
 #: ui/main.qml:195
 #, kde-format
 msgid "Bigscreen Display Homescreen Shortcut"
-msgstr ""
+msgstr "קיצור במסך הבית לתצוגה של המסכים הגדולים"
 
 #: ui/main.qml:216
 #, kde-format

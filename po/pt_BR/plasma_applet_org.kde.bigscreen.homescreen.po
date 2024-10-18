@@ -1,0 +1,185 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# Blumen Herzenschein <herzenschein@gmail.com>, 2020.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"PO-Revision-Date: 2022-12-15 11:07-0300\n"
+"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: contents/config/config.qml:11
+#, kde-format
+msgid "General"
+msgstr "Geral"
+
+#: contents/ui/ConfigWindow.qml:136 contents/ui/launcher/LauncherHome.qml:182
+#, kde-format
+msgid "Settings"
+msgstr "Configurações adicionais"
+
+#: contents/ui/ConfigWindow.qml:183 contents/ui/FavoritesManager.qml:232
+#: contents/ui/TaskWindowView.qml:217
+#, fuzzy, kde-format
+#| msgid "close"
+msgid "Close"
+msgstr "fechar"
+
+#: contents/ui/FavoritesManager.qml:67
+#, kde-format
+msgid "Favorites Manager"
+msgstr ""
+
+#: contents/ui/FavoritesManager.qml:99
+#, kde-format
+msgid "Add Favorites"
+msgstr ""
+
+#: contents/ui/FavoritesManager.qml:167
+#, kde-format
+msgid "Remove Favorites"
+msgstr ""
+
+#: contents/ui/indicators/Favorites.qml:51
+#, kde-format
+msgid "Manage Favorites"
+msgstr ""
+
+#: contents/ui/indicators/PairWindow.qml:48
+#, kde-format
+msgid "Pairing Request From %1"
+msgstr "Solicitação de emparelhamento de %1"
+
+#: contents/ui/indicators/PairWindow.qml:83
+#, kde-format
+msgid "Accept"
+msgstr "Aceitar"
+
+#: contents/ui/indicators/PairWindow.qml:127
+#, kde-format
+msgid "Cancel"
+msgstr ""
+
+#: contents/ui/indicators/Volume.qml:25
+#, kde-format
+msgid "Audio Volume"
+msgstr ""
+
+#: contents/ui/launcher/config/configGeneral.qml:31
+#, kde-format
+msgid "Websocket Address:"
+msgstr "Endereço de websocket:"
+
+#: contents/ui/launcher/config/configGeneral.qml:37
+#, kde-format
+msgid "Additional Settings:"
+msgstr "Configurações adicionais:"
+
+#: contents/ui/launcher/config/configGeneral.qml:38
+#, kde-format
+msgid "Enable Notifications"
+msgstr "Ativar notificações"
+
+#: contents/ui/launcher/config/configGeneral.qml:44
+#, kde-format
+msgid "Enable Remote TTS"
+msgstr "Ativar Text-to-Speech (TTS) remoto"
+
+#: contents/ui/launcher/config/configGeneral.qml:49
+#, kde-format
+msgid "Enable Remote STT"
+msgstr "Ativar Speech-to-Text remoto"
+
+#: contents/ui/launcher/LauncherHome.qml:54
+#, kde-format
+msgid "Favorites"
+msgstr ""
+
+#: contents/ui/launcher/LauncherHome.qml:72
+#, kde-format
+msgid "Recent"
+msgstr "Recentes"
+
+#: contents/ui/launcher/LauncherHome.qml:100
+#, fuzzy, kde-format
+#| msgid "Applications"
+msgid "Voice Applications"
+msgstr "Aplicativos"
+
+#: contents/ui/launcher/LauncherHome.qml:126
+#, kde-format
+msgid "Applications"
+msgstr "Aplicativos"
+
+#: contents/ui/launcher/LauncherHome.qml:153
+#, kde-format
+msgid "Games"
+msgstr "Jogos"
+
+#: contents/ui/PowerManagementItem.qml:41
+#, kde-format
+msgid "Bigscreen has enabled system-wide inhibition"
+msgstr "A tela grande habilitou a inibição por todo o sistema"
+
+#: contents/ui/TaskWindowView.qml:180
+#, kde-format
+msgid "Clear Tasks"
+msgstr ""
+
+#~ msgid "Use Colored Tiles"
+#~ msgstr "Usar blocos coloridos"
+
+#~ msgid "Use Expanding Tiles"
+#~ msgstr "Usar blocos expansíveis"
+
+#~ msgid "KDE Connect"
+#~ msgstr "KDE Connect"
+
+#~ msgid "Reject"
+#~ msgstr "Rejeitar"
+
+#~ msgid "Increase Volume"
+#~ msgstr "Aumentar o volume"
+
+#~ msgid "Decrease Volume"
+#~ msgstr "Diminuir o volume"
+
+#~ msgid "Mute"
+#~ msgstr "Emudecer"
+
+#~ msgid "Audio Device chooser"
+#~ msgstr "Seletor de dispositivo de áudio"
+
+#~ msgid "Network"
+#~ msgstr "Rede"
+
+#~ msgid "Voice Apps"
+#~ msgstr "Apps de voz"
+
+#~ msgid "Getting Ready... Please Wait"
+#~ msgstr "Preparando, favor aguardar"
+
+#~ msgid "Audio"
+#~ msgstr "Áudio"
+
+#~ msgid "Bigscreen Settings"
+#~ msgstr "Configurações da tela grande"
+
+#~ msgid "Wallpaper"
+#~ msgstr "Papel de parede"
+
+#~ msgid "Wireless"
+#~ msgstr "Rede sem fio"
+
+#~ msgid "Mycroft Skill Installer"
+#~ msgstr "Instalador de skills do Mycroft"

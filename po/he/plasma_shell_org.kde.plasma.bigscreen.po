@@ -1,0 +1,43 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"PO-Revision-Date: 2024-03-08 10:08+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Lokalize 23.08.4\n"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:49
+msgid "Layout cannot be changed while widgets are locked"
+msgstr "אי אפשר לשנות את הפריסה כשהווידג׳טים נעולים"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:60
+msgid "Wallpaper Type:"
+msgstr "סוג תמונת רקע:"
+
+#: contents/configuration/ContainmentConfiguration.qml:37
+msgid "Wallpaper"
+msgstr "תמונת רקע"
+
+#: contents/configuration/ContainmentConfiguration.qml:130
+msgid "Slideshow"
+msgstr "מצגת"
+
+#: contents/lockscreen/PasswordDialog.qml:46
+msgid "Password"
+msgstr ""
+
+#: contents/lockscreen/PasswordDialog.qml:76
+msgid "Unlock Screen"
+msgstr ""

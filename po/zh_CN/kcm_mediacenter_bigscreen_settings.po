@@ -39,10 +39,9 @@ msgid "Month"
 msgstr ""
 
 #: ui/delegates/DatePicker.qml:70
-#, fuzzy, kde-format
-#| msgid "May"
+#, kde-format
 msgid "Day"
-msgstr "五月"
+msgstr ""
 
 #: ui/delegates/DeviceTimeSettings.qml:136
 #, kde-format
@@ -55,10 +54,9 @@ msgid "Timezone:"
 msgstr "时区："
 
 #: ui/delegates/DeviceTimeSettings.qml:187
-#, fuzzy, kde-format
-#| msgid "Set time automatically:"
+#, kde-format
 msgid "Set time automatically"
-msgstr "自动设置时间："
+msgstr ""
 
 #: ui/delegates/DeviceTimeSettings.qml:256
 #, kde-format
@@ -191,39 +189,3 @@ msgstr ""
 #, kde-format
 msgid "General Appearance"
 msgstr "常规外观"
-
-#~ msgid "Jan"
-#~ msgstr "一月"
-
-#~ msgid "Feb"
-#~ msgstr "二月"
-
-#~ msgid "Mar"
-#~ msgstr "三月"
-
-#~ msgid "Apr"
-#~ msgstr "四月"
-
-#~ msgid "Jun"
-#~ msgstr "六月"
-
-#~ msgid "Jul"
-#~ msgstr "七月"
-
-#~ msgid "Aug"
-#~ msgstr "八月"
-
-#~ msgid "Sep"
-#~ msgstr "九月"
-
-#~ msgid "Oct"
-#~ msgstr "十月"
-
-#~ msgid "Nov"
-#~ msgstr "十一月"
-
-#~ msgid "Dec"
-#~ msgstr "十二月"
-
-#~ msgid "Exit"
-#~ msgstr "退出"

@@ -1,0 +1,171 @@
+# Bulgarian translations for plasma-bigscreen package.
+# Copyright (C) 2022 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# Automatically generated, 2022.
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"PO-Revision-Date: 2022-12-08 18:54+0100\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.08.3\n"
+
+#: contents/config/config.qml:11
+#, kde-format
+msgid "General"
+msgstr "Общи"
+
+#: contents/ui/ConfigWindow.qml:136 contents/ui/launcher/LauncherHome.qml:182
+#, kde-format
+msgid "Settings"
+msgstr "Настройки"
+
+#: contents/ui/ConfigWindow.qml:183 contents/ui/FavoritesManager.qml:232
+#: contents/ui/TaskWindowView.qml:217
+#, fuzzy, kde-format
+#| msgid "close"
+msgid "Close"
+msgstr "затваряне"
+
+#: contents/ui/FavoritesManager.qml:67
+#, kde-format
+msgid "Favorites Manager"
+msgstr ""
+
+#: contents/ui/FavoritesManager.qml:99
+#, kde-format
+msgid "Add Favorites"
+msgstr ""
+
+#: contents/ui/FavoritesManager.qml:167
+#, kde-format
+msgid "Remove Favorites"
+msgstr ""
+
+#: contents/ui/indicators/Favorites.qml:51
+#, kde-format
+msgid "Manage Favorites"
+msgstr ""
+
+#: contents/ui/indicators/PairWindow.qml:48
+#, kde-format
+msgid "Pairing Request From %1"
+msgstr "Заявка за сдвояване от %1"
+
+#: contents/ui/indicators/PairWindow.qml:83
+#, kde-format
+msgid "Accept"
+msgstr "Приемане"
+
+#: contents/ui/indicators/PairWindow.qml:127
+#, kde-format
+msgid "Cancel"
+msgstr ""
+
+#: contents/ui/indicators/Volume.qml:25
+#, kde-format
+msgid "Audio Volume"
+msgstr ""
+
+#: contents/ui/launcher/config/configGeneral.qml:31
+#, kde-format
+msgid "Websocket Address:"
+msgstr "Адрес на Websocket:"
+
+#: contents/ui/launcher/config/configGeneral.qml:37
+#, kde-format
+msgid "Additional Settings:"
+msgstr "Допълнителни настройки:"
+
+#: contents/ui/launcher/config/configGeneral.qml:38
+#, kde-format
+msgid "Enable Notifications"
+msgstr "Включване на известяванията"
+
+#: contents/ui/launcher/config/configGeneral.qml:44
+#, kde-format
+msgid "Enable Remote TTS"
+msgstr "Активиране на Remote TTS"
+
+#: contents/ui/launcher/config/configGeneral.qml:49
+#, kde-format
+msgid "Enable Remote STT"
+msgstr "Активиране на Remote STT"
+
+#: contents/ui/launcher/LauncherHome.qml:54
+#, kde-format
+msgid "Favorites"
+msgstr ""
+
+#: contents/ui/launcher/LauncherHome.qml:72
+#, kde-format
+msgid "Recent"
+msgstr "Скоро отваряни"
+
+#: contents/ui/launcher/LauncherHome.qml:100
+#, fuzzy, kde-format
+#| msgid "Applications"
+msgid "Voice Applications"
+msgstr "Приложения"
+
+#: contents/ui/launcher/LauncherHome.qml:126
+#, kde-format
+msgid "Applications"
+msgstr "Приложения"
+
+#: contents/ui/launcher/LauncherHome.qml:153
+#, kde-format
+msgid "Games"
+msgstr "Игри"
+
+#: contents/ui/PowerManagementItem.qml:41
+#, kde-format
+msgid "Bigscreen has enabled system-wide inhibition"
+msgstr "BigScreen е активирал инхибирането на системата"
+
+#: contents/ui/TaskWindowView.qml:180
+#, kde-format
+msgid "Clear Tasks"
+msgstr ""
+
+#~ msgid "Use Colored Tiles"
+#~ msgstr "Използване на цветни плочки"
+
+#~ msgid "Use Expanding Tiles"
+#~ msgstr "Използване на разширяващи се плочки"
+
+#~ msgid "KDE Connect"
+#~ msgstr "KDE Connect"
+
+#~ msgid "Reject"
+#~ msgstr "Отхвърляне"
+
+#~ msgid "Increase Volume"
+#~ msgstr "Увеличаване на звука"
+
+#~ msgid "Decrease Volume"
+#~ msgstr "Намаляване на звука"
+
+#~ msgid "Mute"
+#~ msgstr "Изключване на звука"
+
+#~ msgid "Audio Device chooser"
+#~ msgstr "Избиране на звуково устройство"
+
+#~ msgid "Network"
+#~ msgstr "Мрежа"
+
+#~ msgid "Voice Apps"
+#~ msgstr "Гласово приложение"
+
+#~ msgid "Getting Ready... Please Wait"
+#~ msgstr "Подготовка... Моля, изчакайте"
