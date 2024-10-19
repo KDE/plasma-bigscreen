@@ -121,7 +121,7 @@
     <p xml:lang="tr">Plasma Büyük Ekran, TV’ler için bir açık kaynaklı kullanıcı arayüzüdür. Bir Linux dağıtımı üzerinde çalışan Plasma Büyük Ekran, televizyonunuzu veya ortam kutunuzu tümüyle üzerinde oynanabilir bir aygıta dönüştürür. Kocaman bir çalıştırıcı ile tüm kurulu uygulamalara ve yeteneklere ulaşabilirsiniz. Ses veya uzaktan kumanda ile denetlenebilirdir.</p>
     <p xml:lang="uk">Plasma Bigscreen — інтерфейс з відкритим кодом для телевізорів Працюючи на основі дистрибутива Linux, Plasma Bigscreen перетворює ваш телевізор або телеприставку на пристрій із усіма придатними до програмування можливостями. Велике вікно запуску надає вам доступ до усіх встановлених програм і можливостей. Системою можна керувати за допомогою голосового керування або пульту до телевізора.</p>
     <p xml:lang="x-test">xxPlasma Bigscreen is an open-source user interface for TVs. Running on top of a Linux distribution, Plasma Bigscreen turns your TV or set-top box into a fully hackable device. A big launcher giving you easy access to any installed apps and skills. Controllable via voice or TV remote.xx</p>
-    <p xml:lang="zh-CN">Plasma 大屏幕版是一款针对电视机设计的开源用户界面。它在 Linux 发行版的基础上运行，可以将电视机或者机顶盒变成完全可定制的设备。它的大型启动器让您可以轻松访问已安装的应用和功能。支持语音或遥控器控制。</p>
+    <p xml:lang="zh-CN">Plasma 大屏幕是一款针对电视机设计的开源用户界面。它在 Linux 发行版的基础上运行，可以将电视机或者机顶盒变成完全可定制的设备。它的大型启动器让您可以轻松访问已安装的应用和功能。支持语音或遥控器控制。</p>
     <p xml:lang="zh-TW">《Plasma 大螢幕》是款開放原始碼的電視用使用者介面。《Plasma 大螢幕》以 Linux 發行版為執行基礎，將您的電視或視訊盒，搖身一變成為完全可以自由改造的裝置。全螢幕的啟動器讓您可以輕鬆使用安裝的應用程式與功能。可以使用語音或電視遙控器控制。</p>
   </description>
   <project_group>KDE</project_group>
