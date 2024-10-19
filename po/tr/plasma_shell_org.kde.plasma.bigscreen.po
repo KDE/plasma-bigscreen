@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2024-03-17 21:23+0300\n"
+"PO-Revision-Date: 2024-10-18 13:39+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:49
 msgid "Layout cannot be changed while widgets are locked"
@@ -36,8 +36,8 @@ msgstr "Slayt Gösterisi"
 
 #: contents/lockscreen/PasswordDialog.qml:46
 msgid "Password"
-msgstr ""
+msgstr "Parola"
 
 #: contents/lockscreen/PasswordDialog.qml:76
 msgid "Unlock Screen"
-msgstr ""
+msgstr "Ekran Kilidini Aç"

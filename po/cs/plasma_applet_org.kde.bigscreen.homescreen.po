@@ -29,10 +29,9 @@ msgstr "Nastavení"
 
 #: contents/ui/ConfigWindow.qml:183 contents/ui/FavoritesManager.qml:232
 #: contents/ui/TaskWindowView.qml:217
-#, fuzzy, kde-format
-#| msgid "close"
+#, kde-format
 msgid "Close"
-msgstr "zavřít"
+msgstr "Zavřít"
 
 #: contents/ui/FavoritesManager.qml:67
 #, kde-format
@@ -67,12 +66,12 @@ msgstr "Přijmout"
 #: contents/ui/indicators/PairWindow.qml:127
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušit"
 
 #: contents/ui/indicators/Volume.qml:25
 #, kde-format
 msgid "Audio Volume"
-msgstr ""
+msgstr "Hlasitost zvuku"
 
 #: contents/ui/launcher/config/configGeneral.qml:31
 #, kde-format
@@ -102,7 +101,7 @@ msgstr "Povolit vzdálené STT"
 #: contents/ui/launcher/LauncherHome.qml:54
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Oblíbené"
 
 #: contents/ui/launcher/LauncherHome.qml:72
 #, kde-format
@@ -110,10 +109,9 @@ msgid "Recent"
 msgstr "Nedávné"
 
 #: contents/ui/launcher/LauncherHome.qml:100
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Voice Applications"
-msgstr "Aplikace"
+msgstr ""
 
 #: contents/ui/launcher/LauncherHome.qml:126
 #, kde-format
@@ -134,21 +132,3 @@ msgstr "Bigscreen povolil pozastavení systému"
 #, kde-format
 msgid "Clear Tasks"
 msgstr ""
-
-#~ msgid "KDE Connect"
-#~ msgstr "KDE Connect"
-
-#~ msgid "Reject"
-#~ msgstr "Odmítnout"
-
-#~ msgid "Increase Volume"
-#~ msgstr "Zvýšit hlasitost"
-
-#~ msgid "Decrease Volume"
-#~ msgstr "Snížit hlasitost"
-
-#~ msgid "Mute"
-#~ msgstr "Ztlumit"
-
-#~ msgid "Network"
-#~ msgstr "Síť"

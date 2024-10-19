@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
 "PO-Revision-Date: 2022-04-06 11:28+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgstr "%1%"
 #: ui/DeviceChooserPage.qml:33
 #, kde-format
 msgid "Audio Settings"
-msgstr ""
+msgstr "Nastavení audio"
 
 #: ui/DeviceChooserPage.qml:92
 #, kde-format
@@ -52,10 +52,3 @@ msgstr "Nástroj pro výběr hudebního zařízení"
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "Použijte tlačítko Zpět [←] k návratu na výběr zařízení"
-
-#~ msgctxt "label of device items"
-#~ msgid "%1 (%2)"
-#~ msgstr "%1 (%2)"
-
-#~ msgid "Exit"
-#~ msgstr "Ukončit"

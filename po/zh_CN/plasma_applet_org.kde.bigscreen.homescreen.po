@@ -32,27 +32,27 @@ msgstr "设置"
 #: contents/ui/TaskWindowView.qml:217
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "关闭"
 
 #: contents/ui/FavoritesManager.qml:67
 #, kde-format
 msgid "Favorites Manager"
-msgstr ""
+msgstr "收藏管理器"
 
 #: contents/ui/FavoritesManager.qml:99
 #, kde-format
 msgid "Add Favorites"
-msgstr ""
+msgstr "添加收藏"
 
 #: contents/ui/FavoritesManager.qml:167
 #, kde-format
 msgid "Remove Favorites"
-msgstr ""
+msgstr "移除收藏"
 
 #: contents/ui/indicators/Favorites.qml:51
 #, kde-format
 msgid "Manage Favorites"
-msgstr ""
+msgstr "管理收藏"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -67,12 +67,12 @@ msgstr "接受"
 #: contents/ui/indicators/PairWindow.qml:127
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: contents/ui/indicators/Volume.qml:25
 #, kde-format
 msgid "Audio Volume"
-msgstr ""
+msgstr "音量"
 
 #: contents/ui/launcher/config/configGeneral.qml:31
 #, kde-format
@@ -102,7 +102,7 @@ msgstr "启用远程 STT"
 #: contents/ui/launcher/LauncherHome.qml:54
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "收藏"
 
 #: contents/ui/launcher/LauncherHome.qml:72
 #, kde-format
@@ -112,7 +112,7 @@ msgstr "最近"
 #: contents/ui/launcher/LauncherHome.qml:100
 #, kde-format
 msgid "Voice Applications"
-msgstr ""
+msgstr "语音应用程序"
 
 #: contents/ui/launcher/LauncherHome.qml:126
 #, kde-format
@@ -132,4 +132,4 @@ msgstr "大屏幕已启用全系统抑制功能"
 #: contents/ui/TaskWindowView.qml:180
 #, kde-format
 msgid "Clear Tasks"
-msgstr ""
+msgstr "清除任务"

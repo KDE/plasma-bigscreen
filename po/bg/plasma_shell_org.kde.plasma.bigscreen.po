@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
 # Automatically generated, 2022.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2022-07-10 16:41+0200\n"
+"PO-Revision-Date: 2024-10-18 09:51+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:49
 msgid "Layout cannot be changed while widgets are locked"
@@ -37,8 +37,8 @@ msgstr "Прожекция"
 
 #: contents/lockscreen/PasswordDialog.qml:46
 msgid "Password"
-msgstr ""
+msgstr "Парола"
 
 #: contents/lockscreen/PasswordDialog.qml:76
 msgid "Unlock Screen"
-msgstr ""
+msgstr "Отключване на екрана"

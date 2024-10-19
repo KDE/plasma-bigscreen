@@ -31,7 +31,7 @@ msgstr "%1%"
 #: ui/DeviceChooserPage.qml:33
 #, kde-format
 msgid "Audio Settings"
-msgstr ""
+msgstr "音频设置"
 
 #: ui/DeviceChooserPage.qml:92
 #, kde-format

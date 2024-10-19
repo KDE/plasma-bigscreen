@@ -71,6 +71,3 @@ msgstr "Použijte tlačítko Zpět [←] k návratu na výběr zařízení"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
-
-#~ msgid "Exit"
-#~ msgstr "Ukončit"

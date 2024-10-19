@@ -30,18 +30,17 @@ msgstr "vit@pelcak.org"
 #: ui/delegates/DatePicker.qml:38
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Rok"
 
 #: ui/delegates/DatePicker.qml:54
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Měsíc"
 
 #: ui/delegates/DatePicker.qml:70
-#, fuzzy, kde-format
-#| msgid "May"
+#, kde-format
 msgid "Day"
-msgstr "Kvě"
+msgstr ""
 
 #: ui/delegates/DeviceTimeSettings.qml:136
 #, kde-format
@@ -54,10 +53,9 @@ msgid "Timezone:"
 msgstr "Časové pásmo:"
 
 #: ui/delegates/DeviceTimeSettings.qml:187
-#, fuzzy, kde-format
-#| msgid "Set time automatically:"
+#, kde-format
 msgid "Set time automatically"
-msgstr "Nastavit čas automaticky:"
+msgstr ""
 
 #: ui/delegates/DeviceTimeSettings.qml:256
 #, kde-format
@@ -124,12 +122,12 @@ msgstr ""
 #: ui/delegates/TimePicker.qml:72
 #, kde-format
 msgid "Second"
-msgstr ""
+msgstr "Sekunda"
 
 #: ui/delegates/TimePicker.qml:89
 #, kde-format
 msgid "AM/PM"
-msgstr ""
+msgstr "ODP./DOP."
 
 #: ui/main.qml:21
 #, kde-format
@@ -190,39 +188,3 @@ msgstr ""
 #, kde-format
 msgid "General Appearance"
 msgstr "Obecný vzhled"
-
-#~ msgid "Jan"
-#~ msgstr "Led"
-
-#~ msgid "Feb"
-#~ msgstr "Úno"
-
-#~ msgid "Mar"
-#~ msgstr "Bře"
-
-#~ msgid "Apr"
-#~ msgstr "Dub"
-
-#~ msgid "Jun"
-#~ msgstr "Čer"
-
-#~ msgid "Jul"
-#~ msgstr "Čec"
-
-#~ msgid "Aug"
-#~ msgstr "Srp"
-
-#~ msgid "Sep"
-#~ msgstr "Zář"
-
-#~ msgid "Oct"
-#~ msgstr "Říj"
-
-#~ msgid "Nov"
-#~ msgstr "Lis"
-
-#~ msgid "Dec"
-#~ msgstr "Pro"
-
-#~ msgid "Exit"
-#~ msgstr "Ukončit"

@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2022-12-08 12:14+0100\n"
+"PO-Revision-Date: 2024-10-18 10:54+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: contents/config/config.qml:11
 #, kde-format
@@ -29,30 +29,29 @@ msgstr "Instellingen"
 
 #: contents/ui/ConfigWindow.qml:183 contents/ui/FavoritesManager.qml:232
 #: contents/ui/TaskWindowView.qml:217
-#, fuzzy, kde-format
-#| msgid "close"
+#, kde-format
 msgid "Close"
-msgstr "sluiten"
+msgstr "Sluiten"
 
 #: contents/ui/FavoritesManager.qml:67
 #, kde-format
 msgid "Favorites Manager"
-msgstr ""
+msgstr "Beheerder van favorieten"
 
 #: contents/ui/FavoritesManager.qml:99
 #, kde-format
 msgid "Add Favorites"
-msgstr ""
+msgstr "Favorieten toevoegen"
 
 #: contents/ui/FavoritesManager.qml:167
 #, kde-format
 msgid "Remove Favorites"
-msgstr ""
+msgstr "Favorieten verwijderen"
 
 #: contents/ui/indicators/Favorites.qml:51
 #, kde-format
 msgid "Manage Favorites"
-msgstr ""
+msgstr "Favorieten beheren"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -67,12 +66,12 @@ msgstr "Accepteren"
 #: contents/ui/indicators/PairWindow.qml:127
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Annuleren"
 
 #: contents/ui/indicators/Volume.qml:25
 #, kde-format
 msgid "Audio Volume"
-msgstr ""
+msgstr "Geluidsvolume"
 
 #: contents/ui/launcher/config/configGeneral.qml:31
 #, kde-format
@@ -102,7 +101,7 @@ msgstr "STT op afstand inschakelen"
 #: contents/ui/launcher/LauncherHome.qml:54
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Favorieten"
 
 #: contents/ui/launcher/LauncherHome.qml:72
 #, kde-format
@@ -110,10 +109,9 @@ msgid "Recent"
 msgstr "Recent"
 
 #: contents/ui/launcher/LauncherHome.qml:100
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Voice Applications"
-msgstr "Toepassingen"
+msgstr "Toepassingen met stem"
 
 #: contents/ui/launcher/LauncherHome.qml:126
 #, kde-format
@@ -133,7 +131,7 @@ msgstr "Bigscreen heeft systeembreed slapen ingeschakeld"
 #: contents/ui/TaskWindowView.qml:180
 #, kde-format
 msgid "Clear Tasks"
-msgstr ""
+msgstr "Taken wissen"
 
 #~ msgid "Use Colored Tiles"
 #~ msgstr "Gekleurde tegels gebruiken"

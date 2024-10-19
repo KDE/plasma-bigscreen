@@ -31,17 +31,17 @@ msgstr "tds00@qq.com"
 #: ui/delegates/DatePicker.qml:38
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "年"
 
 #: ui/delegates/DatePicker.qml:54
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "月"
 
 #: ui/delegates/DatePicker.qml:70
 #, kde-format
 msgid "Day"
-msgstr ""
+msgstr "日"
 
 #: ui/delegates/DeviceTimeSettings.qml:136
 #, kde-format
@@ -56,7 +56,7 @@ msgstr "时区："
 #: ui/delegates/DeviceTimeSettings.qml:187
 #, kde-format
 msgid "Set time automatically"
-msgstr ""
+msgstr "自动设置时间"
 
 #: ui/delegates/DeviceTimeSettings.qml:256
 #, kde-format
@@ -83,7 +83,7 @@ msgstr "点击 [←] 后退按钮保存配置并返回设置页面"
 #: ui/delegates/DeviceTimeSettings.qml:482
 #, kde-format
 msgid "Search City / Region"
-msgstr ""
+msgstr "搜索城市/地区"
 
 #: ui/delegates/DeviceTimeSettings.qml:501
 #, kde-format
@@ -98,37 +98,37 @@ msgstr "%1，%2"
 #: ui/delegates/ShortcutsPicker.qml:67
 #, kde-format
 msgid "Update Shortcut Keys"
-msgstr ""
+msgstr "更新快捷键"
 
 #: ui/delegates/ShortcutsPicker.qml:106
 #, kde-format
 msgid "Reset Default"
-msgstr ""
+msgstr "重置为默认值"
 
 #: ui/delegates/ShortcutsPicker.qml:120
 #, kde-format
 msgid "Set Shortcut"
-msgstr ""
+msgstr "设置快捷键"
 
 #: ui/delegates/TimePicker.qml:40
 #, kde-format
 msgid "Hour"
-msgstr ""
+msgstr " 小时"
 
 #: ui/delegates/TimePicker.qml:56
 #, kde-format
 msgid "Minute"
-msgstr ""
+msgstr "分钟"
 
 #: ui/delegates/TimePicker.qml:72
 #, kde-format
 msgid "Second"
-msgstr ""
+msgstr "秒"
 
 #: ui/delegates/TimePicker.qml:89
 #, kde-format
 msgid "AM/PM"
-msgstr ""
+msgstr "AM/PM"
 
 #: ui/main.qml:21
 #, kde-format
@@ -138,7 +138,7 @@ msgstr "外观"
 #: ui/main.qml:62
 #, kde-format
 msgid "Appearance & Personalization"
-msgstr ""
+msgstr "外观和个性化"
 
 #: ui/main.qml:112
 #, kde-format
@@ -168,22 +168,22 @@ msgstr "调整日期和时间"
 #: ui/main.qml:163
 #, kde-format
 msgid "Bigscreen Shortcuts"
-msgstr ""
+msgstr "大屏幕快捷键"
 
 #: ui/main.qml:171
 #, kde-format
 msgid "Bigscreen Settings Shortcut"
-msgstr ""
+msgstr "大屏幕设置快捷键"
 
 #: ui/main.qml:183
 #, kde-format
 msgid "Bigscreen Tasks Shortcut"
-msgstr ""
+msgstr "大屏幕任务快捷键"
 
 #: ui/main.qml:195
 #, kde-format
 msgid "Bigscreen Display Homescreen Shortcut"
-msgstr ""
+msgstr "大屏幕显示主屏幕快捷键"
 
 #: ui/main.qml:216
 #, kde-format

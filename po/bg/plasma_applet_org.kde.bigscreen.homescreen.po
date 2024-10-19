@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
 # Automatically generated, 2022.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2022-12-08 18:54+0100\n"
+"PO-Revision-Date: 2024-10-18 10:07+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: contents/config/config.qml:11
 #, kde-format
@@ -31,30 +31,29 @@ msgstr "Настройки"
 
 #: contents/ui/ConfigWindow.qml:183 contents/ui/FavoritesManager.qml:232
 #: contents/ui/TaskWindowView.qml:217
-#, fuzzy, kde-format
-#| msgid "close"
+#, kde-format
 msgid "Close"
-msgstr "затваряне"
+msgstr "Затваряне"
 
 #: contents/ui/FavoritesManager.qml:67
 #, kde-format
 msgid "Favorites Manager"
-msgstr ""
+msgstr "Управление на Предпочитани"
 
 #: contents/ui/FavoritesManager.qml:99
 #, kde-format
 msgid "Add Favorites"
-msgstr ""
+msgstr "Добавяне в Предпочитани"
 
 #: contents/ui/FavoritesManager.qml:167
 #, kde-format
 msgid "Remove Favorites"
-msgstr ""
+msgstr "Премахване от Предпочитани"
 
 #: contents/ui/indicators/Favorites.qml:51
 #, kde-format
 msgid "Manage Favorites"
-msgstr ""
+msgstr "Управление на Предпочитани"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -69,12 +68,12 @@ msgstr "Приемане"
 #: contents/ui/indicators/PairWindow.qml:127
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Отказ"
 
 #: contents/ui/indicators/Volume.qml:25
 #, kde-format
 msgid "Audio Volume"
-msgstr ""
+msgstr "Сила на звука"
 
 #: contents/ui/launcher/config/configGeneral.qml:31
 #, kde-format
@@ -104,7 +103,7 @@ msgstr "Активиране на Remote STT"
 #: contents/ui/launcher/LauncherHome.qml:54
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Предпочитани"
 
 #: contents/ui/launcher/LauncherHome.qml:72
 #, kde-format
@@ -112,10 +111,9 @@ msgid "Recent"
 msgstr "Скоро отваряни"
 
 #: contents/ui/launcher/LauncherHome.qml:100
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Voice Applications"
-msgstr "Приложения"
+msgstr "Гласове приложения"
 
 #: contents/ui/launcher/LauncherHome.qml:126
 #, kde-format
@@ -135,7 +133,7 @@ msgstr "BigScreen е активирал инхибирането на систе
 #: contents/ui/TaskWindowView.qml:180
 #, kde-format
 msgid "Clear Tasks"
-msgstr ""
+msgstr "Изчистване на задачите"
 
 #~ msgid "Use Colored Tiles"
 #~ msgstr "Използване на цветни плочки"

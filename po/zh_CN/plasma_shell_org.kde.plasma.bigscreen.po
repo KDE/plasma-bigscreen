@@ -32,12 +32,12 @@ msgstr "壁纸"
 
 #: contents/configuration/ContainmentConfiguration.qml:130
 msgid "Slideshow"
-msgstr "幻灯片放映"
+msgstr "幻灯片"
 
 #: contents/lockscreen/PasswordDialog.qml:46
 msgid "Password"
-msgstr ""
+msgstr "密码"
 
 #: contents/lockscreen/PasswordDialog.qml:76
 msgid "Unlock Screen"
-msgstr ""
+msgstr "解锁屏幕"

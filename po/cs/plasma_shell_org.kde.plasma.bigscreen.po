@@ -35,8 +35,8 @@ msgstr "Promítání"
 
 #: contents/lockscreen/PasswordDialog.qml:46
 msgid "Password"
-msgstr ""
+msgstr "Heslo"
 
 #: contents/lockscreen/PasswordDialog.qml:76
 msgid "Unlock Screen"
-msgstr ""
+msgstr "Odemknout obrazovku"

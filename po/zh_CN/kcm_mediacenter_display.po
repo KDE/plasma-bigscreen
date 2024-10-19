@@ -21,44 +21,44 @@ msgstr ""
 #: ui/delegates/ConfirmationDialog.qml:54
 #, kde-format
 msgid "New Resolution"
-msgstr ""
+msgstr "新分辨率"
 
 #: ui/delegates/ConfirmationDialog.qml:89
 #, kde-format
 msgid "Accept"
-msgstr ""
+msgstr "接受"
 
 #: ui/delegates/ConfirmationDialog.qml:133
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: ui/delegates/LocalSettingCurrentResolution.qml:46
 #, kde-format
 msgid "Resolution: "
-msgstr ""
+msgstr "分辨率："
 
 #: ui/delegates/LocalSettingCurrentResolution.qml:69
 #, kde-format
 msgid "Refresh Rate: "
-msgstr ""
+msgstr "刷新率："
 
 #: ui/delegates/LocalSettingCurrentResolution.qml:92
 #, kde-format
 msgid "Mode: "
-msgstr ""
+msgstr "模式："
 
 #: ui/delegates/LocalSettingResolution.qml:65
 #, kde-format
 msgid "Available Resolutions"
-msgstr ""
+msgstr "可用的分辨率"
 
 #: ui/delegates/LocalSettingScale.qml:52
 #, kde-format
 msgid "Scale"
-msgstr ""
+msgstr "缩放"
 
 #: ui/main.qml:21 ui/main.qml:52
 #, kde-format
 msgid "Display Configuration"
-msgstr ""
+msgstr "显示配置"

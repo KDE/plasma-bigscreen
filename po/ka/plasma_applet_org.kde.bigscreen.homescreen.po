@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2022-12-12 07:24+0100\n"
+"PO-Revision-Date: 2024-10-18 05:36+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: contents/config/config.qml:11
 #, kde-format
@@ -30,30 +30,29 @@ msgstr "პარამეტრები"
 
 #: contents/ui/ConfigWindow.qml:183 contents/ui/FavoritesManager.qml:232
 #: contents/ui/TaskWindowView.qml:217
-#, fuzzy, kde-format
-#| msgid "close"
+#, kde-format
 msgid "Close"
 msgstr "დახურვა"
 
 #: contents/ui/FavoritesManager.qml:67
 #, kde-format
 msgid "Favorites Manager"
-msgstr ""
+msgstr "სანიშნეების მმართველი"
 
 #: contents/ui/FavoritesManager.qml:99
 #, kde-format
 msgid "Add Favorites"
-msgstr ""
+msgstr "სანიშნეების დამატება"
 
 #: contents/ui/FavoritesManager.qml:167
 #, kde-format
 msgid "Remove Favorites"
-msgstr ""
+msgstr "სანიშნეების წაშლა"
 
 #: contents/ui/indicators/Favorites.qml:51
 #, kde-format
 msgid "Manage Favorites"
-msgstr ""
+msgstr "სანიშნეების მართვა"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -68,12 +67,12 @@ msgstr "დასტური"
 #: contents/ui/indicators/PairWindow.qml:127
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "გაუქმება"
 
 #: contents/ui/indicators/Volume.qml:25
 #, kde-format
 msgid "Audio Volume"
-msgstr ""
+msgstr "ხმის დონე"
 
 #: contents/ui/launcher/config/configGeneral.qml:31
 #, kde-format
@@ -103,18 +102,17 @@ msgstr "დაშორებული STT-ის ჩართვა"
 #: contents/ui/launcher/LauncherHome.qml:54
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "სანიშნეები"
 
 #: contents/ui/launcher/LauncherHome.qml:72
 #, kde-format
 msgid "Recent"
-msgstr "ახლახანს"
+msgstr "უახლესი"
 
 #: contents/ui/launcher/LauncherHome.qml:100
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Voice Applications"
-msgstr "აპლიკაციები"
+msgstr "ხმის აპლიკაციები"
 
 #: contents/ui/launcher/LauncherHome.qml:126
 #, kde-format
@@ -134,7 +132,7 @@ msgstr "Bigscreen -მა მთელი სისტემის კონტ�
 #: contents/ui/TaskWindowView.qml:180
 #, kde-format
 msgid "Clear Tasks"
-msgstr ""
+msgstr "დავალებების გასუფთავება"
 
 #~ msgid "Use Colored Tiles"
 #~ msgstr "გაფერადებული ფილების გამოყენება"
