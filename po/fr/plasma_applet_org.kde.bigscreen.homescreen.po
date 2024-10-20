@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2024-04-26 16:16+0200\n"
+"PO-Revision-Date: 2024-10-18 11:12+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -26,30 +26,29 @@ msgstr "Configuration"
 
 #: contents/ui/ConfigWindow.qml:183 contents/ui/FavoritesManager.qml:232
 #: contents/ui/TaskWindowView.qml:217
-#, fuzzy, kde-format
-#| msgid "close"
+#, kde-format
 msgid "Close"
-msgstr "fermer"
+msgstr "Fermer"
 
 #: contents/ui/FavoritesManager.qml:67
 #, kde-format
 msgid "Favorites Manager"
-msgstr ""
+msgstr "Gestionnaire de favoris"
 
 #: contents/ui/FavoritesManager.qml:99
 #, kde-format
 msgid "Add Favorites"
-msgstr ""
+msgstr "Ajouter aux favoris"
 
 #: contents/ui/FavoritesManager.qml:167
 #, kde-format
 msgid "Remove Favorites"
-msgstr ""
+msgstr "Supprimer des favoris"
 
 #: contents/ui/indicators/Favorites.qml:51
 #, kde-format
 msgid "Manage Favorites"
-msgstr ""
+msgstr "Gérer les favoris"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -64,12 +63,12 @@ msgstr "Accepter"
 #: contents/ui/indicators/PairWindow.qml:127
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Annuler"
 
 #: contents/ui/indicators/Volume.qml:25
 #, kde-format
 msgid "Audio Volume"
-msgstr ""
+msgstr "Volume audio"
 
 #: contents/ui/launcher/config/configGeneral.qml:31
 #, kde-format
@@ -99,7 +98,7 @@ msgstr "Autoriser la reconnaissance vocale à distance"
 #: contents/ui/launcher/LauncherHome.qml:54
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Favoris"
 
 #: contents/ui/launcher/LauncherHome.qml:72
 #, kde-format
@@ -107,10 +106,9 @@ msgid "Recent"
 msgstr "Récent"
 
 #: contents/ui/launcher/LauncherHome.qml:100
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Voice Applications"
-msgstr "Applications"
+msgstr "Applications vocales"
 
 #: contents/ui/launcher/LauncherHome.qml:126
 #, kde-format
@@ -131,7 +129,7 @@ msgstr ""
 #: contents/ui/TaskWindowView.qml:180
 #, kde-format
 msgid "Clear Tasks"
-msgstr ""
+msgstr "Effacer les tâches"
 
 #~ msgid "Use Colored Tiles"
 #~ msgstr "Utiliser des tuiles colorées"

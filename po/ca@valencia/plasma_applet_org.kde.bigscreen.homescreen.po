@@ -1,16 +1,16 @@
-# Translation of plasma_applet_org.kde.mycroft.bigscreen.homescreen.po to Catalan (Valencian)
-# Copyright (C) 2020-2022 This_file_is_part_of_KDE
+# Translation of plasma_applet_org.kde.bigscreen.homescreen.po to Catalan (Valencian)
+# Copyright (C) 2020-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2020.
-# Josep M. Ferrer <txemaq@gmail.com>, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2022-12-08 17:10+0100\n"
+"PO-Revision-Date: 2024-10-18 10:27+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: contents/config/config.qml:11
 #, kde-format
@@ -32,30 +32,29 @@ msgstr "Configuració"
 
 #: contents/ui/ConfigWindow.qml:183 contents/ui/FavoritesManager.qml:232
 #: contents/ui/TaskWindowView.qml:217
-#, fuzzy, kde-format
-#| msgid "close"
+#, kde-format
 msgid "Close"
-msgstr "tanca"
+msgstr "Tanca"
 
 #: contents/ui/FavoritesManager.qml:67
 #, kde-format
 msgid "Favorites Manager"
-msgstr ""
+msgstr "Gestor de preferits"
 
 #: contents/ui/FavoritesManager.qml:99
 #, kde-format
 msgid "Add Favorites"
-msgstr ""
+msgstr "Afig als preferits"
 
 #: contents/ui/FavoritesManager.qml:167
 #, kde-format
 msgid "Remove Favorites"
-msgstr ""
+msgstr "Elimina dels preferits"
 
 #: contents/ui/indicators/Favorites.qml:51
 #, kde-format
 msgid "Manage Favorites"
-msgstr ""
+msgstr "Gestiona els preferits"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -70,12 +69,12 @@ msgstr "Accepta"
 #: contents/ui/indicators/PairWindow.qml:127
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel·la"
 
 #: contents/ui/indicators/Volume.qml:25
 #, kde-format
 msgid "Audio Volume"
-msgstr ""
+msgstr "Volum de l'àudio"
 
 #: contents/ui/launcher/config/configGeneral.qml:31
 #, kde-format
@@ -105,7 +104,7 @@ msgstr "Activa el STT remot"
 #: contents/ui/launcher/LauncherHome.qml:54
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Preferits"
 
 #: contents/ui/launcher/LauncherHome.qml:72
 #, kde-format
@@ -113,10 +112,9 @@ msgid "Recent"
 msgstr "Recent"
 
 #: contents/ui/launcher/LauncherHome.qml:100
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Voice Applications"
-msgstr "Aplicacions"
+msgstr "Aplicacions de veu"
 
 #: contents/ui/launcher/LauncherHome.qml:126
 #, kde-format
@@ -136,37 +134,4 @@ msgstr "La Bigscreen ha activat la inhibició global del sistema"
 #: contents/ui/TaskWindowView.qml:180
 #, kde-format
 msgid "Clear Tasks"
-msgstr ""
-
-#~ msgid "Use Colored Tiles"
-#~ msgstr "Utilitza fitxes de colors"
-
-#~ msgid "Use Expanding Tiles"
-#~ msgstr "Utilitza fitxes expandides"
-
-#~ msgid "KDE Connect"
-#~ msgstr "KDE Connect"
-
-#~ msgid "Reject"
-#~ msgstr "Rebutja"
-
-#~ msgid "Increase Volume"
-#~ msgstr "Apuja el volum"
-
-#~ msgid "Decrease Volume"
-#~ msgstr "Abaixa el volum"
-
-#~ msgid "Mute"
-#~ msgstr "Silenci"
-
-#~ msgid "Audio Device chooser"
-#~ msgstr "Selector del dispositiu d'àudio"
-
-#~ msgid "Network"
-#~ msgstr "Xarxa"
-
-#~ msgid "Voice Apps"
-#~ msgstr "Aplicacions de veu"
-
-#~ msgid "Getting Ready... Please Wait"
-#~ msgstr "S'està preparant… espereu"
+msgstr "Neteja les tasques"

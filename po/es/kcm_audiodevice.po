@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# Víctor Rodrigo Córdoba <vrcordoba@gmail.com>, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2022-03-26 17:07+0100\n"
+"PO-Revision-Date: 2024-10-19 19:03+0200\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: ui/delegates/VolumeObject.qml:58
 #, kde-format
@@ -31,7 +31,7 @@ msgstr "%1%"
 #: ui/DeviceChooserPage.qml:33
 #, kde-format
 msgid "Audio Settings"
-msgstr ""
+msgstr "Preferencias de audio"
 
 #: ui/DeviceChooserPage.qml:92
 #, kde-format
@@ -53,21 +53,3 @@ msgstr "Selector de dispositivo de audio"
 msgid "Press the [←] Back button to return to device selection"
 msgstr ""
 "Pulse la tecla retroceso [←] para retornar a la selección de dispositivo"
-
-#~ msgctxt "label of device items"
-#~ msgid "%1 (%2)"
-#~ msgstr "%1 (%2)"
-
-#~ msgid "Exit"
-#~ msgstr "Salir"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Víctor Rodrigo Córdoba"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "vrcordoba@gmail.com"
-
-#~ msgid "Configure Plasma Audio"
-#~ msgstr "Configurar el audio de Plasma"

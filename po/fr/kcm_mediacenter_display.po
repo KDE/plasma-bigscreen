@@ -1,58 +1,61 @@
+#
+# SPDX-FileCopyrightText: 2024 Xavier Besnard <xavier.besnard@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2024-10-18 05:33+0200\n"
-"Last-Translator: KDE Francophone <kde-francophone@kde.org>\n"
-"Language-Team: KDE Francophone <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2024-10-18 11:10+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: ui/delegates/ConfirmationDialog.qml:54
 #, kde-format
 msgid "New Resolution"
-msgstr ""
+msgstr "Nouvelle résolution"
 
 #: ui/delegates/ConfirmationDialog.qml:89
 #, kde-format
 msgid "Accept"
-msgstr ""
+msgstr "Accepter"
 
 #: ui/delegates/ConfirmationDialog.qml:133
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Annuler"
 
 #: ui/delegates/LocalSettingCurrentResolution.qml:46
 #, kde-format
 msgid "Resolution: "
-msgstr ""
+msgstr "Résolution : "
 
 #: ui/delegates/LocalSettingCurrentResolution.qml:69
 #, kde-format
 msgid "Refresh Rate: "
-msgstr ""
+msgstr "Taux de rafraîchissement :"
 
 #: ui/delegates/LocalSettingCurrentResolution.qml:92
 #, kde-format
 msgid "Mode: "
-msgstr ""
+msgstr "Mode :"
 
 #: ui/delegates/LocalSettingResolution.qml:65
 #, kde-format
 msgid "Available Resolutions"
-msgstr ""
+msgstr "Résolutions disponibles"
 
 #: ui/delegates/LocalSettingScale.qml:52
 #, kde-format
 msgid "Scale"
-msgstr ""
+msgstr "Échelle"
 
 #: ui/main.qml:21 ui/main.qml:52
 #, kde-format
 msgid "Display Configuration"
-msgstr ""
+msgstr "Configuration d’affichage"

@@ -29,10 +29,9 @@ msgstr "Ρυθμίσεις"
 
 #: contents/ui/ConfigWindow.qml:183 contents/ui/FavoritesManager.qml:232
 #: contents/ui/TaskWindowView.qml:217
-#, fuzzy, kde-format
-#| msgid "close"
+#, kde-format
 msgid "Close"
-msgstr "κλείσιμο"
+msgstr "Κλείσιμο"
 
 #: contents/ui/FavoritesManager.qml:67
 #, kde-format

@@ -1,4 +1,4 @@
-# Translation of plasma_lookandfeel_org.kde.plasma.mycroft.bigscreen.po to Catalan (Valencian)
+# Translation of plasma_lookandfeel_org.kde.plasma.bigscreen.po to Catalan (Valencian)
 # Copyright (C) 2020 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
@@ -26,6 +26,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma, creat per la comunitat KDE"
-
-#~ msgid "Welcome"
-#~ msgstr "Us donem la benvinguda"

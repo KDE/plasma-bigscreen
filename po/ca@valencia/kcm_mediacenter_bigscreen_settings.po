@@ -1,15 +1,15 @@
 # Translation of kcm_mediacenter_bigscreen_settings.po to Catalan (Valencian)
-# Copyright (C) 2021-2023 This_file_is_part_of_KDE
+# Copyright (C) 2021-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2021, 2023.
+# SPDX-FileCopyrightText: 2021, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2023-06-15 09:12+0200\n"
+"PO-Revision-Date: 2024-10-17 15:47+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -32,18 +32,17 @@ msgstr "txemaq@gmail.com"
 #: ui/delegates/DatePicker.qml:38
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Any"
 
 #: ui/delegates/DatePicker.qml:54
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Mes"
 
 #: ui/delegates/DatePicker.qml:70
-#, fuzzy, kde-format
-#| msgid "May"
+#, kde-format
 msgid "Day"
-msgstr "maig"
+msgstr "Dia"
 
 #: ui/delegates/DeviceTimeSettings.qml:136
 #, kde-format
@@ -56,10 +55,9 @@ msgid "Timezone:"
 msgstr "Zona horària:"
 
 #: ui/delegates/DeviceTimeSettings.qml:187
-#, fuzzy, kde-format
-#| msgid "Set time automatically:"
+#, kde-format
 msgid "Set time automatically"
-msgstr "Establix la data i l'hora automàticament:"
+msgstr "Establix la data i l'hora automàticament"
 
 #: ui/delegates/DeviceTimeSettings.qml:256
 #, kde-format
@@ -88,7 +86,7 @@ msgstr ""
 #: ui/delegates/DeviceTimeSettings.qml:482
 #, kde-format
 msgid "Search City / Region"
-msgstr ""
+msgstr "Busca la població / regió"
 
 #: ui/delegates/DeviceTimeSettings.qml:501
 #, kde-format
@@ -103,37 +101,37 @@ msgstr "%1, %2"
 #: ui/delegates/ShortcutsPicker.qml:67
 #, kde-format
 msgid "Update Shortcut Keys"
-msgstr ""
+msgstr "Actualitza les tecles de drecera"
 
 #: ui/delegates/ShortcutsPicker.qml:106
 #, kde-format
 msgid "Reset Default"
-msgstr ""
+msgstr "Restablix als valors predeterminats"
 
 #: ui/delegates/ShortcutsPicker.qml:120
 #, kde-format
 msgid "Set Shortcut"
-msgstr ""
+msgstr "Establix una drecera"
 
 #: ui/delegates/TimePicker.qml:40
 #, kde-format
 msgid "Hour"
-msgstr ""
+msgstr "Hora"
 
 #: ui/delegates/TimePicker.qml:56
 #, kde-format
 msgid "Minute"
-msgstr ""
+msgstr "Minut"
 
 #: ui/delegates/TimePicker.qml:72
 #, kde-format
 msgid "Second"
-msgstr ""
+msgstr "Segon"
 
 #: ui/delegates/TimePicker.qml:89
 #, kde-format
 msgid "AM/PM"
-msgstr ""
+msgstr "AM/PM"
 
 #: ui/main.qml:21
 #, kde-format
@@ -143,7 +141,7 @@ msgstr "Aparença"
 #: ui/main.qml:62
 #, kde-format
 msgid "Appearance & Personalization"
-msgstr ""
+msgstr "Aparença i personalització"
 
 #: ui/main.qml:112
 #, kde-format
@@ -173,69 +171,24 @@ msgstr "Ajusta la data i l'hora"
 #: ui/main.qml:163
 #, kde-format
 msgid "Bigscreen Shortcuts"
-msgstr ""
+msgstr "Dreceres de la Bigscreen"
 
 #: ui/main.qml:171
 #, kde-format
 msgid "Bigscreen Settings Shortcut"
-msgstr ""
+msgstr "Dreceres de configuració de la Bigscreen"
 
 #: ui/main.qml:183
 #, kde-format
 msgid "Bigscreen Tasks Shortcut"
-msgstr ""
+msgstr "Dreceres de tasques de la Bigscreen"
 
 #: ui/main.qml:195
 #, kde-format
 msgid "Bigscreen Display Homescreen Shortcut"
-msgstr ""
+msgstr "Dreceres de visualització de la pantalla d'inici de la Bigscreen"
 
 #: ui/main.qml:216
 #, kde-format
 msgid "General Appearance"
 msgstr "Aparença general"
-
-# skip-rule: punctuation-period-no
-#~ msgid "Jan"
-#~ msgstr "gen."
-
-# skip-rule: punctuation-period-no
-#~ msgid "Feb"
-#~ msgstr "febr."
-
-#~ msgid "Mar"
-#~ msgstr "març"
-
-# skip-rule: punctuation-period-no
-#~ msgid "Apr"
-#~ msgstr "abr."
-
-#~ msgid "Jun"
-#~ msgstr "juny"
-
-# skip-rule: punctuation-period-no
-#~ msgid "Jul"
-#~ msgstr "jul."
-
-# skip-rule: punctuation-period-no
-#~ msgid "Aug"
-#~ msgstr "ago."
-
-# skip-rule: punctuation-period-no
-#~ msgid "Sep"
-#~ msgstr "set."
-
-# skip-rule: punctuation-period-no
-#~ msgid "Oct"
-#~ msgstr "oct."
-
-# skip-rule: punctuation-period-no
-#~ msgid "Nov"
-#~ msgstr "nov."
-
-# skip-rule: punctuation-period-no
-#~ msgid "Dec"
-#~ msgstr "des."
-
-#~ msgid "Exit"
-#~ msgstr "Eixida"
