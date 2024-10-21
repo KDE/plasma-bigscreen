@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2024-03-07 15:00+0200\n"
+"PO-Revision-Date: 2024-10-20 20:15+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: contents/config/config.qml:11
 #, kde-format
@@ -30,30 +30,29 @@ msgstr "הגדרות"
 
 #: contents/ui/ConfigWindow.qml:183 contents/ui/FavoritesManager.qml:232
 #: contents/ui/TaskWindowView.qml:217
-#, fuzzy, kde-format
-#| msgid "close"
+#, kde-format
 msgid "Close"
 msgstr "סגירה"
 
 #: contents/ui/FavoritesManager.qml:67
 #, kde-format
 msgid "Favorites Manager"
-msgstr ""
+msgstr "מנהל מועדפים"
 
 #: contents/ui/FavoritesManager.qml:99
 #, kde-format
 msgid "Add Favorites"
-msgstr ""
+msgstr "הוספה למועדפים"
 
 #: contents/ui/FavoritesManager.qml:167
 #, kde-format
 msgid "Remove Favorites"
-msgstr ""
+msgstr "הסרה מהמועדפים"
 
 #: contents/ui/indicators/Favorites.qml:51
 #, kde-format
 msgid "Manage Favorites"
-msgstr ""
+msgstr "ניהול מועדפים"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -68,12 +67,12 @@ msgstr "קבלה"
 #: contents/ui/indicators/PairWindow.qml:127
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "ביטול"
 
 #: contents/ui/indicators/Volume.qml:25
 #, kde-format
 msgid "Audio Volume"
-msgstr ""
+msgstr "עוצמת שמע"
 
 #: contents/ui/launcher/config/configGeneral.qml:31
 #, kde-format
@@ -103,7 +102,7 @@ msgstr "הפעלת הכתבה מרחוק"
 #: contents/ui/launcher/LauncherHome.qml:54
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "מועדפים"
 
 #: contents/ui/launcher/LauncherHome.qml:72
 #, kde-format
@@ -111,10 +110,9 @@ msgid "Recent"
 msgstr "אחרונים"
 
 #: contents/ui/launcher/LauncherHome.qml:100
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Voice Applications"
-msgstr "יישומונים"
+msgstr "יישומי קול"
 
 #: contents/ui/launcher/LauncherHome.qml:126
 #, kde-format
@@ -134,7 +132,7 @@ msgstr "המערכת למסכים גדולים הפעילה מניעה כלל מ
 #: contents/ui/TaskWindowView.qml:180
 #, kde-format
 msgid "Clear Tasks"
-msgstr ""
+msgstr "פינוי משימות"
 
 #~ msgid "Use Colored Tiles"
 #~ msgstr "להשתמש באריחים צבעוניים"

@@ -1,63 +1,63 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2024-10-19 16:24+0200\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
-"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
-"Language: sv\n"
+"PO-Revision-Date: 2024-10-20 20:16+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: ui/delegates/ConfirmationDialog.qml:54
 #, kde-format
 msgid "New Resolution"
-msgstr "Ny upplösning"
+msgstr "רזולוציה חדשה"
 
 #: ui/delegates/ConfirmationDialog.qml:89
 #, kde-format
 msgid "Accept"
-msgstr "Acceptera"
+msgstr "אישור"
 
 #: ui/delegates/ConfirmationDialog.qml:133
 #, kde-format
 msgid "Cancel"
-msgstr "Avbryt"
+msgstr "ביטול"
 
 #: ui/delegates/LocalSettingCurrentResolution.qml:46
 #, kde-format
 msgid "Resolution: "
-msgstr "Upplösning: "
+msgstr "רזולוציה: "
 
 #: ui/delegates/LocalSettingCurrentResolution.qml:69
 #, kde-format
 msgid "Refresh Rate: "
-msgstr "Uppdateringsfrekvens: "
+msgstr "קצב רענון: "
 
 #: ui/delegates/LocalSettingCurrentResolution.qml:92
 #, kde-format
 msgid "Mode: "
-msgstr "Läge: "
+msgstr "מצב: "
 
 #: ui/delegates/LocalSettingResolution.qml:65
 #, kde-format
 msgid "Available Resolutions"
-msgstr "Tillgängliga upplösningar"
+msgstr "רזולוציות זמינות"
 
 #: ui/delegates/LocalSettingScale.qml:52
 #, kde-format
 msgid "Scale"
-msgstr "Skala"
+msgstr "קנה מידה"
 
 #: ui/main.qml:21 ui/main.qml:52
 #, kde-format
 msgid "Display Configuration"
-msgstr "Skärminställning"
+msgstr "הגדרות תצוגה"
