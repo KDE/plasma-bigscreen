@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2024-10-20 18:41+0200\n"
+"PO-Revision-Date: 2024-10-21 12:22+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -36,22 +36,22 @@ msgstr "Claude"
 #: contents/ui/FavoritesManager.qml:67
 #, kde-format
 msgid "Favorites Manager"
-msgstr ""
+msgstr "Gerente de favoritos"
 
 #: contents/ui/FavoritesManager.qml:99
 #, kde-format
 msgid "Add Favorites"
-msgstr ""
+msgstr "Adde Favoritos"
 
 #: contents/ui/FavoritesManager.qml:167
 #, kde-format
 msgid "Remove Favorites"
-msgstr ""
+msgstr "Remoive Favoritos"
 
 #: contents/ui/indicators/Favorites.qml:51
 #, kde-format
 msgid "Manage Favorites"
-msgstr ""
+msgstr "Gere Favoritos"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -66,12 +66,12 @@ msgstr "Accepta"
 #: contents/ui/indicators/PairWindow.qml:127
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Cancella"
 
 #: contents/ui/indicators/Volume.qml:25
 #, kde-format
 msgid "Audio Volume"
-msgstr ""
+msgstr "Volumine de audio"
 
 #: contents/ui/launcher/config/configGeneral.qml:31
 #, kde-format
@@ -101,7 +101,7 @@ msgstr "Habilita Remote STT"
 #: contents/ui/launcher/LauncherHome.qml:54
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Favoritos"
 
 #: contents/ui/launcher/LauncherHome.qml:72
 #, kde-format
@@ -131,7 +131,7 @@ msgstr "Bigscreen ha habilitate inhibition per tote le systema"
 #: contents/ui/TaskWindowView.qml:180
 #, kde-format
 msgid "Clear Tasks"
-msgstr ""
+msgstr "Netta cargas"
 
 #~ msgid "Use Colored Tiles"
 #~ msgstr "Usa tegulas (Tiles) colorate"

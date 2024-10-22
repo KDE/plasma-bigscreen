@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2024-10-20 18:40+0200\n"
+"PO-Revision-Date: 2024-10-21 12:21+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -30,7 +30,7 @@ msgstr "g.sora@tiscali.it"
 #: ui/delegates/DatePicker.qml:38
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Anno"
 
 #: ui/delegates/DatePicker.qml:54
 #, kde-format
@@ -85,7 +85,7 @@ msgstr ""
 #: ui/delegates/DeviceTimeSettings.qml:482
 #, kde-format
 msgid "Search City / Region"
-msgstr ""
+msgstr "Cerca Citate/Region"
 
 #: ui/delegates/DeviceTimeSettings.qml:501
 #, kde-format
@@ -100,17 +100,17 @@ msgstr "%1, %2"
 #: ui/delegates/ShortcutsPicker.qml:67
 #, kde-format
 msgid "Update Shortcut Keys"
-msgstr ""
+msgstr "Actualisa claves de via breve"
 
 #: ui/delegates/ShortcutsPicker.qml:106
 #, kde-format
 msgid "Reset Default"
-msgstr ""
+msgstr "Retorna a valores predefinite"
 
 #: ui/delegates/ShortcutsPicker.qml:120
 #, kde-format
 msgid "Set Shortcut"
-msgstr ""
+msgstr "Fixa via breve"
 
 #: ui/delegates/TimePicker.qml:40
 #, kde-format
@@ -140,7 +140,7 @@ msgstr "Apparentia"
 #: ui/main.qml:62
 #, kde-format
 msgid "Appearance & Personalization"
-msgstr ""
+msgstr "Apparentia & Personalisation"
 
 #: ui/main.qml:112
 #, kde-format
@@ -170,22 +170,22 @@ msgstr "Adjusta data & tempore"
 #: ui/main.qml:163
 #, kde-format
 msgid "Bigscreen Shortcuts"
-msgstr ""
+msgstr "Vias breve de Bigscreen"
 
 #: ui/main.qml:171
 #, kde-format
 msgid "Bigscreen Settings Shortcut"
-msgstr ""
+msgstr "Via breve de preferentias de Bigscreen"
 
 #: ui/main.qml:183
 #, kde-format
 msgid "Bigscreen Tasks Shortcut"
-msgstr ""
+msgstr "Via breve de cargas de Bigscreen"
 
 #: ui/main.qml:195
 #, kde-format
 msgid "Bigscreen Display Homescreen Shortcut"
-msgstr ""
+msgstr "Via breve de schermo initial de monstrator de Bigscreen"
 
 #: ui/main.qml:216
 #, kde-format
