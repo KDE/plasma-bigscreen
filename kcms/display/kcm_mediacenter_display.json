@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Display Settings",
+        "Description[ar]": "إعدادات العرض",
         "Description[bg]": "Настройки на екрана",
         "Description[ca@valencia]": "Configureu la pantalla",
         "Description[ca]": "Configuració de la pantalla",
@@ -24,6 +25,7 @@
         ],
         "Icon": "preferences-desktop-display-symbolic",
         "Name": "Display Settings",
+        "Name[ar]": "إعدادات العرض",
         "Name[bg]": "Настройки на екрана",
         "Name[ca@valencia]": "Configureu la pantalla",
         "Name[ca]": "Configuració de la pantalla",
