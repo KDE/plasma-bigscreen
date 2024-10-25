@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
+# SPDX-FileCopyrightText: 2022, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2022-12-22 09:09+0400\n"
+"PO-Revision-Date: 2024-10-24 07:44+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: contents/config/config.qml:11
 #, kde-format
@@ -29,30 +30,29 @@ msgstr "إعدادات"
 
 #: contents/ui/ConfigWindow.qml:183 contents/ui/FavoritesManager.qml:232
 #: contents/ui/TaskWindowView.qml:217
-#, fuzzy, kde-format
-#| msgid "close"
+#, kde-format
 msgid "Close"
 msgstr "أغلق"
 
 #: contents/ui/FavoritesManager.qml:67
 #, kde-format
 msgid "Favorites Manager"
-msgstr ""
+msgstr "مدير المفضلات"
 
 #: contents/ui/FavoritesManager.qml:99
 #, kde-format
 msgid "Add Favorites"
-msgstr ""
+msgstr "أضف إلى المفضّلة"
 
 #: contents/ui/FavoritesManager.qml:167
 #, kde-format
 msgid "Remove Favorites"
-msgstr ""
+msgstr "أزل من المفضّلة"
 
 #: contents/ui/indicators/Favorites.qml:51
 #, kde-format
 msgid "Manage Favorites"
-msgstr ""
+msgstr "أدر المفضلات"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -67,12 +67,12 @@ msgstr "اقبل"
 #: contents/ui/indicators/PairWindow.qml:127
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "ألغِ"
 
 #: contents/ui/indicators/Volume.qml:25
 #, kde-format
 msgid "Audio Volume"
-msgstr ""
+msgstr "مستوى الصّوت"
 
 #: contents/ui/launcher/config/configGeneral.qml:31
 #, kde-format
@@ -102,7 +102,7 @@ msgstr "مكّن خدمة تحويل الصوت إلى نص البعيدة"
 #: contents/ui/launcher/LauncherHome.qml:54
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "المفضّلة"
 
 #: contents/ui/launcher/LauncherHome.qml:72
 #, kde-format
@@ -110,10 +110,9 @@ msgid "Recent"
 msgstr "الحديثة"
 
 #: contents/ui/launcher/LauncherHome.qml:100
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Voice Applications"
-msgstr "التّطبيقات"
+msgstr "تطبيقات الصوت"
 
 #: contents/ui/launcher/LauncherHome.qml:126
 #, kde-format
@@ -133,7 +132,7 @@ msgstr "الشاشة الكبيرة مكنت السبات على مستوى ال
 #: contents/ui/TaskWindowView.qml:180
 #, kde-format
 msgid "Clear Tasks"
-msgstr ""
+msgstr "امسح المهامّ"
 
 #~ msgid "Use Colored Tiles"
 #~ msgstr "استعمل القطع الملونة"
