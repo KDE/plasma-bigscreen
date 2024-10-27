@@ -193,39 +193,3 @@ msgstr ""
 #, kde-format
 msgid "General Appearance"
 msgstr "Generell utsjånad"
-
-#~ msgid "Jan"
-#~ msgstr "Jan."
-
-#~ msgid "Feb"
-#~ msgstr "Feb."
-
-#~ msgid "Mar"
-#~ msgstr "Mars"
-
-#~ msgid "Apr"
-#~ msgstr "Apr."
-
-#~ msgid "Jun"
-#~ msgstr "Juni"
-
-#~ msgid "Jul"
-#~ msgstr "Juli"
-
-#~ msgid "Aug"
-#~ msgstr "Aug."
-
-#~ msgid "Sep"
-#~ msgstr "Sep."
-
-#~ msgid "Oct"
-#~ msgstr "Okt."
-
-#~ msgid "Nov"
-#~ msgstr "Nov."
-
-#~ msgid "Dec"
-#~ msgstr "Des."
-
-#~ msgid "Exit"
-#~ msgstr "Avslutt"

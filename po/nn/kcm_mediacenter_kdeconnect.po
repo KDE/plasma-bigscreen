@@ -73,6 +73,3 @@ msgstr "Trykk «[←] Tilbake» for å velja ny eining"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
-
-#~ msgid "Exit"
-#~ msgstr "Avslutt"

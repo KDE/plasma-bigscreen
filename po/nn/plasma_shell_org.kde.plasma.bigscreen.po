@@ -1,4 +1,4 @@
-# Translation of plasma_shell_org.kde.plasma.mycroft.bigscreen to Norwegian Nynorsk
+# Translation of plasma_shell_org.kde.plasma.bigscreen to Norwegian Nynorsk
 #
 # Karl Ove Hufthammer <karl@huftis.org>, 2021.
 msgid ""

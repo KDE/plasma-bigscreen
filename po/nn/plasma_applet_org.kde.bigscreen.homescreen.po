@@ -1,4 +1,4 @@
-# Translation of plasma_applet_org.kde.mycroft.bigscreen.homescreen to Norwegian Nynorsk
+# Translation of plasma_applet_org.kde.bigscreen.homescreen to Norwegian Nynorsk
 #
 # Karl Ove Hufthammer <karl@huftis.org>, 2020, 2021, 2022, 2023.
 msgid ""
@@ -136,36 +136,3 @@ msgstr "Bigscreen har slått på hindring for heila systemet"
 #, kde-format
 msgid "Clear Tasks"
 msgstr ""
-
-#~ msgid "Use Colored Tiles"
-#~ msgstr "Bruk farga fliser"
-
-#~ msgid "Use Expanding Tiles"
-#~ msgstr "Bruk utvidbare fliser"
-
-#~ msgid "KDE Connect"
-#~ msgstr "KDE Connect"
-
-#~ msgid "Reject"
-#~ msgstr "Avvis"
-
-#~ msgid "Increase Volume"
-#~ msgstr "Høgare lyd"
-
-#~ msgid "Decrease Volume"
-#~ msgstr "Lågare lyd"
-
-#~ msgid "Mute"
-#~ msgstr "Demp lyd"
-
-#~ msgid "Audio Device chooser"
-#~ msgstr "Vel lydeining"
-
-#~ msgid "Network"
-#~ msgstr "Nettverk"
-
-#~ msgid "Voice Apps"
-#~ msgstr "Stemmeappar"
-
-#~ msgid "Getting Ready... Please Wait"
-#~ msgstr "Gjer klar. Vent litt …"
