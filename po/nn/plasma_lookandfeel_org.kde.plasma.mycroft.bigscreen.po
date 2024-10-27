@@ -1,4 +1,4 @@
-# Translation of plasma_lookandfeel_org.kde.plasma.mycroft.bigscreen to Norwegian Nynorsk
+# Translation of plasma_lookandfeel_org.kde.plasma.bigscreen to Norwegian Nynorsk
 #
 # Karl Ove Hufthammer <karl@huftis.org>, 2020.
 msgid ""
