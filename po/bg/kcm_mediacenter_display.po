@@ -1,58 +1,63 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# SPDX-FileCopyrightText: 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2024-10-18 17:35+0200\n"
-"Last-Translator: Simulacrum\n"
-"Language-Team: Nevernessian\n"
-"Language: de\n"
+"PO-Revision-Date: 2024-10-18 09:55+0200\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: ui/delegates/ConfirmationDialog.qml:54
 #, kde-format
 msgid "New Resolution"
-msgstr ""
+msgstr "Нова разделителна способност"
 
 #: ui/delegates/ConfirmationDialog.qml:89
 #, kde-format
 msgid "Accept"
-msgstr ""
+msgstr "Приемане"
 
 #: ui/delegates/ConfirmationDialog.qml:133
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Отказване"
 
 #: ui/delegates/LocalSettingCurrentResolution.qml:46
 #, kde-format
 msgid "Resolution: "
-msgstr ""
+msgstr "Разделителна способност: "
 
 #: ui/delegates/LocalSettingCurrentResolution.qml:69
 #, kde-format
 msgid "Refresh Rate: "
-msgstr ""
+msgstr "Честота на опресняване:"
 
 #: ui/delegates/LocalSettingCurrentResolution.qml:92
 #, kde-format
 msgid "Mode: "
-msgstr ""
+msgstr "Режим: "
 
 #: ui/delegates/LocalSettingResolution.qml:65
 #, kde-format
 msgid "Available Resolutions"
-msgstr ""
+msgstr "Налични разделителни способности"
 
 #: ui/delegates/LocalSettingScale.qml:52
 #, kde-format
 msgid "Scale"
-msgstr ""
+msgstr "Мащабиране"
 
 #: ui/main.qml:21 ui/main.qml:52
 #, kde-format
 msgid "Display Configuration"
-msgstr ""
+msgstr "Конфигурация на екрана"
