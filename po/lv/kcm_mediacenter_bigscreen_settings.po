@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2024-05-28 16:19+0300\n"
+"PO-Revision-Date: 2024-10-30 13:01+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,18 +31,17 @@ msgstr "toms.trasuns@posteo.net"
 #: ui/delegates/DatePicker.qml:38
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Gads"
 
 #: ui/delegates/DatePicker.qml:54
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Mēnesis"
 
 #: ui/delegates/DatePicker.qml:70
-#, fuzzy, kde-format
-#| msgid "May"
+#, kde-format
 msgid "Day"
-msgstr "Maijs"
+msgstr "Diena"
 
 #: ui/delegates/DeviceTimeSettings.qml:136
 #, kde-format
@@ -55,10 +54,9 @@ msgid "Timezone:"
 msgstr "Laika josla:"
 
 #: ui/delegates/DeviceTimeSettings.qml:187
-#, fuzzy, kde-format
-#| msgid "Set time automatically:"
+#, kde-format
 msgid "Set time automatically"
-msgstr "Iestatīt laiku automātiski:"
+msgstr "Iestatīt laiku automātiski"
 
 #: ui/delegates/DeviceTimeSettings.qml:256
 #, kde-format
@@ -87,7 +85,7 @@ msgstr ""
 #: ui/delegates/DeviceTimeSettings.qml:482
 #, kde-format
 msgid "Search City / Region"
-msgstr ""
+msgstr "Meklēt pilsētu / reģionu"
 
 #: ui/delegates/DeviceTimeSettings.qml:501
 #, kde-format
@@ -102,37 +100,37 @@ msgstr "%1, %2"
 #: ui/delegates/ShortcutsPicker.qml:67
 #, kde-format
 msgid "Update Shortcut Keys"
-msgstr ""
+msgstr "Atjaunināt saīšņu taustiņus"
 
 #: ui/delegates/ShortcutsPicker.qml:106
 #, kde-format
 msgid "Reset Default"
-msgstr ""
+msgstr "Atiestatīt uz noklusējumiem"
 
 #: ui/delegates/ShortcutsPicker.qml:120
 #, kde-format
 msgid "Set Shortcut"
-msgstr ""
+msgstr "Iestatīt saīsni"
 
 #: ui/delegates/TimePicker.qml:40
 #, kde-format
 msgid "Hour"
-msgstr ""
+msgstr "Stunda"
 
 #: ui/delegates/TimePicker.qml:56
 #, kde-format
 msgid "Minute"
-msgstr ""
+msgstr "Minūte"
 
 #: ui/delegates/TimePicker.qml:72
 #, kde-format
 msgid "Second"
-msgstr ""
+msgstr "Sekunde"
 
 #: ui/delegates/TimePicker.qml:89
 #, kde-format
 msgid "AM/PM"
-msgstr ""
+msgstr "AM/PM"
 
 #: ui/main.qml:21
 #, kde-format
@@ -142,7 +140,7 @@ msgstr "Izskats"
 #: ui/main.qml:62
 #, kde-format
 msgid "Appearance & Personalization"
-msgstr ""
+msgstr "Izskats un personalizācija"
 
 #: ui/main.qml:112
 #, kde-format
@@ -172,27 +170,27 @@ msgstr "Mainīt datumu un laiku"
 #: ui/main.qml:163
 #, kde-format
 msgid "Bigscreen Shortcuts"
-msgstr ""
+msgstr "Lielā ekrāna saīsnes"
 
 #: ui/main.qml:171
 #, kde-format
 msgid "Bigscreen Settings Shortcut"
-msgstr ""
+msgstr "Lielā ekrāna iestatījumu saīsne"
 
 #: ui/main.qml:183
 #, kde-format
 msgid "Bigscreen Tasks Shortcut"
-msgstr ""
+msgstr "Lielā ekrāna uzdevumu saīsne"
 
 #: ui/main.qml:195
 #, kde-format
 msgid "Bigscreen Display Homescreen Shortcut"
-msgstr ""
+msgstr "Lielā ekrāna mājas ekrāna parādīšanas saīsne"
 
 #: ui/main.qml:216
 #, kde-format
 msgid "General Appearance"
-msgstr "Vispārīgs izskats"
+msgstr "Pamata izskats"
 
 #~ msgid "Jan"
 #~ msgstr "Janv."
