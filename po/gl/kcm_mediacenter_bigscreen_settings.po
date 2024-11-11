@@ -1,21 +1,21 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2023.
+# SPDX-FileCopyrightText: 2024 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2023-06-16 08:41+0200\n"
+"PO-Revision-Date: 2024-11-10 12:29+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -30,18 +30,17 @@ msgstr "adrian@chaves.io"
 #: ui/delegates/DatePicker.qml:38
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Ano"
 
 #: ui/delegates/DatePicker.qml:54
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Mes"
 
 #: ui/delegates/DatePicker.qml:70
-#, fuzzy, kde-format
-#| msgid "May"
+#, kde-format
 msgid "Day"
-msgstr "mai"
+msgstr "Día"
 
 #: ui/delegates/DeviceTimeSettings.qml:136
 #, kde-format
@@ -54,10 +53,9 @@ msgid "Timezone:"
 msgstr "Fuso horario:"
 
 #: ui/delegates/DeviceTimeSettings.qml:187
-#, fuzzy, kde-format
-#| msgid "Set time automatically:"
+#, kde-format
 msgid "Set time automatically"
-msgstr "Definir a hora automaticamente:"
+msgstr "Definir a hora automaticamente."
 
 #: ui/delegates/DeviceTimeSettings.qml:256
 #, kde-format
@@ -84,7 +82,7 @@ msgstr "Prema o botón de [←] Atrás para gardar e volver á configuración."
 #: ui/delegates/DeviceTimeSettings.qml:482
 #, kde-format
 msgid "Search City / Region"
-msgstr ""
+msgstr "Buscar unha cidade ou rexión"
 
 #: ui/delegates/DeviceTimeSettings.qml:501
 #, kde-format
@@ -99,37 +97,37 @@ msgstr "%1, %2"
 #: ui/delegates/ShortcutsPicker.qml:67
 #, kde-format
 msgid "Update Shortcut Keys"
-msgstr ""
+msgstr "Actualizar as teclas de atallo"
 
 #: ui/delegates/ShortcutsPicker.qml:106
 #, kde-format
 msgid "Reset Default"
-msgstr ""
+msgstr "Restabelecer o predeterminado"
 
 #: ui/delegates/ShortcutsPicker.qml:120
 #, kde-format
 msgid "Set Shortcut"
-msgstr ""
+msgstr "Definir o atallo"
 
 #: ui/delegates/TimePicker.qml:40
 #, kde-format
 msgid "Hour"
-msgstr ""
+msgstr "Hora"
 
 #: ui/delegates/TimePicker.qml:56
 #, kde-format
 msgid "Minute"
-msgstr ""
+msgstr "Minuto"
 
 #: ui/delegates/TimePicker.qml:72
 #, kde-format
 msgid "Second"
-msgstr ""
+msgstr "Segundo"
 
 #: ui/delegates/TimePicker.qml:89
 #, kde-format
 msgid "AM/PM"
-msgstr ""
+msgstr "a. m. / p. m."
 
 #: ui/main.qml:21
 #, kde-format
@@ -139,7 +137,7 @@ msgstr "Aparencia"
 #: ui/main.qml:62
 #, kde-format
 msgid "Appearance & Personalization"
-msgstr ""
+msgstr "Aparencia e personalización"
 
 #: ui/main.qml:112
 #, kde-format
@@ -169,22 +167,22 @@ msgstr "Axustar a data e hora"
 #: ui/main.qml:163
 #, kde-format
 msgid "Bigscreen Shortcuts"
-msgstr ""
+msgstr "Atallos de Bigscreen"
 
 #: ui/main.qml:171
 #, kde-format
 msgid "Bigscreen Settings Shortcut"
-msgstr ""
+msgstr "Atallo da configuración de Bigscreen"
 
 #: ui/main.qml:183
 #, kde-format
 msgid "Bigscreen Tasks Shortcut"
-msgstr ""
+msgstr "Atallo das tarefas de Bigscreen"
 
 #: ui/main.qml:195
 #, kde-format
 msgid "Bigscreen Display Homescreen Shortcut"
-msgstr ""
+msgstr "Atallo da páxina inicial de pantalla de Bigscreen"
 
 #: ui/main.qml:216
 #, kde-format
