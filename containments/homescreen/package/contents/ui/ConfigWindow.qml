@@ -260,7 +260,8 @@ NanoShell.FullScreenOverlay {
                             }
                         }
 
-                        KeyNavigation.right: loadedKCMPage
+                        // The about-distro KCM is not a native bigscreen kcm, so it eats keyboard inputs and softlocks us
+                        KeyNavigation.right: (currentModuleName == "kcm_about-distro") ? null :  loadedKCMPage 
 
                         onClicked: {
                             openModule(modelData.kcmId);
@@ -369,7 +370,7 @@ NanoShell.FullScreenOverlay {
                 }
             }
         }
-
+        
         Component {
             id: kcmContainer
             Kirigami.Page {

@@ -56,7 +56,7 @@ void KcmsListModel::loadKcms()
 
     const auto kcmPlugins = KPluginMetaData::findPlugins("kcms")
             << KPluginMetaData::findPlugins("plasma/kcms") << KPluginMetaData::findPlugins("plasma/kcms/systemsettings");
-    // only get the mediacenter kcms
+
     for (const auto &kcm : kcmPlugins) {
         if (kcm.pluginId().contains("mediacenter")) {
             KcmData kcmData;
@@ -81,6 +81,13 @@ void KcmsListModel::loadKcms()
     wallpaperData.description = "Change the desktop wallpaper";
     wallpaperData.id = "kcm_mediacenter_wallpaper";
     unorderedList.append(wallpaperData);
+
+    KcmData aboutData;
+    aboutData.name = "About this System";
+    aboutData.iconName = "help-about";
+    aboutData.description = "About the system";
+    aboutData.id = "plasma/kcms/kcm_about-distro";
+    unorderedList.append(aboutData);
 
     m_kcms << orderedList.values();
     m_kcms << unorderedList;
