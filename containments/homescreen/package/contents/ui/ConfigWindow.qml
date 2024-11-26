@@ -374,12 +374,47 @@ NanoShell.FullScreenOverlay {
             id: kcmContainer
             Kirigami.Page {
                 id: container
+
                 property QtObject kcm
                 property Item internalPage
                 property Item lastSettingMenuItem
                 property bool suppressDeletion: false
 
                 title: internalPage.title
+
+                header: Item {
+                    id: headerAreaTop
+                    height: parent.height * 0.075
+                    anchors.top: parent.top
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    anchors.margins: Kirigami.Units.largeSpacing
+
+                    Kirigami.Heading {
+                        id: settingsTitle
+                        text: internalPage.title
+                        anchors.fill: parent
+                        anchors.margins: Kirigami.Units.largeSpacing
+                        verticalAlignment: Text.AlignBottom
+                        horizontalAlignment: Text.AlignLeft
+                        font.bold: true
+                        color: Kirigami.Theme.textColor
+                        fontSizeMode: Text.Fit
+                        minimumPixelSize: 16
+                        font.pixelSize: 32
+                    }
+
+                    Kirigami.Separator {
+                        id: settingsSeparator
+                        anchors.top: headerAreaTop.bottom
+                        anchors.left: parent.left
+                        anchors.right: parent.right
+                        Kirigami.Theme.colorSet: Kirigami.Theme.Button
+                        Kirigami.Theme.inherit: false
+                        color: Kirigami.Theme.backgroundColor
+                        height: 2
+                    }
+                }
 
                 topPadding: 0
                 leftPadding: 0

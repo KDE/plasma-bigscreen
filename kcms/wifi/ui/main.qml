@@ -274,41 +274,6 @@ KCM.SimpleKCM {
     
     
     contentItem: FocusScope {
-
-        Item {
-            id: headerAreaTop
-            height: parent.height * 0.075
-            anchors.top: parent.top
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.margins: Kirigami.Units.largeSpacing
-
-            Kirigami.Heading {
-                id: settingsTitle
-                text: i18n("Network Settings")
-                anchors.fill: parent
-                anchors.margins: Kirigami.Units.largeSpacing
-                verticalAlignment: Text.AlignBottom
-                horizontalAlignment: Text.AlignLeft
-                font.bold: true
-                color: Kirigami.Theme.textColor
-                fontSizeMode: Text.Fit
-                minimumPixelSize: 16
-                font.pixelSize: 32
-            }
-        }
-
-        Kirigami.Separator {
-            id: settingsSeparator
-            anchors.top: headerAreaTop.bottom
-            anchors.left: parent.left
-            anchors.right: parent.right
-            Kirigami.Theme.colorSet: Kirigami.Theme.Button
-            Kirigami.Theme.inherit: false
-            color: Kirigami.Theme.backgroundColor
-            height: 2
-        }
-
         Item {
             id: footerMain
             anchors.left: parent.left
@@ -366,7 +331,7 @@ KCM.SimpleKCM {
         ColumnLayout {
             anchors.left: parent.left
             anchors.leftMargin: Kirigami.Units.largeSpacing
-            anchors.top: headerAreaTop.bottom
+            anchors.top: parent.top
             anchors.topMargin: Kirigami.Units.largeSpacing * 2
             anchors.bottom: footerMain.top
             width: parent.width - deviceConnectionView.width
