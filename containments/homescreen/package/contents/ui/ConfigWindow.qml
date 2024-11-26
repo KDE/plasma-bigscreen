@@ -230,6 +230,15 @@ NanoShell.FullScreenOverlay {
                         Layout.preferredHeight: Kirigami.Units.gridUnit * 5
                         Keys.onEscapePressed: hideOverlay()
 
+                        leftPadding: Kirigami.Units.gridUnit * 2
+
+                        scale: kcmButton.activeFocus ? 0.96 : 1 
+                        Behavior on scale {
+                                NumberAnimation {
+                                    duration: 100
+                                }
+                        }
+
                         onFocusChanged: {
                             if(focus) {
                                 settingsKCMMenu.lastIndex = index;
@@ -265,20 +274,30 @@ NanoShell.FullScreenOverlay {
                             id: kcmButtonBackground
                             Kirigami.Theme.colorSet: Kirigami.Theme.Button
                             Kirigami.Theme.inherit: false
-                            color: kcmButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
+                            color: (modelData.kcmId === currentModuleName) ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
+                            radius: Kirigami.Units.largeSpacing
+                            border.color: kcmButton.activeFocus ? Kirigami.Theme.linkColor : ((modelData.kcmId === currentModuleName) ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor)
+                            border.width: 3        
+
+                            Behavior on color {
+                                ColorAnimation {
+                                    duration: 100
+                                }
+                            }
+                                         
                         }
 
-                        contentItem: Item {
+                        contentItem: Item {                            
                             RowLayout {
                                 id: kcmButtonLayout
                                 anchors.fill: parent
-                                spacing: 5
+                                spacing: Kirigami.Units.gridUnit
 
                                 Kirigami.Icon {
                                     id: kcmButtonIcon
                                     source: modelData.kcmIconName
                                     Layout.alignment: Qt.AlignLeft
-                                    Layout.fillHeight: true
+                                    Layout.preferredHeight: Kirigami.Units.iconSizes.large
                                     Layout.preferredWidth: kcmButtonIcon.height
                                 }
 
@@ -321,7 +340,7 @@ NanoShell.FullScreenOverlay {
                         property: "opacity"
                         from: 0
                         to:1
-                        duration: 200
+                        duration: 100
                     }
                 }
                 pushExit: Transition {
@@ -329,7 +348,7 @@ NanoShell.FullScreenOverlay {
                         property: "opacity"
                         from: 1
                         to:0
-                        duration: 200
+                        duration: 100
                     }
                 }
                 popEnter: Transition {
@@ -337,7 +356,7 @@ NanoShell.FullScreenOverlay {
                         property: "opacity"
                         from: 0
                         to:1
-                        duration: 200
+                        duration: 100
                     }
                 }
                 popExit: Transition {
@@ -345,7 +364,7 @@ NanoShell.FullScreenOverlay {
                         property: "opacity"
                         from: 1
                         to:0
-                        duration: 200
+                        duration: 100
                     }
                 }
             }
