@@ -63,6 +63,7 @@
         "Description[uk]": "Домашня сторінка для телевізорів на основі Плазми",
         "Description[x-test]": "xxHomescreen for Plasma based TVsxx",
         "Description[zh_CN]": "基于 Plasma 的电视主屏幕",
+        "Description[zh_TW]": "基於 Plasma 的電視用的主畫面",
         "Icon": "plasma",
         "License": "GPL",
         "Name": "Plasma Bigscreen",

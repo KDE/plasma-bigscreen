@@ -23,6 +23,7 @@
         "Description[uk]": "Параметри показу",
         "Description[x-test]": "xxDisplay Settingsxx",
         "Description[zh_CN]": "显示设置",
+        "Description[zh_TW]": "顯示器設定",
         "FormFactors": [
             "mediacenter"
         ],
@@ -49,7 +50,8 @@
         "Name[tr]": "Görüntü Ayarları",
         "Name[uk]": "Параметри показу",
         "Name[x-test]": "xxDisplay Settingsxx",
-        "Name[zh_CN]": "显示设置"
+        "Name[zh_CN]": "显示设置",
+        "Name[zh_TW]": "顯示器設定"
     },
     "X-DocPath": "kcontrol/display/index.html",
     "X-KDE-System-Settings-Parent-Category": "display",

@@ -62,6 +62,7 @@
         "Description[uk]": "Вигляд і поведінка Плазми для великих екранів",
         "Description[x-test]": "xxPlasma Plasma Big Screen look and feelxx",
         "Description[zh_CN]": "Plasma 大屏幕界面外观设置",
+        "Description[zh_TW]": "Plasma Plasma 大螢幕外觀及感覺",
         "Id": "org.kde.plasma.bigscreen",
         "License": "GPLv2+",
         "Name": "Plasma Big Screen",
