@@ -1,63 +1,63 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2024 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
+# SPDX-FileCopyrightText: 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2024-10-19 19:09+0200\n"
-"Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
-"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
-"Language: es\n"
+"PO-Revision-Date: 2024-11-26 21:31+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: ui/delegates/ConfirmationDialog.qml:54
 #, kde-format
 msgid "New Resolution"
-msgstr "Nueva resolución"
+msgstr "新解析度"
 
 #: ui/delegates/ConfirmationDialog.qml:89
 #, kde-format
 msgid "Accept"
-msgstr "Aceptar"
+msgstr "接受"
 
 #: ui/delegates/ConfirmationDialog.qml:133
 #, kde-format
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "取消"
 
 #: ui/delegates/LocalSettingCurrentResolution.qml:46
 #, kde-format
 msgid "Resolution: "
-msgstr "Resolución:"
+msgstr "解析度："
 
 #: ui/delegates/LocalSettingCurrentResolution.qml:69
 #, kde-format
 msgid "Refresh Rate: "
-msgstr "Tasa de refresco:"
+msgstr "刷新頻率："
 
 #: ui/delegates/LocalSettingCurrentResolution.qml:92
 #, kde-format
 msgid "Mode: "
-msgstr "Modo"
+msgstr "模式："
 
 #: ui/delegates/LocalSettingResolution.qml:65
 #, kde-format
 msgid "Available Resolutions"
-msgstr "Resoluciones disponibles"
+msgstr "可用的解析度"
 
 #: ui/delegates/LocalSettingScale.qml:52
 #, kde-format
 msgid "Scale"
-msgstr "Escala"
+msgstr "縮放"
 
 #: ui/main.qml:21 ui/main.qml:52
 #, kde-format
 msgid "Display Configuration"
-msgstr "Configuración de visualización"
+msgstr "顯示器設定"

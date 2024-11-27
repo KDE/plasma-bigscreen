@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2024-01-03 03:56+0900\n"
+"PO-Revision-Date: 2024-11-26 21:34+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: contents/config/config.qml:11
 #, kde-format
@@ -33,30 +33,29 @@ msgstr "設定"
 
 #: contents/ui/ConfigWindow.qml:183 contents/ui/FavoritesManager.qml:232
 #: contents/ui/TaskWindowView.qml:217
-#, fuzzy, kde-format
-#| msgid "close"
+#, kde-format
 msgid "Close"
 msgstr "關閉"
 
 #: contents/ui/FavoritesManager.qml:67
 #, kde-format
 msgid "Favorites Manager"
-msgstr ""
+msgstr "最愛管理"
 
 #: contents/ui/FavoritesManager.qml:99
 #, kde-format
 msgid "Add Favorites"
-msgstr ""
+msgstr "新增到最愛"
 
 #: contents/ui/FavoritesManager.qml:167
 #, kde-format
 msgid "Remove Favorites"
-msgstr ""
+msgstr "移除最愛"
 
 #: contents/ui/indicators/Favorites.qml:51
 #, kde-format
 msgid "Manage Favorites"
-msgstr ""
+msgstr "管理最愛"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -71,12 +70,12 @@ msgstr "接受"
 #: contents/ui/indicators/PairWindow.qml:127
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: contents/ui/indicators/Volume.qml:25
 #, kde-format
 msgid "Audio Volume"
-msgstr ""
+msgstr "音效音量"
 
 #: contents/ui/launcher/config/configGeneral.qml:31
 #, kde-format
@@ -106,7 +105,7 @@ msgstr "啟用遠端 STT"
 #: contents/ui/launcher/LauncherHome.qml:54
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "最愛"
 
 #: contents/ui/launcher/LauncherHome.qml:72
 #, kde-format
@@ -114,10 +113,9 @@ msgid "Recent"
 msgstr "最近"
 
 #: contents/ui/launcher/LauncherHome.qml:100
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Voice Applications"
-msgstr "應用程式"
+msgstr "語音應用程式"
 
 #: contents/ui/launcher/LauncherHome.qml:126
 #, kde-format
@@ -137,7 +135,7 @@ msgstr "大螢幕已啟用全系統睡眠阻擋"
 #: contents/ui/TaskWindowView.qml:180
 #, kde-format
 msgid "Clear Tasks"
-msgstr ""
+msgstr "清空工作項目"
 
 #~ msgid "Use Colored Tiles"
 #~ msgstr "使用多彩方塊"
