@@ -1,0 +1,63 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# SPDX-FileCopyrightText: 2024 Shinjo Park <kde@peremen.name>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"PO-Revision-Date: 2024-11-29 00:32+0100\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 23.08.5\n"
+
+#: ui/delegates/ConfirmationDialog.qml:54
+#, kde-format
+msgid "New Resolution"
+msgstr "새 해상도"
+
+#: ui/delegates/ConfirmationDialog.qml:89
+#, kde-format
+msgid "Accept"
+msgstr "수락"
+
+#: ui/delegates/ConfirmationDialog.qml:133
+#, kde-format
+msgid "Cancel"
+msgstr "취소"
+
+#: ui/delegates/LocalSettingCurrentResolution.qml:46
+#, kde-format
+msgid "Resolution: "
+msgstr "해상도:"
+
+#: ui/delegates/LocalSettingCurrentResolution.qml:69
+#, kde-format
+msgid "Refresh Rate: "
+msgstr "화면 주사율:"
+
+#: ui/delegates/LocalSettingCurrentResolution.qml:92
+#, kde-format
+msgid "Mode: "
+msgstr "모드:"
+
+#: ui/delegates/LocalSettingResolution.qml:65
+#, kde-format
+msgid "Available Resolutions"
+msgstr "사용 가능한 해상도"
+
+#: ui/delegates/LocalSettingScale.qml:52
+#, kde-format
+msgid "Scale"
+msgstr "크기 조정"
+
+#: ui/main.qml:21 ui/main.qml:52
+#, kde-format
+msgid "Display Configuration"
+msgstr "디스플레이 설정"

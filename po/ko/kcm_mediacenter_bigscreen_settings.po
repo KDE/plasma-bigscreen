@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# Shinjo Park <kde@peremen.name>, 2021, 2023.
+# SPDX-FileCopyrightText: 2021, 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2023-07-25 01:12+0200\n"
+"PO-Revision-Date: 2024-11-29 00:34+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -30,18 +30,17 @@ msgstr "kde@peremen.name"
 #: ui/delegates/DatePicker.qml:38
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "연도"
 
 #: ui/delegates/DatePicker.qml:54
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "월"
 
 #: ui/delegates/DatePicker.qml:70
-#, fuzzy, kde-format
-#| msgid "May"
+#, kde-format
 msgid "Day"
-msgstr "5월"
+msgstr "일"
 
 #: ui/delegates/DeviceTimeSettings.qml:136
 #, kde-format
@@ -54,10 +53,9 @@ msgid "Timezone:"
 msgstr "시간대:"
 
 #: ui/delegates/DeviceTimeSettings.qml:187
-#, fuzzy, kde-format
-#| msgid "Set time automatically:"
+#, kde-format
 msgid "Set time automatically"
-msgstr "자동으로 시간 설정:"
+msgstr "자동으로 시간 설정"
 
 #: ui/delegates/DeviceTimeSettings.qml:256
 #, kde-format
@@ -84,7 +82,7 @@ msgstr "[←] 뒤로 단추를 누르면 설정을 저장하고 돌아갑니다"
 #: ui/delegates/DeviceTimeSettings.qml:482
 #, kde-format
 msgid "Search City / Region"
-msgstr ""
+msgstr "도시/지역 검색"
 
 #: ui/delegates/DeviceTimeSettings.qml:501
 #, kde-format
@@ -99,37 +97,37 @@ msgstr "%1, %2"
 #: ui/delegates/ShortcutsPicker.qml:67
 #, kde-format
 msgid "Update Shortcut Keys"
-msgstr ""
+msgstr "단축키 업데이트"
 
 #: ui/delegates/ShortcutsPicker.qml:106
 #, kde-format
 msgid "Reset Default"
-msgstr ""
+msgstr "기본값으로 초기화"
 
 #: ui/delegates/ShortcutsPicker.qml:120
 #, kde-format
 msgid "Set Shortcut"
-msgstr ""
+msgstr "단축키 설정"
 
 #: ui/delegates/TimePicker.qml:40
 #, kde-format
 msgid "Hour"
-msgstr ""
+msgstr "시간"
 
 #: ui/delegates/TimePicker.qml:56
 #, kde-format
 msgid "Minute"
-msgstr ""
+msgstr "분"
 
 #: ui/delegates/TimePicker.qml:72
 #, kde-format
 msgid "Second"
-msgstr ""
+msgstr "초"
 
 #: ui/delegates/TimePicker.qml:89
 #, kde-format
 msgid "AM/PM"
-msgstr ""
+msgstr "오전/오후"
 
 #: ui/main.qml:21
 #, kde-format
@@ -139,7 +137,7 @@ msgstr "모양"
 #: ui/main.qml:62
 #, kde-format
 msgid "Appearance & Personalization"
-msgstr ""
+msgstr "모양과 개인화"
 
 #: ui/main.qml:112
 #, kde-format
@@ -169,22 +167,22 @@ msgstr "날짜와 시간 조정"
 #: ui/main.qml:163
 #, kde-format
 msgid "Bigscreen Shortcuts"
-msgstr ""
+msgstr "큰 화면 단축키"
 
 #: ui/main.qml:171
 #, kde-format
 msgid "Bigscreen Settings Shortcut"
-msgstr ""
+msgstr "큰 화면 설정 단축키"
 
 #: ui/main.qml:183
 #, kde-format
 msgid "Bigscreen Tasks Shortcut"
-msgstr ""
+msgstr "큰 화면 할 일 단축키"
 
 #: ui/main.qml:195
 #, kde-format
 msgid "Bigscreen Display Homescreen Shortcut"
-msgstr ""
+msgstr "큰 화면 디스플레이 홈 화면 단축키"
 
 #: ui/main.qml:216
 #, kde-format

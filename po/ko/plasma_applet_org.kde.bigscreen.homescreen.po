@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# Shinjo Park <kde@peremen.name>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2023-03-01 01:37+0100\n"
+"PO-Revision-Date: 2024-11-29 00:33+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: contents/config/config.qml:11
 #, kde-format
@@ -29,30 +29,29 @@ msgstr "설정"
 
 #: contents/ui/ConfigWindow.qml:183 contents/ui/FavoritesManager.qml:232
 #: contents/ui/TaskWindowView.qml:217
-#, fuzzy, kde-format
-#| msgid "close"
+#, kde-format
 msgid "Close"
 msgstr "닫기"
 
 #: contents/ui/FavoritesManager.qml:67
 #, kde-format
 msgid "Favorites Manager"
-msgstr ""
+msgstr "책갈피 관리자"
 
 #: contents/ui/FavoritesManager.qml:99
 #, kde-format
 msgid "Add Favorites"
-msgstr ""
+msgstr "책갈피 추가"
 
 #: contents/ui/FavoritesManager.qml:167
 #, kde-format
 msgid "Remove Favorites"
-msgstr ""
+msgstr "책갈피 삭제"
 
 #: contents/ui/indicators/Favorites.qml:51
 #, kde-format
 msgid "Manage Favorites"
-msgstr ""
+msgstr "책갈피 관리"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -67,12 +66,12 @@ msgstr "수락"
 #: contents/ui/indicators/PairWindow.qml:127
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "취소"
 
 #: contents/ui/indicators/Volume.qml:25
 #, kde-format
 msgid "Audio Volume"
-msgstr ""
+msgstr "오디오 음량"
 
 #: contents/ui/launcher/config/configGeneral.qml:31
 #, kde-format
@@ -102,7 +101,7 @@ msgstr "원격 STT 활성화"
 #: contents/ui/launcher/LauncherHome.qml:54
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "책갈피"
 
 #: contents/ui/launcher/LauncherHome.qml:72
 #, kde-format
@@ -110,10 +109,9 @@ msgid "Recent"
 msgstr "최근"
 
 #: contents/ui/launcher/LauncherHome.qml:100
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Voice Applications"
-msgstr "앱"
+msgstr "음성 앱"
 
 #: contents/ui/launcher/LauncherHome.qml:126
 #, kde-format
@@ -133,7 +131,7 @@ msgstr "큰 화면에서 시스템 전역 대기 모드 방지를 활성화함"
 #: contents/ui/TaskWindowView.qml:180
 #, kde-format
 msgid "Clear Tasks"
-msgstr ""
+msgstr "할 일 비우기"
 
 #~ msgid "Use Colored Tiles"
 #~ msgstr "색상 적용된 타일 사용"
