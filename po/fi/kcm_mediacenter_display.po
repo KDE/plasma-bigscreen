@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2024-12-05 00:41+0000\n"
 "PO-Revision-Date: 2024-10-18 11:45+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -57,7 +57,7 @@ msgstr "Käytettävissä olevat tarkkuudet"
 msgid "Scale"
 msgstr "Mittakaava"
 
-#: ui/main.qml:21 ui/main.qml:52
+#: ui/main.qml:21
 #, kde-format
 msgid "Display Configuration"
 msgstr "Näyttöasetukset"

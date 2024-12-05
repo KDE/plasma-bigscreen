@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_audiodevice\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2024-12-05 00:41+0000\n"
 "PO-Revision-Date: 2022-04-15 19:15+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -27,17 +27,12 @@ msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/DeviceChooserPage.qml:33
-#, kde-format
-msgid "Audio Settings"
-msgstr ""
-
-#: ui/DeviceChooserPage.qml:92
+#: ui/DeviceChooserPage.qml:58
 #, kde-format
 msgid "Playback Devices"
 msgstr "Prehrávacie zariadenie"
 
-#: ui/DeviceChooserPage.qml:124
+#: ui/DeviceChooserPage.qml:90
 #, kde-format
 msgid "Recording Devices"
 msgstr "Nahrávacie zariadenia"

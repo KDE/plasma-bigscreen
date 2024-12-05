@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2024-12-05 00:41+0000\n"
 "PO-Revision-Date: 2021-01-23 14:06+0100\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -67,7 +67,7 @@ msgstr "Az eszköz nem érhető el"
 msgid "Press the [←] Back button to return to device selection"
 msgstr "Nyomja meg a [←] Vissza gombot az eszközválasztáshoz visszatéréshez"
 
-#: ui/main.qml:21 ui/main.qml:58
+#: ui/main.qml:21
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"

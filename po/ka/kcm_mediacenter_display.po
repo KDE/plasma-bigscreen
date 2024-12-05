@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2024-12-05 00:41+0000\n"
 "PO-Revision-Date: 2024-10-18 05:39+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -58,7 +58,7 @@ msgstr "ხელმისაწვდომი გარჩევადობ�
 msgid "Scale"
 msgstr "მასშტაბი"
 
-#: ui/main.qml:21 ui/main.qml:52
+#: ui/main.qml:21
 #, kde-format
 msgid "Display Configuration"
 msgstr "ეკრანის მორგება"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2024-12-05 00:41+0000\n"
 "PO-Revision-Date: 2024-05-28 14:57+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -68,7 +68,7 @@ msgstr "Ierīces nav sasniedzama"
 msgid "Press the [←] Back button to return to device selection"
 msgstr "Spiediet [←] atpakaļ pogu, lai atgrieztos ierīču atlasē"
 
-#: ui/main.qml:21 ui/main.qml:58
+#: ui/main.qml:21
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"

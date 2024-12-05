@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2024-12-05 00:41+0000\n"
 "PO-Revision-Date: 2024-10-24 07:48+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -135,60 +135,58 @@ msgstr "صباحا/مساءا"
 msgid "Appearance"
 msgstr "المظهر"
 
-#: ui/main.qml:62
-#, kde-format
-msgid "Appearance & Personalization"
-msgstr "المظهر والتخصيص"
-
-#: ui/main.qml:112
+#: ui/main.qml:77
 #, kde-format
 msgid "Launcher Appearance"
 msgstr "مظهر المطلق"
 
-#: ui/main.qml:121
+#: ui/main.qml:86
 #, kde-format
 msgid "Power Inhibition"
 msgstr "تثبيط الطاقة"
 
-#: ui/main.qml:132
+#: ui/main.qml:97
 #, kde-format
 msgid "Colored Tiles"
 msgstr "قطع ملونة"
 
-#: ui/main.qml:144
+#: ui/main.qml:109
 #, kde-format
 msgid "Expanding Tiles"
 msgstr "قطع موسعة"
 
-#: ui/main.qml:155
+#: ui/main.qml:120
 #, kde-format
 msgid "Adjust Date & Time"
 msgstr "اضبط التّاريخ والوقت"
 
-#: ui/main.qml:163
+#: ui/main.qml:128
 #, kde-format
 msgid "Bigscreen Shortcuts"
 msgstr "اختصارات الشاشة الكبيرة"
 
-#: ui/main.qml:171
+#: ui/main.qml:136
 #, kde-format
 msgid "Bigscreen Settings Shortcut"
 msgstr "اختصار إعدادات الشاشة الكبيرة"
 
-#: ui/main.qml:183
+#: ui/main.qml:148
 #, kde-format
 msgid "Bigscreen Tasks Shortcut"
 msgstr "اختصار مهام الشاشة الكبيرة"
 
-#: ui/main.qml:195
+#: ui/main.qml:160
 #, kde-format
 msgid "Bigscreen Display Homescreen Shortcut"
 msgstr "اختصار عرض الشاشة الرئيسة"
 
-#: ui/main.qml:216
+#: ui/main.qml:181
 #, kde-format
 msgid "General Appearance"
 msgstr "المظهر العام"
+
+#~ msgid "Appearance & Personalization"
+#~ msgstr "المظهر والتخصيص"
 
 #~ msgid "Jan"
 #~ msgstr "يناير"

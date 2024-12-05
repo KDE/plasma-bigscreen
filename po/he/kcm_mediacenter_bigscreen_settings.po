@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2024-12-05 00:41+0000\n"
 "PO-Revision-Date: 2024-10-17 23:02+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -135,60 +135,58 @@ msgstr "AM/PM"
 msgid "Appearance"
 msgstr "מראה"
 
-#: ui/main.qml:62
-#, kde-format
-msgid "Appearance & Personalization"
-msgstr "מראה והתאמה אישית"
-
-#: ui/main.qml:112
+#: ui/main.qml:77
 #, kde-format
 msgid "Launcher Appearance"
 msgstr "מראה המשגר"
 
-#: ui/main.qml:121
+#: ui/main.qml:86
 #, kde-format
 msgid "Power Inhibition"
 msgstr "מניעת צריכת חשמל"
 
-#: ui/main.qml:132
+#: ui/main.qml:97
 #, kde-format
 msgid "Colored Tiles"
 msgstr "אריחים צבעוניים"
 
-#: ui/main.qml:144
+#: ui/main.qml:109
 #, kde-format
 msgid "Expanding Tiles"
 msgstr "אריחים מתרחבים"
 
-#: ui/main.qml:155
+#: ui/main.qml:120
 #, kde-format
 msgid "Adjust Date & Time"
 msgstr "כיוון התאריך והשעה"
 
-#: ui/main.qml:163
+#: ui/main.qml:128
 #, kde-format
 msgid "Bigscreen Shortcuts"
 msgstr "קיצורי דרך למסכים גדולים"
 
-#: ui/main.qml:171
+#: ui/main.qml:136
 #, kde-format
 msgid "Bigscreen Settings Shortcut"
 msgstr "קיצור דרך להגדרות למסכים גדולים"
 
-#: ui/main.qml:183
+#: ui/main.qml:148
 #, kde-format
 msgid "Bigscreen Tasks Shortcut"
 msgstr "קיצור למשימות למסכים גדולים"
 
-#: ui/main.qml:195
+#: ui/main.qml:160
 #, kde-format
 msgid "Bigscreen Display Homescreen Shortcut"
 msgstr "קיצור במסך הבית לתצוגה של המסכים הגדולים"
 
-#: ui/main.qml:216
+#: ui/main.qml:181
 #, kde-format
 msgid "General Appearance"
 msgstr "מראה כללי"
+
+#~ msgid "Appearance & Personalization"
+#~ msgstr "מראה והתאמה אישית"
 
 #~ msgid "Jan"
 #~ msgstr "ינו"

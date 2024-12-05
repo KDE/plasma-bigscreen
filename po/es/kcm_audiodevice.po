@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2024-12-05 00:41+0000\n"
 "PO-Revision-Date: 2024-10-19 19:03+0200\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -28,17 +28,12 @@ msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/DeviceChooserPage.qml:33
-#, kde-format
-msgid "Audio Settings"
-msgstr "Preferencias de audio"
-
-#: ui/DeviceChooserPage.qml:92
+#: ui/DeviceChooserPage.qml:58
 #, kde-format
 msgid "Playback Devices"
 msgstr "Dispositivos de reproducción"
 
-#: ui/DeviceChooserPage.qml:124
+#: ui/DeviceChooserPage.qml:90
 #, kde-format
 msgid "Recording Devices"
 msgstr "Dispositivos de grabación"
@@ -53,3 +48,6 @@ msgstr "Selector de dispositivo de audio"
 msgid "Press the [←] Back button to return to device selection"
 msgstr ""
 "Pulse la tecla retroceso [←] para retornar a la selección de dispositivo"
+
+#~ msgid "Audio Settings"
+#~ msgstr "Preferencias de audio"

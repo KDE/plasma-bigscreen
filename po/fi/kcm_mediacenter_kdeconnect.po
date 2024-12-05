@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2024-12-05 00:41+0000\n"
 "PO-Revision-Date: 2021-02-07 14:14+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -66,7 +66,7 @@ msgstr "Tätä laitetta ei tavoiteta"
 msgid "Press the [←] Back button to return to device selection"
 msgstr "Palaa laitteen valintaan Takaisin-painikkeella [←]"
 
-#: ui/main.qml:21 ui/main.qml:58
+#: ui/main.qml:21
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"

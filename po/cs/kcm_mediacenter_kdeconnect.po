@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2024-12-05 00:41+0000\n"
 "PO-Revision-Date: 2021-02-17 10:27+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -67,7 +67,7 @@ msgstr "Toto zařízení je nedostupné"
 msgid "Press the [←] Back button to return to device selection"
 msgstr "Použijte tlačítko Zpět [←] k návratu na výběr zařízení"
 
-#: ui/main.qml:21 ui/main.qml:58
+#: ui/main.qml:21
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"

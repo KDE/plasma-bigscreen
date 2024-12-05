@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2024-12-05 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -28,17 +28,12 @@ msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/DeviceChooserPage.qml:33
-#, kde-format
-msgid "Audio Settings"
-msgstr "音频设置"
-
-#: ui/DeviceChooserPage.qml:92
+#: ui/DeviceChooserPage.qml:58
 #, kde-format
 msgid "Playback Devices"
 msgstr "播放设备"
 
-#: ui/DeviceChooserPage.qml:124
+#: ui/DeviceChooserPage.qml:90
 #, kde-format
 msgid "Recording Devices"
 msgstr "录音设备"
@@ -52,3 +47,6 @@ msgstr "音频设备选择程序"
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "点击 [←] 后退按钮返回设备选择列表"
+
+#~ msgid "Audio Settings"
+#~ msgstr "音频设置"

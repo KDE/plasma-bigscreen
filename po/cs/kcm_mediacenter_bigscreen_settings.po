@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2024-12-05 00:41+0000\n"
 "PO-Revision-Date: 2023-06-23 12:40+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -134,57 +134,52 @@ msgstr "ODP./DOP."
 msgid "Appearance"
 msgstr "Vzhled"
 
-#: ui/main.qml:62
-#, kde-format
-msgid "Appearance & Personalization"
-msgstr ""
-
-#: ui/main.qml:112
+#: ui/main.qml:77
 #, kde-format
 msgid "Launcher Appearance"
 msgstr "Vzhled spouštěče"
 
-#: ui/main.qml:121
+#: ui/main.qml:86
 #, kde-format
 msgid "Power Inhibition"
 msgstr ""
 
-#: ui/main.qml:132
+#: ui/main.qml:97
 #, kde-format
 msgid "Colored Tiles"
 msgstr "Barevné dlaždice"
 
-#: ui/main.qml:144
+#: ui/main.qml:109
 #, kde-format
 msgid "Expanding Tiles"
 msgstr ""
 
-#: ui/main.qml:155
+#: ui/main.qml:120
 #, kde-format
 msgid "Adjust Date & Time"
 msgstr "Upravit datum a čas"
 
-#: ui/main.qml:163
+#: ui/main.qml:128
 #, kde-format
 msgid "Bigscreen Shortcuts"
 msgstr ""
 
-#: ui/main.qml:171
+#: ui/main.qml:136
 #, kde-format
 msgid "Bigscreen Settings Shortcut"
 msgstr ""
 
-#: ui/main.qml:183
+#: ui/main.qml:148
 #, kde-format
 msgid "Bigscreen Tasks Shortcut"
 msgstr ""
 
-#: ui/main.qml:195
+#: ui/main.qml:160
 #, kde-format
 msgid "Bigscreen Display Homescreen Shortcut"
 msgstr ""
 
-#: ui/main.qml:216
+#: ui/main.qml:181
 #, kde-format
 msgid "General Appearance"
 msgstr "Obecný vzhled"

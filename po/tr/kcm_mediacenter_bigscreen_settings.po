@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2024-12-05 00:41+0000\n"
 "PO-Revision-Date: 2024-10-18 02:03+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -136,60 +136,58 @@ msgstr "ÖÖ/ÖS"
 msgid "Appearance"
 msgstr "Görünüş"
 
-#: ui/main.qml:62
-#, kde-format
-msgid "Appearance & Personalization"
-msgstr "Görünüş ve Kişiselleştirme"
-
-#: ui/main.qml:112
+#: ui/main.qml:77
 #, kde-format
 msgid "Launcher Appearance"
 msgstr "Başlatıcı Görünüşü"
 
-#: ui/main.qml:121
+#: ui/main.qml:86
 #, kde-format
 msgid "Power Inhibition"
 msgstr "Güç Engellemeleri"
 
-#: ui/main.qml:132
+#: ui/main.qml:97
 #, kde-format
 msgid "Colored Tiles"
 msgstr "Renkli Döşemeler"
 
-#: ui/main.qml:144
+#: ui/main.qml:109
 #, kde-format
 msgid "Expanding Tiles"
 msgstr "Genişleyen Döşemeler"
 
-#: ui/main.qml:155
+#: ui/main.qml:120
 #, kde-format
 msgid "Adjust Date & Time"
 msgstr "Tarih ve Zamanı Ayarla"
 
-#: ui/main.qml:163
+#: ui/main.qml:128
 #, kde-format
 msgid "Bigscreen Shortcuts"
 msgstr "Büyük Ekran Kısayolları"
 
-#: ui/main.qml:171
+#: ui/main.qml:136
 #, kde-format
 msgid "Bigscreen Settings Shortcut"
 msgstr "Büyük Ekran Ayarları Kısayolu"
 
-#: ui/main.qml:183
+#: ui/main.qml:148
 #, kde-format
 msgid "Bigscreen Tasks Shortcut"
 msgstr "Büyük Ekran Görevler Kısayolu"
 
-#: ui/main.qml:195
+#: ui/main.qml:160
 #, kde-format
 msgid "Bigscreen Display Homescreen Shortcut"
 msgstr "Büyük Ekran Ana Ekranı Kısayolu"
 
-#: ui/main.qml:216
+#: ui/main.qml:181
 #, kde-format
 msgid "General Appearance"
 msgstr "Genel Görünüş"
+
+#~ msgid "Appearance & Personalization"
+#~ msgstr "Görünüş ve Kişiselleştirme"
 
 #~ msgid "Jan"
 #~ msgstr "Oca"

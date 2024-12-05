@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2024-12-05 00:41+0000\n"
 "PO-Revision-Date: 2024-10-30 13:01+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -137,60 +137,58 @@ msgstr "AM/PM"
 msgid "Appearance"
 msgstr "Izskats"
 
-#: ui/main.qml:62
-#, kde-format
-msgid "Appearance & Personalization"
-msgstr "Izskats un personalizācija"
-
-#: ui/main.qml:112
+#: ui/main.qml:77
 #, kde-format
 msgid "Launcher Appearance"
 msgstr "Palaidēja izskats"
 
-#: ui/main.qml:121
+#: ui/main.qml:86
 #, kde-format
 msgid "Power Inhibition"
 msgstr "Jaudas nomākšana"
 
-#: ui/main.qml:132
+#: ui/main.qml:97
 #, kde-format
 msgid "Colored Tiles"
 msgstr "Krāsainas flīzes"
 
-#: ui/main.qml:144
+#: ui/main.qml:109
 #, kde-format
 msgid "Expanding Tiles"
 msgstr "Paplašināmas flīzes"
 
-#: ui/main.qml:155
+#: ui/main.qml:120
 #, kde-format
 msgid "Adjust Date & Time"
 msgstr "Mainīt datumu un laiku"
 
-#: ui/main.qml:163
+#: ui/main.qml:128
 #, kde-format
 msgid "Bigscreen Shortcuts"
 msgstr "Lielā ekrāna saīsnes"
 
-#: ui/main.qml:171
+#: ui/main.qml:136
 #, kde-format
 msgid "Bigscreen Settings Shortcut"
 msgstr "Lielā ekrāna iestatījumu saīsne"
 
-#: ui/main.qml:183
+#: ui/main.qml:148
 #, kde-format
 msgid "Bigscreen Tasks Shortcut"
 msgstr "Lielā ekrāna uzdevumu saīsne"
 
-#: ui/main.qml:195
+#: ui/main.qml:160
 #, kde-format
 msgid "Bigscreen Display Homescreen Shortcut"
 msgstr "Lielā ekrāna mājas ekrāna parādīšanas saīsne"
 
-#: ui/main.qml:216
+#: ui/main.qml:181
 #, kde-format
 msgid "General Appearance"
 msgstr "Pamata izskats"
+
+#~ msgid "Appearance & Personalization"
+#~ msgstr "Izskats un personalizācija"
 
 #~ msgid "Jan"
 #~ msgstr "Janv."
