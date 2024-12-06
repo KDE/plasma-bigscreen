@@ -184,6 +184,3 @@ msgstr "大屏幕显示主屏幕快捷键"
 #, kde-format
 msgid "General Appearance"
 msgstr "常规外观"
-
-#~ msgid "Appearance & Personalization"
-#~ msgstr "外观和个性化"
