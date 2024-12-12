@@ -36,7 +36,7 @@ msgstr "Bu aygıt eşleştirilmek istiyor"
 #: ui/delegates/PairRequest.qml:63
 #, kde-format
 msgid "Accept"
-msgstr "Kabul et"
+msgstr "Kabul Et"
 
 #: ui/delegates/PairRequest.qml:99
 #, kde-format
@@ -72,17 +72,3 @@ msgstr "Aygıt seçimine geri dönmek için [←] Geri düğmesine basın"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Bağlan"
-
-#~ msgid "Exit"
-#~ msgstr "Çık"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Volkan Gezer"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "volkangezer@gmail.com"
-
-#~ msgid "Configure KDE Connect"
-#~ msgstr "KDE Bağlan'ı yapılandır"

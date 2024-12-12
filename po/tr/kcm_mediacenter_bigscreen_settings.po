@@ -159,7 +159,7 @@ msgstr "Genişleyen Döşemeler"
 #: ui/main.qml:120
 #, kde-format
 msgid "Adjust Date & Time"
-msgstr "Tarih ve Zamanı Ayarla"
+msgstr "Tarihi ve Zamanı Ayarla"
 
 #: ui/main.qml:128
 #, kde-format
@@ -185,42 +185,3 @@ msgstr "Büyük Ekran Ana Ekranı Kısayolu"
 #, kde-format
 msgid "General Appearance"
 msgstr "Genel Görünüş"
-
-#~ msgid "Appearance & Personalization"
-#~ msgstr "Görünüş ve Kişiselleştirme"
-
-#~ msgid "Jan"
-#~ msgstr "Oca"
-
-#~ msgid "Feb"
-#~ msgstr "Şub"
-
-#~ msgid "Mar"
-#~ msgstr "Mar"
-
-#~ msgid "Apr"
-#~ msgstr "Nis"
-
-#~ msgid "Jun"
-#~ msgstr "Haz"
-
-#~ msgid "Jul"
-#~ msgstr "Tem"
-
-#~ msgid "Aug"
-#~ msgstr "Ağu"
-
-#~ msgid "Sep"
-#~ msgstr "Eyl"
-
-#~ msgid "Oct"
-#~ msgstr "Eki"
-
-#~ msgid "Nov"
-#~ msgstr "Kas"
-
-#~ msgid "Dec"
-#~ msgstr "Ara"
-
-#~ msgid "Exit"
-#~ msgstr "Çık"
