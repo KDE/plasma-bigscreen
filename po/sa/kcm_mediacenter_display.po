@@ -1,0 +1,62 @@
+# Sanskrit translations for plasma-bigscreen package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"PO-Revision-Date: 2024-12-13 19:10+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ui/delegates/ConfirmationDialog.qml:54
+#, kde-format
+msgid "New Resolution"
+msgstr "नवीन संकल्प"
+
+#: ui/delegates/ConfirmationDialog.qml:89
+#, kde-format
+msgid "Accept"
+msgstr "स्वीकरोतु"
+
+#: ui/delegates/ConfirmationDialog.qml:133
+#, kde-format
+msgid "Cancel"
+msgstr "निरसयतु"
+
+#: ui/delegates/LocalSettingCurrentResolution.qml:46
+#, kde-format
+msgid "Resolution: "
+msgstr "प्रस्ताव: "
+
+#: ui/delegates/LocalSettingCurrentResolution.qml:69
+#, kde-format
+msgid "Refresh Rate: "
+msgstr "ताजगी दरः : १. "
+
+#: ui/delegates/LocalSettingCurrentResolution.qml:92
+#, kde-format
+msgid "Mode: "
+msgstr "मोडः : १. "
+
+#: ui/delegates/LocalSettingResolution.qml:65
+#, kde-format
+msgid "Available Resolutions"
+msgstr "उपलब्ध संकल्पाः"
+
+#: ui/delegates/LocalSettingScale.qml:52
+#, kde-format
+msgid "Scale"
+msgstr "मापन"
+
+#: ui/main.qml:21
+#, kde-format
+msgid "Display Configuration"
+msgstr "प्रदर्शन विन्यास"
