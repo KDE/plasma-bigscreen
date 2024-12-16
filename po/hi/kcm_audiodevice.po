@@ -1,51 +1,48 @@
-# Sanskrit translations for plasma-bigscreen package.
+# Hindi translations for plasma-bigscreen package.
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
-# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 00:41+0000\n"
-"PO-Revision-Date: 2024-12-14 01:12+0530\n"
-"Last-Translator: kali <skkalwar999@gmail.com>\n"
-"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
-"Language: sa\n"
+"PO-Revision-Date: 2024-12-15 17:37+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
+"Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n>2);\n"
-"X-Generator: Lokalize 24.08.2\n"
 
 #: ui/delegates/VolumeObject.qml:58
 #, kde-format
 msgid "Adjust Volume"
-msgstr "Adjust Volume इति"
+msgstr "वॉल्यूम समायोजित करें"
 
 #: ui/delegates/VolumeObject.qml:123
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
-msgstr "%1% २."
+msgstr "%1%"
 
 #: ui/DeviceChooserPage.qml:58
 #, kde-format
 msgid "Playback Devices"
-msgstr "प्लेबैक उपकरणम्"
+msgstr "प्रतिश्रवण उपकरण"
 
 #: ui/DeviceChooserPage.qml:90
 #, kde-format
 msgid "Recording Devices"
-msgstr "अभिलेखनयन्त्राणि"
+msgstr "रिकॉर्डिंग डिवाइस"
 
 #: ui/main.qml:20
 #, kde-format
 msgid "Audio Device Chooser"
-msgstr "श्रव्ययन्त्रचयनकर्ता"
+msgstr "ऑडियो डिवाइस चयनकर्ता"
 
 #: ui/SettingsItem.qml:234
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
-msgstr "उपकरणचयनं प्रति प्रत्यागन्तुं [←] Back बटनं नुदन्तु"
+msgstr "डिवाइस चयन पर वापस लौटने के लिए [←] बैक बटन दबाएँ"

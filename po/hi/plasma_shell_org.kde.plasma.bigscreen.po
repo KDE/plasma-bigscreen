@@ -1,4 +1,4 @@
-# Sanskrit translations for plasma-bigscreen package.
+# Hindi translations for plasma-bigscreen package.
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 # Kali <EMAIL@ADDRESS>, 2024.
@@ -8,22 +8,21 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2024-12-13 19:10+0530\n"
+"PO-Revision-Date: 2024-12-15 17:37+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
-"Language: sa\n"
+"Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
+"Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n>2);\n"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:49
 msgid "Layout cannot be changed while widgets are locked"
-msgstr "विजेट् लॉक् कृत्वा विन्यासः परिवर्तयितुं न शक्यते"
+msgstr "विजेट लॉक होने पर लेआउट नहीं बदला जा सकता"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:60
 msgid "Wallpaper Type:"
-msgstr "वॉलपेपर प्रकारः : १."
+msgstr "वॉलपेपर प्रकार:"
 
 #: contents/configuration/ContainmentConfiguration.qml:37
 msgid "Wallpaper"
@@ -35,7 +34,7 @@ msgstr "स्लाइड शो"
 
 #: contents/lockscreen/PasswordDialog.qml:46
 msgid "Password"
-msgstr "समाभाष्"
+msgstr "पासवर्ड"
 
 #: contents/lockscreen/PasswordDialog.qml:76
 msgid "Unlock Screen"

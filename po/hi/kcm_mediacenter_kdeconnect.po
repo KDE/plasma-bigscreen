@@ -1,4 +1,4 @@
-# Sanskrit translations for plasma-bigscreen package.
+# Hindi translations for plasma-bigscreen package.
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 # Kali <EMAIL@ADDRESS>, 2024.
@@ -8,66 +8,65 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 00:41+0000\n"
-"PO-Revision-Date: 2024-12-13 19:10+0530\n"
+"PO-Revision-Date: 2024-12-15 17:37+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
-"Language: sa\n"
+"Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
+"Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n>2);\n"
 
 #: ui/delegates/PairedView.qml:29
 #, kde-format
 msgid "This device is paired"
-msgstr "एतत् यन्त्रं युग्मितम् अस्ति"
+msgstr "यह डिवाइस युग्मित है"
 
 #: ui/delegates/PairedView.qml:62
 #, kde-format
 msgid "Unpair"
-msgstr "अयुग्मम्"
+msgstr "अयुग्मित"
 
 #: ui/delegates/PairRequest.qml:29
 #, kde-format
 msgid "This device is requesting to be paired"
-msgstr "एतत् यन्त्रं युग्मीकरणं कर्तुं अनुरोधं करोति"
+msgstr "यह डिवाइस युग्मित होने का अनुरोध कर रहा है"
 
 #: ui/delegates/PairRequest.qml:63
 #, kde-format
 msgid "Accept"
-msgstr "स्वीकरोतु"
+msgstr "स्वीकार करना"
 
 #: ui/delegates/PairRequest.qml:99
 #, kde-format
 msgid "Reject"
-msgstr "अस्वीकार"
+msgstr "अस्वीकार करना"
 
 #: ui/delegates/UnpairedView.qml:40
 #, kde-format
 msgid "This device is not paired"
-msgstr "एतत् यन्त्रं युग्मितं नास्ति"
+msgstr "यह डिवाइस युग्मित नहीं है"
 
 #: ui/delegates/UnpairedView.qml:80
 #, kde-format
 msgid "Pair"
-msgstr "युग्म"
+msgstr "जोड़ा"
 
 #: ui/delegates/UnpairedView.qml:91
 #, kde-format
 msgid "Pairing request sent to device"
-msgstr "उपकरणे प्रेषितः युग्मीकरणानुरोधः"
+msgstr "डिवाइस पर युग्मन अनुरोध भेजा गया"
 
 #: ui/delegates/Unreachable.qml:18
 #, kde-format
 msgid "This device is not reachable"
-msgstr "एतत् यन्त्रं न प्राप्यते"
+msgstr "यह डिवाइस उपलब्ध नहीं है"
 
 #: ui/DeviceConnectionView.qml:188
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
-msgstr "उपकरणचयनं प्रति प्रत्यागन्तुं [←] Back बटनं नुदन्तु"
+msgstr "डिवाइस चयन पर वापस लौटने के लिए [←] वापस बटन दबाएँ"
 
 #: ui/main.qml:21
 #, kde-format
 msgid "KDE Connect"
-msgstr "KDE Connect इति"
+msgstr "केडीई कनेक्ट"

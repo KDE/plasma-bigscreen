@@ -1,33 +1,30 @@
-# Sanskrit translations for plasma-bigscreen package.
+# Hindi translations for plasma-bigscreen package.
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
-# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 00:41+0000\n"
-"PO-Revision-Date: 2024-12-13 20:22+0530\n"
-"Last-Translator: kali <skkalwar999@gmail.com>\n"
-"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
-"Language: sa\n"
+"PO-Revision-Date: 2024-12-15 17:37+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
+"Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n>2);\n"
-"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "भवतः नामानि"
+msgstr "तुम्हारे नाम"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "भवतः ईमेलपत्राणि"
+msgstr "आपके ईमेल"
 
 #: ui/delegates/DatePicker.qml:38
 #, kde-format
@@ -37,59 +34,59 @@ msgstr "वर्ष"
 #: ui/delegates/DatePicker.qml:54
 #, kde-format
 msgid "Month"
-msgstr "माह"
+msgstr "महीना"
 
 #: ui/delegates/DatePicker.qml:70
 #, kde-format
 msgid "Day"
-msgstr "दिनं"
+msgstr "दिन"
 
 #: ui/delegates/DeviceTimeSettings.qml:136
 #, kde-format
 msgid "Time Display"
-msgstr "समयप्रदर्शनम्"
+msgstr "समय का प्रदर्शन"
 
 #: ui/delegates/DeviceTimeSettings.qml:145
 #, kde-format
 msgid "Timezone:"
-msgstr "समयक्षेत्रम् : १."
+msgstr "समयक्षेत्र:"
 
 #: ui/delegates/DeviceTimeSettings.qml:187
 #, kde-format
 msgid "Set time automatically"
-msgstr "स्वयमेव समयं सेट् कुर्वन्तु"
+msgstr "स्वचालित रूप से समय सेट करें"
 
 #: ui/delegates/DeviceTimeSettings.qml:256
 #, kde-format
 msgid "Time"
-msgstr "कालः"
+msgstr "समय"
 
 #: ui/delegates/DeviceTimeSettings.qml:318
 #, kde-format
 msgid "Date"
-msgstr "दिनाङ्कः"
+msgstr "तारीख"
 
 #: ui/delegates/DeviceTimeSettings.qml:399 ui/delegates/ShortcutsPicker.qml:191
 #, kde-format
 msgid "Press the [←] Back button to return to appearance settings"
-msgstr "रूपसेटिंग्स् प्रति प्रत्यागन्तुं [←] Back बटनं नुदन्तु"
+msgstr "उपस्थिति सेटिंग पर वापस जाने के लिए [←] वापस बटन दबाएँ"
 
 #: ui/delegates/DeviceTimeSettings.qml:460
 #: ui/delegates/DeviceTimeSettings.qml:583
 #: ui/delegates/DeviceTimeSettings.qml:678
 #, kde-format
 msgid "Press the [←] Back button to save configuration and return to settings"
-msgstr "विन्यासं रक्षितुं सेटिंग्स् प्रति प्रत्यागन्तुं च [←] Back बटनं नुदन्तु"
+msgstr "कॉन्फ़िगरेशन को सहेजने और सेटिंग्स पर वापस लौटने के लिए [←] बैक बटन दबाएँ"
 
 #: ui/delegates/DeviceTimeSettings.qml:482
 #, kde-format
 msgid "Search City / Region"
-msgstr "नगरं / क्षेत्रं अन्वेष्टुम्"
+msgstr "शहर/क्षेत्र खोजें"
 
 #: ui/delegates/DeviceTimeSettings.qml:501
 #, kde-format
 msgid "Your local timezone is %1"
-msgstr "भवतः स्थानीयसमयक्षेत्रं %1 अस्ति"
+msgstr "आपका स्थानीय समयक्षेत्र %1 है"
 
 #: ui/delegates/DeviceTimeSettings.qml:501
 #, kde-format
@@ -99,89 +96,89 @@ msgstr "%1, %2"
 #: ui/delegates/ShortcutsPicker.qml:67
 #, kde-format
 msgid "Update Shortcut Keys"
-msgstr "शॉर्टकट कुञ्जी अद्यतन करें"
+msgstr "शॉर्टकट कुंजियाँ अपडेट करें"
 
 #: ui/delegates/ShortcutsPicker.qml:106
 #, kde-format
 msgid "Reset Default"
-msgstr "पूर्वनिर्धारितं पुनः सेट् कुर्वन्तु"
+msgstr "डिफ़ॉल्ट रीसेट करें"
 
 #: ui/delegates/ShortcutsPicker.qml:120
 #, kde-format
 msgid "Set Shortcut"
-msgstr "शॉर्टकट् सेट् कुर्वन्तु"
+msgstr "शॉर्टकट सेट करें"
 
 #: ui/delegates/TimePicker.qml:40
 #, kde-format
 msgid "Hour"
-msgstr "घटकः"
+msgstr "घंटा"
 
 #: ui/delegates/TimePicker.qml:56
 #, kde-format
 msgid "Minute"
-msgstr "क्षणं"
+msgstr "मिनट"
 
 #: ui/delegates/TimePicker.qml:72
 #, kde-format
 msgid "Second"
-msgstr "क्षण"
+msgstr "दूसरा"
 
 #: ui/delegates/TimePicker.qml:89
 #, kde-format
 msgid "AM/PM"
-msgstr "प्र./प"
+msgstr "दोपहर से पूर्व दोपहर के बाद"
 
 #: ui/main.qml:21
 #, kde-format
 msgid "Appearance"
-msgstr "स्वरूपम्‌"
+msgstr "उपस्थिति"
 
 #: ui/main.qml:77
 #, kde-format
 msgid "Launcher Appearance"
-msgstr "प्रक्षेपक स्वरूप"
+msgstr "लॉन्चर का स्वरूप"
 
 #: ui/main.qml:86
 #, kde-format
 msgid "Power Inhibition"
-msgstr "शक्तिनिरोधः"
+msgstr "शक्ति अवरोध"
 
 #: ui/main.qml:97
 #, kde-format
 msgid "Colored Tiles"
-msgstr "रंगीन टाइल्स"
+msgstr "रंगीन टाइलें"
 
 #: ui/main.qml:109
 #, kde-format
 msgid "Expanding Tiles"
-msgstr "टाइल्स् विस्तारयन्"
+msgstr "विस्तारित टाइलें"
 
 #: ui/main.qml:120
 #, kde-format
 msgid "Adjust Date & Time"
-msgstr "तिथि एवं समय समायोजित करें"
+msgstr "दिनांक और समय समायोजित करें"
 
 #: ui/main.qml:128
 #, kde-format
 msgid "Bigscreen Shortcuts"
-msgstr "बिगस्क्रीन् शॉर्टकट"
+msgstr "बिगस्क्रीन शॉर्टकट"
 
 #: ui/main.qml:136
 #, kde-format
 msgid "Bigscreen Settings Shortcut"
-msgstr "बिगस्क्रीन् सेटिंग्स् शॉर्टकट्"
+msgstr "बिगस्क्रीन सेटिंग्स शॉर्टकट"
 
 #: ui/main.qml:148
 #, kde-format
 msgid "Bigscreen Tasks Shortcut"
-msgstr "बिगस्क्रीन् कार्य शॉर्टकट"
+msgstr "बिगस्क्रीन कार्य शॉर्टकट"
 
 #: ui/main.qml:160
 #, kde-format
 msgid "Bigscreen Display Homescreen Shortcut"
-msgstr "Bigscreen Display होमस्क्रीन् शॉर्टकट"
+msgstr "बिगस्क्रीन डिस्प्ले होमस्क्रीन शॉर्टकट"
 
 #: ui/main.qml:181
 #, kde-format
 msgid "General Appearance"
-msgstr "सामान्यरूपम्"
+msgstr "सामान्य उपस्थिति"
