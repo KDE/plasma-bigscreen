@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 00:41+0000\n"
-"PO-Revision-Date: 2024-02-09 22:05+0100\n"
+"PO-Revision-Date: 2024-12-27 17:40+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -31,18 +31,17 @@ msgstr "olivermkellogg@gmail.com"
 #: ui/delegates/DatePicker.qml:38
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Jaro"
 
 #: ui/delegates/DatePicker.qml:54
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Monato"
 
 #: ui/delegates/DatePicker.qml:70
-#, fuzzy, kde-format
-#| msgid "May"
+#, kde-format
 msgid "Day"
-msgstr "Maj"
+msgstr "Tago"
 
 #: ui/delegates/DeviceTimeSettings.qml:136
 #, kde-format
@@ -55,10 +54,9 @@ msgid "Timezone:"
 msgstr "Horzono:"
 
 #: ui/delegates/DeviceTimeSettings.qml:187
-#, fuzzy, kde-format
-#| msgid "Set time automatically:"
+#, kde-format
 msgid "Set time automatically"
-msgstr "Fiksi tempon aŭtomate:"
+msgstr "Fiksi tempon aŭtomate"
 
 #: ui/delegates/DeviceTimeSettings.qml:256
 #, kde-format
@@ -165,60 +163,24 @@ msgstr "Alĝustigi Daton & Horon"
 #: ui/main.qml:128
 #, kde-format
 msgid "Bigscreen Shortcuts"
-msgstr ""
+msgstr "Grandekranaj Ŝparvojoj"
 
 #: ui/main.qml:136
 #, kde-format
 msgid "Bigscreen Settings Shortcut"
-msgstr ""
+msgstr "Grandekran-Agorda Ŝparvojo"
 
 #: ui/main.qml:148
 #, kde-format
 msgid "Bigscreen Tasks Shortcut"
-msgstr ""
+msgstr "Ŝparvojo de Grandekranaj Taskoj"
 
 #: ui/main.qml:160
 #, kde-format
 msgid "Bigscreen Display Homescreen Shortcut"
-msgstr ""
+msgstr "Ŝparvojo de Grandekrana Komencbildo"
 
 #: ui/main.qml:181
 #, kde-format
 msgid "General Appearance"
 msgstr "Ĝenerala Apero"
-
-#~ msgid "Jan"
-#~ msgstr "Jan"
-
-#~ msgid "Feb"
-#~ msgstr "Feb"
-
-#~ msgid "Mar"
-#~ msgstr "Mar"
-
-#~ msgid "Apr"
-#~ msgstr "Apr"
-
-#~ msgid "Jun"
-#~ msgstr "Jun"
-
-#~ msgid "Jul"
-#~ msgstr "Jul"
-
-#~ msgid "Aug"
-#~ msgstr "Aŭg"
-
-#~ msgid "Sep"
-#~ msgstr "Sep"
-
-#~ msgid "Oct"
-#~ msgstr "Okt"
-
-#~ msgid "Nov"
-#~ msgstr "Nov"
-
-#~ msgid "Dec"
-#~ msgstr "Dec"
-
-#~ msgid "Exit"
-#~ msgstr "Eliri"

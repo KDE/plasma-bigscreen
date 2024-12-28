@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2024-02-09 22:05+0100\n"
+"PO-Revision-Date: 2024-12-27 17:40+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -30,30 +30,29 @@ msgstr "Agordoj"
 
 #: contents/ui/ConfigWindow.qml:183 contents/ui/FavoritesManager.qml:232
 #: contents/ui/TaskWindowView.qml:217
-#, fuzzy, kde-format
-#| msgid "close"
+#, kde-format
 msgid "Close"
-msgstr "fermi"
+msgstr "Fermi"
 
 #: contents/ui/FavoritesManager.qml:67
 #, kde-format
 msgid "Favorites Manager"
-msgstr ""
+msgstr "Mastrumilo de Plejŝatatoj"
 
 #: contents/ui/FavoritesManager.qml:99
 #, kde-format
 msgid "Add Favorites"
-msgstr ""
+msgstr "Aldoni Plejŝatatojn"
 
 #: contents/ui/FavoritesManager.qml:167
 #, kde-format
 msgid "Remove Favorites"
-msgstr ""
+msgstr "Forigi Plejŝatatojn"
 
 #: contents/ui/indicators/Favorites.qml:51
 #, kde-format
 msgid "Manage Favorites"
-msgstr ""
+msgstr "Mastrumi Plejŝatatojn"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -68,12 +67,12 @@ msgstr "Akcepti"
 #: contents/ui/indicators/PairWindow.qml:127
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Nuligi"
 
 #: contents/ui/indicators/Volume.qml:25
 #, kde-format
 msgid "Audio Volume"
-msgstr ""
+msgstr "Aŭdila Laŭteco"
 
 #: contents/ui/launcher/config/configGeneral.qml:31
 #, kde-format
@@ -111,10 +110,9 @@ msgid "Recent"
 msgstr "Lastatempa"
 
 #: contents/ui/launcher/LauncherHome.qml:100
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Voice Applications"
-msgstr "Aplikaĵoj"
+msgstr "Voĉ-Aplikaĵoj"
 
 #: contents/ui/launcher/LauncherHome.qml:126
 #, kde-format
@@ -135,36 +133,3 @@ msgstr "Bigscreen ŝaltis tutsisteman inhibicion"
 #, kde-format
 msgid "Clear Tasks"
 msgstr ""
-
-#~ msgid "Use Colored Tiles"
-#~ msgstr "Uzi Koloritajn Kahelojn"
-
-#~ msgid "Use Expanding Tiles"
-#~ msgstr "Uzi Vastiĝantajn Kahelojn"
-
-#~ msgid "KDE Connect"
-#~ msgstr "KDE Connect"
-
-#~ msgid "Reject"
-#~ msgstr "Malakcepti"
-
-#~ msgid "Increase Volume"
-#~ msgstr "Pliigi Laŭtecon"
-
-#~ msgid "Decrease Volume"
-#~ msgstr "Malpliigi Laŭtecon"
-
-#~ msgid "Mute"
-#~ msgstr "Silentigi"
-
-#~ msgid "Audio Device chooser"
-#~ msgstr "Elektilo por Aŭd-Aparato"
-
-#~ msgid "Network"
-#~ msgstr "Reto"
-
-#~ msgid "Voice Apps"
-#~ msgstr "Voĉ-Apoj"
-
-#~ msgid "Getting Ready... Please Wait"
-#~ msgstr "Pretiĝanta... Bonvolu Atendi"
