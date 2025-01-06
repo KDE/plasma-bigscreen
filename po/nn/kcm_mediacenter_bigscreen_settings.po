@@ -41,7 +41,6 @@ msgstr ""
 
 #: ui/delegates/DatePicker.qml:70
 #, fuzzy, kde-format
-#| msgid "May"
 msgid "Day"
 msgstr "Mai"
 
@@ -57,7 +56,6 @@ msgstr "Tidssone:"
 
 #: ui/delegates/DeviceTimeSettings.qml:187
 #, fuzzy, kde-format
-#| msgid "Set time automatically:"
 msgid "Set time automatically"
 msgstr "Still klokka automatisk:"
 

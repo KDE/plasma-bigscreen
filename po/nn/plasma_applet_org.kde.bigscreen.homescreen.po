@@ -32,7 +32,6 @@ msgstr "Innstillingar"
 #: contents/ui/ConfigWindow.qml:183 contents/ui/FavoritesManager.qml:232
 #: contents/ui/TaskWindowView.qml:217
 #, fuzzy, kde-format
-#| msgid "close"
 msgid "Close"
 msgstr "lukk"
 
@@ -113,7 +112,6 @@ msgstr "Nylege"
 
 #: contents/ui/launcher/LauncherHome.qml:100
 #, fuzzy, kde-format
-#| msgid "Applications"
 msgid "Voice Applications"
 msgstr "Program"
 
