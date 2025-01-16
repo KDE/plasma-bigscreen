@@ -35,8 +35,8 @@ public:
     KcmsListModel(QObject *parent = nullptr);
     ~KcmsListModel() override;
 
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
-    int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     void moveRow(const QModelIndex &sourceParent, int sourceRow, const QModelIndex &destinationParent, int destinationChild);
 
     Qt::ItemFlags flags(const QModelIndex &index) const override;
@@ -44,7 +44,7 @@ public:
     Q_INVOKABLE void moveItem(int row, int destination);
     Q_INVOKABLE void loadKcms();
 
-    QHash<int, QByteArray> roleNames() const Q_DECL_OVERRIDE;
+    QHash<int, QByteArray> roleNames() const override;
 
     int count();
 
