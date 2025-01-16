@@ -46,7 +46,7 @@ public:
 
     QHash<int, QByteArray> roleNames() const override;
 
-    int count();
+    int count() const;
 
     QStringList appOrder() const;
     void setAppOrder(const QStringList &order);

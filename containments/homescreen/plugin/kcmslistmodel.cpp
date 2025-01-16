@@ -41,7 +41,7 @@ QHash<int, QByteArray> KcmsListModel::roleNames() const
     return roles;
 }
 
-int KcmsListModel::count()
+int KcmsListModel::count() const
 {
     return m_kcms.count();
 }
