@@ -1,4 +1,5 @@
 #include "shortcuts.h"
+#include <KLocalizedString>
 #include <QAction>
 
 Shortcuts* Shortcuts::instance()
@@ -19,17 +20,17 @@ void Shortcuts::initializeShortcuts()
 {
     toggleActivateSettingsAction = new QAction(this);    
     toggleActivateSettingsAction->setObjectName(QStringLiteral("Toggle Bigscreen Settings"));
-    toggleActivateSettingsAction->setText(QStringLiteral("Toggle Bigscreen Settings"));
+    toggleActivateSettingsAction->setText(i18n("Toggle Bigscreen Settings"));
     KGlobalAccel::self()->setGlobalShortcut(toggleActivateSettingsAction, Qt::Key_Settings);
 
     toggleActivateTasksAction = new QAction(this);
     toggleActivateTasksAction->setObjectName(QStringLiteral("Toggle Bigscreen Tasks Overview"));
-    toggleActivateTasksAction->setText(QStringLiteral("Toggle Bigscreen Tasks Overview"));
+    toggleActivateTasksAction->setText(i18n("Toggle Bigscreen Tasks Overview"));
     KGlobalAccel::self()->setGlobalShortcut(toggleActivateTasksAction, Qt::Key_Menu);
 
     toggleDisplayHomeScreenAction = new QAction(this);
     toggleDisplayHomeScreenAction->setObjectName(QStringLiteral("Toggle Bigscreen Home Screen"));
-    toggleDisplayHomeScreenAction->setText(QStringLiteral("Toggle Bigscreen Home Screen"));    
+    toggleDisplayHomeScreenAction->setText(i18n("Toggle Bigscreen Home Screen"));
     KGlobalAccel::self()->setGlobalShortcut(toggleDisplayHomeScreenAction, Qt::Key_HomePage | Qt::Key_Back);  
     
     connect(toggleActivateSettingsAction, &QAction::triggered, this, [this]() {
