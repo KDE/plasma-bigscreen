@@ -1,9 +1,9 @@
 project(bigscreen)
 
 set(bigscreen_SRCS
-    envreader.cpp
-    bigscreenplugin.cpp
-    bigscreenplugin_dbus.cpp
+    envreader.cpp envreader.h
+    bigscreenplugin.cpp bigscreenplugin.h
+    bigscreenplugin_dbus.cpp bigscreenplugin_dbus.h
     global.cpp
     )
 

@@ -1,7 +1,7 @@
 set(bigscreensettings_SRCS
-    bigscreensettings.cpp
-    globalthemelistmodel.cpp
-    timedated_interface.cpp
+    bigscreensettings.cpp bigscreensettings.h
+    globalthemelistmodel.cpp globalthemelistmodel.h
+    timedated_interface.cpp timedated_interface.h
 )
 
 kcmutils_add_qml_kcm(kcm_mediacenter_bigscreen_settings SOURCES ${bigscreensettings_SRCS})

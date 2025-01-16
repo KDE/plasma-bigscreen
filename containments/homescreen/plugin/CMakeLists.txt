@@ -4,15 +4,15 @@ add_definitions(-DTRANSLATION_DOMAIN=\"biglauncherhomescreen\")
 
 kcoreaddons_add_plugin(org.kde.bigscreen.homescreen INSTALL_NAMESPACE "plasma/applets")
 target_sources(org.kde.bigscreen.homescreen PRIVATE
-    biglauncherhomescreen.cpp
-    biglauncher_dbus.cpp
-    applicationlistmodel.cpp
-    kcmslistmodel.cpp
-    favslistmodel.cpp
-    configuration.cpp
-    shortcuts.cpp
-    settings/modulesmodel.cpp
-    settings/module.cpp
+    biglauncherhomescreen.cpp biglauncherhomescreen.h
+    biglauncher_dbus.cpp biglauncher_dbus.h
+    applicationlistmodel.cpp applicationlistmodel.h
+    kcmslistmodel.cpp kcmslistmodel.h
+    favslistmodel.cpp favslistmodel.h
+    configuration.cpp configuration.h
+    shortcuts.cpp shortcuts.h
+    settings/modulesmodel.cpp settings/modulesmodel.h
+    settings/module.cpp settings/module.h
 )
 
 target_link_libraries(org.kde.bigscreen.homescreen

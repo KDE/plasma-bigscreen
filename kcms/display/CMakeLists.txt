@@ -1,6 +1,6 @@
 set(displaysettings_SRCS
-    displaysettings.cpp
-    displaymodel.cpp
+    displaysettings.cpp displaysettings.h
+    displaymodel.cpp displaymodel.h
 )
 
 kcmutils_add_qml_kcm(kcm_mediacenter_display SOURCES ${displaysettings_SRCS})
