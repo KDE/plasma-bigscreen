@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 00:41+0000\n"
-"PO-Revision-Date: 2024-10-20 20:16+0300\n"
+"PO-Revision-Date: 2025-01-24 09:27+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: ui/delegates/ConfirmationDialog.qml:54
 #, kde-format
@@ -41,7 +41,7 @@ msgstr "רזולוציה: "
 #: ui/delegates/LocalSettingCurrentResolution.qml:69
 #, kde-format
 msgid "Refresh Rate: "
-msgstr "קצב רענון: "
+msgstr "קצב ריענון: "
 
 #: ui/delegates/LocalSettingCurrentResolution.qml:92
 #, kde-format
