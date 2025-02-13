@@ -4,7 +4,7 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2020.
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma_lookandfeel_org.kde.plasma.mycroft.bigscreen\n"
+"Project-Id-Version: plasma_lookandfeel_org.kde.plasma.bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-09-04 00:18+0000\n"
 "PO-Revision-Date: 2020-09-09 13:30+0200\n"

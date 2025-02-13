@@ -6,7 +6,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma_applet_org.kde.mycroft.bigscreen.homescreen\n"
+"Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-08 00:47+0000\n"
 "PO-Revision-Date: 2023-04-03 16:53+0200\n"
