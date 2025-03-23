@@ -323,11 +323,11 @@ ContainmentItem {
                     id: settingsIndicator
                     Layout.fillHeight: true
                     implicitWidth: height
-                    KeyNavigation.left: taskWindowView.modelCount > 0 ? tasksIndicator : null
+                    KeyNavigation.left: taskWindowView.modelCount > 0 ? tasksIndicator : favsIndicator
                     KeyNavigation.down: launcher
                     KeyNavigation.right: volumeIndicator
                     KeyNavigation.tab: volumeIndicator
-                    KeyNavigation.backtab: taskWindowView.modelCount > 0 ? tasksIndicator : null
+                    KeyNavigation.backtab: taskWindowView.modelCount > 0 ? tasksIndicator : favsIndicator
                 }
 
                 Indicators.Volume {
