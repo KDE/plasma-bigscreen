@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: none
+[Desktop Entry]
+Name=Plasma BigScreen
+Exec=bigscreen
+Icon=plasma-media-center
+Type=Application
+Categories=Qt;KDE;AudioVideo;Video;Player

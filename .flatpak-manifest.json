@@ -1,0 +1,222 @@
+{
+    "id": "org.kde.plasma.bigscreen",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "6.9",
+    "sdk": "org.kde.Sdk",
+    "command": "bigscreen",
+    "tags": ["nightly"],
+    "desktop-file-name-suffix": " (Nightly)",
+    "finish-args": [
+        "--share=ipc",
+        "--device=dri",
+        "--socket=wayland",
+        "--socket=inherit-wayland-socket",
+        "--env=QML2_IMPORT_PATH=/app/qml:/app/lib/qml:/app/lib64/qml",
+        "--env=QT_PLUGIN_PATH=/app/plugins:/app/lib64/plugins:/app/lib/plugins:/usr/share/runtime/lib/plugins",
+        "--own=org.kde.plasmashell"
+    ],
+    "cleanup": [
+        "/include",
+        "/lib/cmake",
+        "/mkspecs",
+        "/etc/xdg/*categories",
+        "/share/qlogging-categories5"
+    ],
+
+    "modules": [
+        {
+            "name": "libplasma",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ],
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/plasma/libplasma.git", "branch": "master"} ]
+        },
+        {
+            "name": "kwayland",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ],
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/plasma/kwayland.git", "branch": "master"} ]
+        },
+        {
+            "name": "plasma-nano",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ],
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/plasma/plasma-nano.git", "branch": "master"} ]
+        },
+        {
+            "name": "plasma-workspace",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DWITH_X11=OFF",
+                "-DCMAKE_DISABLE_FIND_PACKAGE_KSysGuard=ON"
+            ],
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/plasma/plasma-workspace.git", "branch": "master"} ],
+            "modules": [
+                {
+                    "name": "krunner",
+                    "config-opts": [
+                        "-DBUILD_TESTING=OFF"
+                    ],
+                    "buildsystem": "cmake-ninja",
+                    "builddir": true,
+                    "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/krunner.git", "branch": "master"} ]
+                },
+                {
+                    "name": "plasma5support",
+                    "config-opts": [
+                        "-DBUILD_TESTING=OFF",
+                        "-DCMAKE_DISABLE_FIND_PACKAGE_KSysGuard=ON"
+                    ],
+                    "buildsystem": "cmake-ninja",
+                    "builddir": true,
+                    "sources": [ { "type": "git", "url": "https://invent.kde.org/plasma/plasma5support.git", "branch": "master"} ]
+                },
+                {
+                    "name": "libkscreen",
+                    "config-opts": [
+                        "-DBUILD_TESTING=OFF"
+                    ],
+                    "buildsystem": "cmake-ninja",
+                    "builddir": true,
+                    "sources": [ { "type": "git", "url": "https://invent.kde.org/plasma/libkscreen.git", "branch": "master"} ],
+                    "modules": [
+                        {
+                            "name": "plasma-wayland-protocols",
+                            "config-opts": [
+                                "-DBUILD_TESTING=OFF"
+                            ],
+                            "buildsystem": "cmake-ninja",
+                            "builddir": true,
+                            "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/plasma-wayland-protocols.git", "branch": "master"} ]
+                        }
+                    ]
+                },
+                {
+                    "name": "layer-shell-qt",
+                    "config-opts": [
+                        "-DBUILD_TESTING=OFF"
+                    ],
+                    "buildsystem": "cmake-ninja",
+                    "builddir": true,
+                    "sources": [ { "type": "git", "url": "https://invent.kde.org/plasma/layer-shell-qt.git", "branch": "master"} ]
+                },
+                {
+                    "name": "phonon",
+                    "config-opts": [
+                        "-DBUILD_TESTING=OFF",
+                        "-DPHONON_BUILD_QT5=OFF",
+                        "-DPHONON_BUILD_QT6=ON"
+                    ],
+                    "buildsystem": "cmake-ninja",
+                    "builddir": true,
+                    "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/phonon.git", "branch": "master"} ]
+                },
+                {
+                    "name": "PolkitQt6-1",
+                    "config-opts": [
+                        "-DBUILD_TESTING=OFF",
+                        "-DQT_MAJOR_VERSION=6"
+                    ],
+                    "buildsystem": "cmake-ninja",
+                    "builddir": true,
+                    "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/polkit-qt-1.git", "branch": "master"} ],
+                    "modules": [
+                        {
+                            "name": "polkit",
+                            "buildsystem": "meson",
+                            "builddir": true,
+                            "config-opts": [
+                                "-Dman=false",
+                                "-Dexamples=false",
+                                "-Dtests=false",
+                                "-Dintrospection=true",
+                                "-Dauthfw=shadow",
+                                "-Dgtk_doc=false"
+                            ],
+                            "sources": [
+                                {
+                                    "type": "git",
+                                    "url": "https://gitlab.freedesktop.org/polkit/polkit.git",
+                                    "branch": "master"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "kwindbus",
+                    "buildsystem": "simple",
+                    "build-commands": [
+                        "cat > KWinDBusInterfaceConfig.cmake <<< 'set(KWIN_INTERFACE \"/app/share/dbus-1/interfaces/org.kde.KWin.xml\")\n set(KWIN_COMPOSITING_INTERFACE \"/app/share/dbus-1/interfaces/org.kde.kwin.Compositing.xml\")\n set(KWIN_EFFECTS_INTERFACE \"/app/share/dbus-1/interfaces/org.kde.kwin.Effects.xml\")\n set(KWIN_VIRTUALKEYBOARD_INTERFACE \"/app/share/dbus-1/interfaces/org.kde.kwin.VirtualKeyboard.xml\")\n set(KWIN_TABLETMODE_INTERFACE \"/app/share/dbus-1/interfaces/org.kde.KWin.TabletModeManager.xml\")\n set(KWIN_INPUTDEVICE_INTERFACE \"/app/share/dbus-1/interfaces/org.kde.kwin.InputDevice.xml\")\n set(KWIN_NIGHTLIGHT_INTERFACE \"/app/share/dbus-1/interfaces/org.kde.KWin.NightLight.xml\")\n set(KWIN_WAYLAND_BIN_PATH \"\")'",
+                        "install -Dt /app/lib/cmake/KWinDBusInterface/ KWinDBusInterfaceConfig.cmake",
+                        "qdbuscpp2xml src/virtualkeyboard_dbus.h -A > org.kde.kwin.VirtualKeyboard.xml",
+                        "find . -name org.kde.*.xml -exec install -Dt /app/share/dbus-1/interfaces/ {} \\;"
+                    ],
+                    "sources": [ { "type": "git", "url": "https://invent.kde.org/plasma/kwin.git", "branch": "master" } ]
+                },
+                {
+                    "name": "screensaverdbus",
+                    "buildsystem": "simple",
+                    "build-commands": [
+                        "cat > ScreenSaverDBusInterfaceConfig.cmake <<< 'set(SCREENSAVER_DBUS_INTERFACE \"/app/share/dbus-1/interfaces/org.freedesktop.ScreenSaver.xml\")\nset(KSCREENLOCKER_DBUS_INTERFACES_DIR /app/share/dbus-1/interfaces/)'",
+                        "install -Dt /app/lib/cmake/ScreenSaverDBusInterface/ ScreenSaverDBusInterfaceConfig.cmake",
+                        "find . -name org.*.xml -exec install -Dt /app/share/dbus-1/interfaces/ {} \\;"
+                    ],
+                    "sources": [ { "type": "git", "url": "https://invent.kde.org/plasma/kscreenlocker.git", "branch": "master" } ]
+                }
+            ]
+        },
+        {
+            "name": "plasma-bigscreen",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                { "type": "dir", "path": "." }
+            ]
+        },
+        {
+            "name": "kirigami-addons",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.kde.org/stable/kirigami-addons/kirigami-addons-1.7.0.tar.xz",
+                    "sha256": "7d854975185cf740de486d84f1e2ec3e4eadb66ac9fb897214cba9ab8cc492b1",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 242933,
+                        "stable-only": true,
+                        "url-template": "https://download.kde.org/stable/kirigami-addons/kirigami-addons-$version.tar.xz"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "desktopfile",
+            "buildsystem": "simple",
+            "build-commands": [
+                "rm /app/share/metainfo/org.kde.plasma.bigscreen.appdata.xml",
+                "install org.kde.plasma.bigscreen.desktop /app/share/applications",
+                "install --mode=766 bigscreen /app/bin",
+                "install -Dt /app/share/icons/hicolor/128x128/apps/ /usr/share/icons/breeze/apps/48/plasma-media-center.svg"
+            ],
+            "sources": [
+                { "type": "dir", "path": "." }
+            ]
+        }
+    ]
+}
