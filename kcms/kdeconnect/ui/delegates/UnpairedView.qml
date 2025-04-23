@@ -12,7 +12,6 @@ import QtQuick.Controls
 import org.kde.bigscreen as Bigscreen
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.components as PlasmaComponents
-import org.kde.kdeconnect
 
 Item {
     id: root

@@ -12,9 +12,7 @@ import QtQuick.Window
 import QtQuick.Controls as QQC2
 
 import org.kde.kirigami as Kirigami
-import org.kde.kdeconnect
 import org.kde.kcmutils as KCM
-import org.kde.bigscreen as Bigscreen
 
 import "delegates" as Delegates
 

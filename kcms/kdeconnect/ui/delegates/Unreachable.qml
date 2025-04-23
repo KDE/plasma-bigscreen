@@ -6,11 +6,9 @@
 */
 
 import QtQuick
-import QtQuick.Layouts
 import QtQuick.Controls
 
 import org.kde.bigscreen as Bigscreen
-import org.kde.kirigami as Kirigami
 
 Item {
     id: notReachableDevice
