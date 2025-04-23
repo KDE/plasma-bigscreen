@@ -9,7 +9,6 @@ import QtQuick
 import QtQuick.Window
 import QtQuick.Layouts
 import QtQuick.Controls as Controls
-import org.kde.kdeconnect as KDEConnect
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.kirigami as Kirigami
 
@@ -25,14 +24,14 @@ Window {
             currentDevice.cancelPairing()
         }
     }
-    
+
     onVisibleChanged: {
         if(visible){
             showMaximized()
             acceptButton.forceActiveFocus()
         }
     }
-    
+
     Item {
         id: contentItem
         anchors.fill: parent
@@ -61,7 +60,7 @@ Window {
                     Keys.onRightPressed: {
                         rejectButton.forceActiveFocus()
                     }
-                    
+
                     background: Kirigami.ShadowedRectangle {
                         color: acceptButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
                         radius: 3
@@ -70,7 +69,7 @@ Window {
                             size: Kirigami.Units.largeSpacing
                         }
                     }
-                    
+
                     contentItem: Item {
                         RowLayout {
                             anchors.centerIn: parent
@@ -84,13 +83,13 @@ Window {
                             }
                         }
                     }
-                                        
+
                     onClicked: (mouse)=> {
                         currentDevice.acceptPairing()
                         pairingRequest = false
                         root.close()
                     }
-                    
+
                     Keys.onReturnPressed: (event)=> {
                         clicked()
                     }
@@ -114,7 +113,7 @@ Window {
                             size: Kirigami.Units.largeSpacing
                         }
                     }
-                    
+
                     contentItem: Item {
                         RowLayout {
                             anchors.centerIn: parent
@@ -128,13 +127,13 @@ Window {
                             }
                         }
                     }
-                    
+
                     onClicked: (mouse)=> {
                         currentDevice.cancelPairing()
                         pairingRequest = false
                         root.close()
                     }
-                    
+
                     Keys.onReturnPressed: (event)=> {
                         clicked()
                     }
@@ -142,4 +141,4 @@ Window {
             }
         }
     }
-} 
+}

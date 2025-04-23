@@ -5,14 +5,11 @@
 */
 
 import QtQuick
-import QtQuick.Layouts
 import QtQuick.Controls
-import org.kde.kirigami as Kirigami
-import org.kde.kdeconnect
 
 Item {
     id: notReachableDevice
-    
+
     Label {
         anchors.centerIn: parent
         text: i18n("This device is not reachable")

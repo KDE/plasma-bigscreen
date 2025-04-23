@@ -7,13 +7,7 @@
 
 import QtQuick
 import QtQuick.Window
-import QtQuick.Layouts
-import QtQml.Models
 import org.kde.plasma.plasmoid
-import QtQuick.Controls as Controls
-import org.kde.kirigami as Kirigami
-import org.kde.kdeconnect as KDEConnect
-import org.kde.plasma.private.nanoshell as NanoShell
 import org.kde.private.biglauncher
 
 AbstractIndicator {
@@ -21,7 +15,7 @@ AbstractIndicator {
     icon.name: "transform-shear-up"
 
     onClicked: {
-        taskWindowView.showOverlay()   
+        taskWindowView.showOverlay()
     }
 
     Connections {

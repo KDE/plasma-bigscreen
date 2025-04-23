@@ -8,16 +8,14 @@
 import QtQuick.Layouts
 import QtQuick
 import QtQuick.Window
-import QtQuick.Controls
 import org.kde.kirigami as Kirigami
-import org.kde.kdeconnect
 import org.kde.kcmutils as KCM
 import org.kde.bigscreen as BigScreen
 import "delegates" as Delegates
 
 KCM.SimpleKCM {
     id: root
-    
+
     title: i18n("KDE Connect")
     background: null
     leftPadding: Kirigami.Units.smallSpacing
@@ -30,7 +28,7 @@ KCM.SimpleKCM {
     function settingMenuItemFocus() {
         settingMenuItem.forceActiveFocus()
     }
-    
+
     Component.onCompleted: {
         if(allDevicesModel.count > 0) {
             connectionView.forceActiveFocus();

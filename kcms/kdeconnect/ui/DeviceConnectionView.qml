@@ -12,8 +12,6 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.kirigami as Kirigami
 import org.kde.bigscreen as BigScreen
-import org.kde.kdeconnect
-import Qt5Compat.GraphicalEffects
 
 import "delegates" as Delegates
 
@@ -24,24 +22,24 @@ Rectangle {
     property bool hasPairingRequests: deviceView.currentDevice.hasPairingRequests
     property bool isTrusted: deviceView.currentDevice.isTrusted
     property bool isReachable: deviceView.currentDevice.isReachable
-    
+
     onCurrentDeviceChanged: checkCurrentStatus()
-    
+
     onHasPairingRequestsChanged: {
         if(hasPairingRequests) {
             checkCurrentStatus()
         }
     }
-    
+
     onIsTrustedChanged: checkCurrentStatus()
     onIsReachableChanged: checkCurrentStatus()
-    
+
     onActiveFocusChanged: {
         if(activeFocus){
             deviceStatView.forceActiveFocus()
         }
     }
-    
+
     function checkCurrentStatus() {
         //if (deviceView.currentDevice.hasPairingRequests) {
         //    deviceStatView.currentIndex = 1
@@ -51,17 +49,17 @@ Rectangle {
             if (deviceView.currentDevice.isTrusted) {
                 deviceIconStatus.source = deviceView.currentDevice.statusIconName
                 deviceStatView.currentIndex = 2
-                
+
             } else {
                 deviceIconStatus.source = deviceView.currentDevice.iconName
                 deviceStatView.currentIndex = 0
             }
-            
+
         } else {
             deviceStatView.currentIndex = 3
         }
     }
-    
+
     ColumnLayout {
         id: colLayoutSettingsItem
         clip: true
@@ -78,7 +76,7 @@ Rectangle {
             Layout.fillWidth: true
             Layout.preferredHeight: parent.height * 0.20
         }
-        
+
         Item {
             Layout.fillWidth: true
             Layout.preferredHeight: parent.height / 3
@@ -93,7 +91,7 @@ Rectangle {
                 height: width
                 radius: 100
                 color: Kirigami.Theme.backgroundColor
-                
+
                 Kirigami.Icon {
                     id: deviceIconStatus
                     anchors.centerIn: parent
@@ -102,7 +100,7 @@ Rectangle {
                     source: currentDevice.iconName
                 }
             }
-            
+
             Kirigami.Heading {
                 id: label2
                 width: parent.width
@@ -124,7 +122,7 @@ Rectangle {
                 height: 1
                 width: parent.width
             }
-            
+
             StackLayout {
                 id: deviceStatView
                 anchors.top: lblSept2.bottom
@@ -133,25 +131,25 @@ Rectangle {
                 anchors.right: parent.right
                 anchors.bottom: parent.bottom
                 currentIndex: 0
-                
+
                 onActiveFocusChanged: {
                     if(activeFocus) {
                         deviceStatView.itemAt(currentIndex).forceActiveFocus();
                     }
                 }
-                
+
                 Delegates.UnpairedView{
                     id: unpairedView
                 }
-                
+
                 Delegates.PairRequest{
                     id: pairRequestView
                 }
-                
+
                 Delegates.PairedView{
                     id: pairedView
                 }
-                
+
                 Delegates.Unreachable{
                     id: unreachableView
                 }
