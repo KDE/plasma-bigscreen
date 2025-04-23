@@ -14,7 +14,8 @@
         "--socket=inherit-wayland-socket",
         "--env=QML2_IMPORT_PATH=/app/qml:/app/lib/qml:/app/lib64/qml",
         "--env=QT_PLUGIN_PATH=/app/plugins:/app/lib64/plugins:/app/lib/plugins:/usr/share/runtime/lib/plugins",
-        "--own=org.kde.plasmashell"
+        "--own-name=org.kde.plasmashell",
+        "--talk-name=org.kde.ActivityManager"
     ],
     "cleanup": [
         "/include",
@@ -178,13 +179,6 @@
             ]
         },
         {
-            "name": "plasma-bigscreen",
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                { "type": "dir", "path": "." }
-            ]
-        },
-        {
             "name": "kirigami-addons",
             "config-opts": [
                 "-DBUILD_TESTING=OFF",
@@ -203,6 +197,33 @@
                         "url-template": "https://download.kde.org/stable/kirigami-addons/kirigami-addons-$version.tar.xz"
                     }
                 }
+            ]
+        },
+        {
+            "name": "plasma-pa",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/plasma/plasma-pa.git", "branch": "master"} ],
+            "modules": [
+                {
+                    "name": "pulseaudio-qt",
+                    "config-opts": [
+                        "-DBUILD_TESTING=OFF",
+                        "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+                    ],
+                    "buildsystem": "cmake-ninja",
+                    "sources": [ { "type": "git", "url": "https://invent.kde.org/libraries/pulseaudio-qt.git", "branch": "master"} ]
+                }
+            ]
+        },
+        {
+            "name": "plasma-bigscreen",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                { "type": "dir", "path": "." }
             ]
         },
         {
