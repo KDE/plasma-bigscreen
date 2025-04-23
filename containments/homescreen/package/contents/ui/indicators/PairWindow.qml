@@ -9,7 +9,6 @@ import QtQuick
 import QtQuick.Window
 import QtQuick.Layouts
 import QtQuick.Controls as Controls
-import org.kde.kdeconnect as KDEConnect
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.kirigami as Kirigami
 
