@@ -72,7 +72,8 @@ msgstr "Data"
 #: ui/delegates/DeviceTimeSettings.qml:399 ui/delegates/ShortcutsPicker.qml:191
 #, kde-format
 msgid "Press the [←] Back button to return to appearance settings"
-msgstr "Premeu el botó Arrere [←] per a tornar a la configuració de l'aparença"
+msgstr ""
+"Premeu el botó «Arrere» [←] per a tornar a la configuració de l'aparença"
 
 #: ui/delegates/DeviceTimeSettings.qml:460
 #: ui/delegates/DeviceTimeSettings.qml:583
@@ -80,7 +81,7 @@ msgstr "Premeu el botó Arrere [←] per a tornar a la configuració de l'aparen
 #, kde-format
 msgid "Press the [←] Back button to save configuration and return to settings"
 msgstr ""
-"Premeu el botó Arrere [←] per a guardar la configuració i tornar a la "
+"Premeu el botó «Arrere» [←] per a guardar la configuració i tornar a la "
 "configuració"
 
 #: ui/delegates/DeviceTimeSettings.qml:482
@@ -187,6 +188,3 @@ msgstr "Dreceres de visualització de la pantalla d'inici de la Bigscreen"
 #, kde-format
 msgid "General Appearance"
 msgstr "Aparença general"
-
-#~ msgid "Appearance & Personalization"
-#~ msgstr "Aparença i personalització"
