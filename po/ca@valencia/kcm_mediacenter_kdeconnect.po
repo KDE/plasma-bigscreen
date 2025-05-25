@@ -82,7 +82,7 @@ msgstr "No es pot accedir a este dispositiu"
 #: package/contents/ui/DeviceConnectionView.qml:196
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
-msgstr "Premeu el botó Arrere [←] per a tornar a la selecció de dispositius"
+msgstr "Premeu el botó «Arrere» [←] per a tornar a la selecció de dispositius"
 
 #: package/contents/ui/main.qml:23
 #, kde-format

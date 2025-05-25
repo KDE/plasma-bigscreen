@@ -122,7 +122,8 @@ msgstr "Data"
 #: package/contents/ui/DeviceTimeSettings.qml:314
 #, kde-format
 msgid "Press the [←] Back button to return to appearance settings"
-msgstr "Premeu el botó Arrere [←] per a tornar a la configuració de l'aparença"
+msgstr ""
+"Premeu el botó «Arrere» [←] per a tornar a la configuració de l'aparença"
 
 #: package/contents/ui/DeviceTimeSettings.qml:377
 #: package/contents/ui/DeviceTimeSettings.qml:502
@@ -130,7 +131,7 @@ msgstr "Premeu el botó Arrere [←] per a tornar a la configuració de l'aparen
 #, kde-format
 msgid "Press the [←] Back button to save configuration and return to settings"
 msgstr ""
-"Premeu el botó Arrere [←] per a guardar la configuració i tornar a la "
+"Premeu el botó «Arrere» [←] per a guardar la configuració i tornar a la "
 "configuració"
 
 #: package/contents/ui/DeviceTimeSettings.qml:418
