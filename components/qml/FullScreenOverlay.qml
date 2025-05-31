@@ -8,7 +8,7 @@ import QtQuick.Layouts
 import QtQuick.Window
 import QtQuick.Controls as Controls
 import org.kde.kirigami as Kirigami
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 import org.kde.private.biglauncher
 import org.kde.plasma.private.nanoshell as NanoShell
 import org.kde.plasma.core as PlasmaCore

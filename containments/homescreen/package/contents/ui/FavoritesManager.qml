@@ -16,7 +16,7 @@ import org.kde.plasma.core as PlasmaCore
 import "launcher/delegates" as Delegates
 
 
-BigScreen.FullScreenOverlay {
+Bigscreen.FullScreenOverlay {
     id: favoritesManagerOverlay
     title: i18n("Favorites Manager")
     initialFocusItem: favsContainerAddSection
