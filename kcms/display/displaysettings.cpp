@@ -13,7 +13,7 @@ DisplaySettings::DisplaySettings(QObject *parent, const KPluginMetaData &data)
     : KQuickConfigModule(parent, data),
       m_displayModel(new DisplayModel(this))
 {
-    setButtons(Apply | Default);
+    setButtons(Apply);
     qmlRegisterAnonymousType<DisplayModel>("DisplayModel", 1);
 }
 

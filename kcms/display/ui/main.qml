@@ -12,7 +12,7 @@ import QtQuick.Controls
 import org.kde.plasma.core as PlasmaCore
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 import org.kde.kitemmodels as KItemModels
 import "delegates" as Delegates
 

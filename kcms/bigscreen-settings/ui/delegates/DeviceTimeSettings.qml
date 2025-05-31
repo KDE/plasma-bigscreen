@@ -14,7 +14,7 @@ import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 import org.kde.plasma.private.digitalclock
 
 Item {

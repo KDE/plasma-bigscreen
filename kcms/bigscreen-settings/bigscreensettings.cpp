@@ -26,7 +26,7 @@ BigscreenSettings::BigscreenSettings(QObject *parent, const KPluginMetaData &dat
     : KQuickConfigModule(parent, data)
     , m_globalThemeListModel(new GlobalThemeListModel(this))
 {
-    setButtons(Apply | Default);
+    setButtons(Apply);
 
     qmlRegisterAnonymousType<GlobalThemeListModel>("GlobalThemeListModel", 1);
     m_theme = new Plasma::Theme(this);

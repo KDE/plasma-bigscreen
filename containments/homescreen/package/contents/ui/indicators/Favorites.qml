@@ -8,7 +8,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 import org.kde.kirigami as Kirigami
 
 AbstractIndicator {

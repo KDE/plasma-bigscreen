@@ -12,7 +12,7 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.kquickcontrolsaddons
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.private.volume
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 
 import "delegates" as Delegates
 import "views" as Views
@@ -50,7 +50,7 @@ FocusScope {
                 }
             }
 
-            BigScreen.TileView {
+            Bigscreen.TileView {
                 id: sinkView
                 model: paSinkModel
                 focus: true
@@ -84,7 +84,7 @@ FocusScope {
                 Layout.fillWidth: true
             }
 
-            BigScreen.TileView {
+            Bigscreen.TileView {
                 id: sourceView
                 model: paSourceModel
                 title: i18n("Recording Devices")

@@ -14,7 +14,7 @@ public:
     explicit KdeConnect(QObject *parent, const KPluginMetaData &data)
         : KQuickConfigModule(parent, data)
     {
-        setButtons(Apply | Default);
+        setButtons(Apply);
     }
 };
 K_PLUGIN_CLASS_WITH_JSON(KdeConnect, "kcm_mediacenter_kdeconnect.json")

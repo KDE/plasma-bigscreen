@@ -17,7 +17,7 @@ import org.kde.kirigami as Kirigami
 import org.kde.kitemmodels as KItemModels
 
 import "delegates" as Delegates
-import org.kde.bigscreen 1.0 as BigScreen
+import org.kde.bigscreen 1.0 as Bigscreen
 import org.kde.private.biglauncher 1.0 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
@@ -49,7 +49,7 @@ FocusScope {
         spacing: Kirigami.Units.largeSpacing * 3
 
  
-        BigScreen.TileRepeater {
+        Bigscreen.TileRepeater {
             id: favAppsView
             title: i18n("Favorites")
             model: plasmoid.favsListModel
@@ -67,7 +67,7 @@ FocusScope {
         }
     
         
-        BigScreen.TileRepeater {
+        Bigscreen.TileRepeater {
             id: recentView
             title: i18n("Recent")
             compactMode: plasmoid.configuration.expandingTiles
@@ -95,7 +95,7 @@ FocusScope {
             navigationDown: voiceAppsView.visible ? voiceAppsView : appsView.visible ? appsView : gamesView.visible ? gamesView : settingsView
         }
 
-        BigScreen.TileRepeater {
+        Bigscreen.TileRepeater {
             id: voiceAppsView
             title: i18n("Voice Applications")
             compactMode: plasmoid.configuration.expandingTiles
@@ -121,7 +121,7 @@ FocusScope {
             navigationDown: appsView.visible ? appsView : gamesView.visible ? gamesView : settingsView
         }
 
-        BigScreen.TileRepeater {
+        Bigscreen.TileRepeater {
             id: appsView
             title: i18n("Applications")
             compactMode: plasmoid.configuration.expandingTiles
@@ -148,7 +148,7 @@ FocusScope {
             navigationDown: gamesView.visible ? gamesView : settingsView
         }
         
-        BigScreen.TileRepeater {
+        Bigscreen.TileRepeater {
             id: gamesView
             title: i18n("Games")
             compactMode: plasmoid.configuration.expandingTiles
@@ -177,7 +177,7 @@ FocusScope {
             id: settingActions
         }
         
-        BigScreen.TileRepeater {
+        Bigscreen.TileRepeater {
             id: settingsView
             title: i18n("Settings")
             model: plasmoid.kcmsListModel

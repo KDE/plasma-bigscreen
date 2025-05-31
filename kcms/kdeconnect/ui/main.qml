@@ -12,7 +12,7 @@ import QtQuick.Controls
 import org.kde.kirigami as Kirigami
 import org.kde.kdeconnect
 import org.kde.kcmutils as KCM
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 import "delegates" as Delegates
 
 KCM.SimpleKCM {
@@ -32,11 +32,7 @@ KCM.SimpleKCM {
     }
     
     Component.onCompleted: {
-        if(allDevicesModel.count > 0) {
-            connectionView.forceActiveFocus();
-        } else {
-            settingMenuItemFocus();
-        }
+        connectionView.forceActiveFocus();
     }
 
     DevicesModel {
@@ -56,7 +52,7 @@ KCM.SimpleKCM {
                 anchors.leftMargin: Kirigami.Units.largeSpacing
                 anchors.topMargin: Kirigami.Units.largeSpacing * 2
 
-                BigScreen.TileView {
+                Bigscreen.TileView {
                     id: connectionView
                     focus: true
                     model:  allDevicesModel

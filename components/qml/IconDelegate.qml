@@ -11,7 +11,7 @@ import Qt5Compat.GraphicalEffects
 import QtQuick.Controls
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.kirigami as Kirigami
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 
 AbstractDelegate {
     id: delegate

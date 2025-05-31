@@ -5,11 +5,11 @@
 */
 
 import QtQuick
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.private.nanoshell as NanoShell
 
-BigScreen.IconDelegate {
+Bigscreen.IconDelegate {
     id: delegate
     icon.name: modelData.kcmIconName
     text: modelData.kcmName
@@ -17,7 +17,7 @@ BigScreen.IconDelegate {
     compactMode: plasmoid.configuration.expandingTiles
 
     onClicked: {
-        BigScreen.NavigationSoundEffects.playClickedSound()
+        Bigscreen.NavigationSoundEffects.playClickedSound()
         NanoShell.StartupFeedback.open(
                             delegate.icon.name,
                             delegate.text,

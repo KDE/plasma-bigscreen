@@ -10,7 +10,7 @@ import QtQuick.Layouts
 import QtQuick.Window
 import QtQuick.Controls as Controls
 import org.kde.kirigami as Kirigami
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 import org.kde.private.biglauncher 
 import org.kde.plasma.private.nanoshell as NanoShell
 
@@ -86,21 +86,17 @@ NanoShell.FullScreenOverlay {
     }
 
 
-    Item {
+    Kirigami.ShadowedRectangle {
         id: configContentItem
+        color: Kirigami.Theme.backgroundColor
         anchors.fill: parent
 
-        Kirigami.ShadowedRectangle {
+        Item {
             id: menu
             width: Screen.desktopAvailableWidth * 0.3
             height: parent.height
-            color: Kirigami.Theme.backgroundColor
             opacity: 0
             x: -menu.width
-
-            shadow {
-                size: Kirigami.Units.largeSpacing * 2
-            }
 
             function open() {
                 menu.opacity = 1;
@@ -125,7 +121,7 @@ NanoShell.FullScreenOverlay {
 
             Item {
                 id: settingsHeader
-                height: parent.height * 0.075
+                height: parent.height * 0.065
                 anchors.top: parent.top
                 anchors.left: parent.left
                 anchors.right: parent.right
@@ -143,60 +139,6 @@ NanoShell.FullScreenOverlay {
                     fontSizeMode: Text.Fit
                     minimumPixelSize: 16
                     font.pixelSize: 32
-                }
-            }
-
-            Item {
-                id: settingsFooter
-                height: Kirigami.Units.gridUnit * 4
-                anchors.bottom: parent.bottom
-                anchors.left: parent.left
-                anchors.right: parent.right
-
-                Controls.Button {
-                    id: kcmcloseButton
-                    anchors.fill: parent
-
-                    Keys.onUpPressed: {
-                        settingsKCMMenu.children[settingsKCMMenuModel.count - 1].forceActiveFocus();
-                    }
-
-                    Keys.onDownPressed: {
-                        settingsKCMMenu.children[0].forceActiveFocus();
-                    }
-
-                    Keys.onEscapePressed: hideOverlay()
-
-                    background: Rectangle {
-                        color: kcmcloseButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
-                    }
-
-                    contentItem: Item {
-                        RowLayout {
-                            anchors.centerIn: parent
-                            Kirigami.Icon {
-                                Layout.preferredWidth: Kirigami.Units.iconSizes.large
-                                Layout.preferredHeight: Kirigami.Units.iconSizes.large
-                                source: "window-close"
-                            }
-                            Controls.Label {
-                                text: i18n("Close")
-                                verticalAlignment: Text.AlignVCenter
-                                horizontalAlignment: Text.AlignHCenter
-                                fontSizeMode: Text.Fit
-                                minimumPixelSize: 8
-                                font.pixelSize: 18
-                            }
-                        }
-                    }
-
-                    onClicked: {
-                        hideOverlay()
-                    }
-
-                    Keys.onReturnPressed: {
-                        hideOverlay()
-                    }
                 }
             }
 
@@ -231,13 +173,6 @@ NanoShell.FullScreenOverlay {
                         Keys.onEscapePressed: hideOverlay()
 
                         leftPadding: Kirigami.Units.gridUnit * 2
-
-                        scale: kcmButton.activeFocus ? 0.96 : 1 
-                        Behavior on scale {
-                                NumberAnimation {
-                                    duration: 100
-                                }
-                        }
 
                         onFocusChanged: {
                             if(focus) {
@@ -317,20 +252,15 @@ NanoShell.FullScreenOverlay {
             }
         }
 
-        Kirigami.ShadowedRectangle {
+        Item {
             id: kcmContainerHolder
             anchors.left: menu.right
             anchors.right: parent.right
             anchors.margins: Kirigami.Units.largeSpacing
             width: parent.width - menu.width
             height: parent.height
-            color: Kirigami.Theme.backgroundColor
             opacity: kcmPresent ? 1 : 0
             property bool kcmPresent: true
-
-            shadow {
-                size: Kirigami.Units.largeSpacing * 2
-            }
 
             Controls.StackView {
                 id: pageStack
@@ -386,7 +316,7 @@ NanoShell.FullScreenOverlay {
                 header: Item {
                     id: headerAreaTop
                     height: parent.height * 0.075
-                    anchors.top: parent.top
+                    anchors.top: parent.bottom
                     anchors.left: parent.left
                     anchors.right: parent.right
                     anchors.margins: Kirigami.Units.largeSpacing

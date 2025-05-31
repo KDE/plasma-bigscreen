@@ -11,7 +11,7 @@ import QtQuick.Controls
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.kirigami as Kirigami
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 import org.kde.kdeconnect
 import Qt5Compat.GraphicalEffects
 
@@ -166,30 +166,5 @@ Rectangle {
         anchors.right: parent.right
         anchors.margins: Kirigami.Units.largeSpacing * 2
         height: Kirigami.Units.gridUnit * 2
-
-        PlasmaComponents.Button {
-            id: backBtnSettingsItem
-            icon.name: "arrow-left"
-            Layout.alignment: Qt.AlignLeft
-
-            KeyNavigation.down: deviceStatView
-
-            Keys.onReturnPressed: {
-                clicked()
-            }
-
-            onClicked: {
-                connectionView.forceActiveFocus()
-            }
-        }
-
-        Label {
-            id: backbtnlabelHeading
-            text: i18n("Press the [←] Back button to return to device selection")
-            wrapMode: Text.WordWrap
-            maximumLineCount: 2
-            Layout.fillWidth: true
-            Layout.alignment: Qt.AlignRight
-        }
     }
 }

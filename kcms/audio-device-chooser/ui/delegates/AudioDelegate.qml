@@ -8,11 +8,11 @@
 import QtQuick
 import QtQuick.Controls
 import org.kde.kirigami as Kirigami
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 import org.kde.plasma.private.volume
 import "../code/icon.js" as Icon
 
-BigScreen.KCMAbstractDelegate {
+Bigscreen.KCMAbstractDelegate {
     id: delegate
     property bool isPlayback: type.substring(0, 4) == "sink"
     property bool onlyOne: false

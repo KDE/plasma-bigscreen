@@ -8,9 +8,9 @@ import QtQuick 2.12
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 import org.kde.kirigami 2.11 as Kirigami
-import org.kde.bigscreen 1.0 as BigScreen
+import org.kde.bigscreen 1.0 as Bigscreen
 
-BigScreen.AbstractDelegate {
+Bigscreen.AbstractDelegate {
     id: delegate
     width: wallpapersView.cellWidth
     height: wallpapersView.cellHeight

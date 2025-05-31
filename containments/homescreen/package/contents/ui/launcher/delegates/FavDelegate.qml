@@ -8,12 +8,12 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.private.nanoshell as NanoShell
 import org.kde.plasma.plasmoid
 
-BigScreen.AbstractDelegate {
+Bigscreen.AbstractDelegate {
     id: delegate
     readonly property var appStorageIdRole: modelData.ApplicationStorageIdRole
     implicitWidth: listView.cellWidth
@@ -82,7 +82,7 @@ BigScreen.AbstractDelegate {
     }
 
     onClicked: {
-        BigScreen.NavigationSoundEffects.playClickedSound()
+        Bigscreen.NavigationSoundEffects.playClickedSound()
         NanoShell.StartupFeedback.open(
                             delegate.icon.name.length > 0 ? delegate.icon.name : model.decoration,
                             delegate.text,

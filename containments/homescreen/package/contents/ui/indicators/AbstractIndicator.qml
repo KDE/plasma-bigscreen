@@ -8,7 +8,7 @@
 import QtQuick
 import QtQuick.Layouts
 import org.kde.plasma.components as PlasmaComponents
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
 
@@ -40,7 +40,7 @@ PlasmaComponents.Button {
     }
 
     onClicked: (event)=> {
-        BigScreen.NavigationSoundEffects.playClickedSound()
+        Bigscreen.NavigationSoundEffects.playClickedSound()
     }
 
     Keys.onPressed: (event)=> {
@@ -50,7 +50,7 @@ PlasmaComponents.Button {
             case Qt.Key_Left:
             case Qt.Key_Tab:
             case Qt.Key_Backtab:
-                BigScreen.NavigationSoundEffects.playMovingSound();
+                Bigscreen.NavigationSoundEffects.playMovingSound();
                 break;
             default:
                 break;

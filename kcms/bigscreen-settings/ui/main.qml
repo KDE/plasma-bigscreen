@@ -12,7 +12,7 @@ import QtQuick.Controls
 import org.kde.plasma.core as PlasmaCore
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 import "delegates" as Delegates
 
 KCM.SimpleKCM {
@@ -32,7 +32,7 @@ KCM.SimpleKCM {
     }
 
     Component.onCompleted: {
-        desktopThemeView.forceActiveFocus();
+        coloredTileDelegate.forceActiveFocus();
     }
 
     function setOption(type, result){
@@ -50,13 +50,13 @@ KCM.SimpleKCM {
     contentItem: FocusScope {
         Item {
             anchors.left: parent.left
-            anchors.leftMargin: Kirigami.Units.largeSpacing
             anchors.top: parent.top
             anchors.topMargin: Kirigami.Units.largeSpacing * 2
             anchors.bottom: parent.bottom
             anchors.right: parent.right
             anchors.rightMargin: Kirigami.Units.largeSpacing
             clip: true
+            KeyNavigation.left: settingMenuItemFocus()
 
             ColumnLayout {
                 id: contentLayout
@@ -74,29 +74,17 @@ KCM.SimpleKCM {
 
                 Kirigami.Heading {
                     id: launcherLookHeader
-                    text: i18n("Launcher Appearance")
+                    text: i18n("Home Screen Appearance")
                     color: Kirigami.Theme.textColor
-                }
-
-                Delegates.LocalSettingDelegate {
-                    id: pmInhibitionDelegate
-                    Layout.fillWidth: true
-                    Layout.preferredHeight: Kirigami.Units.gridUnit * 4
-                    isChecked: kcm.pmInhibitionActive() ? 1 : 0
-                    name: i18n("Power Inhibition")
-                    customType: "pmInhibition"
-                    KeyNavigation.left: settingMenuItem
-                    KeyNavigation.down: coloredTileDelegate
                 }
 
                 Delegates.LocalSettingDelegate {
                     id: coloredTileDelegate
                     Layout.fillWidth: true
-                    Layout.preferredHeight: Kirigami.Units.gridUnit * 4
                     isChecked: kcm.useColoredTiles() ? 1 : 0
                     name: i18n("Colored Tiles")
+                    description: i18n("Tile backgrounds will be colored based on the app's icon")
                     customType: "coloredTile"
-                    KeyNavigation.left: settingMenuItem
                     KeyNavigation.up: pmInhibitionDelegate
                     KeyNavigation.down: expandableTileDelegate
                 }
@@ -104,64 +92,11 @@ KCM.SimpleKCM {
                 Delegates.LocalSettingDelegate {
                     id: expandableTileDelegate
                     Layout.fillWidth: true
-                    Layout.preferredHeight: Kirigami.Units.gridUnit * 4
                     isChecked: kcm.useExpandingTiles() ? 1 : 0
                     name: i18n("Expanding Tiles")
+                    description: i18n("Tiles will expand when selected")
                     customType: "exapandableTile"
-                    KeyNavigation.left: settingMenuItem
                     KeyNavigation.up: coloredTileDelegate
-                    KeyNavigation.down: timeDateSettingsDelegate
-                }
-
-                Delegates.TimeDelegate {
-                    id: timeDateSettingsDelegate
-                    Layout.fillWidth: true
-                    Layout.preferredHeight: Kirigami.Units.gridUnit * 4
-                    name: i18n("Adjust Date & Time")
-                    KeyNavigation.left: settingMenuItem
-                    KeyNavigation.up: expandableTileDelegate
-                    KeyNavigation.down: settingsShortcutDelegate
-                }
-
-                Kirigami.Heading {
-                    id: launcherShortcutsHeader
-                    text: i18n("Bigscreen Shortcuts")
-                    color: Kirigami.Theme.textColor
-                }
-
-                Delegates.ShortcutsDelegate {
-                    id: settingsShortcutDelegate
-                    Layout.fillWidth: true
-                    Layout.preferredHeight: Kirigami.Units.gridUnit * 4
-                    description: i18n("Bigscreen Settings Shortcut")
-                    getActionPath: "activateSettingsShortcut"
-                    setActionPath: "setActivateSettingsShortcut"
-                    KeyNavigation.left: settingMenuItem
-                    KeyNavigation.up: timeDateSettingsDelegate
-                    KeyNavigation.down: tasksShortcutDelegate
-                }
-
-                Delegates.ShortcutsDelegate {
-                    id: tasksShortcutDelegate
-                    Layout.fillWidth: true
-                    Layout.preferredHeight: Kirigami.Units.gridUnit * 4
-                    description: i18n("Bigscreen Tasks Shortcut")
-                    getActionPath: "activateTasksShortcut"
-                    setActionPath: "setActivateTasksShortcut"
-                    KeyNavigation.left: settingMenuItem
-                    KeyNavigation.up: settingsShortcutDelegate
-                    KeyNavigation.down: displayHomeScreenShortcutDelegate
-                }
-
-                Delegates.ShortcutsDelegate {
-                    id: displayHomeScreenShortcutDelegate
-                    Layout.fillWidth: true
-                    Layout.preferredHeight: Kirigami.Units.gridUnit * 4
-                    description: i18n("Bigscreen Display Homescreen Shortcut")
-                    getActionPath: "displayHomeScreenShortcut"
-                    setActionPath: "setDisplayHomeScreenShortcut"
-                    KeyNavigation.left: settingMenuItem
-                    KeyNavigation.up: tasksShortcutDelegate
                     KeyNavigation.down: desktopThemeView
                 }
 
@@ -170,7 +105,7 @@ KCM.SimpleKCM {
                     Layout.preferredHeight: Kirigami.Units.largeSpacing * 2
                 }
 
-                BigScreen.TileView {
+                Bigscreen.TileView {
                     id: desktopThemeView
                     Layout.fillWidth: true
                     Layout.fillHeight: true
@@ -178,8 +113,8 @@ KCM.SimpleKCM {
                     focus: true
                     model: kcm.globalThemeListModel
                     view.cacheBuffer: parent.width * 2
-                    title: i18n("General Appearance")
-                    navigationUp: displayHomeScreenShortcutDelegate
+                    title: i18n("Global Theme")
+                    navigationUp: expandableTileDelegate
                     enabled: !settingsAreaLoader.opened
                     delegate: Delegates.ThemeDelegate {
                         text: model.display

@@ -9,7 +9,7 @@ import QtQuick.Layouts
 import QtQuick.Controls
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.kirigami as Kirigami
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 import Qt5Compat.GraphicalEffects
 
 Control {

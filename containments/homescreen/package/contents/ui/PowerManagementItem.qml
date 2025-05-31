@@ -13,7 +13,7 @@ import org.kde.plasma.plasma5support as P5Support
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 
 Item {
     id: powerManagementItem

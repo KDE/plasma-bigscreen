@@ -7,7 +7,7 @@
 #pragma once
 #include <QQmlExtensionPlugin>
 
-class BigScreenPlugin : public QQmlExtensionPlugin
+class BigscreenPlugin : public QQmlExtensionPlugin
 {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QQmlExtensionInterface")

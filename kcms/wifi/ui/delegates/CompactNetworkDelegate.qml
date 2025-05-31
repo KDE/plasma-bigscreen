@@ -10,11 +10,11 @@ import QtQuick.Layouts
 import QtQuick.Controls
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.kirigami as Kirigami
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 import Qt5Compat.GraphicalEffects
 import org.kde.plasma.networkmanagement as PlasmaNM
 
-BigScreen.AbstractDelegate {
+Bigscreen.AbstractDelegate {
     id: delegate
 
     property bool activating: model.ConnectionState == PlasmaNM.Enums.Activating

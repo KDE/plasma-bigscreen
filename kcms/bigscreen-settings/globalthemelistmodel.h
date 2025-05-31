@@ -9,9 +9,9 @@
 #ifndef GLOBALTHEMELISTMODEL_H
 #define GLOBALTHEMELISTMODEL_H
 
+#include <KPackage/Package>
 #include <QAbstractListModel>
 #include <QObject>
-#include <KPackage/Package>
 
 class GlobalThemeInfo;
 class GlobalThemeListModel : public QAbstractListModel
@@ -36,7 +36,7 @@ public:
     QModelIndex indexOf(const QString &path) const;
     void reload();
     KPackage::Package packageForPluginId(const QString &pluginId) const;
-    
+
     Q_INVOKABLE QVariantMap get(int index) const;
     Q_INVOKABLE void setTheme(const QString &pluginId);
 
@@ -46,7 +46,6 @@ private:
     QHash<int, QByteArray> m_roleNames;
     QList<GlobalThemeInfo> m_themes;
 };
-
 
 class GlobalThemeInfo
 {

@@ -6,12 +6,12 @@
 */
 
 import QtQuick
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.private.nanoshell as NanoShell
 import org.kde.plasma.plasmoid
 
-BigScreen.IconDelegate {
+Bigscreen.IconDelegate {
     id: delegate
     readonly property var appStorageIdRole: modelData.ApplicationStorageIdRole
 
@@ -21,7 +21,7 @@ BigScreen.IconDelegate {
     compactMode: plasmoid.configuration.expandingTiles
 
     onClicked: {
-        BigScreen.NavigationSoundEffects.playClickedSound()
+        Bigscreen.NavigationSoundEffects.playClickedSound()
         NanoShell.StartupFeedback.open(
                             delegate.icon.name.length > 0 ? delegate.icon.name : model.decoration,
                             delegate.text,

@@ -3,7 +3,7 @@ import QtQuick 2.12
 import QtQuick.Layouts 1.4
 import QtQuick.Controls 2.12 as Controls
 import org.kde.kirigami 2.13 as Kirigami
-import org.kde.bigscreen 1.0 as BigScreen
+import org.kde.bigscreen 1.0 as Bigscreen
 
 Image {
     id: image

@@ -7,9 +7,9 @@
 
 import QtQuick
 import QtQuick.Controls
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 
-BigScreen.KCMAbstractDelegate {
+Bigscreen.KCMAbstractDelegate {
     id: delegate
     property QtObject deviceObj: device
     itemIcon: model.iconName

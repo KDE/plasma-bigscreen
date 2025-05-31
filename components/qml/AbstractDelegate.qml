@@ -12,7 +12,7 @@ import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.kirigami as Kirigami
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 
 QQC2.ItemDelegate {
     id: delegate

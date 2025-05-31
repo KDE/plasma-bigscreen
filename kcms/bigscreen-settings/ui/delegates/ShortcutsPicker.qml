@@ -10,7 +10,7 @@ import QtQuick.Controls
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 import org.kde.kquickcontrols as KQuickControls
 import Qt5Compat.GraphicalEffects
 

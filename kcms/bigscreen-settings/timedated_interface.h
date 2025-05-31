@@ -8,11 +8,11 @@
 #ifndef TIMEDATED_INTERFACE_H
 #define TIMEDATED_INTERFACE_H
 
-#include <QObject>
-#include <QVariant>
 #include <QDBusAbstractInterface>
 #include <QDBusConnection>
 #include <QDBusPendingReply>
+#include <QObject>
+#include <QVariant>
 
 class OrgFreedesktopTimedate1Interface : public QDBusAbstractInterface
 {
@@ -63,9 +63,9 @@ Q_SIGNALS: // SIGNALS
 
 namespace org
 {
-    namespace freedesktop
-    {
-        typedef ::OrgFreedesktopTimedate1Interface timedate1;
-    }
+namespace freedesktop
+{
+typedef ::OrgFreedesktopTimedate1Interface timedate1;
+}
 }
 #endif

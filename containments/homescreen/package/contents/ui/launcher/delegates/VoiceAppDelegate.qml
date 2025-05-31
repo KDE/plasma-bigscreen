@@ -6,10 +6,10 @@
 */
 
 import QtQuick
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 import org.kde.plasma.plasmoid
 
-BigScreen.IconDelegate {
+Bigscreen.IconDelegate {
     readonly property var vAppStorageIdRole: modelData.ApplicationStorageIdRole
 
     icon.name: modelData && modelData.ApplicationIconRole ? modelData.ApplicationIconRole : ""
@@ -18,7 +18,7 @@ BigScreen.IconDelegate {
     compactMode: plasmoid.configuration.expandingTiles
 
     onClicked: {
-        BigScreen.NavigationSoundEffects.playClickedSound()
+        Bigscreen.NavigationSoundEffects.playClickedSound()
         plasmoid.applicationListModel.runApplication(modelData.ApplicationStorageIdRole)
         recentView.forceActiveFocus();
         recentView.currentIndex = 0;

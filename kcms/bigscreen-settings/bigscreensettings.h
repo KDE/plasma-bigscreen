@@ -41,7 +41,7 @@ public:
 
 public Q_SLOTS:
     void load() override;
-    
+
     bool useColoredTiles();
     void setUseColoredTiles(bool useColoredTiles);
 

@@ -7,7 +7,7 @@
 
 import QtQuick
 import QtQuick.Layouts
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 
 AbstractIndicator {
     id: button
@@ -15,6 +15,6 @@ AbstractIndicator {
     icon.name: "system-shutdown"
 
     onClicked: (event)=> {
-        BigScreen.Global.promptLogoutGreeter("promptShutDown");
+        Bigscreen.Global.promptLogoutGreeter("promptShutDown");
     }
 }

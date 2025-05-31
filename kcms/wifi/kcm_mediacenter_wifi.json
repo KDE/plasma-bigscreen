@@ -1,6 +1,6 @@
 {
     "KPlugin": {
-        "Description": "Connect to Wifi networks",
+        "Description": "Connect to Wi-Fi networks",
         "Description[ar]": "اتصل بشبكات لاسلكية",
         "Description[az]": "Wifi şəbəkələrinə qoşulun",
         "Description[bg]": "Свързване с безжични мрежи",
@@ -43,7 +43,7 @@
             "mediacenter"
         ],
         "Icon": "network-wireless-signal-exellent",
-        "Name": "Wifi",
+        "Name": "Wi-Fi",
         "Name[ar]": "الشبكة اللاسلكيّ",
         "Name[az]": "Wifi",
         "Name[bg]": "Wifi",

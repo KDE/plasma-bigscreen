@@ -7,12 +7,12 @@
  ***************************************************************************/
 
 #include "globalthemelistmodel.h"
+#include <KLocalizedString>
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
-#include <KLocalizedString>
 #include <QDir>
-#include <QProcess>
 #include <QJsonObject>
+#include <QProcess>
 
 GlobalThemeListModel::GlobalThemeListModel(QObject *parent)
     : QAbstractListModel(parent)
@@ -138,7 +138,7 @@ void GlobalThemeListModel::setTheme(const QString &pluginId)
 
 void GlobalThemeListModel::verifyPackage(const QString &packageName)
 {
-   KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Shell"));
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Shell"));
 
     if (!packageName.isEmpty()) {
         package.setPath(packageName);
@@ -153,7 +153,7 @@ void GlobalThemeListModel::verifyPackage(const QString &packageName)
 
     qDebug() << "Package" << packageName << package.filePath("lockscreenmainscript");
 
-    // if (!package.filePath("lockscreenmainscript").contains(package.path())) 
+    // if (!package.filePath("lockscreenmainscript").contains(package.path()))
     // {
     //     qDebug() << "Package" << packageName << "does not contain the lockscreenmainscript";
     // }

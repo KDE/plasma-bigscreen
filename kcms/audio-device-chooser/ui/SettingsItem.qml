@@ -11,7 +11,7 @@ import QtQuick.Controls
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 import Qt5Compat.GraphicalEffects
 import org.kde.plasma.private.volume
 

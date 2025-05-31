@@ -8,7 +8,7 @@ import QtQuick.Layouts
 import QtQuick.Window
 import QtQuick.Controls as Controls
 import org.kde.kirigami as Kirigami
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 import org.kde.private.biglauncher 
 import org.kde.plasma.private.nanoshell as NanoShell
 import org.kde.taskmanager as TaskManager
@@ -115,7 +115,7 @@ NanoShell.FullScreenOverlay {
                     positionViewAtIndex(taskListView.currentIndex, ListView.Contain)
                 }
 
-                delegate: BigScreen.TaskDelegate {
+                delegate: Bigscreen.TaskDelegate {
                     id: taskDelegate
                     iconImage: model.decoration
                     text: model.AppName
@@ -224,7 +224,7 @@ NanoShell.FullScreenOverlay {
         }
     }
 
-    BigScreen.TileRepeater {
+    Bigscreen.TileRepeater {
         id: favAppsView
         anchors.bottom: parent.bottom
         anchors.left: parent.left
@@ -241,7 +241,7 @@ NanoShell.FullScreenOverlay {
 
             onClicked: {
                 hideOverlay()
-                BigScreen.NavigationSoundEffects.playClickedSound()
+                Bigscreen.NavigationSoundEffects.playClickedSound()
                 NanoShell.StartupFeedback.open(
                                     delegate.icon.name.length > 0 ? delegate.icon.name : model.decoration,
                                     delegate.text,

@@ -13,7 +13,7 @@ import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 import org.kde.kquickcontrolsaddons
 import org.kde.kirigami as Kirigami
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 import Qt5Compat.GraphicalEffects
 import org.kde.coreaddons as KCoreAddons
 import org.kde.kirigamiaddons.components as KirigamiComponents
@@ -393,7 +393,7 @@ ContainmentItem {
                 anchors.centerIn: parent
 
                 onClicked: {
-                    BigScreen.Global.promptLogoutGreeter("promptAll")
+                    Bigscreen.Global.promptLogoutGreeter("promptAll")
                 }
 
                 Keys.onReturnPressed: onClicked()

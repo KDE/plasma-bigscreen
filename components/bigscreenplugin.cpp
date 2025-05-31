@@ -27,9 +27,7 @@ static QObject *globalSingletonProvider(QQmlEngine *engine, QJSEngine *scriptEng
     return new Global;
 }
 
-
-
-void BigScreenPlugin::registerTypes(const char *uri)
+void BigscreenPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("org.kde.bigscreen"));
 
@@ -38,7 +36,7 @@ void BigScreenPlugin::registerTypes(const char *uri)
     qmlRegisterSingletonType<Global>(uri, 1, 0, "Global", globalSingletonProvider);
 }
 
-QUrl BigScreenPlugin::componentUrl(const QString &fileName)
+QUrl BigscreenPlugin::componentUrl(const QString &fileName)
 {
     auto url = baseUrl();
     url.setPath(url.path() % QLatin1Char('/'));

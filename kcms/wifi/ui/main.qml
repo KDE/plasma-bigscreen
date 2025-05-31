@@ -13,7 +13,7 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.networkmanagement as PlasmaNM
 import org.kde.kcmutils as KCM
-import org.kde.bigscreen as BigScreen
+import org.kde.bigscreen as Bigscreen
 import "views" as Views
 import "delegates" as Delegates
 
@@ -336,7 +336,7 @@ KCM.SimpleKCM {
             anchors.bottom: footerMain.top
             width: parent.width - deviceConnectionView.width
 
-            BigScreen.TileView {
+            Bigscreen.TileView {
                 id: connectionView
                 focus: true
                 model: appletProxyModel
