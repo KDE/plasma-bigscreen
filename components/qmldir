@@ -8,3 +8,4 @@ IconDelegate 1.0 IconDelegate.qml
 IconNewDelegate 1.0 IconNewDelegate.qml
 KCMAbstractDelegate 1.0 KCMAbstractDelegate.qml
 TaskDelegate 1.0 TaskDelegate.qml
+FullScreenOverlay 1.0 FullScreenOverlay.qml

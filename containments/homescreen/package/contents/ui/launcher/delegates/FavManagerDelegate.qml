@@ -1,6 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2019 Marco Martin <mart@kde.org>
     SPDX-FileCopyrightText: 2019 Aditya Mehra <aix.m@outlook.com>
+    SPDX-FileCopyrightText: 2025 Seshan Ravikumar <seshan@sineware.ca>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -15,6 +16,7 @@ Controls.Button {
     id: delegateButton
     height: Kirigami.Units.gridUnit * 4
     property var modelItem
+    property string modelActionIcon: ""
 
     background: Rectangle {
         color: delegateButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
@@ -43,6 +45,13 @@ Controls.Button {
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignLeft
                 text: modelItem ? modelItem.ApplicationNameRole : ""
+            }
+
+            Kirigami.Icon {
+                Layout.fillHeight: true
+                Layout.preferredWidth: height
+                Layout.alignment: Qt.AlignRight
+                source: modelActionIcon
             }
         }
     }

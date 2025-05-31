@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2019 Aditya Mehra <aix.m@outlook.com>
+    SPDX-FileCopyrightText: 2025 Seshan Ravikumar <seshan@sineware.ca>
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
@@ -14,76 +15,32 @@ import org.kde.plasma.private.nanoshell as NanoShell
 import org.kde.plasma.core as PlasmaCore
 import "launcher/delegates" as Delegates
 
-NanoShell.FullScreenOverlay {
+
+BigScreen.FullScreenOverlay {
     id: favoritesManagerOverlay
-    width: Screen.desktopAvailableWidth
-    height: Screen.desktopAvailableHeight
-    visible: false
-    color: "transparent"
-
-    function showOverlay() {
-        if (!favoritesManagerOverlay.visible) {
-            favoritesManagerOverlay.visible = true;
-            favsContainerAddSection.forceActiveFocus();
-        }
-    }
-
-    function hideOverlay() {
-        if (favoritesManagerOverlay.visible) {
-            favoritesManagerOverlay.visible = false;
-        }
-    }
+    title: i18n("Favorites Manager")
+    initialFocusItem: favsContainerAddSection
     
-    Rectangle {
-        id: windowBackgroundDimmer
+    Item {
         anchors.fill: parent
-        color: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.5)
-    }
 
-    Controls.Control {
-        id: favsContainerHolder
-        anchors.fill: parent
-        anchors.margins: Kirigami.Units.largeSpacing * 4
-
-        background: Kirigami.ShadowedRectangle {
-            color: Kirigami.Theme.backgroundColor
-            radius: 6
-            shadow {
-                size: Kirigami.Units.largeSpacing * 1
-            }
-        }
-
-        contentItem: Item {
+        Kirigami.Theme.colorSet: Kirigami.Theme.View
+        Kirigami.Theme.inherit: false
+        
+        Item {
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: Kirigami.Units.largeSpacing
+            
             Rectangle {
-                id: favsManagerHeader
+                anchors.left: parent.left
                 anchors.top: parent.top
-                anchors.left: parent.left
-                anchors.right: parent.right
-                height: Kirigami.Units.gridUnit * 4
-                color: Kirigami.Theme.backgroundColor
-
-                Controls.Label {
-                    anchors.fill: parent
-                    text: i18n("Favorites Manager")
-                    fontSizeMode: Text.Fit
-                    minimumPixelSize: 8
-                    font.pixelSize: 24
-                    verticalAlignment: Text.AlignVCenter
-                    horizontalAlignment: Text.AlignHCenter
-                    elide: Text.ElideRight
-                    maximumLineCount: 1
-                    color: Kirigami.Theme.textColor
-                }
-            }
-
-            Rectangle {
-                anchors.left: parent.left
-                anchors.top: favsManagerHeader.bottom
-                anchors.bottom: closeButton.top
-                anchors.margins: Kirigami.Units.largeSpacing
+                anchors.bottom: parent.bottom
                 anchors.right: favsManagerSeparator.left
                 color: Kirigami.Theme.alternateBackgroundColor
-
+                
                 Rectangle {
                     id: addFavHeader
                     anchors.top: parent.top
@@ -91,9 +48,7 @@ NanoShell.FullScreenOverlay {
                     height: Kirigami.Units.gridUnit * 4
                     color: Kirigami.Theme.backgroundColor
                     radius: 6
-                    border.color: Kirigami.Theme.disabledTextColor
-                    border.width: 1
-
+                    
                     Controls.Label {
                         anchors.fill: parent
                         text: i18n("Add Favorites")
@@ -107,7 +62,7 @@ NanoShell.FullScreenOverlay {
                         color: Kirigami.Theme.textColor
                     }
                 }
-
+                
                 ListView {
                     id: favsContainerAddSection
                     anchors.top: addFavHeader.bottom
@@ -122,35 +77,35 @@ NanoShell.FullScreenOverlay {
                     KeyNavigation.down: closeButton
                     KeyNavigation.right: favsContainerRemoveSection
                     spacing: Kirigami.Units.smallSpacing
-
+                    
                     delegate: Delegates.FavManagerDelegate {
                         width: favsContainerAddSection.width
                         modelItem: model
-
+                        modelActionIcon: "list-add-symbolic"
+                        
                         onClicked: {
                             plasmoid.FavsManager.addFav(plasmoid.applicationListModel.itemMap(index));
                         }
                     }
                 }
             }
-
+            
             Kirigami.Separator {
                 id: favsManagerSeparator
-                anchors.top: favsManagerHeader.bottom
-                anchors.bottom: closeButton.top
+                anchors.top: parent.top
+                anchors.bottom: parent.bottom
                 anchors.centerIn: parent
                 width: Kirigami.Units.largeSpacing
                 color: "transparent"
             }
-
+            
             Rectangle {
                 anchors.left: favsManagerSeparator.right
                 anchors.right: parent.right
-                anchors.top: favsManagerHeader.bottom
-                anchors.bottom: closeButton.top
-                anchors.margins: Kirigami.Units.largeSpacing
-                color: Kirigami.Theme.alternateBackgroundColor
-
+                anchors.top: parent.top
+                anchors.bottom: parent.bottom
+                color: Kirigami.Theme.backgroundColor
+                
                 Rectangle {
                     id: removeFavHeader
                     anchors.top: parent.top
@@ -158,10 +113,7 @@ NanoShell.FullScreenOverlay {
                     height: Kirigami.Units.gridUnit * 4
                     color: Kirigami.Theme.backgroundColor
                     radius: 6
-                    border.color: Kirigami.Theme.disabledTextColor
-                    border.width: 1
-
-
+                    
                     Controls.Label {
                         anchors.fill: parent
                         text: i18n("Remove Favorites")
@@ -175,7 +127,7 @@ NanoShell.FullScreenOverlay {
                         color: Kirigami.Theme.textColor
                     }
                 }
-
+                
                 ListView {
                     id: favsContainerRemoveSection
                     anchors.top: removeFavHeader.bottom
@@ -190,53 +142,19 @@ NanoShell.FullScreenOverlay {
                     KeyNavigation.left: favsContainerAddSection
                     KeyNavigation.down: closeButton
                     spacing: Kirigami.Units.smallSpacing
-
+                    
                     delegate: Delegates.FavManagerDelegate {
                         width: favsContainerRemoveSection.width
                         modelItem: model
-
+                        modelActionIcon: "list-remove-symbolic"
+                        
                         onClicked: {
                             plasmoid.FavsManager.removeFav(plasmoid.favsListModel.itemMap(index));
                         }
                     }
                 }
             }
-
-            Controls.Button {
-                id: closeButton
-                anchors.bottom: parent.bottom
-                anchors.left: parent.left
-                anchors.right: parent.right
-                height: Kirigami.Units.gridUnit * 4
-
-                background: Kirigami.ShadowedRectangle {
-                    color: closeButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
-                    radius: 6
-                    shadow {
-                        size: Kirigami.Units.largeSpacing * 1
-                    }
-                }
-
-                contentItem: Item {
-                    RowLayout {
-                        anchors.centerIn: parent
-                        Kirigami.Icon {
-                            Layout.fillHeight: true
-                            Layout.preferredWidth: height
-                            source: "window-close"
-                        }
-                        Controls.Label {
-                            fontSizeMode: Text.Fit
-                            minimumPixelSize: 8
-                            font.pixelSize: 18
-                            text: i18n("Close")
-                        }
-                    }
-                }
-
-                onClicked: hideOverlay()
-                Keys.onReturnPressed: hideOverlay()
-            }
         }
+        
     }
 }
