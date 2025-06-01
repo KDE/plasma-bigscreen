@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2025-06-01 00:44+0000\n"
 "PO-Revision-Date: 2024-10-20 20:15+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -23,28 +23,22 @@ msgstr ""
 msgid "General"
 msgstr "כללי"
 
-#: contents/ui/ConfigWindow.qml:136 contents/ui/launcher/LauncherHome.qml:182
+#: contents/ui/ConfigWindow.qml:132 contents/ui/launcher/LauncherHome.qml:182
 #, kde-format
 msgid "Settings"
 msgstr "הגדרות"
 
-#: contents/ui/ConfigWindow.qml:183 contents/ui/FavoritesManager.qml:232
-#: contents/ui/TaskWindowView.qml:217
-#, kde-format
-msgid "Close"
-msgstr "סגירה"
-
-#: contents/ui/FavoritesManager.qml:67
+#: contents/ui/FavoritesManager.qml:21
 #, kde-format
 msgid "Favorites Manager"
 msgstr "מנהל מועדפים"
 
-#: contents/ui/FavoritesManager.qml:99
+#: contents/ui/FavoritesManager.qml:54
 #, kde-format
 msgid "Add Favorites"
 msgstr "הוספה למועדפים"
 
-#: contents/ui/FavoritesManager.qml:167
+#: contents/ui/FavoritesManager.qml:119
 #, kde-format
 msgid "Remove Favorites"
 msgstr "הסרה מהמועדפים"
@@ -133,6 +127,11 @@ msgstr "המערכת למסכים גדולים הפעילה מניעה כלל מ
 #, kde-format
 msgid "Clear Tasks"
 msgstr "פינוי משימות"
+
+#: contents/ui/TaskWindowView.qml:217
+#, kde-format
+msgid "Close"
+msgstr "סגירה"
 
 #~ msgid "Use Colored Tiles"
 #~ msgstr "להשתמש באריחים צבעוניים"

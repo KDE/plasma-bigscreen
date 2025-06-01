@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-01 00:44+0000\n"
 "PO-Revision-Date: 2021-01-23 12:08+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -64,15 +64,13 @@ msgstr "S'ha enviat una sol·licitud d'aparellament al dispositiu"
 msgid "This device is not reachable"
 msgstr "No es pot accedir a aquest dispositiu"
 
-#: ui/DeviceConnectionView.qml:188
-#, kde-format
-msgid "Press the [←] Back button to return to device selection"
-msgstr "Premeu el botó Enrere [←] per a tornar a la selecció de dispositius"
-
 #: ui/main.qml:21
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
+
+#~ msgid "Press the [←] Back button to return to device selection"
+#~ msgstr "Premeu el botó Enrere [←] per a tornar a la selecció de dispositius"
 
 #~ msgid "Exit"
 #~ msgstr "Surt"

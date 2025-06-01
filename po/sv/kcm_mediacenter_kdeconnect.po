@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-01 00:44+0000\n"
 "PO-Revision-Date: 2021-01-23 07:58+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -62,15 +62,13 @@ msgstr "Begäran om att para ihop skickad till apparat"
 msgid "This device is not reachable"
 msgstr "Apparaten går inte att nå"
 
-#: ui/DeviceConnectionView.qml:188
-#, kde-format
-msgid "Press the [←] Back button to return to device selection"
-msgstr "Klicka på knappen Bakåt [←] för att återgå till enhetsval"
-
 #: ui/main.qml:21
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE-anslut"
+
+#~ msgid "Press the [←] Back button to return to device selection"
+#~ msgstr "Klicka på knappen Bakåt [←] för att återgå till enhetsval"
 
 #~ msgid "Exit"
 #~ msgstr "Avsluta"

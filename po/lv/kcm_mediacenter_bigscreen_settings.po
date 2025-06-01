@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-01 00:44+0000\n"
 "PO-Revision-Date: 2024-10-30 13:01+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -138,54 +138,56 @@ msgid "Appearance"
 msgstr "Izskats"
 
 #: ui/main.qml:77
-#, kde-format
-msgid "Launcher Appearance"
-msgstr "Palaidēja izskats"
+#, fuzzy, kde-format
+#| msgid "General Appearance"
+msgid "Home Screen Appearance"
+msgstr "Pamata izskats"
 
-#: ui/main.qml:86
-#, kde-format
-msgid "Power Inhibition"
-msgstr "Jaudas nomākšana"
-
-#: ui/main.qml:97
+#: ui/main.qml:85
 #, kde-format
 msgid "Colored Tiles"
 msgstr "Krāsainas flīzes"
 
-#: ui/main.qml:109
+#: ui/main.qml:86
+#, kde-format
+msgid "Tile backgrounds will be colored based on the app's icon"
+msgstr ""
+
+#: ui/main.qml:96
 #, kde-format
 msgid "Expanding Tiles"
 msgstr "Paplašināmas flīzes"
 
-#: ui/main.qml:120
+#: ui/main.qml:97
 #, kde-format
-msgid "Adjust Date & Time"
-msgstr "Mainīt datumu un laiku"
+msgid "Tiles will expand when selected"
+msgstr ""
 
-#: ui/main.qml:128
+#: ui/main.qml:116
 #, kde-format
-msgid "Bigscreen Shortcuts"
-msgstr "Lielā ekrāna saīsnes"
+msgid "Global Theme"
+msgstr ""
 
-#: ui/main.qml:136
-#, kde-format
-msgid "Bigscreen Settings Shortcut"
-msgstr "Lielā ekrāna iestatījumu saīsne"
+#~ msgid "Launcher Appearance"
+#~ msgstr "Palaidēja izskats"
 
-#: ui/main.qml:148
-#, kde-format
-msgid "Bigscreen Tasks Shortcut"
-msgstr "Lielā ekrāna uzdevumu saīsne"
+#~ msgid "Power Inhibition"
+#~ msgstr "Jaudas nomākšana"
 
-#: ui/main.qml:160
-#, kde-format
-msgid "Bigscreen Display Homescreen Shortcut"
-msgstr "Lielā ekrāna mājas ekrāna parādīšanas saīsne"
+#~ msgid "Adjust Date & Time"
+#~ msgstr "Mainīt datumu un laiku"
 
-#: ui/main.qml:181
-#, kde-format
-msgid "General Appearance"
-msgstr "Pamata izskats"
+#~ msgid "Bigscreen Shortcuts"
+#~ msgstr "Lielā ekrāna saīsnes"
+
+#~ msgid "Bigscreen Settings Shortcut"
+#~ msgstr "Lielā ekrāna iestatījumu saīsne"
+
+#~ msgid "Bigscreen Tasks Shortcut"
+#~ msgstr "Lielā ekrāna uzdevumu saīsne"
+
+#~ msgid "Bigscreen Display Homescreen Shortcut"
+#~ msgstr "Lielā ekrāna mājas ekrāna parādīšanas saīsne"
 
 #~ msgid "Appearance & Personalization"
 #~ msgstr "Izskats un personalizācija"

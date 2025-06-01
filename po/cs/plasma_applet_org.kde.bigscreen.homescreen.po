@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2025-06-01 00:44+0000\n"
 "PO-Revision-Date: 2022-01-17 14:34+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -22,28 +22,22 @@ msgstr ""
 msgid "General"
 msgstr "Obecné"
 
-#: contents/ui/ConfigWindow.qml:136 contents/ui/launcher/LauncherHome.qml:182
+#: contents/ui/ConfigWindow.qml:132 contents/ui/launcher/LauncherHome.qml:182
 #, kde-format
 msgid "Settings"
 msgstr "Nastavení"
 
-#: contents/ui/ConfigWindow.qml:183 contents/ui/FavoritesManager.qml:232
-#: contents/ui/TaskWindowView.qml:217
-#, kde-format
-msgid "Close"
-msgstr "Zavřít"
-
-#: contents/ui/FavoritesManager.qml:67
+#: contents/ui/FavoritesManager.qml:21
 #, kde-format
 msgid "Favorites Manager"
 msgstr ""
 
-#: contents/ui/FavoritesManager.qml:99
+#: contents/ui/FavoritesManager.qml:54
 #, kde-format
 msgid "Add Favorites"
 msgstr ""
 
-#: contents/ui/FavoritesManager.qml:167
+#: contents/ui/FavoritesManager.qml:119
 #, kde-format
 msgid "Remove Favorites"
 msgstr ""
@@ -132,3 +126,8 @@ msgstr "Bigscreen povolil pozastavení systému"
 #, kde-format
 msgid "Clear Tasks"
 msgstr ""
+
+#: contents/ui/TaskWindowView.qml:217
+#, kde-format
+msgid "Close"
+msgstr "Zavřít"

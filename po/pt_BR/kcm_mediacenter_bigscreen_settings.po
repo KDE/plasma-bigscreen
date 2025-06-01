@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-01 00:44+0000\n"
 "PO-Revision-Date: 2025-02-06 17:46-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -139,54 +139,56 @@ msgid "Appearance"
 msgstr "Aparência"
 
 #: ui/main.qml:77
-#, kde-format
-msgid "Launcher Appearance"
-msgstr "Aparência do lançador"
+#, fuzzy, kde-format
+#| msgid "General Appearance"
+msgid "Home Screen Appearance"
+msgstr "Aparência geral"
 
-#: ui/main.qml:86
-#, kde-format
-msgid "Power Inhibition"
-msgstr "Inibição de energia"
-
-#: ui/main.qml:97
+#: ui/main.qml:85
 #, kde-format
 msgid "Colored Tiles"
 msgstr "Blocos coloridos"
 
-#: ui/main.qml:109
+#: ui/main.qml:86
+#, kde-format
+msgid "Tile backgrounds will be colored based on the app's icon"
+msgstr ""
+
+#: ui/main.qml:96
 #, kde-format
 msgid "Expanding Tiles"
 msgstr "Blocos expansíveis"
 
-#: ui/main.qml:120
+#: ui/main.qml:97
 #, kde-format
-msgid "Adjust Date & Time"
-msgstr "Ajustar data e hora"
+msgid "Tiles will expand when selected"
+msgstr ""
 
-#: ui/main.qml:128
+#: ui/main.qml:116
 #, kde-format
-msgid "Bigscreen Shortcuts"
-msgstr "Atalhos do Bigscreen"
+msgid "Global Theme"
+msgstr ""
 
-#: ui/main.qml:136
-#, kde-format
-msgid "Bigscreen Settings Shortcut"
-msgstr "Atalho para configurações do Bigscreen"
+#~ msgid "Launcher Appearance"
+#~ msgstr "Aparência do lançador"
 
-#: ui/main.qml:148
-#, kde-format
-msgid "Bigscreen Tasks Shortcut"
-msgstr "Atalho para tarefas do Bigscreen"
+#~ msgid "Power Inhibition"
+#~ msgstr "Inibição de energia"
 
-#: ui/main.qml:160
-#, kde-format
-msgid "Bigscreen Display Homescreen Shortcut"
-msgstr "Atalho para exibir tela inicial do Bigscreen"
+#~ msgid "Adjust Date & Time"
+#~ msgstr "Ajustar data e hora"
 
-#: ui/main.qml:181
-#, kde-format
-msgid "General Appearance"
-msgstr "Aparência geral"
+#~ msgid "Bigscreen Shortcuts"
+#~ msgstr "Atalhos do Bigscreen"
+
+#~ msgid "Bigscreen Settings Shortcut"
+#~ msgstr "Atalho para configurações do Bigscreen"
+
+#~ msgid "Bigscreen Tasks Shortcut"
+#~ msgstr "Atalho para tarefas do Bigscreen"
+
+#~ msgid "Bigscreen Display Homescreen Shortcut"
+#~ msgstr "Atalho para exibir tela inicial do Bigscreen"
 
 #~ msgid "Jan"
 #~ msgstr "Jan"

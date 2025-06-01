@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-01 00:44+0000\n"
 "PO-Revision-Date: 2024-12-15 17:37+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -62,12 +62,10 @@ msgstr "डिवाइस पर युग्मन अनुरोध भे�
 msgid "This device is not reachable"
 msgstr "यह डिवाइस उपलब्ध नहीं है"
 
-#: ui/DeviceConnectionView.qml:188
-#, kde-format
-msgid "Press the [←] Back button to return to device selection"
-msgstr "डिवाइस चयन पर वापस लौटने के लिए [←] वापस बटन दबाएँ"
-
 #: ui/main.qml:21
 #, kde-format
 msgid "KDE Connect"
 msgstr "केडीई कनेक्ट"
+
+#~ msgid "Press the [←] Back button to return to device selection"
+#~ msgstr "डिवाइस चयन पर वापस लौटने के लिए [←] वापस बटन दबाएँ"

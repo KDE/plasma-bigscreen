@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-01 00:44+0000\n"
 "PO-Revision-Date: 2024-10-17 15:27+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -138,54 +138,56 @@ msgid "Appearance"
 msgstr "Вигляд"
 
 #: ui/main.qml:77
-#, kde-format
-msgid "Launcher Appearance"
-msgstr "Вигляд засобу запуску"
+#, fuzzy, kde-format
+#| msgid "General Appearance"
+msgid "Home Screen Appearance"
+msgstr "Загальний вигляд"
 
-#: ui/main.qml:86
-#, kde-format
-msgid "Power Inhibition"
-msgstr "Придушення живлення"
-
-#: ui/main.qml:97
+#: ui/main.qml:85
 #, kde-format
 msgid "Colored Tiles"
 msgstr "Кольорові плитки"
 
-#: ui/main.qml:109
+#: ui/main.qml:86
+#, kde-format
+msgid "Tile backgrounds will be colored based on the app's icon"
+msgstr ""
+
+#: ui/main.qml:96
 #, kde-format
 msgid "Expanding Tiles"
 msgstr "Розширювані плитки"
 
-#: ui/main.qml:120
+#: ui/main.qml:97
 #, kde-format
-msgid "Adjust Date & Time"
-msgstr "Скоригувати дату і час"
+msgid "Tiles will expand when selected"
+msgstr ""
 
-#: ui/main.qml:128
+#: ui/main.qml:116
 #, kde-format
-msgid "Bigscreen Shortcuts"
-msgstr "Скорочення Bigscreen"
+msgid "Global Theme"
+msgstr ""
 
-#: ui/main.qml:136
-#, kde-format
-msgid "Bigscreen Settings Shortcut"
-msgstr "Скорочення «Параметрів Bigscreen»"
+#~ msgid "Launcher Appearance"
+#~ msgstr "Вигляд засобу запуску"
 
-#: ui/main.qml:148
-#, kde-format
-msgid "Bigscreen Tasks Shortcut"
-msgstr "Скорочення «Завдань Bigscreen»"
+#~ msgid "Power Inhibition"
+#~ msgstr "Придушення живлення"
 
-#: ui/main.qml:160
-#, kde-format
-msgid "Bigscreen Display Homescreen Shortcut"
-msgstr "Скорочення «Домашньої сторінки Bigscreen»"
+#~ msgid "Adjust Date & Time"
+#~ msgstr "Скоригувати дату і час"
 
-#: ui/main.qml:181
-#, kde-format
-msgid "General Appearance"
-msgstr "Загальний вигляд"
+#~ msgid "Bigscreen Shortcuts"
+#~ msgstr "Скорочення Bigscreen"
+
+#~ msgid "Bigscreen Settings Shortcut"
+#~ msgstr "Скорочення «Параметрів Bigscreen»"
+
+#~ msgid "Bigscreen Tasks Shortcut"
+#~ msgstr "Скорочення «Завдань Bigscreen»"
+
+#~ msgid "Bigscreen Display Homescreen Shortcut"
+#~ msgstr "Скорочення «Домашньої сторінки Bigscreen»"
 
 #~ msgid "Appearance & Personalization"
 #~ msgstr "Вигляд і персоналізація"

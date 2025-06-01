@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-01 00:44+0000\n"
 "PO-Revision-Date: 2022-07-10 15:16+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -64,15 +64,14 @@ msgstr "Заявка за сдвояване е изпратено до устр
 msgid "This device is not reachable"
 msgstr "Това устройство не може да бъде достигнато"
 
-#: ui/DeviceConnectionView.qml:188
-#, kde-format
-msgid "Press the [←] Back button to return to device selection"
-msgstr "Натиснете клавиша  [←] Back, за да се върнете към избор на устройство"
-
 #: ui/main.qml:21
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
+
+#~ msgid "Press the [←] Back button to return to device selection"
+#~ msgstr ""
+#~ "Натиснете клавиша  [←] Back, за да се върнете към избор на устройство"
 
 #~ msgid "Exit"
 #~ msgstr "Изход"

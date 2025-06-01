@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2025-06-01 00:44+0000\n"
 "PO-Revision-Date: 2024-11-09 16:29+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -22,28 +22,22 @@ msgstr ""
 msgid "General"
 msgstr "Xeral"
 
-#: contents/ui/ConfigWindow.qml:136 contents/ui/launcher/LauncherHome.qml:182
+#: contents/ui/ConfigWindow.qml:132 contents/ui/launcher/LauncherHome.qml:182
 #, kde-format
 msgid "Settings"
 msgstr "Configuración"
 
-#: contents/ui/ConfigWindow.qml:183 contents/ui/FavoritesManager.qml:232
-#: contents/ui/TaskWindowView.qml:217
-#, kde-format
-msgid "Close"
-msgstr "Pechar"
-
-#: contents/ui/FavoritesManager.qml:67
+#: contents/ui/FavoritesManager.qml:21
 #, kde-format
 msgid "Favorites Manager"
 msgstr "Xestor de cousas favoritas"
 
-#: contents/ui/FavoritesManager.qml:99
+#: contents/ui/FavoritesManager.qml:54
 #, kde-format
 msgid "Add Favorites"
 msgstr "Engadir cousas favoritas"
 
-#: contents/ui/FavoritesManager.qml:167
+#: contents/ui/FavoritesManager.qml:119
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Retirar cousas favoritas"
@@ -132,6 +126,11 @@ msgstr "Bigscreen activou a inhibición do sistema."
 #, kde-format
 msgid "Clear Tasks"
 msgstr "Borrar as tarefas"
+
+#: contents/ui/TaskWindowView.qml:217
+#, kde-format
+msgid "Close"
+msgstr "Pechar"
 
 #~ msgid "Use Colored Tiles"
 #~ msgstr "Usar teselas coradas"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-01 00:44+0000\n"
 "PO-Revision-Date: 2024-10-17 05:23+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -138,54 +138,56 @@ msgid "Appearance"
 msgstr "გარემოს იერსახე"
 
 #: ui/main.qml:77
-#, kde-format
-msgid "Launcher Appearance"
-msgstr "გამშვების გარეგნობა"
+#, fuzzy, kde-format
+#| msgid "General Appearance"
+msgid "Home Screen Appearance"
+msgstr "ზოგადი გარეგნობა"
 
-#: ui/main.qml:86
-#, kde-format
-msgid "Power Inhibition"
-msgstr "კვების ინჰიბიცია"
-
-#: ui/main.qml:97
+#: ui/main.qml:85
 #, kde-format
 msgid "Colored Tiles"
 msgstr "ფერადი ფილები"
 
-#: ui/main.qml:109
+#: ui/main.qml:86
+#, kde-format
+msgid "Tile backgrounds will be colored based on the app's icon"
+msgstr ""
+
+#: ui/main.qml:96
 #, kde-format
 msgid "Expanding Tiles"
 msgstr "გაფართოებადი ფილები"
 
-#: ui/main.qml:120
+#: ui/main.qml:97
 #, kde-format
-msgid "Adjust Date & Time"
-msgstr "დროისა და თარიღის გასწორება"
+msgid "Tiles will expand when selected"
+msgstr ""
 
-#: ui/main.qml:128
+#: ui/main.qml:116
 #, kde-format
-msgid "Bigscreen Shortcuts"
-msgstr "Bigscreen-ის მალსახმობები"
+msgid "Global Theme"
+msgstr ""
 
-#: ui/main.qml:136
-#, kde-format
-msgid "Bigscreen Settings Shortcut"
-msgstr "Bigscreen-ის მორგების მალსახმობი"
+#~ msgid "Launcher Appearance"
+#~ msgstr "გამშვების გარეგნობა"
 
-#: ui/main.qml:148
-#, kde-format
-msgid "Bigscreen Tasks Shortcut"
-msgstr "Bigscreen-ის ამოცანების მალსახმობი"
+#~ msgid "Power Inhibition"
+#~ msgstr "კვების ინჰიბიცია"
 
-#: ui/main.qml:160
-#, kde-format
-msgid "Bigscreen Display Homescreen Shortcut"
-msgstr "Bigscreen-ის საწყისი ეკრანის ჩვენების მალსახმობი"
+#~ msgid "Adjust Date & Time"
+#~ msgstr "დროისა და თარიღის გასწორება"
 
-#: ui/main.qml:181
-#, kde-format
-msgid "General Appearance"
-msgstr "ზოგადი გარეგნობა"
+#~ msgid "Bigscreen Shortcuts"
+#~ msgstr "Bigscreen-ის მალსახმობები"
+
+#~ msgid "Bigscreen Settings Shortcut"
+#~ msgstr "Bigscreen-ის მორგების მალსახმობი"
+
+#~ msgid "Bigscreen Tasks Shortcut"
+#~ msgstr "Bigscreen-ის ამოცანების მალსახმობი"
+
+#~ msgid "Bigscreen Display Homescreen Shortcut"
+#~ msgstr "Bigscreen-ის საწყისი ეკრანის ჩვენების მალსახმობი"
 
 #~ msgid "Appearance & Personalization"
 #~ msgstr "გარეგნობა & მორგება"

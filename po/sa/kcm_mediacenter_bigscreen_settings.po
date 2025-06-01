@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-01 00:44+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -137,51 +137,53 @@ msgid "Appearance"
 msgstr "स्वरूपम्‌"
 
 #: ui/main.qml:77
-#, kde-format
-msgid "Launcher Appearance"
-msgstr "प्रक्षेपक स्वरूप"
+#, fuzzy, kde-format
+#| msgid "General Appearance"
+msgid "Home Screen Appearance"
+msgstr "सामान्यरूपम्"
 
-#: ui/main.qml:86
-#, kde-format
-msgid "Power Inhibition"
-msgstr "शक्तिनिरोधः"
-
-#: ui/main.qml:97
+#: ui/main.qml:85
 #, kde-format
 msgid "Colored Tiles"
 msgstr "रंगीन टाइल्स"
 
-#: ui/main.qml:109
+#: ui/main.qml:86
+#, kde-format
+msgid "Tile backgrounds will be colored based on the app's icon"
+msgstr ""
+
+#: ui/main.qml:96
 #, kde-format
 msgid "Expanding Tiles"
 msgstr "टाइल्स् विस्तारयन्"
 
-#: ui/main.qml:120
+#: ui/main.qml:97
 #, kde-format
-msgid "Adjust Date & Time"
-msgstr "तिथि एवं समय समायोजित करें"
+msgid "Tiles will expand when selected"
+msgstr ""
 
-#: ui/main.qml:128
+#: ui/main.qml:116
 #, kde-format
-msgid "Bigscreen Shortcuts"
-msgstr "बिगस्क्रीन् शॉर्टकट"
+msgid "Global Theme"
+msgstr ""
 
-#: ui/main.qml:136
-#, kde-format
-msgid "Bigscreen Settings Shortcut"
-msgstr "बिगस्क्रीन् सेटिंग्स् शॉर्टकट्"
+#~ msgid "Launcher Appearance"
+#~ msgstr "प्रक्षेपक स्वरूप"
 
-#: ui/main.qml:148
-#, kde-format
-msgid "Bigscreen Tasks Shortcut"
-msgstr "बिगस्क्रीन् कार्य शॉर्टकट"
+#~ msgid "Power Inhibition"
+#~ msgstr "शक्तिनिरोधः"
 
-#: ui/main.qml:160
-#, kde-format
-msgid "Bigscreen Display Homescreen Shortcut"
-msgstr "Bigscreen Display होमस्क्रीन् शॉर्टकट"
+#~ msgid "Adjust Date & Time"
+#~ msgstr "तिथि एवं समय समायोजित करें"
 
-#: ui/main.qml:181
-#, kde-format
-msgid "General Appearance"
-msgstr "सामान्यरूपम्"
+#~ msgid "Bigscreen Shortcuts"
+#~ msgstr "बिगस्क्रीन् शॉर्टकट"
+
+#~ msgid "Bigscreen Settings Shortcut"
+#~ msgstr "बिगस्क्रीन् सेटिंग्स् शॉर्टकट्"
+
+#~ msgid "Bigscreen Tasks Shortcut"
+#~ msgstr "बिगस्क्रीन् कार्य शॉर्टकट"
+
+#~ msgid "Bigscreen Display Homescreen Shortcut"
+#~ msgstr "Bigscreen Display होमस्क्रीन् शॉर्टकट"

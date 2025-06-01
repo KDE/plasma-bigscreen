@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-01 00:44+0000\n"
 "PO-Revision-Date: 2022-03-19 21:40+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -140,54 +140,38 @@ msgstr "Penampilan"
 #: ui/main.qml:77
 #, fuzzy, kde-format
 #| msgid "Appearance"
-msgid "Launcher Appearance"
+msgid "Home Screen Appearance"
 msgstr "Penampilan"
 
-#: ui/main.qml:86
-#, kde-format
-msgid "Power Inhibition"
-msgstr ""
-
-#: ui/main.qml:97
+#: ui/main.qml:85
 #, kde-format
 msgid "Colored Tiles"
 msgstr ""
 
-#: ui/main.qml:109
+#: ui/main.qml:86
+#, kde-format
+msgid "Tile backgrounds will be colored based on the app's icon"
+msgstr ""
+
+#: ui/main.qml:96
 #, kde-format
 msgid "Expanding Tiles"
 msgstr ""
 
-#: ui/main.qml:120
+#: ui/main.qml:97
 #, kde-format
-msgid "Adjust Date & Time"
+msgid "Tiles will expand when selected"
 msgstr ""
 
-#: ui/main.qml:128
+#: ui/main.qml:116
 #, kde-format
-msgid "Bigscreen Shortcuts"
+msgid "Global Theme"
 msgstr ""
 
-#: ui/main.qml:136
-#, kde-format
-msgid "Bigscreen Settings Shortcut"
-msgstr ""
-
-#: ui/main.qml:148
-#, kde-format
-msgid "Bigscreen Tasks Shortcut"
-msgstr ""
-
-#: ui/main.qml:160
-#, kde-format
-msgid "Bigscreen Display Homescreen Shortcut"
-msgstr ""
-
-#: ui/main.qml:181
-#, fuzzy, kde-format
-#| msgid "Appearance"
-msgid "General Appearance"
-msgstr "Penampilan"
+#, fuzzy
+#~| msgid "Appearance"
+#~ msgid "Launcher Appearance"
+#~ msgstr "Penampilan"
 
 #~ msgid "Jan"
 #~ msgstr "Jan"

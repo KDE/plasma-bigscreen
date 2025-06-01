@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-01 00:44+0000\n"
 "PO-Revision-Date: 2024-02-07 21:29-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -62,15 +62,13 @@ msgstr "ਡਿਵਾਈਸ ਨੂੰ ਪੇਅਰ ਕਰਨ ਦੀ ਬੇਨਤ�
 msgid "This device is not reachable"
 msgstr "ਇਹ ਡਿਵਾਈਸ ਪਹੁੰਚ ਵਿੱਚ ਨਹੀਂ ਹੈ"
 
-#: ui/DeviceConnectionView.qml:188
-#, kde-format
-msgid "Press the [←] Back button to return to device selection"
-msgstr "ਡਿਵਾਇਸ ਚੁਣਨ ਲਈ ਵਾਪਸ ਜਾਣ ਵਾਸਤੇ [←] ਪਿੱਛੇ ਬਟਨ ਨੂੰ ਦਬਾਓ"
-
 #: ui/main.qml:21
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE ਕਨੈਕਟ"
+
+#~ msgid "Press the [←] Back button to return to device selection"
+#~ msgstr "ਡਿਵਾਇਸ ਚੁਣਨ ਲਈ ਵਾਪਸ ਜਾਣ ਵਾਸਤੇ [←] ਪਿੱਛੇ ਬਟਨ ਨੂੰ ਦਬਾਓ"
 
 #~ msgid "Exit"
 #~ msgstr "ਬਾਹਰ"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2025-06-01 00:44+0000\n"
 "PO-Revision-Date: 2023-04-03 16:53+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -24,29 +24,22 @@ msgstr ""
 msgid "General"
 msgstr "Allgemein"
 
-#: contents/ui/ConfigWindow.qml:136 contents/ui/launcher/LauncherHome.qml:182
+#: contents/ui/ConfigWindow.qml:132 contents/ui/launcher/LauncherHome.qml:182
 #, kde-format
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: contents/ui/ConfigWindow.qml:183 contents/ui/FavoritesManager.qml:232
-#: contents/ui/TaskWindowView.qml:217
-#, fuzzy, kde-format
-#| msgid "close"
-msgid "Close"
-msgstr "Schließen"
-
-#: contents/ui/FavoritesManager.qml:67
+#: contents/ui/FavoritesManager.qml:21
 #, kde-format
 msgid "Favorites Manager"
 msgstr ""
 
-#: contents/ui/FavoritesManager.qml:99
+#: contents/ui/FavoritesManager.qml:54
 #, kde-format
 msgid "Add Favorites"
 msgstr ""
 
-#: contents/ui/FavoritesManager.qml:167
+#: contents/ui/FavoritesManager.qml:119
 #, kde-format
 msgid "Remove Favorites"
 msgstr ""
@@ -136,6 +129,12 @@ msgstr "Bigscreen hat eine systemweite Blockade aktiviert"
 #, kde-format
 msgid "Clear Tasks"
 msgstr ""
+
+#: contents/ui/TaskWindowView.qml:217
+#, fuzzy, kde-format
+#| msgid "close"
+msgid "Close"
+msgstr "Schließen"
 
 #~ msgid "Use Colored Tiles"
 #~ msgstr "Farbige Kacheln verwenden"

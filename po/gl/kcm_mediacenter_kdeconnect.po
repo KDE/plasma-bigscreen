@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-01 00:44+0000\n"
 "PO-Revision-Date: 2023-03-26 11:24+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -62,15 +62,13 @@ msgstr "Enviouse unha solicitude de emparellamento ao dispositivo"
 msgid "This device is not reachable"
 msgstr "O dispositivo está fóra de alcance"
 
-#: ui/DeviceConnectionView.qml:188
-#, kde-format
-msgid "Press the [←] Back button to return to device selection"
-msgstr "Prema o botón de [←] Atrás para volver á selección de dispositivo"
-
 #: ui/main.qml:21
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
+
+#~ msgid "Press the [←] Back button to return to device selection"
+#~ msgstr "Prema o botón de [←] Atrás para volver á selección de dispositivo"
 
 #~ msgid "Exit"
 #~ msgstr "Saír"
