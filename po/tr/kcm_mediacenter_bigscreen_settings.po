@@ -2,21 +2,21 @@
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2022.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-01 00:44+0000\n"
-"PO-Revision-Date: 2024-10-18 02:03+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"PO-Revision-Date: 2025-06-01 20:53+0300\n"
+"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -137,10 +137,9 @@ msgid "Appearance"
 msgstr "Görünüş"
 
 #: ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "General Appearance"
+#, kde-format
 msgid "Home Screen Appearance"
-msgstr "Genel Görünüş"
+msgstr "Ana Ekran Görünüşü"
 
 #: ui/main.qml:85
 #, kde-format
@@ -150,7 +149,7 @@ msgstr "Renkli Döşemeler"
 #: ui/main.qml:86
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
-msgstr ""
+msgstr "Döşemeli arka planlar, uygulamanın simgesinin rengine bağlıdır"
 
 #: ui/main.qml:96
 #, kde-format
@@ -160,12 +159,12 @@ msgstr "Genişleyen Döşemeler"
 #: ui/main.qml:97
 #, kde-format
 msgid "Tiles will expand when selected"
-msgstr ""
+msgstr "Döşemeler seçildiğinde genişler"
 
 #: ui/main.qml:116
 #, kde-format
 msgid "Global Theme"
-msgstr ""
+msgstr "Global Tema"
 
 #~ msgid "Launcher Appearance"
 #~ msgstr "Başlatıcı Görünüşü"

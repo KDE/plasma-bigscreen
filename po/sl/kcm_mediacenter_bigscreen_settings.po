@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-01 00:44+0000\n"
-"PO-Revision-Date: 2024-10-17 07:33+0200\n"
+"PO-Revision-Date: 2025-06-01 07:29+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -137,35 +137,34 @@ msgid "Appearance"
 msgstr "Videz"
 
 #: ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "General Appearance"
+#, kde-format
 msgid "Home Screen Appearance"
-msgstr "Splošni videz"
+msgstr "Videz domačega zaslona"
 
 #: ui/main.qml:85
 #, kde-format
 msgid "Colored Tiles"
-msgstr "Pobarvani strešniki"
+msgstr "Pobarvane ploščice"
 
 #: ui/main.qml:86
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
-msgstr ""
+msgstr "Ozadja ploščic bodo obarvana glede na ikono aplikacije"
 
 #: ui/main.qml:96
 #, kde-format
 msgid "Expanding Tiles"
-msgstr "Razširjajoči strešniki"
+msgstr "Razširjajoči ploščice"
 
 #: ui/main.qml:97
 #, kde-format
 msgid "Tiles will expand when selected"
-msgstr ""
+msgstr "Ploščice se bodo razširile, ko bodo izbrane"
 
 #: ui/main.qml:116
 #, kde-format
 msgid "Global Theme"
-msgstr ""
+msgstr "Globalna tema"
 
 #~ msgid "Launcher Appearance"
 #~ msgstr "Videz zaganjalnika"

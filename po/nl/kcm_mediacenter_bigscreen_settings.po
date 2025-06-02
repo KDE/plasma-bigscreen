@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2021, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2021, 2023, 2024, 2025 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-01 00:44+0000\n"
-"PO-Revision-Date: 2024-10-17 12:13+0200\n"
+"PO-Revision-Date: 2025-06-01 13:41+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,12 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Freek de Kruijf - 2021 t/m 2024"
+msgstr "Freek de Kruijf - 2021 t/m 2025"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -138,10 +138,9 @@ msgid "Appearance"
 msgstr "Uiterlijk"
 
 #: ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "General Appearance"
+#, kde-format
 msgid "Home Screen Appearance"
-msgstr "Algemeen uiterlijk"
+msgstr "Uiterlijk van hoofdscherm"
 
 #: ui/main.qml:85
 #, kde-format
@@ -152,6 +151,8 @@ msgstr "Gekleurde tegels"
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr ""
+"Tegelachtergronden zullen gekleurd worden gebaseerd op de pictogrammen van "
+"toepassingen"
 
 #: ui/main.qml:96
 #, kde-format
@@ -161,12 +162,12 @@ msgstr "Zich uitbreidende tegels"
 #: ui/main.qml:97
 #, kde-format
 msgid "Tiles will expand when selected"
-msgstr ""
+msgstr "Tegels zullen uitbreiden bij selectie"
 
 #: ui/main.qml:116
 #, kde-format
 msgid "Global Theme"
-msgstr ""
+msgstr "Globaal thema"
 
 #~ msgid "Launcher Appearance"
 #~ msgstr "Uiterlijk van Programmastarter"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-01 00:44+0000\n"
-"PO-Revision-Date: 2024-10-17 05:23+0200\n"
+"PO-Revision-Date: 2025-06-01 05:29+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -138,10 +138,9 @@ msgid "Appearance"
 msgstr "გარემოს იერსახე"
 
 #: ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "General Appearance"
+#, kde-format
 msgid "Home Screen Appearance"
-msgstr "ზოგადი გარეგნობა"
+msgstr "საწყისი ეკრანის გარეგნობა"
 
 #: ui/main.qml:85
 #, kde-format
@@ -151,7 +150,7 @@ msgstr "ფერადი ფილები"
 #: ui/main.qml:86
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
-msgstr ""
+msgstr "ფილების ფონი აპის ხატულის მიხედვით გაფერადდება"
 
 #: ui/main.qml:96
 #, kde-format
@@ -161,12 +160,12 @@ msgstr "გაფართოებადი ფილები"
 #: ui/main.qml:97
 #, kde-format
 msgid "Tiles will expand when selected"
-msgstr ""
+msgstr "ფილები გაფართოვდება მათი მონიშვნისას"
 
 #: ui/main.qml:116
 #, kde-format
 msgid "Global Theme"
-msgstr ""
+msgstr "გლობალური თემა"
 
 #~ msgid "Launcher Appearance"
 #~ msgstr "გამშვების გარეგნობა"
