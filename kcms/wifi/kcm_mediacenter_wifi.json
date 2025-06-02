@@ -1,11 +1,31 @@
 {
     "KPlugin": {
         "Description": "Connect to Wi-Fi networks",
+        "Description[ca@valencia]": "Connecta amb xarxes Wi-Fi",
+        "Description[ca]": "Connecta amb xarxes Wi-Fi",
+        "Description[he]": "התחברות לרשתות אלחוטיות",
+        "Description[ka]": "მიუერთდით Wi-Fi ქსელებს",
+        "Description[nl]": "Met WiFi-netwerken verbinden",
+        "Description[sl]": "Poveži se z omrežji Wifi",
+        "Description[sv]": "Anslut till WIFI-nätverk",
+        "Description[tr]": "Wi-Fi ağlarına bağlanın",
+        "Description[uk]": "З'єднання із мережами Wi-Fi",
+        "Description[x-test]": "xxConnect to Wi-Fi networksxx",
         "FormFactors": [
             "mediacenter"
         ],
         "Icon": "network-wireless-signal-exellent",
-        "Name": "Wi-Fi"
+        "Name": "Wi-Fi",
+        "Name[ca@valencia]": "Wi-Fi",
+        "Name[ca]": "Wi-Fi",
+        "Name[he]": "רשת אלחוטית",
+        "Name[ka]": "Wi-Fi",
+        "Name[nl]": "Wi-Fi",
+        "Name[sl]": "Wi-Fi",
+        "Name[sv]": "WIFI",
+        "Name[tr]": "Wi-Fi",
+        "Name[uk]": "Wi-Fi",
+        "Name[x-test]": "xxWi-Fixx"
     },
     "X-DocPath": "kcontrol/wifi/index.html",
     "X-KDE-System-Settings-Parent-Category": "networksettings",
