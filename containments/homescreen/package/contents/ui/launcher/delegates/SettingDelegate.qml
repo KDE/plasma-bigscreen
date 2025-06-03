@@ -7,7 +7,6 @@
 import QtQuick
 import org.kde.bigscreen as Bigscreen
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.private.nanoshell as NanoShell
 
 Bigscreen.IconDelegate {
     id: delegate
@@ -18,12 +17,6 @@ Bigscreen.IconDelegate {
 
     onClicked: {
         Bigscreen.NavigationSoundEffects.playClickedSound()
-        NanoShell.StartupFeedback.open(
-                            delegate.icon.name,
-                            delegate.text,
-                            delegate.Kirigami.ScenePosition.x + delegate.width/2,
-                            delegate.Kirigami.ScenePosition.y + delegate.height/2,
-                            Math.min(delegate.width, delegate.height), delegate.Kirigami.Theme.backgroundColor);
         settingActions.launchSettings(modelData.kcmId)
         recentView.forceActiveFocus();
         recentView.currentIndex = 0;

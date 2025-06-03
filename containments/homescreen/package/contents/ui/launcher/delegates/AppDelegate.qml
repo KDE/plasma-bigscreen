@@ -22,7 +22,7 @@ Bigscreen.IconDelegate {
 
     onClicked: {
         Bigscreen.NavigationSoundEffects.playClickedSound()
-        NanoShell.StartupFeedback.open(
+        feedbackWindow.open(
                             delegate.icon.name.length > 0 ? delegate.icon.name : model.decoration,
                             delegate.text,
                             delegate.Kirigami.ScenePosition.x + delegate.width/2,

@@ -10,7 +10,6 @@ import QtQuick.Layouts
 import QtQuick.Controls
 import org.kde.bigscreen as Bigscreen
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.private.nanoshell as NanoShell
 import org.kde.plasma.plasmoid
 
 Bigscreen.AbstractDelegate {
@@ -83,7 +82,7 @@ Bigscreen.AbstractDelegate {
 
     onClicked: {
         Bigscreen.NavigationSoundEffects.playClickedSound()
-        NanoShell.StartupFeedback.open(
+        feedbackWindow.open(
                             delegate.icon.name.length > 0 ? delegate.icon.name : model.decoration,
                             delegate.text,
                             delegate.Kirigami.ScenePosition.x + delegate.width/2,
