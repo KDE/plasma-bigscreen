@@ -167,12 +167,3 @@ msgstr ""
 #, kde-format
 msgid "Global Theme"
 msgstr ""
-
-#~ msgid "Launcher Appearance"
-#~ msgstr "Utsjånad til programstartar"
-
-#~ msgid "Power Inhibition"
-#~ msgstr "Straumsparings­hindring"
-
-#~ msgid "Adjust Date & Time"
-#~ msgstr "Still inn dato og klokkeslett …"

@@ -68,6 +68,3 @@ msgstr "Får ikkje kontakt med eininga"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
-
-#~ msgid "Press the [←] Back button to return to device selection"
-#~ msgstr "Trykk «[←] Tilbake» for å velja ny eining"
