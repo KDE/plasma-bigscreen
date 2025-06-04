@@ -12,6 +12,7 @@
         "Description[tr]": "Wi-Fi ağlarına bağlanın",
         "Description[uk]": "З'єднання із мережами Wi-Fi",
         "Description[x-test]": "xxConnect to Wi-Fi networksxx",
+        "Description[zh_TW]": "連線至 Wi-Fi 網路",
         "FormFactors": [
             "mediacenter"
         ],
@@ -27,7 +28,8 @@
         "Name[sv]": "WIFI",
         "Name[tr]": "Wi-Fi",
         "Name[uk]": "Wi-Fi",
-        "Name[x-test]": "xxWi-Fixx"
+        "Name[x-test]": "xxWi-Fixx",
+        "Name[zh_TW]": "Wi-Fi"
     },
     "X-DocPath": "kcontrol/wifi/index.html",
     "X-KDE-System-Settings-Parent-Category": "networksettings",
