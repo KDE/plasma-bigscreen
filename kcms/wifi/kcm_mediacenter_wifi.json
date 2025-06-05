@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Connect to Wi-Fi networks",
+        "Description[bg]": "Свързване с безжични мрежи",
         "Description[ca@valencia]": "Connecta amb xarxes Wi-Fi",
         "Description[ca]": "Connecta amb xarxes Wi-Fi",
         "Description[fr]": "Se connecter aux réseaux sans fil Wifi",
@@ -18,6 +19,7 @@
         ],
         "Icon": "network-wireless-signal-exellent",
         "Name": "Wi-Fi",
+        "Name[bg]": "Wi-Fi",
         "Name[ca@valencia]": "Wi-Fi",
         "Name[ca]": "Wi-Fi",
         "Name[fr]": "Wifi",
