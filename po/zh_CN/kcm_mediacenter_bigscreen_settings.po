@@ -136,10 +136,9 @@ msgid "Appearance"
 msgstr "外观"
 
 #: ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "General Appearance"
+#, kde-format
 msgid "Home Screen Appearance"
-msgstr "常规外观"
+msgstr "主屏幕外观"
 
 #: ui/main.qml:85
 #, kde-format
@@ -149,7 +148,7 @@ msgstr "彩色磁贴"
 #: ui/main.qml:86
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
-msgstr ""
+msgstr "磁贴背景将根据应用程序的图标进行着色。"
 
 #: ui/main.qml:96
 #, kde-format
@@ -159,30 +158,9 @@ msgstr "拉伸磁贴"
 #: ui/main.qml:97
 #, kde-format
 msgid "Tiles will expand when selected"
-msgstr ""
+msgstr "选中时，磁贴将放大显示。"
 
 #: ui/main.qml:116
 #, kde-format
 msgid "Global Theme"
-msgstr ""
-
-#~ msgid "Launcher Appearance"
-#~ msgstr "启动器外观"
-
-#~ msgid "Power Inhibition"
-#~ msgstr "能耗抑制"
-
-#~ msgid "Adjust Date & Time"
-#~ msgstr "调整日期和时间"
-
-#~ msgid "Bigscreen Shortcuts"
-#~ msgstr "大屏幕快捷键"
-
-#~ msgid "Bigscreen Settings Shortcut"
-#~ msgstr "大屏幕设置快捷键"
-
-#~ msgid "Bigscreen Tasks Shortcut"
-#~ msgstr "大屏幕任务快捷键"
-
-#~ msgid "Bigscreen Display Homescreen Shortcut"
-#~ msgstr "大屏幕显示主屏幕快捷键"
+msgstr "全局主题"

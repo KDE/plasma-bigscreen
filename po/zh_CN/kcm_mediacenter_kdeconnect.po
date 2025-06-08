@@ -67,6 +67,3 @@ msgstr "设备无法访问"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
-
-#~ msgid "Press the [←] Back button to return to device selection"
-#~ msgstr "点击 [←] 后退按钮返回设备选择列表"
