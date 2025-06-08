@@ -4,6 +4,7 @@
         "Description[bg]": "Свързване с безжични мрежи",
         "Description[ca@valencia]": "Connecta amb xarxes Wi-Fi",
         "Description[ca]": "Connecta amb xarxes Wi-Fi",
+        "Description[es]": "Conectar a redes Wi-Fi",
         "Description[fr]": "Se connecter aux réseaux sans fil Wifi",
         "Description[he]": "התחברות לרשתות אלחוטיות",
         "Description[ka]": "მიუერთდით Wi-Fi ქსელებს",
@@ -13,6 +14,7 @@
         "Description[tr]": "Wi-Fi ağlarına bağlanın",
         "Description[uk]": "З'єднання із мережами Wi-Fi",
         "Description[x-test]": "xxConnect to Wi-Fi networksxx",
+        "Description[zh_CN]": "连接到 Wi-Fi 网络",
         "Description[zh_TW]": "連線至 Wi-Fi 網路",
         "FormFactors": [
             "mediacenter"
@@ -22,6 +24,7 @@
         "Name[bg]": "Wi-Fi",
         "Name[ca@valencia]": "Wi-Fi",
         "Name[ca]": "Wi-Fi",
+        "Name[es]": "Wi-Fi",
         "Name[fr]": "Wifi",
         "Name[he]": "רשת אלחוטית",
         "Name[ka]": "Wi-Fi",
@@ -31,6 +34,7 @@
         "Name[tr]": "Wi-Fi",
         "Name[uk]": "Wi-Fi",
         "Name[x-test]": "xxWi-Fixx",
+        "Name[zh_CN]": "无线网络",
         "Name[zh_TW]": "Wi-Fi"
     },
     "X-DocPath": "kcontrol/wifi/index.html",
