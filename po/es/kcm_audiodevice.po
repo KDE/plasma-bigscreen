@@ -1,13 +1,14 @@
-# Copyright (C) YEAR This file is copyright:
+# Spanish translations for kcm_audiodevice.po package.
+# Copyright (C) 2020-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024, 2025 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma-bigscreen\n"
+"Project-Id-Version: kcm_audiodevice\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 00:41+0000\n"
-"PO-Revision-Date: 2024-10-19 19:03+0200\n"
+"PO-Revision-Date: 2025-06-09 02:21+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -48,6 +49,3 @@ msgstr "Selector de dispositivo de audio"
 msgid "Press the [←] Back button to return to device selection"
 msgstr ""
 "Pulse la tecla retroceso [←] para retornar a la selección de dispositivo"
-
-#~ msgid "Audio Settings"
-#~ msgstr "Preferencias de audio"

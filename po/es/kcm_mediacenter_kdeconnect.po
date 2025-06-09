@@ -1,15 +1,15 @@
 # Spanish translations for kcm_mediacenter_kdeconnect.po package.
-# Copyright (C) 2020 This file is copyright:
+# Copyright (C) 2020-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-#
 # Automatically generated, 2020.
-# Víctor Rodrigo Córdoba <vrcordoba@gmail.com>, 2020, 2021.
+#
+# SPDX-FileCopyrightText: 2020, 2021, 2025 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_kdeconnect\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-01 00:44+0000\n"
-"PO-Revision-Date: 2021-01-30 16:38+0100\n"
+"PO-Revision-Date: 2025-06-09 02:21+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -68,21 +68,3 @@ msgstr "Este dispositivo no está presente"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
-
-#~ msgid "Press the [←] Back button to return to device selection"
-#~ msgstr ""
-#~ "Pulse la tecla retroceso [←] para retornar a la selección de dispositivo"
-
-#~ msgid "Exit"
-#~ msgstr "Salir"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Víctor Rodrigo Córdoba"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "vrcordoba@gmail.com"
-
-#~ msgid "Configure KDE Connect"
-#~ msgstr "Configure KDE Connect"
