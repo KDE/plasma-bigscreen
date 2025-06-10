@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-01 00:44+0000\n"
-"PO-Revision-Date: 2024-10-30 13:01+0200\n"
+"PO-Revision-Date: 2025-06-04 16:48+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -138,10 +138,9 @@ msgid "Appearance"
 msgstr "Izskats"
 
 #: ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "General Appearance"
+#, kde-format
 msgid "Home Screen Appearance"
-msgstr "Pamata izskats"
+msgstr "Mājas ekrāna izskats"
 
 #: ui/main.qml:85
 #, kde-format
@@ -151,7 +150,7 @@ msgstr "Krāsainas flīzes"
 #: ui/main.qml:86
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
-msgstr ""
+msgstr "Flīzes fons tiks iekrāsots, ievērojot programmas ikonu"
 
 #: ui/main.qml:96
 #, kde-format
@@ -161,12 +160,12 @@ msgstr "Paplašināmas flīzes"
 #: ui/main.qml:97
 #, kde-format
 msgid "Tiles will expand when selected"
-msgstr ""
+msgstr "Flīzes paplašināsies, tās atlasot"
 
 #: ui/main.qml:116
 #, kde-format
 msgid "Global Theme"
-msgstr ""
+msgstr "Globālais motīvs"
 
 #~ msgid "Launcher Appearance"
 #~ msgstr "Palaidēja izskats"
