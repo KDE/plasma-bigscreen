@@ -14,5 +14,18 @@ export PLASMA_INTEGRATION_USE_PORTAL=1
 export PLASMA_PLATFORM=mediacenter
 export QT_FILE_SELECTORS=mediacenter
 
+# Set ~/.config/plasma-bigscreen/... as location for default bigscreen configs (i.e. envmanager generated)
+export XDG_CONFIG_DIRS="$HOME/.config/plasma-bigscreen:/etc/xdg:$XDG_CONFIG_DIRS"
+
+# if coredumpd knows about the dumps, make sure drkonqi catches them
+if grep -q '/systemd-coredump' /proc/sys/kernel/core_pattern
+then
+	export KDE_COREDUMP_NOTIFY=1
+fi
+
+# ensure that we have our environment settings set properly prior to the shell being loaded (otherwise there is a race condition with autostart)
+QT_QPA_PLATFORM=offscreen plasma-bigscreen-envmanager --apply-settings
+
+
 export PLASMA_DEFAULT_SHELL=org.kde.plasma.bigscreen
 startplasma-wayland --xwayland --libinput --exit-with-session=@KDE_INSTALL_FULL_LIBEXECDIR@/startplasma-waylandsession

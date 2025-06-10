@@ -34,6 +34,7 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     KIO
     WindowSystem
     Svg
+    DBusAddons
 )
 
 find_package(Plasma ${PROJECT_VERSION} REQUIRED)
@@ -63,6 +64,7 @@ add_subdirectory(containments)
 add_subdirectory(kcms)
 add_subdirectory(components)
 add_subdirectory(sounds)
+add_subdirectory(envmanager)
 
 plasma_install_package(shell org.kde.plasma.bigscreen shells)
 plasma_install_package(lookandfeel org.kde.plasma.bigscreen look-and-feel lookandfeel)

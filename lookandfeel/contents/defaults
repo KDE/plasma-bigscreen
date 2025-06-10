@@ -1,9 +1,6 @@
 [kdeglobals][KDE]
 widgetStyle=Breeze
 
-[Desktop][org.kde.plasma.mini]
-Containment=org.kde.bigscreen.homescreen
-
 [kdeglobals][General]
 ColorScheme=BreezeLight
 
@@ -18,9 +15,6 @@ cursorTheme=breeze_cursors
 
 [kwinrc][org.kde.kdecoration2]
 library=org.kde.breeze
-
-[plasmashellrc][Shell]
-ShellPackage=org.kde.plasma.bigscreen
 
 [KSplash]
 Theme=org.kde.plasma.bigscreen
