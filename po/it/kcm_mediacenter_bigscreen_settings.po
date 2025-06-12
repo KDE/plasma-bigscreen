@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# SPDX-FileCopyrightText: 2021, 2023, 2024 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2023, 2024, 2025 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-01 00:44+0000\n"
-"PO-Revision-Date: 2024-10-18 11:16+0200\n"
+"PO-Revision-Date: 2025-06-02 21:08+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -138,10 +138,9 @@ msgid "Appearance"
 msgstr "Aspetto"
 
 #: ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "General Appearance"
+#, kde-format
 msgid "Home Screen Appearance"
-msgstr "Aspetto generale"
+msgstr "Aspetto generale della schermata principale"
 
 #: ui/main.qml:85
 #, kde-format
@@ -152,6 +151,7 @@ msgstr "Riquadri colorati"
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr ""
+"Gli sfondi dei riquadri saranno colorati in base all'icona dell'applicazione"
 
 #: ui/main.qml:96
 #, kde-format
@@ -161,12 +161,12 @@ msgstr "Espansione dei riquadri"
 #: ui/main.qml:97
 #, kde-format
 msgid "Tiles will expand when selected"
-msgstr ""
+msgstr "I riquadri si espanderanno quando selezionati"
 
 #: ui/main.qml:116
 #, kde-format
 msgid "Global Theme"
-msgstr ""
+msgstr "Tema globale"
 
 #~ msgid "Launcher Appearance"
 #~ msgstr "Aspetto dell'avviatore"
