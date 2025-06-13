@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2023 Devin Lin <devin@kde.org>
+// SPDX-FileCopyrightText: 2023-2025 Devin Lin <devin@kde.org>
 // SPDX-FileCopyrightText: 2024 Luis Büchi <luis.buechi@kdemail.net>
 // SPDX-FileCopyrightText: 2025 Seshan Ravikumar <seshan@sineware.ca>
 // SPDX-License-Identifier: GPL-2.0-or-later
@@ -16,23 +16,14 @@
 
 using namespace Qt::Literals::StringLiterals;
 
-const QString CONFIG_FILE = u"plasmabigscreenrc"_s;
-const QString SAVED_CONFIG_GROUP = u"SavedConfig"_s;
-
 // In bin/startplasma-bigscreen, we add `~/.config/plasma-bigscreen` to XDG_CONFIG_DIRS to overlay our own configs
 const QString BIGSCREEN_KWINRC_FILE = u"plasma-bigscreen/kwinrc"_s;
 const QString BIGSCREEN_KSMSERVERRC_FILE = u"plasma-bigscreen/ksmserverrc"_s;
+const QString BIGSCREEN_KDEGLOBALS_FILE = u"plasma-bigscreen/kdeglobals"_s;
 
 Settings::Settings(QObject *parent)
     : QObject{parent}
     , m_isMediacenterPlatform{KRuntimePlatform::runtimePlatform().contains(u"mediacenter"_s)}
-    , m_bigscreenConfig{KSharedConfig::openConfig(CONFIG_FILE, KConfig::SimpleConfig)}
-    , m_kwinrcConfig{KSharedConfig::openConfig(BIGSCREEN_KWINRC_FILE, KConfig::SimpleConfig)}
-    , m_appBlacklistConfig{KSharedConfig::openConfig(u"applications-blacklistrc"_s, KConfig::SimpleConfig)}
-    , m_kdeglobalsConfig{KSharedConfig::openConfig(u"kdeglobals"_s, KConfig::SimpleConfig)}
-    , m_ksmServerConfig{KSharedConfig::openConfig(BIGSCREEN_KSMSERVERRC_FILE, KConfig::SimpleConfig)}
-    , m_originalKwinrcConfig{KSharedConfig::openConfig(u"kwinrc"_s, KConfig::SimpleConfig)}
-    , m_configWatcher{KConfigWatcher::create(m_bigscreenConfig)}
 {
 }
 
@@ -46,8 +37,6 @@ void Settings::applyConfiguration()
 {
     if (!m_isMediacenterPlatform) {
         qCDebug(LOGGING_CATEGORY) << "Configuration will not be applied, as the session is not Mediacenter/Plasma Bigscreen.";
-        qCDebug(LOGGING_CATEGORY) << "Restoring any previously saved configuration...";
-        loadSavedConfiguration();
         return;
     }
 
@@ -55,54 +44,42 @@ void Settings::applyConfiguration()
     applyBigscreenConfiguration();
 }
 
-void Settings::loadSavedConfiguration()
-{
-    // kwinrc (legacy, we only write in the plasma-bigscreen/kwinrc file now)
-    loadKeys(u"kwinrc"_s, m_originalKwinrcConfig, getKwinrcSettings(m_bigscreenConfig));
-    m_originalKwinrcConfig->sync();
-    reloadKWinConfig();
-
-    // applications-blacklistrc
-    loadKeys(u"applications-blacklistrc"_s, m_appBlacklistConfig, APPLICATIONS_BLACKLIST_DEFAULT_SETTINGS);
-    m_appBlacklistConfig->sync();
-
-    // kdeglobals
-    loadKeys(u"kdeglobals"_s, m_kdeglobalsConfig, KDEGLOBALS_DEFAULT_SETTINGS);
-    loadKeys(u"kdeglobals"_s, m_kdeglobalsConfig, KDEGLOBALS_SETTINGS);
-    m_kdeglobalsConfig->sync();
-
-    // save our changes
-    m_bigscreenConfig->sync();
-}
-
 void Settings::applyBigscreenConfiguration()
 {
-    // kwinrc-plasma-bigscreen
-    writeKeys(BIGSCREEN_KWINRC_FILE, m_kwinrcConfig, getKwinrcSettings(m_bigscreenConfig));
-    m_kwinrcConfig->sync();
-    reloadKWinConfig();
+    // kwinrc
+    {
+        setOptionsImmutable(false, BIGSCREEN_KWINRC_FILE, KWINRC_SETTINGS);
 
-    // applications-blacklistrc
-    writeKeysAndSave(u"applications-blacklistrc"_s,
-                     m_appBlacklistConfig,
-                     APPLICATIONS_BLACKLIST_DEFAULT_SETTINGS,
-                     true); // only write entries if they are not already defined in the config
-    m_appBlacklistConfig->sync();
+        auto kwinrc = kwinrcConfig();
+        writeKeys(BIGSCREEN_KWINRC_FILE, kwinrc, KWINRC_SETTINGS);
+        kwinrc->sync();
+        reloadKWinConfig();
+
+        setOptionsImmutable(true, BIGSCREEN_KWINRC_FILE, KWINRC_SETTINGS);
+    }
 
     // kdeglobals
-    writeKeysAndSave(u"kdeglobals"_s,
-                     m_kdeglobalsConfig,
-                     KDEGLOBALS_DEFAULT_SETTINGS,
-                     true); // only write entries if they are not already defined in the config
-    writeKeysAndSave(u"kdeglobals"_s, m_kdeglobalsConfig, KDEGLOBALS_SETTINGS, false);
-    m_kdeglobalsConfig->sync();
+    {
+        setOptionsImmutable(false, BIGSCREEN_KDEGLOBALS_FILE, KDEGLOBALS_SETTINGS);
+
+        auto kdeglobals = KSharedConfig::openConfig(BIGSCREEN_KDEGLOBALS_FILE, KConfig::SimpleConfig);
+        writeKeys(u"kdeglobals"_s, kdeglobals, KDEGLOBALS_DEFAULT_SETTINGS);
+        writeKeys(u"kdeglobals"_s, kdeglobals, KDEGLOBALS_SETTINGS);
+        kdeglobals->sync();
+
+        setOptionsImmutable(true, BIGSCREEN_KDEGLOBALS_FILE, KDEGLOBALS_SETTINGS);
+    }
 
     // ksmserver
-    writeKeys(BIGSCREEN_KSMSERVERRC_FILE, m_ksmServerConfig, KSMSERVER_SETTINGS);
-    m_ksmServerConfig->sync();
+    {
+        setOptionsImmutable(false, BIGSCREEN_KSMSERVERRC_FILE, KSMSERVER_SETTINGS);
 
-    // save our changes
-    m_bigscreenConfig->sync();
+        auto ksmserver = KSharedConfig::openConfig(BIGSCREEN_KSMSERVERRC_FILE, KConfig::SimpleConfig);
+        writeKeys(BIGSCREEN_KSMSERVERRC_FILE, ksmserver, KSMSERVER_SETTINGS);
+        ksmserver->sync();
+
+        setOptionsImmutable(true, BIGSCREEN_KSMSERVERRC_FILE, KSMSERVER_SETTINGS);
+    }
 }
 
 void Settings::writeKeys(const QString &fileName, KSharedConfig::Ptr &config, const QMap<QString, QMap<QString, QVariant>> &settings)
@@ -118,84 +95,9 @@ void Settings::writeKeys(const QString &fileName, KSharedConfig::Ptr &config, co
     }
 }
 
-void Settings::writeKeysAndSave(const QString &fileName,
-                                KSharedConfig::Ptr &config,
-                                const QMap<QString, QMap<QString, QVariant>> &settings,
-                                bool overwriteOnlyIfEmpty)
+KSharedConfig::Ptr Settings::kwinrcConfig() const
 {
-    const auto groupNames = settings.keys();
-    for (const auto &groupName : groupNames) {
-        auto group = KConfigGroup{config, groupName};
-
-        const auto keys = settings[groupName].keys();
-        for (const auto &key : keys) {
-            if (!group.hasKey(key) || !overwriteOnlyIfEmpty) {
-                // save key
-                saveConfigSetting(fileName, groupName, key, group.readEntry(key));
-
-                // overwrite with mobile setting
-                group.writeEntry(key, settings[groupName][key], KConfigGroup::Notify);
-            }
-        }
-    }
-}
-
-void Settings::loadKeys(const QString &fileName, KSharedConfig::Ptr &config, const QMap<QString, QMap<QString, QVariant>> &settings)
-{
-    const auto groupNames = settings.keys();
-    for (const auto &groupName : groupNames) {
-        const auto group = KConfigGroup{config, groupName};
-
-        const auto keys = settings[groupName].keys();
-        for (const auto &key : keys) {
-            loadSavedConfigSetting(config, fileName, groupName, key);
-        }
-    }
-}
-
-// NOTE: this only saves a value if it hasn't already been saved
-void Settings::saveConfigSetting(const QString &fileName, const QString &group, const QString &key, const QVariant value)
-{
-    // These are not const because we are writing an entry
-    auto savedGroup = KConfigGroup{m_bigscreenConfig, SAVED_CONFIG_GROUP};
-    auto fileGroup = KConfigGroup{&savedGroup, fileName};
-    auto keyGroup = KConfigGroup{&fileGroup, group};
-
-    if (!keyGroup.hasKey(key)) {
-        qCDebug(LOGGING_CATEGORY) << "In" << fileName << "saved" << key << "=" << value;
-        keyGroup.writeEntry(key, value);
-    }
-}
-
-// NOTE: this deletes the stored value from the config after loading
-const QString Settings::loadSavedConfigSetting(KSharedConfig::Ptr &config, const QString &fileName, const QString &group, const QString &key, bool write)
-{
-    auto savedGroup = KConfigGroup{m_bigscreenConfig, SAVED_CONFIG_GROUP};
-    auto fileGroup = KConfigGroup{&savedGroup, fileName};
-    auto keyGroup = KConfigGroup{&fileGroup, group};
-
-    if (!keyGroup.hasKey(key)) {
-        return {};
-    }
-
-    const auto value = keyGroup.readEntry(key);
-
-    // write to real config
-    auto configGroup = KConfigGroup{config, group};
-
-    if ((!configGroup.hasKey(key) || configGroup.readEntry(key) != value) && write) {
-        qCDebug(LOGGING_CATEGORY) << "In" << fileName << "loading saved value of" << key << "which is" << value << "in" << group;
-
-        if (value.isEmpty()) { // delete blank entries!
-            configGroup.deleteEntry(key);
-        } else {
-            configGroup.writeEntry(key, value, KConfigGroup::Notify);
-        }
-    }
-
-    // remove saved config option
-    keyGroup.deleteEntry(key);
-    return value;
+    return KSharedConfig::openConfig(BIGSCREEN_KWINRC_FILE, KConfig::SimpleConfig);
 }
 
 void Settings::reloadKWinConfig()
@@ -206,7 +108,7 @@ void Settings::reloadKWinConfig()
 
     // Effects need to manually be loaded/unloaded in a live KWin session.
 
-    KConfigGroup pluginsGroup{m_kwinrcConfig, QStringLiteral("Plugins")};
+    KConfigGroup pluginsGroup{kwinrcConfig(), QStringLiteral("Plugins")};
 
     for (const auto &effect : KWIN_EFFECTS) {
         // Read from the config whether the effect is enabled (settings are suffixed with "Enabled", ex. blurEnabled)

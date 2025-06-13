@@ -2,14 +2,8 @@
 # SPDX-FileCopyrightText: 2024 Aditya Mehra <aix.m@outlook.com>
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-[kdeglobals][KDE]
-LookAndFeelPackage=org.kde.plasma.bigscreen
-
 [Desktop]
 Containment=org.kde.bigscreen.homescreen
 ToolBox=
 
 [Desktop][ContainmentActions]
-
-[plasmarc][Theme]
-name=default
