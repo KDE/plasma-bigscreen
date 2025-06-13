@@ -2,9 +2,8 @@
     SPDX-FileCopyrightText: 2021 Aditya Mehra <aix.m@outlook.com>
     SPDX-FileCopyrightText: 2015 Marco Martin <mart@kde.org>
 
-
     SPDX-License-Identifier: GPL-2.0-or-later
-*/
+ */
 
 #pragma once
 

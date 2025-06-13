@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2019 Marco Martin <mart@kde.org>
+# SPDX-FileCopyrightText: 2019 Aditya Mehra <aix.m@outlook.com>
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 set(bigscreensettings_SRCS
     bigscreensettings.cpp bigscreensettings.h
     globalthemelistmodel.cpp globalthemelistmodel.h

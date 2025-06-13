@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2024 Aditya Mehra <aix.m@outlook.com>
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 #include "shortcuts.h"
 #include <KLocalizedString>
 #include <QAction>
@@ -18,7 +21,7 @@ Shortcuts::Shortcuts(QObject *parent)
 
 void Shortcuts::initializeShortcuts()
 {
-    toggleActivateSettingsAction = new QAction(this);    
+    toggleActivateSettingsAction = new QAction(this);
     toggleActivateSettingsAction->setObjectName(QStringLiteral("Toggle Bigscreen Settings"));
     toggleActivateSettingsAction->setText(i18n("Toggle Bigscreen Settings"));
     KGlobalAccel::self()->setGlobalShortcut(toggleActivateSettingsAction, Qt::Key_Settings);
@@ -31,8 +34,8 @@ void Shortcuts::initializeShortcuts()
     toggleDisplayHomeScreenAction = new QAction(this);
     toggleDisplayHomeScreenAction->setObjectName(QStringLiteral("Toggle Bigscreen Home Screen"));
     toggleDisplayHomeScreenAction->setText(i18n("Toggle Bigscreen Home Screen"));
-    KGlobalAccel::self()->setGlobalShortcut(toggleDisplayHomeScreenAction, Qt::Key_HomePage | Qt::Key_Back);  
-    
+    KGlobalAccel::self()->setGlobalShortcut(toggleDisplayHomeScreenAction, Qt::Key_HomePage | Qt::Key_Back);
+
     connect(toggleActivateSettingsAction, &QAction::triggered, this, [this]() {
         Q_EMIT toggleSettingsOverlay();
     });

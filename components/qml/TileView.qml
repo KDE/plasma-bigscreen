@@ -2,7 +2,7 @@
     SPDX-FileCopyrightText: 2019 Aditya Mehra <aix.m@outlook.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
-*/
+ */
 
 import QtQuick
 import QtQuick.Layouts
@@ -23,7 +23,7 @@ FocusScope {
     property alias currentItem: view.currentItem
     property bool titleVisible: true
     Layout.fillWidth: true
-    
+
     implicitHeight: view.implicitHeight + header.implicitHeight
 
     //TODO:dynamic
@@ -49,7 +49,7 @@ FocusScope {
         visible: titleVisible
         enabled: titleVisible
     }
-    
+
     ListView {
         id: view
         anchors {
@@ -86,7 +86,7 @@ FocusScope {
 
         onMovementEnded: flickEnded()
         onFlickEnded: currentIndex = indexAt(mapToItem(contentItem, cellWidth, 0).x, 0)
-        
+
         spacing: 0
         orientation: ListView.Horizontal
 

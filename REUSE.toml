@@ -1,0 +1,7 @@
+version = 1
+
+[[annotations]]
+path = "**/*.json"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Plasma Bigscreen contributors"
+SPDX-License-Identifier = "GPL-2.0-or-later"

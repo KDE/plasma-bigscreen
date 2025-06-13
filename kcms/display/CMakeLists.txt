@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2024 Aditya Mehra <aix.m@outlook.com>
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 set(displaysettings_SRCS
     displaysettings.cpp displaysettings.h
     displaymodel.cpp displaymodel.h

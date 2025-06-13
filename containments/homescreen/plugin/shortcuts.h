@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2024 Aditya Mehra <aix.m@outlook.com>
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 // Create a singleton class instance for managing all bigscreen qactions and shortcuts.
 
 #ifndef SHORTCUTS_H

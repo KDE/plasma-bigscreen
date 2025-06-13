@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2024 Aditya Mehra <aix.m@outlook.com>
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 #pragma once
 
 #include <QObject>
@@ -21,12 +24,12 @@ public:
         ModesRole = Qt::UserRole + 8,
     };
     Q_ENUM(DisplayRoles);
-    
+
     DisplayModel(QObject *parent = nullptr);
     ~DisplayModel() override;
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;    
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
 
     Q_INVOKABLE void refresh();

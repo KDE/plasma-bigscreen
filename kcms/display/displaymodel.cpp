@@ -1,4 +1,8 @@
+// SPDX-FileCopyrightText: 2024 Aditya Mehra <aix.m@outlook.com>
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 #include "displaymodel.h"
+
 #include <QDBusMessage>
 #include <QDBusConnection>
 #include <QDBusArgument>
@@ -142,7 +146,7 @@ QVariantList DisplayModel::deserializeMapsList(QDBusArgument arg)
         QDBusArgument map = mapsList.at(i).value<QDBusArgument>();
         mapsList.replace(i, deserializeMap(map));
     }
-    
+
     for (int i = 0; i < mapsList.size(); i++) {
         QVariantMap map = mapsList.at(i).toMap();
         QDBusArgument size = map.value(QStringLiteral("size")).value<QDBusArgument>();

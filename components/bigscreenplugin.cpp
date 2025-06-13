@@ -3,7 +3,7 @@
     SPDX-FileCopyrightText: 2015 Marco Martin <mart@kde.org>
 
     SPDX-License-Identifier: MIT
-*/
+ */
 
 #include "bigscreenplugin.h"
 #include "envreader.h"

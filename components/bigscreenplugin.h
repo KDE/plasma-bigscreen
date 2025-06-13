@@ -2,7 +2,7 @@
     SPDX-FileCopyrightText: 2020 Marco Martin <mart@kde.org>
 
     SPDX-License-Identifier: MIT
-*/
+ */
 
 #pragma once
 #include <QQmlExtensionPlugin>

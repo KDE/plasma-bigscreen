@@ -1,9 +1,9 @@
  /*
- * SPDX-FileCopyrightText: 2022 Aditya Mehra <aix.m@outlook.com>
- * SPDX-FileCopyrightText: 2020 Marco Martin <mart@kde.org>
- *
- * SPDX-License-Identifier: GPL-2.0-or-later
- */
+  * SPDX-FileCopyrightText: 2022 Aditya Mehra <aix.m@outlook.com>
+  * SPDX-FileCopyrightText: 2020 Marco Martin <mart@kde.org>
+  *
+  * SPDX-License-Identifier: GPL-2.0-or-later
+  */
 
 import QtQuick
 import QtQuick.Layouts

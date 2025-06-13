@@ -1,7 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2016 Aditya Mehra <aix.m@outlook.com>
     SPDX-License-Identifier: LGPL-2.0-or-later
-*/
+ */
 
 #ifndef BIGSCREENPLUGIN_DBUS_H
 #define BIGSCREENPLUGIN_DBUS_H

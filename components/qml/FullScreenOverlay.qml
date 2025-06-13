@@ -1,7 +1,7 @@
 /*
-SPDX-FileCopyrightText: 2025 Seshan Ravikumar <seshan@sineware.ca>
-SPDX-License-Identifier: GPL-2.0-or-later
-*/
+ * SPDX-FileCopyrightText: 2025 Seshan Ravikumar <seshan@sineware.ca>
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ */
 
 import QtQuick
 import QtQuick.Layouts
@@ -15,7 +15,7 @@ import org.kde.plasma.core as PlasmaCore
 
 NanoShell.FullScreenOverlay {
     id: root
-    
+
     property string title: ""
     property Item initialFocusItem: contentContainer
     property alias closeButton: closeButton
@@ -63,11 +63,11 @@ NanoShell.FullScreenOverlay {
         anchors.rightMargin: Kirigami.Units.largeSpacing * 8
 
         scale: root.visible ? 1.0 : 0.9
-        Behavior on scale { 
-            NumberAnimation  { 
+        Behavior on scale {
+            NumberAnimation  {
                 duration: KiriGami.Units.shortDuration
-                easing.type: Easing.InOutQuad 
-            } 
+                easing.type: Easing.InOutQuad
+            }
         }
 
         Kirigami.Theme.colorSet: Kirigami.Theme.View
@@ -134,13 +134,13 @@ NanoShell.FullScreenOverlay {
         width: Kirigami.Units.gridUnit * 8
 
         opacity: root.visible ? 1.0 : 0.5
-        Behavior on opacity { 
-            NumberAnimation  { 
+        Behavior on opacity {
+            NumberAnimation  {
                 duration: KiriGami.Units.shortDuration
-                easing.type: Easing.InOutQuad 
-            } 
+                easing.type: Easing.InOutQuad
+            }
         }
-        
+
         background: Kirigami.ShadowedRectangle {
             color: closeButton.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
             radius: 6
@@ -148,7 +148,7 @@ NanoShell.FullScreenOverlay {
                 size: Kirigami.Units.largeSpacing
             }
         }
-        
+
         contentItem: Item {
             RowLayout {
                 anchors.centerIn: parent
@@ -165,7 +165,7 @@ NanoShell.FullScreenOverlay {
                 }
             }
         }
-        
+
         onClicked: hideOverlay()
         Keys.onReturnPressed: hideOverlay()
     }

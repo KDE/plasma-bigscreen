@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2020 Bart Ribbers <bribbers@disroot.org>
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 configure_file(plasma-bigscreen-wayland.in ${CMAKE_CURRENT_BINARY_DIR}/plasma-bigscreen-wayland)
 install(PROGRAMS
 	${CMAKE_CURRENT_BINARY_DIR}/plasma-bigscreen-wayland

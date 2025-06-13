@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2020 Marco Martin <mart@kde.org>
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 project(bigscreen)
 
 set(bigscreen_SRCS

@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  - SPDX-FileCopyrightText: 2019 Aditya Mehra <aix.m@outlook.com>
+  - SPDX-FileCopyrightText: 2020 Marco Martin <mart@kde.org>
+  - SPDX-License-Identifier: MIT
+  -->
 <kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
@@ -11,10 +16,10 @@
     </entry>
     <entry name="notifications" type="Bool">
             <default>true</default>
-    </entry> 
+    </entry>
     <entry name="dashboardview" type="Bool">
             <default>false</default>
-    </entry> 
+    </entry>
     <entry name="conversationview" type="Bool">
             <default>true</default>
     </entry>

@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2019 Marco Martin <mart@kde.org>
+// SPDX-FileCopyrightText: 2024 Aditya Mehra <aix.m@outlook.com>
+// SPDX-License-Identifier: GPL-2.0-or-later
 
 import QtQuick 2.12
 import QtQuick.Layouts 1.4

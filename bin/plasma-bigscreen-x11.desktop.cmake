@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2020 Bart Ribbers <bribbers@disroot.org>
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 [Desktop Entry]
 Exec=dbus-run-session ${CMAKE_INSTALL_FULL_BINDIR}/plasma-bigscreen-x11
 TryExec=${CMAKE_INSTALL_FULL_BINDIR}/plasma-bigscreen-x11

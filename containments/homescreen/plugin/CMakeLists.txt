@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2019 Marco Martin <mart@kde.org>
+# SPDX-FileCopyrightText: 2019 Aditya Mehra <aix.m@outlook.com>
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 kde_enable_exceptions()
 
 add_definitions(-DTRANSLATION_DOMAIN=\"biglauncherhomescreen\")
@@ -25,7 +29,7 @@ target_link_libraries(org.kde.bigscreen.homescreen
     Plasma::Plasma
     KF6::I18n
     KF6::Notifications
-    KF6::Service 
+    KF6::Service
     KF6::KIOWidgets
     KF6::KCMUtilsQuick
     KF6::GlobalAccel
