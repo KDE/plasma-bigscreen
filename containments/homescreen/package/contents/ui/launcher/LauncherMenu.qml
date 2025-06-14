@@ -20,7 +20,14 @@ import org.kde.kirigami as Kirigami
 FocusScope {
     id: root
 
+    property real leftMargin
+    property real rightMargin
+
     readonly property int reservedSpaceForLabel: metrics.height
+
+    // Whether the view has scrolled down at least one row
+    readonly property bool scrolledDown: launcherHome.scrolledDown
+
     signal activateAppView
     signal activateTopNavBar
     signal activateSettingsView
@@ -75,5 +82,14 @@ FocusScope {
         visible: false
     }
 
-    LauncherHome {}
+    LauncherHome {
+        id: launcherHome
+        anchors {
+            fill: parent
+            leftMargin: root.leftMargin
+            rightMargin: root.rightMargin
+        }
+
+        navigationUp: root.KeyNavigation.up
+    }
 }

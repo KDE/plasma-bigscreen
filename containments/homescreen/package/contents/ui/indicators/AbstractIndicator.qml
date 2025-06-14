@@ -14,14 +14,12 @@ import org.kde.ksvg as KSvg
 
 PlasmaComponents.Button {
     id: button
-
-    Layout.fillHeight: true
     Layout.preferredWidth: height
 
-    leftPadding: 0
-    topPadding: 0
-    rightPadding: 0
-    bottomPadding: 0
+    leftPadding: Kirigami.Units.smallSpacing
+    topPadding: Kirigami.Units.smallSpacing
+    rightPadding: Kirigami.Units.smallSpacing
+    bottomPadding: Kirigami.Units.smallSpacing
 
     background: KSvg.FrameSvgItem {
         id: frame

@@ -96,12 +96,13 @@ AbstractDelegate {
 
                 Label {
                     id: textLabel
+                    renderType: Text.NativeRendering
                     width: parent.width
                     height: parent.height
                     wrapMode: Text.WordWrap
                     verticalAlignment: Text.AlignVCenter
                     font.pixelSize: delegate.compactMode ? width * 0.2 : width * 0.1
-                    font.bold: true
+                    font.weight: Font.ExtraBold
                     maximumLineCount: 2
                     elide: Text.ElideRight
                     text: delegate.text
@@ -118,7 +119,7 @@ AbstractDelegate {
             verticalAlignment: Text.AlignTop
             width: parent.width
             height: parent.height * 0.25
-            font.pixelSize: height * 0.20
+            font.pixelSize: height * 0.15
             maximumLineCount: 3
             elide: Text.ElideRight
             wrapMode: Text.WordWrap

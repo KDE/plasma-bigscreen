@@ -15,6 +15,8 @@ AbstractIndicator {
     icon.name: "system-shutdown"
 
     onClicked: (event)=> {
-        Bigscreen.Global.promptLogoutGreeter("promptShutDown");
+        // Prompt all since we don't have any other way of doing it.
+        Bigscreen.Global.promptLogoutGreeter("promptAll");
+        // Bigscreen.Global.promptLogoutGreeter("promptShutDown");
     }
 }

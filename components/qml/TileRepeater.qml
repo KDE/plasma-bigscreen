@@ -65,23 +65,6 @@ FocusScope {
         currentItem.forceActiveFocus();
     }
 
-    Kirigami.ShadowedRectangle {
-        id: headerBackground
-        width: header.contentWidth + Kirigami.Units.largeSpacing * 2
-        height: header.implicitHeight
-        anchors {
-            left: parent.left
-            leftMargin: -Kirigami.Units.largeSpacing
-            top: parent.top
-        }
-        color: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.7)
-        radius: 6
-        shadow {
-            size: Kirigami.Units.largeSpacing
-        }
-        visible: root.titleVisible
-    }
-
     Kirigami.Heading {
         id: header
         anchors {
@@ -90,9 +73,9 @@ FocusScope {
             top: parent.top
         }
         text: title
-        layer.enabled: true
-        font.pixelSize: 28
-        color: Kirigami.Theme.textColor
+        font.pixelSize: 32
+        font.weight: Font.Light
+        color: 'white'
         visible: root.titleVisible
     }
 

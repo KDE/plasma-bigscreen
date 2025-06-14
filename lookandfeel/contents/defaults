@@ -6,7 +6,7 @@
 widgetStyle=Breeze
 
 [kdeglobals][General]
-ColorScheme=BreezeLight
+ColorScheme=BreezeDark
 
 [kdeglobals][Icons]
 Theme=breeze

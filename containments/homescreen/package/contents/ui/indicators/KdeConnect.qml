@@ -17,7 +17,7 @@ import org.kde.plasma.private.nanoshell as NanoShell
 
 AbstractIndicator {
     id: connectionIcon
-    icon.name: "kdeconnect"
+    icon.name: "phone-symbolic"
     property var window
 
     KDEConnect.DevicesModel {
@@ -29,7 +29,7 @@ AbstractIndicator {
         delegate: Item {
             property bool pairingRequest: device.isPairRequested || device.isPairRequestedByPeer ? 1 : 0
             property var bigscreenIface: KDEConnect.BigscreenDbusInterfaceFactory.create(model.deviceId)
-            
+
             onPairingRequestChanged: {
                 if (pairingRequest) {
                     if(device.name.length > 0){
@@ -56,7 +56,7 @@ AbstractIndicator {
             }
         }
     }
-        
+
     onClicked: {
         configWindow.showOverlay("kcm_mediacenter_kdeconnect")
     }
