@@ -6,13 +6,17 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
+
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.kirigami as Kirigami
 
 AbstractDelegate {
     id: delegate
-    implicitWidth: listView.cellWidth * 2.5
-    implicitHeight: listView.height + Kirigami.Units.largeSpacing
+
+    property var listView: ListView.view
+    implicitWidth: listView ? listView.cellWidth * 2.5 : 0
+    implicitHeight: listView ? listView.height + Kirigami.Units.largeSpacing : 0
+
     property alias itemIcon: contentItemSvgIcon.source
     property alias itemLabel: contentItemLabel.text
     property alias itemLabelVisible: contentItemLabel.visible
@@ -37,7 +41,7 @@ AbstractDelegate {
     }
 
     Keys.onLeftPressed: (event)=> {
-        if(listView.currentIndex == 0){
+        if(listView && listView.currentIndex == 0){
             settingMenuItemFocus()
         } else {
             event.accepted = false
@@ -46,17 +50,17 @@ AbstractDelegate {
 
     contentItem: Item {
         id: contentItemLayout
-        
+
         Kirigami.Icon {
             id: contentItemSvgIcon
             width: Kirigami.Units.iconSizes.huge
             height: width
             y: contentItemLayout.height/2 - contentItemSvgIcon.height/2
         }
-        
+
         ColumnLayout {
             id: textLayout
-            
+
             anchors {
                 left: contentItemSvgIcon.right
                 right: contentItemLayout.right
@@ -77,7 +81,7 @@ AbstractDelegate {
                 color: Kirigami.Theme.textColor
                 font: itemLabelFont
             }
-            
+
             PlasmaComponents.Label {
                 id: contentItemSubLabel
                 Layout.fillWidth: true
@@ -91,7 +95,7 @@ AbstractDelegate {
                 font.pixelSize: contentItemLabel.font.pixelSize * 0.8
             }
         }
-        
+
         Item {
             id: contentItemRepresentationLayout
             anchors.right: parent.right
@@ -102,8 +106,8 @@ AbstractDelegate {
             Kirigami.Icon {
                 id: contentItemTickIcon
                 anchors.centerIn: parent
-                width: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
-                height: listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
+                width: listView && listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
+                height: listView && listView.currentIndex == index && delegate.activeFocus ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
             }
         }
     }

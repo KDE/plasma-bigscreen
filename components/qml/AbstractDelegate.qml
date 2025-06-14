@@ -28,14 +28,14 @@ QQC2.ItemDelegate {
         return null;
     }
     readonly property bool isCurrent: {//print(text+index+" "+listView.currentIndex+activeFocus+" "+listView.moving)
-        listView.currentIndex == index && activeFocus && !listView.moving
+        listView && listView.currentIndex == index && activeFocus && !listView.moving
     }
 
     highlighted: isCurrent
     property int shadowSize: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     property int borderSize: Kirigami.Units.smallSpacing
     property int baseRadius: 6
-    
+
     z: isCurrent ? 2 : 0
 
     onClicked: {
