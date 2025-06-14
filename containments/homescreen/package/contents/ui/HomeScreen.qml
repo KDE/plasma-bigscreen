@@ -13,6 +13,7 @@ import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 import org.kde.kquickcontrolsaddons
 import org.kde.kirigami as Kirigami
+import org.kde.bigscreen as Bigscreen
 
 import "launcher"
 
@@ -23,7 +24,8 @@ Item {
     readonly property real rightMargin: leftMargin
 
     // Whether to blur the wallpaper background
-    readonly property bool blurBackground: launcher.scrolledDown
+    readonly property bool blurBackground: launcher.scrolledDown || root.Window.activeFocusItem === null
+    readonly property bool darkenBackground: launcher.scrolledDown
 
     property real zoomScale: 1
 
@@ -62,6 +64,7 @@ Item {
 
     transitions: [
         Transition {
+            to: "focused"
             ParallelAnimation {
                 OpacityAnimator { duration: 300 }
                 NumberAnimation { target: root; property: 'zoomScale'; duration: 600; easing.type: Easing.OutExpo }

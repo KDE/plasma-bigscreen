@@ -12,8 +12,12 @@ import org.kde.bigscreen as Bigscreen
 import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
 
-PlasmaComponents.Button {
+PlasmaComponents.ToolButton {
     id: button
+
+    Kirigami.Theme.inherit: false
+    Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+
     Layout.preferredWidth: height
 
     leftPadding: Kirigami.Units.smallSpacing

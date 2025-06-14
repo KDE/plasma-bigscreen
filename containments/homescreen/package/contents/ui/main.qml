@@ -14,6 +14,7 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.kquickcontrolsaddons
 
 import "launcher"
+import "settings" as Settings
 
 ContainmentItem {
     id: root
@@ -81,7 +82,7 @@ ContainmentItem {
         id: feedbackWindow
     }
 
-    ConfigWindow {
+    Settings.ConfigWindow {
         id: configWindow
     }
 
@@ -124,7 +125,7 @@ ContainmentItem {
     Rectangle {
         anchors.fill: parent
         color: 'black'
-        opacity: homeScreen.blurBackground ? 0.7 : 0.4
+        opacity: homeScreen.darkenBackground ? 0.7 : 0.4
         Behavior on opacity { NumberAnimation { duration: 500 } }
     }
 
