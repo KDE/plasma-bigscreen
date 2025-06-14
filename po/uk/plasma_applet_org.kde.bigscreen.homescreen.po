@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.mycroft.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-14 00:44+0000\n"
 "PO-Revision-Date: 2024-10-18 19:29+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: contents/config/config.qml:11
+#: contents/config/config.qml:12
 #, kde-format
 msgid "General"
 msgstr "Загальне"
@@ -70,27 +70,27 @@ msgstr "Скасувати"
 msgid "Audio Volume"
 msgstr "Гучність"
 
-#: contents/ui/launcher/config/configGeneral.qml:31
+#: contents/ui/launcher/config/configGeneral.qml:32
 #, kde-format
 msgid "Websocket Address:"
 msgstr "Адреса вебсокета:"
 
-#: contents/ui/launcher/config/configGeneral.qml:37
+#: contents/ui/launcher/config/configGeneral.qml:38
 #, kde-format
 msgid "Additional Settings:"
 msgstr "Додаткові параметри:"
 
-#: contents/ui/launcher/config/configGeneral.qml:38
+#: contents/ui/launcher/config/configGeneral.qml:39
 #, kde-format
 msgid "Enable Notifications"
 msgstr "Увімкнути сповіщення"
 
-#: contents/ui/launcher/config/configGeneral.qml:44
+#: contents/ui/launcher/config/configGeneral.qml:45
 #, kde-format
 msgid "Enable Remote TTS"
 msgstr "Увімкнути віддалену систему озвучення тексту"
 
-#: contents/ui/launcher/config/configGeneral.qml:49
+#: contents/ui/launcher/config/configGeneral.qml:50
 #, kde-format
 msgid "Enable Remote STT"
 msgstr "Увімкнути віддалену систему запису мовлення"

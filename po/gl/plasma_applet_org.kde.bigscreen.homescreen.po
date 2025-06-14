@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-14 00:44+0000\n"
 "PO-Revision-Date: 2024-11-09 16:29+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.08.3\n"
 
-#: contents/config/config.qml:11
+#: contents/config/config.qml:12
 #, kde-format
 msgid "General"
 msgstr "Xeral"
@@ -67,27 +67,27 @@ msgstr "Cancelar"
 msgid "Audio Volume"
 msgstr "Volume do son"
 
-#: contents/ui/launcher/config/configGeneral.qml:31
+#: contents/ui/launcher/config/configGeneral.qml:32
 #, kde-format
 msgid "Websocket Address:"
 msgstr "Enderezo de socket web:"
 
-#: contents/ui/launcher/config/configGeneral.qml:37
+#: contents/ui/launcher/config/configGeneral.qml:38
 #, kde-format
 msgid "Additional Settings:"
 msgstr "Configuración adicional:"
 
-#: contents/ui/launcher/config/configGeneral.qml:38
+#: contents/ui/launcher/config/configGeneral.qml:39
 #, kde-format
 msgid "Enable Notifications"
 msgstr "Activar as notificacións"
 
-#: contents/ui/launcher/config/configGeneral.qml:44
+#: contents/ui/launcher/config/configGeneral.qml:45
 #, kde-format
 msgid "Enable Remote TTS"
 msgstr "Activar o texto-para-fala remoto"
 
-#: contents/ui/launcher/config/configGeneral.qml:49
+#: contents/ui/launcher/config/configGeneral.qml:50
 #, kde-format
 msgid "Enable Remote STT"
 msgstr "Activar o fala-para-texto remoto"

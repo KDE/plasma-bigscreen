@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-14 00:44+0000\n"
 "PO-Revision-Date: 2020-07-22 13:41+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.04.2\n"
 
-#: contents/config/config.qml:11
+#: contents/config/config.qml:12
 #, kde-format
 msgid "General"
 msgstr ""
@@ -67,27 +67,27 @@ msgstr ""
 msgid "Audio Volume"
 msgstr ""
 
-#: contents/ui/launcher/config/configGeneral.qml:31
+#: contents/ui/launcher/config/configGeneral.qml:32
 #, kde-format
 msgid "Websocket Address:"
 msgstr "Adresse på websocket:"
 
-#: contents/ui/launcher/config/configGeneral.qml:37
+#: contents/ui/launcher/config/configGeneral.qml:38
 #, kde-format
 msgid "Additional Settings:"
 msgstr "Yderligere indstillinger:"
 
-#: contents/ui/launcher/config/configGeneral.qml:38
+#: contents/ui/launcher/config/configGeneral.qml:39
 #, kde-format
 msgid "Enable Notifications"
 msgstr "Aktivér bekendtgørelser"
 
-#: contents/ui/launcher/config/configGeneral.qml:44
+#: contents/ui/launcher/config/configGeneral.qml:45
 #, kde-format
 msgid "Enable Remote TTS"
 msgstr "Aktivér ekstern TTS"
 
-#: contents/ui/launcher/config/configGeneral.qml:49
+#: contents/ui/launcher/config/configGeneral.qml:50
 #, kde-format
 msgid "Enable Remote STT"
 msgstr "Aktivér ekstern STT"
