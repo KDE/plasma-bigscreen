@@ -58,7 +58,7 @@ Controls.Control {
             if (tasksIndicator.visible) {
                 tasksIndicator.forceActiveFocus();
             } else {
-                favsIndicator.forceActiveFocus();
+                searchIndicator.forceActiveFocus();
             }
         }
     }
@@ -87,21 +87,29 @@ Controls.Control {
             Indicators.Tasks {
                 id: tasksIndicator
                 visible: taskWindowView.modelCount > 0
-                Layout.fillHeight: false
-                KeyNavigation.right: favsIndicator
-                KeyNavigation.tab: favsIndicator
+
+                KeyNavigation.right: searchIndicator
+                KeyNavigation.tab: searchIndicator
 
                 TaskWindowView {
                     id: taskWindowView
                 }
             }
 
+            Indicators.Search {
+                id: searchIndicator
+                KeyNavigation.left: tasksIndicator.visible ? tasksIndicator : null
+                KeyNavigation.backtab: tasksIndicator.visible ? tasksIndicator : null
+                KeyNavigation.right: favsIndicator
+                KeyNavigation.tab: favsIndicator
+            }
+
             Indicators.Favorites {
                 id: favsIndicator
-                KeyNavigation.left: tasksIndicator.visible ? tasksIndicator : null
+                KeyNavigation.left: searchIndicator
+                KeyNavigation.backtab: searchIndicator
                 KeyNavigation.right: settingsIndicator
                 KeyNavigation.tab: settingsIndicator
-                KeyNavigation.backtab: tasksIndicator.visible ? tasksIndicator : null
             }
 
             Indicators.Settings {
