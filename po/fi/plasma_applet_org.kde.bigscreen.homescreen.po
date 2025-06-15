@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"POT-Creation-Date: 2025-06-15 00:44+0000\n"
 "PO-Revision-Date: 2024-11-07 17:23+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "General"
 msgstr "Perusasetukset"
 
-#: contents/ui/ConfigWindow.qml:132 contents/ui/launcher/LauncherHome.qml:182
+#: contents/ui/ConfigWindow.qml:132 contents/ui/launcher/LauncherHome.qml:212
 #, kde-format
 msgid "Settings"
 msgstr "Asetukset"
@@ -41,11 +41,6 @@ msgstr "Lisää suosikkeihin"
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Poista suosikeista"
-
-#: contents/ui/indicators/Favorites.qml:51
-#, kde-format
-msgid "Manage Favorites"
-msgstr "Hallitse suosikkeja"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -92,27 +87,27 @@ msgstr "Ota käyttöön etä-TTS"
 msgid "Enable Remote STT"
 msgstr "Ota käyttöön etä-STT"
 
-#: contents/ui/launcher/LauncherHome.qml:54
+#: contents/ui/launcher/LauncherHome.qml:70
 #, kde-format
 msgid "Favorites"
 msgstr "Suosikit"
 
-#: contents/ui/launcher/LauncherHome.qml:72
+#: contents/ui/launcher/LauncherHome.qml:90
 #, kde-format
 msgid "Recent"
 msgstr "Viimeaikainen"
 
-#: contents/ui/launcher/LauncherHome.qml:100
+#: contents/ui/launcher/LauncherHome.qml:121
 #, kde-format
 msgid "Voice Applications"
 msgstr "Puhesovellukset"
 
-#: contents/ui/launcher/LauncherHome.qml:126
+#: contents/ui/launcher/LauncherHome.qml:150
 #, kde-format
 msgid "Applications"
 msgstr "Sovellukset"
 
-#: contents/ui/launcher/LauncherHome.qml:153
+#: contents/ui/launcher/LauncherHome.qml:180
 #, kde-format
 msgid "Games"
 msgstr "Pelit"
@@ -131,6 +126,9 @@ msgstr "Tyhjennä tehtävät"
 #, kde-format
 msgid "Close"
 msgstr "Sulje"
+
+#~ msgid "Manage Favorites"
+#~ msgstr "Hallitse suosikkeja"
 
 #~ msgid "Use Colored Tiles"
 #~ msgstr "Käytä värillisiä tiiliä"

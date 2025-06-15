@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"POT-Creation-Date: 2025-06-15 00:44+0000\n"
 "PO-Revision-Date: 2024-12-28 17:41+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "General"
 msgstr "Ĝenerala"
 
-#: contents/ui/ConfigWindow.qml:132 contents/ui/launcher/LauncherHome.qml:182
+#: contents/ui/ConfigWindow.qml:132 contents/ui/launcher/LauncherHome.qml:212
 #, kde-format
 msgid "Settings"
 msgstr "Agordoj"
@@ -42,11 +42,6 @@ msgstr "Aldoni Plejŝatatojn"
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Forigi Plejŝatatojn"
-
-#: contents/ui/indicators/Favorites.qml:51
-#, kde-format
-msgid "Manage Favorites"
-msgstr "Mastrumi Plejŝatatojn"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -93,27 +88,27 @@ msgstr "Ebligi Remote-TTS"
 msgid "Enable Remote STT"
 msgstr "Ebligi Remote-TTT"
 
-#: contents/ui/launcher/LauncherHome.qml:54
+#: contents/ui/launcher/LauncherHome.qml:70
 #, kde-format
 msgid "Favorites"
 msgstr "Plej ŝatatoj"
 
-#: contents/ui/launcher/LauncherHome.qml:72
+#: contents/ui/launcher/LauncherHome.qml:90
 #, kde-format
 msgid "Recent"
 msgstr "Lastatempa"
 
-#: contents/ui/launcher/LauncherHome.qml:100
+#: contents/ui/launcher/LauncherHome.qml:121
 #, kde-format
 msgid "Voice Applications"
 msgstr "Voĉ-Aplikaĵoj"
 
-#: contents/ui/launcher/LauncherHome.qml:126
+#: contents/ui/launcher/LauncherHome.qml:150
 #, kde-format
 msgid "Applications"
 msgstr "Aplikaĵoj"
 
-#: contents/ui/launcher/LauncherHome.qml:153
+#: contents/ui/launcher/LauncherHome.qml:180
 #, kde-format
 msgid "Games"
 msgstr "Ludoj"
@@ -132,3 +127,6 @@ msgstr "Viŝi Taskojn"
 #, kde-format
 msgid "Close"
 msgstr "Fermi"
+
+#~ msgid "Manage Favorites"
+#~ msgstr "Mastrumi Plejŝatatojn"

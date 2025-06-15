@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"POT-Creation-Date: 2025-06-15 00:44+0000\n"
 "PO-Revision-Date: 2024-10-18 10:27+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgid "General"
 msgstr "General"
 
-#: contents/ui/ConfigWindow.qml:132 contents/ui/launcher/LauncherHome.qml:182
+#: contents/ui/ConfigWindow.qml:132 contents/ui/launcher/LauncherHome.qml:212
 #, kde-format
 msgid "Settings"
 msgstr "Configuració"
@@ -44,11 +44,6 @@ msgstr "Afegeix als preferits"
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Elimina dels preferits"
-
-#: contents/ui/indicators/Favorites.qml:51
-#, kde-format
-msgid "Manage Favorites"
-msgstr "Gestiona els preferits"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -95,27 +90,27 @@ msgstr "Activa el TTS remot"
 msgid "Enable Remote STT"
 msgstr "Activa el STT remot"
 
-#: contents/ui/launcher/LauncherHome.qml:54
+#: contents/ui/launcher/LauncherHome.qml:70
 #, kde-format
 msgid "Favorites"
 msgstr "Preferits"
 
-#: contents/ui/launcher/LauncherHome.qml:72
+#: contents/ui/launcher/LauncherHome.qml:90
 #, kde-format
 msgid "Recent"
 msgstr "Recent"
 
-#: contents/ui/launcher/LauncherHome.qml:100
+#: contents/ui/launcher/LauncherHome.qml:121
 #, kde-format
 msgid "Voice Applications"
 msgstr "Aplicacions de veu"
 
-#: contents/ui/launcher/LauncherHome.qml:126
+#: contents/ui/launcher/LauncherHome.qml:150
 #, kde-format
 msgid "Applications"
 msgstr "Aplicacions"
 
-#: contents/ui/launcher/LauncherHome.qml:153
+#: contents/ui/launcher/LauncherHome.qml:180
 #, kde-format
 msgid "Games"
 msgstr "Jocs"
@@ -134,6 +129,9 @@ msgstr "Neteja les tasques"
 #, kde-format
 msgid "Close"
 msgstr "Tanca"
+
+#~ msgid "Manage Favorites"
+#~ msgstr "Gestiona els preferits"
 
 #~ msgid "Use Colored Tiles"
 #~ msgstr "Usa fitxes de colors"

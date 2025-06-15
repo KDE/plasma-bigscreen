@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"POT-Creation-Date: 2025-06-15 00:44+0000\n"
 "PO-Revision-Date: 2020-04-04 12:28+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: contents/ui/ConfigWindow.qml:132 contents/ui/launcher/LauncherHome.qml:182
+#: contents/ui/ConfigWindow.qml:132 contents/ui/launcher/LauncherHome.qml:212
 #, kde-format
 msgid "Settings"
 msgstr "Seadistused"
@@ -40,11 +40,6 @@ msgstr ""
 #: contents/ui/FavoritesManager.qml:119
 #, kde-format
 msgid "Remove Favorites"
-msgstr ""
-
-#: contents/ui/indicators/Favorites.qml:51
-#, kde-format
-msgid "Manage Favorites"
 msgstr ""
 
 #: contents/ui/indicators/PairWindow.qml:48
@@ -92,28 +87,28 @@ msgstr "Kaug-TTS lubamine"
 msgid "Enable Remote STT"
 msgstr "Kaug-STT lubamine"
 
-#: contents/ui/launcher/LauncherHome.qml:54
+#: contents/ui/launcher/LauncherHome.qml:70
 #, kde-format
 msgid "Favorites"
 msgstr ""
 
-#: contents/ui/launcher/LauncherHome.qml:72
+#: contents/ui/launcher/LauncherHome.qml:90
 #, kde-format
 msgid "Recent"
 msgstr "Hiljutised"
 
-#: contents/ui/launcher/LauncherHome.qml:100
+#: contents/ui/launcher/LauncherHome.qml:121
 #, fuzzy, kde-format
 #| msgid "Applications"
 msgid "Voice Applications"
 msgstr "Rakendused"
 
-#: contents/ui/launcher/LauncherHome.qml:126
+#: contents/ui/launcher/LauncherHome.qml:150
 #, kde-format
 msgid "Applications"
 msgstr "Rakendused"
 
-#: contents/ui/launcher/LauncherHome.qml:153
+#: contents/ui/launcher/LauncherHome.qml:180
 #, kde-format
 msgid "Games"
 msgstr "Mängud"

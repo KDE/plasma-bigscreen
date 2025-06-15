@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"POT-Creation-Date: 2025-06-15 00:44+0000\n"
 "PO-Revision-Date: 2024-11-09 16:29+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "General"
 msgstr "Xeral"
 
-#: contents/ui/ConfigWindow.qml:132 contents/ui/launcher/LauncherHome.qml:182
+#: contents/ui/ConfigWindow.qml:132 contents/ui/launcher/LauncherHome.qml:212
 #, kde-format
 msgid "Settings"
 msgstr "Configuración"
@@ -41,11 +41,6 @@ msgstr "Engadir cousas favoritas"
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Retirar cousas favoritas"
-
-#: contents/ui/indicators/Favorites.qml:51
-#, kde-format
-msgid "Manage Favorites"
-msgstr "Xestionar cousas favoritas"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -92,27 +87,27 @@ msgstr "Activar o texto-para-fala remoto"
 msgid "Enable Remote STT"
 msgstr "Activar o fala-para-texto remoto"
 
-#: contents/ui/launcher/LauncherHome.qml:54
+#: contents/ui/launcher/LauncherHome.qml:70
 #, kde-format
 msgid "Favorites"
 msgstr "Cousas favoritas"
 
-#: contents/ui/launcher/LauncherHome.qml:72
+#: contents/ui/launcher/LauncherHome.qml:90
 #, kde-format
 msgid "Recent"
 msgstr "Recentes"
 
-#: contents/ui/launcher/LauncherHome.qml:100
+#: contents/ui/launcher/LauncherHome.qml:121
 #, kde-format
 msgid "Voice Applications"
 msgstr "Aplicacións de voz"
 
-#: contents/ui/launcher/LauncherHome.qml:126
+#: contents/ui/launcher/LauncherHome.qml:150
 #, kde-format
 msgid "Applications"
 msgstr "Aplicacións"
 
-#: contents/ui/launcher/LauncherHome.qml:153
+#: contents/ui/launcher/LauncherHome.qml:180
 #, kde-format
 msgid "Games"
 msgstr "Xogos"
@@ -131,6 +126,9 @@ msgstr "Borrar as tarefas"
 #, kde-format
 msgid "Close"
 msgstr "Pechar"
+
+#~ msgid "Manage Favorites"
+#~ msgstr "Xestionar cousas favoritas"
 
 #~ msgid "Use Colored Tiles"
 #~ msgstr "Usar teselas coradas"

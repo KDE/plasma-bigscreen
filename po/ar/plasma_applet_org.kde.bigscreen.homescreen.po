@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"POT-Creation-Date: 2025-06-15 00:44+0000\n"
 "PO-Revision-Date: 2024-10-24 07:44+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "General"
 msgstr "عامّ"
 
-#: contents/ui/ConfigWindow.qml:132 contents/ui/launcher/LauncherHome.qml:182
+#: contents/ui/ConfigWindow.qml:132 contents/ui/launcher/LauncherHome.qml:212
 #, kde-format
 msgid "Settings"
 msgstr "إعدادات"
@@ -42,11 +42,6 @@ msgstr "أضف إلى المفضّلة"
 #, kde-format
 msgid "Remove Favorites"
 msgstr "أزل من المفضّلة"
-
-#: contents/ui/indicators/Favorites.qml:51
-#, kde-format
-msgid "Manage Favorites"
-msgstr "أدر المفضلات"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -93,27 +88,27 @@ msgstr "مكّن خدمة تحويل النص إلى الصوت البعيدة"
 msgid "Enable Remote STT"
 msgstr "مكّن خدمة تحويل الصوت إلى نص البعيدة"
 
-#: contents/ui/launcher/LauncherHome.qml:54
+#: contents/ui/launcher/LauncherHome.qml:70
 #, kde-format
 msgid "Favorites"
 msgstr "المفضّلة"
 
-#: contents/ui/launcher/LauncherHome.qml:72
+#: contents/ui/launcher/LauncherHome.qml:90
 #, kde-format
 msgid "Recent"
 msgstr "الحديثة"
 
-#: contents/ui/launcher/LauncherHome.qml:100
+#: contents/ui/launcher/LauncherHome.qml:121
 #, kde-format
 msgid "Voice Applications"
 msgstr "تطبيقات الصوت"
 
-#: contents/ui/launcher/LauncherHome.qml:126
+#: contents/ui/launcher/LauncherHome.qml:150
 #, kde-format
 msgid "Applications"
 msgstr "التّطبيقات"
 
-#: contents/ui/launcher/LauncherHome.qml:153
+#: contents/ui/launcher/LauncherHome.qml:180
 #, kde-format
 msgid "Games"
 msgstr "الألعاب"
@@ -132,6 +127,9 @@ msgstr "امسح المهامّ"
 #, kde-format
 msgid "Close"
 msgstr "أغلق"
+
+#~ msgid "Manage Favorites"
+#~ msgstr "أدر المفضلات"
 
 #~ msgid "Use Colored Tiles"
 #~ msgstr "استعمل القطع الملونة"

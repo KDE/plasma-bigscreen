@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"POT-Creation-Date: 2025-06-15 00:44+0000\n"
 "PO-Revision-Date: 2024-12-15 17:37+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "General"
 msgstr "सामान्य"
 
-#: contents/ui/ConfigWindow.qml:132 contents/ui/launcher/LauncherHome.qml:182
+#: contents/ui/ConfigWindow.qml:132 contents/ui/launcher/LauncherHome.qml:212
 #, kde-format
 msgid "Settings"
 msgstr "सेटिंग्स"
@@ -41,11 +41,6 @@ msgstr "पसंदीदा जोड़ें"
 #, kde-format
 msgid "Remove Favorites"
 msgstr "पसंदीदा हटाएं"
-
-#: contents/ui/indicators/Favorites.qml:51
-#, kde-format
-msgid "Manage Favorites"
-msgstr "पसंदीदा प्रबंधित करें"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -92,27 +87,27 @@ msgstr "रिमोट TTS सक्षम करें"
 msgid "Enable Remote STT"
 msgstr "रिमोट एसटीटी सक्षम करें"
 
-#: contents/ui/launcher/LauncherHome.qml:54
+#: contents/ui/launcher/LauncherHome.qml:70
 #, kde-format
 msgid "Favorites"
 msgstr "पसंदीदा"
 
-#: contents/ui/launcher/LauncherHome.qml:72
+#: contents/ui/launcher/LauncherHome.qml:90
 #, kde-format
 msgid "Recent"
 msgstr "हाल ही का"
 
-#: contents/ui/launcher/LauncherHome.qml:100
+#: contents/ui/launcher/LauncherHome.qml:121
 #, kde-format
 msgid "Voice Applications"
 msgstr "आवाज़ अनुप्रयोग"
 
-#: contents/ui/launcher/LauncherHome.qml:126
+#: contents/ui/launcher/LauncherHome.qml:150
 #, kde-format
 msgid "Applications"
 msgstr "अनुप्रयोग"
 
-#: contents/ui/launcher/LauncherHome.qml:153
+#: contents/ui/launcher/LauncherHome.qml:180
 #, kde-format
 msgid "Games"
 msgstr "खेल"
@@ -131,3 +126,6 @@ msgstr "कार्य साफ़ करें"
 #, kde-format
 msgid "Close"
 msgstr "बंद करना"
+
+#~ msgid "Manage Favorites"
+#~ msgstr "पसंदीदा प्रबंधित करें"
