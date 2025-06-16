@@ -127,6 +127,3 @@ msgstr "清除任务"
 #, kde-format
 msgid "Close"
 msgstr "关闭"
-
-#~ msgid "Manage Favorites"
-#~ msgstr "管理收藏"
