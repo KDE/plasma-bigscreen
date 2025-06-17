@@ -1,0 +1,35 @@
+#!/bin/sh
+# SPDX-FileCopyrightText: 2020 Bart Ribbers <bribbers@disroot.org>
+# SPDX-FileCopyrightText: 2021 Aleix Pol <apol@kde.org>
+# SPDX-FileCopyrightText: 2025 Seshan Ravikumar <seshan@sineware.ca>
+# SPDX-License-Identifier: GPL-2.0-or-later
+
+# Common environment variables for Plasma Bigscreen
+
+[ -f /etc/profile ] && . /etc/profile
+
+export QT_QPA_PLATFORMTHEME=KDE
+export QT_QUICK_CONTROLS_STYLE=org.kde.breeze
+export QT_ENABLE_GLYPH_CACHE_WORKAROUND=1
+export QT_QUICK_CONTROLS_MOBILE=true
+
+export PLASMA_INTEGRATION_USE_PORTAL=1
+export PLASMA_PLATFORM=mediacenter
+export QT_FILE_SELECTORS=mediacenter
+export PLASMA_DEFAULT_SHELL=org.kde.plasma.bigscreen
+
+export QT_IM_MODULE=qtvirtualkeyboard
+export QT_VIRTUALKEYBOARD_STYLE=Plasma
+
+# Set ~/.config/plasma-bigscreen/... as location for default bigscreen configs (i.e. envmanager generated)
+export XDG_CONFIG_DIRS="$HOME/.config/plasma-bigscreen:/etc/xdg:$XDG_CONFIG_DIRS"
+
+# if coredumpd knows about the dumps, make sure drkonqi catches them
+if grep -q '/systemd-coredump' /proc/sys/kernel/core_pattern
+then
+	export KDE_COREDUMP_NOTIFY=1
+fi
+
+
+# Apply environment settings
+QT_QPA_PLATFORM=offscreen plasma-bigscreen-envmanager --apply-settings

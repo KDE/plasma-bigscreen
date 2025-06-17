@@ -1,0 +1,43 @@
+#!/bin/sh
+# SPDX-FileCopyrightText: 2025 Seshan Ravikumar <seshan@sineware.ca>
+# SPDX-License-Identifier: GPL-2.0-or-later
+
+if [ -z "$XDG_CURRENT_DESKTOP" ] || [ "$XDG_CURRENT_DESKTOP" != "KDE" ]; then
+    echo "This script can only be run on KDE Plasma."
+    exit 1
+fi
+
+CACHE_DIR="$XDG_CACHE_HOME/plasma-bigscreen"
+SAVED_ENV="$CACHE_DIR/saved-env"
+
+mkdir -pv "$CACHE_DIR"
+
+swap_to_bigscreen() {
+    # Save current environment for restoration
+    export -p > "$SAVED_ENV"
+
+    # Source Bigscreen common environment
+    . plasma-bigscreen-common-env
+
+    export PLASMA_BIGSCREEN_LAUNCH_REASON=swap
+
+    plasmashell --replace &
+}
+
+swap_to_default() {
+    # Restore saved environment
+    . "$SAVED_ENV"
+    rm "$SAVED_ENV"
+
+    unset PLASMA_BIGSCREEN_LAUNCH_REASON
+
+
+    plasmashell --replace &
+}
+
+if [ "$PLASMA_BIGSCREEN_LAUNCH_REASON" = "swap" ]; then
+    # If already in Bigscreen mode, switch back to default Plasma
+    swap_to_default
+else
+    swap_to_bigscreen
+fi

@@ -5,32 +5,11 @@
 # SPDX-FileCopyrightText: 2025 Seshan Ravikumar <seshan@sineware.ca>
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-[ -f /etc/profile ] && . /etc/profile
+# Source Bigscreen common environment
+. plasma-bigscreen-common-env
 
 export QT_QPA_PLATFORM=wayland
-export QT_QPA_PLATFORMTHEME=KDE
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 export EGL_PLATFORM=wayland
 
-export QT_QUICK_CONTROLS_STYLE=org.kde.breeze
-export QT_ENABLE_GLYPH_CACHE_WORKAROUND=1
-export QT_QUICK_CONTROLS_MOBILE=true
-export PLASMA_INTEGRATION_USE_PORTAL=1
-export PLASMA_PLATFORM=mediacenter
-export QT_FILE_SELECTORS=mediacenter
-
-# Set ~/.config/plasma-bigscreen/... as location for default bigscreen configs (i.e. envmanager generated)
-export XDG_CONFIG_DIRS="$HOME/.config/plasma-bigscreen:/etc/xdg:$XDG_CONFIG_DIRS"
-
-# if coredumpd knows about the dumps, make sure drkonqi catches them
-if grep -q '/systemd-coredump' /proc/sys/kernel/core_pattern
-then
-	export KDE_COREDUMP_NOTIFY=1
-fi
-
-# ensure that we have our environment settings set properly prior to the shell being loaded (otherwise there is a race condition with autostart)
-QT_QPA_PLATFORM=offscreen plasma-bigscreen-envmanager --apply-settings
-
-
-export PLASMA_DEFAULT_SHELL=org.kde.plasma.bigscreen
 startplasma-wayland --xwayland --libinput --exit-with-session=@KDE_INSTALL_FULL_LIBEXECDIR@/startplasma-waylandsession
