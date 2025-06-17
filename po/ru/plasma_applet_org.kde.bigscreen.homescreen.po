@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-15 00:44+0000\n"
+"POT-Creation-Date: 2025-06-17 00:44+0000\n"
 "PO-Revision-Date: 2023-01-28 22:16+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -23,11 +23,6 @@ msgstr ""
 #, kde-format
 msgid "General"
 msgstr "Основное"
-
-#: contents/ui/ConfigWindow.qml:132 contents/ui/launcher/LauncherHome.qml:212
-#, kde-format
-msgid "Settings"
-msgstr "Параметры"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -114,6 +109,18 @@ msgstr "Приложения"
 #, kde-format
 msgid "Games"
 msgstr "Игры"
+
+#: contents/ui/launcher/LauncherHome.qml:212
+#: contents/ui/settings/ConfigWindowSidebar.qml:45
+#, kde-format
+msgid "Settings"
+msgstr "Параметры"
+
+#: contents/ui/launcher/search/SearchTextField.qml:24
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Search…"
+msgstr ""
 
 #: contents/ui/PowerManagementItem.qml:41
 #, kde-format
