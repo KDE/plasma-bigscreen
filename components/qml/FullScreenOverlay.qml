@@ -65,7 +65,7 @@ NanoShell.FullScreenOverlay {
         scale: root.visible ? 1.0 : 0.9
         Behavior on scale {
             NumberAnimation  {
-                duration: KiriGami.Units.shortDuration
+                duration: Kirigami.Units.shortDuration
                 easing.type: Easing.InOutQuad
             }
         }
@@ -136,7 +136,7 @@ NanoShell.FullScreenOverlay {
         opacity: root.visible ? 1.0 : 0.5
         Behavior on opacity {
             NumberAnimation  {
-                duration: KiriGami.Units.shortDuration
+                duration: Kirigami.Units.shortDuration
                 easing.type: Easing.InOutQuad
             }
         }
