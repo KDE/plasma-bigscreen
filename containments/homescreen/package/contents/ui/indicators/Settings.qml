@@ -19,9 +19,10 @@ import org.kde.private.biglauncher
 AbstractIndicator {
     id: settingsIcon
     icon.name: "configure"
+    text: i18n('Settings')
 
     onClicked: {
-        configWindow.showOverlay()   
+        configWindow.showOverlay()
     }
 
     Connections {

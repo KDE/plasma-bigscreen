@@ -15,6 +15,7 @@ import "code/icon.js" as Icon
 
 AbstractIndicator {
     id: paIcon
+    text: i18n('Audio Settings')
 
     GlobalConfig {
         id: config
@@ -26,7 +27,7 @@ AbstractIndicator {
     readonly property string dummyOutputName: "auto_null"
     icon.name: PreferredDevice.sink && !isDummyOutput(PreferredDevice.sink) ? AudioIcon.forVolume(volumePercent(PreferredDevice.sink.volume), PreferredDevice.sink.muted, "")
                                                                                           : AudioIcon.forVolume(0, true, "")
- 
+
     function isDummyOutput(output) {
         return output && output.name === dummyOutputName;
     }

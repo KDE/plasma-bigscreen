@@ -15,6 +15,7 @@ import org.kde.plasma.private.nanoshell as NanoShell
 
 AbstractIndicator {
     id: connectionIcon
+    text: i18n('Internet Settings')
 
     icon.name: connectionIconProvider.connectionIcon
 

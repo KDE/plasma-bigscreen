@@ -14,6 +14,7 @@ import org.kde.kirigami as Kirigami
 AbstractIndicator {
     id: favsIcon
     icon.name: "edit-entry"
+    text: i18n('Customize Favorites')
 
     onClicked: {
         favsManagerWindowView.showOverlay()

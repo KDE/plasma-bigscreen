@@ -11,11 +11,11 @@ import org.kde.bigscreen as Bigscreen
 
 AbstractIndicator {
     id: button
-    
     icon.name: Bigscreen.Global.launchReason === "swap" ? "window-close" : "system-shutdown"
+    text: (Bigscreen.Global.launchReason === "swap") ? i18n('Exit Bigscreen') : i18n('Power')
 
     onClicked: (event)=> {
-        if(Bigscreen.Global.launchReason === "swap") {
+        if (Bigscreen.Global.launchReason === "swap") {
             Bigscreen.Global.swapSession();
         } else {
             // Prompt all since we don't have any other way of doing it.
