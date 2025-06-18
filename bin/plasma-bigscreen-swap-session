@@ -7,7 +7,7 @@ if [ -z "$XDG_CURRENT_DESKTOP" ] || [ "$XDG_CURRENT_DESKTOP" != "KDE" ]; then
     exit 1
 fi
 
-CACHE_DIR="$XDG_CACHE_HOME/plasma-bigscreen"
+CACHE_DIR="$HOME/.cache/plasma-bigscreen"
 SAVED_ENV="$CACHE_DIR/saved-env"
 
 mkdir -pv "$CACHE_DIR"
