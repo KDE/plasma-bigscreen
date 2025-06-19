@@ -92,7 +92,7 @@ Item {
                 
                     Kirigami.Icon {
                         Layout.preferredWidth: Kirigami.Units.iconSizes.small
-                        Layout.preferredHeight: Kirigamif.Units.iconSizes.small
+                        Layout.preferredHeight: Kirigami.Units.iconSizes.small
                         source: "dialog-cancel"
                     }
                     PlasmaComponents.Label {

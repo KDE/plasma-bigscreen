@@ -13,12 +13,13 @@ Bigscreen.KCMAbstractDelegate {
     id: delegate
     property QtObject deviceObj: device
     itemIcon: model.iconName
-    itemLabel: i18n(model.display)
+    itemLabel: i18n(model.name)
+    itemLabelBold: true
     itemSubLabel: i18n(model.toolTip)
     itemTickVisible: false
 
     onClicked: {
         listView.currentIndex = index
-        deviceConnectionView.forceActiveFocus()
+        if (deviceObj.isReachable) { deviceConnectionView.forceActiveFocus() }
     }
 }

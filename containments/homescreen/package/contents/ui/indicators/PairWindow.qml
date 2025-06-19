@@ -16,7 +16,7 @@ import org.kde.kirigami as Kirigami
 Window {
     id: root
     property QtObject currentDevice
-    property bool pairingRequest: currentDevice.isPairRequested || currentDevice.isPairRequestedByPeer ? 1 : 0
+    property bool pairingRequest: currentDevice.isPairRequestedByPeer ? 1 : 0
     color: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.7)
     flags: Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint
 

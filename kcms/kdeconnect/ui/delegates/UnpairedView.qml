@@ -35,6 +35,7 @@ Item {
         anchors.fill: parent
         
         PlasmaComponents.Label {
+            id: unpairedLabel
             Layout.fillWidth: true
             horizontalAlignment: Text.AlignHCenter
             text: i18n("This device is not paired")
@@ -51,14 +52,10 @@ Item {
             }
                 
             onClicked: {
-                deviceView.currentDevice.requestPair()
-                pairRequestNotification.visible = true
-                delay(2500, function() {
-                    pairRequestNotification.visible = false
-                })
+                deviceView.currentDevice.requestPairing()
+                pairBtn.visible = false
+                unpairedLabel.text = "Pairing request sent"
             }
-                
-            KeyNavigation.up: backBtnSettingsItem
         
             background: Rectangle {
                 color: pairBtn.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
@@ -71,8 +68,8 @@ Item {
                     anchors.centerIn: parent
                 
                     Kirigami.Icon {
-                        Layout.preferredWidth: PlasmaCore.Units.iconSizes.small
-                        Layout.preferredHeight: PlasmaCore.Units.iconSizes.small
+                        Layout.preferredWidth: Kirigami.Units.iconSizes.small
+                        Layout.preferredHeight: Kirigami.Units.iconSizes.small
                         source: "network-connect"
                     }
                     
@@ -81,14 +78,6 @@ Item {
                     }
                 }
             }
-        }
-        
-        PlasmaComponents.Label {
-            id: pairRequestNotification
-            Layout.fillWidth: true
-            horizontalAlignment: Text.AlignHCenter
-            visible: false
-            text: i18n("Pairing request sent to device")
         }
     }
 } 

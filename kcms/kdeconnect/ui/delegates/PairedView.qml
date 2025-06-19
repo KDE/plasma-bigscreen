@@ -35,8 +35,6 @@ Item {
             Layout.preferredHeight: Kirigami.Units.gridUnit * 2
             Kirigami.Theme.colorSet: Kirigami.Theme.Button
             
-            KeyNavigation.up: backBtnSettingsItem
-            
             Keys.onReturnPressed: {
                 clicked()
             }

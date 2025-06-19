@@ -28,7 +28,7 @@ AbstractIndicator {
     Repeater {
         model: allDevicesModel
         delegate: Item {
-            property bool pairingRequest: device.isPairRequested || device.isPairRequestedByPeer ? 1 : 0
+            property bool pairingRequest: device.isPairRequestedByPeer ? 1 : 0
             property var bigscreenIface: KDEConnect.BigscreenDbusInterfaceFactory.create(model.deviceId)
 
             onPairingRequestChanged: {

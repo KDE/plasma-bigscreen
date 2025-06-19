@@ -125,8 +125,6 @@ NanoShell.FullScreenOverlay {
             }
         }
 
-        // Close settings when escape is pressed
-        Keys.onEscapePressed: hideOverlay()
 
         // Sidebar (left panel)
         ConfigWindowSidebar {
@@ -142,6 +140,7 @@ NanoShell.FullScreenOverlay {
 
             KeyNavigation.right: root.isCurrentModuleFocusable ? loadedKCMPage : null
             KeyNavigation.tab: KeyNavigation.right
+            Keys.onEscapePressed: hideOverlay()
         }
 
         // Shadow
@@ -279,6 +278,7 @@ NanoShell.FullScreenOverlay {
 
                 KeyNavigation.left: root.isCurrentModuleFocusable ? root.settingsKCMMenu : null
                 KeyNavigation.backtab: KeyNavigation.left
+                Keys.onEscapePressed: root.settingsKCMMenu.forceActiveFocus()
 
                 header: Item {
                     id: headerAreaTop

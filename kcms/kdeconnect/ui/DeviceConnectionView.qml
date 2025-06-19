@@ -21,44 +21,45 @@ Rectangle {
     id: deviceView
     color: Kirigami.Theme.backgroundColor
     property QtObject currentDevice
-    property bool hasPairingRequests: deviceView.currentDevice.hasPairingRequests
-    property bool isTrusted: deviceView.currentDevice.isTrusted
-    property bool isReachable: deviceView.currentDevice.isReachable
+    property bool isPairRequested: currentDevice.isPairRequested
+    property bool isPaired: currentDevice.isPaired
+    property bool isReachable: currentDevice.isReachable
     
     onCurrentDeviceChanged: checkCurrentStatus()
     
-    onHasPairingRequestsChanged: {
-        if(hasPairingRequests) {
+    onIsPairRequestedChanged: {
+        if(isPairRequested) {
             checkCurrentStatus()
         }
     }
     
-    onIsTrustedChanged: checkCurrentStatus()
+    onIsPairedChanged: checkCurrentStatus()
     onIsReachableChanged: checkCurrentStatus()
     
     onActiveFocusChanged: {
-        if(activeFocus){
-            deviceStatView.forceActiveFocus()
+        if (activeFocus) {
+            deviceStackLayout.forceActiveFocus()
         }
     }
     
     function checkCurrentStatus() {
-        //if (deviceView.currentDevice.hasPairingRequests) {
-        //    deviceStatView.currentIndex = 1
+        //if (currentDevice.isPairRequested) {
+        //    deviceStackLayout.currentIndex = 1
         //} else
         // disable pairing request handler in kcm as indicator handles pairing in bigscreen
-        if (deviceView.currentDevice.isReachable) {
-            if (deviceView.currentDevice.isTrusted) {
-                deviceIconStatus.source = deviceView.currentDevice.statusIconName
-                deviceStatView.currentIndex = 2
+        
+        if (currentDevice.isReachable) {
+            if (currentDevice.isPaired) {
+                deviceIconStatus.source = currentDevice.statusIconName
+                deviceStackLayout.currentIndex = 2
                 
             } else {
-                deviceIconStatus.source = deviceView.currentDevice.iconName
-                deviceStatView.currentIndex = 0
+                deviceIconStatus.source = currentDevice.iconName
+                deviceStackLayout.currentIndex = 0
             }
             
         } else {
-            deviceStatView.currentIndex = 3
+            deviceStackLayout.currentIndex = 3
         }
     }
     
@@ -85,11 +86,11 @@ Rectangle {
             Layout.alignment: Qt.AlignTop
 
             Rectangle {
-                id: dIcon
-                anchors.top: headrSept.bottom
-                anchors.topMargin: Kirigami.Units.largeSpacing
+                id: deviceIcon
+                anchors.bottom: deviceIconSept.bottom
+                anchors.bottomMargin: Kirigami.Units.largeSpacing
                 anchors.horizontalCenter: parent.horizontalCenter
-                width: PlasmaCore.Units.iconSizes.huge
+                width: Kirigami.Units.iconSizes.huge
                 height: width
                 radius: 100
                 color: Kirigami.Theme.backgroundColor
@@ -97,17 +98,27 @@ Rectangle {
                 Kirigami.Icon {
                     id: deviceIconStatus
                     anchors.centerIn: parent
-                    width: PlasmaCore.Units.iconSizes.large
+                    width: Kirigami.Units.iconSizes.large
                     height: width
                     source: currentDevice.iconName
                 }
             }
+
+            Kirigami.Separator {
+                id: deviceIconSept
+                anchors.top: deviceIcon.bottom
+                anchors.topMargin: Kirigami.Units.smallSpacing
+                anchors.bottomMargin: Kirigami.Units.smallSpacing
+                height: 1
+                width: parent.width
+            }
             
             Kirigami.Heading {
-                id: label2
+                id: deviceLabel
                 width: parent.width
-                anchors.top: dIcon.bottom
+                anchors.top: deviceIconSept.bottom
                 anchors.topMargin: Kirigami.Units.largeSpacing
+                anchors.bottomMargin: Kirigami.Units.largeSpacing
                 horizontalAlignment: Text.AlignHCenter
                 wrapMode: Text.WordWrap
                 level: 2
@@ -115,46 +126,42 @@ Rectangle {
                 elide: Text.ElideRight
                 color: Kirigami.Theme.textColor
                 text: currentDevice.name
+                font.bold: true
             }
 
             Kirigami.Separator {
-                id: lblSept2
-                anchors.top: label2.bottom
-                anchors.topMargin: Kirigami.Units.smallSpacing
+                id: deviceLabelSept
+                anchors.top: deviceLabel.bottom
+                anchors.topMargin: Kirigami.Units.mediumSpacing
                 height: 1
                 width: parent.width
             }
             
             StackLayout {
-                id: deviceStatView
-                anchors.top: lblSept2.bottom
+                id: deviceStackLayout
+                anchors.top: deviceLabelSept.bottom
                 anchors.topMargin: Kirigami.Units.largeSpacing
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.bottom: parent.bottom
-                currentIndex: 0
-                
+
                 onActiveFocusChanged: {
-                    if(activeFocus) {
-                        deviceStatView.itemAt(currentIndex).forceActiveFocus();
+                    if (activeFocus) {
+                        children[currentIndex].forceActiveFocus()
                     }
                 }
-                
-                Delegates.UnpairedView{
-                    id: unpairedView
+
+                onCurrentIndexChanged: {
+                    connectionView.forceActiveFocus()
                 }
                 
-                Delegates.PairRequest{
-                    id: pairRequestView
-                }
+                Delegates.UnpairedView { id: unpairedView }
                 
-                Delegates.PairedView{
-                    id: pairedView
-                }
+                Delegates.PairRequest { id: pairRequestView }
                 
-                Delegates.Unreachable{
-                    id: unreachableView
-                }
+                Delegates.PairedView { id: pairedView }
+                
+                Delegates.Unreachable{ id: unreachableView }
             }
         }
     }

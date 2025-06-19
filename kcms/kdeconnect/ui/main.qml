@@ -25,12 +25,6 @@ KCM.SimpleKCM {
     rightPadding: Kirigami.Units.smallSpacing
     bottomPadding: 0
 
-    property Item settingMenuItem: networkSelectionView.parent.parent.lastSettingMenuItem
-
-    function settingMenuItemFocus() {
-        settingMenuItem.forceActiveFocus()
-    }
-    
     Component.onCompleted: {
         connectionView.forceActiveFocus();
     }
@@ -59,8 +53,7 @@ KCM.SimpleKCM {
                     Layout.alignment: Qt.AlignTop
                     title: allDevicesModel.count > 0 ? "Found Devices" : "No Devices Found"
                     currentIndex: 0
-                    delegate: Delegates.DeviceDelegate{}
-                    navigationDown: kcmcloseButton
+                    delegate: Delegates.DeviceDelegate {}
                     Behavior on x {
                         NumberAnimation {
                             duration: Kirigami.Units.longDuration * 2
@@ -74,6 +67,14 @@ KCM.SimpleKCM {
             }
         }
 
+        Kirigami.Separator {
+            id: viewSept
+            anchors.right: deviceConnectionView.left
+            anchors.top: deviceConnectionView.top
+            anchors.bottom: deviceConnectionView.bottom
+            width: 1
+        }
+
         DeviceConnectionView {
             id: deviceConnectionView
             anchors.top: parent.top
@@ -82,6 +83,8 @@ KCM.SimpleKCM {
             visible: allDevicesModel.count > 0 ? 1 : 0
             anchors.rightMargin: -Kirigami.Units.smallSpacing
             width: Kirigami.Units.gridUnit * 15
+            Keys.onLeftPressed: connectionView.forceActiveFocus()
+            Keys.onEscapePressed: connectionView.forceActiveFocus()
         }
     }
 }

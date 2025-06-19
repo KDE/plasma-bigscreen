@@ -19,6 +19,7 @@ AbstractDelegate {
 
     property alias itemIcon: contentItemSvgIcon.source
     property alias itemLabel: contentItemLabel.text
+    property alias itemLabelBold: contentItemLabel.font.bold
     property alias itemLabelVisible: contentItemLabel.visible
     property alias itemSubLabel: contentItemSubLabel.text
     property alias itemSubLabelVisible: contentItemSubLabel.visible
@@ -37,7 +38,7 @@ AbstractDelegate {
     }
 
     Keys.onReturnPressed: (event)=> {
-        onClicked()
+        clicked()
     }
 
     Keys.onLeftPressed: (event)=> {
@@ -53,7 +54,7 @@ AbstractDelegate {
 
         Kirigami.Icon {
             id: contentItemSvgIcon
-            width: Kirigami.Units.iconSizes.huge
+            width: Kirigami.Units.iconSizes.large
             height: width
             y: contentItemLayout.height/2 - contentItemSvgIcon.height/2
         }
