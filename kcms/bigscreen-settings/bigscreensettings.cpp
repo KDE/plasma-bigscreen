@@ -67,14 +67,6 @@ bool BigscreenSettings::useColoredTiles()
     return responseArg.at(0).toBool();
 }
 
-bool BigscreenSettings::useExpandingTiles()
-{
-    QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "expandableTilesActive");
-    QDBusMessage response = QDBusConnection::sessionBus().call(msg);
-    QList<QVariant> responseArg = response.arguments();
-    return responseArg.at(0).toBool();
-}
-
 bool BigscreenSettings::pmInhibitionActive()
 {
     QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "pmInhibitionActive");
@@ -87,13 +79,6 @@ void BigscreenSettings::setUseColoredTiles(bool useColoredTiles)
 {
     QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "useColoredTiles");
     msg << useColoredTiles;
-    QDBusConnection::sessionBus().send(msg);
-}
-
-void BigscreenSettings::setUseExpandingTiles(bool useExpandingTiles)
-{
-    QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "useExpandableTiles");
-    msg << useExpandingTiles;
     QDBusConnection::sessionBus().send(msg);
 }
 

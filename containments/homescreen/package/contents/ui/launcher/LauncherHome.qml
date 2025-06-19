@@ -61,7 +61,7 @@ FocusScope {
 
         spacing: Kirigami.Units.largeSpacing * 3
 
-        Bigscreen.TileRepeater {
+        Bigscreen.TileListView {
             id: favAppsView
             // Recursively get the next visible view
             property var currentViewUpwards: visible ? favAppsView : root.navigationUp
@@ -72,7 +72,6 @@ FocusScope {
             visible: count > 0
             currentIndex: 0
             focus: visible
-            columns: 7
             onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = favAppsView
             delegate: Delegates.FavDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
@@ -82,13 +81,12 @@ FocusScope {
             navigationDown: recentView.currentViewDownwards
         }
 
-        Bigscreen.TileRepeater {
+        Bigscreen.TileListView {
             id: recentView
             property var currentViewUpwards: visible ? recentView : favAppsView.currentViewUpwards
             property var currentViewDownwards: visible ? recentView : voiceAppsView.currentViewDownwards
 
             title: i18n("Recent")
-            compactMode: plasmoid.configuration.expandingTiles
             model: Kicker.RecentUsageModel {
                 shownItems: Kicker.RecentUsageModel.OnlyApps
             }
@@ -103,8 +101,7 @@ FocusScope {
                 property var modelData: typeof model !== "undefined" ? model : null
                 iconImage: model.decoration
                 text: model.display
-                comment: model.description
-                onClicked: (mouse)=> {
+                onClicked: (mouse) => {
                     recentView.model.trigger(index, "", null);
                 }
             }
@@ -113,13 +110,12 @@ FocusScope {
             navigationDown: voiceAppsView.currentViewDownwards
         }
 
-        Bigscreen.TileRepeater {
+        Bigscreen.TileListView {
             id: voiceAppsView
             property var currentViewUpwards: visible ? voiceAppsView : recentView.currentViewUpwards
             property var currentViewDownwards: visible ? voiceAppsView : appsView.currentViewDownwards
 
             title: i18n("Voice Applications")
-            compactMode: plasmoid.configuration.expandingTiles
             model: KItemModels.KSortFilterProxyModel {
                 sourceModel: plasmoid.applicationListModel
                 filterRoleName: "ApplicationCategoriesRole"
@@ -135,20 +131,18 @@ FocusScope {
             onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = voiceAppsView
             delegate: Delegates.VoiceAppDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
-
             }
 
             navigationUp: recentView.currentViewUpwards
             navigationDown: appsView.currentViewDownwards
         }
 
-        Bigscreen.TileRepeater {
+        Bigscreen.TileListView {
             id: appsView
             property var currentViewUpwards: visible ? appsView : voiceAppsView.currentViewUpwards
             property var currentViewDownwards: visible ? appsView : gamesView.currentViewDownwards
 
             title: i18n("Applications")
-            compactMode: plasmoid.configuration.expandingTiles
             visible: count > 0
             enabled: count > 0
             model: KItemModels.KSortFilterProxyModel {
@@ -165,20 +159,18 @@ FocusScope {
             onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = appsView
             delegate: Delegates.AppDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
-                comment: model.ApplicationCommentRole
             }
 
             navigationUp: voiceAppsView.currentViewUpwards
             navigationDown: gamesView.currentViewDownwards
         }
 
-        Bigscreen.TileRepeater {
+        Bigscreen.TileListView {
             id: gamesView
             property var currentViewUpwards: visible ? gamesView : appsView.currentViewUpwards
             property var currentViewDownwards: visible ? gamesView : settingsView.currentViewDownwards
 
             title: i18n("Games")
-            compactMode: plasmoid.configuration.expandingTiles
             visible: count > 0
             enabled: count > 0
             model: KItemModels.KSortFilterProxyModel {
@@ -204,15 +196,15 @@ FocusScope {
             id: settingActions
         }
 
-        Bigscreen.TileRepeater {
+        Bigscreen.TileListView {
             id: settingsView
             property var currentViewUpwards: visible ? settingsView : gamesView.currentViewUpwards
             property var currentViewDownwards: visible ? settingsView : null
 
             title: i18n("Settings")
             model: plasmoid.kcmsListModel
-            compactMode: plasmoid.configuration.expandingTiles
 
+            currentIndex: 0
             onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = settingsView
             delegate: Delegates.SettingDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null

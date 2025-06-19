@@ -45,9 +45,6 @@ public Q_SLOTS:
     bool useColoredTiles();
     void setUseColoredTiles(bool useColoredTiles);
 
-    bool useExpandingTiles();
-    void setUseExpandingTiles(bool useExpandingTiles);
-
     bool pmInhibitionActive();
     void setPmInhibitionActive(bool pmInhibitionActive);
 

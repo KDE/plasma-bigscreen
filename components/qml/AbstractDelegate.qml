@@ -8,7 +8,7 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
-import Qt5Compat.GraphicalEffects
+import QtQuick.Effects
 
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.kirigami as Kirigami
@@ -32,9 +32,9 @@ QQC2.ItemDelegate {
     }
 
     highlighted: isCurrent
-    property int shadowSize: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+    property int shadowSize: 16
     property int borderSize: Kirigami.Units.smallSpacing
-    property int baseRadius: 6
+    property int baseRadius: Kirigami.Units.cornerRadius
 
     z: isCurrent ? 2 : 0
 
@@ -43,10 +43,10 @@ QQC2.ItemDelegate {
         listView.currentIndex = index
     }
 
-    leftPadding: Kirigami.Units.largeSpacing * 2
-    topPadding: Kirigami.Units.largeSpacing * 2
-    rightPadding: Kirigami.Units.largeSpacing * 2
-    bottomPadding: Kirigami.Units.largeSpacing * 2
+    leftPadding: Kirigami.Units.gridUnit
+    topPadding: Kirigami.Units.gridUnit
+    rightPadding: Kirigami.Units.gridUnit
+    bottomPadding: Kirigami.Units.gridUnit
 
     leftInset: Kirigami.Units.largeSpacing
     topInset: Kirigami.Units.largeSpacing
@@ -83,16 +83,12 @@ QQC2.ItemDelegate {
             }
         }
 
-        Kirigami.ShadowedRectangle {
+        Rectangle {
             id: frame
-            anchors {
-                fill: parent
-            }
+            anchors.fill: parent
             radius: delegate.baseRadius
             color: delegate.Kirigami.Theme.backgroundColor
-            shadow {
-                size: delegate.shadowSize
-            }
+            visible: false // Drawn by MultiEffect below
 
             states: [
                 State {
@@ -177,6 +173,17 @@ QQC2.ItemDelegate {
                     }
                 }
             }
+        }
+
+        MultiEffect {
+            id: frameShadow
+
+            anchors.fill: frame
+            source: frame
+            blurMax: delegate.shadowSize
+            shadowEnabled: true
+            shadowOpacity: 0.6
+            shadowColor: 'black'
         }
     }
 }

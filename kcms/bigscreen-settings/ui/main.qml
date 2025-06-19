@@ -39,9 +39,6 @@ KCM.SimpleKCM {
         if(type == "coloredTile"){
             kcm.setUseColoredTiles(result);
         }
-        if(type == "exapandableTile"){
-            kcm.setUseExpandingTiles(result);
-        }
         if(type == "pmInhibition"){
             kcm.setPmInhibitionActive(result);
         }
@@ -86,17 +83,6 @@ KCM.SimpleKCM {
                     description: i18n("Tile backgrounds will be colored based on the app's icon")
                     customType: "coloredTile"
                     KeyNavigation.up: pmInhibitionDelegate
-                    KeyNavigation.down: expandableTileDelegate
-                }
-
-                Delegates.LocalSettingDelegate {
-                    id: expandableTileDelegate
-                    Layout.fillWidth: true
-                    isChecked: kcm.useExpandingTiles() ? 1 : 0
-                    name: i18n("Expanding Tiles")
-                    description: i18n("Tiles will expand when selected")
-                    customType: "exapandableTile"
-                    KeyNavigation.up: coloredTileDelegate
                     KeyNavigation.down: desktopThemeView
                 }
 
@@ -114,7 +100,7 @@ KCM.SimpleKCM {
                     model: kcm.globalThemeListModel
                     view.cacheBuffer: parent.width * 2
                     title: i18n("Global Theme")
-                    navigationUp: expandableTileDelegate
+                    navigationUp: coloredTileDelegate
                     enabled: !settingsAreaLoader.opened
                     delegate: Delegates.ThemeDelegate {
                         text: model.display

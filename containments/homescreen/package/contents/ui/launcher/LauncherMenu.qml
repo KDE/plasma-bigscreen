@@ -47,7 +47,6 @@ FocusScope {
         plasmoid.applicationListModel.loadApplications();
         root.activateAppView();
         plasmoid.setUseColoredTiles(plasmoid.configuration.coloredTiles);
-        plasmoid.setUseExpandableTiles(plasmoid.configuration.expandingTiles);
     }
 
     Connections {
@@ -62,10 +61,6 @@ FocusScope {
         function onUseColoredTilesChanged(msgUseColoredTiles) {
             plasmoid.configuration.coloredTiles = msgUseColoredTiles;
             plasmoid.setUseColoredTiles(plasmoid.configuration.coloredTiles);
-        }
-        function onUseExpandableTilesChanged(msgUseExpandableTiles) {
-            plasmoid.configuration.expandingTiles = msgUseExpandableTiles;
-            plasmoid.setUseExpandableTiles(plasmoid.configuration.expandingTiles);
         }
     }
 

@@ -78,73 +78,45 @@ FocusScope {
         visible: root.titleVisible
     }
 
-    Flickable {
+    ListView {
         id: view
+        property var listView: view
         anchors {
             left: parent.left
             right: parent.right
             top: header.baseline
             bottom: parent.bottom
             topMargin: Kirigami.Units.largeSpacing * 2
-            leftMargin: -Kirigami.Units.largeSpacing
         }
         readonly property int cellWidth: root.width / columns + (Kirigami.Units.gridUnit / 1)
         property int cellHeight: cellWidth * 0.75
-        property int currentIndex: 0
-        property alias count: repeater.count
-        property alias model: repeater.model
-        property alias delegate: repeater.delegate
-        readonly property Item currentItem: layout.children[currentIndex]
 
-        function indexAt(x, y) {
-            return Math.max(0, Math.min(count - 1, Math.round(x / cellWidth)));
-        }
-
-        focus: true
         implicitHeight: cellHeight
-        contentWidth: layout.width
-        contentHeight: height
 
-        onCurrentItemChanged: {
-            if (!currentItem) return;
-            currentItem.forceActiveFocus();
-            slideAnim.slideToIndex(currentIndex);
-        }
+        keyNavigationEnabled: true
+        reuseItems: true
+        focus: true
+        snapMode: ListView.SnapOneItem
+        cacheBuffer: width * 2
+        spacing: 0
+        orientation: ListView.Horizontal
 
-        onMovementEnded: currentIndex = Math.min(count - 1, Math.round((contentX + cellWidth) / cellWidth))
-        onFlickEnded: movementEnded()
+        highlightMoveVelocity: -1
+        highlightMoveDuration: Kirigami.Units.longDuration
 
-        NumberAnimation {
-            id: slideAnim
-            target: view
-            property: "contentX"
-            duration: 250
+        preferredHighlightBegin: 0
+        preferredHighlightEnd: cellWidth
+        displayMarginBeginning: cellWidth
+        displayMarginEnd: cellWidth
 
-            function slideToIndex(index) {
-                slideAnim.running = false;
-                slideAnim.from = view.contentX;
-                slideAnim.to = Math.max(0, view.cellWidth * view.currentIndex);
-                slideAnim.restart();
-            }
-        }
+        onMovementEnded: flickEnded()
 
-        Row {
-            id: layout
-            anchors {
-                top: parent.top
-                bottom: parent.bottom
-            }
-            spacing: 0
+        onFlickEnded: currentIndex = indexAt(mapToItem(contentItem, cellWidth, 0).x, 0)
 
-            Repeater {
-                id: repeater
-                onChildrenChanged: view.currentIndexChanged();
-            }
-
-            // Spacer
-            Item {
-                width: view.width - view.cellWidth * 2
-                height: 1
+        move: Transition {
+            SmoothedAnimation {
+                property: "x"
+                duration: Kirigami.Units.longDuration
             }
         }
 

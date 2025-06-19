@@ -13,7 +13,6 @@ Bigscreen.IconDelegate {
     icon.name: modelData.kcmIconName
     text: modelData.kcmName
     useIconColors: plasmoid.configuration.coloredTiles
-    compactMode: plasmoid.configuration.expandingTiles
 
     onClicked: {
         Bigscreen.NavigationSoundEffects.playClickedSound()
