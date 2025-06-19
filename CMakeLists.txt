@@ -60,6 +60,8 @@ find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     DBus
     Network
     Multimedia
+    WebEngineCore
+    WebEngineQuick
 )
 
 ecm_find_qmlmodule(org.kde.plasma.core 2.0)
@@ -74,6 +76,7 @@ add_subdirectory(kcms)
 add_subdirectory(components)
 add_subdirectory(sounds)
 add_subdirectory(envmanager)
+add_subdirectory(webapp-viewer)
 
 plasma_install_package(shell org.kde.plasma.bigscreen shells)
 plasma_install_package(lookandfeel org.kde.plasma.bigscreen look-and-feel lookandfeel)
