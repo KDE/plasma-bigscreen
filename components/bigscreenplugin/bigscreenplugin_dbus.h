@@ -6,10 +6,11 @@
 #ifndef BIGSCREENPLUGIN_DBUS_H
 #define BIGSCREENPLUGIN_DBUS_H
 
-#include <QObject>
-#include <QStringList>
 #include <QDBusAbstractAdaptor>
 #include <QDBusConnection>
+#include <QObject>
+#include <QStringList>
+#include <qqmlregistration.h>
 
 QT_BEGIN_NAMESPACE
 class QByteArray;
@@ -27,6 +28,8 @@ QT_END_NAMESPACE
 class BigscreenDbusAdapterInterface : public QDBusAbstractAdaptor
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
     Q_CLASSINFO("D-Bus Interface", "org.kde.bigscreen")
     Q_CLASSINFO("D-Bus Introspection",
                 ""

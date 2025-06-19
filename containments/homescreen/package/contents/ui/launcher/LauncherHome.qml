@@ -17,7 +17,7 @@ import org.kde.kirigami as Kirigami
 import org.kde.kitemmodels as KItemModels
 
 import "delegates" as Delegates
-import org.kde.bigscreen 1.0 as Bigscreen
+import org.kde.bigscreen as Bigscreen
 import org.kde.private.biglauncher 1.0
 import org.kde.plasma.private.kicker 0.1 as Kicker
 

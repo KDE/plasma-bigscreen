@@ -12,7 +12,6 @@
 #include <qstringliteral.h>
 
 using namespace Qt::Literals::StringLiterals;
- 
 
 Global::Global(QObject *parent)
     : QObject(parent)
@@ -47,6 +46,5 @@ void Global::swapSession()
     const QString xdgCurrentDesktop = u"XDG_CURRENT_DESKTOP=KDE"_s;
 
     process->startDetached(u"env"_s,
-        QStringList() << u"-i"_s << path << home << plasmaBigscreenLaunchReason << xdgCurrentDesktop << u"plasma-bigscreen-swap-session"_s
-    );
+                           QStringList() << u"-i"_s << path << home << plasmaBigscreenLaunchReason << xdgCurrentDesktop << u"plasma-bigscreen-swap-session"_s);
 }

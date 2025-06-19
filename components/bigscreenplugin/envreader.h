@@ -7,26 +7,29 @@
 #ifndef ENVREADER_H
 #define ENVREADER_H
 
+#include "bigscreenplugin_dbus.h"
 #include <QObject>
 #include <QVariant>
-#include "bigscreenplugin_dbus.h"
+#include <qqmlregistration.h>
 
 class EnvReader : public QObject
 {
-        Q_OBJECT
+    Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
 
 public:
     explicit EnvReader(QObject *parent = nullptr);
 
 public Q_SLOTS:
-        QString getValue(const QString &name);
-        void kScreenConfChange();
+    QString getValue(const QString &name);
+    void kScreenConfChange();
 
 Q_SIGNALS:
-        void configChangeReceived();
+    void configChangeReceived();
 
 private:
-        BigscreenDbusAdapterInterface* m_bigscreenDbusAdapterInterface;
+    BigscreenDbusAdapterInterface *m_bigscreenDbusAdapterInterface;
 };
 
 #endif // ENVREADER_H

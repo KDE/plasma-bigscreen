@@ -9,14 +9,18 @@
 #ifndef GLOBAL_H
 #define GLOBAL_H
 
+#include <QDir>
 #include <QObject>
 #include <QProcess>
-#include <QDir>
+#include <qqmlregistration.h>
 
 class Global : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString launchReason READ launchReason CONSTANT)
+    QML_ELEMENT
+    QML_SINGLETON
+
 public:
     explicit Global(QObject *parent = nullptr);
 
