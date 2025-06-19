@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-17 00:44+0000\n"
+"POT-Creation-Date: 2025-06-19 00:44+0000\n"
 "PO-Revision-Date: 2024-12-20 21:53+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -54,7 +54,7 @@ msgstr "स्वीकरोतु"
 msgid "Cancel"
 msgstr "निरसयतु"
 
-#: contents/ui/indicators/Volume.qml:25
+#: contents/ui/indicators/Volume.qml:26
 #, kde-format
 msgid "Audio Volume"
 msgstr "श्रव्य मात्रा"

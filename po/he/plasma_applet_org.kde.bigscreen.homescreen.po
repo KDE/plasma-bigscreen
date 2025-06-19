@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-17 00:44+0000\n"
-"PO-Revision-Date: 2024-10-20 20:15+0300\n"
+"POT-Creation-Date: 2025-06-19 00:44+0000\n"
+"PO-Revision-Date: 2025-06-17 21:34+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: contents/config/config.qml:12
 #, kde-format
@@ -53,7 +53,7 @@ msgstr "קבלה"
 msgid "Cancel"
 msgstr "ביטול"
 
-#: contents/ui/indicators/Volume.qml:25
+#: contents/ui/indicators/Volume.qml:26
 #, kde-format
 msgid "Audio Volume"
 msgstr "עוצמת שמע"
@@ -118,7 +118,7 @@ msgstr "הגדרות"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "חיפוש…"
 
 #: contents/ui/PowerManagementItem.qml:41
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-17 00:44+0000\n"
+"POT-Creation-Date: 2025-06-19 00:44+0000\n"
 "PO-Revision-Date: 2023-04-03 16:53+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -54,7 +54,7 @@ msgstr "Annehmen"
 msgid "Cancel"
 msgstr ""
 
-#: contents/ui/indicators/Volume.qml:25
+#: contents/ui/indicators/Volume.qml:26
 #, kde-format
 msgid "Audio Volume"
 msgstr ""

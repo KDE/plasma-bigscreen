@@ -163,7 +163,7 @@ msgstr ""
 #: ui/main.qml:116
 #, kde-format
 msgid "Global Theme"
-msgstr ""
+msgstr "Celkový motiv"
 
 #~ msgid "Launcher Appearance"
 #~ msgstr "Vzhled spouštěče"

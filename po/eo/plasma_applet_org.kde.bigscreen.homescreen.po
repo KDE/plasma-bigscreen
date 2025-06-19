@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-17 00:44+0000\n"
+"POT-Creation-Date: 2025-06-19 00:44+0000\n"
 "PO-Revision-Date: 2024-12-28 17:41+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -53,7 +53,7 @@ msgstr "Akcepti"
 msgid "Cancel"
 msgstr "Nuligi"
 
-#: contents/ui/indicators/Volume.qml:25
+#: contents/ui/indicators/Volume.qml:26
 #, kde-format
 msgid "Audio Volume"
 msgstr "Aŭdila Laŭteco"
