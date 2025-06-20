@@ -76,9 +76,16 @@ const std::vector<WebApp> &WebAppManager::applications() const
 void WebAppManager::addApp(const QString &name, const QString &url, const QImage &icon, const QString &userAgent)
 {
     const QString filename = generateFileName(name);
-    const QString desktopFileName = generateDesktopFileName(name);
 
     icon.save(iconDirectory() % QDir::separator() % filename % u".png", "PNG");
+    addApp(name, url, filename, userAgent);
+}
+
+void WebAppManager::addApp(const QString &name, const QString &url, const QString &iconFileName, const QString &userAgent)
+{
+    const QString filename = generateFileName(name);
+    const QString desktopFileName = generateDesktopFileName(name);
+
     KConfig desktopFile(desktopFileDirectory() % QDir::separator() % desktopFileName, KConfig::SimpleConfig);
 
     // TODO: maybe have program read options from .desktop file?
@@ -94,10 +101,10 @@ void WebAppManager::addApp(const QString &name, const QString &url, const QImage
     desktopEntry.writeEntry(QStringLiteral("URL"), url);
     desktopEntry.writeEntry(QStringLiteral("Name"), name);
     desktopEntry.writeEntry(QStringLiteral("Exec"), exec);
-    desktopEntry.writeEntry(QStringLiteral("Icon"), filename);
+    desktopEntry.writeEntry(QStringLiteral("Icon"), iconFileName);
     desktopEntry.writeEntry(USERAGENT_CFG_KEY, userAgent);
 
-    m_webApps.push_back(WebApp{name, filename, url, userAgent});
+    m_webApps.push_back(WebApp{name, iconFileName, url, userAgent});
 
     desktopFile.sync();
 

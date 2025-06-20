@@ -45,18 +45,20 @@ void WebAppCreator::setWebsiteName(const QString &websiteName)
 
 QCoro::Task<> WebAppCreator::addEntry(const QString name, const QString url, const QString iconUrl, const QString &userAgent)
 {
-    QPointer self = this;
-    auto image = co_await fetchIcon(iconUrl);
-    if (!self) {
-        co_return;
-    }
+    // QPointer self = this;
+    // auto image = co_await fetchIcon(iconUrl);
+    // if (!self) {
+    //     co_return;
+    // }
 
-    m_webAppMngr.addApp(name, url, image, userAgent);
+    // m_webAppMngr.addApp(name, url, image, userAgent);
+    m_webAppMngr.addApp(name, url, iconUrl, userAgent);
 
     // Refresh homescreen entries
     QProcess buildsycoca;
     buildsycoca.setProgram(QStringLiteral("kbuildsycoca6"));
     buildsycoca.startDetached();
+    co_return;
 }
 
 QCoro::QmlTask WebAppCreator::createDesktopFile(const QString name, QString url, QString icon, const QString &userAgent)

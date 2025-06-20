@@ -30,25 +30,8 @@ Kirigami.ScrollablePage {
     ColumnLayout {
         spacing: Kirigami.Units.largeSpacing
 
-        Bigscreen.TileView {
-            model: WebAppsKCM.WebAppManagerModel
-
-            delegate: Bigscreen.KCMAbstractDelegate {
-                highlighted: activeFocus
-                Layout.fillWidth: true
-
-                itemIcon: model.desktopIcon
-                itemLabel: model.name
-                itemSubLabel: model.url
-
-                onClicked: {
-                }
-            }
-        }
-
-        Bigscreen.AbstractDelegate {
+        Bigscreen.FormButtonDelegate {
             id: addWebApp
-            highlighted: activeFocus
             Layout.fillWidth: true
 
             onClicked: {
@@ -56,64 +39,146 @@ Kirigami.ScrollablePage {
                 nameTextField.forceActiveFocus()
             }
 
-            contentItem: RowLayout {
-                Kirigami.Heading {
-                    Layout.fillWidth: true
-                    text: i18n('Add web app')
-                }
-                Kirigami.Icon {
-                    Layout.alignment: Qt.AlignCenter
-                    source: 'list-add'
-                    implicitWidth: Kirigami.Units.iconSizes.smallMedium
-                    implicitHeight: Kirigami.Units.iconSizes.smallMedium
-                }
-            }
+            text: i18n('Add web app')
+            icon.name: 'list-add'
 
-            Bigscreen.OverlayDialog {
-                id: addWebAppDialog
-                title: i18n("Add web application")
+            KeyNavigation.down: webAppListView
+        }
 
-                onAccepted: {
-                    WebAppsKCM.WebAppCreator.addEntry(nameTextField.text, urlTextField.text, 'internet-web-browser', userAgentTextField.text);
-                    close();
-                }
+        ListView {
+            id: webAppListView
+            implicitHeight: contentHeight
+            spacing: Kirigami.Units.smallSpacing
+            Layout.fillWidth: true
 
-                contentItem: ColumnLayout {
-                    spacing: Kirigami.Units.largeSpacing
+            KeyNavigation.up: addWebApp
 
-                    Bigscreen.FormTextField {
-                        id: nameTextField
-                        Layout.fillWidth: true
-                        placeholderText: i18n("Name")
+            model: WebAppsKCM.WebAppManagerModel
 
-                        KeyNavigation.down: urlTextField
-                    }
-                    Bigscreen.FormTextField {
-                        id: urlTextField
-                        Layout.fillWidth: true
-                        placeholderText: i18n("URL")
+            delegate: Bigscreen.FormButtonDelegate {
+                icon.name: model.desktopIcon
+                text: model.name
+                description: model.url
+                width: webAppListView.width
 
-                        KeyNavigation.down: userAgentTextField
-                    }
-                    Bigscreen.FormTextField {
-                        id: userAgentTextField
-                        Layout.fillWidth: true
-                        placeholderText: i18n("User Agent")
-
-                        KeyNavigation.down: addWebAppDialog.footer
-                    }
+                onClicked: {
+                    delegateInfoDialog.icon = model.desktopIcon;
+                    delegateInfoDialog.name = model.name;
+                    delegateInfoDialog.url = model.name;
+                    delegateInfoDialog.userAgent = model.userAgent;
+                    delegateInfoDialog.open();
+                    nameButtonDelegate.forceActiveFocus();
                 }
             }
+        }
+    }
 
-            Bigscreen.OverlaySidebar {
-                id: delegateInfoDialog
+    Bigscreen.OverlayDialog {
+        id: addWebAppDialog
+        title: i18n("Add web application")
 
-                header: ColumnLayout {
+        onAccepted: {
+            WebAppsKCM.WebAppCreator.addEntry(nameTextField.text, urlTextField.text, 'internet-web-browser', userAgentTextField.text);
+            close();
+        }
 
-                }
+        contentItem: ColumnLayout {
+            spacing: Kirigami.Units.largeSpacing
 
-                contentItem: ColumnLayout {
+            Bigscreen.FormTextField {
+                id: nameTextField
+                Layout.fillWidth: true
+                placeholderText: i18n("Name")
 
+                KeyNavigation.down: urlTextField
+            }
+            Bigscreen.FormTextField {
+                id: urlTextField
+                Layout.fillWidth: true
+                placeholderText: i18n("URL")
+
+                KeyNavigation.down: userAgentTextField
+            }
+            Bigscreen.FormTextField {
+                id: userAgentTextField
+                Layout.fillWidth: true
+                placeholderText: i18n("User Agent")
+
+                KeyNavigation.down: addWebAppDialog.footer
+            }
+        }
+    }
+
+    Bigscreen.OverlaySidebar {
+        id: delegateInfoDialog
+
+        property string icon
+        property string name
+        property string url
+        property string userAgent
+
+        header: ColumnLayout {
+            spacing: Kirigami.Units.gridUnit
+            Item { Layout.fillHeight: true }
+
+            Kirigami.Icon {
+                Layout.alignment: Qt.AlignHCenter
+                implicitWidth: 128
+                implicitHeight: 128
+                source: delegateInfoDialog.icon
+            }
+            QQC2.Label {
+                Layout.alignment: Qt.AlignHCenter
+                font.pixelSize: 32
+                font.weight: Font.Light
+                text: delegateInfoDialog.name
+            }
+        }
+
+        contentItem: ColumnLayout {
+            spacing: Kirigami.Units.largeSpacing
+
+            Bigscreen.FormButtonDelegate {
+                id: nameButtonDelegate
+                Layout.fillWidth: true
+                text: i18n("Name")
+                description: delegateInfoDialog.name
+
+                KeyNavigation.down: urlButtonDelegate
+                Keys.onLeftPressed: delegateInfoDialog.hideOverlay()
+            }
+
+            Bigscreen.FormButtonDelegate {
+                id: urlButtonDelegate
+                Layout.fillWidth: true
+                text: i18n("URL")
+                description: delegateInfoDialog.url
+
+                KeyNavigation.down: descriptionButtonDelegate
+                Keys.onLeftPressed: delegateInfoDialog.hideOverlay()
+            }
+
+            Bigscreen.FormButtonDelegate {
+                id: descriptionButtonDelegate
+                Layout.fillWidth: true
+                text: i18n("User Agent")
+                description: delegateInfoDialog.userAgent.length > 0 ? delegateInfoDialog.userAgent : i18n("Default user agent")
+
+                KeyNavigation.down: deleteButtonDelegate
+                Keys.onLeftPressed: delegateInfoDialog.hideOverlay()
+            }
+            Item { Layout.fillHeight: true }
+
+            Bigscreen.FormButtonDelegate {
+                id: deleteButtonDelegate
+                Layout.fillWidth: true
+                icon.name: 'delete'
+                text: i18n("Delete")
+
+                Keys.onLeftPressed: delegateInfoDialog.hideOverlay()
+
+                onClicked: {
+                    WebAppsKCM.WebAppManager.removeApp(delegateInfoDialog.name);
                 }
             }
         }

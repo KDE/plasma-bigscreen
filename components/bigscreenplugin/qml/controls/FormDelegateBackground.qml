@@ -16,8 +16,8 @@ Item {
         id: frame
         anchors.fill: parent
         color: root.control.activeFocus ? Kirigami.Theme.activeBackgroundColor : Kirigami.Theme.alternateBackgroundColor
-        border.width: 2
-        border.color: root.control.activeFocus ? Kirigami.Theme.highlightColor : 'transparent'
+        border.width: root.control.activeFocus ? 2 : 1
+        border.color: root.control.activeFocus ? Kirigami.Theme.highlightColor : Qt.darker(color, 1.2)
         radius: Kirigami.Units.cornerRadius
     }
 

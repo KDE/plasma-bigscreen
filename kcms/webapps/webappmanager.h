@@ -28,6 +28,7 @@ public:
     const std::vector<WebApp> &applications() const;
 
     void addApp(const QString &name, const QString &url, const QImage &icon, const QString &userAgent);
+    void addApp(const QString &name, const QString &url, const QString &iconFileName, const QString &userAgent);
     bool exists(const QString &name);
     bool removeApp(const QString &name);
 

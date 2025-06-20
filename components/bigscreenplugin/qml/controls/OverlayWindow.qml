@@ -17,6 +17,11 @@ NanoShell.FullScreenOverlay {
     property alias overlayColor: overlayBackground.color
     property alias content: control.contentItem
 
+    property real closeDuration: 400
+
+    signal openRequested()
+    signal closeRequested()
+
     function showOverlay() {
         if (!root.visible) {
             root.showFullScreen();
@@ -34,6 +39,7 @@ NanoShell.FullScreenOverlay {
         if (visible) {
             opacityAnim.to = 1;
             opacityAnim.restart();
+            openRequested();
         }
     }
 
@@ -42,6 +48,7 @@ NanoShell.FullScreenOverlay {
             close.accepted = false;
             opacityAnim.to = 0;
             opacityAnim.restart();
+            closeRequested();
         }
     }
 
@@ -59,7 +66,7 @@ NanoShell.FullScreenOverlay {
             opacity: 0
             NumberAnimation on opacity {
                 id: opacityAnim
-                duration: 400
+                duration: root.closeDuration
                 easing.type: Easing.OutCubic
                 onFinished: {
                     if (overlayBackground.opacity === 0) {
