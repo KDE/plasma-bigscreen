@@ -9,7 +9,7 @@ import QtQuick.Window
 import QtQuick.Controls as Controls
 import org.kde.kirigami as Kirigami
 import org.kde.bigscreen as Bigscreen
-import org.kde.private.biglauncher 
+import org.kde.private.biglauncher
 import org.kde.plasma.private.nanoshell as NanoShell
 import org.kde.taskmanager as TaskManager
 import org.kde.plasma.core as PlasmaCore
@@ -52,14 +52,14 @@ NanoShell.FullScreenOverlay {
             }
         }
     }
-    
+
     TaskManager.TasksModel {
         id: tasksModel
         filterByVirtualDesktop: false
         filterByActivity: false
         filterNotMaximized: false
         filterByScreen: false
-        filterHidden: false        
+        filterHidden: false
         groupMode: TaskManager.TasksModel.GroupDisabled
     }
 
@@ -134,7 +134,7 @@ NanoShell.FullScreenOverlay {
 
                 moveDisplaced: Transition {
                     NumberAnimation { properties: "x,y"; duration: 200 }
-                }            
+                }
             }
         }
     }
@@ -170,7 +170,7 @@ NanoShell.FullScreenOverlay {
                     anchors.centerIn: parent
                     Kirigami.Icon {
                         Layout.fillHeight: true
-                        Layout.preferredWidth: height                  
+                        Layout.preferredWidth: height
                         source: "edit-clear-all"
                     }
                     Controls.Label {
@@ -207,7 +207,7 @@ NanoShell.FullScreenOverlay {
                     anchors.centerIn: parent
                     Kirigami.Icon {
                         Layout.fillHeight: true
-                        Layout.preferredWidth: height                  
+                        Layout.preferredWidth: height
                         source: "window-close"
                     }
                     Controls.Label {
@@ -231,7 +231,7 @@ NanoShell.FullScreenOverlay {
         anchors.right: parent.right
         anchors.margins: Kirigami.Units.largeSpacing
         titleVisible: false
-        model: plasmoid.favsListModel
+        model: Plasmoid.favsListModel
         visible: count > 0
         currentIndex: 0
         focus: false
@@ -242,13 +242,9 @@ NanoShell.FullScreenOverlay {
             onClicked: {
                 hideOverlay()
                 Bigscreen.NavigationSoundEffects.playClickedSound()
-                feedbackWindow.open(
-                                    delegate.icon.name.length > 0 ? delegate.icon.name : model.decoration,
-                                    delegate.text,
-                                    delegate.Kirigami.ScenePosition.x + delegate.width/2,
-                                    delegate.Kirigami.ScenePosition.y + delegate.height/2,
-                                    Math.min(delegate.width, delegate.height), delegate.Kirigami.Theme.backgroundColor);
-                plasmoid.applicationListModel.runApplication(modelData.ApplicationStorageIdRole)
+                feedbackWindow.open(delegate.text,
+                                    delegate.icon.name.length > 0 ? delegate.icon.name : model.decoration);
+                Plasmoid.applicationListModel.runApplication(modelData.ApplicationStorageIdRole)
             }
         }
 

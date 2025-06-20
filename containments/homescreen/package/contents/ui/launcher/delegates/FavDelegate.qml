@@ -22,12 +22,8 @@ Bigscreen.IconDelegate {
 
     onClicked: {
         Bigscreen.NavigationSoundEffects.playClickedSound()
-        feedbackWindow.open(
-                            delegate.icon.name.length > 0 ? delegate.icon.name : model.decoration,
-                            delegate.text,
-                            delegate.Kirigami.ScenePosition.x + delegate.width/2,
-                            delegate.Kirigami.ScenePosition.y + delegate.height/2,
-                            Math.min(delegate.width, delegate.height), delegate.Kirigami.Theme.backgroundColor);
+        feedbackWindow.open(delegate.text,
+                            delegate.icon.name.length > 0 ? delegate.icon.name : model.decoration);
         Plasmoid.applicationListModel.runApplication(modelData.ApplicationStorageIdRole)
     }
 }

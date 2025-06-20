@@ -97,7 +97,7 @@ ContainmentItem {
         groupMode: TaskManager.TasksModel.GroupDisabled
     }
 
-    FeedbackWindow {
+    StartupFeedbackWindow {
         id: feedbackWindow
     }
 
