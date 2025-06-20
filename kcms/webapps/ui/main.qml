@@ -53,6 +53,7 @@ Kirigami.ScrollablePage {
 
             onClicked: {
                 addWebAppDialog.open()
+                nameTextField.forceActiveFocus()
             }
 
             contentItem: RowLayout {
@@ -68,10 +69,9 @@ Kirigami.ScrollablePage {
                 }
             }
 
-            Dialog {
+            Bigscreen.OverlayDialog {
                 id: addWebAppDialog
                 title: i18n("Add web application")
-                standardButtons: Dialog.Ok | Dialog.Cancel
 
                 onAccepted: {
                     WebAppsKCM.WebAppCreator.addEntry(nameTextField.text, urlTextField.text, 'internet-web-browser', userAgentTextField.text);
@@ -79,24 +79,41 @@ Kirigami.ScrollablePage {
                 }
 
                 contentItem: ColumnLayout {
-                    QQC2.TextField {
+                    spacing: Kirigami.Units.largeSpacing
+
+                    Bigscreen.FormTextField {
                         id: nameTextField
+                        Layout.fillWidth: true
                         placeholderText: i18n("Name")
 
                         KeyNavigation.down: urlTextField
                     }
-                    QQC2.TextField {
+                    Bigscreen.FormTextField {
                         id: urlTextField
+                        Layout.fillWidth: true
                         placeholderText: i18n("URL")
 
                         KeyNavigation.down: userAgentTextField
                     }
-                    QQC2.TextField {
+                    Bigscreen.FormTextField {
                         id: userAgentTextField
+                        Layout.fillWidth: true
                         placeholderText: i18n("User Agent")
 
                         KeyNavigation.down: addWebAppDialog.footer
                     }
+                }
+            }
+
+            Bigscreen.OverlaySidebar {
+                id: delegateInfoDialog
+
+                header: ColumnLayout {
+
+                }
+
+                contentItem: ColumnLayout {
+
                 }
             }
         }

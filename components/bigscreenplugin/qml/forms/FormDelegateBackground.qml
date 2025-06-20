@@ -1,0 +1,34 @@
+// SPDX-FileCopyrightText: 2025 Devin Lin <devin@kde.org>
+// SPDX-License-Identifier: GPL-2.0-or-later
+
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2
+import QtQuick.Effects
+
+import org.kde.kirigami as Kirigami
+
+Item {
+    id: root
+    property var control
+
+    Rectangle {
+        id: frame
+        anchors.fill: parent
+        color: root.control.activeFocus ? Kirigami.Theme.activeBackgroundColor : Kirigami.Theme.alternateBackgroundColor
+        border.width: 2
+        border.color: root.control.activeFocus ? Kirigami.Theme.highlightColor : 'transparent'
+        radius: Kirigami.Units.cornerRadius
+    }
+
+    MultiEffect {
+        id: frameShadow
+
+        anchors.fill: frame
+        source: frame
+        blurMax: 16
+        shadowEnabled: true
+        shadowOpacity: 0.6
+        shadowColor: 'black'
+    }
+}
