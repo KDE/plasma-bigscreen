@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2025 Seshan Ravikumar <seshan@sineware.ca>
+# SPDX-License-Identifier: LicenseRef-KDE-Accepted-GPL
+
+[Desktop Entry]
+Name=Plasma Bigscreen UVC Viewer
+Exec=plasma-bigscreen-uvcviewer
+Icon=video-display
+Type=Application
+Terminal=false
+Categories=AudioVideo
