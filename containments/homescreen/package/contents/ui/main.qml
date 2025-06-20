@@ -133,7 +133,7 @@ ContainmentItem {
             cached: true
             source: controlledWallpaperSource
             anchors.fill: parent
-            visible: opacity > 0
+            visible: true // Don't load and unload, which is laggy
             opacity: homeScreen.blurBackground ? 1 : 0
 
             Behavior on opacity { NumberAnimation { duration: 500 } }
