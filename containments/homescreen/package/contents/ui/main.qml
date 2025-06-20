@@ -8,6 +8,7 @@ import QtQuick.Layouts
 import QtQuick.Controls as Controls
 import QtQuick.Window
 import Qt5Compat.GraphicalEffects
+import org.kde.taskmanager as TaskManager
 
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
@@ -25,6 +26,14 @@ ContainmentItem {
 
     function configureWallpaper() {
         Plasmoid.internalAction("configure").trigger();
+    }
+
+    Plasmoid.onActivated: {
+        // Action when the meta key is pressed
+        for (var i = 0; i < tasksModel.count; i++) {
+            const idx = tasksModel.makeModelIndex(i);
+            tasksModel.requestToggleMinimized(idx);
+        }
     }
 
     Connections {
@@ -76,6 +85,16 @@ ContainmentItem {
             Layout.fillWidth: true
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         }
+    }
+
+    TaskManager.TasksModel {
+        id: tasksModel
+        filterByVirtualDesktop: false
+        filterByActivity: false
+        filterNotMaximized: false
+        filterByScreen: false
+        filterHidden: true
+        groupMode: TaskManager.TasksModel.GroupDisabled
     }
 
     FeedbackWindow {
