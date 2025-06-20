@@ -58,3 +58,4 @@ Comment[sl]=Preklopi na sejo na velikega zaslona Plasme
 Comment[tr]=Bir Plasma Büyük Ekran oturumuna geçiş yapın
 Comment[uk]=Перемкнутися на сеанс Плазми для великих екранів
 Comment[x-test]=xxSwitch into a Plasma Bigscreen sessionxx
+Comment[zh_TW]=切換到 Plasma 大螢幕工作階段
