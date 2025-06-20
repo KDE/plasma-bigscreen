@@ -7,6 +7,7 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Window
 import QtQuick.Controls as Controls
+
 import org.kde.kirigami as Kirigami
 import org.kde.bigscreen as Bigscreen
 import org.kde.private.biglauncher
@@ -14,6 +15,8 @@ import org.kde.plasma.private.nanoshell as NanoShell
 import org.kde.taskmanager as TaskManager
 import org.kde.plasma.core as PlasmaCore
 import org.kde.kitemmodels as KItemModels
+import org.kde.plasma.plasmoid
+
 import "launcher/delegates" as Delegates
 
 NanoShell.FullScreenOverlay {
