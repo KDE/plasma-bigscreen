@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2022-07-10 15:16+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "This device is paired"
 msgstr "Устройството е сдвоено"
 
-#: ui/delegates/PairedView.qml:62
+#: ui/delegates/PairedView.qml:60
 #, kde-format
 msgid "Unpair"
 msgstr "Разделяне"
@@ -44,20 +44,15 @@ msgstr "Приемане"
 msgid "Reject"
 msgstr "Отхвърляне"
 
-#: ui/delegates/UnpairedView.qml:40
+#: ui/delegates/UnpairedView.qml:41
 #, kde-format
 msgid "This device is not paired"
 msgstr "Устройството не е сдвоено"
 
-#: ui/delegates/UnpairedView.qml:80
+#: ui/delegates/UnpairedView.qml:77
 #, kde-format
 msgid "Pair"
 msgstr "Сдвояване"
-
-#: ui/delegates/UnpairedView.qml:91
-#, kde-format
-msgid "Pairing request sent to device"
-msgstr "Заявка за сдвояване е изпратено до устройство"
 
 #: ui/delegates/Unreachable.qml:18
 #, kde-format
@@ -68,6 +63,9 @@ msgstr "Това устройство не може да бъде достигн
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
+
+#~ msgid "Pairing request sent to device"
+#~ msgstr "Заявка за сдвояване е изпратено до устройство"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr ""

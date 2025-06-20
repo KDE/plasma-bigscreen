@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2021-01-25 10:37+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "This device is paired"
 msgstr "Questo dispositivo è associato"
 
-#: ui/delegates/PairedView.qml:62
+#: ui/delegates/PairedView.qml:60
 #, kde-format
 msgid "Unpair"
 msgstr "Disassocia"
@@ -42,20 +42,15 @@ msgstr "Accetta"
 msgid "Reject"
 msgstr "Rifiuta"
 
-#: ui/delegates/UnpairedView.qml:40
+#: ui/delegates/UnpairedView.qml:41
 #, kde-format
 msgid "This device is not paired"
 msgstr "Questo dispositivo non è associato"
 
-#: ui/delegates/UnpairedView.qml:80
+#: ui/delegates/UnpairedView.qml:77
 #, kde-format
 msgid "Pair"
 msgstr "Associa"
-
-#: ui/delegates/UnpairedView.qml:91
-#, kde-format
-msgid "Pairing request sent to device"
-msgstr "Richiesta di associazione inviata al dispositivo"
 
 #: ui/delegates/Unreachable.qml:18
 #, kde-format
@@ -66,6 +61,9 @@ msgstr "Questo dispositivo non è raggiungibile"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
+
+#~ msgid "Pairing request sent to device"
+#~ msgstr "Richiesta di associazione inviata al dispositivo"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr ""

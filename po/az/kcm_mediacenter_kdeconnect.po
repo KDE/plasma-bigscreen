@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2021-01-23 21:40+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "This device is paired"
 msgstr "Bu cihaz birləşdirildi"
 
-#: ui/delegates/PairedView.qml:62
+#: ui/delegates/PairedView.qml:60
 #, kde-format
 msgid "Unpair"
 msgstr "Ayırmaq"
@@ -42,20 +42,15 @@ msgstr "Qəbul etmək"
 msgid "Reject"
 msgstr "İmtina etmək"
 
-#: ui/delegates/UnpairedView.qml:40
+#: ui/delegates/UnpairedView.qml:41
 #, kde-format
 msgid "This device is not paired"
 msgstr "Bu cuhaz birləşmədi"
 
-#: ui/delegates/UnpairedView.qml:80
+#: ui/delegates/UnpairedView.qml:77
 #, kde-format
 msgid "Pair"
 msgstr "Birləşmə"
-
-#: ui/delegates/UnpairedView.qml:91
-#, kde-format
-msgid "Pairing request sent to device"
-msgstr "Birləşmə sorğusu cihaza göndərildi"
 
 #: ui/delegates/Unreachable.qml:18
 #, kde-format
@@ -66,6 +61,9 @@ msgstr "Bu cihaz əlçatmazdır"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
+
+#~ msgid "Pairing request sent to device"
+#~ msgstr "Birləşmə sorğusu cihaza göndərildi"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "Cihaz seçiminə qayıtmaq üçün [←] Geriyə düyməsinə vurun"

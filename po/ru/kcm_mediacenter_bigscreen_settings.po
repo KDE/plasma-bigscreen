@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2025-05-20 14:07+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -135,33 +135,23 @@ msgstr "AM/PM"
 msgid "Appearance"
 msgstr "Внешний вид"
 
-#: ui/main.qml:77
+#: ui/main.qml:74
 #, fuzzy, kde-format
 #| msgid "Appearance"
 msgid "Home Screen Appearance"
 msgstr "Внешний вид"
 
-#: ui/main.qml:85
+#: ui/main.qml:82
 #, kde-format
 msgid "Colored Tiles"
 msgstr ""
 
-#: ui/main.qml:86
+#: ui/main.qml:83
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr ""
 
-#: ui/main.qml:96
-#, kde-format
-msgid "Expanding Tiles"
-msgstr ""
-
-#: ui/main.qml:97
-#, kde-format
-msgid "Tiles will expand when selected"
-msgstr ""
-
-#: ui/main.qml:116
+#: ui/main.qml:102
 #, kde-format
 msgid "Global Theme"
 msgstr ""

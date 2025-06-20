@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-19 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2024-11-29 00:33+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -87,27 +87,27 @@ msgstr "원격 STT 활성화"
 msgid "Favorites"
 msgstr "책갈피"
 
-#: contents/ui/launcher/LauncherHome.qml:90
+#: contents/ui/launcher/LauncherHome.qml:89
 #, kde-format
 msgid "Recent"
 msgstr "최근"
 
-#: contents/ui/launcher/LauncherHome.qml:121
+#: contents/ui/launcher/LauncherHome.qml:118
 #, kde-format
 msgid "Voice Applications"
 msgstr "음성 앱"
 
-#: contents/ui/launcher/LauncherHome.qml:150
+#: contents/ui/launcher/LauncherHome.qml:145
 #, kde-format
 msgid "Applications"
 msgstr "앱"
 
-#: contents/ui/launcher/LauncherHome.qml:180
+#: contents/ui/launcher/LauncherHome.qml:173
 #, kde-format
 msgid "Games"
 msgstr "게임"
 
-#: contents/ui/launcher/LauncherHome.qml:212
+#: contents/ui/launcher/LauncherHome.qml:204
 #: contents/ui/settings/ConfigWindowSidebar.qml:45
 #, kde-format
 msgid "Settings"

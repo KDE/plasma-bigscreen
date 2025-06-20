@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-19 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -88,27 +88,27 @@ msgstr "启用远程 STT"
 msgid "Favorites"
 msgstr "收藏"
 
-#: contents/ui/launcher/LauncherHome.qml:90
+#: contents/ui/launcher/LauncherHome.qml:89
 #, kde-format
 msgid "Recent"
 msgstr "最近"
 
-#: contents/ui/launcher/LauncherHome.qml:121
+#: contents/ui/launcher/LauncherHome.qml:118
 #, kde-format
 msgid "Voice Applications"
 msgstr "语音应用程序"
 
-#: contents/ui/launcher/LauncherHome.qml:150
+#: contents/ui/launcher/LauncherHome.qml:145
 #, kde-format
 msgid "Applications"
 msgstr "应用"
 
-#: contents/ui/launcher/LauncherHome.qml:180
+#: contents/ui/launcher/LauncherHome.qml:173
 #, kde-format
 msgid "Games"
 msgstr "游戏"
 
-#: contents/ui/launcher/LauncherHome.qml:212
+#: contents/ui/launcher/LauncherHome.qml:204
 #: contents/ui/settings/ConfigWindowSidebar.qml:45
 #, kde-format
 msgid "Settings"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.mycroft.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-19 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2025-06-17 09:47+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -90,27 +90,27 @@ msgstr "Увімкнути віддалену систему запису мов
 msgid "Favorites"
 msgstr "Улюблене"
 
-#: contents/ui/launcher/LauncherHome.qml:90
+#: contents/ui/launcher/LauncherHome.qml:89
 #, kde-format
 msgid "Recent"
 msgstr "Нещодавні"
 
-#: contents/ui/launcher/LauncherHome.qml:121
+#: contents/ui/launcher/LauncherHome.qml:118
 #, kde-format
 msgid "Voice Applications"
 msgstr "Голосові програми"
 
-#: contents/ui/launcher/LauncherHome.qml:150
+#: contents/ui/launcher/LauncherHome.qml:145
 #, kde-format
 msgid "Applications"
 msgstr "Програми"
 
-#: contents/ui/launcher/LauncherHome.qml:180
+#: contents/ui/launcher/LauncherHome.qml:173
 #, kde-format
 msgid "Games"
 msgstr "Ігри"
 
-#: contents/ui/launcher/LauncherHome.qml:212
+#: contents/ui/launcher/LauncherHome.qml:204
 #: contents/ui/settings/ConfigWindowSidebar.qml:45
 #, kde-format
 msgid "Settings"

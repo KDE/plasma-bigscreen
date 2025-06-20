@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2025-06-01 07:29+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -136,35 +136,31 @@ msgstr "Dop/Pop"
 msgid "Appearance"
 msgstr "Videz"
 
-#: ui/main.qml:77
+#: ui/main.qml:74
 #, kde-format
 msgid "Home Screen Appearance"
 msgstr "Videz domačega zaslona"
 
-#: ui/main.qml:85
+#: ui/main.qml:82
 #, kde-format
 msgid "Colored Tiles"
 msgstr "Pobarvane ploščice"
 
-#: ui/main.qml:86
+#: ui/main.qml:83
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "Ozadja ploščic bodo obarvana glede na ikono aplikacije"
 
-#: ui/main.qml:96
-#, kde-format
-msgid "Expanding Tiles"
-msgstr "Razširjajoči ploščice"
-
-#: ui/main.qml:97
-#, kde-format
-msgid "Tiles will expand when selected"
-msgstr "Ploščice se bodo razširile, ko bodo izbrane"
-
-#: ui/main.qml:116
+#: ui/main.qml:102
 #, kde-format
 msgid "Global Theme"
 msgstr "Globalna tema"
+
+#~ msgid "Expanding Tiles"
+#~ msgstr "Razširjajoči ploščice"
+
+#~ msgid "Tiles will expand when selected"
+#~ msgstr "Ploščice se bodo razširile, ko bodo izbrane"
 
 #~ msgid "Launcher Appearance"
 #~ msgstr "Videz zaganjalnika"

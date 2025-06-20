@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2025-02-06 17:46-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -138,36 +138,29 @@ msgstr "AM/PM"
 msgid "Appearance"
 msgstr "Aparência"
 
-#: ui/main.qml:77
+#: ui/main.qml:74
 #, fuzzy, kde-format
 #| msgid "General Appearance"
 msgid "Home Screen Appearance"
 msgstr "Aparência geral"
 
-#: ui/main.qml:85
+#: ui/main.qml:82
 #, kde-format
 msgid "Colored Tiles"
 msgstr "Blocos coloridos"
 
-#: ui/main.qml:86
+#: ui/main.qml:83
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr ""
 
-#: ui/main.qml:96
-#, kde-format
-msgid "Expanding Tiles"
-msgstr "Blocos expansíveis"
-
-#: ui/main.qml:97
-#, kde-format
-msgid "Tiles will expand when selected"
-msgstr ""
-
-#: ui/main.qml:116
+#: ui/main.qml:102
 #, kde-format
 msgid "Global Theme"
 msgstr ""
+
+#~ msgid "Expanding Tiles"
+#~ msgstr "Blocos expansíveis"
 
 #~ msgid "Launcher Appearance"
 #~ msgstr "Aparência do lançador"

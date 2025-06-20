@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2025-06-01 12:14+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -137,35 +137,31 @@ msgstr "AM/PM"
 msgid "Appearance"
 msgstr "Вигляд"
 
-#: ui/main.qml:77
+#: ui/main.qml:74
 #, kde-format
 msgid "Home Screen Appearance"
 msgstr "Вигляд домашньої сторінки"
 
-#: ui/main.qml:85
+#: ui/main.qml:82
 #, kde-format
 msgid "Colored Tiles"
 msgstr "Кольорові плитки"
 
-#: ui/main.qml:86
+#: ui/main.qml:83
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "Тло плитки буде розфарбоване на основі кольорів піктограми програми"
 
-#: ui/main.qml:96
-#, kde-format
-msgid "Expanding Tiles"
-msgstr "Розширювані плитки"
-
-#: ui/main.qml:97
-#, kde-format
-msgid "Tiles will expand when selected"
-msgstr "Плитки розгортатимуться при позначенні"
-
-#: ui/main.qml:116
+#: ui/main.qml:102
 #, kde-format
 msgid "Global Theme"
 msgstr "Загальна тема"
+
+#~ msgid "Expanding Tiles"
+#~ msgstr "Розширювані плитки"
+
+#~ msgid "Tiles will expand when selected"
+#~ msgstr "Плитки розгортатимуться при позначенні"
 
 #~ msgid "Launcher Appearance"
 #~ msgstr "Вигляд засобу запуску"

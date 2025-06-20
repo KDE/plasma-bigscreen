@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-19 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2024-12-15 17:37+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -87,27 +87,27 @@ msgstr "रिमोट एसटीटी सक्षम करें"
 msgid "Favorites"
 msgstr "पसंदीदा"
 
-#: contents/ui/launcher/LauncherHome.qml:90
+#: contents/ui/launcher/LauncherHome.qml:89
 #, kde-format
 msgid "Recent"
 msgstr "हाल ही का"
 
-#: contents/ui/launcher/LauncherHome.qml:121
+#: contents/ui/launcher/LauncherHome.qml:118
 #, kde-format
 msgid "Voice Applications"
 msgstr "आवाज़ अनुप्रयोग"
 
-#: contents/ui/launcher/LauncherHome.qml:150
+#: contents/ui/launcher/LauncherHome.qml:145
 #, kde-format
 msgid "Applications"
 msgstr "अनुप्रयोग"
 
-#: contents/ui/launcher/LauncherHome.qml:180
+#: contents/ui/launcher/LauncherHome.qml:173
 #, kde-format
 msgid "Games"
 msgstr "खेल"
 
-#: contents/ui/launcher/LauncherHome.qml:212
+#: contents/ui/launcher/LauncherHome.qml:204
 #: contents/ui/settings/ConfigWindowSidebar.qml:45
 #, kde-format
 msgid "Settings"

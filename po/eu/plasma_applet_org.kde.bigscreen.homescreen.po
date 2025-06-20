@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-19 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2024-10-26 18:03+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -90,27 +90,27 @@ msgstr "Gaitu urrutiko STT"
 msgid "Favorites"
 msgstr "Gogokoak"
 
-#: contents/ui/launcher/LauncherHome.qml:90
+#: contents/ui/launcher/LauncherHome.qml:89
 #, kde-format
 msgid "Recent"
 msgstr "Azken aldikoa"
 
-#: contents/ui/launcher/LauncherHome.qml:121
+#: contents/ui/launcher/LauncherHome.qml:118
 #, kde-format
 msgid "Voice Applications"
 msgstr "Ahots-aplikazioak"
 
-#: contents/ui/launcher/LauncherHome.qml:150
+#: contents/ui/launcher/LauncherHome.qml:145
 #, kde-format
 msgid "Applications"
 msgstr "Aplikazioak"
 
-#: contents/ui/launcher/LauncherHome.qml:180
+#: contents/ui/launcher/LauncherHome.qml:173
 #, kde-format
 msgid "Games"
 msgstr "Jokoak"
 
-#: contents/ui/launcher/LauncherHome.qml:212
+#: contents/ui/launcher/LauncherHome.qml:204
 #: contents/ui/settings/ConfigWindowSidebar.qml:45
 #, kde-format
 msgid "Settings"

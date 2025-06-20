@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2024-03-02 22:18+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -140,36 +140,29 @@ msgstr ""
 msgid "Appearance"
 msgstr "Megjelenés"
 
-#: ui/main.qml:77
+#: ui/main.qml:74
 #, fuzzy, kde-format
 #| msgid "General Appearance"
 msgid "Home Screen Appearance"
 msgstr "Általános megjelenés"
 
-#: ui/main.qml:85
+#: ui/main.qml:82
 #, kde-format
 msgid "Colored Tiles"
 msgstr "Színes csempék"
 
-#: ui/main.qml:86
+#: ui/main.qml:83
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr ""
 
-#: ui/main.qml:96
-#, kde-format
-msgid "Expanding Tiles"
-msgstr "Bővülő csempék"
-
-#: ui/main.qml:97
-#, kde-format
-msgid "Tiles will expand when selected"
-msgstr ""
-
-#: ui/main.qml:116
+#: ui/main.qml:102
 #, kde-format
 msgid "Global Theme"
 msgstr ""
+
+#~ msgid "Expanding Tiles"
+#~ msgstr "Bővülő csempék"
 
 #~ msgid "Launcher Appearance"
 #~ msgstr "Indító megjelenése"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -135,32 +135,28 @@ msgstr "AM/PM"
 msgid "Appearance"
 msgstr "外观"
 
-#: ui/main.qml:77
+#: ui/main.qml:74
 #, kde-format
 msgid "Home Screen Appearance"
 msgstr "主屏幕外观"
 
-#: ui/main.qml:85
+#: ui/main.qml:82
 #, kde-format
 msgid "Colored Tiles"
 msgstr "彩色磁贴"
 
-#: ui/main.qml:86
+#: ui/main.qml:83
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "磁贴背景将根据应用程序的图标进行着色。"
 
-#: ui/main.qml:96
-#, kde-format
-msgid "Expanding Tiles"
-msgstr "拉伸磁贴"
-
-#: ui/main.qml:97
-#, kde-format
-msgid "Tiles will expand when selected"
-msgstr "选中时，磁贴将放大显示。"
-
-#: ui/main.qml:116
+#: ui/main.qml:102
 #, kde-format
 msgid "Global Theme"
 msgstr "全局主题"
+
+#~ msgid "Expanding Tiles"
+#~ msgstr "拉伸磁贴"
+
+#~ msgid "Tiles will expand when selected"
+#~ msgstr "选中时，磁贴将放大显示。"

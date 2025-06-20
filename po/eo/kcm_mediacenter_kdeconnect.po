@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2024-02-09 22:05+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "This device is paired"
 msgstr "Ĉi aparato estas kuplita"
 
-#: ui/delegates/PairedView.qml:62
+#: ui/delegates/PairedView.qml:60
 #, kde-format
 msgid "Unpair"
 msgstr "Malkupli"
@@ -43,20 +43,15 @@ msgstr "Akcepti"
 msgid "Reject"
 msgstr "Malakcepti"
 
-#: ui/delegates/UnpairedView.qml:40
+#: ui/delegates/UnpairedView.qml:41
 #, kde-format
 msgid "This device is not paired"
 msgstr "Ĉi tiu aparato ne estas kuplita"
 
-#: ui/delegates/UnpairedView.qml:80
+#: ui/delegates/UnpairedView.qml:77
 #, kde-format
 msgid "Pair"
 msgstr "Kupli"
-
-#: ui/delegates/UnpairedView.qml:91
-#, kde-format
-msgid "Pairing request sent to device"
-msgstr "Sendis alpeton pri kupliĝo al aparato"
 
 #: ui/delegates/Unreachable.qml:18
 #, kde-format
@@ -67,6 +62,9 @@ msgstr "Ĉi tiu aparato ne estas atingebla"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
+
+#~ msgid "Pairing request sent to device"
+#~ msgstr "Sendis alpeton pri kupliĝo al aparato"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "Premu la butonon Reen [←] por reveni al aparata elekto"

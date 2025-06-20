@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "This device is paired"
 msgstr "此设备已配对"
 
-#: ui/delegates/PairedView.qml:62
+#: ui/delegates/PairedView.qml:60
 #, kde-format
 msgid "Unpair"
 msgstr "取消配对"
@@ -43,20 +43,15 @@ msgstr "接受"
 msgid "Reject"
 msgstr "拒绝"
 
-#: ui/delegates/UnpairedView.qml:40
+#: ui/delegates/UnpairedView.qml:41
 #, kde-format
 msgid "This device is not paired"
 msgstr "此设备未配对"
 
-#: ui/delegates/UnpairedView.qml:80
+#: ui/delegates/UnpairedView.qml:77
 #, kde-format
 msgid "Pair"
 msgstr "配对"
-
-#: ui/delegates/UnpairedView.qml:91
-#, kde-format
-msgid "Pairing request sent to device"
-msgstr "配对请求已发送到设备"
 
 #: ui/delegates/Unreachable.qml:18
 #, kde-format
@@ -67,3 +62,6 @@ msgstr "设备无法访问"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
+
+#~ msgid "Pairing request sent to device"
+#~ msgstr "配对请求已发送到设备"

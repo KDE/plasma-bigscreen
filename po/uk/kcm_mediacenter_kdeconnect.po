@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_kdeconnect\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2021-01-22 13:21+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgid "This device is paired"
 msgstr "Цей пристрій пов'язано"
 
-#: ui/delegates/PairedView.qml:62
+#: ui/delegates/PairedView.qml:60
 #, kde-format
 msgid "Unpair"
 msgstr "Скасувати пов’язування"
@@ -45,20 +45,15 @@ msgstr "Прийняти"
 msgid "Reject"
 msgstr "Відмовити"
 
-#: ui/delegates/UnpairedView.qml:40
+#: ui/delegates/UnpairedView.qml:41
 #, kde-format
 msgid "This device is not paired"
 msgstr "Цей пристрій не пов'язано"
 
-#: ui/delegates/UnpairedView.qml:80
+#: ui/delegates/UnpairedView.qml:77
 #, kde-format
 msgid "Pair"
 msgstr "Пов'язати"
-
-#: ui/delegates/UnpairedView.qml:91
-#, kde-format
-msgid "Pairing request sent to device"
-msgstr "На пристрій надіслано запит щодо пов'язування"
 
 #: ui/delegates/Unreachable.qml:18
 #, kde-format
@@ -69,6 +64,9 @@ msgstr "Цей пристрій є недоступним"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
+
+#~ msgid "Pairing request sent to device"
+#~ msgstr "На пристрій надіслано запит щодо пов'язування"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "Натисніть кнопку «[←] Назад», щоб повернутися до вибору пристрою"

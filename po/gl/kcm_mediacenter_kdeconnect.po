@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2023-03-26 11:24+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "This device is paired"
 msgstr "Este dispositivo está emparellado"
 
-#: ui/delegates/PairedView.qml:62
+#: ui/delegates/PairedView.qml:60
 #, kde-format
 msgid "Unpair"
 msgstr "Desemparellar"
@@ -42,20 +42,15 @@ msgstr "Aceptar"
 msgid "Reject"
 msgstr "Rexeitar"
 
-#: ui/delegates/UnpairedView.qml:40
+#: ui/delegates/UnpairedView.qml:41
 #, kde-format
 msgid "This device is not paired"
 msgstr "Este dispositivo non está emparellado"
 
-#: ui/delegates/UnpairedView.qml:80
+#: ui/delegates/UnpairedView.qml:77
 #, kde-format
 msgid "Pair"
 msgstr "Emparellar"
-
-#: ui/delegates/UnpairedView.qml:91
-#, kde-format
-msgid "Pairing request sent to device"
-msgstr "Enviouse unha solicitude de emparellamento ao dispositivo"
 
 #: ui/delegates/Unreachable.qml:18
 #, kde-format
@@ -66,6 +61,9 @@ msgstr "O dispositivo está fóra de alcance"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
+
+#~ msgid "Pairing request sent to device"
+#~ msgstr "Enviouse unha solicitude de emparellamento ao dispositivo"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "Prema o botón de [←] Atrás para volver á selección de dispositivo"

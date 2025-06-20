@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2021-02-04 21:26+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgid "This device is paired"
 msgstr "Gailu hau parekatuta dago"
 
-#: ui/delegates/PairedView.qml:62
+#: ui/delegates/PairedView.qml:60
 #, kde-format
 msgid "Unpair"
 msgstr "Desparekatu"
@@ -45,20 +45,15 @@ msgstr "Onartu"
 msgid "Reject"
 msgstr "Errefusatu"
 
-#: ui/delegates/UnpairedView.qml:40
+#: ui/delegates/UnpairedView.qml:41
 #, kde-format
 msgid "This device is not paired"
 msgstr "Gailu hau ez dago parekatuta"
 
-#: ui/delegates/UnpairedView.qml:80
+#: ui/delegates/UnpairedView.qml:77
 #, kde-format
 msgid "Pair"
 msgstr "Parekatu"
-
-#: ui/delegates/UnpairedView.qml:91
-#, kde-format
-msgid "Pairing request sent to device"
-msgstr "Parekatzeko eskaera bidali zaio gailuari"
 
 #: ui/delegates/Unreachable.qml:18
 #, kde-format
@@ -69,6 +64,9 @@ msgstr "Gailu hau ez da irisgarria"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
+
+#~ msgid "Pairing request sent to device"
+#~ msgstr "Parekatzeko eskaera bidali zaio gailuari"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "Sakatu [←] Atzera botoia gailuen hautapenera itzultzeko"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2025-06-01 13:41+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -137,37 +137,33 @@ msgstr "AM/PM"
 msgid "Appearance"
 msgstr "Uiterlijk"
 
-#: ui/main.qml:77
+#: ui/main.qml:74
 #, kde-format
 msgid "Home Screen Appearance"
 msgstr "Uiterlijk van hoofdscherm"
 
-#: ui/main.qml:85
+#: ui/main.qml:82
 #, kde-format
 msgid "Colored Tiles"
 msgstr "Gekleurde tegels"
 
-#: ui/main.qml:86
+#: ui/main.qml:83
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr ""
 "Tegelachtergronden zullen gekleurd worden gebaseerd op de pictogrammen van "
 "toepassingen"
 
-#: ui/main.qml:96
-#, kde-format
-msgid "Expanding Tiles"
-msgstr "Zich uitbreidende tegels"
-
-#: ui/main.qml:97
-#, kde-format
-msgid "Tiles will expand when selected"
-msgstr "Tegels zullen uitbreiden bij selectie"
-
-#: ui/main.qml:116
+#: ui/main.qml:102
 #, kde-format
 msgid "Global Theme"
 msgstr "Globaal thema"
+
+#~ msgid "Expanding Tiles"
+#~ msgstr "Zich uitbreidende tegels"
+
+#~ msgid "Tiles will expand when selected"
+#~ msgstr "Tegels zullen uitbreiden bij selectie"
 
 #~ msgid "Launcher Appearance"
 #~ msgstr "Uiterlijk van Programmastarter"

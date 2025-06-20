@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_kdeconnect\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2022-01-07 14:58+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "This device is paired"
 msgstr "Toto zariadenie je spárované"
 
-#: ui/delegates/PairedView.qml:62
+#: ui/delegates/PairedView.qml:60
 #, kde-format
 msgid "Unpair"
 msgstr "Odpárovať"
@@ -41,20 +41,15 @@ msgstr "Prijať"
 msgid "Reject"
 msgstr "Odmietnuť"
 
-#: ui/delegates/UnpairedView.qml:40
+#: ui/delegates/UnpairedView.qml:41
 #, kde-format
 msgid "This device is not paired"
 msgstr "Toto zariadenie nie je spárované"
 
-#: ui/delegates/UnpairedView.qml:80
+#: ui/delegates/UnpairedView.qml:77
 #, kde-format
 msgid "Pair"
 msgstr "Spárovať"
-
-#: ui/delegates/UnpairedView.qml:91
-#, kde-format
-msgid "Pairing request sent to device"
-msgstr "Požiadavka na spárovanie odoslaná do zariadenia"
 
 #: ui/delegates/Unreachable.qml:18
 #, kde-format
@@ -65,6 +60,9 @@ msgstr "Toto zariadenie nie je dosiahnuteľné"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
+
+#~ msgid "Pairing request sent to device"
+#~ msgstr "Požiadavka na spárovanie odoslaná do zariadenia"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "Stlačte tlačidlo [←] Späť pre návrat na výber zariadenia"

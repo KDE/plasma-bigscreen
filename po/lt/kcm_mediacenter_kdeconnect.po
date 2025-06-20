@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2024-05-25 15:47+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "This device is paired"
 msgstr "Šis įrenginys yra suporuotas"
 
-#: ui/delegates/PairedView.qml:62
+#: ui/delegates/PairedView.qml:60
 #, kde-format
 msgid "Unpair"
 msgstr "Išporuoti"
@@ -44,20 +44,15 @@ msgstr "Priimti"
 msgid "Reject"
 msgstr "Atmesti"
 
-#: ui/delegates/UnpairedView.qml:40
+#: ui/delegates/UnpairedView.qml:41
 #, kde-format
 msgid "This device is not paired"
 msgstr "Šis įrenginys nėra suporuotas"
 
-#: ui/delegates/UnpairedView.qml:80
+#: ui/delegates/UnpairedView.qml:77
 #, kde-format
 msgid "Pair"
 msgstr "Suporuoti"
-
-#: ui/delegates/UnpairedView.qml:91
-#, kde-format
-msgid "Pairing request sent to device"
-msgstr "Suporavimo užklausa išsiųsta į įrenginį"
 
 #: ui/delegates/Unreachable.qml:18
 #, kde-format
@@ -68,6 +63,9 @@ msgstr "Šis įrenginys yra nepasiekiamas"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
+
+#~ msgid "Pairing request sent to device"
+#~ msgstr "Suporavimo užklausa išsiųsta į įrenginį"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr ""

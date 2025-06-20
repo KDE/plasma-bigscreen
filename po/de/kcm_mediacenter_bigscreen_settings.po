@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2023-06-15 13:52+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -144,36 +144,29 @@ msgstr ""
 msgid "Appearance"
 msgstr "Erscheinungsbild"
 
-#: ui/main.qml:77
+#: ui/main.qml:74
 #, fuzzy, kde-format
 #| msgid "General Appearance"
 msgid "Home Screen Appearance"
 msgstr "Allgemeines Erscheinungsbild"
 
-#: ui/main.qml:85
+#: ui/main.qml:82
 #, kde-format
 msgid "Colored Tiles"
 msgstr "Farbige Kacheln"
 
-#: ui/main.qml:86
+#: ui/main.qml:83
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr ""
 
-#: ui/main.qml:96
-#, kde-format
-msgid "Expanding Tiles"
-msgstr "Ausdehnende Kacheln"
-
-#: ui/main.qml:97
-#, kde-format
-msgid "Tiles will expand when selected"
-msgstr ""
-
-#: ui/main.qml:116
+#: ui/main.qml:102
 #, kde-format
 msgid "Global Theme"
 msgstr ""
+
+#~ msgid "Expanding Tiles"
+#~ msgstr "Ausdehnende Kacheln"
 
 #~ msgid "Launcher Appearance"
 #~ msgstr "Erscheinungsbild des Anwendungsstarters"

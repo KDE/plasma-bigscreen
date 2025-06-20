@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "This device is paired"
 msgstr "Perangkat ini sudah disandingkan"
 
-#: ui/delegates/PairedView.qml:62
+#: ui/delegates/PairedView.qml:60
 #, kde-format
 msgid "Unpair"
 msgstr "Leraikan"
@@ -42,20 +42,15 @@ msgstr "Setujui"
 msgid "Reject"
 msgstr "Apkir"
 
-#: ui/delegates/UnpairedView.qml:40
+#: ui/delegates/UnpairedView.qml:41
 #, kde-format
 msgid "This device is not paired"
 msgstr "Perangkat ini belum disandingkan"
 
-#: ui/delegates/UnpairedView.qml:80
+#: ui/delegates/UnpairedView.qml:77
 #, kde-format
 msgid "Pair"
 msgstr "Sandingkan"
-
-#: ui/delegates/UnpairedView.qml:91
-#, kde-format
-msgid "Pairing request sent to device"
-msgstr "Permintaan penyandingan dikirim ke peranti"
 
 #: ui/delegates/Unreachable.qml:18
 #, kde-format
@@ -66,6 +61,9 @@ msgstr "Perangkat ini belum bisa diraih"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
+
+#~ msgid "Pairing request sent to device"
+#~ msgstr "Permintaan penyandingan dikirim ke peranti"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "Tekan tombol Kembali [←] untuk kembali je pemilihan peranti"

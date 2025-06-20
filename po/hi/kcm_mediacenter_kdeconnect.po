@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2024-12-15 17:37+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "This device is paired"
 msgstr "यह डिवाइस युग्मित है"
 
-#: ui/delegates/PairedView.qml:62
+#: ui/delegates/PairedView.qml:60
 #, kde-format
 msgid "Unpair"
 msgstr "अयुग्मित"
@@ -42,20 +42,15 @@ msgstr "स्वीकार करना"
 msgid "Reject"
 msgstr "अस्वीकार करना"
 
-#: ui/delegates/UnpairedView.qml:40
+#: ui/delegates/UnpairedView.qml:41
 #, kde-format
 msgid "This device is not paired"
 msgstr "यह डिवाइस युग्मित नहीं है"
 
-#: ui/delegates/UnpairedView.qml:80
+#: ui/delegates/UnpairedView.qml:77
 #, kde-format
 msgid "Pair"
 msgstr "जोड़ा"
-
-#: ui/delegates/UnpairedView.qml:91
-#, kde-format
-msgid "Pairing request sent to device"
-msgstr "डिवाइस पर युग्मन अनुरोध भेजा गया"
 
 #: ui/delegates/Unreachable.qml:18
 #, kde-format
@@ -66,6 +61,9 @@ msgstr "यह डिवाइस उपलब्ध नहीं है"
 #, kde-format
 msgid "KDE Connect"
 msgstr "केडीई कनेक्ट"
+
+#~ msgid "Pairing request sent to device"
+#~ msgstr "डिवाइस पर युग्मन अनुरोध भेजा गया"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "डिवाइस चयन पर वापस लौटने के लिए [←] वापस बटन दबाएँ"

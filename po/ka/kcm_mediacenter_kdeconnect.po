@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2022-09-30 15:15+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "This device is paired"
 msgstr "ეს მოწყობილობა დაწყვილებულია"
 
-#: ui/delegates/PairedView.qml:62
+#: ui/delegates/PairedView.qml:60
 #, kde-format
 msgid "Unpair"
 msgstr "დაწყვილების მოხსნა"
@@ -43,20 +43,15 @@ msgstr "დასტური"
 msgid "Reject"
 msgstr "უარყოფა"
 
-#: ui/delegates/UnpairedView.qml:40
+#: ui/delegates/UnpairedView.qml:41
 #, kde-format
 msgid "This device is not paired"
 msgstr "ეს მოწყობილობა დაწყვილებული არაა"
 
-#: ui/delegates/UnpairedView.qml:80
+#: ui/delegates/UnpairedView.qml:77
 #, kde-format
 msgid "Pair"
 msgstr "დაწყვილება"
-
-#: ui/delegates/UnpairedView.qml:91
-#, kde-format
-msgid "Pairing request sent to device"
-msgstr "მოწყობილობაზე დაწყვილების მოთხოვნა გაგზავნილია"
 
 #: ui/delegates/Unreachable.qml:18
 #, kde-format
@@ -67,6 +62,9 @@ msgstr "ეს მოწყობილობა მიუწვდომელ�
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
+
+#~ msgid "Pairing request sent to device"
+#~ msgstr "მოწყობილობაზე დაწყვილების მოთხოვნა გაგზავნილია"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "მოწყობილობის არჩევანზე დასაბრუნებლად დააწექით [←] უკან გასვლას"

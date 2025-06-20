@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2025-06-01 20:50+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -135,35 +135,31 @@ msgstr "AM/PM"
 msgid "Appearance"
 msgstr "מראה"
 
-#: ui/main.qml:77
+#: ui/main.qml:74
 #, kde-format
 msgid "Home Screen Appearance"
 msgstr "מראה מסך הבית"
 
-#: ui/main.qml:85
+#: ui/main.qml:82
 #, kde-format
 msgid "Colored Tiles"
 msgstr "אריחים צבעוניים"
 
-#: ui/main.qml:86
+#: ui/main.qml:83
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "הרקע הזה ייצבע לפי סמל היישומון"
 
-#: ui/main.qml:96
-#, kde-format
-msgid "Expanding Tiles"
-msgstr "אריחים מתרחבים"
-
-#: ui/main.qml:97
-#, kde-format
-msgid "Tiles will expand when selected"
-msgstr "האריחים יתרחבו עם בחירתם"
-
-#: ui/main.qml:116
+#: ui/main.qml:102
 #, kde-format
 msgid "Global Theme"
 msgstr "ערכת עיצוב כללית"
+
+#~ msgid "Expanding Tiles"
+#~ msgstr "אריחים מתרחבים"
+
+#~ msgid "Tiles will expand when selected"
+#~ msgstr "האריחים יתרחבו עם בחירתם"
 
 #~ msgid "Launcher Appearance"
 #~ msgstr "מראה המשגר"

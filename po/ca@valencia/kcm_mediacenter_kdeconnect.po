@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 00:44+0000\n"
 "PO-Revision-Date: 2021-01-23 12:08+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "This device is paired"
 msgstr "Este dispositiu està aparellat"
 
-#: ui/delegates/PairedView.qml:62
+#: ui/delegates/PairedView.qml:60
 #, kde-format
 msgid "Unpair"
 msgstr "Desaparella"
@@ -44,20 +44,15 @@ msgstr "Accepta"
 msgid "Reject"
 msgstr "Rebutja"
 
-#: ui/delegates/UnpairedView.qml:40
+#: ui/delegates/UnpairedView.qml:41
 #, kde-format
 msgid "This device is not paired"
 msgstr "Este dispositiu no està aparellat"
 
-#: ui/delegates/UnpairedView.qml:80
+#: ui/delegates/UnpairedView.qml:77
 #, kde-format
 msgid "Pair"
 msgstr "Aparella"
-
-#: ui/delegates/UnpairedView.qml:91
-#, kde-format
-msgid "Pairing request sent to device"
-msgstr "S'ha enviat una sol·licitud d'aparellament al dispositiu"
 
 #: ui/delegates/Unreachable.qml:18
 #, kde-format
@@ -68,6 +63,9 @@ msgstr "No es pot accedir a este dispositiu"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
+
+#~ msgid "Pairing request sent to device"
+#~ msgstr "S'ha enviat una sol·licitud d'aparellament al dispositiu"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr ""
