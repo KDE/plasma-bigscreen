@@ -6,4 +6,5 @@
 add_subdirectory(wifi)
 add_subdirectory(kdeconnect)
 add_subdirectory(bigscreen-settings)
+add_subdirectory(webapps)
 # add_subdirectory(display)

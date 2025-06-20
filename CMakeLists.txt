@@ -10,6 +10,7 @@ set(PROJECT_VERSION "6.4.80")
 
 set(QT_MIN_VERSION "6.8.0")
 set(KF_MIN_VERSION "6.14.0")
+set(QCORO_MIN_VERSION "0.7.0")
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -63,6 +64,11 @@ find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     WebEngineCore
     WebEngineQuick
 )
+find_package(QCoro6 ${QCORO_MIN_VERSION} REQUIRED COMPONENTS Core Quick Qml)
+
+add_definitions(-DQT_NO_FOREACH -DQT_NO_URL_CAST_FROM_STRING)
+kde_enable_exceptions()
+qcoro_enable_coroutines()
 
 ecm_find_qmlmodule(org.kde.plasma.core 2.0)
 
