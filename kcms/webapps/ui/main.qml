@@ -73,7 +73,7 @@ Kirigami.ScrollablePage {
         }
     }
 
-    Bigscreen.OverlayDialog {
+    Bigscreen.Dialog {
         id: addWebAppDialog
         title: i18n("Add web application")
 
@@ -109,7 +109,7 @@ Kirigami.ScrollablePage {
         }
     }
 
-    Bigscreen.OverlaySidebar {
+    Bigscreen.SidebarOverlay {
         id: delegateInfoDialog
 
         property string icon
@@ -135,7 +135,7 @@ Kirigami.ScrollablePage {
             }
         }
 
-        contentItem: ColumnLayout {
+        content: ColumnLayout {
             spacing: Kirigami.Units.largeSpacing
 
             Bigscreen.FormButtonDelegate {
@@ -145,7 +145,7 @@ Kirigami.ScrollablePage {
                 description: delegateInfoDialog.name
 
                 KeyNavigation.down: urlButtonDelegate
-                Keys.onLeftPressed: delegateInfoDialog.hideOverlay()
+                Keys.onLeftPressed: delegateInfoDialog.close()
             }
 
             Bigscreen.FormButtonDelegate {
@@ -155,7 +155,7 @@ Kirigami.ScrollablePage {
                 description: delegateInfoDialog.url
 
                 KeyNavigation.down: descriptionButtonDelegate
-                Keys.onLeftPressed: delegateInfoDialog.hideOverlay()
+                Keys.onLeftPressed: delegateInfoDialog.close()
             }
 
             Bigscreen.FormButtonDelegate {
@@ -165,7 +165,7 @@ Kirigami.ScrollablePage {
                 description: delegateInfoDialog.userAgent.length > 0 ? delegateInfoDialog.userAgent : i18n("Default user agent")
 
                 KeyNavigation.down: deleteButtonDelegate
-                Keys.onLeftPressed: delegateInfoDialog.hideOverlay()
+                Keys.onLeftPressed: delegateInfoDialog.close()
             }
             Item { Layout.fillHeight: true }
 
@@ -175,7 +175,7 @@ Kirigami.ScrollablePage {
                 icon.name: 'delete'
                 text: i18n("Delete")
 
-                Keys.onLeftPressed: delegateInfoDialog.hideOverlay()
+                Keys.onLeftPressed: delegateInfoDialog.close()
 
                 onClicked: {
                     WebAppsKCM.WebAppManager.removeApp(delegateInfoDialog.name);
