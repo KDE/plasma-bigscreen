@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-20 00:44+0000\n"
+"POT-Creation-Date: 2025-06-21 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -118,19 +118,19 @@ msgstr "设置"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "搜索…"
 
 #: contents/ui/PowerManagementItem.qml:41
 #, kde-format
 msgid "Bigscreen has enabled system-wide inhibition"
 msgstr "大屏幕已启用全系统抑制功能"
 
-#: contents/ui/TaskWindowView.qml:180
+#: contents/ui/TaskWindowView.qml:183
 #, kde-format
 msgid "Clear Tasks"
 msgstr "清除任务"
 
-#: contents/ui/TaskWindowView.qml:217
+#: contents/ui/TaskWindowView.qml:220
 #, kde-format
 msgid "Close"
 msgstr "关闭"

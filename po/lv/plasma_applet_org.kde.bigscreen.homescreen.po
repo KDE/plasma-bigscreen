@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-20 00:44+0000\n"
+"POT-Creation-Date: 2025-06-21 00:44+0000\n"
 "PO-Revision-Date: 2024-10-30 13:04+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -125,12 +125,12 @@ msgstr ""
 msgid "Bigscreen has enabled system-wide inhibition"
 msgstr "Lielais ekrāns ir ieslēdzis visas sistēmas iesnaudināšanas nomākšanu"
 
-#: contents/ui/TaskWindowView.qml:180
+#: contents/ui/TaskWindowView.qml:183
 #, kde-format
 msgid "Clear Tasks"
 msgstr "Notīrīt uzdevumus"
 
-#: contents/ui/TaskWindowView.qml:217
+#: contents/ui/TaskWindowView.qml:220
 #, kde-format
 msgid "Close"
 msgstr "Aizvērt"

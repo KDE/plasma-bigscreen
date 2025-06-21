@@ -154,9 +154,3 @@ msgstr "磁贴背景将根据应用程序的图标进行着色。"
 #, kde-format
 msgid "Global Theme"
 msgstr "全局主题"
-
-#~ msgid "Expanding Tiles"
-#~ msgstr "拉伸磁贴"
-
-#~ msgid "Tiles will expand when selected"
-#~ msgstr "选中时，磁贴将放大显示。"

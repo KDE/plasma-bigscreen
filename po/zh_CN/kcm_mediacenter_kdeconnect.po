@@ -62,6 +62,3 @@ msgstr "设备无法访问"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
-
-#~ msgid "Pairing request sent to device"
-#~ msgstr "配对请求已发送到设备"
