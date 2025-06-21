@@ -3,14 +3,13 @@
     SPDX-License-Identifier: LicenseRef-KDE-Accepted-GPL
 */
 
-#include <QApplication>
-#include <QQmlApplicationEngine>
-#include <QtQml>
-#include <QUrl>
-#include <QQuickStyle>
+#include <KIconTheme>
 #include <KLocalizedContext>
 #include <KLocalizedString>
-#include <KIconTheme>
+#include <QApplication>
+#include <QQmlApplicationEngine>
+#include <QUrl>
+#include <QtQml>
 
 int main(int argc, char *argv[])
 {
@@ -23,9 +22,6 @@ int main(int argc, char *argv[])
     QApplication::setDesktopFileName(QStringLiteral("org.kde.plasma.bigscreen.uvcviewer"));
 
     QApplication::setStyle(QStringLiteral("breeze"));
-    if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE")) {
-        QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
-    }
 
     QQmlApplicationEngine engine;
 

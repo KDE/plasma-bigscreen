@@ -12,6 +12,7 @@ Dependencies:
     'frameworks/kconfigwidgets': '@latest-kf6'
     'frameworks/kcoreaddons': '@latest-kf6'
     'frameworks/ki18n': '@latest-kf6'
+    'frameworks/kiconthemes': '@latest-kf6'
     'frameworks/kio': '@latest-kf6'
     'frameworks/kjobwidgets': '@latest-kf6'
     'frameworks/knotifications': '@latest-kf6'

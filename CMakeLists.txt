@@ -27,11 +27,11 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMOptionalAddSubdirectory)
 include(ECMInstallIcons)
 include(ECMDeprecationSettings)
-include(ECMFindQmlModule)
 include(GenerateExportHeader)
 include(KDEGitCommitHooks)
 include(KDEClangFormat)
 include(FeatureSummary)
+include(ECMQmlModule)
 
 remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 
@@ -45,6 +45,7 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     WindowSystem
     Svg
     DBusAddons
+    IconThemes
 )
 
 find_package(Plasma ${PROJECT_VERSION} REQUIRED)
