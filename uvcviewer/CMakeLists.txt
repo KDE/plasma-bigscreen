@@ -27,7 +27,6 @@ find_package(KF6 REQUIRED COMPONENTS
     Kirigami
     I18n
     CoreAddons
-    QQC2DesktopStyle
     IconThemes
 )
 
