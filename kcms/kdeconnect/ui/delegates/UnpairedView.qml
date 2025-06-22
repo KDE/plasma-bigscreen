@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2020 Aditya Mehra <aix.m@outlook.com>
+    SPDX-FileCopyrightText: 2025 Devin Lin <devin@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
@@ -7,19 +8,25 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
+
+import org.kde.bigscreen as Bigscreen
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.kdeconnect
 
 Item {
-    id: untrustedDevice
+    id: root
     Layout.fillWidth: true
     Layout.fillHeight: true
-    
+
+    signal pairingRequested()
+
     onActiveFocusChanged: {
-        pairBtn.forceActiveFocus()
+        if (activeFocus) {
+            pairBtn.forceActiveFocus()
+        }
     }
-    
+
     Timer {
         id: timer
     }
@@ -30,54 +37,29 @@ Item {
         timer.triggered.connect(cb);
         timer.start();
     }
-    
+
     ColumnLayout {
         anchors.fill: parent
-        
-        PlasmaComponents.Label {
+
+        Bigscreen.TextDelegate {
             id: unpairedLabel
-            Layout.fillWidth: true
-            horizontalAlignment: Text.AlignHCenter
+            icon.name: 'info'
             text: i18n("This device is not paired")
+            raisedBackground: false
         }
-        
-        Button {
+
+        Bigscreen.ButtonDelegate {
             id: pairBtn
-            Layout.fillWidth: true
-            Layout.preferredHeight: Kirigami.Units.gridUnit * 2
-            Kirigami.Theme.colorSet: Kirigami.Theme.Button
-            
-            Keys.onReturnPressed: {
-                clicked()
-            }
-                
+
             onClicked: {
-                deviceView.currentDevice.requestPairing()
-                pairBtn.visible = false
-                unpairedLabel.text = "Pairing request sent"
+                root.pairingRequested();
+                unpairedLabel.text = i18n("Pairing request sent")
             }
-        
-            background: Rectangle {
-                color: pairBtn.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
-                border.width: 0.75
-                border.color: Qt.tint(Kirigami.Theme.textColor, Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.8))
-            }
-            
-            contentItem: Item {
-                RowLayout {
-                    anchors.centerIn: parent
-                
-                    Kirigami.Icon {
-                        Layout.preferredWidth: Kirigami.Units.iconSizes.small
-                        Layout.preferredHeight: Kirigami.Units.iconSizes.small
-                        source: "network-connect"
-                    }
-                    
-                    PlasmaComponents.Label {
-                        text: i18n("Pair")
-                    }
-                }
-            }
+
+            icon.name: "network-connect"
+            text: i18n("Pair")
         }
+
+        Item { Layout.fillHeight: true }
     }
-} 
+}

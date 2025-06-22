@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2020 Aditya Mehra <aix.m@outlook.com>
+    SPDX-FileCopyrightText: 2025 Devin Lin <devin@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
@@ -7,60 +8,42 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
+
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.kirigami as Kirigami
+import org.kde.bigscreen as Bigscreen
 import org.kde.kdeconnect
 
 Item {
-    id: trustedDevice
+    id: root
     Layout.fillWidth: true
     Layout.fillHeight: true
-    
+
+    signal unpairRequested()
+
     onActiveFocusChanged: {
-        unpairBtn.forceActiveFocus()
+        if (activeFocus) {
+            unpairBtn.forceActiveFocus();
+        }
     }
 
     ColumnLayout {
+        spacing: Kirigami.Units.largeSpacing
         anchors.fill: parent
-        
-        PlasmaComponents.Label {
-            Layout.fillWidth: true
-            horizontalAlignment: Text.AlignHCenter
+
+        Bigscreen.TextDelegate {
             text: i18n("This device is paired")
+            icon.name: 'info'
+            raisedBackground: false
         }
-        
-        Button {
+
+        Bigscreen.ButtonDelegate {
             id: unpairBtn
-            Layout.fillWidth: true
-            Layout.preferredHeight: Kirigami.Units.gridUnit * 2
-            Kirigami.Theme.colorSet: Kirigami.Theme.Button
-            
-            Keys.onReturnPressed: {
-                clicked()
-            }
-            
-            onClicked: deviceView.currentDevice.unpair()
-            
-            background: Rectangle {
-                color: unpairBtn.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
-                border.width: 0.75
-                border.color: Qt.tint(Kirigami.Theme.textColor, Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.8))
-            }
-            
-            contentItem: Item {
-                RowLayout {
-                    anchors.centerIn: parent
-                
-                    Kirigami.Icon {
-                        Layout.preferredWidth: PlasmaCore.Units.iconSizes.small
-                        Layout.preferredHeight: PlasmaCore.Units.iconSizes.small
-                        source: "network-disconnect"
-                    }
-                    PlasmaComponents.Label {
-                        text: i18n("Unpair")
-                    }
-                }
-            }
+            onClicked: root.unpairRequested()
+            text: i18n("Unpair")
+            icon.name: 'network-disconnect'
         }
+
+        Item { Layout.fillHeight: true }
     }
-} 
+}

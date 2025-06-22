@@ -1,25 +1,23 @@
 /*
-    SPDX-FileCopyrightText: 2020 Aditya Mehra <aix.m@outlook.com>
     SPDX-FileCopyrightText: 2019 Marco Martin <mart@kde.org>
+    SPDX-FileCopyrightText: 2020 Aditya Mehra <aix.m@outlook.com>
+    SPDX-FileCopyrightText: 2025 Devin Lin <devin@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 import QtQuick
 import QtQuick.Controls
+
 import org.kde.bigscreen as Bigscreen
 
-Bigscreen.KCMAbstractDelegate {
+Bigscreen.ButtonDelegate {
     id: delegate
-    property QtObject deviceObj: device
-    itemIcon: model.iconName
-    itemLabel: i18n(model.name)
-    itemLabelBold: true
-    itemSubLabel: i18n(model.toolTip)
-    itemTickVisible: false
+    raisedBackground: false
 
-    onClicked: {
-        listView.currentIndex = index
-        if (deviceObj.isReachable) { deviceConnectionView.forceActiveFocus() }
-    }
+    property QtObject deviceObj: model.device
+
+    icon.name: model.iconName
+    text: i18n(model.name)
+    description: i18n(model.toolTip)
 }
