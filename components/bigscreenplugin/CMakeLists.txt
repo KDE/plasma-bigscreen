@@ -15,6 +15,7 @@ target_sources(bigscreenplugin PRIVATE ${bigscreenplugin_SRCS})
 # Singleton declarations
 set_source_files_properties(
     qml/NavigationSoundEffects.qml
+    qml/controls/Units.qml
     PROPERTIES
     QT_QML_SINGLETON_TYPE TRUE
 )

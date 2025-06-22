@@ -1,6 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2021 Aditya Mehra <aix.m@outlook.com>
     SPDX-FileCopyrightText: 2013-2017 Jan Grulich <jgrulich@redhat.com>
+    SPDX-FileCopyrightText: 2025 Devin Lin <devin@kde.org>
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
 
@@ -9,7 +10,7 @@ import QtQuick.Layouts
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.kirigami as Kirigami
 
-Item {
+ColumnLayout {
     property bool connected
     property var connectionType
     property var details: []
@@ -28,20 +29,16 @@ Item {
 
     Kirigami.Heading {
         id: ipAddressesLabel
-        anchors.top: parent.top
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.leftMargin: Kirigami.Units.largeSpacing
-        text: "IP Address Details"
+        Layout.fillWidth: true
+        text: i18n("IP Address Details")
         visible: ipDetails.length > 0 ? 1 : 0
         enabled: ipDetails.length > 0 ? 1 : 0
     }
 
-    Column {
+    ColumnLayout {
         id: ipAddressBlockColumn
-        width: parent.width
-        anchors.top: ipAddressesLabel.bottom
-        anchors.topMargin: Kirigami.Units.largeSpacing
+        Layout.fillWidth: true
+        Layout.topMargin: Kirigami.Units.largeSPacing
         visible: ipDetails.length > 0 ? 1 : 0
         enabled: ipDetails.length > 0 ? 1 : 0
 
@@ -55,20 +52,13 @@ Item {
 
             model: ipDetails.length / 2
 
-            Item {
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                }
-                height: Math.max(detailNameLabel.height, detailValueLabel.height)
+            delegate: RowLayout {
+                Layout.fillWidth: true
 
                 PlasmaComponents.Label {
                     id: detailNameLabel
-                    anchors {
-                        left: parent.left
-                        leftMargin: Kirigami.Units.largeSpacing
-                    }
-                    height: paintedHeight
+                    Layout.fillWidth: true
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
                     horizontalAlignment: Text.AlignLeft
                     text: ipDetails[index*2] + ": "
 
@@ -81,11 +71,6 @@ Item {
 
                 PlasmaComponents.Label {
                     id: detailValueLabel
-                    anchors {
-                        left: detailNameLabel.right
-                        right: parent.right
-                    }
-                    height: paintedHeight
                     elide: Text.ElideRight
                     text: ipDetails[(index*2)+1]
                     textFormat: Text.PlainText
@@ -95,36 +80,18 @@ Item {
         }
     }
 
-    Kirigami.Separator {
-        id: detailsSept
-        anchors.top: ipAddressBlockColumn.bottom
-        anchors.topMargin: Kirigami.Units.largeSpacing
-        visible: connected
-        height: 1
-        anchors.left: parent.left
-        anchors.leftMargin: Kirigami.Units.largeSpacing
-        anchors.right: parent.right
-        anchors.rightMargin: Kirigami.Units.largeSpacing
-    }
-
     Kirigami.Heading {
         id: networkInformationLabel
-        anchors.top: detailsSept.visible ? detailsSept.bottom : parent.top
-        anchors.topMargin: Kirigami.Units.largeSpacing
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.leftMargin: Kirigami.Units.largeSpacing
+        Layout.fillWidth: true
         text: "Network Information"
         visible: networkDetails.length > 0 ? 1 : 0
         enabled: networkDetails.length > 0 ? 1 : 0
     }
 
-    Column {
+    ColumnLayout {
         id: networkInformationBlockColumn
-        width: parent.width
-        anchors.top: networkInformationLabel.bottom
-        anchors.topMargin: Kirigami.Units.largeSpacing
-        anchors.bottom: parent.bottom
+        Layout.fillWidth: true
+        Layout.topMargin: Kirigami.Units.largeSpacing
         visible: networkDetails.length > 0 ? 1 : 0
         enabled: networkDetails.length > 0 ? 1 : 0
 
@@ -138,20 +105,13 @@ Item {
 
             model: networkDetails.length / 2
 
-            Item {
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                }
-                height: Math.max(detailNameLabel.height, detailValueLabel.height)
+            delegate: RowLayout {
+                Layout.fillWidth: true
 
                 PlasmaComponents.Label {
                     id: detailNameLabel
-                    anchors {
-                        left: parent.left
-                        leftMargin: Kirigami.Units.largeSpacing
-                    }
-                    height: paintedHeight
+                    Layout.fillWidth: true
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
                     horizontalAlignment: Text.AlignRight
                     text: networkDetails[index*2] + ": "
 
@@ -164,11 +124,6 @@ Item {
 
                 PlasmaComponents.Label {
                     id: detailValueLabel
-                    anchors {
-                        left: detailNameLabel.right
-                        right: parent.right
-                    }
-                    height: paintedHeight
                     elide: Text.ElideRight
                     text: networkDetails[(index*2)+1]
                     textFormat: Text.PlainText
@@ -178,4 +133,4 @@ Item {
         }
     }
 }
- 
+

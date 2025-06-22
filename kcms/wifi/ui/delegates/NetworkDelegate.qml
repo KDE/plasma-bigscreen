@@ -11,32 +11,38 @@ import org.kde.kirigami as Kirigami
 import org.kde.bigscreen as Bigscreen
 import org.kde.plasma.networkmanagement as PlasmaNM
 
-Bigscreen.KCMAbstractDelegate {
+Bigscreen.ButtonDelegate {
     id: delegate
 
+    required property var model
     property bool activating: model.ConnectionState == PlasmaNM.Enums.Activating
     property bool deactivating: model.ConnectionState == PlasmaNM.Enums.Deactivating
     property bool predictableWirelessPassword: !model.Uuid && model.Type == PlasmaNM.Enums.Wireless &&
                                                (model.SecurityType == PlasmaNM.Enums.StaticWep || model.SecurityType == PlasmaNM.Enums.WpaPsk ||
                                                 model.SecurityType == PlasmaNM.Enums.Wpa2Psk || model.SecurityType == PlasmaNM.Enums.SAE)
 
-    checked: connectionView.currentIndex === index && connectionView.activeFocus
+    text: model.ItemUniqueName
+    // itemLabelFont: Qt.font({
+    //     weight: model.ConnectionState == PlasmaNM.Enums.Activated ? Font.DemiBold : Font.Normal,
+    //     italic: model.ConnectionState == PlasmaNM.Enums.Activating ? true : false
+    // })
 
-    itemLabel: model.ItemUniqueName
-    itemLabelFont: Qt.font({
-        weight: model.ConnectionState == PlasmaNM.Enums.Activated ? Font.DemiBold : Font.Normal,
-        italic: model.ConnectionState == PlasmaNM.Enums.Activating ? true : false
-    })
+    // description: itemText()
+    // itemTickSource: Qt.resolvedUrl("../images/green-tick-thick.svg")
+    // itemTickOpacity: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0
 
-    itemSubLabel: itemText()
-    itemTickSource: Qt.resolvedUrl("../images/green-tick-thick.svg")
-    itemTickOpacity: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0
-
-    itemIcon: switch(model.Type) {
+    icon.name: switch(model.Type) {
         case PlasmaNM.Enums.Wireless:
             return itemSignalIcon(model.Signal)
         case PlasmaNM.Enums.Wired:
             return "network-wired-activated"
+    }
+
+    trailing: Kirigami.Icon {
+        visible: model.ConnectionState == PlasmaNM.Enums.Activated
+        implicitWidth: Kirigami.Units.iconSizes.medium
+        implicitHeight: Kirigami.Units.iconSizes.medium
+        source: 'checkmark'
     }
 
     function itemText() {
@@ -61,49 +67,18 @@ Bigscreen.KCMAbstractDelegate {
     }
 
     function itemSignalIcon(signalState) {
-        if (signalState <= 25){
-            return "network-wireless-connected-25"
-        } else if (signalState <= 50){
-            return "network-wireless-connected-50"
-        } else if (signalState <= 75){
-            return "network-wireless-connected-75"
+        if (signalState <= 20){
+            return model.SecurityType > PlasmaNM.Enums.NoneSecurity ? "network-wireless-20-locked" : "network-wireless-20"
+        } else if (signalState <= 40){
+            return model.SecurityType > PlasmaNM.Enums.NoneSecurity ? "network-wireless-40-locked" : "network-wireless-40"
+        } else if (signalState <= 60){
+            return model.SecurityType > PlasmaNM.Enums.NoneSecurity ? "network-wireless-60-locked" : "network-wireless-60"
+        } else if (signalState <= 80){
+            return model.SecurityType > PlasmaNM.Enums.NoneSecurity ? "network-wireless-80-locked" : "network-wireless-80"
         } else if (signalState <= 100){
-            return "network-wireless-connected-100"
+            return model.SecurityType > PlasmaNM.Enums.NoneSecurity ? "network-wireless-100-locked" : "network-wireless-100"
         } else {
             return "network-wireless-connected-00"
         }
-    }
-
-    onClicked: {
-        listView.currentIndex = 0
-        listView.positionViewAtBeginning()
-        if (!model.ConnectionPath) {
-            networkSelectionView.devicePath = model.DevicePath
-            networkSelectionView.specificPath = model.SpecificPath
-            networkSelectionView.connectionName = itemLabel
-            networkSelectionView.securityType = model.SecurityType
-            if(model.SecurityType == -1 ){
-                networkSelectionView.connectToOpenNetwork()
-            } else {
-                passwordLayer.open();
-                passField.forceActiveFocus();
-            }
-        } else if (model.ConnectionState == PlasmaNM.Enums.Deactivated) {
-            handler.activateConnection(model.ConnectionPath, model.DevicePath, model.SpecificPath)
-        } else {
-            handler.deactivateConnection(model.ConnectionPath, model.DevicePath)
-        }
-    }
-
-    Keys.onMenuPressed: {
-        pathToRemove = model.ConnectionPath
-        nameToRemove = model.ItemUniqueName
-        networkActions.open()
-    }
-
-    onPressAndHold: {
-        pathToRemove = model.ConnectionPath
-        nameToRemove = model.ItemUniqueName
-        networkActions.open()
     }
 }

@@ -236,9 +236,8 @@ NanoShell.FullScreenOverlay {
                 ColumnLayout {
                     anchors.fill: parent
 
-                    Bigscreen.AbstractDelegate {
+                    Bigscreen.ButtonDelegate {
                         id: wallpaperSelectorDelegate
-                        highlighted: activeFocus
                         Layout.fillWidth: true
 
                         // Open wallpaper selector
@@ -247,18 +246,8 @@ NanoShell.FullScreenOverlay {
                             Plasmoid.internalAction("configure").trigger();
                         }
 
-                        contentItem: RowLayout {
-                            Kirigami.Heading {
-                                Layout.fillWidth: true
-                                text: i18n('Open wallpaper selector')
-                            }
-                            Kirigami.Icon {
-                                Layout.alignment: Qt.AlignCenter
-                                source: 'arrow-right'
-                                implicitWidth: Kirigami.Units.iconSizes.smallMedium
-                                implicitHeight: Kirigami.Units.iconSizes.smallMedium
-                            }
-                        }
+                        text: i18n('Open wallpaper selector')
+                        icon.name: 'backgroundtool'
                     }
                     Item { Layout.fillHeight: true }
                 }
