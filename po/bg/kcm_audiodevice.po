@@ -49,13 +49,3 @@ msgstr "Избиране на звукови устройства"
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
 msgstr "Натиснете клавиша  [←] Back, за да се върнете към избор на устройство"
-
-#~ msgid "Audio Settings"
-#~ msgstr "Аудио настройки"
-
-#~ msgctxt "label of device items"
-#~ msgid "%1 (%2)"
-#~ msgstr "%1 (%2)"
-
-#~ msgid "Exit"
-#~ msgstr "Изход"

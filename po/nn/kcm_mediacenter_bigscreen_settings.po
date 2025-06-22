@@ -157,6 +157,3 @@ msgstr ""
 #, kde-format
 msgid "Global Theme"
 msgstr ""
-
-#~ msgid "Expanding Tiles"
-#~ msgstr "Utvidbare fliser"

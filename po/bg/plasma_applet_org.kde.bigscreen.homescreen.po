@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
 # Automatically generated, 2022.
-# SPDX-FileCopyrightText: 2022, 2024 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-21 00:44+0000\n"
-"PO-Revision-Date: 2024-10-18 10:07+0200\n"
+"PO-Revision-Date: 2025-06-21 12:12+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #: contents/config/config.qml:12
 #, kde-format
@@ -119,7 +119,7 @@ msgstr "Настройки"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "Търсене…"
 
 #: contents/ui/PowerManagementItem.qml:41
 #, kde-format
@@ -135,39 +135,3 @@ msgstr "Изчистване на задачите"
 #, kde-format
 msgid "Close"
 msgstr "Затваряне"
-
-#~ msgid "Manage Favorites"
-#~ msgstr "Управление на Предпочитани"
-
-#~ msgid "Use Colored Tiles"
-#~ msgstr "Използване на цветни плочки"
-
-#~ msgid "Use Expanding Tiles"
-#~ msgstr "Използване на разширяващи се плочки"
-
-#~ msgid "KDE Connect"
-#~ msgstr "KDE Connect"
-
-#~ msgid "Reject"
-#~ msgstr "Отхвърляне"
-
-#~ msgid "Increase Volume"
-#~ msgstr "Увеличаване на звука"
-
-#~ msgid "Decrease Volume"
-#~ msgstr "Намаляване на звука"
-
-#~ msgid "Mute"
-#~ msgstr "Изключване на звука"
-
-#~ msgid "Audio Device chooser"
-#~ msgstr "Избиране на звуково устройство"
-
-#~ msgid "Network"
-#~ msgstr "Мрежа"
-
-#~ msgid "Voice Apps"
-#~ msgstr "Гласово приложение"
-
-#~ msgid "Getting Ready... Please Wait"
-#~ msgstr "Подготовка... Моля, изчакайте"

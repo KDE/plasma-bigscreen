@@ -63,13 +63,3 @@ msgstr "Това устройство не може да бъде достигн
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
-
-#~ msgid "Pairing request sent to device"
-#~ msgstr "Заявка за сдвояване е изпратено до устройство"
-
-#~ msgid "Press the [←] Back button to return to device selection"
-#~ msgstr ""
-#~ "Натиснете клавиша  [←] Back, за да се върнете към избор на устройство"
-
-#~ msgid "Exit"
-#~ msgstr "Изход"

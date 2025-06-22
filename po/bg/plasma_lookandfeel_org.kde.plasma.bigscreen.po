@@ -26,6 +26,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Сесия на Plasma"
-
-#~ msgid "Welcome"
-#~ msgstr "Добре дошли"

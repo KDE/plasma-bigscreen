@@ -63,6 +63,3 @@ msgstr "Får ikkje kontakt med eininga"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
-
-#~ msgid "Pairing request sent to device"
-#~ msgstr "Sende paringsførespurnad til eining"
