@@ -11,6 +11,12 @@ import org.kde.kirigami as Kirigami
 
 T.ItemDelegate {
     id: root
+
+    /*!
+       \brief Whether the delegate should be visually raised over the view.
+
+       \default true
+     */
     property bool raisedBackground: true
 
     verticalPadding: Units.verticalPadding

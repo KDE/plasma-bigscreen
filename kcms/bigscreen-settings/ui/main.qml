@@ -1,137 +1,185 @@
 /*
     SPDX-FileCopyrightText: 2020 Aditya Mehra <aix.m@outlook.com>
+    SPDX-FileCopyrightText: 2025 Devin Lin <devin@kde.org>
 
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 
 */
 
-import QtQuick.Layouts
 import QtQuick
+import QtQuick.Layouts
 import QtQuick.Window
-import QtQuick.Controls
+import QtQuick.Controls as QQC2
+
 import org.kde.plasma.core as PlasmaCore
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 import org.kde.bigscreen as Bigscreen
-import "delegates" as Delegates
 
-KCM.SimpleKCM {
+Kirigami.ScrollablePage {
     id: root
 
-    title: i18n("Appearance")
+    title: i18n("System")
     background: null
+
     leftPadding: Kirigami.Units.smallSpacing
-    topPadding: 0
+    topPadding: Kirigami.Units.smallSpacing
     rightPadding: Kirigami.Units.smallSpacing
-    bottomPadding: 0
+    bottomPadding: Kirigami.Units.smallSpacing
 
-    property Item settingMenuItem: root.parent.parent.lastSettingMenuItem
-
-    function settingMenuItemFocus() {
-        settingMenuItem.forceActiveFocus()
-    }
-
-    Component.onCompleted: {
-        coloredTileDelegate.forceActiveFocus();
-    }
-
-    function setOption(type, result){
-        if(type == "coloredTile"){
-            kcm.setUseColoredTiles(result);
-        }
-        if(type == "pmInhibition"){
-            kcm.setPmInhibitionActive(result);
+    onActiveFocusChanged: {
+        if (activeFocus) {
+            coloredTileDelegate.forceActiveFocus();
         }
     }
 
-    contentItem: FocusScope {
-        Item {
-            anchors.left: parent.left
-            anchors.top: parent.top
-            anchors.topMargin: Kirigami.Units.largeSpacing * 2
-            anchors.bottom: parent.bottom
-            anchors.right: parent.right
-            anchors.rightMargin: Kirigami.Units.largeSpacing
-            clip: true
-            KeyNavigation.left: settingMenuItemFocus()
+    ColumnLayout {
+        // Since ScrollablePage's scrollview eats up the propagation of the left event to root, manually set it here
+        KeyNavigation.left: root.KeyNavigation.left
+        spacing: 0
 
-            ColumnLayout {
-                id: contentLayout
-                anchors.left: parent.left
-                anchors.right: parent.right
-                anchors.leftMargin: Kirigami.Units.largeSpacing
-                anchors.rightMargin: Kirigami.Units.largeSpacing
+        QQC2.Label {
+            text: i18n("Homescreen Appearance")
+            font.pixelSize: 22
 
-                Behavior on y {
-                    NumberAnimation {
-                        duration: Kirigami.Units.longDuration * 2
-                        easing.type: Easing.InOutQuad
-                    }
-                }
+            Layout.topMargin: Kirigami.Units.gridUnit
+            Layout.bottomMargin: Kirigami.Units.gridUnit
+        }
 
-                Kirigami.Heading {
-                    id: launcherLookHeader
-                    text: i18n("Home Screen Appearance")
-                    color: Kirigami.Theme.textColor
-                }
+        Bigscreen.SwitchDelegate {
+            id: coloredTileDelegate
+            Layout.bottomMargin: Kirigami.Units.smallSpacing
 
-                Delegates.LocalSettingDelegate {
-                    id: coloredTileDelegate
-                    Layout.fillWidth: true
-                    isChecked: kcm.useColoredTiles() ? 1 : 0
-                    name: i18n("Colored Tiles")
-                    description: i18n("Tile backgrounds will be colored based on the app's icon")
-                    customType: "coloredTile"
-                    KeyNavigation.up: pmInhibitionDelegate
-                    KeyNavigation.down: desktopThemeView
-                }
+            raisedBackground: true
+            checked: kcm.useColoredTiles() ? 1 : 0
+            text: i18n("Colored tiles")
+            description: i18n("Tile backgrounds will be colored based on the app's icon")
 
-                Item {
-                    Layout.fillWidth: true
-                    Layout.preferredHeight: Kirigami.Units.largeSpacing * 2
-                }
+            KeyNavigation.down: desktopThemeButton
 
-                Bigscreen.TileView {
-                    id: desktopThemeView
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    Layout.alignment: Qt.AlignTop
-                    focus: true
-                    model: kcm.globalThemeListModel
-                    view.cacheBuffer: parent.width * 2
-                    title: i18n("Global Theme")
-                    navigationUp: coloredTileDelegate
-                    enabled: !settingsAreaLoader.opened
-                    delegate: Delegates.ThemeDelegate {
-                        text: model.display
-                    }
+            onCheckedChanged: kcm.setUseColoredTiles(checked);
+        }
 
-                    Behavior on x {
-                        NumberAnimation {
-                            duration: Kirigami.Units.longDuration * 2
-                            easing.type: Easing.InOutQuad
-                        }
-                    }
-                }
+        Bigscreen.ButtonDelegate {
+            id: desktopThemeButton
+            raisedBackground: true
+
+            KeyNavigation.down: pmInhibitionDelegate
+
+            text: i18n('Global theme')
+            description: i18n('Set the system theme')
+
+            onClicked: themeSidebar.open();
+        }
+
+        QQC2.Label {
+            text: i18n("System")
+            font.pixelSize: 22
+
+            Layout.topMargin: Kirigami.Units.gridUnit
+            Layout.bottomMargin: Kirigami.Units.gridUnit
+        }
+
+        Bigscreen.SwitchDelegate {
+            id: pmInhibitionDelegate
+            Layout.bottomMargin: Kirigami.Units.smallSpacing
+            KeyNavigation.down: timeDateDelegate
+
+            text: i18n('Power inhibition')
+            checked: kcm.pmInhibitionActive() ? true : false
+            onCheckedChanged: kcm.setPmInhibitionActive(checked);
+        }
+
+        Bigscreen.ButtonDelegate {
+            id: timeDateDelegate
+            KeyNavigation.down: settingsShortcutDelegate
+
+            icon.name: "preferences-system-time"
+            text: i18n('Adjust date & time')
+
+            onClicked: deviceTimeSettings.open()
+        }
+
+        QQC2.Label {
+            text: i18n("Shortcuts")
+            font.pixelSize: 22
+
+            Layout.topMargin: Kirigami.Units.gridUnit
+            Layout.bottomMargin: Kirigami.Units.gridUnit
+        }
+
+        Bigscreen.ButtonDelegate {
+            id: settingsShortcutDelegate
+            KeyNavigation.down: tasksShortcutDelegate
+            Layout.bottomMargin: Kirigami.Units.smallSpacing
+            text: i18n('Open settings shortcut')
+            icon.name: 'preferences-desktop-keyboard-symbolic'
+
+            property string getActionPath: "activateSettingsShortcut"
+            property string setActionPath: "setActivateSettingsShortcut"
+            property string resetActionPath: "resetActivateSettingsShortcut"
+            onClicked: {
+                shortcutsPicker.title = text;
+                shortcutsPicker.currentShortcut = kcm.getShortcut(getActionPath);
+                shortcutsPicker.getActionPath = getActionPath;
+                shortcutsPicker.setActionPath = setActionPath;
+                shortcutsPicker.resetActionPath = resetActionPath;
+                shortcutsPicker.open();
             }
         }
 
-        SettingsAreaLoader {
-            id: settingsAreaLoader
-            anchors.top: parent.top
-            anchors.bottom: parent.bottom
-            anchors.right: parent.right
-            anchors.rightMargin: -Kirigami.Units.smallSpacing
-            property bool opened: false
-            visible: opened
-            enabled: opened
-            width: parent.width / 3.5
+        Bigscreen.ButtonDelegate {
+            id: tasksShortcutDelegate
+            KeyNavigation.down: homescreenShortcutDelegate
+            Layout.bottomMargin: Kirigami.Units.smallSpacing
+            text: i18n('Open tasks shortcut')
+            icon.name: 'preferences-desktop-keyboard-symbolic'
 
-            onOpenedChanged: {
-                if(opened){
-                    settingsAreaLoader.forceActiveFocus()
-                }
+            property string getActionPath: "activateTasksShortcut"
+            property string setActionPath: "setActivateTasksShortcut"
+            property string resetActionPath: "resetActivateTasksShortcut"
+            onClicked: {
+                shortcutsPicker.title = text;
+                shortcutsPicker.currentShortcut = kcm.getShortcut(getActionPath);
+                shortcutsPicker.getActionPath = getActionPath;
+                shortcutsPicker.setActionPath = setActionPath;
+                shortcutsPicker.resetActionPath = resetActionPath;
+                shortcutsPicker.open();
             }
+        }
+
+        Bigscreen.ButtonDelegate {
+            id: homescreenShortcutDelegate
+            Layout.bottomMargin: Kirigami.Units.smallSpacing
+            text: i18n('Open homescreen shortcut')
+            icon.name: 'preferences-desktop-keyboard-symbolic'
+
+            property string getActionPath: "displayHomeScreenShortcut"
+            property string setActionPath: "setDisplayHomeScreenShortcut"
+            property string resetActionPath: "resetDisplayHomeScreenShortcut"
+            onClicked: {
+                shortcutsPicker.title = text;
+                shortcutsPicker.currentShortcut = kcm.getShortcut(getActionPath);
+                shortcutsPicker.getActionPath = getActionPath;
+                shortcutsPicker.setActionPath = setActionPath;
+                shortcutsPicker.resetActionPath = resetActionPath;
+                shortcutsPicker.open();
+            }
+        }
+
+        ShortcutsPickerSidebar {
+            id: shortcutsPicker
+            onClosed: settingsShortcutDelegate.forceActiveFocus()
+        }
+
+        DeviceTimeSettingsSidebar {
+            id: deviceTimeSettings
+            onClosed: timeDateDelegate.forceActiveFocus()
+        }
+
+        ThemeSidebar {
+            id: themeSidebar
+            onClosed: desktopThemeButton.forceActiveFocus()
         }
     }
 }

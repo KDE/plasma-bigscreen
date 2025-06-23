@@ -193,6 +193,12 @@ void BigscreenSettings::setShortcut(const QString &action, const QKeySequence &s
     QDBusConnection::sessionBus().send(msg);
 }
 
+void BigscreenSettings::resetShortcut(const QString &action)
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", action);
+    QDBusConnection::sessionBus().send(msg);
+}
+
 GlobalThemeListModel *BigscreenSettings::globalThemeListModel()
 {
     return m_globalThemeListModel;

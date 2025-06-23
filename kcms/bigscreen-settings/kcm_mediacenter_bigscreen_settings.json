@@ -39,12 +39,10 @@
         "Description[zh_CN]": "界面外观",
         "Description[zh_TW]": "外觀與感覺",
         "FormFactors": [
-            "handset",
-            "tablet",
             "mediacenter"
         ],
-        "Icon": "view-grid-symbolic",
-        "Name": "Appearance",
+        "Icon": "plasma-symbolic",
+        "Name": "System",
         "Name[ar]": "المظهر",
         "Name[ast]": "Aspeutu",
         "Name[az]": "Xarici görünüş",

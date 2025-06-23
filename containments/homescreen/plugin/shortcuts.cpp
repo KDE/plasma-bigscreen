@@ -91,3 +91,27 @@ void Shortcuts::setDisplayHomeScreenShortcut(const QKeySequence &shortcut)
 {
     KGlobalAccel::self()->setGlobalShortcut(toggleDisplayHomeScreenAction, shortcut);
 }
+
+void Shortcuts::resetActivateSettingsShortcut()
+{
+    auto defaultShortcuts = KGlobalAccel::self()->defaultShortcut(toggleActivateSettingsAction);
+    for (const auto &shortcut : defaultShortcuts) {
+        setActivateSettingsShortcut(shortcut);
+    }
+}
+
+void Shortcuts::resetActivateTasksShortcut()
+{
+    auto defaultShortcuts = KGlobalAccel::self()->defaultShortcut(toggleActivateTasksAction);
+    for (const auto &shortcut : defaultShortcuts) {
+        setActivateSettingsShortcut(shortcut);
+    }
+}
+
+void Shortcuts::resetDisplayHomeScreenShortcut()
+{
+    auto defaultShortcuts = KGlobalAccel::self()->defaultShortcut(toggleDisplayHomeScreenAction);
+    for (const auto &shortcut : defaultShortcuts) {
+        setActivateSettingsShortcut(shortcut);
+    }
+}

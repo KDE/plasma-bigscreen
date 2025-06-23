@@ -304,6 +304,9 @@ NanoShell.FullScreenOverlay {
                     if (internalPage) {
                         internalPage.parent = contentItem;
                         internalPage.anchors.fill = contentItem;
+
+                        // Ensure pages have keynavigation set
+                        internalPage.KeyNavigation.left = Qt.binding(() => container.KeyNavigation.left);
                     }
                 }
                 onActiveFocusChanged: {

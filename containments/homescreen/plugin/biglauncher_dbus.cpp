@@ -116,6 +116,21 @@ void BigLauncherDbusAdapterInterface::setDisplayHomeScreenShortcut(const QString
     m_shortcuts->setDisplayHomeScreenShortcut(seq);
 }
 
+void BigLauncherDbusAdapterInterface::resetActivateSettingsShortcut()
+{
+    m_shortcuts->resetActivateSettingsShortcut();
+}
+
+void BigLauncherDbusAdapterInterface::resetActivateTasksShortcut()
+{
+    m_shortcuts->resetActivateTasksShortcut();
+}
+
+void BigLauncherDbusAdapterInterface::resetDisplayHomeScreenShortcut()
+{
+    m_shortcuts->resetDisplayHomeScreenShortcut();
+}
+
 Q_INVOKABLE QString BigLauncherDbusAdapterInterface::getMethod(const QString &method)
 {
     QString str = method;

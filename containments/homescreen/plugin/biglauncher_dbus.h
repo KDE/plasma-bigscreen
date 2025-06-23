@@ -78,6 +78,12 @@ class BigLauncherDbusAdapterInterface : public QDBusAbstractAdaptor
                 "    <method name=\"setDisplayHomeScreenShortcut\">\n"
                 "      <arg direction=\"in\" type=\"s\" name=\"shortcut\"/>\n"
                 "    </method>\n"
+                "    <method name=\"resetActivateSettingsShortcut\">\n"
+                "    </method>\n"
+                "    <method name=\"resetActivateTasksShortcut\">\n"
+                "    </method>\n"
+                "    <method name=\"resetDisplayHomeScreenShortcut\">\n"
+                "    </method>\n"
                 "  </interface>\n"
                 "")
 public:
@@ -104,6 +110,10 @@ public Q_SLOTS: // METHODS
     void setActivateSettingsShortcut(const QString &shortcut);
     void setActivateTasksShortcut(const QString &shortcut);
     void setDisplayHomeScreenShortcut(const QString &shortcut);
+
+    void resetActivateSettingsShortcut();
+    void resetActivateTasksShortcut();
+    void resetDisplayHomeScreenShortcut();
 
 Q_SIGNALS: // SIGNALS
     void useColoredTilesChanged(const bool &msgUseColoredTiles);

@@ -27,6 +27,10 @@ public:
     void setActivateTasksShortcut(const QKeySequence &shortcut);
     void setDisplayHomeScreenShortcut(const QKeySequence &shortcut);
 
+    void resetActivateSettingsShortcut();
+    void resetActivateTasksShortcut();
+    void resetDisplayHomeScreenShortcut();
+
 Q_SIGNALS:
     void toggleSettingsOverlay();
     void toggleTasksOverlay();

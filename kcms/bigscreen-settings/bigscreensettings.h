@@ -24,7 +24,7 @@ class BigscreenSettings : public KQuickConfigModule
 {
     Q_OBJECT
 
-    Q_PROPERTY(QString themeName READ themeName WRITE setThemeName NOTIFY themeNameChanged)
+    Q_PROPERTY(QString themeName READ themeName NOTIFY themeNameChanged)
     Q_PROPERTY(GlobalThemeListModel *globalThemeListModel READ globalThemeListModel CONSTANT)
     Q_PROPERTY(QTime currentTime READ currentTime WRITE setCurrentTime NOTIFY currentTimeChanged)
     Q_PROPERTY(QDate currentDate READ currentDate WRITE setCurrentDate NOTIFY currentDateChanged)
@@ -63,6 +63,7 @@ public Q_SLOTS:
 
     QString getShortcut(const QString &action);
     void setShortcut(const QString &action, const QKeySequence &shortcut);
+    void resetShortcut(const QString &action);
 
 Q_SIGNALS:
     void themeNameChanged();
