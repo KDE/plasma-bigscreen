@@ -39,8 +39,10 @@ QQC2.ItemDelegate {
     z: isCurrent ? 2 : 0
 
     onClicked: {
-        listView.forceActiveFocus()
-        listView.currentIndex = index
+        if (listView) {
+            listView.forceActiveFocus()
+            listView.currentIndex = index
+        }
     }
 
     leftPadding: Kirigami.Units.gridUnit

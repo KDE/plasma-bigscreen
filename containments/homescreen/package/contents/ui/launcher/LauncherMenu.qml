@@ -31,7 +31,6 @@ FocusScope {
 
     signal activateAppView
     signal activateTopNavBar
-    signal activateSettingsView
 
     property Item wallpaper: {
         for (var i in plasmoid.children) {
