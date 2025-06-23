@@ -42,11 +42,7 @@ AbstractDelegate {
     }
 
     Keys.onLeftPressed: (event)=> {
-        if(listView && listView.currentIndex == 0){
-            settingMenuItemFocus()
-        } else {
-            event.accepted = false
-        }
+        event.accepted = false
     }
 
     contentItem: Item {

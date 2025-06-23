@@ -63,6 +63,10 @@ Note that `kdesrc-build` doesn't automatically build `plasma-nano` and `plasma-s
 - DBus
 - Network
 
+### Other dependencies
+
+- QCoro
+
 </details>
 
 To start the Bigscreen homescreen in a window, use the following script:
