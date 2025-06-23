@@ -8,8 +8,6 @@
 # Source Bigscreen common environment
 . plasma-bigscreen-common-env
 
-export QT_QPA_PLATFORM=wayland
-export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 export EGL_PLATFORM=wayland
 
 startplasma-wayland --xwayland --libinput --exit-with-session=@KDE_INSTALL_FULL_LIBEXECDIR@/startplasma-waylandsession
