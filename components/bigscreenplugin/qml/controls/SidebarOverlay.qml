@@ -89,7 +89,6 @@ QQC2.Popup {
         QQC2.Control {
             id: headerControl
             visible: contentItem
-            implicitHeight: parent.height * 0.3
 
             topPadding: Kirigami.Units.gridUnit
             bottomPadding: Kirigami.Units.gridUnit

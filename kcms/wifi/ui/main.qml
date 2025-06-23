@@ -24,6 +24,7 @@ KCM.SimpleKCM {
     id: networkSelectionView
 
     title: i18n("Network")
+    background: null
 
     leftPadding: Kirigami.Units.smallSpacing
     topPadding: Kirigami.Units.smallSpacing
