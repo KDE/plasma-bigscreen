@@ -15,9 +15,10 @@ import org.kde.plasma.private.nanoshell as NanoShell
 import org.kde.milou as Milou
 import org.kde.kirigami 2.19 as Kirigami
 
-NanoShell.FullScreenOverlay {
+Window {
     id: root
 
+    flags: Qt.FramelessWindowHint
     color: 'transparent'
 
     function showOverlay() {

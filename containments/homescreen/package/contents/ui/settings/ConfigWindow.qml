@@ -15,7 +15,7 @@ import org.kde.plasma.private.nanoshell as NanoShell
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.plasma.plasmoid
 
-NanoShell.FullScreenOverlay {
+Window {
     id: root
 
     flags: Qt.FramelessWindowHint
