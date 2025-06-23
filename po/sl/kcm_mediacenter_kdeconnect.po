@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-20 00:44+0000\n"
+"POT-Creation-Date: 2025-06-23 00:43+0000\n"
 "PO-Revision-Date: 2021-01-24 22:45+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -18,53 +18,56 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 
-#: ui/delegates/PairedView.qml:29
+#: ui/delegates/PairedView.qml:35
 #, kde-format
 msgid "This device is paired"
 msgstr "Ta naprava je uparjena"
 
-#: ui/delegates/PairedView.qml:60
+#: ui/delegates/PairedView.qml:43
 #, kde-format
 msgid "Unpair"
 msgstr "Odstrani par"
 
-#: ui/delegates/PairRequest.qml:29
+#: ui/delegates/PairRequest.qml:35
 #, kde-format
 msgid "This device is requesting to be paired"
 msgstr "Ta naprava želi biti uparjena"
 
-#: ui/delegates/PairRequest.qml:63
+#: ui/delegates/PairRequest.qml:44
 #, kde-format
 msgid "Accept"
 msgstr "Sprejmi"
 
-#: ui/delegates/PairRequest.qml:99
+#: ui/delegates/PairRequest.qml:53
 #, kde-format
 msgid "Reject"
 msgstr "Zavrni"
 
-#: ui/delegates/UnpairedView.qml:41
+#: ui/delegates/UnpairedView.qml:47
 #, kde-format
 msgid "This device is not paired"
 msgstr "Ta naprava ni uparjena"
 
-#: ui/delegates/UnpairedView.qml:77
+#: ui/delegates/UnpairedView.qml:56
+#, fuzzy, kde-format
+#| msgid "Pairing request sent to device"
+msgid "Pairing request sent"
+msgstr "Zahteva za parjenje poslana napravi"
+
+#: ui/delegates/UnpairedView.qml:60
 #, kde-format
 msgid "Pair"
 msgstr "Par"
 
-#: ui/delegates/Unreachable.qml:18
+#: ui/delegates/Unreachable.qml:25
 #, kde-format
 msgid "This device is not reachable"
 msgstr "Ta naprava ni dosegljiva"
 
-#: ui/main.qml:21
+#: ui/main.qml:24
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
-
-#~ msgid "Pairing request sent to device"
-#~ msgstr "Zahteva za parjenje poslana napravi"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "Pritisnite gumb [←] Back za vrnitev na izbiro naprave"

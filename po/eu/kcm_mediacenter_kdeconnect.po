@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-20 00:44+0000\n"
+"POT-Creation-Date: 2025-06-23 00:43+0000\n"
 "PO-Revision-Date: 2021-02-04 21:26+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,53 +20,56 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 20.12.1\n"
 
-#: ui/delegates/PairedView.qml:29
+#: ui/delegates/PairedView.qml:35
 #, kde-format
 msgid "This device is paired"
 msgstr "Gailu hau parekatuta dago"
 
-#: ui/delegates/PairedView.qml:60
+#: ui/delegates/PairedView.qml:43
 #, kde-format
 msgid "Unpair"
 msgstr "Desparekatu"
 
-#: ui/delegates/PairRequest.qml:29
+#: ui/delegates/PairRequest.qml:35
 #, kde-format
 msgid "This device is requesting to be paired"
 msgstr "Gailu hau parekatzea eskatzen ari da"
 
-#: ui/delegates/PairRequest.qml:63
+#: ui/delegates/PairRequest.qml:44
 #, kde-format
 msgid "Accept"
 msgstr "Onartu"
 
-#: ui/delegates/PairRequest.qml:99
+#: ui/delegates/PairRequest.qml:53
 #, kde-format
 msgid "Reject"
 msgstr "Errefusatu"
 
-#: ui/delegates/UnpairedView.qml:41
+#: ui/delegates/UnpairedView.qml:47
 #, kde-format
 msgid "This device is not paired"
 msgstr "Gailu hau ez dago parekatuta"
 
-#: ui/delegates/UnpairedView.qml:77
+#: ui/delegates/UnpairedView.qml:56
+#, fuzzy, kde-format
+#| msgid "Pairing request sent to device"
+msgid "Pairing request sent"
+msgstr "Parekatzeko eskaera bidali zaio gailuari"
+
+#: ui/delegates/UnpairedView.qml:60
 #, kde-format
 msgid "Pair"
 msgstr "Parekatu"
 
-#: ui/delegates/Unreachable.qml:18
+#: ui/delegates/Unreachable.qml:25
 #, kde-format
 msgid "This device is not reachable"
 msgstr "Gailu hau ez da irisgarria"
 
-#: ui/main.qml:21
+#: ui/main.qml:24
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
-
-#~ msgid "Pairing request sent to device"
-#~ msgstr "Parekatzeko eskaera bidali zaio gailuari"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "Sakatu [←] Atzera botoia gailuen hautapenera itzultzeko"

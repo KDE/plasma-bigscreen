@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-20 00:44+0000\n"
+"POT-Creation-Date: 2025-06-23 00:43+0000\n"
 "PO-Revision-Date: 2020-04-04 12:34-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -14,47 +14,52 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: ui/delegates/PairedView.qml:29
+#: ui/delegates/PairedView.qml:35
 #, kde-format
 msgid "This device is paired"
 msgstr ""
 
-#: ui/delegates/PairedView.qml:60
+#: ui/delegates/PairedView.qml:43
 #, kde-format
 msgid "Unpair"
 msgstr ""
 
-#: ui/delegates/PairRequest.qml:29
+#: ui/delegates/PairRequest.qml:35
 #, kde-format
 msgid "This device is requesting to be paired"
 msgstr ""
 
-#: ui/delegates/PairRequest.qml:63
+#: ui/delegates/PairRequest.qml:44
 #, kde-format
 msgid "Accept"
 msgstr ""
 
-#: ui/delegates/PairRequest.qml:99
+#: ui/delegates/PairRequest.qml:53
 #, kde-format
 msgid "Reject"
 msgstr ""
 
-#: ui/delegates/UnpairedView.qml:41
+#: ui/delegates/UnpairedView.qml:47
 #, kde-format
 msgid "This device is not paired"
 msgstr ""
 
-#: ui/delegates/UnpairedView.qml:77
+#: ui/delegates/UnpairedView.qml:56
+#, kde-format
+msgid "Pairing request sent"
+msgstr ""
+
+#: ui/delegates/UnpairedView.qml:60
 #, kde-format
 msgid "Pair"
 msgstr ""
 
-#: ui/delegates/Unreachable.qml:18
+#: ui/delegates/Unreachable.qml:25
 #, kde-format
 msgid "This device is not reachable"
 msgstr ""
 
-#: ui/main.qml:21
+#: ui/main.qml:24
 #, kde-format
 msgid "KDE Connect"
 msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-20 00:44+0000\n"
+"POT-Creation-Date: 2025-06-23 00:43+0000\n"
 "PO-Revision-Date: 2020-04-04 12:32+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -17,53 +17,56 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.12.2\n"
 
-#: ui/delegates/PairedView.qml:29
+#: ui/delegates/PairedView.qml:35
 #, kde-format
 msgid "This device is paired"
 msgstr "See seade on paaristatud"
 
-#: ui/delegates/PairedView.qml:60
+#: ui/delegates/PairedView.qml:43
 #, kde-format
 msgid "Unpair"
 msgstr "Lahuta paaristus"
 
-#: ui/delegates/PairRequest.qml:29
+#: ui/delegates/PairRequest.qml:35
 #, kde-format
 msgid "This device is requesting to be paired"
 msgstr "See seade soovib paaristamist"
 
-#: ui/delegates/PairRequest.qml:63
+#: ui/delegates/PairRequest.qml:44
 #, kde-format
 msgid "Accept"
 msgstr "Nõustu"
 
-#: ui/delegates/PairRequest.qml:99
+#: ui/delegates/PairRequest.qml:53
 #, kde-format
 msgid "Reject"
 msgstr "Lükka tagasi"
 
-#: ui/delegates/UnpairedView.qml:41
+#: ui/delegates/UnpairedView.qml:47
 #, kde-format
 msgid "This device is not paired"
 msgstr "See seade on paaristamata"
 
-#: ui/delegates/UnpairedView.qml:77
+#: ui/delegates/UnpairedView.qml:56
+#, fuzzy, kde-format
+#| msgid "Pairing request sent to device"
+msgid "Pairing request sent"
+msgstr "Seadmele saadeti paaristamissoov"
+
+#: ui/delegates/UnpairedView.qml:60
 #, kde-format
 msgid "Pair"
 msgstr "Paarista"
 
-#: ui/delegates/Unreachable.qml:18
+#: ui/delegates/Unreachable.qml:25
 #, kde-format
 msgid "This device is not reachable"
 msgstr "See seade ei ole kättesaadav"
 
-#: ui/main.qml:21
+#: ui/main.qml:24
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
-
-#~ msgid "Pairing request sent to device"
-#~ msgstr "Seadmele saadeti paaristamissoov"
 
 #~ msgid "Exit"
 #~ msgstr "Välju"

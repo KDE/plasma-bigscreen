@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-20 00:44+0000\n"
+"POT-Creation-Date: 2025-06-23 00:43+0000\n"
 "PO-Revision-Date: 2025-05-31 17:41+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -18,53 +18,56 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: ui/delegates/PairedView.qml:29
+#: ui/delegates/PairedView.qml:35
 #, kde-format
 msgid "This device is paired"
 msgstr "هذا الجهاز مقترن"
 
-#: ui/delegates/PairedView.qml:60
+#: ui/delegates/PairedView.qml:43
 #, kde-format
 msgid "Unpair"
 msgstr "أزل الاقتران"
 
-#: ui/delegates/PairRequest.qml:29
+#: ui/delegates/PairRequest.qml:35
 #, kde-format
 msgid "This device is requesting to be paired"
 msgstr "هذا الجهاز طلب الاقتران"
 
-#: ui/delegates/PairRequest.qml:63
+#: ui/delegates/PairRequest.qml:44
 #, kde-format
 msgid "Accept"
 msgstr "اقبل"
 
-#: ui/delegates/PairRequest.qml:99
+#: ui/delegates/PairRequest.qml:53
 #, kde-format
 msgid "Reject"
 msgstr "ارفض"
 
-#: ui/delegates/UnpairedView.qml:41
+#: ui/delegates/UnpairedView.qml:47
 #, kde-format
 msgid "This device is not paired"
 msgstr "الجهاز غير مقترن"
 
-#: ui/delegates/UnpairedView.qml:77
+#: ui/delegates/UnpairedView.qml:56
+#, fuzzy, kde-format
+#| msgid "Pairing request sent to device"
+msgid "Pairing request sent"
+msgstr "أرسل طلب اقتران إلى الجهاز"
+
+#: ui/delegates/UnpairedView.qml:60
 #, kde-format
 msgid "Pair"
 msgstr "اقرن"
 
-#: ui/delegates/Unreachable.qml:18
+#: ui/delegates/Unreachable.qml:25
 #, kde-format
 msgid "This device is not reachable"
 msgstr "الجهاز غير قابل الوصول"
 
-#: ui/main.qml:21
+#: ui/main.qml:24
 #, kde-format
 msgid "KDE Connect"
 msgstr "جسر كِيدِي"
-
-#~ msgid "Pairing request sent to device"
-#~ msgstr "أرسل طلب اقتران إلى الجهاز"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "اضغط على زر الخلف [←] لترجع تحديد جهاز"
