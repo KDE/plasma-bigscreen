@@ -18,9 +18,6 @@ export PLASMA_PLATFORM=mediacenter
 export QT_FILE_SELECTORS=mediacenter
 export PLASMA_DEFAULT_SHELL=org.kde.plasma.bigscreen
 
-export QT_IM_MODULE=qtvirtualkeyboard
-export QT_VIRTUALKEYBOARD_STYLE=Plasma
-
 # Set ~/.config/plasma-bigscreen/... as location for default bigscreen configs (i.e. envmanager generated)
 export XDG_CONFIG_DIRS="$HOME/.config/plasma-bigscreen:/etc/xdg:$XDG_CONFIG_DIRS"
 
