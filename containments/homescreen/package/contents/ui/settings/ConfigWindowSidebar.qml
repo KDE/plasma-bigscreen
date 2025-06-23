@@ -76,7 +76,6 @@ Rectangle {
             onCurrentItemChanged: {
                 if (currentItem) {
                     currentItem.forceActiveFocus();
-                    currentItem.clicked();
                 }
             }
 
@@ -105,7 +104,7 @@ Rectangle {
 
                 background: Rectangle {
                     id: kcmButtonBackground
-                    color: (modelData.kcmId == currentModuleName || kcmButton.ListView.isCurrentItem) ?
+                    color: (modelData.kcmId == currentModuleName) ?
                             Qt.rgba(Kirigami.Theme.highlightColor.r, Kirigami.Theme.highlightColor.g, Kirigami.Theme.highlightColor.b, 0.2) : 'transparent'
                     radius: Kirigami.Units.cornerRadius
 
@@ -113,9 +112,17 @@ Rectangle {
                     Kirigami.Theme.colorSet: Kirigami.Theme.Button
 
                     border.width: 2
-                    border.color: (modelData.kcmId === currentModuleName || kcmButton.ListView.isCurrentItem) ? Kirigami.Theme.highlightColor : 'transparent'
+                    border.color: {
+                        if (modelData.kcmId === currentModuleName) {
+                            return Kirigami.Theme.highlightColor;
+                        } else if (kcmButton.ListView.isCurrentItem && settingsKCMMenu.activeFocus) {
+                            return Kirigami.Theme.highlightColor;
+                        }
+                        return 'transparent';
+                    }
 
-                    scale: (settingsKCMMenu.activeFocus) ? 1.05 : 1.0
+                    // Only scale if this delegate is the shown KCM, and user focus is on it
+                    scale: (modelData.kcmId == currentModuleName && kcmButton.ListView.isCurrentItem && settingsKCMMenu.activeFocus) ? 1.05 : 1
                     Behavior on scale { NumberAnimation {} }
                 }
 
