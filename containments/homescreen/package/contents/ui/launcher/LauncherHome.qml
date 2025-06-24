@@ -26,6 +26,8 @@ FocusScope {
 
     property Item navigationUp
 
+    property real startY
+
     // Whether the view has scrolled down at least one row
     readonly property bool scrolledDown: launcherHomeColumn.currentSection && launcherHomeColumn.currentSection !== favAppsView.currentViewDownwards
 
@@ -36,10 +38,16 @@ FocusScope {
             right: parent.right
         }
         property Item currentSection
+        readonly property Item firstSection: favAppsView.currentViewDownwards
 
-        y: parent.height/2
+        y: root.startY
         function intendedY() {
-            return currentSection ? -currentSection.y + parent.height/2 - currentSection.height/2 : parent.height/2;
+            if (!currentSection) {
+                return startY;
+            } else if (firstSection == currentSection) {
+                return startY;
+            }
+            return Math.round(-currentSection.y + startY - currentSection.height/2);
         }
 
         onCurrentSectionChanged: {

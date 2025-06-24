@@ -20,6 +20,7 @@ import org.kde.kirigami as Kirigami
 FocusScope {
     id: root
 
+    property real startY
     property real leftMargin
     property real rightMargin
 
@@ -86,5 +87,6 @@ FocusScope {
         }
 
         navigationUp: root.KeyNavigation.up
+        startY: root.startY
     }
 }

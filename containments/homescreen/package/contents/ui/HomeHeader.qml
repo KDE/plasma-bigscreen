@@ -23,7 +23,7 @@ import "indicators" as Indicators
 Controls.Control {
     id: root
 
-    readonly property real largeHeight: Kirigami.Units.gridUnit * 15
+    readonly property real largeHeight: Math.min(parent.height / 2, Kirigami.Units.gridUnit * 15)
     readonly property real shrunkHeight: Kirigami.Units.gridUnit * 7
 
     state: "large"
@@ -33,8 +33,8 @@ Controls.Control {
             PropertyChanges { target: clock; state: "column" }
             PropertyChanges { target: root; height: root.largeHeight }
             PropertyChanges {
-                target: rowLayout
-                topMargin: Kirigami.Units.gridUnit * 6
+                target: root
+                topPadding: Math.min(largeHeight - clock.clockBigHeight - Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 6)
             }
         },
         State {
@@ -42,14 +42,14 @@ Controls.Control {
             PropertyChanges { target: clock; state: "row" }
             PropertyChanges { target: root; height: root.shrunkHeight }
             PropertyChanges {
-                target: rowLayout
-                topMargin: Kirigami.Units.gridUnit * 3
+                target: root
+                topPadding: Kirigami.Units.gridUnit * 3
             }
         }
     ]
     transitions: Transition {
         PropertyAnimation { target: root; property: 'height'; duration: 200; easing.type: Easing.InOutCubic }
-        PropertyAnimation { target: rowLayout; property: 'topMargin'; duration: 200; easing.type: Easing.InOutCubic }
+        PropertyAnimation { target: root; property: 'topPadding'; duration: 200; easing.type: Easing.InOutCubic }
     }
 
     // Forward focus to first item
@@ -63,6 +63,11 @@ Controls.Control {
         }
     }
 
+    topPadding: 0
+    bottomPadding: 0
+    leftPadding: 0
+    rightPadding: 0
+
     contentItem: RowLayout {
         id: rowLayout
         spacing: Kirigami.Units.largeSpacing
@@ -70,17 +75,13 @@ Controls.Control {
         Kirigami.Theme.inherit: false
         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
 
-        property real topMargin: Kirigami.Units.gridUnit * 6
-
         Indicators.Clock {
             id: clock
-            Layout.topMargin: rowLayout.topMargin
             Layout.fillWidth: true
             Layout.alignment: Qt.AlignTop | Qt.AlignLeft
         }
 
         RowLayout {
-            Layout.topMargin: rowLayout.topMargin
             Layout.alignment: Qt.AlignTop | Qt.AlignRight
             spacing: Kirigami.Units.gridUnit
 

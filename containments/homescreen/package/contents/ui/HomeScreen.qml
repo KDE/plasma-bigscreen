@@ -92,6 +92,11 @@ Item {
     LauncherMenu {
         id: launcher
         opacity: 0 // Displayed with launcherOpacityGradient below
+        startY: {
+            const minY = header.largeHeight; // Right after the HomeHeader at max height
+            const desiredY = (parent.height / 2);
+            return Math.round(Math.max(minY, desiredY) - header.shrunkHeight); // Adjust for anchors.topMargin
+        }
         anchors {
             fill: parent
             topMargin: header.shrunkHeight

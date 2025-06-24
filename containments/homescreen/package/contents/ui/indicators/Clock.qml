@@ -15,13 +15,12 @@ Item {
     implicitHeight: clockColumn.visible ? clockColumn.implicitHeight : clockRow.implicitHeight
     implicitWidth: clockColumn.visible ? clockColumn.implicitWidth : clockRow.implicitWidth
 
+    // Expose value that doesn't animate
+    readonly property real clockBigHeight: clockColumn.implicitHeight
+
     // TODO whether to show am/pm from locale?
     readonly property string timeString: Qt.formatTime(timeSource.data["Local"]["DateTime"], "h:mm ap");
     readonly property string dateString: Qt.formatDate(timeSource.data["Local"]["DateTime"], "MMMM d, yyyy")
-
-    Behavior on implicitHeight {
-        NumberAnimation { easing.type: Easing.InOutCubic; duration: 200 }
-    }
 
     state: "column"
     states: [
