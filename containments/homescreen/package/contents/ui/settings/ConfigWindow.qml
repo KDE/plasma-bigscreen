@@ -31,7 +31,7 @@ Window {
 
     // HACK: some KCMs we don't want to navigate to because we lose focus
     // The about-distro KCM is not a native bigscreen kcm, so it eats keyboard inputs and softlocks us
-    readonly property bool isCurrentModuleFocusable: currentModuleName != "kcm_about-distro"
+    readonly property bool isCurrentModuleFocusable: true
 
     // Timer utility with callback
     Timer {

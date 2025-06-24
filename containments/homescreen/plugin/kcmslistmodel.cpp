@@ -19,7 +19,7 @@ QVariantMap KcmsListModel::get(int index) const
     if (index < 0 || index >= m_kcms.count()) {
         return QVariantMap();
     }
-    
+
     QVariantMap map;
     map["kcmId"] = m_kcms.at(index).id;
     map["kcmIconName"] = m_kcms.at(index).iconName;
@@ -54,24 +54,31 @@ void KcmsListModel::loadKcms()
     QMap<int, KcmData> orderedList;
     QList<KcmData> unorderedList;
 
-    const auto kcmPlugins = KPluginMetaData::findPlugins("kcms")
-            << KPluginMetaData::findPlugins("plasma/kcms") << KPluginMetaData::findPlugins("plasma/kcms/systemsettings");
+    auto filter = [this](const KPluginMetaData &data) {
+        // TODO: one day, filter by form factor and not name (once kcms are updated with proper form factor)
+        if (data.pluginId().contains("mediacenter")) {
+            return true;
+        }
+        return false;
+    };
 
-    for (const auto &kcm : kcmPlugins) {
-        if (kcm.pluginId().contains("mediacenter")) {
-            KcmData kcmData;
-            kcmData.name = kcm.name();
-            kcmData.description = kcm.description();
-            kcmData.iconName = kcm.iconName();
-            kcmData.id = kcm.pluginId();
-            kcmData.path = kcm.fileName();
+    QList<KPluginMetaData> kcms = KPluginMetaData::findPlugins("kcms", filter);
+    kcms << KPluginMetaData::findPlugins("plasma/kcms", filter);
+    kcms << KPluginMetaData::findPlugins("plasma/kcms/systemsettings", filter);
 
-            auto it = m_appPositions.constFind(kcm.pluginId());
-            if (it != m_appPositions.constEnd()) {
-                orderedList.insert(it.value(), kcmData);
-            } else {
-                unorderedList.append(kcmData);
-            }
+    for (const auto &kcm : kcms) {
+        KcmData kcmData;
+        kcmData.name = kcm.name();
+        kcmData.description = kcm.description();
+        kcmData.iconName = kcm.iconName();
+        kcmData.id = kcm.pluginId();
+        kcmData.path = kcm.fileName();
+
+        auto it = m_appPositions.constFind(kcm.pluginId());
+        if (it != m_appPositions.constEnd()) {
+            orderedList.insert(it.value(), kcmData);
+        } else {
+            unorderedList.append(kcmData);
         }
     }
 
@@ -82,15 +89,13 @@ void KcmsListModel::loadKcms()
     wallpaperData.id = "kcm_mediacenter_wallpaper";
     unorderedList.append(wallpaperData);
 
-    KcmData aboutData;
-    aboutData.name = "About this System";
-    aboutData.iconName = "help-about";
-    aboutData.description = "About the system";
-    aboutData.id = "plasma/kcms/kcm_about-distro";
-    unorderedList.append(aboutData);
-
     m_kcms << orderedList.values();
     m_kcms << unorderedList;
+
+    // Sort alphabetically
+    std::sort(m_kcms.begin(), m_kcms.end(), [](const KcmData &k1, const KcmData &k2) {
+        return k1.name < k2.name;
+    });
 
     endResetModel();
     Q_EMIT countChanged();
