@@ -17,6 +17,7 @@ NanoShell.FullScreenOverlay {
     id: window
 
     function open(windowName, windowIcon) {
+        window.visible = false;
         window.title = windowName;
         window.icon = windowIcon;
         window.state = "open";
@@ -26,8 +27,6 @@ NanoShell.FullScreenOverlay {
     property alias state: windowRoot.state
     property alias icon: icon.source
 
-    width: Screen.width
-    height: Screen.height
     color: "transparent"
 
     onVisibleChanged: {
