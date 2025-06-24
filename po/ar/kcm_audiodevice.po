@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-24 00:44+0000\n"
 "PO-Revision-Date: 2024-10-24 07:43+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -18,36 +18,31 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: ui/delegates/VolumeObject.qml:58
+#: ui/delegates/VolumeObject.qml:62
 #, kde-format
 msgid "Adjust Volume"
 msgstr "اضبط الصوت"
 
-#: ui/delegates/VolumeObject.qml:123
+#: ui/delegates/VolumeObject.qml:131
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "‏%1٪"
 
-#: ui/DeviceChooserPage.qml:58
-#, kde-format
-msgid "Playback Devices"
-msgstr "أجهزة التشغيل"
-
-#: ui/DeviceChooserPage.qml:90
-#, kde-format
-msgid "Recording Devices"
-msgstr "أجهزة التّسجيل"
-
-#: ui/main.qml:20
-#, kde-format
-msgid "Audio Device Chooser"
+#: ui/main.qml:21
+#, fuzzy, kde-format
+#| msgid "Audio Device Chooser"
+msgid "Audio Devices"
 msgstr "منتقى جهاز الصوت"
 
-#: ui/SettingsItem.qml:234
-#, kde-format
-msgid "Press the [←] Back button to return to device selection"
-msgstr "اضغط على زر الخلف [←] لترجع تحديد جهاز"
+#~ msgid "Playback Devices"
+#~ msgstr "أجهزة التشغيل"
+
+#~ msgid "Recording Devices"
+#~ msgstr "أجهزة التّسجيل"
+
+#~ msgid "Press the [←] Back button to return to device selection"
+#~ msgstr "اضغط على زر الخلف [←] لترجع تحديد جهاز"
 
 #~ msgid "Audio Settings"
 #~ msgstr "إعدادات الصوت"

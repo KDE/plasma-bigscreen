@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-23 00:43+0000\n"
-"PO-Revision-Date: 2022-09-30 15:15+0200\n"
+"PO-Revision-Date: 2025-06-23 04:06+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.6\n"
 
 #: ui/delegates/PairedView.qml:35
 #, kde-format
@@ -49,10 +49,9 @@ msgid "This device is not paired"
 msgstr "ეს მოწყობილობა დაწყვილებული არაა"
 
 #: ui/delegates/UnpairedView.qml:56
-#, fuzzy, kde-format
-#| msgid "Pairing request sent to device"
+#, kde-format
 msgid "Pairing request sent"
-msgstr "მოწყობილობაზე დაწყვილების მოთხოვნა გაგზავნილია"
+msgstr "დაწყვილების მოთხოვნა გაგზავნილია"
 
 #: ui/delegates/UnpairedView.qml:60
 #, kde-format

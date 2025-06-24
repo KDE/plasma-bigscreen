@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-20 00:44+0000\n"
+"POT-Creation-Date: 2025-06-24 00:44+0000\n"
 "PO-Revision-Date: 2025-06-01 07:29+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -28,133 +28,137 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "matjaz.jeran@amis.net"
 
-#: ui/delegates/DatePicker.qml:38
+#: ui/DatePicker.qml:38
 #, kde-format
 msgid "Year"
 msgstr "Leto"
 
-#: ui/delegates/DatePicker.qml:54
+#: ui/DatePicker.qml:54
 #, kde-format
 msgid "Month"
 msgstr "Mesec"
 
-#: ui/delegates/DatePicker.qml:70
+#: ui/DatePicker.qml:70
 #, kde-format
 msgid "Day"
 msgstr "Dan"
 
-#: ui/delegates/DeviceTimeSettings.qml:136
-#, kde-format
-msgid "Time Display"
-msgstr "Prikaz časa"
+#: ui/DeviceTimeSettingsSidebar.qml:78
+#, fuzzy, kde-format
+#| msgid "Adjust Date & Time"
+msgid "Adjust Date & Time Settings"
+msgstr "Prilagodi datum in čas"
 
-#: ui/delegates/DeviceTimeSettings.qml:145
-#, kde-format
-msgid "Timezone:"
+#: ui/DeviceTimeSettingsSidebar.qml:90
+#, fuzzy, kde-format
+#| msgid "Timezone:"
+msgid "Timezone"
 msgstr "Časovni pas:"
 
-#: ui/delegates/DeviceTimeSettings.qml:187
+#: ui/DeviceTimeSettingsSidebar.qml:102
 #, kde-format
 msgid "Set time automatically"
 msgstr "Samodejno nastavi čas"
 
-#: ui/delegates/DeviceTimeSettings.qml:256
-#, kde-format
-msgid "Time"
-msgstr "Čas"
-
-#: ui/delegates/DeviceTimeSettings.qml:318
-#, kde-format
-msgid "Date"
-msgstr "Datum"
-
-#: ui/delegates/DeviceTimeSettings.qml:399 ui/delegates/ShortcutsPicker.qml:191
-#, kde-format
-msgid "Press the [←] Back button to return to appearance settings"
-msgstr "Pritisnite gumb [←] za povratek na nastavitve videza"
-
-#: ui/delegates/DeviceTimeSettings.qml:460
-#: ui/delegates/DeviceTimeSettings.qml:583
-#: ui/delegates/DeviceTimeSettings.qml:678
-#, kde-format
-msgid "Press the [←] Back button to save configuration and return to settings"
-msgstr ""
-"Pritisnite gumb [←] za shranjevanje nastavitev in povratek na nastavitve"
-
-#: ui/delegates/DeviceTimeSettings.qml:482
+#: ui/DeviceTimeSettingsSidebar.qml:181
 #, kde-format
 msgid "Search City / Region"
 msgstr "Išči kraj / Regijo"
 
-#: ui/delegates/DeviceTimeSettings.qml:501
+#: ui/DeviceTimeSettingsSidebar.qml:200
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "Vaš lokalni časovni pas je %1"
 
-#: ui/delegates/DeviceTimeSettings.qml:501
+#: ui/DeviceTimeSettingsSidebar.qml:200
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: ui/delegates/ShortcutsPicker.qml:67
+#: ui/main.qml:22 ui/main.qml:76
 #, kde-format
-msgid "Update Shortcut Keys"
-msgstr "Posodobi tipke bližnjice"
+msgid "System"
+msgstr ""
 
-#: ui/delegates/ShortcutsPicker.qml:106
-#, kde-format
-msgid "Reset Default"
-msgstr "Ponovno nastavi privzeto"
-
-#: ui/delegates/ShortcutsPicker.qml:120
-#, kde-format
-msgid "Set Shortcut"
-msgstr "Nastavi bližnjico"
-
-#: ui/delegates/TimePicker.qml:40
-#, kde-format
-msgid "Hour"
-msgstr "Ura"
-
-#: ui/delegates/TimePicker.qml:56
-#, kde-format
-msgid "Minute"
-msgstr "Minuta"
-
-#: ui/delegates/TimePicker.qml:72
-#, kde-format
-msgid "Second"
-msgstr "Sekunda"
-
-#: ui/delegates/TimePicker.qml:89
-#, kde-format
-msgid "AM/PM"
-msgstr "Dop/Pop"
-
-#: ui/main.qml:21
-#, kde-format
-msgid "Appearance"
-msgstr "Videz"
-
-#: ui/main.qml:74
-#, kde-format
-msgid "Home Screen Appearance"
+#: ui/main.qml:42
+#, fuzzy, kde-format
+#| msgid "Home Screen Appearance"
+msgid "Homescreen Appearance"
 msgstr "Videz domačega zaslona"
 
-#: ui/main.qml:82
-#, kde-format
-msgid "Colored Tiles"
+#: ui/main.qml:55
+#, fuzzy, kde-format
+#| msgid "Colored Tiles"
+msgid "Colored tiles"
 msgstr "Pobarvane ploščice"
 
-#: ui/main.qml:83
+#: ui/main.qml:56
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "Ozadja ploščic bodo obarvana glede na ikono aplikacije"
 
-#: ui/main.qml:102
+#: ui/main.qml:104
+#, fuzzy, kde-format
+#| msgid "Set Shortcut"
+msgid "Shortcuts"
+msgstr "Nastavi bližnjico"
+
+#: ui/ShortcutsPickerSidebar.qml:63
+#, fuzzy, kde-format
+#| msgid "Reset Default"
+msgid "Reset to default"
+msgstr "Ponovno nastavi privzeto"
+
+#: ui/ShortcutsPickerSidebar.qml:77
 #, kde-format
-msgid "Global Theme"
-msgstr "Globalna tema"
+msgid "Set Shortcut"
+msgstr "Nastavi bližnjico"
+
+#: ui/TimePicker.qml:40
+#, kde-format
+msgid "Hour"
+msgstr "Ura"
+
+#: ui/TimePicker.qml:56
+#, kde-format
+msgid "Minute"
+msgstr "Minuta"
+
+#: ui/TimePicker.qml:72
+#, kde-format
+msgid "Second"
+msgstr "Sekunda"
+
+#: ui/TimePicker.qml:89
+#, kde-format
+msgid "AM/PM"
+msgstr "Dop/Pop"
+
+#~ msgid "Time Display"
+#~ msgstr "Prikaz časa"
+
+#~ msgid "Time"
+#~ msgstr "Čas"
+
+#~ msgid "Date"
+#~ msgstr "Datum"
+
+#~ msgid "Press the [←] Back button to return to appearance settings"
+#~ msgstr "Pritisnite gumb [←] za povratek na nastavitve videza"
+
+#~ msgid ""
+#~ "Press the [←] Back button to save configuration and return to settings"
+#~ msgstr ""
+#~ "Pritisnite gumb [←] za shranjevanje nastavitev in povratek na nastavitve"
+
+#~ msgid "Update Shortcut Keys"
+#~ msgstr "Posodobi tipke bližnjice"
+
+#~ msgid "Appearance"
+#~ msgstr "Videz"
+
+#~ msgid "Global Theme"
+#~ msgstr "Globalna tema"
 
 #~ msgid "Expanding Tiles"
 #~ msgstr "Razširjajoči ploščice"
@@ -167,9 +171,6 @@ msgstr "Globalna tema"
 
 #~ msgid "Power Inhibition"
 #~ msgstr "Zaviranje moči"
-
-#~ msgid "Adjust Date & Time"
-#~ msgstr "Prilagodi datum in čas"
 
 #~ msgid "Bigscreen Shortcuts"
 #~ msgstr "Bližnjice velikega zaslona"

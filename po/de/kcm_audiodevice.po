@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_audiodevice\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-24 00:44+0000\n"
 "PO-Revision-Date: 2022-04-15 04:47+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -18,36 +18,31 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: ui/delegates/VolumeObject.qml:58
+#: ui/delegates/VolumeObject.qml:62
 #, kde-format
 msgid "Adjust Volume"
 msgstr "Lautstärke anpassen"
 
-#: ui/delegates/VolumeObject.qml:123
+#: ui/delegates/VolumeObject.qml:131
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/DeviceChooserPage.qml:58
-#, kde-format
-msgid "Playback Devices"
-msgstr "Wiedergabegeräte"
-
-#: ui/DeviceChooserPage.qml:90
-#, kde-format
-msgid "Recording Devices"
-msgstr "Aufnahmegeräte"
-
-#: ui/main.qml:20
-#, kde-format
-msgid "Audio Device Chooser"
+#: ui/main.qml:21
+#, fuzzy, kde-format
+#| msgid "Audio Device Chooser"
+msgid "Audio Devices"
 msgstr "Audiogerät auswählen"
 
-#: ui/SettingsItem.qml:234
-#, kde-format
-msgid "Press the [←] Back button to return to device selection"
-msgstr "Drücken Sie den Knopf  [←]  „Zurück“ bringt Sie zur Geräteauswahl"
+#~ msgid "Playback Devices"
+#~ msgstr "Wiedergabegeräte"
+
+#~ msgid "Recording Devices"
+#~ msgstr "Aufnahmegeräte"
+
+#~ msgid "Press the [←] Back button to return to device selection"
+#~ msgstr "Drücken Sie den Knopf  [←]  „Zurück“ bringt Sie zur Geräteauswahl"
 
 #~ msgctxt "label of device items"
 #~ msgid "%1 (%2)"

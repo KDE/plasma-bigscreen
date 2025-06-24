@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-24 00:44+0000\n"
 "PO-Revision-Date: 2024-10-26 17:46+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,36 +20,31 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: ui/delegates/VolumeObject.qml:58
+#: ui/delegates/VolumeObject.qml:62
 #, kde-format
 msgid "Adjust Volume"
 msgstr "Doitu bolumena"
 
-#: ui/delegates/VolumeObject.qml:123
+#: ui/delegates/VolumeObject.qml:131
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "% %1"
 
-#: ui/DeviceChooserPage.qml:58
-#, kde-format
-msgid "Playback Devices"
-msgstr "Atzera jotzeko gailuak"
-
-#: ui/DeviceChooserPage.qml:90
-#, kde-format
-msgid "Recording Devices"
-msgstr "Grabatzeko gailuak"
-
-#: ui/main.qml:20
-#, kde-format
-msgid "Audio Device Chooser"
+#: ui/main.qml:21
+#, fuzzy, kde-format
+#| msgid "Audio Device Chooser"
+msgid "Audio Devices"
 msgstr "Audio-gailu hautatzailea"
 
-#: ui/SettingsItem.qml:234
-#, kde-format
-msgid "Press the [←] Back button to return to device selection"
-msgstr "Sakatu [←] Atzera botoia gailuen hautapenera itzultzeko"
+#~ msgid "Playback Devices"
+#~ msgstr "Atzera jotzeko gailuak"
+
+#~ msgid "Recording Devices"
+#~ msgstr "Grabatzeko gailuak"
+
+#~ msgid "Press the [←] Back button to return to device selection"
+#~ msgstr "Sakatu [←] Atzera botoia gailuen hautapenera itzultzeko"
 
 #~ msgid "Audio Settings"
 #~ msgstr "Audio-ezarpenak"

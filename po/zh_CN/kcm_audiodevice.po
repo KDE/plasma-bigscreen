@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-24 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,33 +17,28 @@ msgstr ""
 "X-Crowdin-File: /kf6-trunk/messages/plasma-bigscreen/kcm_audiodevice.pot\n"
 "X-Crowdin-File-ID: 49400\n"
 
-#: ui/delegates/VolumeObject.qml:58
+#: ui/delegates/VolumeObject.qml:62
 #, kde-format
 msgid "Adjust Volume"
 msgstr "调整音量"
 
-#: ui/delegates/VolumeObject.qml:123
+#: ui/delegates/VolumeObject.qml:131
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/DeviceChooserPage.qml:58
-#, kde-format
-msgid "Playback Devices"
-msgstr "播放设备"
-
-#: ui/DeviceChooserPage.qml:90
-#, kde-format
-msgid "Recording Devices"
-msgstr "录音设备"
-
-#: ui/main.qml:20
-#, kde-format
-msgid "Audio Device Chooser"
+#: ui/main.qml:21
+#, fuzzy, kde-format
+#| msgid "Audio Device Chooser"
+msgid "Audio Devices"
 msgstr "音频设备选择程序"
 
-#: ui/SettingsItem.qml:234
-#, kde-format
-msgid "Press the [←] Back button to return to device selection"
-msgstr "点击 [←] 后退按钮返回设备选择列表"
+#~ msgid "Playback Devices"
+#~ msgstr "播放设备"
+
+#~ msgid "Recording Devices"
+#~ msgstr "录音设备"
+
+#~ msgid "Press the [←] Back button to return to device selection"
+#~ msgstr "点击 [←] 后退按钮返回设备选择列表"

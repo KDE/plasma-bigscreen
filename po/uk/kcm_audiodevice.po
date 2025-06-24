@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_audiodevice\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-24 00:44+0000\n"
 "PO-Revision-Date: 2024-10-17 15:22+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -20,36 +20,31 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: ui/delegates/VolumeObject.qml:58
+#: ui/delegates/VolumeObject.qml:62
 #, kde-format
 msgid "Adjust Volume"
 msgstr "Регулювання гучності"
 
-#: ui/delegates/VolumeObject.qml:123
+#: ui/delegates/VolumeObject.qml:131
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/DeviceChooserPage.qml:58
-#, kde-format
-msgid "Playback Devices"
-msgstr "Пристрої відтворення"
-
-#: ui/DeviceChooserPage.qml:90
-#, kde-format
-msgid "Recording Devices"
-msgstr "Пристрої запису"
-
-#: ui/main.qml:20
-#, kde-format
-msgid "Audio Device Chooser"
+#: ui/main.qml:21
+#, fuzzy, kde-format
+#| msgid "Audio Device Chooser"
+msgid "Audio Devices"
 msgstr "Вибір звукового пристрою"
 
-#: ui/SettingsItem.qml:234
-#, kde-format
-msgid "Press the [←] Back button to return to device selection"
-msgstr "Натисніть кнопку «[←] Назад», щоб повернутися до вибору пристрою"
+#~ msgid "Playback Devices"
+#~ msgstr "Пристрої відтворення"
+
+#~ msgid "Recording Devices"
+#~ msgstr "Пристрої запису"
+
+#~ msgid "Press the [←] Back button to return to device selection"
+#~ msgstr "Натисніть кнопку «[←] Назад», щоб повернутися до вибору пристрою"
 
 #~ msgid "Audio Settings"
 #~ msgstr "Параметри звуку"

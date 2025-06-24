@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-20 00:44+0000\n"
+"POT-Creation-Date: 2025-06-24 00:44+0000\n"
 "PO-Revision-Date: 2025-06-01 20:50+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -28,132 +28,136 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-l10n-he@kde.org"
 
-#: ui/delegates/DatePicker.qml:38
+#: ui/DatePicker.qml:38
 #, kde-format
 msgid "Year"
 msgstr "שנה"
 
-#: ui/delegates/DatePicker.qml:54
+#: ui/DatePicker.qml:54
 #, kde-format
 msgid "Month"
 msgstr "חודש"
 
-#: ui/delegates/DatePicker.qml:70
+#: ui/DatePicker.qml:70
 #, kde-format
 msgid "Day"
 msgstr "יום"
 
-#: ui/delegates/DeviceTimeSettings.qml:136
-#, kde-format
-msgid "Time Display"
-msgstr "תצוגת שעה"
+#: ui/DeviceTimeSettingsSidebar.qml:78
+#, fuzzy, kde-format
+#| msgid "Adjust Date & Time"
+msgid "Adjust Date & Time Settings"
+msgstr "כיוון התאריך והשעה"
 
-#: ui/delegates/DeviceTimeSettings.qml:145
-#, kde-format
-msgid "Timezone:"
+#: ui/DeviceTimeSettingsSidebar.qml:90
+#, fuzzy, kde-format
+#| msgid "Timezone:"
+msgid "Timezone"
 msgstr "אזור זמן:"
 
-#: ui/delegates/DeviceTimeSettings.qml:187
+#: ui/DeviceTimeSettingsSidebar.qml:102
 #, kde-format
 msgid "Set time automatically"
 msgstr "הגדרת השעה אוטומטית"
 
-#: ui/delegates/DeviceTimeSettings.qml:256
-#, kde-format
-msgid "Time"
-msgstr "שעה"
-
-#: ui/delegates/DeviceTimeSettings.qml:318
-#, kde-format
-msgid "Date"
-msgstr "תאריך"
-
-#: ui/delegates/DeviceTimeSettings.qml:399 ui/delegates/ShortcutsPicker.qml:191
-#, kde-format
-msgid "Press the [←] Back button to return to appearance settings"
-msgstr "יש לחזור על כפתור החזרה [→] כדי לחזור להגדרות המראה"
-
-#: ui/delegates/DeviceTimeSettings.qml:460
-#: ui/delegates/DeviceTimeSettings.qml:583
-#: ui/delegates/DeviceTimeSettings.qml:678
-#, kde-format
-msgid "Press the [←] Back button to save configuration and return to settings"
-msgstr "יש לחזור על כפתור החזרה [→] כדי לשמור את התצורה ולחזור להגדרות"
-
-#: ui/delegates/DeviceTimeSettings.qml:482
+#: ui/DeviceTimeSettingsSidebar.qml:181
 #, kde-format
 msgid "Search City / Region"
 msgstr "חיפוש עיר / אזור"
 
-#: ui/delegates/DeviceTimeSettings.qml:501
+#: ui/DeviceTimeSettingsSidebar.qml:200
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "אזור הזמן המקומי שלך הוא %1"
 
-#: ui/delegates/DeviceTimeSettings.qml:501
+#: ui/DeviceTimeSettingsSidebar.qml:200
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: ui/delegates/ShortcutsPicker.qml:67
+#: ui/main.qml:22 ui/main.qml:76
 #, kde-format
-msgid "Update Shortcut Keys"
-msgstr "עדכון מקשי קיצור"
+msgid "System"
+msgstr ""
 
-#: ui/delegates/ShortcutsPicker.qml:106
-#, kde-format
-msgid "Reset Default"
-msgstr "איפוס ברירת המחדל"
-
-#: ui/delegates/ShortcutsPicker.qml:120
-#, kde-format
-msgid "Set Shortcut"
-msgstr "הגדרת קיצור דרך"
-
-#: ui/delegates/TimePicker.qml:40
-#, kde-format
-msgid "Hour"
-msgstr "שעה"
-
-#: ui/delegates/TimePicker.qml:56
-#, kde-format
-msgid "Minute"
-msgstr "דקה"
-
-#: ui/delegates/TimePicker.qml:72
-#, kde-format
-msgid "Second"
-msgstr "שנייה"
-
-#: ui/delegates/TimePicker.qml:89
-#, kde-format
-msgid "AM/PM"
-msgstr "AM/PM"
-
-#: ui/main.qml:21
-#, kde-format
-msgid "Appearance"
-msgstr "מראה"
-
-#: ui/main.qml:74
-#, kde-format
-msgid "Home Screen Appearance"
+#: ui/main.qml:42
+#, fuzzy, kde-format
+#| msgid "Home Screen Appearance"
+msgid "Homescreen Appearance"
 msgstr "מראה מסך הבית"
 
-#: ui/main.qml:82
-#, kde-format
-msgid "Colored Tiles"
+#: ui/main.qml:55
+#, fuzzy, kde-format
+#| msgid "Colored Tiles"
+msgid "Colored tiles"
 msgstr "אריחים צבעוניים"
 
-#: ui/main.qml:83
+#: ui/main.qml:56
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "הרקע הזה ייצבע לפי סמל היישומון"
 
-#: ui/main.qml:102
+#: ui/main.qml:104
+#, fuzzy, kde-format
+#| msgid "Set Shortcut"
+msgid "Shortcuts"
+msgstr "הגדרת קיצור דרך"
+
+#: ui/ShortcutsPickerSidebar.qml:63
+#, fuzzy, kde-format
+#| msgid "Reset Default"
+msgid "Reset to default"
+msgstr "איפוס ברירת המחדל"
+
+#: ui/ShortcutsPickerSidebar.qml:77
 #, kde-format
-msgid "Global Theme"
-msgstr "ערכת עיצוב כללית"
+msgid "Set Shortcut"
+msgstr "הגדרת קיצור דרך"
+
+#: ui/TimePicker.qml:40
+#, kde-format
+msgid "Hour"
+msgstr "שעה"
+
+#: ui/TimePicker.qml:56
+#, kde-format
+msgid "Minute"
+msgstr "דקה"
+
+#: ui/TimePicker.qml:72
+#, kde-format
+msgid "Second"
+msgstr "שנייה"
+
+#: ui/TimePicker.qml:89
+#, kde-format
+msgid "AM/PM"
+msgstr "AM/PM"
+
+#~ msgid "Time Display"
+#~ msgstr "תצוגת שעה"
+
+#~ msgid "Time"
+#~ msgstr "שעה"
+
+#~ msgid "Date"
+#~ msgstr "תאריך"
+
+#~ msgid "Press the [←] Back button to return to appearance settings"
+#~ msgstr "יש לחזור על כפתור החזרה [→] כדי לחזור להגדרות המראה"
+
+#~ msgid ""
+#~ "Press the [←] Back button to save configuration and return to settings"
+#~ msgstr "יש לחזור על כפתור החזרה [→] כדי לשמור את התצורה ולחזור להגדרות"
+
+#~ msgid "Update Shortcut Keys"
+#~ msgstr "עדכון מקשי קיצור"
+
+#~ msgid "Appearance"
+#~ msgstr "מראה"
+
+#~ msgid "Global Theme"
+#~ msgstr "ערכת עיצוב כללית"
 
 #~ msgid "Expanding Tiles"
 #~ msgstr "אריחים מתרחבים"
@@ -166,9 +170,6 @@ msgstr "ערכת עיצוב כללית"
 
 #~ msgid "Power Inhibition"
 #~ msgstr "מניעת צריכת חשמל"
-
-#~ msgid "Adjust Date & Time"
-#~ msgstr "כיוון התאריך והשעה"
 
 #~ msgid "Bigscreen Shortcuts"
 #~ msgstr "קיצורי דרך למסכים גדולים"

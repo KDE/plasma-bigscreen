@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-20 00:44+0000\n"
+"POT-Creation-Date: 2025-06-24 00:44+0000\n"
 "PO-Revision-Date: 2025-06-19 10:01+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -27,132 +27,137 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "adrian@chaves.gal"
 
-#: ui/delegates/DatePicker.qml:38
+#: ui/DatePicker.qml:38
 #, kde-format
 msgid "Year"
 msgstr "Ano"
 
-#: ui/delegates/DatePicker.qml:54
+#: ui/DatePicker.qml:54
 #, kde-format
 msgid "Month"
 msgstr "Mes"
 
-#: ui/delegates/DatePicker.qml:70
+#: ui/DatePicker.qml:70
 #, kde-format
 msgid "Day"
 msgstr "Día"
 
-#: ui/delegates/DeviceTimeSettings.qml:136
-#, kde-format
-msgid "Time Display"
-msgstr "Visualización da hora"
+#: ui/DeviceTimeSettingsSidebar.qml:78
+#, fuzzy, kde-format
+#| msgid "Adjust Date & Time"
+msgid "Adjust Date & Time Settings"
+msgstr "Axustar a data e hora"
 
-#: ui/delegates/DeviceTimeSettings.qml:145
-#, kde-format
-msgid "Timezone:"
+#: ui/DeviceTimeSettingsSidebar.qml:90
+#, fuzzy, kde-format
+#| msgid "Timezone:"
+msgid "Timezone"
 msgstr "Fuso horario:"
 
-#: ui/delegates/DeviceTimeSettings.qml:187
+#: ui/DeviceTimeSettingsSidebar.qml:102
 #, kde-format
 msgid "Set time automatically"
 msgstr "Definir a hora automaticamente."
 
-#: ui/delegates/DeviceTimeSettings.qml:256
-#, kde-format
-msgid "Time"
-msgstr "Hora"
-
-#: ui/delegates/DeviceTimeSettings.qml:318
-#, kde-format
-msgid "Date"
-msgstr "Data"
-
-#: ui/delegates/DeviceTimeSettings.qml:399 ui/delegates/ShortcutsPicker.qml:191
-#, kde-format
-msgid "Press the [←] Back button to return to appearance settings"
-msgstr "Prema o botón de [←] Atrás para volver á configuración da aparencia."
-
-#: ui/delegates/DeviceTimeSettings.qml:460
-#: ui/delegates/DeviceTimeSettings.qml:583
-#: ui/delegates/DeviceTimeSettings.qml:678
-#, kde-format
-msgid "Press the [←] Back button to save configuration and return to settings"
-msgstr "Prema o botón de [←] Atrás para gardar e volver á configuración."
-
-#: ui/delegates/DeviceTimeSettings.qml:482
+#: ui/DeviceTimeSettingsSidebar.qml:181
 #, kde-format
 msgid "Search City / Region"
 msgstr "Buscar unha cidade ou rexión"
 
-#: ui/delegates/DeviceTimeSettings.qml:501
+#: ui/DeviceTimeSettingsSidebar.qml:200
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "O fuso horario local é %1."
 
-#: ui/delegates/DeviceTimeSettings.qml:501
+#: ui/DeviceTimeSettingsSidebar.qml:200
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: ui/delegates/ShortcutsPicker.qml:67
+#: ui/main.qml:22 ui/main.qml:76
 #, kde-format
-msgid "Update Shortcut Keys"
-msgstr "Actualizar as teclas de atallo"
+msgid "System"
+msgstr ""
 
-#: ui/delegates/ShortcutsPicker.qml:106
-#, kde-format
-msgid "Reset Default"
-msgstr "Restabelecer o predeterminado"
-
-#: ui/delegates/ShortcutsPicker.qml:120
-#, kde-format
-msgid "Set Shortcut"
-msgstr "Definir o atallo"
-
-#: ui/delegates/TimePicker.qml:40
-#, kde-format
-msgid "Hour"
-msgstr "Hora"
-
-#: ui/delegates/TimePicker.qml:56
-#, kde-format
-msgid "Minute"
-msgstr "Minuto"
-
-#: ui/delegates/TimePicker.qml:72
-#, kde-format
-msgid "Second"
-msgstr "Segundo"
-
-#: ui/delegates/TimePicker.qml:89
-#, kde-format
-msgid "AM/PM"
-msgstr "a. m. / p. m."
-
-#: ui/main.qml:21
-#, kde-format
-msgid "Appearance"
-msgstr "Aparencia"
-
-#: ui/main.qml:74
-#, kde-format
-msgid "Home Screen Appearance"
+#: ui/main.qml:42
+#, fuzzy, kde-format
+#| msgid "Home Screen Appearance"
+msgid "Homescreen Appearance"
 msgstr "Aparencia da pantalla principal"
 
-#: ui/main.qml:82
-#, kde-format
-msgid "Colored Tiles"
+#: ui/main.qml:55
+#, fuzzy, kde-format
+#| msgid "Colored Tiles"
+msgid "Colored tiles"
 msgstr "Teselas coradas"
 
-#: ui/main.qml:83
+#: ui/main.qml:56
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "Os fondos de teselas colaranse en liña coa icona da aplicación."
 
-#: ui/main.qml:102
+#: ui/main.qml:104
+#, fuzzy, kde-format
+#| msgid "Set Shortcut"
+msgid "Shortcuts"
+msgstr "Definir o atallo"
+
+#: ui/ShortcutsPickerSidebar.qml:63
+#, fuzzy, kde-format
+#| msgid "Reset Default"
+msgid "Reset to default"
+msgstr "Restabelecer o predeterminado"
+
+#: ui/ShortcutsPickerSidebar.qml:77
 #, kde-format
-msgid "Global Theme"
-msgstr "Tema global"
+msgid "Set Shortcut"
+msgstr "Definir o atallo"
+
+#: ui/TimePicker.qml:40
+#, kde-format
+msgid "Hour"
+msgstr "Hora"
+
+#: ui/TimePicker.qml:56
+#, kde-format
+msgid "Minute"
+msgstr "Minuto"
+
+#: ui/TimePicker.qml:72
+#, kde-format
+msgid "Second"
+msgstr "Segundo"
+
+#: ui/TimePicker.qml:89
+#, kde-format
+msgid "AM/PM"
+msgstr "a. m. / p. m."
+
+#~ msgid "Time Display"
+#~ msgstr "Visualización da hora"
+
+#~ msgid "Time"
+#~ msgstr "Hora"
+
+#~ msgid "Date"
+#~ msgstr "Data"
+
+#~ msgid "Press the [←] Back button to return to appearance settings"
+#~ msgstr ""
+#~ "Prema o botón de [←] Atrás para volver á configuración da aparencia."
+
+#~ msgid ""
+#~ "Press the [←] Back button to save configuration and return to settings"
+#~ msgstr "Prema o botón de [←] Atrás para gardar e volver á configuración."
+
+#~ msgid "Update Shortcut Keys"
+#~ msgstr "Actualizar as teclas de atallo"
+
+#~ msgid "Appearance"
+#~ msgstr "Aparencia"
+
+#~ msgid "Global Theme"
+#~ msgstr "Tema global"
 
 #~ msgid "Expanding Tiles"
 #~ msgstr "Teselas expansíbeis"
@@ -162,9 +167,6 @@ msgstr "Tema global"
 
 #~ msgid "Power Inhibition"
 #~ msgstr "Inhibición da enerxía"
-
-#~ msgid "Adjust Date & Time"
-#~ msgstr "Axustar a data e hora"
 
 #~ msgid "Bigscreen Shortcuts"
 #~ msgstr "Atallos de Bigscreen"

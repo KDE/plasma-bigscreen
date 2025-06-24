@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-20 00:44+0000\n"
+"POT-Creation-Date: 2025-06-24 00:44+0000\n"
 "PO-Revision-Date: 2024-05-17 01:59+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -29,137 +29,133 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "<>"
 
-#: ui/delegates/DatePicker.qml:38
+#: ui/DatePicker.qml:38
 #, kde-format
 msgid "Year"
 msgstr ""
 
-#: ui/delegates/DatePicker.qml:54
+#: ui/DatePicker.qml:54
 #, kde-format
 msgid "Month"
 msgstr ""
 
-#: ui/delegates/DatePicker.qml:70
+#: ui/DatePicker.qml:70
 #, fuzzy, kde-format
 #| msgid "May"
 msgid "Day"
 msgstr "Geg"
 
-#: ui/delegates/DeviceTimeSettings.qml:136
-#, kde-format
-msgid "Time Display"
-msgstr "Laiko atvaizdavimas"
+#: ui/DeviceTimeSettingsSidebar.qml:78
+#, fuzzy, kde-format
+#| msgid "Adjust Date & Time"
+msgid "Adjust Date & Time Settings"
+msgstr "Reguliuoti datą ir laiką"
 
-#: ui/delegates/DeviceTimeSettings.qml:145
-#, kde-format
-msgid "Timezone:"
+#: ui/DeviceTimeSettingsSidebar.qml:90
+#, fuzzy, kde-format
+#| msgid "Timezone:"
+msgid "Timezone"
 msgstr "Laiko juosta:"
 
-#: ui/delegates/DeviceTimeSettings.qml:187
+#: ui/DeviceTimeSettingsSidebar.qml:102
 #, fuzzy, kde-format
 #| msgid "Set time automatically:"
 msgid "Set time automatically"
 msgstr "Nustatyti laiką automatiškai:"
 
-#: ui/delegates/DeviceTimeSettings.qml:256
-#, kde-format
-msgid "Time"
-msgstr "Laikas"
-
-#: ui/delegates/DeviceTimeSettings.qml:318
-#, kde-format
-msgid "Date"
-msgstr "Data"
-
-#: ui/delegates/DeviceTimeSettings.qml:399 ui/delegates/ShortcutsPicker.qml:191
-#, kde-format
-msgid "Press the [←] Back button to return to appearance settings"
-msgstr "Paspauskite mygtuką [←] „Atgal“ norėdami grįžti į išvaizdos nuostatas"
-
-#: ui/delegates/DeviceTimeSettings.qml:460
-#: ui/delegates/DeviceTimeSettings.qml:583
-#: ui/delegates/DeviceTimeSettings.qml:678
-#, kde-format
-msgid "Press the [←] Back button to save configuration and return to settings"
-msgstr ""
-"Paspauskite mygtuką [←] „Atgal“ norėdami įrašyti konfigūraciją ir grįžti į "
-"nuostatas"
-
-#: ui/delegates/DeviceTimeSettings.qml:482
+#: ui/DeviceTimeSettingsSidebar.qml:181
 #, kde-format
 msgid "Search City / Region"
 msgstr ""
 
-#: ui/delegates/DeviceTimeSettings.qml:501
+#: ui/DeviceTimeSettingsSidebar.qml:200
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "Jūsų vietinė laiko juosta yra %1"
 
-#: ui/delegates/DeviceTimeSettings.qml:501
+#: ui/DeviceTimeSettingsSidebar.qml:200
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: ui/delegates/ShortcutsPicker.qml:67
+#: ui/main.qml:22 ui/main.qml:76
 #, kde-format
-msgid "Update Shortcut Keys"
+msgid "System"
 msgstr ""
 
-#: ui/delegates/ShortcutsPicker.qml:106
-#, kde-format
-msgid "Reset Default"
-msgstr ""
-
-#: ui/delegates/ShortcutsPicker.qml:120
-#, kde-format
-msgid "Set Shortcut"
-msgstr ""
-
-#: ui/delegates/TimePicker.qml:40
-#, kde-format
-msgid "Hour"
-msgstr ""
-
-#: ui/delegates/TimePicker.qml:56
-#, kde-format
-msgid "Minute"
-msgstr ""
-
-#: ui/delegates/TimePicker.qml:72
-#, kde-format
-msgid "Second"
-msgstr ""
-
-#: ui/delegates/TimePicker.qml:89
-#, kde-format
-msgid "AM/PM"
-msgstr ""
-
-#: ui/main.qml:21
-#, kde-format
-msgid "Appearance"
-msgstr "Išvaizda"
-
-#: ui/main.qml:74
+#: ui/main.qml:42
 #, fuzzy, kde-format
 #| msgid "General Appearance"
-msgid "Home Screen Appearance"
+msgid "Homescreen Appearance"
 msgstr "Bendra išvaizda"
 
-#: ui/main.qml:82
-#, kde-format
-msgid "Colored Tiles"
+#: ui/main.qml:55
+#, fuzzy, kde-format
+#| msgid "Colored Tiles"
+msgid "Colored tiles"
 msgstr "Spalvotos plytelės"
 
-#: ui/main.qml:83
+#: ui/main.qml:56
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr ""
 
-#: ui/main.qml:102
+#: ui/main.qml:104
 #, kde-format
-msgid "Global Theme"
+msgid "Shortcuts"
 msgstr ""
+
+#: ui/ShortcutsPickerSidebar.qml:63
+#, kde-format
+msgid "Reset to default"
+msgstr ""
+
+#: ui/ShortcutsPickerSidebar.qml:77
+#, kde-format
+msgid "Set Shortcut"
+msgstr ""
+
+#: ui/TimePicker.qml:40
+#, kde-format
+msgid "Hour"
+msgstr ""
+
+#: ui/TimePicker.qml:56
+#, kde-format
+msgid "Minute"
+msgstr ""
+
+#: ui/TimePicker.qml:72
+#, kde-format
+msgid "Second"
+msgstr ""
+
+#: ui/TimePicker.qml:89
+#, kde-format
+msgid "AM/PM"
+msgstr ""
+
+#~ msgid "Time Display"
+#~ msgstr "Laiko atvaizdavimas"
+
+#~ msgid "Time"
+#~ msgstr "Laikas"
+
+#~ msgid "Date"
+#~ msgstr "Data"
+
+#~ msgid "Press the [←] Back button to return to appearance settings"
+#~ msgstr ""
+#~ "Paspauskite mygtuką [←] „Atgal“ norėdami grįžti į išvaizdos nuostatas"
+
+#~ msgid ""
+#~ "Press the [←] Back button to save configuration and return to settings"
+#~ msgstr ""
+#~ "Paspauskite mygtuką [←] „Atgal“ norėdami įrašyti konfigūraciją ir grįžti "
+#~ "į nuostatas"
+
+#~ msgid "Appearance"
+#~ msgstr "Išvaizda"
 
 #~ msgid "Expanding Tiles"
 #~ msgstr "Didėjančios plytelės"
@@ -169,9 +165,6 @@ msgstr ""
 
 #~ msgid "Power Inhibition"
 #~ msgstr "Maitinimo slopinimas"
-
-#~ msgid "Adjust Date & Time"
-#~ msgstr "Reguliuoti datą ir laiką"
 
 #~ msgid "Jan"
 #~ msgstr "Sau"

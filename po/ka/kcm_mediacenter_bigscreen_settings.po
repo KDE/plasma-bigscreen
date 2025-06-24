@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-20 00:44+0000\n"
+"POT-Creation-Date: 2025-06-24 00:44+0000\n"
 "PO-Revision-Date: 2025-06-01 05:29+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -28,134 +28,138 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Temuri.doghonadze@gmail.com"
 
-#: ui/delegates/DatePicker.qml:38
+#: ui/DatePicker.qml:38
 #, kde-format
 msgid "Year"
 msgstr "წელი"
 
-#: ui/delegates/DatePicker.qml:54
+#: ui/DatePicker.qml:54
 #, kde-format
 msgid "Month"
 msgstr "თვე"
 
-#: ui/delegates/DatePicker.qml:70
+#: ui/DatePicker.qml:70
 #, kde-format
 msgid "Day"
 msgstr "დღე"
 
-#: ui/delegates/DeviceTimeSettings.qml:136
-#, kde-format
-msgid "Time Display"
-msgstr "დროის ჩვენება"
+#: ui/DeviceTimeSettingsSidebar.qml:78
+#, fuzzy, kde-format
+#| msgid "Adjust Date & Time"
+msgid "Adjust Date & Time Settings"
+msgstr "დროისა და თარიღის გასწორება"
 
-#: ui/delegates/DeviceTimeSettings.qml:145
-#, kde-format
-msgid "Timezone:"
+#: ui/DeviceTimeSettingsSidebar.qml:90
+#, fuzzy, kde-format
+#| msgid "Timezone:"
+msgid "Timezone"
 msgstr "დროის სარტყელი:"
 
-#: ui/delegates/DeviceTimeSettings.qml:187
+#: ui/DeviceTimeSettingsSidebar.qml:102
 #, kde-format
 msgid "Set time automatically"
 msgstr "დროის ავტომატურად დაყენება"
 
-#: ui/delegates/DeviceTimeSettings.qml:256
-#, kde-format
-msgid "Time"
-msgstr "დრო"
-
-#: ui/delegates/DeviceTimeSettings.qml:318
-#, kde-format
-msgid "Date"
-msgstr "თარიღი"
-
-#: ui/delegates/DeviceTimeSettings.qml:399 ui/delegates/ShortcutsPicker.qml:191
-#, kde-format
-msgid "Press the [←] Back button to return to appearance settings"
-msgstr "გარეგნობის პარამეტრებზე დასაბრუნებლად დააწექით [←] უკან გასვლას"
-
-#: ui/delegates/DeviceTimeSettings.qml:460
-#: ui/delegates/DeviceTimeSettings.qml:583
-#: ui/delegates/DeviceTimeSettings.qml:678
-#, kde-format
-msgid "Press the [←] Back button to save configuration and return to settings"
-msgstr ""
-"კონფიგურაციის შესანახად და პარამეტრებზე დასაბრუნებლად დააწექით [←] უკან "
-"გასვლას"
-
-#: ui/delegates/DeviceTimeSettings.qml:482
+#: ui/DeviceTimeSettingsSidebar.qml:181
 #, kde-format
 msgid "Search City / Region"
 msgstr "ქალაქის / რეგინის ძებნა"
 
-#: ui/delegates/DeviceTimeSettings.qml:501
+#: ui/DeviceTimeSettingsSidebar.qml:200
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "თქვენი ლოკალური დროის სარტყელია : %1"
 
-#: ui/delegates/DeviceTimeSettings.qml:501
+#: ui/DeviceTimeSettingsSidebar.qml:200
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: ui/delegates/ShortcutsPicker.qml:67
+#: ui/main.qml:22 ui/main.qml:76
 #, kde-format
-msgid "Update Shortcut Keys"
-msgstr "მალსახმობი ღილაკების განახლება"
+msgid "System"
+msgstr ""
 
-#: ui/delegates/ShortcutsPicker.qml:106
-#, kde-format
-msgid "Reset Default"
-msgstr "ნაგულისხმევზე ჩამოყრა"
-
-#: ui/delegates/ShortcutsPicker.qml:120
-#, kde-format
-msgid "Set Shortcut"
-msgstr "მალსახმობის დაყენება"
-
-#: ui/delegates/TimePicker.qml:40
-#, kde-format
-msgid "Hour"
-msgstr "საათი"
-
-#: ui/delegates/TimePicker.qml:56
-#, kde-format
-msgid "Minute"
-msgstr "წუთი"
-
-#: ui/delegates/TimePicker.qml:72
-#, kde-format
-msgid "Second"
-msgstr "წამი"
-
-#: ui/delegates/TimePicker.qml:89
-#, kde-format
-msgid "AM/PM"
-msgstr "AM/PM"
-
-#: ui/main.qml:21
-#, kde-format
-msgid "Appearance"
-msgstr "გარემოს იერსახე"
-
-#: ui/main.qml:74
-#, kde-format
-msgid "Home Screen Appearance"
+#: ui/main.qml:42
+#, fuzzy, kde-format
+#| msgid "Home Screen Appearance"
+msgid "Homescreen Appearance"
 msgstr "საწყისი ეკრანის გარეგნობა"
 
-#: ui/main.qml:82
-#, kde-format
-msgid "Colored Tiles"
+#: ui/main.qml:55
+#, fuzzy, kde-format
+#| msgid "Colored Tiles"
+msgid "Colored tiles"
 msgstr "ფერადი ფილები"
 
-#: ui/main.qml:83
+#: ui/main.qml:56
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "ფილების ფონი აპის ხატულის მიხედვით გაფერადდება"
 
-#: ui/main.qml:102
+#: ui/main.qml:104
+#, fuzzy, kde-format
+#| msgid "Set Shortcut"
+msgid "Shortcuts"
+msgstr "მალსახმობის დაყენება"
+
+#: ui/ShortcutsPickerSidebar.qml:63
+#, fuzzy, kde-format
+#| msgid "Reset Default"
+msgid "Reset to default"
+msgstr "ნაგულისხმევზე ჩამოყრა"
+
+#: ui/ShortcutsPickerSidebar.qml:77
 #, kde-format
-msgid "Global Theme"
-msgstr "გლობალური თემა"
+msgid "Set Shortcut"
+msgstr "მალსახმობის დაყენება"
+
+#: ui/TimePicker.qml:40
+#, kde-format
+msgid "Hour"
+msgstr "საათი"
+
+#: ui/TimePicker.qml:56
+#, kde-format
+msgid "Minute"
+msgstr "წუთი"
+
+#: ui/TimePicker.qml:72
+#, kde-format
+msgid "Second"
+msgstr "წამი"
+
+#: ui/TimePicker.qml:89
+#, kde-format
+msgid "AM/PM"
+msgstr "AM/PM"
+
+#~ msgid "Time Display"
+#~ msgstr "დროის ჩვენება"
+
+#~ msgid "Time"
+#~ msgstr "დრო"
+
+#~ msgid "Date"
+#~ msgstr "თარიღი"
+
+#~ msgid "Press the [←] Back button to return to appearance settings"
+#~ msgstr "გარეგნობის პარამეტრებზე დასაბრუნებლად დააწექით [←] უკან გასვლას"
+
+#~ msgid ""
+#~ "Press the [←] Back button to save configuration and return to settings"
+#~ msgstr ""
+#~ "კონფიგურაციის შესანახად და პარამეტრებზე დასაბრუნებლად დააწექით [←] უკან "
+#~ "გასვლას"
+
+#~ msgid "Update Shortcut Keys"
+#~ msgstr "მალსახმობი ღილაკების განახლება"
+
+#~ msgid "Appearance"
+#~ msgstr "გარემოს იერსახე"
+
+#~ msgid "Global Theme"
+#~ msgstr "გლობალური თემა"
 
 #~ msgid "Expanding Tiles"
 #~ msgstr "გაფართოებადი ფილები"
@@ -168,9 +172,6 @@ msgstr "გლობალური თემა"
 
 #~ msgid "Power Inhibition"
 #~ msgstr "კვების ინჰიბიცია"
-
-#~ msgid "Adjust Date & Time"
-#~ msgstr "დროისა და თარიღის გასწორება"
 
 #~ msgid "Bigscreen Shortcuts"
 #~ msgstr "Bigscreen-ის მალსახმობები"

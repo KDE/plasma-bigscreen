@@ -1,46 +1,47 @@
-# Copyright (C) 2025 This file is copyright:
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# SPDX-FileCopyrightText: 2025 Freek de Kruijf <freekdekruijf@kde.nl>
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-22 00:45+0000\n"
-"PO-Revision-Date: 2025-06-22 15:50+0200\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: \n"
-"Language: nl\n"
+"PO-Revision-Date: 2025-06-23 04:10+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
+"Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Poedit 3.6\n"
 
 #: CameraHomePage.qml:14
 #, kde-format
 msgctxt "@title"
 msgid "Select Media Device"
-msgstr "Media-apparaat selecteren"
+msgstr "აირჩიეთ მედიამოწყობილობა"
 
 #: CameraHomePage.qml:25
 #, kde-format
 msgctxt "@title"
 msgid "Available Video Inputs"
-msgstr "Beschikbare video-invoeren"
+msgstr "ხელმისაწვდომი ვიდეოს შეყვანები"
 
 #: CameraHomePage.qml:95
 #, kde-format
 msgid "No cameras found"
-msgstr "Geen camera's gevonden"
+msgstr "კამერა აღმოჩენილი არაა"
 
 #: CameraHomePage.qml:103
 #, kde-format
 msgid "Plasma Bigscreen UVC Viewer"
-msgstr "Plasma Bigscreen UVC-viewer"
+msgstr "Plasma Bigscreen UVC-ის დამთვალიერებელი"
 
 #: Main.qml:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Bigscreen UVC Viewer"
-msgstr "Bigscreen UVC-viewer"
+msgstr "Bigscreen UVC-ის დამთვალიერებელი"

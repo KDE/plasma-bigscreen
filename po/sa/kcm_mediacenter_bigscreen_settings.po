@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-20 00:44+0000\n"
+"POT-Creation-Date: 2025-06-24 00:44+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -29,133 +29,133 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "skkalwar999@gmail.com"
 
-#: ui/delegates/DatePicker.qml:38
+#: ui/DatePicker.qml:38
 #, kde-format
 msgid "Year"
 msgstr "वर्ष"
 
-#: ui/delegates/DatePicker.qml:54
+#: ui/DatePicker.qml:54
 #, kde-format
 msgid "Month"
 msgstr "माह"
 
-#: ui/delegates/DatePicker.qml:70
+#: ui/DatePicker.qml:70
 #, kde-format
 msgid "Day"
 msgstr "दिनं"
 
-#: ui/delegates/DeviceTimeSettings.qml:136
-#, kde-format
-msgid "Time Display"
-msgstr "समयप्रदर्शनम्"
+#: ui/DeviceTimeSettingsSidebar.qml:78
+#, fuzzy, kde-format
+#| msgid "Adjust Date & Time"
+msgid "Adjust Date & Time Settings"
+msgstr "तिथि एवं समय समायोजित करें"
 
-#: ui/delegates/DeviceTimeSettings.qml:145
-#, kde-format
-msgid "Timezone:"
+#: ui/DeviceTimeSettingsSidebar.qml:90
+#, fuzzy, kde-format
+#| msgid "Timezone:"
+msgid "Timezone"
 msgstr "समयक्षेत्रम् :"
 
-#: ui/delegates/DeviceTimeSettings.qml:187
+#: ui/DeviceTimeSettingsSidebar.qml:102
 #, kde-format
 msgid "Set time automatically"
 msgstr "स्वयमेव समयं सेट् कुर्वन्तु"
 
-#: ui/delegates/DeviceTimeSettings.qml:256
-#, kde-format
-msgid "Time"
-msgstr "कालः"
-
-#: ui/delegates/DeviceTimeSettings.qml:318
-#, kde-format
-msgid "Date"
-msgstr "दिनाङ्कः"
-
-#: ui/delegates/DeviceTimeSettings.qml:399 ui/delegates/ShortcutsPicker.qml:191
-#, kde-format
-msgid "Press the [←] Back button to return to appearance settings"
-msgstr "रूपसेटिंग्स् प्रति प्रत्यागन्तुं [←] Back बटनं नुदन्तु"
-
-#: ui/delegates/DeviceTimeSettings.qml:460
-#: ui/delegates/DeviceTimeSettings.qml:583
-#: ui/delegates/DeviceTimeSettings.qml:678
-#, kde-format
-msgid "Press the [←] Back button to save configuration and return to settings"
-msgstr "विन्यासं रक्षितुं सेटिंग्स् प्रति प्रत्यागन्तुं च [←] Back बटनं नुदन्तु"
-
-#: ui/delegates/DeviceTimeSettings.qml:482
+#: ui/DeviceTimeSettingsSidebar.qml:181
 #, kde-format
 msgid "Search City / Region"
 msgstr "नगरं / क्षेत्रं अन्वेष्टुम्"
 
-#: ui/delegates/DeviceTimeSettings.qml:501
+#: ui/DeviceTimeSettingsSidebar.qml:200
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "भवतः स्थानीयसमयक्षेत्रं %1 अस्ति"
 
-#: ui/delegates/DeviceTimeSettings.qml:501
+#: ui/DeviceTimeSettingsSidebar.qml:200
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: ui/delegates/ShortcutsPicker.qml:67
+#: ui/main.qml:22 ui/main.qml:76
 #, kde-format
-msgid "Update Shortcut Keys"
-msgstr "शॉर्टकट कुञ्जी अद्यतन करें"
+msgid "System"
+msgstr ""
 
-#: ui/delegates/ShortcutsPicker.qml:106
-#, kde-format
-msgid "Reset Default"
-msgstr "पूर्वनिर्धारितं पुनः सेट् कुर्वन्तु"
-
-#: ui/delegates/ShortcutsPicker.qml:120
-#, kde-format
-msgid "Set Shortcut"
-msgstr "शॉर्टकट् सेट् कुर्वन्तु"
-
-#: ui/delegates/TimePicker.qml:40
-#, kde-format
-msgid "Hour"
-msgstr "घटकः"
-
-#: ui/delegates/TimePicker.qml:56
-#, kde-format
-msgid "Minute"
-msgstr "क्षणं"
-
-#: ui/delegates/TimePicker.qml:72
-#, kde-format
-msgid "Second"
-msgstr "क्षण"
-
-#: ui/delegates/TimePicker.qml:89
-#, kde-format
-msgid "AM/PM"
-msgstr "प्र./प"
-
-#: ui/main.qml:21
-#, kde-format
-msgid "Appearance"
-msgstr "स्वरूपम्‌"
-
-#: ui/main.qml:74
+#: ui/main.qml:42
 #, fuzzy, kde-format
 #| msgid "General Appearance"
-msgid "Home Screen Appearance"
+msgid "Homescreen Appearance"
 msgstr "सामान्यरूपम्"
 
-#: ui/main.qml:82
-#, kde-format
-msgid "Colored Tiles"
+#: ui/main.qml:55
+#, fuzzy, kde-format
+#| msgid "Colored Tiles"
+msgid "Colored tiles"
 msgstr "रंगीन टाइल्स"
 
-#: ui/main.qml:83
+#: ui/main.qml:56
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr ""
 
-#: ui/main.qml:102
+#: ui/main.qml:104
+#, fuzzy, kde-format
+#| msgid "Set Shortcut"
+msgid "Shortcuts"
+msgstr "शॉर्टकट् सेट् कुर्वन्तु"
+
+#: ui/ShortcutsPickerSidebar.qml:63
+#, fuzzy, kde-format
+#| msgid "Reset Default"
+msgid "Reset to default"
+msgstr "पूर्वनिर्धारितं पुनः सेट् कुर्वन्तु"
+
+#: ui/ShortcutsPickerSidebar.qml:77
 #, kde-format
-msgid "Global Theme"
-msgstr ""
+msgid "Set Shortcut"
+msgstr "शॉर्टकट् सेट् कुर्वन्तु"
+
+#: ui/TimePicker.qml:40
+#, kde-format
+msgid "Hour"
+msgstr "घटकः"
+
+#: ui/TimePicker.qml:56
+#, kde-format
+msgid "Minute"
+msgstr "क्षणं"
+
+#: ui/TimePicker.qml:72
+#, kde-format
+msgid "Second"
+msgstr "क्षण"
+
+#: ui/TimePicker.qml:89
+#, kde-format
+msgid "AM/PM"
+msgstr "प्र./प"
+
+#~ msgid "Time Display"
+#~ msgstr "समयप्रदर्शनम्"
+
+#~ msgid "Time"
+#~ msgstr "कालः"
+
+#~ msgid "Date"
+#~ msgstr "दिनाङ्कः"
+
+#~ msgid "Press the [←] Back button to return to appearance settings"
+#~ msgstr "रूपसेटिंग्स् प्रति प्रत्यागन्तुं [←] Back बटनं नुदन्तु"
+
+#~ msgid ""
+#~ "Press the [←] Back button to save configuration and return to settings"
+#~ msgstr "विन्यासं रक्षितुं सेटिंग्स् प्रति प्रत्यागन्तुं च [←] Back बटनं नुदन्तु"
+
+#~ msgid "Update Shortcut Keys"
+#~ msgstr "शॉर्टकट कुञ्जी अद्यतन करें"
+
+#~ msgid "Appearance"
+#~ msgstr "स्वरूपम्‌"
 
 #~ msgid "Expanding Tiles"
 #~ msgstr "टाइल्स् विस्तारयन्"
@@ -165,9 +165,6 @@ msgstr ""
 
 #~ msgid "Power Inhibition"
 #~ msgstr "शक्तिनिरोधः"
-
-#~ msgid "Adjust Date & Time"
-#~ msgstr "तिथि एवं समय समायोजित करें"
 
 #~ msgid "Bigscreen Shortcuts"
 #~ msgstr "बिगस्क्रीन् शॉर्टकट"
