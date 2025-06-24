@@ -8,6 +8,7 @@ import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 
 import org.kde.kirigami as Kirigami
+import org.kde.bigscreen as Bigscreen
 
 T.ItemDelegate {
     id: root
@@ -53,4 +54,10 @@ T.ItemDelegate {
     }
 
     Layout.fillWidth: true
+
+    onActiveFocusChanged: {
+        if (activeFocus) {
+            Bigscreen.NavigationSoundEffects.playMovingSound();
+        }
+    }
 }

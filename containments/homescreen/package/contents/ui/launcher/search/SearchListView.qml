@@ -25,6 +25,9 @@ Milou.ResultsListView {
     clip: true
     highlight: activeFocus ? highlightComponent : null
 
+    Keys.onUpPressed: Bigscreen.NavigationSoundEffects.playMovingSound();
+    Keys.onDownPressed: Bigscreen.NavigationSoundEffects.playMovingSound();
+
     Component {
         id: highlightComponent
 

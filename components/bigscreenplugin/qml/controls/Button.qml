@@ -8,6 +8,7 @@ import QtQuick.Templates as T
 import QtQuick.Effects
 
 import org.kde.kirigami as Kirigami
+import org.kde.bigscreen as Bigscreen
 
 T.Button {
     id: root
@@ -36,6 +37,12 @@ T.Button {
     onPressed: root.forceActiveFocus()
     Keys.onReturnPressed: {
         clicked();
+    }
+
+    onActiveFocusChanged: {
+        if (activeFocus) {
+            Bigscreen.NavigationSoundEffects.playMovingSound();
+        }
     }
 
     contentItem: RowLayout {

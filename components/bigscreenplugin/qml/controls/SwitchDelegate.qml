@@ -7,6 +7,7 @@ import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 
 import org.kde.kirigami as Kirigami
+import org.kde.bigscreen as Bigscreen
 
 T.SwitchDelegate {
     id: root
@@ -111,6 +112,12 @@ T.SwitchDelegate {
     }
 
     onClicked: checked = !checked
+
+    onActiveFocusChanged: {
+        if (activeFocus) {
+            Bigscreen.NavigationSoundEffects.playMovingSound();
+        }
+    }
 
     contentItem: RowLayout {
         spacing: 0

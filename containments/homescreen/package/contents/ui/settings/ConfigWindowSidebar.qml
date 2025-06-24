@@ -77,6 +77,8 @@ Rectangle {
                 if (currentItem) {
                     currentItem.forceActiveFocus();
                 }
+
+                Bigscreen.NavigationSoundEffects.playMovingSound();
             }
 
             delegate: Controls.Button {

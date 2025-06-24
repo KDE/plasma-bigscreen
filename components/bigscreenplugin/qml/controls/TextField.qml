@@ -8,6 +8,7 @@ import QtQuick.Templates as T
 import QtQuick.Effects
 
 import org.kde.kirigami as Kirigami
+import org.kde.bigscreen as Bigscreen
 
 QQC2.TextField {
     id: root
@@ -23,4 +24,10 @@ QQC2.TextField {
     rightPadding: Kirigami.Units.gridUnit
 
     font.pixelSize: 18
+
+    onActiveFocusChanged: {
+        if (activeFocus) {
+            Bigscreen.NavigationSoundEffects.playMovingSound();
+        }
+    }
 }
