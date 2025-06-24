@@ -27,7 +27,7 @@ const QMap<QString, QMap<QString, QVariant>> KWINRC_SETTINGS = {
       {"InteractiveWindowMoveEnabled", false}}},
     {"Plugins",
      {
-         {"blurEnabled", true} // enable blur plugin
+         {"blurEnabled", false} // disable blur plugin for performance
      }},
     {"org.kde.kdecoration2",
      {
