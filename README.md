@@ -71,11 +71,6 @@ To start the Bigscreen homescreen in a window, use the following script:
 #/bin/bash
 
 # Environment variables
-export QT_QPA_PLATFORM=wayland
-export QT_QPA_PLATFORMTHEME=KDE
-export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
-export EGL_PLATFORM=wayland
-
 export QT_QUICK_CONTROLS_STYLE=org.kde.breeze
 export QT_ENABLE_GLYPH_CACHE_WORKAROUND=1
 export QT_QUICK_CONTROLS_MOBILE=true
@@ -90,7 +85,7 @@ export XDG_CONFIG_DIRS="$HOME/.config/plasma-bigscreen:/etc/xdg:$XDG_CONFIG_DIRS
 QT_QPA_PLATFORM=offscreen plasma-bigscreen-envmanager --apply-settings
 
 export PLASMA_DEFAULT_SHELL=org.kde.plasma.bigscreen
-QT_QPA_PLATFORM=wayland dbus-run-session kwin_wayland "plasmashell -p org.kde.plasma.bigscreen"
+dbus-run-session kwin_wayland "plasmashell -p org.kde.plasma.bigscreen"
 ```
 
 <br/>
