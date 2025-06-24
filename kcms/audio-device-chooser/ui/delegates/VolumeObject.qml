@@ -18,31 +18,22 @@ import org.kde.plasma.private.volume
 Bigscreen.ItemDelegate {
     id: root
     property var model
+    property var slider: sliderLoader.item ? sliderLoader.item.sliderObject : null
 
     function increaseVal() {
-        var l = 0
-        l = slider.position + 0.05
-        slider.value = slider.valueAt(l);
+        if (slider) {
+            var l = 0
+            l = slider.position + 0.05
+            slider.value = slider.valueAt(l);
+        }
     }
 
     function decreaseVal() {
-        var l = 0
-        l = slider.position - 0.05
-        slider.value = slider.valueAt(l);
-    }
-
-    SinkModel {
-        id: paSinkModel
-    }
-
-    SourceModel {
-        id: paSourceModel
-    }
-
-    Timer {
-        id: updateTimer
-        interval: 200
-        onTriggered: slider.value = vol
+        if (slider) {
+            var l = 0
+            l = slider.position - 0.05
+            slider.value = slider.valueAt(l);
+        }
     }
 
     contentItem: ColumnLayout {
@@ -72,63 +63,84 @@ Bigscreen.ItemDelegate {
                 source: "audio-card"
             }
 
-            QQC2.Slider {
-                id: slider
+            Loader {
+                id: sliderLoader
+                active: false
+
                 Layout.alignment: Qt.AlignVCenter
                 Layout.fillWidth: true
 
-                // Helper properties to allow async slider updates.
-                // While we are sliding we must not react to value updates
-                // as otherwise we can easily end up in a loop where value
-                // changes trigger volume changes trigger value changes.
-                property int volume: model ? model.Volume : 0
-                property bool ignoreValueChange: true
-
-                from: model ? model.PulseAudio.MinimalVolume : 0
-                to: model ? model.PulseAudio.NormalVolume : 0
-                // TODO: implement a way to hide tickmarks
-                // stepSize: to / (PulseAudio.MaximalVolume / PulseAudio.NormalVolume * 100.0)
-                visible: !model || model.HasVolume
-                enabled: model && model.VolumeWritable
-                opacity: (!model || model.Muted) ? 0.5 : 1
-
-                Component.onCompleted: {
-                    ignoreValueChange = false;
-                }
-
-                onVolumeChanged: {
-                    var oldIgnoreValueChange = ignoreValueChange;
-                    ignoreValueChange = true;
-                    value = model.Volume;
-                    ignoreValueChange = oldIgnoreValueChange;
-                }
-
-                onValueChanged: {
-                    if (model) {
-                        model.Volume = value;
+                // HACK: reload slider when model changes
+                Connections {
+                    target: root
+                    function onModelChanged() {
+                        sliderLoader.active = false;
+                        if (root.model) {
+                            sliderLoader.active = true;
+                        }
                     }
                 }
 
-                onPressedChanged: {
-                    if (!pressed) {
-                        // Make sure to sync the volume once the button was
-                        // released.
-                        // Otherwise it might be that the slider is at v10
-                        // whereas PA rejected the volume change and is
-                        // still at v15 (e.g.).
-                        updateTimer.restart();
+                sourceComponent: RowLayout {
+                    property var sliderObject: slider
+
+                    QQC2.Slider {
+                        id: slider
+                        Layout.alignment: Qt.AlignVCenter
+                        Layout.fillWidth: true
+
+                        // Helper properties to allow async slider updates.
+                        // While we are sliding we must not react to value updates
+                        // as otherwise we can easily end up in a loop where value
+                        // changes trigger volume changes trigger value changes.
+                        property int volume: model.Volume
+                        property bool ignoreValueChange: true
+
+                        from: model.PulseAudio.MinimalVolume
+                        to: model.PulseAudio.NormalVolume
+
+                        visible: model.HasVolume
+                        enabled: model.VolumeWritable
+                        opacity: model.Muted ? 0.5 : 1
+
+                        Component.onCompleted: {
+                            ignoreValueChange = false;
+                        }
+
+                        onVolumeChanged: {
+                            var oldIgnoreValueChange = ignoreValueChange;
+                            ignoreValueChange = true;
+                            value = model.Volume;
+                            ignoreValueChange = oldIgnoreValueChange;
+                        }
+
+                        onValueChanged: model.Volume = value;
+
+                        onPressedChanged: {
+                            if (!pressed) {
+                                // Make sure to sync the volume once the button was
+                                // released.
+                                // Otherwise it might be that the slider is at v10
+                                // whereas PA rejected the volume change and is
+                                // still at v15 (e.g.).
+                                updateTimer.restart();
+                            }
+                        }
+                    }
+
+                    QQC2.Label {
+                        id: percentLabel
+                        readonly property real value: (model.PulseObject.volume > slider.maximumValue) ? model.PulseObject.volume : slider.value
+
+                        Layout.alignment: Qt.AlignVCenter
+                        Layout.preferredWidth: contentWidth + Kirigami.Units.largeSpacing
+
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
+                        text: i18nc("volume percentage", "%1%", Math.round(value / model.PulseAudio.NormalVolume * 100.0))
+                        font.pixelSize: Bigscreen.Units.defaultFontPixelSize
                     }
                 }
-            }
-
-            QQC2.Label {
-                id: percentLabel
-                readonly property real value: (model && model.PulseObject.volume > slider.maximumValue) ? model.PulseObject.volume : slider.value
-
-                Layout.preferredWidth: contentWidth + Kirigami.Units.largeSpacing
-                horizontalAlignment: Text.AlignHCenter
-                verticalAlignment: Text.AlignVCenter
-                text: model ? i18nc("volume percentage", "%1%", Math.round(value / model.PulseAudio.NormalVolume * 100.0)) : ''
             }
         }
     }

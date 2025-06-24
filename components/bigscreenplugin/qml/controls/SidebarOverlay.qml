@@ -42,7 +42,7 @@ QQC2.Popup {
         SequentialAnimation {
             NumberAnimation {
                 property: "x"
-                duration: Kirigami.Units.longDuration
+                duration: 400
                 easing.type: Easing.InOutCubic
                 from: root.parent.width; to: root.parent.width - root.width
             }
@@ -54,7 +54,7 @@ QQC2.Popup {
     exit: Transition {
         NumberAnimation {
             property: "x"
-            duration: Kirigami.Units.longDuration
+            duration: 400
             easing.type: Easing.InOutCubic
             to: root.parent.width; from: root.parent.width - root.width
         }
