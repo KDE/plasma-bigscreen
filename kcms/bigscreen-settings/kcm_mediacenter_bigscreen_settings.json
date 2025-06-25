@@ -42,7 +42,16 @@
             "mediacenter"
         ],
         "Icon": "plasma-symbolic",
-        "Name": "System"
+        "Name": "System",
+        "Name[ca@valencia]": "Sistema",
+        "Name[ca]": "Sistema",
+        "Name[eu]": "Sistema",
+        "Name[ka]": "სისტემა",
+        "Name[nl]": "Systeem",
+        "Name[sl]": "Sistem",
+        "Name[tr]": "Sistem",
+        "Name[uk]": "Система",
+        "Name[x-test]": "xxSystemxx"
     },
     "X-KDE-Keywords": "theme, look, feel",
     "X-KDE-Keywords[ar]": "سمة,منظر,شكل",
