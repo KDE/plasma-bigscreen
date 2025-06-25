@@ -20,12 +20,31 @@ set_source_files_properties(
     QT_QML_SINGLETON_TYPE TRUE
 )
 
-# Include qml and js files within ./qml/
-file(GLOB_RECURSE _qml_sources
-    "qml/*.qml"
-    "qml/*.js"
+ecm_target_qml_sources(bigscreenplugin SOURCES
+    qml/controls/Button.qml
+    qml/controls/ButtonDelegate.qml
+    qml/controls/ComboBoxDelegate.qml
+    qml/controls/DelegateBackground.qml
+    qml/controls/Dialog.qml
+    qml/controls/DialogButtonBox.qml
+    qml/controls/ItemDelegate.qml
+    qml/controls/OverlayWindow.qml
+    qml/controls/PopupBackground.qml
+    qml/controls/SidebarOverlay.qml
+    qml/controls/SwitchDelegate.qml
+    qml/controls/TextDelegate.qml
+    qml/controls/TextField.qml
+    qml/controls/Units.qml
+    qml/AbstractDelegate.qml
+    qml/FullScreenOverlay.qml
+    qml/IconDelegate.qml
+    qml/KCMAbstractDelegate.qml
+    qml/NavigationSoundEffects.qml
+    qml/TaskDelegate.qml
+    qml/TileListView.qml
+    qml/TileRepeater.qml
+    qml/TileView.qml
 )
-ecm_target_qml_sources(bigscreenplugin SOURCES ${_qml_sources})
 
 target_link_libraries(bigscreenplugin
     PUBLIC

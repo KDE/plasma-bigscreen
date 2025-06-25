@@ -54,6 +54,7 @@ Note that `kdesrc-build` doesn't automatically build `plasma-nano` and `plasma-s
 - WindowSystem
 - KDEConnect
 - SVG
+- KScreen
 
 ### Qt dependencies
 

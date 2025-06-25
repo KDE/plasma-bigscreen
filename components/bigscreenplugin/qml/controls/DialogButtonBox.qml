@@ -15,12 +15,6 @@ QQC2.DialogButtonBox {
 
     visible: count > 0
 
-    // background: Rectangle {
-    //     color: Kirigami.Theme.alternateBackgroundColor
-    //     bottomLeftRadius: Kirigami.Units.largeSpacing
-    //     bottomRightRadius: Kirigami.Units.largeSpacing
-    // }
-
     topPadding: Kirigami.Units.gridUnit
     bottomPadding: Kirigami.Units.gridUnit
     leftPadding: Kirigami.Units.gridUnit
@@ -46,6 +40,9 @@ QQC2.DialogButtonBox {
     }
 
     delegate: Button {
+        // HACK: for some reason the height isn't correct on initial start
+        onImplicitHeightChanged: height = implicitHeight
+
         onActiveFocusChanged: {
             if (activeFocus) {
                 listView.forceActiveFocus()

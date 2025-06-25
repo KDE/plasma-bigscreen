@@ -48,6 +48,7 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     IconThemes
 )
 
+find_package(KF6Screen CONFIG REQUIRED)
 find_package(Plasma ${PROJECT_VERSION} REQUIRED)
 find_package(PlasmaActivities ${PROJECT_VERSION} REQUIRED)
 find_package(PlasmaActivitiesStats ${PROJECT_VERSION} REQUIRED)

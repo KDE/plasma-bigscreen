@@ -23,6 +23,7 @@ Dependencies:
     'frameworks/solid': '@latest-kf6'
     'frameworks/ksvg': '@latest-kf6'
     'plasma/kwayland': '@same'
+    'plasma/libkscreen': '@same'
     'plasma/libplasma': '@same'
     'plasma/plasma-workspace': '@same'
     'plasma/plasma-activities': '@latest-kf6' # Different versioning due to being a former Framework
