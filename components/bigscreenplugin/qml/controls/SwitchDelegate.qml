@@ -189,11 +189,6 @@ T.SwitchDelegate {
             onPressAndHold: root.pressAndHold()
             onDoubleClicked: root.doubleClicked()
 
-            onCheckedChanged: {
-                root.checked = checked;
-                checked = Qt.binding(() => root.checked);
-            }
-
             Accessible.ignored: true
         }
 
