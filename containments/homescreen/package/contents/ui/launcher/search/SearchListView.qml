@@ -11,6 +11,7 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.private.nanoshell as NanoShell
+import org.kde.bigscreen as Bigscreen
 
 import org.kde.milou as Milou
 import org.kde.kirigami 2.19 as Kirigami
@@ -25,8 +26,16 @@ Milou.ResultsListView {
     clip: true
     highlight: activeFocus ? highlightComponent : null
 
-    Keys.onUpPressed: Bigscreen.NavigationSoundEffects.playMovingSound();
-    Keys.onDownPressed: Bigscreen.NavigationSoundEffects.playMovingSound();
+    keyNavigationEnabled: true
+
+    Keys.onUpPressed: {
+        currentIndex--;
+        Bigscreen.NavigationSoundEffects.playMovingSound();
+    }
+    Keys.onDownPressed: {
+        currentIndex++;
+        Bigscreen.NavigationSoundEffects.playMovingSound();
+    }
 
     Component {
         id: highlightComponent
