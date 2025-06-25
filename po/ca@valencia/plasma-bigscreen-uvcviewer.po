@@ -1,4 +1,4 @@
-# Translation of plasma-bigscreen-uvcviewer.po to Catalan
+# Translation of plasma-bigscreen-uvcviewer.po to Catalan (Valencian)
 # Copyright (C) 2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
@@ -12,7 +12,7 @@ msgstr ""
 "PO-Revision-Date: 2025-06-22 16:35+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
-"Language: ca\n"
+"Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,13 +34,13 @@ msgstr "No s'ha trobat cap càmera"
 #: CameraHomePage.qml:66
 #, kde-format
 msgid "Plasma Bigscreen UVC Viewer"
-msgstr "Visualitzador d'UVC del Plasma Bigscreen"
+msgstr "Visor d'UVC de Plasma Bigscreen"
 
 #: Main.qml:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Bigscreen UVC Viewer"
-msgstr "Visualitzador d'UVC del Bigscreen"
+msgstr "Visor d'UVC de Bigscreen"
 
 #~ msgctxt "@title"
 #~ msgid "Available Video Inputs"

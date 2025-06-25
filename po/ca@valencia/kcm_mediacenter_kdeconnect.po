@@ -1,15 +1,15 @@
 # Translation of kcm_mediacenter_kdeconnect.po to Catalan (Valencian)
-# Copyright (C) 2020-2021 This_file_is_part_of_KDE
+# Copyright (C) 2020-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2020, 2021.
+# SPDX-FileCopyrightText: 2020, 2021, 2025 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-23 00:43+0000\n"
-"PO-Revision-Date: 2021-01-23 12:08+0100\n"
+"PO-Revision-Date: 2025-06-23 09:45+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: ui/delegates/PairedView.qml:35
 #, kde-format
@@ -50,10 +50,9 @@ msgid "This device is not paired"
 msgstr "Este dispositiu no està aparellat"
 
 #: ui/delegates/UnpairedView.qml:56
-#, fuzzy, kde-format
-#| msgid "Pairing request sent to device"
+#, kde-format
 msgid "Pairing request sent"
-msgstr "S'ha enviat una sol·licitud d'aparellament al dispositiu"
+msgstr "S'ha enviat una sol·licitud d'aparellament"
 
 #: ui/delegates/UnpairedView.qml:60
 #, kde-format
@@ -69,7 +68,3 @@ msgstr "No es pot accedir a este dispositiu"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
-
-#~ msgid "Press the [←] Back button to return to device selection"
-#~ msgstr ""
-#~ "Premeu el botó «Arrere» [←] per a tornar a la selecció de dispositius"

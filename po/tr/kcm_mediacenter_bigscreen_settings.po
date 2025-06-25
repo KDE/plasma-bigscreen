@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-24 00:44+0000\n"
-"PO-Revision-Date: 2025-06-01 20:53+0300\n"
+"PO-Revision-Date: 2025-06-24 08:59+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -44,16 +44,14 @@ msgid "Day"
 msgstr "Gün"
 
 #: ui/DeviceTimeSettingsSidebar.qml:78
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust Date & Time Settings"
-msgstr "Tarihi ve Zamanı Ayarla"
+msgstr "Tarih ve Zaman Ayarlarını Yap"
 
 #: ui/DeviceTimeSettingsSidebar.qml:90
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "Zaman dilimi:"
+msgstr "Zaman Dilimi"
 
 #: ui/DeviceTimeSettingsSidebar.qml:102
 #, kde-format
@@ -78,19 +76,17 @@ msgstr "%1, %2"
 #: ui/main.qml:22 ui/main.qml:76
 #, kde-format
 msgid "System"
-msgstr ""
+msgstr "Sistem"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Home Screen Appearance"
+#, kde-format
 msgid "Homescreen Appearance"
 msgstr "Ana Ekran Görünüşü"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Colored Tiles"
+#, kde-format
 msgid "Colored tiles"
-msgstr "Renkli Döşemeler"
+msgstr "Renkli döşemeler"
 
 #: ui/main.qml:56
 #, kde-format
@@ -98,14 +94,12 @@ msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "Döşemeli arka planlar, uygulamanın simgesinin rengine bağlıdır"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Set Shortcut"
+#, kde-format
 msgid "Shortcuts"
-msgstr "Kısayol Ayarla"
+msgstr "Kısayollar"
 
 #: ui/ShortcutsPickerSidebar.qml:63
-#, fuzzy, kde-format
-#| msgid "Reset Default"
+#, kde-format
 msgid "Reset to default"
 msgstr "Öntanımlılara Sıfırla"
 

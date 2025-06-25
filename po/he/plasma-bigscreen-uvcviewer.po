@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-22 00:45+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2025-06-22 13:52+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -18,24 +18,19 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 25.04.1\n"
 
-#: CameraHomePage.qml:14
+#: CameraHomePage.qml:15
 #, kde-format
 msgctxt "@title"
 msgid "Select Media Device"
 msgstr "בחירת התקנת מדיה"
 
-#: CameraHomePage.qml:25
-#, kde-format
-msgctxt "@title"
-msgid "Available Video Inputs"
-msgstr "ערוצי קלט וידאו זמינים"
-
-#: CameraHomePage.qml:95
-#, kde-format
-msgid "No cameras found"
+#: CameraHomePage.qml:61
+#, fuzzy, kde-format
+#| msgid "No cameras found"
+msgid "No video devices found"
 msgstr "לא נמצאו מצלמות"
 
-#: CameraHomePage.qml:103
+#: CameraHomePage.qml:66
 #, kde-format
 msgid "Plasma Bigscreen UVC Viewer"
 msgstr "מציג UVC (מחלקת וידאו USB) של פלזמה למסכים גדולים"
@@ -45,3 +40,7 @@ msgstr "מציג UVC (מחלקת וידאו USB) של פלזמה למסכים ג
 msgctxt "@title:window"
 msgid "Bigscreen UVC Viewer"
 msgstr "מציג UVC (מחלקת וידאו USB) למסכים גדולים"
+
+#~ msgctxt "@title"
+#~ msgid "Available Video Inputs"
+#~ msgstr "ערוצי קלט וידאו זמינים"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-22 00:45+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2025-06-22 06:30+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -18,24 +18,19 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 
-#: CameraHomePage.qml:14
+#: CameraHomePage.qml:15
 #, kde-format
 msgctxt "@title"
 msgid "Select Media Device"
 msgstr "Izberite medijsko napravo"
 
-#: CameraHomePage.qml:25
-#, kde-format
-msgctxt "@title"
-msgid "Available Video Inputs"
-msgstr "Razpoložljivi video vhodi"
-
-#: CameraHomePage.qml:95
-#, kde-format
-msgid "No cameras found"
+#: CameraHomePage.qml:61
+#, fuzzy, kde-format
+#| msgid "No cameras found"
+msgid "No video devices found"
 msgstr "Ni najdenih kamer"
 
-#: CameraHomePage.qml:103
+#: CameraHomePage.qml:66
 #, kde-format
 msgid "Plasma Bigscreen UVC Viewer"
 msgstr "Pregledovalnik UVC na velikem zaslonu v Plasmi"
@@ -45,3 +40,7 @@ msgstr "Pregledovalnik UVC na velikem zaslonu v Plasmi"
 msgctxt "@title:window"
 msgid "Bigscreen UVC Viewer"
 msgstr "Pregledovalnik UVC na velikem zaslonu"
+
+#~ msgctxt "@title"
+#~ msgid "Available Video Inputs"
+#~ msgstr "Razpoložljivi video vhodi"

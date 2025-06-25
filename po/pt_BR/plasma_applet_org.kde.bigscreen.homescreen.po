@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-21 00:44+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2025-02-06 17:47-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -84,32 +84,32 @@ msgstr "Ativar Text-to-Speech (TTS) remoto"
 msgid "Enable Remote STT"
 msgstr "Ativar Speech-to-Text remoto"
 
-#: contents/ui/launcher/LauncherHome.qml:70
+#: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: contents/ui/launcher/LauncherHome.qml:89
+#: contents/ui/launcher/LauncherHome.qml:97
 #, kde-format
 msgid "Recent"
 msgstr "Recentes"
 
-#: contents/ui/launcher/LauncherHome.qml:118
+#: contents/ui/launcher/LauncherHome.qml:126
 #, kde-format
 msgid "Voice Applications"
 msgstr "Aplicativos de voz"
 
-#: contents/ui/launcher/LauncherHome.qml:145
+#: contents/ui/launcher/LauncherHome.qml:153
 #, kde-format
 msgid "Applications"
 msgstr "Aplicativos"
 
-#: contents/ui/launcher/LauncherHome.qml:173
+#: contents/ui/launcher/LauncherHome.qml:181
 #, kde-format
 msgid "Games"
 msgstr "Jogos"
 
-#: contents/ui/launcher/LauncherHome.qml:204
+#: contents/ui/launcher/LauncherHome.qml:212
 #: contents/ui/settings/ConfigWindowSidebar.qml:45
 #, kde-format
 msgid "Settings"

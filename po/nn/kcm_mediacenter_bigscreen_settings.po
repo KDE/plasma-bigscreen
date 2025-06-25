@@ -131,23 +131,3 @@ msgstr ""
 #, kde-format
 msgid "AM/PM"
 msgstr ""
-
-#~ msgid "Time Display"
-#~ msgstr "Vising av klokkeslett"
-
-#~ msgid "Time"
-#~ msgstr "Klokkeslett"
-
-#~ msgid "Date"
-#~ msgstr "Dato"
-
-#~ msgid "Press the [←] Back button to return to appearance settings"
-#~ msgstr "Trykk «[←] Tilbake» for å gå tilbake til utsjånads­innstillingane"
-
-#~ msgid ""
-#~ "Press the [←] Back button to save configuration and return to settings"
-#~ msgstr ""
-#~ "Trykk «[←] Tilbake» for å lagra oppsettet og gå tilbake til innstillingane"
-
-#~ msgid "Appearance"
-#~ msgstr "Utsjånad"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-24 00:44+0000\n"
-"PO-Revision-Date: 2025-06-01 05:29+0200\n"
+"PO-Revision-Date: 2025-06-24 05:48+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -44,16 +44,14 @@ msgid "Day"
 msgstr "დღე"
 
 #: ui/DeviceTimeSettingsSidebar.qml:78
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust Date & Time Settings"
-msgstr "დროისა და თარიღის გასწორება"
+msgstr "დროისა და თარიღის პარამეტრების გასწორება"
 
 #: ui/DeviceTimeSettingsSidebar.qml:90
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "დროის სარტყელი:"
+msgstr "დროის სარტყელი"
 
 #: ui/DeviceTimeSettingsSidebar.qml:102
 #, kde-format
@@ -78,17 +76,15 @@ msgstr "%1, %2"
 #: ui/main.qml:22 ui/main.qml:76
 #, kde-format
 msgid "System"
-msgstr ""
+msgstr "სისტემა"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Home Screen Appearance"
+#, kde-format
 msgid "Homescreen Appearance"
 msgstr "საწყისი ეკრანის გარეგნობა"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Colored Tiles"
+#, kde-format
 msgid "Colored tiles"
 msgstr "ფერადი ფილები"
 
@@ -98,16 +94,14 @@ msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "ფილების ფონი აპის ხატულის მიხედვით გაფერადდება"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Set Shortcut"
+#, kde-format
 msgid "Shortcuts"
-msgstr "მალსახმობის დაყენება"
+msgstr "მალსახმობები"
 
 #: ui/ShortcutsPickerSidebar.qml:63
-#, fuzzy, kde-format
-#| msgid "Reset Default"
+#, kde-format
 msgid "Reset to default"
-msgstr "ნაგულისხმევზე ჩამოყრა"
+msgstr "ნაგულისხმევ მნიშვნელობაზე დაბრუნება"
 
 #: ui/ShortcutsPickerSidebar.qml:77
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-21 00:44+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2025-06-17 04:41+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -83,32 +83,32 @@ msgstr "დაშორებული TTS-ის ჩართვა"
 msgid "Enable Remote STT"
 msgstr "დაშორებული STT-ის ჩართვა"
 
-#: contents/ui/launcher/LauncherHome.qml:70
+#: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
 msgid "Favorites"
 msgstr "სანიშნეები"
 
-#: contents/ui/launcher/LauncherHome.qml:89
+#: contents/ui/launcher/LauncherHome.qml:97
 #, kde-format
 msgid "Recent"
 msgstr "უახლესი"
 
-#: contents/ui/launcher/LauncherHome.qml:118
+#: contents/ui/launcher/LauncherHome.qml:126
 #, kde-format
 msgid "Voice Applications"
 msgstr "ხმის აპლიკაციები"
 
-#: contents/ui/launcher/LauncherHome.qml:145
+#: contents/ui/launcher/LauncherHome.qml:153
 #, kde-format
 msgid "Applications"
 msgstr "აპლიკაციები"
 
-#: contents/ui/launcher/LauncherHome.qml:173
+#: contents/ui/launcher/LauncherHome.qml:181
 #, kde-format
 msgid "Games"
 msgstr "თამაშები"
 
-#: contents/ui/launcher/LauncherHome.qml:204
+#: contents/ui/launcher/LauncherHome.qml:212
 #: contents/ui/settings/ConfigWindowSidebar.qml:45
 #, kde-format
 msgid "Settings"

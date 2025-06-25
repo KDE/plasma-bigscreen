@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-24 00:44+0000\n"
-"PO-Revision-Date: 2025-06-01 07:29+0200\n"
+"PO-Revision-Date: 2025-06-24 07:06+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -44,16 +44,14 @@ msgid "Day"
 msgstr "Dan"
 
 #: ui/DeviceTimeSettingsSidebar.qml:78
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust Date & Time Settings"
-msgstr "Prilagodi datum in čas"
+msgstr "Prilagodi nastavitve datuma in časa"
 
 #: ui/DeviceTimeSettingsSidebar.qml:90
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "Časovni pas:"
+msgstr "Časovni pas"
 
 #: ui/DeviceTimeSettingsSidebar.qml:102
 #, kde-format
@@ -78,17 +76,15 @@ msgstr "%1, %2"
 #: ui/main.qml:22 ui/main.qml:76
 #, kde-format
 msgid "System"
-msgstr ""
+msgstr "Sistem"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Home Screen Appearance"
+#, kde-format
 msgid "Homescreen Appearance"
 msgstr "Videz domačega zaslona"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Colored Tiles"
+#, kde-format
 msgid "Colored tiles"
 msgstr "Pobarvane ploščice"
 
@@ -98,16 +94,14 @@ msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "Ozadja ploščic bodo obarvana glede na ikono aplikacije"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Set Shortcut"
+#, kde-format
 msgid "Shortcuts"
-msgstr "Nastavi bližnjico"
+msgstr "Bližnjice"
 
 #: ui/ShortcutsPickerSidebar.qml:63
-#, fuzzy, kde-format
-#| msgid "Reset Default"
+#, kde-format
 msgid "Reset to default"
-msgstr "Ponovno nastavi privzeto"
+msgstr "Ponovno nastavi na privzeto"
 
 #: ui/ShortcutsPickerSidebar.qml:77
 #, kde-format

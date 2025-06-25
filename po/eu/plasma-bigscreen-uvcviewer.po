@@ -1,18 +1,19 @@
-# Translation of plasma-bigscreen-uvcviewer.po to Catalan
-# Copyright (C) 2025 This_file_is_part_of_KDE
-# This file is distributed under the license LGPL version 2.1 or
-# version 3 or later versions approved by the membership of KDE e.V.
+# Translation for plasma-bigscreen-uvcviewer.po to Euskara/Basque (eu).
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
 #
-# SPDX-FileCopyrightText: 2025 Josep M. Ferrer <txemaq@gmail.com>
+# Translators:
+# SPDX-FileCopyrightText: 2025 Iñigo Salvador Azurmendi <xalba@ni.eus>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-25 00:44+0000\n"
-"PO-Revision-Date: 2025-06-22 16:35+0200\n"
-"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
-"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
-"Language: ca\n"
+"PO-Revision-Date: 2025-06-24 18:38+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,25 +24,25 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Select Media Device"
-msgstr "Seleccioneu un dispositiu multimèdia"
+msgstr "Hautatu hedabide-gailua"
 
 #: CameraHomePage.qml:61
 #, fuzzy, kde-format
 #| msgid "No cameras found"
 msgid "No video devices found"
-msgstr "No s'ha trobat cap càmera"
+msgstr "Ez da kamerarik aurkitu"
 
 #: CameraHomePage.qml:66
 #, kde-format
 msgid "Plasma Bigscreen UVC Viewer"
-msgstr "Visualitzador d'UVC del Plasma Bigscreen"
+msgstr "Plasma Bigscreen UVC Ikustailea"
 
 #: Main.qml:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Bigscreen UVC Viewer"
-msgstr "Visualitzador d'UVC del Bigscreen"
+msgstr "Bigscreen UVC Ikustailea"
 
 #~ msgctxt "@title"
 #~ msgid "Available Video Inputs"
-#~ msgstr "Entrades disponibles de vídeo"
+#~ msgstr "Bide-sarrera erabilgarriak"

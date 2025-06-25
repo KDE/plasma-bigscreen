@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2024-10-18 02:43+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: ui/delegates/VolumeObject.qml:62
+#: ui/delegates/VolumeObject.qml:53
 #, kde-format
 msgid "Adjust Volume"
 msgstr "Regola il volume"
 
-#: ui/delegates/VolumeObject.qml:131
+#: ui/delegates/VolumeObject.qml:140
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"

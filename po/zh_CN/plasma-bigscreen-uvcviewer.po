@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-22 00:45+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2025-06-22 19:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,24 +18,18 @@ msgstr ""
 "uvcviewer.pot\n"
 "X-Crowdin-File-ID: 58026\n"
 
-#: CameraHomePage.qml:14
+#: CameraHomePage.qml:15
 #, kde-format
 msgctxt "@title"
 msgid "Select Media Device"
 msgstr ""
 
-#: CameraHomePage.qml:25
+#: CameraHomePage.qml:61
 #, kde-format
-msgctxt "@title"
-msgid "Available Video Inputs"
+msgid "No video devices found"
 msgstr ""
 
-#: CameraHomePage.qml:95
-#, kde-format
-msgid "No cameras found"
-msgstr ""
-
-#: CameraHomePage.qml:103
+#: CameraHomePage.qml:66
 #, kde-format
 msgid "Plasma Bigscreen UVC Viewer"
 msgstr ""

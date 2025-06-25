@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the plasma-bigscreen package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-22 00:45+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2025-06-23 04:10+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -17,25 +16,21 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: CameraHomePage.qml:14
+#: CameraHomePage.qml:15
 #, kde-format
 msgctxt "@title"
 msgid "Select Media Device"
 msgstr "აირჩიეთ მედიამოწყობილობა"
 
-#: CameraHomePage.qml:25
-#, kde-format
-msgctxt "@title"
-msgid "Available Video Inputs"
-msgstr "ხელმისაწვდომი ვიდეოს შეყვანები"
-
-#: CameraHomePage.qml:95
-#, kde-format
-msgid "No cameras found"
+#: CameraHomePage.qml:61
+#, fuzzy, kde-format
+#| msgid "No cameras found"
+msgid "No video devices found"
 msgstr "კამერა აღმოჩენილი არაა"
 
-#: CameraHomePage.qml:103
+#: CameraHomePage.qml:66
 #, kde-format
 msgid "Plasma Bigscreen UVC Viewer"
 msgstr "Plasma Bigscreen UVC-ის დამთვალიერებელი"
@@ -45,3 +40,7 @@ msgstr "Plasma Bigscreen UVC-ის დამთვალიერებელ�
 msgctxt "@title:window"
 msgid "Bigscreen UVC Viewer"
 msgstr "Bigscreen UVC-ის დამთვალიერებელი"
+
+#~ msgctxt "@title"
+#~ msgid "Available Video Inputs"
+#~ msgstr "ხელმისაწვდომი ვიდეოს შეყვანები"

@@ -1,41 +1,43 @@
+#
+# SPDX-FileCopyrightText: 2025 Xavier Besnard <xavier.besnard@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-22 00:45+0000\n"
-"PO-Revision-Date: 2025-06-23 05:31+0200\n"
-"Last-Translator: KDE Francophone <kde-francophone@kde.org>\n"
-"Language-Team: KDE Francophone <kde-francophone@kde.org>\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"PO-Revision-Date: 2025-06-23 10:05+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 25.04.2\n"
 
-#: CameraHomePage.qml:14
+#: CameraHomePage.qml:15
 #, kde-format
 msgctxt "@title"
 msgid "Select Media Device"
-msgstr ""
+msgstr "Sélectionner un périphérique multimédia"
 
-#: CameraHomePage.qml:25
-#, kde-format
-msgctxt "@title"
-msgid "Available Video Inputs"
-msgstr ""
+#: CameraHomePage.qml:61
+#, fuzzy, kde-format
+#| msgid "No cameras found"
+msgid "No video devices found"
+msgstr "Aucune caméra trouvée"
 
-#: CameraHomePage.qml:95
-#, kde-format
-msgid "No cameras found"
-msgstr ""
-
-#: CameraHomePage.qml:103
+#: CameraHomePage.qml:66
 #, kde-format
 msgid "Plasma Bigscreen UVC Viewer"
-msgstr ""
+msgstr "Afficheur « UVC » de Plasma Bigscreen"
 
 #: Main.qml:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Bigscreen UVC Viewer"
-msgstr ""
+msgstr "Afficheur « UVC » de Bigscreen"
+
+#~ msgctxt "@title"
+#~ msgid "Available Video Inputs"
+#~ msgstr "Entrées vidéo disponibles"

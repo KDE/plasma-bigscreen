@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
-"PO-Revision-Date: 2024-10-17 05:20+0200\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"PO-Revision-Date: 2025-06-24 05:47+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,24 +16,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
-#: ui/delegates/VolumeObject.qml:62
+#: ui/delegates/VolumeObject.qml:53
 #, kde-format
 msgid "Adjust Volume"
 msgstr "ხმის მორგება"
 
-#: ui/delegates/VolumeObject.qml:131
+#: ui/delegates/VolumeObject.qml:140
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1%"
 
 #: ui/main.qml:21
-#, fuzzy, kde-format
-#| msgid "Audio Device Chooser"
+#, kde-format
 msgid "Audio Devices"
-msgstr "აუდიო მოწყობილობის არჩევა"
+msgstr "აუდიო მოწყობილობები"
 
 #~ msgid "Playback Devices"
 #~ msgstr "დამკვრელი მოწყობილობები"

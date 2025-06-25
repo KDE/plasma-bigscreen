@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_audiodevice\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2025-06-09 02:21+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: ui/delegates/VolumeObject.qml:62
+#: ui/delegates/VolumeObject.qml:53
 #, kde-format
 msgid "Adjust Volume"
 msgstr "Ajustar volumen"
 
-#: ui/delegates/VolumeObject.qml:131
+#: ui/delegates/VolumeObject.qml:140
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"

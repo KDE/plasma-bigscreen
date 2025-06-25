@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-24 00:44+0000\n"
-"PO-Revision-Date: 2025-06-01 12:10+0200\n"
+"PO-Revision-Date: 2025-06-24 12:06+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -47,13 +47,12 @@ msgstr "Dia"
 #: ui/DeviceTimeSettingsSidebar.qml:78
 #, kde-format
 msgid "Adjust Date & Time Settings"
-msgstr ""
+msgstr "Ajusta la data i configuració de l'hora"
 
 #: ui/DeviceTimeSettingsSidebar.qml:90
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "Zona horària:"
+msgstr "Zona horària"
 
 #: ui/DeviceTimeSettingsSidebar.qml:102
 #, kde-format
@@ -78,37 +77,32 @@ msgstr "%1, %2"
 #: ui/main.qml:22 ui/main.qml:76
 #, kde-format
 msgid "System"
-msgstr ""
+msgstr "Sistema"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Home Screen Appearance"
+#, kde-format
 msgid "Homescreen Appearance"
 msgstr "Aparença de la pantalla inicial"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Colored Tiles"
+#, kde-format
 msgid "Colored tiles"
 msgstr "Fitxes de colors"
 
 #: ui/main.qml:56
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
-msgstr ""
-"Els fons de les fitxes s'acoloriran en funció de la icona de l'aplicació"
+msgstr "El fons de les fitxes s'acolorirà en funció de la icona de l'aplicació"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Set Shortcut"
+#, kde-format
 msgid "Shortcuts"
-msgstr "Establix una drecera"
+msgstr "Dreceres"
 
 #: ui/ShortcutsPickerSidebar.qml:63
-#, fuzzy, kde-format
-#| msgid "Reset Default"
+#, kde-format
 msgid "Reset to default"
-msgstr "Restablix als valors predeterminats"
+msgstr "Restablix els valors predeterminats"
 
 #: ui/ShortcutsPickerSidebar.qml:77
 #, kde-format
@@ -134,37 +128,3 @@ msgstr "Segon"
 #, kde-format
 msgid "AM/PM"
 msgstr "AM/PM"
-
-#~ msgid "Time Display"
-#~ msgstr "Visualització del temps"
-
-#~ msgid "Time"
-#~ msgstr "Hora"
-
-#~ msgid "Date"
-#~ msgstr "Data"
-
-#~ msgid "Press the [←] Back button to return to appearance settings"
-#~ msgstr ""
-#~ "Premeu el botó «Arrere» [←] per a tornar a la configuració de l'aparença"
-
-#~ msgid ""
-#~ "Press the [←] Back button to save configuration and return to settings"
-#~ msgstr ""
-#~ "Premeu el botó «Arrere» [←] per a guardar la configuració i tornar a la "
-#~ "configuració"
-
-#~ msgid "Update Shortcut Keys"
-#~ msgstr "Actualitza les tecles de drecera"
-
-#~ msgid "Appearance"
-#~ msgstr "Aparença"
-
-#~ msgid "Global Theme"
-#~ msgstr "Tema global"
-
-#~ msgid "Expanding Tiles"
-#~ msgstr "Fitxes expandides"
-
-#~ msgid "Tiles will expand when selected"
-#~ msgstr "Les fitxes s'expandiran en seleccionar-se"

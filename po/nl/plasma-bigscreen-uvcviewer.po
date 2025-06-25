@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-22 00:45+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2025-06-22 15:50+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -17,24 +17,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.04.2\n"
 
-#: CameraHomePage.qml:14
+#: CameraHomePage.qml:15
 #, kde-format
 msgctxt "@title"
 msgid "Select Media Device"
 msgstr "Media-apparaat selecteren"
 
-#: CameraHomePage.qml:25
-#, kde-format
-msgctxt "@title"
-msgid "Available Video Inputs"
-msgstr "Beschikbare video-invoeren"
-
-#: CameraHomePage.qml:95
-#, kde-format
-msgid "No cameras found"
+#: CameraHomePage.qml:61
+#, fuzzy, kde-format
+#| msgid "No cameras found"
+msgid "No video devices found"
 msgstr "Geen camera's gevonden"
 
-#: CameraHomePage.qml:103
+#: CameraHomePage.qml:66
 #, kde-format
 msgid "Plasma Bigscreen UVC Viewer"
 msgstr "Plasma Bigscreen UVC-viewer"
@@ -44,3 +39,7 @@ msgstr "Plasma Bigscreen UVC-viewer"
 msgctxt "@title:window"
 msgid "Bigscreen UVC Viewer"
 msgstr "Bigscreen UVC-viewer"
+
+#~ msgctxt "@title"
+#~ msgid "Available Video Inputs"
+#~ msgstr "Beschikbare video-invoeren"

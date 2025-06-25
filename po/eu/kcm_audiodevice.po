@@ -1,16 +1,16 @@
 # Translation for kcm_audiodevice.po to Euskara/Basque (eu).
-# Copyright (C) 2020-2024 This file is copyright:
+# Copyright (C) 2020-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2021, 2022, 2024.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2021, 2022, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
-"PO-Revision-Date: 2024-10-26 17:46+0200\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"PO-Revision-Date: 2025-06-24 18:35+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,24 +18,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.04.2\n"
 
-#: ui/delegates/VolumeObject.qml:62
+#: ui/delegates/VolumeObject.qml:53
 #, kde-format
 msgid "Adjust Volume"
 msgstr "Doitu bolumena"
 
-#: ui/delegates/VolumeObject.qml:131
+#: ui/delegates/VolumeObject.qml:140
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "% %1"
 
 #: ui/main.qml:21
-#, fuzzy, kde-format
-#| msgid "Audio Device Chooser"
+#, kde-format
 msgid "Audio Devices"
-msgstr "Audio-gailu hautatzailea"
+msgstr "Audio-gailuak"
 
 #~ msgid "Playback Devices"
 #~ msgstr "Atzera jotzeko gailuak"
