@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-26 00:44+0000\n"
 "PO-Revision-Date: 2024-10-19 13:05+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -17,47 +17,31 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: ui/delegates/ConfirmationDialog.qml:54
-#, kde-format
-msgid "New Resolution"
-msgstr "Nowa rozdzielczość"
-
-#: ui/delegates/ConfirmationDialog.qml:89
-#, kde-format
-msgid "Accept"
-msgstr "Przyjmij"
-
-#: ui/delegates/ConfirmationDialog.qml:133
-#, kde-format
-msgid "Cancel"
-msgstr "Anuluj"
-
-#: ui/delegates/LocalSettingCurrentResolution.qml:46
-#, kde-format
-msgid "Resolution: "
-msgstr "Rozdzielczość: "
-
-#: ui/delegates/LocalSettingCurrentResolution.qml:69
-#, kde-format
-msgid "Refresh Rate: "
-msgstr "Częstotliwość odświeżania: "
-
-#: ui/delegates/LocalSettingCurrentResolution.qml:92
-#, kde-format
-msgid "Mode: "
-msgstr "Tryb: "
-
-#: ui/delegates/LocalSettingResolution.qml:65
-#, kde-format
-msgid "Available Resolutions"
-msgstr "Dostępne rozdzielczości"
-
-#: ui/delegates/LocalSettingScale.qml:52
-#, kde-format
-msgid "Scale"
-msgstr "Skala"
-
-#: ui/main.qml:21
+#: ui/main.qml:22
 #, kde-format
 msgid "Display Configuration"
 msgstr "Ustawienia wyświetlania"
+
+#~ msgid "New Resolution"
+#~ msgstr "Nowa rozdzielczość"
+
+#~ msgid "Accept"
+#~ msgstr "Przyjmij"
+
+#~ msgid "Cancel"
+#~ msgstr "Anuluj"
+
+#~ msgid "Resolution: "
+#~ msgstr "Rozdzielczość: "
+
+#~ msgid "Refresh Rate: "
+#~ msgstr "Częstotliwość odświeżania: "
+
+#~ msgid "Mode: "
+#~ msgstr "Tryb: "
+
+#~ msgid "Available Resolutions"
+#~ msgstr "Dostępne rozdzielczości"
+
+#~ msgid "Scale"
+#~ msgstr "Skala"

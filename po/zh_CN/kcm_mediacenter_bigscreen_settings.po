@@ -49,10 +49,9 @@ msgid "Adjust Date & Time Settings"
 msgstr ""
 
 #: ui/DeviceTimeSettingsSidebar.qml:90
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "时区："
+msgstr ""
 
 #: ui/DeviceTimeSettingsSidebar.qml:102
 #, kde-format
@@ -80,16 +79,14 @@ msgid "System"
 msgstr ""
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Home Screen Appearance"
+#, kde-format
 msgid "Homescreen Appearance"
-msgstr "主屏幕外观"
+msgstr ""
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Colored Tiles"
+#, kde-format
 msgid "Colored tiles"
-msgstr "彩色磁贴"
+msgstr ""
 
 #: ui/main.qml:56
 #, kde-format
@@ -97,16 +94,14 @@ msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "磁贴背景将根据应用程序的图标进行着色。"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Set Shortcut"
+#, kde-format
 msgid "Shortcuts"
-msgstr "设置快捷键"
+msgstr ""
 
 #: ui/ShortcutsPickerSidebar.qml:63
-#, fuzzy, kde-format
-#| msgid "Reset Default"
+#, kde-format
 msgid "Reset to default"
-msgstr "重置为默认值"
+msgstr ""
 
 #: ui/ShortcutsPickerSidebar.qml:77
 #, kde-format
@@ -132,28 +127,3 @@ msgstr "秒"
 #, kde-format
 msgid "AM/PM"
 msgstr "AM/PM"
-
-#~ msgid "Time Display"
-#~ msgstr "时间显示"
-
-#~ msgid "Time"
-#~ msgstr "时间"
-
-#~ msgid "Date"
-#~ msgstr "日期"
-
-#~ msgid "Press the [←] Back button to return to appearance settings"
-#~ msgstr "点击 [←] 后退按钮返回外观设置页面"
-
-#~ msgid ""
-#~ "Press the [←] Back button to save configuration and return to settings"
-#~ msgstr "点击 [←] 后退按钮保存配置并返回设置页面"
-
-#~ msgid "Update Shortcut Keys"
-#~ msgstr "更新快捷键"
-
-#~ msgid "Appearance"
-#~ msgstr "外观"
-
-#~ msgid "Global Theme"
-#~ msgstr "全局主题"

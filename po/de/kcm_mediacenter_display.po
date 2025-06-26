@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_display\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-26 00:44+0000\n"
 "PO-Revision-Date: 2024-10-18 17:35+0200\n"
 "Last-Translator: Simulacrum\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -12,47 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ui/delegates/ConfirmationDialog.qml:54
-#, kde-format
-msgid "New Resolution"
-msgstr ""
-
-#: ui/delegates/ConfirmationDialog.qml:89
-#, kde-format
-msgid "Accept"
-msgstr ""
-
-#: ui/delegates/ConfirmationDialog.qml:133
-#, kde-format
-msgid "Cancel"
-msgstr ""
-
-#: ui/delegates/LocalSettingCurrentResolution.qml:46
-#, kde-format
-msgid "Resolution: "
-msgstr ""
-
-#: ui/delegates/LocalSettingCurrentResolution.qml:69
-#, kde-format
-msgid "Refresh Rate: "
-msgstr ""
-
-#: ui/delegates/LocalSettingCurrentResolution.qml:92
-#, kde-format
-msgid "Mode: "
-msgstr ""
-
-#: ui/delegates/LocalSettingResolution.qml:65
-#, kde-format
-msgid "Available Resolutions"
-msgstr ""
-
-#: ui/delegates/LocalSettingScale.qml:52
-#, kde-format
-msgid "Scale"
-msgstr ""
-
-#: ui/main.qml:21
+#: ui/main.qml:22
 #, kde-format
 msgid "Display Configuration"
 msgstr ""

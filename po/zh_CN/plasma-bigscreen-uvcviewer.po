@@ -22,7 +22,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Select Media Device"
-msgstr ""
+msgstr "选择媒体设备"
 
 #: CameraHomePage.qml:61
 #, kde-format
@@ -32,10 +32,10 @@ msgstr ""
 #: CameraHomePage.qml:66
 #, kde-format
 msgid "Plasma Bigscreen UVC Viewer"
-msgstr ""
+msgstr "Plasma 大屏幕 UVC 查看器"
 
 #: Main.qml:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Bigscreen UVC Viewer"
-msgstr ""
+msgstr "大屏幕 UVC 查看器"

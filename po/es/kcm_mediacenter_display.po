@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_display\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-26 00:44+0000\n"
 "PO-Revision-Date: 2025-06-09 02:21+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -18,47 +18,31 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: ui/delegates/ConfirmationDialog.qml:54
-#, kde-format
-msgid "New Resolution"
-msgstr "Nueva resolución"
-
-#: ui/delegates/ConfirmationDialog.qml:89
-#, kde-format
-msgid "Accept"
-msgstr "Aceptar"
-
-#: ui/delegates/ConfirmationDialog.qml:133
-#, kde-format
-msgid "Cancel"
-msgstr "Cancelar"
-
-#: ui/delegates/LocalSettingCurrentResolution.qml:46
-#, kde-format
-msgid "Resolution: "
-msgstr "Resolución:"
-
-#: ui/delegates/LocalSettingCurrentResolution.qml:69
-#, kde-format
-msgid "Refresh Rate: "
-msgstr "Tasa de refresco:"
-
-#: ui/delegates/LocalSettingCurrentResolution.qml:92
-#, kde-format
-msgid "Mode: "
-msgstr "Modo"
-
-#: ui/delegates/LocalSettingResolution.qml:65
-#, kde-format
-msgid "Available Resolutions"
-msgstr "Resoluciones disponibles"
-
-#: ui/delegates/LocalSettingScale.qml:52
-#, kde-format
-msgid "Scale"
-msgstr "Escala"
-
-#: ui/main.qml:21
+#: ui/main.qml:22
 #, kde-format
 msgid "Display Configuration"
 msgstr "Configuración de visualización"
+
+#~ msgid "New Resolution"
+#~ msgstr "Nueva resolución"
+
+#~ msgid "Accept"
+#~ msgstr "Aceptar"
+
+#~ msgid "Cancel"
+#~ msgstr "Cancelar"
+
+#~ msgid "Resolution: "
+#~ msgstr "Resolución:"
+
+#~ msgid "Refresh Rate: "
+#~ msgstr "Tasa de refresco:"
+
+#~ msgid "Mode: "
+#~ msgstr "Modo"
+
+#~ msgid "Available Resolutions"
+#~ msgstr "Resoluciones disponibles"
+
+#~ msgid "Scale"
+#~ msgstr "Escala"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-26 00:44+0000\n"
 "PO-Revision-Date: 2024-10-18 05:39+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,47 +18,31 @@ msgstr ""
 "X-Generator: Poedit 3.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ui/delegates/ConfirmationDialog.qml:54
-#, kde-format
-msgid "New Resolution"
-msgstr "ახალი გარჩევადობა"
-
-#: ui/delegates/ConfirmationDialog.qml:89
-#, kde-format
-msgid "Accept"
-msgstr "დასტური"
-
-#: ui/delegates/ConfirmationDialog.qml:133
-#, kde-format
-msgid "Cancel"
-msgstr "გაუქმება"
-
-#: ui/delegates/LocalSettingCurrentResolution.qml:46
-#, kde-format
-msgid "Resolution: "
-msgstr "გარჩევადობა: "
-
-#: ui/delegates/LocalSettingCurrentResolution.qml:69
-#, kde-format
-msgid "Refresh Rate: "
-msgstr "განახლების _სიხშირე: "
-
-#: ui/delegates/LocalSettingCurrentResolution.qml:92
-#, kde-format
-msgid "Mode: "
-msgstr "რეჟიმი: "
-
-#: ui/delegates/LocalSettingResolution.qml:65
-#, kde-format
-msgid "Available Resolutions"
-msgstr "ხელმისაწვდომი გარჩევადობები"
-
-#: ui/delegates/LocalSettingScale.qml:52
-#, kde-format
-msgid "Scale"
-msgstr "მასშტაბი"
-
-#: ui/main.qml:21
+#: ui/main.qml:22
 #, kde-format
 msgid "Display Configuration"
 msgstr "ეკრანის მორგება"
+
+#~ msgid "New Resolution"
+#~ msgstr "ახალი გარჩევადობა"
+
+#~ msgid "Accept"
+#~ msgstr "დასტური"
+
+#~ msgid "Cancel"
+#~ msgstr "გაუქმება"
+
+#~ msgid "Resolution: "
+#~ msgstr "გარჩევადობა: "
+
+#~ msgid "Refresh Rate: "
+#~ msgstr "განახლების _სიხშირე: "
+
+#~ msgid "Mode: "
+#~ msgstr "რეჟიმი: "
+
+#~ msgid "Available Resolutions"
+#~ msgstr "ხელმისაწვდომი გარჩევადობები"
+
+#~ msgid "Scale"
+#~ msgstr "მასშტაბი"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-26 00:44+0000\n"
 "PO-Revision-Date: 2024-10-22 15:07+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -17,47 +17,31 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: ui/delegates/ConfirmationDialog.qml:54
-#, kde-format
-msgid "New Resolution"
-msgstr "Nové rozlišení"
-
-#: ui/delegates/ConfirmationDialog.qml:89
-#, kde-format
-msgid "Accept"
-msgstr "Přijmout"
-
-#: ui/delegates/ConfirmationDialog.qml:133
-#, kde-format
-msgid "Cancel"
-msgstr "Zrušit"
-
-#: ui/delegates/LocalSettingCurrentResolution.qml:46
-#, kde-format
-msgid "Resolution: "
-msgstr "Rozlišení: "
-
-#: ui/delegates/LocalSettingCurrentResolution.qml:69
-#, kde-format
-msgid "Refresh Rate: "
-msgstr "Obnovovací frekvence: "
-
-#: ui/delegates/LocalSettingCurrentResolution.qml:92
-#, kde-format
-msgid "Mode: "
-msgstr "Režim: "
-
-#: ui/delegates/LocalSettingResolution.qml:65
-#, kde-format
-msgid "Available Resolutions"
-msgstr "Dostupná rozlišení"
-
-#: ui/delegates/LocalSettingScale.qml:52
-#, kde-format
-msgid "Scale"
-msgstr "Měřítko"
-
-#: ui/main.qml:21
+#: ui/main.qml:22
 #, kde-format
 msgid "Display Configuration"
 msgstr "Nastavení obrazovky"
+
+#~ msgid "New Resolution"
+#~ msgstr "Nové rozlišení"
+
+#~ msgid "Accept"
+#~ msgstr "Přijmout"
+
+#~ msgid "Cancel"
+#~ msgstr "Zrušit"
+
+#~ msgid "Resolution: "
+#~ msgstr "Rozlišení: "
+
+#~ msgid "Refresh Rate: "
+#~ msgstr "Obnovovací frekvence: "
+
+#~ msgid "Mode: "
+#~ msgstr "Režim: "
+
+#~ msgid "Available Resolutions"
+#~ msgstr "Dostupná rozlišení"
+
+#~ msgid "Scale"
+#~ msgstr "Měřítko"

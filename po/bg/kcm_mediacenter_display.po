@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:41+0000\n"
+"POT-Creation-Date: 2025-06-26 00:44+0000\n"
 "PO-Revision-Date: 2024-10-18 09:55+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -17,47 +17,31 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.11.70\n"
 
-#: ui/delegates/ConfirmationDialog.qml:54
-#, kde-format
-msgid "New Resolution"
-msgstr "Нова разделителна способност"
-
-#: ui/delegates/ConfirmationDialog.qml:89
-#, kde-format
-msgid "Accept"
-msgstr "Приемане"
-
-#: ui/delegates/ConfirmationDialog.qml:133
-#, kde-format
-msgid "Cancel"
-msgstr "Отказване"
-
-#: ui/delegates/LocalSettingCurrentResolution.qml:46
-#, kde-format
-msgid "Resolution: "
-msgstr "Разделителна способност: "
-
-#: ui/delegates/LocalSettingCurrentResolution.qml:69
-#, kde-format
-msgid "Refresh Rate: "
-msgstr "Честота на опресняване:"
-
-#: ui/delegates/LocalSettingCurrentResolution.qml:92
-#, kde-format
-msgid "Mode: "
-msgstr "Режим: "
-
-#: ui/delegates/LocalSettingResolution.qml:65
-#, kde-format
-msgid "Available Resolutions"
-msgstr "Налични разделителни способности"
-
-#: ui/delegates/LocalSettingScale.qml:52
-#, kde-format
-msgid "Scale"
-msgstr "Мащабиране"
-
-#: ui/main.qml:21
+#: ui/main.qml:22
 #, kde-format
 msgid "Display Configuration"
 msgstr "Конфигурация на екрана"
+
+#~ msgid "New Resolution"
+#~ msgstr "Нова разделителна способност"
+
+#~ msgid "Accept"
+#~ msgstr "Приемане"
+
+#~ msgid "Cancel"
+#~ msgstr "Отказване"
+
+#~ msgid "Resolution: "
+#~ msgstr "Разделителна способност: "
+
+#~ msgid "Refresh Rate: "
+#~ msgstr "Честота на опресняване:"
+
+#~ msgid "Mode: "
+#~ msgstr "Режим: "
+
+#~ msgid "Available Resolutions"
+#~ msgstr "Налични разделителни способности"
+
+#~ msgid "Scale"
+#~ msgstr "Мащабиране"

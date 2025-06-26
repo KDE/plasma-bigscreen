@@ -29,16 +29,6 @@ msgid "%1%"
 msgstr "%1%"
 
 #: ui/main.qml:21
-#, fuzzy, kde-format
-#| msgid "Audio Device Chooser"
+#, kde-format
 msgid "Audio Devices"
-msgstr "音频设备选择程序"
-
-#~ msgid "Playback Devices"
-#~ msgstr "播放设备"
-
-#~ msgid "Recording Devices"
-#~ msgstr "录音设备"
-
-#~ msgid "Press the [←] Back button to return to device selection"
-#~ msgstr "点击 [←] 后退按钮返回设备选择列表"
+msgstr ""
