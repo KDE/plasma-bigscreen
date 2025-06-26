@@ -15,6 +15,7 @@ Name[sl]=Vpogledovalnik UVC na velikem zaslonu Plasme
 Name[tr]=Plasma Büyük Ekran UVC Görüntüleyicisi
 Name[uk]=Переглядач UVC для Плазми для великих екранів
 Name[x-test]=xxPlasma Bigscreen UVC Viewerxx
+Name[zh_CN]=Plasma 大屏幕 UVC 查看器
 Exec=plasma-bigscreen-uvcviewer
 Icon=video-display
 Type=Application
