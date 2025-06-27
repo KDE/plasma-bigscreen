@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-25 00:44+0000\n"
-"PO-Revision-Date: 2024-10-24 07:44+0400\n"
+"PO-Revision-Date: 2025-06-26 11:35+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -118,7 +118,7 @@ msgstr "إعدادات"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "ابحث…"
 
 #: contents/ui/PowerManagementItem.qml:41
 #, kde-format

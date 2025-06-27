@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-24 00:44+0000\n"
-"PO-Revision-Date: 2025-06-01 20:50+0300\n"
+"PO-Revision-Date: 2025-06-24 06:08+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -44,16 +44,14 @@ msgid "Day"
 msgstr "יום"
 
 #: ui/DeviceTimeSettingsSidebar.qml:78
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust Date & Time Settings"
-msgstr "כיוון התאריך והשעה"
+msgstr "כיוון הגדרות התאריך והשעה"
 
 #: ui/DeviceTimeSettingsSidebar.qml:90
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "אזור זמן:"
+msgstr "אזור זמן"
 
 #: ui/DeviceTimeSettingsSidebar.qml:102
 #, kde-format
@@ -78,17 +76,15 @@ msgstr "%1, %2"
 #: ui/main.qml:22 ui/main.qml:76
 #, kde-format
 msgid "System"
-msgstr ""
+msgstr "מערכת"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Home Screen Appearance"
+#, kde-format
 msgid "Homescreen Appearance"
 msgstr "מראה מסך הבית"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Colored Tiles"
+#, kde-format
 msgid "Colored tiles"
 msgstr "אריחים צבעוניים"
 
@@ -98,16 +94,14 @@ msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "הרקע הזה ייצבע לפי סמל היישומון"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Set Shortcut"
+#, kde-format
 msgid "Shortcuts"
-msgstr "הגדרת קיצור דרך"
+msgstr "מקשי קיצור"
 
 #: ui/ShortcutsPickerSidebar.qml:63
-#, fuzzy, kde-format
-#| msgid "Reset Default"
+#, kde-format
 msgid "Reset to default"
-msgstr "איפוס ברירת המחדל"
+msgstr "איפוס לברירת המחדל"
 
 #: ui/ShortcutsPickerSidebar.qml:77
 #, kde-format

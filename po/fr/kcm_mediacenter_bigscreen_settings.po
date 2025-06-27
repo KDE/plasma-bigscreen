@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-24 00:44+0000\n"
-"PO-Revision-Date: 2025-06-02 09:53+0200\n"
+"PO-Revision-Date: 2025-06-25 08:42+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,16 +41,14 @@ msgid "Day"
 msgstr "Jour"
 
 #: ui/DeviceTimeSettingsSidebar.qml:78
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust Date & Time Settings"
-msgstr "Régler la date et l'heure"
+msgstr "Ajuster les paramètres de date et d'heure"
 
 #: ui/DeviceTimeSettingsSidebar.qml:90
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "Fuseau horaire :"
+msgstr "Fuseau horaire"
 
 #: ui/DeviceTimeSettingsSidebar.qml:102
 #, kde-format
@@ -75,17 +73,15 @@ msgstr "%1, %2"
 #: ui/main.qml:22 ui/main.qml:76
 #, kde-format
 msgid "System"
-msgstr ""
+msgstr "Système"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Home Screen Appearance"
+#, kde-format
 msgid "Homescreen Appearance"
 msgstr "Apparence de l'écran d'accueil"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Colored Tiles"
+#, kde-format
 msgid "Colored tiles"
 msgstr "Tuiles colorées"
 
@@ -97,14 +93,12 @@ msgstr ""
 "l'application."
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Set Shortcut"
+#, kde-format
 msgid "Shortcuts"
-msgstr "Définir un raccourci"
+msgstr "Raccourcis"
 
 #: ui/ShortcutsPickerSidebar.qml:63
-#, fuzzy, kde-format
-#| msgid "Reset Default"
+#, kde-format
 msgid "Reset to default"
 msgstr "Réinitialiser aux valeurs par défaut"
 

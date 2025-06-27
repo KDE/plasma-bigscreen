@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-24 00:44+0000\n"
-"PO-Revision-Date: 2025-06-09 17:52+0400\n"
+"PO-Revision-Date: 2025-06-26 11:35+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -44,16 +44,14 @@ msgid "Day"
 msgstr "اليوم"
 
 #: ui/DeviceTimeSettingsSidebar.qml:78
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust Date & Time Settings"
-msgstr "اضبط التّاريخ والوقت"
+msgstr "اضبط إعدادات التّاريخ والوقت"
 
 #: ui/DeviceTimeSettingsSidebar.qml:90
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "المنطقة الزمنية:"
+msgstr "المنطقة الزمنية"
 
 #: ui/DeviceTimeSettingsSidebar.qml:102
 #, kde-format
@@ -78,17 +76,15 @@ msgstr "%1، %2"
 #: ui/main.qml:22 ui/main.qml:76
 #, kde-format
 msgid "System"
-msgstr ""
+msgstr "النظام"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Home Screen Appearance"
+#, kde-format
 msgid "Homescreen Appearance"
 msgstr "مظهر شاشة البيت"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Colored Tiles"
+#, kde-format
 msgid "Colored tiles"
 msgstr "قطع ملونة"
 
@@ -98,16 +94,14 @@ msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "ستلّون خلفيات المربعات بناءً على أيقونة التطبيق"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Set Shortcut"
+#, kde-format
 msgid "Shortcuts"
-msgstr "عين اختصار"
+msgstr "الاختصارات"
 
 #: ui/ShortcutsPickerSidebar.qml:63
-#, fuzzy, kde-format
-#| msgid "Reset Default"
+#, kde-format
 msgid "Reset to default"
-msgstr "استعد المبدئي"
+msgstr "صفّر إلى المبدئيات"
 
 #: ui/ShortcutsPickerSidebar.qml:77
 #, kde-format

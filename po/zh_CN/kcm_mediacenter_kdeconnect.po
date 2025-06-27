@@ -51,7 +51,7 @@ msgstr "此设备未配对"
 #: ui/delegates/UnpairedView.qml:56
 #, kde-format
 msgid "Pairing request sent"
-msgstr ""
+msgstr "配对请求已发送"
 
 #: ui/delegates/UnpairedView.qml:60
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-25 00:44+0000\n"
-"PO-Revision-Date: 2024-10-17 23:00+0300\n"
+"PO-Revision-Date: 2025-06-24 06:07+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: ui/delegates/VolumeObject.qml:53
 #, kde-format
@@ -30,10 +30,9 @@ msgid "%1%"
 msgstr "%1%"
 
 #: ui/main.qml:21
-#, fuzzy, kde-format
-#| msgid "Audio Device Chooser"
+#, kde-format
 msgid "Audio Devices"
-msgstr "בורר התקני שמע"
+msgstr "התקני שמע"
 
 #~ msgid "Playback Devices"
 #~ msgstr "התקני נגינה"

@@ -27,7 +27,7 @@ msgstr "选择媒体设备"
 #: CameraHomePage.qml:61
 #, kde-format
 msgid "No video devices found"
-msgstr ""
+msgstr "没有找到视频设备"
 
 #: CameraHomePage.qml:66
 #, kde-format

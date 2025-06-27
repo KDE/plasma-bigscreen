@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-23 00:43+0000\n"
-"PO-Revision-Date: 2025-05-31 17:41+0400\n"
+"PO-Revision-Date: 2025-06-26 11:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -49,10 +49,9 @@ msgid "This device is not paired"
 msgstr "الجهاز غير مقترن"
 
 #: ui/delegates/UnpairedView.qml:56
-#, fuzzy, kde-format
-#| msgid "Pairing request sent to device"
+#, kde-format
 msgid "Pairing request sent"
-msgstr "أرسل طلب اقتران إلى الجهاز"
+msgstr "أرسل طلب اقتران"
 
 #: ui/delegates/UnpairedView.qml:60
 #, kde-format

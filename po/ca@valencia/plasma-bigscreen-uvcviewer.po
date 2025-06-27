@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-25 00:44+0000\n"
-"PO-Revision-Date: 2025-06-22 16:35+0200\n"
+"PO-Revision-Date: 2025-06-25 16:52+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: CameraHomePage.qml:15
 #, kde-format
@@ -26,10 +26,9 @@ msgid "Select Media Device"
 msgstr "Seleccioneu un dispositiu multimèdia"
 
 #: CameraHomePage.qml:61
-#, fuzzy, kde-format
-#| msgid "No cameras found"
+#, kde-format
 msgid "No video devices found"
-msgstr "No s'ha trobat cap càmera"
+msgstr "No s'ha trobat cap dispositiu de vídeo"
 
 #: CameraHomePage.qml:66
 #, kde-format
@@ -41,7 +40,3 @@ msgstr "Visor d'UVC de Plasma Bigscreen"
 msgctxt "@title:window"
 msgid "Bigscreen UVC Viewer"
 msgstr "Visor d'UVC de Bigscreen"
-
-#~ msgctxt "@title"
-#~ msgid "Available Video Inputs"
-#~ msgstr "Entrades disponibles de vídeo"

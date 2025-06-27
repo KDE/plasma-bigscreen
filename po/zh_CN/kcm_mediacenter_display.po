@@ -22,27 +22,3 @@ msgstr ""
 #, kde-format
 msgid "Display Configuration"
 msgstr "显示配置"
-
-#~ msgid "New Resolution"
-#~ msgstr "新分辨率"
-
-#~ msgid "Accept"
-#~ msgstr "接受"
-
-#~ msgid "Cancel"
-#~ msgstr "取消"
-
-#~ msgid "Resolution: "
-#~ msgstr "分辨率："
-
-#~ msgid "Refresh Rate: "
-#~ msgstr "刷新率："
-
-#~ msgid "Mode: "
-#~ msgstr "模式："
-
-#~ msgid "Available Resolutions"
-#~ msgstr "可用的分辨率"
-
-#~ msgid "Scale"
-#~ msgstr "缩放"

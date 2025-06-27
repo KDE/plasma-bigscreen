@@ -31,4 +31,4 @@ msgstr "%1%"
 #: ui/main.qml:21
 #, kde-format
 msgid "Audio Devices"
-msgstr ""
+msgstr "音频设备"

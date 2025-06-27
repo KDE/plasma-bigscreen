@@ -46,12 +46,12 @@ msgstr "日"
 #: ui/DeviceTimeSettingsSidebar.qml:78
 #, kde-format
 msgid "Adjust Date & Time Settings"
-msgstr ""
+msgstr "调整日期和时间设置"
 
 #: ui/DeviceTimeSettingsSidebar.qml:90
 #, kde-format
 msgid "Timezone"
-msgstr ""
+msgstr "时区"
 
 #: ui/DeviceTimeSettingsSidebar.qml:102
 #, kde-format
@@ -76,17 +76,17 @@ msgstr "%1，%2"
 #: ui/main.qml:22 ui/main.qml:76
 #, kde-format
 msgid "System"
-msgstr ""
+msgstr "系统"
 
 #: ui/main.qml:42
 #, kde-format
 msgid "Homescreen Appearance"
-msgstr ""
+msgstr "主屏幕外观"
 
 #: ui/main.qml:55
 #, kde-format
 msgid "Colored tiles"
-msgstr ""
+msgstr "彩色磁贴"
 
 #: ui/main.qml:56
 #, kde-format
@@ -96,12 +96,12 @@ msgstr "磁贴背景将根据应用程序的图标进行着色。"
 #: ui/main.qml:104
 #, kde-format
 msgid "Shortcuts"
-msgstr ""
+msgstr "快捷键"
 
 #: ui/ShortcutsPickerSidebar.qml:63
 #, kde-format
 msgid "Reset to default"
-msgstr ""
+msgstr "重置为默认值"
 
 #: ui/ShortcutsPickerSidebar.qml:77
 #, kde-format
