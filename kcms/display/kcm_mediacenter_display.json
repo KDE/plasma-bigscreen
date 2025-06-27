@@ -34,7 +34,16 @@
             "mediacenter"
         ],
         "Icon": "preferences-desktop-display-symbolic",
-        "Name": "Display"
+        "Name": "Display",
+        "Name[ca@valencia]": "Pantalla",
+        "Name[ca]": "Pantalla",
+        "Name[eu]": "Bistaratzea",
+        "Name[he]": "תצוגה",
+        "Name[ka]": "ეკრანი",
+        "Name[nl]": "Beeldscherm",
+        "Name[sl]": "Zaslon",
+        "Name[uk]": "Показ",
+        "Name[x-test]": "xxDisplayxx"
     },
     "X-DocPath": "kcontrol/display/index.html",
     "X-KDE-System-Settings-Parent-Category": "display",

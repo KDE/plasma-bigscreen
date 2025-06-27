@@ -49,6 +49,7 @@ Icon=applications-multimedia
 Terminal=false
 Categories=AudioVideo
 Comment=Switch into a Plasma Bigscreen session
+Comment[ar]=بدّل إلى جلسة بلازما الشاشة الكبيرة
 Comment[bg]=Превключване към сесия на Plasma Bigscreen
 Comment[ca]=Canvia a una sessió del Plasma Bigscreen
 Comment[ca@valencia]=Canvia a una sessió de Plasma Bigscreen
