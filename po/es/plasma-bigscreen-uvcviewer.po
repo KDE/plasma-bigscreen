@@ -1,0 +1,41 @@
+# Spanish translations for plasma-bigscreen-uvcviewer.po package.
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# SPDX-FileCopyrightText: 2025 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen-uvcviewer\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"PO-Revision-Date: 2025-06-28 23:40+0100\n"
+"Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.04.2\n"
+
+#: CameraHomePage.qml:15
+#, kde-format
+msgctxt "@title"
+msgid "Select Media Device"
+msgstr "Seleccionar dispositivo de medios"
+
+#: CameraHomePage.qml:61
+#, kde-format
+msgid "No video devices found"
+msgstr "No se encontró ningún dispositivo de vídeo"
+
+#: CameraHomePage.qml:66
+#, kde-format
+msgid "Plasma Bigscreen UVC Viewer"
+msgstr "Visor UVC de Plasma Bigscreen"
+
+#: Main.qml:17
+#, kde-format
+msgctxt "@title:window"
+msgid "Bigscreen UVC Viewer"
+msgstr "Visor UVC de Bigscreen"

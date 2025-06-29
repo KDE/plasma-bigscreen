@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-24 00:44+0000\n"
-"PO-Revision-Date: 2025-06-09 02:21+0100\n"
+"PO-Revision-Date: 2025-06-28 23:40+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -46,13 +46,12 @@ msgstr "Día"
 #: ui/DeviceTimeSettingsSidebar.qml:78
 #, kde-format
 msgid "Adjust Date & Time Settings"
-msgstr ""
+msgstr "Preferencias de ajuste de fecha y hora"
 
 #: ui/DeviceTimeSettingsSidebar.qml:90
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "Zona horaria:"
+msgstr "Zona horaria"
 
 #: ui/DeviceTimeSettingsSidebar.qml:102
 #, kde-format
@@ -77,17 +76,15 @@ msgstr "%1, %2"
 #: ui/main.qml:22 ui/main.qml:76
 #, kde-format
 msgid "System"
-msgstr ""
+msgstr "Sistema"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Home Screen Appearance"
+#, kde-format
 msgid "Homescreen Appearance"
 msgstr "Apariencia de la pantalla de inicio"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Colored Tiles"
+#, kde-format
 msgid "Colored tiles"
 msgstr "Mosaicos coloreados"
 
@@ -97,14 +94,12 @@ msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "El mosaico del fondo tomará el color del icono de la aplicación"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Set Shortcut"
+#, kde-format
 msgid "Shortcuts"
-msgstr "Crear atajo rápido"
+msgstr "Accesos rápidos"
 
 #: ui/ShortcutsPickerSidebar.qml:63
-#, fuzzy, kde-format
-#| msgid "Reset Default"
+#, kde-format
 msgid "Reset to default"
 msgstr "Reiniciar a predeterminados"
 
@@ -132,37 +127,3 @@ msgstr "Segundo"
 #, kde-format
 msgid "AM/PM"
 msgstr "AM/PM"
-
-#~ msgid "Time Display"
-#~ msgstr "Visualización de la hora"
-
-#~ msgid "Time"
-#~ msgstr "Hora"
-
-#~ msgid "Date"
-#~ msgstr "Fecha"
-
-#~ msgid "Press the [←] Back button to return to appearance settings"
-#~ msgstr ""
-#~ "Pulse el botón atrás [←] para retornar a las preferencias de apariencia"
-
-#~ msgid ""
-#~ "Press the [←] Back button to save configuration and return to settings"
-#~ msgstr ""
-#~ "Pulse el botón atrás [←] para guardar la configuración y volver a las "
-#~ "preferencias"
-
-#~ msgid "Update Shortcut Keys"
-#~ msgstr "Actualizar teclas de atajos de teclado"
-
-#~ msgid "Appearance"
-#~ msgstr "Apariencia"
-
-#~ msgid "Global Theme"
-#~ msgstr "Tema global"
-
-#~ msgid "Expanding Tiles"
-#~ msgstr "Expandir mosaico"
-
-#~ msgid "Tiles will expand when selected"
-#~ msgstr "El mosaico se expandirá cuando se seleccione"

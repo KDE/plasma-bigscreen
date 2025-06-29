@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_audiodevice\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-25 00:44+0000\n"
-"PO-Revision-Date: 2025-06-09 02:21+0100\n"
+"PO-Revision-Date: 2025-06-28 23:39+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: ui/delegates/VolumeObject.qml:53
 #, kde-format
@@ -30,17 +30,6 @@ msgid "%1%"
 msgstr "%1%"
 
 #: ui/main.qml:21
-#, fuzzy, kde-format
-#| msgid "Audio Device Chooser"
+#, kde-format
 msgid "Audio Devices"
-msgstr "Selector de dispositivo de audio"
-
-#~ msgid "Playback Devices"
-#~ msgstr "Dispositivos de reproducción"
-
-#~ msgid "Recording Devices"
-#~ msgstr "Dispositivos de grabación"
-
-#~ msgid "Press the [←] Back button to return to device selection"
-#~ msgstr ""
-#~ "Pulse la tecla retroceso [←] para retornar a la selección de dispositivo"
+msgstr "Dispositivo de audio"
