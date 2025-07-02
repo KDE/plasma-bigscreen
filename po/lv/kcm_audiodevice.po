@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-25 00:44+0000\n"
-"PO-Revision-Date: 2024-10-30 12:59+0200\n"
+"PO-Revision-Date: 2025-06-30 17:54+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: ui/delegates/VolumeObject.qml:53
 #, kde-format
 msgid "Adjust Volume"
-msgstr "Regulēt skaļumu"
+msgstr "Mainīt skaļumu"
 
 #: ui/delegates/VolumeObject.qml:140
 #, kde-format
@@ -30,10 +30,9 @@ msgid "%1%"
 msgstr "%1 %"
 
 #: ui/main.qml:21
-#, fuzzy, kde-format
-#| msgid "Audio Device Chooser"
+#, kde-format
 msgid "Audio Devices"
-msgstr "Audio ierīces izvēlētājs"
+msgstr "Audio ierīces"
 
 #~ msgid "Playback Devices"
 #~ msgstr "Atskaņojošās ierīces"
