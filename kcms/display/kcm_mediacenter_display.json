@@ -43,13 +43,15 @@
         "Name[he]": "תצוגה",
         "Name[it]": "Schermo",
         "Name[ka]": "ეკრანი",
+        "Name[lv]": "Displejs",
         "Name[nl]": "Beeldscherm",
         "Name[sl]": "Zaslon",
         "Name[sv]": "Bildskärm",
         "Name[tr]": "Görüntü",
         "Name[uk]": "Показ",
         "Name[x-test]": "xxDisplayxx",
-        "Name[zh_CN]": "显示"
+        "Name[zh_CN]": "显示",
+        "Name[zh_TW]": "顯示器"
     },
     "X-DocPath": "kcontrol/display/index.html",
     "X-KDE-System-Settings-Parent-Category": "display",

@@ -52,13 +52,15 @@
         "Name[he]": "מערכת",
         "Name[it]": "Sistema",
         "Name[ka]": "სისტემა",
+        "Name[lv]": "Sistēma",
         "Name[nl]": "Systeem",
         "Name[sl]": "Sistem",
         "Name[sv]": "System",
         "Name[tr]": "Sistem",
         "Name[uk]": "Система",
         "Name[x-test]": "xxSystemxx",
-        "Name[zh_CN]": "系统"
+        "Name[zh_CN]": "系统",
+        "Name[zh_TW]": "系統"
     },
     "X-KDE-Keywords": "theme, look, feel",
     "X-KDE-Keywords[ar]": "سمة,منظر,شكل",
