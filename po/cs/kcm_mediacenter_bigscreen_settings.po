@@ -49,10 +49,9 @@ msgid "Adjust Date & Time Settings"
 msgstr "Upravit datum a čas"
 
 #: ui/DeviceTimeSettingsSidebar.qml:90
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "Časové pásmo:"
+msgstr "Časové pásmo"
 
 #: ui/DeviceTimeSettingsSidebar.qml:102
 #, kde-format
@@ -77,7 +76,7 @@ msgstr "%1, %2"
 #: ui/main.qml:22 ui/main.qml:76
 #, kde-format
 msgid "System"
-msgstr ""
+msgstr "Systém"
 
 #: ui/main.qml:42
 #, fuzzy, kde-format
@@ -99,12 +98,12 @@ msgstr ""
 #: ui/main.qml:104
 #, kde-format
 msgid "Shortcuts"
-msgstr ""
+msgstr "Zkratky"
 
 #: ui/ShortcutsPickerSidebar.qml:63
 #, kde-format
 msgid "Reset to default"
-msgstr ""
+msgstr "Obnovit výchozí"
 
 #: ui/ShortcutsPickerSidebar.qml:77
 #, kde-format

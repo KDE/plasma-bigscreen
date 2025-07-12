@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-25 00:44+0000\n"
-"PO-Revision-Date: 2024-11-07 17:21+0200\n"
+"PO-Revision-Date: 2025-06-24 17:07+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -29,10 +29,9 @@ msgid "%1%"
 msgstr "%1 %"
 
 #: ui/main.qml:21
-#, fuzzy, kde-format
-#| msgid "Audio Device Chooser"
+#, kde-format
 msgid "Audio Devices"
-msgstr "Äänilaitevalinta"
+msgstr "Äänilaitteet"
 
 #~ msgid "Playback Devices"
 #~ msgstr "Toistolaitteet"

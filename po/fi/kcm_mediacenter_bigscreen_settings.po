@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# SPDX-FileCopyrightText: 2021, 2023, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2021, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-24 00:44+0000\n"
-"PO-Revision-Date: 2024-11-07 17:22+0200\n"
+"PO-Revision-Date: 2025-06-24 17:05+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -43,16 +43,14 @@ msgid "Day"
 msgstr "Päivä"
 
 #: ui/DeviceTimeSettingsSidebar.qml:78
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust Date & Time Settings"
 msgstr "Säädä päiväystä ja kellonaikaa"
 
 #: ui/DeviceTimeSettingsSidebar.qml:90
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "Aikavyöhyke:"
+msgstr "Aikavyöhyke"
 
 #: ui/DeviceTimeSettingsSidebar.qml:102
 #, kde-format
@@ -77,36 +75,32 @@ msgstr "%1, %2"
 #: ui/main.qml:22 ui/main.qml:76
 #, kde-format
 msgid "System"
-msgstr ""
+msgstr "Järjestelmä"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "General Appearance"
+#, kde-format
 msgid "Homescreen Appearance"
-msgstr "Yleisulkoasu"
+msgstr "Kotinäkymän ulkoasu"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Colored Tiles"
+#, kde-format
 msgid "Colored tiles"
 msgstr "Väritiilet"
 
 #: ui/main.qml:56
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
-msgstr ""
+msgstr "Tiilten taustat väritetään sovelluskuvakkeen mukaan"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Set Shortcut"
+#, kde-format
 msgid "Shortcuts"
-msgstr "Aseta pikanäppäin"
+msgstr "Pikanäppäimet"
 
 #: ui/ShortcutsPickerSidebar.qml:63
-#, fuzzy, kde-format
-#| msgid "Reset Default"
+#, kde-format
 msgid "Reset to default"
-msgstr "Palauta oletukset"
+msgstr "Palauta oletukseksi"
 
 #: ui/ShortcutsPickerSidebar.qml:77
 #, kde-format
