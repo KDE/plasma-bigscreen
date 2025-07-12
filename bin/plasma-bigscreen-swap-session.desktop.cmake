@@ -55,6 +55,7 @@ Comment[ca]=Canvia a una sessió del Plasma Bigscreen
 Comment[ca@valencia]=Canvia a una sessió de Plasma Bigscreen
 Comment[es]=Cambiar a una sesión Plasma Bigscreen
 Comment[eu]=Aldatu Plasma Bigscreen saio batera
+Comment[fi]=Vaihda Plasma Bigscreen -istuntoon
 Comment[fr]=Basculer vers une session Bigscreen de Plasma
 Comment[gl]=Cambiar a unha sesión de Plasma Bigscreen
 Comment[he]=החלפה להפעלת פלזמה למסכים גדולים
