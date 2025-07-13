@@ -28,7 +28,6 @@ Plasma Bigscreen is a user-friendly, open-source interface designed for devices 
 
 It is recommended to use `kde-builder` to build this from source.
 See [this page](https://community.kde.org/Get_Involved/development) in order to set it up.
-Note that `kdesrc-build` doesn't automatically build `plasma-nano` and `plasma-settings`, so make sure to also build that before you run the shell.
 
 <details>
 <summary><b>Click here to see dependencies</b></summary>
