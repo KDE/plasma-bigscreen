@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-15 00:45+0000\n"
 "PO-Revision-Date: 2025-06-30 17:56+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -17,11 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 "X-Generator: Lokalize 25.04.2\n"
-
-#: contents/config/config.qml:12
-#, kde-format
-msgid "General"
-msgstr "Pamata"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -57,31 +52,6 @@ msgstr "Atcelt"
 #, kde-format
 msgid "Audio Volume"
 msgstr "Skaļums"
-
-#: contents/ui/launcher/config/configGeneral.qml:32
-#, kde-format
-msgid "Websocket Address:"
-msgstr "Tīmekļa ligzdas adrese:"
-
-#: contents/ui/launcher/config/configGeneral.qml:38
-#, kde-format
-msgid "Additional Settings:"
-msgstr "Papildu iestatījumi:"
-
-#: contents/ui/launcher/config/configGeneral.qml:39
-#, kde-format
-msgid "Enable Notifications"
-msgstr "Ieslēgt paziņojumus"
-
-#: contents/ui/launcher/config/configGeneral.qml:45
-#, kde-format
-msgid "Enable Remote TTS"
-msgstr "Ieslēgt attāliāto TTS"
-
-#: contents/ui/launcher/config/configGeneral.qml:50
-#, kde-format
-msgid "Enable Remote STT"
-msgstr "Ieslēgt attālināto STT"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -134,6 +104,24 @@ msgstr "Notīrīt uzdevumus"
 #, kde-format
 msgid "Close"
 msgstr "Aizvērt"
+
+#~ msgid "General"
+#~ msgstr "Pamata"
+
+#~ msgid "Websocket Address:"
+#~ msgstr "Tīmekļa ligzdas adrese:"
+
+#~ msgid "Additional Settings:"
+#~ msgstr "Papildu iestatījumi:"
+
+#~ msgid "Enable Notifications"
+#~ msgstr "Ieslēgt paziņojumus"
+
+#~ msgid "Enable Remote TTS"
+#~ msgstr "Ieslēgt attāliāto TTS"
+
+#~ msgid "Enable Remote STT"
+#~ msgstr "Ieslēgt attālināto STT"
 
 #~ msgid "Manage Favorites"
 #~ msgstr "Pārvaldīt iecienītos"

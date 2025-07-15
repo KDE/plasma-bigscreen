@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-15 00:45+0000\n"
 "PO-Revision-Date: 2025-06-21 21:36+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -16,11 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.04.1\n"
-
-#: contents/config/config.qml:12
-#, kde-format
-msgid "General"
-msgstr "Allmänt"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -56,31 +51,6 @@ msgstr "Avbryt"
 #, kde-format
 msgid "Audio Volume"
 msgstr "Ljudvolym"
-
-#: contents/ui/launcher/config/configGeneral.qml:32
-#, kde-format
-msgid "Websocket Address:"
-msgstr "Webbuttagsadress:"
-
-#: contents/ui/launcher/config/configGeneral.qml:38
-#, kde-format
-msgid "Additional Settings:"
-msgstr "Ytterligare inställningar:"
-
-#: contents/ui/launcher/config/configGeneral.qml:39
-#, kde-format
-msgid "Enable Notifications"
-msgstr "Aktivera underrättelser"
-
-#: contents/ui/launcher/config/configGeneral.qml:45
-#, kde-format
-msgid "Enable Remote TTS"
-msgstr "Aktivera fjärr-TTS"
-
-#: contents/ui/launcher/config/configGeneral.qml:50
-#, kde-format
-msgid "Enable Remote STT"
-msgstr "Aktivera fjärr-STT"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -133,6 +103,24 @@ msgstr "Rensa uppgifter"
 #, kde-format
 msgid "Close"
 msgstr "Stäng"
+
+#~ msgid "General"
+#~ msgstr "Allmänt"
+
+#~ msgid "Websocket Address:"
+#~ msgstr "Webbuttagsadress:"
+
+#~ msgid "Additional Settings:"
+#~ msgstr "Ytterligare inställningar:"
+
+#~ msgid "Enable Notifications"
+#~ msgstr "Aktivera underrättelser"
+
+#~ msgid "Enable Remote TTS"
+#~ msgstr "Aktivera fjärr-TTS"
+
+#~ msgid "Enable Remote STT"
+#~ msgstr "Aktivera fjärr-STT"
 
 #~ msgid "Manage Favorites"
 #~ msgstr "Hantera favoriter"

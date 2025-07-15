@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-15 00:45+0000\n"
 "PO-Revision-Date: 2024-02-07 21:19-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -16,11 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.4\n"
-
-#: contents/config/config.qml:12
-#, kde-format
-msgid "General"
-msgstr "ਆਮ"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -56,31 +51,6 @@ msgstr ""
 #, kde-format
 msgid "Audio Volume"
 msgstr ""
-
-#: contents/ui/launcher/config/configGeneral.qml:32
-#, kde-format
-msgid "Websocket Address:"
-msgstr "ਵੈੱਬਸਾਕਟ ਐਡਰੈਸ:"
-
-#: contents/ui/launcher/config/configGeneral.qml:38
-#, kde-format
-msgid "Additional Settings:"
-msgstr "ਵਧੀਕ ਸੈਟਿੰਗਾਂ:"
-
-#: contents/ui/launcher/config/configGeneral.qml:39
-#, kde-format
-msgid "Enable Notifications"
-msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਸਮਰੱਥ ਕਰੋ"
-
-#: contents/ui/launcher/config/configGeneral.qml:45
-#, kde-format
-msgid "Enable Remote TTS"
-msgstr "ਰਿਮੋਟ TTS ਸਮਰੱਥ ਕਰੋ"
-
-#: contents/ui/launcher/config/configGeneral.qml:50
-#, kde-format
-msgid "Enable Remote STT"
-msgstr "ਰਿਮੋਟ STT ਸਮਰੱਥ ਕਰੋ"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -135,6 +105,24 @@ msgstr ""
 #| msgid "close"
 msgid "Close"
 msgstr "ਬੰਦ ਕਰੋ"
+
+#~ msgid "General"
+#~ msgstr "ਆਮ"
+
+#~ msgid "Websocket Address:"
+#~ msgstr "ਵੈੱਬਸਾਕਟ ਐਡਰੈਸ:"
+
+#~ msgid "Additional Settings:"
+#~ msgstr "ਵਧੀਕ ਸੈਟਿੰਗਾਂ:"
+
+#~ msgid "Enable Notifications"
+#~ msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਸਮਰੱਥ ਕਰੋ"
+
+#~ msgid "Enable Remote TTS"
+#~ msgstr "ਰਿਮੋਟ TTS ਸਮਰੱਥ ਕਰੋ"
+
+#~ msgid "Enable Remote STT"
+#~ msgstr "ਰਿਮੋਟ STT ਸਮਰੱਥ ਕਰੋ"
 
 #~ msgid "Use Colored Tiles"
 #~ msgstr "ਰੰਗਦਾਰ ਟਾਈਲਾਂ ਵਰਤੋਂ"

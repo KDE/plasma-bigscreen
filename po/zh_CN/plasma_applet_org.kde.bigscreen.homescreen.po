@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-15 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,11 +17,6 @@ msgstr ""
 "X-Crowdin-File: /kf6-trunk/messages/plasma-bigscreen/plasma_applet_org.kde."
 "bigscreen.homescreen.pot\n"
 "X-Crowdin-File-ID: 56210\n"
-
-#: contents/config/config.qml:12
-#, kde-format
-msgid "General"
-msgstr "常规"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -57,31 +52,6 @@ msgstr "取消"
 #, kde-format
 msgid "Audio Volume"
 msgstr "音量"
-
-#: contents/ui/launcher/config/configGeneral.qml:32
-#, kde-format
-msgid "Websocket Address:"
-msgstr "Websocket 地址："
-
-#: contents/ui/launcher/config/configGeneral.qml:38
-#, kde-format
-msgid "Additional Settings:"
-msgstr "额外设置："
-
-#: contents/ui/launcher/config/configGeneral.qml:39
-#, kde-format
-msgid "Enable Notifications"
-msgstr "启用通知"
-
-#: contents/ui/launcher/config/configGeneral.qml:45
-#, kde-format
-msgid "Enable Remote TTS"
-msgstr "启用远程 TTS"
-
-#: contents/ui/launcher/config/configGeneral.qml:50
-#, kde-format
-msgid "Enable Remote STT"
-msgstr "启用远程 STT"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -134,3 +104,21 @@ msgstr "清除任务"
 #, kde-format
 msgid "Close"
 msgstr "关闭"
+
+#~ msgid "General"
+#~ msgstr "常规"
+
+#~ msgid "Websocket Address:"
+#~ msgstr "Websocket 地址："
+
+#~ msgid "Additional Settings:"
+#~ msgstr "额外设置："
+
+#~ msgid "Enable Notifications"
+#~ msgstr "启用通知"
+
+#~ msgid "Enable Remote TTS"
+#~ msgstr "启用远程 TTS"
+
+#~ msgid "Enable Remote STT"
+#~ msgstr "启用远程 STT"

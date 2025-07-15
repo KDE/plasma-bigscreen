@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-15 00:45+0000\n"
 "PO-Revision-Date: 2022-01-17 14:34+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -16,11 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.1\n"
-
-#: contents/config/config.qml:12
-#, kde-format
-msgid "General"
-msgstr "Obecné"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -56,31 +51,6 @@ msgstr "Zrušit"
 #, kde-format
 msgid "Audio Volume"
 msgstr "Hlasitost zvuku"
-
-#: contents/ui/launcher/config/configGeneral.qml:32
-#, kde-format
-msgid "Websocket Address:"
-msgstr "Adresa webového soketu:"
-
-#: contents/ui/launcher/config/configGeneral.qml:38
-#, kde-format
-msgid "Additional Settings:"
-msgstr "Další nastavení:"
-
-#: contents/ui/launcher/config/configGeneral.qml:39
-#, kde-format
-msgid "Enable Notifications"
-msgstr "Povolit upozornění"
-
-#: contents/ui/launcher/config/configGeneral.qml:45
-#, kde-format
-msgid "Enable Remote TTS"
-msgstr "Povolit vzdálené TTS"
-
-#: contents/ui/launcher/config/configGeneral.qml:50
-#, kde-format
-msgid "Enable Remote STT"
-msgstr "Povolit vzdálené STT"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -133,3 +103,21 @@ msgstr ""
 #, kde-format
 msgid "Close"
 msgstr "Zavřít"
+
+#~ msgid "General"
+#~ msgstr "Obecné"
+
+#~ msgid "Websocket Address:"
+#~ msgstr "Adresa webového soketu:"
+
+#~ msgid "Additional Settings:"
+#~ msgstr "Další nastavení:"
+
+#~ msgid "Enable Notifications"
+#~ msgstr "Povolit upozornění"
+
+#~ msgid "Enable Remote TTS"
+#~ msgstr "Povolit vzdálené TTS"
+
+#~ msgid "Enable Remote STT"
+#~ msgstr "Povolit vzdálené STT"

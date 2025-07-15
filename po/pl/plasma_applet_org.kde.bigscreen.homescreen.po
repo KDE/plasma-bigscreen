@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-15 00:45+0000\n"
 "PO-Revision-Date: 2024-10-19 13:02+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -16,11 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-
-#: contents/config/config.qml:12
-#, kde-format
-msgid "General"
-msgstr "Ogólne"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -56,31 +51,6 @@ msgstr "Anuluj"
 #, kde-format
 msgid "Audio Volume"
 msgstr "Głośność dźwięku"
-
-#: contents/ui/launcher/config/configGeneral.qml:32
-#, kde-format
-msgid "Websocket Address:"
-msgstr "Adres gniazda sieciowego:"
-
-#: contents/ui/launcher/config/configGeneral.qml:38
-#, kde-format
-msgid "Additional Settings:"
-msgstr "Dodatkowe ustawienia:"
-
-#: contents/ui/launcher/config/configGeneral.qml:39
-#, kde-format
-msgid "Enable Notifications"
-msgstr "Włącz powiadomienia"
-
-#: contents/ui/launcher/config/configGeneral.qml:45
-#, kde-format
-msgid "Enable Remote TTS"
-msgstr "Włącz zdalny TTS"
-
-#: contents/ui/launcher/config/configGeneral.qml:50
-#, kde-format
-msgid "Enable Remote STT"
-msgstr "Włącz zdalny STT"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -133,6 +103,24 @@ msgstr "Wyczyść zadania"
 #, kde-format
 msgid "Close"
 msgstr "Zamknij"
+
+#~ msgid "General"
+#~ msgstr "Ogólne"
+
+#~ msgid "Websocket Address:"
+#~ msgstr "Adres gniazda sieciowego:"
+
+#~ msgid "Additional Settings:"
+#~ msgstr "Dodatkowe ustawienia:"
+
+#~ msgid "Enable Notifications"
+#~ msgstr "Włącz powiadomienia"
+
+#~ msgid "Enable Remote TTS"
+#~ msgstr "Włącz zdalny TTS"
+
+#~ msgid "Enable Remote STT"
+#~ msgstr "Włącz zdalny STT"
 
 #~ msgid "Manage Favorites"
 #~ msgstr "Zarządzaj ulubionymi"

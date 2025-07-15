@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-15 00:45+0000\n"
 "PO-Revision-Date: 2025-06-20 22:34+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -19,11 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.04.2\n"
-
-#: contents/config/config.qml:12
-#, kde-format
-msgid "General"
-msgstr "Orokorra"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -59,31 +54,6 @@ msgstr "Utzi"
 #, kde-format
 msgid "Audio Volume"
 msgstr "Audioaren bolumena"
-
-#: contents/ui/launcher/config/configGeneral.qml:32
-#, kde-format
-msgid "Websocket Address:"
-msgstr "Web-hargunearen helbidea:"
-
-#: contents/ui/launcher/config/configGeneral.qml:38
-#, kde-format
-msgid "Additional Settings:"
-msgstr "Ezarpen osagarriak:"
-
-#: contents/ui/launcher/config/configGeneral.qml:39
-#, kde-format
-msgid "Enable Notifications"
-msgstr "Gaitu jakinarazpenak"
-
-#: contents/ui/launcher/config/configGeneral.qml:45
-#, kde-format
-msgid "Enable Remote TTS"
-msgstr "Gaitu urrutiko TTS"
-
-#: contents/ui/launcher/config/configGeneral.qml:50
-#, kde-format
-msgid "Enable Remote STT"
-msgstr "Gaitu urrutiko STT"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -136,6 +106,24 @@ msgstr "Garbitu atazak"
 #, kde-format
 msgid "Close"
 msgstr "Itxi"
+
+#~ msgid "General"
+#~ msgstr "Orokorra"
+
+#~ msgid "Websocket Address:"
+#~ msgstr "Web-hargunearen helbidea:"
+
+#~ msgid "Additional Settings:"
+#~ msgstr "Ezarpen osagarriak:"
+
+#~ msgid "Enable Notifications"
+#~ msgstr "Gaitu jakinarazpenak"
+
+#~ msgid "Enable Remote TTS"
+#~ msgstr "Gaitu urrutiko TTS"
+
+#~ msgid "Enable Remote STT"
+#~ msgstr "Gaitu urrutiko STT"
 
 #~ msgid "Manage Favorites"
 #~ msgstr "Kudeatu Gogokoak"

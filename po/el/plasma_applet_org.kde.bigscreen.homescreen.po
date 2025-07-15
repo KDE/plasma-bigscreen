@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-15 00:45+0000\n"
 "PO-Revision-Date: 2020-10-07 09:35+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -16,11 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.04.2\n"
-
-#: contents/config/config.qml:12
-#, kde-format
-msgid "General"
-msgstr ""
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -56,31 +51,6 @@ msgstr ""
 #, kde-format
 msgid "Audio Volume"
 msgstr ""
-
-#: contents/ui/launcher/config/configGeneral.qml:32
-#, kde-format
-msgid "Websocket Address:"
-msgstr "Διεύθυνση υποδοχής στον ιστό:"
-
-#: contents/ui/launcher/config/configGeneral.qml:38
-#, kde-format
-msgid "Additional Settings:"
-msgstr "Πρόσθετες ρυθμίσεις:"
-
-#: contents/ui/launcher/config/configGeneral.qml:39
-#, kde-format
-msgid "Enable Notifications"
-msgstr "ενεργοποίηση ειδοποιήσεων"
-
-#: contents/ui/launcher/config/configGeneral.qml:45
-#, kde-format
-msgid "Enable Remote TTS"
-msgstr "Ενεργοποίηση απομακρυσμένου TTS"
-
-#: contents/ui/launcher/config/configGeneral.qml:50
-#, kde-format
-msgid "Enable Remote STT"
-msgstr "Ενεργοποίηση απομακρυσμένου STT"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -134,6 +104,21 @@ msgstr ""
 #, kde-format
 msgid "Close"
 msgstr "Κλείσιμο"
+
+#~ msgid "Websocket Address:"
+#~ msgstr "Διεύθυνση υποδοχής στον ιστό:"
+
+#~ msgid "Additional Settings:"
+#~ msgstr "Πρόσθετες ρυθμίσεις:"
+
+#~ msgid "Enable Notifications"
+#~ msgstr "ενεργοποίηση ειδοποιήσεων"
+
+#~ msgid "Enable Remote TTS"
+#~ msgstr "Ενεργοποίηση απομακρυσμένου TTS"
+
+#~ msgid "Enable Remote STT"
+#~ msgstr "Ενεργοποίηση απομακρυσμένου STT"
 
 #~ msgid "Use Colored Tiles"
 #~ msgstr "Χρήση έγχρωμων πλακιδίων"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-15 00:45+0000\n"
 "PO-Revision-Date: 2024-12-28 17:41+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -17,11 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#: contents/config/config.qml:12
-#, kde-format
-msgid "General"
-msgstr "Ĝenerala"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -57,31 +52,6 @@ msgstr "Nuligi"
 #, kde-format
 msgid "Audio Volume"
 msgstr "Aŭdila Laŭteco"
-
-#: contents/ui/launcher/config/configGeneral.qml:32
-#, kde-format
-msgid "Websocket Address:"
-msgstr "Websocket-Adreso:"
-
-#: contents/ui/launcher/config/configGeneral.qml:38
-#, kde-format
-msgid "Additional Settings:"
-msgstr "Pliaj Agordoj:"
-
-#: contents/ui/launcher/config/configGeneral.qml:39
-#, kde-format
-msgid "Enable Notifications"
-msgstr "Ebligi Sciigojn"
-
-#: contents/ui/launcher/config/configGeneral.qml:45
-#, kde-format
-msgid "Enable Remote TTS"
-msgstr "Ebligi Remote-TTS"
-
-#: contents/ui/launcher/config/configGeneral.qml:50
-#, kde-format
-msgid "Enable Remote STT"
-msgstr "Ebligi Remote-TTT"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -134,6 +104,24 @@ msgstr "Viŝi Taskojn"
 #, kde-format
 msgid "Close"
 msgstr "Fermi"
+
+#~ msgid "General"
+#~ msgstr "Ĝenerala"
+
+#~ msgid "Websocket Address:"
+#~ msgstr "Websocket-Adreso:"
+
+#~ msgid "Additional Settings:"
+#~ msgstr "Pliaj Agordoj:"
+
+#~ msgid "Enable Notifications"
+#~ msgstr "Ebligi Sciigojn"
+
+#~ msgid "Enable Remote TTS"
+#~ msgstr "Ebligi Remote-TTS"
+
+#~ msgid "Enable Remote STT"
+#~ msgstr "Ebligi Remote-TTT"
 
 #~ msgid "Manage Favorites"
 #~ msgstr "Mastrumi Plejŝatatojn"

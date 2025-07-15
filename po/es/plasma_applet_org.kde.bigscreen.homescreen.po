@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-15 00:45+0000\n"
 "PO-Revision-Date: 2025-06-22 18:43+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -17,11 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.04.2\n"
-
-#: contents/config/config.qml:12
-#, kde-format
-msgid "General"
-msgstr "General"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -57,31 +52,6 @@ msgstr "Cancelar"
 #, kde-format
 msgid "Audio Volume"
 msgstr "Volumen de audio"
-
-#: contents/ui/launcher/config/configGeneral.qml:32
-#, kde-format
-msgid "Websocket Address:"
-msgstr "Dirección Websocket:"
-
-#: contents/ui/launcher/config/configGeneral.qml:38
-#, kde-format
-msgid "Additional Settings:"
-msgstr "Preferencias adicionales:"
-
-#: contents/ui/launcher/config/configGeneral.qml:39
-#, kde-format
-msgid "Enable Notifications"
-msgstr "Habilitar notificaciones"
-
-#: contents/ui/launcher/config/configGeneral.qml:45
-#, kde-format
-msgid "Enable Remote TTS"
-msgstr "Habilitar TTS remota"
-
-#: contents/ui/launcher/config/configGeneral.qml:50
-#, kde-format
-msgid "Enable Remote STT"
-msgstr "Habilitar STT remoto"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -134,3 +104,21 @@ msgstr "Limpiar tareas"
 #, kde-format
 msgid "Close"
 msgstr "Cerrar"
+
+#~ msgid "General"
+#~ msgstr "General"
+
+#~ msgid "Websocket Address:"
+#~ msgstr "Dirección Websocket:"
+
+#~ msgid "Additional Settings:"
+#~ msgstr "Preferencias adicionales:"
+
+#~ msgid "Enable Notifications"
+#~ msgstr "Habilitar notificaciones"
+
+#~ msgid "Enable Remote TTS"
+#~ msgstr "Habilitar TTS remota"
+
+#~ msgid "Enable Remote STT"
+#~ msgstr "Habilitar STT remoto"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-15 00:45+0000\n"
 "PO-Revision-Date: 2023-02-19 15:56+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -16,11 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.2\n"
-
-#: contents/config/config.qml:12
-#, kde-format
-msgid "General"
-msgstr "Əsas"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -56,31 +51,6 @@ msgstr ""
 #, kde-format
 msgid "Audio Volume"
 msgstr ""
-
-#: contents/ui/launcher/config/configGeneral.qml:32
-#, kde-format
-msgid "Websocket Address:"
-msgstr "Veb Soketi ünvanı:"
-
-#: contents/ui/launcher/config/configGeneral.qml:38
-#, kde-format
-msgid "Additional Settings:"
-msgstr "Əlavə Ayarlar:"
-
-#: contents/ui/launcher/config/configGeneral.qml:39
-#, kde-format
-msgid "Enable Notifications"
-msgstr "Bildirişləri aktiv etmək"
-
-#: contents/ui/launcher/config/configGeneral.qml:45
-#, kde-format
-msgid "Enable Remote TTS"
-msgstr "Şəbəkədəki Mətn Səsləndirməni (TTS) aktiv etmək"
-
-#: contents/ui/launcher/config/configGeneral.qml:50
-#, kde-format
-msgid "Enable Remote STT"
-msgstr "Şəbəkədəki STT aktiv etmək"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -135,6 +105,24 @@ msgstr ""
 #| msgid "close"
 msgid "Close"
 msgstr "bağlamaq"
+
+#~ msgid "General"
+#~ msgstr "Əsas"
+
+#~ msgid "Websocket Address:"
+#~ msgstr "Veb Soketi ünvanı:"
+
+#~ msgid "Additional Settings:"
+#~ msgstr "Əlavə Ayarlar:"
+
+#~ msgid "Enable Notifications"
+#~ msgstr "Bildirişləri aktiv etmək"
+
+#~ msgid "Enable Remote TTS"
+#~ msgstr "Şəbəkədəki Mətn Səsləndirməni (TTS) aktiv etmək"
+
+#~ msgid "Enable Remote STT"
+#~ msgstr "Şəbəkədəki STT aktiv etmək"
 
 #~ msgid "Use Colored Tiles"
 #~ msgstr "Rəngli lövhəciklərdən istifadə edin"

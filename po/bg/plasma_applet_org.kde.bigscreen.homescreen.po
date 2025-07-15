@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-15 00:45+0000\n"
 "PO-Revision-Date: 2025-06-21 12:12+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -18,11 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.07.70\n"
-
-#: contents/config/config.qml:12
-#, kde-format
-msgid "General"
-msgstr "Общи"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -58,31 +53,6 @@ msgstr "Отказ"
 #, kde-format
 msgid "Audio Volume"
 msgstr "Сила на звука"
-
-#: contents/ui/launcher/config/configGeneral.qml:32
-#, kde-format
-msgid "Websocket Address:"
-msgstr "Адрес на Websocket:"
-
-#: contents/ui/launcher/config/configGeneral.qml:38
-#, kde-format
-msgid "Additional Settings:"
-msgstr "Допълнителни настройки:"
-
-#: contents/ui/launcher/config/configGeneral.qml:39
-#, kde-format
-msgid "Enable Notifications"
-msgstr "Включване на известяванията"
-
-#: contents/ui/launcher/config/configGeneral.qml:45
-#, kde-format
-msgid "Enable Remote TTS"
-msgstr "Активиране на Remote TTS"
-
-#: contents/ui/launcher/config/configGeneral.qml:50
-#, kde-format
-msgid "Enable Remote STT"
-msgstr "Активиране на Remote STT"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -135,3 +105,21 @@ msgstr "Изчистване на задачите"
 #, kde-format
 msgid "Close"
 msgstr "Затваряне"
+
+#~ msgid "General"
+#~ msgstr "Общи"
+
+#~ msgid "Websocket Address:"
+#~ msgstr "Адрес на Websocket:"
+
+#~ msgid "Additional Settings:"
+#~ msgstr "Допълнителни настройки:"
+
+#~ msgid "Enable Notifications"
+#~ msgstr "Включване на известяванията"
+
+#~ msgid "Enable Remote TTS"
+#~ msgstr "Активиране на Remote TTS"
+
+#~ msgid "Enable Remote STT"
+#~ msgstr "Активиране на Remote STT"

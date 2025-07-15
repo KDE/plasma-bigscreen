@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-15 00:45+0000\n"
 "PO-Revision-Date: 2025-06-18 08:49+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -16,11 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.04.2\n"
-
-#: contents/config/config.qml:12
-#, kde-format
-msgid "General"
-msgstr "Generale"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -56,31 +51,6 @@ msgstr "Annulla"
 #, kde-format
 msgid "Audio Volume"
 msgstr "Volume audio"
-
-#: contents/ui/launcher/config/configGeneral.qml:32
-#, kde-format
-msgid "Websocket Address:"
-msgstr "Indirizzo websocket:"
-
-#: contents/ui/launcher/config/configGeneral.qml:38
-#, kde-format
-msgid "Additional Settings:"
-msgstr "Impostazioni aggiuntive:"
-
-#: contents/ui/launcher/config/configGeneral.qml:39
-#, kde-format
-msgid "Enable Notifications"
-msgstr "Attiva le notifiche"
-
-#: contents/ui/launcher/config/configGeneral.qml:45
-#, kde-format
-msgid "Enable Remote TTS"
-msgstr "Abilita sintesi vocale remota"
-
-#: contents/ui/launcher/config/configGeneral.qml:50
-#, kde-format
-msgid "Enable Remote STT"
-msgstr "Abilita riconoscimento vocale remoto"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -133,6 +103,24 @@ msgstr "Cancella attività"
 #, kde-format
 msgid "Close"
 msgstr "Chiudi"
+
+#~ msgid "General"
+#~ msgstr "Generale"
+
+#~ msgid "Websocket Address:"
+#~ msgstr "Indirizzo websocket:"
+
+#~ msgid "Additional Settings:"
+#~ msgstr "Impostazioni aggiuntive:"
+
+#~ msgid "Enable Notifications"
+#~ msgstr "Attiva le notifiche"
+
+#~ msgid "Enable Remote TTS"
+#~ msgstr "Abilita sintesi vocale remota"
+
+#~ msgid "Enable Remote STT"
+#~ msgstr "Abilita riconoscimento vocale remoto"
 
 #~ msgid "Manage Favorites"
 #~ msgstr "Gestisci preferiti"

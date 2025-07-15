@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.mycroft.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-15 00:45+0000\n"
 "PO-Revision-Date: 2022-01-07 14:58+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -15,11 +15,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 21.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-
-#: contents/config/config.qml:12
-#, kde-format
-msgid "General"
-msgstr ""
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -54,31 +49,6 @@ msgstr ""
 #: contents/ui/indicators/Volume.qml:26
 #, kde-format
 msgid "Audio Volume"
-msgstr ""
-
-#: contents/ui/launcher/config/configGeneral.qml:32
-#, kde-format
-msgid "Websocket Address:"
-msgstr ""
-
-#: contents/ui/launcher/config/configGeneral.qml:38
-#, kde-format
-msgid "Additional Settings:"
-msgstr "Ďalšie nastavenia"
-
-#: contents/ui/launcher/config/configGeneral.qml:39
-#, kde-format
-msgid "Enable Notifications"
-msgstr "Povoliť oznámenia"
-
-#: contents/ui/launcher/config/configGeneral.qml:45
-#, kde-format
-msgid "Enable Remote TTS"
-msgstr ""
-
-#: contents/ui/launcher/config/configGeneral.qml:50
-#, kde-format
-msgid "Enable Remote STT"
 msgstr ""
 
 #: contents/ui/launcher/LauncherHome.qml:78
@@ -134,6 +104,12 @@ msgstr ""
 #| msgid "close"
 msgid "Close"
 msgstr "zatvoriť"
+
+#~ msgid "Additional Settings:"
+#~ msgstr "Ďalšie nastavenia"
+
+#~ msgid "Enable Notifications"
+#~ msgstr "Povoliť oznámenia"
 
 #~ msgid "Use Colored Tiles"
 #~ msgstr "Použiť zafarbené dlaždice"
