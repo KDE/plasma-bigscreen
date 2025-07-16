@@ -104,21 +104,3 @@ msgstr "清除任务"
 #, kde-format
 msgid "Close"
 msgstr "关闭"
-
-#~ msgid "General"
-#~ msgstr "常规"
-
-#~ msgid "Websocket Address:"
-#~ msgstr "Websocket 地址："
-
-#~ msgid "Additional Settings:"
-#~ msgstr "额外设置："
-
-#~ msgid "Enable Notifications"
-#~ msgstr "启用通知"
-
-#~ msgid "Enable Remote TTS"
-#~ msgstr "启用远程 TTS"
-
-#~ msgid "Enable Remote STT"
-#~ msgstr "启用远程 STT"
