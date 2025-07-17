@@ -6,7 +6,6 @@
 <component type="desktop-application">
   <id>org.kde.plasma.bigscreen</id>
   <launchable type="desktop-id">plasma-bigscreen-wayland.desktop</launchable>
-  <launchable type="desktop-id">plasma-bigscreen-x11.desktop</launchable>
   <name>KDE Plasma Bigscreen</name>
   <name xml:lang="ar">كِيدِي بلازما الشاشة الكبيرة</name>
   <name xml:lang="az">KDE Plasma böyük ekranı</name>
