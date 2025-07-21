@@ -105,21 +105,3 @@ msgstr ""
 #, fuzzy, kde-format
 msgid "Close"
 msgstr "lukk"
-
-#~ msgid "General"
-#~ msgstr "Generelt"
-
-#~ msgid "Websocket Address:"
-#~ msgstr "Websocket-adresse:"
-
-#~ msgid "Additional Settings:"
-#~ msgstr "Fleire innstillingar:"
-
-#~ msgid "Enable Notifications"
-#~ msgstr "Slå på varslingar"
-
-#~ msgid "Enable Remote TTS"
-#~ msgstr "Slå på ekstern talesyntese"
-
-#~ msgid "Enable Remote STT"
-#~ msgstr "Slå på ekstern taleattkjenning"
