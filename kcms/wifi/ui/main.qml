@@ -36,12 +36,6 @@ KCM.SimpleKCM {
     property var devicePath
     property var specificPath
 
-    property Item settingMenuItem: networkSelectionView.parent.parent.lastSettingMenuItem
-
-    function settingMenuItemFocus() {
-        settingMenuItem.forceActiveFocus()
-    }
-
     onActiveFocusChanged: {
         if (activeFocus) {
             handler.requestScan();

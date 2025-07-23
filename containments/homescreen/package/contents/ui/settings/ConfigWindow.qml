@@ -29,10 +29,6 @@ Window {
     // Height of header components (shared between the two panes)
     readonly property real headerHeight: Kirigami.Units.gridUnit * 7
 
-    // HACK: some KCMs we don't want to navigate to because we lose focus
-    // The about-distro KCM is not a native bigscreen kcm, so it eats keyboard inputs and softlocks us
-    readonly property bool isCurrentModuleFocusable: true
-
     // Timer utility with callback
     Timer {
         id: timer
@@ -105,10 +101,6 @@ Window {
         }
     }
 
-    Module {
-        id: module
-    }
-
     Item {
         id: configContentItem
         anchors.fill: parent
@@ -125,7 +117,6 @@ Window {
             }
         }
 
-
         // Sidebar (left panel)
         ConfigWindowSidebar {
             id: menu
@@ -138,7 +129,7 @@ Window {
 
             currentModuleName: root.currentModuleName
 
-            KeyNavigation.right: root.isCurrentModuleFocusable ? loadedKCMPage : null
+            KeyNavigation.right: loadedKCMPage
             KeyNavigation.tab: KeyNavigation.right
             Keys.onEscapePressed: hideOverlay()
         }
@@ -191,193 +182,30 @@ Window {
             }
         }
 
+        Module {
+            id: module
+        }
+
         Component {
             id: wallpaperKcm
-            Kirigami.Page {
-                id: container
 
-                KeyNavigation.left: root.isCurrentModuleFocusable ? root.settingsKCMMenu : null
+            WallpaperKCMPage {
+                KeyNavigation.left: root.settingsKCMMenu
                 KeyNavigation.backtab: KeyNavigation.left
-
-                onActiveFocusChanged: {
-                    if (activeFocus) {
-                        wallpaperSelectorDelegate.forceActiveFocus();
-                    }
-                }
-
-                topPadding: 0
-                leftPadding: Kirigami.Units.gridUnit + Kirigami.Units.largeSpacing
-                rightPadding: leftPadding
-                bottomPadding: 0
-
-                header: Item {
-                    id: headerAreaTop
-                    height: root.headerHeight
-                    width: parent.width
-
-                    Kirigami.Heading {
-                        id: settingsTitle
-                        text: i18n('Wallpaper')
-                        anchors.fill: parent
-
-                        padding: container.leftPadding
-                        verticalAlignment: Text.AlignBottom
-                        horizontalAlignment: Text.AlignLeft
-
-                        font.weight: Font.Light
-
-                        color: Kirigami.Theme.textColor
-                        fontSizeMode: Text.Fit
-                        minimumPixelSize: 16
-                        font.pixelSize: 32
-                    }
-                }
-
-                ColumnLayout {
-                    anchors.fill: parent
-
-                    Bigscreen.ButtonDelegate {
-                        id: wallpaperSelectorDelegate
-                        Layout.fillWidth: true
-
-                        // Open wallpaper selector
-                        onClicked: {
-                            root.hideOverlay();
-                            Plasmoid.internalAction("configure").trigger();
-                        }
-
-                        text: i18n('Open wallpaper selector')
-                        icon.name: 'backgroundtool'
-                    }
-                    Item { Layout.fillHeight: true }
-                }
             }
         }
 
         Component {
             id: kcmContainer
-            Kirigami.Page {
-                id: container
 
-                property QtObject kcm
-                property Item internalPage
-                property bool suppressDeletion: false
-
-                title: internalPage.title
-
-                KeyNavigation.left: root.isCurrentModuleFocusable ? root.settingsKCMMenu : null
+            KCMContainer {
+                KeyNavigation.left: root.settingsKCMMenu
                 KeyNavigation.backtab: KeyNavigation.left
                 Keys.onEscapePressed: root.settingsKCMMenu.forceActiveFocus()
 
-                header: Item {
-                    id: headerAreaTop
-                    height: root.headerHeight
-                    width: parent.width
-
-                    Kirigami.Heading {
-                        id: settingsTitle
-                        text: internalPage ? internalPage.title : ''
-                        anchors.fill: parent
-
-                        padding: container.leftPadding
-                        verticalAlignment: Text.AlignBottom
-                        horizontalAlignment: Text.AlignLeft
-
-                        font.weight: Font.Light
-
-                        color: Kirigami.Theme.textColor
-                        fontSizeMode: Text.Fit
-                        minimumPixelSize: 16
-                        font.pixelSize: 32
-                    }
+                onNewPageRequested: (page) => {
+                    pageStack.push(kcmContainer.createObject(pageStack, {"internalPage": page}));
                 }
-
-                topPadding: 0
-                leftPadding: Kirigami.Units.gridUnit + Kirigami.Units.largeSpacing
-                rightPadding: leftPadding
-                bottomPadding: 0
-
-                flickable: internalPage ? internalPage.flickable : null
-                actions: (internalPage && internalPage.actions) ? internalPage.actions : []
-
-                onInternalPageChanged: {
-                    if (internalPage) {
-                        internalPage.parent = contentItem;
-                        internalPage.anchors.fill = contentItem;
-
-                        // Ensure pages have keynavigation set
-                        internalPage.KeyNavigation.left = Qt.binding(() => container.KeyNavigation.left);
-                    }
-                }
-                onActiveFocusChanged: {
-                    if (activeFocus && internalPage && root.isCurrentModuleFocusable) {
-                        internalPage.forceActiveFocus();
-                    }
-                    if (activeFocus && !root.isCurrentModuleFocusable) {
-                        // Return focus to sidebar if this module is not focusable
-                        root.settingsKCMMenu.forceActiveFocus();
-                    }
-                }
-
-                Component.onCompleted: {
-                    // setting a binding seems to not work, add them manually
-                    if (internalPage && internalPage.actions) {
-                        for (let action of internalPage.actions) {
-                            actions.push(action);
-                        }
-                    }
-                    if (kcm.load !== undefined) {
-                        kcm.load();
-                    }
-                }
-
-                data: [
-                    Connections {
-                        target: internalPage
-                        function onActionsChanged() {
-                            root.actions.clear();
-                            for (let action of internalPage.actions) {
-                                root.actions.push(action);
-                            }
-                        }
-                    },
-                    Connections {
-                        target: kcm
-                        function onPagePushed(page) {
-                            pageStack.push(kcmContainer.createObject(pageStack, {"internalPage": page}));
-                        }
-                        function onPageRemoved() {
-                            pageStack.pop();
-                            hideOverlay();
-                        }
-                        function onNeedsSaveChanged() {
-                            if (kcm.needsSave) {
-                                kcm.save();
-                            }
-                        }
-                    },
-                    Connections {
-                        target: pageStack
-                        // TODO: this doesn't exist in StackView, find alternative
-                        // function onPageRemoved(page) {
-                        //     if (kcm.needsSave) {
-                        //         kcm.save();
-                        //     }
-                        //     if (page == container && !container.suppressDeletion) {
-                        //         page.destroy();
-                        //     }
-                        // }
-                    },
-                    Connections {
-                        target: kcm
-                        function onCurrentIndexChanged(index) {
-                            const index_with_offset = index + 1;
-                            if (index_with_offset !== pageStack.currentIndex) {
-                                pageStack.currentIndex = index_with_offset;
-                            }
-                        }
-                    }
-                ]
             }
         }
     }
