@@ -114,39 +114,18 @@ Bigscreen.SidebarOverlay {
         }
     }
 
-    header: ColumnLayout {
-        spacing: Kirigami.Units.gridUnit
-        Item { Layout.fillHeight: true }
-
-        Kirigami.Icon {
-            id: dIcon
-            Layout.alignment: Qt.AlignHCenter
-            implicitWidth: 96
-            implicitHeight: 96
-
-            source: {
-                if (!model) return 'network-wired-activated';
-                switch(model.Type) {
-                case PlasmaNM.Enums.Wireless:
-                    return itemSignalIcon(model.Signal)
-                case PlasmaNM.Enums.Wired:
-                    return "network-wired-activated"
-                }
+    header: Bigscreen.SidebarOverlayHeader {
+        iconSource: {
+            if (!model) return 'network-wired-activated';
+            switch(model.Type) {
+            case PlasmaNM.Enums.Wireless:
+                return itemSignalIcon(model.Signal)
+            case PlasmaNM.Enums.Wired:
+                return "network-wired-activated"
             }
         }
 
-        QQC2.Label {
-            id: label2
-            Layout.fillWidth: true
-            horizontalAlignment: Text.AlignHCenter
-            wrapMode: Text.WordWrap
-            maximumLineCount: 2
-            elide: Text.ElideRight
-            color: Kirigami.Theme.textColor
-            text: model ? model.ItemUniqueName : ''
-            font.pixelSize: 32
-            font.weight: Font.Light
-        }
+        title: model ? model.ItemUniqueName : ''
     }
 
     content: ColumnLayout {

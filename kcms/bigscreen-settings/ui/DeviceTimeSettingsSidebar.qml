@@ -58,27 +58,9 @@ Bigscreen.SidebarOverlay {
         }
     }
 
-    header: ColumnLayout {
-        spacing: Kirigami.Units.gridUnit
-
-        Item { Layout.fillHeight: true }
-        Kirigami.Icon {
-            Layout.alignment: Qt.AlignHCenter
-            implicitWidth: 96
-            implicitHeight: 96
-            source: "preferences-system-time"
-        }
-        QQC2.Label {
-            id: deviceLabel
-            Layout.fillWidth: true
-            horizontalAlignment: Text.AlignHCenter
-            wrapMode: Text.WordWrap
-            maximumLineCount: 2
-            elide: Text.ElideRight
-            text: i18n("Adjust Date & Time Settings")
-            font.pixelSize: 32
-            font.weight: Font.Light
-        }
+    header: Bigscreen.SidebarOverlayHeader {
+        iconSource: "preferences-system-time"
+        title: i18n("Adjust Date & Time Settings")
     }
 
     content: ColumnLayout {

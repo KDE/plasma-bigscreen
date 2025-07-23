@@ -18,26 +18,9 @@ Bigscreen.SidebarOverlay {
     id: root
     openFocusItem: desktopThemeView
 
-    header: ColumnLayout {
-        spacing: Kirigami.Units.gridUnit
-
-        Item { Layout.fillHeight: true }
-        Kirigami.Icon {
-            Layout.alignment: Qt.AlignHCenter
-            implicitWidth: 96
-            implicitHeight: 96
-            source: 'preferences-desktop-theme'
-        }
-        QQC2.Label {
-            Layout.fillWidth: true
-            horizontalAlignment: Text.AlignHCenter
-            wrapMode: Text.WordWrap
-            maximumLineCount: 2
-            elide: Text.ElideRight
-            text: i18n('Global theme')
-            font.pixelSize: 32
-            font.weight: Font.Light
-        }
+    header: Bigscreen.SidebarOverlayHeader {
+        iconSource: 'preferences-desktop-theme'
+        title: i18n('Global theme')
     }
 
     content: ColumnLayout {

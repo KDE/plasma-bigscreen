@@ -23,26 +23,9 @@ Bigscreen.SidebarOverlay {
     property string setActionPath
     property string resetActionPath
 
-    header: ColumnLayout {
-        spacing: Kirigami.Units.gridUnit
-
-        Item { Layout.fillHeight: true }
-        Kirigami.Icon {
-            Layout.alignment: Qt.AlignHCenter
-            implicitWidth: 96
-            implicitHeight: 96
-            source: 'input-keyboard-symbolic'
-        }
-        QQC2.Label {
-            Layout.fillWidth: true
-            horizontalAlignment: Text.AlignHCenter
-            wrapMode: Text.WordWrap
-            maximumLineCount: 2
-            elide: Text.ElideRight
-            text: root.title
-            font.pixelSize: 32
-            font.weight: Font.Light
-        }
+    header: Bigscreen.SidebarOverlayHeader {
+        iconSource: 'input-keyboard-symbolic'
+        title: root.title
     }
 
     content: ColumnLayout {

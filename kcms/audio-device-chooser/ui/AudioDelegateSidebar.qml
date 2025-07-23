@@ -31,37 +31,10 @@ Bigscreen.SidebarOverlay {
 
     openFocusItem: (model && model.PulseObject.default) ? volObj : setDefBtn
 
-    header: ColumnLayout {
-        spacing: Kirigami.Units.gridUnit
-
-        Item { Layout.fillHeight: true }
-        Kirigami.Icon {
-            Layout.alignment: Qt.AlignHCenter
-            implicitWidth: 96
-            implicitHeight: 96
-            source: model ? Icon.name(model.Volume, model.Muted, isPlayback ? "audio-volume" : "microphone-sensitivity") : ''
-        }
-        QQC2.Label {
-            Layout.fillWidth: true
-            horizontalAlignment: Text.AlignHCenter
-            wrapMode: Text.WordWrap
-            maximumLineCount: 2
-            elide: Text.ElideRight
-            text: currentPort ? currentPort.description : ''
-            font.pixelSize: 32
-            font.weight: Font.Light
-        }
-
-        QQC2.Label {
-            Layout.fillWidth: true
-            horizontalAlignment: Text.AlignHCenter
-            wrapMode: Text.WordWrap
-            maximumLineCount: 2
-            elide: Text.ElideRight
-            text: model ? model.Description : ''
-            font.pixelSize: Bigscreen.Units.defaultFontPixelSize
-            font.weight: Font.Light
-        }
+    header: Bigscreen.SidebarOverlayHeader {
+        iconSource: model ? Icon.name(model.Volume, model.Muted, isPlayback ? "audio-volume" : "microphone-sensitivity") : ''
+        title: currentPort ? currentPort.description : ''
+        subtitle: model ? model.Description : ''
     }
 
     content: ColumnLayout {

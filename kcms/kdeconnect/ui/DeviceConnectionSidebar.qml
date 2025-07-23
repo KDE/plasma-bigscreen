@@ -59,28 +59,9 @@ Bigscreen.SidebarOverlay {
         }
     }
 
-    header: ColumnLayout {
-        spacing: Kirigami.Units.gridUnit
-
-        Item { Layout.fillHeight: true }
-        Kirigami.Icon {
-            id: deviceIconStatus
-            Layout.alignment: Qt.AlignHCenter
-            implicitWidth: 96
-            implicitHeight: 96
-            source: currentDevice.iconName
-        }
-        QQC2.Label {
-            id: deviceLabel
-            Layout.fillWidth: true
-            horizontalAlignment: Text.AlignHCenter
-            wrapMode: Text.WordWrap
-            maximumLineCount: 2
-            elide: Text.ElideRight
-            text: currentDevice.name
-            font.pixelSize: 32
-            font.weight: Font.Light
-        }
+    header: Bigscreen.SidebarOverlayHeader {
+        iconSource: currentDevice.iconName
+        title: currentDevice.name
     }
 
     content: ColumnLayout {
