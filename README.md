@@ -34,7 +34,11 @@ See [this page](https://community.kde.org/Get_Involved/development) in order to 
 
 ### KDE Plasma Dependencies
 
-- Plasma Nano - https://invent.kde.org/plasma/plasma-nano
+- [Plasma Nano](https://invent.kde.org/plasma/plasma-nano)
+- [Plasma NM](https://invent.kde.org/plasma/plasma-nm)
+- [Plasma PA](https://invent.kde.org/plasma/plasma-pa)
+- [Milou](https://invent.kde.org/plasma/milou) 
+- [KScreen](https://invent.kde.org/plasma/libkscreen)
 
 ### KDE Frameworks Dependencies
 
@@ -42,18 +46,16 @@ See [this page](https://community.kde.org/Get_Involved/development) in order to 
 - ActivitiesStats
 - Plasma
 - I18n
-- Kirigami
+- [Kirigami](https://invent.kde.org/frameworks/kirigami)
 - KCMUtils
 - GlobalAccel
-- Milou
 - Notifications
 - PlasmaQuick
 - KIO
 - Wayland
 - WindowSystem
-- KDEConnect
+- [KDE Connect](https://invent.kde.org/network/kdeconnect-kde)
 - SVG
-- KScreen
 
 ### Qt dependencies
 
