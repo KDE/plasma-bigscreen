@@ -36,17 +36,11 @@ class BigLauncherDbusAdapterInterface : public QDBusAbstractAdaptor
                 "    <signal name=\"useColoredTilesChanged\">\n"
                 "      <arg direction=\"out\" type=\"b\" name=\"msgUseColoredTiles\"/>\n"
                 "    </signal>\n"
-                "    <signal name=\"useExpandableTilesChanged\">\n"
-                "      <arg direction=\"out\" type=\"b\" name=\"msgUseExpandableTiles\"/>\n"
-                "    </signal>\n"
                 "    <signal name=\"enablePmInhibitionChanged\">\n"
                 "      <arg direction=\"out\" type=\"b\" name=\"msgEnablePmInhibition\"/>\n"
                 "    </signal>\n"
                 "    <method name=\"useColoredTiles\">\n"
                 "      <arg direction=\"in\" type=\"b\" name=\"coloredTiles\"/>\n"
-                "    </method>\n"
-                "    <method name=\"useExpandableTiles\">\n"
-                "      <arg direction=\"in\" type=\"b\" name=\"expandableTiles\"/>\n"
                 "    </method>\n"
                 "    <method name=\"enablePmInhibition\">\n"
                 "      <arg direction=\"in\" type=\"b\" name=\"pmInhibition\"/>\n"
@@ -54,11 +48,10 @@ class BigLauncherDbusAdapterInterface : public QDBusAbstractAdaptor
                 "    <method name=\"coloredTilesActive\">\n"
                 "      <arg direction=\"out\" type=\"b\"/>\n"
                 "    </method>\n"
-                "    <method name=\"expandableTilesActive\">\n"
-                "      <arg direction=\"out\" type=\"b\"/>\n"
-                "    </method>\n"
                 "    <method name=\"pmInhibitionActive\">\n"
                 "      <arg direction=\"out\" type=\"b\"/>\n"
+                "    </method>\n"
+                "    <method name=\"activateWallpaperSelector\">\n"
                 "    </method>\n"
                 "    <method name=\"activateSettingsShortcut\">\n"
                 "      <arg direction=\"out\" type=\"s\"/>\n"
@@ -94,15 +87,13 @@ public:
 public: // PROPERTIES
 public Q_SLOTS: // METHODS
     void useColoredTiles(const bool &coloredTiles);
-    void useExpandableTiles(const bool &expandableTiles);
     bool coloredTilesActive();
-    bool expandableTilesActive();
     bool pmInhibitionActive();
     void enablePmInhibition(const bool &pmInhibition);
 
     void setColoredTilesActive(const bool &coloredTilesActive);
-    void setExpandableTilesActive(const bool &expandableTilesActive);
 
+    void activateWallpaperSelector();
     QString activateSettingsShortcut();
     QString activateTasksShortcut();
     QString displayHomeScreenShortcut();
@@ -117,14 +108,12 @@ public Q_SLOTS: // METHODS
 
 Q_SIGNALS: // SIGNALS
     void useColoredTilesChanged(const bool &msgUseColoredTiles);
-    void useExpandableTilesChanged(const bool &msgUseExpandableTiles);
     void enablePmInhibitionChanged(const bool &msgEnablePmInhibition);
     void coloredTilesActiveRequested();
-    void expandableTilesActiveRequested();
+    void activateWallpaperSelectorRequested();
 
 private:
     bool m_useColoredTiles;
-    bool m_useExpandableTiles;
     Shortcuts *m_shortcuts;
 };
 

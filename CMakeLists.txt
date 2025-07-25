@@ -77,6 +77,7 @@ add_subdirectory(components)
 add_subdirectory(sounds)
 add_subdirectory(envmanager)
 add_subdirectory(uvcviewer)
+add_subdirectory(settingsapp)
 
 plasma_install_package(shell org.kde.plasma.bigscreen shells)
 plasma_install_package(lookandfeel org.kde.plasma.bigscreen look-and-feel lookandfeel)

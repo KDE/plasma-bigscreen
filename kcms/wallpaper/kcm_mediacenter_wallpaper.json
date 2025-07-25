@@ -1,0 +1,12 @@
+{
+    "KPlugin": {
+        "Description": "Change the system wallpaper",
+        "FormFactors": [
+            "mediacenter"
+        ],
+        "Icon": "preferences-desktop-wallpaper",
+        "Name": "Wallpaper"
+    },
+    "X-KDE-System-Settings-Parent-Category": "appearance",
+    "X-KDE-Weight": 40
+}

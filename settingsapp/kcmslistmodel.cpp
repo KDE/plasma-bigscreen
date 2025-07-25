@@ -4,8 +4,8 @@
 */
 
 #include "kcmslistmodel.h"
-#include <QFile>
 #include <KPluginMetaData>
+#include <QFile>
 
 KcmsListModel::KcmsListModel(QObject *parent)
     : QAbstractListModel(parent)
@@ -13,6 +13,21 @@ KcmsListModel::KcmsListModel(QObject *parent)
 }
 
 KcmsListModel::~KcmsListModel() = default;
+
+KcmsListModel *KcmsListModel::instance()
+{
+    static KcmsListModel *singleton = new KcmsListModel();
+    return singleton;
+}
+
+KcmsListModel *KcmsListModel::create(QQmlEngine *qmlEngine, QJSEngine *jsEngine)
+{
+    Q_UNUSED(qmlEngine);
+    Q_UNUSED(jsEngine);
+    auto *model = instance();
+    QQmlEngine::setObjectOwnership(model, QQmlEngine::CppOwnership);
+    return model;
+}
 
 QVariantMap KcmsListModel::get(int index) const
 {
@@ -82,13 +97,6 @@ void KcmsListModel::loadKcms()
         }
     }
 
-    KcmData wallpaperData;
-    wallpaperData.name = "Wallpaper";
-    wallpaperData.iconName = "preferences-desktop-wallpaper";
-    wallpaperData.description = "Change the desktop wallpaper";
-    wallpaperData.id = "kcm_mediacenter_wallpaper";
-    unorderedList.append(wallpaperData);
-
     m_kcms << orderedList.values();
     m_kcms << unorderedList;
 
@@ -124,45 +132,6 @@ QVariant KcmsListModel::data(const QModelIndex &index, int role) const
     default:
         return QVariant();
     }
-}
-
-void KcmsListModel::moveRow(const QModelIndex &sourceParent, int sourceRow, const QModelIndex &destinationParent, int destinationChild)
-{
-    Q_UNUSED(sourceParent);
-    Q_UNUSED(destinationParent);
-    moveItem(sourceRow, destinationChild);
-}
-
-void KcmsListModel::moveItem(int row, int destination)
-{
-    if (row < 0 || destination < 0 || row >= m_kcms.length() || destination >= m_kcms.length() || row == destination) {
-        return;
-    }
-    if (destination > row) {
-        ++destination;
-    }
-
-    beginMoveRows(QModelIndex(), row, row, QModelIndex(), destination);
-    if (destination > row) {
-        KcmData data = m_kcms.at(row);
-        m_kcms.insert(destination, data);
-        m_kcms.takeAt(row);
-    } else {
-        KcmData data = m_kcms.takeAt(row);
-        m_kcms.insert(destination, data);
-    }
-
-    m_appOrder.clear();
-    m_appPositions.clear();
-    int i = 0;
-    for (const auto &app : std::as_const(m_kcms)) {
-        m_appOrder << app.id;
-        m_appPositions[app.id] = i;
-        ++i;
-    }
-
-    Q_EMIT appOrderChanged();
-    endMoveRows();
 }
 
 int KcmsListModel::rowCount(const QModelIndex &parent) const

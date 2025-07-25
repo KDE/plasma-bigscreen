@@ -176,7 +176,7 @@ FocusScope {
         Bigscreen.TileListView {
             id: gamesView
             property var currentViewUpwards: visible ? gamesView : appsView.currentViewUpwards
-            property var currentViewDownwards: visible ? gamesView : settingsView.currentViewDownwards
+            property var currentViewDownwards: visible ? gamesView : null
 
             title: i18n("Games")
             visible: count > 0
@@ -197,28 +197,6 @@ FocusScope {
             }
 
             navigationUp: appsView.currentViewUpwards
-            navigationDown: settingsView.currentViewDownwards
-        }
-
-        SettingActions {
-            id: settingActions
-        }
-
-        Bigscreen.TileListView {
-            id: settingsView
-            property var currentViewUpwards: visible ? settingsView : gamesView.currentViewUpwards
-            property var currentViewDownwards: visible ? settingsView : null
-
-            title: i18n("Settings")
-            model: plasmoid.kcmsListModel
-
-            currentIndex: 0
-            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = settingsView
-            delegate: Delegates.SettingDelegate {
-                property var modelData: typeof model !== "undefined" ? model : null
-            }
-
-            navigationUp: gamesView.currentViewUpwards
             navigationDown: null
         }
 
@@ -236,7 +214,7 @@ FocusScope {
             target: root
             function onActivateAppView() {
                 if (recentView.visible) {
-                recentView.forceActiveFocus();
+                    recentView.forceActiveFocus();
                 } else if(voiceAppsView.visible) {
                     voiceAppsView.forceActiveFocus();
                 } else {

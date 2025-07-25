@@ -59,6 +59,6 @@ AbstractIndicator {
     }
 
     onClicked: {
-        configWindow.showOverlay("kcm_mediacenter_kdeconnect")
+        Plasmoid.openSettings("kcm_mediacenter_kdeconnect")
     }
 }

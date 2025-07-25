@@ -101,10 +101,6 @@ ContainmentItem {
         id: feedbackWindow
     }
 
-    Settings.ConfigWindow {
-        id: configWindow
-    }
-
     FavoritesManager {
         id: favsManagerWindowView
     }

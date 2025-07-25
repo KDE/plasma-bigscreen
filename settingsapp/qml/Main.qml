@@ -10,10 +10,8 @@ import QtQuick.Controls as Controls
 
 import org.kde.kirigami as Kirigami
 import org.kde.bigscreen as Bigscreen
-import org.kde.private.biglauncher
-import org.kde.plasma.private.nanoshell as NanoShell
-import org.kde.plasma.extras as PlasmaExtras
-import org.kde.plasma.plasmoid
+
+import org.kde.plasma.bigscreen.settings
 
 Window {
     id: root
@@ -28,6 +26,16 @@ Window {
 
     // Height of header components (shared between the two panes)
     readonly property real headerHeight: Kirigami.Units.gridUnit * 7
+
+    Component.onCompleted: {
+        KcmsListModel.loadKcms();
+
+        if (SettingsApp.launchModule.length === 0) {
+            showOverlay();
+        } else {
+            showOverlay(SettingsApp.launchModule);
+        }
+    }
 
     // Timer utility with callback
     Timer {
@@ -45,15 +53,19 @@ Window {
     }
 
     function showOverlay(moduleName=undefined) {
-        if (!root.visible) {
-            root.showFullScreen();
-            timer.setTimeout(function () {
-                settingsKCMMenu.forceActiveFocus();
-            }, 100);
-        }
+        root.showFullScreen();
+
+        timer.setTimeout(function () {
+            // Force active focus on either the sidebar or content
+            if ((moduleName === undefined) || (root.loadedKCMPage === null)) {
+                root.settingsKCMMenu.forceActiveFocus();
+            } else {
+                root.loadedKCMPage.forceActiveFocus();
+            }
+        }, 100);
 
         if (moduleName === undefined) {
-            openModule(plasmoid.kcmsListModel.get(0).kcmId);
+            openModule(KcmsListModel.get(0).kcmId);
         } else {
             openModule(moduleName);
         }
@@ -72,18 +84,10 @@ Window {
             pageStack.clear();
         }
 
-        if (path.indexOf("kcm_mediacenter_wallpaper") != -1) {
-            // HACK: Special page for wallpaper selector
-            // TODO: create proper wallpaper KCM
-            loadedKCMPage = wallpaperKcm.createObject(pageStack, {});
-            pageStack.push(loadedKCMPage);
-            currentModuleName = 'kcm_mediacenter_wallpaper';
-        } else {
-            // Load page for KCM
-            loadedKCMPage = kcmContainer.createObject(pageStack, {"kcm": module.kcm, "internalPage": module.kcm.mainUi});
-            pageStack.push(loadedKCMPage);
-            currentModuleName = module.name;
-        }
+        // Load page for KCM
+        loadedKCMPage = kcmContainer.createObject(pageStack, {"kcm": module.kcm, "internalPage": module.kcm.mainUi});
+        pageStack.push(loadedKCMPage);
+        currentModuleName = module.name;
     }
 
     onVisibleChanged: {
@@ -184,15 +188,6 @@ Window {
 
         Module {
             id: module
-        }
-
-        Component {
-            id: wallpaperKcm
-
-            WallpaperKCMPage {
-                KeyNavigation.left: root.settingsKCMMenu
-                KeyNavigation.backtab: KeyNavigation.left
-            }
         }
 
         Component {

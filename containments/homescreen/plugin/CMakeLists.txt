@@ -11,12 +11,9 @@ target_sources(org.kde.bigscreen.homescreen PRIVATE
     biglauncherhomescreen.cpp biglauncherhomescreen.h
     biglauncher_dbus.cpp biglauncher_dbus.h
     applicationlistmodel.cpp applicationlistmodel.h
-    kcmslistmodel.cpp kcmslistmodel.h
     favslistmodel.cpp favslistmodel.h
     configuration.cpp configuration.h
     shortcuts.cpp shortcuts.h
-    settings/modulesmodel.cpp settings/modulesmodel.h
-    settings/module.cpp settings/module.h
 )
 
 target_link_libraries(org.kde.bigscreen.homescreen

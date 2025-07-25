@@ -10,10 +10,6 @@ import QtQuick.Controls as Controls
 
 import org.kde.kirigami as Kirigami
 import org.kde.bigscreen as Bigscreen
-import org.kde.private.biglauncher
-import org.kde.plasma.private.nanoshell as NanoShell
-import org.kde.plasma.extras as PlasmaExtras
-import org.kde.plasma.plasmoid
 
 Rectangle {
     id: root
@@ -64,12 +60,12 @@ Rectangle {
 
             Layout.fillWidth: true
             Layout.fillHeight: true
-            leftMargin: menu.horizontalMargin
-            rightMargin: menu.horizontalMargin
+            leftMargin: root.horizontalMargin
+            rightMargin: root.horizontalMargin
             topMargin: Kirigami.Units.largeSpacing
             bottomMargin: Kirigami.Units.largeSpacing
 
-            model: plasmoid.kcmsListModel
+            model: KcmsListModel
             spacing: Kirigami.Units.largeSpacing
             keyNavigationEnabled: true
 
@@ -95,12 +91,23 @@ Rectangle {
                 onClicked: openModule(modelData.kcmId);
                 Keys.onReturnPressed: openModule(modelData.kcmId);
 
-                Connections {
-                    target: root
-                    function onCurrentModuleNameChanged() {
+                // Need a timer for listview to propagate model changes, otherwise the last kcm (ex. Wi-Fi) doesn't get selected
+                Timer {
+                    id: indexChangeTimer
+                    interval: 1
+                    repeat: false
+                    onTriggered: {
                         if (modelData.kcmId === currentModuleName) {
                             settingsKCMMenu.currentIndex = model.index;
                         }
+                    }
+                }
+
+                Component.onCompleted: indexChangeTimer.restart();
+                Connections {
+                    target: root
+                    function onCurrentModuleNameChanged() {
+                        indexChangeTimer.restart();
                     }
                 }
 

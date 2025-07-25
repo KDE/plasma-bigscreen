@@ -39,11 +39,6 @@ void BigLauncherDbusAdapterInterface::useColoredTiles(const bool &coloredTiles)
     Q_EMIT useColoredTilesChanged(coloredTiles);
 }
 
-void BigLauncherDbusAdapterInterface::useExpandableTiles(const bool &expandableTiles)
-{
-    Q_EMIT useExpandableTilesChanged(expandableTiles);
-}
-
 void BigLauncherDbusAdapterInterface::enablePmInhibition(const bool &pmInhibition)
 {
     Configuration::self().setPmInhibitionEnabled(pmInhibition);
@@ -59,15 +54,6 @@ bool BigLauncherDbusAdapterInterface::coloredTilesActive()
     }
 }
 
-bool BigLauncherDbusAdapterInterface::expandableTilesActive()
-{
-    if(m_useExpandableTiles) {
-         return 1;
-    } else {
-        return 0;
-    }
-}
-
 bool BigLauncherDbusAdapterInterface::pmInhibitionActive()
 {
     return Configuration::self().pmInhibitionEnabled();
@@ -78,9 +64,9 @@ void BigLauncherDbusAdapterInterface::setColoredTilesActive(const bool &coloredT
     m_useColoredTiles = coloredTilesActive;
 }
 
-void BigLauncherDbusAdapterInterface::setExpandableTilesActive(const bool &expandableTilesActive)
+void BigLauncherDbusAdapterInterface::activateWallpaperSelector()
 {
-    m_useExpandableTiles = expandableTilesActive;
+    Q_EMIT activateWallpaperSelectorRequested();
 }
 
 QString BigLauncherDbusAdapterInterface::activateSettingsShortcut()

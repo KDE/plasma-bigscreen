@@ -12,6 +12,7 @@ import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.networkmanagement as PlasmaNM
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.private.nanoshell as NanoShell
+import org.kde.plasma.plasmoid
 
 AbstractIndicator {
     id: connectionIcon
@@ -43,6 +44,6 @@ AbstractIndicator {
         id: connectionIconProvider
     }
     onClicked: {
-        configWindow.showOverlay("kcm_mediacenter_wifi")
+        Plasmoid.openSettings("kcm_mediacenter_wifi")
     }
 }

@@ -11,7 +11,6 @@
 #include "biglauncher_dbus.h"
 
 class ApplicationListModel;
-class KcmsListModel;
 class FavsManager;
 class FavsListModel;
 class SessionManagement;
@@ -22,7 +21,6 @@ class HomeScreen : public Plasma::Containment
 {
     Q_OBJECT
     Q_PROPERTY(ApplicationListModel *applicationListModel READ applicationListModel CONSTANT)
-    Q_PROPERTY(KcmsListModel *kcmsListModel READ kcmsListModel CONSTANT)
     Q_PROPERTY(BigLauncherDbusAdapterInterface *bigLauncherDbusAdapterInterface READ bigLauncherDbusAdapterInterface CONSTANT)
     Q_PROPERTY(FavsListModel *favsListModel READ favsListModel CONSTANT)
 
@@ -31,19 +29,18 @@ public:
     ~HomeScreen() override;
 
     ApplicationListModel *applicationListModel() const;
-    KcmsListModel *kcmsListModel() const;
     BigLauncherDbusAdapterInterface *bigLauncherDbusAdapterInterface() const;
     FavsListModel *favsListModel() const;
+
+    Q_INVOKABLE void openSettings(QString module = QString{});
 
 public Q_SLOTS:
     void executeCommand(const QString &command);
     void requestShutdown();
     void setUseColoredTiles(bool coloredTiles);
-    void setUseExpandableTiles(bool expandableTiles);
 
 private:
     ApplicationListModel *m_applicationListModel;
-    KcmsListModel *m_kcmsListModel;
     SessionManagement *m_session;
     BigLauncherDbusAdapterInterface* m_bigLauncherDbusAdapterInterface;
     FavsManager *m_favsManager;

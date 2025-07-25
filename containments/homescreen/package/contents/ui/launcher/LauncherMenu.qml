@@ -44,7 +44,6 @@ FocusScope {
 
     Component.onCompleted: {
         root.forceActiveFocus();
-        plasmoid.kcmsListModel.loadKcms();
         plasmoid.applicationListModel.loadApplications();
         root.activateAppView();
         plasmoid.setUseColoredTiles(plasmoid.configuration.coloredTiles);
@@ -58,10 +57,15 @@ FocusScope {
     }
 
     Connections {
-        target: plasmoid.bigLauncherDbusAdapterInterface
+        target: Plasmoid.bigLauncherDbusAdapterInterface
+
         function onUseColoredTilesChanged(msgUseColoredTiles) {
-            plasmoid.configuration.coloredTiles = msgUseColoredTiles;
-            plasmoid.setUseColoredTiles(plasmoid.configuration.coloredTiles);
+            Plasmoid.configuration.coloredTiles = msgUseColoredTiles;
+            Plasmoid.setUseColoredTiles(Plasmoid.configuration.coloredTiles);
+        }
+
+        function onActivateWallpaperSelectorRequested() {
+            Plasmoid.internalAction("configure").trigger();
         }
     }
 

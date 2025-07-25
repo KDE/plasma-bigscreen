@@ -38,7 +38,6 @@ KCM.SimpleKCM {
 
     onActiveFocusChanged: {
         if (activeFocus) {
-            handler.requestScan();
             refreshButton.forceActiveFocus();
         }
     }
@@ -155,7 +154,11 @@ KCM.SimpleKCM {
             id: sidebarOverlay
 
             property var delegate
-            onClosed: delegate.forceActiveFocus()
+            onClosed: {
+                if (delegate) {
+                    delegate.forceActiveFocus();
+                }
+            }
         }
     }
 }

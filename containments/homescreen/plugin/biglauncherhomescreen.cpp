@@ -7,11 +7,8 @@
 
 #include "biglauncherhomescreen.h"
 #include "applicationlistmodel.h"
-#include "kcmslistmodel.h"
 #include "favslistmodel.h"
 #include "shortcuts.h"
-#include "settings/modulesmodel.h"
-#include "settings/module.h"
 
 #include <QProcess>
 #include <QQmlEngine>
@@ -43,11 +40,8 @@ HomeScreen::HomeScreen(QObject *parent, const KPluginMetaData &data, const QVari
     , m_session(new SessionManagement(this))
 {
     const char *uri = "org.kde.private.biglauncher";
-    qmlRegisterType<Module>(uri, 1, 0, "Module");
-    qmlRegisterType<ModulesModel>(uri, 1, 0, "ModulesModel");
     qmlRegisterSingletonType<FavsManager>(uri, 1, 0, "FavsManager", favsManagerSingletonProvider);
     qmlRegisterSingletonType<Shortcuts>(uri, 1, 0, "Shortcuts", shortcutsSingletonProvider);
-    qmlRegisterUncreatableType<KcmsListModel>(uri, 1, 0, "KcmsListModel", QStringLiteral("KcmsListModel is uncreatable"));
     qmlRegisterUncreatableType<ApplicationListModel>(uri, 1, 0, "ApplicationListModel", QStringLiteral("Cannot create an item of type ApplicationListModel"));
     qmlRegisterUncreatableType<FavsListModel>(uri, 1, 0, "FavsListModel", QStringLiteral("Cannot create an item of type FavsListModel"));
     qmlRegisterUncreatableType<BigLauncherDbusAdapterInterface>(uri,
@@ -59,7 +53,6 @@ HomeScreen::HomeScreen(QObject *parent, const KPluginMetaData &data, const QVari
     // setHasConfigurationInterface(true);
     m_bigLauncherDbusAdapterInterface = new BigLauncherDbusAdapterInterface(this);
     m_applicationListModel = new ApplicationListModel(this);
-    m_kcmsListModel = new KcmsListModel(this);
 
     m_favsManager = FavsManager::instance();
     m_favsListModel = new FavsListModel(m_favsManager, this);
@@ -69,11 +62,6 @@ HomeScreen::HomeScreen(QObject *parent, const KPluginMetaData &data, const QVari
 
 HomeScreen::~HomeScreen()
 {
-}
-
-KcmsListModel *HomeScreen::kcmsListModel() const
-{
-    return m_kcmsListModel;
 }
 
 ApplicationListModel *HomeScreen::applicationListModel() const
@@ -89,6 +77,15 @@ BigLauncherDbusAdapterInterface *HomeScreen::bigLauncherDbusAdapterInterface() c
 FavsListModel *HomeScreen::favsListModel() const
 {
     return m_favsListModel;
+}
+
+void HomeScreen::openSettings(QString module)
+{
+    if (module.isEmpty()) {
+        executeCommand(QStringLiteral("plasma-bigscreen-settings"));
+    } else {
+        executeCommand(QStringLiteral("plasma-bigscreen-settings -m ") + module);
+    }
 }
 
 void HomeScreen::executeCommand(const QString &command)
@@ -114,11 +111,6 @@ void HomeScreen::requestShutdown()
 void HomeScreen::setUseColoredTiles(bool coloredTiles)
 {
     m_bigLauncherDbusAdapterInterface->setColoredTilesActive(coloredTiles);
-}
-
-void HomeScreen::setUseExpandableTiles(bool expandableTiles)
-{
-    m_bigLauncherDbusAdapterInterface->setExpandableTilesActive(expandableTiles);
 }
 
 K_PLUGIN_CLASS_WITH_JSON(HomeScreen, "metadata.json")

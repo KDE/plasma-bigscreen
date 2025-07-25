@@ -5,8 +5,6 @@
 ecm_add_qml_module(bigscreenplugin URI org.kde.bigscreen GENERATE_PLUGIN_SOURCE DEPENDENCIES QtQuick)
 
 set(bigscreenplugin_SRCS
-    envreader.cpp
-    bigscreenplugin_dbus.cpp
     global.cpp
 )
 

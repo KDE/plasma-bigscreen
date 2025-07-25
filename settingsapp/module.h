@@ -11,9 +11,13 @@
 #include <QFileInfo>
 #include <QObject>
 
+#include <qqmlregistration.h>
+
 class Module : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+
     Q_PROPERTY(KQuickConfigModule *kcm READ kcm NOTIFY kcmChanged)
     Q_PROPERTY(QString path READ path WRITE setPath NOTIFY pathChanged)
     Q_PROPERTY(QString name READ name WRITE setPath NOTIFY nameChanged)

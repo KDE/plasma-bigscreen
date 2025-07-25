@@ -3,15 +3,15 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef KCMSLISTMODEL_H
-#define KCMSLISTMODEL_H
+#pragma once
 
 #include <KPluginMetaData>
 #include <QAbstractListModel>
-
-#include "configuration.h"
+#include <QJSEngine>
 #include <QList>
 #include <QObject>
+#include <QQmlEngine>
+#include <qqmlregistration.h>
 
 class QString;
 
@@ -26,22 +26,33 @@ struct KcmData {
 class KcmsListModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
+
     Q_PROPERTY(int count READ count NOTIFY countChanged)
 
 public:
-    enum Roles { KcmIdRole = Qt::UserRole + 1, KcmIconNameRole, KcmDescriptionRole, KcmNameRole, KcmRole, KcmPathRole};
+    enum Roles {
+        KcmIdRole = Qt::UserRole + 1,
+        KcmIconNameRole,
+        KcmDescriptionRole,
+        KcmNameRole,
+        KcmRole,
+        KcmPathRole
+    };
     Q_ENUM(Roles)
 
     KcmsListModel(QObject *parent = nullptr);
     ~KcmsListModel() override;
 
+    static KcmsListModel *instance();
+    static KcmsListModel *create(QQmlEngine *qmlEngine, QJSEngine *jsEngine);
+
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
-    void moveRow(const QModelIndex &sourceParent, int sourceRow, const QModelIndex &destinationParent, int destinationChild);
 
     Qt::ItemFlags flags(const QModelIndex &index) const override;
 
-    Q_INVOKABLE void moveItem(int row, int destination);
     Q_INVOKABLE void loadKcms();
 
     QHash<int, QByteArray> roleNames() const override;
@@ -62,8 +73,4 @@ private:
 
     QStringList m_appOrder;
     QHash<QString, int> m_appPositions;
-
-    Configuration m_configuration;
 };
-
-#endif // KCMSLISTMODEL_H

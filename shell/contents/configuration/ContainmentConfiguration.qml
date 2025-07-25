@@ -5,7 +5,7 @@
 */
 
 import QtQuick 2.12
-import QtQuick.Window 2.12
+import QtQuick.Window
 import QtQuick.Layouts 1.0
 import QtQuick.Controls 2.3 as Controls
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -27,6 +27,10 @@ AppletConfiguration {
     internalDialog.height: Math.min(root.width, Math.max(internalDialog.implicitHeight, Kirigami.Units.gridUnit * 29))
 
     readonly property bool horizontal: false
+
+    Component.onCompleted: {
+        Window.window.flags = Qt.FramelessWindowHint;
+    }
 
 //BEGIN model
     globalConfigModel: globalContainmentConfigModel
@@ -61,7 +65,7 @@ AppletConfiguration {
         rightPadding: Kirigami.Units.smallSpacing * 2
         topPadding: Kirigami.Units.smallSpacing * 2
         bottomPadding: Kirigami.Units.smallSpacing * 2
-        
+
         Wallpaper.ImageBackend {
             id: imageWallpaper
         }
@@ -84,7 +88,7 @@ AppletConfiguration {
             KeyNavigation.left: headerItem
             Keys.onUpPressed: imageWallpaperDrawer.close()
             highlightRangeMode: ListView.ApplyRange
-            
+
             preferredHighlightBegin: cellWidth
             preferredHighlightEnd: cellWidth
             displayMarginBeginning: cellWidth*2
@@ -137,7 +141,7 @@ AppletConfiguration {
                     wallpapersView.currentIndex = 0
                 }
             }
-    
+
             delegate: WallpaperDelegate {
                 id: delegate
 
@@ -147,7 +151,7 @@ AppletConfiguration {
                         wallpapersView.currentIndex = index;
                     }
                 }
-                
+
                 contentItem: Item {
                     Kirigami.Icon {
                         anchors.centerIn: parent
