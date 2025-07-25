@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-25 00:44+0000\n"
 "PO-Revision-Date: 2025-06-28 23:40+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -43,32 +43,32 @@ msgstr "Mes"
 msgid "Day"
 msgstr "Día"
 
-#: ui/DeviceTimeSettingsSidebar.qml:78
+#: ui/DeviceTimeSettingsSidebar.qml:63
 #, kde-format
 msgid "Adjust Date & Time Settings"
 msgstr "Preferencias de ajuste de fecha y hora"
 
-#: ui/DeviceTimeSettingsSidebar.qml:90
+#: ui/DeviceTimeSettingsSidebar.qml:72
 #, kde-format
 msgid "Timezone"
 msgstr "Zona horaria"
 
-#: ui/DeviceTimeSettingsSidebar.qml:102
+#: ui/DeviceTimeSettingsSidebar.qml:84
 #, kde-format
 msgid "Set time automatically"
 msgstr "Establecer hora automáticamente"
 
-#: ui/DeviceTimeSettingsSidebar.qml:181
+#: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
 msgid "Search City / Region"
 msgstr "Buscar ciudad / región"
 
-#: ui/DeviceTimeSettingsSidebar.qml:200
+#: ui/DeviceTimeSettingsSidebar.qml:182
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "Su zona horaria local es %1"
 
-#: ui/DeviceTimeSettingsSidebar.qml:200
+#: ui/DeviceTimeSettingsSidebar.qml:182
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
@@ -98,12 +98,12 @@ msgstr "El mosaico del fondo tomará el color del icono de la aplicación"
 msgid "Shortcuts"
 msgstr "Accesos rápidos"
 
-#: ui/ShortcutsPickerSidebar.qml:63
+#: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format
 msgid "Reset to default"
 msgstr "Reiniciar a predeterminados"
 
-#: ui/ShortcutsPickerSidebar.qml:77
+#: ui/ShortcutsPickerSidebar.qml:60
 #, kde-format
 msgid "Set Shortcut"
 msgstr "Crear atajo rápido"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-25 00:44+0000\n"
 "PO-Revision-Date: 2023-06-23 12:40+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -42,33 +42,33 @@ msgstr "Měsíc"
 msgid "Day"
 msgstr ""
 
-#: ui/DeviceTimeSettingsSidebar.qml:78
+#: ui/DeviceTimeSettingsSidebar.qml:63
 #, fuzzy, kde-format
 #| msgid "Adjust Date & Time"
 msgid "Adjust Date & Time Settings"
 msgstr "Upravit datum a čas"
 
-#: ui/DeviceTimeSettingsSidebar.qml:90
+#: ui/DeviceTimeSettingsSidebar.qml:72
 #, kde-format
 msgid "Timezone"
 msgstr "Časové pásmo"
 
-#: ui/DeviceTimeSettingsSidebar.qml:102
+#: ui/DeviceTimeSettingsSidebar.qml:84
 #, kde-format
 msgid "Set time automatically"
 msgstr ""
 
-#: ui/DeviceTimeSettingsSidebar.qml:181
+#: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
 msgid "Search City / Region"
 msgstr ""
 
-#: ui/DeviceTimeSettingsSidebar.qml:200
+#: ui/DeviceTimeSettingsSidebar.qml:182
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "Vaše současné časové pásmo je %1"
 
-#: ui/DeviceTimeSettingsSidebar.qml:200
+#: ui/DeviceTimeSettingsSidebar.qml:182
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
@@ -100,12 +100,12 @@ msgstr ""
 msgid "Shortcuts"
 msgstr "Zkratky"
 
-#: ui/ShortcutsPickerSidebar.qml:63
+#: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format
 msgid "Reset to default"
 msgstr "Obnovit výchozí"
 
-#: ui/ShortcutsPickerSidebar.qml:77
+#: ui/ShortcutsPickerSidebar.qml:60
 #, kde-format
 msgid "Set Shortcut"
 msgstr ""

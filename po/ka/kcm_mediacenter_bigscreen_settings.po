@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-25 00:44+0000\n"
 "PO-Revision-Date: 2025-06-24 05:48+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -43,32 +43,32 @@ msgstr "თვე"
 msgid "Day"
 msgstr "დღე"
 
-#: ui/DeviceTimeSettingsSidebar.qml:78
+#: ui/DeviceTimeSettingsSidebar.qml:63
 #, kde-format
 msgid "Adjust Date & Time Settings"
 msgstr "დროისა და თარიღის პარამეტრების გასწორება"
 
-#: ui/DeviceTimeSettingsSidebar.qml:90
+#: ui/DeviceTimeSettingsSidebar.qml:72
 #, kde-format
 msgid "Timezone"
 msgstr "დროის სარტყელი"
 
-#: ui/DeviceTimeSettingsSidebar.qml:102
+#: ui/DeviceTimeSettingsSidebar.qml:84
 #, kde-format
 msgid "Set time automatically"
 msgstr "დროის ავტომატურად დაყენება"
 
-#: ui/DeviceTimeSettingsSidebar.qml:181
+#: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
 msgid "Search City / Region"
 msgstr "ქალაქის / რეგინის ძებნა"
 
-#: ui/DeviceTimeSettingsSidebar.qml:200
+#: ui/DeviceTimeSettingsSidebar.qml:182
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "თქვენი ლოკალური დროის სარტყელია : %1"
 
-#: ui/DeviceTimeSettingsSidebar.qml:200
+#: ui/DeviceTimeSettingsSidebar.qml:182
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
@@ -98,12 +98,12 @@ msgstr "ფილების ფონი აპის ხატულის �
 msgid "Shortcuts"
 msgstr "მალსახმობები"
 
-#: ui/ShortcutsPickerSidebar.qml:63
+#: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format
 msgid "Reset to default"
 msgstr "ნაგულისხმევ მნიშვნელობაზე დაბრუნება"
 
-#: ui/ShortcutsPickerSidebar.qml:77
+#: ui/ShortcutsPickerSidebar.qml:60
 #, kde-format
 msgid "Set Shortcut"
 msgstr "მალსახმობის დაყენება"

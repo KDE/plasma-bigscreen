@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-25 00:44+0000\n"
 "PO-Revision-Date: 2025-06-26 11:35+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -43,32 +43,32 @@ msgstr "الشهر"
 msgid "Day"
 msgstr "اليوم"
 
-#: ui/DeviceTimeSettingsSidebar.qml:78
+#: ui/DeviceTimeSettingsSidebar.qml:63
 #, kde-format
 msgid "Adjust Date & Time Settings"
 msgstr "اضبط إعدادات التّاريخ والوقت"
 
-#: ui/DeviceTimeSettingsSidebar.qml:90
+#: ui/DeviceTimeSettingsSidebar.qml:72
 #, kde-format
 msgid "Timezone"
 msgstr "المنطقة الزمنية"
 
-#: ui/DeviceTimeSettingsSidebar.qml:102
+#: ui/DeviceTimeSettingsSidebar.qml:84
 #, kde-format
 msgid "Set time automatically"
 msgstr "اضبط الوقت آليًّا"
 
-#: ui/DeviceTimeSettingsSidebar.qml:181
+#: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
 msgid "Search City / Region"
 msgstr "ابحث عن المدينة / المنطقة"
 
-#: ui/DeviceTimeSettingsSidebar.qml:200
+#: ui/DeviceTimeSettingsSidebar.qml:182
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "منطقتك الزمنية هي %1"
 
-#: ui/DeviceTimeSettingsSidebar.qml:200
+#: ui/DeviceTimeSettingsSidebar.qml:182
 #, kde-format
 msgid "%1, %2"
 msgstr "%1، %2"
@@ -98,12 +98,12 @@ msgstr "ستلّون خلفيات المربعات بناءً على أيقون�
 msgid "Shortcuts"
 msgstr "الاختصارات"
 
-#: ui/ShortcutsPickerSidebar.qml:63
+#: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format
 msgid "Reset to default"
 msgstr "صفّر إلى المبدئيات"
 
-#: ui/ShortcutsPickerSidebar.qml:77
+#: ui/ShortcutsPickerSidebar.qml:60
 #, kde-format
 msgid "Set Shortcut"
 msgstr "عين اختصار"

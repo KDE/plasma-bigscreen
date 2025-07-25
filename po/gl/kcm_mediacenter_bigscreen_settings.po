@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-25 00:44+0000\n"
 "PO-Revision-Date: 2025-06-19 10:01+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -42,34 +42,34 @@ msgstr "Mes"
 msgid "Day"
 msgstr "Día"
 
-#: ui/DeviceTimeSettingsSidebar.qml:78
+#: ui/DeviceTimeSettingsSidebar.qml:63
 #, fuzzy, kde-format
 #| msgid "Adjust Date & Time"
 msgid "Adjust Date & Time Settings"
 msgstr "Axustar a data e hora"
 
-#: ui/DeviceTimeSettingsSidebar.qml:90
+#: ui/DeviceTimeSettingsSidebar.qml:72
 #, fuzzy, kde-format
 #| msgid "Timezone:"
 msgid "Timezone"
 msgstr "Fuso horario:"
 
-#: ui/DeviceTimeSettingsSidebar.qml:102
+#: ui/DeviceTimeSettingsSidebar.qml:84
 #, kde-format
 msgid "Set time automatically"
 msgstr "Definir a hora automaticamente."
 
-#: ui/DeviceTimeSettingsSidebar.qml:181
+#: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
 msgid "Search City / Region"
 msgstr "Buscar unha cidade ou rexión"
 
-#: ui/DeviceTimeSettingsSidebar.qml:200
+#: ui/DeviceTimeSettingsSidebar.qml:182
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "O fuso horario local é %1."
 
-#: ui/DeviceTimeSettingsSidebar.qml:200
+#: ui/DeviceTimeSettingsSidebar.qml:182
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
@@ -102,13 +102,13 @@ msgstr "Os fondos de teselas colaranse en liña coa icona da aplicación."
 msgid "Shortcuts"
 msgstr "Definir o atallo"
 
-#: ui/ShortcutsPickerSidebar.qml:63
+#: ui/ShortcutsPickerSidebar.qml:46
 #, fuzzy, kde-format
 #| msgid "Reset Default"
 msgid "Reset to default"
 msgstr "Restabelecer o predeterminado"
 
-#: ui/ShortcutsPickerSidebar.qml:77
+#: ui/ShortcutsPickerSidebar.qml:60
 #, kde-format
 msgid "Set Shortcut"
 msgstr "Definir o atallo"
