@@ -123,18 +123,26 @@ Controls.Control {
 
             Indicators.Volume {
                 id: volumeIndicator
-                KeyNavigation.right: wifiIndicator
-                KeyNavigation.tab: wifiIndicator
+                KeyNavigation.right: batteryIndicator
+                KeyNavigation.tab: batteryIndicator
                 KeyNavigation.backtab: settingsIndicator
                 KeyNavigation.left: settingsIndicator
+            }
+
+            Indicators.Battery {
+                id: batteryIndicator
+                KeyNavigation.right: wifiIndicator
+                KeyNavigation.tab: wifiIndicator
+                KeyNavigation.backtab: volumeIndicator
+                KeyNavigation.left: volumeIndicator
             }
 
             Indicators.Wifi {
                 id: wifiIndicator
                 KeyNavigation.right: kdeConnectIndicator
                 KeyNavigation.tab: kdeConnectIndicator
-                KeyNavigation.backtab: volumeIndicator
-                KeyNavigation.left: volumeIndicator
+                KeyNavigation.backtab: batteryIndicator
+                KeyNavigation.left: batteryIndicator
             }
 
             Indicators.KdeConnect {
