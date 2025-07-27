@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-15 00:45+0000\n"
+"POT-Creation-Date: 2025-07-27 00:43+0000\n"
 "PO-Revision-Date: 2025-02-06 17:47-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -34,6 +34,11 @@ msgstr "Adicionar favoritos"
 msgid "Remove Favorites"
 msgstr "Remover favoritos"
 
+#: contents/ui/indicators/Battery.qml:15
+#, kde-format
+msgid "Battery: %1%"
+msgstr ""
+
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
 msgid "Pairing Request From %1"
@@ -49,7 +54,7 @@ msgstr "Aceitar"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: contents/ui/indicators/Volume.qml:26
+#: contents/ui/indicators/Volume.qml:28
 #, kde-format
 msgid "Audio Volume"
 msgstr "Volume do áudio"
@@ -79,12 +84,6 @@ msgstr "Aplicativos"
 msgid "Games"
 msgstr "Jogos"
 
-#: contents/ui/launcher/LauncherHome.qml:212
-#: contents/ui/settings/ConfigWindowSidebar.qml:45
-#, kde-format
-msgid "Settings"
-msgstr "Configurações adicionais"
-
 #: contents/ui/launcher/search/SearchTextField.qml:24
 #, kde-format
 msgctxt "@info:placeholder"
@@ -105,6 +104,9 @@ msgstr "Limpar tarefas"
 #, kde-format
 msgid "Close"
 msgstr "Fechar"
+
+#~ msgid "Settings"
+#~ msgstr "Configurações adicionais"
 
 #~ msgid "General"
 #~ msgstr "Geral"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-15 00:45+0000\n"
+"POT-Creation-Date: 2025-07-27 00:43+0000\n"
 "PO-Revision-Date: 2025-06-18 08:49+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -32,6 +32,11 @@ msgstr "Aggiungi preferiti"
 msgid "Remove Favorites"
 msgstr "Rimuovi preferiti"
 
+#: contents/ui/indicators/Battery.qml:15
+#, kde-format
+msgid "Battery: %1%"
+msgstr ""
+
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
 msgid "Pairing Request From %1"
@@ -47,7 +52,7 @@ msgstr "Accetta"
 msgid "Cancel"
 msgstr "Annulla"
 
-#: contents/ui/indicators/Volume.qml:26
+#: contents/ui/indicators/Volume.qml:28
 #, kde-format
 msgid "Audio Volume"
 msgstr "Volume audio"
@@ -77,12 +82,6 @@ msgstr "Applicazioni"
 msgid "Games"
 msgstr "Giochi"
 
-#: contents/ui/launcher/LauncherHome.qml:212
-#: contents/ui/settings/ConfigWindowSidebar.qml:45
-#, kde-format
-msgid "Settings"
-msgstr "Impostazioni"
-
 #: contents/ui/launcher/search/SearchTextField.qml:24
 #, kde-format
 msgctxt "@info:placeholder"
@@ -103,6 +102,9 @@ msgstr "Cancella attività"
 #, kde-format
 msgid "Close"
 msgstr "Chiudi"
+
+#~ msgid "Settings"
+#~ msgstr "Impostazioni"
 
 #~ msgid "General"
 #~ msgstr "Generale"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2025-07-27 00:43+0000\n"
 "PO-Revision-Date: 2025-06-09 02:22+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -28,11 +28,11 @@ msgstr ""
 msgid "Wallpaper Type:"
 msgstr "Tipo del fondo de pantalla:"
 
-#: contents/configuration/ContainmentConfiguration.qml:37
+#: contents/configuration/ContainmentConfiguration.qml:41
 msgid "Wallpaper"
 msgstr "Fondo de pantalla"
 
-#: contents/configuration/ContainmentConfiguration.qml:130
+#: contents/configuration/ContainmentConfiguration.qml:134
 msgid "Slideshow"
 msgstr "Presentación de diapositivas"
 

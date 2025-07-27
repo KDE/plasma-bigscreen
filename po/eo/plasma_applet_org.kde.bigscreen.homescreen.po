@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-15 00:45+0000\n"
+"POT-Creation-Date: 2025-07-27 00:43+0000\n"
 "PO-Revision-Date: 2024-12-28 17:41+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -33,6 +33,11 @@ msgstr "Aldoni Plejŝatatojn"
 msgid "Remove Favorites"
 msgstr "Forigi Plejŝatatojn"
 
+#: contents/ui/indicators/Battery.qml:15
+#, kde-format
+msgid "Battery: %1%"
+msgstr ""
+
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
 msgid "Pairing Request From %1"
@@ -48,7 +53,7 @@ msgstr "Akcepti"
 msgid "Cancel"
 msgstr "Nuligi"
 
-#: contents/ui/indicators/Volume.qml:26
+#: contents/ui/indicators/Volume.qml:28
 #, kde-format
 msgid "Audio Volume"
 msgstr "Aŭdila Laŭteco"
@@ -78,12 +83,6 @@ msgstr "Aplikaĵoj"
 msgid "Games"
 msgstr "Ludoj"
 
-#: contents/ui/launcher/LauncherHome.qml:212
-#: contents/ui/settings/ConfigWindowSidebar.qml:45
-#, kde-format
-msgid "Settings"
-msgstr "Agordoj"
-
 #: contents/ui/launcher/search/SearchTextField.qml:24
 #, kde-format
 msgctxt "@info:placeholder"
@@ -104,6 +103,9 @@ msgstr "Viŝi Taskojn"
 #, kde-format
 msgid "Close"
 msgstr "Fermi"
+
+#~ msgid "Settings"
+#~ msgstr "Agordoj"
 
 #~ msgid "General"
 #~ msgstr "Ĝenerala"

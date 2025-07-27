@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2025-07-27 00:43+0000\n"
 "PO-Revision-Date: 2024-10-18 05:36+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -26,11 +26,11 @@ msgstr "განლაგების შეცვლა შეუძლებ�
 msgid "Wallpaper Type:"
 msgstr "ფონური სურათის ტიპი:"
 
-#: contents/configuration/ContainmentConfiguration.qml:37
+#: contents/configuration/ContainmentConfiguration.qml:41
 msgid "Wallpaper"
 msgstr "ფონური სურათი"
 
-#: contents/configuration/ContainmentConfiguration.qml:130
+#: contents/configuration/ContainmentConfiguration.qml:134
 msgid "Slideshow"
 msgstr "სლაიდშოუ"
 

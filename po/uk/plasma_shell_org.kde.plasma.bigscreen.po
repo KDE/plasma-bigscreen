@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.mycroft.bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2025-07-27 00:43+0000\n"
 "PO-Revision-Date: 2024-10-18 19:29+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -28,11 +28,11 @@ msgstr "Доки віджети заблоковано, компонування
 msgid "Wallpaper Type:"
 msgstr "Тип фонового зображення:"
 
-#: contents/configuration/ContainmentConfiguration.qml:37
+#: contents/configuration/ContainmentConfiguration.qml:41
 msgid "Wallpaper"
 msgstr "Зображення тла"
 
-#: contents/configuration/ContainmentConfiguration.qml:130
+#: contents/configuration/ContainmentConfiguration.qml:134
 msgid "Slideshow"
 msgstr "Показ слайдів"
 

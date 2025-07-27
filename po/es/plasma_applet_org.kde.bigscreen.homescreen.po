@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-15 00:45+0000\n"
+"POT-Creation-Date: 2025-07-27 00:43+0000\n"
 "PO-Revision-Date: 2025-06-22 18:43+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -33,6 +33,11 @@ msgstr "Añadir favoritos"
 msgid "Remove Favorites"
 msgstr "Eliminar favoritos"
 
+#: contents/ui/indicators/Battery.qml:15
+#, kde-format
+msgid "Battery: %1%"
+msgstr ""
+
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
 msgid "Pairing Request From %1"
@@ -48,7 +53,7 @@ msgstr "Aceptar"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: contents/ui/indicators/Volume.qml:26
+#: contents/ui/indicators/Volume.qml:28
 #, kde-format
 msgid "Audio Volume"
 msgstr "Volumen de audio"
@@ -78,12 +83,6 @@ msgstr "Aplicaciones"
 msgid "Games"
 msgstr "Juegos"
 
-#: contents/ui/launcher/LauncherHome.qml:212
-#: contents/ui/settings/ConfigWindowSidebar.qml:45
-#, kde-format
-msgid "Settings"
-msgstr "Preferencias"
-
 #: contents/ui/launcher/search/SearchTextField.qml:24
 #, kde-format
 msgctxt "@info:placeholder"
@@ -104,6 +103,9 @@ msgstr "Limpiar tareas"
 #, kde-format
 msgid "Close"
 msgstr "Cerrar"
+
+#~ msgid "Settings"
+#~ msgstr "Preferencias"
 
 #~ msgid "General"
 #~ msgstr "General"

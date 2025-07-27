@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-15 00:45+0000\n"
+"POT-Creation-Date: 2025-07-27 00:43+0000\n"
 "PO-Revision-Date: 2024-03-02 22:20+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -33,6 +33,11 @@ msgstr ""
 msgid "Remove Favorites"
 msgstr ""
 
+#: contents/ui/indicators/Battery.qml:15
+#, kde-format
+msgid "Battery: %1%"
+msgstr ""
+
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
 msgid "Pairing Request From %1"
@@ -48,7 +53,7 @@ msgstr "Elfogadás"
 msgid "Cancel"
 msgstr ""
 
-#: contents/ui/indicators/Volume.qml:26
+#: contents/ui/indicators/Volume.qml:28
 #, kde-format
 msgid "Audio Volume"
 msgstr ""
@@ -79,12 +84,6 @@ msgstr "Alkalmazások"
 msgid "Games"
 msgstr "Játékok"
 
-#: contents/ui/launcher/LauncherHome.qml:212
-#: contents/ui/settings/ConfigWindowSidebar.qml:45
-#, kde-format
-msgid "Settings"
-msgstr "Beállítások"
-
 #: contents/ui/launcher/search/SearchTextField.qml:24
 #, kde-format
 msgctxt "@info:placeholder"
@@ -106,6 +105,9 @@ msgstr ""
 #| msgid "close"
 msgid "Close"
 msgstr "bezárás"
+
+#~ msgid "Settings"
+#~ msgstr "Beállítások"
 
 #~ msgid "General"
 #~ msgstr "Általános"

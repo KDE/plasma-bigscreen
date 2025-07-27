@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2025-07-27 00:43+0000\n"
 "PO-Revision-Date: 2024-10-26 17:47+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -28,11 +28,11 @@ msgstr "Antolamendua ezin da aldatu trepetak giltzatuta dauden bitartean"
 msgid "Wallpaper Type:"
 msgstr "Horma-paper mota:"
 
-#: contents/configuration/ContainmentConfiguration.qml:37
+#: contents/configuration/ContainmentConfiguration.qml:41
 msgid "Wallpaper"
 msgstr "Horma-papera"
 
-#: contents/configuration/ContainmentConfiguration.qml:130
+#: contents/configuration/ContainmentConfiguration.qml:134
 msgid "Slideshow"
 msgstr "Diapositiba emanaldia"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2025-07-27 00:43+0000\n"
 "PO-Revision-Date: 2024-10-19 13:06+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -25,11 +25,11 @@ msgstr "Nie można zmienić układu, gdy elementy interfejsu są unieruchomione"
 msgid "Wallpaper Type:"
 msgstr "Rodzaj tapety:"
 
-#: contents/configuration/ContainmentConfiguration.qml:37
+#: contents/configuration/ContainmentConfiguration.qml:41
 msgid "Wallpaper"
 msgstr "Tapeta"
 
-#: contents/configuration/ContainmentConfiguration.qml:130
+#: contents/configuration/ContainmentConfiguration.qml:134
 msgid "Slideshow"
 msgstr "Pokaz obrazów"
 

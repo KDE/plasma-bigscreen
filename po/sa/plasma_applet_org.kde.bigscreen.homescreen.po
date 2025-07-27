@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-15 00:45+0000\n"
+"POT-Creation-Date: 2025-07-27 00:43+0000\n"
 "PO-Revision-Date: 2024-12-20 21:53+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -34,6 +34,11 @@ msgstr "प्रियं योजयतु"
 msgid "Remove Favorites"
 msgstr "प्रियं निष्कासयन्तु"
 
+#: contents/ui/indicators/Battery.qml:15
+#, kde-format
+msgid "Battery: %1%"
+msgstr ""
+
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
 msgid "Pairing Request From %1"
@@ -49,7 +54,7 @@ msgstr "स्वीकरोतु"
 msgid "Cancel"
 msgstr "निरसयतु"
 
-#: contents/ui/indicators/Volume.qml:26
+#: contents/ui/indicators/Volume.qml:28
 #, kde-format
 msgid "Audio Volume"
 msgstr "श्रव्य मात्रा"
@@ -79,12 +84,6 @@ msgstr "अनुप्रयोगाः"
 msgid "Games"
 msgstr "क्रीडाः"
 
-#: contents/ui/launcher/LauncherHome.qml:212
-#: contents/ui/settings/ConfigWindowSidebar.qml:45
-#, kde-format
-msgid "Settings"
-msgstr "सेटिंग्स्"
-
 #: contents/ui/launcher/search/SearchTextField.qml:24
 #, kde-format
 msgctxt "@info:placeholder"
@@ -105,6 +104,9 @@ msgstr "स्पष्टं कार्यम्"
 #, kde-format
 msgid "Close"
 msgstr "पिधानं करोतु"
+
+#~ msgid "Settings"
+#~ msgstr "सेटिंग्स्"
 
 #~ msgid "General"
 #~ msgstr "सामान्य"

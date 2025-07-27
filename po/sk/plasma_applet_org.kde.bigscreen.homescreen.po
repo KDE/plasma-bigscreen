@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.mycroft.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-15 00:45+0000\n"
+"POT-Creation-Date: 2025-07-27 00:43+0000\n"
 "PO-Revision-Date: 2022-01-07 14:58+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -31,6 +31,11 @@ msgstr ""
 msgid "Remove Favorites"
 msgstr ""
 
+#: contents/ui/indicators/Battery.qml:15
+#, kde-format
+msgid "Battery: %1%"
+msgstr ""
+
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
 msgid "Pairing Request From %1"
@@ -46,7 +51,7 @@ msgstr "Prijať"
 msgid "Cancel"
 msgstr ""
 
-#: contents/ui/indicators/Volume.qml:26
+#: contents/ui/indicators/Volume.qml:28
 #, kde-format
 msgid "Audio Volume"
 msgstr ""
@@ -77,12 +82,6 @@ msgstr "Aplikácie"
 msgid "Games"
 msgstr "Hry"
 
-#: contents/ui/launcher/LauncherHome.qml:212
-#: contents/ui/settings/ConfigWindowSidebar.qml:45
-#, kde-format
-msgid "Settings"
-msgstr "Nastavenia"
-
 #: contents/ui/launcher/search/SearchTextField.qml:24
 #, kde-format
 msgctxt "@info:placeholder"
@@ -104,6 +103,9 @@ msgstr ""
 #| msgid "close"
 msgid "Close"
 msgstr "zatvoriť"
+
+#~ msgid "Settings"
+#~ msgstr "Nastavenia"
 
 #~ msgid "Additional Settings:"
 #~ msgstr "Ďalšie nastavenia"

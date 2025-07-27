@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-15 00:45+0000\n"
+"POT-Creation-Date: 2025-07-27 00:43+0000\n"
 "PO-Revision-Date: 2025-06-17 08:20+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -35,6 +35,11 @@ msgstr "Afig als preferits"
 msgid "Remove Favorites"
 msgstr "Elimina dels preferits"
 
+#: contents/ui/indicators/Battery.qml:15
+#, kde-format
+msgid "Battery: %1%"
+msgstr ""
+
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
 msgid "Pairing Request From %1"
@@ -50,7 +55,7 @@ msgstr "Accepta"
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: contents/ui/indicators/Volume.qml:26
+#: contents/ui/indicators/Volume.qml:28
 #, kde-format
 msgid "Audio Volume"
 msgstr "Volum de l'àudio"
@@ -80,12 +85,6 @@ msgstr "Aplicacions"
 msgid "Games"
 msgstr "Jocs"
 
-#: contents/ui/launcher/LauncherHome.qml:212
-#: contents/ui/settings/ConfigWindowSidebar.qml:45
-#, kde-format
-msgid "Settings"
-msgstr "Configuració"
-
 #: contents/ui/launcher/search/SearchTextField.qml:24
 #, kde-format
 msgctxt "@info:placeholder"
@@ -106,6 +105,9 @@ msgstr "Neteja les tasques"
 #, kde-format
 msgid "Close"
 msgstr "Tanca"
+
+#~ msgid "Settings"
+#~ msgstr "Configuració"
 
 #~ msgid "General"
 #~ msgstr "General"
