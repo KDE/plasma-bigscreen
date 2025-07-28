@@ -23,27 +23,3 @@ msgstr ""
 #, kde-format
 msgid "Display Configuration"
 msgstr "Configureu la pantalla"
-
-#~ msgid "New Resolution"
-#~ msgstr "Resolució nova"
-
-#~ msgid "Accept"
-#~ msgstr "Accepta"
-
-#~ msgid "Cancel"
-#~ msgstr "Cancel·la"
-
-#~ msgid "Resolution: "
-#~ msgstr "Resolució: "
-
-#~ msgid "Refresh Rate: "
-#~ msgstr "Freqüència d'actualització: "
-
-#~ msgid "Mode: "
-#~ msgstr "Mode: "
-
-#~ msgid "Available Resolutions"
-#~ msgstr "Resolucions disponibles"
-
-#~ msgid "Scale"
-#~ msgstr "Escala"

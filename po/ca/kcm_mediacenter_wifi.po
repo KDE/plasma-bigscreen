@@ -1,0 +1,75 @@
+# Translation of kcm_mediacenter_wifi.po to Catalan
+# Copyright (C) 2025 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# SPDX-FileCopyrightText: 2025 Josep M. Ferrer <txemaq@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"PO-Revision-Date: 2025-07-27 11:49+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 25.04.3\n"
+
+#: ui/delegates/NetworkDelegate.qml:65 ui/DeviceConnectionSidebar.qml:72
+#, kde-format
+msgid "Connected"
+msgstr "Connectat"
+
+#: ui/DetailsText.qml:33
+#, kde-format
+msgid "IP Address Details"
+msgstr "Detalls de l'adreça IP"
+
+#: ui/DeviceConnectionSidebar.qml:180
+#, kde-format
+msgid "Forget network"
+msgstr "Oblida la xarxa"
+
+#: ui/DeviceConnectionSidebar.qml:190
+#, kde-format
+msgid "Are you sure you want to forget the network %1?"
+msgstr "Esteu segur que voleu oblidar la xarxa %1?"
+
+#: ui/DeviceConnectionSidebar.qml:242
+#, kde-format
+msgid "Speed"
+msgstr "Velocitat"
+
+#: ui/main.qml:26
+#, kde-format
+msgid "Network"
+msgstr "Xarxa"
+
+#: ui/main.qml:103
+#, kde-format
+msgid "Refresh"
+msgstr "Actualitza"
+
+#: ui/PasswordDialog.qml:22
+#, kde-format
+msgid "Enter Password For %1"
+msgstr "Introduïu la contrasenya per a %1"
+
+#: ui/PasswordDialog.qml:34
+#, kde-format
+msgid "Password…"
+msgstr "Contrasenya…"
+
+#: ui/PasswordDialog.qml:54
+#, kde-format
+msgid "Connect"
+msgstr "Connecta"
+
+#: ui/PasswordDialog.qml:59
+#, kde-format
+msgid "Cancel"
+msgstr "Cancel·la"

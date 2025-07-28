@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-27 00:43+0000\n"
-"PO-Revision-Date: 2025-06-17 04:41+0200\n"
+"PO-Revision-Date: 2025-07-27 20:04+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -36,7 +36,7 @@ msgstr "სანიშნეების წაშლა"
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
 msgid "Battery: %1%"
-msgstr ""
+msgstr "ელემენტი: %1%"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format

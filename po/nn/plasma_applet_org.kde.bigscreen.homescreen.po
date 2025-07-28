@@ -104,6 +104,3 @@ msgstr ""
 #, fuzzy, kde-format
 msgid "Close"
 msgstr "lukk"
-
-#~ msgid "Settings"
-#~ msgstr "Innstillingar"
