@@ -1,12 +1,28 @@
 {
     "KPlugin": {
         "Description": "Change the system wallpaper",
+        "Description[ca@valencia]": "Canvia el fons de pantalla del sistema",
+        "Description[ca]": "Canvia el fons de pantalla del sistema",
+        "Description[he]": "החלפת תמונת הרקע של המערכת",
+        "Description[ka]": "სისტემის ფონური სურათის შეცვლა",
+        "Description[nl]": "Systeemachtergrondafbeelding wijzigen",
+        "Description[sl]": "Zamenjaj sistemsko tapeto",
+        "Description[tr]": "Sistem duvar kâğıdını değiştirin",
+        "Description[uk]": "Змінити фонове зображення системи",
         "Description[x-test]": "xxChange the system wallpaperxx",
         "FormFactors": [
             "mediacenter"
         ],
         "Icon": "preferences-desktop-wallpaper",
         "Name": "Wallpaper",
+        "Name[ca@valencia]": "Fons de pantalla",
+        "Name[ca]": "Fons de pantalla",
+        "Name[he]": "תמונת רקע",
+        "Name[ka]": "ფონის სურათი",
+        "Name[nl]": "Achtergrondafbeelding",
+        "Name[sl]": "Tapeta",
+        "Name[tr]": "Duvar Kâğıdı",
+        "Name[uk]": "Фонове зображення",
         "Name[x-test]": "xxWallpaperxx"
     },
     "X-KDE-System-Settings-Parent-Category": "appearance",
