@@ -27,6 +27,11 @@ Window {
     // Height of header components (shared between the two panes)
     readonly property real headerHeight: Kirigami.Units.gridUnit * 7
 
+    // Whether to have the sidebar shown at all times
+    readonly property bool dualPanel: !visible || root.width > (minimumSidebarWidth * 2.5)
+
+    readonly property real minimumSidebarWidth: Kirigami.Units.gridUnit * 20
+
     Component.onCompleted: {
         KcmsListModel.loadKcms();
 
@@ -129,7 +134,7 @@ Window {
             anchors.top: parent.top
             anchors.left: parent.left
             anchors.bottom: parent.bottom
-            width: Math.max(Kirigami.Units.gridUnit * 20, parent.width * 0.20)
+            width: Math.max(root.minimumSidebarWidth, parent.width * 0.20)
 
             currentModuleName: root.currentModuleName
 
@@ -142,7 +147,7 @@ Window {
         Rectangle {
             width: Kirigami.Units.largeSpacing
             anchors.top: parent.top
-            anchors.right: menu.right
+            anchors.right: kcmContainerHolder.left
             anchors.bottom: parent.bottom
             opacity: 0.1
 
@@ -158,17 +163,61 @@ Window {
             id: kcmContainerHolder
             color: Kirigami.Theme.backgroundColor
 
-            anchors {
-                left: menu.right
-                right: parent.right
-                top: parent.top
-                bottom: parent.bottom
+            x: menu.width
+            y: 0
+            height: parent.height
+            width: root.dualPanel ? (parent.width - menu.width) : (parent.width)
+
+            property real oldX: x
+            property bool xIncreasing: false
+            onXChanged: {
+                xIncreasing = oldX < x;
+                oldX = x;
             }
 
-            property bool kcmPresent: true
+            // Implement panel slide with touch
+            DragHandler {
+                xAxis {
+                    enabled: !root.dualPanel
+                    minimum: 0
+                    maximum: menu.width
+                }
+                yAxis.enabled: false
+
+                onActiveChanged: {
+                    if (!active) {
+                        // Snap to end when touch stops
+                        if (kcmContainerHolder.xIncreasing) {
+                            settingsKCMMenu.forceActiveFocus();
+                        } else {
+                            loadedKCMPage.forceActiveFocus();
+                        }
+                    }
+                }
+            }
+
+            states: [
+                State {
+                    name: 'focused'
+                    when: settingsKCMMenu.activeFocus
+                    PropertyChanges { target: kcmContainerHolder; x: menu.width }
+                },
+                State {
+                    name: 'notFocused'
+                    when: !settingsKCMMenu.activeFocus
+                    PropertyChanges { target: kcmContainerHolder; x: root.dualPanel ? menu.width : 0 }
+                }
+            ]
+
+            transitions: [
+                Transition {
+                    NumberAnimation { properties: 'x'; duration: Kirigami.Units.longDuration; easing.type: Easing.OutCubic }
+                }
+            ]
 
             Controls.StackView {
                 id: pageStack
+                opacity: root.dualPanel ? 1 : (settingsKCMMenu.activeFocus ? 0.5 : 1)
                 anchors.fill: parent
 
                 pushEnter: Transition {
