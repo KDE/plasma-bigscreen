@@ -1,19 +1,16 @@
-# Translation for kcm_mediacenter_wifi.po to Euskara/Basque (eu).
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
 #
-# Translators:
-# SPDX-FileCopyrightText: 2025 Iñigo Salvador Azurmendi <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-27 00:43+0000\n"
-"PO-Revision-Date: 2025-07-28 14:19+0200\n"
-"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
-"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
-"Language: eu\n"
+"PO-Revision-Date: 2025-07-29 12:24+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,54 +20,54 @@ msgstr ""
 #: ui/delegates/NetworkDelegate.qml:65 ui/DeviceConnectionSidebar.qml:72
 #, kde-format
 msgid "Connected"
-msgstr "Konektatuta"
+msgstr "Ansluten"
 
 #: ui/DetailsText.qml:33
 #, kde-format
 msgid "IP Address Details"
-msgstr "IP helbidearen xehetasunak"
+msgstr "IP-adressinformation"
 
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
 msgid "Forget network"
-msgstr "Ahaztu sarea"
+msgstr "Glöm nätverk"
 
 #: ui/DeviceConnectionSidebar.qml:190
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
-msgstr "Ziur zaude %1 sarea ahaztu nahi duzula?"
+msgstr "Är du säker på att du vill glömma nätverket %1?"
 
 #: ui/DeviceConnectionSidebar.qml:242
 #, kde-format
 msgid "Speed"
-msgstr "Abiadura"
+msgstr "Hastighet"
 
 #: ui/main.qml:26
 #, kde-format
 msgid "Network"
-msgstr "Sarea"
+msgstr "Nätverk"
 
 #: ui/main.qml:103
 #, kde-format
 msgid "Refresh"
-msgstr "Berritu"
+msgstr "Uppdatera"
 
 #: ui/PasswordDialog.qml:22
 #, kde-format
 msgid "Enter Password For %1"
-msgstr "Sartu %1(r)en pasahitza"
+msgstr "Ange lösenord för %1"
 
 #: ui/PasswordDialog.qml:34
 #, kde-format
 msgid "Password…"
-msgstr "Pasahitza…"
+msgstr "Lösenord…"
 
 #: ui/PasswordDialog.qml:54
 #, kde-format
 msgid "Connect"
-msgstr "Konektatu"
+msgstr "Anslut"
 
 #: ui/PasswordDialog.qml:59
 #, kde-format
 msgid "Cancel"
-msgstr "Utzi"
+msgstr "Avbryt"

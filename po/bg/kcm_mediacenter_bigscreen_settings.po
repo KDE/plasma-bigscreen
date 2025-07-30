@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-25 00:44+0000\n"
-"PO-Revision-Date: 2025-06-04 19:25+0200\n"
+"PO-Revision-Date: 2025-07-28 20:35+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -47,13 +47,12 @@ msgstr "Ден"
 #: ui/DeviceTimeSettingsSidebar.qml:63
 #, kde-format
 msgid "Adjust Date & Time Settings"
-msgstr ""
+msgstr "Настройване на дата и час"
 
 #: ui/DeviceTimeSettingsSidebar.qml:72
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "Часови пояс:"
+msgstr "Часова зона"
 
 #: ui/DeviceTimeSettingsSidebar.qml:84
 #, kde-format
@@ -78,17 +77,15 @@ msgstr "%1, %2"
 #: ui/main.qml:22 ui/main.qml:76
 #, kde-format
 msgid "System"
-msgstr ""
+msgstr "Система"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Home Screen Appearance"
+#, kde-format
 msgid "Homescreen Appearance"
 msgstr "Външен вид на началния екран"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Colored Tiles"
+#, kde-format
 msgid "Colored tiles"
 msgstr "Цветни плочки"
 
@@ -98,14 +95,12 @@ msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "Фонът на плочките ще бъде оцветен според иконата на приложението"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Set Shortcut"
+#, kde-format
 msgid "Shortcuts"
-msgstr "Задаване клавишни комбинации"
+msgstr "Клавишни комбинации"
 
 #: ui/ShortcutsPickerSidebar.qml:46
-#, fuzzy, kde-format
-#| msgid "Reset Default"
+#, kde-format
 msgid "Reset to default"
 msgstr "Връщане на стандартните настройки"
 

@@ -1,19 +1,16 @@
-# Translation for plasma-bigscreen-settings.po to Euskara/Basque (eu).
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
 #
-# Translators:
-# SPDX-FileCopyrightText: 2025 Iñigo Salvador Azurmendi <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-27 00:43+0000\n"
-"PO-Revision-Date: 2025-07-28 14:24+0200\n"
-"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
-"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
-"Language: eu\n"
+"PO-Revision-Date: 2025-07-29 12:25+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,34 +20,34 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Iñigo Salvador Azurmendi"
+msgstr "Stefan Asserhäll"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "xalba@ni.eus"
+msgstr "stefan.asserhall@gmail.com"
 
 #: main.cpp:31
 #, kde-format
 msgid "Bigscreen Settings"
-msgstr "Bigscreen ezarpenak"
+msgstr "Inställningar för storbildsskärm"
 
 #: main.cpp:33
 #, kde-format
 msgid "Plasma Bigscreen Settings"
-msgstr "Plasma Bigscreen ezarpenak"
+msgstr "Inställningar för Plasma storbildsskärm"
 
 #: main.cpp:35
 #, kde-format
 msgid "Copyright 2025 Plasma developers"
-msgstr "Copyright 2025 Plasma garatzaileak"
+msgstr "Copyright 2025 Plasma-utvecklarna"
 
 #: main.cpp:37
 #, kde-format
 msgid "Settings module to open"
-msgstr "Ireki beharreko ezarpen-modulua"
+msgstr "Inställningsmodul att öppna"
 
 #: qml/ConfigWindowSidebar.qml:41
 #, kde-format
 msgid "Settings"
-msgstr "Ezarpenak"
+msgstr "Inställningar"
