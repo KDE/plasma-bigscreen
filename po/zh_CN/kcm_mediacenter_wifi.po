@@ -26,12 +26,12 @@ msgstr "已连接"
 #: ui/DetailsText.qml:33
 #, kde-format
 msgid "IP Address Details"
-msgstr ""
+msgstr "IP 地址详情"
 
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
 msgid "Forget network"
-msgstr ""
+msgstr "忘记网络"
 
 #: ui/DeviceConnectionSidebar.qml:190
 #, kde-format
@@ -46,7 +46,7 @@ msgstr "速度"
 #: ui/main.qml:26
 #, kde-format
 msgid "Network"
-msgstr ""
+msgstr "网络"
 
 #: ui/main.qml:103
 #, kde-format
@@ -61,7 +61,7 @@ msgstr "输入 %1 的密码"
 #: ui/PasswordDialog.qml:34
 #, kde-format
 msgid "Password…"
-msgstr ""
+msgstr "密码…"
 
 #: ui/PasswordDialog.qml:54
 #, kde-format

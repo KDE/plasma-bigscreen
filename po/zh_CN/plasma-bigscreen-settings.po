@@ -21,34 +21,34 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Tyson Tan"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "tds00@qq.com"
 
 #: main.cpp:31
 #, kde-format
 msgid "Bigscreen Settings"
-msgstr ""
+msgstr "大屏幕设置"
 
 #: main.cpp:33
 #, kde-format
 msgid "Plasma Bigscreen Settings"
-msgstr ""
+msgstr "Plasma 大屏幕设置"
 
 #: main.cpp:35
 #, kde-format
 msgid "Copyright 2025 Plasma developers"
-msgstr ""
+msgstr "Copyright 2025 Plasma developers"
 
 #: main.cpp:37
 #, kde-format
 msgid "Settings module to open"
-msgstr ""
+msgstr "要打开的设置模块"
 
 #: qml/ConfigWindowSidebar.qml:41
 #, kde-format
 msgid "Settings"
-msgstr ""
+msgstr "设置"
