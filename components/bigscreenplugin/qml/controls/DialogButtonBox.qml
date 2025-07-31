@@ -25,12 +25,6 @@ QQC2.DialogButtonBox {
     position: QQC2.DialogButtonBox.Footer
 
     standardButtons: root.dialog.standardButtons
-    onAccepted: root.dialog.accept()
-    onRejected: root.dialog.reject()
-    onApplied: root.dialog.applied()
-    onDiscarded: root.dialog.discarded()
-    onHelpRequested: root.dialog.helpRequested()
-    onReset: root.dialog.reset()
 
     onActiveFocusChanged: {
         if (activeFocus) {
