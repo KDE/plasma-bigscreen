@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Change the system wallpaper",
+        "Description[bg]": "Промяна на тапета",
         "Description[ca@valencia]": "Canvia el fons de pantalla del sistema",
         "Description[ca]": "Canvia el fons de pantalla del sistema",
         "Description[eu]": "Aldatu sistemaren horma-papera",
@@ -17,6 +18,7 @@
         ],
         "Icon": "preferences-desktop-wallpaper",
         "Name": "Wallpaper",
+        "Name[bg]": "Тапет",
         "Name[ca@valencia]": "Fons de pantalla",
         "Name[ca]": "Fons de pantalla",
         "Name[eu]": "Horma-papera",
