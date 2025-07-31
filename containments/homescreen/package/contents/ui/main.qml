@@ -15,7 +15,6 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.kquickcontrolsaddons
 
 import "launcher"
-import "settings" as Settings
 
 ContainmentItem {
     id: root
