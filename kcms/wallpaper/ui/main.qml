@@ -12,8 +12,8 @@ import org.kde.kcmutils as KCM
 import org.kde.kirigami as Kirigami
 import org.kde.bigscreen as Bigscreen
 
-KCM.SimpleKCM {
-    id: container
+Kirigami.ScrollablePage {
+    id: root
 
     title: i18n('Wallpaper')
     background: null
@@ -31,6 +31,9 @@ KCM.SimpleKCM {
 
     ColumnLayout {
         spacing: 0
+
+        // Since ScrollablePage's scrollview eats up the propagation of the left event to root, manually set it here
+        KeyNavigation.left: root.KeyNavigation.left
 
         Bigscreen.ButtonDelegate {
             id: wallpaperSelectorDelegate
