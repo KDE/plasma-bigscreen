@@ -65,6 +65,10 @@ See [this page](https://community.kde.org/Get_Involved/development) in order to 
 - DBus
 - Network
 
+### Other dependencies
+
+- QCoro
+
 </details>
 
 To start the Bigscreen homescreen in a window, use the following script:
