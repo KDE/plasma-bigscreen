@@ -13,6 +13,7 @@
         "Description[tr]": "Sistem duvar kâğıdını değiştirin",
         "Description[uk]": "Змінити фонове зображення системи",
         "Description[x-test]": "xxChange the system wallpaperxx",
+        "Description[zh_CN]": "更改系统壁纸",
         "FormFactors": [
             "mediacenter"
         ],
@@ -29,7 +30,8 @@
         "Name[sv]": "Skrivbordsunderlägg",
         "Name[tr]": "Duvar Kâğıdı",
         "Name[uk]": "Фонове зображення",
-        "Name[x-test]": "xxWallpaperxx"
+        "Name[x-test]": "xxWallpaperxx",
+        "Name[zh_CN]": "壁纸"
     },
     "X-KDE-System-Settings-Parent-Category": "appearance",
     "X-KDE-Weight": 40
