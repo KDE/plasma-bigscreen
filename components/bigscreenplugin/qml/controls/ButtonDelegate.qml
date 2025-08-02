@@ -27,6 +27,11 @@ ItemDelegate {
     property alias descriptionItem: internalDescriptionItem
 
     /*!
+       \brief Text font properties
+     */
+    property alias textFont: internalTextItem.font 
+
+    /*!
        \brief This property specifies whether the description font should be smaller
      */
     property bool smallDescription: true

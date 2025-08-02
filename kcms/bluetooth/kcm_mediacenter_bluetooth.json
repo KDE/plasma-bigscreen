@@ -1,0 +1,15 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "therealuser8395@proton.me",
+                "Name": "User8395"
+            }
+        ],
+        "Name": "Bluetooth",
+        "Description": "Manage Bluetooth devices",
+        "FormFactors": ["mediacenter"],
+        "Icon": "preferences-system-bluetooth-battery-symbolic",
+        "X-KDE-System-Settings-Parent-Category": "hardware"
+    }
+}

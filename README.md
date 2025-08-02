@@ -45,6 +45,7 @@ See [this page](https://community.kde.org/Get_Involved/development) in order to 
 - Activities
 - ActivitiesStats
 - Plasma
+- BluezQt
 - I18n
 - [Kirigami](https://invent.kde.org/frameworks/kirigami)
 - KCMUtils
