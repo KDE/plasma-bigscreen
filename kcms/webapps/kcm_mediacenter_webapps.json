@@ -1,11 +1,13 @@
 {
     "KPlugin": {
         "Description": "Create and manage web applications",
+        "Description[x-test]": "xxCreate and manage web applicationsxx",
         "FormFactors": [
             "mediacenter"
         ],
         "Icon": "internet-web-browser-symbolic",
-        "Name": "Web Apps"
+        "Name": "Web Apps",
+        "Name[x-test]": "xxWeb Appsxx"
     },
     "X-KDE-System-Settings-Parent-Category": "appearance",
     "X-KDE-Weight": 40

@@ -6,10 +6,12 @@
                 "Name": "User8395"
             }
         ],
-        "Name": "Bluetooth",
         "Description": "Manage Bluetooth devices",
-        "FormFactors": ["mediacenter"],
+        "FormFactors": [
+            "mediacenter"
+        ],
         "Icon": "preferences-system-bluetooth-battery-symbolic",
+        "Name": "Bluetooth",
         "X-KDE-System-Settings-Parent-Category": "hardware"
     }
 }
