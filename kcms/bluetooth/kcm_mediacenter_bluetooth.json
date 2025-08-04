@@ -3,15 +3,18 @@
         "Authors": [
             {
                 "Email": "therealuser8395@proton.me",
-                "Name": "User8395"
+                "Name": "User8395",
+                "Name[x-test]": "xxUser8395xx"
             }
         ],
         "Description": "Manage Bluetooth devices",
+        "Description[x-test]": "xxManage Bluetooth devicesxx",
         "FormFactors": [
             "mediacenter"
         ],
         "Icon": "preferences-system-bluetooth-battery-symbolic",
         "Name": "Bluetooth",
+        "Name[x-test]": "xxBluetoothxx",
         "X-KDE-System-Settings-Parent-Category": "hardware"
     }
 }
