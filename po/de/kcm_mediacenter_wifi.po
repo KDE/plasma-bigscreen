@@ -1,0 +1,74 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# Burkhard Lück <lueck@hube-lueck.de>, 2021.
+# Alois Spitzbart <spitz234@hotmail.com>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_mediacenter_wifi\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"PO-Revision-Date: 2022-10-24 07:44+0200\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.08.1\n"
+
+#: ui/delegates/NetworkDelegate.qml:65 ui/DeviceConnectionSidebar.qml:72
+#, kde-format
+msgid "Connected"
+msgstr "Verbunden"
+
+#: ui/DetailsText.qml:33
+#, kde-format
+msgid "IP Address Details"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:180
+#, kde-format
+msgid "Forget network"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:190
+#, kde-format
+msgid "Are you sure you want to forget the network %1?"
+msgstr "Möchten Sie das Netzwerk %1 wirklich vergessen?"
+
+#: ui/DeviceConnectionSidebar.qml:242
+#, kde-format
+msgid "Speed"
+msgstr "Geschwindigkeit"
+
+#: ui/main.qml:26
+#, kde-format
+msgid "Network"
+msgstr "Netzwerk"
+
+#: ui/main.qml:103
+#, kde-format
+msgid "Refresh"
+msgstr "Aktualisieren"
+
+#: ui/PasswordDialog.qml:22
+#, kde-format
+msgid "Enter Password For %1"
+msgstr "Passwort für %1 eingeben"
+
+#: ui/PasswordDialog.qml:34
+#, kde-format
+msgid "Password…"
+msgstr ""
+
+#: ui/PasswordDialog.qml:54
+#, kde-format
+msgid "Connect"
+msgstr "Verbinden"
+
+#: ui/PasswordDialog.qml:59
+#, kde-format
+msgid "Cancel"
+msgstr "Abbrechen"
