@@ -4,6 +4,7 @@
             {
                 "Email": "therealuser8395@proton.me",
                 "Name": "User8395",
+                "Name[ar]": "User8395",
                 "Name[ca@valencia]": "User8395",
                 "Name[ca]": "User8395",
                 "Name[eu]": "User8395",
@@ -15,10 +16,12 @@
                 "Name[sv]": "User8395",
                 "Name[tr]": "User8395",
                 "Name[uk]": "User8395",
-                "Name[x-test]": "xxUser8395xx"
+                "Name[x-test]": "xxUser8395xx",
+                "Name[zh_CN]": "User8395"
             }
         ],
         "Description": "Manage Bluetooth devices",
+        "Description[ar]": "يدير أجهزة بلوتوث",
         "Description[ca@valencia]": "Gestiona els dispositius Bluetooth",
         "Description[ca]": "Gestiona els dispositius Bluetooth",
         "Description[eu]": "Kudeatu Bluetooth gailuak",
@@ -31,11 +34,13 @@
         "Description[tr]": "Bluetooth aygıtlarını yapılandır",
         "Description[uk]": "Керування пристроями Bluetooth",
         "Description[x-test]": "xxManage Bluetooth devicesxx",
+        "Description[zh_CN]": "管理蓝牙设备",
         "FormFactors": [
             "mediacenter"
         ],
         "Icon": "preferences-system-bluetooth-battery-symbolic",
         "Name": "Bluetooth",
+        "Name[ar]": "بلوتوث",
         "Name[ca@valencia]": "Bluetooth",
         "Name[ca]": "Bluetooth",
         "Name[eu]": "Bluetooth",
@@ -48,6 +53,7 @@
         "Name[tr]": "Bluetooth",
         "Name[uk]": "Bluetooth",
         "Name[x-test]": "xxBluetoothxx",
+        "Name[zh_CN]": "蓝牙",
         "X-KDE-System-Settings-Parent-Category": "hardware"
     }
 }
