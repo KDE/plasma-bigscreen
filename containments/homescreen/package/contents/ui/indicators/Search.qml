@@ -17,7 +17,7 @@ import "../launcher/search" as Search
 AbstractIndicator {
     id: settingsIcon
     icon.name: "search"
-    text: i18n('Search')
+    text: i18n("Search")
 
     onClicked: {
         searchWindow.showOverlay();

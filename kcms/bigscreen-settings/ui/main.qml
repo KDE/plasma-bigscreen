@@ -66,8 +66,8 @@ Kirigami.ScrollablePage {
 
             KeyNavigation.down: pmInhibitionDelegate
 
-            text: i18n('Global theme')
-            description: i18n('Set the system theme')
+            text: i18n("Global theme")
+            description: i18n("Set the system theme")
 
             onClicked: themeSidebar.open();
         }
@@ -85,7 +85,7 @@ Kirigami.ScrollablePage {
             Layout.bottomMargin: Kirigami.Units.smallSpacing
             KeyNavigation.down: timeDateDelegate
 
-            text: i18n('Power inhibition')
+            text: i18n("Power inhibition")
             checked: kcm.pmInhibitionActive() ? true : false
             onCheckedChanged: kcm.setPmInhibitionActive(checked);
         }
@@ -95,7 +95,7 @@ Kirigami.ScrollablePage {
             KeyNavigation.down: settingsShortcutDelegate
 
             icon.name: "preferences-system-time"
-            text: i18n('Adjust date & time')
+            text: i18n("Adjust date & time")
 
             onClicked: deviceTimeSettings.open()
         }
@@ -112,7 +112,7 @@ Kirigami.ScrollablePage {
             id: settingsShortcutDelegate
             KeyNavigation.down: tasksShortcutDelegate
             Layout.bottomMargin: Kirigami.Units.smallSpacing
-            text: i18n('Open settings shortcut')
+            text: i18n("Open settings shortcut")
             icon.name: 'preferences-desktop-keyboard-symbolic'
 
             property string getActionPath: "activateSettingsShortcut"
@@ -132,7 +132,7 @@ Kirigami.ScrollablePage {
             id: tasksShortcutDelegate
             KeyNavigation.down: homescreenShortcutDelegate
             Layout.bottomMargin: Kirigami.Units.smallSpacing
-            text: i18n('Open tasks shortcut')
+            text: i18n("Open tasks shortcut")
             icon.name: 'preferences-desktop-keyboard-symbolic'
 
             property string getActionPath: "activateTasksShortcut"
@@ -151,7 +151,7 @@ Kirigami.ScrollablePage {
         Bigscreen.ButtonDelegate {
             id: homescreenShortcutDelegate
             Layout.bottomMargin: Kirigami.Units.smallSpacing
-            text: i18n('Open homescreen shortcut')
+            text: i18n("Open homescreen shortcut")
             icon.name: 'preferences-desktop-keyboard-symbolic'
 
             property string getActionPath: "displayHomeScreenShortcut"

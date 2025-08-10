@@ -20,7 +20,7 @@ Bigscreen.SidebarOverlay {
 
     header: Bigscreen.SidebarOverlayHeader {
         iconSource: 'preferences-desktop-theme'
-        title: i18n('Global theme')
+        title: i18n("Global theme")
     }
 
     content: ColumnLayout {

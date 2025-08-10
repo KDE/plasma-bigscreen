@@ -47,7 +47,7 @@ Kirigami.ScrollablePage {
         KeyNavigation.left: root.KeyNavigation.left
 
         QQC2.Label {
-            text: i18n('Playback Devices')
+            text: i18n("Playback Devices")
             font.pixelSize: 22
             font.weight: Font.Normal
             Layout.fillWidth: true
@@ -78,7 +78,7 @@ Kirigami.ScrollablePage {
         }
 
         QQC2.Label {
-            text: i18n('Recording Devices')
+            text: i18n("Recording Devices")
             font.pixelSize: 22
             font.weight: Font.Normal
             Layout.fillWidth: true

@@ -17,7 +17,7 @@ import "code/icon.js" as Icon
 
 AbstractIndicator {
     id: paIcon
-    text: i18n('Audio Settings')
+    text: i18n("Audio Settings")
 
     GlobalConfig {
         id: config

@@ -99,7 +99,7 @@ Bigscreen.SidebarOverlay {
             id: timeDelegate
             enabled: !automaticTimeDelegate.checked
             icon.name: 'clock'
-            text: i18n('Time')
+            text: i18n("Time")
             description: Qt.formatTime(root.currentTime, "hh:mm");
 
             KeyNavigation.up: automaticTimeDelegate
@@ -112,7 +112,7 @@ Bigscreen.SidebarOverlay {
             id: dateDelegate
             enabled: !automaticTimeDelegate.checked
             icon.name: 'view-calendar'
-            text: i18n('Date')
+            text: i18n("Date")
             description: Qt.formatDate(root.currentTime,"dd.MM.yyyy");
 
             KeyNavigation.up: timeDelegate
@@ -141,7 +141,7 @@ Bigscreen.SidebarOverlay {
                 Bigscreen.Button {
                     id: backBtnTZPItem
                     icon.name: "go-previous-view"
-                    text: i18n('Back')
+                    text: i18n("Back")
                     Layout.bottomMargin: Kirigami.Units.largeSpacing
                     KeyNavigation.down: searchField
 
@@ -218,7 +218,7 @@ Bigscreen.SidebarOverlay {
             Bigscreen.Button {
                 id: backBtnTPItem
                 icon.name: "go-previous-view"
-                text: i18n('Back')
+                text: i18n("Back")
                 KeyNavigation.down: timePicker
 
                 onClicked: {
@@ -268,7 +268,7 @@ Bigscreen.SidebarOverlay {
             Bigscreen.Button {
                 id: backBtnDTItem
                 icon.name: "go-previous-view"
-                text: i18n('Back')
+                text: i18n("Back")
                 KeyNavigation.down: datePicker
 
                 onClicked: {

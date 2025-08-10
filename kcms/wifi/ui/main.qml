@@ -111,7 +111,7 @@ KCM.SimpleKCM {
         }
 
         QQC2.Label {
-            text: i18n('Connections')
+            text: i18n("Connections")
             font.pixelSize: 22
             font.weight: Font.Normal
             Layout.topMargin: Kirigami.Units.gridUnit

@@ -36,7 +36,7 @@ Bigscreen.SidebarOverlay {
 
         Bigscreen.TextDelegate {
             id: shortcutLabel
-            text: i18n('Shortcut currently set to')
+            text: i18n("Shortcut currently set to")
             description: root.currentShortcut
         }
 

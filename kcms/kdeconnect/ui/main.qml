@@ -41,7 +41,7 @@ KCM.SimpleKCM {
         spacing: 0
 
         QQC2.Label {
-            text: i18n('Devices')
+            text: i18n("Devices")
             font.pixelSize: 22
             font.weight: Font.Normal
             Layout.topMargin: Kirigami.Units.gridUnit

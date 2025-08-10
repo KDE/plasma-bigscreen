@@ -18,7 +18,7 @@ Bigscreen.Dialog {
 
     property real displayScale
 
-    title: i18n('Scale')
+    title: i18n("Scale")
     standardButtons: Bigscreen.Dialog.Ok | Bigscreen.Dialog.Cancel
     openFocusItem: contentItem
 

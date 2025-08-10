@@ -13,7 +13,7 @@ import org.kde.plasma.plasmoid
 AbstractIndicator {
     id: settingsIcon
     icon.name: "configure"
-    text: i18n('Settings')
+    text: i18n("Settings")
 
     onClicked: {
         Plasmoid.openSettings();

@@ -135,7 +135,7 @@ Bigscreen.SidebarOverlay {
         Bigscreen.ButtonDelegate {
             id: networkInfoButton
             icon.name: 'info'
-            text: i18n('Network information')
+            text: i18n("Network information")
             description: itemText()
 
             onClicked: infoDialog.open()
@@ -146,7 +146,7 @@ Bigscreen.SidebarOverlay {
         Bigscreen.ButtonDelegate {
             id: connectToggleButton
 
-            text: model ? (model.ConnectionState == PlasmaNM.Enums.Activated ? i18n('Disconnect') : i18n('Connect')) : ''
+            text: model ? (model.ConnectionState == PlasmaNM.Enums.Activated ? i18n("Disconnect") : i18n("Connect")) : ''
             icon.name: model ? (model.ConnectionState == PlasmaNM.Enums.Activated ? 'network-disconnect' : 'network-connect') : ''
 
             KeyNavigation.down: forgetButton
@@ -210,7 +210,7 @@ Bigscreen.SidebarOverlay {
 
         Bigscreen.Dialog {
             id: infoDialog
-            title: i18n('Network details')
+            title: i18n("Network details")
 
             onClosed: networkInfoButton.forceActiveFocus()
 

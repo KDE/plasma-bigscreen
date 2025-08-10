@@ -17,7 +17,7 @@ import org.kde.plasma.private.nanoshell as NanoShell
 
 AbstractIndicator {
     id: connectionIcon
-    text: i18n('KDE Connect')
+    text: i18n("KDE Connect")
     icon.name: "phone-symbolic"
     property var window
 

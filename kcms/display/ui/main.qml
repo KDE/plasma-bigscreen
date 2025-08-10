@@ -39,7 +39,7 @@ Kirigami.ScrollablePage {
 
         Bigscreen.ComboBoxDelegate {
             id: selectedDisplayDelegate
-            text: i18n('Selected display')
+            text: i18n("Selected display")
             icon.name: 'preferences-desktop-display-randr-symbolic'
 
             model: kcm.displayModel
@@ -71,7 +71,7 @@ Kirigami.ScrollablePage {
         }
 
         QQC2.Label {
-            text: i18n('Display %1', kcm.displayModel.selectedDisplayName)
+            text: i18n("Display %1", kcm.displayModel.selectedDisplayName)
             font.pixelSize: 22
             font.weight: Font.Normal
             Layout.topMargin: Kirigami.Units.gridUnit
@@ -80,7 +80,7 @@ Kirigami.ScrollablePage {
 
         Bigscreen.SwitchDelegate {
             id: enabledDelegate
-            text: i18n('Enabled')
+            text: i18n("Enabled")
             visible: selectedDisplayDelegate.count > 1 // Only show if we have more than one screen
             checked: kcm.displayModel.selectedDisplayEnabled
 
@@ -95,7 +95,7 @@ Kirigami.ScrollablePage {
 
         Bigscreen.ComboBoxDelegate {
             id: modeDelegate
-            text: i18n('Screen mode (Resolution & Refresh Rate)')
+            text: i18n("Screen mode (Resolution & Refresh Rate)")
             model: kcm.displayModel.selectedDisplayAvailableModes
             enabled: kcm.displayModel.selectedDisplayEnabled
 
@@ -124,7 +124,7 @@ Kirigami.ScrollablePage {
 
         Bigscreen.ButtonDelegate {
             id: scaleDelegate
-            text: i18n('Scale')
+            text: i18n("Scale")
             description: Math.round(kcm.displayModel.selectedDisplayScale * 100) + "%"
             enabled: kcm.displayModel.selectedDisplayEnabled
 

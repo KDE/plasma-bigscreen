@@ -19,7 +19,7 @@ import org.kde.private.biglauncher
 AbstractIndicator {
     id: tasksIcon
     icon.name: "transform-shear-up"
-    text: i18n('Tasks')
+    text: i18n("Tasks")
 
     onClicked: {
         taskWindowView.showOverlay()

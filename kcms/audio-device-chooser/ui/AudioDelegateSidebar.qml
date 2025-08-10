@@ -46,7 +46,7 @@ Bigscreen.SidebarOverlay {
             id: setDefBtn
 
             KeyNavigation.down: volObj
-            text: i18n('Set as default device')
+            text: i18n("Set as default device")
 
             enabled: root.model && !root.model.PulseObject.default
 

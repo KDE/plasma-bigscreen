@@ -15,7 +15,7 @@ import org.kde.bigscreen as Bigscreen
 Kirigami.ScrollablePage {
     id: root
 
-    title: i18n('Wallpaper')
+    title: i18n("Wallpaper")
     background: null
 
     onActiveFocusChanged: {
@@ -45,7 +45,7 @@ Kirigami.ScrollablePage {
                 Window.window.close();
             }
 
-            text: i18n('Open wallpaper selector')
+            text: i18n("Open wallpaper selector")
             icon.name: 'backgroundtool'
         }
     }

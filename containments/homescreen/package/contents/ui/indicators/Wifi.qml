@@ -16,7 +16,7 @@ import org.kde.plasma.plasmoid
 
 AbstractIndicator {
     id: connectionIcon
-    text: i18n('Internet Settings')
+    text: i18n("Internet Settings")
 
     icon.name: connectionIconProvider.connectionIcon
 
