@@ -40,14 +40,14 @@ Kirigami.ScrollablePage {
                 nameTextField.forceActiveFocus()
             }
 
-            text: i18n('Add web app')
+            text: i18n("Add Web App")
             icon.name: 'list-add'
 
             KeyNavigation.down: webAppListView
         }
 
         QQC2.Label {
-            text: i18n('Installed Web Apps')
+            text: i18n("Installed web apps")
             font.pixelSize: 22
             font.weight: Font.Normal
             Layout.fillWidth: true
@@ -87,7 +87,7 @@ Kirigami.ScrollablePage {
 
         Bigscreen.Dialog {
             id: addWebAppDialog
-            title: i18n("Add web application")
+            title: i18n("Add Web Application")
             standardButtons: Bigscreen.Dialog.Ok | Bigscreen.Dialog.Cancel
             openFocusItem: nameTextField
 
@@ -117,7 +117,7 @@ Kirigami.ScrollablePage {
                 Bigscreen.TextField {
                     id: userAgentTextField
                     Layout.fillWidth: true
-                    placeholderText: i18n("User Agent (empty for default)")
+                    placeholderText: i18n("User agent (empty for default)")
 
                     KeyNavigation.down: addWebAppDialog.footer
                 }
