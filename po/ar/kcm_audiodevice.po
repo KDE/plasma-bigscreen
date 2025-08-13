@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-06-26 11:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -17,6 +17,11 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.5\n"
+
+#: ui/AudioDelegateSidebar.qml:49
+#, kde-format
+msgid "Set as default device"
+msgstr ""
 
 #: ui/delegates/VolumeObject.qml:53
 #, kde-format
@@ -34,11 +39,15 @@ msgstr "‏%1٪"
 msgid "Audio Devices"
 msgstr "أجهزة الصوت"
 
-#~ msgid "Playback Devices"
-#~ msgstr "أجهزة التشغيل"
+#: ui/main.qml:50
+#, kde-format
+msgid "Playback Devices"
+msgstr "أجهزة التشغيل"
 
-#~ msgid "Recording Devices"
-#~ msgstr "أجهزة التّسجيل"
+#: ui/main.qml:81
+#, kde-format
+msgid "Recording Devices"
+msgstr "أجهزة التّسجيل"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "اضغط على زر الخلف [←] لترجع تحديد جهاز"

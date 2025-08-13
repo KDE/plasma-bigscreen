@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-07-28 18:36+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -37,6 +37,17 @@ msgstr "Ta bort favoriter"
 msgid "Battery: %1%"
 msgstr "Batteri: %1 %"
 
+#: contents/ui/indicators/Favorites.qml:17
+#, fuzzy, kde-format
+#| msgid "Remove Favorites"
+msgid "Customize Favorites"
+msgstr "Ta bort favoriter"
+
+#: contents/ui/indicators/KdeConnect.qml:20
+#, kde-format
+msgid "KDE Connect"
+msgstr "KDE-anslut"
+
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
 msgid "Pairing Request From %1"
@@ -52,10 +63,50 @@ msgstr "Acceptera"
 msgid "Cancel"
 msgstr "Avbryt"
 
+#: contents/ui/indicators/Search.qml:20
+#, fuzzy, kde-format
+#| msgctxt "@info:placeholder"
+#| msgid "Search…"
+msgid "Search"
+msgstr "Sök…"
+
+#: contents/ui/indicators/Settings.qml:16
+#, kde-format
+msgid "Settings"
+msgstr "Inställningar"
+
+#: contents/ui/indicators/Shutdown.qml:15
+#, kde-format
+msgid "Exit Bigscreen"
+msgstr ""
+
+#: contents/ui/indicators/Shutdown.qml:15
+#, kde-format
+msgid "Power"
+msgstr ""
+
+#: contents/ui/indicators/Tasks.qml:22
+#, fuzzy, kde-format
+#| msgid "Clear Tasks"
+msgid "Tasks"
+msgstr "Rensa uppgifter"
+
+#: contents/ui/indicators/Volume.qml:20
+#, fuzzy, kde-format
+#| msgid "Additional Settings:"
+msgid "Audio Settings"
+msgstr "Ytterligare inställningar:"
+
 #: contents/ui/indicators/Volume.qml:28
 #, kde-format
 msgid "Audio Volume"
 msgstr "Ljudvolym"
+
+#: contents/ui/indicators/Wifi.qml:19
+#, fuzzy, kde-format
+#| msgid "Settings"
+msgid "Internet Settings"
+msgstr "Inställningar"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -103,17 +154,11 @@ msgstr "Rensa uppgifter"
 msgid "Close"
 msgstr "Stäng"
 
-#~ msgid "Settings"
-#~ msgstr "Inställningar"
-
 #~ msgid "General"
 #~ msgstr "Allmänt"
 
 #~ msgid "Websocket Address:"
 #~ msgstr "Webbuttagsadress:"
-
-#~ msgid "Additional Settings:"
-#~ msgstr "Ytterligare inställningar:"
 
 #~ msgid "Enable Notifications"
 #~ msgstr "Aktivera underrättelser"
@@ -132,9 +177,6 @@ msgstr "Stäng"
 
 #~ msgid "Use Expanding Tiles"
 #~ msgstr "Använd expanderade rutor"
-
-#~ msgid "KDE Connect"
-#~ msgstr "KDE-anslut"
 
 #~ msgid "Reject"
 #~ msgstr "Avslå"

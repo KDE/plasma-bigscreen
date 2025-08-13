@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-06-24 12:06+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -59,6 +59,23 @@ msgstr "Zona horària"
 msgid "Set time automatically"
 msgstr "Establix la data i l'hora automàticament"
 
+#: ui/DeviceTimeSettingsSidebar.qml:102
+#, fuzzy, kde-format
+#| msgid "Timezone"
+msgid "Time"
+msgstr "Zona horària"
+
+#: ui/DeviceTimeSettingsSidebar.qml:115
+#, kde-format
+msgid "Date"
+msgstr ""
+
+#: ui/DeviceTimeSettingsSidebar.qml:144 ui/DeviceTimeSettingsSidebar.qml:221
+#: ui/DeviceTimeSettingsSidebar.qml:271
+#, kde-format
+msgid "Back"
+msgstr ""
+
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
 msgid "Search City / Region"
@@ -94,10 +111,52 @@ msgstr "Fitxes de colors"
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "El fons de les fitxes s'acolorirà en funció de la icona de l'aplicació"
 
+#: ui/main.qml:69 ui/ThemeSidebar.qml:23
+#, kde-format
+msgid "Global theme"
+msgstr ""
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Set the system theme"
+msgstr ""
+
+#: ui/main.qml:88
+#, kde-format
+msgid "Power inhibition"
+msgstr ""
+
+#: ui/main.qml:98
+#, fuzzy, kde-format
+#| msgid "Adjust Date & Time Settings"
+msgid "Adjust date & time"
+msgstr "Ajusta la data i configuració de l'hora"
+
 #: ui/main.qml:104
 #, kde-format
 msgid "Shortcuts"
 msgstr "Dreceres"
+
+#: ui/main.qml:115
+#, kde-format
+msgid "Open settings shortcut"
+msgstr ""
+
+#: ui/main.qml:135
+#, fuzzy, kde-format
+#| msgid "Set Shortcut"
+msgid "Open tasks shortcut"
+msgstr "Establix una drecera"
+
+#: ui/main.qml:154
+#, kde-format
+msgid "Open homescreen shortcut"
+msgstr ""
+
+#: ui/ShortcutsPickerSidebar.qml:39
+#, kde-format
+msgid "Shortcut currently set to"
+msgstr ""
 
 #: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format

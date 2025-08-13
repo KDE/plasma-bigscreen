@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2020-03-08 22:07-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -13,6 +13,11 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+
+#: ui/AudioDelegateSidebar.qml:49
+#, kde-format
+msgid "Set as default device"
+msgstr ""
 
 #: ui/delegates/VolumeObject.qml:53
 #, kde-format
@@ -28,4 +33,14 @@ msgstr ""
 #: ui/main.qml:21
 #, kde-format
 msgid "Audio Devices"
+msgstr ""
+
+#: ui/main.qml:50
+#, kde-format
+msgid "Playback Devices"
+msgstr ""
+
+#: ui/main.qml:81
+#, kde-format
+msgid "Recording Devices"
 msgstr ""

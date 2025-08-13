@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_display\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-26 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-06-09 02:21+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -22,6 +22,31 @@ msgstr ""
 #, kde-format
 msgid "Display Configuration"
 msgstr "Configuración de visualización"
+
+#: ui/main.qml:42
+#, kde-format
+msgid "Selected display"
+msgstr ""
+
+#: ui/main.qml:74
+#, kde-format
+msgid "Display %1"
+msgstr ""
+
+#: ui/main.qml:83
+#, kde-format
+msgid "Enabled"
+msgstr ""
+
+#: ui/main.qml:98
+#, kde-format
+msgid "Screen mode (Resolution & Refresh Rate)"
+msgstr ""
+
+#: ui/main.qml:127 ui/ScaleDialog.qml:21
+#, kde-format
+msgid "Scale"
+msgstr "Escala"
 
 #~ msgid "New Resolution"
 #~ msgstr "Nueva resolución"
@@ -43,6 +68,3 @@ msgstr "Configuración de visualización"
 
 #~ msgid "Available Resolutions"
 #~ msgstr "Resoluciones disponibles"
-
-#~ msgid "Scale"
-#~ msgstr "Escala"

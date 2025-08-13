@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-23 00:43+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -67,3 +67,8 @@ msgstr "设备无法访问"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
+
+#: ui/main.qml:44
+#, kde-format
+msgid "Devices"
+msgstr ""

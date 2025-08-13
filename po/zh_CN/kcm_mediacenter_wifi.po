@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-07-28 19:40\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -28,6 +28,22 @@ msgstr "已连接"
 msgid "IP Address Details"
 msgstr "IP 地址详情"
 
+#: ui/DeviceConnectionSidebar.qml:138
+#, kde-format
+msgid "Network information"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
+#, kde-format
+msgid "Connect"
+msgstr "连接"
+
+#: ui/DeviceConnectionSidebar.qml:149
+#, fuzzy, kde-format
+#| msgid "Connect"
+msgid "Disconnect"
+msgstr "连接"
+
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
 msgid "Forget network"
@@ -37,6 +53,12 @@ msgstr "忘记网络"
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
 msgstr "您确定要忘记网络 %1 吗？"
+
+#: ui/DeviceConnectionSidebar.qml:213
+#, fuzzy, kde-format
+#| msgid "Network"
+msgid "Network details"
+msgstr "网络"
 
 #: ui/DeviceConnectionSidebar.qml:242
 #, kde-format
@@ -53,6 +75,12 @@ msgstr "网络"
 msgid "Refresh"
 msgstr "刷新"
 
+#: ui/main.qml:114
+#, fuzzy, kde-format
+#| msgid "Connect"
+msgid "Connections"
+msgstr "连接"
+
 #: ui/PasswordDialog.qml:22
 #, kde-format
 msgid "Enter Password For %1"
@@ -62,11 +90,6 @@ msgstr "输入 %1 的密码"
 #, kde-format
 msgid "Password…"
 msgstr "密码…"
-
-#: ui/PasswordDialog.qml:54
-#, kde-format
-msgid "Connect"
-msgstr "连接"
 
 #: ui/PasswordDialog.qml:59
 #, kde-format

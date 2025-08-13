@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2024-02-07 21:19-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -37,6 +37,16 @@ msgstr ""
 msgid "Battery: %1%"
 msgstr ""
 
+#: contents/ui/indicators/Favorites.qml:17
+#, kde-format
+msgid "Customize Favorites"
+msgstr ""
+
+#: contents/ui/indicators/KdeConnect.qml:20
+#, kde-format
+msgid "KDE Connect"
+msgstr "KDE ਕਨੈਕਟ"
+
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
 msgid "Pairing Request From %1"
@@ -52,10 +62,47 @@ msgstr "ਮਨਜ਼ੂਰ ਕਰੋ"
 msgid "Cancel"
 msgstr ""
 
+#: contents/ui/indicators/Search.qml:20
+#, kde-format
+msgid "Search"
+msgstr ""
+
+#: contents/ui/indicators/Settings.qml:16
+#, kde-format
+msgid "Settings"
+msgstr "ਸੈਟਿੰਗਾਂ"
+
+#: contents/ui/indicators/Shutdown.qml:15
+#, kde-format
+msgid "Exit Bigscreen"
+msgstr ""
+
+#: contents/ui/indicators/Shutdown.qml:15
+#, kde-format
+msgid "Power"
+msgstr ""
+
+#: contents/ui/indicators/Tasks.qml:22
+#, kde-format
+msgid "Tasks"
+msgstr ""
+
+#: contents/ui/indicators/Volume.qml:20
+#, fuzzy, kde-format
+#| msgid "Additional Settings:"
+msgid "Audio Settings"
+msgstr "ਵਧੀਕ ਸੈਟਿੰਗਾਂ:"
+
 #: contents/ui/indicators/Volume.qml:28
 #, kde-format
 msgid "Audio Volume"
 msgstr ""
+
+#: contents/ui/indicators/Wifi.qml:19
+#, fuzzy, kde-format
+#| msgid "Settings"
+msgid "Internet Settings"
+msgstr "ਸੈਟਿੰਗਾਂ"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -105,17 +152,11 @@ msgstr ""
 msgid "Close"
 msgstr "ਬੰਦ ਕਰੋ"
 
-#~ msgid "Settings"
-#~ msgstr "ਸੈਟਿੰਗਾਂ"
-
 #~ msgid "General"
 #~ msgstr "ਆਮ"
 
 #~ msgid "Websocket Address:"
 #~ msgstr "ਵੈੱਬਸਾਕਟ ਐਡਰੈਸ:"
-
-#~ msgid "Additional Settings:"
-#~ msgstr "ਵਧੀਕ ਸੈਟਿੰਗਾਂ:"
 
 #~ msgid "Enable Notifications"
 #~ msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਸਮਰੱਥ ਕਰੋ"
@@ -131,9 +172,6 @@ msgstr "ਬੰਦ ਕਰੋ"
 
 #~ msgid "Use Expanding Tiles"
 #~ msgstr "ਫੈਲੀਆਂ ਟਾਈਲਾਂ ਵਰਤੋਂ"
-
-#~ msgid "KDE Connect"
-#~ msgstr "KDE ਕਨੈਕਟ"
 
 #~ msgid "Reject"
 #~ msgstr "ਰੱਦ ਕਰੋ"

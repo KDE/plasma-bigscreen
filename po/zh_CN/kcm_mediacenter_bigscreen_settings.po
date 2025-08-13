@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -58,6 +58,23 @@ msgstr "时区"
 msgid "Set time automatically"
 msgstr "自动设置时间"
 
+#: ui/DeviceTimeSettingsSidebar.qml:102
+#, fuzzy, kde-format
+#| msgid "Timezone"
+msgid "Time"
+msgstr "时区"
+
+#: ui/DeviceTimeSettingsSidebar.qml:115
+#, kde-format
+msgid "Date"
+msgstr ""
+
+#: ui/DeviceTimeSettingsSidebar.qml:144 ui/DeviceTimeSettingsSidebar.qml:221
+#: ui/DeviceTimeSettingsSidebar.qml:271
+#, kde-format
+msgid "Back"
+msgstr ""
+
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
 msgid "Search City / Region"
@@ -93,10 +110,52 @@ msgstr "彩色磁贴"
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "磁贴背景将根据应用程序的图标进行着色。"
 
+#: ui/main.qml:69 ui/ThemeSidebar.qml:23
+#, kde-format
+msgid "Global theme"
+msgstr ""
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Set the system theme"
+msgstr ""
+
+#: ui/main.qml:88
+#, kde-format
+msgid "Power inhibition"
+msgstr ""
+
+#: ui/main.qml:98
+#, fuzzy, kde-format
+#| msgid "Adjust Date & Time Settings"
+msgid "Adjust date & time"
+msgstr "调整日期和时间设置"
+
 #: ui/main.qml:104
 #, kde-format
 msgid "Shortcuts"
 msgstr "快捷键"
+
+#: ui/main.qml:115
+#, kde-format
+msgid "Open settings shortcut"
+msgstr ""
+
+#: ui/main.qml:135
+#, fuzzy, kde-format
+#| msgid "Set Shortcut"
+msgid "Open tasks shortcut"
+msgstr "设置快捷键"
+
+#: ui/main.qml:154
+#, kde-format
+msgid "Open homescreen shortcut"
+msgstr ""
+
+#: ui/ShortcutsPickerSidebar.qml:39
+#, kde-format
+msgid "Shortcut currently set to"
+msgstr ""
 
 #: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format

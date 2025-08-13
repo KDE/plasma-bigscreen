@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2024-11-29 00:33+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -37,6 +37,17 @@ msgstr "책갈피 삭제"
 msgid "Battery: %1%"
 msgstr ""
 
+#: contents/ui/indicators/Favorites.qml:17
+#, fuzzy, kde-format
+#| msgid "Remove Favorites"
+msgid "Customize Favorites"
+msgstr "책갈피 삭제"
+
+#: contents/ui/indicators/KdeConnect.qml:20
+#, kde-format
+msgid "KDE Connect"
+msgstr "KDE Connect"
+
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
 msgid "Pairing Request From %1"
@@ -52,10 +63,48 @@ msgstr "수락"
 msgid "Cancel"
 msgstr "취소"
 
+#: contents/ui/indicators/Search.qml:20
+#, kde-format
+msgid "Search"
+msgstr ""
+
+#: contents/ui/indicators/Settings.qml:16
+#, kde-format
+msgid "Settings"
+msgstr "설정"
+
+#: contents/ui/indicators/Shutdown.qml:15
+#, kde-format
+msgid "Exit Bigscreen"
+msgstr ""
+
+#: contents/ui/indicators/Shutdown.qml:15
+#, kde-format
+msgid "Power"
+msgstr ""
+
+#: contents/ui/indicators/Tasks.qml:22
+#, fuzzy, kde-format
+#| msgid "Clear Tasks"
+msgid "Tasks"
+msgstr "할 일 비우기"
+
+#: contents/ui/indicators/Volume.qml:20
+#, fuzzy, kde-format
+#| msgid "Additional Settings:"
+msgid "Audio Settings"
+msgstr "추가 설정:"
+
 #: contents/ui/indicators/Volume.qml:28
 #, kde-format
 msgid "Audio Volume"
 msgstr "오디오 음량"
+
+#: contents/ui/indicators/Wifi.qml:19
+#, fuzzy, kde-format
+#| msgid "Settings"
+msgid "Internet Settings"
+msgstr "설정"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -103,17 +152,11 @@ msgstr "할 일 비우기"
 msgid "Close"
 msgstr "닫기"
 
-#~ msgid "Settings"
-#~ msgstr "설정"
-
 #~ msgid "General"
 #~ msgstr "일반"
 
 #~ msgid "Websocket Address:"
 #~ msgstr "웹소켓 주소:"
-
-#~ msgid "Additional Settings:"
-#~ msgstr "추가 설정:"
 
 #~ msgid "Enable Notifications"
 #~ msgstr "알림 사용"
@@ -132,9 +175,6 @@ msgstr "닫기"
 
 #~ msgid "Use Expanding Tiles"
 #~ msgstr "늘어나는 타일 사용"
-
-#~ msgid "KDE Connect"
-#~ msgstr "KDE Connect"
 
 #~ msgid "Reject"
 #~ msgstr "거부"

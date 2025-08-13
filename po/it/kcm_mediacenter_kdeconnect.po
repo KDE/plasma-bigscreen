@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-23 00:43+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-06-23 14:04+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -66,6 +66,11 @@ msgstr "Questo dispositivo non è raggiungibile"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
+
+#: ui/main.qml:44
+#, kde-format
+msgid "Devices"
+msgstr ""
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr ""

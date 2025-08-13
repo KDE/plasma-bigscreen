@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2024-12-20 12:26+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -18,6 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 "X-Generator: Lokalize 24.08.2\n"
+
+#: ui/AudioDelegateSidebar.qml:49
+#, kde-format
+msgid "Set as default device"
+msgstr ""
 
 #: ui/delegates/VolumeObject.qml:53
 #, kde-format
@@ -36,11 +41,15 @@ msgstr "%1%"
 msgid "Audio Devices"
 msgstr "श्रव्ययन्त्रचयनकर्ता"
 
-#~ msgid "Playback Devices"
-#~ msgstr "प्लेबैक उपकरणम्"
+#: ui/main.qml:50
+#, kde-format
+msgid "Playback Devices"
+msgstr "प्लेबैक उपकरणम्"
 
-#~ msgid "Recording Devices"
-#~ msgstr "अभिलेखनयन्त्राणि"
+#: ui/main.qml:81
+#, kde-format
+msgid "Recording Devices"
+msgstr "अभिलेखनयन्त्राणि"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "उपकरणचयनं प्रति प्रत्यागन्तुं [←] Back बटनं नुदन्तु"

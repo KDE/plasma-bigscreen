@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-06-19 09:38+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -37,6 +37,17 @@ msgstr "Retirar cousas favoritas"
 msgid "Battery: %1%"
 msgstr ""
 
+#: contents/ui/indicators/Favorites.qml:17
+#, fuzzy, kde-format
+#| msgid "Remove Favorites"
+msgid "Customize Favorites"
+msgstr "Retirar cousas favoritas"
+
+#: contents/ui/indicators/KdeConnect.qml:20
+#, kde-format
+msgid "KDE Connect"
+msgstr "KDE Connect"
+
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
 msgid "Pairing Request From %1"
@@ -52,10 +63,50 @@ msgstr "Aceptar"
 msgid "Cancel"
 msgstr "Cancelar"
 
+#: contents/ui/indicators/Search.qml:20
+#, fuzzy, kde-format
+#| msgctxt "@info:placeholder"
+#| msgid "Search…"
+msgid "Search"
+msgstr "Buscar…"
+
+#: contents/ui/indicators/Settings.qml:16
+#, kde-format
+msgid "Settings"
+msgstr "Configuración"
+
+#: contents/ui/indicators/Shutdown.qml:15
+#, kde-format
+msgid "Exit Bigscreen"
+msgstr ""
+
+#: contents/ui/indicators/Shutdown.qml:15
+#, kde-format
+msgid "Power"
+msgstr ""
+
+#: contents/ui/indicators/Tasks.qml:22
+#, fuzzy, kde-format
+#| msgid "Clear Tasks"
+msgid "Tasks"
+msgstr "Borrar as tarefas"
+
+#: contents/ui/indicators/Volume.qml:20
+#, fuzzy, kde-format
+#| msgid "Additional Settings:"
+msgid "Audio Settings"
+msgstr "Configuración adicional:"
+
 #: contents/ui/indicators/Volume.qml:28
 #, kde-format
 msgid "Audio Volume"
 msgstr "Volume do son"
+
+#: contents/ui/indicators/Wifi.qml:19
+#, fuzzy, kde-format
+#| msgid "Settings"
+msgid "Internet Settings"
+msgstr "Configuración"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -103,17 +154,11 @@ msgstr "Borrar as tarefas"
 msgid "Close"
 msgstr "Pechar"
 
-#~ msgid "Settings"
-#~ msgstr "Configuración"
-
 #~ msgid "General"
 #~ msgstr "Xeral"
 
 #~ msgid "Websocket Address:"
 #~ msgstr "Enderezo de socket web:"
-
-#~ msgid "Additional Settings:"
-#~ msgstr "Configuración adicional:"
 
 #~ msgid "Enable Notifications"
 #~ msgstr "Activar as notificacións"
@@ -132,9 +177,6 @@ msgstr "Pechar"
 
 #~ msgid "Use Expanding Tiles"
 #~ msgstr "Usar teselas expansíbeis"
-
-#~ msgid "KDE Connect"
-#~ msgstr "KDE Connect"
 
 #~ msgid "Reject"
 #~ msgstr "Rexeitar"

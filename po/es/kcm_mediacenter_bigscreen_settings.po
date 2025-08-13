@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-06-28 23:40+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -58,6 +58,23 @@ msgstr "Zona horaria"
 msgid "Set time automatically"
 msgstr "Establecer hora automáticamente"
 
+#: ui/DeviceTimeSettingsSidebar.qml:102
+#, fuzzy, kde-format
+#| msgid "Timezone"
+msgid "Time"
+msgstr "Zona horaria"
+
+#: ui/DeviceTimeSettingsSidebar.qml:115
+#, kde-format
+msgid "Date"
+msgstr ""
+
+#: ui/DeviceTimeSettingsSidebar.qml:144 ui/DeviceTimeSettingsSidebar.qml:221
+#: ui/DeviceTimeSettingsSidebar.qml:271
+#, kde-format
+msgid "Back"
+msgstr ""
+
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
 msgid "Search City / Region"
@@ -93,10 +110,52 @@ msgstr "Mosaicos coloreados"
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "El mosaico del fondo tomará el color del icono de la aplicación"
 
+#: ui/main.qml:69 ui/ThemeSidebar.qml:23
+#, kde-format
+msgid "Global theme"
+msgstr ""
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Set the system theme"
+msgstr ""
+
+#: ui/main.qml:88
+#, kde-format
+msgid "Power inhibition"
+msgstr ""
+
+#: ui/main.qml:98
+#, fuzzy, kde-format
+#| msgid "Adjust Date & Time Settings"
+msgid "Adjust date & time"
+msgstr "Preferencias de ajuste de fecha y hora"
+
 #: ui/main.qml:104
 #, kde-format
 msgid "Shortcuts"
 msgstr "Accesos rápidos"
+
+#: ui/main.qml:115
+#, kde-format
+msgid "Open settings shortcut"
+msgstr ""
+
+#: ui/main.qml:135
+#, fuzzy, kde-format
+#| msgid "Set Shortcut"
+msgid "Open tasks shortcut"
+msgstr "Crear atajo rápido"
+
+#: ui/main.qml:154
+#, kde-format
+msgid "Open homescreen shortcut"
+msgstr ""
+
+#: ui/ShortcutsPickerSidebar.qml:39
+#, kde-format
+msgid "Shortcut currently set to"
+msgstr ""
 
 #: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format

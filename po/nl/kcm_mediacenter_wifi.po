@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-07-27 15:13+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -27,6 +27,22 @@ msgstr "Verbonden"
 msgid "IP Address Details"
 msgstr "Details van IP-adres"
 
+#: ui/DeviceConnectionSidebar.qml:138
+#, kde-format
+msgid "Network information"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
+#, kde-format
+msgid "Connect"
+msgstr "Verbinden"
+
+#: ui/DeviceConnectionSidebar.qml:149
+#, fuzzy, kde-format
+#| msgid "Connect"
+msgid "Disconnect"
+msgstr "Verbinden"
+
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
 msgid "Forget network"
@@ -36,6 +52,12 @@ msgstr "Netwerk vergeten"
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
 msgstr "Wilt u het netwerk %1 vergeten?"
+
+#: ui/DeviceConnectionSidebar.qml:213
+#, fuzzy, kde-format
+#| msgid "Network"
+msgid "Network details"
+msgstr "Netwerk"
 
 #: ui/DeviceConnectionSidebar.qml:242
 #, kde-format
@@ -52,6 +74,12 @@ msgstr "Netwerk"
 msgid "Refresh"
 msgstr "Vernieuwen"
 
+#: ui/main.qml:114
+#, fuzzy, kde-format
+#| msgid "Connect"
+msgid "Connections"
+msgstr "Verbinden"
+
 #: ui/PasswordDialog.qml:22
 #, kde-format
 msgid "Enter Password For %1"
@@ -61,11 +89,6 @@ msgstr "Wachtwoord invoeren voor %1"
 #, kde-format
 msgid "Password…"
 msgstr "Wachtwoord…"
-
-#: ui/PasswordDialog.qml:54
-#, kde-format
-msgid "Connect"
-msgstr "Verbinden"
 
 #: ui/PasswordDialog.qml:59
 #, kde-format

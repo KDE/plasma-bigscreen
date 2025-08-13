@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2022-01-07 14:57+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -59,6 +59,22 @@ msgstr "Časová zóna:"
 msgid "Set time automatically"
 msgstr "Nastaviť čas automaticky"
 
+#: ui/DeviceTimeSettingsSidebar.qml:102
+#, kde-format
+msgid "Time"
+msgstr "Čas"
+
+#: ui/DeviceTimeSettingsSidebar.qml:115
+#, kde-format
+msgid "Date"
+msgstr "Dátum"
+
+#: ui/DeviceTimeSettingsSidebar.qml:144 ui/DeviceTimeSettingsSidebar.qml:221
+#: ui/DeviceTimeSettingsSidebar.qml:271
+#, kde-format
+msgid "Back"
+msgstr ""
+
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
 msgid "Search City / Region"
@@ -95,9 +111,49 @@ msgstr ""
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr ""
 
+#: ui/main.qml:69 ui/ThemeSidebar.qml:23
+#, kde-format
+msgid "Global theme"
+msgstr ""
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Set the system theme"
+msgstr ""
+
+#: ui/main.qml:88
+#, kde-format
+msgid "Power inhibition"
+msgstr ""
+
+#: ui/main.qml:98
+#, kde-format
+msgid "Adjust date & time"
+msgstr ""
+
 #: ui/main.qml:104
 #, kde-format
 msgid "Shortcuts"
+msgstr ""
+
+#: ui/main.qml:115
+#, kde-format
+msgid "Open settings shortcut"
+msgstr ""
+
+#: ui/main.qml:135
+#, kde-format
+msgid "Open tasks shortcut"
+msgstr ""
+
+#: ui/main.qml:154
+#, kde-format
+msgid "Open homescreen shortcut"
+msgstr ""
+
+#: ui/ShortcutsPickerSidebar.qml:39
+#, kde-format
+msgid "Shortcut currently set to"
 msgstr ""
 
 #: ui/ShortcutsPickerSidebar.qml:46
@@ -132,12 +188,6 @@ msgstr ""
 
 #~ msgid "Time Display"
 #~ msgstr "Zobrazenie času"
-
-#~ msgid "Time"
-#~ msgstr "Čas"
-
-#~ msgid "Date"
-#~ msgstr "Dátum"
 
 #~ msgid "Press the [←] Back button to return to appearance settings"
 #~ msgstr "Stlačte tlačidlo [←] Späť pre návrat na nastavenia vzhľadu"

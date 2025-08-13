@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-06-24 18:38+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -60,6 +60,22 @@ msgstr "Ordu-eremua"
 msgid "Set time automatically"
 msgstr "Ezarri ordua automatikoki"
 
+#: ui/DeviceTimeSettingsSidebar.qml:102
+#, kde-format
+msgid "Time"
+msgstr "Ordua"
+
+#: ui/DeviceTimeSettingsSidebar.qml:115
+#, kde-format
+msgid "Date"
+msgstr "Data"
+
+#: ui/DeviceTimeSettingsSidebar.qml:144 ui/DeviceTimeSettingsSidebar.qml:221
+#: ui/DeviceTimeSettingsSidebar.qml:271
+#, kde-format
+msgid "Back"
+msgstr ""
+
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
 msgid "Search City / Region"
@@ -96,10 +112,56 @@ msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr ""
 "Lauzen atzeko planoa aplikazioaren ikonoan oinarrituta koloreztatuko dira"
 
+#: ui/main.qml:69 ui/ThemeSidebar.qml:23
+#, fuzzy, kde-format
+#| msgid "Global Theme"
+msgid "Global theme"
+msgstr "Gai globala"
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Set the system theme"
+msgstr ""
+
+#: ui/main.qml:88
+#, fuzzy, kde-format
+#| msgid "Power Inhibition"
+msgid "Power inhibition"
+msgstr "Energia-inhibizioa"
+
+#: ui/main.qml:98
+#, fuzzy, kde-format
+#| msgid "Adjust Date & Time Settings"
+msgid "Adjust date & time"
+msgstr "Doitu data eta ordu ezarpenak"
+
 #: ui/main.qml:104
 #, kde-format
 msgid "Shortcuts"
 msgstr "Lasterbideak"
+
+#: ui/main.qml:115
+#, fuzzy, kde-format
+#| msgid "Bigscreen Settings Shortcut"
+msgid "Open settings shortcut"
+msgstr "Bigscreen Ezarpenen lasterbideak"
+
+#: ui/main.qml:135
+#, fuzzy, kde-format
+#| msgid "Bigscreen Tasks Shortcut"
+msgid "Open tasks shortcut"
+msgstr "Bigscreen Atazen lasterbideak"
+
+#: ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Bigscreen Display Homescreen Shortcut"
+msgid "Open homescreen shortcut"
+msgstr "Bigscreen Azaldu Hasierako pantaila Lasterbidea"
+
+#: ui/ShortcutsPickerSidebar.qml:39
+#, kde-format
+msgid "Shortcut currently set to"
+msgstr ""
 
 #: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format
@@ -134,12 +196,6 @@ msgstr "AM/PM"
 #~ msgid "Time Display"
 #~ msgstr "Denbora azaltzea"
 
-#~ msgid "Time"
-#~ msgstr "Ordua"
-
-#~ msgid "Date"
-#~ msgstr "Data"
-
 #~ msgid "Press the [←] Back button to return to appearance settings"
 #~ msgstr "Sakatu [←] Atzera botoia itxura ezarpenetara itzultzeko"
 
@@ -154,9 +210,6 @@ msgstr "AM/PM"
 #~ msgid "Appearance"
 #~ msgstr "Itxura"
 
-#~ msgid "Global Theme"
-#~ msgstr "Gai globala"
-
 #~ msgid "Expanding Tiles"
 #~ msgstr "Zabaltzen diren lauzak"
 
@@ -166,20 +219,8 @@ msgstr "AM/PM"
 #~ msgid "Launcher Appearance"
 #~ msgstr "Abiarazlearen itxura"
 
-#~ msgid "Power Inhibition"
-#~ msgstr "Energia-inhibizioa"
-
 #~ msgid "Bigscreen Shortcuts"
 #~ msgstr "Bigscreen Lasterbideak"
-
-#~ msgid "Bigscreen Settings Shortcut"
-#~ msgstr "Bigscreen Ezarpenen lasterbideak"
-
-#~ msgid "Bigscreen Tasks Shortcut"
-#~ msgstr "Bigscreen Atazen lasterbideak"
-
-#~ msgid "Bigscreen Display Homescreen Shortcut"
-#~ msgstr "Bigscreen Azaldu Hasierako pantaila Lasterbidea"
 
 #~ msgid "Appearance & Personalization"
 #~ msgstr "Itxura eta pertsonalizazioa"

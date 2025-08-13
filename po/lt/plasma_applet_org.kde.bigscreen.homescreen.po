@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2020-10-17 02:30+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -38,6 +38,16 @@ msgstr ""
 msgid "Battery: %1%"
 msgstr ""
 
+#: contents/ui/indicators/Favorites.qml:17
+#, kde-format
+msgid "Customize Favorites"
+msgstr ""
+
+#: contents/ui/indicators/KdeConnect.qml:20
+#, kde-format
+msgid "KDE Connect"
+msgstr ""
+
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
 msgid "Pairing Request From %1"
@@ -53,9 +63,44 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
+#: contents/ui/indicators/Search.qml:20
+#, kde-format
+msgid "Search"
+msgstr ""
+
+#: contents/ui/indicators/Settings.qml:16
+#, kde-format
+msgid "Settings"
+msgstr ""
+
+#: contents/ui/indicators/Shutdown.qml:15
+#, kde-format
+msgid "Exit Bigscreen"
+msgstr ""
+
+#: contents/ui/indicators/Shutdown.qml:15
+#, kde-format
+msgid "Power"
+msgstr ""
+
+#: contents/ui/indicators/Tasks.qml:22
+#, kde-format
+msgid "Tasks"
+msgstr ""
+
+#: contents/ui/indicators/Volume.qml:20
+#, kde-format
+msgid "Audio Settings"
+msgstr ""
+
 #: contents/ui/indicators/Volume.qml:28
 #, kde-format
 msgid "Audio Volume"
+msgstr ""
+
+#: contents/ui/indicators/Wifi.qml:19
+#, kde-format
+msgid "Internet Settings"
 msgstr ""
 
 #: contents/ui/launcher/LauncherHome.qml:78

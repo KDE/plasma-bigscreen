@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-07-29 05:25+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -28,6 +28,22 @@ msgstr "დაკავშირებულია"
 msgid "IP Address Details"
 msgstr "IP მისამართის დეტალები"
 
+#: ui/DeviceConnectionSidebar.qml:138
+#, kde-format
+msgid "Network information"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
+#, kde-format
+msgid "Connect"
+msgstr "მიერთება"
+
+#: ui/DeviceConnectionSidebar.qml:149
+#, fuzzy, kde-format
+#| msgid "Connect"
+msgid "Disconnect"
+msgstr "მიერთება"
+
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
 msgid "Forget network"
@@ -37,6 +53,12 @@ msgstr "ქსელის დავიწყება"
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
 msgstr "დარწმუნებული ხართ, რომ გსურთ დაივიწყოთ ქსელი \"%1\"?"
+
+#: ui/DeviceConnectionSidebar.qml:213
+#, fuzzy, kde-format
+#| msgid "Network"
+msgid "Network details"
+msgstr "ქსელი"
 
 #: ui/DeviceConnectionSidebar.qml:242
 #, kde-format
@@ -53,6 +75,12 @@ msgstr "ქსელი"
 msgid "Refresh"
 msgstr "განახლება"
 
+#: ui/main.qml:114
+#, fuzzy, kde-format
+#| msgid "Connect"
+msgid "Connections"
+msgstr "მიერთება"
+
 #: ui/PasswordDialog.qml:22
 #, kde-format
 msgid "Enter Password For %1"
@@ -62,11 +90,6 @@ msgstr "შეიყვანეთ %1-ის პაროლი"
 #, kde-format
 msgid "Password…"
 msgstr "პაროლი…"
-
-#: ui/PasswordDialog.qml:54
-#, kde-format
-msgid "Connect"
-msgstr "მიერთება"
 
 #: ui/PasswordDialog.qml:59
 #, kde-format

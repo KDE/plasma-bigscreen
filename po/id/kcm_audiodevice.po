@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2024-11-10 07:14+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -16,6 +16,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.08.2\n"
+
+#: ui/AudioDelegateSidebar.qml:49
+#, kde-format
+msgid "Set as default device"
+msgstr ""
 
 #: ui/delegates/VolumeObject.qml:53
 #, kde-format
@@ -34,11 +39,15 @@ msgstr "%1%"
 msgid "Audio Devices"
 msgstr "Pemilihan Peranti Audio"
 
-#~ msgid "Playback Devices"
-#~ msgstr "Peranti Pemutaran"
+#: ui/main.qml:50
+#, kde-format
+msgid "Playback Devices"
+msgstr "Peranti Pemutaran"
 
-#~ msgid "Recording Devices"
-#~ msgstr "Peranti Perekaman"
+#: ui/main.qml:81
+#, kde-format
+msgid "Recording Devices"
+msgstr "Peranti Perekaman"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "Tekanlah tombol Kembali [←] untuk kembali ke pemilihan peranti"

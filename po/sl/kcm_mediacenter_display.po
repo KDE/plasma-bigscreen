@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-26 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2024-10-17 07:40+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -22,6 +22,31 @@ msgstr ""
 #, kde-format
 msgid "Display Configuration"
 msgstr "Konfiguracija zaslona"
+
+#: ui/main.qml:42
+#, kde-format
+msgid "Selected display"
+msgstr ""
+
+#: ui/main.qml:74
+#, kde-format
+msgid "Display %1"
+msgstr ""
+
+#: ui/main.qml:83
+#, kde-format
+msgid "Enabled"
+msgstr ""
+
+#: ui/main.qml:98
+#, kde-format
+msgid "Screen mode (Resolution & Refresh Rate)"
+msgstr ""
+
+#: ui/main.qml:127 ui/ScaleDialog.qml:21
+#, kde-format
+msgid "Scale"
+msgstr "Merilo"
 
 #~ msgid "New Resolution"
 #~ msgstr "Nova ločljivost"
@@ -43,6 +68,3 @@ msgstr "Konfiguracija zaslona"
 
 #~ msgid "Available Resolutions"
 #~ msgstr "Razpoložljive ločljivosti"
-
-#~ msgid "Scale"
-#~ msgstr "Merilo"

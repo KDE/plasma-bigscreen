@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2020-10-07 09:35+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -37,6 +37,16 @@ msgstr ""
 msgid "Battery: %1%"
 msgstr ""
 
+#: contents/ui/indicators/Favorites.qml:17
+#, kde-format
+msgid "Customize Favorites"
+msgstr ""
+
+#: contents/ui/indicators/KdeConnect.qml:20
+#, kde-format
+msgid "KDE Connect"
+msgstr "KDE Connect"
+
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
 msgid "Pairing Request From %1"
@@ -52,10 +62,47 @@ msgstr "Αποδοχή"
 msgid "Cancel"
 msgstr ""
 
+#: contents/ui/indicators/Search.qml:20
+#, kde-format
+msgid "Search"
+msgstr ""
+
+#: contents/ui/indicators/Settings.qml:16
+#, kde-format
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#: contents/ui/indicators/Shutdown.qml:15
+#, kde-format
+msgid "Exit Bigscreen"
+msgstr ""
+
+#: contents/ui/indicators/Shutdown.qml:15
+#, kde-format
+msgid "Power"
+msgstr ""
+
+#: contents/ui/indicators/Tasks.qml:22
+#, kde-format
+msgid "Tasks"
+msgstr ""
+
+#: contents/ui/indicators/Volume.qml:20
+#, fuzzy, kde-format
+#| msgid "Additional Settings:"
+msgid "Audio Settings"
+msgstr "Πρόσθετες ρυθμίσεις:"
+
 #: contents/ui/indicators/Volume.qml:28
 #, kde-format
 msgid "Audio Volume"
 msgstr ""
+
+#: contents/ui/indicators/Wifi.qml:19
+#, fuzzy, kde-format
+#| msgid "Settings"
+msgid "Internet Settings"
+msgstr "Ρυθμίσεις"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -104,14 +151,8 @@ msgstr ""
 msgid "Close"
 msgstr "Κλείσιμο"
 
-#~ msgid "Settings"
-#~ msgstr "Ρυθμίσεις"
-
 #~ msgid "Websocket Address:"
 #~ msgstr "Διεύθυνση υποδοχής στον ιστό:"
-
-#~ msgid "Additional Settings:"
-#~ msgstr "Πρόσθετες ρυθμίσεις:"
 
 #~ msgid "Enable Notifications"
 #~ msgstr "ενεργοποίηση ειδοποιήσεων"
@@ -127,9 +168,6 @@ msgstr "Κλείσιμο"
 
 #~ msgid "Use Expanding Tiles"
 #~ msgstr "Χρήση εκτεταμένων πλακιδίων"
-
-#~ msgid "KDE Connect"
-#~ msgstr "KDE Connect"
 
 #~ msgid "Reject"
 #~ msgstr "Απόρριψη"

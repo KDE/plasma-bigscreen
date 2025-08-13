@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -38,6 +38,17 @@ msgstr "移除收藏"
 msgid "Battery: %1%"
 msgstr "电量：%1%"
 
+#: contents/ui/indicators/Favorites.qml:17
+#, fuzzy, kde-format
+#| msgid "Remove Favorites"
+msgid "Customize Favorites"
+msgstr "移除收藏"
+
+#: contents/ui/indicators/KdeConnect.qml:20
+#, kde-format
+msgid "KDE Connect"
+msgstr ""
+
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
 msgid "Pairing Request From %1"
@@ -53,10 +64,48 @@ msgstr "接受"
 msgid "Cancel"
 msgstr "取消"
 
+#: contents/ui/indicators/Search.qml:20
+#, fuzzy, kde-format
+#| msgctxt "@info:placeholder"
+#| msgid "Search…"
+msgid "Search"
+msgstr "搜索…"
+
+#: contents/ui/indicators/Settings.qml:16
+#, kde-format
+msgid "Settings"
+msgstr ""
+
+#: contents/ui/indicators/Shutdown.qml:15
+#, kde-format
+msgid "Exit Bigscreen"
+msgstr ""
+
+#: contents/ui/indicators/Shutdown.qml:15
+#, kde-format
+msgid "Power"
+msgstr ""
+
+#: contents/ui/indicators/Tasks.qml:22
+#, fuzzy, kde-format
+#| msgid "Clear Tasks"
+msgid "Tasks"
+msgstr "清除任务"
+
+#: contents/ui/indicators/Volume.qml:20
+#, kde-format
+msgid "Audio Settings"
+msgstr ""
+
 #: contents/ui/indicators/Volume.qml:28
 #, kde-format
 msgid "Audio Volume"
 msgstr "音量"
+
+#: contents/ui/indicators/Wifi.qml:19
+#, kde-format
+msgid "Internet Settings"
+msgstr ""
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format

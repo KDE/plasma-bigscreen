@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -61,6 +61,22 @@ msgstr "समयक्षेत्रम् :"
 msgid "Set time automatically"
 msgstr "स्वयमेव समयं सेट् कुर्वन्तु"
 
+#: ui/DeviceTimeSettingsSidebar.qml:102
+#, kde-format
+msgid "Time"
+msgstr "कालः"
+
+#: ui/DeviceTimeSettingsSidebar.qml:115
+#, kde-format
+msgid "Date"
+msgstr "दिनाङ्कः"
+
+#: ui/DeviceTimeSettingsSidebar.qml:144 ui/DeviceTimeSettingsSidebar.qml:221
+#: ui/DeviceTimeSettingsSidebar.qml:271
+#, kde-format
+msgid "Back"
+msgstr ""
+
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
 msgid "Search City / Region"
@@ -98,11 +114,56 @@ msgstr "रंगीन टाइल्स"
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr ""
 
+#: ui/main.qml:69 ui/ThemeSidebar.qml:23
+#, kde-format
+msgid "Global theme"
+msgstr ""
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Set the system theme"
+msgstr ""
+
+#: ui/main.qml:88
+#, fuzzy, kde-format
+#| msgid "Power Inhibition"
+msgid "Power inhibition"
+msgstr "शक्तिनिरोधः"
+
+#: ui/main.qml:98
+#, fuzzy, kde-format
+#| msgid "Adjust Date & Time"
+msgid "Adjust date & time"
+msgstr "तिथि एवं समय समायोजित करें"
+
 #: ui/main.qml:104
 #, fuzzy, kde-format
 #| msgid "Set Shortcut"
 msgid "Shortcuts"
 msgstr "शॉर्टकट् सेट् कुर्वन्तु"
+
+#: ui/main.qml:115
+#, fuzzy, kde-format
+#| msgid "Bigscreen Settings Shortcut"
+msgid "Open settings shortcut"
+msgstr "बिगस्क्रीन् सेटिंग्स् शॉर्टकट्"
+
+#: ui/main.qml:135
+#, fuzzy, kde-format
+#| msgid "Bigscreen Tasks Shortcut"
+msgid "Open tasks shortcut"
+msgstr "बिगस्क्रीन् कार्य शॉर्टकट"
+
+#: ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Bigscreen Display Homescreen Shortcut"
+msgid "Open homescreen shortcut"
+msgstr "Bigscreen Display होमस्क्रीन् शॉर्टकट"
+
+#: ui/ShortcutsPickerSidebar.qml:39
+#, kde-format
+msgid "Shortcut currently set to"
+msgstr ""
 
 #: ui/ShortcutsPickerSidebar.qml:46
 #, fuzzy, kde-format
@@ -138,12 +199,6 @@ msgstr "प्र./प"
 #~ msgid "Time Display"
 #~ msgstr "समयप्रदर्शनम्"
 
-#~ msgid "Time"
-#~ msgstr "कालः"
-
-#~ msgid "Date"
-#~ msgstr "दिनाङ्कः"
-
 #~ msgid "Press the [←] Back button to return to appearance settings"
 #~ msgstr "रूपसेटिंग्स् प्रति प्रत्यागन्तुं [←] Back बटनं नुदन्तु"
 
@@ -163,17 +218,5 @@ msgstr "प्र./प"
 #~ msgid "Launcher Appearance"
 #~ msgstr "प्रक्षेपक स्वरूप"
 
-#~ msgid "Power Inhibition"
-#~ msgstr "शक्तिनिरोधः"
-
 #~ msgid "Bigscreen Shortcuts"
 #~ msgstr "बिगस्क्रीन् शॉर्टकट"
-
-#~ msgid "Bigscreen Settings Shortcut"
-#~ msgstr "बिगस्क्रीन् सेटिंग्स् शॉर्टकट्"
-
-#~ msgid "Bigscreen Tasks Shortcut"
-#~ msgstr "बिगस्क्रीन् कार्य शॉर्टकट"
-
-#~ msgid "Bigscreen Display Homescreen Shortcut"
-#~ msgstr "Bigscreen Display होमस्क्रीन् शॉर्टकट"

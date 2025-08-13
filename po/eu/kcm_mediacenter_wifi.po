@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-07-28 14:19+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -30,6 +30,22 @@ msgstr "Konektatuta"
 msgid "IP Address Details"
 msgstr "IP helbidearen xehetasunak"
 
+#: ui/DeviceConnectionSidebar.qml:138
+#, kde-format
+msgid "Network information"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
+#, kde-format
+msgid "Connect"
+msgstr "Konektatu"
+
+#: ui/DeviceConnectionSidebar.qml:149
+#, fuzzy, kde-format
+#| msgid "Connect"
+msgid "Disconnect"
+msgstr "Konektatu"
+
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
 msgid "Forget network"
@@ -39,6 +55,12 @@ msgstr "Ahaztu sarea"
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
 msgstr "Ziur zaude %1 sarea ahaztu nahi duzula?"
+
+#: ui/DeviceConnectionSidebar.qml:213
+#, fuzzy, kde-format
+#| msgid "Network"
+msgid "Network details"
+msgstr "Sarea"
 
 #: ui/DeviceConnectionSidebar.qml:242
 #, kde-format
@@ -55,6 +77,12 @@ msgstr "Sarea"
 msgid "Refresh"
 msgstr "Berritu"
 
+#: ui/main.qml:114
+#, fuzzy, kde-format
+#| msgid "Connect"
+msgid "Connections"
+msgstr "Konektatu"
+
 #: ui/PasswordDialog.qml:22
 #, kde-format
 msgid "Enter Password For %1"
@@ -64,11 +92,6 @@ msgstr "Sartu %1(r)en pasahitza"
 #, kde-format
 msgid "Password…"
 msgstr "Pasahitza…"
-
-#: ui/PasswordDialog.qml:54
-#, kde-format
-msgid "Connect"
-msgstr "Konektatu"
 
 #: ui/PasswordDialog.qml:59
 #, kde-format

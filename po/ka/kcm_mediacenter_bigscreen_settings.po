@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-06-24 05:48+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -58,6 +58,22 @@ msgstr "დროის სარტყელი"
 msgid "Set time automatically"
 msgstr "დროის ავტომატურად დაყენება"
 
+#: ui/DeviceTimeSettingsSidebar.qml:102
+#, kde-format
+msgid "Time"
+msgstr "დრო"
+
+#: ui/DeviceTimeSettingsSidebar.qml:115
+#, kde-format
+msgid "Date"
+msgstr "თარიღი"
+
+#: ui/DeviceTimeSettingsSidebar.qml:144 ui/DeviceTimeSettingsSidebar.qml:221
+#: ui/DeviceTimeSettingsSidebar.qml:271
+#, kde-format
+msgid "Back"
+msgstr ""
+
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
 msgid "Search City / Region"
@@ -93,10 +109,56 @@ msgstr "ფერადი ფილები"
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "ფილების ფონი აპის ხატულის მიხედვით გაფერადდება"
 
+#: ui/main.qml:69 ui/ThemeSidebar.qml:23
+#, fuzzy, kde-format
+#| msgid "Global Theme"
+msgid "Global theme"
+msgstr "გლობალური თემა"
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Set the system theme"
+msgstr ""
+
+#: ui/main.qml:88
+#, fuzzy, kde-format
+#| msgid "Power Inhibition"
+msgid "Power inhibition"
+msgstr "კვების ინჰიბიცია"
+
+#: ui/main.qml:98
+#, fuzzy, kde-format
+#| msgid "Adjust Date & Time Settings"
+msgid "Adjust date & time"
+msgstr "დროისა და თარიღის პარამეტრების გასწორება"
+
 #: ui/main.qml:104
 #, kde-format
 msgid "Shortcuts"
 msgstr "მალსახმობები"
+
+#: ui/main.qml:115
+#, fuzzy, kde-format
+#| msgid "Bigscreen Settings Shortcut"
+msgid "Open settings shortcut"
+msgstr "Bigscreen-ის მორგების მალსახმობი"
+
+#: ui/main.qml:135
+#, fuzzy, kde-format
+#| msgid "Bigscreen Tasks Shortcut"
+msgid "Open tasks shortcut"
+msgstr "Bigscreen-ის ამოცანების მალსახმობი"
+
+#: ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Bigscreen Display Homescreen Shortcut"
+msgid "Open homescreen shortcut"
+msgstr "Bigscreen-ის საწყისი ეკრანის ჩვენების მალსახმობი"
+
+#: ui/ShortcutsPickerSidebar.qml:39
+#, kde-format
+msgid "Shortcut currently set to"
+msgstr ""
 
 #: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format
@@ -131,12 +193,6 @@ msgstr "AM/PM"
 #~ msgid "Time Display"
 #~ msgstr "დროის ჩვენება"
 
-#~ msgid "Time"
-#~ msgstr "დრო"
-
-#~ msgid "Date"
-#~ msgstr "თარიღი"
-
 #~ msgid "Press the [←] Back button to return to appearance settings"
 #~ msgstr "გარეგნობის პარამეტრებზე დასაბრუნებლად დააწექით [←] უკან გასვლას"
 
@@ -152,9 +208,6 @@ msgstr "AM/PM"
 #~ msgid "Appearance"
 #~ msgstr "გარემოს იერსახე"
 
-#~ msgid "Global Theme"
-#~ msgstr "გლობალური თემა"
-
 #~ msgid "Expanding Tiles"
 #~ msgstr "გაფართოებადი ფილები"
 
@@ -164,20 +217,8 @@ msgstr "AM/PM"
 #~ msgid "Launcher Appearance"
 #~ msgstr "გამშვების გარეგნობა"
 
-#~ msgid "Power Inhibition"
-#~ msgstr "კვების ინჰიბიცია"
-
 #~ msgid "Bigscreen Shortcuts"
 #~ msgstr "Bigscreen-ის მალსახმობები"
-
-#~ msgid "Bigscreen Settings Shortcut"
-#~ msgstr "Bigscreen-ის მორგების მალსახმობი"
-
-#~ msgid "Bigscreen Tasks Shortcut"
-#~ msgstr "Bigscreen-ის ამოცანების მალსახმობი"
-
-#~ msgid "Bigscreen Display Homescreen Shortcut"
-#~ msgstr "Bigscreen-ის საწყისი ეკრანის ჩვენების მალსახმობი"
 
 #~ msgid "Appearance & Personalization"
 #~ msgstr "გარეგნობა & მორგება"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-26 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2024-10-30 13:03+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -22,6 +22,31 @@ msgstr ""
 #, kde-format
 msgid "Display Configuration"
 msgstr "Displeja konfigurācija"
+
+#: ui/main.qml:42
+#, kde-format
+msgid "Selected display"
+msgstr ""
+
+#: ui/main.qml:74
+#, kde-format
+msgid "Display %1"
+msgstr ""
+
+#: ui/main.qml:83
+#, kde-format
+msgid "Enabled"
+msgstr ""
+
+#: ui/main.qml:98
+#, kde-format
+msgid "Screen mode (Resolution & Refresh Rate)"
+msgstr ""
+
+#: ui/main.qml:127 ui/ScaleDialog.qml:21
+#, kde-format
+msgid "Scale"
+msgstr "Mērogs"
 
 #~ msgid "New Resolution"
 #~ msgstr "Jauna izšķirtspēja"
@@ -43,6 +68,3 @@ msgstr "Displeja konfigurācija"
 
 #~ msgid "Available Resolutions"
 #~ msgstr "Pieejamās izšķirtspējas"
-
-#~ msgid "Scale"
-#~ msgstr "Mērogs"

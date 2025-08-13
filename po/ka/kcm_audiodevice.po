@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-06-24 05:47+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -17,6 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.6\n"
+
+#: ui/AudioDelegateSidebar.qml:49
+#, kde-format
+msgid "Set as default device"
+msgstr ""
 
 #: ui/delegates/VolumeObject.qml:53
 #, kde-format
@@ -34,11 +39,15 @@ msgstr "%1%"
 msgid "Audio Devices"
 msgstr "აუდიო მოწყობილობები"
 
-#~ msgid "Playback Devices"
-#~ msgstr "დამკვრელი მოწყობილობები"
+#: ui/main.qml:50
+#, kde-format
+msgid "Playback Devices"
+msgstr "დამკვრელი მოწყობილობები"
 
-#~ msgid "Recording Devices"
-#~ msgstr "ჩამწერი მოწყობილობები"
+#: ui/main.qml:81
+#, kde-format
+msgid "Recording Devices"
+msgstr "ჩამწერი მოწყობილობები"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "მოწყობილობის არჩევანზე დასაბრუნებლად დააწექით [←] უკან გასვლას"

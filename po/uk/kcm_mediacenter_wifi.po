@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-07-27 16:43+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -28,6 +28,22 @@ msgstr "З'єднано"
 msgid "IP Address Details"
 msgstr "Параметри IP-адреси"
 
+#: ui/DeviceConnectionSidebar.qml:138
+#, kde-format
+msgid "Network information"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
+#, kde-format
+msgid "Connect"
+msgstr "З'єднатися"
+
+#: ui/DeviceConnectionSidebar.qml:149
+#, fuzzy, kde-format
+#| msgid "Connect"
+msgid "Disconnect"
+msgstr "З'єднатися"
+
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
 msgid "Forget network"
@@ -37,6 +53,12 @@ msgstr "Забути мережу"
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
 msgstr "Ви справді хочете, щоб система забула про мережу %1?"
+
+#: ui/DeviceConnectionSidebar.qml:213
+#, fuzzy, kde-format
+#| msgid "Network"
+msgid "Network details"
+msgstr "Мережа"
 
 #: ui/DeviceConnectionSidebar.qml:242
 #, kde-format
@@ -53,6 +75,12 @@ msgstr "Мережа"
 msgid "Refresh"
 msgstr "Освіжити"
 
+#: ui/main.qml:114
+#, fuzzy, kde-format
+#| msgid "Connect"
+msgid "Connections"
+msgstr "З'єднатися"
+
 #: ui/PasswordDialog.qml:22
 #, kde-format
 msgid "Enter Password For %1"
@@ -62,11 +90,6 @@ msgstr "Введіть пароль до %1"
 #, kde-format
 msgid "Password…"
 msgstr "Пароль…"
-
-#: ui/PasswordDialog.qml:54
-#, kde-format
-msgid "Connect"
-msgstr "З'єднатися"
 
 #: ui/PasswordDialog.qml:59
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-07-27 07:14+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -28,6 +28,22 @@ msgstr "מחובר"
 msgid "IP Address Details"
 msgstr "פרטי כתובת IP"
 
+#: ui/DeviceConnectionSidebar.qml:138
+#, kde-format
+msgid "Network information"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
+#, kde-format
+msgid "Connect"
+msgstr "התחברות"
+
+#: ui/DeviceConnectionSidebar.qml:149
+#, fuzzy, kde-format
+#| msgid "Connect"
+msgid "Disconnect"
+msgstr "התחברות"
+
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
 msgid "Forget network"
@@ -37,6 +53,12 @@ msgstr "התעלמות מרשת"
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
 msgstr "לשכוח את הרשת %1?"
+
+#: ui/DeviceConnectionSidebar.qml:213
+#, fuzzy, kde-format
+#| msgid "Network"
+msgid "Network details"
+msgstr "רשת"
 
 #: ui/DeviceConnectionSidebar.qml:242
 #, kde-format
@@ -53,6 +75,12 @@ msgstr "רשת"
 msgid "Refresh"
 msgstr "ריענון"
 
+#: ui/main.qml:114
+#, fuzzy, kde-format
+#| msgid "Connect"
+msgid "Connections"
+msgstr "התחברות"
+
 #: ui/PasswordDialog.qml:22
 #, kde-format
 msgid "Enter Password For %1"
@@ -62,11 +90,6 @@ msgstr "נא למלא סיסמה עבור %1"
 #, kde-format
 msgid "Password…"
 msgstr "סיסמה…"
-
-#: ui/PasswordDialog.qml:54
-#, kde-format
-msgid "Connect"
-msgstr "התחברות"
 
 #: ui/PasswordDialog.qml:59
 #, kde-format

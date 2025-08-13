@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-07-27 11:49+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -29,6 +29,22 @@ msgstr "Connectat"
 msgid "IP Address Details"
 msgstr "Detalls de l'adreça IP"
 
+#: ui/DeviceConnectionSidebar.qml:138
+#, kde-format
+msgid "Network information"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
+#, kde-format
+msgid "Connect"
+msgstr "Connecta"
+
+#: ui/DeviceConnectionSidebar.qml:149
+#, fuzzy, kde-format
+#| msgid "Connect"
+msgid "Disconnect"
+msgstr "Connecta"
+
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
 msgid "Forget network"
@@ -38,6 +54,12 @@ msgstr "Oblida la xarxa"
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
 msgstr "Segur que voleu oblidar la xarxa %1?"
+
+#: ui/DeviceConnectionSidebar.qml:213
+#, fuzzy, kde-format
+#| msgid "Network"
+msgid "Network details"
+msgstr "Xarxa"
 
 #: ui/DeviceConnectionSidebar.qml:242
 #, kde-format
@@ -54,6 +76,12 @@ msgstr "Xarxa"
 msgid "Refresh"
 msgstr "Actualitza"
 
+#: ui/main.qml:114
+#, fuzzy, kde-format
+#| msgid "Connect"
+msgid "Connections"
+msgstr "Connecta"
+
 #: ui/PasswordDialog.qml:22
 #, kde-format
 msgid "Enter Password For %1"
@@ -63,11 +91,6 @@ msgstr "Introduïu la contrasenya per a %1"
 #, kde-format
 msgid "Password…"
 msgstr "Contrasenya…"
-
-#: ui/PasswordDialog.qml:54
-#, kde-format
-msgid "Connect"
-msgstr "Connecta"
 
 #: ui/PasswordDialog.qml:59
 #, kde-format

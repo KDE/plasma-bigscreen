@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-06-24 17:07+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -16,6 +16,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.08.5\n"
+
+#: ui/AudioDelegateSidebar.qml:49
+#, kde-format
+msgid "Set as default device"
+msgstr ""
 
 #: ui/delegates/VolumeObject.qml:53
 #, kde-format
@@ -33,11 +38,15 @@ msgstr "%1 %"
 msgid "Audio Devices"
 msgstr "Äänilaitteet"
 
-#~ msgid "Playback Devices"
-#~ msgstr "Toistolaitteet"
+#: ui/main.qml:50
+#, kde-format
+msgid "Playback Devices"
+msgstr "Toistolaitteet"
 
-#~ msgid "Recording Devices"
-#~ msgstr "Tallentavat laitteet"
+#: ui/main.qml:81
+#, kde-format
+msgid "Recording Devices"
+msgstr "Tallentavat laitteet"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "Palaa laitteen valintaan Takaisin-painikkeella [←]"

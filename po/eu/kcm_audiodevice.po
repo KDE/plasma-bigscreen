@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-06-24 18:35+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -19,6 +19,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.04.2\n"
+
+#: ui/AudioDelegateSidebar.qml:49
+#, kde-format
+msgid "Set as default device"
+msgstr ""
 
 #: ui/delegates/VolumeObject.qml:53
 #, kde-format
@@ -36,11 +41,15 @@ msgstr "% %1"
 msgid "Audio Devices"
 msgstr "Audio-gailuak"
 
-#~ msgid "Playback Devices"
-#~ msgstr "Atzera jotzeko gailuak"
+#: ui/main.qml:50
+#, kde-format
+msgid "Playback Devices"
+msgstr "Atzera jotzeko gailuak"
 
-#~ msgid "Recording Devices"
-#~ msgstr "Grabatzeko gailuak"
+#: ui/main.qml:81
+#, kde-format
+msgid "Recording Devices"
+msgstr "Grabatzeko gailuak"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "Sakatu [←] Atzera botoia gailuen hautapenera itzultzeko"

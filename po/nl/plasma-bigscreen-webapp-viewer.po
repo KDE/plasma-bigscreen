@@ -1,0 +1,243 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# SPDX-FileCopyrightText: 2025 Freek de Kruijf <freekdekruijf@kde.nl>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-08-12 00:45+0000\n"
+"PO-Revision-Date: 2025-08-12 11:11+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.04.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Freek de Kruijf - 2025"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "freekdekruijf@kde.nl"
+
+#: main.cpp:38
+#, kde-format
+msgid "The user agent to browse with."
+msgstr "De gebruikersagent waarmee te bladeren."
+
+#: main.cpp:40
+#, kde-format
+msgid "The name of the web app"
+msgstr "De naam van de webtoepassing"
+
+#: main.cpp:43
+#, kde-format
+msgid "link of website to launch"
+msgstr "koppeling van te starten website"
+
+#: main.cpp:57
+#, kde-format
+msgid "Webview"
+msgstr "Webweergave"
+
+#: main.cpp:59
+#, kde-format
+msgid "Plasma Bigscreen Webapp runtime"
+msgstr "Plasma Bigscreen runtime van webtoepassing"
+
+#: main.cpp:61
+#, kde-format
+msgid "Copyright 2025 Plasma developers"
+msgstr "Copyright 2025, de ontwikkelaars van Plasma"
+
+#: qml/WebView.qml:192
+#, kde-format
+msgctxt "@info:status"
+msgid "Entered Full Screen mode"
+msgstr "Modus Volledig scherm geactiveerd"
+
+#: qml/WebView.qml:193
+#, kde-format
+msgctxt "@action:button"
+msgid "Exit Full Screen (Esc)"
+msgstr "Volledig scherm verlaten (Esc)"
+
+#: qml/WebView.qml:306
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Play"
+msgstr "Afspelen"
+
+#: qml/WebView.qml:307
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Pause"
+msgstr "Pauzeren"
+
+#: qml/WebView.qml:314
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Unmute"
+msgstr "Dempen opheffen"
+
+#: qml/WebView.qml:315
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Mute"
+msgstr "Dempen"
+
+#: qml/WebView.qml:325
+#, kde-format
+msgctxt "@label"
+msgid "Speed"
+msgstr "Snelheid"
+
+#: qml/WebView.qml:348
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Loop"
+msgstr "Lus"
+
+#: qml/WebView.qml:355
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Exit Fullscreen"
+msgstr "Volledig scherm verlaten"
+
+#: qml/WebView.qml:355
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Enter Fullscreen"
+msgstr "Volledig scherm ingaan"
+
+#: qml/WebView.qml:368
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Hide Controls"
+msgstr "Besturingen verbergen"
+
+#: qml/WebView.qml:369
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Show Controls"
+msgstr "Besturingen tonen"
+
+#: qml/WebView.qml:377
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Video"
+msgstr "Video openen"
+
+#: qml/WebView.qml:377
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Audio"
+msgstr "Audio openen"
+
+#: qml/WebView.qml:378
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Video in New Tab"
+msgstr "Video openen in nieuw tabblad"
+
+#: qml/WebView.qml:378
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Audio in New Tab"
+msgstr "Audio openen in nieuw tabblad"
+
+#: qml/WebView.qml:386
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Save Video"
+msgstr "Video opslaan"
+
+#: qml/WebView.qml:392
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Video Link"
+msgstr "Videokoppeling kopiëren"
+
+#: qml/WebView.qml:398
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Image"
+msgstr "Afbeelding openen"
+
+#: qml/WebView.qml:398
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Image in New Tab"
+msgstr "Afbeelding openen in nieuw tabblad"
+
+#: qml/WebView.qml:406
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Save Image"
+msgstr "Afbeelding opslaan"
+
+#: qml/WebView.qml:412
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Image"
+msgstr "Afbeelding kopiëren"
+
+#: qml/WebView.qml:418
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Image Link"
+msgstr "Koppeling van afbeelding kopiëren"
+
+#: qml/WebView.qml:424
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Link"
+msgstr "Koppeling openen"
+
+#: qml/WebView.qml:424
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Link in New Window"
+msgstr "Link openen in een nieuw venster"
+
+#: qml/WebView.qml:432
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Save Link"
+msgstr "Koppeling opslaan"
+
+#: qml/WebView.qml:438
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Link"
+msgstr "Koppeling kopiëren"
+
+#: qml/WebView.qml:445
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy"
+msgstr "Kopiëren"
+
+#: qml/WebView.qml:451
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Cut"
+msgstr "Knippen"
+
+#: qml/WebView.qml:457
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Paste"
+msgstr "Plakken"
+
+#: webprofile.cpp:48
+#, kde-format
+msgid "Open"
+msgstr "Openen"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2024-10-18 16:54+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -37,6 +37,17 @@ msgstr "Remove Favourites"
 msgid "Battery: %1%"
 msgstr ""
 
+#: contents/ui/indicators/Favorites.qml:17
+#, fuzzy, kde-format
+#| msgid "Remove Favorites"
+msgid "Customize Favorites"
+msgstr "Remove Favourites"
+
+#: contents/ui/indicators/KdeConnect.qml:20
+#, kde-format
+msgid "KDE Connect"
+msgstr "KDE Connect"
+
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
 msgid "Pairing Request From %1"
@@ -52,10 +63,48 @@ msgstr "Accept"
 msgid "Cancel"
 msgstr "Cancel"
 
+#: contents/ui/indicators/Search.qml:20
+#, kde-format
+msgid "Search"
+msgstr ""
+
+#: contents/ui/indicators/Settings.qml:16
+#, kde-format
+msgid "Settings"
+msgstr "Settings"
+
+#: contents/ui/indicators/Shutdown.qml:15
+#, kde-format
+msgid "Exit Bigscreen"
+msgstr ""
+
+#: contents/ui/indicators/Shutdown.qml:15
+#, kde-format
+msgid "Power"
+msgstr ""
+
+#: contents/ui/indicators/Tasks.qml:22
+#, fuzzy, kde-format
+#| msgid "Clear Tasks"
+msgid "Tasks"
+msgstr "Clear Tasks"
+
+#: contents/ui/indicators/Volume.qml:20
+#, fuzzy, kde-format
+#| msgid "Additional Settings:"
+msgid "Audio Settings"
+msgstr "Additional Settings:"
+
 #: contents/ui/indicators/Volume.qml:28
 #, kde-format
 msgid "Audio Volume"
 msgstr "Audio Volume"
+
+#: contents/ui/indicators/Wifi.qml:19
+#, fuzzy, kde-format
+#| msgid "Settings"
+msgid "Internet Settings"
+msgstr "Settings"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -103,17 +152,11 @@ msgstr "Clear Tasks"
 msgid "Close"
 msgstr "Close"
 
-#~ msgid "Settings"
-#~ msgstr "Settings"
-
 #~ msgid "General"
 #~ msgstr "General"
 
 #~ msgid "Websocket Address:"
 #~ msgstr "Websocket Address:"
-
-#~ msgid "Additional Settings:"
-#~ msgstr "Additional Settings:"
 
 #~ msgid "Enable Notifications"
 #~ msgstr "Enable Notifications"
@@ -132,9 +175,6 @@ msgstr "Close"
 
 #~ msgid "Use Expanding Tiles"
 #~ msgstr "Use Expanding Tiles"
-
-#~ msgid "KDE Connect"
-#~ msgstr "KDE Connect"
 
 #~ msgid "Reject"
 #~ msgstr "Reject"

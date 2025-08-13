@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2024-12-27 17:40+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -60,6 +60,22 @@ msgstr "Horzono:"
 msgid "Set time automatically"
 msgstr "Fiksi tempon aŭtomate"
 
+#: ui/DeviceTimeSettingsSidebar.qml:102
+#, kde-format
+msgid "Time"
+msgstr "Tempo"
+
+#: ui/DeviceTimeSettingsSidebar.qml:115
+#, kde-format
+msgid "Date"
+msgstr "Dato"
+
+#: ui/DeviceTimeSettingsSidebar.qml:144 ui/DeviceTimeSettingsSidebar.qml:221
+#: ui/DeviceTimeSettingsSidebar.qml:271
+#, kde-format
+msgid "Back"
+msgstr ""
+
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
 msgid "Search City / Region"
@@ -97,11 +113,56 @@ msgstr "Koloritaj Kaheloj"
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr ""
 
+#: ui/main.qml:69 ui/ThemeSidebar.qml:23
+#, kde-format
+msgid "Global theme"
+msgstr ""
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Set the system theme"
+msgstr ""
+
+#: ui/main.qml:88
+#, fuzzy, kde-format
+#| msgid "Power Inhibition"
+msgid "Power inhibition"
+msgstr "Inhibicio de Potenco"
+
+#: ui/main.qml:98
+#, fuzzy, kde-format
+#| msgid "Adjust Date & Time"
+msgid "Adjust date & time"
+msgstr "Alĝustigi Daton & Horon"
+
 #: ui/main.qml:104
 #, fuzzy, kde-format
 #| msgid "Bigscreen Shortcuts"
 msgid "Shortcuts"
 msgstr "Grandekranaj Ŝparvojoj"
+
+#: ui/main.qml:115
+#, fuzzy, kde-format
+#| msgid "Bigscreen Settings Shortcut"
+msgid "Open settings shortcut"
+msgstr "Grandekran-Agorda Ŝparvojo"
+
+#: ui/main.qml:135
+#, fuzzy, kde-format
+#| msgid "Bigscreen Tasks Shortcut"
+msgid "Open tasks shortcut"
+msgstr "Ŝparvojo de Grandekranaj Taskoj"
+
+#: ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Bigscreen Display Homescreen Shortcut"
+msgid "Open homescreen shortcut"
+msgstr "Ŝparvojo de Grandekrana Komencbildo"
+
+#: ui/ShortcutsPickerSidebar.qml:39
+#, kde-format
+msgid "Shortcut currently set to"
+msgstr ""
 
 #: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format
@@ -136,12 +197,6 @@ msgstr ""
 #~ msgid "Time Display"
 #~ msgstr "Tempomontro"
 
-#~ msgid "Time"
-#~ msgstr "Tempo"
-
-#~ msgid "Date"
-#~ msgstr "Dato"
-
 #~ msgid "Press the [←] Back button to return to appearance settings"
 #~ msgstr "Premu la [←] Reen-Klavon por reveni al elektoj de apero"
 
@@ -157,15 +212,3 @@ msgstr ""
 
 #~ msgid "Launcher Appearance"
 #~ msgstr "Apero de Lanĉilo"
-
-#~ msgid "Power Inhibition"
-#~ msgstr "Inhibicio de Potenco"
-
-#~ msgid "Bigscreen Settings Shortcut"
-#~ msgstr "Grandekran-Agorda Ŝparvojo"
-
-#~ msgid "Bigscreen Tasks Shortcut"
-#~ msgstr "Ŝparvojo de Grandekranaj Taskoj"
-
-#~ msgid "Bigscreen Display Homescreen Shortcut"
-#~ msgstr "Ŝparvojo de Grandekrana Komencbildo"

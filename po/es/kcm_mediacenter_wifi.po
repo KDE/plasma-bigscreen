@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_wifi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-08-02 22:09+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -28,6 +28,22 @@ msgstr "Conectado"
 msgid "IP Address Details"
 msgstr "Detalles de la dirección IP"
 
+#: ui/DeviceConnectionSidebar.qml:138
+#, kde-format
+msgid "Network information"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
+#, kde-format
+msgid "Connect"
+msgstr "Conectar"
+
+#: ui/DeviceConnectionSidebar.qml:149
+#, fuzzy, kde-format
+#| msgid "Connect"
+msgid "Disconnect"
+msgstr "Conectar"
+
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
 msgid "Forget network"
@@ -37,6 +53,12 @@ msgstr "Olvidar red"
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
 msgstr "¿Está seguro de que quiere olvidar la red %1?"
+
+#: ui/DeviceConnectionSidebar.qml:213
+#, fuzzy, kde-format
+#| msgid "Network"
+msgid "Network details"
+msgstr "Red"
 
 #: ui/DeviceConnectionSidebar.qml:242
 #, kde-format
@@ -53,6 +75,12 @@ msgstr "Red"
 msgid "Refresh"
 msgstr "Refrescar"
 
+#: ui/main.qml:114
+#, fuzzy, kde-format
+#| msgid "Connect"
+msgid "Connections"
+msgstr "Conectar"
+
 #: ui/PasswordDialog.qml:22
 #, kde-format
 msgid "Enter Password For %1"
@@ -62,11 +90,6 @@ msgstr "Introducir contraseña para %1"
 #, kde-format
 msgid "Password…"
 msgstr "Contraseña…"
-
-#: ui/PasswordDialog.qml:54
-#, kde-format
-msgid "Connect"
-msgstr "Conectar"
 
 #: ui/PasswordDialog.qml:59
 #, kde-format

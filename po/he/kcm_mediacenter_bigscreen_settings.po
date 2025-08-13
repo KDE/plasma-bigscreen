@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-06-24 06:08+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -58,6 +58,22 @@ msgstr "אזור זמן"
 msgid "Set time automatically"
 msgstr "הגדרת השעה אוטומטית"
 
+#: ui/DeviceTimeSettingsSidebar.qml:102
+#, kde-format
+msgid "Time"
+msgstr "שעה"
+
+#: ui/DeviceTimeSettingsSidebar.qml:115
+#, kde-format
+msgid "Date"
+msgstr "תאריך"
+
+#: ui/DeviceTimeSettingsSidebar.qml:144 ui/DeviceTimeSettingsSidebar.qml:221
+#: ui/DeviceTimeSettingsSidebar.qml:271
+#, kde-format
+msgid "Back"
+msgstr ""
+
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
 msgid "Search City / Region"
@@ -93,10 +109,56 @@ msgstr "אריחים צבעוניים"
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "הרקע הזה ייצבע לפי סמל היישומון"
 
+#: ui/main.qml:69 ui/ThemeSidebar.qml:23
+#, fuzzy, kde-format
+#| msgid "Global Theme"
+msgid "Global theme"
+msgstr "ערכת עיצוב כללית"
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Set the system theme"
+msgstr ""
+
+#: ui/main.qml:88
+#, fuzzy, kde-format
+#| msgid "Power Inhibition"
+msgid "Power inhibition"
+msgstr "מניעת צריכת חשמל"
+
+#: ui/main.qml:98
+#, fuzzy, kde-format
+#| msgid "Adjust Date & Time Settings"
+msgid "Adjust date & time"
+msgstr "כיוון הגדרות התאריך והשעה"
+
 #: ui/main.qml:104
 #, kde-format
 msgid "Shortcuts"
 msgstr "מקשי קיצור"
+
+#: ui/main.qml:115
+#, fuzzy, kde-format
+#| msgid "Bigscreen Settings Shortcut"
+msgid "Open settings shortcut"
+msgstr "קיצור דרך להגדרות למסכים גדולים"
+
+#: ui/main.qml:135
+#, fuzzy, kde-format
+#| msgid "Bigscreen Tasks Shortcut"
+msgid "Open tasks shortcut"
+msgstr "קיצור למשימות למסכים גדולים"
+
+#: ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Bigscreen Display Homescreen Shortcut"
+msgid "Open homescreen shortcut"
+msgstr "קיצור במסך הבית לתצוגה של המסכים הגדולים"
+
+#: ui/ShortcutsPickerSidebar.qml:39
+#, kde-format
+msgid "Shortcut currently set to"
+msgstr ""
 
 #: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format
@@ -131,12 +193,6 @@ msgstr "AM/PM"
 #~ msgid "Time Display"
 #~ msgstr "תצוגת שעה"
 
-#~ msgid "Time"
-#~ msgstr "שעה"
-
-#~ msgid "Date"
-#~ msgstr "תאריך"
-
 #~ msgid "Press the [←] Back button to return to appearance settings"
 #~ msgstr "יש לחזור על כפתור החזרה [→] כדי לחזור להגדרות המראה"
 
@@ -150,9 +206,6 @@ msgstr "AM/PM"
 #~ msgid "Appearance"
 #~ msgstr "מראה"
 
-#~ msgid "Global Theme"
-#~ msgstr "ערכת עיצוב כללית"
-
 #~ msgid "Expanding Tiles"
 #~ msgstr "אריחים מתרחבים"
 
@@ -162,20 +215,8 @@ msgstr "AM/PM"
 #~ msgid "Launcher Appearance"
 #~ msgstr "מראה המשגר"
 
-#~ msgid "Power Inhibition"
-#~ msgstr "מניעת צריכת חשמל"
-
 #~ msgid "Bigscreen Shortcuts"
 #~ msgstr "קיצורי דרך למסכים גדולים"
-
-#~ msgid "Bigscreen Settings Shortcut"
-#~ msgstr "קיצור דרך להגדרות למסכים גדולים"
-
-#~ msgid "Bigscreen Tasks Shortcut"
-#~ msgstr "קיצור למשימות למסכים גדולים"
-
-#~ msgid "Bigscreen Display Homescreen Shortcut"
-#~ msgstr "קיצור במסך הבית לתצוגה של המסכים הגדולים"
 
 #~ msgid "Appearance & Personalization"
 #~ msgstr "מראה והתאמה אישית"

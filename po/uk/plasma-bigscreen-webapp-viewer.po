@@ -1,0 +1,244 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2025.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-08-12 00:45+0000\n"
+"PO-Revision-Date: 2025-08-12 10:01+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.04.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Юрій Чорноіван"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "yurchor@ukr.net"
+
+#: main.cpp:38
+#, kde-format
+msgid "The user agent to browse with."
+msgstr "Агент користувача для навігації."
+
+#: main.cpp:40
+#, kde-format
+msgid "The name of the web app"
+msgstr "Назва вебпрограми"
+
+#: main.cpp:43
+#, kde-format
+msgid "link of website to launch"
+msgstr "посилання на сайт, який слід відкрити"
+
+#: main.cpp:57
+#, kde-format
+msgid "Webview"
+msgstr "Вебперегляд"
+
+#: main.cpp:59
+#, kde-format
+msgid "Plasma Bigscreen Webapp runtime"
+msgstr "Середовище виконання вебпрограм для Плазми для великих екранів"
+
+#: main.cpp:61
+#, kde-format
+msgid "Copyright 2025 Plasma developers"
+msgstr "© Розробники Плазми, 2025"
+
+#: qml/WebView.qml:192
+#, kde-format
+msgctxt "@info:status"
+msgid "Entered Full Screen mode"
+msgstr "Перехід у повноекранний режим"
+
+#: qml/WebView.qml:193
+#, kde-format
+msgctxt "@action:button"
+msgid "Exit Full Screen (Esc)"
+msgstr "Вийти з повноекранного режиму (Esc)"
+
+#: qml/WebView.qml:306
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Play"
+msgstr "Відтворити"
+
+#: qml/WebView.qml:307
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Pause"
+msgstr "Пауза"
+
+#: qml/WebView.qml:314
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Unmute"
+msgstr "Увімкнути звук"
+
+#: qml/WebView.qml:315
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Mute"
+msgstr "Вимкнути звук"
+
+#: qml/WebView.qml:325
+#, kde-format
+msgctxt "@label"
+msgid "Speed"
+msgstr "Швидкість"
+
+#: qml/WebView.qml:348
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Loop"
+msgstr "Зациклити"
+
+#: qml/WebView.qml:355
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Exit Fullscreen"
+msgstr "Вийти з повноекранного режиму"
+
+#: qml/WebView.qml:355
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Enter Fullscreen"
+msgstr "Повноекранний режим"
+
+#: qml/WebView.qml:368
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Hide Controls"
+msgstr "Приховати керування"
+
+#: qml/WebView.qml:369
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Show Controls"
+msgstr "Показати керування"
+
+#: qml/WebView.qml:377
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Video"
+msgstr "Відкрити відео"
+
+#: qml/WebView.qml:377
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Audio"
+msgstr "Відкрити звукові дані"
+
+#: qml/WebView.qml:378
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Video in New Tab"
+msgstr "Відкрити відео у новій вкладці"
+
+#: qml/WebView.qml:378
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Audio in New Tab"
+msgstr "Відкрити звукові дані у новій вкладці"
+
+#: qml/WebView.qml:386
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Save Video"
+msgstr "Зберегти відеодані"
+
+#: qml/WebView.qml:392
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Video Link"
+msgstr "Копіювати посилання на відео"
+
+#: qml/WebView.qml:398
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Image"
+msgstr "Відкрити зображення"
+
+#: qml/WebView.qml:398
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Image in New Tab"
+msgstr "Відкрити зображення у новій вкладці"
+
+#: qml/WebView.qml:406
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Save Image"
+msgstr "Зберегти зображення"
+
+#: qml/WebView.qml:412
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Image"
+msgstr "Копіювати зображення"
+
+#: qml/WebView.qml:418
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Image Link"
+msgstr "Копіювати посилання на зображення"
+
+#: qml/WebView.qml:424
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Link"
+msgstr "Відкрити посилання"
+
+#: qml/WebView.qml:424
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Link in New Window"
+msgstr "Відкрити посилання у новому вікні"
+
+#: qml/WebView.qml:432
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Save Link"
+msgstr "Зберегти посилання"
+
+#: qml/WebView.qml:438
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Link"
+msgstr "Копіювати посилання"
+
+#: qml/WebView.qml:445
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy"
+msgstr "Копіювати"
+
+#: qml/WebView.qml:451
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Cut"
+msgstr "Вирізати"
+
+#: qml/WebView.qml:457
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Paste"
+msgstr "Вставити"
+
+#: webprofile.cpp:48
+#, kde-format
+msgid "Open"
+msgstr "Відкрити"

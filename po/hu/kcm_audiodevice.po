@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2021-01-23 14:06+0100\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -16,6 +16,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.03.70\n"
+
+#: ui/AudioDelegateSidebar.qml:49
+#, kde-format
+msgid "Set as default device"
+msgstr ""
 
 #: ui/delegates/VolumeObject.qml:53
 #, kde-format
@@ -34,11 +39,15 @@ msgstr "%1%"
 msgid "Audio Devices"
 msgstr "Hangeszköz-választó"
 
-#~ msgid "Playback Devices"
-#~ msgstr "Lejátszóeszközök"
+#: ui/main.qml:50
+#, kde-format
+msgid "Playback Devices"
+msgstr "Lejátszóeszközök"
 
-#~ msgid "Recording Devices"
-#~ msgstr "Felvevőeszközök"
+#: ui/main.qml:81
+#, kde-format
+msgid "Recording Devices"
+msgstr "Felvevőeszközök"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "Nyomja meg a [←] Vissza gombot az eszközválasztáshoz visszatéréshez"

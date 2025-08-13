@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2025-02-06 17:46-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -60,6 +60,22 @@ msgstr "Fuso horário:"
 msgid "Set time automatically"
 msgstr "Definir a hora automaticamente:"
 
+#: ui/DeviceTimeSettingsSidebar.qml:102
+#, kde-format
+msgid "Time"
+msgstr "Hora"
+
+#: ui/DeviceTimeSettingsSidebar.qml:115
+#, kde-format
+msgid "Date"
+msgstr "Data"
+
+#: ui/DeviceTimeSettingsSidebar.qml:144 ui/DeviceTimeSettingsSidebar.qml:221
+#: ui/DeviceTimeSettingsSidebar.qml:271
+#, kde-format
+msgid "Back"
+msgstr ""
+
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
 msgid "Search City / Region"
@@ -97,11 +113,56 @@ msgstr "Blocos coloridos"
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr ""
 
+#: ui/main.qml:69 ui/ThemeSidebar.qml:23
+#, kde-format
+msgid "Global theme"
+msgstr ""
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Set the system theme"
+msgstr ""
+
+#: ui/main.qml:88
+#, fuzzy, kde-format
+#| msgid "Power Inhibition"
+msgid "Power inhibition"
+msgstr "Inibição de energia"
+
+#: ui/main.qml:98
+#, fuzzy, kde-format
+#| msgid "Adjust Date & Time"
+msgid "Adjust date & time"
+msgstr "Ajustar data e hora"
+
 #: ui/main.qml:104
 #, fuzzy, kde-format
 #| msgid "Set Shortcut"
 msgid "Shortcuts"
 msgstr "Definir atalho"
+
+#: ui/main.qml:115
+#, fuzzy, kde-format
+#| msgid "Bigscreen Settings Shortcut"
+msgid "Open settings shortcut"
+msgstr "Atalho para configurações do Bigscreen"
+
+#: ui/main.qml:135
+#, fuzzy, kde-format
+#| msgid "Bigscreen Tasks Shortcut"
+msgid "Open tasks shortcut"
+msgstr "Atalho para tarefas do Bigscreen"
+
+#: ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Bigscreen Display Homescreen Shortcut"
+msgid "Open homescreen shortcut"
+msgstr "Atalho para exibir tela inicial do Bigscreen"
+
+#: ui/ShortcutsPickerSidebar.qml:39
+#, kde-format
+msgid "Shortcut currently set to"
+msgstr ""
 
 #: ui/ShortcutsPickerSidebar.qml:46
 #, fuzzy, kde-format
@@ -137,12 +198,6 @@ msgstr "AM/PM"
 #~ msgid "Time Display"
 #~ msgstr "Exibição das horas"
 
-#~ msgid "Time"
-#~ msgstr "Hora"
-
-#~ msgid "Date"
-#~ msgstr "Data"
-
 #~ msgid "Press the [←] Back button to return to appearance settings"
 #~ msgstr ""
 #~ "Pressione o botão Voltar [←] para retornar às configurações de aparência"
@@ -165,20 +220,8 @@ msgstr "AM/PM"
 #~ msgid "Launcher Appearance"
 #~ msgstr "Aparência do lançador"
 
-#~ msgid "Power Inhibition"
-#~ msgstr "Inibição de energia"
-
 #~ msgid "Bigscreen Shortcuts"
 #~ msgstr "Atalhos do Bigscreen"
-
-#~ msgid "Bigscreen Settings Shortcut"
-#~ msgstr "Atalho para configurações do Bigscreen"
-
-#~ msgid "Bigscreen Tasks Shortcut"
-#~ msgstr "Atalho para tarefas do Bigscreen"
-
-#~ msgid "Bigscreen Display Homescreen Shortcut"
-#~ msgstr "Atalho para exibir tela inicial do Bigscreen"
 
 #~ msgid "Jan"
 #~ msgstr "Jan"

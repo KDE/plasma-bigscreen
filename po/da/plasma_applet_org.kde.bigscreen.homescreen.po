@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
 "PO-Revision-Date: 2020-07-22 13:41+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -37,6 +37,16 @@ msgstr ""
 msgid "Battery: %1%"
 msgstr ""
 
+#: contents/ui/indicators/Favorites.qml:17
+#, kde-format
+msgid "Customize Favorites"
+msgstr ""
+
+#: contents/ui/indicators/KdeConnect.qml:20
+#, kde-format
+msgid "KDE Connect"
+msgstr "KDE Connect"
+
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
 msgid "Pairing Request From %1"
@@ -52,10 +62,47 @@ msgstr "Acceptér"
 msgid "Cancel"
 msgstr ""
 
+#: contents/ui/indicators/Search.qml:20
+#, kde-format
+msgid "Search"
+msgstr ""
+
+#: contents/ui/indicators/Settings.qml:16
+#, kde-format
+msgid "Settings"
+msgstr "Indstillinger"
+
+#: contents/ui/indicators/Shutdown.qml:15
+#, kde-format
+msgid "Exit Bigscreen"
+msgstr ""
+
+#: contents/ui/indicators/Shutdown.qml:15
+#, kde-format
+msgid "Power"
+msgstr ""
+
+#: contents/ui/indicators/Tasks.qml:22
+#, kde-format
+msgid "Tasks"
+msgstr ""
+
+#: contents/ui/indicators/Volume.qml:20
+#, fuzzy, kde-format
+#| msgid "Additional Settings:"
+msgid "Audio Settings"
+msgstr "Yderligere indstillinger:"
+
 #: contents/ui/indicators/Volume.qml:28
 #, kde-format
 msgid "Audio Volume"
 msgstr ""
+
+#: contents/ui/indicators/Wifi.qml:19
+#, fuzzy, kde-format
+#| msgid "Settings"
+msgid "Internet Settings"
+msgstr "Indstillinger"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -105,14 +152,8 @@ msgstr ""
 msgid "Close"
 msgstr "luk"
 
-#~ msgid "Settings"
-#~ msgstr "Indstillinger"
-
 #~ msgid "Websocket Address:"
 #~ msgstr "Adresse på websocket:"
-
-#~ msgid "Additional Settings:"
-#~ msgstr "Yderligere indstillinger:"
 
 #~ msgid "Enable Notifications"
 #~ msgstr "Aktivér bekendtgørelser"
@@ -128,9 +169,6 @@ msgstr "luk"
 
 #~ msgid "Use Expanding Tiles"
 #~ msgstr "Brug felter der folder sig ud"
-
-#~ msgid "KDE Connect"
-#~ msgstr "KDE Connect"
 
 #~ msgid "Reject"
 #~ msgstr "Afvis"
