@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-08-12 09:10+0200\n"
+"PO-Revision-Date: 2025-08-13 20:19+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -25,19 +25,17 @@ msgid "Web Apps"
 msgstr "Aplicacions web"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgid "Web Apps"
+#, kde-format
 msgid "Add Web App"
-msgstr "Aplicacions web"
+msgstr "Afegeix una aplicació web"
 
 #: ui/main.qml:50
 #, kde-format
 msgid "Installed web apps"
-msgstr ""
+msgstr "Aplicacions web instal·lades"
 
 #: ui/main.qml:90
-#, fuzzy, kde-format
-#| msgid "Add web application"
+#, kde-format
 msgid "Add Web Application"
 msgstr "Afegeix una aplicació web"
 
@@ -52,8 +50,7 @@ msgid "URL"
 msgstr "URL"
 
 #: ui/main.qml:120
-#, fuzzy, kde-format
-#| msgid "User Agent (empty for default)"
+#, kde-format
 msgid "User agent (empty for default)"
 msgstr "Agent d'usuari (buit per al predeterminat)"
 

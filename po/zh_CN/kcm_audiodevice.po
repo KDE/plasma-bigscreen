@@ -41,10 +41,9 @@ msgstr "音频设备"
 #: ui/main.qml:50
 #, kde-format
 msgid "Playback Devices"
-msgstr ""
+msgstr "播放设备"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgid "Audio Devices"
+#, kde-format
 msgid "Recording Devices"
-msgstr "音频设备"
+msgstr "录音设备"

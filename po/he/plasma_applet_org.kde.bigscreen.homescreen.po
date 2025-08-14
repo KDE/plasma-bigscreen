@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-07-27 07:13+0300\n"
+"PO-Revision-Date: 2025-08-13 13:58+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -39,10 +39,9 @@ msgid "Battery: %1%"
 msgstr "סוללה: %1%"
 
 #: contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Customize Favorites"
-msgstr "הסרה מהמועדפים"
+msgstr "התאמת המועדפים"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -65,11 +64,9 @@ msgid "Cancel"
 msgstr "ביטול"
 
 #: contents/ui/indicators/Search.qml:20
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "Search…"
+#, kde-format
 msgid "Search"
-msgstr "חיפוש…"
+msgstr "חיפוש"
 
 #: contents/ui/indicators/Settings.qml:16
 #, kde-format
@@ -79,24 +76,22 @@ msgstr "הגדרות"
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Exit Bigscreen"
-msgstr ""
+msgstr "יציאה ממסכים גדולים"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Power"
-msgstr ""
+msgstr "כיבוי"
 
 #: contents/ui/indicators/Tasks.qml:22
-#, fuzzy, kde-format
-#| msgid "Clear Tasks"
+#, kde-format
 msgid "Tasks"
-msgstr "פינוי משימות"
+msgstr "משימות"
 
 #: contents/ui/indicators/Volume.qml:20
-#, fuzzy, kde-format
-#| msgid "Additional Settings:"
+#, kde-format
 msgid "Audio Settings"
-msgstr "הגדרות נוספות:"
+msgstr "הגדרות שמע"
 
 #: contents/ui/indicators/Volume.qml:28
 #, kde-format
@@ -104,10 +99,9 @@ msgid "Audio Volume"
 msgstr "עוצמת שמע"
 
 #: contents/ui/indicators/Wifi.qml:19
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgid "Internet Settings"
-msgstr "הגדרות"
+msgstr "הגדרות אינטרנט"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format

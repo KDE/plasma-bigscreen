@@ -1,46 +1,47 @@
-# Copyright (C) 2025 This file is copyright:
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# SPDX-FileCopyrightText: 2025 Emir SARI <emir_sari@îcloud.com>
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-08-13 16:53+0300\n"
-"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
-"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
-"Language: tr\n"
+"PO-Revision-Date: 2025-08-13 06:29+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
+"Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Poedit 3.6\n"
 
 #: ui/main.qml:16
 #, kde-format
 msgid "Web Apps"
-msgstr "Web Uygulamaları"
+msgstr "ვებაპები"
 
 #: ui/main.qml:43
 #, kde-format
 msgid "Add Web App"
-msgstr "Web Uygulaması Ekle"
+msgstr "ვებაპის დამატება"
 
 #: ui/main.qml:50
 #, kde-format
 msgid "Installed web apps"
-msgstr "Kurulu web uygulamaları"
+msgstr "დაყენებული ვებაპები"
 
 #: ui/main.qml:90
 #, kde-format
 msgid "Add Web Application"
-msgstr "Web Uygulaması Ekle"
+msgstr "ვებაპის დამატება"
 
 #: ui/main.qml:106 ui/WebAppInfoSidebar.qml:52
 #, kde-format
 msgid "Name"
-msgstr "Ad"
+msgstr "სახელი"
 
 #: ui/main.qml:113 ui/WebAppInfoSidebar.qml:60
 #, kde-format
@@ -50,24 +51,24 @@ msgstr "URL"
 #: ui/main.qml:120
 #, kde-format
 msgid "User agent (empty for default)"
-msgstr "Kullanıcı aracısı (Öntanımlı: Boş)"
+msgstr "მომხმარებლის აგენტი (დატოვეთ ცარიელი ნაგულისხმევისთვის)"
 
 #: ui/WebAppInfoSidebar.qml:68
 #, kde-format
 msgid "User Agent"
-msgstr "Kullanıcı Aracısı"
+msgstr "მომხმარებლის აგენტი"
 
 #: ui/WebAppInfoSidebar.qml:69
 #, kde-format
 msgid "Default user agent"
-msgstr "Öntanımlı kullanıcı aracısı"
+msgstr "ნაგულისხმევი მომხმარებლის აგენტი"
 
 #: ui/WebAppInfoSidebar.qml:78
 #, kde-format
 msgid "Delete"
-msgstr "Sil"
+msgstr "წაშლა"
 
 #: ui/WebAppInfoSidebar.qml:86
 #, kde-format
 msgid "Delete web app %1?"
-msgstr "%1 Web Uygulamasını Sil?"
+msgstr "წავშალო ვებაპი %1?"

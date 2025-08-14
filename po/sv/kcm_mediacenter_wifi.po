@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-07-29 12:24+0200\n"
+"PO-Revision-Date: 2025-08-13 08:17+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -30,7 +30,7 @@ msgstr "IP-adressinformation"
 #: ui/DeviceConnectionSidebar.qml:138
 #, kde-format
 msgid "Network information"
-msgstr ""
+msgstr "Nätverksinformation"
 
 #: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
 #, kde-format
@@ -38,10 +38,9 @@ msgid "Connect"
 msgstr "Anslut"
 
 #: ui/DeviceConnectionSidebar.qml:149
-#, fuzzy, kde-format
-#| msgid "Connect"
+#, kde-format
 msgid "Disconnect"
-msgstr "Anslut"
+msgstr "Koppla ner"
 
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
@@ -54,10 +53,9 @@ msgid "Are you sure you want to forget the network %1?"
 msgstr "Är du säker på att du vill glömma nätverket %1?"
 
 #: ui/DeviceConnectionSidebar.qml:213
-#, fuzzy, kde-format
-#| msgid "Network"
+#, kde-format
 msgid "Network details"
-msgstr "Nätverk"
+msgstr "Nätverksinformation"
 
 #: ui/DeviceConnectionSidebar.qml:242
 #, kde-format
@@ -75,10 +73,9 @@ msgid "Refresh"
 msgstr "Uppdatera"
 
 #: ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid "Connect"
+#, kde-format
 msgid "Connections"
-msgstr "Anslut"
+msgstr "Anslutningar"
 
 #: ui/PasswordDialog.qml:22
 #, kde-format

@@ -39,10 +39,9 @@ msgid "Battery: %1%"
 msgstr "电量：%1%"
 
 #: contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Customize Favorites"
-msgstr "移除收藏"
+msgstr ""
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -65,11 +64,9 @@ msgid "Cancel"
 msgstr "取消"
 
 #: contents/ui/indicators/Search.qml:20
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "Search…"
+#, kde-format
 msgid "Search"
-msgstr "搜索…"
+msgstr ""
 
 #: contents/ui/indicators/Settings.qml:16
 #, kde-format
@@ -87,10 +84,9 @@ msgid "Power"
 msgstr ""
 
 #: contents/ui/indicators/Tasks.qml:22
-#, fuzzy, kde-format
-#| msgid "Clear Tasks"
+#, kde-format
 msgid "Tasks"
-msgstr "清除任务"
+msgstr ""
 
 #: contents/ui/indicators/Volume.qml:20
 #, kde-format

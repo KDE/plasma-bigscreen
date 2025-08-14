@@ -59,15 +59,14 @@ msgid "Set time automatically"
 msgstr "自动设置时间"
 
 #: ui/DeviceTimeSettingsSidebar.qml:102
-#, fuzzy, kde-format
-#| msgid "Timezone"
+#, kde-format
 msgid "Time"
-msgstr "时区"
+msgstr "时间"
 
 #: ui/DeviceTimeSettingsSidebar.qml:115
 #, kde-format
 msgid "Date"
-msgstr ""
+msgstr "日期"
 
 #: ui/DeviceTimeSettingsSidebar.qml:144 ui/DeviceTimeSettingsSidebar.qml:221
 #: ui/DeviceTimeSettingsSidebar.qml:271
@@ -126,10 +125,9 @@ msgid "Power inhibition"
 msgstr ""
 
 #: ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time Settings"
+#, kde-format
 msgid "Adjust date & time"
-msgstr "调整日期和时间设置"
+msgstr ""
 
 #: ui/main.qml:104
 #, kde-format
@@ -142,10 +140,9 @@ msgid "Open settings shortcut"
 msgstr ""
 
 #: ui/main.qml:135
-#, fuzzy, kde-format
-#| msgid "Set Shortcut"
+#, kde-format
 msgid "Open tasks shortcut"
-msgstr "设置快捷键"
+msgstr ""
 
 #: ui/main.qml:154
 #, kde-format

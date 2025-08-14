@@ -39,10 +39,9 @@ msgid "Connect"
 msgstr "连接"
 
 #: ui/DeviceConnectionSidebar.qml:149
-#, fuzzy, kde-format
-#| msgid "Connect"
+#, kde-format
 msgid "Disconnect"
-msgstr "连接"
+msgstr ""
 
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
@@ -55,10 +54,9 @@ msgid "Are you sure you want to forget the network %1?"
 msgstr "您确定要忘记网络 %1 吗？"
 
 #: ui/DeviceConnectionSidebar.qml:213
-#, fuzzy, kde-format
-#| msgid "Network"
+#, kde-format
 msgid "Network details"
-msgstr "网络"
+msgstr ""
 
 #: ui/DeviceConnectionSidebar.qml:242
 #, kde-format
@@ -76,10 +74,9 @@ msgid "Refresh"
 msgstr "刷新"
 
 #: ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid "Connect"
+#, kde-format
 msgid "Connections"
-msgstr "连接"
+msgstr ""
 
 #: ui/PasswordDialog.qml:22
 #, kde-format

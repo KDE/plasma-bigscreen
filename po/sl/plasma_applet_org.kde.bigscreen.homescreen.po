@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-07-27 08:07+0200\n"
+"PO-Revision-Date: 2025-08-13 06:58+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -39,15 +39,14 @@ msgid "Battery: %1%"
 msgstr "Baterija: %1%"
 
 #: contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Customize Favorites"
-msgstr "Odstrani priljubljene"
+msgstr "Prilagodi priljubljene"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
 msgid "KDE Connect"
-msgstr ""
+msgstr "KDE Connect"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -65,11 +64,9 @@ msgid "Cancel"
 msgstr "Prekliči"
 
 #: contents/ui/indicators/Search.qml:20
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "Search…"
+#, kde-format
 msgid "Search"
-msgstr "Išči…"
+msgstr "Išči"
 
 #: contents/ui/indicators/Settings.qml:16
 #, kde-format
@@ -79,24 +76,22 @@ msgstr "Nastavitve"
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Exit Bigscreen"
-msgstr ""
+msgstr "Zapusti veliki zaslon"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Power"
-msgstr ""
+msgstr "Napajanje"
 
 #: contents/ui/indicators/Tasks.qml:22
-#, fuzzy, kde-format
-#| msgid "Clear Tasks"
+#, kde-format
 msgid "Tasks"
-msgstr "Počisti opravila"
+msgstr "Opravila"
 
 #: contents/ui/indicators/Volume.qml:20
-#, fuzzy, kde-format
-#| msgid "Additional Settings:"
+#, kde-format
 msgid "Audio Settings"
-msgstr "Dodatne nastavitve:"
+msgstr "Nastavitve zvoka"
 
 #: contents/ui/indicators/Volume.qml:28
 #, kde-format
@@ -104,10 +99,9 @@ msgid "Audio Volume"
 msgstr "Glasnost zvoka"
 
 #: contents/ui/indicators/Wifi.qml:19
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgid "Internet Settings"
-msgstr "Nastavitve"
+msgstr "Nastavitve interneta"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format

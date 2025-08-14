@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.mycroft.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-07-27 16:42+0300\n"
+"PO-Revision-Date: 2025-08-13 21:51+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -41,10 +41,9 @@ msgid "Battery: %1%"
 msgstr "Акумулятор: %1%"
 
 #: contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Customize Favorites"
-msgstr "Вилучити з улюбленого"
+msgstr "Налаштовування улюбленого"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -67,11 +66,9 @@ msgid "Cancel"
 msgstr "Скасувати"
 
 #: contents/ui/indicators/Search.qml:20
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "Search…"
+#, kde-format
 msgid "Search"
-msgstr "Шукати…"
+msgstr "Пошук"
 
 #: contents/ui/indicators/Settings.qml:16
 #, kde-format
@@ -81,24 +78,22 @@ msgstr "Параметри"
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Exit Bigscreen"
-msgstr ""
+msgstr "Вийти з Bigscreen"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Power"
-msgstr ""
+msgstr "Живлення"
 
 #: contents/ui/indicators/Tasks.qml:22
-#, fuzzy, kde-format
-#| msgid "Clear Tasks"
+#, kde-format
 msgid "Tasks"
-msgstr "Спорожнити список завдань"
+msgstr "Завдання"
 
 #: contents/ui/indicators/Volume.qml:20
-#, fuzzy, kde-format
-#| msgid "Additional Settings:"
+#, kde-format
 msgid "Audio Settings"
-msgstr "Додаткові параметри:"
+msgstr "Параметри звуку"
 
 #: contents/ui/indicators/Volume.qml:28
 #, kde-format
@@ -106,10 +101,9 @@ msgid "Audio Volume"
 msgstr "Гучність"
 
 #: contents/ui/indicators/Wifi.qml:19
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgid "Internet Settings"
-msgstr "Параметри"
+msgstr "Параметри інтернету"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format

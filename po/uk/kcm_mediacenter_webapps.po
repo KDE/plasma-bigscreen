@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-08-12 09:59+0300\n"
+"PO-Revision-Date: 2025-08-13 21:49+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -24,19 +24,17 @@ msgid "Web Apps"
 msgstr "Вебпрограми"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgid "Web Apps"
+#, kde-format
 msgid "Add Web App"
-msgstr "Вебпрограми"
+msgstr "Додавання вебпрограми"
 
 #: ui/main.qml:50
 #, kde-format
 msgid "Installed web apps"
-msgstr ""
+msgstr "Встановлені вебпрограми"
 
 #: ui/main.qml:90
-#, fuzzy, kde-format
-#| msgid "Add web application"
+#, kde-format
 msgid "Add Web Application"
 msgstr "Додати вебпрограму"
 
@@ -51,8 +49,7 @@ msgid "URL"
 msgstr "Адреса"
 
 #: ui/main.qml:120
-#, fuzzy, kde-format
-#| msgid "User Agent (empty for default)"
+#, kde-format
 msgid "User agent (empty for default)"
 msgstr "Агент користувача (порожній — типовий)"
 

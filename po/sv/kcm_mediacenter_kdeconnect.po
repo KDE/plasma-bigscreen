@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-06-28 20:11+0200\n"
+"PO-Revision-Date: 2025-08-13 08:15+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,22 +15,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: ui/delegates/PairedView.qml:35
 #, kde-format
 msgid "This device is paired"
-msgstr "Apparaten är ihopparad"
+msgstr "Apparaten är parkopplad"
 
 #: ui/delegates/PairedView.qml:43
 #, kde-format
 msgid "Unpair"
-msgstr "Ta bort ihopparning"
+msgstr "Ta bort parkoppling"
 
 #: ui/delegates/PairRequest.qml:35
 #, kde-format
 msgid "This device is requesting to be paired"
-msgstr "Apparaten begär att bli ihopparad"
+msgstr "Apparaten begär att bli parkopplad"
 
 #: ui/delegates/PairRequest.qml:44
 #, kde-format
@@ -45,7 +45,7 @@ msgstr "Avslå"
 #: ui/delegates/UnpairedView.qml:47
 #, kde-format
 msgid "This device is not paired"
-msgstr "Apparaten är inte ihopparad"
+msgstr "Apparaten är inte parkopplad"
 
 #: ui/delegates/UnpairedView.qml:56
 #, kde-format
@@ -70,7 +70,7 @@ msgstr "KDE-anslut"
 #: ui/main.qml:44
 #, kde-format
 msgid "Devices"
-msgstr ""
+msgstr "Enheter"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "Klicka på knappen Bakåt [←] för att återgå till enhetsval"

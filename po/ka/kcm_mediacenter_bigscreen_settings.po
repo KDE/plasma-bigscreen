@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-06-24 05:48+0200\n"
+"PO-Revision-Date: 2025-08-13 06:21+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -72,7 +72,7 @@ msgstr "თარიღი"
 #: ui/DeviceTimeSettingsSidebar.qml:271
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "უკან"
 
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
@@ -110,27 +110,24 @@ msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "ფილების ფონი აპის ხატულის მიხედვით გაფერადდება"
 
 #: ui/main.qml:69 ui/ThemeSidebar.qml:23
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgid "Global theme"
 msgstr "გლობალური თემა"
 
 #: ui/main.qml:70
 #, kde-format
 msgid "Set the system theme"
-msgstr ""
+msgstr "სისტემური თემის დაყენება"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgid "Power Inhibition"
+#, kde-format
 msgid "Power inhibition"
 msgstr "კვების ინჰიბიცია"
 
 #: ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time Settings"
+#, kde-format
 msgid "Adjust date & time"
-msgstr "დროისა და თარიღის პარამეტრების გასწორება"
+msgstr "დროისა და თარიღის გასწორება"
 
 #: ui/main.qml:104
 #, kde-format
@@ -138,27 +135,24 @@ msgid "Shortcuts"
 msgstr "მალსახმობები"
 
 #: ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "Bigscreen Settings Shortcut"
+#, kde-format
 msgid "Open settings shortcut"
-msgstr "Bigscreen-ის მორგების მალსახმობი"
+msgstr "მორგების ფანჯრის გახსნის მალსახმობი"
 
 #: ui/main.qml:135
-#, fuzzy, kde-format
-#| msgid "Bigscreen Tasks Shortcut"
+#, kde-format
 msgid "Open tasks shortcut"
-msgstr "Bigscreen-ის ამოცანების მალსახმობი"
+msgstr "ამოცანების გახსნის მალსახმობი"
 
 #: ui/main.qml:154
-#, fuzzy, kde-format
-#| msgid "Bigscreen Display Homescreen Shortcut"
+#, kde-format
 msgid "Open homescreen shortcut"
-msgstr "Bigscreen-ის საწყისი ეკრანის ჩვენების მალსახმობი"
+msgstr "საწყისი ეკრანის გახსნის მალსახმობი"
 
 #: ui/ShortcutsPickerSidebar.qml:39
 #, kde-format
 msgid "Shortcut currently set to"
-msgstr ""
+msgstr "მალსახმობი მიმდინარე მნიშვნელობაა"
 
 #: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format

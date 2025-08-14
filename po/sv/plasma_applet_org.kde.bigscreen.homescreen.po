@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-07-28 18:36+0200\n"
+"PO-Revision-Date: 2025-08-13 08:17+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -38,10 +38,9 @@ msgid "Battery: %1%"
 msgstr "Batteri: %1 %"
 
 #: contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Customize Favorites"
-msgstr "Ta bort favoriter"
+msgstr "Anpassa favoriter"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -64,11 +63,9 @@ msgid "Cancel"
 msgstr "Avbryt"
 
 #: contents/ui/indicators/Search.qml:20
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "Search…"
+#, kde-format
 msgid "Search"
-msgstr "Sök…"
+msgstr "Sök"
 
 #: contents/ui/indicators/Settings.qml:16
 #, kde-format
@@ -78,24 +75,22 @@ msgstr "Inställningar"
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Exit Bigscreen"
-msgstr ""
+msgstr "Avsluta storbildsskärm"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Power"
-msgstr ""
+msgstr "Effekt"
 
 #: contents/ui/indicators/Tasks.qml:22
-#, fuzzy, kde-format
-#| msgid "Clear Tasks"
+#, kde-format
 msgid "Tasks"
-msgstr "Rensa uppgifter"
+msgstr "Uppgifter"
 
 #: contents/ui/indicators/Volume.qml:20
-#, fuzzy, kde-format
-#| msgid "Additional Settings:"
+#, kde-format
 msgid "Audio Settings"
-msgstr "Ytterligare inställningar:"
+msgstr "Ljudinställningar"
 
 #: contents/ui/indicators/Volume.qml:28
 #, kde-format
@@ -103,10 +98,9 @@ msgid "Audio Volume"
 msgstr "Ljudvolym"
 
 #: contents/ui/indicators/Wifi.qml:19
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgid "Internet Settings"
-msgstr "Inställningar"
+msgstr "Internetinställningar"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format

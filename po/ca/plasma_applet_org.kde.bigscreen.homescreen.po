@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-07-27 11:47+0200\n"
+"PO-Revision-Date: 2025-08-13 20:20+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -41,10 +41,9 @@ msgid "Battery: %1%"
 msgstr "Bateria: %1%"
 
 #: contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Customize Favorites"
-msgstr "Elimina dels preferits"
+msgstr "Personalitza els preferits"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -67,11 +66,9 @@ msgid "Cancel"
 msgstr "Cancel·la"
 
 #: contents/ui/indicators/Search.qml:20
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "Search…"
+#, kde-format
 msgid "Search"
-msgstr "Cerca…"
+msgstr "Cerca"
 
 #: contents/ui/indicators/Settings.qml:16
 #, kde-format
@@ -81,24 +78,22 @@ msgstr "Configuració"
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Exit Bigscreen"
-msgstr ""
+msgstr "Surt de la Bigscreen"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Power"
-msgstr ""
+msgstr "Energia"
 
 #: contents/ui/indicators/Tasks.qml:22
-#, fuzzy, kde-format
-#| msgid "Clear Tasks"
+#, kde-format
 msgid "Tasks"
-msgstr "Neteja les tasques"
+msgstr "Tasques"
 
 #: contents/ui/indicators/Volume.qml:20
-#, fuzzy, kde-format
-#| msgid "Additional Settings:"
+#, kde-format
 msgid "Audio Settings"
-msgstr "Configuració addicional:"
+msgstr "Configuració d'àudio"
 
 #: contents/ui/indicators/Volume.qml:28
 #, kde-format
@@ -106,10 +101,9 @@ msgid "Audio Volume"
 msgstr "Volum de l'àudio"
 
 #: contents/ui/indicators/Wifi.qml:19
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgid "Internet Settings"
-msgstr "Configuració"
+msgstr "Configuració d'Internet"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format

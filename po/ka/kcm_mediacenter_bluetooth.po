@@ -1,0 +1,254 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-08-12 00:45+0000\n"
+"PO-Revision-Date: 2025-08-13 06:33+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+
+#: ui/DeviceConnectionSidebar.qml:37
+#, kde-format
+msgid "Device information"
+msgstr "მოწყობილობის ინფორმაცია"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Connecting…"
+msgstr "დაკავშირება…"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Disconnecting…"
+msgstr "მიმდინარეობს გათიშვა…"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Disconnect"
+msgstr "გათიშვა"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Pair"
+msgstr "დაწყვილება"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Connect"
+msgstr "დაკავშირება"
+
+#: ui/DeviceConnectionSidebar.qml:86
+#, kde-format
+msgid "Forget device"
+msgstr "მოწყობილობის დავიწყება"
+
+#: ui/DeviceConnectionSidebar.qml:96
+#, kde-format
+msgid "Are you sure you want to forget the device %1?"
+msgstr "მართლა გსურთ, დაივიწყოთ მოწყობილობა %1?"
+
+#: ui/DeviceConnectionSidebar.qml:121
+#, kde-format
+msgid "Device details"
+msgstr "მოწყობილობის დეტალები"
+
+#: ui/DeviceConnectionSidebar.qml:131
+#, kde-format
+msgid "Type: "
+msgstr "ტიპი: "
+
+#: ui/DeviceConnectionSidebar.qml:136
+#, kde-format
+msgid "Address: "
+msgstr "მისამართი: "
+
+#: ui/DeviceConnectionSidebar.qml:141 ui/DeviceConnectionSidebar.qml:148
+#, kde-format
+msgid "Change name"
+msgstr "სახელის შეცვლა"
+
+#: ui/DeviceDelegate.qml:33
+#, kde-format
+msgid "Connected"
+msgstr "დაკავშირებულია"
+
+#: ui/DeviceDelegate.qml:39
+#, kde-format
+msgid "%1% Battery"
+msgstr "%1% ელემენტი"
+
+#: ui/main.qml:25
+#, kde-format
+msgid "Bluetooth"
+msgstr "ბლუთუზი"
+
+#: ui/main.qml:69
+#, kde-format
+msgid "Enable Bluetooth"
+msgstr "ბლუთუზის ჩართვა"
+
+#: ui/main.qml:88
+#, kde-format
+msgid "Paired devices"
+msgstr "შეწყვილებული მოწყობილობები"
+
+#: ui/main.qml:122
+#, kde-format
+msgid "Available devices"
+msgstr "ხელმისაწვდომი მოწყობილობები"
+
+#: ui/script.js:13
+#, kde-format
+msgctxt "This device is a Phone"
+msgid "Phone"
+msgstr "ტელეფონი"
+
+#: ui/script.js:15
+#, kde-format
+msgctxt "This device is a Modem"
+msgid "Modem"
+msgstr "მოდემი"
+
+#: ui/script.js:17
+#, kde-format
+msgctxt "This device is a Computer"
+msgid "Computer"
+msgstr "კომპიუტერი"
+
+#: ui/script.js:19
+#, kde-format
+msgctxt "This device is of type Network"
+msgid "Network"
+msgstr "ქსელი"
+
+#: ui/script.js:21
+#, kde-format
+msgctxt "This device is a Headset"
+msgid "Headset"
+msgstr "ყურსასმენი"
+
+#: ui/script.js:23
+#, kde-format
+msgctxt "This device is a Headphones"
+msgid "Headphones"
+msgstr "ყურსასმენები"
+
+#: ui/script.js:25
+#, kde-format
+msgctxt "This device is an Audio/Video device"
+msgid "Multimedia"
+msgstr "მულტიმედია"
+
+#: ui/script.js:27
+#, kde-format
+msgctxt "This device is a Keyboard"
+msgid "Keyboard"
+msgstr "კლავიატურა"
+
+#: ui/script.js:29
+#, kde-format
+msgctxt "This device is a Mouse"
+msgid "Mouse"
+msgstr "თაგუნა"
+
+#: ui/script.js:31
+#, kde-format
+msgctxt "This device is a Game controller"
+msgid "Game controller"
+msgstr "სათამაშო კონტროლერი"
+
+#: ui/script.js:33
+#, kde-format
+msgctxt "This device is a Graphics Tablet (input device)"
+msgid "Tablet"
+msgstr "ტაბლეტი"
+
+#: ui/script.js:35
+#, kde-format
+msgctxt "This device is a Peripheral device"
+msgid "Peripheral"
+msgstr "გარე"
+
+#: ui/script.js:37
+#, kde-format
+msgctxt "This device is a Camera"
+msgid "Camera"
+msgstr "კამერა"
+
+#: ui/script.js:39
+#, kde-format
+msgctxt "This device is a Printer"
+msgid "Printer"
+msgstr "პრინტერი"
+
+#: ui/script.js:41
+#, kde-format
+msgctxt ""
+"This device is an Imaging device (printer, scanner, camera, display, …)"
+msgid "Imaging"
+msgstr "გამოსახულების"
+
+#: ui/script.js:43
+#, kde-format
+msgctxt "This device is a Wearable"
+msgid "Wearable"
+msgstr "მინიმოწყობილობა"
+
+#: ui/script.js:45
+#, kde-format
+msgctxt "This device is a Toy"
+msgid "Toy"
+msgstr "სათამაშო"
+
+#: ui/script.js:47
+#, kde-format
+msgctxt "This device is a Health device"
+msgid "Health"
+msgstr "ჯანმრთელობა"
+
+#: ui/script.js:53
+#, kde-format
+msgid "File transfer"
+msgstr "ფაილის მიმოცვლა"
+
+#: ui/script.js:56
+#, kde-format
+msgid "Send file"
+msgstr "ფაილის გაგზავნა"
+
+#: ui/script.js:59
+#, kde-format
+msgid "Input"
+msgstr "შეყვანა"
+
+#: ui/script.js:62
+#, kde-format
+msgid "Audio"
+msgstr "აუდიო"
+
+#: ui/script.js:65
+#, kde-format
+msgid "Network"
+msgstr "ქსელი"
+
+#: ui/script.js:69
+#, kde-format
+msgid "Other"
+msgstr "სხვა"
+
+#: ui/script.js:72
+#, kde-format
+msgctxt "List separator"
+msgid ", "
+msgstr ", "
