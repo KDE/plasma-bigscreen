@@ -77,10 +77,9 @@ msgid "Refresh"
 msgstr "Oppdater"
 
 #: ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid "Connect"
+#, kde-format
 msgid "Connections"
-msgstr "Kopla til"
+msgstr "Tilkoplingar"
 
 #: ui/PasswordDialog.qml:22
 #, kde-format

@@ -20,7 +20,7 @@ msgstr ""
 #: ui/AudioDelegateSidebar.qml:49
 #, kde-format
 msgid "Set as default device"
-msgstr ""
+msgstr "设置为默认设备"
 
 #: ui/delegates/VolumeObject.qml:53
 #, kde-format

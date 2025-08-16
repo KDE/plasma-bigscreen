@@ -61,15 +61,14 @@ msgid "Set time automatically"
 msgstr "Still klokka automatisk:"
 
 #: ui/DeviceTimeSettingsSidebar.qml:102
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Time"
-msgstr "Tidssone:"
+msgstr "Klokkeslett"
 
 #: ui/DeviceTimeSettingsSidebar.qml:115
 #, kde-format
 msgid "Date"
-msgstr ""
+msgstr "Dato"
 
 #: ui/DeviceTimeSettingsSidebar.qml:144 ui/DeviceTimeSettingsSidebar.qml:221
 #: ui/DeviceTimeSettingsSidebar.qml:271

@@ -21,54 +21,54 @@ msgstr ""
 #: ui/main.qml:16
 #, kde-format
 msgid "Web Apps"
-msgstr ""
+msgstr "网页应用"
 
 #: ui/main.qml:43
 #, kde-format
 msgid "Add Web App"
-msgstr ""
+msgstr "添加网页应用"
 
 #: ui/main.qml:50
 #, kde-format
 msgid "Installed web apps"
-msgstr ""
+msgstr "已安装的网页应用"
 
 #: ui/main.qml:90
 #, kde-format
 msgid "Add Web Application"
-msgstr ""
+msgstr "添加网页应用"
 
 #: ui/main.qml:106 ui/WebAppInfoSidebar.qml:52
 #, kde-format
 msgid "Name"
-msgstr ""
+msgstr "名称"
 
 #: ui/main.qml:113 ui/WebAppInfoSidebar.qml:60
 #, kde-format
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: ui/main.qml:120
 #, kde-format
 msgid "User agent (empty for default)"
-msgstr ""
+msgstr "用户代理 (留空将使用默认代理)"
 
 #: ui/WebAppInfoSidebar.qml:68
 #, kde-format
 msgid "User Agent"
-msgstr ""
+msgstr "用户代理"
 
 #: ui/WebAppInfoSidebar.qml:69
 #, kde-format
 msgid "Default user agent"
-msgstr ""
+msgstr "默认用户代理"
 
 #: ui/WebAppInfoSidebar.qml:78
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "删除"
 
 #: ui/WebAppInfoSidebar.qml:86
 #, kde-format
 msgid "Delete web app %1?"
-msgstr ""
+msgstr "删除网页应用 %1 吗？"

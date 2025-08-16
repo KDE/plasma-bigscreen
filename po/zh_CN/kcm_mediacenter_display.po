@@ -26,24 +26,24 @@ msgstr "显示配置"
 #: ui/main.qml:42
 #, kde-format
 msgid "Selected display"
-msgstr ""
+msgstr "选中的显示器"
 
 #: ui/main.qml:74
 #, kde-format
 msgid "Display %1"
-msgstr ""
+msgstr "显示器 %1"
 
 #: ui/main.qml:83
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "已启用"
 
 #: ui/main.qml:98
 #, kde-format
 msgid "Screen mode (Resolution & Refresh Rate)"
-msgstr ""
+msgstr "屏幕模式 (分辨率和刷新率)"
 
 #: ui/main.qml:127 ui/ScaleDialog.qml:21
 #, kde-format
 msgid "Scale"
-msgstr ""
+msgstr "缩放"

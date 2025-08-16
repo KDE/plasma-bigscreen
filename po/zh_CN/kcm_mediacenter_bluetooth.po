@@ -21,234 +21,234 @@ msgstr ""
 #: ui/DeviceConnectionSidebar.qml:37
 #, kde-format
 msgid "Device information"
-msgstr ""
+msgstr "设备信息"
 
 #: ui/DeviceConnectionSidebar.qml:48
 #, kde-format
 msgid "Connecting…"
-msgstr ""
+msgstr "正在连接…"
 
 #: ui/DeviceConnectionSidebar.qml:48
 #, kde-format
 msgid "Disconnecting…"
-msgstr ""
+msgstr "正在断开连接…"
 
 #: ui/DeviceConnectionSidebar.qml:48
 #, kde-format
 msgid "Disconnect"
-msgstr ""
+msgstr "断开连接"
 
 #: ui/DeviceConnectionSidebar.qml:48
 #, kde-format
 msgid "Pair"
-msgstr ""
+msgstr "配对"
 
 #: ui/DeviceConnectionSidebar.qml:48
 #, kde-format
 msgid "Connect"
-msgstr ""
+msgstr "连接"
 
 #: ui/DeviceConnectionSidebar.qml:86
 #, kde-format
 msgid "Forget device"
-msgstr ""
+msgstr "忘记设备"
 
 #: ui/DeviceConnectionSidebar.qml:96
 #, kde-format
 msgid "Are you sure you want to forget the device %1?"
-msgstr ""
+msgstr "您确定要忘记设备 %1 吗？"
 
 #: ui/DeviceConnectionSidebar.qml:121
 #, kde-format
 msgid "Device details"
-msgstr ""
+msgstr "设备详细信息"
 
 #: ui/DeviceConnectionSidebar.qml:131
 #, kde-format
 msgid "Type: "
-msgstr ""
+msgstr "类型："
 
 #: ui/DeviceConnectionSidebar.qml:136
 #, kde-format
 msgid "Address: "
-msgstr ""
+msgstr "地址："
 
 #: ui/DeviceConnectionSidebar.qml:141 ui/DeviceConnectionSidebar.qml:148
 #, kde-format
 msgid "Change name"
-msgstr ""
+msgstr "更改名称"
 
 #: ui/DeviceDelegate.qml:33
 #, kde-format
 msgid "Connected"
-msgstr ""
+msgstr "已连接"
 
 #: ui/DeviceDelegate.qml:39
 #, kde-format
 msgid "%1% Battery"
-msgstr ""
+msgstr "%1% 电量"
 
 #: ui/main.qml:25
 #, kde-format
 msgid "Bluetooth"
-msgstr ""
+msgstr "蓝牙"
 
 #: ui/main.qml:69
 #, kde-format
 msgid "Enable Bluetooth"
-msgstr ""
+msgstr "启用蓝牙"
 
 #: ui/main.qml:88
 #, kde-format
 msgid "Paired devices"
-msgstr ""
+msgstr "已配对设备"
 
 #: ui/main.qml:122
 #, kde-format
 msgid "Available devices"
-msgstr ""
+msgstr "可用设备"
 
 #: ui/script.js:13
 #, kde-format
 msgctxt "This device is a Phone"
 msgid "Phone"
-msgstr ""
+msgstr "手机"
 
 #: ui/script.js:15
 #, kde-format
 msgctxt "This device is a Modem"
 msgid "Modem"
-msgstr ""
+msgstr "调制解调器"
 
 #: ui/script.js:17
 #, kde-format
 msgctxt "This device is a Computer"
 msgid "Computer"
-msgstr ""
+msgstr "计算机"
 
 #: ui/script.js:19
 #, kde-format
 msgctxt "This device is of type Network"
 msgid "Network"
-msgstr ""
+msgstr "网络"
 
 #: ui/script.js:21
 #, kde-format
 msgctxt "This device is a Headset"
 msgid "Headset"
-msgstr ""
+msgstr "耳麦"
 
 #: ui/script.js:23
 #, kde-format
 msgctxt "This device is a Headphones"
 msgid "Headphones"
-msgstr ""
+msgstr "耳机"
 
 #: ui/script.js:25
 #, kde-format
 msgctxt "This device is an Audio/Video device"
 msgid "Multimedia"
-msgstr ""
+msgstr "多媒体"
 
 #: ui/script.js:27
 #, kde-format
 msgctxt "This device is a Keyboard"
 msgid "Keyboard"
-msgstr ""
+msgstr "键盘"
 
 #: ui/script.js:29
 #, kde-format
 msgctxt "This device is a Mouse"
 msgid "Mouse"
-msgstr ""
+msgstr "鼠标"
 
 #: ui/script.js:31
 #, kde-format
 msgctxt "This device is a Game controller"
 msgid "Game controller"
-msgstr ""
+msgstr "游戏控制器"
 
 #: ui/script.js:33
 #, kde-format
 msgctxt "This device is a Graphics Tablet (input device)"
 msgid "Tablet"
-msgstr ""
+msgstr "数位板"
 
 #: ui/script.js:35
 #, kde-format
 msgctxt "This device is a Peripheral device"
 msgid "Peripheral"
-msgstr ""
+msgstr "外设"
 
 #: ui/script.js:37
 #, kde-format
 msgctxt "This device is a Camera"
 msgid "Camera"
-msgstr ""
+msgstr "相机"
 
 #: ui/script.js:39
 #, kde-format
 msgctxt "This device is a Printer"
 msgid "Printer"
-msgstr ""
+msgstr "打印机"
 
 #: ui/script.js:41
 #, kde-format
 msgctxt ""
 "This device is an Imaging device (printer, scanner, camera, display, …)"
 msgid "Imaging"
-msgstr ""
+msgstr "影像设备"
 
 #: ui/script.js:43
 #, kde-format
 msgctxt "This device is a Wearable"
 msgid "Wearable"
-msgstr ""
+msgstr "可穿戴设备"
 
 #: ui/script.js:45
 #, kde-format
 msgctxt "This device is a Toy"
 msgid "Toy"
-msgstr ""
+msgstr "玩具"
 
 #: ui/script.js:47
 #, kde-format
 msgctxt "This device is a Health device"
 msgid "Health"
-msgstr ""
+msgstr "健康设备"
 
 #: ui/script.js:53
 #, kde-format
 msgid "File transfer"
-msgstr ""
+msgstr "文件传输"
 
 #: ui/script.js:56
 #, kde-format
 msgid "Send file"
-msgstr ""
+msgstr "发送文件"
 
 #: ui/script.js:59
 #, kde-format
 msgid "Input"
-msgstr ""
+msgstr "输入"
 
 #: ui/script.js:62
 #, kde-format
 msgid "Audio"
-msgstr ""
+msgstr "音频"
 
 #: ui/script.js:65
 #, kde-format
 msgid "Network"
-msgstr ""
+msgstr "网络"
 
 #: ui/script.js:69
 #, kde-format
 msgid "Other"
-msgstr ""
+msgstr "其他"
 
 #: ui/script.js:72
 #, kde-format
 msgctxt "List separator"
 msgid ", "
-msgstr ""
+msgstr "，"

@@ -21,4 +21,4 @@ msgstr ""
 #: qml/FullScreenOverlay.qml:164
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "关闭"

@@ -47,7 +47,7 @@ msgstr ""
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
 msgid "KDE Connect"
-msgstr ""
+msgstr "KDE Connect"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -72,7 +72,7 @@ msgstr ""
 #: contents/ui/indicators/Settings.qml:16
 #, kde-format
 msgid "Settings"
-msgstr ""
+msgstr "Innstillingar"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format

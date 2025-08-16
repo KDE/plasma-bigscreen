@@ -31,7 +31,7 @@ msgstr "IP 地址详情"
 #: ui/DeviceConnectionSidebar.qml:138
 #, kde-format
 msgid "Network information"
-msgstr ""
+msgstr "网络信息"
 
 #: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
 #, kde-format
@@ -41,7 +41,7 @@ msgstr "连接"
 #: ui/DeviceConnectionSidebar.qml:149
 #, kde-format
 msgid "Disconnect"
-msgstr ""
+msgstr "断开连接"
 
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
@@ -56,7 +56,7 @@ msgstr "您确定要忘记网络 %1 吗？"
 #: ui/DeviceConnectionSidebar.qml:213
 #, kde-format
 msgid "Network details"
-msgstr ""
+msgstr "网络详情"
 
 #: ui/DeviceConnectionSidebar.qml:242
 #, kde-format
@@ -76,7 +76,7 @@ msgstr "刷新"
 #: ui/main.qml:114
 #, kde-format
 msgid "Connections"
-msgstr ""
+msgstr "连接"
 
 #: ui/PasswordDialog.qml:22
 #, kde-format

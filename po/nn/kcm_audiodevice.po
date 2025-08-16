@@ -44,10 +44,9 @@ msgstr "Vel lydeining"
 #: ui/main.qml:50
 #, kde-format
 msgid "Playback Devices"
-msgstr ""
+msgstr "Avspelingseiningar"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgid "Audio Device Chooser"
+#, kde-format
 msgid "Recording Devices"
-msgstr "Vel lydeining"
+msgstr "Opptakseiningar"

@@ -21,9 +21,9 @@ msgstr ""
 #: ui/main.qml:18
 #, kde-format
 msgid "Wallpaper"
-msgstr ""
+msgstr "壁纸"
 
 #: ui/main.qml:48
 #, kde-format
 msgid "Open wallpaper selector"
-msgstr ""
+msgstr "打开壁纸选择器"

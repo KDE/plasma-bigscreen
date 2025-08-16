@@ -41,12 +41,12 @@ msgstr "电量：%1%"
 #: contents/ui/indicators/Favorites.qml:17
 #, kde-format
 msgid "Customize Favorites"
-msgstr ""
+msgstr "自定义收藏夹"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
 msgid "KDE Connect"
-msgstr ""
+msgstr "KDE Connect"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -66,32 +66,32 @@ msgstr "取消"
 #: contents/ui/indicators/Search.qml:20
 #, kde-format
 msgid "Search"
-msgstr ""
+msgstr "搜索"
 
 #: contents/ui/indicators/Settings.qml:16
 #, kde-format
 msgid "Settings"
-msgstr ""
+msgstr "设置"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Exit Bigscreen"
-msgstr ""
+msgstr "退出大屏幕"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Power"
-msgstr ""
+msgstr "电源"
 
 #: contents/ui/indicators/Tasks.qml:22
 #, kde-format
 msgid "Tasks"
-msgstr ""
+msgstr "任务"
 
 #: contents/ui/indicators/Volume.qml:20
 #, kde-format
 msgid "Audio Settings"
-msgstr ""
+msgstr "音频设置"
 
 #: contents/ui/indicators/Volume.qml:28
 #, kde-format
@@ -101,7 +101,7 @@ msgstr "音量"
 #: contents/ui/indicators/Wifi.qml:19
 #, kde-format
 msgid "Internet Settings"
-msgstr ""
+msgstr "互联网设置"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format

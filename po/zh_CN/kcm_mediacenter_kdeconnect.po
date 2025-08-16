@@ -71,4 +71,4 @@ msgstr "KDE Connect"
 #: ui/main.qml:44
 #, kde-format
 msgid "Devices"
-msgstr ""
+msgstr "设备"
