@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-07-26 19:48+0200\n"
+"PO-Revision-Date: 2025-08-16 07:05+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -72,7 +72,7 @@ msgstr "Data"
 #: ui/DeviceTimeSettingsSidebar.qml:271
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Wstecz"
 
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
@@ -112,24 +112,22 @@ msgstr "Tła kafelków będą zabarwiane na podstawie ikony aplikacji"
 #: ui/main.qml:69 ui/ThemeSidebar.qml:23
 #, kde-format
 msgid "Global theme"
-msgstr ""
+msgstr "Globalny wygląd"
 
 #: ui/main.qml:70
 #, kde-format
 msgid "Set the system theme"
-msgstr ""
+msgstr "Ustaw wygląd systemu"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgid "Power Inhibition"
+#, kde-format
 msgid "Power inhibition"
 msgstr "Zapobieganie usypianiu"
 
 #: ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time Settings"
+#, kde-format
 msgid "Adjust date & time"
-msgstr "Dostosuj ustawienia daty i czasu"
+msgstr "Dostosuj datę i czas"
 
 #: ui/main.qml:104
 #, kde-format
@@ -137,32 +135,29 @@ msgid "Shortcuts"
 msgstr "Skróty"
 
 #: ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "Bigscreen Settings Shortcut"
+#, kde-format
 msgid "Open settings shortcut"
-msgstr "Ustawienia skrótów Dużego Ekranu"
+msgstr "Skrót otwierania ustawień"
 
 #: ui/main.qml:135
-#, fuzzy, kde-format
-#| msgid "Bigscreen Tasks Shortcut"
+#, kde-format
 msgid "Open tasks shortcut"
-msgstr "Skróty zadań Dużego Ekranu"
+msgstr "Skrót otwierania zadań"
 
 #: ui/main.qml:154
-#, fuzzy, kde-format
-#| msgid "Bigscreen Display Homescreen Shortcut"
+#, kde-format
 msgid "Open homescreen shortcut"
-msgstr "Skrót ekranu domowego Dużego Ekranu"
+msgstr "Skrót otwierania ekranu domowego"
 
 #: ui/ShortcutsPickerSidebar.qml:39
 #, kde-format
 msgid "Shortcut currently set to"
-msgstr ""
+msgstr "Skrót obecnie ustawiony na"
 
 #: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format
 msgid "Reset to default"
-msgstr "Przywróć domyślne"
+msgstr "Przywróć domyślny"
 
 #: ui/ShortcutsPickerSidebar.qml:60
 #, kde-format
