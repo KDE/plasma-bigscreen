@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-06-30 17:55+0300\n"
+"PO-Revision-Date: 2025-08-22 16:41+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -72,7 +72,7 @@ msgstr "Datums"
 #: ui/DeviceTimeSettingsSidebar.qml:271
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Atpakaļ"
 
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
@@ -110,27 +110,24 @@ msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "Flīzes fons tiks iekrāsots, ievērojot programmas ikonu"
 
 #: ui/main.qml:69 ui/ThemeSidebar.qml:23
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgid "Global theme"
 msgstr "Globālais motīvs"
 
 #: ui/main.qml:70
 #, kde-format
 msgid "Set the system theme"
-msgstr ""
+msgstr "Iestatīt sistēmas motīvu"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgid "Power Inhibition"
+#, kde-format
 msgid "Power inhibition"
-msgstr "Jaudas nomākšana"
+msgstr "Iesnaudināšanas nomākšana"
 
 #: ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time Settings"
+#, kde-format
 msgid "Adjust date & time"
-msgstr "Mainīt datuma un laika iestatījumus"
+msgstr "Mainīt datumu un laiku"
 
 #: ui/main.qml:104
 #, kde-format
@@ -138,27 +135,24 @@ msgid "Shortcuts"
 msgstr "Saīsnes"
 
 #: ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "Bigscreen Settings Shortcut"
+#, kde-format
 msgid "Open settings shortcut"
-msgstr "Lielā ekrāna iestatījumu saīsne"
+msgstr "Atvērt iestatījumu saīsni"
 
 #: ui/main.qml:135
-#, fuzzy, kde-format
-#| msgid "Bigscreen Tasks Shortcut"
+#, kde-format
 msgid "Open tasks shortcut"
-msgstr "Lielā ekrāna uzdevumu saīsne"
+msgstr "Atvērt uzdevumu saīsni"
 
 #: ui/main.qml:154
-#, fuzzy, kde-format
-#| msgid "Bigscreen Display Homescreen Shortcut"
+#, kde-format
 msgid "Open homescreen shortcut"
-msgstr "Lielā ekrāna mājas ekrāna parādīšanas saīsne"
+msgstr "Atvērt mājas ekrāna saīsni"
 
 #: ui/ShortcutsPickerSidebar.qml:39
 #, kde-format
 msgid "Shortcut currently set to"
-msgstr ""
+msgstr "Saīsne šobrīd ir iestatīta uz"
 
 #: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format

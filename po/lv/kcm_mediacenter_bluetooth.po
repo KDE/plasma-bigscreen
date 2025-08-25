@@ -1,0 +1,254 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# SPDX-FileCopyrightText: 2025 Toms Trasuns <toms.trasuns@posteo.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-08-12 00:45+0000\n"
+"PO-Revision-Date: 2025-08-22 16:35+0300\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 25.08.0\n"
+
+#: ui/DeviceConnectionSidebar.qml:37
+#, kde-format
+msgid "Device information"
+msgstr "Informācija par ierīci"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Connecting…"
+msgstr "Savienojas…"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Disconnecting…"
+msgstr "Atvienojas…"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Disconnect"
+msgstr "Atvienoties"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Pair"
+msgstr "Sapārot"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Connect"
+msgstr "Savienoties"
+
+#: ui/DeviceConnectionSidebar.qml:86
+#, kde-format
+msgid "Forget device"
+msgstr "Aizmirst šo ierīci"
+
+#: ui/DeviceConnectionSidebar.qml:96
+#, kde-format
+msgid "Are you sure you want to forget the device %1?"
+msgstr "Vai tiešām vēlaties aizmirst ierīci „%1“?"
+
+#: ui/DeviceConnectionSidebar.qml:121
+#, kde-format
+msgid "Device details"
+msgstr "Informācija par ierīci"
+
+#: ui/DeviceConnectionSidebar.qml:131
+#, kde-format
+msgid "Type: "
+msgstr "Tips: "
+
+#: ui/DeviceConnectionSidebar.qml:136
+#, kde-format
+msgid "Address: "
+msgstr "Adrese: "
+
+#: ui/DeviceConnectionSidebar.qml:141 ui/DeviceConnectionSidebar.qml:148
+#, kde-format
+msgid "Change name"
+msgstr "Mainīt nosaukumu"
+
+#: ui/DeviceDelegate.qml:33
+#, kde-format
+msgid "Connected"
+msgstr "Savienoties"
+
+#: ui/DeviceDelegate.qml:39
+#, kde-format
+msgid "%1% Battery"
+msgstr "%1 % baterija"
+
+#: ui/main.qml:25
+#, kde-format
+msgid "Bluetooth"
+msgstr "„Bluetooth“"
+
+#: ui/main.qml:69
+#, kde-format
+msgid "Enable Bluetooth"
+msgstr "Ieslēgt „Bluetooth“"
+
+#: ui/main.qml:88
+#, kde-format
+msgid "Paired devices"
+msgstr "Sapārotās ierīces"
+
+#: ui/main.qml:122
+#, kde-format
+msgid "Available devices"
+msgstr "Pieejamās ierīces"
+
+#: ui/script.js:13
+#, kde-format
+msgctxt "This device is a Phone"
+msgid "Phone"
+msgstr "Tālrunis"
+
+#: ui/script.js:15
+#, kde-format
+msgctxt "This device is a Modem"
+msgid "Modem"
+msgstr "Modems"
+
+#: ui/script.js:17
+#, kde-format
+msgctxt "This device is a Computer"
+msgid "Computer"
+msgstr "Dators"
+
+#: ui/script.js:19
+#, kde-format
+msgctxt "This device is of type Network"
+msgid "Network"
+msgstr "Tīkls"
+
+#: ui/script.js:21
+#, kde-format
+msgctxt "This device is a Headset"
+msgid "Headset"
+msgstr "Austiņas ar mikrofonu"
+
+#: ui/script.js:23
+#, kde-format
+msgctxt "This device is a Headphones"
+msgid "Headphones"
+msgstr "Austiņas"
+
+#: ui/script.js:25
+#, kde-format
+msgctxt "This device is an Audio/Video device"
+msgid "Multimedia"
+msgstr "Multivide"
+
+#: ui/script.js:27
+#, kde-format
+msgctxt "This device is a Keyboard"
+msgid "Keyboard"
+msgstr "Tastatūra"
+
+#: ui/script.js:29
+#, kde-format
+msgctxt "This device is a Mouse"
+msgid "Mouse"
+msgstr "Pele"
+
+#: ui/script.js:31
+#, kde-format
+msgctxt "This device is a Game controller"
+msgid "Game controller"
+msgstr "Spēļu kontrolieris"
+
+#: ui/script.js:33
+#, kde-format
+msgctxt "This device is a Graphics Tablet (input device)"
+msgid "Tablet"
+msgstr "Planšetdators"
+
+#: ui/script.js:35
+#, kde-format
+msgctxt "This device is a Peripheral device"
+msgid "Peripheral"
+msgstr "Perifērijas ierīce"
+
+#: ui/script.js:37
+#, kde-format
+msgctxt "This device is a Camera"
+msgid "Camera"
+msgstr "Kamera"
+
+#: ui/script.js:39
+#, kde-format
+msgctxt "This device is a Printer"
+msgid "Printer"
+msgstr "Printeris"
+
+#: ui/script.js:41
+#, kde-format
+msgctxt ""
+"This device is an Imaging device (printer, scanner, camera, display, …)"
+msgid "Imaging"
+msgstr "Attēlu uzņēmējiekārta"
+
+#: ui/script.js:43
+#, kde-format
+msgctxt "This device is a Wearable"
+msgid "Wearable"
+msgstr "Valkājamierīce"
+
+#: ui/script.js:45
+#, kde-format
+msgctxt "This device is a Toy"
+msgid "Toy"
+msgstr "Rotaļlieta"
+
+#: ui/script.js:47
+#, kde-format
+msgctxt "This device is a Health device"
+msgid "Health"
+msgstr "Veselība"
+
+#: ui/script.js:53
+#, kde-format
+msgid "File transfer"
+msgstr "Datņu nosūtīšana"
+
+#: ui/script.js:56
+#, kde-format
+msgid "Send file"
+msgstr "Nosūtīt datni"
+
+#: ui/script.js:59
+#, kde-format
+msgid "Input"
+msgstr "Ievade"
+
+#: ui/script.js:62
+#, kde-format
+msgid "Audio"
+msgstr "Audio"
+
+#: ui/script.js:65
+#, kde-format
+msgid "Network"
+msgstr "Tīkls"
+
+#: ui/script.js:69
+#, kde-format
+msgid "Other"
+msgstr "Cita"
+
+#: ui/script.js:72
+#, kde-format
+msgctxt "List separator"
+msgid ", "
+msgstr ", "
