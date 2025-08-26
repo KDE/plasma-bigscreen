@@ -3,20 +3,21 @@
 #
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2021, 2023.
 # SPDX-FileCopyrightText: 2025 Geraldo Simiao <geraldosimiao@fedoraproject.org>
+# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-02-06 17:46-0300\n"
-"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"PO-Revision-Date: 2025-08-25 19:21-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -44,16 +45,14 @@ msgid "Day"
 msgstr "Dia"
 
 #: ui/DeviceTimeSettingsSidebar.qml:63
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust Date & Time Settings"
-msgstr "Ajustar data e hora"
+msgstr "Configurações de ajuste de data e hora"
 
 #: ui/DeviceTimeSettingsSidebar.qml:72
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "Fuso horário:"
+msgstr "Fuso horário"
 
 #: ui/DeviceTimeSettingsSidebar.qml:84
 #, kde-format
@@ -74,7 +73,7 @@ msgstr "Data"
 #: ui/DeviceTimeSettingsSidebar.qml:271
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Voltar"
 
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
@@ -94,81 +93,72 @@ msgstr "%1, %2"
 #: ui/main.qml:22 ui/main.qml:76
 #, kde-format
 msgid "System"
-msgstr ""
+msgstr "Sistema"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "General Appearance"
+#, kde-format
 msgid "Homescreen Appearance"
-msgstr "Aparência geral"
+msgstr "Aparência da tela inicial"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Colored Tiles"
+#, kde-format
 msgid "Colored tiles"
 msgstr "Blocos coloridos"
 
 #: ui/main.qml:56
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
-msgstr ""
+msgstr "Os fundos dos blocos serão coloridos com base no ícone do aplicativo"
 
 #: ui/main.qml:69 ui/ThemeSidebar.qml:23
 #, kde-format
 msgid "Global theme"
-msgstr ""
+msgstr "Tema global"
 
 #: ui/main.qml:70
 #, kde-format
 msgid "Set the system theme"
-msgstr ""
+msgstr "Define o tema do sistema"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgid "Power Inhibition"
+#, kde-format
 msgid "Power inhibition"
 msgstr "Inibição de energia"
 
 #: ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust date & time"
 msgstr "Ajustar data e hora"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Set Shortcut"
+#, kde-format
 msgid "Shortcuts"
-msgstr "Definir atalho"
+msgstr "Atalhos"
 
 #: ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "Bigscreen Settings Shortcut"
+#, kde-format
 msgid "Open settings shortcut"
-msgstr "Atalho para configurações do Bigscreen"
+msgstr "Abrir as configurações de atalhos"
 
 #: ui/main.qml:135
-#, fuzzy, kde-format
-#| msgid "Bigscreen Tasks Shortcut"
+#, kde-format
 msgid "Open tasks shortcut"
-msgstr "Atalho para tarefas do Bigscreen"
+msgstr "Abrir atalhos para tarefas"
 
 #: ui/main.qml:154
-#, fuzzy, kde-format
-#| msgid "Bigscreen Display Homescreen Shortcut"
+#, kde-format
 msgid "Open homescreen shortcut"
-msgstr "Atalho para exibir tela inicial do Bigscreen"
+msgstr "Abrir atalhos para a tela inicial"
 
 #: ui/ShortcutsPickerSidebar.qml:39
 #, kde-format
 msgid "Shortcut currently set to"
-msgstr ""
+msgstr "Atalho atualmente definido para"
 
 #: ui/ShortcutsPickerSidebar.qml:46
-#, fuzzy, kde-format
-#| msgid "Reset Default"
+#, kde-format
 msgid "Reset to default"
-msgstr "Restaurar para o padrão"
+msgstr "Redefinir para o padrão"
 
 #: ui/ShortcutsPickerSidebar.qml:60
 #, kde-format

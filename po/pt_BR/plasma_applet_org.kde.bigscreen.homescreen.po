@@ -4,20 +4,21 @@
 # Blumen Herzenschein <herzenschein@gmail.com>, 2020.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2020, 2021, 2022.
 # SPDX-FileCopyrightText: 2025 Geraldo Simiao <geraldosimiao@fedoraproject.org>
+# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-02-06 17:47-0300\n"
-"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"PO-Revision-Date: 2025-08-25 19:15-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -37,13 +38,12 @@ msgstr "Remover favoritos"
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
 msgid "Battery: %1%"
-msgstr ""
+msgstr "Bateria: %1%"
 
 #: contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Customize Favorites"
-msgstr "Remover favoritos"
+msgstr "Personalizar favoritos"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -68,34 +68,32 @@ msgstr "Cancelar"
 #: contents/ui/indicators/Search.qml:20
 #, kde-format
 msgid "Search"
-msgstr ""
+msgstr "Pesquisar"
 
 #: contents/ui/indicators/Settings.qml:16
 #, kde-format
 msgid "Settings"
-msgstr "Configurações adicionais"
+msgstr "Configurações"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Exit Bigscreen"
-msgstr ""
+msgstr "Sair da Bigscreen"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Power"
-msgstr ""
+msgstr "Energia"
 
 #: contents/ui/indicators/Tasks.qml:22
-#, fuzzy, kde-format
-#| msgid "Clear Tasks"
+#, kde-format
 msgid "Tasks"
-msgstr "Limpar tarefas"
+msgstr "Tarefas"
 
 #: contents/ui/indicators/Volume.qml:20
-#, fuzzy, kde-format
-#| msgid "Additional Settings:"
+#, kde-format
 msgid "Audio Settings"
-msgstr "Configurações adicionais:"
+msgstr "Configurações de áudio"
 
 #: contents/ui/indicators/Volume.qml:28
 #, kde-format
@@ -103,10 +101,9 @@ msgid "Audio Volume"
 msgstr "Volume do áudio"
 
 #: contents/ui/indicators/Wifi.qml:19
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgid "Internet Settings"
-msgstr "Configurações adicionais"
+msgstr "Configurações da Internet"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -137,7 +134,7 @@ msgstr "Jogos"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "Pesquisar..."
 
 #: contents/ui/PowerManagementItem.qml:41
 #, kde-format
