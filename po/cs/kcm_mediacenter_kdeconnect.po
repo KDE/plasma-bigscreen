@@ -48,10 +48,9 @@ msgid "This device is not paired"
 msgstr "Zařízení není spárováno"
 
 #: ui/delegates/UnpairedView.qml:56
-#, fuzzy, kde-format
-#| msgid "Pairing request sent to device"
+#, kde-format
 msgid "Pairing request sent"
-msgstr "Požadavek o párování byl odeslán na zařízení"
+msgstr ""
 
 #: ui/delegates/UnpairedView.qml:60
 #, kde-format
@@ -71,7 +70,4 @@ msgstr "KDE Connect"
 #: ui/main.qml:44
 #, kde-format
 msgid "Devices"
-msgstr ""
-
-#~ msgid "Press the [←] Back button to return to device selection"
-#~ msgstr "Použijte tlačítko Zpět [←] k návratu na výběr zařízení"
+msgstr "Zařízení"

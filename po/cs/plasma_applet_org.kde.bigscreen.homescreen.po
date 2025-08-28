@@ -35,18 +35,17 @@ msgstr ""
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
 msgid "Battery: %1%"
-msgstr ""
+msgstr "Baterie: %1%"
 
 #: contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgid "Customize Favorites"
-msgstr "Oblíbené"
+msgstr ""
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
 msgid "KDE Connect"
-msgstr ""
+msgstr "KDE Connect"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -64,11 +63,9 @@ msgid "Cancel"
 msgstr "Zrušit"
 
 #: contents/ui/indicators/Search.qml:20
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "Search…"
+#, kde-format
 msgid "Search"
-msgstr "Hledat…"
+msgstr "Hledat"
 
 #: contents/ui/indicators/Settings.qml:16
 #, kde-format
@@ -83,18 +80,17 @@ msgstr ""
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Power"
-msgstr ""
+msgstr "Mocnitel"
 
 #: contents/ui/indicators/Tasks.qml:22
 #, kde-format
 msgid "Tasks"
-msgstr ""
+msgstr "Úlohy"
 
 #: contents/ui/indicators/Volume.qml:20
-#, fuzzy, kde-format
-#| msgid "Additional Settings:"
+#, kde-format
 msgid "Audio Settings"
-msgstr "Další nastavení:"
+msgstr "Nastavení audio"
 
 #: contents/ui/indicators/Volume.qml:28
 #, kde-format
@@ -102,10 +98,9 @@ msgid "Audio Volume"
 msgstr "Hlasitost zvuku"
 
 #: contents/ui/indicators/Wifi.qml:19
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgid "Internet Settings"
-msgstr "Nastavení"
+msgstr ""
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -152,18 +147,3 @@ msgstr ""
 #, kde-format
 msgid "Close"
 msgstr "Zavřít"
-
-#~ msgid "General"
-#~ msgstr "Obecné"
-
-#~ msgid "Websocket Address:"
-#~ msgstr "Adresa webového soketu:"
-
-#~ msgid "Enable Notifications"
-#~ msgstr "Povolit upozornění"
-
-#~ msgid "Enable Remote TTS"
-#~ msgstr "Povolit vzdálené TTS"
-
-#~ msgid "Enable Remote STT"
-#~ msgstr "Povolit vzdálené STT"

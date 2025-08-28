@@ -30,12 +30,12 @@ msgstr ""
 #: ui/main.qml:74
 #, kde-format
 msgid "Display %1"
-msgstr ""
+msgstr "Obrazovka %1"
 
 #: ui/main.qml:83
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Povoleno"
 
 #: ui/main.qml:98
 #, kde-format
@@ -46,24 +46,3 @@ msgstr ""
 #, kde-format
 msgid "Scale"
 msgstr "Měřítko"
-
-#~ msgid "New Resolution"
-#~ msgstr "Nové rozlišení"
-
-#~ msgid "Accept"
-#~ msgstr "Přijmout"
-
-#~ msgid "Cancel"
-#~ msgstr "Zrušit"
-
-#~ msgid "Resolution: "
-#~ msgstr "Rozlišení: "
-
-#~ msgid "Refresh Rate: "
-#~ msgstr "Obnovovací frekvence: "
-
-#~ msgid "Mode: "
-#~ msgstr "Režim: "
-
-#~ msgid "Available Resolutions"
-#~ msgstr "Dostupná rozlišení"

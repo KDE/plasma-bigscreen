@@ -34,10 +34,9 @@ msgid "%1%"
 msgstr "%1%"
 
 #: ui/main.qml:21
-#, fuzzy, kde-format
-#| msgid "Audio Device Chooser"
+#, kde-format
 msgid "Audio Devices"
-msgstr "Nástroj pro výběr hudebního zařízení"
+msgstr ""
 
 #: ui/main.qml:50
 #, kde-format
@@ -48,6 +47,3 @@ msgstr "Přehrávací zařízení"
 #, kde-format
 msgid "Recording Devices"
 msgstr "Nahrávací zařízení"
-
-#~ msgid "Press the [←] Back button to return to device selection"
-#~ msgstr "Použijte tlačítko Zpět [←] k návratu na výběr zařízení"

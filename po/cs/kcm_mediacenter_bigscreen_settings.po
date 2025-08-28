@@ -43,10 +43,9 @@ msgid "Day"
 msgstr ""
 
 #: ui/DeviceTimeSettingsSidebar.qml:63
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust Date & Time Settings"
-msgstr "Upravit datum a čas"
+msgstr ""
 
 #: ui/DeviceTimeSettingsSidebar.qml:72
 #, kde-format
@@ -72,7 +71,7 @@ msgstr "Datum"
 #: ui/DeviceTimeSettingsSidebar.qml:271
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Zpět"
 
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
@@ -95,16 +94,14 @@ msgid "System"
 msgstr "Systém"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "General Appearance"
+#, kde-format
 msgid "Homescreen Appearance"
-msgstr "Obecný vzhled"
+msgstr ""
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Colored Tiles"
+#, kde-format
 msgid "Colored tiles"
-msgstr "Barevné dlaždice"
+msgstr ""
 
 #: ui/main.qml:56
 #, kde-format
@@ -112,10 +109,9 @@ msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr ""
 
 #: ui/main.qml:69 ui/ThemeSidebar.qml:23
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgid "Global theme"
-msgstr "Celkový motiv"
+msgstr ""
 
 #: ui/main.qml:70
 #, kde-format
@@ -128,10 +124,9 @@ msgid "Power inhibition"
 msgstr ""
 
 #: ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust date & time"
-msgstr "Upravit datum a čas"
+msgstr ""
 
 #: ui/main.qml:104
 #, kde-format
@@ -187,19 +182,3 @@ msgstr "Sekunda"
 #, kde-format
 msgid "AM/PM"
 msgstr "ODP./DOP."
-
-#~ msgid "Time Display"
-#~ msgstr "Zobrazení času"
-
-#~ msgid "Press the [←] Back button to return to appearance settings"
-#~ msgstr "Použijte tlačítko Zpět [←] k návratu do nastavení vzhledu"
-
-#~ msgid ""
-#~ "Press the [←] Back button to save configuration and return to settings"
-#~ msgstr "Použijte tlačítko Zpět [←] k uložení voleb a návratu do nastavení"
-
-#~ msgid "Appearance"
-#~ msgstr "Vzhled"
-
-#~ msgid "Launcher Appearance"
-#~ msgstr "Vzhled spouštěče"
