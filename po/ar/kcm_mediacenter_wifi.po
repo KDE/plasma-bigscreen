@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-08-03 10:53+0400\n"
+"PO-Revision-Date: 2025-08-28 12:30+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -31,7 +31,7 @@ msgstr "تفاصيل عنوان الانترنت IP"
 #: ui/DeviceConnectionSidebar.qml:138
 #, kde-format
 msgid "Network information"
-msgstr ""
+msgstr "معلومات الشبكة"
 
 #: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
 #, kde-format
@@ -39,10 +39,9 @@ msgid "Connect"
 msgstr "اتّصل"
 
 #: ui/DeviceConnectionSidebar.qml:149
-#, fuzzy, kde-format
-#| msgid "Connect"
+#, kde-format
 msgid "Disconnect"
-msgstr "اتّصل"
+msgstr "اقطع الاتصال"
 
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
@@ -55,10 +54,9 @@ msgid "Are you sure you want to forget the network %1?"
 msgstr "أمتأكد أنك تريد نسيان شبكة %1؟"
 
 #: ui/DeviceConnectionSidebar.qml:213
-#, fuzzy, kde-format
-#| msgid "Network"
+#, kde-format
 msgid "Network details"
-msgstr "الشبكة"
+msgstr "تفاصيل الشبكة"
 
 #: ui/DeviceConnectionSidebar.qml:242
 #, kde-format
@@ -76,10 +74,9 @@ msgid "Refresh"
 msgstr "حدّث"
 
 #: ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid "Connect"
+#, kde-format
 msgid "Connections"
-msgstr "اتّصل"
+msgstr "الاتصالات"
 
 #: ui/PasswordDialog.qml:22
 #, kde-format

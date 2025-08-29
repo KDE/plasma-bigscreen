@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-06-26 11:35+0400\n"
+"PO-Revision-Date: 2025-08-28 12:30+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -72,7 +72,7 @@ msgstr "التاريخ"
 #: ui/DeviceTimeSettingsSidebar.qml:271
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "عُد"
 
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
@@ -110,27 +110,24 @@ msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "ستلّون خلفيات المربعات بناءً على أيقونة التطبيق"
 
 #: ui/main.qml:69 ui/ThemeSidebar.qml:23
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgid "Global theme"
-msgstr "سمة شاملة"
+msgstr "سمة عامة"
 
 #: ui/main.qml:70
 #, kde-format
 msgid "Set the system theme"
-msgstr ""
+msgstr "عيّن سمة النظام"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgid "Power Inhibition"
+#, kde-format
 msgid "Power inhibition"
 msgstr "تثبيط الطاقة"
 
 #: ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time Settings"
+#, kde-format
 msgid "Adjust date & time"
-msgstr "اضبط إعدادات التّاريخ والوقت"
+msgstr "اضبط التّاريخ والوقت"
 
 #: ui/main.qml:104
 #, kde-format
@@ -138,27 +135,24 @@ msgid "Shortcuts"
 msgstr "الاختصارات"
 
 #: ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "Bigscreen Settings Shortcut"
+#, kde-format
 msgid "Open settings shortcut"
-msgstr "اختصار إعدادات الشاشة الكبيرة"
+msgstr "افتح اختصار الإعدادات"
 
 #: ui/main.qml:135
-#, fuzzy, kde-format
-#| msgid "Bigscreen Tasks Shortcut"
+#, kde-format
 msgid "Open tasks shortcut"
-msgstr "اختصار مهام الشاشة الكبيرة"
+msgstr "افتح اختصار المهام"
 
 #: ui/main.qml:154
-#, fuzzy, kde-format
-#| msgid "Bigscreen Display Homescreen Shortcut"
+#, kde-format
 msgid "Open homescreen shortcut"
-msgstr "اختصار عرض الشاشة الرئيسة"
+msgstr "افتح اختصار الشاشة الرئيسة"
 
 #: ui/ShortcutsPickerSidebar.qml:39
 #, kde-format
 msgid "Shortcut currently set to"
-msgstr ""
+msgstr "الاختصار موضوع الآن لـ"
 
 #: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format

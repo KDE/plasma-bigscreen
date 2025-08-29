@@ -1,0 +1,254 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# SPDX-FileCopyrightText: 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-08-12 00:45+0000\n"
+"PO-Revision-Date: 2025-08-28 12:32+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
+
+#: ui/DeviceConnectionSidebar.qml:37
+#, kde-format
+msgid "Device information"
+msgstr "معلومات الجهاز"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Connecting…"
+msgstr "يتّصل…"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Disconnecting…"
+msgstr "يقطع الاتّصال…"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Disconnect"
+msgstr "اقطع الاتصال"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Pair"
+msgstr "اقرن"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Connect"
+msgstr "اتّصل"
+
+#: ui/DeviceConnectionSidebar.qml:86
+#, kde-format
+msgid "Forget device"
+msgstr "انسَ جهاز"
+
+#: ui/DeviceConnectionSidebar.qml:96
+#, kde-format
+msgid "Are you sure you want to forget the device %1?"
+msgstr "هل تريد حقا نسيان الجهاز %1؟"
+
+#: ui/DeviceConnectionSidebar.qml:121
+#, kde-format
+msgid "Device details"
+msgstr "تفاصيل الجهاز"
+
+#: ui/DeviceConnectionSidebar.qml:131
+#, kde-format
+msgid "Type: "
+msgstr "النوع: "
+
+#: ui/DeviceConnectionSidebar.qml:136
+#, kde-format
+msgid "Address: "
+msgstr "العنوان: "
+
+#: ui/DeviceConnectionSidebar.qml:141 ui/DeviceConnectionSidebar.qml:148
+#, kde-format
+msgid "Change name"
+msgstr "غير الاسم"
+
+#: ui/DeviceDelegate.qml:33
+#, kde-format
+msgid "Connected"
+msgstr "متّصل"
+
+#: ui/DeviceDelegate.qml:39
+#, kde-format
+msgid "%1% Battery"
+msgstr "البطارية %1٪"
+
+#: ui/main.qml:25
+#, kde-format
+msgid "Bluetooth"
+msgstr "بلوتوث"
+
+#: ui/main.qml:69
+#, kde-format
+msgid "Enable Bluetooth"
+msgstr "مكّن بلوتوث"
+
+#: ui/main.qml:88
+#, kde-format
+msgid "Paired devices"
+msgstr "الأجهزة مقترنة"
+
+#: ui/main.qml:122
+#, kde-format
+msgid "Available devices"
+msgstr "الأجهزة المتوفّرة"
+
+#: ui/script.js:13
+#, kde-format
+msgctxt "This device is a Phone"
+msgid "Phone"
+msgstr "هاتف"
+
+#: ui/script.js:15
+#, kde-format
+msgctxt "This device is a Modem"
+msgid "Modem"
+msgstr "مودم"
+
+#: ui/script.js:17
+#, kde-format
+msgctxt "This device is a Computer"
+msgid "Computer"
+msgstr "حاسوب"
+
+#: ui/script.js:19
+#, kde-format
+msgctxt "This device is of type Network"
+msgid "Network"
+msgstr "شبكة"
+
+#: ui/script.js:21
+#, kde-format
+msgctxt "This device is a Headset"
+msgid "Headset"
+msgstr "سماعة رأس"
+
+#: ui/script.js:23
+#, kde-format
+msgctxt "This device is a Headphones"
+msgid "Headphones"
+msgstr "سماعات أذن"
+
+#: ui/script.js:25
+#, kde-format
+msgctxt "This device is an Audio/Video device"
+msgid "Multimedia"
+msgstr "وسائط المتعدّدة"
+
+#: ui/script.js:27
+#, kde-format
+msgctxt "This device is a Keyboard"
+msgid "Keyboard"
+msgstr "لوحة المفاتيح"
+
+#: ui/script.js:29
+#, kde-format
+msgctxt "This device is a Mouse"
+msgid "Mouse"
+msgstr "فأرة"
+
+#: ui/script.js:31
+#, kde-format
+msgctxt "This device is a Game controller"
+msgid "Game controller"
+msgstr "متحكم الألعاب"
+
+#: ui/script.js:33
+#, kde-format
+msgctxt "This device is a Graphics Tablet (input device)"
+msgid "Tablet"
+msgstr "لوحي"
+
+#: ui/script.js:35
+#, kde-format
+msgctxt "This device is a Peripheral device"
+msgid "Peripheral"
+msgstr "ملحق"
+
+#: ui/script.js:37
+#, kde-format
+msgctxt "This device is a Camera"
+msgid "Camera"
+msgstr "كاميرا"
+
+#: ui/script.js:39
+#, kde-format
+msgctxt "This device is a Printer"
+msgid "Printer"
+msgstr "طابعة"
+
+#: ui/script.js:41
+#, kde-format
+msgctxt ""
+"This device is an Imaging device (printer, scanner, camera, display, …)"
+msgid "Imaging"
+msgstr "تصويري"
+
+#: ui/script.js:43
+#, kde-format
+msgctxt "This device is a Wearable"
+msgid "Wearable"
+msgstr "ملبوس"
+
+#: ui/script.js:45
+#, kde-format
+msgctxt "This device is a Toy"
+msgid "Toy"
+msgstr "لعبة"
+
+#: ui/script.js:47
+#, kde-format
+msgctxt "This device is a Health device"
+msgid "Health"
+msgstr "صحي"
+
+#: ui/script.js:53
+#, kde-format
+msgid "File transfer"
+msgstr "نقل الملفّات"
+
+#: ui/script.js:56
+#, kde-format
+msgid "Send file"
+msgstr "أرسل ملفًّا"
+
+#: ui/script.js:59
+#, kde-format
+msgid "Input"
+msgstr "الدّخل"
+
+#: ui/script.js:62
+#, kde-format
+msgid "Audio"
+msgstr "صوت"
+
+#: ui/script.js:65
+#, kde-format
+msgid "Network"
+msgstr "شبكة"
+
+#: ui/script.js:69
+#, kde-format
+msgid "Other"
+msgstr "أخرى"
+
+#: ui/script.js:72
+#, kde-format
+msgctxt "List separator"
+msgid ", "
+msgstr "، "
