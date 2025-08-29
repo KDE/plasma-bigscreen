@@ -70,8 +70,7 @@ void KcmsListModel::loadKcms()
     QList<KcmData> unorderedList;
 
     auto filter = [this](const KPluginMetaData &data) {
-        // TODO: one day, filter by form factor and not name (once kcms are updated with proper form factor)
-        if (data.pluginId().contains("mediacenter")) {
+        if (data.formFactors().contains("mediacenter")) {
             return true;
         }
         return false;
