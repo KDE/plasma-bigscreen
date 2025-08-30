@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-07-01 22:06+0900\n"
+"PO-Revision-Date: 2025-08-29 23:33+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 25.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -74,7 +74,7 @@ msgstr "日期"
 #: ui/DeviceTimeSettingsSidebar.qml:271
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "返回"
 
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
@@ -114,27 +114,24 @@ msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "方塊背景會依應用程式圖示色彩而上色"
 
 #: ui/main.qml:69 ui/ThemeSidebar.qml:23
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgid "Global theme"
 msgstr "全域主題"
 
 #: ui/main.qml:70
 #, kde-format
 msgid "Set the system theme"
-msgstr ""
+msgstr "設定系統主題"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgid "Power Inhibition"
+#, kde-format
 msgid "Power inhibition"
 msgstr "電源阻擋"
 
 #: ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time Settings"
+#, kde-format
 msgid "Adjust date & time"
-msgstr "調整日期和時間設定值"
+msgstr "調整日期和時間"
 
 #: ui/main.qml:104
 #, kde-format
@@ -142,27 +139,24 @@ msgid "Shortcuts"
 msgstr "快捷鍵"
 
 #: ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "Bigscreen Settings Shortcut"
+#, kde-format
 msgid "Open settings shortcut"
-msgstr "《大螢幕》設定值快捷鍵"
+msgstr "開啟設定值快捷鍵"
 
 #: ui/main.qml:135
-#, fuzzy, kde-format
-#| msgid "Bigscreen Tasks Shortcut"
+#, kde-format
 msgid "Open tasks shortcut"
-msgstr "《大螢幕》工作快捷鍵"
+msgstr "開啟工作快捷鍵"
 
 #: ui/main.qml:154
-#, fuzzy, kde-format
-#| msgid "Bigscreen Display Homescreen Shortcut"
+#, kde-format
 msgid "Open homescreen shortcut"
-msgstr "《大螢幕》顯示主畫面快捷鍵"
+msgstr "開啟主畫面快捷鍵"
 
 #: ui/ShortcutsPickerSidebar.qml:39
 #, kde-format
 msgid "Shortcut currently set to"
-msgstr ""
+msgstr "捷徑目前設為"
 
 #: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format
