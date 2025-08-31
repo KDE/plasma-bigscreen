@@ -1,21 +1,22 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# SPDX-FileCopyrightText: 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2024-10-19 13:05+0200\n"
+"PO-Revision-Date: 2025-08-30 08:20+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
-"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language-Team: pl\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: ui/main.qml:22
 #, kde-format
@@ -25,22 +26,22 @@ msgstr "Ustawienia wyświetlania"
 #: ui/main.qml:42
 #, kde-format
 msgid "Selected display"
-msgstr ""
+msgstr "Wybrany wyświetlacz"
 
 #: ui/main.qml:74
 #, kde-format
 msgid "Display %1"
-msgstr ""
+msgstr "Wyświetlacz %1"
 
 #: ui/main.qml:83
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Włączony"
 
 #: ui/main.qml:98
 #, kde-format
 msgid "Screen mode (Resolution & Refresh Rate)"
-msgstr ""
+msgstr "Tryb ekranu (rozdzielczość i szybkość odświeżania)"
 
 #: ui/main.qml:127 ui/ScaleDialog.qml:21
 #, kde-format

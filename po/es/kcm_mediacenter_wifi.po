@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_mediacenter_wifi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-08-02 22:09+0100\n"
+"PO-Revision-Date: 2025-08-30 19:23+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: ui/delegates/NetworkDelegate.qml:65 ui/DeviceConnectionSidebar.qml:72
 #, kde-format
@@ -31,7 +31,7 @@ msgstr "Detalles de la dirección IP"
 #: ui/DeviceConnectionSidebar.qml:138
 #, kde-format
 msgid "Network information"
-msgstr ""
+msgstr "Información de red"
 
 #: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
 #, kde-format
@@ -39,10 +39,9 @@ msgid "Connect"
 msgstr "Conectar"
 
 #: ui/DeviceConnectionSidebar.qml:149
-#, fuzzy, kde-format
-#| msgid "Connect"
+#, kde-format
 msgid "Disconnect"
-msgstr "Conectar"
+msgstr "Desconectar"
 
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
@@ -55,10 +54,9 @@ msgid "Are you sure you want to forget the network %1?"
 msgstr "¿Está seguro de que quiere olvidar la red %1?"
 
 #: ui/DeviceConnectionSidebar.qml:213
-#, fuzzy, kde-format
-#| msgid "Network"
+#, kde-format
 msgid "Network details"
-msgstr "Red"
+msgstr "Detalles de red"
 
 #: ui/DeviceConnectionSidebar.qml:242
 #, kde-format
@@ -76,10 +74,9 @@ msgid "Refresh"
 msgstr "Refrescar"
 
 #: ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid "Connect"
+#, kde-format
 msgid "Connections"
-msgstr "Conectar"
+msgstr "Conexiones"
 
 #: ui/PasswordDialog.qml:22
 #, kde-format

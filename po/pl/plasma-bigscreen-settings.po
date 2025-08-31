@@ -1,0 +1,54 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# SPDX-FileCopyrightText: 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"PO-Revision-Date: 2025-08-30 08:24+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 25.08.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Łukasz Wojniłowicz"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "lukasz.wojnilowicz@gmail.com"
+
+#: main.cpp:31
+#, kde-format
+msgid "Bigscreen Settings"
+msgstr "Ustawienia Dużego Ekranu"
+
+#: main.cpp:33
+#, kde-format
+msgid "Plasma Bigscreen Settings"
+msgstr "Ustawienia Dużego Ekranu Plazmy"
+
+#: main.cpp:35
+#, kde-format
+msgid "Copyright 2025 Plasma developers"
+msgstr "Copyright 2025 Programiści Plazmy"
+
+#: main.cpp:37
+#, kde-format
+msgid "Settings module to open"
+msgstr "Moduł ustawień do otwarcia"
+
+#: qml/ConfigWindowSidebar.qml:41
+#, kde-format
+msgid "Settings"
+msgstr "Ustawienia"

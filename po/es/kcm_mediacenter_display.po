@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_mediacenter_display\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-06-09 02:21+0100\n"
+"PO-Revision-Date: 2025-08-30 19:23+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: ui/main.qml:22
 #, kde-format
@@ -26,45 +26,24 @@ msgstr "Configuración de visualización"
 #: ui/main.qml:42
 #, kde-format
 msgid "Selected display"
-msgstr ""
+msgstr "Pantalla seleccionada"
 
 #: ui/main.qml:74
 #, kde-format
 msgid "Display %1"
-msgstr ""
+msgstr "Pantalla %1"
 
 #: ui/main.qml:83
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Activada"
 
 #: ui/main.qml:98
 #, kde-format
 msgid "Screen mode (Resolution & Refresh Rate)"
-msgstr ""
+msgstr "Modo de pantalla (Resolución y tasa de refresco)"
 
 #: ui/main.qml:127 ui/ScaleDialog.qml:21
 #, kde-format
 msgid "Scale"
 msgstr "Escala"
-
-#~ msgid "New Resolution"
-#~ msgstr "Nueva resolución"
-
-#~ msgid "Accept"
-#~ msgstr "Aceptar"
-
-#~ msgid "Cancel"
-#~ msgstr "Cancelar"
-
-#~ msgid "Resolution: "
-#~ msgstr "Resolución:"
-
-#~ msgid "Refresh Rate: "
-#~ msgstr "Tasa de refresco:"
-
-#~ msgid "Mode: "
-#~ msgstr "Modo"
-
-#~ msgid "Available Resolutions"
-#~ msgstr "Resoluciones disponibles"

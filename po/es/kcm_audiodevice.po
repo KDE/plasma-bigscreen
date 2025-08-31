@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_audiodevice\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-06-28 23:39+0100\n"
+"PO-Revision-Date: 2025-08-30 19:23+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: ui/AudioDelegateSidebar.qml:49
 #, kde-format
 msgid "Set as default device"
-msgstr ""
+msgstr "Establecer como dispositivo por omisión"
 
 #: ui/delegates/VolumeObject.qml:53
 #, kde-format
@@ -42,10 +42,9 @@ msgstr "Dispositivo de audio"
 #: ui/main.qml:50
 #, kde-format
 msgid "Playback Devices"
-msgstr ""
+msgstr "Dispositivos de reproducción"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgid "Audio Devices"
+#, kde-format
 msgid "Recording Devices"
-msgstr "Dispositivo de audio"
+msgstr "Dispositivos de grabación"

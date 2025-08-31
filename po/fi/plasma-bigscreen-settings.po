@@ -1,0 +1,53 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# SPDX-FileCopyrightText: 2025 Tommi Nieminen <translator@legisign.org>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"PO-Revision-Date: 2025-07-31 09:55+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.5\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Tommi Nieminen"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "translator@legisign.org"
+
+#: main.cpp:31
+#, kde-format
+msgid "Bigscreen Settings"
+msgstr "Bigscreenin asetukset"
+
+#: main.cpp:33
+#, kde-format
+msgid "Plasma Bigscreen Settings"
+msgstr "Plasma Bigscreenin asetukset"
+
+#: main.cpp:35
+#, kde-format
+msgid "Copyright 2025 Plasma developers"
+msgstr "Tekijänoikeudet 2025, Plasman kehittäjät"
+
+#: main.cpp:37
+#, kde-format
+msgid "Settings module to open"
+msgstr "Avattava asetusmoduuli"
+
+#: qml/ConfigWindowSidebar.qml:41
+#, kde-format
+msgid "Settings"
+msgstr "Asetukset"

@@ -1,254 +1,254 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# SPDX-FileCopyrightText: 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-12 00:45+0000\n"
-"PO-Revision-Date: 2025-08-28 12:32+0400\n"
-"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: ar\n"
-"Language: ar\n"
+"PO-Revision-Date: 2025-08-30 08:19+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: pl\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: ui/DeviceConnectionSidebar.qml:37
 #, kde-format
 msgid "Device information"
-msgstr "معلومات الجهاز"
+msgstr "Szczegóły o urządzeniu"
 
 #: ui/DeviceConnectionSidebar.qml:48
 #, kde-format
 msgid "Connecting…"
-msgstr "يتّصل…"
+msgstr "Łączenie…"
 
 #: ui/DeviceConnectionSidebar.qml:48
 #, kde-format
 msgid "Disconnecting…"
-msgstr "يقطع الاتّصال…"
+msgstr "Rozłączanie…"
 
 #: ui/DeviceConnectionSidebar.qml:48
 #, kde-format
 msgid "Disconnect"
-msgstr "اقطع الاتصال"
+msgstr "Rozłącz"
 
 #: ui/DeviceConnectionSidebar.qml:48
 #, kde-format
 msgid "Pair"
-msgstr "اقرن"
+msgstr "Sparuj"
 
 #: ui/DeviceConnectionSidebar.qml:48
 #, kde-format
 msgid "Connect"
-msgstr "اتّصل"
+msgstr "Połącz"
 
 #: ui/DeviceConnectionSidebar.qml:86
 #, kde-format
 msgid "Forget device"
-msgstr "انسَ جهاز"
+msgstr "Zapomnij urządzenie"
 
 #: ui/DeviceConnectionSidebar.qml:96
 #, kde-format
 msgid "Are you sure you want to forget the device %1?"
-msgstr "هل تريد حقا نسيان الجهاز %1؟"
+msgstr "Czy na pewno zapomnieć o urządzeniu %1?"
 
 #: ui/DeviceConnectionSidebar.qml:121
 #, kde-format
 msgid "Device details"
-msgstr "تفاصيل الجهاز"
+msgstr "Szczegóły o urządzeniu"
 
 #: ui/DeviceConnectionSidebar.qml:131
 #, kde-format
 msgid "Type: "
-msgstr "النوع: "
+msgstr "Rodzaj: "
 
 #: ui/DeviceConnectionSidebar.qml:136
 #, kde-format
 msgid "Address: "
-msgstr "العنوان: "
+msgstr "Adres: "
 
 #: ui/DeviceConnectionSidebar.qml:141 ui/DeviceConnectionSidebar.qml:148
 #, kde-format
 msgid "Change name"
-msgstr "غير الاسم"
+msgstr "Zmień nazwę"
 
 #: ui/DeviceDelegate.qml:33
 #, kde-format
 msgid "Connected"
-msgstr "متّصل"
+msgstr "Podłączone"
 
 #: ui/DeviceDelegate.qml:39
 #, kde-format
 msgid "%1% Battery"
-msgstr "البطارية %1٪"
+msgstr "%1% Bateria"
 
 #: ui/main.qml:25
 #, kde-format
 msgid "Bluetooth"
-msgstr "بلوتوث"
+msgstr "Bluetooth"
 
 #: ui/main.qml:69
 #, kde-format
 msgid "Enable Bluetooth"
-msgstr "مكّن بلوتوث"
+msgstr "Włącz Bluetooth"
 
 #: ui/main.qml:88
 #, kde-format
 msgid "Paired devices"
-msgstr "الأجهزة مقترنة"
+msgstr "Sparowane urządzenia"
 
 #: ui/main.qml:122
 #, kde-format
 msgid "Available devices"
-msgstr "الأجهزة المتوفّرة"
+msgstr "Dostępne urządzenia"
 
 #: ui/script.js:13
 #, kde-format
 msgctxt "This device is a Phone"
 msgid "Phone"
-msgstr "هاتف"
+msgstr "Telefon"
 
 #: ui/script.js:15
 #, kde-format
 msgctxt "This device is a Modem"
 msgid "Modem"
-msgstr "مودم"
+msgstr "Modem"
 
 #: ui/script.js:17
 #, kde-format
 msgctxt "This device is a Computer"
 msgid "Computer"
-msgstr "حاسوب"
+msgstr "Komputer"
 
 #: ui/script.js:19
 #, kde-format
 msgctxt "This device is of type Network"
 msgid "Network"
-msgstr "شبكة"
+msgstr "Sieć"
 
 #: ui/script.js:21
 #, kde-format
 msgctxt "This device is a Headset"
 msgid "Headset"
-msgstr "سماعة رأس"
+msgstr "Zestaw słuchawkowy"
 
 #: ui/script.js:23
 #, kde-format
 msgctxt "This device is a Headphones"
 msgid "Headphones"
-msgstr "سماعات أذن"
+msgstr "Słuchawki"
 
 #: ui/script.js:25
 #, kde-format
 msgctxt "This device is an Audio/Video device"
 msgid "Multimedia"
-msgstr "وسائط المتعدّدة"
+msgstr "Multimedia"
 
 #: ui/script.js:27
 #, kde-format
 msgctxt "This device is a Keyboard"
 msgid "Keyboard"
-msgstr "لوحة المفاتيح"
+msgstr "Klawiatura"
 
 #: ui/script.js:29
 #, kde-format
 msgctxt "This device is a Mouse"
 msgid "Mouse"
-msgstr "فأرة"
+msgstr "Mysz"
 
 #: ui/script.js:31
 #, kde-format
 msgctxt "This device is a Game controller"
 msgid "Game controller"
-msgstr "متحكم الألعاب"
+msgstr "Pad do gier"
 
 #: ui/script.js:33
 #, kde-format
 msgctxt "This device is a Graphics Tablet (input device)"
 msgid "Tablet"
-msgstr "لوحي"
+msgstr "Tablet"
 
 #: ui/script.js:35
 #, kde-format
 msgctxt "This device is a Peripheral device"
 msgid "Peripheral"
-msgstr "ملحق"
+msgstr "Peryferia"
 
 #: ui/script.js:37
 #, kde-format
 msgctxt "This device is a Camera"
 msgid "Camera"
-msgstr "كاميرا"
+msgstr "Aparat"
 
 #: ui/script.js:39
 #, kde-format
 msgctxt "This device is a Printer"
 msgid "Printer"
-msgstr "طابعة"
+msgstr "Drukarka"
 
 #: ui/script.js:41
 #, kde-format
 msgctxt ""
 "This device is an Imaging device (printer, scanner, camera, display, …)"
 msgid "Imaging"
-msgstr "تصويري"
+msgstr "Urządzenie obrazujące"
 
 #: ui/script.js:43
 #, kde-format
 msgctxt "This device is a Wearable"
 msgid "Wearable"
-msgstr "ملبوس"
+msgstr "Urządzenie do noszenia"
 
 #: ui/script.js:45
 #, kde-format
 msgctxt "This device is a Toy"
 msgid "Toy"
-msgstr "لعبة"
+msgstr "Zabawka"
 
 #: ui/script.js:47
 #, kde-format
 msgctxt "This device is a Health device"
 msgid "Health"
-msgstr "صحي"
+msgstr "Zdrowie"
 
 #: ui/script.js:53
 #, kde-format
 msgid "File transfer"
-msgstr "نقل الملفّات"
+msgstr "Przesyłanie plików"
 
 #: ui/script.js:56
 #, kde-format
 msgid "Send file"
-msgstr "أرسل ملفًّا"
+msgstr "Wyślij plik"
 
 #: ui/script.js:59
 #, kde-format
 msgid "Input"
-msgstr "الدّخل"
+msgstr "Wejście"
 
 #: ui/script.js:62
 #, kde-format
 msgid "Audio"
-msgstr "صوت"
+msgstr "Dźwięk"
 
 #: ui/script.js:65
 #, kde-format
 msgid "Network"
-msgstr "شبكة"
+msgstr "Sieć"
 
 #: ui/script.js:69
 #, kde-format
 msgid "Other"
-msgstr "أخرى"
+msgstr "Inne"
 
 #: ui/script.js:72
 #, kde-format
 msgctxt "List separator"
 msgid ", "
-msgstr "، "
+msgstr ", "
