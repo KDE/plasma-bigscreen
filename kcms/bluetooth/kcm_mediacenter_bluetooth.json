@@ -21,7 +21,8 @@
                 "Name[tr]": "User8395",
                 "Name[uk]": "User8395",
                 "Name[x-test]": "xxUser8395xx",
-                "Name[zh_CN]": "User8395"
+                "Name[zh_CN]": "User8395",
+                "Name[zh_TW]": "User8395"
             }
         ],
         "Description": "Manage Bluetooth devices",
@@ -44,6 +45,7 @@
         "Description[uk]": "Керування пристроями Bluetooth",
         "Description[x-test]": "xxManage Bluetooth devicesxx",
         "Description[zh_CN]": "管理蓝牙设备",
+        "Description[zh_TW]": "管理藍牙裝置",
         "FormFactors": [
             "mediacenter"
         ],
@@ -68,6 +70,7 @@
         "Name[uk]": "Bluetooth",
         "Name[x-test]": "xxBluetoothxx",
         "Name[zh_CN]": "蓝牙",
+        "Name[zh_TW]": "藍牙",
         "X-KDE-System-Settings-Parent-Category": "hardware"
     }
 }

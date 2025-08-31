@@ -20,6 +20,7 @@
         "Description[uk]": "Змінити фонове зображення системи",
         "Description[x-test]": "xxChange the system wallpaperxx",
         "Description[zh_CN]": "更改系统壁纸",
+        "Description[zh_TW]": "變更系統桌布",
         "FormFactors": [
             "mediacenter"
         ],
@@ -44,7 +45,8 @@
         "Name[tr]": "Duvar Kâğıdı",
         "Name[uk]": "Фонове зображення",
         "Name[x-test]": "xxWallpaperxx",
-        "Name[zh_CN]": "壁纸"
+        "Name[zh_CN]": "壁纸",
+        "Name[zh_TW]": "桌布"
     },
     "X-KDE-System-Settings-Parent-Category": "appearance",
     "X-KDE-Weight": 40
