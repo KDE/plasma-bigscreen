@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2024-05-25 15:47+0300\n"
+"PO-Revision-Date: 2025-09-01 17:01+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.6\n"
 
 #: ui/delegates/PairedView.qml:35
 #, kde-format
@@ -50,10 +50,9 @@ msgid "This device is not paired"
 msgstr "Šis įrenginys nėra suporuotas"
 
 #: ui/delegates/UnpairedView.qml:56
-#, fuzzy, kde-format
-#| msgid "Pairing request sent to device"
+#, kde-format
 msgid "Pairing request sent"
-msgstr "Suporavimo užklausa išsiųsta į įrenginį"
+msgstr "Suporavimo užklausa išsiųsta"
 
 #: ui/delegates/UnpairedView.qml:60
 #, kde-format
@@ -73,7 +72,7 @@ msgstr "KDE Connect"
 #: ui/main.qml:44
 #, kde-format
 msgid "Devices"
-msgstr ""
+msgstr "Įrenginiai"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr ""
