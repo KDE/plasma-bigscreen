@@ -24,7 +24,7 @@ WebEngineView {
     property var userAgent: WebApp.UserAgent
 
     // loadingActive property is set to true when loading is started
-    // and turned to false only after succesful or failed loading. It
+    // and turned to false only after successful or failed loading. It
     // is possible to set it to false by calling stopLoading method.
     //
     // The property was introduced as it triggers visibility of the webEngineView
