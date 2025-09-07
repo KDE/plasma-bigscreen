@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2024 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2024-10-18 09:55+0200\n"
+"PO-Revision-Date: 2025-09-06 18:02+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #: ui/main.qml:22
 #, kde-format
@@ -25,22 +25,22 @@ msgstr "Конфигурация на екрана"
 #: ui/main.qml:42
 #, kde-format
 msgid "Selected display"
-msgstr ""
+msgstr "Избран екран"
 
 #: ui/main.qml:74
 #, kde-format
 msgid "Display %1"
-msgstr ""
+msgstr "Екран %1"
 
 #: ui/main.qml:83
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Активиран"
 
 #: ui/main.qml:98
 #, kde-format
 msgid "Screen mode (Resolution & Refresh Rate)"
-msgstr ""
+msgstr "Екранен режим (разделителна способност и честота на опресняване)"
 
 #: ui/main.qml:127 ui/ScaleDialog.qml:21
 #, kde-format

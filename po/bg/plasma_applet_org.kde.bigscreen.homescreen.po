@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-07-28 20:32+0200\n"
+"PO-Revision-Date: 2025-09-06 17:56+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -40,15 +40,14 @@ msgid "Battery: %1%"
 msgstr "Батерия: %1% "
 
 #: contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Customize Favorites"
-msgstr "Премахване от Предпочитани"
+msgstr "Настройване на Предпочитани"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
 msgid "KDE Connect"
-msgstr ""
+msgstr "KDE Connect"
 
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
@@ -66,11 +65,9 @@ msgid "Cancel"
 msgstr "Отказ"
 
 #: contents/ui/indicators/Search.qml:20
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "Search…"
+#, kde-format
 msgid "Search"
-msgstr "Търсене…"
+msgstr "Търсене"
 
 #: contents/ui/indicators/Settings.qml:16
 #, kde-format
@@ -80,24 +77,22 @@ msgstr "Настройки"
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Exit Bigscreen"
-msgstr ""
+msgstr "Излизане от Bigscreen"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Power"
-msgstr ""
+msgstr "Захранване"
 
 #: contents/ui/indicators/Tasks.qml:22
-#, fuzzy, kde-format
-#| msgid "Clear Tasks"
+#, kde-format
 msgid "Tasks"
-msgstr "Изчистване на задачите"
+msgstr "Задачи"
 
 #: contents/ui/indicators/Volume.qml:20
-#, fuzzy, kde-format
-#| msgid "Additional Settings:"
+#, kde-format
 msgid "Audio Settings"
-msgstr "Допълнителни настройки:"
+msgstr "Аудио настройки"
 
 #: contents/ui/indicators/Volume.qml:28
 #, kde-format
@@ -105,10 +100,9 @@ msgid "Audio Volume"
 msgstr "Сила на звука"
 
 #: contents/ui/indicators/Wifi.qml:19
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgid "Internet Settings"
-msgstr "Настройки"
+msgstr "Настройки за интернет"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format

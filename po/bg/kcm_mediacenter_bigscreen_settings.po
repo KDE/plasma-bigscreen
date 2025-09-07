@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-07-28 20:35+0200\n"
+"PO-Revision-Date: 2025-09-06 17:55+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -73,7 +73,7 @@ msgstr "Дата"
 #: ui/DeviceTimeSettingsSidebar.qml:271
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
@@ -111,52 +111,49 @@ msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "Фонът на плочките ще бъде оцветен според иконата на приложението"
 
 #: ui/main.qml:69 ui/ThemeSidebar.qml:23
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgid "Global theme"
 msgstr "Глобална тема"
 
 #: ui/main.qml:70
 #, kde-format
 msgid "Set the system theme"
-msgstr ""
+msgstr "Задаване на системната тема"
 
 #: ui/main.qml:88
 #, kde-format
 msgid "Power inhibition"
-msgstr ""
+msgstr "Инхибиране на захранването"
 
 #: ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time Settings"
+#, kde-format
 msgid "Adjust date & time"
 msgstr "Настройване на дата и час"
 
 #: ui/main.qml:104
 #, kde-format
 msgid "Shortcuts"
-msgstr "Клавишни комбинации"
+msgstr "Бързи връзки"
 
 #: ui/main.qml:115
 #, kde-format
 msgid "Open settings shortcut"
-msgstr ""
+msgstr "Бърза връзка за отваряне на настройките"
 
 #: ui/main.qml:135
-#, fuzzy, kde-format
-#| msgid "Set Shortcut"
+#, kde-format
 msgid "Open tasks shortcut"
-msgstr "Задаване клавишни комбинации"
+msgstr "Бърза връзка за отваряне на задачите"
 
 #: ui/main.qml:154
 #, kde-format
 msgid "Open homescreen shortcut"
-msgstr ""
+msgstr "Бърза връзка за отваряне на домашната страница"
 
 #: ui/ShortcutsPickerSidebar.qml:39
 #, kde-format
 msgid "Shortcut currently set to"
-msgstr ""
+msgstr "Бързата връзка е настроена на"
 
 #: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format
@@ -166,7 +163,7 @@ msgstr "Връщане на стандартните настройки"
 #: ui/ShortcutsPickerSidebar.qml:60
 #, kde-format
 msgid "Set Shortcut"
-msgstr "Задаване клавишни комбинации"
+msgstr "Задаване на бързи връзки"
 
 #: ui/TimePicker.qml:40
 #, kde-format

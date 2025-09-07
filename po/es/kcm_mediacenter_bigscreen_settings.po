@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-06-28 23:40+0100\n"
+"PO-Revision-Date: 2025-09-07 00:52+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -59,21 +59,20 @@ msgid "Set time automatically"
 msgstr "Establecer hora automáticamente"
 
 #: ui/DeviceTimeSettingsSidebar.qml:102
-#, fuzzy, kde-format
-#| msgid "Timezone"
+#, kde-format
 msgid "Time"
-msgstr "Zona horaria"
+msgstr "Hora"
 
 #: ui/DeviceTimeSettingsSidebar.qml:115
 #, kde-format
 msgid "Date"
-msgstr ""
+msgstr "Fecha"
 
 #: ui/DeviceTimeSettingsSidebar.qml:144 ui/DeviceTimeSettingsSidebar.qml:221
 #: ui/DeviceTimeSettingsSidebar.qml:271
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Atrás"
 
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
@@ -113,23 +112,22 @@ msgstr "El mosaico del fondo tomará el color del icono de la aplicación"
 #: ui/main.qml:69 ui/ThemeSidebar.qml:23
 #, kde-format
 msgid "Global theme"
-msgstr ""
+msgstr "Tema global"
 
 #: ui/main.qml:70
 #, kde-format
 msgid "Set the system theme"
-msgstr ""
+msgstr "Establecer el tema del sistema"
 
 #: ui/main.qml:88
 #, kde-format
 msgid "Power inhibition"
-msgstr ""
+msgstr "Inhibición de apagado"
 
 #: ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time Settings"
+#, kde-format
 msgid "Adjust date & time"
-msgstr "Preferencias de ajuste de fecha y hora"
+msgstr "Ajuste de fecha y hora"
 
 #: ui/main.qml:104
 #, kde-format
@@ -139,23 +137,22 @@ msgstr "Accesos rápidos"
 #: ui/main.qml:115
 #, kde-format
 msgid "Open settings shortcut"
-msgstr ""
+msgstr "Acceso rápido a preferencias"
 
 #: ui/main.qml:135
-#, fuzzy, kde-format
-#| msgid "Set Shortcut"
+#, kde-format
 msgid "Open tasks shortcut"
-msgstr "Crear atajo rápido"
+msgstr "Acceso rápido a tareas"
 
 #: ui/main.qml:154
 #, kde-format
 msgid "Open homescreen shortcut"
-msgstr ""
+msgstr "Acceso rápido a la pantalla de inicio"
 
 #: ui/ShortcutsPickerSidebar.qml:39
 #, kde-format
 msgid "Shortcut currently set to"
-msgstr ""
+msgstr "Valor actual del acceso rápido"
 
 #: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format
