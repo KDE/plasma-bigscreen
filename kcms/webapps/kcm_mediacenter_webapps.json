@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Create and manage web applications",
         "Description[ar]": "أنشئ وأدر تطبيقات الويب",
+        "Description[bg]": "Създаване и управление на уеб приложения",
         "Description[ca@valencia]": "Crea i gestiona aplicacions web",
         "Description[ca]": "Crea i gestiona aplicacions web",
         "Description[es]": "Crear y administrar aplicaciones web",
@@ -27,6 +28,7 @@
         "Icon": "internet-web-browser-symbolic",
         "Name": "Web Apps",
         "Name[ar]": "تطبيقات الويب",
+        "Name[bg]": "Уеб приложения",
         "Name[ca@valencia]": "Aplicacions web",
         "Name[ca]": "Aplicacions web",
         "Name[es]": "Aplicaciones web",
