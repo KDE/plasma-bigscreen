@@ -36,7 +36,6 @@
                 "Name[sv]": "Aditya Mehra",
                 "Name[tr]": "Aditya Mehra",
                 "Name[uk]": "Aditya Mehra",
-                "Name[x-test]": "xxAditya Mehraxx",
                 "Name[zh_CN]": "Aditya Mehra",
                 "Name[zh_TW]": "Aditya Mehra"
             }
@@ -69,7 +68,6 @@
         "Description[sv]": "Hemskärm för storbildsskärm med fokus på anpassningsbarhet.",
         "Description[tr]": "Özelleştirilebilirliğe önem veren bir televizyon ana ekranı.",
         "Description[uk]": "Домашня сторінка Плазми для великих екранів із акцентом на гнучкості налаштувань.",
-        "Description[x-test]": "xxBigscreen homescreen with a focus on customizability.xx",
         "Description[zh_CN]": "高可定制性的大屏幕主屏幕方案。",
         "Description[zh_TW]": "大螢幕的主畫面，注重可自訂性。",
         "Id": "org.kde.bigscreen.homescreen",
@@ -101,7 +99,6 @@
         "Name[sv]": "Hemskärm för Plasma storbildsskärm",
         "Name[tr]": "Plasma Büyük Ekran Ana Ekranı",
         "Name[uk]": "Домашня сторінка Плазми для великих екранів",
-        "Name[x-test]": "xxPlasma Bigscreen Homescreenxx",
         "Name[zh_CN]": "Plasma 大屏幕主屏幕",
         "Name[zh_TW]": "Plasma 大螢幕主畫面",
         "Website": "https://plasma-bigscreen.org"

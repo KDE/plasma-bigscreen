@@ -36,7 +36,6 @@
                 "Name[sv]": "Marco Martin",
                 "Name[tr]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
-                "Name[x-test]": "xxMarco Martinxx",
                 "Name[zh_CN]": "Marco Martin",
                 "Name[zh_TW]": "Marco Martin"
             }
@@ -68,7 +67,6 @@
         "Description[sv]": "Utseende och känsla för Plasma storbildsskärm",
         "Description[tr]": "Plasma Büyük Ekran görünümü ve hissi",
         "Description[uk]": "Вигляд і поведінка Плазми для великих екранів",
-        "Description[x-test]": "xxPlasma Plasma Big Screen look and feelxx",
         "Description[zh_CN]": "Plasma 大屏幕界面外观设置",
         "Description[zh_TW]": "Plasma Plasma 大螢幕外觀及感覺",
         "Id": "org.kde.plasma.bigscreen",
@@ -112,7 +110,6 @@
         "Name[sv]": "Plasma storbildsskärm",
         "Name[tr]": "Plasma Büyük Ekran",
         "Name[uk]": "Плазма для великих екранів",
-        "Name[x-test]": "xxPlasma Big Screenxx",
         "Name[zh_CN]": "Plasma 大屏幕",
         "Name[zh_TW]": "Plasma 大螢幕",
         "Version": "1.0",

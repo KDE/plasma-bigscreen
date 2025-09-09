@@ -36,7 +36,6 @@
                 "Name[sv]": "Marco Martin",
                 "Name[tr]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
-                "Name[x-test]": "xxMarco Martinxx",
                 "Name[zh_CN]": "Marco Martin",
                 "Name[zh_TW]": "Marco Martin"
             }
@@ -74,7 +73,6 @@
         "Description[sv]": "Plasma skal för tv-apparater",
         "Description[tr]": "TV’ler için Plasma kabuğu",
         "Description[uk]": "Оболонка Плазми для телевізорів",
-        "Description[x-test]": "xxPlasma shell for TVsxx",
         "Description[zh_CN]": "适配电视的 Plasma 外壳程序",
         "Description[zh_TW]": "電視用的 Plasma 殼層",
         "Id": "org.kde.plasma.bigscreen",
@@ -118,7 +116,6 @@
         "Name[sv]": "Plasma storbildsskärm",
         "Name[tr]": "Plasma Büyük Ekran",
         "Name[uk]": "Плазма для великих екранів",
-        "Name[x-test]": "xxPlasma Big Screenxx",
         "Name[zh_CN]": "Plasma 大屏幕",
         "Name[zh_TW]": "Plasma 大螢幕",
         "Version": "0.1",

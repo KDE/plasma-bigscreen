@@ -36,7 +36,6 @@
                 "Name[sv]": "Aditya Mehra",
                 "Name[tr]": "Aditya Mehra",
                 "Name[uk]": "Aditya Mehra",
-                "Name[x-test]": "xxAditya Mehraxx",
                 "Name[zh_CN]": "Aditya Mehra",
                 "Name[zh_TW]": "Aditya Mehra"
             }
@@ -69,7 +68,6 @@
         "Description[sv]": "Hemskärm för Plasma-baserade tv-apparater",
         "Description[tr]": "Plasma tabanlı TV’ler için ana ekran",
         "Description[uk]": "Домашня сторінка для телевізорів на основі Плазми",
-        "Description[x-test]": "xxHomescreen for Plasma based TVsxx",
         "Description[zh_CN]": "基于 Plasma 的电视主屏幕",
         "Description[zh_TW]": "基於 Plasma 的電視用的主畫面",
         "Icon": "plasma",
@@ -111,7 +109,6 @@
         "Name[sv]": "Plasma storbildsskärm",
         "Name[tr]": "Plasma Büyük Ekran",
         "Name[uk]": "Плазма для великих екранів",
-        "Name[x-test]": "xxPlasma Bigscreenxx",
         "Name[zh_CN]": "Plasma 大屏幕",
         "Name[zh_TW]": "Plasma 大螢幕",
         "Website": "https://plasma-bigscreen.org/"

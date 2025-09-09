@@ -19,7 +19,6 @@
         "Description[sv]": "Skapa och hantera webbprogram",
         "Description[tr]": "Web uygulamaları oluşturun ve onları yönetin",
         "Description[uk]": "Створення вебпрограм та керування ними",
-        "Description[x-test]": "xxCreate and manage web applicationsxx",
         "Description[zh_CN]": "创建和管理网页应用",
         "Description[zh_TW]": "建立並管理網頁應用程式",
         "FormFactors": [
@@ -45,7 +44,6 @@
         "Name[sv]": "Webbprogram",
         "Name[tr]": "Web Uygulamaları",
         "Name[uk]": "Вебпрограми",
-        "Name[x-test]": "xxWeb Appsxx",
         "Name[zh_CN]": "网页应用",
         "Name[zh_TW]": "網頁應用程式"
     },

@@ -27,7 +27,6 @@
         "Description[sv]": "Skärminställningar",
         "Description[tr]": "Görüntü Ayarları",
         "Description[uk]": "Параметри показу",
-        "Description[x-test]": "xxDisplay Settingsxx",
         "Description[zh_CN]": "显示设置",
         "Description[zh_TW]": "顯示器設定",
         "FormFactors": [
@@ -55,7 +54,6 @@
         "Name[sv]": "Bildskärm",
         "Name[tr]": "Görüntü",
         "Name[uk]": "Показ",
-        "Name[x-test]": "xxDisplayxx",
         "Name[zh_CN]": "显示",
         "Name[zh_TW]": "顯示器"
     },
