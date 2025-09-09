@@ -30,7 +30,6 @@
         "Description[sv]": "Hantera mediacenter ljudenheter",
         "Description[tr]": "Ortam merkezi ses aygıtlarını yapılandır",
         "Description[uk]": "Керування звуковими пристроями медіацентру",
-        "Description[x-test]": "xxManage mediacenter audio devicesxx",
         "Description[zh_CN]": "管理媒体中心音频设备",
         "Description[zh_TW]": "管理媒體中心的音效裝置",
         "FormFactors": [
@@ -69,7 +68,6 @@
         "Name[sv]": "Ljud",
         "Name[tr]": "Ses",
         "Name[uk]": "Звук",
-        "Name[x-test]": "xxAudioxx",
         "Name[zh_CN]": "音频",
         "Name[zh_TW]": "音效"
     },

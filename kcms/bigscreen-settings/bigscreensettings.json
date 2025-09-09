@@ -30,7 +30,6 @@
         "Description[sv]": "Utseende och känsla",
         "Description[tr]": "Görünüm ve His",
         "Description[uk]": "Вигляд і поведінка",
-        "Description[x-test]": "xxLook and Feelxx",
         "Description[zh_CN]": "界面外观",
         "Description[zh_TW]": "外觀與感覺",
         "FormFactors": [
@@ -72,7 +71,6 @@
         "Name[sv]": "Utseende",
         "Name[tr]": "Görünüş",
         "Name[uk]": "Вигляд",
-        "Name[x-test]": "xxAppearancexx",
         "Name[zh_CN]": "外观",
         "Name[zh_TW]": "外觀"
     },
@@ -107,7 +105,6 @@
     "X-KDE-Keywords[sv]": "tema, utseende, känsla",
     "X-KDE-Keywords[tr]": "tema, görünüm, his",
     "X-KDE-Keywords[uk]": "theme,look,feel,тема,вигляд,поведінка",
-    "X-KDE-Keywords[x-test]": "xxthemexx,xx lookxx,xx feelxx",
     "X-KDE-System-Settings-Parent-Category": "regionalsettings",
     "X-KDE-Weight": 70
 }
