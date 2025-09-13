@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-06-24 17:05+0300\n"
+"PO-Revision-Date: 2025-09-03 18:42+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -71,7 +71,7 @@ msgstr "Päiväys"
 #: ui/DeviceTimeSettingsSidebar.qml:271
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Takaisin"
 
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
@@ -111,23 +111,21 @@ msgstr "Tiilten taustat väritetään sovelluskuvakkeen mukaan"
 #: ui/main.qml:69 ui/ThemeSidebar.qml:23
 #, kde-format
 msgid "Global theme"
-msgstr ""
+msgstr "Yleisteema"
 
 #: ui/main.qml:70
 #, kde-format
 msgid "Set the system theme"
-msgstr ""
+msgstr "Aseta järjestelmäteemaksi"
 
 # *** TARKISTA: Käännös perustuu oletukseen.
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgid "Power Inhibition"
+#, kde-format
 msgid "Power inhibition"
 msgstr "Sammutuksen estäminen"
 
 #: ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time Settings"
+#, kde-format
 msgid "Adjust date & time"
 msgstr "Säädä päiväystä ja kellonaikaa"
 
@@ -137,27 +135,24 @@ msgid "Shortcuts"
 msgstr "Pikanäppäimet"
 
 #: ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "Bigscreen Settings Shortcut"
+#, kde-format
 msgid "Open settings shortcut"
-msgstr "Bigscreen-asetusten pikanäppäin"
+msgstr "Avaa asetukset -pikanäppäin"
 
 #: ui/main.qml:135
-#, fuzzy, kde-format
-#| msgid "Bigscreen Tasks Shortcut"
+#, kde-format
 msgid "Open tasks shortcut"
-msgstr "Bigscreen-tehtävien pikanäppäin"
+msgstr "Avaa tehtävät -pikanäppäin"
 
 #: ui/main.qml:154
-#, fuzzy, kde-format
-#| msgid "Bigscreen Display Homescreen Shortcut"
+#, kde-format
 msgid "Open homescreen shortcut"
-msgstr "Bigscreen-kotinäkymän pikanäppäin"
+msgstr "Avaa kotinäyttö -pikanäppäin"
 
 #: ui/ShortcutsPickerSidebar.qml:39
 #, kde-format
 msgid "Shortcut currently set to"
-msgstr ""
+msgstr "Pikanäppäin on kytketty toimintoon"
 
 #: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format

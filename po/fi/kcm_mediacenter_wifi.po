@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-07-31 09:56+0300\n"
+"PO-Revision-Date: 2025-09-03 18:43+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: ui/delegates/NetworkDelegate.qml:65 ui/DeviceConnectionSidebar.qml:72
 #, kde-format
@@ -30,7 +30,7 @@ msgstr "IP-osoitetiedot"
 #: ui/DeviceConnectionSidebar.qml:138
 #, kde-format
 msgid "Network information"
-msgstr ""
+msgstr "Verkon tiedot"
 
 #: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
 #, kde-format
@@ -38,10 +38,9 @@ msgid "Connect"
 msgstr "Yhdistä"
 
 #: ui/DeviceConnectionSidebar.qml:149
-#, fuzzy, kde-format
-#| msgid "Connect"
+#, kde-format
 msgid "Disconnect"
-msgstr "Yhdistä"
+msgstr "Katkaise yhteys"
 
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
@@ -56,7 +55,7 @@ msgstr "Haluatko varmasti unohtaa verkon %1?"
 #: ui/DeviceConnectionSidebar.qml:213
 #, kde-format
 msgid "Network details"
-msgstr ""
+msgstr "Verkon tiedot"
 
 #: ui/DeviceConnectionSidebar.qml:242
 #, kde-format
@@ -74,10 +73,9 @@ msgid "Refresh"
 msgstr "Virkistä"
 
 #: ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid "Connect"
+#, kde-format
 msgid "Connections"
-msgstr "Yhdistä"
+msgstr "Yhteydet"
 
 #: ui/PasswordDialog.qml:22
 #, kde-format
