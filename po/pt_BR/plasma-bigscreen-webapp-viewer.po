@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-12 00:45+0000\n"
-"PO-Revision-Date: 2025-08-25 19:23-0300\n"
+"PO-Revision-Date: 2025-09-14 08:46-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -61,13 +61,13 @@ msgstr "Copyright 2025 Desenvolvedores do Plasma"
 #, kde-format
 msgctxt "@info:status"
 msgid "Entered Full Screen mode"
-msgstr "Entrou no modo de tela inteira"
+msgstr "Entrou no modo de tela cheia"
 
 #: qml/WebView.qml:193
 #, kde-format
 msgctxt "@action:button"
 msgid "Exit Full Screen (Esc)"
-msgstr "Sair da tela inteira (Esc)"
+msgstr "Sair da tela cheia (Esc)"
 
 #: qml/WebView.qml:306
 #, kde-format
@@ -109,13 +109,13 @@ msgstr "Repetição"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Exit Fullscreen"
-msgstr "Sair da tela inteira"
+msgstr "Sair da tela cheia"
 
 #: qml/WebView.qml:355
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Enter Fullscreen"
-msgstr "Entrar em tela inteira"
+msgstr "Entrar em tela cheia"
 
 #: qml/WebView.qml:368
 #, kde-format
