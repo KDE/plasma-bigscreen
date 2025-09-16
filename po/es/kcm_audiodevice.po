@@ -32,7 +32,7 @@ msgstr "Ajustar volumen"
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: ui/main.qml:21
 #, kde-format

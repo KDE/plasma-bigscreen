@@ -36,7 +36,7 @@ msgstr "Eliminar favoritos"
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
 msgid "Battery: %1%"
-msgstr "Batería: %1%"
+msgstr "Batería: %1 %"
 
 #: contents/ui/indicators/Favorites.qml:17
 #, kde-format
