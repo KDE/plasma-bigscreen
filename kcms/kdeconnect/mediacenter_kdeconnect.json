@@ -73,7 +73,7 @@
         "Name[tr]": "KDE Connect",
         "Name[uk]": "KDE Connect",
         "Name[zh_CN]": "KDE Connect",
-        "Name[zh_TW]": "KDE 連線"
+        "Name[zh_TW]": "KDE Connect"
     },
     "X-DocPath": "kcontrol/kdeconnect/index.html",
     "X-KDE-System-Settings-Parent-Category": "hardware",
