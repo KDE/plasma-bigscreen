@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-05-20 14:07+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2025-09-26 20:36+0200\n"
+"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -50,10 +50,9 @@ msgid "Adjust Date & Time Settings"
 msgstr "Настроить дату и время"
 
 #: ui/DeviceTimeSettingsSidebar.qml:72
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "Часовой пояс:"
+msgstr "Часовой пояс"
 
 #: ui/DeviceTimeSettingsSidebar.qml:84
 #, kde-format
@@ -74,12 +73,12 @@ msgstr "Дата"
 #: ui/DeviceTimeSettingsSidebar.qml:271
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
 msgid "Search City / Region"
-msgstr ""
+msgstr "Поиск города или области"
 
 #: ui/DeviceTimeSettingsSidebar.qml:182
 #, kde-format
@@ -94,18 +93,17 @@ msgstr "%1, %2"
 #: ui/main.qml:22 ui/main.qml:76
 #, kde-format
 msgid "System"
-msgstr ""
+msgstr "Система"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgid "Homescreen Appearance"
-msgstr "Внешний вид"
+msgstr "Внешний вид главного экрана"
 
 #: ui/main.qml:55
 #, kde-format
 msgid "Colored tiles"
-msgstr ""
+msgstr "Цветные плитки"
 
 #: ui/main.qml:56
 #, kde-format
@@ -115,7 +113,7 @@ msgstr ""
 #: ui/main.qml:69 ui/ThemeSidebar.qml:23
 #, kde-format
 msgid "Global theme"
-msgstr ""
+msgstr "Оформление рабочей среды"
 
 #: ui/main.qml:70
 #, kde-format
@@ -128,15 +126,14 @@ msgid "Power inhibition"
 msgstr ""
 
 #: ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust date & time"
 msgstr "Настроить дату и время"
 
 #: ui/main.qml:104
 #, kde-format
 msgid "Shortcuts"
-msgstr ""
+msgstr "Комбинации клавиш"
 
 #: ui/main.qml:115
 #, kde-format
@@ -161,7 +158,7 @@ msgstr ""
 #: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format
 msgid "Reset to default"
-msgstr ""
+msgstr "По умолчанию"
 
 #: ui/ShortcutsPickerSidebar.qml:60
 #, kde-format
