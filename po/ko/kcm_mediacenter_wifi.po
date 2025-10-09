@@ -1,0 +1,93 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# Shinjo Park <kde@peremen.name>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-08-13 00:44+0000\n"
+"PO-Revision-Date: 2021-07-28 02:38+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.12.3\n"
+
+#: ui/delegates/NetworkDelegate.qml:65 ui/DeviceConnectionSidebar.qml:72
+#, kde-format
+msgid "Connected"
+msgstr "연결됨"
+
+#: ui/DetailsText.qml:33
+#, kde-format
+msgid "IP Address Details"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:138
+#, kde-format
+msgid "Network information"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
+#, kde-format
+msgid "Connect"
+msgstr "연결"
+
+#: ui/DeviceConnectionSidebar.qml:149
+#, kde-format
+msgid "Disconnect"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:180
+#, kde-format
+msgid "Forget network"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:190
+#, kde-format
+msgid "Are you sure you want to forget the network %1?"
+msgstr "%1 네트워크를 삭제하시겠습니까?"
+
+#: ui/DeviceConnectionSidebar.qml:213
+#, kde-format
+msgid "Network details"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:242
+#, kde-format
+msgid "Speed"
+msgstr "속도"
+
+#: ui/main.qml:26
+#, kde-format
+msgid "Network"
+msgstr "네트워크"
+
+#: ui/main.qml:103
+#, kde-format
+msgid "Refresh"
+msgstr "새로 고침"
+
+#: ui/main.qml:114
+#, kde-format
+msgid "Connections"
+msgstr ""
+
+#: ui/PasswordDialog.qml:22
+#, kde-format
+msgid "Enter Password For %1"
+msgstr "%1의 암호 입력"
+
+#: ui/PasswordDialog.qml:34
+#, kde-format
+msgid "Password…"
+msgstr ""
+
+#: ui/PasswordDialog.qml:59
+#, kde-format
+msgid "Cancel"
+msgstr "취소"
