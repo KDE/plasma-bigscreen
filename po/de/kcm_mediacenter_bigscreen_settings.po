@@ -2,10 +2,8 @@
 # German translation for plasma-bigscreen.
 # Copyright (C) 2021 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# Frederik Schwarzer <schwarzer@kde.org>, 2021, 2023.
-# Alois Spitzbart <spitz234@hotmail.com>, 2022.
-#
-# Automatically generated, 2021.
+# SPDX-FileCopyrightText: 2021, 2023 Frederik Schwarzer <schwarzer@kde.org>
+# SPDX-FileCopyrightText: 2022 Alois Spitzbart <spitz234@hotmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
