@@ -60,6 +60,7 @@ Comment[gl]=Cambiar a unha sesión de Plasma Bigscreen
 Comment[he]=החלפה להפעלת פלזמה למסכים גדולים
 Comment[it]=Passa a una sessione di Plasma Bigscreen
 Comment[ka]=გადართვა Plasma Bigscreen-ის სესიაზე
+Comment[ko]=Plasma 큰 화면 세션으로 전환
 Comment[lv]=Pārslēgties uz „Plasma Bigscreen“ sesiju
 Comment[nl]=Omschakelen in een Plasma Bigscreen-sessie
 Comment[pl]=Przełącz na posiedzenie Dużego Ekranu Plazmy
