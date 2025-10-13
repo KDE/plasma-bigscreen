@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2025-06-10 22:36+0200\n"
+"PO-Revision-Date: 2025-10-12 12:45+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -43,16 +43,14 @@ msgid "Day"
 msgstr "일"
 
 #: ui/DeviceTimeSettingsSidebar.qml:63
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust Date & Time Settings"
 msgstr "날짜와 시간 조정"
 
 #: ui/DeviceTimeSettingsSidebar.qml:72
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "시간대:"
+msgstr "시간대"
 
 #: ui/DeviceTimeSettingsSidebar.qml:84
 #, kde-format
@@ -73,7 +71,7 @@ msgstr "날짜"
 #: ui/DeviceTimeSettingsSidebar.qml:271
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "뒤로"
 
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
@@ -93,17 +91,15 @@ msgstr "%1, %2"
 #: ui/main.qml:22 ui/main.qml:76
 #, kde-format
 msgid "System"
-msgstr ""
+msgstr "시스템"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Home Screen Appearance"
+#, kde-format
 msgid "Homescreen Appearance"
 msgstr "홈 화면 모양"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Colored Tiles"
+#, kde-format
 msgid "Colored tiles"
 msgstr "색상 적용된 타일"
 
@@ -113,60 +109,52 @@ msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "앱 아이콘의 색상을 기반으로 타일 배경 색상이 결정됨"
 
 #: ui/main.qml:69 ui/ThemeSidebar.qml:23
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgid "Global theme"
 msgstr "전역 테마"
 
 #: ui/main.qml:70
 #, kde-format
 msgid "Set the system theme"
-msgstr ""
+msgstr "시스템 테마 설정"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgid "Power Inhibition"
+#, kde-format
 msgid "Power inhibition"
 msgstr "전원 상태 변경 방지"
 
 #: ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust date & time"
 msgstr "날짜와 시간 조정"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Set Shortcut"
+#, kde-format
 msgid "Shortcuts"
-msgstr "단축키 설정"
+msgstr "단축키"
 
 #: ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "Bigscreen Settings Shortcut"
+#, kde-format
 msgid "Open settings shortcut"
-msgstr "큰 화면 설정 단축키"
+msgstr "설정 열기 단축키"
 
 #: ui/main.qml:135
-#, fuzzy, kde-format
-#| msgid "Bigscreen Tasks Shortcut"
+#, kde-format
 msgid "Open tasks shortcut"
-msgstr "큰 화면 할 일 단축키"
+msgstr "할 일 열기 단축키"
 
 #: ui/main.qml:154
-#, fuzzy, kde-format
-#| msgid "Bigscreen Display Homescreen Shortcut"
+#, kde-format
 msgid "Open homescreen shortcut"
-msgstr "큰 화면 디스플레이 홈 화면 단축키"
+msgstr "홈 화면 열기 단축키"
 
 #: ui/ShortcutsPickerSidebar.qml:39
 #, kde-format
 msgid "Shortcut currently set to"
-msgstr ""
+msgstr "현재 설정된 단축키"
 
 #: ui/ShortcutsPickerSidebar.qml:46
-#, fuzzy, kde-format
-#| msgid "Reset Default"
+#, kde-format
 msgid "Reset to default"
 msgstr "기본값으로 초기화"
 

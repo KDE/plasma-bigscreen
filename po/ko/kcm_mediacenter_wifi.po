@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# Shinjo Park <kde@peremen.name>, 2021.
+# SPDX-FileCopyrightText: 2021, 2025 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2021-07-28 02:38+0200\n"
+"PO-Revision-Date: 2025-10-12 12:53+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: ui/delegates/NetworkDelegate.qml:65 ui/DeviceConnectionSidebar.qml:72
 #, kde-format
@@ -25,12 +25,12 @@ msgstr "연결됨"
 #: ui/DetailsText.qml:33
 #, kde-format
 msgid "IP Address Details"
-msgstr ""
+msgstr "IP 주소 정보"
 
 #: ui/DeviceConnectionSidebar.qml:138
 #, kde-format
 msgid "Network information"
-msgstr ""
+msgstr "네트워크 정보"
 
 #: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
 #, kde-format
@@ -40,12 +40,12 @@ msgstr "연결"
 #: ui/DeviceConnectionSidebar.qml:149
 #, kde-format
 msgid "Disconnect"
-msgstr ""
+msgstr "연결 끊기"
 
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
 msgid "Forget network"
-msgstr ""
+msgstr "네트워크 삭제"
 
 #: ui/DeviceConnectionSidebar.qml:190
 #, kde-format
@@ -55,7 +55,7 @@ msgstr "%1 네트워크를 삭제하시겠습니까?"
 #: ui/DeviceConnectionSidebar.qml:213
 #, kde-format
 msgid "Network details"
-msgstr ""
+msgstr "네트워크 자세한 정보"
 
 #: ui/DeviceConnectionSidebar.qml:242
 #, kde-format
@@ -75,7 +75,7 @@ msgstr "새로 고침"
 #: ui/main.qml:114
 #, kde-format
 msgid "Connections"
-msgstr ""
+msgstr "연결"
 
 #: ui/PasswordDialog.qml:22
 #, kde-format
@@ -85,7 +85,7 @@ msgstr "%1의 암호 입력"
 #: ui/PasswordDialog.qml:34
 #, kde-format
 msgid "Password…"
-msgstr ""
+msgstr "암호…"
 
 #: ui/PasswordDialog.qml:59
 #, kde-format

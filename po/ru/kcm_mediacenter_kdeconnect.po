@@ -1,14 +1,14 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2021.
+# SPDX-FileCopyrightText: 2020, 2021, 2025 Alexander Yavorsky <kekcuha@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2021-02-06 16:30+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2025-10-12 20:13+0200\n"
+"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 20.12.2\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: ui/delegates/PairedView.qml:35
 #, kde-format
@@ -49,10 +49,9 @@ msgid "This device is not paired"
 msgstr "Это устройство не сопряжено"
 
 #: ui/delegates/UnpairedView.qml:56
-#, fuzzy, kde-format
-#| msgid "Pairing request sent to device"
+#, kde-format
 msgid "Pairing request sent"
-msgstr "Запрос на сопряжение отправлен на устройство"
+msgstr "Отправлен запрос на сопряжение"
 
 #: ui/delegates/UnpairedView.qml:60
 #, kde-format
@@ -72,7 +71,7 @@ msgstr "KDE Connect"
 #: ui/main.qml:44
 #, kde-format
 msgid "Devices"
-msgstr ""
+msgstr "Устройства"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "Нажмите [←] чтобы вернуться к выбору устройства"

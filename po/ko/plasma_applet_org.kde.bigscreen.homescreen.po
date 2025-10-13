@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2024-11-29 00:33+0100\n"
+"PO-Revision-Date: 2025-10-12 12:54+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -35,13 +35,12 @@ msgstr "책갈피 삭제"
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
 msgid "Battery: %1%"
-msgstr ""
+msgstr "배터리: %1%"
 
 #: contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Customize Favorites"
-msgstr "책갈피 삭제"
+msgstr "책갈피 사용자 정의"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -66,7 +65,7 @@ msgstr "취소"
 #: contents/ui/indicators/Search.qml:20
 #, kde-format
 msgid "Search"
-msgstr ""
+msgstr "검색"
 
 #: contents/ui/indicators/Settings.qml:16
 #, kde-format
@@ -76,24 +75,22 @@ msgstr "설정"
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Exit Bigscreen"
-msgstr ""
+msgstr "큰 화면 끝내기"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Power"
-msgstr ""
+msgstr "전원"
 
 #: contents/ui/indicators/Tasks.qml:22
-#, fuzzy, kde-format
-#| msgid "Clear Tasks"
+#, kde-format
 msgid "Tasks"
-msgstr "할 일 비우기"
+msgstr "할 일"
 
 #: contents/ui/indicators/Volume.qml:20
-#, fuzzy, kde-format
-#| msgid "Additional Settings:"
+#, kde-format
 msgid "Audio Settings"
-msgstr "추가 설정:"
+msgstr "오디오 설정"
 
 #: contents/ui/indicators/Volume.qml:28
 #, kde-format
@@ -101,10 +98,9 @@ msgid "Audio Volume"
 msgstr "오디오 음량"
 
 #: contents/ui/indicators/Wifi.qml:19
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgid "Internet Settings"
-msgstr "설정"
+msgstr "인터넷 설정"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
@@ -135,7 +131,7 @@ msgstr "게임"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "검색…"
 
 #: contents/ui/PowerManagementItem.qml:41
 #, kde-format

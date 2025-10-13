@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# Shinjo Park <kde@peremen.name>, 2020, 2021.
+# SPDX-FileCopyrightText: 2020, 2021, 2025 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2021-05-16 23:56+0200\n"
+"PO-Revision-Date: 2025-10-12 12:54+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,22 +15,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: ui/delegates/PairedView.qml:35
 #, kde-format
 msgid "This device is paired"
-msgstr "이 장치가 연결됨"
+msgstr "이 장치가 페어링됨"
 
 #: ui/delegates/PairedView.qml:43
 #, kde-format
 msgid "Unpair"
-msgstr "연결 해제"
+msgstr "페어링 해제"
 
 #: ui/delegates/PairRequest.qml:35
 #, kde-format
 msgid "This device is requesting to be paired"
-msgstr "장치에서 연결 요청을 보냄"
+msgstr "장치에서 페어링 요청을 보냄"
 
 #: ui/delegates/PairRequest.qml:44
 #, kde-format
@@ -48,15 +48,14 @@ msgid "This device is not paired"
 msgstr "장치가 연결되지 않음"
 
 #: ui/delegates/UnpairedView.qml:56
-#, fuzzy, kde-format
-#| msgid "Pairing request sent to device"
+#, kde-format
 msgid "Pairing request sent"
-msgstr "장치에 연결 요청 보냄"
+msgstr "페어링 요청 보냄"
 
 #: ui/delegates/UnpairedView.qml:60
 #, kde-format
 msgid "Pair"
-msgstr "연결"
+msgstr "페어"
 
 #: ui/delegates/Unreachable.qml:25
 #, kde-format
@@ -71,7 +70,7 @@ msgstr "KDE Connect"
 #: ui/main.qml:44
 #, kde-format
 msgid "Devices"
-msgstr ""
+msgstr "장치"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "[←] 뒤로 단추를 누르면 장치 선택으로 돌아갑니다"
