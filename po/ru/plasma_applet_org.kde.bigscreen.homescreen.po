@@ -1,15 +1,15 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# Alexander Yavorsky <kekcuha@gmail.com>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2025 Alexander Yavorsky <kekcuha@gmail.com>
 # Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:44+0000\n"
-"PO-Revision-Date: 2023-01-28 22:16+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2025-10-27 10:33+0200\n"
+"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -62,12 +62,12 @@ msgstr "Принять"
 #: contents/ui/indicators/PairWindow.qml:127
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Отмена"
 
 #: contents/ui/indicators/Search.qml:20
 #, kde-format
 msgid "Search"
-msgstr ""
+msgstr "Поиск"
 
 #: contents/ui/indicators/Settings.qml:16
 #, kde-format
@@ -82,34 +82,32 @@ msgstr ""
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Power"
-msgstr ""
+msgstr "Управления питанием"
 
 #: contents/ui/indicators/Tasks.qml:22
 #, kde-format
 msgid "Tasks"
-msgstr ""
+msgstr "Приложения"
 
 #: contents/ui/indicators/Volume.qml:20
-#, fuzzy, kde-format
-#| msgid "Additional Settings:"
+#, kde-format
 msgid "Audio Settings"
-msgstr "Дополнительные параметры:"
+msgstr "Настройки звука"
 
 #: contents/ui/indicators/Volume.qml:28
 #, kde-format
 msgid "Audio Volume"
-msgstr ""
+msgstr "Громкость звука"
 
 #: contents/ui/indicators/Wifi.qml:19
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgid "Internet Settings"
-msgstr "Параметры"
+msgstr "Настройки подключения к интернету"
 
 #: contents/ui/launcher/LauncherHome.qml:78
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Избранное"
 
 #: contents/ui/launcher/LauncherHome.qml:97
 #, kde-format
@@ -136,7 +134,7 @@ msgstr "Игры"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "Поиск…"
 
 #: contents/ui/PowerManagementItem.qml:41
 #, kde-format
@@ -149,10 +147,9 @@ msgid "Clear Tasks"
 msgstr ""
 
 #: contents/ui/TaskWindowView.qml:220
-#, fuzzy, kde-format
-#| msgid "close"
+#, kde-format
 msgid "Close"
-msgstr "закрыть"
+msgstr "Закрыть"
 
 #~ msgid "General"
 #~ msgstr "Основное"
