@@ -149,18 +149,3 @@ msgstr "Изчистване на задачите"
 #, kde-format
 msgid "Close"
 msgstr "Затваряне"
-
-#~ msgid "General"
-#~ msgstr "Общи"
-
-#~ msgid "Websocket Address:"
-#~ msgstr "Адрес на Websocket:"
-
-#~ msgid "Enable Notifications"
-#~ msgstr "Включване на известяванията"
-
-#~ msgid "Enable Remote TTS"
-#~ msgstr "Активиране на Remote TTS"
-
-#~ msgid "Enable Remote STT"
-#~ msgstr "Активиране на Remote STT"

@@ -184,21 +184,3 @@ msgstr "Секунда"
 #, kde-format
 msgid "AM/PM"
 msgstr "AM/PM"
-
-#~ msgid "Time Display"
-#~ msgstr "Показване на дата и час"
-
-#~ msgid "Press the [←] Back button to return to appearance settings"
-#~ msgstr ""
-#~ "Натиснете клавиша  [←] Back, за да се върнете към настройки на външен вид"
-
-#~ msgid ""
-#~ "Press the [←] Back button to save configuration and return to settings"
-#~ msgstr ""
-#~ "Натиснете клавиша  [←] Back, за да запазите настройките и връщане назад"
-
-#~ msgid "Update Shortcut Keys"
-#~ msgstr "Актуализиране на клавишни комбинации"
-
-#~ msgid "Appearance"
-#~ msgstr "Външен вид"

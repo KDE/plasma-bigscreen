@@ -49,7 +49,3 @@ msgstr "Устройства за възпроизвеждане"
 #, kde-format
 msgid "Recording Devices"
 msgstr "Устройства за запис"
-
-#~ msgid "Press the [←] Back button to return to device selection"
-#~ msgstr ""
-#~ "Натиснете клавиша  [←] Back, за да се върнете към избор на устройство"

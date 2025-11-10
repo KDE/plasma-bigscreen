@@ -46,24 +46,3 @@ msgstr "Екранен режим (разделителна способност
 #, kde-format
 msgid "Scale"
 msgstr "Мащабиране"
-
-#~ msgid "New Resolution"
-#~ msgstr "Нова разделителна способност"
-
-#~ msgid "Accept"
-#~ msgstr "Приемане"
-
-#~ msgid "Cancel"
-#~ msgstr "Отказване"
-
-#~ msgid "Resolution: "
-#~ msgstr "Разделителна способност: "
-
-#~ msgid "Refresh Rate: "
-#~ msgstr "Честота на опресняване:"
-
-#~ msgid "Mode: "
-#~ msgstr "Режим: "
-
-#~ msgid "Available Resolutions"
-#~ msgstr "Налични разделителни способности"
