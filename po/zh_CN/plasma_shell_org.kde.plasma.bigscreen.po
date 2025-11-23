@@ -20,7 +20,7 @@ msgstr ""
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:49
 msgid "Layout cannot be changed while widgets are locked"
-msgstr "挂件被锁定时无法修改布局"
+msgstr "小部件被锁定时无法修改布局"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:60
 msgid "Wallpaper Type:"
