@@ -16,7 +16,7 @@ import org.kde.bigscreen as Bigscreen
 import org.kde.milou as Milou
 import org.kde.kirigami 2.19 as Kirigami
 
-Milou.ResultsListView {
+Milou.ResultsView {
     id: root
 
     property var queryTextField
@@ -85,7 +85,7 @@ Milou.ResultsListView {
         // Go to search bar if this we press up with the first item selected
         KeyNavigation.up: model.index === 0 ? queryTextField : null
 
-        // Used by ResultsListView to determine next tab action
+        // Used by ResultsView to determine next tab action
         function activateNextAction() {
             queryTextField.forceActiveFocus();
             queryTextField.selectAll();
