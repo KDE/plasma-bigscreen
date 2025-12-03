@@ -1,0 +1,42 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# SPDX-FileCopyrightText: 2025 Sveinn í Felli <sv1@fellsnet.is>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"PO-Revision-Date: 2025-12-02 10:14+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.5\n"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:49
+msgid "Layout cannot be changed while widgets are locked"
+msgstr "Ekki er hægt að breyta framsetningu á meðan viðmótshlutar eru læstir"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:60
+msgid "Wallpaper Type:"
+msgstr "Tegund bakgrunnsmyndar:"
+
+#: contents/configuration/ContainmentConfiguration.qml:41
+msgid "Wallpaper"
+msgstr "Bakgrunnsmynd"
+
+#: contents/configuration/ContainmentConfiguration.qml:134
+msgid "Slideshow"
+msgstr "Skyggnusýning"
+
+#: contents/lockscreen/PasswordDialog.qml:46
+msgid "Password"
+msgstr "Lykilorð"
+
+#: contents/lockscreen/PasswordDialog.qml:76
+msgid "Unlock Screen"
+msgstr "Aflæsa skjá"
