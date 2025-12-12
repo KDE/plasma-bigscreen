@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# Vit Pelcak <vit@pelcak.org>, 2020, 2021.
+# SPDX-FileCopyrightText: 2020, 2021, 2025 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2021-02-17 10:27+0100\n"
+"PO-Revision-Date: 2025-12-11 23:07+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 20.12.2\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: ui/delegates/PairedView.qml:35
 #, kde-format
@@ -50,7 +50,7 @@ msgstr "Zařízení není spárováno"
 #: ui/delegates/UnpairedView.qml:56
 #, kde-format
 msgid "Pairing request sent"
-msgstr ""
+msgstr "Požadavek na párování byl odeslán"
 
 #: ui/delegates/UnpairedView.qml:60
 #, kde-format
