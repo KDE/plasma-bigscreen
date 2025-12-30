@@ -1,0 +1,184 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: ui/DatePicker.qml:38
+#, kde-format
+msgid "Year"
+msgstr ""
+
+#: ui/DatePicker.qml:54
+#, kde-format
+msgid "Month"
+msgstr ""
+
+#: ui/DatePicker.qml:70
+#, kde-format
+msgid "Day"
+msgstr ""
+
+#: ui/DeviceTimeSettingsSidebar.qml:63
+#, kde-format
+msgid "Adjust Date & Time Settings"
+msgstr ""
+
+#: ui/DeviceTimeSettingsSidebar.qml:72
+#, kde-format
+msgid "Timezone"
+msgstr ""
+
+#: ui/DeviceTimeSettingsSidebar.qml:84
+#, kde-format
+msgid "Set time automatically"
+msgstr ""
+
+#: ui/DeviceTimeSettingsSidebar.qml:102
+#, kde-format
+msgid "Time"
+msgstr ""
+
+#: ui/DeviceTimeSettingsSidebar.qml:115
+#, kde-format
+msgid "Date"
+msgstr ""
+
+#: ui/DeviceTimeSettingsSidebar.qml:144 ui/DeviceTimeSettingsSidebar.qml:221
+#: ui/DeviceTimeSettingsSidebar.qml:271
+#, kde-format
+msgid "Back"
+msgstr ""
+
+#: ui/DeviceTimeSettingsSidebar.qml:163
+#, kde-format
+msgid "Search City / Region"
+msgstr ""
+
+#: ui/DeviceTimeSettingsSidebar.qml:182
+#, kde-format
+msgid "Your local timezone is %1"
+msgstr ""
+
+#: ui/DeviceTimeSettingsSidebar.qml:182
+#, kde-format
+msgid "%1, %2"
+msgstr ""
+
+#: ui/main.qml:22 ui/main.qml:76
+#, kde-format
+msgid "System"
+msgstr ""
+
+#: ui/main.qml:42
+#, kde-format
+msgid "Homescreen Appearance"
+msgstr ""
+
+#: ui/main.qml:55
+#, kde-format
+msgid "Colored tiles"
+msgstr ""
+
+#: ui/main.qml:56
+#, kde-format
+msgid "Tile backgrounds will be colored based on the app's icon"
+msgstr ""
+
+#: ui/main.qml:69 ui/ThemeSidebar.qml:23
+#, kde-format
+msgid "Global theme"
+msgstr ""
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Set the system theme"
+msgstr ""
+
+#: ui/main.qml:88
+#, kde-format
+msgid "Power inhibition"
+msgstr ""
+
+#: ui/main.qml:98
+#, kde-format
+msgid "Adjust date & time"
+msgstr ""
+
+#: ui/main.qml:104
+#, kde-format
+msgid "Shortcuts"
+msgstr ""
+
+#: ui/main.qml:115
+#, kde-format
+msgid "Open settings shortcut"
+msgstr ""
+
+#: ui/main.qml:135
+#, kde-format
+msgid "Open tasks shortcut"
+msgstr ""
+
+#: ui/main.qml:154
+#, kde-format
+msgid "Open homescreen shortcut"
+msgstr ""
+
+#: ui/ShortcutsPickerSidebar.qml:39
+#, kde-format
+msgid "Shortcut currently set to"
+msgstr ""
+
+#: ui/ShortcutsPickerSidebar.qml:46
+#, kde-format
+msgid "Reset to default"
+msgstr ""
+
+#: ui/ShortcutsPickerSidebar.qml:60
+#, kde-format
+msgid "Set Shortcut"
+msgstr ""
+
+#: ui/TimePicker.qml:40
+#, kde-format
+msgid "Hour"
+msgstr ""
+
+#: ui/TimePicker.qml:56
+#, kde-format
+msgid "Minute"
+msgstr ""
+
+#: ui/TimePicker.qml:72
+#, kde-format
+msgid "Second"
+msgstr ""
+
+#: ui/TimePicker.qml:89
+#, kde-format
+msgid "AM/PM"
+msgstr ""
