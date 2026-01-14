@@ -28,7 +28,7 @@
         "FormFactors": [
             "mediacenter"
         ],
-        "Icon": "network-wireless-signal-exellent",
+        "Icon": "network-wireless-signal-exellent-symbolic",
         "Name": "Wi-Fi",
         "Name[ar]": "واي فاي",
         "Name[bg]": "Wi-Fi",

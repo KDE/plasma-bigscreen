@@ -42,7 +42,7 @@
         "FormFactors": [
             "mediacenter"
         ],
-        "Icon": "kdeconnect",
+        "Icon": "kdeconnect-symbolic",
         "Name": "KDE Connect",
         "Name[ar]": "جسر كِيدِي",
         "Name[az]": "KDE Connect",

@@ -44,7 +44,7 @@
             "handset",
             "tablet"
         ],
-        "Icon": "audio-volume-high",
+        "Icon": "audio-volume-high-symbolic",
         "Name": "Audio",
         "Name[ar]": "الصوت",
         "Name[az]": "Səs",

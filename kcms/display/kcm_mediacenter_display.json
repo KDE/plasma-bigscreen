@@ -33,7 +33,7 @@
         "FormFactors": [
             "mediacenter"
         ],
-        "Icon": "preferences-desktop-display-symbolic",
+        "Icon": "preferences-desktop-display-randr-symbolic",
         "Name": "Display",
         "Name[ar]": "العرض",
         "Name[bg]": "Дисплей",

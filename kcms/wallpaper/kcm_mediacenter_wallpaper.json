@@ -27,7 +27,7 @@
         "FormFactors": [
             "mediacenter"
         ],
-        "Icon": "preferences-desktop-wallpaper",
+        "Icon": "preferences-desktop-display",
         "Name": "Wallpaper",
         "Name[ar]": "الخلفية",
         "Name[bg]": "Тапет",
