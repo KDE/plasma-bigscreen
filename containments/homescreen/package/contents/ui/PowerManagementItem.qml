@@ -11,7 +11,7 @@ import QtQuick.Window
 import QtQuick.Controls
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.kirigami as Kirigami
-import org.kde.kcmutils as KCM
+// import org.kde.kcmutils as KCM
 import org.kde.bigscreen as Bigscreen
 import org.kde.plasma.private.batterymonitor
 

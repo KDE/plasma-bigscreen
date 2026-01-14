@@ -11,51 +11,34 @@ import QtQuick.Layouts
 import QtQuick.Window
 import QtQuick.Controls as QQC2
 
-import org.kde.plasma.plasma5support as P5Support
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 import org.kde.bigscreen as Bigscreen
 import org.kde.plasma.private.digitalclock
+import org.kde.plasma.clock
 
 Bigscreen.SidebarOverlay {
     id: root
 
     property string timeFormat
-    property date currentTime: dataSource.data["Local"]["DateTime"];
+
+    // current time now comes from libclock
+    property string currentTimezoneId: clock.timeZone
+    property date currentTime: clock.dateTime
     property date tzAdjustedCurrentTime: {
-        // get the time for the given timezone from the dataengine
-        var now = currentTime;
-        // get current UTC time
-        var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
-        // add the dataengine TZ offset to it
-        return new Date(msUTC + (dataSource.data["Local"]["Offset"] * 1000));
+        // currentTime is already in the system timezone
+        return new Date(currentTime.getTime())
     }
-    property var tzOffset
 
     openFocusItem: tzDelegate
 
+    Clock {
+        id: clock
+        trackSeconds: true
+    }
+
     TimeZoneModel {
         id: timeZones
-    }
-
-    P5Support.DataSource {
-        id: dataSource
-        engine: "time"
-        connectedSources: ["Local"]
-        interval: 1000
-    }
-
-    Component.onCompleted: {
-        tzOffset = new Date().getTimezoneOffset();
-        dataSource.onDataChanged.connect(dateTimeChanged);
-    }
-
-    function dateTimeChanged() {
-        var currentTZOffset = dataSource.data["Local"]["Offset"] / 60;
-        if (currentTZOffset !== tzOffset) {
-            tzOffset = currentTZOffset;
-            Date.timeZoneUpdated();
-        }
     }
 
     header: Bigscreen.SidebarOverlayHeader {
@@ -70,7 +53,7 @@ Bigscreen.SidebarOverlay {
         Bigscreen.ButtonDelegate {
             id: tzDelegate
             text: i18n("Timezone")
-            description: dataSource.data["Local"]["Timezone"]
+            description: root.currentTimezoneId
 
             KeyNavigation.down: automaticTimeDelegate
 
@@ -179,7 +162,9 @@ Bigscreen.SidebarOverlay {
                     delegate: Bigscreen.ButtonDelegate {
                         raisedBackground: false
                         width: listView.width
-                        text: model.timeZoneId == "Local" ? i18n("Your local timezone is %1", city) : i18n("%1, %2", city, region)
+                        text: model.timeZoneId == "Local"
+                            ? i18n("Your local timezone is %1", city)
+                            : i18n("%1, %2", city, region)
                         enabled: model.timeZoneId != "Local" ? 1 : 0
 
                         onClicked: kcm.saveTimeZone(model.timeZoneId)
@@ -203,8 +188,7 @@ Bigscreen.SidebarOverlay {
         }
     }
 
-
-   QQC2.Popup {
+    QQC2.Popup {
         id: timePickerSheet
         width: parent.width
         height: parent.height
@@ -286,7 +270,7 @@ Bigscreen.SidebarOverlay {
                 Component.onCompleted: {
                     var date = new Date(root.currentTime)
                     datePicker.day = date.getDate()
-                    datePicker.month = date.getMonth()+1
+                    datePicker.month = date.getMonth() + 1
                     datePicker.year = date.getFullYear()
                 }
 

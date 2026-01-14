@@ -5,10 +5,11 @@
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
+import QtQml
 
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.plasma5support as P5Support
 import org.kde.plasma.components as PC3
+import org.kde.plasma.clock
 
 Item {
     id: root
@@ -19,8 +20,49 @@ Item {
     readonly property real clockBigHeight: clockColumn.implicitHeight
 
     // TODO whether to show am/pm from locale?
-    readonly property string timeString: Qt.formatTime(timeSource.data["Local"]["DateTime"], "h:mm ap");
-    readonly property string dateString: Qt.formatDate(timeSource.data["Local"]["DateTime"], "MMMM d, yyyy")
+    property var locale: Qt.locale()
+
+    property string timeString
+    property string dateString
+
+    Clock {
+        id: clock
+        trackSeconds: false
+    }
+
+    function updateClock ()
+    {
+        // Time only, locale-aware (24h vs am/pm, separators, etc.)
+        timeString = locale.toString(
+            clock.dateTime,
+            locale.timeFormat(Locale.ShortFormat)
+        )
+
+        // Date only, long form, fully translated
+        dateString = locale.toString(
+            clock.dateTime,
+            locale.dateFormat(Locale.LongFormat)
+        )
+    }
+
+    Component.onCompleted: updateClock(); // update right at startup
+
+    // update clock when libclock ticks
+    Connections {
+        target: clock
+        function onDateTimeChanged() {
+            updateClock();
+        }
+    }
+
+    // update locale if needed
+    Connections {
+        target: Qt.application
+        function onLocaleChanged() {
+            locale = Qt.locale();
+            updateClock();
+        }
+    }
 
     state: "column"
     states: [
@@ -52,14 +94,6 @@ Item {
             }
         }
     ]
-
-    P5Support.DataSource {
-        id: timeSource
-        engine: "time"
-        connectedSources: ["Local"]
-        interval: 60000
-        intervalAlignment: P5Support.Types.AlignToMinute
-    }
 
     RowLayout {
         id: clockRow
@@ -132,4 +166,3 @@ Item {
         }
     }
 }
-
