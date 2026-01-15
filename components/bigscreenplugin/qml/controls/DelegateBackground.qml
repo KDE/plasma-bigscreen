@@ -18,7 +18,11 @@ Item {
     Rectangle {
         id: frame
         anchors.fill: parent
-        color: (root.control.enabled && root.control.activeFocus) ? Kirigami.Theme.activeBackgroundColor : (raisedBackground ? root.neutralBackgroundColor : 'transparent')
+        color: (root.control.enabled && root.control.activeFocus) 
+            ? activeBackgroundColor
+            : (root.control.enabled && root.control.hovered)
+                ? Qt.lighter(root.neutralBackgroundColor, 1.2)
+                    : (raisedBackground ? root.neutralBackgroundColor : 'transparent')
         border.width: root.control.activeFocus ? 2 : 1
         border.color: root.control.activeFocus ? Kirigami.Theme.highlightColor : (raisedBackground ? 'transparent' : Qt.darker(color, 1.2))
         radius: Kirigami.Units.cornerRadius

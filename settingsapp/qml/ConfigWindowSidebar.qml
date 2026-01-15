@@ -114,7 +114,9 @@ Rectangle {
                 background: Rectangle {
                     id: kcmButtonBackground
                     color: (modelData.kcmId == currentModuleName) ?
-                            Qt.rgba(Kirigami.Theme.highlightColor.r, Kirigami.Theme.highlightColor.g, Kirigami.Theme.highlightColor.b, 0.2) : 'transparent'
+                            Qt.rgba(Kirigami.Theme.highlightColor.r, Kirigami.Theme.highlightColor.g, Kirigami.Theme.highlightColor.b, 0.2) :
+                            (kcmButton.hovered ? Qt.rgba(Kirigami.Theme.highlightColor.r, Kirigami.Theme.highlightColor.g, Kirigami.Theme.highlightColor.b, 0.1)
+                                : 'transparent')
                     radius: Kirigami.Units.cornerRadius
 
                     Kirigami.Theme.inherit: false
