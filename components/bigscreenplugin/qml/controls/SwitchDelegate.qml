@@ -96,7 +96,7 @@ T.SwitchDelegate {
     background: DelegateBackground {
         control: root
         raisedBackground: root.raisedBackground
-        neutralBackgroundColor: Kirigami.Theme.alternateBackgroundColor
+        alternateBackgroundColor: true
     }
 
     icon {

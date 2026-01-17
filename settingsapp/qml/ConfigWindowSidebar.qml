@@ -111,29 +111,17 @@ Rectangle {
                     }
                 }
 
-                background: Rectangle {
+                background: Bigscreen.DelegateBackground {
                     id: kcmButtonBackground
-                    color: (modelData.kcmId == currentModuleName) ?
-                            Qt.rgba(Kirigami.Theme.highlightColor.r, Kirigami.Theme.highlightColor.g, Kirigami.Theme.highlightColor.b, 0.2) :
-                            (kcmButton.hovered ? Qt.rgba(Kirigami.Theme.highlightColor.r, Kirigami.Theme.highlightColor.g, Kirigami.Theme.highlightColor.b, 0.1)
-                                : 'transparent')
-                    radius: Kirigami.Units.cornerRadius
+                    control: kcmButton
 
-                    Kirigami.Theme.inherit: false
-                    Kirigami.Theme.colorSet: Kirigami.Theme.Button
-
-                    border.width: 2
-                    border.color: {
-                        if (modelData.kcmId === currentModuleName) {
-                            return Kirigami.Theme.highlightColor;
-                        } else if (kcmButton.ListView.isCurrentItem && settingsKCMMenu.activeFocus) {
-                            return Kirigami.Theme.highlightColor;
-                        }
-                        return 'transparent';
-                    }
+                    raisedBackground: false
+                    translucentHighlight: true
+                    highlighted: (kcmButton.modelData.kcmId == currentModuleName)
+                    borderHighlighted: highlighted || (kcmButton.ListView.isCurrentItem && settingsKCMMenu.activeFocus)
 
                     // Only scale if this delegate is the shown KCM, and user focus is on it
-                    scale: (modelData.kcmId == currentModuleName && kcmButton.ListView.isCurrentItem && settingsKCMMenu.activeFocus) ? 1.05 : 1
+                    scale: (kcmButton.modelData.kcmId == currentModuleName && kcmButton.ListView.isCurrentItem && settingsKCMMenu.activeFocus) ? 1.05 : 1
                     Behavior on scale { NumberAnimation {} }
                 }
 

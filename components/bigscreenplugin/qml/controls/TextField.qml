@@ -15,7 +15,7 @@ QQC2.TextField {
 
     background: DelegateBackground {
         control: root
-        neutralBackgroundColor: Kirigami.Theme.alternateBackgroundColor
+        alternateBackgroundColor: true
     }
 
     topPadding: Kirigami.Units.gridUnit

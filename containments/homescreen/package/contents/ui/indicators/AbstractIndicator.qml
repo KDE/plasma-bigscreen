@@ -28,16 +28,10 @@ PlasmaComponents.ToolButton {
     rightPadding: Kirigami.Units.smallSpacing
     bottomPadding: Kirigami.Units.smallSpacing
 
-    background: Rectangle {
-        color: (button.focus) ?
-                Qt.rgba(Kirigami.Theme.highlightColor.r, Kirigami.Theme.highlightColor.g, Kirigami.Theme.highlightColor.b, 0.2) : 'transparent'
-        radius: Kirigami.Units.cornerRadius
-
-        Kirigami.Theme.inherit: false
-        Kirigami.Theme.colorSet: Kirigami.Theme.Button
-
-        border.width: 2
-        border.color: (button.focus) ? Kirigami.Theme.highlightColor : 'transparent'
+    background: Bigscreen.DelegateBackground {
+        control: button
+        raisedBackground: false
+        translucentHighlight: true
     }
 
     QQC2.ToolTip.visible: text && focus
