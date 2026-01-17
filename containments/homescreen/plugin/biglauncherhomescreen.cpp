@@ -57,11 +57,6 @@ HomeScreen::HomeScreen(QObject *parent, const KPluginMetaData &data, const QVari
     qmlRegisterSingletonType<BigLauncherDbusAdapterInterface>(uri, 1, 0, "BigLauncherDbusAdapterInterface", dbusSingletonProvider);
     qmlRegisterUncreatableType<ApplicationListModel>(uri, 1, 0, "ApplicationListModel", QStringLiteral("Cannot create an item of type ApplicationListModel"));
     qmlRegisterUncreatableType<FavsListModel>(uri, 1, 0, "FavsListModel", QStringLiteral("Cannot create an item of type FavsListModel"));
-    qmlRegisterUncreatableType<BigLauncherDbusAdapterInterface>(uri,
-                                                                1,
-                                                                0,
-                                                                "BigLauncherDbusAdapterInterface",
-                                                                QStringLiteral("Cannot create an item of type BigLauncherDbusAdapterInterface"));
 
     // setHasConfigurationInterface(true);
 }
