@@ -4,34 +4,51 @@
 */
 
 #include "biglauncher_dbus.h"
+#include "biglauncheradaptor.h"
 #include "configuration.h"
 #include <QByteArray>
+#include <QDBusMessage>
 #include <QList>
 #include <QMap>
 #include <QMetaObject>
 #include <QString>
 #include <QVariant>
-#include <QDBusMessage>
 
 /*
  * Implementation of adaptor class BigLauncherDbusAdapterInterface
  */
 
-BigLauncherDbusAdapterInterface::BigLauncherDbusAdapterInterface(QObject *parent)
-    : QDBusAbstractAdaptor(parent)
+BigLauncherDbusAdapterInterface *BigLauncherDbusAdapterInterface::instance()
 {
-    // constructor
-    QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.registerObject("/BigLauncher", this, QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportNonScriptableSlots);
-    dbus.registerService("org.kde.biglauncher");
-    setAutoRelaySignals(true);
+    static BigLauncherDbusAdapterInterface *s_self = nullptr;
+    if (!s_self) {
+        s_self = new BigLauncherDbusAdapterInterface;
+    }
+    return s_self;
+}
 
-    m_shortcuts = Shortcuts::instance();
+BigLauncherDbusAdapterInterface::BigLauncherDbusAdapterInterface(QObject *parent)
+    : QObject(parent)
+    , m_shortcuts{Shortcuts::instance()}
+{
 }
 
 BigLauncherDbusAdapterInterface::~BigLauncherDbusAdapterInterface()
 {
-    // destructor
+}
+
+void BigLauncherDbusAdapterInterface::init()
+{
+    if (!m_initialized) {
+        new BiglauncherAdaptor{this};
+
+        QDBusConnection dbus = QDBusConnection::sessionBus();
+        dbus.registerObject(QStringLiteral("/BigLauncher"), this);
+        dbus.registerService("org.kde.biglauncher");
+        // setAutoRelaySignals(true);
+
+        m_initialized = true;
+    }
 }
 
 void BigLauncherDbusAdapterInterface::useColoredTiles(const bool &coloredTiles)
@@ -47,11 +64,7 @@ void BigLauncherDbusAdapterInterface::enablePmInhibition(const bool &pmInhibitio
 
 bool BigLauncherDbusAdapterInterface::coloredTilesActive()
 {
-    if(m_useColoredTiles) {
-        return 1;
-    } else {
-        return 0;
-    }
+    return m_useColoredTiles;
 }
 
 bool BigLauncherDbusAdapterInterface::pmInhibitionActive()

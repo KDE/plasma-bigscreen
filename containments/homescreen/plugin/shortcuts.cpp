@@ -17,6 +17,7 @@ Shortcuts* Shortcuts::instance()
 Shortcuts::Shortcuts(QObject *parent)
     : QObject(parent)
 {
+    initializeShortcuts();
 }
 
 void Shortcuts::initializeShortcuts()

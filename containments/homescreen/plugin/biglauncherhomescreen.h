@@ -21,7 +21,6 @@ class HomeScreen : public Plasma::Containment
 {
     Q_OBJECT
     Q_PROPERTY(ApplicationListModel *applicationListModel READ applicationListModel CONSTANT)
-    Q_PROPERTY(BigLauncherDbusAdapterInterface *bigLauncherDbusAdapterInterface READ bigLauncherDbusAdapterInterface CONSTANT)
     Q_PROPERTY(FavsListModel *favsListModel READ favsListModel CONSTANT)
 
 public:
@@ -31,6 +30,7 @@ public:
     ApplicationListModel *applicationListModel() const;
     BigLauncherDbusAdapterInterface *bigLauncherDbusAdapterInterface() const;
     FavsListModel *favsListModel() const;
+    Shortcuts *shortcuts() const;
 
     Q_INVOKABLE void openSettings(QString module = QString{});
 
@@ -42,8 +42,5 @@ public Q_SLOTS:
 private:
     ApplicationListModel *m_applicationListModel;
     SessionManagement *m_session;
-    BigLauncherDbusAdapterInterface* m_bigLauncherDbusAdapterInterface;
-    FavsManager *m_favsManager;
     FavsListModel *m_favsListModel;
-    Shortcuts *m_shortcuts;
 };

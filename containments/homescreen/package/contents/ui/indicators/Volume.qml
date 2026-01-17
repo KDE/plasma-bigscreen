@@ -19,13 +19,7 @@ AbstractIndicator {
     id: paIcon
     text: i18n("Audio Settings")
 
-    GlobalConfig {
-        id: config
-    }
-    readonly property SinkModel paSinkModel: SinkModel { id: paSinkModel }
     property bool volumeFeedback: true
-    property bool globalMute: config.globalMute
-    property string displayName: i18n("Audio Volume")
     readonly property string dummyOutputName: "auto_null"
     icon.name: PreferredDevice.sink && !isDummyOutput(PreferredDevice.sink) ? AudioIcon.forVolume(volumePercent(PreferredDevice.sink.volume), PreferredDevice.sink.muted, "")
                                                                                           : AudioIcon.forVolume(0, true, "")

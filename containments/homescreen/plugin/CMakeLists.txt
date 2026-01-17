@@ -6,8 +6,7 @@ kde_enable_exceptions()
 
 add_definitions(-DTRANSLATION_DOMAIN=\"biglauncherhomescreen\")
 
-kcoreaddons_add_plugin(org.kde.bigscreen.homescreen INSTALL_NAMESPACE "plasma/applets")
-target_sources(org.kde.bigscreen.homescreen PRIVATE
+set(homescreen_SRCS
     biglauncherhomescreen.cpp biglauncherhomescreen.h
     biglauncher_dbus.cpp biglauncher_dbus.h
     applicationlistmodel.cpp applicationlistmodel.h
@@ -15,6 +14,22 @@ target_sources(org.kde.bigscreen.homescreen PRIVATE
     configuration.cpp configuration.h
     shortcuts.cpp shortcuts.h
 )
+
+# DBus Interface
+qt_generate_dbus_interface(
+    ${CMAKE_CURRENT_SOURCE_DIR}/biglauncher_dbus.h
+    org.kde.biglauncher.xml
+    OPTIONS -s -m -P
+)
+qt_add_dbus_adaptor(homescreen_SRCS ${CMAKE_CURRENT_BINARY_DIR}/org.kde.biglauncher.xml
+                    ${CMAKE_CURRENT_SOURCE_DIR}/biglauncher_dbus.h BigLauncherDbusAdapterInterface)
+qt_add_dbus_interface(homescreen_SRCS ${CMAKE_CURRENT_BINARY_DIR}/org.kde.biglauncher.xml biglauncherinterface)
+
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.biglauncher.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR})
+# ---
+
+kcoreaddons_add_plugin(org.kde.bigscreen.homescreen INSTALL_NAMESPACE "plasma/applets")
+target_sources(org.kde.bigscreen.homescreen PRIVATE ${homescreen_SRCS})
 
 target_link_libraries(org.kde.bigscreen.homescreen
     Qt::Gui

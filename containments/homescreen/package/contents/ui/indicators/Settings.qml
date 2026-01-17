@@ -8,7 +8,9 @@
 import QtQuick
 import QtQuick.Controls as Controls
 import QtQuick.Layouts
+
 import org.kde.plasma.plasmoid
+import org.kde.private.biglauncher
 
 AbstractIndicator {
     id: settingsIcon
@@ -20,7 +22,7 @@ AbstractIndicator {
     }
 
     Connections {
-        target: Plasmoid.Shortcuts
+        target: Shortcuts
 
         function onToggleSettingsOverlay() {
             Plasmoid.openSettings();

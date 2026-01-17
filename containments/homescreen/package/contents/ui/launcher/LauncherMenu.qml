@@ -29,50 +29,15 @@ FocusScope {
     // Whether the view has scrolled down at least one row
     readonly property bool scrolledDown: launcherHome.scrolledDown
 
-    signal activateAppView
-    signal activateTopNavBar
-
-    property Item wallpaper: {
-        for (var i in plasmoid.children) {
-            if (plasmoid.children[i].toString().indexOf("WallpaperInterface") === 0) {
-                return plasmoid.children[i];
-            }
+    onFocusChanged: {
+        if (focus) {
+            launcherHome.activateAppView();
         }
-        return null;
     }
 
     Component.onCompleted: {
-        root.forceActiveFocus();
         plasmoid.applicationListModel.loadApplications();
-        root.activateAppView();
         plasmoid.setUseColoredTiles(plasmoid.configuration.coloredTiles);
-    }
-
-    Connections {
-        target: plasmoid.applicationListModel
-        function onAppOrderChanged() {
-            root.activateAppView()
-        }
-    }
-
-    Connections {
-        target: Plasmoid.bigLauncherDbusAdapterInterface
-
-        function onUseColoredTilesChanged(msgUseColoredTiles) {
-            Plasmoid.configuration.coloredTiles = msgUseColoredTiles;
-            Plasmoid.setUseColoredTiles(Plasmoid.configuration.coloredTiles);
-        }
-
-        function onActivateWallpaperSelectorRequested() {
-            Plasmoid.internalAction("configure").trigger();
-        }
-    }
-
-    Connections {
-        target: root
-        function onActivateTopNavBar() {
-            topButtonBar.focus = true
-        }
     }
 
     Controls.Label {

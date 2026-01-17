@@ -13,6 +13,7 @@ import org.kde.taskmanager as TaskManager
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 import org.kde.kquickcontrolsaddons
+import org.kde.private.biglauncher
 
 import "launcher"
 
@@ -36,15 +37,24 @@ ContainmentItem {
     }
 
     Connections {
-        target: Plasmoid.bigLauncherDbusAdapterInterface
+        target: BigLauncherDbusAdapterInterface
 
         function onEnablePmInhibitionChanged(pmInhibition) {
-            var powerInhibition = Plasmoid.bigLauncherDbusAdapterInterface.pmInhibitionActive()
+            var powerInhibition = BigLauncherDbusAdapterInterface.pmInhibitionActive()
             if (powerInhibition) {
                 pmInhibitItem.inhibit = true
             } else {
                 pmInhibitItem.inhibit = false
             }
+        }
+
+        function onUseColoredTilesChanged(msgUseColoredTiles) {
+            Plasmoid.configuration.coloredTiles = msgUseColoredTiles;
+            Plasmoid.setUseColoredTiles(Plasmoid.configuration.coloredTiles);
+        }
+
+        function onActivateWallpaperSelectorRequested() {
+            root.configureWallpaper();
         }
     }
 
@@ -57,10 +67,10 @@ ContainmentItem {
     }
 
     Component.onCompleted: {
-        for (var i in plasmoid.applets) {
-            root.addApplet(plasmoid.applets[i], -1, -1)
+        for (var i in Plasmoid.applets) {
+            root.addApplet(Plasmoid.applets[i], -1, -1)
         }
-        pmInhibitItem.inhibit = Plasmoid.bigLauncherDbusAdapterInterface.pmInhibitionActive()
+        pmInhibitItem.inhibit = BigLauncherDbusAdapterInterface.pmInhibitionActive()
     }
 
     function addApplet(applet, x, y) {

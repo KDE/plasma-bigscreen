@@ -29,11 +29,10 @@ AbstractIndicator {
         model: allDevicesModel
         delegate: Item {
             property bool pairingRequest: device.isPairRequestedByPeer ? 1 : 0
-            property var bigscreenIface: KDEConnect.BigscreenDbusInterfaceFactory.create(model.deviceId)
 
             onPairingRequestChanged: {
                 if (pairingRequest) {
-                    if(device.name.length > 0){
+                    if (device.name.length > 0){
                         var component = Qt.createComponent("PairWindow.qml");
                         if (component.status != Component.Ready)
                         {

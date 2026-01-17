@@ -19,7 +19,7 @@ public:
     ~FavsManager() override;
     bool isFav(const QString &storageId, const QString &entryPath);
     QList<QVariantMap> favsList();
-    
+
 public Q_SLOTS:
     void addFav(QVariantMap fav);
     void removeFav(QVariantMap fav);

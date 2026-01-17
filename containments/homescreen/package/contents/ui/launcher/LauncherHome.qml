@@ -31,6 +31,27 @@ FocusScope {
     // Whether the view has scrolled down at least one row
     readonly property bool scrolledDown: launcherHomeColumn.currentSection && launcherHomeColumn.currentSection !== favAppsView.currentViewDownwards
 
+    function activateAppView() {
+        if (favAppsView.visible) {
+            favAppsView.forceActiveFocus()
+        } else if (recentView.visible) {
+            recentView.forceActiveFocus();
+        } else if (voiceAppsView.visible) {
+            voiceAppsView.forceActiveFocus();
+        } else {
+            appsView.forceActiveFocus();
+        }
+    }
+
+    Component.onCompleted: activateAppView()
+
+    Connections {
+        target: Plasmoid.applicationListModel
+        function onAppOrderChanged() {
+            root.activateAppView()
+        }
+    }
+
     ColumnLayout {
         id: launcherHomeColumn
         anchors {
@@ -198,29 +219,6 @@ FocusScope {
 
             navigationUp: appsView.currentViewUpwards
             navigationDown: null
-        }
-
-        Component.onCompleted: {
-            if (recentView.visible) {
-                recentView.forceActiveFocus();
-            } else if(voiceAppsView.visible) {
-                voiceAppsView.forceActiveFocus();
-            } else {
-                appsView.forceActiveFocus();
-            }
-        }
-
-        Connections {
-            target: root
-            function onActivateAppView() {
-                if (recentView.visible) {
-                    recentView.forceActiveFocus();
-                } else if(voiceAppsView.visible) {
-                    voiceAppsView.forceActiveFocus();
-                } else {
-                    appsView.forceActiveFocus();
-                }
-            }
         }
     }
 }

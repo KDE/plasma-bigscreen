@@ -34,30 +34,29 @@ static QObject *shortcutsSingletonProvider(QQmlEngine *engine, QJSEngine *script
     return Shortcuts::instance();
 }
 
+static QObject *dbusSingletonProvider(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(scriptEngine);
+
+    engine->setObjectOwnership(BigLauncherDbusAdapterInterface::instance(), QQmlEngine::CppOwnership);
+    return BigLauncherDbusAdapterInterface::instance();
+}
 
 HomeScreen::HomeScreen(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : Plasma::Containment(parent, data, args)
+    , m_applicationListModel(new ApplicationListModel(this))
     , m_session(new SessionManagement(this))
+    , m_favsListModel(new FavsListModel(FavsManager::instance(), this))
 {
+    // Ensure DBus adapter is initialized
+    BigLauncherDbusAdapterInterface::instance()->init();
+
     const char *uri = "org.kde.private.biglauncher";
-    qmlRegisterSingletonType<FavsManager>(uri, 1, 0, "FavsManager", favsManagerSingletonProvider);
     qmlRegisterSingletonType<Shortcuts>(uri, 1, 0, "Shortcuts", shortcutsSingletonProvider);
-    qmlRegisterUncreatableType<ApplicationListModel>(uri, 1, 0, "ApplicationListModel", QStringLiteral("Cannot create an item of type ApplicationListModel"));
-    qmlRegisterUncreatableType<FavsListModel>(uri, 1, 0, "FavsListModel", QStringLiteral("Cannot create an item of type FavsListModel"));
-    qmlRegisterUncreatableType<BigLauncherDbusAdapterInterface>(uri,
-                                                                1,
-                                                                0,
-                                                                "BigLauncherDbusAdapterInterface",
-                                                                QStringLiteral("Cannot create an item of type BigLauncherDbusAdapterInterface"));
+    qmlRegisterSingletonType<FavsManager>(uri, 1, 0, "FavsManager", favsManagerSingletonProvider);
+    qmlRegisterSingletonType<BigLauncherDbusAdapterInterface>(uri, 1, 0, "BigLauncherDbusAdapterInterface", dbusSingletonProvider);
 
     // setHasConfigurationInterface(true);
-    m_bigLauncherDbusAdapterInterface = new BigLauncherDbusAdapterInterface(this);
-    m_applicationListModel = new ApplicationListModel(this);
-
-    m_favsManager = FavsManager::instance();
-    m_favsListModel = new FavsListModel(m_favsManager, this);
-    m_shortcuts = Shortcuts::instance();
-    m_shortcuts->initializeShortcuts();
 }
 
 HomeScreen::~HomeScreen()
@@ -67,11 +66,6 @@ HomeScreen::~HomeScreen()
 ApplicationListModel *HomeScreen::applicationListModel() const
 {
     return m_applicationListModel;
-}
-
-BigLauncherDbusAdapterInterface *HomeScreen::bigLauncherDbusAdapterInterface() const
-{
-    return m_bigLauncherDbusAdapterInterface;
 }
 
 FavsListModel *HomeScreen::favsListModel() const
@@ -110,7 +104,7 @@ void HomeScreen::requestShutdown()
 
 void HomeScreen::setUseColoredTiles(bool coloredTiles)
 {
-    m_bigLauncherDbusAdapterInterface->setColoredTilesActive(coloredTiles);
+    BigLauncherDbusAdapterInterface::instance()->setColoredTilesActive(coloredTiles);
 }
 
 K_PLUGIN_CLASS_WITH_JSON(HomeScreen, "metadata.json")
