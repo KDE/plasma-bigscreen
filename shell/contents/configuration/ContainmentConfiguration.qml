@@ -145,7 +145,7 @@ AppletConfiguration {
             delegate: WallpaperDelegate {
                 id: delegate
 
-                highlighted: configDialog.wallpaperConfiguration["Image"] == model.path
+                highlighted: configDialog.wallpaperConfiguration["Image"] == model.source
                 onIsCurrentChanged: {
                     if (isCurrent) {
                         wallpapersView.currentIndex = index;
@@ -161,18 +161,20 @@ AppletConfiguration {
                         visible: !walliePreview.visible
                     }
 
-                    Addons.QPixmapItem {
+                    Image {
                         id: walliePreview
                         anchors.fill: parent
-                        visible: model.screenshot != null
-                        smooth: true
-                        pixmap: model.screenshot
+                        visible: model.source != null
+                        asynchronous: true
+                        cache: false
                         fillMode: Image.PreserveAspectCrop
+                        source: model.preview
+                        sourceSize: Qt.size(width * 3, height * 3)
                     }
                 }
                 onClicked: {
                     configDialog.currentWallpaper = "org.kde.image";
-                    configDialog.wallpaperConfiguration["Image"] = model.path;
+                    configDialog.wallpaperConfiguration["Image"] = model.source;
                     configDialog.applyWallpaper()
                 }
                 Keys.onReturnPressed: {
