@@ -36,8 +36,8 @@ FocusScope {
     }
 
     Component.onCompleted: {
-        plasmoid.applicationListModel.loadApplications();
-        plasmoid.setUseColoredTiles(plasmoid.configuration.coloredTiles);
+        Plasmoid.applicationListModel.loadApplications();
+        Plasmoid.setUseColoredTiles(plasmoid.configuration.coloredTiles);
     }
 
     Controls.Label {
