@@ -82,6 +82,21 @@ void BigscreenSettings::setUseColoredTiles(bool useColoredTiles)
     QDBusConnection::sessionBus().send(msg);
 }
 
+bool BigscreenSettings::useWallpaperBlur()
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "wallpaperBlurActive");
+    QDBusMessage response = QDBusConnection::sessionBus().call(msg);
+    QList<QVariant> responseArg = response.arguments();
+    return responseArg.at(0).toBool();
+}
+
+void BigscreenSettings::setUseWallpaperBlur(bool useWallpaperBlur)
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "useWallpaperBlur");
+    msg << useWallpaperBlur;
+    QDBusConnection::sessionBus().send(msg);
+}
+
 void BigscreenSettings::setPmInhibitionActive(bool pmInhibitionActive)
 {
     QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", "enablePmInhibition");

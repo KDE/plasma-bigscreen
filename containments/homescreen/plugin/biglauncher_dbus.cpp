@@ -77,6 +77,21 @@ void BigLauncherDbusAdapterInterface::setColoredTilesActive(const bool &coloredT
     m_useColoredTiles = coloredTilesActive;
 }
 
+void BigLauncherDbusAdapterInterface::useWallpaperBlur(const bool &wallpaperBlur)
+{
+    Q_EMIT useWallpaperBlurChanged(wallpaperBlur);
+}
+
+bool BigLauncherDbusAdapterInterface::wallpaperBlurActive()
+{
+    return m_useWallpaperBlur;
+}
+
+void BigLauncherDbusAdapterInterface::setWallpaperBlurActive(const bool &wallpaperBlurActive)
+{
+    m_useWallpaperBlur = wallpaperBlurActive;
+}
+
 void BigLauncherDbusAdapterInterface::activateWallpaperSelector()
 {
     Q_EMIT activateWallpaperSelectorRequested();

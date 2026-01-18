@@ -14,5 +14,8 @@
     <entry name="coloredTiles" type="Bool">
         <default>true</default>
     </entry>
+    <entry name="wallpaperBlur" type="Bool">
+        <default>false</default>
+    </entry>
 </group>
 </kcfg>

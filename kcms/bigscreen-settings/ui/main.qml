@@ -55,9 +55,23 @@ Kirigami.ScrollablePage {
             text: i18n("Colored tiles")
             description: i18n("Tile backgrounds will be colored based on the app's icon")
 
-            KeyNavigation.down: desktopThemeButton
+            KeyNavigation.down: wallpaperBlurDelegate
 
             onCheckedChanged: kcm.setUseColoredTiles(checked);
+        }
+
+        Bigscreen.SwitchDelegate {
+            id: wallpaperBlurDelegate
+            Layout.bottomMargin: Kirigami.Units.smallSpacing
+
+            raisedBackground: true
+            checked: kcm.useWallpaperBlur() ? 1 : 0
+            text: i18n("Wallpaper blur")
+            description: i18n("Apply a blur effect to the wallpaper on the homescreen")
+
+            KeyNavigation.down: desktopThemeButton
+
+            onCheckedChanged: kcm.setUseWallpaperBlur(checked);
         }
 
         Bigscreen.ButtonDelegate {

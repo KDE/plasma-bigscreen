@@ -109,6 +109,11 @@ void HomeScreen::setUseColoredTiles(bool coloredTiles)
     BigLauncherDbusAdapterInterface::instance()->setColoredTilesActive(coloredTiles);
 }
 
+void HomeScreen::setUseWallpaperBlur(bool wallpaperBlur)
+{
+    BigLauncherDbusAdapterInterface::instance()->setWallpaperBlurActive(wallpaperBlur);
+}
+
 K_PLUGIN_CLASS_WITH_JSON(HomeScreen, "metadata.json")
 
 #include "biglauncherhomescreen.moc"

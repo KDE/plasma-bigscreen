@@ -38,6 +38,7 @@ public Q_SLOTS:
     void executeCommand(const QString &command);
     void requestShutdown();
     void setUseColoredTiles(bool coloredTiles);
+    void setUseWallpaperBlur(bool wallpaperBlur);
 
 private:
     ApplicationListModel *m_applicationListModel;

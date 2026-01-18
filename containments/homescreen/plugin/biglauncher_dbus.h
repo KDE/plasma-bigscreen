@@ -39,6 +39,10 @@ public Q_SLOTS: // METHODS
 
     void setColoredTilesActive(const bool &coloredTilesActive);
 
+    Q_SCRIPTABLE void useWallpaperBlur(const bool &wallpaperBlur);
+    Q_SCRIPTABLE bool wallpaperBlurActive();
+    void setWallpaperBlurActive(const bool &wallpaperBlurActive);
+
     Q_SCRIPTABLE void activateWallpaperSelector();
     Q_SCRIPTABLE QString activateSettingsShortcut();
     Q_SCRIPTABLE QString activateTasksShortcut();
@@ -54,12 +58,14 @@ public Q_SLOTS: // METHODS
 
 Q_SIGNALS: // SIGNALS
     Q_SCRIPTABLE void useColoredTilesChanged(const bool &msgUseColoredTiles);
+    Q_SCRIPTABLE void useWallpaperBlurChanged(const bool &msgUseWallpaperBlur);
     Q_SCRIPTABLE void enablePmInhibitionChanged(const bool &msgEnablePmInhibition);
     void coloredTilesActiveRequested();
     void activateWallpaperSelectorRequested();
 
 private:
     bool m_useColoredTiles;
+    bool m_useWallpaperBlur;
     Shortcuts *m_shortcuts;
 
     bool m_initialized{false};

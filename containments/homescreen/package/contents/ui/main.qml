@@ -53,6 +53,11 @@ ContainmentItem {
             Plasmoid.setUseColoredTiles(Plasmoid.configuration.coloredTiles);
         }
 
+        function onUseWallpaperBlurChanged(msgUseWallpaperBlur) {
+            Plasmoid.configuration.wallpaperBlur = msgUseWallpaperBlur;
+            Plasmoid.setUseWallpaperBlur(Plasmoid.configuration.wallpaperBlur);
+        }
+
         function onActivateWallpaperSelectorRequested() {
             root.configureWallpaper();
         }
@@ -71,6 +76,7 @@ ContainmentItem {
             root.addApplet(Plasmoid.applets[i], -1, -1)
         }
         pmInhibitItem.inhibit = BigLauncherDbusAdapterInterface.pmInhibitionActive()
+        Plasmoid.setUseWallpaperBlur(Plasmoid.configuration.wallpaperBlur)
     }
 
     function addApplet(applet, x, y) {
@@ -114,34 +120,39 @@ ContainmentItem {
         id: favsManagerWindowView
     }
 
-    // Homescreen background
-    Item {
-        id: wallpaperBlur
+    // Homescreen background - only loaded when wallpaperBlur setting is enabled
+    Loader {
+        id: wallpaperBlurLoader
         anchors.fill: parent
-
-        // Only take samples from wallpaper when we need the blur for performance
-        ShaderEffectSource {
-            id: controlledWallpaperSource
+        active: Plasmoid.configuration.wallpaperBlur
+        sourceComponent: Item {
+            id: wallpaperBlur
             anchors.fill: parent
 
-            sourceItem: Plasmoid.wallpaperGraphicsObject
-            live: blur.visible
-            hideSource: false
-            visible: false
-        }
+            // Only take samples from wallpaper when we need the blur for performance
+            ShaderEffectSource {
+                id: controlledWallpaperSource
+                anchors.fill: parent
 
-        // Wallpaper blur
-        // We attempted to use MultiEffect in the past, but it had very poor performance
-        FastBlur {
-            id: blur
-            radius: 50
-            cached: true
-            source: controlledWallpaperSource
-            anchors.fill: parent
-            visible: true // Don't load and unload, which is laggy
-            opacity: homeScreen.blurBackground ? 1 : 0
+                sourceItem: Plasmoid.wallpaperGraphicsObject
+                live: blur.visible
+                hideSource: false
+                visible: false
+            }
 
-            Behavior on opacity { NumberAnimation { duration: 500 } }
+            // Wallpaper blur
+            // We attempted to use MultiEffect in the past, but it had very poor performance
+            FastBlur {
+                id: blur
+                radius: 50
+                cached: true
+                source: controlledWallpaperSource
+                anchors.fill: parent
+                visible: true // Don't load and unload, which is laggy
+                opacity: homeScreen.blurBackground ? 1 : 0
+
+                Behavior on opacity { NumberAnimation { duration: 500 } }
+            }
         }
     }
 
