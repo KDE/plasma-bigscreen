@@ -14,7 +14,7 @@ import org.kde.plasma.private.nanoshell as NanoShell
 import org.kde.bigscreen as Bigscreen
 
 import org.kde.milou as Milou
-import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigami as Kirigami
 
 Milou.ResultsView {
     id: root
@@ -24,27 +24,17 @@ Milou.ResultsView {
 
     queryString: queryTextField.text
     clip: true
-    highlight: activeFocus ? highlightComponent : null
-
     keyNavigationEnabled: true
+    highlight: null
 
     Keys.onUpPressed: {
         currentIndex--;
         Bigscreen.NavigationSoundEffects.playMovingSound();
     }
     Keys.onDownPressed: {
-        currentIndex++;
-        Bigscreen.NavigationSoundEffects.playMovingSound();
-    }
-
-    Component {
-        id: highlightComponent
-
-        Rectangle {
-            color: Qt.rgba(Kirigami.Theme.highlightColor.r, Kirigami.Theme.highlightColor.g, Kirigami.Theme.highlightColor.b, 0.2)
-            radius: Kirigami.Units.cornerRadius
-            border.width: 2
-            border.color: Kirigami.Theme.highlightColor
+        if (currentIndex < (root.count - 1)) {
+            currentIndex++;
+            Bigscreen.NavigationSoundEffects.playMovingSound();
         }
     }
 
@@ -76,11 +66,11 @@ Milou.ResultsView {
         }
     }
 
-
-    delegate: MouseArea {
+    delegate: Bigscreen.ButtonDelegate {
         id: delegate
-        height: rowLayout.height
         width: listView.width
+
+        raisedBackground: false
 
         // Go to search bar if this we press up with the first item selected
         KeyNavigation.up: model.index === 0 ? queryTextField : null
@@ -98,62 +88,14 @@ Milou.ResultsView {
 
             root.hideOverlayRequested();
         }
-        hoverEnabled: true
 
-        Rectangle {
-            anchors.fill: parent
-            radius: Kirigami.Units.cornerRadius
-            color: delegate.pressed ? Qt.rgba(255, 255, 255, 0.3) : (delegate.containsMouse ? Qt.rgba(255, 255, 255, 0.1) : "transparent")
+        leading: Kirigami.Icon {
+            source: model.decoration
+            implicitWidth: Kirigami.Units.iconSizes.large
+            implicitHeight: Kirigami.Units.iconSizes.large
         }
 
-        RowLayout {
-            id: rowLayout
-            anchors {
-                top: parent.top
-                left: parent.left
-                right: parent.right
-                leftMargin: Kirigami.Units.gridUnit
-                rightMargin: Kirigami.Units.gridUnit
-            }
-
-            Kirigami.Icon {
-                Layout.alignment: Qt.AlignVCenter
-                source: model.decoration
-                implicitWidth: Kirigami.Units.iconSizes.large
-                implicitHeight: Kirigami.Units.iconSizes.large
-            }
-
-            ColumnLayout {
-                Layout.fillWidth: true
-                Layout.alignment: Qt.AlignVCenter
-                Layout.topMargin: Kirigami.Units.gridUnit
-                Layout.bottomMargin: Kirigami.Units.gridUnit
-                spacing: Kirigami.Units.smallSpacing
-
-                Kirigami.Heading {
-                    id: title
-                    Layout.fillWidth: true
-                    Layout.leftMargin: Kirigami.Units.gridUnit
-                    Layout.rightMargin: Kirigami.Units.gridUnit
-
-                    maximumLineCount: 1
-                    elide: Text.ElideRight
-                    text: typeof modelData !== "undefined" ? modelData : model.display
-
-                    font.weight: Font.Medium
-                }
-                PlasmaComponents.Label {
-                    id: subtitle
-                    Layout.fillWidth: true
-                    Layout.leftMargin: Kirigami.Units.gridUnit
-                    Layout.rightMargin: Kirigami.Units.gridUnit
-
-                    maximumLineCount: 1
-                    elide: Text.ElideRight
-                    text: model.subtext || ""
-                    opacity: 0.8
-                }
-            }
-        }
+        text: typeof modelData !== "undefined" ? modelData : model.display
+        description: model.subtext || ""
     }
 }
