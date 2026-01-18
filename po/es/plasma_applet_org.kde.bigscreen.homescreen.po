@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-18 00:44+0000\n"
 "PO-Revision-Date: 2025-09-07 00:53+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -68,7 +68,7 @@ msgstr "Cancelar"
 msgid "Search"
 msgstr "Buscar"
 
-#: contents/ui/indicators/Settings.qml:16
+#: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
 msgstr "Preferencias"
@@ -83,7 +83,7 @@ msgstr "Salir de Bigscreen"
 msgid "Power"
 msgstr "Apagado"
 
-#: contents/ui/indicators/Tasks.qml:22
+#: contents/ui/indicators/Tasks.qml:23
 #, kde-format
 msgid "Tasks"
 msgstr "Tareas"
@@ -93,37 +93,32 @@ msgstr "Tareas"
 msgid "Audio Settings"
 msgstr "Preferencias de audio"
 
-#: contents/ui/indicators/Volume.qml:28
-#, kde-format
-msgid "Audio Volume"
-msgstr "Volumen de audio"
-
 #: contents/ui/indicators/Wifi.qml:19
 #, kde-format
 msgid "Internet Settings"
 msgstr "Preferencias de internet"
 
-#: contents/ui/launcher/LauncherHome.qml:78
+#: contents/ui/launcher/LauncherHome.qml:99
 #, kde-format
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: contents/ui/launcher/LauncherHome.qml:97
+#: contents/ui/launcher/LauncherHome.qml:118
 #, kde-format
 msgid "Recent"
 msgstr "Reciente"
 
-#: contents/ui/launcher/LauncherHome.qml:126
+#: contents/ui/launcher/LauncherHome.qml:147
 #, kde-format
 msgid "Voice Applications"
 msgstr "Aplicaciones de voz"
 
-#: contents/ui/launcher/LauncherHome.qml:153
+#: contents/ui/launcher/LauncherHome.qml:174
 #, kde-format
 msgid "Applications"
 msgstr "Aplicaciones"
 
-#: contents/ui/launcher/LauncherHome.qml:181
+#: contents/ui/launcher/LauncherHome.qml:202
 #, kde-format
 msgid "Games"
 msgstr "Juegos"
@@ -148,3 +143,6 @@ msgstr "Limpiar tareas"
 #, kde-format
 msgid "Close"
 msgstr "Cerrar"
+
+#~ msgid "Audio Volume"
+#~ msgstr "Volumen de audio"

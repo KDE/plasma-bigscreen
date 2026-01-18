@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-18 00:44+0000\n"
 "PO-Revision-Date: 2025-08-13 06:23+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -68,7 +68,7 @@ msgstr "გაუქმება"
 msgid "Search"
 msgstr "ძებნა"
 
-#: contents/ui/indicators/Settings.qml:16
+#: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
 msgstr "პარამეტრები"
@@ -83,7 +83,7 @@ msgstr "გასვლა Bigscreen-დან"
 msgid "Power"
 msgstr "კვება"
 
-#: contents/ui/indicators/Tasks.qml:22
+#: contents/ui/indicators/Tasks.qml:23
 #, kde-format
 msgid "Tasks"
 msgstr "ამოცანები"
@@ -93,37 +93,32 @@ msgstr "ამოცანები"
 msgid "Audio Settings"
 msgstr "აუდიოს პარამეტრები"
 
-#: contents/ui/indicators/Volume.qml:28
-#, kde-format
-msgid "Audio Volume"
-msgstr "ხმის დონე"
-
 #: contents/ui/indicators/Wifi.qml:19
 #, kde-format
 msgid "Internet Settings"
 msgstr "ინტერნეტის მორგება"
 
-#: contents/ui/launcher/LauncherHome.qml:78
+#: contents/ui/launcher/LauncherHome.qml:99
 #, kde-format
 msgid "Favorites"
 msgstr "რჩეულები"
 
-#: contents/ui/launcher/LauncherHome.qml:97
+#: contents/ui/launcher/LauncherHome.qml:118
 #, kde-format
 msgid "Recent"
 msgstr "უახლესი"
 
-#: contents/ui/launcher/LauncherHome.qml:126
+#: contents/ui/launcher/LauncherHome.qml:147
 #, kde-format
 msgid "Voice Applications"
 msgstr "ხმის აპლიკაციები"
 
-#: contents/ui/launcher/LauncherHome.qml:153
+#: contents/ui/launcher/LauncherHome.qml:174
 #, kde-format
 msgid "Applications"
 msgstr "აპლიკაციები"
 
-#: contents/ui/launcher/LauncherHome.qml:181
+#: contents/ui/launcher/LauncherHome.qml:202
 #, kde-format
 msgid "Games"
 msgstr "თამაშები"
@@ -148,6 +143,9 @@ msgstr "დავალებების გასუფთავება"
 #, kde-format
 msgid "Close"
 msgstr "დახურვა"
+
+#~ msgid "Audio Volume"
+#~ msgstr "ხმის დონე"
 
 #~ msgid "General"
 #~ msgstr "ზოგადი"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.mycroft.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-18 00:44+0000\n"
 "PO-Revision-Date: 2022-01-07 14:58+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -66,7 +66,7 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: contents/ui/indicators/Settings.qml:16
+#: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
 msgstr "Nastavenia"
@@ -81,7 +81,7 @@ msgstr ""
 msgid "Power"
 msgstr ""
 
-#: contents/ui/indicators/Tasks.qml:22
+#: contents/ui/indicators/Tasks.qml:23
 #, kde-format
 msgid "Tasks"
 msgstr ""
@@ -92,39 +92,34 @@ msgstr ""
 msgid "Audio Settings"
 msgstr "Ďalšie nastavenia"
 
-#: contents/ui/indicators/Volume.qml:28
-#, kde-format
-msgid "Audio Volume"
-msgstr ""
-
 #: contents/ui/indicators/Wifi.qml:19
 #, fuzzy, kde-format
 #| msgid "Settings"
 msgid "Internet Settings"
 msgstr "Nastavenia"
 
-#: contents/ui/launcher/LauncherHome.qml:78
+#: contents/ui/launcher/LauncherHome.qml:99
 #, kde-format
 msgid "Favorites"
 msgstr ""
 
-#: contents/ui/launcher/LauncherHome.qml:97
+#: contents/ui/launcher/LauncherHome.qml:118
 #, kde-format
 msgid "Recent"
 msgstr "Nedávne"
 
-#: contents/ui/launcher/LauncherHome.qml:126
+#: contents/ui/launcher/LauncherHome.qml:147
 #, fuzzy, kde-format
 #| msgid "Applications"
 msgid "Voice Applications"
 msgstr "Aplikácie"
 
-#: contents/ui/launcher/LauncherHome.qml:153
+#: contents/ui/launcher/LauncherHome.qml:174
 #, kde-format
 msgid "Applications"
 msgstr "Aplikácie"
 
-#: contents/ui/launcher/LauncherHome.qml:181
+#: contents/ui/launcher/LauncherHome.qml:202
 #, kde-format
 msgid "Games"
 msgstr "Hry"

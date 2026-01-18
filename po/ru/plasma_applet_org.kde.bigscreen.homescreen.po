@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-18 00:44+0000\n"
 "PO-Revision-Date: 2025-10-27 10:33+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -69,7 +69,7 @@ msgstr "Отмена"
 msgid "Search"
 msgstr "Поиск"
 
-#: contents/ui/indicators/Settings.qml:16
+#: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
 msgstr "Параметры"
@@ -84,7 +84,7 @@ msgstr ""
 msgid "Power"
 msgstr "Управления питанием"
 
-#: contents/ui/indicators/Tasks.qml:22
+#: contents/ui/indicators/Tasks.qml:23
 #, kde-format
 msgid "Tasks"
 msgstr "Приложения"
@@ -94,38 +94,33 @@ msgstr "Приложения"
 msgid "Audio Settings"
 msgstr "Настройки звука"
 
-#: contents/ui/indicators/Volume.qml:28
-#, kde-format
-msgid "Audio Volume"
-msgstr "Громкость звука"
-
 #: contents/ui/indicators/Wifi.qml:19
 #, kde-format
 msgid "Internet Settings"
 msgstr "Настройки подключения к интернету"
 
-#: contents/ui/launcher/LauncherHome.qml:78
+#: contents/ui/launcher/LauncherHome.qml:99
 #, kde-format
 msgid "Favorites"
 msgstr "Избранное"
 
-#: contents/ui/launcher/LauncherHome.qml:97
+#: contents/ui/launcher/LauncherHome.qml:118
 #, kde-format
 msgid "Recent"
 msgstr "Недавние"
 
-#: contents/ui/launcher/LauncherHome.qml:126
+#: contents/ui/launcher/LauncherHome.qml:147
 #, fuzzy, kde-format
 #| msgid "Applications"
 msgid "Voice Applications"
 msgstr "Приложения"
 
-#: contents/ui/launcher/LauncherHome.qml:153
+#: contents/ui/launcher/LauncherHome.qml:174
 #, kde-format
 msgid "Applications"
 msgstr "Приложения"
 
-#: contents/ui/launcher/LauncherHome.qml:181
+#: contents/ui/launcher/LauncherHome.qml:202
 #, kde-format
 msgid "Games"
 msgstr "Игры"
@@ -150,6 +145,9 @@ msgstr ""
 #, kde-format
 msgid "Close"
 msgstr "Закрыть"
+
+#~ msgid "Audio Volume"
+#~ msgstr "Громкость звука"
 
 #~ msgid "General"
 #~ msgstr "Основное"

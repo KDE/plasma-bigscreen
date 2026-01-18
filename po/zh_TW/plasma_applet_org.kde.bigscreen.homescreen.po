@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-18 00:44+0000\n"
 "PO-Revision-Date: 2025-08-29 23:34+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -71,7 +71,7 @@ msgstr "取消"
 msgid "Search"
 msgstr "搜尋"
 
-#: contents/ui/indicators/Settings.qml:16
+#: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
 msgstr "設定"
@@ -86,7 +86,7 @@ msgstr "離開《大螢幕》"
 msgid "Power"
 msgstr "電源"
 
-#: contents/ui/indicators/Tasks.qml:22
+#: contents/ui/indicators/Tasks.qml:23
 #, kde-format
 msgid "Tasks"
 msgstr "工作項目"
@@ -96,37 +96,32 @@ msgstr "工作項目"
 msgid "Audio Settings"
 msgstr "音效設定"
 
-#: contents/ui/indicators/Volume.qml:28
-#, kde-format
-msgid "Audio Volume"
-msgstr "音效音量"
-
 #: contents/ui/indicators/Wifi.qml:19
 #, kde-format
 msgid "Internet Settings"
 msgstr "網際網路設定"
 
-#: contents/ui/launcher/LauncherHome.qml:78
+#: contents/ui/launcher/LauncherHome.qml:99
 #, kde-format
 msgid "Favorites"
 msgstr "最愛"
 
-#: contents/ui/launcher/LauncherHome.qml:97
+#: contents/ui/launcher/LauncherHome.qml:118
 #, kde-format
 msgid "Recent"
 msgstr "最近"
 
-#: contents/ui/launcher/LauncherHome.qml:126
+#: contents/ui/launcher/LauncherHome.qml:147
 #, kde-format
 msgid "Voice Applications"
 msgstr "語音應用程式"
 
-#: contents/ui/launcher/LauncherHome.qml:153
+#: contents/ui/launcher/LauncherHome.qml:174
 #, kde-format
 msgid "Applications"
 msgstr "應用程式"
 
-#: contents/ui/launcher/LauncherHome.qml:181
+#: contents/ui/launcher/LauncherHome.qml:202
 #, kde-format
 msgid "Games"
 msgstr "遊戲"
@@ -151,6 +146,9 @@ msgstr "清空工作項目"
 #, kde-format
 msgid "Close"
 msgstr "關閉"
+
+#~ msgid "Audio Volume"
+#~ msgstr "音效音量"
 
 #~ msgid "General"
 #~ msgstr "一般"

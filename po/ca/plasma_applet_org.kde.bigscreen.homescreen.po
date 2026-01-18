@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-18 00:44+0000\n"
 "PO-Revision-Date: 2025-08-13 20:20+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -70,7 +70,7 @@ msgstr "Cancel·la"
 msgid "Search"
 msgstr "Cerca"
 
-#: contents/ui/indicators/Settings.qml:16
+#: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
 msgstr "Configuració"
@@ -85,7 +85,7 @@ msgstr "Surt de la Bigscreen"
 msgid "Power"
 msgstr "Energia"
 
-#: contents/ui/indicators/Tasks.qml:22
+#: contents/ui/indicators/Tasks.qml:23
 #, kde-format
 msgid "Tasks"
 msgstr "Tasques"
@@ -95,37 +95,32 @@ msgstr "Tasques"
 msgid "Audio Settings"
 msgstr "Configuració d'àudio"
 
-#: contents/ui/indicators/Volume.qml:28
-#, kde-format
-msgid "Audio Volume"
-msgstr "Volum de l'àudio"
-
 #: contents/ui/indicators/Wifi.qml:19
 #, kde-format
 msgid "Internet Settings"
 msgstr "Configuració d'Internet"
 
-#: contents/ui/launcher/LauncherHome.qml:78
+#: contents/ui/launcher/LauncherHome.qml:99
 #, kde-format
 msgid "Favorites"
 msgstr "Preferits"
 
-#: contents/ui/launcher/LauncherHome.qml:97
+#: contents/ui/launcher/LauncherHome.qml:118
 #, kde-format
 msgid "Recent"
 msgstr "Recent"
 
-#: contents/ui/launcher/LauncherHome.qml:126
+#: contents/ui/launcher/LauncherHome.qml:147
 #, kde-format
 msgid "Voice Applications"
 msgstr "Aplicacions de veu"
 
-#: contents/ui/launcher/LauncherHome.qml:153
+#: contents/ui/launcher/LauncherHome.qml:174
 #, kde-format
 msgid "Applications"
 msgstr "Aplicacions"
 
-#: contents/ui/launcher/LauncherHome.qml:181
+#: contents/ui/launcher/LauncherHome.qml:202
 #, kde-format
 msgid "Games"
 msgstr "Jocs"
@@ -150,6 +145,9 @@ msgstr "Neteja les tasques"
 #, kde-format
 msgid "Close"
 msgstr "Tanca"
+
+#~ msgid "Audio Volume"
+#~ msgstr "Volum de l'àudio"
 
 #~ msgid "General"
 #~ msgstr "General"

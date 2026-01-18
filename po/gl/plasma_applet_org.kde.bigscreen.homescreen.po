@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-18 00:44+0000\n"
 "PO-Revision-Date: 2025-06-19 09:38+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -70,7 +70,7 @@ msgstr "Cancelar"
 msgid "Search"
 msgstr "Buscar…"
 
-#: contents/ui/indicators/Settings.qml:16
+#: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
 msgstr "Configuración"
@@ -85,7 +85,7 @@ msgstr ""
 msgid "Power"
 msgstr ""
 
-#: contents/ui/indicators/Tasks.qml:22
+#: contents/ui/indicators/Tasks.qml:23
 #, fuzzy, kde-format
 #| msgid "Clear Tasks"
 msgid "Tasks"
@@ -97,38 +97,33 @@ msgstr "Borrar as tarefas"
 msgid "Audio Settings"
 msgstr "Configuración adicional:"
 
-#: contents/ui/indicators/Volume.qml:28
-#, kde-format
-msgid "Audio Volume"
-msgstr "Volume do son"
-
 #: contents/ui/indicators/Wifi.qml:19
 #, fuzzy, kde-format
 #| msgid "Settings"
 msgid "Internet Settings"
 msgstr "Configuración"
 
-#: contents/ui/launcher/LauncherHome.qml:78
+#: contents/ui/launcher/LauncherHome.qml:99
 #, kde-format
 msgid "Favorites"
 msgstr "Cousas favoritas"
 
-#: contents/ui/launcher/LauncherHome.qml:97
+#: contents/ui/launcher/LauncherHome.qml:118
 #, kde-format
 msgid "Recent"
 msgstr "Recentes"
 
-#: contents/ui/launcher/LauncherHome.qml:126
+#: contents/ui/launcher/LauncherHome.qml:147
 #, kde-format
 msgid "Voice Applications"
 msgstr "Aplicacións de voz"
 
-#: contents/ui/launcher/LauncherHome.qml:153
+#: contents/ui/launcher/LauncherHome.qml:174
 #, kde-format
 msgid "Applications"
 msgstr "Aplicacións"
 
-#: contents/ui/launcher/LauncherHome.qml:181
+#: contents/ui/launcher/LauncherHome.qml:202
 #, kde-format
 msgid "Games"
 msgstr "Xogos"
@@ -153,6 +148,9 @@ msgstr "Borrar as tarefas"
 #, kde-format
 msgid "Close"
 msgstr "Pechar"
+
+#~ msgid "Audio Volume"
+#~ msgstr "Volume do son"
 
 #~ msgid "General"
 #~ msgstr "Xeral"

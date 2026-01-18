@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-18 00:44+0000\n"
 "PO-Revision-Date: 2024-12-20 21:53+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -70,7 +70,7 @@ msgstr "निरसयतु"
 msgid "Search"
 msgstr ""
 
-#: contents/ui/indicators/Settings.qml:16
+#: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
 msgstr "सेटिंग्स्"
@@ -85,7 +85,7 @@ msgstr ""
 msgid "Power"
 msgstr ""
 
-#: contents/ui/indicators/Tasks.qml:22
+#: contents/ui/indicators/Tasks.qml:23
 #, fuzzy, kde-format
 #| msgid "Clear Tasks"
 msgid "Tasks"
@@ -97,38 +97,33 @@ msgstr "स्पष्टं कार्यम्"
 msgid "Audio Settings"
 msgstr "अतिरिक्तसेटिंग्स् :"
 
-#: contents/ui/indicators/Volume.qml:28
-#, kde-format
-msgid "Audio Volume"
-msgstr "श्रव्य मात्रा"
-
 #: contents/ui/indicators/Wifi.qml:19
 #, fuzzy, kde-format
 #| msgid "Settings"
 msgid "Internet Settings"
 msgstr "सेटिंग्स्"
 
-#: contents/ui/launcher/LauncherHome.qml:78
+#: contents/ui/launcher/LauncherHome.qml:99
 #, kde-format
 msgid "Favorites"
 msgstr "प्रियाः"
 
-#: contents/ui/launcher/LauncherHome.qml:97
+#: contents/ui/launcher/LauncherHome.qml:118
 #, kde-format
 msgid "Recent"
 msgstr "सद्यस्क"
 
-#: contents/ui/launcher/LauncherHome.qml:126
+#: contents/ui/launcher/LauncherHome.qml:147
 #, kde-format
 msgid "Voice Applications"
 msgstr "स्वर अनुप्रयोग"
 
-#: contents/ui/launcher/LauncherHome.qml:153
+#: contents/ui/launcher/LauncherHome.qml:174
 #, kde-format
 msgid "Applications"
 msgstr "अनुप्रयोगाः"
 
-#: contents/ui/launcher/LauncherHome.qml:181
+#: contents/ui/launcher/LauncherHome.qml:202
 #, kde-format
 msgid "Games"
 msgstr "क्रीडाः"
@@ -153,6 +148,9 @@ msgstr "स्पष्टं कार्यम्"
 #, kde-format
 msgid "Close"
 msgstr "पिधानं करोतु"
+
+#~ msgid "Audio Volume"
+#~ msgstr "श्रव्य मात्रा"
 
 #~ msgid "General"
 #~ msgstr "सामान्य"
