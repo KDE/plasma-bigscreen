@@ -20,7 +20,12 @@ const QMap<QString, QMap<QString, QVariant>> KDEGLOBALS_DEFAULT_SETTINGS = {{"Ge
 
 const QMap<QString, QMap<QString, QVariant>> KDEGLOBALS_SETTINGS = {{"KDE", {{"LookAndFeelPackage", "org.kde.plasma.bigscreen"}}}};
 
+// plasma-bigscreen/plasma-keyboardrc
+const QMap<QString, QMap<QString, QVariant>> PLASMAKEYBOARDRC_SETTINGS = {{"General", {{"keyboardNavigationEnabled", true}}}};
+
 // plasma-bigscreen/kwinrc
+const QMap<QString, QMap<QString, QVariant>> KWINRC_DEFAULT_SETTINGS = {
+    {"Wayland", {{"InputMethod", "/usr/share/applications/org.kde.plasma.keyboard.desktop"}}}};
 const QMap<QString, QMap<QString, QVariant>> KWINRC_SETTINGS = {
     {"Windows",
      {{"Placement", "Maximizing"}, // maximize all windows by

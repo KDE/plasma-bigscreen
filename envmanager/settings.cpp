@@ -20,6 +20,7 @@ using namespace Qt::Literals::StringLiterals;
 const QString BIGSCREEN_KWINRC_FILE = u"plasma-bigscreen/kwinrc"_s;
 const QString BIGSCREEN_KSMSERVERRC_FILE = u"plasma-bigscreen/ksmserverrc"_s;
 const QString BIGSCREEN_KDEGLOBALS_FILE = u"plasma-bigscreen/kdeglobals"_s;
+const QString BIGSCREEN_PLASMAKEYBOARDRC_FILE = u"plasma-bigscreen/plasmakeyboardrc"_s;
 
 Settings::Settings(QObject *parent)
     : QObject{parent}
@@ -51,6 +52,7 @@ void Settings::applyBigscreenConfiguration()
         setOptionsImmutable(false, BIGSCREEN_KWINRC_FILE, KWINRC_SETTINGS);
 
         auto kwinrc = kwinrcConfig();
+        writeKeys(BIGSCREEN_KWINRC_FILE, kwinrc, KWINRC_DEFAULT_SETTINGS); // don't make immutable
         writeKeys(BIGSCREEN_KWINRC_FILE, kwinrc, KWINRC_SETTINGS);
         kwinrc->sync();
         reloadKWinConfig();
@@ -63,7 +65,7 @@ void Settings::applyBigscreenConfiguration()
         setOptionsImmutable(false, BIGSCREEN_KDEGLOBALS_FILE, KDEGLOBALS_SETTINGS);
 
         auto kdeglobals = KSharedConfig::openConfig(BIGSCREEN_KDEGLOBALS_FILE, KConfig::SimpleConfig);
-        writeKeys(u"kdeglobals"_s, kdeglobals, KDEGLOBALS_DEFAULT_SETTINGS);
+        writeKeys(u"kdeglobals"_s, kdeglobals, KDEGLOBALS_DEFAULT_SETTINGS); // don't make immutable
         writeKeys(u"kdeglobals"_s, kdeglobals, KDEGLOBALS_SETTINGS);
         kdeglobals->sync();
 
@@ -79,6 +81,17 @@ void Settings::applyBigscreenConfiguration()
         ksmserver->sync();
 
         setOptionsImmutable(true, BIGSCREEN_KSMSERVERRC_FILE, KSMSERVER_SETTINGS);
+    }
+
+    // plasmakeyboardrc
+    {
+        setOptionsImmutable(false, BIGSCREEN_PLASMAKEYBOARDRC_FILE, PLASMAKEYBOARDRC_SETTINGS);
+
+        auto plasmaKeyboard = KSharedConfig::openConfig(BIGSCREEN_PLASMAKEYBOARDRC_FILE, KConfig::SimpleConfig);
+        writeKeys(BIGSCREEN_PLASMAKEYBOARDRC_FILE, plasmaKeyboard, PLASMAKEYBOARDRC_SETTINGS);
+        plasmaKeyboard->sync();
+
+        setOptionsImmutable(true, BIGSCREEN_PLASMAKEYBOARDRC_FILE, PLASMAKEYBOARDRC_SETTINGS);
     }
 }
 
