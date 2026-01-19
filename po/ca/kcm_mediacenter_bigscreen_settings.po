@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-19 00:45+0000\n"
 "PO-Revision-Date: 2025-08-13 20:12+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -90,7 +90,7 @@ msgstr "La vostra zona horària local és %1"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: ui/main.qml:22 ui/main.qml:76
+#: ui/main.qml:22 ui/main.qml:90
 #, kde-format
 msgid "System"
 msgstr "Sistema"
@@ -111,42 +111,52 @@ msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr ""
 "Els fons de les fitxes s'acoloriran en funció de la icona de l'aplicació"
 
-#: ui/main.qml:69 ui/ThemeSidebar.qml:23
+#: ui/main.qml:69
+#, kde-format
+msgid "Wallpaper blur"
+msgstr ""
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Apply a blur effect to the wallpaper on the homescreen"
+msgstr ""
+
+#: ui/main.qml:83 ui/ThemeSidebar.qml:23
 #, kde-format
 msgid "Global theme"
 msgstr "Tema global"
 
-#: ui/main.qml:70
+#: ui/main.qml:84
 #, kde-format
 msgid "Set the system theme"
 msgstr "Estableix el tema del sistema"
 
-#: ui/main.qml:88
+#: ui/main.qml:102
 #, kde-format
 msgid "Power inhibition"
 msgstr "Inhibició d'energia"
 
-#: ui/main.qml:98
+#: ui/main.qml:112
 #, kde-format
 msgid "Adjust date & time"
 msgstr "Ajusta la data i l'hora"
 
-#: ui/main.qml:104
+#: ui/main.qml:118
 #, kde-format
 msgid "Shortcuts"
 msgstr "Dreceres"
 
-#: ui/main.qml:115
+#: ui/main.qml:129
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "Drecera d'obrir la configuració"
 
-#: ui/main.qml:135
+#: ui/main.qml:149
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "Drecera d'obrir tasques"
 
-#: ui/main.qml:154
+#: ui/main.qml:168
 #, kde-format
 msgid "Open homescreen shortcut"
 msgstr "Drecera d'obrir la pàgina d'inici"

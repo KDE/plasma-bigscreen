@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-19 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -89,7 +89,7 @@ msgstr "您的当地时区为 %1"
 msgid "%1, %2"
 msgstr "%1，%2"
 
-#: ui/main.qml:22 ui/main.qml:76
+#: ui/main.qml:22 ui/main.qml:90
 #, kde-format
 msgid "System"
 msgstr "系统"
@@ -109,42 +109,52 @@ msgstr "彩色磁贴"
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "磁贴背景将根据应用程序的图标进行着色。"
 
-#: ui/main.qml:69 ui/ThemeSidebar.qml:23
+#: ui/main.qml:69
+#, kde-format
+msgid "Wallpaper blur"
+msgstr ""
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Apply a blur effect to the wallpaper on the homescreen"
+msgstr ""
+
+#: ui/main.qml:83 ui/ThemeSidebar.qml:23
 #, kde-format
 msgid "Global theme"
 msgstr "全局主题"
 
-#: ui/main.qml:70
+#: ui/main.qml:84
 #, kde-format
 msgid "Set the system theme"
 msgstr "设置系统主题"
 
-#: ui/main.qml:88
+#: ui/main.qml:102
 #, kde-format
 msgid "Power inhibition"
 msgstr "功耗抑制"
 
-#: ui/main.qml:98
+#: ui/main.qml:112
 #, kde-format
 msgid "Adjust date & time"
 msgstr "调整日期和时间"
 
-#: ui/main.qml:104
+#: ui/main.qml:118
 #, kde-format
 msgid "Shortcuts"
 msgstr "快捷键"
 
-#: ui/main.qml:115
+#: ui/main.qml:129
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "打开设置快捷键"
 
-#: ui/main.qml:135
+#: ui/main.qml:149
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "打开任务快捷键"
 
-#: ui/main.qml:154
+#: ui/main.qml:168
 #, kde-format
 msgid "Open homescreen shortcut"
 msgstr "打开主屏幕快捷键"

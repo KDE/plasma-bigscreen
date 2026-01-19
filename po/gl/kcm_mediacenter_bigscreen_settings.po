@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-19 00:45+0000\n"
 "PO-Revision-Date: 2025-06-19 10:01+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -90,7 +90,7 @@ msgstr "O fuso horario local é %1."
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: ui/main.qml:22 ui/main.qml:76
+#: ui/main.qml:22 ui/main.qml:90
 #, kde-format
 msgid "System"
 msgstr ""
@@ -112,48 +112,58 @@ msgstr "Teselas coradas"
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "Os fondos de teselas colaranse en liña coa icona da aplicación."
 
-#: ui/main.qml:69 ui/ThemeSidebar.qml:23
+#: ui/main.qml:69
+#, kde-format
+msgid "Wallpaper blur"
+msgstr ""
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Apply a blur effect to the wallpaper on the homescreen"
+msgstr ""
+
+#: ui/main.qml:83 ui/ThemeSidebar.qml:23
 #, fuzzy, kde-format
 #| msgid "Global Theme"
 msgid "Global theme"
 msgstr "Tema global"
 
-#: ui/main.qml:70
+#: ui/main.qml:84
 #, kde-format
 msgid "Set the system theme"
 msgstr ""
 
-#: ui/main.qml:88
+#: ui/main.qml:102
 #, fuzzy, kde-format
 #| msgid "Power Inhibition"
 msgid "Power inhibition"
 msgstr "Inhibición da enerxía"
 
-#: ui/main.qml:98
+#: ui/main.qml:112
 #, fuzzy, kde-format
 #| msgid "Adjust Date & Time"
 msgid "Adjust date & time"
 msgstr "Axustar a data e hora"
 
-#: ui/main.qml:104
+#: ui/main.qml:118
 #, fuzzy, kde-format
 #| msgid "Set Shortcut"
 msgid "Shortcuts"
 msgstr "Definir o atallo"
 
-#: ui/main.qml:115
+#: ui/main.qml:129
 #, fuzzy, kde-format
 #| msgid "Bigscreen Settings Shortcut"
 msgid "Open settings shortcut"
 msgstr "Atallo da configuración de Bigscreen"
 
-#: ui/main.qml:135
+#: ui/main.qml:149
 #, fuzzy, kde-format
 #| msgid "Bigscreen Tasks Shortcut"
 msgid "Open tasks shortcut"
 msgstr "Atallo das tarefas de Bigscreen"
 
-#: ui/main.qml:154
+#: ui/main.qml:168
 #, fuzzy, kde-format
 #| msgid "Bigscreen Display Homescreen Shortcut"
 msgid "Open homescreen shortcut"
