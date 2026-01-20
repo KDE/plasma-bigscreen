@@ -101,6 +101,22 @@ ContainmentItem {
         function onHomeActionRequested() {
             root.activateHome();
         }
+
+        function onSdlControllerAdded(name) {
+            Plasmoid.showOSD(i18n("Controller added: %1", name), "input-gamepad-symbolic");
+        }
+
+        function onSdlControllerRemoved(name) {
+            Plasmoid.showOSD(i18n("Controller removed: %1", name), "input-gamepad-symbolic");
+        }
+
+        function onCecControllerAdded(name) {
+            Plasmoid.showOSD(i18n("Remote added: %1", name), "input-tvremote-symbolic");
+        }
+
+        function onCecControllerRemoved(name) {
+            Plasmoid.showOSD(i18n("Remote removed: %1", name), "input-tvremote-symbolic");
+        }
     }
 
     // Trigger home overlay for back and left action

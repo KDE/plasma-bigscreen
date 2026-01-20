@@ -15,6 +15,8 @@
 #include <QQmlContext>
 #include <sessionmanagement.h>
 
+#include <QDBusConnection>
+#include <QDBusMessage>
 
 static QObject *favsManagerSingletonProvider(QQmlEngine *engine, QJSEngine *scriptEngine)
 {
@@ -58,7 +60,7 @@ HomeScreen::HomeScreen(QObject *parent, const KPluginMetaData &data, const QVari
     qmlRegisterUncreatableType<ApplicationListModel>(uri, 1, 0, "ApplicationListModel", QStringLiteral("Cannot create an item of type ApplicationListModel"));
     qmlRegisterUncreatableType<FavsListModel>(uri, 1, 0, "FavsListModel", QStringLiteral("Cannot create an item of type FavsListModel"));
 
-    // setHasConfigurationInterface(true);
+    setHasConfigurationInterface(true);
 }
 
 HomeScreen::~HomeScreen()
@@ -97,6 +99,18 @@ void HomeScreen::openTasks()
 void HomeScreen::openHomeOverlay()
 {
     Q_EMIT openHomeOverlayRequested();
+}
+
+void HomeScreen::showOSD(const QString &text, const QString &iconName)
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
+                                                      QStringLiteral("/org/kde/osdService"),
+                                                      QStringLiteral("org.kde.osdService"),
+                                                      QStringLiteral("showText"));
+
+    msg.setArguments({iconName, text});
+
+    QDBusConnection::sessionBus().call(msg, QDBus::NoBlock);
 }
 
 void HomeScreen::executeCommand(const QString &command)
