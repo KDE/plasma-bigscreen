@@ -8,11 +8,7 @@ import QtQuick.Controls as Controls
 
 import org.kde.plasma.plasmoid
 import org.kde.kirigami as Kirigami
-import org.kde.kdeconnect as KDEConnect
-import org.kde.plasma.private.nanoshell as NanoShell
 import org.kde.private.biglauncher
-
-import "../launcher/search" as Search
 
 AbstractIndicator {
     id: settingsIcon
@@ -20,10 +16,6 @@ AbstractIndicator {
     text: i18n("Search")
 
     onClicked: {
-        searchWindow.showOverlay();
-    }
-
-    Search.SearchWindow {
-        id: searchWindow
+        Plasmoid.openSearch();
     }
 }

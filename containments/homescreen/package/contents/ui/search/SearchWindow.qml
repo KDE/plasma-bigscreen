@@ -7,13 +7,11 @@ import QtQuick.Effects
 import QtQuick.Window
 import QtQuick.Controls as QQC2
 
-import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.plasma.plasmoid
 import org.kde.plasma.private.nanoshell as NanoShell
 
 import org.kde.milou as Milou
-import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigami as Kirigami
 
 Window {
     id: root

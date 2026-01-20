@@ -120,17 +120,23 @@ FocusScope {
             }
         }
 
-        Keys.onLeftPressed: {
+        Keys.onLeftPressed: (event) => {
             if (currentIndex > 0) {
                 Bigscreen.NavigationSoundEffects.playMovingSound();
                 currentIndex = Math.max(0, currentIndex - 1);
+                event.accepted = true;
+            } else {
+                event.accepted = false;
             }
         }
 
-        Keys.onRightPressed: {
+        Keys.onRightPressed: (event) => {
             if (currentIndex < count - 1) {
                 Bigscreen.NavigationSoundEffects.playMovingSound();
                 currentIndex = Math.min(count - 1, currentIndex + 1);
+                event.accepted = true;
+            } else {
+                event.accepted = false;
             }
         }
 

@@ -91,10 +91,6 @@ Controls.Control {
 
                 KeyNavigation.right: searchIndicator
                 KeyNavigation.tab: searchIndicator
-
-                TaskWindowView {
-                    id: taskWindowView
-                }
             }
 
             Indicators.Search {

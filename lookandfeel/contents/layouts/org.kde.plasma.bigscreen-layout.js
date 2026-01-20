@@ -17,6 +17,7 @@ for (var j = 0; j < desktopsArray.length; j++) {
    if (j == 0) {
         // Add meta to home default shortcut
         desk.currentConfigGroup = new Array("Shortcuts");
-        desk.writeConfig("global", "Meta");
+        // desk.writeConfig("global", "Meta");
+        desk.writeConfig("global", "Meta+F1")
     }
 }

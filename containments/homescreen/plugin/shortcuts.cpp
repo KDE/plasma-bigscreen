@@ -37,6 +37,11 @@ void Shortcuts::initializeShortcuts()
     toggleDisplayHomeScreenAction->setText(i18n("Toggle Bigscreen Home Screen"));
     KGlobalAccel::self()->setGlobalShortcut(toggleDisplayHomeScreenAction, Qt::Key_HomePage | Qt::Key_Back);
 
+    toggleDisplayHomeOverlayAction = new QAction(this);
+    toggleDisplayHomeOverlayAction->setObjectName(QStringLiteral("Toggle Bigscreen Home Overlay"));
+    toggleDisplayHomeOverlayAction->setText(i18n("Toggle Bigscreen Home Overlay"));
+    KGlobalAccel::self()->setGlobalShortcut(toggleDisplayHomeOverlayAction, Qt::META | Qt::Key_O);
+
     connect(toggleActivateSettingsAction, &QAction::triggered, this, [this]() {
         Q_EMIT toggleSettingsOverlay();
     });
@@ -47,6 +52,10 @@ void Shortcuts::initializeShortcuts()
 
     connect(toggleDisplayHomeScreenAction, &QAction::triggered, this, [this]() {
         Q_EMIT toggleHomeScreen();
+    });
+
+    connect(toggleDisplayHomeOverlayAction, &QAction::triggered, this, [this]() {
+        Q_EMIT toggleHomeOverlay();
     });
 }
 
@@ -77,6 +86,14 @@ QKeySequence Shortcuts::displayHomeScreenShortcut() const
     return QKeySequence();
 }
 
+QKeySequence Shortcuts::displayHomeOverlayShortcut() const
+{
+    const QList<QKeySequence> shortcuts = KGlobalAccel::self()->shortcut(toggleDisplayHomeOverlayAction);
+    if (shortcuts.count() > 0) {
+        return shortcuts.first();
+    }
+    return QKeySequence();
+}
 
 void Shortcuts::setActivateSettingsShortcut(const QKeySequence &shortcut)
 {
@@ -91,6 +108,11 @@ void Shortcuts::setActivateTasksShortcut(const QKeySequence &shortcut)
 void Shortcuts::setDisplayHomeScreenShortcut(const QKeySequence &shortcut)
 {
     KGlobalAccel::self()->setGlobalShortcut(toggleDisplayHomeScreenAction, shortcut);
+}
+
+void Shortcuts::setDisplayHomeOverlayShortcut(const QKeySequence &shortcut)
+{
+    KGlobalAccel::self()->setGlobalShortcut(toggleDisplayHomeOverlayAction, shortcut);
 }
 
 void Shortcuts::resetActivateSettingsShortcut()
@@ -112,6 +134,14 @@ void Shortcuts::resetActivateTasksShortcut()
 void Shortcuts::resetDisplayHomeScreenShortcut()
 {
     auto defaultShortcuts = KGlobalAccel::self()->defaultShortcut(toggleDisplayHomeScreenAction);
+    for (const auto &shortcut : defaultShortcuts) {
+        setActivateSettingsShortcut(shortcut);
+    }
+}
+
+void Shortcuts::resetDisplayHomeOverlayShortcut()
+{
+    auto defaultShortcuts = KGlobalAccel::self()->defaultShortcut(toggleDisplayHomeOverlayAction);
     for (const auto &shortcut : defaultShortcuts) {
         setActivateSettingsShortcut(shortcut);
     }

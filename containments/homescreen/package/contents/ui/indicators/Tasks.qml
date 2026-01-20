@@ -23,21 +23,6 @@ AbstractIndicator {
     text: i18n("Tasks")
 
     onClicked: {
-        taskWindowView.showOverlay()
-    }
-
-    Connections {
-        target: Shortcuts
-
-        function onToggleTasksOverlay() {
-            if(!taskWindowView.active) {
-                taskWindowView.showOverlay()
-            } else {
-                taskWindowView.hideOverlay()
-            }
-        }
-        function onToggleHomeScreen() {
-            taskWindowView.minimizeAllTasks()
-        }
+        Plasmoid.openTasks();
     }
 }

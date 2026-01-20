@@ -45,6 +45,8 @@ FocusScope {
 
     Component.onCompleted: activateAppView()
 
+    Keys.onLeftPressed: Plasmoid.openHomeOverlay()
+
     Connections {
         target: Plasmoid.applicationListModel
         function onAppOrderChanged() {

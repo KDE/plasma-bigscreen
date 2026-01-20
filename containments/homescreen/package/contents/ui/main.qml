@@ -16,6 +16,8 @@ import org.kde.kquickcontrolsaddons
 import org.kde.private.biglauncher
 
 import "launcher"
+import "homeoverlay"
+import "search" as Search
 
 ContainmentItem {
     id: root
@@ -30,10 +32,7 @@ ContainmentItem {
 
     Plasmoid.onActivated: {
         // Action when the meta key is pressed
-        for (var i = 0; i < tasksModel.count; i++) {
-            const idx = tasksModel.makeModelIndex(i);
-            tasksModel.requestToggleMinimized(idx);
-        }
+        tasksModel.minimizeAllTasks();
     }
 
     Connections {
@@ -61,6 +60,35 @@ ContainmentItem {
         function onActivateWallpaperSelectorRequested() {
             root.configureWallpaper();
         }
+    }
+
+    Connections {
+        target: Shortcuts
+
+        function onToggleHomeScreen() {
+            tasksModel.minimizeAllTasks();
+        }
+    }
+
+    Connections {
+        target: Plasmoid
+
+        function onOpenTasksRequested() {
+            taskWindowView.showOverlay();
+        }
+
+        function onOpenSearchRequested() {
+            searchWindow.showOverlay();
+        }
+
+        function onOpenHomeOverlayRequested() {
+            homeOverlayWindow.showOverlay();
+        }
+    }
+
+    // Trigger home overlay for back and left action
+    Keys.onEscapePressed: {
+        homeOverlayWindow.showOverlay();
     }
 
     Containment.onAppletAdded: (applet, x, y) => {
@@ -110,14 +138,40 @@ ContainmentItem {
         filterByScreen: false
         filterHidden: true
         groupMode: TaskManager.TasksModel.GroupDisabled
+
+        function minimizeAllTasks() {
+            for (var i = 0; i < tasksModel.count; i++) {
+                const idx = tasksModel.makeModelIndex(i);
+                tasksModel.requestToggleMinimized(idx);
+            }
+        }
     }
 
+    // Shell windows
     StartupFeedbackWindow {
         id: feedbackWindow
     }
 
+    Search.SearchWindow {
+        id: searchWindow
+    }
+
+    TaskWindowView {
+        id: taskWindowView
+    }
+
     FavoritesManager {
         id: favsManagerWindowView
+    }
+
+    HomeOverlayWindow {
+        id: homeOverlayWindow
+
+        showTasksButton: taskWindowView.modelCount > 1 // TODO: HACK: the home overlay window counts as a task
+        onMinimizeAllTasksRequested: tasksModel.minimizeAllTasks()
+        onSearchRequested: Plasmoid.openSearch()
+        onTasksRequested: Plasmoid.openTasks()
+        onSettingsRequested: Plasmoid.openSettings()
     }
 
     // Homescreen background - only loaded when wallpaperBlur setting is enabled

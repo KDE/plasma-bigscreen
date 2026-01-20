@@ -33,10 +33,17 @@ public:
     Shortcuts *shortcuts() const;
 
     Q_INVOKABLE void openSettings(QString module = QString{});
+    Q_INVOKABLE void openSearch();
+    Q_INVOKABLE void openTasks();
+    Q_INVOKABLE void openHomeOverlay();
+
+Q_SIGNALS:
+    void openSearchRequested();
+    void openTasksRequested();
+    void openHomeOverlayRequested();
 
 public Q_SLOTS:
     void executeCommand(const QString &command);
-    void requestShutdown();
     void setUseColoredTiles(bool coloredTiles);
     void setUseWallpaperBlur(bool wallpaperBlur);
 

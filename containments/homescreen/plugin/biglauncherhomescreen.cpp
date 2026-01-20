@@ -84,24 +84,26 @@ void HomeScreen::openSettings(QString module)
     }
 }
 
+void HomeScreen::openSearch()
+{
+    Q_EMIT openSearchRequested();
+}
+
+void HomeScreen::openTasks()
+{
+    Q_EMIT openTasksRequested();
+}
+
+void HomeScreen::openHomeOverlay()
+{
+    Q_EMIT openHomeOverlayRequested();
+}
+
 void HomeScreen::executeCommand(const QString &command)
 {
     qInfo() << "Executing" << command;
     QStringList split = QProcess::splitCommand(command);
     QProcess::startDetached(split.takeFirst(), split);
-}
-
-void HomeScreen::requestShutdown()
-{
-    if (m_session->state() == SessionManagement::State::Loading) {
-        connect(m_session, &SessionManagement::stateChanged, this, [this]() {
-            if (m_session->state() == SessionManagement::State::Ready) {
-                m_session->requestShutdown();
-                disconnect(m_session, nullptr, this, nullptr);
-            }
-        });
-    }
-    m_session->requestShutdown();
 }
 
 void HomeScreen::setUseColoredTiles(bool coloredTiles)
