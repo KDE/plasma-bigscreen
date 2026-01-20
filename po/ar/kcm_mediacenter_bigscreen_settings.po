@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-19 00:45+0000\n"
-"PO-Revision-Date: 2025-08-28 12:30+0400\n"
+"PO-Revision-Date: 2026-01-19 22:05+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -112,12 +112,12 @@ msgstr "ستلّون خلفيات المربعات بناءً على أيقون�
 #: ui/main.qml:69
 #, kde-format
 msgid "Wallpaper blur"
-msgstr ""
+msgstr "طمس الخلفية"
 
 #: ui/main.qml:70
 #, kde-format
 msgid "Apply a blur effect to the wallpaper on the homescreen"
-msgstr ""
+msgstr "تطبيق تأثير الطمس على خلفية الشاشة الرئيسة"
 
 #: ui/main.qml:83 ui/ThemeSidebar.qml:23
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2021, 2023, 2024, 2025.
+# Yuri Chornoivan <yurchor@ukr.net>, 2021, 2023, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-19 00:45+0000\n"
-"PO-Revision-Date: 2025-08-13 21:47+0300\n"
+"PO-Revision-Date: 2026-01-19 08:29+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -112,12 +112,13 @@ msgstr "Тло плитки буде розфарбоване на основі 
 #: ui/main.qml:69
 #, kde-format
 msgid "Wallpaper blur"
-msgstr ""
+msgstr "Розмивання фонового зображення"
 
 #: ui/main.qml:70
 #, kde-format
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr ""
+"Застосувати ефект розмивання до фонового зображення на домашній сторінці"
 
 #: ui/main.qml:83 ui/ThemeSidebar.qml:23
 #, kde-format

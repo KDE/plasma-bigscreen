@@ -143,6 +143,3 @@ msgstr "清除任务"
 #, kde-format
 msgid "Close"
 msgstr "关闭"
-
-#~ msgid "Audio Volume"
-#~ msgstr "音量"
