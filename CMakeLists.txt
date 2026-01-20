@@ -6,9 +6,9 @@
 cmake_minimum_required(VERSION 3.24)
 
 project(plasma-bigscreen)
-set(PROJECT_VERSION "6.4.80")
+set(PROJECT_VERSION "6.5.80")
 
-set(QT_MIN_VERSION "6.8.0")
+set(QT_MIN_VERSION "6.10.0")
 set(KF_MIN_VERSION "6.14.0")
 set(QCORO_MIN_VERSION "0.7.0")
 
@@ -66,18 +66,27 @@ find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Multimedia
     WebEngineCore
     WebEngineQuick
+    WaylandClient
 )
 find_package(QCoro6 ${QCORO_MIN_VERSION} REQUIRED COMPONENTS Core Quick Qml)
+
+find_package(PlasmaWaylandProtocols REQUIRED)
+find_package(Wayland REQUIRED COMPONENTS Client)
+
+# libcec (TV Remote support)
+pkg_check_modules(Libcec IMPORTED_TARGET libcec>=6)
+add_feature_info(Libcec Libcec_FOUND "Adds support for CEC devices (ex. TV Remotes)")
+
+# SDL3 (Game controller support)
+find_package(SDL3 REQUIRED)
+set_package_properties(SDL3 PROPERTIES
+        TYPE REQUIRED
+        PURPOSE "Required for game controller support"
+)
 
 add_definitions(-DQT_NO_FOREACH -DQT_NO_URL_CAST_FROM_STRING)
 kde_enable_exceptions()
 qcoro_enable_coroutines()
-
-ecm_find_qmlmodule(org.kde.plasma.core 2.0)
-
-ecm_set_disabled_deprecation_versions(QT 6.2.0
-    KF 6.4.0
-)
 
 add_subdirectory(bin)
 add_subdirectory(containments)
@@ -88,6 +97,8 @@ add_subdirectory(envmanager)
 add_subdirectory(uvcviewer)
 add_subdirectory(settingsapp)
 add_subdirectory(webapp-viewer)
+add_subdirectory(inputhandler)
+add_subdirectory(kded)
 
 plasma_install_package(shell org.kde.plasma.bigscreen shells)
 plasma_install_package(lookandfeel org.kde.plasma.bigscreen look-and-feel lookandfeel)

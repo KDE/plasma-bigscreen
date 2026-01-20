@@ -12,15 +12,20 @@ This repository contains shell components for Plasma Bigscreen.
 * Documentation: [invent.kde.org/plasma/plasma-bigscreen/-/wikis/home](https://invent.kde.org/plasma/plasma-bigscreen/-/wikis/home)
 * Development channel: [matrix.to/#/#plasma-bigscreen:kde.org](https://matrix.to/#/#plasma-bigscreen:kde.org)
 
-Plasma Bigscreen is a user-friendly, open-source interface designed for devices like HTPCs and SBCs connected to TVs and projectors. It provides an intuitive experience that allows for easy navigation from a distance using remote controls. Discover an engaging environment that adapts to your preferences, offering the safety and privacy protection that come with the Free and Open Source Software.
+Plasma Bigscreen is a user-friendly, open-source, Wayland desktop environment designed for devices like HTPCs and SBCs connected to TVs and projectors. It provides an intuitive experience that allows for easy navigation from a distance using remote controls. Discover an engaging environment that adapts to your preferences, offering the safety and privacy protection that come with free and open source software!
 
 ### Locations
 
 * [components](components) - Shell components & controls libraries
 * [containments](containments) - Shell components (homescreen)
+* [envmanager](envmanager) - Utility that sets Plasma configuration
+* [inputhandler](inputhandler) - Daemon that interprets controllers and TV remotes as keyboard input
 * [kcms](kcms) - Settings modules
-* [look-and-feel](look-and-feel/contents) - Plasma look-and-feel package
-* [shell](shell) Plasma shell package, provides implementations for applet and containment configuration dialogs
+* [lookandfeel](lookandfeel/contents) - Plasma look-and-feel package
+* [settingsapp](settingsapp) - The standalone settings application
+* [shell](shell) - Plasma shell package, provides implementations for applet and containment configuration dialogs
+* [uvcviewer](uvcviewer) - Standalone application to view camera input, paired with a UVC adapter it can view input from other devices (ex. consoles)
+* [webapp-viewer](webapp-viewer) - Application to view webapps added from the settings
 
 <img src="/screenshots/homescreen.png" width=500px/>
 
@@ -37,8 +42,9 @@ See [this page](https://community.kde.org/Get_Involved/development) in order to 
 - [Plasma Nano](https://invent.kde.org/plasma/plasma-nano)
 - [Plasma NM](https://invent.kde.org/plasma/plasma-nm)
 - [Plasma PA](https://invent.kde.org/plasma/plasma-pa)
-- [Milou](https://invent.kde.org/plasma/milou) 
+- [Milou](https://invent.kde.org/plasma/milou)
 - [KScreen](https://invent.kde.org/plasma/libkscreen)
+- [KWin](https://invent.kde.org/plasma/kwin)
 
 ### KDE Frameworks Dependencies
 
@@ -58,17 +64,11 @@ See [this page](https://community.kde.org/Get_Involved/development) in order to 
 - [KDE Connect](https://invent.kde.org/network/kdeconnect-kde)
 - SVG
 
-### Qt dependencies
-
-- Quick
-- Core
-- Qml
-- DBus
-- Network
-
 ### Other dependencies
 
 - QCoro
+- SDL (for game controller support)
+- libcec (optional: for TV Controller support)
 
 </details>
 

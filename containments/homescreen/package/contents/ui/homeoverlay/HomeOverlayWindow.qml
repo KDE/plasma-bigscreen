@@ -11,6 +11,7 @@ import org.kde.plasma.private.nanoshell as NanoShell
 import org.kde.plasma.plasma5support as P5Support
 import org.kde.private.biglauncher
 import org.kde.bigscreen as Bigscreen
+import org.kde.bigscreen.controllerhandler as ControllerHandler
 
 NanoShell.FullScreenOverlay {
     id: window
@@ -24,13 +25,27 @@ NanoShell.FullScreenOverlay {
 
     color: "transparent"
 
+    property bool closeControllerSuppressState
+
     function showOverlay() {
         showMaximized();
     }
 
+    function hideOverlay() {
+        sidebar.close();
+    }
+
     onVisibleChanged: {
         if (visible) {
+            // Don't have controller input suppressed while the home overlay is open, so user can interact
+            // Save the state to a variable
+            closeControllerSuppressState = ControllerHandler.ControllerHandlerStatus.inputSuppressed;
+            ControllerHandler.ControllerHandlerStatus.inputSuppressed = false;
+
             sidebar.open()
+        } else {
+            // Restore controller input suppressed state (which may have been toggled here)
+            ControllerHandler.ControllerHandlerStatus.inputSuppressed = closeControllerSuppressState;
         }
     }
     onActiveChanged: {
@@ -46,7 +61,7 @@ NanoShell.FullScreenOverlay {
             if (window.visible) {
                 sidebar.close();
             } else {
-                window.showMaximized();
+                window.showFullScreen();
             }
         }
     }
@@ -150,7 +165,7 @@ NanoShell.FullScreenOverlay {
                         id: searchButton
                         Layout.fillWidth: true
 
-                        KeyNavigation.down: showTasksButton ? tasksButton : settingsButton
+                        KeyNavigation.down: tasksButton.downItem
 
                         text: i18n("Search")
                         icon.name: "system-search-symbolic"
@@ -164,7 +179,10 @@ NanoShell.FullScreenOverlay {
                         id: tasksButton
                         Layout.fillWidth: true
 
-                        KeyNavigation.down: settingsButton
+                        property Item downItem: visible ? tasksButton : controllerButton.downItem
+                        property Item upItem: visible ? tasksButton : searchButton
+                        KeyNavigation.down: controllerButton.downItem
+                        KeyNavigation.up: searchButton
 
                         visible: showTasksButton
                         text: i18n("Tasks")
@@ -177,10 +195,28 @@ NanoShell.FullScreenOverlay {
 
                     Item { Layout.fillHeight: true }
 
+                    Bigscreen.SwitchDelegate {
+                        id: controllerButton
+                        Layout.fillWidth: true
+
+                        property Item downItem: visible ? controllerButton : settingsButton
+                        property Item upItem: visible ? controllerButton : tasksButton.upItem
+                        KeyNavigation.up: tasksButton.upItem
+                        KeyNavigation.down: settingsButton
+
+                        visible: ControllerHandler.ControllerHandlerStatus.sdlControllerConnected
+                        icon.name: "input-gamepad-symbolic"
+                        text: i18n("Controller")
+                        description: window.closeControllerSuppressState ? i18n("Key capture off") : i18n("Currently capturing keys…")
+
+                        checked: !window.closeControllerSuppressState
+                        onCheckedChanged: window.closeControllerSuppressState = !checked
+                    }
+
                     Bigscreen.ButtonDelegate {
                         id: settingsButton
                         Layout.fillWidth: true
-                        KeyNavigation.up: showTasksButton ? tasksButton : searchButton
+                        KeyNavigation.up: controllerButton.upItem
 
                         text: i18n("Settings")
                         icon.name: "settings-configure-symbolic"

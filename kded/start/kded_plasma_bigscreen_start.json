@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Description": "Run initial tasks for Plasma Bigscreen during session startup",
+        "Name": "Plasma Bigscreen Start"
+    },
+    "X-KDE-Kded-autoload": true,
+    "X-KDE-Kded-phase": 1,
+    "X-KDE-Library": "plasma-bigscreen"
+}
+

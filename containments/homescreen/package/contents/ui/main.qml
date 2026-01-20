@@ -14,6 +14,7 @@ import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 import org.kde.kquickcontrolsaddons
 import org.kde.private.biglauncher
+import org.kde.bigscreen.controllerhandler as ControllerHandler
 
 import "launcher"
 import "homeoverlay"
@@ -30,9 +31,17 @@ ContainmentItem {
         Plasmoid.internalAction("configure").trigger();
     }
 
+    function activateHome() {
+        if (homeOverlayWindow.visible) {
+            homeOverlayWindow.hideOverlay();
+        } else {
+            homeOverlayWindow.showOverlay();
+        }
+    }
+
+    // Action for when Meta key is pressed
     Plasmoid.onActivated: {
-        // Action when the meta key is pressed
-        tasksModel.minimizeAllTasks();
+        root.activateHome();
     }
 
     Connections {
@@ -83,6 +92,14 @@ ContainmentItem {
 
         function onOpenHomeOverlayRequested() {
             homeOverlayWindow.showOverlay();
+        }
+    }
+
+    Connections {
+        target: ControllerHandler.ControllerHandlerStatus
+
+        function onHomeActionRequested() {
+            root.activateHome();
         }
     }
 

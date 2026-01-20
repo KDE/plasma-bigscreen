@@ -2,3 +2,4 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 add_subdirectory(bigscreenplugin)
+add_subdirectory(controllerhandler)

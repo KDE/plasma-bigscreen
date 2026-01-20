@@ -32,7 +32,8 @@ const QMap<QString, QMap<QString, QVariant>> KWINRC_SETTINGS = {
       {"InteractiveWindowMoveEnabled", false}}},
     {"Plugins",
      {
-         {"blurEnabled", false} // disable blur plugin for performance
+         {"blurEnabled", false}, // disable blur plugin for performance
+         {"gamecontrollerEnabled", false} // disable gamecontroller plugin to do our own handling
      }},
     {"org.kde.kdecoration2",
      {
