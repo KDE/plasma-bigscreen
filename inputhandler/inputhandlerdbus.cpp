@@ -50,6 +50,7 @@ void InputHandlerDBus::setSdlController(SdlController *controller)
     if (m_sdlController) {
         connect(m_sdlController, &SdlController::controllerAdded, this, &InputHandlerDBus::sdlControllerAdded);
         connect(m_sdlController, &SdlController::controllerRemoved, this, &InputHandlerDBus::sdlControllerRemoved);
+        connect(m_sdlController, &SdlController::isSuppressInputChanged, this, &InputHandlerDBus::inputSuppressedChanged);
     }
 }
 
@@ -93,15 +94,20 @@ bool InputHandlerDBus::isInputSuppressed() const
     return m_sdlController->isSuppressInput();
 }
 
+bool InputHandlerDBus::isInputManuallySuppressed() const
+{
+    if (!m_sdlController) {
+        return false;
+    }
+    return m_sdlController->isManualSuppressInput();
+}
+
 void InputHandlerDBus::setInputSuppressed(bool suppress)
 {
     if (!m_sdlController) {
         return;
     }
-    if (m_sdlController->isSuppressInput() != suppress) {
-        m_sdlController->setSuppressInput(suppress);
-        Q_EMIT inputSuppressedChanged(suppress);
-    }
+    m_sdlController->setSuppressInput(suppress);
 }
 
 #include "moc_inputhandlerdbus.cpp"

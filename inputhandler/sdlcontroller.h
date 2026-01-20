@@ -12,6 +12,7 @@
 #include <QTimer>
 
 #include "device.h"
+#include "devicewatcher.h"
 
 #include <SDL3/SDL.h>
 
@@ -72,13 +73,6 @@ private:
     static constexpr double MOUSE_SENSITIVITY = 15.0;
 };
 
-/**
- * @brief Controller manager for SDL gamepad devices
- *
- * This class initializes SDL3 and manages gamepad hotplug events.
- * It creates SdlDevice instances for each connected gamepad and
- * registers them with the ControllerManager.
- */
 class SdlController : public QObject
 {
     Q_OBJECT
@@ -94,10 +88,15 @@ public:
     {
         return m_suppressInput;
     }
+    bool isManualSuppressInput() const
+    {
+        return m_manualSuppressInput;
+    }
 
 Q_SIGNALS:
     void controllerAdded(const QString &name);
     void controllerRemoved(const QString &name);
+    void isSuppressInputChanged(bool suppressed, bool automatic); // automatic - whether it was changed by the DeviceWatcher
 
 private Q_SLOTS:
     void poll();
@@ -109,6 +108,8 @@ private:
     QMap<SDL_JoystickID, SdlDevice *> m_devices;
     QTimer *m_pollTimer = nullptr;
     bool m_suppressInput = false;
+    bool m_manualSuppressInput = false; // Manually set via D-Bus
+    DeviceWatcher *m_deviceWatcher = nullptr;
 
     // Polling intervals
     static constexpr int SHORT_POLL_INTERVAL = 16; // ~60fps when devices connected

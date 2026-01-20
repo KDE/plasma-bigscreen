@@ -41,6 +41,7 @@ NanoShell.FullScreenOverlay {
             // Save the state to a variable
             closeControllerSuppressState = ControllerHandler.ControllerHandlerStatus.inputSuppressed;
             ControllerHandler.ControllerHandlerStatus.inputSuppressed = false;
+            controllerButton.checked = Qt.binding(() => !window.closeControllerSuppressState);
 
             sidebar.open()
         } else {
@@ -87,8 +88,6 @@ NanoShell.FullScreenOverlay {
 
             Kirigami.Theme.inherit: false
             Kirigami.Theme.colorSet: Kirigami.Theme.Button
-
-            Keys.onRightPressed: sidebar.close()
 
             QQC2.Control {
                 id: headerControl
@@ -207,7 +206,7 @@ NanoShell.FullScreenOverlay {
                         visible: ControllerHandler.ControllerHandlerStatus.sdlControllerConnected
                         icon.name: "input-gamepad-symbolic"
                         text: i18n("Controller")
-                        description: window.closeControllerSuppressState ? i18n("Key capture off") : i18n("Currently capturing keys…")
+                        description: checked ? i18n("Currently capturing keys…") : i18n("Key capture off")
 
                         checked: !window.closeControllerSuppressState
                         onCheckedChanged: window.closeControllerSuppressState = !checked

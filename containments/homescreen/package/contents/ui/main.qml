@@ -117,6 +117,17 @@ ContainmentItem {
         function onCecControllerRemoved(name) {
             Plasmoid.showOSD(i18n("Remote removed: %1", name), "input-tvremote-symbolic");
         }
+
+        function onInputSuppressedChanged(suppressed, automatic) {
+            const systemTakingOver = i18n("System taking over controller input");
+            if (automatic) {
+                if (suppressed) {
+                    Plasmoid.showOSD(i18n("Application taking over controller input"), "input-gamepad-symbolic");
+                } else {
+                    Plasmoid.showOSD(systemTakingOver, "input-gamepad-symbolic");
+                }
+            }
+        }
     }
 
     // Trigger home overlay for back and left action

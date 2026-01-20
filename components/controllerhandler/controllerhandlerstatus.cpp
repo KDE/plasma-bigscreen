@@ -51,7 +51,7 @@ void ControllerHandlerStatus::connectToService()
     bus.connect(SERVICE, PATH, IFACE, QStringLiteral("sdlControllerRemoved"), this, SLOT(onSdlControllerRemoved(QString)));
     bus.connect(SERVICE, PATH, IFACE, QStringLiteral("cecControllerAdded"), this, SLOT(onCecControllerAdded(QString)));
     bus.connect(SERVICE, PATH, IFACE, QStringLiteral("cecControllerRemoved"), this, SLOT(onCecControllerRemoved(QString)));
-    bus.connect(SERVICE, PATH, IFACE, QStringLiteral("inputSuppressedChanged"), this, SLOT(onInputSuppressedChanged(bool)));
+    bus.connect(SERVICE, PATH, IFACE, QStringLiteral("inputSuppressedChanged"), this, SLOT(onInputSuppressedChanged(bool, bool)));
     bus.connect(SERVICE, PATH, IFACE, QStringLiteral("homeActionRequested"), this, SIGNAL(homeActionRequested()));
 
     m_serviceAvailable = true;
@@ -68,7 +68,7 @@ void ControllerHandlerStatus::disconnectFromService()
         bus.disconnect(SERVICE, PATH, IFACE, QStringLiteral("sdlControllerRemoved"), this, SLOT(onSdlControllerRemoved(QString)));
         bus.disconnect(SERVICE, PATH, IFACE, QStringLiteral("cecControllerAdded"), this, SLOT(onCecControllerAdded(QString)));
         bus.disconnect(SERVICE, PATH, IFACE, QStringLiteral("cecControllerRemoved"), this, SLOT(onCecControllerRemoved(QString)));
-        bus.disconnect(SERVICE, PATH, IFACE, QStringLiteral("inputSuppressedChanged"), this, SLOT(onInputSuppressedChanged(bool)));
+        bus.disconnect(SERVICE, PATH, IFACE, QStringLiteral("inputSuppressedChanged"), this, SLOT(onInputSuppressedChanged(bool, bool)));
         bus.disconnect(SERVICE, PATH, IFACE, QStringLiteral("homeActionRequested"), this, SIGNAL(homeActionRequested()));
 
         delete m_dbusInterface;
@@ -90,6 +90,7 @@ void ControllerHandlerStatus::updateConnectionStatus()
     bool newSdlConnected = isSdlControllerConnected();
     bool newCecConnected = isCecControllerConnected();
     bool newInputSuppressed = m_dbusInterface->property("inputSuppressed").toBool();
+    bool newInputManuallySuppressed = m_dbusInterface->property("inputManuallySuppressed").toBool();
 
     if (newSdlConnected != m_sdlControllerConnected) {
         m_sdlControllerConnected = newSdlConnected;
@@ -101,9 +102,10 @@ void ControllerHandlerStatus::updateConnectionStatus()
         Q_EMIT cecControllerConnectedChanged();
     }
 
-    if (newInputSuppressed != m_inputSuppressed) {
+    if (newInputSuppressed != m_inputSuppressed || newInputManuallySuppressed != m_inputManuallySuppressed) {
         m_inputSuppressed = newInputSuppressed;
-        Q_EMIT inputSuppressedChanged();
+        m_inputManuallySuppressed = newInputManuallySuppressed;
+        Q_EMIT inputSuppressedChanged(newInputSuppressed, !newInputManuallySuppressed);
     }
 }
 
@@ -122,6 +124,11 @@ bool ControllerHandlerStatus::serviceAvailable() const
 bool ControllerHandlerStatus::inputSuppressed() const
 {
     return m_inputSuppressed;
+}
+
+bool ControllerHandlerStatus::inputManuallySuppressed() const
+{
+    return m_inputManuallySuppressed;
 }
 
 void ControllerHandlerStatus::setInputSuppressed(bool suppress)
@@ -175,11 +182,18 @@ void ControllerHandlerStatus::onCecControllerRemoved(const QString &name)
     Q_EMIT cecControllerRemoved(name);
 }
 
-void ControllerHandlerStatus::onInputSuppressedChanged(bool suppressed)
+void ControllerHandlerStatus::onInputSuppressedChanged(bool suppressed, bool automatic)
 {
-    if (m_inputSuppressed != suppressed) {
+    // Fetch the current manual suppression state from DBus
+    bool newManuallySuppressed = m_inputManuallySuppressed;
+    if (m_dbusInterface) {
+        newManuallySuppressed = m_dbusInterface->property("inputManuallySuppressed").toBool();
+    }
+
+    if (m_inputSuppressed != suppressed || m_inputManuallySuppressed != newManuallySuppressed) {
         m_inputSuppressed = suppressed;
-        Q_EMIT inputSuppressedChanged();
+        m_inputManuallySuppressed = newManuallySuppressed;
+        Q_EMIT inputSuppressedChanged(suppressed, automatic);
     }
 }
 

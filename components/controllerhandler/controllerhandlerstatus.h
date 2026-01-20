@@ -18,6 +18,7 @@ class ControllerHandlerStatus : public QObject
     Q_PROPERTY(bool cecControllerConnected READ cecControllerConnected NOTIFY cecControllerConnectedChanged)
     Q_PROPERTY(bool serviceAvailable READ serviceAvailable NOTIFY serviceAvailableChanged)
     Q_PROPERTY(bool inputSuppressed READ inputSuppressed WRITE setInputSuppressed NOTIFY inputSuppressedChanged)
+    Q_PROPERTY(bool inputManuallySuppressed READ inputManuallySuppressed NOTIFY inputSuppressedChanged)
 
 public:
     explicit ControllerHandlerStatus(QObject *parent = nullptr);
@@ -27,6 +28,7 @@ public:
     bool cecControllerConnected() const;
     bool serviceAvailable() const;
     bool inputSuppressed() const;
+    bool inputManuallySuppressed() const;
 
     void setInputSuppressed(bool suppress);
 
@@ -37,7 +39,7 @@ Q_SIGNALS:
     void sdlControllerConnectedChanged();
     void cecControllerConnectedChanged();
     void serviceAvailableChanged();
-    void inputSuppressedChanged();
+    void inputSuppressedChanged(bool suppressed, bool automatic);
 
     void sdlControllerAdded(const QString &name);
     void sdlControllerRemoved(const QString &name);
@@ -52,7 +54,7 @@ private Q_SLOTS:
     void onSdlControllerRemoved(const QString &name);
     void onCecControllerAdded(const QString &name);
     void onCecControllerRemoved(const QString &name);
-    void onInputSuppressedChanged(bool suppressed);
+    void onInputSuppressedChanged(bool suppressed, bool automatic);
 
 private:
     void updateConnectionStatus();
@@ -64,4 +66,5 @@ private:
     bool m_cecControllerConnected = false;
     bool m_serviceAvailable = false;
     bool m_inputSuppressed = false;
+    bool m_inputManuallySuppressed = false;
 };

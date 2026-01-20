@@ -27,6 +27,24 @@ SdlController::SdlController()
         qInfo() << "SDL3 gamepad subsystem initialized";
     }
 
+    // Watch for other processes listening to the controller
+    m_deviceWatcher = new DeviceWatcher(this);
+    connect(m_deviceWatcher, &DeviceWatcher::otherProcessesChanged, this, [this](bool othersUsing) {
+        qInfo() << "Other processes using device:" << othersUsing;
+
+        // Automatically suppress input if other apps are listening
+        // Manual suppression takes precedence
+        if (!m_manualSuppressInput) {
+            bool oldValue = m_suppressInput;
+            m_suppressInput = othersUsing;
+
+            if (m_suppressInput != oldValue) {
+                Q_EMIT isSuppressInputChanged(m_suppressInput, true);
+                qInfo() << "SDL input suppression (auto):" << (othersUsing ? "enabled" : "disabled");
+            }
+        }
+    });
+
     // Set up polling timer
     m_pollTimer = new QTimer(this);
     connect(m_pollTimer, &QTimer::timeout, this, &SdlController::poll);
@@ -100,8 +118,17 @@ bool SdlController::hasConnectedControllers() const
 
 void SdlController::setSuppressInput(bool suppress)
 {
+    bool oldValue = m_suppressInput;
+
+    m_manualSuppressInput = suppress;
     m_suppressInput = suppress;
-    qInfo() << "SDL input suppression:" << (suppress ? "enabled" : "disabled");
+
+    qInfo() << "SDL input suppression (manual):" << (suppress ? "enabled" : "disabled")
+            << "-> effective:" << (m_suppressInput ? "suppressed" : "not suppressed");
+
+    if (m_suppressInput != oldValue) {
+        Q_EMIT isSuppressInputChanged(m_suppressInput, false);
+    }
 }
 
 void SdlController::addDevice(SDL_JoystickID instanceId)
@@ -124,6 +151,12 @@ void SdlController::addDevice(SDL_JoystickID instanceId)
     auto device = new SdlDevice(gamepad, instanceId, this);
     m_devices.insert(instanceId, device);
 
+    // Register the device path with the watcher
+    QString devicePath = device->getUniqueIdentifier();
+    if (!devicePath.isEmpty()) {
+        m_deviceWatcher->addDevicePath(devicePath);
+    }
+
     ControllerManager::instance().newDevice(device);
 
     // Emit signal for DBus
@@ -143,6 +176,12 @@ void SdlController::removeDevice(SDL_JoystickID instanceId)
     auto device = m_devices.take(instanceId);
     QString deviceName = device->getName();
     qInfo() << "Removing SDL gamepad:" << deviceName;
+
+    // Unregister the device path from the watcher
+    QString devicePath = device->getUniqueIdentifier();
+    if (!devicePath.isEmpty()) {
+        m_deviceWatcher->removeDevicePath(devicePath);
+    }
 
     ControllerManager::instance().deviceRemoved(device);
     delete device;

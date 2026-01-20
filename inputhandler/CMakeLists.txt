@@ -15,6 +15,7 @@ target_sources(plasma-bigscreen-inputhandler PRIVATE
     xdgremotedesktopsystem.cpp
     sdlcontroller.cpp
     device.cpp
+    devicewatcher.cpp
     inputhandlerdbus.cpp
 )
 

@@ -15,18 +15,12 @@ class SdlController;
 class CECController;
 #endif
 
-/**
- * @brief DBus interface for the input handler daemon
- *
- * Provides methods to query controller status and signals for controller events.
- * Registered on the session bus at org.kde.plasma.bigscreen.inputhandler
- * on the path /InputHandler
- */
 class InputHandlerDBus : public QObject
 {
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.kde.plasma.bigscreen.inputhandler")
     Q_PROPERTY(bool inputSuppressed READ isInputSuppressed WRITE setInputSuppressed NOTIFY inputSuppressedChanged)
+    Q_PROPERTY(bool inputManuallySuppressed READ isInputManuallySuppressed NOTIFY inputSuppressedChanged)
 
 public:
     explicit InputHandlerDBus(QObject *parent = nullptr);
@@ -39,6 +33,7 @@ public:
 #endif
 
     bool isInputSuppressed() const;
+    bool isInputManuallySuppressed() const;
     void setInputSuppressed(bool suppress);
 
 public Q_SLOTS:
@@ -52,7 +47,7 @@ Q_SIGNALS:
     Q_SCRIPTABLE void sdlControllerRemoved(const QString &name);
     Q_SCRIPTABLE void cecControllerAdded(const QString &name);
     Q_SCRIPTABLE void cecControllerRemoved(const QString &name);
-    Q_SCRIPTABLE void inputSuppressedChanged(bool suppressed);
+    Q_SCRIPTABLE void inputSuppressedChanged(bool suppressed, bool automatic);
     Q_SCRIPTABLE void homeActionRequested();
 
 private:
