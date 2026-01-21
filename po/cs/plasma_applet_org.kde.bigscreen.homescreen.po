@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-18 00:44+0000\n"
+"POT-Creation-Date: 2026-01-21 00:47+0000\n"
 "PO-Revision-Date: 2022-01-17 14:34+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -31,6 +31,44 @@ msgstr ""
 #, kde-format
 msgid "Remove Favorites"
 msgstr ""
+
+#: contents/ui/homeoverlay/HomeOverlayWindow.qml:155
+#, kde-format
+msgid "Home"
+msgstr ""
+
+#: contents/ui/homeoverlay/HomeOverlayWindow.qml:169
+#: contents/ui/indicators/Search.qml:16
+#, kde-format
+msgid "Search"
+msgstr "Hledat"
+
+#: contents/ui/homeoverlay/HomeOverlayWindow.qml:187
+#: contents/ui/indicators/Tasks.qml:23
+#, kde-format
+msgid "Tasks"
+msgstr "Úlohy"
+
+#: contents/ui/homeoverlay/HomeOverlayWindow.qml:208
+#, kde-format
+msgid "Controller"
+msgstr ""
+
+#: contents/ui/homeoverlay/HomeOverlayWindow.qml:209
+#, kde-format
+msgid "Currently capturing keys…"
+msgstr ""
+
+#: contents/ui/homeoverlay/HomeOverlayWindow.qml:209
+#, kde-format
+msgid "Key capture off"
+msgstr ""
+
+#: contents/ui/homeoverlay/HomeOverlayWindow.qml:220
+#: contents/ui/indicators/Settings.qml:18
+#, kde-format
+msgid "Settings"
+msgstr "Nastavení"
 
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
@@ -62,16 +100,6 @@ msgstr "Přijmout"
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: contents/ui/indicators/Search.qml:20
-#, kde-format
-msgid "Search"
-msgstr "Hledat"
-
-#: contents/ui/indicators/Settings.qml:18
-#, kde-format
-msgid "Settings"
-msgstr "Nastavení"
-
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Exit Bigscreen"
@@ -81,11 +109,6 @@ msgstr ""
 #, kde-format
 msgid "Power"
 msgstr "Mocnitel"
-
-#: contents/ui/indicators/Tasks.qml:23
-#, kde-format
-msgid "Tasks"
-msgstr "Úlohy"
 
 #: contents/ui/indicators/Volume.qml:20
 #, kde-format
@@ -97,48 +120,78 @@ msgstr "Nastavení audio"
 msgid "Internet Settings"
 msgstr ""
 
-#: contents/ui/launcher/LauncherHome.qml:99
+#: contents/ui/launcher/LauncherHome.qml:101
 #, kde-format
 msgid "Favorites"
 msgstr "Oblíbené"
 
-#: contents/ui/launcher/LauncherHome.qml:118
+#: contents/ui/launcher/LauncherHome.qml:120
 #, kde-format
 msgid "Recent"
 msgstr "Nedávné"
 
-#: contents/ui/launcher/LauncherHome.qml:147
+#: contents/ui/launcher/LauncherHome.qml:149
 #, kde-format
 msgid "Voice Applications"
 msgstr ""
 
-#: contents/ui/launcher/LauncherHome.qml:174
+#: contents/ui/launcher/LauncherHome.qml:176
 #, kde-format
 msgid "Applications"
 msgstr "Aplikace"
 
-#: contents/ui/launcher/LauncherHome.qml:202
+#: contents/ui/launcher/LauncherHome.qml:204
 #, kde-format
 msgid "Games"
 msgstr "Hry"
 
-#: contents/ui/launcher/search/SearchTextField.qml:24
+#: contents/ui/main.qml:106
 #, kde-format
-msgctxt "@info:placeholder"
-msgid "Search…"
-msgstr "Hledat…"
+msgid "Controller added: %1"
+msgstr ""
+
+#: contents/ui/main.qml:110
+#, kde-format
+msgid "Controller removed: %1"
+msgstr ""
+
+#: contents/ui/main.qml:114
+#, kde-format
+msgid "Remote added: %1"
+msgstr ""
+
+#: contents/ui/main.qml:118
+#, kde-format
+msgid "Remote removed: %1"
+msgstr ""
+
+#: contents/ui/main.qml:122
+#, kde-format
+msgid "System taking over controller input"
+msgstr ""
+
+#: contents/ui/main.qml:125
+#, kde-format
+msgid "Application taking over controller input"
+msgstr ""
 
 #: contents/ui/PowerManagementItem.qml:41
 #, kde-format
 msgid "Bigscreen has enabled system-wide inhibition"
 msgstr "Bigscreen povolil pozastavení systému"
 
-#: contents/ui/TaskWindowView.qml:183
+#: contents/ui/search/SearchTextField.qml:24
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Search…"
+msgstr "Hledat…"
+
+#: contents/ui/TaskWindowView.qml:226
 #, kde-format
 msgid "Clear Tasks"
 msgstr ""
 
-#: contents/ui/TaskWindowView.qml:220
+#: contents/ui/TaskWindowView.qml:263
 #, kde-format
 msgid "Close"
 msgstr "Zavřít"

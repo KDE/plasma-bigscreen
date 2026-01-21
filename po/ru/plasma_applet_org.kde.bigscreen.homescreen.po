@@ -1,15 +1,15 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2025 Alexander Yavorsky <kekcuha@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2025, 2026 Alexander Yavorsky <kekcuha@gmail.com>
 # Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-18 00:44+0000\n"
-"PO-Revision-Date: 2025-10-27 10:33+0200\n"
-"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
+"POT-Creation-Date: 2026-01-21 00:47+0000\n"
+"PO-Revision-Date: 2026-01-13 19:50+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -33,6 +33,44 @@ msgstr ""
 #, kde-format
 msgid "Remove Favorites"
 msgstr ""
+
+#: contents/ui/homeoverlay/HomeOverlayWindow.qml:155
+#, kde-format
+msgid "Home"
+msgstr ""
+
+#: contents/ui/homeoverlay/HomeOverlayWindow.qml:169
+#: contents/ui/indicators/Search.qml:16
+#, kde-format
+msgid "Search"
+msgstr "Поиск"
+
+#: contents/ui/homeoverlay/HomeOverlayWindow.qml:187
+#: contents/ui/indicators/Tasks.qml:23
+#, kde-format
+msgid "Tasks"
+msgstr "Приложения"
+
+#: contents/ui/homeoverlay/HomeOverlayWindow.qml:208
+#, kde-format
+msgid "Controller"
+msgstr ""
+
+#: contents/ui/homeoverlay/HomeOverlayWindow.qml:209
+#, kde-format
+msgid "Currently capturing keys…"
+msgstr ""
+
+#: contents/ui/homeoverlay/HomeOverlayWindow.qml:209
+#, kde-format
+msgid "Key capture off"
+msgstr ""
+
+#: contents/ui/homeoverlay/HomeOverlayWindow.qml:220
+#: contents/ui/indicators/Settings.qml:18
+#, kde-format
+msgid "Settings"
+msgstr "Параметры"
 
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
@@ -64,16 +102,6 @@ msgstr "Принять"
 msgid "Cancel"
 msgstr "Отмена"
 
-#: contents/ui/indicators/Search.qml:20
-#, kde-format
-msgid "Search"
-msgstr "Поиск"
-
-#: contents/ui/indicators/Settings.qml:18
-#, kde-format
-msgid "Settings"
-msgstr "Параметры"
-
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Exit Bigscreen"
@@ -82,12 +110,7 @@ msgstr ""
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Power"
-msgstr "Управления питанием"
-
-#: contents/ui/indicators/Tasks.qml:23
-#, kde-format
-msgid "Tasks"
-msgstr "Приложения"
+msgstr "Управление питанием"
 
 #: contents/ui/indicators/Volume.qml:20
 #, kde-format
@@ -99,49 +122,79 @@ msgstr "Настройки звука"
 msgid "Internet Settings"
 msgstr "Настройки подключения к интернету"
 
-#: contents/ui/launcher/LauncherHome.qml:99
+#: contents/ui/launcher/LauncherHome.qml:101
 #, kde-format
 msgid "Favorites"
 msgstr "Избранное"
 
-#: contents/ui/launcher/LauncherHome.qml:118
+#: contents/ui/launcher/LauncherHome.qml:120
 #, kde-format
 msgid "Recent"
 msgstr "Недавние"
 
-#: contents/ui/launcher/LauncherHome.qml:147
+#: contents/ui/launcher/LauncherHome.qml:149
 #, fuzzy, kde-format
 #| msgid "Applications"
 msgid "Voice Applications"
 msgstr "Приложения"
 
-#: contents/ui/launcher/LauncherHome.qml:174
+#: contents/ui/launcher/LauncherHome.qml:176
 #, kde-format
 msgid "Applications"
 msgstr "Приложения"
 
-#: contents/ui/launcher/LauncherHome.qml:202
+#: contents/ui/launcher/LauncherHome.qml:204
 #, kde-format
 msgid "Games"
 msgstr "Игры"
 
-#: contents/ui/launcher/search/SearchTextField.qml:24
+#: contents/ui/main.qml:106
 #, kde-format
-msgctxt "@info:placeholder"
-msgid "Search…"
-msgstr "Поиск…"
+msgid "Controller added: %1"
+msgstr ""
+
+#: contents/ui/main.qml:110
+#, kde-format
+msgid "Controller removed: %1"
+msgstr ""
+
+#: contents/ui/main.qml:114
+#, kde-format
+msgid "Remote added: %1"
+msgstr ""
+
+#: contents/ui/main.qml:118
+#, kde-format
+msgid "Remote removed: %1"
+msgstr ""
+
+#: contents/ui/main.qml:122
+#, kde-format
+msgid "System taking over controller input"
+msgstr ""
+
+#: contents/ui/main.qml:125
+#, kde-format
+msgid "Application taking over controller input"
+msgstr ""
 
 #: contents/ui/PowerManagementItem.qml:41
 #, kde-format
 msgid "Bigscreen has enabled system-wide inhibition"
 msgstr "Bigscreen было включено общесистемное состояние блокировки"
 
-#: contents/ui/TaskWindowView.qml:183
+#: contents/ui/search/SearchTextField.qml:24
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Search…"
+msgstr "Поиск…"
+
+#: contents/ui/TaskWindowView.qml:226
 #, kde-format
 msgid "Clear Tasks"
 msgstr ""
 
-#: contents/ui/TaskWindowView.qml:220
+#: contents/ui/TaskWindowView.qml:263
 #, kde-format
 msgid "Close"
 msgstr "Закрыть"
