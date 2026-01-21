@@ -6,12 +6,10 @@
 
 #pragma once
 
-#include "abstractsystem.h"
-
 #include <QDBusInterface>
 #include <QDBusObjectPath>
 
-class XdgRemoteDesktopSystem : public AbstractSystem
+class XdgRemoteDesktopSystem : public QObject
 {
     Q_OBJECT
 
@@ -19,10 +17,10 @@ public:
     XdgRemoteDesktopSystem();
     ~XdgRemoteDesktopSystem() override;
 
-    bool init() override;
-    void emitKey(int key, bool pressed) override;
-    void emitPointerMotion(double deltaX, double deltaY) override;
-    void emitPointerButton(int button, bool pressed) override;
+    bool init();
+    void emitKey(int key, bool pressed);
+    void emitPointerMotion(double deltaX, double deltaY);
+    void emitPointerButton(int button, bool pressed);
 
 private Q_SLOTS:
     void handleSessionCreated(uint code, const QVariantMap &results);

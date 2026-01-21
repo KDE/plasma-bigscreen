@@ -5,37 +5,12 @@
  */
 
 #include "controllermanager.h"
-#include "kwinfakeinputsystem.h"
 #include "xdgremotedesktopsystem.h"
 
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <KWindowSystem>
-
-class NoOpInputSystem : public AbstractSystem
-{
-public:
-    bool init() override
-    {
-        return true;
-    }
-    void emitKey(int key, bool pressed) override
-    {
-        Q_UNUSED(key)
-        Q_UNUSED(pressed)
-    }
-    void emitPointerMotion(double deltaX, double deltaY) override
-    {
-        Q_UNUSED(deltaX)
-        Q_UNUSED(deltaY)
-    }
-    void emitPointerButton(int button, bool pressed) override
-    {
-        Q_UNUSED(button)
-        Q_UNUSED(pressed)
-    }
-};
 
 ControllerManager::ControllerManager(QObject *parent)
     : QObject(parent)
@@ -54,7 +29,6 @@ void ControllerManager::newDevice(Device *device)
     qInfo() << "New device connected:" << device->getName();
 
     m_usedKeys += device->usedKeys();
-    m_inputSystem->setSupportedKeys(m_usedKeys);
 
     device->setIndex(m_connectedDevices.size());
 
@@ -117,7 +91,7 @@ QVector<Device *> ControllerManager::connectedDevices()
 void ControllerManager::emitKey(int key, bool pressed)
 {
     m_lastUsed.start();
-    if (!m_enabled) {
+    if (!m_enabled || !m_inputSystem) {
         return;
     }
 
@@ -127,7 +101,7 @@ void ControllerManager::emitKey(int key, bool pressed)
 void ControllerManager::emitPointerMotion(double deltaX, double deltaY)
 {
     m_lastUsed.start();
-    if (!m_enabled) {
+    if (!m_enabled || !m_inputSystem) {
         return;
     }
 
@@ -137,7 +111,7 @@ void ControllerManager::emitPointerMotion(double deltaX, double deltaY)
 void ControllerManager::emitPointerButton(int button, bool pressed)
 {
     m_lastUsed.start();
-    if (!m_enabled) {
+    if (!m_enabled || !m_inputSystem) {
         return;
     }
 
@@ -155,32 +129,19 @@ ControllerManager::~ControllerManager()
     m_connectedDevices.clear();
 }
 
-void ControllerManager::noopInput()
-{
-    m_inputSystem.reset(new NoOpInputSystem);
-}
-
 void ControllerManager::resetInputSystem()
 {
     m_inputSystem.reset();
 
-    // Try KWin fake input first (more direct when available)
-    std::unique_ptr<AbstractSystem> inputSystem(new KWinFakeInputSystem);
-    if (inputSystem->init()) {
-        m_inputSystem.reset(inputSystem.release());
-        return;
-    }
-
-    // Fall back to XDG Remote Desktop portal
-    inputSystem.reset(new XdgRemoteDesktopSystem);
+    std::unique_ptr<XdgRemoteDesktopSystem> inputSystem(new XdgRemoteDesktopSystem);
     if (inputSystem->init()) {
         m_inputSystem.reset(inputSystem.release());
         return;
     }
 
     // No input system available
-    m_inputSystem.reset(new NoOpInputSystem);
-    qWarning() << "Could not find an input system, plasma-bigscreen-inputhandler will not be able to send events";
+    m_inputSystem.reset();
+    qWarning() << "Could not setup input system, plasma-bigscreen-inputhandler will not be able to send events";
 }
 
 #include "moc_controllermanager.cpp"

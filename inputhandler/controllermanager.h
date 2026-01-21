@@ -7,7 +7,7 @@
 #pragma once
 
 #include "device.h"
-#include "kwinfakeinputsystem.h"
+#include "xdgremotedesktopsystem.h"
 #include <QDateTime>
 #include <QHash>
 #include <QObject>
@@ -28,9 +28,6 @@ public:
     void newDevice(Device *device);
     void deviceRemoved(Device *device);
     bool isConnected(QString uniqueIdentifier);
-
-    /** Have input not forward events to the OS */
-    void noopInput();
 
     /** Have input forward events to the OS */
     void resetInputSystem();
@@ -53,7 +50,7 @@ private:
 
     bool m_enabled = true;
     QVector<Device *> m_connectedDevices;
-    QScopedPointer<AbstractSystem> m_inputSystem;
+    QScopedPointer<XdgRemoteDesktopSystem> m_inputSystem;
     QTimer m_lastUsed;
 
     QSet<int> m_usedKeys;

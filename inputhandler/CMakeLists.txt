@@ -5,13 +5,10 @@ add_executable(plasma-bigscreen-inputhandler)
 if (Qt6_VERSION VERSION_GREATER_EQUAL "6.8.0")
     set(private_code_option  "PRIVATE_CODE")
 endif()
-qt6_generate_wayland_protocol_client_sources(plasma-bigscreen-inputhandler FILES ${PLASMA_WAYLAND_PROTOCOLS_DIR}/fake-input.xml ${private_code_option})
 
 target_sources(plasma-bigscreen-inputhandler PRIVATE
     main.cpp
     controllermanager.cpp
-    abstractsystem.cpp
-    kwinfakeinputsystem.cpp
     xdgremotedesktopsystem.cpp
     sdlcontroller.cpp
     device.cpp
@@ -24,7 +21,6 @@ target_link_libraries(plasma-bigscreen-inputhandler
     Qt::Core
     Qt::DBus
     Qt::Gui
-    Qt::WaylandClient
     KF6::ConfigCore
     KF6::Notifications
     KF6::Solid
@@ -33,7 +29,6 @@ target_link_libraries(plasma-bigscreen-inputhandler
     KF6::CoreAddons
     KF6::WindowSystem
     SDL3::SDL3
-    Wayland::Client
 )
 target_compile_definitions(plasma-bigscreen-inputhandler PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
 

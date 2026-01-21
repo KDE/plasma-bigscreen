@@ -17,7 +17,7 @@ constexpr uint DEVICE_POINTER = 2;
 constexpr uint DEVICE_ALL = DEVICE_KEYBOARD | DEVICE_POINTER;
 
 XdgRemoteDesktopSystem::XdgRemoteDesktopSystem()
-    : AbstractSystem()
+    : QObject()
 {
 }
 
