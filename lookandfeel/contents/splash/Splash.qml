@@ -31,7 +31,6 @@ Rectangle {
         id: content
         width: parent.width
         height: parent.height
-        opacity: 0
 
         TextMetrics {
             id: units
@@ -45,11 +44,10 @@ Rectangle {
             id: logo
             asynchronous: true
             anchors.centerIn: parent
-            property real size: Kirigami.Units.gridUnit * 8
             source: "images/logo-big.svg"
 
-            sourceSize.width: size + Kirigami.Units.gridUnit * 3
-            sourceSize.height: size
+            sourceSize.width: Kirigami.Units.gridUnit * 12
+            sourceSize.height: Kirigami.Units.gridUnit * 12
         }
 
         Image {
@@ -69,35 +67,51 @@ Rectangle {
                 running: Kirigami.Units.longDuration > 1
             }
         }
+    }
 
-        Row {
-            spacing: Kirigami.Units.smallSpacing * 2
-            anchors {
-                bottom: parent.bottom
-                right: parent.right
-                margins: units.gridUnit
-            }
-            Text {
-                color: "#eff0f1"
-                anchors.verticalCenter: parent.verticalCenter
-                text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "This is the first text the user sees while starting in the splash screen, should be translated as something short, is a form that can be seen on a product. Plasma is the project name so shouldn't be translated.", "Plasma made by KDE")
-            }
-            Image {
-                asynchronous: true
-                source: "images/kde.svgz"
-                sourceSize.height: Kirigami.Units.gridUnit * 2
-                sourceSize.width: Kirigami.Units.gridUnit * 2
-            }
+    Row {
+        spacing: Kirigami.Units.smallSpacing * 2
+        anchors {
+            bottom: parent.bottom
+            right: parent.right
+            margins: units.gridUnit
+        }
+        Text {
+            color: "#eff0f1"
+            anchors.verticalCenter: parent.verticalCenter
+            text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "This is the first text the user sees while starting in the splash screen, should be translated as something short, is a form that can be seen on a product. Plasma is the project name so shouldn't be translated.", "Plasma made by KDE")
+        }
+        Image {
+            asynchronous: true
+            source: "images/kde.svgz"
+            sourceSize.height: Kirigami.Units.gridUnit * 2
+            sourceSize.width: Kirigami.Units.gridUnit * 2
         }
     }
 
-    OpacityAnimator {
+    ParallelAnimation {
         id: introAnimation
         running: false
-        target: content
-        from: 0
-        to: 1
-        duration: 1000
-        easing.type: Easing.InOutQuad
+        OpacityAnimator {
+            target: busyIndicator
+            from: 0
+            to: 1
+            duration: 1600
+            easing.type: Easing.InExpo
+        }
+        OpacityAnimator {
+            target: logo
+            from: 0
+            to: 1
+            duration: 800
+            easing.type: Easing.Linear
+        }
+        ScaleAnimator {
+            target: logo
+            from: 0.8
+            to: 1.0
+            duration: 2000
+            easing.type: Easing.OutExpo
+        }
     }
 }

@@ -3,12 +3,12 @@
 
 <svg
    sodipodi:docname="logo-big.svg"
-   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
    version="1.1"
    id="svg4351"
-   viewBox="0 0 129.43282 99.526337"
+   viewBox="14.953242 0 99.526337 99.526337"
    height="99.526337"
-   width="129.43282"
+   width="99.526337"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -19,17 +19,6 @@
    xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs4353">
-    <linearGradient
-       id="linearGradient23653"
-       inkscape:collect="always">
-      <stop
-         id="stop23649"
-         style="stop-color:#fafafa;stop-opacity:1" />
-      <stop
-         id="stop23651"
-         style="stop-opacity:0.65626746;stop-color:#fafafa"
-         offset="1" />
-    </linearGradient>
     <linearGradient
        inkscape:collect="always"
        id="linearGradient12715">
@@ -620,17 +609,6 @@
        x2="64.145638"
        y2="14.714873"
        gradientUnits="userSpaceOnUse" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient23653"
-       id="radialGradient23655"
-       cx="-276"
-       cy="432.29077"
-       fx="-276"
-       fy="432.29077"
-       r="12.086667"
-       gradientTransform="matrix(1,0,0,0.62768893,0,160.94664)"
-       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      inkscape:guide-bbox="true"
@@ -642,7 +620,7 @@
      inkscape:window-maximized="1"
      inkscape:window-y="0"
      inkscape:window-x="0"
-     inkscape:window-height="1052"
+     inkscape:window-height="1022"
      inkscape:window-width="1920"
      units="px"
      fit-margin-bottom="2"
@@ -652,28 +630,32 @@
      showgrid="true"
      inkscape:current-layer="g1070"
      inkscape:document-units="px"
-     inkscape:cy="41.260163"
-     inkscape:cx="58.638211"
-     inkscape:zoom="4.92"
+     inkscape:cy="43.763011"
+     inkscape:cx="37.726734"
+     inkscape:zoom="6.9579307"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
      bordercolor="#666666"
      pagecolor="#ffffff"
      id="base"
-     lock-margins="true">
+     lock-margins="true"
+     inkscape:deskcolor="#d1d1d1">
     <inkscape:grid
        type="xygrid"
        id="grid4168"
        originx="-18.390618"
-       originy="34.763151" />
+       originy="34.763151"
+       spacingy="1"
+       spacingx="1"
+       units="px" />
     <sodipodi:guide
        position="-18.390617,74.236838"
        orientation="0,1"
        id="guide1052"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="61.609386,74.236838"
+       position="124.39024,79.763188"
        orientation="1,0"
        id="guide1054"
        inkscape:locked="false" />
@@ -717,78 +699,77 @@
     <g
        id="g1070"
        transform="matrix(5.2263673,0,0,6.3684223,1190.5844,-2321.2194)">
-      <path
-         inkscape:export-ydpi="96"
-         inkscape:export-xdpi="96"
-         inkscape:export-filename="/home/uri/pbs_logo.png"
-         style="opacity:1;mix-blend-mode:normal;fill:url(#radialGradient23655);fill-opacity:1;stroke:#eff0f1;stroke-width:0.20800097;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.90433973"
-         d="m -283.92228,439.79077 h 15.84466 c 1.95012,0 4.07762,-1.90345 4.07762,-3.69582 v -7.60869 c 0,-1.79239 -2.1275,-3.69549 -4.07762,-3.69549 h -15.84467 c -1.95013,0 -4.07771,1.9031 -4.07771,3.69549 v 7.60869 c 0,1.79237 2.12758,3.69582 4.07772,3.69582 z"
-         id="path1253"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="sssssssss" />
-      <circle
-         inkscape:export-ydpi="96"
-         inkscape:export-xdpi="96"
-         inkscape:export-filename="/home/uri/pbs_logo.png"
-         cy="429.29077"
-         cx="-276.5"
-         id="ellipse1002"
-         style="opacity:0.79996649;fill:url(#linearGradient1201);fill-opacity:1;stroke:none;stroke-width:0.16674744;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         r="3.5" />
-      <path
-         inkscape:export-ydpi="96"
-         inkscape:export-xdpi="96"
-         inkscape:export-filename="/home/uri/pbs_logo.png"
-         style="opacity:0.18;fill:url(#linearGradient1203);fill-opacity:1;stroke:none;stroke-width:0.132184;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m -276.62079,426.51499 c -0.0668,0 -0.12069,0.0538 -0.12069,0.12069 v 0.36207 c 0,0.0669 0.0539,0.12069 0.12069,0.12069 h 0.12069 a 2.1724146,2.1724147 0 0 1 2.17241,2.17241 v 0.12069 c 0,0.0669 0.0539,0.12069 0.12069,0.12069 h 0.36207 c 0.0669,0 0.12069,-0.0538 0.12069,-0.12069 v -0.12069 a 2.7758625,2.7758628 0 0 0 -2.77586,-2.77586 z"
-         id="path1004"
-         inkscape:connector-curvature="0" />
-      <circle
-         r="5"
-         inkscape:export-ydpi="96"
-         inkscape:export-xdpi="96"
-         inkscape:export-filename="/home/uri/pbs_logo.png"
-         style="opacity:0.80039493;fill:url(#linearGradient2176);fill-opacity:1;stroke:none;stroke-width:0.238095;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="ellipse1006"
-         cx="-278"
-         cy="433.79077" />
-      <circle
-         r="4.5"
-         inkscape:export-ydpi="96"
-         inkscape:export-xdpi="96"
-         inkscape:export-filename="/home/uri/pbs_logo.png"
-         style="opacity:0.80020249;fill:url(#linearGradient2172);fill-opacity:1;stroke:none;stroke-width:0.214286;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="ellipse1008"
-         cx="-272.5"
-         cy="433.29077" />
-      <path
-         inkscape:export-ydpi="96"
-         inkscape:export-xdpi="96"
-         inkscape:export-filename="/home/uri/pbs_logo.png"
-         style="opacity:0.18;fill:url(#linearGradient1211);fill-opacity:1;stroke:none;stroke-width:0.198413;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m -278.0001,429.62416 a 4.1666659,4.1666655 0 0 0 -4.16247,4.04763 h -0.005 v 0.11904 0.11905 c 0,0.0659 0.053,0.11905 0.11904,0.11905 h 0.35715 c 0.066,0 0.11904,-0.0531 0.11904,-0.11905 v -0.11905 a 3.5714273,3.5714273 0 0 1 3.57143,-3.57143 h 0.11905 c 0.066,0 0.11905,-0.0531 0.11905,-0.11905 v -0.35714 c 0,-0.0659 -0.0531,-0.11905 -0.11905,-0.11905 z"
-         id="path1018"
-         inkscape:connector-curvature="0" />
-      <path
-         inkscape:export-ydpi="96"
-         inkscape:export-xdpi="96"
-         inkscape:export-filename="/home/uri/pbs_logo.png"
-         style="opacity:0.18;fill:url(#linearGradient1213);fill-opacity:1;stroke:none;stroke-width:0.174812;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m -269.30272,433.05399 c -0.0657,0 -0.11842,0.0528 -0.11842,0.11842 v 0.11842 a 3.078947,3.0789469 0 0 1 -3.07894,3.07894 h -0.11843 c -0.0657,0 -0.11842,0.0528 -0.11842,0.11843 v 0.35526 c 0,0.0657 0.0528,0.11843 0.11842,0.11843 h 0.11843 a 3.6710518,3.6710517 0 0 0 3.67105,-3.67106 v -0.11842 c 0,-0.0657 -0.0528,-0.11842 -0.11842,-0.11842 z"
-         id="path1032"
-         inkscape:connector-curvature="0" />
-      <path
-         id="rect928"
-         d="m 58.853516,12.146484 -0.707032,0.707032 3.5,3.5 L 61,17 l 5.992188,5.992188 c 0.982914,-0.0227 2.000222,-0.516986 2.765624,-1.234376 L 63,15 62.353516,15.646484 Z m -2,3 -0.707032,0.707032 2.5,2.5 -0.501953,0.501953 L 62.289062,23 h 2.417969 z"
-         style="opacity:0.2;fill:url(#linearGradient1022);fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:connector-curvature="0"
-         transform="translate(-335,416.79077)" />
-      <path
-         id="path916"
-         transform="translate(-335,416.79077)"
-         d="M 58.5,12 A 0.5,0.5 0 0 0 58,12.5 0.5,0.5 0 0 0 58.5,13 0.5,0.5 0 0 0 59,12.5 0.5,0.5 0 0 0 58.5,12 Z m 2.5,1 -1,1 1,1 -1,1 1,1 2,-2 z m -4.5,2 A 0.5,0.5 0 0 0 56,15.5 0.5,0.5 0 0 0 56.5,16 0.5,0.5 0 0 0 57,15.5 0.5,0.5 0 0 0 56.5,15 Z m 2,3 A 0.5,0.5 0 0 0 58,18.5 0.5,0.5 0 0 0 58.5,19 0.5,0.5 0 0 0 59,18.5 0.5,0.5 0 0 0 58.5,18 Z"
-         style="opacity:1;fill:url(#linearGradient16173);fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:connector-curvature="0" />
+      <g
+         id="background-circles"
+         transform="matrix(1.0590664,0,0,0.84910146,15.841177,65.32143)">
+        <circle
+           inkscape:export-ydpi="96"
+           inkscape:export-xdpi="96"
+           inkscape:export-filename="/home/uri/pbs_logo.png"
+           cy="429.29077"
+           cx="-276.5"
+           id="ellipse1002"
+           style="opacity:0.799966;fill:url(#linearGradient1201);fill-opacity:1;stroke:none;stroke-width:0.166747;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           r="3.5" />
+        <path
+           inkscape:export-ydpi="96"
+           inkscape:export-xdpi="96"
+           inkscape:export-filename="/home/uri/pbs_logo.png"
+           style="opacity:0.18;fill:url(#linearGradient1203);fill-opacity:1;stroke:none;stroke-width:0.132184;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m -276.62079,426.51499 c -0.0668,0 -0.12069,0.0538 -0.12069,0.12069 v 0.36207 c 0,0.0669 0.0539,0.12069 0.12069,0.12069 h 0.12069 a 2.1724146,2.1724147 0 0 1 2.17241,2.17241 v 0.12069 c 0,0.0669 0.0539,0.12069 0.12069,0.12069 h 0.36207 c 0.0669,0 0.12069,-0.0538 0.12069,-0.12069 v -0.12069 a 2.7758625,2.7758628 0 0 0 -2.77586,-2.77586 z"
+           id="path1004"
+           inkscape:connector-curvature="0" />
+        <circle
+           r="5"
+           inkscape:export-ydpi="96"
+           inkscape:export-xdpi="96"
+           inkscape:export-filename="/home/uri/pbs_logo.png"
+           style="opacity:0.800395;fill:url(#linearGradient2176);fill-opacity:1;stroke:none;stroke-width:0.238095;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="ellipse1006"
+           cx="-278"
+           cy="433.79077" />
+        <circle
+           r="4.5"
+           inkscape:export-ydpi="96"
+           inkscape:export-xdpi="96"
+           inkscape:export-filename="/home/uri/pbs_logo.png"
+           style="opacity:0.800202;fill:url(#linearGradient2172);fill-opacity:1;stroke:none;stroke-width:0.214286;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="ellipse1008"
+           cx="-272.5"
+           cy="433.29077" />
+        <path
+           inkscape:export-ydpi="96"
+           inkscape:export-xdpi="96"
+           inkscape:export-filename="/home/uri/pbs_logo.png"
+           style="opacity:0.18;fill:url(#linearGradient1211);fill-opacity:1;stroke:none;stroke-width:0.198413;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m -278.0001,429.62416 a 4.1666659,4.1666655 0 0 0 -4.16247,4.04763 h -0.005 v 0.11904 0.11905 c 0,0.0659 0.053,0.11905 0.11904,0.11905 h 0.35715 c 0.066,0 0.11904,-0.0531 0.11904,-0.11905 v -0.11905 a 3.5714273,3.5714273 0 0 1 3.57143,-3.57143 h 0.11905 c 0.066,0 0.11905,-0.0531 0.11905,-0.11905 v -0.35714 c 0,-0.0659 -0.0531,-0.11905 -0.11905,-0.11905 z"
+           id="path1018"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:export-ydpi="96"
+           inkscape:export-xdpi="96"
+           inkscape:export-filename="/home/uri/pbs_logo.png"
+           style="opacity:0.18;fill:url(#linearGradient1213);fill-opacity:1;stroke:none;stroke-width:0.174812;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m -269.30272,433.05399 c -0.0657,0 -0.11842,0.0528 -0.11842,0.11842 v 0.11842 a 3.078947,3.0789469 0 0 1 -3.07894,3.07894 h -0.11843 c -0.0657,0 -0.11842,0.0528 -0.11842,0.11843 v 0.35526 c 0,0.0657 0.0528,0.11843 0.11842,0.11843 h 0.11843 a 3.6710518,3.6710517 0 0 0 3.67105,-3.67106 v -0.11842 c 0,-0.0657 -0.0528,-0.11842 -0.11842,-0.11842 z"
+           id="path1032"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="plasma-shape"
+         transform="matrix(1,0,0,0.8205,-0.1900616,77.59619)">
+        <path
+           id="rect928"
+           d="m 58.853516,12.146484 -0.707032,0.707032 3.5,3.5 L 61,17 l 5.992188,5.992188 c 0.982914,-0.0227 2.000222,-0.516986 2.765624,-1.234376 L 63,15 62.353516,15.646484 Z m -2,3 -0.707032,0.707032 2.5,2.5 -0.501953,0.501953 L 62.289062,23 h 2.417969 z"
+           style="opacity:0.2;fill:url(#linearGradient1022);fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           inkscape:connector-curvature="0"
+           transform="translate(-335,416.79077)" />
+        <path
+           id="path916"
+           d="M 58.5,12 A 0.5,0.5 0 0 0 58,12.5 0.5,0.5 0 0 0 58.5,13 0.5,0.5 0 0 0 59,12.5 0.5,0.5 0 0 0 58.5,12 Z m 2.5,1 -1,1 1,1 -1,1 1,1 2,-2 z m -4.5,2 A 0.5,0.5 0 0 0 56,15.5 0.5,0.5 0 0 0 56.5,16 0.5,0.5 0 0 0 57,15.5 0.5,0.5 0 0 0 56.5,15 Z m 2,3 A 0.5,0.5 0 0 0 58,18.5 0.5,0.5 0 0 0 58.5,19 0.5,0.5 0 0 0 59,18.5 0.5,0.5 0 0 0 58.5,18 Z"
+           style="opacity:1;fill:#eff0f1;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           inkscape:connector-curvature="0"
+           transform="translate(-335,416.79077)" />
+      </g>
     </g>
   </g>
 </svg>
