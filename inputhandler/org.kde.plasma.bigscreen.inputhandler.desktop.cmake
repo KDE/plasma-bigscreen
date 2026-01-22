@@ -2,6 +2,14 @@
 # SPDX-FileCopyrightText: 2022 Bart Ribbers <bribbers@disroot.org>
 [Desktop Entry]
 Name=Plasma Bigscreen Input Handler
+Name[ca]=Gestor d'entrada del Plasma Bigscreen
+Name[he]=מטפל הקלט לפלזמה למסכים גדולים
+Name[ka]=Plasma Bigscreen-ის შეყვანის დამმუშავებელი
+Name[nl]=Plasma Bigscreen behandelaar van invoer
+Name[pt_BR]=Manipulador de entrada do Plasma Bigscreen
+Name[sl]=Upravljalnik vhoda za veliki zaslon Plasma
+Name[tr]=Plasma Büyük Ekran Giriş İşleyicisi
+Name[uk]=Обробник вхідних даних Plasma Bigscreen
 Exec=@CMAKE_INSTALL_PREFIX@/bin/plasma-bigscreen-inputhandler
 Icon=gamepad
 Type=Application

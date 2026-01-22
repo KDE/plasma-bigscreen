@@ -1,7 +1,21 @@
 {
     "KPlugin": {
         "Description": "Run initial tasks for Plasma Bigscreen during session startup",
-        "Name": "Plasma Bigscreen Start"
+        "Description[ca]": "Executa les tasques inicials del Plasma Bigscreen durant l'inici de sessió",
+        "Description[he]": "הרצת משימות התחלתיות לפלזמה למסכים גדולים במהלך ההפעלה",
+        "Description[nl]": "Initiële taken voor Plasma Bigscreen uitvoeren tijdens opstarten van sessie",
+        "Description[pt_BR]": "Executa as tarefas iniciais para o Plasma Bigscreen durante a inicialização da sessão.",
+        "Description[sl]": "Zaženi začetna opravila za veliki zaslon Plasma med zagonom seje",
+        "Description[tr]": "Oturum başlangıcı sırasında Plasma Büyük Ekran başlangıç görevlerini çalıştırın",
+        "Description[uk]": "Запуск початкових завдань для Plasma Bigscreen під час запуску сеансу",
+        "Name": "Plasma Bigscreen Start",
+        "Name[ca]": "Inici del Plasma Bigscreen",
+        "Name[he]": "התחלת פלזמה למסכים גדולים",
+        "Name[nl]": "Begin van Plasma Bigscreen",
+        "Name[pt_BR]": "Iniciar o Plasma Bigscreen",
+        "Name[sl]": "Zagon velikega zaslona Plasma",
+        "Name[tr]": "Plasma Büyük Ekran Başlangıç",
+        "Name[uk]": "Запуск Plasma Bigscreen"
     },
     "X-KDE-Kded-autoload": true,
     "X-KDE-Kded-phase": 1,
