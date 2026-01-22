@@ -4,22 +4,22 @@
 # Blumen Herzenschein <herzenschein@gmail.com>, 2020.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2020, 2021, 2022.
 # SPDX-FileCopyrightText: 2025 Geraldo Simiao <geraldosimiao@fedoraproject.org>
-# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Marcus Gama <marcus.gama@gmail.com>
 # SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-21 00:47+0000\n"
-"PO-Revision-Date: 2025-11-08 21:10-0300\n"
-"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
+"POT-Creation-Date: 2026-01-22 01:00+0000\n"
+"PO-Revision-Date: 2026-01-21 06:54-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -39,7 +39,7 @@ msgstr "Remover favoritos"
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:155
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "Início"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:169
 #: contents/ui/indicators/Search.qml:16
@@ -56,17 +56,17 @@ msgstr "Tarefas"
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:208
 #, kde-format
 msgid "Controller"
-msgstr ""
+msgstr "Controlador"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:209
 #, kde-format
 msgid "Currently capturing keys…"
-msgstr ""
+msgstr "Capturando teclas atualmente…"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:209
 #, kde-format
 msgid "Key capture off"
-msgstr ""
+msgstr "Captura de tecla desligada"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:220
 #: contents/ui/indicators/Settings.qml:18
@@ -124,27 +124,27 @@ msgstr "Configurações de áudio"
 msgid "Internet Settings"
 msgstr "Configurações da Internet"
 
-#: contents/ui/launcher/LauncherHome.qml:101
+#: contents/ui/launcher/LauncherHome.qml:99
 #, kde-format
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: contents/ui/launcher/LauncherHome.qml:120
+#: contents/ui/launcher/LauncherHome.qml:118
 #, kde-format
 msgid "Recent"
 msgstr "Recentes"
 
-#: contents/ui/launcher/LauncherHome.qml:149
+#: contents/ui/launcher/LauncherHome.qml:147
 #, kde-format
 msgid "Voice Applications"
 msgstr "Aplicativos de voz"
 
-#: contents/ui/launcher/LauncherHome.qml:176
+#: contents/ui/launcher/LauncherHome.qml:174
 #, kde-format
 msgid "Applications"
 msgstr "Aplicativos"
 
-#: contents/ui/launcher/LauncherHome.qml:204
+#: contents/ui/launcher/LauncherHome.qml:202
 #, kde-format
 msgid "Games"
 msgstr "Jogos"
@@ -152,32 +152,32 @@ msgstr "Jogos"
 #: contents/ui/main.qml:106
 #, kde-format
 msgid "Controller added: %1"
-msgstr ""
+msgstr "Controlador adicionado: %1"
 
 #: contents/ui/main.qml:110
 #, kde-format
 msgid "Controller removed: %1"
-msgstr ""
+msgstr "Controlador removido: %1"
 
 #: contents/ui/main.qml:114
 #, kde-format
 msgid "Remote added: %1"
-msgstr ""
+msgstr "Controle remoto adicionado: %1"
 
 #: contents/ui/main.qml:118
 #, kde-format
 msgid "Remote removed: %1"
-msgstr ""
+msgstr "Controle remoto removido: %1"
 
 #: contents/ui/main.qml:122
 #, kde-format
 msgid "System taking over controller input"
-msgstr ""
+msgstr "O sistema está assumindo a entrada do controlador"
 
 #: contents/ui/main.qml:125
 #, kde-format
 msgid "Application taking over controller input"
-msgstr ""
+msgstr "O aplicativo está assumindo a entrada do controlador"
 
 #: contents/ui/PowerManagementItem.qml:41
 #, kde-format

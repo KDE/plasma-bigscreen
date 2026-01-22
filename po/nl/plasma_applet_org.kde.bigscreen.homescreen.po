@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024, 2025 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024, 2025, 2026 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-21 00:47+0000\n"
-"PO-Revision-Date: 2025-08-14 15:00+0200\n"
+"POT-Creation-Date: 2026-01-22 01:00+0000\n"
+"PO-Revision-Date: 2026-01-21 11:38+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -35,7 +35,7 @@ msgstr "Favorieten verwijderen"
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:155
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:169
 #: contents/ui/indicators/Search.qml:16
@@ -52,17 +52,17 @@ msgstr "Taken"
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:208
 #, kde-format
 msgid "Controller"
-msgstr ""
+msgstr "Besturing"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:209
 #, kde-format
 msgid "Currently capturing keys…"
-msgstr ""
+msgstr "Vangt nu toetsen…"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:209
 #, kde-format
 msgid "Key capture off"
-msgstr ""
+msgstr "Vangen van toetsen nu uit"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:220
 #: contents/ui/indicators/Settings.qml:18
@@ -120,27 +120,27 @@ msgstr "Audio-instellingen"
 msgid "Internet Settings"
 msgstr "Internetinstellingen"
 
-#: contents/ui/launcher/LauncherHome.qml:101
+#: contents/ui/launcher/LauncherHome.qml:99
 #, kde-format
 msgid "Favorites"
 msgstr "Favorieten"
 
-#: contents/ui/launcher/LauncherHome.qml:120
+#: contents/ui/launcher/LauncherHome.qml:118
 #, kde-format
 msgid "Recent"
 msgstr "Recent"
 
-#: contents/ui/launcher/LauncherHome.qml:149
+#: contents/ui/launcher/LauncherHome.qml:147
 #, kde-format
 msgid "Voice Applications"
 msgstr "Toepassingen met stem"
 
-#: contents/ui/launcher/LauncherHome.qml:176
+#: contents/ui/launcher/LauncherHome.qml:174
 #, kde-format
 msgid "Applications"
 msgstr "Toepassingen"
 
-#: contents/ui/launcher/LauncherHome.qml:204
+#: contents/ui/launcher/LauncherHome.qml:202
 #, kde-format
 msgid "Games"
 msgstr "Spellen"
@@ -148,32 +148,32 @@ msgstr "Spellen"
 #: contents/ui/main.qml:106
 #, kde-format
 msgid "Controller added: %1"
-msgstr ""
+msgstr "Besturing toegevoegd: %1"
 
 #: contents/ui/main.qml:110
 #, kde-format
 msgid "Controller removed: %1"
-msgstr ""
+msgstr "Besturing verwijderd: %1"
 
 #: contents/ui/main.qml:114
 #, kde-format
 msgid "Remote added: %1"
-msgstr ""
+msgstr "Op afstand toegevoegd: %1"
 
 #: contents/ui/main.qml:118
 #, kde-format
 msgid "Remote removed: %1"
-msgstr ""
+msgstr "Op afstand verwijderd: %1"
 
 #: contents/ui/main.qml:122
 #, kde-format
 msgid "System taking over controller input"
-msgstr ""
+msgstr "Systeem neem invoer van besturing over"
 
 #: contents/ui/main.qml:125
 #, kde-format
 msgid "Application taking over controller input"
-msgstr ""
+msgstr "Toepassing neem invoer van besturing over"
 
 #: contents/ui/PowerManagementItem.qml:41
 #, kde-format

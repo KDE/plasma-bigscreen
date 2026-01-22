@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2021, 2022, 2024, 2025.
+# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2021, 2022, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.mycroft.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-21 00:47+0000\n"
-"PO-Revision-Date: 2025-08-13 21:51+0300\n"
+"POT-Creation-Date: 2026-01-22 01:00+0000\n"
+"PO-Revision-Date: 2026-01-21 22:25+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -38,7 +38,7 @@ msgstr "Вилучити з улюбленого"
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:155
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "Домівка"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:169
 #: contents/ui/indicators/Search.qml:16
@@ -55,17 +55,17 @@ msgstr "Завдання"
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:208
 #, kde-format
 msgid "Controller"
-msgstr ""
+msgstr "Контролер"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:209
 #, kde-format
 msgid "Currently capturing keys…"
-msgstr ""
+msgstr "Захоплюємо натискання клавіш…"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:209
 #, kde-format
 msgid "Key capture off"
-msgstr ""
+msgstr "Захоплення клавіш вимкнено"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:220
 #: contents/ui/indicators/Settings.qml:18
@@ -123,27 +123,27 @@ msgstr "Параметри звуку"
 msgid "Internet Settings"
 msgstr "Параметри інтернету"
 
-#: contents/ui/launcher/LauncherHome.qml:101
+#: contents/ui/launcher/LauncherHome.qml:99
 #, kde-format
 msgid "Favorites"
 msgstr "Улюблене"
 
-#: contents/ui/launcher/LauncherHome.qml:120
+#: contents/ui/launcher/LauncherHome.qml:118
 #, kde-format
 msgid "Recent"
 msgstr "Нещодавні"
 
-#: contents/ui/launcher/LauncherHome.qml:149
+#: contents/ui/launcher/LauncherHome.qml:147
 #, kde-format
 msgid "Voice Applications"
 msgstr "Голосові програми"
 
-#: contents/ui/launcher/LauncherHome.qml:176
+#: contents/ui/launcher/LauncherHome.qml:174
 #, kde-format
 msgid "Applications"
 msgstr "Програми"
 
-#: contents/ui/launcher/LauncherHome.qml:204
+#: contents/ui/launcher/LauncherHome.qml:202
 #, kde-format
 msgid "Games"
 msgstr "Ігри"
@@ -151,32 +151,32 @@ msgstr "Ігри"
 #: contents/ui/main.qml:106
 #, kde-format
 msgid "Controller added: %1"
-msgstr ""
+msgstr "Додано контролер: %1"
 
 #: contents/ui/main.qml:110
 #, kde-format
 msgid "Controller removed: %1"
-msgstr ""
+msgstr "Вилучено контролер: %1"
 
 #: contents/ui/main.qml:114
 #, kde-format
 msgid "Remote added: %1"
-msgstr ""
+msgstr "Додано дистанційне керування: %1"
 
 #: contents/ui/main.qml:118
 #, kde-format
 msgid "Remote removed: %1"
-msgstr ""
+msgstr "Вилучено дистанційне керування: %1"
 
 #: contents/ui/main.qml:122
 #, kde-format
 msgid "System taking over controller input"
-msgstr ""
+msgstr "Система перехоплює вхідні дані контролера"
 
 #: contents/ui/main.qml:125
 #, kde-format
 msgid "Application taking over controller input"
-msgstr ""
+msgstr "Програма перехоплює вхідні дані контролера"
 
 #: contents/ui/PowerManagementItem.qml:41
 #, kde-format

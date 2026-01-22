@@ -1,19 +1,19 @@
-# SPDX-FileCopyrightText: 2021, 2023, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2021, 2023, 2024, 2025, 2026 Xavier Besnard <xavier.besnard@kde.org>
 # Thomas Vergnaud <thomas.vergnaud@mailo.eu>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-19 00:45+0000\n"
-"PO-Revision-Date: 2025-08-14 09:23+0200\n"
+"PO-Revision-Date: 2026-01-20 18:05+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <French <kde-francophone@kde.org>>\n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.07.90\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -111,12 +111,12 @@ msgstr ""
 #: ui/main.qml:69
 #, kde-format
 msgid "Wallpaper blur"
-msgstr ""
+msgstr "Floutage du fond d'écran"
 
 #: ui/main.qml:70
 #, kde-format
 msgid "Apply a blur effect to the wallpaper on the homescreen"
-msgstr ""
+msgstr "Appliquer un effet de floutage au fond d'écran de l'écran d'accueil"
 
 #: ui/main.qml:83 ui/ThemeSidebar.qml:23
 #, kde-format
