@@ -26,7 +26,6 @@ ecm_target_qml_sources(bigscreenplugin SOURCES
     qml/controls/Dialog.qml
     qml/controls/DialogButtonBox.qml
     qml/controls/ItemDelegate.qml
-    qml/controls/OverlayWindow.qml
     qml/controls/PopupBackground.qml
     qml/controls/SidebarOverlay.qml
     qml/controls/SidebarOverlayHeader.qml
@@ -41,7 +40,6 @@ ecm_target_qml_sources(bigscreenplugin SOURCES
     qml/TaskDelegate.qml
     qml/TileListView.qml
     qml/TileRepeater.qml
-    qml/TileView.qml
 )
 
 target_link_libraries(bigscreenplugin

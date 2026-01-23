@@ -143,7 +143,7 @@ FocusScope {
         Keys.onDownPressed: {
             if (!root.navigationDown) return;
             Bigscreen.NavigationSoundEffects.playMovingSound();
-            if (root.navigationDown instanceof TileView || root.navigationDown instanceof TileRepeater || root.navigationDown instanceof TileListView) {
+            if (root.navigationDown instanceof TileRepeater || root.navigationDown instanceof TileListView) {
                 root.navigationDown.currentIndex = Math.min(Math.floor(root.navigationDown.view.indexAt(root.navigationDown.view.contentX, height / 2)), root.navigationDown.view.count - 1);
                 if (root.navigationDown.currentIndex < 0) {
                     root.navigationDown.currentIndex = view.currentIndex > 0 ? root.navigationDown.view.count - 1 : 0;
@@ -155,7 +155,7 @@ FocusScope {
         Keys.onUpPressed: {
             if (!root.navigationUp) return;
             Bigscreen.NavigationSoundEffects.playMovingSound();
-            if (root.navigationUp instanceof TileView || root.navigationUp instanceof TileRepeater || root.navigationUp instanceof TileListView) {
+            if (root.navigationUp instanceof TileRepeater || root.navigationUp instanceof TileListView) {
                 root.navigationUp.currentIndex = Math.min(Math.floor(root.navigationUp.view.indexAt(root.navigationUp.view.contentX, height / 2)), root.navigationUp.view.count - 1);
                 if (root.navigationUp.currentIndex < 0) {
                     root.navigationUp.currentIndex = view.currentIndex > 0 ? root.navigationUp.view.count - 1 : 0;
