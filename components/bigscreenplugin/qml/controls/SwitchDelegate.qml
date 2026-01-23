@@ -111,8 +111,6 @@ T.SwitchDelegate {
         clicked();
     }
 
-    onClicked: checked = !checked
-
     onActiveFocusChanged: {
         if (activeFocus) {
             Bigscreen.NavigationSoundEffects.playMovingSound();
