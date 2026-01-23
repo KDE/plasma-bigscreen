@@ -112,12 +112,12 @@ msgstr "磁贴背景将根据应用程序的图标进行着色。"
 #: ui/main.qml:69
 #, kde-format
 msgid "Wallpaper blur"
-msgstr ""
+msgstr "壁纸模糊"
 
 #: ui/main.qml:70
 #, kde-format
 msgid "Apply a blur effect to the wallpaper on the homescreen"
-msgstr ""
+msgstr "对主屏幕上的壁纸应用模糊效果"
 
 #: ui/main.qml:83 ui/ThemeSidebar.qml:23
 #, kde-format

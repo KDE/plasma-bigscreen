@@ -1,16 +1,16 @@
 # Translation of plasma_applet_org.kde.bigscreen.homescreen.po to Catalan (Valencian)
-# Copyright (C) 2020-2025 This_file_is_part_of_KDE
+# Copyright (C) 2020-2026 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024, 2025, 2026 Josep M. Ferrer <txemaq@gmail.com>
 # SPDX-FileCopyrightText: 2020 Antoni Bella Pérez <antonibella5@yahoo.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-22 01:00+0000\n"
-"PO-Revision-Date: 2025-08-13 20:20+0200\n"
+"PO-Revision-Date: 2026-01-21 10:14+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -38,7 +38,7 @@ msgstr "Elimina dels preferits"
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:155
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "Inici"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:169
 #: contents/ui/indicators/Search.qml:16
@@ -55,17 +55,17 @@ msgstr "Tasques"
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:208
 #, kde-format
 msgid "Controller"
-msgstr ""
+msgstr "Controlador"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:209
 #, kde-format
 msgid "Currently capturing keys…"
-msgstr ""
+msgstr "Actualment s'estan capturant tecles…"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:209
 #, kde-format
 msgid "Key capture off"
-msgstr ""
+msgstr "Captura de tecles desactivada"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:220
 #: contents/ui/indicators/Settings.qml:18
@@ -151,32 +151,32 @@ msgstr "Jocs"
 #: contents/ui/main.qml:106
 #, kde-format
 msgid "Controller added: %1"
-msgstr ""
+msgstr "Controlador afegit: %1"
 
 #: contents/ui/main.qml:110
 #, kde-format
 msgid "Controller removed: %1"
-msgstr ""
+msgstr "Controlador eliminat: %1"
 
 #: contents/ui/main.qml:114
 #, kde-format
 msgid "Remote added: %1"
-msgstr ""
+msgstr "Remot afegit: %1"
 
 #: contents/ui/main.qml:118
 #, kde-format
 msgid "Remote removed: %1"
-msgstr ""
+msgstr "Remot eliminat: %1"
 
 #: contents/ui/main.qml:122
 #, kde-format
 msgid "System taking over controller input"
-msgstr ""
+msgstr "El sistema s'encarrega de l'entrada del controlador"
 
 #: contents/ui/main.qml:125
 #, kde-format
 msgid "Application taking over controller input"
-msgstr ""
+msgstr "L'aplicació s'encarrega de l'entrada del controlador"
 
 #: contents/ui/PowerManagementItem.qml:41
 #, kde-format
@@ -198,6 +198,3 @@ msgstr "Neteja les tasques"
 #, kde-format
 msgid "Close"
 msgstr "Tanca"
-
-#~ msgid "Audio Volume"
-#~ msgstr "Volum de l'àudio"
