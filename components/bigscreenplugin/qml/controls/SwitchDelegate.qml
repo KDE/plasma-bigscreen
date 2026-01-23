@@ -108,7 +108,7 @@ T.SwitchDelegate {
 
     onPressed: root.forceActiveFocus()
     Keys.onReturnPressed: {
-        clicked();
+        click();
     }
 
     onActiveFocusChanged: {

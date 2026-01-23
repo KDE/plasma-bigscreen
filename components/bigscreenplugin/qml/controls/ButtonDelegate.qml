@@ -29,7 +29,7 @@ ItemDelegate {
     /*!
        \brief Text font properties
      */
-    property alias textFont: internalTextItem.font 
+    property alias textFont: internalTextItem.font
 
     /*!
        \brief This property specifies whether the description font should be smaller
@@ -70,7 +70,7 @@ ItemDelegate {
 
     onPressed: root.forceActiveFocus()
     Keys.onReturnPressed: {
-        clicked();
+        click();
     }
 
     contentItem: RowLayout {

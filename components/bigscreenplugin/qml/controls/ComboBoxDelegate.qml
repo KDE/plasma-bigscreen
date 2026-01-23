@@ -127,7 +127,7 @@ ItemDelegate {
 
     onPressed: root.forceActiveFocus()
     Keys.onReturnPressed: {
-        clicked();
+        click();
     }
     onClicked: comboBoxDialog.open()
 

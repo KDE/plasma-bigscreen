@@ -36,7 +36,7 @@ T.Button {
 
     onPressed: root.forceActiveFocus()
     Keys.onReturnPressed: {
-        clicked();
+        click();
     }
 
     onActiveFocusChanged: {
