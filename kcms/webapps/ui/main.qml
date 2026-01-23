@@ -48,8 +48,7 @@ Kirigami.ScrollablePage {
 
         QQC2.Label {
             text: i18n("Installed web apps")
-            font.pixelSize: 22
-            font.weight: Font.Normal
+            font.pixelSize: Bigscreen.Units.headingFontPixelSize
             Layout.fillWidth: true
             Layout.topMargin: Kirigami.Units.gridUnit
             Layout.bottomMargin: Kirigami.Units.gridUnit

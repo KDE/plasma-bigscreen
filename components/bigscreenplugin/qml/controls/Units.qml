@@ -14,4 +14,5 @@ QtObject {
     readonly property int horizontalSpacing: Kirigami.Units.largeSpacing
 
     readonly property int defaultFontPixelSize: 18
+    readonly property int headingFontPixelSize: 22
 }

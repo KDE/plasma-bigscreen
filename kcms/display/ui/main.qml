@@ -72,8 +72,7 @@ Kirigami.ScrollablePage {
 
         QQC2.Label {
             text: i18n("Display %1", kcm.displayModel.selectedDisplayName)
-            font.pixelSize: 22
-            font.weight: Font.Normal
+            font.pixelSize: Bigscreen.Units.headingFontPixelSize
             Layout.topMargin: Kirigami.Units.gridUnit
             Layout.bottomMargin: Kirigami.Units.gridUnit
         }

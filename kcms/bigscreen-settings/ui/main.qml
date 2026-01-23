@@ -40,7 +40,7 @@ Kirigami.ScrollablePage {
 
         QQC2.Label {
             text: i18n("Homescreen Appearance")
-            font.pixelSize: 22
+            font.pixelSize: Bigscreen.Units.headingFontPixelSize
 
             Layout.topMargin: Kirigami.Units.gridUnit
             Layout.bottomMargin: Kirigami.Units.gridUnit
@@ -88,7 +88,7 @@ Kirigami.ScrollablePage {
 
         QQC2.Label {
             text: i18n("System")
-            font.pixelSize: 22
+            font.pixelSize: Bigscreen.Units.headingFontPixelSize
 
             Layout.topMargin: Kirigami.Units.gridUnit
             Layout.bottomMargin: Kirigami.Units.gridUnit
@@ -116,7 +116,7 @@ Kirigami.ScrollablePage {
 
         QQC2.Label {
             text: i18n("Shortcuts")
-            font.pixelSize: 22
+            font.pixelSize: Bigscreen.Units.headingFontPixelSize
 
             Layout.topMargin: Kirigami.Units.gridUnit
             Layout.bottomMargin: Kirigami.Units.gridUnit

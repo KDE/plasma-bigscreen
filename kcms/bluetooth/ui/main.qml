@@ -87,8 +87,7 @@ Kirigami.ScrollablePage {
             id: pairedLabel
             text: i18n("Paired devices")
             visible: BluezQt.Manager.bluetoothOperational
-            font.pixelSize: 22
-            font.weight: Font.Normal
+            font.pixelSize: Bigscreen.Units.headingFontPixelSize
             Layout.topMargin: Kirigami.Units.gridUnit
             Layout.bottomMargin: Kirigami.Units.smallSpacing
         }
@@ -121,8 +120,7 @@ Kirigami.ScrollablePage {
             id: unpairedLabel
             text: i18n("Available devices")
             visible: BluezQt.Manager.bluetoothOperational
-            font.pixelSize: 22
-            font.weight: Font.Normal
+            font.pixelSize: Bigscreen.Units.headingFontPixelSize
             Layout.topMargin: Kirigami.Units.gridUnit
             Layout.bottomMargin: Kirigami.Units.smallSpacing
         }
