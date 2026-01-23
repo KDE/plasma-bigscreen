@@ -14,6 +14,8 @@ This repository contains shell components for Plasma Bigscreen.
 
 Plasma Bigscreen is a user-friendly, open-source, Wayland desktop environment designed for devices like HTPCs and SBCs connected to TVs and projectors. It provides an intuitive experience that allows for easy navigation from a distance using remote controls. Discover an engaging environment that adapts to your preferences, offering the safety and privacy protection that come with free and open source software!
 
+<img src="lookandfeel/contents/splash/images/logo-big.svg" width=100px/>
+
 ### Locations
 
 * [components](components) - Shell components & controls libraries
