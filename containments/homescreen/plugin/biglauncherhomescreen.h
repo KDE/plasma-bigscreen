@@ -11,6 +11,7 @@
 #include "biglauncher_dbus.h"
 
 class ApplicationListModel;
+class ApplicationListSearchModel;
 class FavsManager;
 class FavsListModel;
 class SessionManagement;
@@ -20,14 +21,14 @@ class BigLauncherDbusAdapterInterface;
 class HomeScreen : public Plasma::Containment
 {
     Q_OBJECT
-    Q_PROPERTY(ApplicationListModel *applicationListModel READ applicationListModel CONSTANT)
+    Q_PROPERTY(ApplicationListSearchModel *applicationListModel READ applicationListModel CONSTANT)
     Q_PROPERTY(FavsListModel *favsListModel READ favsListModel CONSTANT)
 
 public:
     HomeScreen(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
     ~HomeScreen() override;
 
-    ApplicationListModel *applicationListModel() const;
+    ApplicationListSearchModel *applicationListModel() const;
     BigLauncherDbusAdapterInterface *bigLauncherDbusAdapterInterface() const;
     FavsListModel *favsListModel() const;
     Shortcuts *shortcuts() const;
@@ -50,7 +51,7 @@ public Q_SLOTS:
     void setUseWallpaperBlur(bool wallpaperBlur);
 
 private:
-    ApplicationListModel *m_applicationListModel;
+    ApplicationListSearchModel *m_applicationListModel;
     SessionManagement *m_session;
     FavsListModel *m_favsListModel;
 };

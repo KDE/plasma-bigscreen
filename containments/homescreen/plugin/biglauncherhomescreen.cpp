@@ -46,7 +46,7 @@ static QObject *dbusSingletonProvider(QQmlEngine *engine, QJSEngine *scriptEngin
 
 HomeScreen::HomeScreen(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : Plasma::Containment(parent, data, args)
-    , m_applicationListModel(new ApplicationListModel(this))
+    , m_applicationListModel(new ApplicationListSearchModel(this, new ApplicationListModel(this)))
     , m_session(new SessionManagement(this))
     , m_favsListModel(new FavsListModel(FavsManager::instance(), this))
 {
@@ -58,6 +58,11 @@ HomeScreen::HomeScreen(QObject *parent, const KPluginMetaData &data, const QVari
     qmlRegisterSingletonType<FavsManager>(uri, 1, 0, "FavsManager", favsManagerSingletonProvider);
     qmlRegisterSingletonType<BigLauncherDbusAdapterInterface>(uri, 1, 0, "BigLauncherDbusAdapterInterface", dbusSingletonProvider);
     qmlRegisterUncreatableType<ApplicationListModel>(uri, 1, 0, "ApplicationListModel", QStringLiteral("Cannot create an item of type ApplicationListModel"));
+    qmlRegisterUncreatableType<ApplicationListSearchModel>(uri,
+                                                           1,
+                                                           0,
+                                                           "ApplicationListSearchModel",
+                                                           QStringLiteral("Cannot create an item of type ApplicationListSearchModel"));
     qmlRegisterUncreatableType<FavsListModel>(uri, 1, 0, "FavsListModel", QStringLiteral("Cannot create an item of type FavsListModel"));
 
     setHasConfigurationInterface(true);
@@ -67,7 +72,7 @@ HomeScreen::~HomeScreen()
 {
 }
 
-ApplicationListModel *HomeScreen::applicationListModel() const
+ApplicationListSearchModel *HomeScreen::applicationListModel() const
 {
     return m_applicationListModel;
 }

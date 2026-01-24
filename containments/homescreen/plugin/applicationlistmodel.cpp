@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2014 Antonis Tsiapaliokas <antonis.tsiapaliokas@kde.org>
+    SPDX-FileCopyrightText: 2026 Devin Lin <devin@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -14,6 +15,7 @@
 #include <QRegularExpression>
 
 // KDE
+#include <KApplicationTrader>
 #include <KConfigGroup>
 #include <KIO/ApplicationLauncherJob>
 #include <KNotificationJobUiDelegate>
@@ -29,6 +31,7 @@ ApplicationListModel::ApplicationListModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     connect(KSycoca::self(), static_cast<void (KSycoca::*)()>(&KSycoca::databaseChanged), this, &ApplicationListModel::sycocaDbChanged);
+    loadApplications();
 }
 
 ApplicationListModel::~ApplicationListModel() = default;
@@ -51,112 +54,101 @@ QHash<int, QByteArray> ApplicationListModel::roleNames() const
 
 void ApplicationListModel::sycocaDbChanged()
 {
-    m_applicationList.clear();
-    m_voiceAppSkills.clear();
-
     loadApplications();
 }
 
-bool appNameLessThan(const ApplicationData &a1, const ApplicationData &a2)
+KService::List ApplicationListModel::queryApplications()
 {
-    return a1.name.toLower() < a2.name.toLower();
-}
+    auto cfg = KSharedConfig::openConfig(QStringLiteral("applications-blacklistrc"));
+    auto blgroup = KConfigGroup(cfg, QStringLiteral("Applications"));
 
-QStringList ApplicationListModel::voiceAppSkills() const
-{
-    return m_voiceAppSkills;
+    const QStringList blacklist = blgroup.readEntry("blacklist", QStringList());
+    auto filter = [blacklist](const KService::Ptr &service) -> bool {
+        if (service->noDisplay()) {
+            return false;
+        }
+        if (!service->showOnCurrentPlatform()) {
+            return false;
+        }
+        if (blacklist.contains(service->desktopEntryName())) {
+            return false;
+        }
+        if (service->property<bool>("Terminal")) {
+            return false;
+        }
+        if (!service->isApplication()) {
+            return false;
+        }
+
+        return true;
+    };
+
+    return KApplicationTrader::query(filter);
 }
 
 void ApplicationListModel::loadApplications()
 {
-    auto cfg = KSharedConfig::openConfig("applications-blacklistrc");
-    auto blgroup = KConfigGroup(cfg, QStringLiteral("Applications"));
+    qDebug() << "Reloading app list...";
 
-    // This is only temporary to get a clue what those apps' desktop files are called
-    // I'll remove it once I've done a blacklist
-    QStringList bl;
+    // This function supports dynamic insertions and deletions to the existing
+    // list depending on what is given from queryApplications().
 
-    QStringList blacklist = blgroup.readEntry("blacklist", QStringList());
-
-    beginResetModel();
-
-    m_applicationList.clear();
-
-    KServiceGroup::Ptr group = KServiceGroup::root();
-    if (!group || !group->isValid()) {
-        return;
+    QMap<QString, int> storageIdMap; // <storageId, index>
+    for (int i = 0; i < m_applicationList.size(); ++i) {
+        const auto &data = m_applicationList[i];
+        storageIdMap.insert(data.storageId, i);
     }
-    KServiceGroup::List subGroupList = group->entries(true);
 
-    QMap<int, ApplicationData> orderedList;
-    QList<ApplicationData> unorderedList;
+    const KService::List currentApps = queryApplications();
+    QList<KService::Ptr> toInsert;
 
-    // Iterate over all entries in the group
-    while (!subGroupList.isEmpty()) {
-        KSycocaEntry::Ptr groupEntry = subGroupList.first();
-        subGroupList.pop_front();
-
-        if (groupEntry->isType(KST_KServiceGroup)) {
-            KServiceGroup::Ptr serviceGroup(static_cast<KServiceGroup *>(groupEntry.data()));
-
-            if (!serviceGroup->noDisplay()) {
-                KServiceGroup::List entryGroupList = serviceGroup->entries(true);
-
-                for (KServiceGroup::List::ConstIterator it = entryGroupList.constBegin(); it != entryGroupList.constEnd(); it++) {
-                    KSycocaEntry::Ptr entry = (*it);
-
-                    if (entry->isType(KST_KServiceGroup)) {
-                        KServiceGroup::Ptr serviceGroup(static_cast<KServiceGroup *>(entry.data()));
-                        subGroupList << serviceGroup;
-
-                    } else if (const auto service = static_cast<KService *>(entry.data()); entry->isType(KST_KService) && !service->exec().isEmpty()) {
-                        if (service->isApplication() && !blacklist.contains(service->desktopEntryName()) && service->showOnCurrentPlatform()
-                            && !service->property<bool>("Terminal")) {
-
-                            if (service->categories().contains(QStringLiteral("VoiceApp"))) {
-                                QString exec = service->exec();
-                                if (!exec.isEmpty()) {
-                                    m_voiceAppSkills << exec;
-                                }
-                            }
-
-                            bl << service->desktopEntryName();
-
-                            ApplicationData data;
-                            data.name = service->name();
-                            data.comment = service->comment();
-                            data.icon = service->icon();
-                            data.categories = service->categories();
-                            data.storageId = service->storageId();
-                            data.entryPath = service->exec();
-                            data.desktopPath = service->entryPath();
-                            data.startupNotify = service->property<bool>("StartupNotify");
-
-                            auto it = m_appPositions.constFind(service->storageId());
-                            if (it != m_appPositions.constEnd()) {
-                                orderedList[*it] = data;
-                            } else {
-                                unorderedList << data;
-                            }
-                        }
-                    }
-                }
-            }
+    for (const KService::Ptr &service : currentApps) {
+        auto it = storageIdMap.find(service->storageId());
+        if (it != storageIdMap.end()) {
+            // Service already in m_applicationList
+            storageIdMap.erase(it);
+        } else {
+            // Service needs to be inserted into m_applicationList
+            toInsert.append(std::move(service));
         }
     }
 
-    Q_EMIT voiceAppSkillsChanged();
+    QList<int> toRemove;
+    for (int index : storageIdMap.values()) {
+        toRemove.append(index);
+    }
 
-    blgroup.writeEntry("allapps", bl);
-    blgroup.writeEntry("blacklist", blacklist);
-    cfg->sync();
+    std::sort(toRemove.begin(), toRemove.end());
 
-    std::sort(unorderedList.begin(), unorderedList.end(), appNameLessThan);
-    m_applicationList << orderedList.values();
-    m_applicationList << unorderedList;
+    // Remove indices first, from end to start to avoid indices changing
+    for (int i = toRemove.size() - 1; i >= 0; --i) {
+        int ind = toRemove[i];
 
-    endResetModel();
-    Q_EMIT countChanged();
+        QString storageId = m_applicationList[ind].storageId;
+
+        beginRemoveRows({}, ind, ind);
+        m_applicationList.removeAt(ind);
+        endRemoveRows();
+
+        Q_EMIT applicationRemoved(storageId);
+    }
+
+    // Append new elements
+    for (const KService::Ptr &service : toInsert) {
+        ApplicationData data;
+        data.name = service->name();
+        data.comment = service->comment();
+        data.icon = service->icon();
+        data.categories = service->categories();
+        data.storageId = service->storageId();
+        data.entryPath = service->exec();
+        data.desktopPath = service->entryPath();
+        data.startupNotify = service->property<bool>("StartupNotify");
+
+        beginInsertRows({}, m_applicationList.size(), m_applicationList.size());
+        m_applicationList.append(data);
+        endInsertRows();
+    }
 }
 
 QVariant ApplicationListModel::data(const QModelIndex &index, int role) const
@@ -208,43 +200,6 @@ int ApplicationListModel::rowCount(const QModelIndex &parent) const
     return m_applicationList.count();
 }
 
-void ApplicationListModel::moveRow(const QModelIndex & /* sourceParent */, int sourceRow, const QModelIndex & /* destinationParent */, int destinationChild)
-{
-    moveItem(sourceRow, destinationChild);
-}
-
-Q_INVOKABLE void ApplicationListModel::moveItem(int row, int destination)
-{
-    if (row < 0 || destination < 0 || row >= m_applicationList.length() || destination >= m_applicationList.length() || row == destination) {
-        return;
-    }
-    if (destination > row) {
-        ++destination;
-    }
-
-    beginMoveRows(QModelIndex(), row, row, QModelIndex(), destination);
-    if (destination > row) {
-        ApplicationData data = m_applicationList.at(row);
-        m_applicationList.insert(destination, data);
-        m_applicationList.takeAt(row);
-    } else {
-        ApplicationData data = m_applicationList.takeAt(row);
-        m_applicationList.insert(destination, data);
-    }
-
-    m_appOrder.clear();
-    m_appPositions.clear();
-    int i = 0;
-    for (const auto &app : std::as_const(m_applicationList)) {
-        m_appOrder << app.storageId;
-        m_appPositions[app.storageId] = i;
-        ++i;
-    }
-
-    Q_EMIT appOrderChanged();
-    endMoveRows();
-}
-
 void ApplicationListModel::executeCommand(const QString &command)
 {
     qWarning() << "Executing" << command;
@@ -271,27 +226,6 @@ void ApplicationListModel::runApplication(const QString &storageId)
     KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()), QStringLiteral("org.kde.plasma.kicker"));
 }
 
-QStringList ApplicationListModel::appOrder() const
-{
-    return m_appOrder;
-}
-
-void ApplicationListModel::setAppOrder(const QStringList &order)
-{
-    if (m_appOrder == order) {
-        return;
-    }
-
-    m_appOrder = order;
-    m_appPositions.clear();
-    int i = 0;
-    for (const auto &app : std::as_const(m_appOrder)) {
-        m_appPositions[app] = i;
-        ++i;
-    }
-    Q_EMIT appOrderChanged();
-}
-
 QVariantMap ApplicationListModel::itemMap(int index)
 {
     QVariantMap map;
@@ -305,4 +239,19 @@ QVariantMap ApplicationListModel::itemMap(int index)
     map[QStringLiteral("startupNotify")] = m_applicationList.at(index).startupNotify;
 
     return map;
+}
+
+ApplicationListSearchModel::ApplicationListSearchModel(QObject *parent, ApplicationListModel *model)
+    : QSortFilterProxyModel(parent)
+{
+    setSourceModel(model);
+
+    setFilterRole(ApplicationListModel::ApplicationNameRole);
+    setFilterCaseSensitivity(Qt::CaseInsensitive);
+
+    setSortRole(ApplicationListModel::ApplicationNameRole);
+    setSortCaseSensitivity(Qt::CaseInsensitive);
+    setSortLocaleAware(true);
+
+    sort(0, Qt::AscendingOrder);
 }

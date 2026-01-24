@@ -9,9 +9,8 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as Controls
 import QtQuick.Window
+
 import org.kde.plasma.plasmoid
-import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.components as PlasmaComponents
 import org.kde.kquickcontrolsaddons
 import org.kde.kirigami as Kirigami
 import org.kde.kitemmodels as KItemModels
@@ -36,8 +35,6 @@ FocusScope {
             favAppsView.forceActiveFocus()
         } else if (recentView.visible) {
             recentView.forceActiveFocus();
-        } else if (voiceAppsView.visible) {
-            voiceAppsView.forceActiveFocus();
         } else {
             appsView.forceActiveFocus();
         }
@@ -97,7 +94,7 @@ FocusScope {
             property var currentViewDownwards: visible ? favAppsView : recentView.currentViewDownwards
 
             title: i18n("Favorites")
-            model: plasmoid.favsListModel
+            model: Plasmoid.favsListModel
             visible: count > 0
             currentIndex: 0
             focus: visible
@@ -113,7 +110,7 @@ FocusScope {
         Bigscreen.TileListView {
             id: recentView
             property var currentViewUpwards: visible ? recentView : favAppsView.currentViewUpwards
-            property var currentViewDownwards: visible ? recentView : voiceAppsView.currentViewDownwards
+            property var currentViewDownwards: visible ? recentView : appsView.currentViewDownwards
 
             title: i18n("Recent")
             model: Kicker.RecentUsageModel {
@@ -136,61 +133,34 @@ FocusScope {
             }
 
             navigationUp: favAppsView.currentViewUpwards
-            navigationDown: voiceAppsView.currentViewDownwards
-        }
-
-        Bigscreen.TileListView {
-            id: voiceAppsView
-            property var currentViewUpwards: visible ? voiceAppsView : recentView.currentViewUpwards
-            property var currentViewDownwards: visible ? voiceAppsView : appsView.currentViewDownwards
-
-            title: i18n("Voice Applications")
-            model: KItemModels.KSortFilterProxyModel {
-                sourceModel: plasmoid.applicationListModel
-                filterRoleName: "ApplicationCategoriesRole"
-                filterRowCallback: function(source_row, source_parent) {
-                    return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("VoiceApp") !== -1;
-                }
-            }
-
-            visible: count > 0
-            enabled: count > 0
-            currentIndex: 0
-            focus: visible && (recentView.currentViewUpwards === root.navigationUp)
-            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = voiceAppsView
-            delegate: Delegates.VoiceAppDelegate {
-                property var modelData: typeof model !== "undefined" ? model : null
-            }
-
-            navigationUp: recentView.currentViewUpwards
             navigationDown: appsView.currentViewDownwards
         }
 
         Bigscreen.TileListView {
             id: appsView
-            property var currentViewUpwards: visible ? appsView : voiceAppsView.currentViewUpwards
+            property var currentViewUpwards: visible ? appsView : recentView.currentViewUpwards
             property var currentViewDownwards: visible ? appsView : gamesView.currentViewDownwards
 
             title: i18n("Applications")
             visible: count > 0
             enabled: count > 0
             model: KItemModels.KSortFilterProxyModel {
-                sourceModel: plasmoid.applicationListModel
+                sourceModel: Plasmoid.applicationListModel
                 filterRoleName: "ApplicationCategoriesRole"
                 filterRowCallback: function(source_row, source_parent) {
                     var cats = sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole);
-                    return cats.indexOf("Game") === -1 && cats.indexOf("VoiceApp") === -1;
+                    return cats.indexOf("Game") === -1;
                 }
             }
 
             currentIndex: 0
-            focus: visible && (voiceAppsView.currentViewUpwards === root.navigationUp)
+            focus: visible && (recentView.currentViewUpwards === root.navigationUp)
             onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = appsView
             delegate: Delegates.AppDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
             }
 
-            navigationUp: voiceAppsView.currentViewUpwards
+            navigationUp: recentView.currentViewUpwards
             navigationDown: gamesView.currentViewDownwards
         }
 
@@ -203,7 +173,7 @@ FocusScope {
             visible: count > 0
             enabled: count > 0
             model: KItemModels.KSortFilterProxyModel {
-                sourceModel: plasmoid.applicationListModel
+                sourceModel: Plasmoid.applicationListModel
                 filterRoleName: "ApplicationCategoriesRole"
                 filterRowCallback: function(source_row, source_parent) {
                     return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("Game") !== -1;
