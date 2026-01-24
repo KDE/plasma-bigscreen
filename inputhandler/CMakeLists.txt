@@ -33,7 +33,12 @@ target_link_libraries(plasma-bigscreen-inputhandler
 target_compile_definitions(plasma-bigscreen-inputhandler PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
 
 if (TARGET PkgConfig::Libcec)
-    set(LIBCEC_SRCS libcec/ceccontroller.cpp libcec/ceccontroller.h)
+    set(LIBCEC_SRCS
+        libcec/ceccontroller.cpp
+        libcec/ceccontroller.h
+        libcec/cecworker.cpp
+        libcec/cecworker.h
+    )
     target_sources(plasma-bigscreen-inputhandler PUBLIC ${LIBCEC_SRCS})
     target_link_libraries(plasma-bigscreen-inputhandler PkgConfig::Libcec)
     add_definitions(-DHAS_LIBCEC)

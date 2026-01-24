@@ -1,6 +1,7 @@
 /*
  *   SPDX-FileCopyrightText: 2022 Bart Ribbers <bribbers@disroot.org>
  *   SPDX-FileCopyrightText: 2022 Aditya Mehra <aix.m@outlook.com>
+ *   SPDX-FileCopyrightText: 2026 Devin Lin <devin@kde.org>
  *
  *   SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
@@ -8,28 +9,21 @@
 #include "ceccontroller.h"
 #include "../controllermanager.h"
 #include "../device.h"
+#include "cecworker.h"
 
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
-#include <QDBusConnection>
 #include <QDBusMetaType>
-#include <QDebug>
-#include <QEventLoop>
-#include <QMutexLocker>
-#include <QTimer>
 
 #include <Solid/DeviceNotifier>
 
-#include <iostream> // Workaround for libcec bug (cecloader.h uses std::cout without including iostream)
-#include <libcec/cec.h>
-#include <libcec/cecloader.h>
 #include <libcec/cectypes.h>
 #include <linux/input-event-codes.h>
 
 using namespace CEC;
 
-QHash<int, int> CECController::m_keyCodeTranslation;
+QHash<int, int> CECController::s_keyMap;
 
 QDBusArgument &operator<<(QDBusArgument &arg, const cec_logical_address &address)
 {
@@ -49,289 +43,177 @@ const QDBusArgument &operator>>(const QDBusArgument &arg, cec_logical_address &a
     return arg;
 }
 
-void CECController::handleCecKeypress(void *param, const cec_keypress *key)
-{
-    CECController *self = static_cast<CECController *>(param);
-    // only handle complete event when we get the keycode, opcode for press event is always sent before keycode
-    self->handleCompleteEvent(key->keycode, key->duration, self->m_hitcommand);
-}
-
-void CECController::handleCommandReceived(void *param, const cec_command *command)
-{
-    CECController *self = static_cast<CECController *>(param);
-    QMutexLocker locker(&self->m_mutex);
-    self->m_hitcommand = command->opcode;
-    if (self->m_hitcommand == CEC_OPCODE_STANDBY) {
-        locker.unlock();
-        QMetaObject::invokeMethod(self, "enterStandby", Qt::QueuedConnection);
-    }
-}
-
-void CECController::handleSourceActivated(void *param, const cec_logical_address address, uint8_t activated)
-{
-    Q_UNUSED(address);
-    CECController *self = static_cast<CECController *>(param);
-    QMetaObject::invokeMethod(self, "sourceActivated", Qt::QueuedConnection, Q_ARG(bool, activated != 0));
-}
-
-void CECController::handleCompleteEvent(const int keycode, const int keyduration, const int opcode)
-{
-    Q_UNUSED(keyduration);
-
-    QMutexLocker locker(&m_mutex);
-
-    if (m_catchNextInput) {
-        m_caughtInput = keycode;
-
-        // check if m_caughtInput has changed
-        if (m_caughtInput != -1) {
-            m_catchNextInput = false;
-            locker.unlock();
-            Q_EMIT keyInputCaught();
-        }
-    } else if (m_nativeNavMode) {
-        locker.unlock();
-        int nativeKeyCode = m_keyCodeTranslation.value(keycode, -1);
-
-        if (nativeKeyCode < 0) {
-            qDebug() << "Received unhandled CEC keycode:" << keycode;
-            return;
-        }
-
-        // Turn home button directly into action
-        if (nativeKeyCode == KEY_HOMEPAGE) {
-            ControllerManager::instance().emitHomeAction();
-            return;
-        }
-
-        if (opcode == CEC_OPCODE_USER_CONTROL_PRESSED) {
-            // send key press and key release events before cec key release event
-            // otherwise the key release event will take 500 ms to be sent and cause the key to be stuck
-            // in the pressed state
-            ControllerManager::instance().emitKey(nativeKeyCode, 1);
-            ControllerManager::instance().emitKey(nativeKeyCode, 0);
-        } else if (opcode == CEC_OPCODE_USER_CONTROL_RELEASE) {
-            // not sure if this is actually needed, cec will send key pressed events even when it hasn't produced a key release event
-            ControllerManager::instance().emitKey(nativeKeyCode, 0);
-        }
-    }
-}
-
-CECController::CECController()
+CECController::CECController(QObject *parent)
+    : QObject(parent)
 {
     qDBusRegisterMetaType<cec_logical_address>();
 
+    // Load key mappings from config
     KSharedConfigPtr config = KSharedConfig::openConfig();
-    KConfigGroup generalGroup = config->group("General");
+    KConfigGroup group = config->group("General");
 
-    auto configPair = [&generalGroup](const char *name, int cecKey, int evKey) {
-        return std::make_pair<int, int>(generalGroup.readEntry(QString("Button") + name, cecKey), generalGroup.readEntry(QString("Key") + name, evKey));
+    auto map = [&group](const char *name, int cecKey, int evKey) {
+        return std::make_pair<int, int>(group.readEntry(QString("Button") + name, cecKey), group.readEntry(QString("Key") + name, evKey));
     };
 
-    m_keyCodeTranslation = {
-        configPair("Play", CEC_USER_CONTROL_CODE_PLAY, KEY_PLAY),
-        configPair("Stop", CEC_USER_CONTROL_CODE_STOP, KEY_STOP),
-        configPair("Pause", CEC_USER_CONTROL_CODE_PAUSE, KEY_PAUSE),
-        configPair("Rewind", CEC_USER_CONTROL_CODE_REWIND, KEY_REWIND),
-        configPair("Fastforward", CEC_USER_CONTROL_CODE_FAST_FORWARD, KEY_FASTFORWARD),
-        configPair("Enter", CEC_USER_CONTROL_CODE_SELECT, KEY_ENTER),
-        configPair("Up", CEC_USER_CONTROL_CODE_UP, KEY_UP),
-        configPair("Down", CEC_USER_CONTROL_CODE_DOWN, KEY_DOWN),
-        configPair("Left", CEC_USER_CONTROL_CODE_LEFT, KEY_LEFT),
-        configPair("Right", CEC_USER_CONTROL_CODE_RIGHT, KEY_RIGHT),
-        configPair("Number0", CEC_USER_CONTROL_CODE_NUMBER0, KEY_0),
-        configPair("Number1", CEC_USER_CONTROL_CODE_NUMBER1, KEY_1),
-        configPair("Number2", CEC_USER_CONTROL_CODE_NUMBER2, KEY_2),
-        configPair("Number3", CEC_USER_CONTROL_CODE_NUMBER3, KEY_3),
-        configPair("Number4", CEC_USER_CONTROL_CODE_NUMBER4, KEY_4),
-        configPair("Number5", CEC_USER_CONTROL_CODE_NUMBER5, KEY_5),
-        configPair("Number6", CEC_USER_CONTROL_CODE_NUMBER6, KEY_6),
-        configPair("Number7", CEC_USER_CONTROL_CODE_NUMBER7, KEY_7),
-        configPair("Number8", CEC_USER_CONTROL_CODE_NUMBER8, KEY_8),
-        configPair("Number9", CEC_USER_CONTROL_CODE_NUMBER9, KEY_9),
-        configPair("Blue", CEC_USER_CONTROL_CODE_F1_BLUE, KEY_BLUE),
-        configPair("Red", CEC_USER_CONTROL_CODE_F2_RED, KEY_RED),
-        configPair("Green", CEC_USER_CONTROL_CODE_F3_GREEN, KEY_GREEN),
-        configPair("Yellow", CEC_USER_CONTROL_CODE_F4_YELLOW, KEY_YELLOW),
-        configPair("ChannelUp", CEC_USER_CONTROL_CODE_CHANNEL_UP, KEY_CHANNELUP),
-        configPair("ChannelDown", CEC_USER_CONTROL_CODE_CHANNEL_DOWN, KEY_CHANNELDOWN),
-        configPair("Exit", CEC_USER_CONTROL_CODE_EXIT, KEY_EXIT),
-        configPair("Back", CEC_USER_CONTROL_CODE_AN_RETURN, KEY_BACK),
-        configPair("Home", CEC_USER_CONTROL_CODE_ROOT_MENU, KEY_HOMEPAGE),
-        configPair("Subtitle", CEC_USER_CONTROL_CODE_SUB_PICTURE, KEY_SUBTITLE),
-        configPair("Info", CEC_USER_CONTROL_CODE_DISPLAY_INFORMATION, KEY_INFO),
+    s_keyMap = {
+        map("Play", CEC_USER_CONTROL_CODE_PLAY, KEY_PLAY),
+        map("Stop", CEC_USER_CONTROL_CODE_STOP, KEY_STOP),
+        map("Pause", CEC_USER_CONTROL_CODE_PAUSE, KEY_PAUSE),
+        map("Rewind", CEC_USER_CONTROL_CODE_REWIND, KEY_REWIND),
+        map("Fastforward", CEC_USER_CONTROL_CODE_FAST_FORWARD, KEY_FASTFORWARD),
+        map("Enter", CEC_USER_CONTROL_CODE_SELECT, KEY_ENTER),
+        map("Up", CEC_USER_CONTROL_CODE_UP, KEY_UP),
+        map("Down", CEC_USER_CONTROL_CODE_DOWN, KEY_DOWN),
+        map("Left", CEC_USER_CONTROL_CODE_LEFT, KEY_LEFT),
+        map("Right", CEC_USER_CONTROL_CODE_RIGHT, KEY_RIGHT),
+        map("Number0", CEC_USER_CONTROL_CODE_NUMBER0, KEY_0),
+        map("Number1", CEC_USER_CONTROL_CODE_NUMBER1, KEY_1),
+        map("Number2", CEC_USER_CONTROL_CODE_NUMBER2, KEY_2),
+        map("Number3", CEC_USER_CONTROL_CODE_NUMBER3, KEY_3),
+        map("Number4", CEC_USER_CONTROL_CODE_NUMBER4, KEY_4),
+        map("Number5", CEC_USER_CONTROL_CODE_NUMBER5, KEY_5),
+        map("Number6", CEC_USER_CONTROL_CODE_NUMBER6, KEY_6),
+        map("Number7", CEC_USER_CONTROL_CODE_NUMBER7, KEY_7),
+        map("Number8", CEC_USER_CONTROL_CODE_NUMBER8, KEY_8),
+        map("Number9", CEC_USER_CONTROL_CODE_NUMBER9, KEY_9),
+        map("Blue", CEC_USER_CONTROL_CODE_F1_BLUE, KEY_BLUE),
+        map("Red", CEC_USER_CONTROL_CODE_F2_RED, KEY_RED),
+        map("Green", CEC_USER_CONTROL_CODE_F3_GREEN, KEY_GREEN),
+        map("Yellow", CEC_USER_CONTROL_CODE_F4_YELLOW, KEY_YELLOW),
+        map("ChannelUp", CEC_USER_CONTROL_CODE_CHANNEL_UP, KEY_CHANNELUP),
+        map("ChannelDown", CEC_USER_CONTROL_CODE_CHANNEL_DOWN, KEY_CHANNELDOWN),
+        map("Exit", CEC_USER_CONTROL_CODE_EXIT, KEY_EXIT),
+        map("Back", CEC_USER_CONTROL_CODE_AN_RETURN, KEY_BACK),
+        map("Home", CEC_USER_CONTROL_CODE_ROOT_MENU, KEY_HOMEPAGE),
+        map("Subtitle", CEC_USER_CONTROL_CODE_SUB_PICTURE, KEY_SUBTITLE),
+        map("Info", CEC_USER_CONTROL_CODE_DISPLAY_INFORMATION, KEY_INFO),
     };
 
-    m_cecCallbacks.Clear();
-    m_cecCallbacks.keyPress = &CECController::handleCecKeypress;
-    m_cecCallbacks.commandReceived = &CECController::handleCommandReceived;
-    m_cecCallbacks.sourceActivated = &CECController::handleSourceActivated;
+    // Hotplug debounce timer
+    m_hotplugTimer.setSingleShot(true);
+    m_hotplugTimer.setInterval(500);
+    connect(&m_hotplugTimer, &QTimer::timeout, this, &CECController::onHotplugTimeout);
 
-    libcec_configuration cecConfig;
-    cecConfig.Clear();
-    cecConfig.bActivateSource = 0;
-    snprintf(cecConfig.strDeviceName, LIBCEC_OSD_NAME_SIZE, "%s", qPrintable(generalGroup.readEntry("OSDName", i18n("KDE Plasma"))));
-    cecConfig.clientVersion = LIBCEC_VERSION_CURRENT;
-    cecConfig.deviceTypes.Add(CEC_DEVICE_TYPE_RECORDING_DEVICE);
-    cecConfig.callbacks = &m_cecCallbacks;
-    cecConfig.callbackParam = this;
+    // Next key timeout
+    m_nextKeyTimer.setSingleShot(true);
+    m_nextKeyTimer.setInterval(30000);
+    connect(&m_nextKeyTimer, &QTimer::timeout, this, &CECController::onNextKeyTimeout);
 
-    m_cecAdapter = LibCecInitialise(&cecConfig);
+    // Create worker in dedicated thread
+    m_workerThread = new QThread(this);
+    m_workerThread->setObjectName(QStringLiteral("CEC Worker"));
+    m_worker = new CECWorker();
+    m_worker->moveToThread(m_workerThread);
 
-    if (!m_cecAdapter) {
-        qCritical() << "Could not create CEC adaptor with current config";
-        m_initFailed = true;
-        return;
-    }
+    connect(m_worker, &CECWorker::initialized, this, &CECController::onWorkerInitialized);
+    connect(m_worker, &CECWorker::deviceDiscovered, this, &CECController::onDeviceDiscovered);
+    connect(m_worker, &CECWorker::cecKeyPressed, this, &CECController::onCecKeyPressed);
+    connect(m_worker, &CECWorker::cecStandbyReceived, this, &CECController::enterStandby);
+    connect(m_worker, &CECWorker::cecSourceActivated, this, &CECController::sourceActivated);
+    connect(m_workerThread, &QThread::finished, m_worker, &QObject::deleteLater);
 
-    // Init video on targets that need this
-    m_cecAdapter->InitVideoStandalone();
+    m_workerThread->start();
 
-    auto notifier = Solid::DeviceNotifier::instance();
-    connect(notifier, &Solid::DeviceNotifier::deviceAdded, this, &CECController::discoverDevices);
-    discoverDevices();
-}
+    // Initialize asynchronously
+    QString osdName = group.readEntry("OSDName", i18n("KDE Plasma"));
+    QMetaObject::invokeMethod(m_worker, "initialize", Qt::QueuedConnection, Q_ARG(QString, osdName));
 
-void CECController::discoverDevices()
-{
-    if (m_initFailed || !m_cecAdapter) {
-        return;
-    }
-
-    cec_adapter_descriptor devices[10];
-    int8_t deviceCount = m_cecAdapter->DetectAdapters(devices, 10, nullptr, true);
-
-    if (deviceCount <= 0) {
-        qWarning() << "No CEC devices found";
-        return;
-    }
-
-    for (int8_t i = 0; i < deviceCount; i++) {
-        QString uniqueIdentifier = devices[i].strComName;
-        if (ControllerManager::instance().isConnected(uniqueIdentifier))
-            continue;
-
-        if (!m_cecAdapter->Open(devices[i].strComName)) {
-            qWarning() << "Could not open CEC device " << devices[i].strComPath << " " << devices[i].strComName;
-            continue;
-        }
-
-        // TODO: detect and handle disconnects
-        Device *device = new Device(DeviceCEC, "CEC Controller", devices[i].strComName);
-        QList<int> values = m_keyCodeTranslation.values();
-        device->setUsedKeys(QSet<int>(values.begin(), values.end()));
-        ControllerManager::instance().newDevice(device);
-
-        m_connectedAdapterCount++;
-        Q_EMIT controllerAdded(QStringLiteral("CEC Controller"));
-    }
-}
-
-bool CECController::hasConnectedAdapters() const
-{
-    return m_connectedAdapterCount > 0;
+    // Listen for device hotplug
+    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded, this, [this] {
+        m_hotplugTimer.start();
+    });
 }
 
 CECController::~CECController()
 {
-    if (m_cecAdapter) {
-        m_cecAdapter->Close();
-        UnloadLibCec(m_cecAdapter);
-        m_cecAdapter = nullptr;
+    if (m_workerThread) {
+        QMetaObject::invokeMethod(m_worker, "cleanup", Qt::BlockingQueuedConnection);
+        m_workerThread->quit();
+        m_workerThread->wait(5000);
     }
 }
 
-int CECController::sendNextKey()
+void CECController::onWorkerInitialized(bool success)
 {
-    QMutexLocker locker(&m_mutex);
+    m_initialized = success;
+    if (success) {
+        QMetaObject::invokeMethod(m_worker, "discoverDevices", Qt::QueuedConnection);
+    }
+}
+
+void CECController::onDeviceDiscovered(const QString &comName)
+{
+    if (m_connectedDevices.contains(comName)) {
+        return;
+    }
+
+    if (ControllerManager::instance().isConnected(comName)) {
+        m_connectedDevices.insert(comName);
+        return;
+    }
+
+    auto *device = new Device(DeviceCEC, QStringLiteral("CEC Controller"), comName);
+    device->setUsedKeys(QSet<int>(s_keyMap.cbegin(), s_keyMap.cend()));
+    ControllerManager::instance().newDevice(device);
+
+    m_connectedDevices.insert(comName);
+    m_adapterCount++;
+    Q_EMIT controllerAdded(QStringLiteral("CEC Controller"));
+}
+
+void CECController::onHotplugTimeout()
+{
+    if (m_initialized) {
+        QMetaObject::invokeMethod(m_worker, "discoverDevices", Qt::QueuedConnection);
+    }
+}
+
+void CECController::requestNextKey()
+{
     m_catchNextInput = true;
-    m_nativeNavMode = false;
-    m_caughtInput = -1;
-    locker.unlock();
-
-    QEventLoop loop;
-    QTimer timeout;
-    timeout.setSingleShot(true);
-    connect(&timeout, &QTimer::timeout, &loop, &QEventLoop::quit);
-    connect(this, &CECController::keyInputCaught, &loop, &QEventLoop::quit);
-    timeout.start(30000); // 30 second timeout
-    loop.exec();
-
-    locker.relock();
-    m_nativeNavMode = true;
-    int result = m_caughtInput;
-    locker.unlock();
-
-    return result;
+    m_nextKeyTimer.start();
 }
 
-bool CECController::hdmiCecSupported()
+void CECController::cancelNextKeyRequest()
 {
-    if (!m_cecAdapter) {
-        return false;
+    if (m_catchNextInput) {
+        m_catchNextInput = false;
+        m_nextKeyTimer.stop();
     }
-
-    cec_logical_addresses addresses = m_cecAdapter->GetLogicalAddresses();
-    for (uint8_t i = 0; i < CECDEVICE_BROADCAST; i++) {
-        cec_logical_address addr = static_cast<cec_logical_address>(i);
-        if (addresses.IsSet(addr)) {
-            cec_power_status status = m_cecAdapter->GetDevicePowerStatus(addr);
-            if (status == CEC_POWER_STATUS_ON) {
-                return true;
-            }
-        }
-    }
-    return false;
 }
 
-bool CECController::sendKey(uchar cecKeycode, cec_logical_address address)
+void CECController::onNextKeyTimeout()
 {
-    if (!m_cecAdapter) {
-        return false;
+    if (m_catchNextInput) {
+        m_catchNextInput = false;
+        Q_EMIT nextKeyReceived(-1);
     }
-    if (!m_cecAdapter->SendKeypress(address, static_cast<cec_user_control_code>(cecKeycode), true)) {
-        return false;
-    }
-    if (!m_cecAdapter->SendKeyRelease(address)) {
-        qWarning() << "Failed to send key release";
-        // Still return true since keypress succeeded
-    }
-    return true;
 }
 
-bool CECController::powerOnDevices(cec_logical_address address)
+void CECController::onCecKeyPressed(int keycode, int opcode)
 {
-    if (!m_cecAdapter) {
-        return false;
+    if (m_catchNextInput) {
+        m_catchNextInput = false;
+        m_nextKeyTimer.stop();
+        Q_EMIT nextKeyReceived(keycode);
+        return;
     }
-    return m_cecAdapter->PowerOnDevices(address);
-}
 
-bool CECController::powerOffDevices(cec_logical_address address)
-{
-    if (!m_cecAdapter) {
-        return false;
+    int nativeKey = s_keyMap.value(keycode, -1);
+    if (nativeKey < 0) {
+        return;
     }
-    return m_cecAdapter->StandbyDevices(address);
-}
 
-bool CECController::makeActiveSource()
-{
-    if (!m_cecAdapter) {
-        return false;
+    if (nativeKey == KEY_HOMEPAGE) {
+        ControllerManager::instance().emitHomeAction();
+        return;
     }
-    return m_cecAdapter->SetActiveSource();
-}
 
-bool CECController::setOSDName(const QString &name)
-{
-    if (!m_cecAdapter) {
-        return false;
+    if (opcode == CEC_OPCODE_USER_CONTROL_PRESSED) {
+        ControllerManager::instance().emitKey(nativeKey, 1);
+        ControllerManager::instance().emitKey(nativeKey, 0);
+    } else if (opcode == CEC_OPCODE_USER_CONTROL_RELEASE) {
+        ControllerManager::instance().emitKey(nativeKey, 0);
     }
-    libcec_configuration cecConfig;
-    if (!m_cecAdapter->GetCurrentConfiguration(&cecConfig)) {
-        return false;
-    }
-    snprintf(cecConfig.strDeviceName, LIBCEC_OSD_NAME_SIZE, "%s", qPrintable(name));
-    return m_cecAdapter->SetConfiguration(&cecConfig);
 }
