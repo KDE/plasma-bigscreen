@@ -29,6 +29,7 @@ private Q_SLOTS:
     void handleSessionClosed(uint code, const QVariantMap &results);
 
 private:
+    void preAuthorize();
     void createSession();
     bool isSessionReady() const;
     QString getRequestPath(const QString &handleToken);

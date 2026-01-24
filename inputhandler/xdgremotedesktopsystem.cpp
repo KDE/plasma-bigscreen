@@ -10,6 +10,7 @@
 #include <QDBusInterface>
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
+#include <QDBusReply>
 #include <QRandomGenerator>
 
 constexpr uint DEVICE_KEYBOARD = 1;
@@ -38,9 +39,41 @@ bool XdgRemoteDesktopSystem::init()
         return false;
     }
 
+    // Pre-authorize host applications for remote desktop access (no prompt)
+    // Note: This applies for all apps that aren't in a flatpak, not just the shell
+    preAuthorize();
+
     createSession();
     qDebug() << "XDG Remote Desktop: Using portal input system";
     return true;
+}
+
+void XdgRemoteDesktopSystem::preAuthorize()
+{
+    QDBusInterface permissionStore(QStringLiteral("org.freedesktop.impl.portal.PermissionStore"),
+                                   QStringLiteral("/org/freedesktop/impl/portal/PermissionStore"),
+                                   QStringLiteral("org.freedesktop.impl.portal.PermissionStore"),
+                                   QDBusConnection::sessionBus());
+
+    if (!permissionStore.isValid()) {
+        qWarning() << "XDG Remote Desktop: Could not connect to permission store";
+        return;
+    }
+
+    permissionStore.setTimeout(1000);
+
+    QDBusReply<void> reply = permissionStore.call(QStringLiteral("SetPermission"),
+                                                  QStringLiteral("kde-authorized"), // table
+                                                  true, // create table if not exists
+                                                  QStringLiteral("remote-desktop"), // id
+                                                  QLatin1String(""), // app (empty for host applications)
+                                                  QStringList{QStringLiteral("yes")}); // permissions
+
+    if (!reply.isValid()) {
+        qWarning() << "XDG Remote Desktop: Failed to set permission:" << reply.error().message();
+    } else {
+        qDebug() << "XDG Remote Desktop: Pre-authorized for remote desktop access";
+    }
 }
 
 QString XdgRemoteDesktopSystem::getRequestPath(const QString &token)
