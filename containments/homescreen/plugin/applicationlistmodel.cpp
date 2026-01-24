@@ -200,15 +200,38 @@ int ApplicationListModel::rowCount(const QModelIndex &parent) const
     return m_applicationList.count();
 }
 
-void ApplicationListModel::executeCommand(const QString &command)
+ApplicationListSearchModel::ApplicationListSearchModel(QObject *parent, ApplicationListModel *model)
+    : QSortFilterProxyModel(parent)
 {
-    qWarning() << "Executing" << command;
-    QStringList args = command.split(QStringLiteral(" "));
-    QString app = args.takeFirst();
-    QProcess::startDetached(app, args);
+    setSourceModel(model);
+
+    setFilterRole(ApplicationListModel::ApplicationNameRole);
+    setFilterCaseSensitivity(Qt::CaseInsensitive);
+
+    setSortRole(ApplicationListModel::ApplicationNameRole);
+    setSortCaseSensitivity(Qt::CaseInsensitive);
+    setSortLocaleAware(true);
+
+    sort(0, Qt::AscendingOrder);
 }
 
-void ApplicationListModel::runApplication(const QString &storageId)
+QVariantMap ApplicationListSearchModel::itemMap(int row)
+{
+    QVariantMap map;
+    QModelIndex idx = index(row, 0);
+    map[QStringLiteral("name")] = data(idx, ApplicationListModel::ApplicationNameRole);
+    map[QStringLiteral("comment")] = data(idx, ApplicationListModel::ApplicationCommentRole);
+    map[QStringLiteral("icon")] = data(idx, ApplicationListModel::ApplicationIconRole);
+    map[QStringLiteral("categories")] = data(idx, ApplicationListModel::ApplicationCategoriesRole);
+    map[QStringLiteral("storageId")] = data(idx, ApplicationListModel::ApplicationStorageIdRole);
+    map[QStringLiteral("entryPath")] = data(idx, ApplicationListModel::ApplicationEntryPathRole);
+    map[QStringLiteral("desktopPath")] = data(idx, ApplicationListModel::ApplicationDesktopRole);
+    map[QStringLiteral("startupNotify")] = data(idx, ApplicationListModel::ApplicationStartupNotifyRole);
+
+    return map;
+}
+
+void ApplicationListSearchModel::runApplication(const QString &storageId)
 {
     if (storageId.isEmpty()) {
         return;
@@ -224,34 +247,4 @@ void ApplicationListModel::runApplication(const QString &storageId)
     job->start();
 
     KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()), QStringLiteral("org.kde.plasma.kicker"));
-}
-
-QVariantMap ApplicationListModel::itemMap(int index)
-{
-    QVariantMap map;
-    map[QStringLiteral("name")] = m_applicationList.at(index).name;
-    map[QStringLiteral("comment")] = m_applicationList.at(index).comment;
-    map[QStringLiteral("icon")] = m_applicationList.at(index).icon;
-    map[QStringLiteral("categories")] = m_applicationList.at(index).categories;
-    map[QStringLiteral("storageId")] = m_applicationList.at(index).storageId;
-    map[QStringLiteral("entryPath")] = m_applicationList.at(index).entryPath;
-    map[QStringLiteral("desktopPath")] = m_applicationList.at(index).desktopPath;
-    map[QStringLiteral("startupNotify")] = m_applicationList.at(index).startupNotify;
-
-    return map;
-}
-
-ApplicationListSearchModel::ApplicationListSearchModel(QObject *parent, ApplicationListModel *model)
-    : QSortFilterProxyModel(parent)
-{
-    setSourceModel(model);
-
-    setFilterRole(ApplicationListModel::ApplicationNameRole);
-    setFilterCaseSensitivity(Qt::CaseInsensitive);
-
-    setSortRole(ApplicationListModel::ApplicationNameRole);
-    setSortCaseSensitivity(Qt::CaseInsensitive);
-    setSortLocaleAware(true);
-
-    sort(0, Qt::AscendingOrder);
 }

@@ -87,7 +87,7 @@ FocusScope {
 
         spacing: Kirigami.Units.largeSpacing * 3
 
-        Bigscreen.TileListView {
+        DelegateListView {
             id: favAppsView
             // Recursively get the next visible view
             property var currentViewUpwards: visible ? favAppsView : root.navigationUp
@@ -107,7 +107,7 @@ FocusScope {
             navigationDown: recentView.currentViewDownwards
         }
 
-        Bigscreen.TileListView {
+        DelegateListView {
             id: recentView
             property var currentViewUpwards: visible ? recentView : favAppsView.currentViewUpwards
             property var currentViewDownwards: visible ? recentView : appsView.currentViewDownwards
@@ -136,7 +136,7 @@ FocusScope {
             navigationDown: appsView.currentViewDownwards
         }
 
-        Bigscreen.TileListView {
+        DelegateListView {
             id: appsView
             property var currentViewUpwards: visible ? appsView : recentView.currentViewUpwards
             property var currentViewDownwards: visible ? appsView : gamesView.currentViewDownwards
@@ -164,7 +164,7 @@ FocusScope {
             navigationDown: gamesView.currentViewDownwards
         }
 
-        Bigscreen.TileListView {
+        DelegateListView {
             id: gamesView
             property var currentViewUpwards: visible ? gamesView : appsView.currentViewUpwards
             property var currentViewDownwards: visible ? gamesView : null

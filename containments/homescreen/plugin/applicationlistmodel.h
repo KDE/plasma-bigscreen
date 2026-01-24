@@ -53,10 +53,7 @@ public:
     };
     Q_ENUM(Roles)
 
-    Q_INVOKABLE void runApplication(const QString &storageId);
-    Q_INVOKABLE void loadApplications();
-    Q_INVOKABLE void executeCommand(const QString &command);
-    Q_INVOKABLE QVariantMap itemMap(int index);
+    void loadApplications();
 
 public Q_SLOTS:
     void sycocaDbChanged();
@@ -76,4 +73,7 @@ class ApplicationListSearchModel : public QSortFilterProxyModel
 
 public:
     ApplicationListSearchModel(QObject *parent = nullptr, ApplicationListModel *model = nullptr);
+
+    Q_INVOKABLE void runApplication(const QString &storageId);
+    Q_INVOKABLE QVariantMap itemMap(int index);
 };
