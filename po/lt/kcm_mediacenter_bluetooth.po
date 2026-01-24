@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-24 00:45+0000\n"
 "PO-Revision-Date: 2025-08-12 00:45+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -103,7 +103,7 @@ msgstr ""
 msgid "Paired devices"
 msgstr ""
 
-#: ui/main.qml:122
+#: ui/main.qml:121
 #, kde-format
 msgid "Available devices"
 msgstr ""

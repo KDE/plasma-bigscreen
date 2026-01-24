@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-24 00:45+0000\n"
 "PO-Revision-Date: 2025-08-14 12:02+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -32,22 +32,22 @@ msgstr "Gehitu web-aplikazioa"
 msgid "Installed web apps"
 msgstr "Instalatutako web-aplikazioak"
 
-#: ui/main.qml:90
+#: ui/main.qml:89
 #, kde-format
 msgid "Add Web Application"
 msgstr "Gehitu web-aplikazioa"
 
-#: ui/main.qml:106 ui/WebAppInfoSidebar.qml:52
+#: ui/main.qml:105 ui/WebAppInfoSidebar.qml:52
 #, kde-format
 msgid "Name"
 msgstr "Izena"
 
-#: ui/main.qml:113 ui/WebAppInfoSidebar.qml:60
+#: ui/main.qml:112 ui/WebAppInfoSidebar.qml:60
 #, kde-format
 msgid "URL"
 msgstr "URL"
 
-#: ui/main.qml:120
+#: ui/main.qml:119
 #, kde-format
 msgid "User agent (empty for default)"
 msgstr "Erabiltzaile-agentea (hutsik lehenetsirako)"

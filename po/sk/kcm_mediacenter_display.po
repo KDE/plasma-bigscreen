@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_display\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-24 00:45+0000\n"
 "PO-Revision-Date: 2024-11-11 17:57+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -30,17 +30,17 @@ msgstr ""
 msgid "Display %1"
 msgstr ""
 
-#: ui/main.qml:83
+#: ui/main.qml:82
 #, kde-format
 msgid "Enabled"
 msgstr ""
 
-#: ui/main.qml:98
+#: ui/main.qml:97
 #, kde-format
 msgid "Screen mode (Resolution & Refresh Rate)"
 msgstr ""
 
-#: ui/main.qml:127 ui/ScaleDialog.qml:21
+#: ui/main.qml:126 ui/ScaleDialog.qml:21
 #, kde-format
 msgid "Scale"
 msgstr "Mierka"

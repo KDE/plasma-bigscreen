@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_bluetooth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-24 00:45+0000\n"
 "PO-Revision-Date: 2025-09-07 00:52+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -105,7 +105,7 @@ msgstr "Activar Bluetooth"
 msgid "Paired devices"
 msgstr "Dispositivos enlazados"
 
-#: ui/main.qml:122
+#: ui/main.qml:121
 #, kde-format
 msgid "Available devices"
 msgstr "Dispositivos disponibles"

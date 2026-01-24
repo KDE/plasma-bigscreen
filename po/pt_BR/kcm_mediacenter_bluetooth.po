@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-24 00:45+0000\n"
 "PO-Revision-Date: 2026-01-05 19:39-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -103,7 +103,7 @@ msgstr "Ativar o Bluetooth"
 msgid "Paired devices"
 msgstr "Dispositivo emparelhados"
 
-#: ui/main.qml:122
+#: ui/main.qml:121
 #, kde-format
 msgid "Available devices"
 msgstr "Dispositivos disponíveis"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-24 00:45+0000\n"
 "PO-Revision-Date: 2025-08-12 09:58+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -103,7 +103,7 @@ msgstr "Увімкнути Bluetooth"
 msgid "Paired devices"
 msgstr "Пов'язані пристрої"
 
-#: ui/main.qml:122
+#: ui/main.qml:121
 #, kde-format
 msgid "Available devices"
 msgstr "Доступні пристрої"

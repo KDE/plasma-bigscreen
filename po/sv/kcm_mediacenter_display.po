@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-24 00:45+0000\n"
 "PO-Revision-Date: 2025-08-13 08:14+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -32,17 +32,17 @@ msgstr "Vald skärm"
 msgid "Display %1"
 msgstr "Skärm %1"
 
-#: ui/main.qml:83
+#: ui/main.qml:82
 #, kde-format
 msgid "Enabled"
 msgstr "Aktiverad"
 
-#: ui/main.qml:98
+#: ui/main.qml:97
 #, kde-format
 msgid "Screen mode (Resolution & Refresh Rate)"
 msgstr "Skärmläge (upplösning och uppdateringsfrekvens)"
 
-#: ui/main.qml:127 ui/ScaleDialog.qml:21
+#: ui/main.qml:126 ui/ScaleDialog.qml:21
 #, kde-format
 msgid "Scale"
 msgstr "Skala"

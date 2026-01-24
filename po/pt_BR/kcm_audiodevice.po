@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-24 00:45+0000\n"
 "PO-Revision-Date: 2025-08-25 19:12-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -44,7 +44,7 @@ msgstr "Dispositivos de áudio"
 msgid "Playback Devices"
 msgstr "Dispositivos de reprodução"
 
-#: ui/main.qml:81
+#: ui/main.qml:80
 #, kde-format
 msgid "Recording Devices"
 msgstr "Dispositivos de gravação"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_audiodevice\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-24 00:45+0000\n"
 "PO-Revision-Date: 2022-04-15 19:15+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -43,7 +43,7 @@ msgstr "Výber audio zariadenia"
 msgid "Playback Devices"
 msgstr "Prehrávacie zariadenie"
 
-#: ui/main.qml:81
+#: ui/main.qml:80
 #, kde-format
 msgid "Recording Devices"
 msgstr "Nahrávacie zariadenia"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-24 00:45+0000\n"
 "PO-Revision-Date: 2025-09-06 18:02+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -32,17 +32,17 @@ msgstr "Избран екран"
 msgid "Display %1"
 msgstr "Екран %1"
 
-#: ui/main.qml:83
+#: ui/main.qml:82
 #, kde-format
 msgid "Enabled"
 msgstr "Активиран"
 
-#: ui/main.qml:98
+#: ui/main.qml:97
 #, kde-format
 msgid "Screen mode (Resolution & Refresh Rate)"
 msgstr "Екранен режим (разделителна способност и честота на опресняване)"
 
-#: ui/main.qml:127 ui/ScaleDialog.qml:21
+#: ui/main.qml:126 ui/ScaleDialog.qml:21
 #, kde-format
 msgid "Scale"
 msgstr "Мащабиране"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-24 00:45+0000\n"
 "PO-Revision-Date: 2025-08-13 16:53+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -32,22 +32,22 @@ msgstr "Web Uygulaması Ekle"
 msgid "Installed web apps"
 msgstr "Kurulu web uygulamaları"
 
-#: ui/main.qml:90
+#: ui/main.qml:89
 #, kde-format
 msgid "Add Web Application"
 msgstr "Web Uygulaması Ekle"
 
-#: ui/main.qml:106 ui/WebAppInfoSidebar.qml:52
+#: ui/main.qml:105 ui/WebAppInfoSidebar.qml:52
 #, kde-format
 msgid "Name"
 msgstr "Ad"
 
-#: ui/main.qml:113 ui/WebAppInfoSidebar.qml:60
+#: ui/main.qml:112 ui/WebAppInfoSidebar.qml:60
 #, kde-format
 msgid "URL"
 msgstr "URL"
 
-#: ui/main.qml:120
+#: ui/main.qml:119
 #, kde-format
 msgid "User agent (empty for default)"
 msgstr "Kullanıcı aracısı (Öntanımlı: Boş)"

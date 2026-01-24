@@ -36,7 +36,7 @@ msgstr "移除收藏"
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:155
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "主页"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:169
 #: contents/ui/indicators/Search.qml:16
@@ -53,17 +53,17 @@ msgstr "任务"
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:208
 #, kde-format
 msgid "Controller"
-msgstr ""
+msgstr "控制器"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:209
 #, kde-format
 msgid "Currently capturing keys…"
-msgstr ""
+msgstr "当前正在捕获按键…"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:209
 #, kde-format
 msgid "Key capture off"
-msgstr ""
+msgstr "按键捕获关闭"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:220
 #: contents/ui/indicators/Settings.qml:18
@@ -149,32 +149,32 @@ msgstr "游戏"
 #: contents/ui/main.qml:106
 #, kde-format
 msgid "Controller added: %1"
-msgstr ""
+msgstr "已添加控制器：%1"
 
 #: contents/ui/main.qml:110
 #, kde-format
 msgid "Controller removed: %1"
-msgstr ""
+msgstr "已移除控制器：%1"
 
 #: contents/ui/main.qml:114
 #, kde-format
 msgid "Remote added: %1"
-msgstr ""
+msgstr "已添加遥控器：%1"
 
 #: contents/ui/main.qml:118
 #, kde-format
 msgid "Remote removed: %1"
-msgstr ""
+msgstr "已移除遥控器：%1"
 
 #: contents/ui/main.qml:122
 #, kde-format
 msgid "System taking over controller input"
-msgstr ""
+msgstr "系统正在接管控制器输入"
 
 #: contents/ui/main.qml:125
 #, kde-format
 msgid "Application taking over controller input"
-msgstr ""
+msgstr "应用程序正在接管控制器输入"
 
 #: contents/ui/PowerManagementItem.qml:41
 #, kde-format

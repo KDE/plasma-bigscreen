@@ -1,0 +1,243 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# SPDX-FileCopyrightText: 2026 giovanni <g.sora@tiscali.it>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"PO-Revision-Date: 2026-01-23 16:27+0100\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.5\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Giovanni Sora"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "g.sora@tiscali.it"
+
+#: main.cpp:38
+#, kde-format
+msgid "The user agent to browse with."
+msgstr ""
+
+#: main.cpp:40
+#, kde-format
+msgid "The name of the web app"
+msgstr ""
+
+#: main.cpp:43
+#, kde-format
+msgid "link of website to launch"
+msgstr ""
+
+#: main.cpp:57
+#, kde-format
+msgid "Webview"
+msgstr "Vista Web"
+
+#: main.cpp:59
+#, kde-format
+msgid "Plasma Bigscreen Webapp runtime"
+msgstr ""
+
+#: main.cpp:61
+#, kde-format
+msgid "Copyright 2025 Plasma developers"
+msgstr ""
+
+#: qml/WebView.qml:192
+#, kde-format
+msgctxt "@info:status"
+msgid "Entered Full Screen mode"
+msgstr "Entrate a modo de Schermo plen"
+
+#: qml/WebView.qml:193
+#, kde-format
+msgctxt "@action:button"
+msgid "Exit Full Screen (Esc)"
+msgstr "Exi Schermo plen (Esc)"
+
+#: qml/WebView.qml:306
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Play"
+msgstr "Reproduce"
+
+#: qml/WebView.qml:307
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Pause"
+msgstr "Pausa"
+
+#: qml/WebView.qml:314
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Unmute"
+msgstr "Non silente"
+
+#: qml/WebView.qml:315
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Mute"
+msgstr "Silente"
+
+#: qml/WebView.qml:325
+#, kde-format
+msgctxt "@label"
+msgid "Speed"
+msgstr "Velocitate"
+
+#: qml/WebView.qml:348
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Loop"
+msgstr "Anella"
+
+#: qml/WebView.qml:355
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Exit Fullscreen"
+msgstr "Exi schermo plen"
+
+#: qml/WebView.qml:355
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Enter Fullscreen"
+msgstr "Passa a schermo plen"
+
+#: qml/WebView.qml:368
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Hide Controls"
+msgstr "Cela Controlos"
+
+#: qml/WebView.qml:369
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Show Controls"
+msgstr "Monstra Controlos"
+
+#: qml/WebView.qml:377
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Video"
+msgstr "Aperi video"
+
+#: qml/WebView.qml:377
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Audio"
+msgstr "Aperi Audio"
+
+#: qml/WebView.qml:378
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Video in New Tab"
+msgstr "Aperi video in nove scheda"
+
+#: qml/WebView.qml:378
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Audio in New Tab"
+msgstr "Aperi Audio in nove scheda"
+
+#: qml/WebView.qml:386
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Save Video"
+msgstr "Salveguarda video"
+
+#: qml/WebView.qml:392
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Video Link"
+msgstr "Copia ligamine de video"
+
+#: qml/WebView.qml:398
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Image"
+msgstr "Aperi imagine"
+
+#: qml/WebView.qml:398
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Image in New Tab"
+msgstr "Aperi imagine in nove scheda"
+
+#: qml/WebView.qml:406
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Save Image"
+msgstr "Salveguarda imagine"
+
+#: qml/WebView.qml:412
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Image"
+msgstr "Copia imagine"
+
+#: qml/WebView.qml:418
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Image Link"
+msgstr "Copia ligamine de imagine"
+
+#: qml/WebView.qml:424
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Link"
+msgstr "Aperi Ligamine"
+
+#: qml/WebView.qml:424
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Link in New Window"
+msgstr "Aperi ligamine in nove fenestra"
+
+#: qml/WebView.qml:432
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Save Link"
+msgstr "Salveguarda ligamine"
+
+#: qml/WebView.qml:438
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Link"
+msgstr "Copia Ligamine"
+
+#: qml/WebView.qml:445
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy"
+msgstr "Copia"
+
+#: qml/WebView.qml:451
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Cut"
+msgstr "Talia"
+
+#: qml/WebView.qml:457
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Paste"
+msgstr "Colla"
+
+#: webprofile.cpp:48
+#, kde-format
+msgid "Open"
+msgstr "Aperi"

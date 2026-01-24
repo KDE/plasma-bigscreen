@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# giovanni <g.sora@tiscali.it>, 2023.
+# SPDX-FileCopyrightText: 2023, 2026 giovanni <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2023-04-07 15:44+0200\n"
+"PO-Revision-Date: 2026-01-23 16:24+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: ui/delegates/PairedView.qml:35
 #, kde-format
@@ -48,10 +48,9 @@ msgid "This device is not paired"
 msgstr "Iste dispositivo non es associate"
 
 #: ui/delegates/UnpairedView.qml:56
-#, fuzzy, kde-format
-#| msgid "Pairing request sent to device"
+#, kde-format
 msgid "Pairing request sent"
-msgstr "Requesta de associar inviate a dispositivo"
+msgstr "Requesta de associar inviate "
 
 #: ui/delegates/UnpairedView.qml:60
 #, kde-format
@@ -71,7 +70,7 @@ msgstr "KDE Connect"
 #: ui/main.qml:44
 #, kde-format
 msgid "Devices"
-msgstr ""
+msgstr "Dispositivos"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr ""

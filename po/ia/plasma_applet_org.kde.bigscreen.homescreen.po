@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2023, 2024 giovanni <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2023, 2024, 2026 giovanni <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-22 01:00+0000\n"
-"PO-Revision-Date: 2024-10-21 12:22+0200\n"
+"PO-Revision-Date: 2026-01-23 16:26+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -39,21 +39,20 @@ msgstr ""
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:169
 #: contents/ui/indicators/Search.qml:16
-#, kde-format
+#, fuzzy, kde-format
 msgid "Search"
-msgstr ""
+msgstr "Cerca"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:187
 #: contents/ui/indicators/Tasks.qml:23
-#, fuzzy, kde-format
-#| msgid "Clear Tasks"
+#, kde-format
 msgid "Tasks"
-msgstr "Netta cargas"
+msgstr "Cargas"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:208
 #, kde-format
 msgid "Controller"
-msgstr ""
+msgstr "Controlator"
 
 #: contents/ui/homeoverlay/HomeOverlayWindow.qml:209
 #, kde-format
@@ -74,7 +73,7 @@ msgstr "Preferentias"
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
 msgid "Battery: %1%"
-msgstr ""
+msgstr "Batteria: %1%"
 
 #: contents/ui/indicators/Favorites.qml:17
 #, fuzzy, kde-format
@@ -108,21 +107,19 @@ msgid "Exit Bigscreen"
 msgstr ""
 
 #: contents/ui/indicators/Shutdown.qml:15
-#, kde-format
+#, fuzzy, kde-format
 msgid "Power"
-msgstr ""
+msgstr "Potentia"
 
 #: contents/ui/indicators/Volume.qml:20
-#, fuzzy, kde-format
-#| msgid "Additional Settings:"
+#, kde-format
 msgid "Audio Settings"
-msgstr "Preferentias additional:"
+msgstr "Preferentias de audio"
 
 #: contents/ui/indicators/Wifi.qml:19
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgid "Internet Settings"
-msgstr "Preferentias"
+msgstr "Preferentiasde Internet"
 
 #: contents/ui/launcher/LauncherHome.qml:99
 #, kde-format
@@ -188,7 +185,7 @@ msgstr "Bigscreen ha habilitate inhibition per tote le systema"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "Cerca…"
 
 #: contents/ui/TaskWindowView.qml:226
 #, kde-format

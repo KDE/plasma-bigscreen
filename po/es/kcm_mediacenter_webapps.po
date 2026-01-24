@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_webapps\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-24 00:45+0000\n"
 "PO-Revision-Date: 2025-09-07 00:52+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -35,22 +35,22 @@ msgstr "Añadir aplicación web"
 msgid "Installed web apps"
 msgstr "Aplicaciones web instaladas"
 
-#: ui/main.qml:90
+#: ui/main.qml:89
 #, kde-format
 msgid "Add Web Application"
 msgstr "Añadir aplicación web"
 
-#: ui/main.qml:106 ui/WebAppInfoSidebar.qml:52
+#: ui/main.qml:105 ui/WebAppInfoSidebar.qml:52
 #, kde-format
 msgid "Name"
 msgstr "Nombre"
 
-#: ui/main.qml:113 ui/WebAppInfoSidebar.qml:60
+#: ui/main.qml:112 ui/WebAppInfoSidebar.qml:60
 #, kde-format
 msgid "URL"
 msgstr "URL"
 
-#: ui/main.qml:120
+#: ui/main.qml:119
 #, kde-format
 msgid "User agent (empty for default)"
 msgstr "Agente de usuario (vacío por omisión)"

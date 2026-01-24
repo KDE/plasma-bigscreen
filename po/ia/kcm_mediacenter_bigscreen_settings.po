@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2023, 2024 giovanni <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2023, 2024, 2026 giovanni <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-19 00:45+0000\n"
-"PO-Revision-Date: 2024-10-21 12:21+0200\n"
+"PO-Revision-Date: 2026-01-23 16:22+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -49,10 +49,9 @@ msgid "Adjust Date & Time Settings"
 msgstr "Adjusta data & tempore"
 
 #: ui/DeviceTimeSettingsSidebar.qml:72
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "Fuso horari:"
+msgstr "Fuso horari"
 
 #: ui/DeviceTimeSettingsSidebar.qml:84
 #, kde-format
@@ -71,9 +70,9 @@ msgstr "Data"
 
 #: ui/DeviceTimeSettingsSidebar.qml:144 ui/DeviceTimeSettingsSidebar.qml:221
 #: ui/DeviceTimeSettingsSidebar.qml:271
-#, kde-format
+#, fuzzy, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Retro"
 
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
@@ -93,7 +92,7 @@ msgstr "%1, %2"
 #: ui/main.qml:22 ui/main.qml:90
 #, kde-format
 msgid "System"
-msgstr ""
+msgstr "Systema"
 
 #: ui/main.qml:42
 #, fuzzy, kde-format
@@ -123,9 +122,9 @@ msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr ""
 
 #: ui/main.qml:83 ui/ThemeSidebar.qml:23
-#, kde-format
+#, fuzzy, kde-format
 msgid "Global theme"
-msgstr ""
+msgstr "Thema Global"
 
 #: ui/main.qml:84
 #, kde-format
@@ -145,10 +144,9 @@ msgid "Adjust date & time"
 msgstr "Adjusta data & tempore"
 
 #: ui/main.qml:118
-#, fuzzy, kde-format
-#| msgid "Set Shortcut"
+#, kde-format
 msgid "Shortcuts"
-msgstr "Fixa via breve"
+msgstr "Vias breve"
 
 #: ui/main.qml:129
 #, fuzzy, kde-format
@@ -174,8 +172,7 @@ msgid "Shortcut currently set to"
 msgstr ""
 
 #: ui/ShortcutsPickerSidebar.qml:46
-#, fuzzy, kde-format
-#| msgid "Reset Default"
+#, kde-format
 msgid "Reset to default"
 msgstr "Retorna a valores predefinite"
 

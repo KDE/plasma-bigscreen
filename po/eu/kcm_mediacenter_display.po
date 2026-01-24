@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-24 00:45+0000\n"
 "PO-Revision-Date: 2025-08-14 11:32+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -35,17 +35,17 @@ msgstr "Hautatu bistaratzailea"
 msgid "Display %1"
 msgstr "%1 bistaratzailea"
 
-#: ui/main.qml:83
+#: ui/main.qml:82
 #, kde-format
 msgid "Enabled"
 msgstr "Gaituta"
 
-#: ui/main.qml:98
+#: ui/main.qml:97
 #, kde-format
 msgid "Screen mode (Resolution & Refresh Rate)"
 msgstr "Pantailaren modua (bereizmena eta freskatze-tasa)"
 
-#: ui/main.qml:127 ui/ScaleDialog.qml:21
+#: ui/main.qml:126 ui/ScaleDialog.qml:21
 #, kde-format
 msgid "Scale"
 msgstr "Eskala"
