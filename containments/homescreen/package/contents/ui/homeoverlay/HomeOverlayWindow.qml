@@ -83,7 +83,6 @@ Window {
         contentItem: MainColumn {
             id: mainColumn
             showTasksButton: tasksView.taskCount > 0
-            implicitWidth: sidebar.columnWidth
             Layout.fillHeight: true
 
             Keys.onRightPressed: {
