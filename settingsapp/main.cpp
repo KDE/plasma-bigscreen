@@ -7,12 +7,15 @@
 #include <QIcon>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QQuickWindow>
 #include <QUrl>
 
 #include <KAboutData>
+#include <KDBusService>
 #include <KLocalizedContext>
 #include <KLocalizedQmlContext>
 #include <KLocalizedString>
+#include <KWindowSystem>
 
 #include "settingsapp.h"
 
@@ -43,6 +46,8 @@ int main(int argc, char *argv[])
 
     KAboutData::setApplicationData(aboutData);
 
+    KDBusService *service = new KDBusService(KDBusService::Unique, &app);
+
     // QML loading
     QQmlApplicationEngine engine;
     KLocalization::setupLocalizedContext(&engine);
@@ -56,6 +61,18 @@ int main(int argc, char *argv[])
     if (engine.rootObjects().isEmpty()) {
         return -1;
     }
+
+    QQuickWindow *mainWindow = qobject_cast<QQuickWindow *>(engine.rootObjects().first());
+    Q_ASSERT(mainWindow);
+
+    QObject::connect(service, &KDBusService::activateRequested, &app, [mainWindow](const QStringList & /*arguments*/, const QString & /*workingDirectory*/) {
+        // HACK: raise window when module is requested;
+        // requestActivate() by itself doesn't seem to work
+        mainWindow->hide();
+        mainWindow->show();
+        mainWindow->requestActivate();
+        KWindowSystem::activateWindow(mainWindow);
+    });
 
     return app.exec();
 }

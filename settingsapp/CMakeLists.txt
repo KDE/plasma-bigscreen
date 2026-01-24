@@ -34,6 +34,8 @@ target_link_libraries(plasma-bigscreen-settings
     KF6::KCMUtils
     KF6::IconThemes
     KF6::I18nQml
+    KF6::WindowSystem
+    KF6::DBusAddons
 )
 
 install(TARGETS plasma-bigscreen-settings ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
