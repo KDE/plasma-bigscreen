@@ -3,15 +3,16 @@
 
 #pragma once
 
+#include <QHash>
 #include <QObject>
 #include <QSet>
+#include <QSocketNotifier>
 #include <QString>
-#include <QStringList>
-#include <QTimer>
 
-// Watch /proc to detect when other applications have opened the same input device files.
-// This is used to suppress input forwarding when games or other applications are directly
-// reading from the controller.
+/**
+ * Uses inotify to watch input devices for open/close events.
+ * When another process opens a monitored device, scans /proc to identify it.
+ */
 class DeviceWatcher : public QObject
 {
     Q_OBJECT
@@ -23,28 +24,25 @@ public:
     void addDevicePath(const QString &devicePath);
     void removeDevicePath(const QString &devicePath);
 
-    // If other processes (ex. games) are monitoring this device/controller
-    bool hasOtherProcesses() const;
-    QList<qint64> otherProcessPids() const;
+    bool hasOtherProcesses() const
+    {
+        return m_othersUsingDevice;
+    }
 
 Q_SIGNALS:
     void otherProcessesChanged(bool othersUsingDevice);
 
-private Q_SLOTS:
-    void checkDeviceAccess();
-
 private:
-    QString getProcessName(qint64 pid) const;
-    bool shouldIgnoreProcess(qint64 pid, const QString &processName) const;
-    QSet<qint64> findProcessesUsingDevice(const QString &devicePath) const;
+    void onInotifyEvent();
+    void checkDeviceAccess();
+    bool isDeviceOpenByOthers() const;
 
+    int m_inotifyFd = -1;
+    QSocketNotifier *m_notifier = nullptr;
+    QHash<int, QString> m_watchDescriptors; // wd -> device path
     QSet<QString> m_devicePaths;
-    QTimer *m_pollTimer = nullptr;
     bool m_othersUsingDevice = false;
     qint64 m_myPid;
 
-    static constexpr int POLL_INTERVAL_MS = 2000;
-
-    // Process names to ignore (system daemons that passively monitor input)
-    static const QStringList IGNORED_PROCESSES;
+    static const QSet<QString> s_ignoredProcesses;
 };
