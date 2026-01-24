@@ -38,7 +38,6 @@ ecm_target_qml_sources(bigscreenplugin SOURCES
     qml/IconDelegate.qml
     qml/NavigationSoundEffects.qml
     qml/TileListView.qml
-    qml/TileRepeater.qml
 )
 
 target_link_libraries(bigscreenplugin
