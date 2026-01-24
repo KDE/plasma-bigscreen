@@ -34,7 +34,7 @@ Plasma Bigscreen is a user-friendly, open-source, Wayland desktop environment de
 ### Test on a development machine
 
 It is recommended to use `kde-builder` to build this from source.
-See [this page](https://community.kde.org/Get_Involved/development) in order to set it up.
+See [this wiki page](https://invent.kde.org/plasma/plasma-bigscreen/-/wikis/Building-and-Testing-Locally) in order to set it up.
 
 <details>
 <summary><b>Click here to see dependencies</b></summary>
@@ -74,7 +74,7 @@ See [this page](https://community.kde.org/Get_Involved/development) in order to 
 
 </details>
 
-To start the Bigscreen homescreen in a window, use the following script:
+To start the Bigscreen homescreen in a window, you can use the following script:
 
 ```bash
 #/bin/bash
