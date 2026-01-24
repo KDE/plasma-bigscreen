@@ -260,8 +260,10 @@ void ApplicationListModel::runApplication(const QString &storageId)
     }
 
     KService::Ptr service = KService::serviceByStorageId(storageId);
+    if (!service) {
+        return;
+    }
 
-    // KRun::runApplication(*service, QList<QUrl>(), nullptr);
     KIO::ApplicationLauncherJob *job = new KIO::ApplicationLauncherJob(service);
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
     job->start();

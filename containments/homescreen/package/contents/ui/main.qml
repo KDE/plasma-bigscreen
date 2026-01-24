@@ -83,7 +83,8 @@ ContainmentItem {
         target: Plasmoid
 
         function onOpenTasksRequested() {
-            taskWindowView.showOverlay();
+            homeOverlayWindow.showOverlay();
+            homeOverlayWindow.openTasks();
         }
 
         function onOpenSearchRequested() {
@@ -92,6 +93,10 @@ ContainmentItem {
 
         function onOpenHomeOverlayRequested() {
             homeOverlayWindow.showOverlay();
+        }
+
+        function onMinimizeAllTasksRequested() {
+            tasksModel.minimizeAllTasks();
         }
     }
 
@@ -200,10 +205,6 @@ ContainmentItem {
         id: searchWindow
     }
 
-    TaskWindowView {
-        id: taskWindowView
-    }
-
     FavoritesManager {
         id: favsManagerWindowView
     }
@@ -211,10 +212,8 @@ ContainmentItem {
     HomeOverlayWindow {
         id: homeOverlayWindow
 
-        showTasksButton: taskWindowView.modelCount > 1 // TODO: HACK: the home overlay window counts as a task
         onMinimizeAllTasksRequested: tasksModel.minimizeAllTasks()
         onSearchRequested: Plasmoid.openSearch()
-        onTasksRequested: Plasmoid.openTasks()
         onSettingsRequested: Plasmoid.openSettings()
     }
 

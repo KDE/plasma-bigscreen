@@ -11,6 +11,7 @@ import org.kde.bigscreen as Bigscreen
 QQC2.Popup {
     id: root
 
+    dim: false
     modal: true
 
     Kirigami.Theme.inherit: false
@@ -25,6 +26,8 @@ QQC2.Popup {
     leftPadding: 0
     rightPadding: 0
 
+    readonly property real openFactor: 1 - Math.abs(x / width)
+
     y: 0
 
     enter: Transition {
@@ -32,7 +35,7 @@ QQC2.Popup {
             NumberAnimation {
                 property: "x"
                 duration: 400
-                easing.type: Easing.InOutCubic
+                easing.type: Easing.OutCubic
                 from: -root.width; to: 0
             }
             // Make sure it's anchored to the left of the screen
@@ -44,7 +47,7 @@ QQC2.Popup {
         NumberAnimation {
             property: "x"
             duration: 400
-            easing.type: Easing.InOutCubic
+            easing.type: Easing.OutCubic
             to: -root.width; from: 0
         }
     }

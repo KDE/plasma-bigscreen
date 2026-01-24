@@ -12,41 +12,42 @@ import org.kde.plasma.plasma5support as P5Support
 import org.kde.private.biglauncher
 import org.kde.bigscreen as Bigscreen
 import org.kde.bigscreen.controllerhandler as ControllerHandler
+import org.kde.layershell as LayerShell
 
-NanoShell.FullScreenOverlay {
+Window {
     id: window
 
-    property bool showTasksButton
+    LayerShell.Window.scope: "overlay"
+    LayerShell.Window.anchors: LayerShell.Window.AnchorTop | LayerShell.Window.AnchorLeft | LayerShell.Window.AnchorRight | LayerShell.Window.AnchorBottom
+    LayerShell.Window.layer: LayerShell.Window.LayerOverlay
+    LayerShell.Window.exclusionZone: -1
 
     signal minimizeAllTasksRequested()
     signal searchRequested()
-    signal tasksRequested()
     signal settingsRequested()
 
-    color: "transparent"
+    Kirigami.Theme.inherit: false
+    Kirigami.Theme.colorSet: Kirigami.Theme.View
+    color: Qt.rgba(0, 0, 0, 0.3 * sidebar.openFactor)
 
-    property bool closeControllerSuppressState
+    function openTasks() {
+        tasksView.open();
+    }
 
     function showOverlay() {
         showMaximized();
     }
 
     function hideOverlay() {
+        tasksView.visible = false;
         sidebar.close();
     }
 
     onVisibleChanged: {
         if (visible) {
-            // Don't have controller input suppressed while the home overlay is open, so user can interact
-            // Save the state to a variable
-            closeControllerSuppressState = ControllerHandler.ControllerHandlerStatus.inputSuppressed;
-            ControllerHandler.ControllerHandlerStatus.inputSuppressed = false;
-            controllerButton.checked = Qt.binding(() => !window.closeControllerSuppressState);
-
             sidebar.open()
         } else {
-            // Restore controller input suppressed state (which may have been toggled here)
-            ControllerHandler.ControllerHandlerStatus.inputSuppressed = closeControllerSuppressState;
+            tasksView.visible = false;
         }
     }
     onActiveChanged: {
@@ -76,156 +77,57 @@ NanoShell.FullScreenOverlay {
     HomeOverlaySidebar {
         id: sidebar
 
-        onVisibleChanged: {
-            if (visible) {
-                homeButton.forceActiveFocus();
-            }
-        }
+        onAboutToHide: tasksView.close()
         onClosed: window.close();
 
-        contentItem: ColumnLayout {
-            spacing: 0
+        contentItem: MainColumn {
+            id: mainColumn
+            showTasksButton: tasksView.taskCount > 0
+            implicitWidth: sidebar.columnWidth
+            Layout.fillHeight: true
 
-            Kirigami.Theme.inherit: false
-            Kirigami.Theme.colorSet: Kirigami.Theme.Button
-
-            QQC2.Control {
-                id: headerControl
-                topPadding: Kirigami.Units.gridUnit
-                bottomPadding: Kirigami.Units.gridUnit
-                leftPadding: Kirigami.Units.gridUnit
-                rightPadding: Kirigami.Units.gridUnit
-
-                Layout.fillWidth: true
-
-                background: Rectangle {
-                    color: Kirigami.Theme.alternateBackgroundColor
-                }
-
-                P5Support.DataSource {
-                    id: timeSource
-                    engine: "time"
-                    connectedSources: ["Local"]
-                    interval: 60000
-                    intervalAlignment: P5Support.Types.AlignToMinute
-                }
-
-                contentItem: ColumnLayout {
-                    QQC2.Label {
-                        id: timeLabel
-                        text: Qt.formatTime(timeSource.data["Local"]["DateTime"], "h:mm ap")
-
-                        Layout.fillWidth: true
-                        horizontalAlignment: Text.AlignHCenter
-                        font.pixelSize: 32
-                        font.weight: Font.Light
-                    }
-
-                    QQC2.Label {
-                        id: dateLabel
-                        text: Qt.formatDate(timeSource.data["Local"]["DateTime"], "MMMM d, yyyy")
-
-                        Layout.fillWidth: true
-                        horizontalAlignment: Text.AlignHCenter
-                        font.pixelSize: Bigscreen.Units.defaultFontPixelSize
-                        font.weight: Font.Light
-                    }
+            Keys.onRightPressed: {
+                if (tasksView.visible) {
+                    tasksView.forceActiveFocus();
                 }
             }
 
-            QQC2.Control {
-                id: contentControl
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-
-                topPadding: Kirigami.Units.gridUnit
-                bottomPadding: Kirigami.Units.gridUnit
-                leftPadding: Kirigami.Units.gridUnit
-                rightPadding: Kirigami.Units.gridUnit
-
-                contentItem: ColumnLayout {
-                    spacing: 0
-
-                    Bigscreen.ButtonDelegate {
-                        id: homeButton
-                        Layout.fillWidth: true
-
-                        KeyNavigation.down: searchButton
-
-                        text: i18n("Home")
-                        icon.name: "go-home-symbolic"
-                        onClicked: {
-                            window.minimizeAllTasksRequested();
-                            sidebar.close();
-                        }
-                    }
-
-                    Bigscreen.ButtonDelegate {
-                        id: searchButton
-                        Layout.fillWidth: true
-
-                        KeyNavigation.down: tasksButton.downItem
-
-                        text: i18n("Search")
-                        icon.name: "system-search-symbolic"
-                        onClicked: {
-                            window.searchRequested();
-                            sidebar.close();
-                        }
-                    }
-
-                    Bigscreen.ButtonDelegate {
-                        id: tasksButton
-                        Layout.fillWidth: true
-
-                        property Item downItem: visible ? tasksButton : controllerButton.downItem
-                        property Item upItem: visible ? tasksButton : searchButton
-                        KeyNavigation.down: controllerButton.downItem
-                        KeyNavigation.up: searchButton
-
-                        visible: showTasksButton
-                        text: i18n("Tasks")
-                        icon.name: "transform-shear-up"
-                        onClicked: {
-                            window.tasksRequested();
-                            sidebar.close();
-                        }
-                    }
-
-                    Item { Layout.fillHeight: true }
-
-                    Bigscreen.SwitchDelegate {
-                        id: controllerButton
-                        Layout.fillWidth: true
-
-                        property Item downItem: visible ? controllerButton : settingsButton
-                        property Item upItem: visible ? controllerButton : tasksButton.upItem
-                        KeyNavigation.up: tasksButton.upItem
-                        KeyNavigation.down: settingsButton
-
-                        visible: ControllerHandler.ControllerHandlerStatus.sdlControllerConnected
-                        icon.name: "input-gamepad-symbolic"
-                        text: i18n("Controller")
-                        description: checked ? i18n("Currently capturing keys…") : i18n("Key capture off")
-
-                        checked: !window.closeControllerSuppressState
-                        onCheckedChanged: window.closeControllerSuppressState = !checked
-                    }
-
-                    Bigscreen.ButtonDelegate {
-                        id: settingsButton
-                        Layout.fillWidth: true
-                        KeyNavigation.up: controllerButton.upItem
-
-                        text: i18n("Settings")
-                        icon.name: "settings-configure-symbolic"
-                        onClicked: {
-                            window.settingsRequested();
-                            sidebar.close();
-                        }
-                    }
-                }
+            onMinimizeAllTasksRequested: {
+                window.minimizeAllTasksRequested();
+                window.hideOverlay();
+            }
+            onSearchRequested: {
+                window.searchRequested();
+                window.hideOverlay();
+            }
+            onTasksRequested: {
+                tasksView.open();
+                tasksView.forceActiveFocus();
+            }
+            onSettingsRequested: {
+                window.settingsRequested();
+                window.hideOverlay();
             }
         }
+    }
+
+    TasksView {
+        id: tasksView
+
+        visible: false
+        leftMargin: sidebar.width * sidebar.openFactor
+        anchors.fill: parent
+
+        onFocusTasksRequested: {
+            mainColumn.focusTasks();
+        }
+
+        onVisibleChanged: {
+            if (!visible) {
+                mainColumn.focusTasks();
+            }
+        }
+
+        onCloseHomeRequested: window.hideOverlay();
     }
 }

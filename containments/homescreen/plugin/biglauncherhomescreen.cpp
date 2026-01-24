@@ -79,6 +79,8 @@ FavsListModel *HomeScreen::favsListModel() const
 
 void HomeScreen::openSettings(QString module)
 {
+    Q_EMIT minimizeAllTasksRequested();
+
     if (module.isEmpty()) {
         executeCommand(QStringLiteral("plasma-bigscreen-settings"));
     } else {

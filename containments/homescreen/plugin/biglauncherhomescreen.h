@@ -39,6 +39,7 @@ public:
     Q_INVOKABLE void showOSD(const QString &text, const QString &iconName);
 
 Q_SIGNALS:
+    void minimizeAllTasksRequested();
     void openSearchRequested();
     void openTasksRequested();
     void openHomeOverlayRequested();

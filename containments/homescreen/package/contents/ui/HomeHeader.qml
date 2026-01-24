@@ -55,11 +55,7 @@ Controls.Control {
     // Forward focus to first item
     onActiveFocusChanged: {
         if (activeFocus) {
-            if (tasksIndicator.visible) {
-                tasksIndicator.forceActiveFocus();
-            } else {
-                searchIndicator.forceActiveFocus();
-            }
+            searchIndicator.forceActiveFocus();
         }
     }
 
@@ -85,18 +81,8 @@ Controls.Control {
             Layout.alignment: Qt.AlignTop | Qt.AlignRight
             spacing: Kirigami.Units.gridUnit
 
-            Indicators.Tasks {
-                id: tasksIndicator
-                visible: taskWindowView.modelCount > 0
-
-                KeyNavigation.right: searchIndicator
-                KeyNavigation.tab: searchIndicator
-            }
-
             Indicators.Search {
                 id: searchIndicator
-                KeyNavigation.left: tasksIndicator.visible ? tasksIndicator : null
-                KeyNavigation.backtab: tasksIndicator.visible ? tasksIndicator : null
                 KeyNavigation.right: favsIndicator
                 KeyNavigation.tab: favsIndicator
             }

@@ -28,6 +28,12 @@ Window {
         root.close();
     }
 
+    onActiveChanged: {
+        if (!active) {
+            hideOverlay();
+        }
+    }
+
     onVisibleChanged: {
         // Fade in when window is opening
         if (visible) {
