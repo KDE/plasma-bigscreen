@@ -15,6 +15,7 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 import org.kde.bigscreen as Bigscreen
+import org.kde.bigscreen.shell as BigscreenShell
 
 Kirigami.ScrollablePage {
     id: root
@@ -78,7 +79,7 @@ Kirigami.ScrollablePage {
             id: desktopThemeButton
             raisedBackground: true
 
-            KeyNavigation.down: pmInhibitionDelegate
+            KeyNavigation.down: navigationSoundDelegate
 
             text: i18n("Global theme")
             description: i18n("Set the system theme")
@@ -95,13 +96,22 @@ Kirigami.ScrollablePage {
         }
 
         Bigscreen.SwitchDelegate {
+            id: navigationSoundDelegate
+            KeyNavigation.down: pmInhibitionDelegate
+
+            text: i18n("Navigation sounds")
+            checked: BigscreenShell.Settings.navigationSoundEnabled ? true : false
+            onCheckedChanged: BigscreenShell.Settings.navigationSoundEnabled = checked
+        }
+
+        Bigscreen.SwitchDelegate {
             id: pmInhibitionDelegate
             Layout.bottomMargin: Kirigami.Units.smallSpacing
             KeyNavigation.down: timeDateDelegate
 
             text: i18n("Power inhibition")
-            checked: kcm.pmInhibitionActive() ? true : false
-            onCheckedChanged: kcm.setPmInhibitionActive(checked);
+            checked: BigscreenShell.Settings.pmInhibitionActive ? true : false
+            onCheckedChanged: BigscreenShell.Settings.pmInhibitionActive = checked
         }
 
         Bigscreen.ButtonDelegate {

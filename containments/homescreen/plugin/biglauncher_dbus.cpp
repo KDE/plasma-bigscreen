@@ -5,7 +5,6 @@
 
 #include "biglauncher_dbus.h"
 #include "biglauncheradaptor.h"
-#include "configuration.h"
 #include <QByteArray>
 #include <QDBusMessage>
 #include <QList>
@@ -45,7 +44,6 @@ void BigLauncherDbusAdapterInterface::init()
         QDBusConnection dbus = QDBusConnection::sessionBus();
         dbus.registerObject(QStringLiteral("/BigLauncher"), this);
         dbus.registerService("org.kde.biglauncher");
-        // setAutoRelaySignals(true);
 
         m_initialized = true;
     }
@@ -56,20 +54,9 @@ void BigLauncherDbusAdapterInterface::useColoredTiles(const bool &coloredTiles)
     Q_EMIT useColoredTilesChanged(coloredTiles);
 }
 
-void BigLauncherDbusAdapterInterface::enablePmInhibition(const bool &pmInhibition)
-{
-    Configuration::self().setPmInhibitionEnabled(pmInhibition);
-    Q_EMIT enablePmInhibitionChanged(pmInhibition);
-}
-
 bool BigLauncherDbusAdapterInterface::coloredTilesActive()
 {
     return m_useColoredTiles;
-}
-
-bool BigLauncherDbusAdapterInterface::pmInhibitionActive()
-{
-    return Configuration::self().pmInhibitionEnabled();
 }
 
 void BigLauncherDbusAdapterInterface::setColoredTilesActive(const bool &coloredTilesActive)

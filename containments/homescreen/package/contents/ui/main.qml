@@ -15,6 +15,7 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.kquickcontrolsaddons
 import org.kde.private.biglauncher
 import org.kde.bigscreen.controllerhandler as ControllerHandler
+import org.kde.bigscreen.shell as BigscreenShell
 
 import "launcher"
 import "homeoverlay"
@@ -46,15 +47,6 @@ ContainmentItem {
 
     Connections {
         target: BigLauncherDbusAdapterInterface
-
-        function onEnablePmInhibitionChanged(pmInhibition) {
-            var powerInhibition = BigLauncherDbusAdapterInterface.pmInhibitionActive()
-            if (powerInhibition) {
-                pmInhibitItem.inhibit = true
-            } else {
-                pmInhibitItem.inhibit = false
-            }
-        }
 
         function onUseColoredTilesChanged(msgUseColoredTiles) {
             Plasmoid.configuration.coloredTiles = msgUseColoredTiles;
@@ -146,13 +138,13 @@ ContainmentItem {
 
     PowerManagementItem {
         id: pmInhibitItem
+        inhibit: BigscreenShell.Settings.pmInhibitionEnabled
     }
 
     Component.onCompleted: {
         for (var i in Plasmoid.applets) {
             root.addApplet(Plasmoid.applets[i], -1, -1)
         }
-        pmInhibitItem.inhibit = BigLauncherDbusAdapterInterface.pmInhibitionActive()
         Plasmoid.setUseWallpaperBlur(Plasmoid.configuration.wallpaperBlur)
     }
 

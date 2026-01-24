@@ -3,8 +3,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef BIGLAUNCHER_DBUS_H
-#define BIGLAUNCHER_DBUS_H
+#pragma once
 
 #include "biglauncherhomescreen.h"
 #include "shortcuts.h"
@@ -34,9 +33,6 @@ public: // PROPERTIES
 public Q_SLOTS: // METHODS
     Q_SCRIPTABLE void useColoredTiles(const bool &coloredTiles);
     Q_SCRIPTABLE bool coloredTilesActive();
-    Q_SCRIPTABLE bool pmInhibitionActive();
-    Q_SCRIPTABLE void enablePmInhibition(const bool &pmInhibition);
-
     void setColoredTilesActive(const bool &coloredTilesActive);
 
     Q_SCRIPTABLE void useWallpaperBlur(const bool &wallpaperBlur);
@@ -59,7 +55,6 @@ public Q_SLOTS: // METHODS
 Q_SIGNALS: // SIGNALS
     Q_SCRIPTABLE void useColoredTilesChanged(const bool &msgUseColoredTiles);
     Q_SCRIPTABLE void useWallpaperBlurChanged(const bool &msgUseWallpaperBlur);
-    Q_SCRIPTABLE void enablePmInhibitionChanged(const bool &msgEnablePmInhibition);
     void coloredTilesActiveRequested();
     void activateWallpaperSelectorRequested();
 
@@ -70,5 +65,3 @@ private:
 
     bool m_initialized{false};
 };
-
-#endif

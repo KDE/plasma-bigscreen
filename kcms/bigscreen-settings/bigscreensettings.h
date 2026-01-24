@@ -48,9 +48,6 @@ public Q_SLOTS:
     bool useWallpaperBlur();
     void setUseWallpaperBlur(bool useWallpaperBlur);
 
-    bool pmInhibitionActive();
-    void setPmInhibitionActive(bool pmInhibitionActive);
-
     void saveTimeZone(const QString &newtimezone);
 
     bool useNtp();

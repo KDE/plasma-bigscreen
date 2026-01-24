@@ -11,7 +11,6 @@ set(homescreen_SRCS
     biglauncher_dbus.cpp biglauncher_dbus.h
     applicationlistmodel.cpp applicationlistmodel.h
     favslistmodel.cpp favslistmodel.h
-    configuration.cpp configuration.h
     shortcuts.cpp shortcuts.h
 )
 

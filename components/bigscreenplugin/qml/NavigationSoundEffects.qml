@@ -8,11 +8,13 @@ import QtQuick
 import QtMultimedia
 import Qt.labs.platform
 
+import org.kde.bigscreen.shell as BigscreenShell
+
 pragma Singleton
 
 QtObject {
     id: navigationSoundEffects
-    
+
     property SoundEffect clickedSound: SoundEffect {
         source: StandardPaths.locate(StandardPaths.GenericDataLocation, "sounds/plasma-bigscreen/clicked.wav")
     }
@@ -22,6 +24,9 @@ QtObject {
     }
 
     function stopNavigationSounds() {
+        if (!BigscreenShell.Settings.navigationSoundEnabled) {
+            return;
+        }
         if (clickedSound.playing) {
             clickedSound.stop();
         }
@@ -31,10 +36,16 @@ QtObject {
     }
 
     function playClickedSound() {
+        if (!BigscreenShell.Settings.navigationSoundEnabled) {
+            return;
+        }
         clickedSound.play();
     }
 
     function playMovingSound() {
+        if (!BigscreenShell.Settings.navigationSoundEnabled) {
+            return;
+        }
         movingSound.play();
     }
 }

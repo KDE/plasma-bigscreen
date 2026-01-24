@@ -77,7 +77,7 @@ FocusScope {
 
         NumberAnimation on y {
             id: yAnim
-            duration: 200; easing.type: Easing.InOutCubic
+            duration: Kirigami.Units.veryLongDuration; easing.type: Easing.InOutQuad
 
             // Set binding so that screen resizes affect Y
             onFinished: {
