@@ -12,9 +12,15 @@ import org.kde.plasma.private.nanoshell as NanoShell
 
 import org.kde.milou as Milou
 import org.kde.kirigami as Kirigami
+import org.kde.layershell as LayerShell
 
 Window {
     id: root
+
+    LayerShell.Window.scope: "overlay"
+    LayerShell.Window.anchors: LayerShell.Window.AnchorTop | LayerShell.Window.AnchorLeft | LayerShell.Window.AnchorRight | LayerShell.Window.AnchorBottom
+    LayerShell.Window.layer: LayerShell.Window.LayerTop
+    LayerShell.Window.exclusionZone: -1
 
     flags: Qt.FramelessWindowHint
     color: 'transparent'
