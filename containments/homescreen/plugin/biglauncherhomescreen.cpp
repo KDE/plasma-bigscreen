@@ -50,9 +50,6 @@ HomeScreen::HomeScreen(QObject *parent, const KPluginMetaData &data, const QVari
     , m_session(new SessionManagement(this))
     , m_favsListModel(new FavsListModel(FavsManager::instance(), this))
 {
-    // HACK: Kill xwaylandvideobridge if running - it interferes with bigscreen's focus
-    QProcess::startDetached(QStringLiteral("pkill"), {QStringLiteral("-9"), QStringLiteral("xwaylandvideobridge")});
-
     // Initialize DBus adapter with configuration
     BigLauncherDbusAdapterInterface::instance()->init(config().group(QStringLiteral("General")));
 

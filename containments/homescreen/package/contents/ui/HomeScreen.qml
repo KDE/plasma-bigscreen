@@ -59,6 +59,10 @@ Item {
                 opacity: 0
                 zoomScale: 1.1
             }
+            StateChangeScript {
+                // HACK: Kill xwaylandvideobridge if running - it interferes with bigscreen's focus
+                script: Plasmoid.executeCommand("pkill -f xwaylandvideobridge")
+            }
         }
     ]
 
