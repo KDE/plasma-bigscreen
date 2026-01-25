@@ -134,6 +134,21 @@ Window {
                 Layout.alignment: Qt.AlignHCenter
 
                 KeyNavigation.down: listView.count > 0 ? listView : null
+
+                onAccepted: focusResultsTimer.restart();
+
+                // Focus on search results after "enter" pressed
+                Timer {
+                    id: focusResultsTimer
+                    interval: 1
+                    repeat: false
+                    running: false
+                    onTriggered: {
+                        if (listView.count > 0) {
+                            listView.forceActiveFocus();
+                        }
+                    }
+                }
             }
 
             // Search results
