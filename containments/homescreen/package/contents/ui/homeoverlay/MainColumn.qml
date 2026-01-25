@@ -10,6 +10,7 @@ import org.kde.plasma.plasma5support as P5Support
 import org.kde.private.biglauncher
 import org.kde.bigscreen as Bigscreen
 import org.kde.bigscreen.controllerhandler as ControllerHandler
+import org.kde.plasma.workspace.keyboardlayout as Keyboards
 
 ColumnLayout {
     id: root
@@ -154,10 +155,10 @@ ColumnLayout {
                 id: controllerButton
                 Layout.fillWidth: true
 
-                property Item downItem: visible ? controllerButton : settingsButton
+                property Item downItem: visible ? controllerButton : keyboardButton
                 property Item upItem: visible ? controllerButton : tasksButton.upItem
                 KeyNavigation.up: tasksButton.upItem
-                KeyNavigation.down: settingsButton
+                KeyNavigation.down: keyboardButton.downItem
 
                 visible: ControllerHandler.ControllerHandlerStatus.sdlControllerConnected
                 icon.name: "input-gamepad-symbolic"
@@ -165,13 +166,36 @@ ColumnLayout {
                 description: checked ? i18n("Currently capturing keys…") : i18n("Key capture off")
 
                 checked: !root.closeControllerSuppressState
-                onCheckedChanged: root.closeControllerSuppressState = !checked
+                onCheckedChanged: {
+                    root.closeControllerSuppressState = !checked;
+                    checked = Qt.binding(() => !root.closeControllerSuppressState)
+                }
+            }
+
+            Bigscreen.SwitchDelegate {
+                id: keyboardButton
+                Layout.fillWidth: true
+
+                property Item downItem: visible ? keyboardButton : settingsButton
+                property Item upItem: visible ? keyboardButton : controllerButton.upItem
+                KeyNavigation.up: controllerButton.upItem
+                KeyNavigation.down: settingsButton
+
+                visible: Keyboards.KWinVirtualKeyboard.available
+                icon.name: "input-keyboard-virtual-symbolic"
+                text: i18n("On-screen Keyboard")
+
+                checked: Keyboards.KWinVirtualKeyboard.enabled
+                onCheckedChanged: {
+                    Keyboards.KWinVirtualKeyboard.enabled = checked;
+                    checked = Qt.binding(() => Keyboards.KWinVirtualKeyboard.enabled);
+                }
             }
 
             Bigscreen.ButtonDelegate {
                 id: settingsButton
                 Layout.fillWidth: true
-                KeyNavigation.up: controllerButton.upItem
+                KeyNavigation.up: keyboardButton.upItem
 
                 text: i18n("Settings")
                 icon.name: "settings-configure-symbolic"
