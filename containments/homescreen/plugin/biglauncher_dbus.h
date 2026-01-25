@@ -5,12 +5,12 @@
 
 #pragma once
 
-#include "biglauncherhomescreen.h"
 #include "shortcuts.h"
-#include <QObject>
-#include <QStringList>
+#include <KConfigGroup>
 #include <QDBusAbstractAdaptor>
 #include <QDBusConnection>
+#include <QObject>
+#include <QStringList>
 
 /*
  * Adaptor class for interface org.kde.biglauncher
@@ -26,18 +26,16 @@ public:
 
     static BigLauncherDbusAdapterInterface *instance();
 
-    void init();
+    void init(const KConfigGroup &config);
     Q_INVOKABLE QString getMethod(const QString &method);
 
 public: // PROPERTIES
 public Q_SLOTS: // METHODS
     Q_SCRIPTABLE void useColoredTiles(const bool &coloredTiles);
     Q_SCRIPTABLE bool coloredTilesActive();
-    void setColoredTilesActive(const bool &coloredTilesActive);
 
     Q_SCRIPTABLE void useWallpaperBlur(const bool &wallpaperBlur);
     Q_SCRIPTABLE bool wallpaperBlurActive();
-    void setWallpaperBlurActive(const bool &wallpaperBlurActive);
 
     Q_SCRIPTABLE void activateWallpaperSelector();
     Q_SCRIPTABLE QString activateSettingsShortcut();
@@ -55,12 +53,10 @@ public Q_SLOTS: // METHODS
 Q_SIGNALS: // SIGNALS
     Q_SCRIPTABLE void useColoredTilesChanged(const bool &msgUseColoredTiles);
     Q_SCRIPTABLE void useWallpaperBlurChanged(const bool &msgUseWallpaperBlur);
-    void coloredTilesActiveRequested();
     void activateWallpaperSelectorRequested();
 
 private:
-    bool m_useColoredTiles;
-    bool m_useWallpaperBlur;
+    KConfigGroup m_config;
     Shortcuts *m_shortcuts;
 
     bool m_initialized{false};

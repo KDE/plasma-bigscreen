@@ -35,10 +35,6 @@ FocusScope {
         }
     }
 
-    Component.onCompleted: {
-        Plasmoid.setUseColoredTiles(plasmoid.configuration.coloredTiles);
-    }
-
     Controls.Label {
         id: metrics
         text: "M\nM"

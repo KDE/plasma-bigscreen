@@ -53,8 +53,8 @@ HomeScreen::HomeScreen(QObject *parent, const KPluginMetaData &data, const QVari
     // HACK: Kill xwaylandvideobridge if running - it interferes with bigscreen's focus
     QProcess::startDetached(QStringLiteral("pkill"), {QStringLiteral("-9"), QStringLiteral("xwaylandvideobridge")});
 
-    // Ensure DBus adapter is initialized
-    BigLauncherDbusAdapterInterface::instance()->init();
+    // Initialize DBus adapter with configuration
+    BigLauncherDbusAdapterInterface::instance()->init(config().group(QStringLiteral("General")));
 
     const char *uri = "org.kde.private.biglauncher";
     qmlRegisterSingletonType<Shortcuts>(uri, 1, 0, "Shortcuts", shortcutsSingletonProvider);
@@ -133,16 +133,6 @@ void HomeScreen::executeCommand(const QString &command)
     qInfo() << "Executing" << command;
     QStringList split = QProcess::splitCommand(command);
     QProcess::startDetached(split.takeFirst(), split);
-}
-
-void HomeScreen::setUseColoredTiles(bool coloredTiles)
-{
-    BigLauncherDbusAdapterInterface::instance()->setColoredTilesActive(coloredTiles);
-}
-
-void HomeScreen::setUseWallpaperBlur(bool wallpaperBlur)
-{
-    BigLauncherDbusAdapterInterface::instance()->setWallpaperBlurActive(wallpaperBlur);
 }
 
 K_PLUGIN_CLASS_WITH_JSON(HomeScreen, "metadata.json")

@@ -49,8 +49,6 @@ Q_SIGNALS:
 
 public Q_SLOTS:
     void executeCommand(const QString &command);
-    void setUseColoredTiles(bool coloredTiles);
-    void setUseWallpaperBlur(bool wallpaperBlur);
 
 private:
     ApplicationListSearchModel *m_applicationListModel;

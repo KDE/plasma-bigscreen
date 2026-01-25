@@ -48,18 +48,16 @@ ContainmentItem {
     Connections {
         target: BigLauncherDbusAdapterInterface
 
-        function onUseColoredTilesChanged(msgUseColoredTiles) {
-            Plasmoid.configuration.coloredTiles = msgUseColoredTiles;
-            Plasmoid.setUseColoredTiles(Plasmoid.configuration.coloredTiles);
-        }
-
-        function onUseWallpaperBlurChanged(msgUseWallpaperBlur) {
-            Plasmoid.configuration.wallpaperBlur = msgUseWallpaperBlur;
-            Plasmoid.setUseWallpaperBlur(Plasmoid.configuration.wallpaperBlur);
-        }
-
         function onActivateWallpaperSelectorRequested() {
             root.configureWallpaper();
+        }
+
+        // Sync D-Bus configuration changes to Plasmoid.configuration
+        function onUseColoredTilesChanged(coloredTiles) {
+            Plasmoid.configuration.coloredTiles = coloredTiles;
+        }
+        function onUseWallpaperBlurChanged(wallpaperBlur) {
+            Plasmoid.configuration.wallpaperBlur = wallpaperBlur;
         }
     }
 
@@ -145,7 +143,6 @@ ContainmentItem {
         for (var i in Plasmoid.applets) {
             root.addApplet(Plasmoid.applets[i], -1, -1)
         }
-        Plasmoid.setUseWallpaperBlur(Plasmoid.configuration.wallpaperBlur)
     }
 
     function addApplet(applet, x, y) {
@@ -214,6 +211,7 @@ ContainmentItem {
         id: wallpaperBlurLoader
         anchors.fill: parent
         active: Plasmoid.configuration.wallpaperBlur
+
         sourceComponent: Item {
             id: wallpaperBlur
             anchors.fill: parent

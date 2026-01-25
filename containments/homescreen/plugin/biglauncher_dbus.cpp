@@ -36,9 +36,11 @@ BigLauncherDbusAdapterInterface::~BigLauncherDbusAdapterInterface()
 {
 }
 
-void BigLauncherDbusAdapterInterface::init()
+void BigLauncherDbusAdapterInterface::init(const KConfigGroup &config)
 {
     if (!m_initialized) {
+        m_config = config;
+
         new BiglauncherAdaptor{this};
 
         QDBusConnection dbus = QDBusConnection::sessionBus();
@@ -51,32 +53,26 @@ void BigLauncherDbusAdapterInterface::init()
 
 void BigLauncherDbusAdapterInterface::useColoredTiles(const bool &coloredTiles)
 {
+    m_config.writeEntry("coloredTiles", coloredTiles);
+    m_config.sync();
     Q_EMIT useColoredTilesChanged(coloredTiles);
 }
 
 bool BigLauncherDbusAdapterInterface::coloredTilesActive()
 {
-    return m_useColoredTiles;
-}
-
-void BigLauncherDbusAdapterInterface::setColoredTilesActive(const bool &coloredTilesActive)
-{
-    m_useColoredTiles = coloredTilesActive;
+    return m_config.readEntry("coloredTiles", true);
 }
 
 void BigLauncherDbusAdapterInterface::useWallpaperBlur(const bool &wallpaperBlur)
 {
+    m_config.writeEntry("wallpaperBlur", wallpaperBlur);
+    m_config.sync();
     Q_EMIT useWallpaperBlurChanged(wallpaperBlur);
 }
 
 bool BigLauncherDbusAdapterInterface::wallpaperBlurActive()
 {
-    return m_useWallpaperBlur;
-}
-
-void BigLauncherDbusAdapterInterface::setWallpaperBlurActive(const bool &wallpaperBlurActive)
-{
-    m_useWallpaperBlur = wallpaperBlurActive;
+    return m_config.readEntry("wallpaperBlur", false);
 }
 
 void BigLauncherDbusAdapterInterface::activateWallpaperSelector()
