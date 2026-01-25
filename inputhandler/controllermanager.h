@@ -51,7 +51,6 @@ private:
     bool m_enabled = true;
     QVector<Device *> m_connectedDevices;
     QScopedPointer<XdgRemoteDesktopSystem> m_inputSystem;
-    QTimer m_lastUsed;
 
     QSet<int> m_usedKeys;
 };

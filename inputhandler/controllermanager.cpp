@@ -40,7 +40,6 @@ void ControllerManager::newDevice(Device *device)
     if (device->getDeviceType() != DeviceCEC) {
         Q_EMIT deviceConnected(device);
     }
-    m_lastUsed.start();
 }
 
 void ControllerManager::deviceRemoved(Device *device)
@@ -51,8 +50,6 @@ void ControllerManager::deviceRemoved(Device *device)
     for (int i = 0; i < m_connectedDevices.size(); i++) {
         m_connectedDevices[i]->setIndex(i);
     }
-
-    m_lastUsed.start();
 }
 
 void ControllerManager::removeDevice(int deviceIndex)
@@ -90,7 +87,6 @@ QVector<Device *> ControllerManager::connectedDevices()
 
 void ControllerManager::emitKey(int key, bool pressed)
 {
-    m_lastUsed.start();
     if (!m_enabled || !m_inputSystem) {
         return;
     }
@@ -100,7 +96,6 @@ void ControllerManager::emitKey(int key, bool pressed)
 
 void ControllerManager::emitPointerMotion(double deltaX, double deltaY)
 {
-    m_lastUsed.start();
     if (!m_enabled || !m_inputSystem) {
         return;
     }
@@ -110,7 +105,6 @@ void ControllerManager::emitPointerMotion(double deltaX, double deltaY)
 
 void ControllerManager::emitPointerButton(int button, bool pressed)
 {
-    m_lastUsed.start();
     if (!m_enabled || !m_inputSystem) {
         return;
     }
