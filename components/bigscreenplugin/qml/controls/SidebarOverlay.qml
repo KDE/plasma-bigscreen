@@ -26,8 +26,8 @@ QQC2.Popup {
     Kirigami.Theme.colorSet: Kirigami.Theme.View
 
     parent: QQC2.Overlay.overlay
-    height: parent.height
-    width: Math.min(Kirigami.Units.gridUnit * 30, Math.max(Kirigami.Units.gridUnit * 25, Math.round(parent.width * 0.3)))
+    height: parent ? parent.height : null
+    width: Math.min(Kirigami.Units.gridUnit * 30, Math.max(Kirigami.Units.gridUnit * 25, Math.round(parent ? (parent.width * 0.3) : 0)))
 
     topPadding: 0
     bottomPadding: 0
@@ -44,10 +44,10 @@ QQC2.Popup {
                 property: "x"
                 duration: 400
                 easing.type: Easing.InOutCubic
-                from: root.parent.width; to: root.parent.width - root.width
+                from: (root.parent ? root.parent.width : 0); to: (root.parent ? root.parent.width : 0) - root.width
             }
             // Make sure it's anchored to the right of the screen
-            ScriptAction { script: root.x = Qt.binding(() => (root.parent.width - root.width)); }
+            ScriptAction { script: root.x = Qt.binding(() => ((root.parent ? root.parent.width : 0) - root.width)); }
         }
     }
 
@@ -56,7 +56,7 @@ QQC2.Popup {
             property: "x"
             duration: 400
             easing.type: Easing.InOutCubic
-            to: root.parent.width; from: root.parent.width - root.width
+            to: (root.parent ? root.parent.width : 0); from: (root.parent ? root.parent.width : 0) - root.width
         }
     }
 
