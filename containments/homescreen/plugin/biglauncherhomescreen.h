@@ -38,12 +38,14 @@ public:
     Q_INVOKABLE void openTasks();
     Q_INVOKABLE void openHomeOverlay();
     Q_INVOKABLE void showOSD(const QString &text, const QString &iconName);
+    Q_INVOKABLE void showAppLaunchScreen(const QString &appName, const QString &icon);
 
 Q_SIGNALS:
     void minimizeAllTasksRequested();
     void openSearchRequested();
     void openTasksRequested();
     void openHomeOverlayRequested();
+    void showAppLaunchScreenRequested(const QString &appName, const QString &icon);
 
 public Q_SLOTS:
     void executeCommand(const QString &command);

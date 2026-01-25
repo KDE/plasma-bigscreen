@@ -22,8 +22,7 @@ Bigscreen.IconDelegate {
 
     onClicked: {
         Bigscreen.NavigationSoundEffects.playClickedSound()
-        feedbackWindow.open(delegate.text,
-                            delegate.icon.name.length > 0 ? delegate.icon.name : model.decoration);
+        Plasmoid.showAppLaunchScreen(delegate.text, delegate.icon.name.length > 0 ? delegate.icon.name : model.decoration);
         Plasmoid.applicationListModel.runApplication(modelData.ApplicationStorageIdRole)
     }
 }

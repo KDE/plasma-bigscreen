@@ -149,8 +149,8 @@ ContainmentItem {
     }
 
     function addApplet(applet, x, y) {
-        var container = appletContainerComponent.createObject(appletsLayout)
         print("Applet added: " + applet + " " + applet.title)
+        var container = appletContainerComponent.createObject(appletsLayout)
 
         const appletItem = root.itemFor(applet);
         appletItem.parent = container;

@@ -12,9 +12,18 @@ import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.components as PC3
 import org.kde.plasma.private.nanoshell as NanoShell
+import org.kde.plasma.plasmoid
 
 NanoShell.FullScreenOverlay {
     id: window
+
+    Connections {
+        target: Plasmoid
+
+        function onShowAppLaunchScreenRequested(appName, icon) {
+            window.open(appName, icon);
+        }
+    }
 
     function open(windowName, windowIcon) {
         window.visible = false;
@@ -40,15 +49,6 @@ NanoShell.FullScreenOverlay {
         if (!active) {
             window.state = "closed";
             window.close();
-        }
-    }
-
-    Connections {
-        target: NanoShell.StartupNotifier
-        enabled: NanoShell.StartupNotifier.isValid
-
-        function onActivationStarted(appId, iconName) {
-            window.open(appId, iconName);
         }
     }
 

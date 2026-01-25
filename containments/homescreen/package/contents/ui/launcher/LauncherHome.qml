@@ -42,13 +42,6 @@ FocusScope {
 
     Component.onCompleted: activateAppView()
 
-    Connections {
-        target: Plasmoid.applicationListModel
-        function onAppOrderChanged() {
-            root.activateAppView()
-        }
-    }
-
     ColumnLayout {
         id: launcherHomeColumn
         anchors {

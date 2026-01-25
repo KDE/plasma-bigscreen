@@ -123,6 +123,11 @@ void HomeScreen::showOSD(const QString &text, const QString &iconName)
     QDBusConnection::sessionBus().call(msg, QDBus::NoBlock);
 }
 
+void HomeScreen::showAppLaunchScreen(const QString &appName, const QString &icon)
+{
+    Q_EMIT showAppLaunchScreenRequested(appName, icon);
+}
+
 void HomeScreen::executeCommand(const QString &command)
 {
     qInfo() << "Executing" << command;
