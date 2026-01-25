@@ -17,6 +17,7 @@ export PLASMA_INTEGRATION_USE_PORTAL=1
 export PLASMA_PLATFORM=mediacenter
 export QT_FILE_SELECTORS=mediacenter
 export PLASMA_DEFAULT_SHELL=org.kde.plasma.bigscreen
+export KWIN_IM_SHOW_ALWAYS=1 # Always show plasma-keyboard
 
 # Set ~/.config/plasma-bigscreen/... as location for default bigscreen configs (i.e. envmanager generated)
 export XDG_CONFIG_DIRS="$HOME/.config/plasma-bigscreen:/etc/xdg:$XDG_CONFIG_DIRS"
