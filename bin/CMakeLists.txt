@@ -22,3 +22,17 @@ install(FILES
 	${CMAKE_CURRENT_BINARY_DIR}/plasma-bigscreen-swap-session.desktop
 	DESTINATION ${KDE_INSTALL_APPDIR}
 )
+
+# Dev session for Plasma developers
+configure_file(plasma-bigscreen-wayland-dev.in ${CMAKE_CURRENT_BINARY_DIR}/plasma-bigscreen-wayland-dev)
+configure_file(plasma-bigscreen-wayland-dev.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/plasma-bigscreen-wayland-dev.desktop)
+configure_file(install-sessions.sh.cmake ${CMAKE_CURRENT_BINARY_DIR}/install-sessions.sh)
+
+install(PROGRAMS
+	${CMAKE_CURRENT_BINARY_DIR}/plasma-bigscreen-wayland-dev
+	DESTINATION ${KDE_INSTALL_BINDIR})
+
+install(FILES
+	${CMAKE_CURRENT_BINARY_DIR}/plasma-bigscreen-wayland-dev.desktop
+    DESTINATION ${KDE_INSTALL_DATADIR}/wayland-sessions
+)
