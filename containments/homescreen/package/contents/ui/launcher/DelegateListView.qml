@@ -109,6 +109,17 @@ FocusScope {
         displayMarginBeginning: cellWidth
         displayMarginEnd: cellWidth
 
+        onCurrentIndexChanged: {
+            xAnim.to = itemAtIndex(currentIndex).x;
+            xAnim.restart();
+        }
+
+        NumberAnimation on contentX {
+            id: xAnim
+            easing.type: Easing.OutCubic
+            duration: Kirigami.Units.longDuration
+        }
+
         onMovementEnded: flickEnded()
 
         onFlickEnded: currentIndex = indexAt(mapToItem(contentItem, cellWidth, 0).x, 0)
