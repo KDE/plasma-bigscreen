@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-25 00:46+0000\n"
 "PO-Revision-Date: 2025-07-27 15:14+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -27,22 +27,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
 
-#: main.cpp:31
+#: main.cpp:34
 #, kde-format
 msgid "Bigscreen Settings"
 msgstr "Instellingen van Bigscreen"
 
-#: main.cpp:33
+#: main.cpp:36
 #, kde-format
 msgid "Plasma Bigscreen Settings"
 msgstr "Instellingen van Plasma Bigscreen"
 
-#: main.cpp:35
+#: main.cpp:38
 #, kde-format
 msgid "Copyright 2025 Plasma developers"
 msgstr "Copyright 2025 Ontwikkelaars van Plasma"
 
-#: main.cpp:37
+#: main.cpp:40
 #, kde-format
 msgid "Settings module to open"
 msgstr "Te openen instellingenmodule"

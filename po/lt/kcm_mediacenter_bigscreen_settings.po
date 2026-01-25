@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-19 00:45+0000\n"
+"POT-Creation-Date: 2026-01-25 00:46+0000\n"
 "PO-Revision-Date: 2024-05-17 01:59+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -94,76 +94,81 @@ msgstr "Jūsų vietinė laiko juosta yra %1"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: ui/main.qml:22 ui/main.qml:90
+#: ui/main.qml:23 ui/main.qml:91
 #, kde-format
 msgid "System"
 msgstr ""
 
-#: ui/main.qml:42
+#: ui/main.qml:43
 #, fuzzy, kde-format
 #| msgid "General Appearance"
 msgid "Homescreen Appearance"
 msgstr "Bendra išvaizda"
 
-#: ui/main.qml:55
+#: ui/main.qml:56
 #, fuzzy, kde-format
 #| msgid "Colored Tiles"
 msgid "Colored tiles"
 msgstr "Spalvotos plytelės"
 
-#: ui/main.qml:56
+#: ui/main.qml:57
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr ""
 
-#: ui/main.qml:69
+#: ui/main.qml:70
 #, kde-format
 msgid "Wallpaper blur"
 msgstr ""
 
-#: ui/main.qml:70
+#: ui/main.qml:71
 #, kde-format
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr ""
 
-#: ui/main.qml:83 ui/ThemeSidebar.qml:23
+#: ui/main.qml:84 ui/ThemeSidebar.qml:23
 #, kde-format
 msgid "Global theme"
 msgstr ""
 
-#: ui/main.qml:84
+#: ui/main.qml:85
 #, kde-format
 msgid "Set the system theme"
 msgstr ""
 
 #: ui/main.qml:102
+#, kde-format
+msgid "Navigation sounds"
+msgstr ""
+
+#: ui/main.qml:112
 #, fuzzy, kde-format
 #| msgid "Power Inhibition"
 msgid "Power inhibition"
 msgstr "Maitinimo slopinimas"
 
-#: ui/main.qml:112
+#: ui/main.qml:122
 #, fuzzy, kde-format
 #| msgid "Adjust Date & Time"
 msgid "Adjust date & time"
 msgstr "Reguliuoti datą ir laiką"
 
-#: ui/main.qml:118
+#: ui/main.qml:128
 #, kde-format
 msgid "Shortcuts"
 msgstr ""
 
-#: ui/main.qml:129
+#: ui/main.qml:139
 #, kde-format
 msgid "Open settings shortcut"
 msgstr ""
 
-#: ui/main.qml:149
+#: ui/main.qml:159
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr ""
 
-#: ui/main.qml:168
+#: ui/main.qml:178
 #, kde-format
 msgid "Open homescreen shortcut"
 msgstr ""

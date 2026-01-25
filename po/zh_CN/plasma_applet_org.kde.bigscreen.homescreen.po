@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-22 01:00+0000\n"
+"POT-Creation-Date: 2026-01-25 00:46+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -33,43 +33,57 @@ msgstr "添加收藏"
 msgid "Remove Favorites"
 msgstr "移除收藏"
 
-#: contents/ui/homeoverlay/HomeOverlayWindow.qml:155
+#: contents/ui/homeoverlay/MainColumn.qml:113
 #, kde-format
 msgid "Home"
 msgstr "主页"
 
-#: contents/ui/homeoverlay/HomeOverlayWindow.qml:169
+#: contents/ui/homeoverlay/MainColumn.qml:126
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr "搜索"
 
-#: contents/ui/homeoverlay/HomeOverlayWindow.qml:187
-#: contents/ui/indicators/Tasks.qml:23
+#: contents/ui/homeoverlay/MainColumn.qml:143
 #, kde-format
 msgid "Tasks"
 msgstr "任务"
 
-#: contents/ui/homeoverlay/HomeOverlayWindow.qml:208
+#: contents/ui/homeoverlay/MainColumn.qml:164
 #, kde-format
 msgid "Controller"
 msgstr "控制器"
 
-#: contents/ui/homeoverlay/HomeOverlayWindow.qml:209
+#: contents/ui/homeoverlay/MainColumn.qml:165
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "当前正在捕获按键…"
 
-#: contents/ui/homeoverlay/HomeOverlayWindow.qml:209
+#: contents/ui/homeoverlay/MainColumn.qml:165
 #, kde-format
 msgid "Key capture off"
 msgstr "按键捕获关闭"
 
-#: contents/ui/homeoverlay/HomeOverlayWindow.qml:220
+#: contents/ui/homeoverlay/MainColumn.qml:176
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
 msgstr "设置"
+
+#: contents/ui/homeoverlay/TaskDelegate.qml:117
+#, kde-format
+msgid "Hold to close…"
+msgstr ""
+
+#: contents/ui/homeoverlay/TasksView.qml:108
+#, kde-format
+msgid "Open Apps"
+msgstr ""
+
+#: contents/ui/homeoverlay/TasksView.qml:159
+#, kde-format
+msgid "Close all apps"
+msgstr ""
 
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
@@ -121,64 +135,61 @@ msgstr "音频设置"
 msgid "Internet Settings"
 msgstr "互联网设置"
 
-#: contents/ui/launcher/LauncherHome.qml:99
+#: contents/ui/launcher/LauncherHome.qml:96
 #, kde-format
 msgid "Favorites"
 msgstr "收藏"
 
-#: contents/ui/launcher/LauncherHome.qml:118
+#: contents/ui/launcher/LauncherHome.qml:115
 #, kde-format
 msgid "Recent"
 msgstr "最近"
 
-#: contents/ui/launcher/LauncherHome.qml:147
-#, kde-format
-msgid "Voice Applications"
-msgstr "语音应用程序"
-
-#: contents/ui/launcher/LauncherHome.qml:174
+#: contents/ui/launcher/LauncherHome.qml:144
 #, kde-format
 msgid "Applications"
 msgstr "应用"
 
-#: contents/ui/launcher/LauncherHome.qml:202
+#: contents/ui/launcher/LauncherHome.qml:172
 #, kde-format
 msgid "Games"
 msgstr "游戏"
 
-#: contents/ui/main.qml:106
+#: contents/ui/main.qml:103
 #, kde-format
 msgid "Controller added: %1"
 msgstr "已添加控制器：%1"
 
-#: contents/ui/main.qml:110
+#: contents/ui/main.qml:107
 #, kde-format
 msgid "Controller removed: %1"
 msgstr "已移除控制器：%1"
 
-#: contents/ui/main.qml:114
+#: contents/ui/main.qml:111
 #, kde-format
 msgid "Remote added: %1"
 msgstr "已添加遥控器：%1"
 
-#: contents/ui/main.qml:118
+#: contents/ui/main.qml:115
 #, kde-format
 msgid "Remote removed: %1"
 msgstr "已移除遥控器：%1"
 
-#: contents/ui/main.qml:122
+#: contents/ui/main.qml:119
 #, kde-format
 msgid "System taking over controller input"
 msgstr "系统正在接管控制器输入"
 
-#: contents/ui/main.qml:125
+#: contents/ui/main.qml:122
 #, kde-format
 msgid "Application taking over controller input"
 msgstr "应用程序正在接管控制器输入"
 
-#: contents/ui/PowerManagementItem.qml:41
-#, kde-format
-msgid "Bigscreen has enabled system-wide inhibition"
+#: contents/ui/PowerManagementItem.qml:24
+#, fuzzy, kde-format
+#| msgid "Bigscreen has enabled system-wide inhibition"
+msgctxt "@info"
+msgid "Plasma Bigscreen has enabled system-wide inhibition"
 msgstr "大屏幕已启用全系统抑制功能"
 
 #: contents/ui/search/SearchTextField.qml:24
@@ -187,12 +198,11 @@ msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "搜索…"
 
-#: contents/ui/TaskWindowView.qml:226
-#, kde-format
-msgid "Clear Tasks"
-msgstr "清除任务"
+#~ msgid "Voice Applications"
+#~ msgstr "语音应用程序"
 
-#: contents/ui/TaskWindowView.qml:263
-#, kde-format
-msgid "Close"
-msgstr "关闭"
+#~ msgid "Clear Tasks"
+#~ msgstr "清除任务"
+
+#~ msgid "Close"
+#~ msgstr "关闭"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-22 01:00+0000\n"
+"POT-Creation-Date: 2026-01-25 00:46+0000\n"
 "PO-Revision-Date: 2023-04-03 16:53+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -33,43 +33,58 @@ msgstr ""
 msgid "Remove Favorites"
 msgstr ""
 
-#: contents/ui/homeoverlay/HomeOverlayWindow.qml:155
+#: contents/ui/homeoverlay/MainColumn.qml:113
 #, kde-format
 msgid "Home"
 msgstr ""
 
-#: contents/ui/homeoverlay/HomeOverlayWindow.qml:169
+#: contents/ui/homeoverlay/MainColumn.qml:126
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr ""
 
-#: contents/ui/homeoverlay/HomeOverlayWindow.qml:187
-#: contents/ui/indicators/Tasks.qml:23
+#: contents/ui/homeoverlay/MainColumn.qml:143
 #, kde-format
 msgid "Tasks"
 msgstr ""
 
-#: contents/ui/homeoverlay/HomeOverlayWindow.qml:208
+#: contents/ui/homeoverlay/MainColumn.qml:164
 #, kde-format
 msgid "Controller"
 msgstr ""
 
-#: contents/ui/homeoverlay/HomeOverlayWindow.qml:209
+#: contents/ui/homeoverlay/MainColumn.qml:165
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr ""
 
-#: contents/ui/homeoverlay/HomeOverlayWindow.qml:209
+#: contents/ui/homeoverlay/MainColumn.qml:165
 #, kde-format
 msgid "Key capture off"
 msgstr ""
 
-#: contents/ui/homeoverlay/HomeOverlayWindow.qml:220
+#: contents/ui/homeoverlay/MainColumn.qml:176
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
 msgstr "Einstellungen"
+
+#: contents/ui/homeoverlay/TaskDelegate.qml:117
+#, kde-format
+msgid "Hold to close…"
+msgstr ""
+
+#: contents/ui/homeoverlay/TasksView.qml:108
+#, fuzzy, kde-format
+#| msgid "Voice Apps"
+msgid "Open Apps"
+msgstr "Sprachanwendungen"
+
+#: contents/ui/homeoverlay/TasksView.qml:159
+#, kde-format
+msgid "Close all apps"
+msgstr ""
 
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
@@ -123,65 +138,61 @@ msgstr "Zusätzliche Einstellungen:"
 msgid "Internet Settings"
 msgstr "Einstellungen"
 
-#: contents/ui/launcher/LauncherHome.qml:99
+#: contents/ui/launcher/LauncherHome.qml:96
 #, kde-format
 msgid "Favorites"
 msgstr ""
 
-#: contents/ui/launcher/LauncherHome.qml:118
+#: contents/ui/launcher/LauncherHome.qml:115
 #, kde-format
 msgid "Recent"
 msgstr "Zuletzt verwendet"
 
-#: contents/ui/launcher/LauncherHome.qml:147
-#, fuzzy, kde-format
-#| msgid "Applications"
-msgid "Voice Applications"
-msgstr "Anwendungen"
-
-#: contents/ui/launcher/LauncherHome.qml:174
+#: contents/ui/launcher/LauncherHome.qml:144
 #, kde-format
 msgid "Applications"
 msgstr "Anwendungen"
 
-#: contents/ui/launcher/LauncherHome.qml:202
+#: contents/ui/launcher/LauncherHome.qml:172
 #, kde-format
 msgid "Games"
 msgstr "Spiele"
 
-#: contents/ui/main.qml:106
+#: contents/ui/main.qml:103
 #, kde-format
 msgid "Controller added: %1"
 msgstr ""
 
-#: contents/ui/main.qml:110
+#: contents/ui/main.qml:107
 #, kde-format
 msgid "Controller removed: %1"
 msgstr ""
 
-#: contents/ui/main.qml:114
+#: contents/ui/main.qml:111
 #, kde-format
 msgid "Remote added: %1"
 msgstr ""
 
-#: contents/ui/main.qml:118
+#: contents/ui/main.qml:115
 #, kde-format
 msgid "Remote removed: %1"
 msgstr ""
 
-#: contents/ui/main.qml:122
+#: contents/ui/main.qml:119
 #, kde-format
 msgid "System taking over controller input"
 msgstr ""
 
-#: contents/ui/main.qml:125
+#: contents/ui/main.qml:122
 #, kde-format
 msgid "Application taking over controller input"
 msgstr ""
 
-#: contents/ui/PowerManagementItem.qml:41
-#, kde-format
-msgid "Bigscreen has enabled system-wide inhibition"
+#: contents/ui/PowerManagementItem.qml:24
+#, fuzzy, kde-format
+#| msgid "Bigscreen has enabled system-wide inhibition"
+msgctxt "@info"
+msgid "Plasma Bigscreen has enabled system-wide inhibition"
 msgstr "Bigscreen hat eine systemweite Blockade aktiviert"
 
 #: contents/ui/search/SearchTextField.qml:24
@@ -190,16 +201,15 @@ msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr ""
 
-#: contents/ui/TaskWindowView.qml:226
-#, kde-format
-msgid "Clear Tasks"
-msgstr ""
+#, fuzzy
+#~| msgid "Applications"
+#~ msgid "Voice Applications"
+#~ msgstr "Anwendungen"
 
-#: contents/ui/TaskWindowView.qml:263
-#, fuzzy, kde-format
-#| msgid "close"
-msgid "Close"
-msgstr "Schließen"
+#, fuzzy
+#~| msgid "close"
+#~ msgid "Close"
+#~ msgstr "Schließen"
 
 #~ msgid "General"
 #~ msgstr "Allgemein"
@@ -239,9 +249,6 @@ msgstr "Schließen"
 
 #~ msgid "Network"
 #~ msgstr "Netzwerk"
-
-#~ msgid "Voice Apps"
-#~ msgstr "Sprachanwendungen"
 
 #~ msgid "Getting Ready... Please Wait"
 #~ msgstr "Wird vorbereitet ... Bitte warten"

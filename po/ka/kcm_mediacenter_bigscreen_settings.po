@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-19 00:45+0000\n"
+"POT-Creation-Date: 2026-01-25 00:46+0000\n"
 "PO-Revision-Date: 2026-01-19 11:28+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -89,72 +89,77 @@ msgstr "თქვენი ლოკალური დროის სარტ
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: ui/main.qml:22 ui/main.qml:90
+#: ui/main.qml:23 ui/main.qml:91
 #, kde-format
 msgid "System"
 msgstr "სისტემა"
 
-#: ui/main.qml:42
+#: ui/main.qml:43
 #, kde-format
 msgid "Homescreen Appearance"
 msgstr "საწყისი ეკრანის გარეგნობა"
 
-#: ui/main.qml:55
+#: ui/main.qml:56
 #, kde-format
 msgid "Colored tiles"
 msgstr "ფერადი ფილები"
 
-#: ui/main.qml:56
+#: ui/main.qml:57
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "ფილების ფონი აპის ხატულის მიხედვით გაფერადდება"
 
-#: ui/main.qml:69
+#: ui/main.qml:70
 #, kde-format
 msgid "Wallpaper blur"
 msgstr "ფონის სურათის გაბუნდოვნება"
 
-#: ui/main.qml:70
+#: ui/main.qml:71
 #, kde-format
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr "გაბუნდოვნების გადატარება საწყისი ეკრანის ფონის სურათზე"
 
-#: ui/main.qml:83 ui/ThemeSidebar.qml:23
+#: ui/main.qml:84 ui/ThemeSidebar.qml:23
 #, kde-format
 msgid "Global theme"
 msgstr "გლობალური თემა"
 
-#: ui/main.qml:84
+#: ui/main.qml:85
 #, kde-format
 msgid "Set the system theme"
 msgstr "სისტემური თემის დაყენება"
 
 #: ui/main.qml:102
 #, kde-format
+msgid "Navigation sounds"
+msgstr ""
+
+#: ui/main.qml:112
+#, kde-format
 msgid "Power inhibition"
 msgstr "კვების ინჰიბიცია"
 
-#: ui/main.qml:112
+#: ui/main.qml:122
 #, kde-format
 msgid "Adjust date & time"
 msgstr "დროისა და თარიღის გასწორება"
 
-#: ui/main.qml:118
+#: ui/main.qml:128
 #, kde-format
 msgid "Shortcuts"
 msgstr "მალსახმობები"
 
-#: ui/main.qml:129
+#: ui/main.qml:139
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "მორგების ფანჯრის გახსნის მალსახმობი"
 
-#: ui/main.qml:149
+#: ui/main.qml:159
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "ამოცანების გახსნის მალსახმობი"
 
-#: ui/main.qml:168
+#: ui/main.qml:178
 #, kde-format
 msgid "Open homescreen shortcut"
 msgstr "საწყისი ეკრანის გახსნის მალსახმობი"

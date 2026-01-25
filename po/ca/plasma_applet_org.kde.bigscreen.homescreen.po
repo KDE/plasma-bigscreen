@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-22 01:00+0000\n"
+"POT-Creation-Date: 2026-01-25 00:46+0000\n"
 "PO-Revision-Date: 2026-01-21 10:14+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -35,43 +35,58 @@ msgstr "Afegeix als preferits"
 msgid "Remove Favorites"
 msgstr "Elimina dels preferits"
 
-#: contents/ui/homeoverlay/HomeOverlayWindow.qml:155
+#: contents/ui/homeoverlay/MainColumn.qml:113
 #, kde-format
 msgid "Home"
 msgstr "Inici"
 
-#: contents/ui/homeoverlay/HomeOverlayWindow.qml:169
+#: contents/ui/homeoverlay/MainColumn.qml:126
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr "Cerca"
 
-#: contents/ui/homeoverlay/HomeOverlayWindow.qml:187
-#: contents/ui/indicators/Tasks.qml:23
+#: contents/ui/homeoverlay/MainColumn.qml:143
 #, kde-format
 msgid "Tasks"
 msgstr "Tasques"
 
-#: contents/ui/homeoverlay/HomeOverlayWindow.qml:208
+#: contents/ui/homeoverlay/MainColumn.qml:164
 #, kde-format
 msgid "Controller"
 msgstr "Controlador"
 
-#: contents/ui/homeoverlay/HomeOverlayWindow.qml:209
+#: contents/ui/homeoverlay/MainColumn.qml:165
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "Actualment s'estan capturant tecles…"
 
-#: contents/ui/homeoverlay/HomeOverlayWindow.qml:209
+#: contents/ui/homeoverlay/MainColumn.qml:165
 #, kde-format
 msgid "Key capture off"
 msgstr "Captura de tecles desactivada"
 
-#: contents/ui/homeoverlay/HomeOverlayWindow.qml:220
+#: contents/ui/homeoverlay/MainColumn.qml:176
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
 msgstr "Configuració"
+
+#: contents/ui/homeoverlay/TaskDelegate.qml:117
+#, kde-format
+msgid "Hold to close…"
+msgstr ""
+
+#: contents/ui/homeoverlay/TasksView.qml:108
+#, fuzzy, kde-format
+#| msgid "Voice Apps"
+msgid "Open Apps"
+msgstr "Aplicacions de veu"
+
+#: contents/ui/homeoverlay/TasksView.qml:159
+#, kde-format
+msgid "Close all apps"
+msgstr ""
 
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
@@ -123,64 +138,61 @@ msgstr "Configuració d'àudio"
 msgid "Internet Settings"
 msgstr "Configuració d'Internet"
 
-#: contents/ui/launcher/LauncherHome.qml:99
+#: contents/ui/launcher/LauncherHome.qml:96
 #, kde-format
 msgid "Favorites"
 msgstr "Preferits"
 
-#: contents/ui/launcher/LauncherHome.qml:118
+#: contents/ui/launcher/LauncherHome.qml:115
 #, kde-format
 msgid "Recent"
 msgstr "Recent"
 
-#: contents/ui/launcher/LauncherHome.qml:147
-#, kde-format
-msgid "Voice Applications"
-msgstr "Aplicacions de veu"
-
-#: contents/ui/launcher/LauncherHome.qml:174
+#: contents/ui/launcher/LauncherHome.qml:144
 #, kde-format
 msgid "Applications"
 msgstr "Aplicacions"
 
-#: contents/ui/launcher/LauncherHome.qml:202
+#: contents/ui/launcher/LauncherHome.qml:172
 #, kde-format
 msgid "Games"
 msgstr "Jocs"
 
-#: contents/ui/main.qml:106
+#: contents/ui/main.qml:103
 #, kde-format
 msgid "Controller added: %1"
 msgstr "Controlador afegit: %1"
 
-#: contents/ui/main.qml:110
+#: contents/ui/main.qml:107
 #, kde-format
 msgid "Controller removed: %1"
 msgstr "Controlador eliminat: %1"
 
-#: contents/ui/main.qml:114
+#: contents/ui/main.qml:111
 #, kde-format
 msgid "Remote added: %1"
 msgstr "Remot afegit: %1"
 
-#: contents/ui/main.qml:118
+#: contents/ui/main.qml:115
 #, kde-format
 msgid "Remote removed: %1"
 msgstr "Remot eliminat: %1"
 
-#: contents/ui/main.qml:122
+#: contents/ui/main.qml:119
 #, kde-format
 msgid "System taking over controller input"
 msgstr "El sistema s'encarrega de l'entrada del controlador"
 
-#: contents/ui/main.qml:125
+#: contents/ui/main.qml:122
 #, kde-format
 msgid "Application taking over controller input"
 msgstr "L'aplicació s'encarrega de l'entrada del controlador"
 
-#: contents/ui/PowerManagementItem.qml:41
-#, kde-format
-msgid "Bigscreen has enabled system-wide inhibition"
+#: contents/ui/PowerManagementItem.qml:24
+#, fuzzy, kde-format
+#| msgid "Bigscreen has enabled system-wide inhibition"
+msgctxt "@info"
+msgid "Plasma Bigscreen has enabled system-wide inhibition"
 msgstr "La Bigscreen ha activat la inhibició global del sistema"
 
 #: contents/ui/search/SearchTextField.qml:24
@@ -189,15 +201,14 @@ msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Cerca…"
 
-#: contents/ui/TaskWindowView.qml:226
-#, kde-format
-msgid "Clear Tasks"
-msgstr "Neteja les tasques"
+#~ msgid "Voice Applications"
+#~ msgstr "Aplicacions de veu"
 
-#: contents/ui/TaskWindowView.qml:263
-#, kde-format
-msgid "Close"
-msgstr "Tanca"
+#~ msgid "Clear Tasks"
+#~ msgstr "Neteja les tasques"
+
+#~ msgid "Close"
+#~ msgstr "Tanca"
 
 #~ msgid "Audio Volume"
 #~ msgstr "Volum de l'àudio"
@@ -243,9 +254,6 @@ msgstr "Tanca"
 
 #~ msgid "Network"
 #~ msgstr "Xarxa"
-
-#~ msgid "Voice Apps"
-#~ msgstr "Aplicacions de veu"
 
 #~ msgid "Getting Ready... Please Wait"
 #~ msgstr "S'està preparant... espereu"

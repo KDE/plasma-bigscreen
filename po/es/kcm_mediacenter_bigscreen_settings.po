@@ -1,14 +1,14 @@
 # Spanish translations for kcm_mediacenter_bigscreen_settings.po package.
-# Copyright (C) 2021-2025 This file is copyright:
+# Copyright (C) 2021-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2021, 2023, 2024, 2025 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2023, 2024, 2025, 2026 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-19 00:45+0000\n"
-"PO-Revision-Date: 2025-09-07 00:52+0100\n"
+"POT-Creation-Date: 2026-01-25 00:46+0000\n"
+"PO-Revision-Date: 2026-01-25 00:38+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -89,72 +89,78 @@ msgstr "Su zona horaria local es %1"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: ui/main.qml:22 ui/main.qml:90
+#: ui/main.qml:23 ui/main.qml:91
 #, kde-format
 msgid "System"
 msgstr "Sistema"
 
-#: ui/main.qml:42
+#: ui/main.qml:43
 #, kde-format
 msgid "Homescreen Appearance"
 msgstr "Apariencia de la pantalla de inicio"
 
-#: ui/main.qml:55
+#: ui/main.qml:56
 #, kde-format
 msgid "Colored tiles"
 msgstr "Mosaicos coloreados"
 
-#: ui/main.qml:56
+#: ui/main.qml:57
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "El mosaico del fondo tomará el color del icono de la aplicación"
 
-#: ui/main.qml:69
+#: ui/main.qml:70
 #, kde-format
 msgid "Wallpaper blur"
-msgstr ""
+msgstr "Difuminado del fondo de pantalla"
 
-#: ui/main.qml:70
+#: ui/main.qml:71
 #, kde-format
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr ""
+"Aplica un efecto de difuminado al fondo de pantalla  en la ventana de inicio"
 
-#: ui/main.qml:83 ui/ThemeSidebar.qml:23
+#: ui/main.qml:84 ui/ThemeSidebar.qml:23
 #, kde-format
 msgid "Global theme"
 msgstr "Tema global"
 
-#: ui/main.qml:84
+#: ui/main.qml:85
 #, kde-format
 msgid "Set the system theme"
 msgstr "Establecer el tema del sistema"
 
 #: ui/main.qml:102
 #, kde-format
+msgid "Navigation sounds"
+msgstr ""
+
+#: ui/main.qml:112
+#, kde-format
 msgid "Power inhibition"
 msgstr "Inhibición de apagado"
 
-#: ui/main.qml:112
+#: ui/main.qml:122
 #, kde-format
 msgid "Adjust date & time"
 msgstr "Ajuste de fecha y hora"
 
-#: ui/main.qml:118
+#: ui/main.qml:128
 #, kde-format
 msgid "Shortcuts"
 msgstr "Accesos rápidos"
 
-#: ui/main.qml:129
+#: ui/main.qml:139
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "Acceso rápido a preferencias"
 
-#: ui/main.qml:149
+#: ui/main.qml:159
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "Acceso rápido a tareas"
 
-#: ui/main.qml:168
+#: ui/main.qml:178
 #, kde-format
 msgid "Open homescreen shortcut"
 msgstr "Acceso rápido a la pantalla de inicio"
