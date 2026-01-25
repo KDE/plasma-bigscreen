@@ -35,7 +35,6 @@ ecm_target_qml_sources(bigscreenplugin SOURCES
     qml/controls/Units.qml
     qml/AbstractDelegate.qml
     qml/FullScreenOverlay.qml
-    qml/IconDelegate.qml
     qml/NavigationSoundEffects.qml
 )
 

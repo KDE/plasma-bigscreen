@@ -12,7 +12,7 @@ import org.kde.bigscreen as Bigscreen
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.plasmoid
 
-Bigscreen.IconDelegate {
+IconDelegate {
     id: delegate
     readonly property var appStorageIdRole: modelData.ApplicationStorageIdRole
     useIconColors: Plasmoid.configuration.coloredTiles
