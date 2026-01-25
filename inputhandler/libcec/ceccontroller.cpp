@@ -11,6 +11,8 @@
 #include "../device.h"
 #include "cecworker.h"
 
+#include <QDebug>
+
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
@@ -46,6 +48,7 @@ const QDBusArgument &operator>>(const QDBusArgument &arg, cec_logical_address &a
 CECController::CECController(QObject *parent)
     : QObject(parent)
 {
+    qDebug() << "CECController: Starting initialization";
     qDBusRegisterMetaType<cec_logical_address>();
 
     // Load key mappings from config
@@ -117,6 +120,7 @@ CECController::CECController(QObject *parent)
 
     // Initialize asynchronously
     QString osdName = group.readEntry("OSDName", i18n("KDE Plasma"));
+    qDebug() << "CECController: Using OSD name from config:" << osdName;
     QMetaObject::invokeMethod(m_worker, "initialize", Qt::QueuedConnection, Q_ARG(QString, osdName));
 
     // Listen for device hotplug
@@ -136,6 +140,7 @@ CECController::~CECController()
 
 void CECController::onWorkerInitialized(bool success)
 {
+    qDebug() << "CECController: Worker initialization" << (success ? "succeeded" : "failed");
     m_initialized = success;
     if (success) {
         QMetaObject::invokeMethod(m_worker, "discoverDevices", Qt::QueuedConnection);
@@ -144,11 +149,15 @@ void CECController::onWorkerInitialized(bool success)
 
 void CECController::onDeviceDiscovered(const QString &comName)
 {
+    qDebug() << "CECController: Device discovered at" << comName;
+
     if (m_connectedDevices.contains(comName)) {
+        qDebug() << "CECController: Device" << comName << "already in connected devices set, skipping";
         return;
     }
 
     if (ControllerManager::instance().isConnected(comName)) {
+        qDebug() << "CECController: Device" << comName << "already connected via ControllerManager, skipping";
         m_connectedDevices.insert(comName);
         return;
     }
@@ -159,11 +168,13 @@ void CECController::onDeviceDiscovered(const QString &comName)
 
     m_connectedDevices.insert(comName);
     m_adapterCount++;
+    qDebug() << "CECController: Successfully registered device" << comName << "- total adapters:" << m_adapterCount;
     Q_EMIT controllerAdded(QStringLiteral("CEC Controller"));
 }
 
 void CECController::onHotplugTimeout()
 {
+    qDebug() << "CECController: Hotplug timeout - triggering device discovery";
     if (m_initialized) {
         QMetaObject::invokeMethod(m_worker, "discoverDevices", Qt::QueuedConnection);
     }
@@ -193,7 +204,10 @@ void CECController::onNextKeyTimeout()
 
 void CECController::onCecKeyPressed(int keycode, int opcode)
 {
+    qDebug() << "CECController: CEC key received - keycode:" << keycode << "opcode:" << opcode;
+
     if (m_catchNextInput) {
+        qDebug() << "CECController: Catching next input mode active, returning keycode to requester";
         m_catchNextInput = false;
         m_nextKeyTimer.stop();
         Q_EMIT nextKeyReceived(keycode);
@@ -202,10 +216,14 @@ void CECController::onCecKeyPressed(int keycode, int opcode)
 
     int nativeKey = s_keyMap.value(keycode, -1);
     if (nativeKey < 0) {
+        qDebug() << "CECController: No mapping found for CEC keycode" << keycode;
         return;
     }
 
+    qDebug() << "CECController: Mapped CEC keycode" << keycode << "to native key" << nativeKey;
+
     if (nativeKey == KEY_HOMEPAGE) {
+        qDebug() << "CECController: Home key detected, emitting home action";
         ControllerManager::instance().emitHomeAction();
         return;
     }

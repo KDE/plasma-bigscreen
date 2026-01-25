@@ -32,6 +32,8 @@ CECWorker::~CECWorker()
 
 void CECWorker::initialize(const QString &osdName)
 {
+    qDebug() << "CECWorker: Initializing with OSD name:" << osdName;
+
     libcec_configuration cecConfig;
     cecConfig.Clear();
     cecConfig.bActivateSource = 0;
@@ -49,45 +51,55 @@ void CECWorker::initialize(const QString &osdName)
         return;
     }
 
+    qDebug() << "CECWorker: CEC adapter created successfully";
     m_cecAdapter->InitVideoStandalone();
+    qDebug() << "CECWorker: Video standalone initialized";
     Q_EMIT initialized(true);
 }
 
 void CECWorker::discoverDevices()
 {
     if (!m_cecAdapter) {
+        qDebug() << "CECWorker: discoverDevices called but no adapter available";
         return;
     }
 
     cec_adapter_descriptor devices[10];
     int8_t count = m_cecAdapter->DetectAdapters(devices, 10, nullptr, true);
+    qDebug() << "CECWorker: Detected" << count << "CEC adapter(s)";
 
     for (int8_t i = 0; i < count; i++) {
+        qDebug() << "CECWorker: Found adapter" << i << "at" << devices[i].strComName;
         Q_EMIT deviceDiscovered(QString::fromLatin1(devices[i].strComName));
     }
 }
 
 void CECWorker::cleanup()
 {
+    qDebug() << "CECWorker: Starting cleanup";
     if (m_cecAdapter) {
         m_cecAdapter->Close();
         UnloadLibCec(m_cecAdapter);
         m_cecAdapter = nullptr;
     }
+    qDebug() << "CECWorker: Cleanup completed";
 }
 
 void CECWorker::handleCecKeypress(void *param, const cec_keypress *key)
 {
     auto *self = static_cast<CECWorker *>(param);
+    qDebug() << "CECWorker: Key pressed - keycode:" << key->keycode << "duration:" << key->duration << "lastOpcode:" << self->m_lastOpcode;
     Q_EMIT self->cecKeyPressed(key->keycode, self->m_lastOpcode);
 }
 
 void CECWorker::handleCommandReceived(void *param, const cec_command *command)
 {
     auto *self = static_cast<CECWorker *>(param);
+    qDebug() << "CECWorker: Command received - opcode:" << command->opcode;
     self->m_lastOpcode = command->opcode;
 
     if (command->opcode == CEC_OPCODE_STANDBY) {
+        qDebug() << "CECWorker: Standby command received";
         Q_EMIT self->cecStandbyReceived();
     }
 }
@@ -95,5 +107,6 @@ void CECWorker::handleCommandReceived(void *param, const cec_command *command)
 void CECWorker::handleSourceActivated(void *param, const cec_logical_address, uint8_t activated)
 {
     auto *self = static_cast<CECWorker *>(param);
+    qDebug() << "CECWorker: Source activation changed - activated:" << (activated != 0);
     Q_EMIT self->cecSourceActivated(activated != 0);
 }
