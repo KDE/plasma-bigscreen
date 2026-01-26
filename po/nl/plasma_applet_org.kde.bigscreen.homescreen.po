@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:46+0000\n"
-"PO-Revision-Date: 2026-01-21 11:38+0100\n"
+"POT-Creation-Date: 2026-01-26 00:44+0000\n"
+"PO-Revision-Date: 2026-01-25 14:45+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -32,38 +32,43 @@ msgstr "Favorieten toevoegen"
 msgid "Remove Favorites"
 msgstr "Favorieten verwijderen"
 
-#: contents/ui/homeoverlay/MainColumn.qml:113
+#: contents/ui/homeoverlay/MainColumn.qml:114
 #, kde-format
 msgid "Home"
 msgstr "Home"
 
-#: contents/ui/homeoverlay/MainColumn.qml:126
+#: contents/ui/homeoverlay/MainColumn.qml:127
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr "Zoeken"
 
-#: contents/ui/homeoverlay/MainColumn.qml:143
+#: contents/ui/homeoverlay/MainColumn.qml:144
 #, kde-format
 msgid "Tasks"
 msgstr "Taken"
 
-#: contents/ui/homeoverlay/MainColumn.qml:164
+#: contents/ui/homeoverlay/MainColumn.qml:165
 #, kde-format
 msgid "Controller"
 msgstr "Besturing"
 
-#: contents/ui/homeoverlay/MainColumn.qml:165
+#: contents/ui/homeoverlay/MainColumn.qml:166
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "Vangt nu toetsen…"
 
-#: contents/ui/homeoverlay/MainColumn.qml:165
+#: contents/ui/homeoverlay/MainColumn.qml:166
 #, kde-format
 msgid "Key capture off"
 msgstr "Vangen van toetsen nu uit"
 
-#: contents/ui/homeoverlay/MainColumn.qml:176
+#: contents/ui/homeoverlay/MainColumn.qml:186
+#, kde-format
+msgid "On-screen Keyboard"
+msgstr ""
+
+#: contents/ui/homeoverlay/MainColumn.qml:200
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
@@ -72,18 +77,17 @@ msgstr "Instellingen"
 #: contents/ui/homeoverlay/TaskDelegate.qml:117
 #, kde-format
 msgid "Hold to close…"
-msgstr ""
+msgstr "Vasthouden om te sluiten…"
 
 #: contents/ui/homeoverlay/TasksView.qml:108
-#, fuzzy, kde-format
-#| msgid "Voice Apps"
+#, kde-format
 msgid "Open Apps"
-msgstr "Geluidstoepassingen"
+msgstr "Toepassingen openen"
 
 #: contents/ui/homeoverlay/TasksView.qml:159
 #, kde-format
 msgid "Close all apps"
-msgstr ""
+msgstr "Alle toepassingen sluiten"
 
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
@@ -135,62 +139,61 @@ msgstr "Audio-instellingen"
 msgid "Internet Settings"
 msgstr "Internetinstellingen"
 
-#: contents/ui/launcher/LauncherHome.qml:96
+#: contents/ui/launcher/LauncherHome.qml:89
 #, kde-format
 msgid "Favorites"
 msgstr "Favorieten"
 
-#: contents/ui/launcher/LauncherHome.qml:115
+#: contents/ui/launcher/LauncherHome.qml:108
 #, kde-format
 msgid "Recent"
 msgstr "Recent"
 
-#: contents/ui/launcher/LauncherHome.qml:144
+#: contents/ui/launcher/LauncherHome.qml:137
 #, kde-format
 msgid "Applications"
 msgstr "Toepassingen"
 
-#: contents/ui/launcher/LauncherHome.qml:172
+#: contents/ui/launcher/LauncherHome.qml:165
 #, kde-format
 msgid "Games"
 msgstr "Spellen"
 
-#: contents/ui/main.qml:103
+#: contents/ui/main.qml:101
 #, kde-format
 msgid "Controller added: %1"
 msgstr "Besturing toegevoegd: %1"
 
-#: contents/ui/main.qml:107
+#: contents/ui/main.qml:105
 #, kde-format
 msgid "Controller removed: %1"
 msgstr "Besturing verwijderd: %1"
 
-#: contents/ui/main.qml:111
+#: contents/ui/main.qml:109
 #, kde-format
 msgid "Remote added: %1"
 msgstr "Op afstand toegevoegd: %1"
 
-#: contents/ui/main.qml:115
+#: contents/ui/main.qml:113
 #, kde-format
 msgid "Remote removed: %1"
 msgstr "Op afstand verwijderd: %1"
 
-#: contents/ui/main.qml:119
+#: contents/ui/main.qml:117
 #, kde-format
 msgid "System taking over controller input"
 msgstr "Systeem neem invoer van besturing over"
 
-#: contents/ui/main.qml:122
+#: contents/ui/main.qml:120
 #, kde-format
 msgid "Application taking over controller input"
 msgstr "Toepassing neem invoer van besturing over"
 
 #: contents/ui/PowerManagementItem.qml:24
-#, fuzzy, kde-format
-#| msgid "Bigscreen has enabled system-wide inhibition"
+#, kde-format
 msgctxt "@info"
 msgid "Plasma Bigscreen has enabled system-wide inhibition"
-msgstr "Bigscreen heeft systeembreed slapen ingeschakeld"
+msgstr "Plasma Bigscreen heeft systeembreed slapen ingeschakeld"
 
 #: contents/ui/search/SearchTextField.qml:24
 #, kde-format

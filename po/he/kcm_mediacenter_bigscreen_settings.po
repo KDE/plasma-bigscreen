@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-25 00:46+0000\n"
-"PO-Revision-Date: 2026-01-19 06:56+0200\n"
+"PO-Revision-Date: 2026-01-25 08:24+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -132,7 +132,7 @@ msgstr "הגדרת ערכת העיצוב"
 #: ui/main.qml:102
 #, kde-format
 msgid "Navigation sounds"
-msgstr ""
+msgstr "צלילי ניווט"
 
 #: ui/main.qml:112
 #, kde-format

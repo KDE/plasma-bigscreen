@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-25 00:46+0000\n"
-"PO-Revision-Date: 2026-01-19 11:05+0100\n"
+"PO-Revision-Date: 2026-01-25 14:43+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -134,7 +134,7 @@ msgstr "Het systeemthema instellen"
 #: ui/main.qml:102
 #, kde-format
 msgid "Navigation sounds"
-msgstr ""
+msgstr "Navigatiegeluiden"
 
 #: ui/main.qml:112
 #, kde-format

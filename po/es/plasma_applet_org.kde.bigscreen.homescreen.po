@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:46+0000\n"
+"POT-Creation-Date: 2026-01-26 00:44+0000\n"
 "PO-Revision-Date: 2026-01-25 00:38+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -33,38 +33,43 @@ msgstr "Añadir favoritos"
 msgid "Remove Favorites"
 msgstr "Eliminar favoritos"
 
-#: contents/ui/homeoverlay/MainColumn.qml:113
+#: contents/ui/homeoverlay/MainColumn.qml:114
 #, kde-format
 msgid "Home"
 msgstr "Inicio"
 
-#: contents/ui/homeoverlay/MainColumn.qml:126
+#: contents/ui/homeoverlay/MainColumn.qml:127
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr "Buscar"
 
-#: contents/ui/homeoverlay/MainColumn.qml:143
+#: contents/ui/homeoverlay/MainColumn.qml:144
 #, kde-format
 msgid "Tasks"
 msgstr "Tareas"
 
-#: contents/ui/homeoverlay/MainColumn.qml:164
+#: contents/ui/homeoverlay/MainColumn.qml:165
 #, kde-format
 msgid "Controller"
 msgstr "Mando"
 
-#: contents/ui/homeoverlay/MainColumn.qml:165
+#: contents/ui/homeoverlay/MainColumn.qml:166
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "Leyendo teclas en este momento…"
 
-#: contents/ui/homeoverlay/MainColumn.qml:165
+#: contents/ui/homeoverlay/MainColumn.qml:166
 #, kde-format
 msgid "Key capture off"
 msgstr "Lectura de teclas desactivada"
 
-#: contents/ui/homeoverlay/MainColumn.qml:176
+#: contents/ui/homeoverlay/MainColumn.qml:186
+#, kde-format
+msgid "On-screen Keyboard"
+msgstr ""
+
+#: contents/ui/homeoverlay/MainColumn.qml:200
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
@@ -135,52 +140,52 @@ msgstr "Preferencias de audio"
 msgid "Internet Settings"
 msgstr "Preferencias de internet"
 
-#: contents/ui/launcher/LauncherHome.qml:96
+#: contents/ui/launcher/LauncherHome.qml:89
 #, kde-format
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: contents/ui/launcher/LauncherHome.qml:115
+#: contents/ui/launcher/LauncherHome.qml:108
 #, kde-format
 msgid "Recent"
 msgstr "Reciente"
 
-#: contents/ui/launcher/LauncherHome.qml:144
+#: contents/ui/launcher/LauncherHome.qml:137
 #, kde-format
 msgid "Applications"
 msgstr "Aplicaciones"
 
-#: contents/ui/launcher/LauncherHome.qml:172
+#: contents/ui/launcher/LauncherHome.qml:165
 #, kde-format
 msgid "Games"
 msgstr "Juegos"
 
-#: contents/ui/main.qml:103
+#: contents/ui/main.qml:101
 #, kde-format
 msgid "Controller added: %1"
 msgstr "Mando añadido: %1"
 
-#: contents/ui/main.qml:107
+#: contents/ui/main.qml:105
 #, kde-format
 msgid "Controller removed: %1"
 msgstr "Mando eliminado: %1"
 
-#: contents/ui/main.qml:111
+#: contents/ui/main.qml:109
 #, kde-format
 msgid "Remote added: %1"
 msgstr "Control remoto añadido: %1"
 
-#: contents/ui/main.qml:115
+#: contents/ui/main.qml:113
 #, kde-format
 msgid "Remote removed: %1"
 msgstr "Control remoto eliminado: %1"
 
-#: contents/ui/main.qml:119
+#: contents/ui/main.qml:117
 #, kde-format
 msgid "System taking over controller input"
 msgstr "Sistema tomando control de la entrada del mando"
 
-#: contents/ui/main.qml:122
+#: contents/ui/main.qml:120
 #, kde-format
 msgid "Application taking over controller input"
 msgstr "Aplicación  tomando control de la entrada del mando"

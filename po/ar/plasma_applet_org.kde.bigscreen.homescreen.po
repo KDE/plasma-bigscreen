@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:46+0000\n"
+"POT-Creation-Date: 2026-01-26 00:44+0000\n"
 "PO-Revision-Date: 2026-01-24 12:16+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -33,38 +33,43 @@ msgstr "أضف إلى المفضّلة"
 msgid "Remove Favorites"
 msgstr "أزل من المفضّلة"
 
-#: contents/ui/homeoverlay/MainColumn.qml:113
+#: contents/ui/homeoverlay/MainColumn.qml:114
 #, kde-format
 msgid "Home"
 msgstr "المنزل"
 
-#: contents/ui/homeoverlay/MainColumn.qml:126
+#: contents/ui/homeoverlay/MainColumn.qml:127
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr "ابحث"
 
-#: contents/ui/homeoverlay/MainColumn.qml:143
+#: contents/ui/homeoverlay/MainColumn.qml:144
 #, kde-format
 msgid "Tasks"
 msgstr "المهام"
 
-#: contents/ui/homeoverlay/MainColumn.qml:164
+#: contents/ui/homeoverlay/MainColumn.qml:165
 #, kde-format
 msgid "Controller"
 msgstr "المتحكم"
 
-#: contents/ui/homeoverlay/MainColumn.qml:165
+#: contents/ui/homeoverlay/MainColumn.qml:166
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "يجري التقاط المفاتيح حاليًا…"
 
-#: contents/ui/homeoverlay/MainColumn.qml:165
+#: contents/ui/homeoverlay/MainColumn.qml:166
 #, kde-format
 msgid "Key capture off"
 msgstr "التقاط المفاتيح متوقف"
 
-#: contents/ui/homeoverlay/MainColumn.qml:176
+#: contents/ui/homeoverlay/MainColumn.qml:186
+#, kde-format
+msgid "On-screen Keyboard"
+msgstr ""
+
+#: contents/ui/homeoverlay/MainColumn.qml:200
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
@@ -136,52 +141,52 @@ msgstr "إعدادات الصوت"
 msgid "Internet Settings"
 msgstr "إعدادات الإنترنت"
 
-#: contents/ui/launcher/LauncherHome.qml:96
+#: contents/ui/launcher/LauncherHome.qml:89
 #, kde-format
 msgid "Favorites"
 msgstr "المفضّلة"
 
-#: contents/ui/launcher/LauncherHome.qml:115
+#: contents/ui/launcher/LauncherHome.qml:108
 #, kde-format
 msgid "Recent"
 msgstr "الحديثة"
 
-#: contents/ui/launcher/LauncherHome.qml:144
+#: contents/ui/launcher/LauncherHome.qml:137
 #, kde-format
 msgid "Applications"
 msgstr "التّطبيقات"
 
-#: contents/ui/launcher/LauncherHome.qml:172
+#: contents/ui/launcher/LauncherHome.qml:165
 #, kde-format
 msgid "Games"
 msgstr "الألعاب"
 
-#: contents/ui/main.qml:103
+#: contents/ui/main.qml:101
 #, kde-format
 msgid "Controller added: %1"
 msgstr "المتحكم المضاف: %1"
 
-#: contents/ui/main.qml:107
+#: contents/ui/main.qml:105
 #, kde-format
 msgid "Controller removed: %1"
 msgstr "المتحكم مُزال : %1"
 
-#: contents/ui/main.qml:111
+#: contents/ui/main.qml:109
 #, kde-format
 msgid "Remote added: %1"
 msgstr "المتحكم البعيد المضاف: %1"
 
-#: contents/ui/main.qml:115
+#: contents/ui/main.qml:113
 #, kde-format
 msgid "Remote removed: %1"
 msgstr "المتحكم البعيد المُزال : %1"
 
-#: contents/ui/main.qml:119
+#: contents/ui/main.qml:117
 #, kde-format
 msgid "System taking over controller input"
 msgstr "نظام يستحوذ على مدخلات وحدة التحكم"
 
-#: contents/ui/main.qml:122
+#: contents/ui/main.qml:120
 #, kde-format
 msgid "Application taking over controller input"
 msgstr "التطبيق يستحوذ على مدخلات وحدة التحكم"

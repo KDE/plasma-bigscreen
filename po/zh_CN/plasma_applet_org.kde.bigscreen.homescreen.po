@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:46+0000\n"
+"POT-Creation-Date: 2026-01-26 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -33,38 +33,43 @@ msgstr "添加收藏"
 msgid "Remove Favorites"
 msgstr "移除收藏"
 
-#: contents/ui/homeoverlay/MainColumn.qml:113
+#: contents/ui/homeoverlay/MainColumn.qml:114
 #, kde-format
 msgid "Home"
 msgstr "主页"
 
-#: contents/ui/homeoverlay/MainColumn.qml:126
+#: contents/ui/homeoverlay/MainColumn.qml:127
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr "搜索"
 
-#: contents/ui/homeoverlay/MainColumn.qml:143
+#: contents/ui/homeoverlay/MainColumn.qml:144
 #, kde-format
 msgid "Tasks"
 msgstr "任务"
 
-#: contents/ui/homeoverlay/MainColumn.qml:164
+#: contents/ui/homeoverlay/MainColumn.qml:165
 #, kde-format
 msgid "Controller"
 msgstr "控制器"
 
-#: contents/ui/homeoverlay/MainColumn.qml:165
+#: contents/ui/homeoverlay/MainColumn.qml:166
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "当前正在捕获按键…"
 
-#: contents/ui/homeoverlay/MainColumn.qml:165
+#: contents/ui/homeoverlay/MainColumn.qml:166
 #, kde-format
 msgid "Key capture off"
 msgstr "按键捕获关闭"
 
-#: contents/ui/homeoverlay/MainColumn.qml:176
+#: contents/ui/homeoverlay/MainColumn.qml:186
+#, kde-format
+msgid "On-screen Keyboard"
+msgstr ""
+
+#: contents/ui/homeoverlay/MainColumn.qml:200
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
@@ -135,52 +140,52 @@ msgstr "音频设置"
 msgid "Internet Settings"
 msgstr "互联网设置"
 
-#: contents/ui/launcher/LauncherHome.qml:96
+#: contents/ui/launcher/LauncherHome.qml:89
 #, kde-format
 msgid "Favorites"
 msgstr "收藏"
 
-#: contents/ui/launcher/LauncherHome.qml:115
+#: contents/ui/launcher/LauncherHome.qml:108
 #, kde-format
 msgid "Recent"
 msgstr "最近"
 
-#: contents/ui/launcher/LauncherHome.qml:144
+#: contents/ui/launcher/LauncherHome.qml:137
 #, kde-format
 msgid "Applications"
 msgstr "应用"
 
-#: contents/ui/launcher/LauncherHome.qml:172
+#: contents/ui/launcher/LauncherHome.qml:165
 #, kde-format
 msgid "Games"
 msgstr "游戏"
 
-#: contents/ui/main.qml:103
+#: contents/ui/main.qml:101
 #, kde-format
 msgid "Controller added: %1"
 msgstr "已添加控制器：%1"
 
-#: contents/ui/main.qml:107
+#: contents/ui/main.qml:105
 #, kde-format
 msgid "Controller removed: %1"
 msgstr "已移除控制器：%1"
 
-#: contents/ui/main.qml:111
+#: contents/ui/main.qml:109
 #, kde-format
 msgid "Remote added: %1"
 msgstr "已添加遥控器：%1"
 
-#: contents/ui/main.qml:115
+#: contents/ui/main.qml:113
 #, kde-format
 msgid "Remote removed: %1"
 msgstr "已移除遥控器：%1"
 
-#: contents/ui/main.qml:119
+#: contents/ui/main.qml:117
 #, kde-format
 msgid "System taking over controller input"
 msgstr "系统正在接管控制器输入"
 
-#: contents/ui/main.qml:122
+#: contents/ui/main.qml:120
 #, kde-format
 msgid "Application taking over controller input"
 msgstr "应用程序正在接管控制器输入"

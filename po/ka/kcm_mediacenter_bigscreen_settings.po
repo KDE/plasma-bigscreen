@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-25 00:46+0000\n"
-"PO-Revision-Date: 2026-01-19 11:28+0100\n"
+"PO-Revision-Date: 2026-01-25 04:05+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -132,7 +132,7 @@ msgstr "სისტემური თემის დაყენება"
 #: ui/main.qml:102
 #, kde-format
 msgid "Navigation sounds"
-msgstr ""
+msgstr "ნავიგაციის ხმები"
 
 #: ui/main.qml:112
 #, kde-format
