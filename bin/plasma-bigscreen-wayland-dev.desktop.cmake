@@ -5,6 +5,14 @@
 Exec=@CMAKE_INSTALL_FULL_LIBEXECDIR@/plasma-dbus-run-session-if-needed ${CMAKE_INSTALL_FULL_BINDIR}/plasma-bigscreen-wayland-dev
 DesktopNames=KDE
 Name=Plasma Bigscreen (Development)
+Name[ca]=Plasma Bigscreen (Desenvolupament)
+Name[ca@valencia]=Plasma Bigscreen (desenvolupament)
+Name[ka]=Plasma Bigscreen (სატესტო)
+Name[nl]=Plasma Bigscreen (ontwikkeling)
+Name[pt_BR]=Plasma Bigscreen (Desenvolvimento)
+Name[sl]=Veliki zaslon Plasma (Razvoj)
+Name[tr]=Plasma Büyük Ekran (Geliştirme)
+Name[uk]=Plasma Bigscreen (розробка)
 Comment=Plasma Bigscreen by KDE
 Comment[ar]=بلازما الشاشة الكبيرة بواسطة كِيدِي
 Comment[az]=KDE tərəfindən Plasma Böyük Ekran
