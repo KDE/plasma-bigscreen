@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2026-01-23 16:27+0100\n"
+"PO-Revision-Date: 2026-01-27 16:06+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -26,15 +26,15 @@ msgstr "Selige dispositivo de Medios"
 #: CameraHomePage.qml:61
 #, kde-format
 msgid "No video devices found"
-msgstr ""
+msgstr "Necun dispositivo video trovate"
 
 #: CameraHomePage.qml:66
 #, kde-format
 msgid "Plasma Bigscreen UVC Viewer"
-msgstr ""
+msgstr "Visor de UVC de Plasma Bigscreen"
 
 #: Main.qml:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Bigscreen UVC Viewer"
-msgstr ""
+msgstr "Visor de UVC de Bigscreen"

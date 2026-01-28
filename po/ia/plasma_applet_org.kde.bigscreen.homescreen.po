@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-26 00:44+0000\n"
-"PO-Revision-Date: 2026-01-23 16:26+0100\n"
+"PO-Revision-Date: 2026-01-27 16:02+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -30,16 +30,16 @@ msgstr "Adde Favoritos"
 #: contents/ui/FavoritesManager.qml:119
 #, kde-format
 msgid "Remove Favorites"
-msgstr "Remoive Favoritos"
+msgstr "Remove Favoritos"
 
 #: contents/ui/homeoverlay/MainColumn.qml:114
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "Domo o initio"
 
 #: contents/ui/homeoverlay/MainColumn.qml:127
 #: contents/ui/indicators/Search.qml:16
-#, fuzzy, kde-format
+#, kde-format
 msgid "Search"
 msgstr "Cerca"
 
@@ -56,17 +56,17 @@ msgstr "Controlator"
 #: contents/ui/homeoverlay/MainColumn.qml:166
 #, kde-format
 msgid "Currently capturing keys…"
-msgstr ""
+msgstr "Currentemente capturante claves..."
 
 #: contents/ui/homeoverlay/MainColumn.qml:166
 #, kde-format
 msgid "Key capture off"
-msgstr ""
+msgstr "Captura de Clave Off (deactivate)"
 
 #: contents/ui/homeoverlay/MainColumn.qml:186
 #, kde-format
 msgid "On-screen Keyboard"
-msgstr ""
+msgstr "Claviero sur schermo"
 
 #: contents/ui/homeoverlay/MainColumn.qml:200
 #: contents/ui/indicators/Settings.qml:18
@@ -77,18 +77,17 @@ msgstr "Preferentias"
 #: contents/ui/homeoverlay/TaskDelegate.qml:117
 #, kde-format
 msgid "Hold to close…"
-msgstr ""
+msgstr "Mantene cauder.."
 
 #: contents/ui/homeoverlay/TasksView.qml:108
-#, fuzzy, kde-format
-#| msgid "Voice Apps"
+#, kde-format
 msgid "Open Apps"
-msgstr "Apps de Voce"
+msgstr "Aperi Apps"
 
 #: contents/ui/homeoverlay/TasksView.qml:159
 #, kde-format
 msgid "Close all apps"
-msgstr ""
+msgstr "Claude omneapps"
 
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
@@ -96,10 +95,9 @@ msgid "Battery: %1%"
 msgstr "Batteria: %1%"
 
 #: contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Customize Favorites"
-msgstr "Remoive Favoritos"
+msgstr "Personalisa Favoritos"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -124,10 +122,10 @@ msgstr "Cancella"
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Exit Bigscreen"
-msgstr ""
+msgstr "Exi Bigscreen"
 
 #: contents/ui/indicators/Shutdown.qml:15
-#, fuzzy, kde-format
+#, kde-format
 msgid "Power"
 msgstr "Potentia"
 
@@ -164,36 +162,35 @@ msgstr "Jocos"
 #: contents/ui/main.qml:101
 #, kde-format
 msgid "Controller added: %1"
-msgstr ""
+msgstr "Controlator addite %1"
 
 #: contents/ui/main.qml:105
 #, kde-format
 msgid "Controller removed: %1"
-msgstr ""
+msgstr "Controlator removite : %1"
 
 #: contents/ui/main.qml:109
 #, kde-format
 msgid "Remote added: %1"
-msgstr ""
+msgstr "Remote addite : %1"
 
 #: contents/ui/main.qml:113
 #, kde-format
 msgid "Remote removed: %1"
-msgstr ""
+msgstr "Remote Removite: %1"
 
 #: contents/ui/main.qml:117
 #, kde-format
 msgid "System taking over controller input"
-msgstr ""
+msgstr "Systema prendente controlo del ingresso de controlator"
 
 #: contents/ui/main.qml:120
 #, kde-format
 msgid "Application taking over controller input"
-msgstr ""
+msgstr "Application prendente controlo del ingresso de controlator"
 
 #: contents/ui/PowerManagementItem.qml:24
-#, fuzzy, kde-format
-#| msgid "Bigscreen has enabled system-wide inhibition"
+#, kde-format
 msgctxt "@info"
 msgid "Plasma Bigscreen has enabled system-wide inhibition"
 msgstr "Bigscreen ha habilitate inhibition per tote le systema"

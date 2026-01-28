@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-24 00:45+0000\n"
-"PO-Revision-Date: 2026-01-23 16:23+0100\n"
+"PO-Revision-Date: 2026-01-27 12:25+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: ui/DeviceConnectionSidebar.qml:37
 #, kde-format
 msgid "Device information"
-msgstr ""
+msgstr "Information de dispositivo"
 
 #: ui/DeviceConnectionSidebar.qml:48
 #, kde-format
@@ -55,12 +55,12 @@ msgstr "Oblida dispositivo"
 #: ui/DeviceConnectionSidebar.qml:96
 #, kde-format
 msgid "Are you sure you want to forget the device %1?"
-msgstr ""
+msgstr "Tu es secur que tu vole oblidar le dispositivo %1?"
 
 #: ui/DeviceConnectionSidebar.qml:121
 #, kde-format
 msgid "Device details"
-msgstr ""
+msgstr "Detalios de dispositivo"
 
 #: ui/DeviceConnectionSidebar.qml:131
 #, kde-format
@@ -75,7 +75,7 @@ msgstr "Adresse"
 #: ui/DeviceConnectionSidebar.qml:141 ui/DeviceConnectionSidebar.qml:148
 #, kde-format
 msgid "Change name"
-msgstr ""
+msgstr "Modifica nomine"
 
 #: ui/DeviceDelegate.qml:33
 #, kde-format
@@ -100,12 +100,12 @@ msgstr "Activar Bluetooth"
 #: ui/main.qml:88
 #, kde-format
 msgid "Paired devices"
-msgstr ""
+msgstr "Dispositivo associate"
 
 #: ui/main.qml:121
 #, kde-format
 msgid "Available devices"
-msgstr ""
+msgstr "Dispositivos disponibile"
 
 #: ui/script.js:13
 #, kde-format

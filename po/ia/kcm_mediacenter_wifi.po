@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2026-01-23 16:25+0100\n"
+"PO-Revision-Date: 2026-01-27 15:55+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -25,12 +25,12 @@ msgstr "Connectite"
 #: ui/DetailsText.qml:33
 #, kde-format
 msgid "IP Address Details"
-msgstr ""
+msgstr "Detalios de Adresse IP"
 
 #: ui/DeviceConnectionSidebar.qml:138
 #, kde-format
 msgid "Network information"
-msgstr ""
+msgstr "Information de rete"
 
 #: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
 #, kde-format
@@ -45,17 +45,17 @@ msgstr "Disconnecte"
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
 msgid "Forget network"
-msgstr ""
+msgstr "Oblida rete"
 
 #: ui/DeviceConnectionSidebar.qml:190
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
-msgstr ""
+msgstr "Tu es secur que tu vole oblidar le rete %1?"
 
 #: ui/DeviceConnectionSidebar.qml:213
 #, kde-format
 msgid "Network details"
-msgstr ""
+msgstr "Detalios de rete"
 
 #: ui/DeviceConnectionSidebar.qml:242
 #, kde-format
@@ -80,7 +80,7 @@ msgstr "Connexiones"
 #: ui/PasswordDialog.qml:22
 #, kde-format
 msgid "Enter Password For %1"
-msgstr ""
+msgstr "Inserta contrasigno per %1"
 
 #: ui/PasswordDialog.qml:34
 #, kde-format

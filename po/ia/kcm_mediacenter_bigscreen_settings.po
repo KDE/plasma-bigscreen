@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-25 00:46+0000\n"
-"PO-Revision-Date: 2026-01-23 16:22+0100\n"
+"PO-Revision-Date: 2026-01-27 12:24+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -43,10 +43,9 @@ msgid "Day"
 msgstr "Die"
 
 #: ui/DeviceTimeSettingsSidebar.qml:63
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust Date & Time Settings"
-msgstr "Adjusta data & tempore"
+msgstr "Adjusta Preferentias de  data & tempore"
 
 #: ui/DeviceTimeSettingsSidebar.qml:72
 #, kde-format
@@ -70,7 +69,7 @@ msgstr "Data"
 
 #: ui/DeviceTimeSettingsSidebar.qml:144 ui/DeviceTimeSettingsSidebar.qml:221
 #: ui/DeviceTimeSettingsSidebar.qml:271
-#, fuzzy, kde-format
+#, kde-format
 msgid "Back"
 msgstr "Retro"
 
@@ -95,56 +94,54 @@ msgid "System"
 msgstr "Systema"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgid "General Appearance"
+#, kde-format
 msgid "Homescreen Appearance"
-msgstr "Apparentia General"
+msgstr "Apparentia de Schermo Domo (de Initio o principal)"
 
 #: ui/main.qml:56
-#, fuzzy, kde-format
-#| msgid "Colored Tiles"
+#, kde-format
 msgid "Colored tiles"
 msgstr "Tegulas (Tiles) colorate"
 
 #: ui/main.qml:57
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
-msgstr ""
+msgstr "Fundos de tegula (Tile) essera colorat ebasate sur le icone de app"
 
 #: ui/main.qml:70
 #, kde-format
 msgid "Wallpaper blur"
-msgstr ""
+msgstr "Tapete de papiro indistincte"
 
 #: ui/main.qml:71
 #, kde-format
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr ""
+"Applica un effecto de indistincte al tapete de papitro sur le schermo "
+"initial (Domo)"
 
 #: ui/main.qml:84 ui/ThemeSidebar.qml:23
-#, fuzzy, kde-format
+#, kde-format
 msgid "Global theme"
 msgstr "Thema Global"
 
 #: ui/main.qml:85
 #, kde-format
 msgid "Set the system theme"
-msgstr ""
+msgstr "Assigna le thema de systema"
 
 #: ui/main.qml:102
 #, kde-format
 msgid "Navigation sounds"
-msgstr ""
+msgstr "Sonos de navigation"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgid "Power Inhibition"
+#, kde-format
 msgid "Power inhibition"
 msgstr "Inhibition de Potentia"
 
 #: ui/main.qml:122
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust date & time"
 msgstr "Adjusta data & tempore"
 
@@ -154,27 +151,24 @@ msgid "Shortcuts"
 msgstr "Vias breve"
 
 #: ui/main.qml:139
-#, fuzzy, kde-format
-#| msgid "Bigscreen Settings Shortcut"
+#, kde-format
 msgid "Open settings shortcut"
-msgstr "Via breve de preferentias de Bigscreen"
+msgstr "Aperi Via breve de preferentias "
 
 #: ui/main.qml:159
-#, fuzzy, kde-format
-#| msgid "Bigscreen Tasks Shortcut"
+#, kde-format
 msgid "Open tasks shortcut"
-msgstr "Via breve de cargas de Bigscreen"
+msgstr "Aperi Via breve de cargas "
 
 #: ui/main.qml:178
-#, fuzzy, kde-format
-#| msgid "Bigscreen Display Homescreen Shortcut"
+#, kde-format
 msgid "Open homescreen shortcut"
-msgstr "Via breve de schermo initial de monstrator de Bigscreen"
+msgstr "Aperi Via breve de schermo initial (Domo o Principal)"
 
 #: ui/ShortcutsPickerSidebar.qml:39
 #, kde-format
 msgid "Shortcut currently set to"
-msgstr ""
+msgstr "Via Breve currentemente assignate a"
 
 #: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format
