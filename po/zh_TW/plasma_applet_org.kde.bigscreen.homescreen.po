@@ -5,13 +5,13 @@
 #
 # Automatically generated, 2020.
 # Yi-Jyun Pan <pan93412@gmail.com>, 2020.
-# SPDX-FileCopyrightText: 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-26 00:44+0000\n"
-"PO-Revision-Date: 2025-08-29 23:34+0900\n"
+"PO-Revision-Date: 2026-01-28 21:29+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.11.70\n"
+"X-Generator: Lokalize 26.03.70\n"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -39,7 +39,7 @@ msgstr "移除最愛"
 #: contents/ui/homeoverlay/MainColumn.qml:114
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "首頁"
 
 #: contents/ui/homeoverlay/MainColumn.qml:127
 #: contents/ui/indicators/Search.qml:16
@@ -55,22 +55,22 @@ msgstr "工作項目"
 #: contents/ui/homeoverlay/MainColumn.qml:165
 #, kde-format
 msgid "Controller"
-msgstr ""
+msgstr "控制器"
 
 #: contents/ui/homeoverlay/MainColumn.qml:166
 #, kde-format
 msgid "Currently capturing keys…"
-msgstr ""
+msgstr "目前正擷取按鍵…"
 
 #: contents/ui/homeoverlay/MainColumn.qml:166
 #, kde-format
 msgid "Key capture off"
-msgstr ""
+msgstr "按鍵擷取停用"
 
 #: contents/ui/homeoverlay/MainColumn.qml:186
 #, kde-format
 msgid "On-screen Keyboard"
-msgstr ""
+msgstr "螢幕上的虛擬鍵盤"
 
 #: contents/ui/homeoverlay/MainColumn.qml:200
 #: contents/ui/indicators/Settings.qml:18
@@ -81,18 +81,17 @@ msgstr "設定"
 #: contents/ui/homeoverlay/TaskDelegate.qml:117
 #, kde-format
 msgid "Hold to close…"
-msgstr ""
+msgstr "按住以關閉…"
 
 #: contents/ui/homeoverlay/TasksView.qml:108
-#, fuzzy, kde-format
-#| msgid "Voice Apps"
+#, kde-format
 msgid "Open Apps"
-msgstr "語音 App"
+msgstr "開啟應用程式"
 
 #: contents/ui/homeoverlay/TasksView.qml:159
 #, kde-format
 msgid "Close all apps"
-msgstr ""
+msgstr "關閉所有應用程式"
 
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
@@ -167,39 +166,38 @@ msgstr "遊戲"
 #: contents/ui/main.qml:101
 #, kde-format
 msgid "Controller added: %1"
-msgstr ""
+msgstr "已加入控制器：%1"
 
 #: contents/ui/main.qml:105
 #, kde-format
 msgid "Controller removed: %1"
-msgstr ""
+msgstr "已移除控制器：%1"
 
 #: contents/ui/main.qml:109
 #, kde-format
 msgid "Remote added: %1"
-msgstr ""
+msgstr "已加入遙控器：%1"
 
 #: contents/ui/main.qml:113
 #, kde-format
 msgid "Remote removed: %1"
-msgstr ""
+msgstr "已移除遙控器：%1"
 
 #: contents/ui/main.qml:117
 #, kde-format
 msgid "System taking over controller input"
-msgstr ""
+msgstr "系統接收控制器輸入"
 
 #: contents/ui/main.qml:120
 #, kde-format
 msgid "Application taking over controller input"
-msgstr ""
+msgstr "應用程式接收控制器輸入"
 
 #: contents/ui/PowerManagementItem.qml:24
-#, fuzzy, kde-format
-#| msgid "Bigscreen has enabled system-wide inhibition"
+#, kde-format
 msgctxt "@info"
 msgid "Plasma Bigscreen has enabled system-wide inhibition"
-msgstr "大螢幕已啟用全系統睡眠阻擋"
+msgstr "Plasma 大螢幕已啟用全系統睡眠阻擋"
 
 #: contents/ui/search/SearchTextField.qml:24
 #, kde-format

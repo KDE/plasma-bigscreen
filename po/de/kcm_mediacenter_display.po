@@ -1,43 +1,45 @@
+# SPDX-FileCopyrightText: 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_display\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-24 00:45+0000\n"
-"PO-Revision-Date: 2024-10-18 17:35+0200\n"
-"Last-Translator: Simulacrum\n"
+"PO-Revision-Date: 2026-01-24 14:21+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: ui/main.qml:22
 #, kde-format
 msgid "Display Configuration"
-msgstr ""
+msgstr "Anzeigeeinrichtung"
 
 #: ui/main.qml:42
 #, kde-format
 msgid "Selected display"
-msgstr ""
+msgstr "Ausgewählte Anzeige"
 
 #: ui/main.qml:74
 #, kde-format
 msgid "Display %1"
-msgstr ""
+msgstr "Anzeige %1"
 
 #: ui/main.qml:82
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Aktiviert"
 
 #: ui/main.qml:97
 #, kde-format
 msgid "Screen mode (Resolution & Refresh Rate)"
-msgstr ""
+msgstr "Bildschirmmodus (Auflösung und Bildwiederholrate)"
 
 #: ui/main.qml:126 ui/ScaleDialog.qml:21
 #, kde-format
 msgid "Scale"
-msgstr ""
+msgstr "Skalierung"
