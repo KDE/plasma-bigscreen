@@ -18,6 +18,7 @@ Name[sv]=Plasma storbildsskärm inmatningshantering
 Name[tr]=Plasma Büyük Ekran Giriş İşleyicisi
 Name[uk]=Обробник вхідних даних Plasma Bigscreen
 Name[zh_CN]=Plasma 大屏幕输入处理程序
+Name[zh_TW]=Plasma 大螢幕輸入處理程式
 Exec=@CMAKE_INSTALL_PREFIX@/bin/plasma-bigscreen-inputhandler
 Icon=gamepad
 Type=Application
