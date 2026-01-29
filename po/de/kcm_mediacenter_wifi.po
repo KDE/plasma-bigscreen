@@ -48,7 +48,7 @@ msgstr "Passwort für %1 eingeben"
 #: package/contents/ui/main.qml:139
 #, kde-format
 msgid "Password..."
-msgstr "Passwort ..."
+msgstr "Passwort …"
 
 #: package/contents/ui/main.qml:163
 #, kde-format
