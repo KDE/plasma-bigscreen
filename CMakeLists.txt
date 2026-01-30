@@ -8,7 +8,7 @@ cmake_minimum_required(VERSION 3.24)
 project(plasma-bigscreen)
 set(PROJECT_VERSION "6.5.80")
 
-set(QT_MIN_VERSION "6.10.0")
+set(QT_MIN_VERSION "6.9.0")
 set(KF_MIN_VERSION "6.14.0")
 set(QCORO_MIN_VERSION "0.7.0")
 
