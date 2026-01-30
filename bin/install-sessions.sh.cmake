@@ -9,7 +9,7 @@ set -e
 
 # Make built-from-source sessions appear in login screen
 sudo install @CMAKE_CURRENT_BINARY_DIR@/plasma-bigscreen-wayland-dev.desktop /usr/share/wayland-sessions/
-install @CMAKE_CURRENT_BINARY_DIR@/plasma-bigscreen-wayland-dev.sh @CMAKE_INSTALL_FULL_LIBEXECDIR@
+install @CMAKE_CURRENT_BINARY_DIR@/plasma-bigscreen-wayland-dev @CMAKE_INSTALL_FULL_LIBEXECDIR@
 
 # Make the system DBus able to see any new DBus files that have been added to
 # the built-from-source plasma session which are not yet present in the system
