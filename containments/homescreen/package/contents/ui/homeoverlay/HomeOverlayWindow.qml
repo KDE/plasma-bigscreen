@@ -28,6 +28,7 @@ Window {
 
     Kirigami.Theme.inherit: false
     Kirigami.Theme.colorSet: Kirigami.Theme.View
+    flags: Qt.FramelessWindowHint
     color: Qt.rgba(0, 0, 0, 0.3 * sidebar.openFactor)
 
     function openTasks() {
