@@ -37,8 +37,13 @@ Bigscreen.ItemDelegate {
             tasksModel.requestClose(tasksModel.makeModelIndex(index));
         }
     }
-
     opacity: 1 - closeFactor
+
+    onClicked: {
+        tasksModel.minimizeAllTasks();
+        tasksModel.requestActivate(tasksModel.makeModelIndex(index));
+        root.closeHomeRequested();
+    }
 
     onPressedChanged: {
         delegatePressed = pressed;
@@ -118,11 +123,5 @@ Bigscreen.ItemDelegate {
                 font.pixelSize: Bigscreen.Units.defaultFontPixelSize
             }
         }
-    }
-
-    onClicked: {
-        tasksModel.minimizeAllTasks();
-        tasksModel.requestActivate(tasksModel.makeModelIndex(index));
-        root.closeHomeRequested();
     }
 }

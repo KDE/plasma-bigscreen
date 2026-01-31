@@ -81,53 +81,70 @@ Window {
         onAboutToHide: tasksView.close()
         onClosed: window.close();
 
-        contentItem: MainColumn {
-            id: mainColumn
-            showTasksButton: tasksView.taskCount > 0
-            Layout.fillHeight: true
+        contentItem: Item {
+            MainColumn {
+                id: mainColumn
+                showTasksButton: tasksView.taskCount > 0
 
-            Keys.onRightPressed: {
-                if (tasksView.visible) {
+                anchors.top: parent.top
+                anchors.bottom: parent.bottom
+                anchors.left: parent.left
+                width: sidebar.sidebarWidth
+
+                Keys.onRightPressed: {
+                    if (tasksView.visible) {
+                        tasksView.forceActiveFocus();
+                    }
+                }
+
+                onMinimizeAllTasksRequested: {
+                    window.minimizeAllTasksRequested();
+                    window.hideOverlay();
+                }
+                onSearchRequested: {
+                    window.searchRequested();
+                    window.hideOverlay();
+                }
+                onTasksRequested: {
+                    tasksView.open();
                     tasksView.forceActiveFocus();
+                }
+                onSettingsRequested: {
+                    window.settingsRequested();
+                    window.hideOverlay();
                 }
             }
 
-            onMinimizeAllTasksRequested: {
-                window.minimizeAllTasksRequested();
-                window.hideOverlay();
+            MouseArea {
+                anchors.top: parent.top
+                anchors.bottom: parent.bottom
+                anchors.left: mainColumn.right
+                anchors.right: parent.right
+                onClicked: window.close()
             }
-            onSearchRequested: {
-                window.searchRequested();
-                window.hideOverlay();
-            }
-            onTasksRequested: {
-                tasksView.open();
-                tasksView.forceActiveFocus();
-            }
-            onSettingsRequested: {
-                window.settingsRequested();
-                window.hideOverlay();
-            }
-        }
-    }
 
-    TasksView {
-        id: tasksView
+            TasksView {
+                id: tasksView
 
-        visible: false
-        leftMargin: sidebar.width * sidebar.openFactor
-        anchors.fill: parent
+                visible: false
 
-        onFocusTasksRequested: {
-            mainColumn.focusTasks();
-        }
+                anchors.top: parent.top
+                anchors.bottom: parent.bottom
+                anchors.left: mainColumn.right
+                anchors.right: parent.right
 
-        onVisibleChanged: {
-            if (!visible) {
-                mainColumn.focusTasks();
+                onFocusTasksRequested: {
+                    mainColumn.focusTasks();
+                }
+
+                onVisibleChanged: {
+                    if (!visible) {
+                        mainColumn.focusTasks();
+                    }
+                }
+
+                onCloseHomeRequested: window.hideOverlay();
             }
         }
-
-        onCloseHomeRequested: window.hideOverlay();
     }
 }

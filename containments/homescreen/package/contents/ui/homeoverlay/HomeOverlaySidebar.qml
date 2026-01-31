@@ -4,11 +4,12 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
+import QtQuick.Templates as T
 
 import org.kde.kirigami as Kirigami
 import org.kde.bigscreen as Bigscreen
 
-QQC2.Popup {
+T.Popup {
     id: root
 
     dim: false
@@ -19,14 +20,16 @@ QQC2.Popup {
 
     parent: QQC2.Overlay.overlay
     height: parent.height
-    width: Math.min(Kirigami.Units.gridUnit * 26, Math.max(Kirigami.Units.gridUnit * 20, Math.round(parent.width * 0.3)))
+    width: parent.width
+
+    property real sidebarWidth: frame.width
 
     topPadding: 0
     bottomPadding: 0
     leftPadding: 0
     rightPadding: 0
 
-    readonly property real openFactor: 1 - Math.abs(x / width)
+    readonly property real openFactor: 1 - Math.abs(x / sidebarWidth)
 
     y: 0
 
@@ -36,7 +39,7 @@ QQC2.Popup {
                 property: "x"
                 duration: 400
                 easing.type: Easing.OutCubic
-                from: -root.width; to: 0
+                from: -root.sidebarWidth; to: 0
             }
             // Make sure it's anchored to the left of the screen
             ScriptAction { script: root.x = Qt.binding(() => 0); }
@@ -48,14 +51,17 @@ QQC2.Popup {
             property: "x"
             duration: 400
             easing.type: Easing.OutCubic
-            to: -root.width; from: 0
+            to: -root.sidebarWidth; from: 0
         }
     }
 
     background: Item {
         Rectangle {
             id: frame
-            anchors.fill: parent
+            anchors.left: parent.left
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            width: Math.min(Kirigami.Units.gridUnit * 26, Math.max(Kirigami.Units.gridUnit * 20, Math.round(parent.width * 0.3)))
             color: Kirigami.Theme.backgroundColor
         }
 
