@@ -132,12 +132,12 @@ msgstr "设置系统主题"
 #: ui/main.qml:102
 #, kde-format
 msgid "Navigation sounds"
-msgstr ""
+msgstr "导航声音"
 
 #: ui/main.qml:112
 #, kde-format
 msgid "Power inhibition"
-msgstr "功耗抑制"
+msgstr "阻止电源管理"
 
 #: ui/main.qml:122
 #, kde-format

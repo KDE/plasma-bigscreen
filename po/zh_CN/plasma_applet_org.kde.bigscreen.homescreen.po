@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-26 00:44+0000\n"
+"POT-Creation-Date: 2026-02-01 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -67,7 +67,7 @@ msgstr "按键捕获关闭"
 #: contents/ui/homeoverlay/MainColumn.qml:186
 #, kde-format
 msgid "On-screen Keyboard"
-msgstr ""
+msgstr "屏幕键盘"
 
 #: contents/ui/homeoverlay/MainColumn.qml:200
 #: contents/ui/indicators/Settings.qml:18
@@ -75,20 +75,20 @@ msgstr ""
 msgid "Settings"
 msgstr "设置"
 
-#: contents/ui/homeoverlay/TaskDelegate.qml:117
+#: contents/ui/homeoverlay/TaskDelegate.qml:122
 #, kde-format
 msgid "Hold to close…"
-msgstr ""
+msgstr "按住以关闭…"
 
 #: contents/ui/homeoverlay/TasksView.qml:108
 #, kde-format
 msgid "Open Apps"
-msgstr ""
+msgstr "打开应用"
 
 #: contents/ui/homeoverlay/TasksView.qml:159
 #, kde-format
 msgid "Close all apps"
-msgstr ""
+msgstr "关闭所有应用"
 
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
@@ -194,7 +194,7 @@ msgstr "应用程序正在接管控制器输入"
 #, kde-format
 msgctxt "@info"
 msgid "Plasma Bigscreen has enabled system-wide inhibition"
-msgstr ""
+msgstr "Plasma 大屏幕已启用系统全局阻止电源管理"
 
 #: contents/ui/search/SearchTextField.qml:24
 #, kde-format
