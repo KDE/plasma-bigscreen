@@ -84,7 +84,10 @@ Rectangle {
         function minimizeAllTasks() {
             for (var i = 0; i < tasksModel.count; i++) {
                 const idx = tasksModel.makeModelIndex(i);
-                tasksModel.requestToggleMinimized(idx);
+
+                if (!tasksModel.data(idx, TaskManager.AbstractTasksModel.IsMinimized)) {
+                    tasksModel.requestToggleMinimized(idx);
+                }
             }
         }
 
