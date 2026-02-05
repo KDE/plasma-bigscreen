@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-01 00:45+0000\n"
+"POT-Creation-Date: 2026-02-05 00:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
@@ -79,12 +79,12 @@ msgstr ""
 msgid "Hold to close…"
 msgstr ""
 
-#: contents/ui/homeoverlay/TasksView.qml:108
+#: contents/ui/homeoverlay/TasksView.qml:111
 #, kde-format
 msgid "Open Apps"
 msgstr ""
 
-#: contents/ui/homeoverlay/TasksView.qml:159
+#: contents/ui/homeoverlay/TasksView.qml:162
 #, kde-format
 msgid "Close all apps"
 msgstr ""

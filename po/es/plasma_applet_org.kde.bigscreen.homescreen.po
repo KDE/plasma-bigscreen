@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-01 00:45+0000\n"
+"POT-Creation-Date: 2026-02-05 00:45+0000\n"
 "PO-Revision-Date: 2026-02-01 00:26+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -80,12 +80,12 @@ msgstr "Preferencias"
 msgid "Hold to close…"
 msgstr "Mantener para cerrar…"
 
-#: contents/ui/homeoverlay/TasksView.qml:108
+#: contents/ui/homeoverlay/TasksView.qml:111
 #, kde-format
 msgid "Open Apps"
 msgstr "Abrir aplicaciones"
 
-#: contents/ui/homeoverlay/TasksView.qml:159
+#: contents/ui/homeoverlay/TasksView.qml:162
 #, kde-format
 msgid "Close all apps"
 msgstr "Cerrar todas las aplicaciones"

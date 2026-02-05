@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.mycroft.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-01 00:45+0000\n"
+"POT-Creation-Date: 2026-02-05 00:45+0000\n"
 "PO-Revision-Date: 2022-01-07 14:58+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -78,13 +78,13 @@ msgstr "Nastavenia"
 msgid "Hold to close…"
 msgstr ""
 
-#: contents/ui/homeoverlay/TasksView.qml:108
+#: contents/ui/homeoverlay/TasksView.qml:111
 #, fuzzy, kde-format
 #| msgid "Voice Apps"
 msgid "Open Apps"
 msgstr "Hlasové aplikácie"
 
-#: contents/ui/homeoverlay/TasksView.qml:159
+#: contents/ui/homeoverlay/TasksView.qml:162
 #, kde-format
 msgid "Close all apps"
 msgstr ""

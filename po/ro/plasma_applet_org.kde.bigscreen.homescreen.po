@@ -1,101 +1,104 @@
-# SPDX-FileCopyrightText: 2026 César A. P. Cláudio <cesarapclaudio@gmail.com>
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# SPDX-FileCopyrightText: 2026 Sergiu Bivol <sergiu@cip.md>
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-05 00:45+0000\n"
-"PO-Revision-Date: 2026-02-04 01:07+0000\n"
-"Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
-"Language-Team: pt\n"
-"Language: pt\n"
+"PO-Revision-Date: 2026-02-04 14:52+0000\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-POFile-SpellExtra: TTS STT Websocket Mycroft Connect\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
 msgid "Favorites Manager"
-msgstr "Gestor de favoritos"
+msgstr "Gestionar de favorite"
 
 #: contents/ui/FavoritesManager.qml:54
 #, kde-format
 msgid "Add Favorites"
-msgstr "Adicionar favoritos"
+msgstr "Adaugă favorite"
 
 #: contents/ui/FavoritesManager.qml:119
 #, kde-format
 msgid "Remove Favorites"
-msgstr "Remover favoritos"
+msgstr "Elimină favorite"
 
 #: contents/ui/homeoverlay/MainColumn.qml:114
 #, kde-format
 msgid "Home"
-msgstr "Início"
+msgstr "Acasă"
 
 #: contents/ui/homeoverlay/MainColumn.qml:127
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
-msgstr "Pesquisar"
+msgstr "Căutare"
 
 #: contents/ui/homeoverlay/MainColumn.qml:144
 #, kde-format
 msgid "Tasks"
-msgstr "Tarefas"
+msgstr "Sarcini"
 
 #: contents/ui/homeoverlay/MainColumn.qml:165
 #, kde-format
 msgid "Controller"
-msgstr "Comando"
+msgstr "Controlor"
 
 #: contents/ui/homeoverlay/MainColumn.qml:166
 #, kde-format
 msgid "Currently capturing keys…"
-msgstr "A capturar teclas…"
+msgstr "Se capturează taste…"
 
 #: contents/ui/homeoverlay/MainColumn.qml:166
 #, kde-format
 msgid "Key capture off"
-msgstr "Captura de teclas desligada"
+msgstr "Capturare taste dezactivată"
 
 #: contents/ui/homeoverlay/MainColumn.qml:186
 #, kde-format
 msgid "On-screen Keyboard"
-msgstr "Teclado no ecrã"
+msgstr "Tastatură pe ecran"
 
 #: contents/ui/homeoverlay/MainColumn.qml:200
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
-msgstr "Definições"
+msgstr "Configurări"
 
 #: contents/ui/homeoverlay/TaskDelegate.qml:122
 #, kde-format
 msgid "Hold to close…"
-msgstr "Mantenha premido para fechar..."
+msgstr "Țineți pentru a închide…"
 
 #: contents/ui/homeoverlay/TasksView.qml:111
 #, kde-format
 msgid "Open Apps"
-msgstr "Abrir aplicações"
+msgstr "Aplicații deschise"
 
 #: contents/ui/homeoverlay/TasksView.qml:162
 #, kde-format
 msgid "Close all apps"
-msgstr "Fechar todas as aplicações"
+msgstr "Închide toate aplicațiile"
 
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
 msgid "Battery: %1%"
-msgstr "Bateria: %1%"
+msgstr "Acumulator: %1%"
 
 #: contents/ui/indicators/Favorites.qml:17
 #, kde-format
 msgid "Customize Favorites"
-msgstr "Personalizar favoritos"
+msgstr "Personalizează favoritele"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -105,42 +108,42 @@ msgstr "KDE Connect"
 #: contents/ui/indicators/PairWindow.qml:48
 #, kde-format
 msgid "Pairing Request From %1"
-msgstr "Pedido de emparelhamento de %1"
+msgstr "Cerere de asociere de la %1"
 
 #: contents/ui/indicators/PairWindow.qml:83
 #, kde-format
 msgid "Accept"
-msgstr "Aceitar"
+msgstr "Acceptă"
 
 #: contents/ui/indicators/PairWindow.qml:127
 #, kde-format
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Renunță"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Exit Bigscreen"
-msgstr "Sair do Bigscreen"
+msgstr "Închide Bigscreen"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Power"
-msgstr "Energia"
+msgstr "Alimentare"
 
 #: contents/ui/indicators/Volume.qml:20
 #, kde-format
 msgid "Audio Settings"
-msgstr "Definições de áudio"
+msgstr "Configurări de sunet"
 
 #: contents/ui/indicators/Wifi.qml:19
 #, kde-format
 msgid "Internet Settings"
-msgstr "Definições de Internet"
+msgstr "Configurări de Internet"
 
 #: contents/ui/launcher/LauncherHome.qml:89
 #, kde-format
 msgid "Favorites"
-msgstr "Favoritos"
+msgstr "Favorite"
 
 #: contents/ui/launcher/LauncherHome.qml:108
 #, kde-format
@@ -150,103 +153,51 @@ msgstr "Recente"
 #: contents/ui/launcher/LauncherHome.qml:137
 #, kde-format
 msgid "Applications"
-msgstr "Aplicações"
+msgstr "Aplicații"
 
 #: contents/ui/launcher/LauncherHome.qml:165
 #, kde-format
 msgid "Games"
-msgstr "Jogos"
+msgstr "Jocuri"
 
 #: contents/ui/main.qml:101
 #, kde-format
 msgid "Controller added: %1"
-msgstr "Comando adicionado: %1"
+msgstr "Controlor adăugat: %1"
 
 #: contents/ui/main.qml:105
 #, kde-format
 msgid "Controller removed: %1"
-msgstr "Comando removido: %1"
+msgstr "Controlor eliminat: %1"
 
 #: contents/ui/main.qml:109
 #, kde-format
 msgid "Remote added: %1"
-msgstr "Controlo remoto adicionado: %1"
+msgstr "Telecomandă adăugată: %1"
 
 #: contents/ui/main.qml:113
 #, kde-format
 msgid "Remote removed: %1"
-msgstr "Controlo remoto removido: %1"
+msgstr "Telecomandă eliminată %1"
 
 #: contents/ui/main.qml:117
 #, kde-format
 msgid "System taking over controller input"
-msgstr "O sistema está a assumir o controlo do comando"
+msgstr "Sistemul ia controlul asupra introducerii de la controlor"
 
 #: contents/ui/main.qml:120
 #, kde-format
 msgid "Application taking over controller input"
-msgstr "A aplicação está a assumir o controlo do comando"
+msgstr "Aplicația ia controlul asupra introducerii de la controlor"
 
 #: contents/ui/PowerManagementItem.qml:24
 #, kde-format
 msgctxt "@info"
 msgid "Plasma Bigscreen has enabled system-wide inhibition"
-msgstr "O Plasma Bigscreen ativou a inibição a nível do sistema"
+msgstr "Plasma Bigscreen a activat inhibiția în tot sistemul"
 
 #: contents/ui/search/SearchTextField.qml:24
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr "Pesquisar..."
-
-#, fuzzy
-#~| msgid "Applications"
-#~ msgid "Voice Applications"
-#~ msgstr "Aplicações"
-
-#, fuzzy
-#~| msgid "close"
-#~ msgid "Close"
-#~ msgstr "fechar"
-
-#~ msgid "General"
-#~ msgstr "Geral"
-
-#~ msgid "Websocket Address:"
-#~ msgstr "Endereço de Websocket:"
-
-#~ msgid "Enable Notifications"
-#~ msgstr "Activar as Notificações"
-
-#~ msgid "Enable Remote TTS"
-#~ msgstr "Activar o TTS Remoto"
-
-#~ msgid "Enable Remote STT"
-#~ msgstr "Activar o STT Remoto"
-
-#~ msgid "Use Colored Tiles"
-#~ msgstr "Usar Mosaicos Coloridos"
-
-#~ msgid "Use Expanding Tiles"
-#~ msgstr "Usar Mosaicos Expandidos"
-
-#~ msgid "Reject"
-#~ msgstr "Rejeitar"
-
-#~ msgid "Increase Volume"
-#~ msgstr "Aumentar o Volume"
-
-#~ msgid "Decrease Volume"
-#~ msgstr "Diminuir o Volume"
-
-#~ msgid "Mute"
-#~ msgstr "Silenciar"
-
-#~ msgid "Audio Device chooser"
-#~ msgstr "Selector de Dispositivos de Áudio"
-
-#~ msgid "Network"
-#~ msgstr "Rede"
-
-#~ msgid "Getting Ready... Please Wait"
-#~ msgstr "A Preparar-se... Espere por Favor"
+msgstr "Caută…"

@@ -1,66 +1,62 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2026 César A. P. Cláudio <cesarapclaudio@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-25 00:46+0000\n"
-"PO-Revision-Date: 2023-06-15 11:48+0100\n"
-"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
-"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"PO-Revision-Date: 2026-02-04 00:48+0000\n"
+"Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
+"Language-Team: pt\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: Jan Fev Abr Jun Jul Ago Set Out Nov\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "José Nuno Pires"
+msgstr "César A. P. Cláudio"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "zepires@gmail.com"
+msgstr "cesarapclaudio@gmail.com"
 
 #: ui/DatePicker.qml:38
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Ano"
 
 #: ui/DatePicker.qml:54
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Mês"
 
 #: ui/DatePicker.qml:70
-#, fuzzy, kde-format
-#| msgid "May"
+#, kde-format
 msgid "Day"
-msgstr "Maio"
+msgstr "Dia"
 
 #: ui/DeviceTimeSettingsSidebar.qml:63
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust Date & Time Settings"
-msgstr "Acertar a Data & Hora"
+msgstr "Alterar data e hora"
 
 #: ui/DeviceTimeSettingsSidebar.qml:72
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "Fuso-horário:"
+msgstr "Fuso horário:"
 
 #: ui/DeviceTimeSettingsSidebar.qml:84
-#, fuzzy, kde-format
-#| msgid "Set time automatically:"
+#, kde-format
 msgid "Set time automatically"
-msgstr "Acertar a hora automaticamente:"
+msgstr "Definir hora automaticamente"
 
 #: ui/DeviceTimeSettingsSidebar.qml:102
 #, kde-format
@@ -76,17 +72,17 @@ msgstr "Data"
 #: ui/DeviceTimeSettingsSidebar.qml:271
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Recuar"
 
 #: ui/DeviceTimeSettingsSidebar.qml:163
 #, kde-format
 msgid "Search City / Region"
-msgstr ""
+msgstr "Pesquisar cidade/região"
 
 #: ui/DeviceTimeSettingsSidebar.qml:182
 #, kde-format
 msgid "Your local timezone is %1"
-msgstr "O seu fuso-horário local é o %1"
+msgstr "O seu fuso horário local é %1"
 
 #: ui/DeviceTimeSettingsSidebar.qml:182
 #, kde-format
@@ -96,116 +92,112 @@ msgstr "%1, %2"
 #: ui/main.qml:23 ui/main.qml:91
 #, kde-format
 msgid "System"
-msgstr ""
+msgstr "Sistema"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgid "General Appearance"
+#, kde-format
 msgid "Homescreen Appearance"
-msgstr "Aparência Geral"
+msgstr "Aspeto do ecrã inicial"
 
 #: ui/main.qml:56
-#, fuzzy, kde-format
-#| msgid "Colored Tiles"
+#, kde-format
 msgid "Colored tiles"
-msgstr "Padrões Coloridos"
+msgstr "Mosaicos coloridos"
 
 #: ui/main.qml:57
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
-msgstr ""
+msgstr "Os fundos dos mosaicos serão coloridos com base no ícone da aplicação"
 
 #: ui/main.qml:70
 #, kde-format
 msgid "Wallpaper blur"
-msgstr ""
+msgstr "Desfocagem do papel de parede"
 
 #: ui/main.qml:71
 #, kde-format
 msgid "Apply a blur effect to the wallpaper on the homescreen"
-msgstr ""
+msgstr "Aplicar um efeito de desfocagem ao papel de parede do ecrã inicial"
 
 #: ui/main.qml:84 ui/ThemeSidebar.qml:23
 #, kde-format
 msgid "Global theme"
-msgstr ""
+msgstr "Tema global"
 
 #: ui/main.qml:85
 #, kde-format
 msgid "Set the system theme"
-msgstr ""
+msgstr "Definir o tema do sistema"
 
 #: ui/main.qml:102
 #, kde-format
 msgid "Navigation sounds"
-msgstr ""
+msgstr "Sons de navegação"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgid "Power Inhibition"
+#, kde-format
 msgid "Power inhibition"
-msgstr "Inibição da Energia"
+msgstr "Inibição de suspensão"
 
 #: ui/main.qml:122
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust date & time"
-msgstr "Acertar a Data & Hora"
+msgstr "Alterar data e hora"
 
 #: ui/main.qml:128
 #, kde-format
 msgid "Shortcuts"
-msgstr ""
+msgstr "Atalhos"
 
 #: ui/main.qml:139
 #, kde-format
 msgid "Open settings shortcut"
-msgstr ""
+msgstr "Abrir atalho das definições"
 
 #: ui/main.qml:159
 #, kde-format
 msgid "Open tasks shortcut"
-msgstr ""
+msgstr "Abrir atalho das tarefas"
 
 #: ui/main.qml:178
 #, kde-format
 msgid "Open homescreen shortcut"
-msgstr ""
+msgstr "Abrir atalho do ecrã inicial"
 
 #: ui/ShortcutsPickerSidebar.qml:39
 #, kde-format
 msgid "Shortcut currently set to"
-msgstr ""
+msgstr "Atalho atualmente definido para"
 
 #: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format
 msgid "Reset to default"
-msgstr ""
+msgstr "Repor predefinição"
 
 #: ui/ShortcutsPickerSidebar.qml:60
 #, kde-format
 msgid "Set Shortcut"
-msgstr ""
+msgstr "Definir atalho"
 
 #: ui/TimePicker.qml:40
 #, kde-format
 msgid "Hour"
-msgstr ""
+msgstr "Hora"
 
 #: ui/TimePicker.qml:56
 #, kde-format
 msgid "Minute"
-msgstr ""
+msgstr "Minuto"
 
 #: ui/TimePicker.qml:72
 #, kde-format
 msgid "Second"
-msgstr ""
+msgstr "Segundo"
 
 #: ui/TimePicker.qml:89
 #, kde-format
 msgid "AM/PM"
-msgstr ""
+msgstr "AM/PM"
 
 #~ msgid "Time Display"
 #~ msgstr "Apresentação da Hora"
