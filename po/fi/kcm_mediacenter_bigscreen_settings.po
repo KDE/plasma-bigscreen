@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:46+0000\n"
+"POT-Creation-Date: 2026-02-07 00:45+0000\n"
 "PO-Revision-Date: 2025-09-03 18:42+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -42,48 +42,48 @@ msgstr "Kuukausi"
 msgid "Day"
 msgstr "Päivä"
 
-#: ui/DeviceTimeSettingsSidebar.qml:63
+#: ui/DeviceTimeSettingsSidebar.qml:46
 #, kde-format
 msgid "Adjust Date & Time Settings"
 msgstr "Säädä päiväystä ja kellonaikaa"
 
-#: ui/DeviceTimeSettingsSidebar.qml:72
+#: ui/DeviceTimeSettingsSidebar.qml:55
 #, kde-format
 msgid "Timezone"
 msgstr "Aikavyöhyke"
 
-#: ui/DeviceTimeSettingsSidebar.qml:84
+#: ui/DeviceTimeSettingsSidebar.qml:67
 #, kde-format
 msgid "Set time automatically"
 msgstr "Aseta aika automaattisesti"
 
-#: ui/DeviceTimeSettingsSidebar.qml:102
+#: ui/DeviceTimeSettingsSidebar.qml:85
 #, kde-format
 msgid "Time"
 msgstr "Aika"
 
-#: ui/DeviceTimeSettingsSidebar.qml:115
+#: ui/DeviceTimeSettingsSidebar.qml:98
 #, kde-format
 msgid "Date"
 msgstr "Päiväys"
 
-#: ui/DeviceTimeSettingsSidebar.qml:144 ui/DeviceTimeSettingsSidebar.qml:221
-#: ui/DeviceTimeSettingsSidebar.qml:271
+#: ui/DeviceTimeSettingsSidebar.qml:127 ui/DeviceTimeSettingsSidebar.qml:205
+#: ui/DeviceTimeSettingsSidebar.qml:255
 #, kde-format
 msgid "Back"
 msgstr "Takaisin"
 
-#: ui/DeviceTimeSettingsSidebar.qml:163
+#: ui/DeviceTimeSettingsSidebar.qml:146
 #, kde-format
 msgid "Search City / Region"
 msgstr "Etsi kaupunkia tai aluetta"
 
-#: ui/DeviceTimeSettingsSidebar.qml:182
+#: ui/DeviceTimeSettingsSidebar.qml:166
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "Paikallinen aikavyöhyke on %1"
 
-#: ui/DeviceTimeSettingsSidebar.qml:182
+#: ui/DeviceTimeSettingsSidebar.qml:167
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:46+0000\n"
+"POT-Creation-Date: 2026-02-07 00:45+0000\n"
 "PO-Revision-Date: 2026-01-25 11:00+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -44,48 +44,48 @@ msgstr "Mes"
 msgid "Day"
 msgstr "Dia"
 
-#: ui/DeviceTimeSettingsSidebar.qml:63
+#: ui/DeviceTimeSettingsSidebar.qml:46
 #, kde-format
 msgid "Adjust Date & Time Settings"
 msgstr "Ajusta la data i configuració de l'hora"
 
-#: ui/DeviceTimeSettingsSidebar.qml:72
+#: ui/DeviceTimeSettingsSidebar.qml:55
 #, kde-format
 msgid "Timezone"
 msgstr "Zona horària"
 
-#: ui/DeviceTimeSettingsSidebar.qml:84
+#: ui/DeviceTimeSettingsSidebar.qml:67
 #, kde-format
 msgid "Set time automatically"
 msgstr "Estableix la data i l'hora automàticament"
 
-#: ui/DeviceTimeSettingsSidebar.qml:102
+#: ui/DeviceTimeSettingsSidebar.qml:85
 #, kde-format
 msgid "Time"
 msgstr "Hora"
 
-#: ui/DeviceTimeSettingsSidebar.qml:115
+#: ui/DeviceTimeSettingsSidebar.qml:98
 #, kde-format
 msgid "Date"
 msgstr "Data"
 
-#: ui/DeviceTimeSettingsSidebar.qml:144 ui/DeviceTimeSettingsSidebar.qml:221
-#: ui/DeviceTimeSettingsSidebar.qml:271
+#: ui/DeviceTimeSettingsSidebar.qml:127 ui/DeviceTimeSettingsSidebar.qml:205
+#: ui/DeviceTimeSettingsSidebar.qml:255
 #, kde-format
 msgid "Back"
 msgstr "Enrere"
 
-#: ui/DeviceTimeSettingsSidebar.qml:163
+#: ui/DeviceTimeSettingsSidebar.qml:146
 #, kde-format
 msgid "Search City / Region"
 msgstr "Cerca la població / regió"
 
-#: ui/DeviceTimeSettingsSidebar.qml:182
+#: ui/DeviceTimeSettingsSidebar.qml:166
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "La vostra zona horària local és %1"
 
-#: ui/DeviceTimeSettingsSidebar.qml:182
+#: ui/DeviceTimeSettingsSidebar.qml:167
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

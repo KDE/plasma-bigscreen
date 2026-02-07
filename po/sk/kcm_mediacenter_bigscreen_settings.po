@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:46+0000\n"
+"POT-Creation-Date: 2026-02-07 00:45+0000\n"
 "PO-Revision-Date: 2022-01-07 14:57+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -42,50 +42,50 @@ msgstr ""
 msgid "Day"
 msgstr "Máj"
 
-#: ui/DeviceTimeSettingsSidebar.qml:63
+#: ui/DeviceTimeSettingsSidebar.qml:46
 #, kde-format
 msgid "Adjust Date & Time Settings"
 msgstr ""
 
-#: ui/DeviceTimeSettingsSidebar.qml:72
+#: ui/DeviceTimeSettingsSidebar.qml:55
 #, fuzzy, kde-format
 #| msgid "Timezone:"
 msgid "Timezone"
 msgstr "Časová zóna:"
 
-#: ui/DeviceTimeSettingsSidebar.qml:84
+#: ui/DeviceTimeSettingsSidebar.qml:67
 #, fuzzy, kde-format
 #| msgid "Set time automatically:"
 msgid "Set time automatically"
 msgstr "Nastaviť čas automaticky"
 
-#: ui/DeviceTimeSettingsSidebar.qml:102
+#: ui/DeviceTimeSettingsSidebar.qml:85
 #, kde-format
 msgid "Time"
 msgstr "Čas"
 
-#: ui/DeviceTimeSettingsSidebar.qml:115
+#: ui/DeviceTimeSettingsSidebar.qml:98
 #, kde-format
 msgid "Date"
 msgstr "Dátum"
 
-#: ui/DeviceTimeSettingsSidebar.qml:144 ui/DeviceTimeSettingsSidebar.qml:221
-#: ui/DeviceTimeSettingsSidebar.qml:271
+#: ui/DeviceTimeSettingsSidebar.qml:127 ui/DeviceTimeSettingsSidebar.qml:205
+#: ui/DeviceTimeSettingsSidebar.qml:255
 #, kde-format
 msgid "Back"
 msgstr ""
 
-#: ui/DeviceTimeSettingsSidebar.qml:163
+#: ui/DeviceTimeSettingsSidebar.qml:146
 #, kde-format
 msgid "Search City / Region"
 msgstr ""
 
-#: ui/DeviceTimeSettingsSidebar.qml:182
+#: ui/DeviceTimeSettingsSidebar.qml:166
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "Vaše miestne časové pásmo je %1"
 
-#: ui/DeviceTimeSettingsSidebar.qml:182
+#: ui/DeviceTimeSettingsSidebar.qml:167
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
