@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-07 00:45+0000\n"
-"PO-Revision-Date: 2026-01-25 20:44+0100\n"
+"PO-Revision-Date: 2026-01-28 17:10+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -137,7 +137,7 @@ msgstr "Das Systemdesign festlegen"
 #: ui/main.qml:102
 #, kde-format
 msgid "Navigation sounds"
-msgstr ""
+msgstr "Navigationsklänge"
 
 #: ui/main.qml:112
 #, kde-format

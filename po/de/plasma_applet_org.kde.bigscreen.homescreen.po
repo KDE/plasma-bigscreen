@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-05 00:45+0000\n"
-"PO-Revision-Date: 2023-04-03 16:53+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2026-01-28 17:00+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -22,38 +22,38 @@ msgstr ""
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
 msgid "Favorites Manager"
-msgstr ""
+msgstr "Favoritenverwaltung"
 
 #: contents/ui/FavoritesManager.qml:54
 #, kde-format
 msgid "Add Favorites"
-msgstr ""
+msgstr "Favoriten hinzufügen"
 
 #: contents/ui/FavoritesManager.qml:119
 #, kde-format
 msgid "Remove Favorites"
-msgstr ""
+msgstr "Favoriten entfernen"
 
 #: contents/ui/homeoverlay/MainColumn.qml:114
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "Startseite"
 
 #: contents/ui/homeoverlay/MainColumn.qml:127
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
-msgstr ""
+msgstr "Suche"
 
 #: contents/ui/homeoverlay/MainColumn.qml:144
 #, kde-format
 msgid "Tasks"
-msgstr ""
+msgstr "Anwendungen"
 
 #: contents/ui/homeoverlay/MainColumn.qml:165
 #, kde-format
 msgid "Controller"
-msgstr ""
+msgstr "Controller"
 
 #: contents/ui/homeoverlay/MainColumn.qml:166
 #, kde-format
@@ -68,7 +68,7 @@ msgstr ""
 #: contents/ui/homeoverlay/MainColumn.qml:186
 #, kde-format
 msgid "On-screen Keyboard"
-msgstr ""
+msgstr "Bildschirmtastatur"
 
 #: contents/ui/homeoverlay/MainColumn.qml:200
 #: contents/ui/indicators/Settings.qml:18
@@ -79,28 +79,27 @@ msgstr "Einstellungen"
 #: contents/ui/homeoverlay/TaskDelegate.qml:122
 #, kde-format
 msgid "Hold to close…"
-msgstr ""
+msgstr "Halten, um zu schließen …"
 
 #: contents/ui/homeoverlay/TasksView.qml:111
-#, fuzzy, kde-format
-#| msgid "Voice Apps"
+#, kde-format
 msgid "Open Apps"
-msgstr "Sprachanwendungen"
+msgstr "Offene Anwendungen"
 
 #: contents/ui/homeoverlay/TasksView.qml:162
 #, kde-format
 msgid "Close all apps"
-msgstr ""
+msgstr "Alle Anwendungen schließen"
 
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
 msgid "Battery: %1%"
-msgstr ""
+msgstr "Akku: %1 %"
 
 #: contents/ui/indicators/Favorites.qml:17
 #, kde-format
 msgid "Customize Favorites"
-msgstr ""
+msgstr "Favoriten anpassen"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -120,34 +119,32 @@ msgstr "Annehmen"
 #: contents/ui/indicators/PairWindow.qml:127
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Abbrechen"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Exit Bigscreen"
-msgstr ""
+msgstr "Bigscreen verlassen"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Power"
-msgstr ""
+msgstr "Energie"
 
 #: contents/ui/indicators/Volume.qml:20
-#, fuzzy, kde-format
-#| msgid "Additional Settings:"
+#, kde-format
 msgid "Audio Settings"
-msgstr "Zusätzliche Einstellungen:"
+msgstr "Audioeinstellungen"
 
 #: contents/ui/indicators/Wifi.qml:19
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgid "Internet Settings"
-msgstr "Einstellungen"
+msgstr "Interneteinstellungen"
 
 #: contents/ui/launcher/LauncherHome.qml:89
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Favoriten"
 
 #: contents/ui/launcher/LauncherHome.qml:108
 #, kde-format
@@ -167,45 +164,44 @@ msgstr "Spiele"
 #: contents/ui/main.qml:101
 #, kde-format
 msgid "Controller added: %1"
-msgstr ""
+msgstr "Controller hinzugefügt: %1"
 
 #: contents/ui/main.qml:105
 #, kde-format
 msgid "Controller removed: %1"
-msgstr ""
+msgstr "Controller entfernt: %1"
 
 #: contents/ui/main.qml:109
 #, kde-format
 msgid "Remote added: %1"
-msgstr ""
+msgstr "Fernbedienung hinzugefügt: %1"
 
 #: contents/ui/main.qml:113
 #, kde-format
 msgid "Remote removed: %1"
-msgstr ""
+msgstr "Fernbedienung entfernt: %1"
 
 #: contents/ui/main.qml:117
 #, kde-format
 msgid "System taking over controller input"
-msgstr ""
+msgstr "System übernimmt Controllereingaben"
 
 #: contents/ui/main.qml:120
 #, kde-format
 msgid "Application taking over controller input"
-msgstr ""
+msgstr "Anwendung übernimmt Controllereingaben"
 
 #: contents/ui/PowerManagementItem.qml:24
-#, fuzzy, kde-format
-#| msgid "Bigscreen has enabled system-wide inhibition"
+#, kde-format
 msgctxt "@info"
 msgid "Plasma Bigscreen has enabled system-wide inhibition"
-msgstr "Bigscreen hat eine systemweite Blockade aktiviert"
+msgstr "Plasma Bigscreen hat eine systemweite Blockade aktiviert"
 
 #: contents/ui/search/SearchTextField.qml:24
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "Suchen …"
 
 #, fuzzy
 #~| msgid "Applications"
