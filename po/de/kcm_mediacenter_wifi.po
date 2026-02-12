@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the plasma-bigscreen package.
 # SPDX-FileCopyrightText: 2021 Burkhard Lück <lueck@hube-lueck.de>
 # SPDX-FileCopyrightText: 2022 Alois Spitzbart <spitz234@hotmail.com>
+# SPDX-FileCopyrightText: 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_wifi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2022-10-24 07:44+0200\n"
-"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
+"PO-Revision-Date: 2026-01-28 17:03+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -43,7 +44,7 @@ msgstr "Geschwindigkeit"
 #: package/contents/ui/main.qml:130
 #, kde-format
 msgid "Enter Password For %1"
-msgstr "Passwort für %1 eingeben"
+msgstr "Passwort für „%1“ eingeben"
 
 #: package/contents/ui/main.qml:139
 #, kde-format
@@ -63,7 +64,7 @@ msgstr "Abbrechen"
 #: package/contents/ui/main.qml:210
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
-msgstr "Möchten Sie das Netzwerk %1 wirklich vergessen?"
+msgstr "Möchten Sie das Netzwerk „%1“ wirklich vergessen?"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -88,7 +89,7 @@ msgstr "Verbindungen verwalten"
 #: wifi.cpp:18
 #, kde-format
 msgid "Configure Plasma wifi"
-msgstr "Plasma-Plasma einrichten"
+msgstr "Plasma-WLAN einrichten"
 
 #~ msgid "Network"
 #~ msgstr "Netzwerk"
