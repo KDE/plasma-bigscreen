@@ -4,8 +4,10 @@
 */
 
 #include "kcmslistmodel.h"
+#include <KLocalizedString>
 #include <KPluginMetaData>
 #include <QFile>
+#include <QStandardPaths>
 
 KcmsListModel::KcmsListModel(QObject *parent)
     : QAbstractListModel(parent)
@@ -103,6 +105,15 @@ void KcmsListModel::loadKcms()
     std::sort(m_kcms.begin(), m_kcms.end(), [](const KcmData &k1, const KcmData &k2) {
         return k1.name < k2.name;
     });
+
+    // Fake KCM for opening "desktop settings", if systemsettings is installed
+    if (!QStandardPaths::findExecutable(QStringLiteral("systemsettings")).isEmpty()) {
+        KcmData fakeSettingsKcm;
+        fakeSettingsKcm.name = i18n("Desktop Settings");
+        fakeSettingsKcm.iconName = "settings-configure";
+        fakeSettingsKcm.id = "open-desktop-settings";
+        m_kcms << fakeSettingsKcm;
+    }
 
     endResetModel();
     Q_EMIT countChanged();

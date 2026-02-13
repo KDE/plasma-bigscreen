@@ -11,6 +11,8 @@ import QtQuick.Controls as Controls
 import org.kde.kirigami as Kirigami
 import org.kde.bigscreen as Bigscreen
 
+import org.kde.plasma.bigscreen.settings
+
 Rectangle {
     id: root
 
@@ -77,19 +79,38 @@ Rectangle {
                 Bigscreen.NavigationSoundEffects.playMovingSound();
             }
 
-            delegate: Controls.Button {
+            Bigscreen.Dialog {
+                id: desktopSettingsDialog
+                title: i18n("Open desktop settings?")
+                standardButtons: Bigscreen.Dialog.Ok | Bigscreen.Dialog.Cancel
+
+                contentItem: Controls.Label {
+                    font.pixelSize: Bigscreen.Units.defaultFontPixelSize
+                    text: i18n("The desktop settings application does not support key navigation, a mouse may be required. However, it contains extra settings that may be useful.")
+                    wrapMode: Text.Wrap
+                }
+
+                onAccepted: SettingsApp.openDesktopSettings();
+            }
+
+            delegate: SidebarDelegate {
                 id: kcmButton
                 property var modelData: typeof model !== "undefined" ? model : null
 
                 width: settingsKCMMenu.width - settingsKCMMenu.leftMargin - settingsKCMMenu.rightMargin
 
-                leftPadding: Kirigami.Units.gridUnit * 2
-                rightPadding: Kirigami.Units.gridUnit * 2
-                topPadding: Kirigami.Units.largeSpacing
-                bottomPadding: Kirigami.Units.largeSpacing
+                onClicked: open()
+                Keys.onReturnPressed: open()
 
-                onClicked: openModule(modelData.kcmId);
-                Keys.onReturnPressed: openModule(modelData.kcmId);
+                function open() {
+                    if (modelData.kcmId === "open-desktop-settings") {
+                        // Custom "fake" KCM to open the desktop settings
+                        desktopSettingsDialog.open();
+                        return;
+                    }
+
+                    openModule(modelData.kcmId);
+                }
 
                 // Need a timer for listview to propagate model changes, otherwise the last kcm (ex. Wi-Fi) doesn't get selected
                 Timer {
@@ -111,41 +132,9 @@ Rectangle {
                     }
                 }
 
-                background: Bigscreen.DelegateBackground {
-                    id: kcmButtonBackground
-                    control: kcmButton
-
-                    raisedBackground: false
-                    translucentHighlight: true
-                    highlighted: (kcmButton.modelData.kcmId == currentModuleName)
-                    borderHighlighted: highlighted || (kcmButton.ListView.isCurrentItem && settingsKCMMenu.activeFocus)
-
-                    // Only scale if this delegate is the shown KCM, and user focus is on it
-                    scale: (kcmButton.modelData.kcmId == currentModuleName && kcmButton.ListView.isCurrentItem && settingsKCMMenu.activeFocus) ? 1.05 : 1
-                    Behavior on scale { NumberAnimation {} }
-                }
-
-                contentItem: RowLayout {
-                    id: kcmButtonLayout
-                    spacing: Kirigami.Units.gridUnit
-
-                    Kirigami.Icon {
-                        id: kcmButtonIcon
-                        source: modelData.kcmIconName
-                        Layout.alignment: Qt.AlignLeft
-                        Layout.preferredHeight: Kirigami.Units.iconSizes.medium
-                        Layout.preferredWidth: kcmButtonIcon.height
-                    }
-
-                    Kirigami.Heading {
-                        id: kcmButtonLabel
-                        text: modelData.kcmName
-                        wrapMode: Text.Wrap
-                        elide: Text.ElideRight
-                        font.weight: Font.Medium
-                        Layout.fillWidth: true
-                    }
-                }
+                name: modelData.kcmName
+                iconName: modelData.kcmIconName
+                selected: modelData.kcmId === currentModuleName
             }
         }
     }

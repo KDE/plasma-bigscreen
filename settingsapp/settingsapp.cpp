@@ -3,6 +3,9 @@
 
 #include "settingsapp.h"
 
+#include <QProcess>
+#include <QStandardPaths>
+
 SettingsApp::SettingsApp(QObject *parent)
     : QObject{parent}
 {
@@ -31,4 +34,16 @@ QString SettingsApp::launchModule() const
 void SettingsApp::setLaunchModule(QString launchModule)
 {
     m_launchModule = launchModule;
+}
+
+void SettingsApp::openDesktopSettings()
+{
+    QProcess *process = new QProcess{this};
+    connect(process, &QProcess::finished, process, &QProcess::deleteLater);
+
+    QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
+    env.insert("PLASMA_PLATFORM", "desktop");
+    process->setProcessEnvironment(env);
+    process->setProgram("systemsettings");
+    process->startDetached();
 }

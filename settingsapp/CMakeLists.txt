@@ -21,6 +21,7 @@ ecm_target_qml_sources(plasma-bigscreen-settings
     qml/Main.qml
     qml/ConfigWindowSidebar.qml
     qml/KCMContainer.qml
+    qml/SidebarDelegate.qml
 )
 
 target_link_libraries(plasma-bigscreen-settings

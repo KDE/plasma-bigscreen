@@ -25,6 +25,8 @@ public:
     QString launchModule() const;
     void setLaunchModule(QString launchModule);
 
+    Q_INVOKABLE void openDesktopSettings();
+
 private:
     QString m_launchModule;
 };
