@@ -6,6 +6,7 @@ Name[ar]=معالج إدخال لبلازما الشاشة الكبيرة
 Name[ca]=Gestor d'entrada del Plasma Bigscreen
 Name[ca@valencia]=Gestor d'entrada de Plasma Bigscreen
 Name[es]=Controlador de entrada de Plasma Bigscreen
+Name[eu]=Plasma Bigscreen sarrera maneiatzailea
 Name[fr]=Gestionnaire d'entrées pour Plasma Bigscreen
 Name[he]=מטפל הקלט לפלזמה למסכים גדולים
 Name[ia]=MAneator de ingresso de Plasma Bigscreen
