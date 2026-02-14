@@ -3,20 +3,19 @@
 # This file is distributed under the same license as the plasma-bigscreen package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:46+0000\n"
+"POT-Creation-Date: 2026-02-14 00:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
-"Language: ga\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -26,6 +25,11 @@ msgstr ""
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
+msgstr ""
+
+#: kcmslistmodel.cpp:112
+#, kde-format
+msgid "Desktop Settings"
 msgstr ""
 
 #: main.cpp:34
@@ -48,7 +52,19 @@ msgstr ""
 msgid "Settings module to open"
 msgstr ""
 
-#: qml/ConfigWindowSidebar.qml:41
+#: qml/ConfigWindowSidebar.qml:43
 #, kde-format
 msgid "Settings"
+msgstr ""
+
+#: qml/ConfigWindowSidebar.qml:84
+#, kde-format
+msgid "Open desktop settings?"
+msgstr ""
+
+#: qml/ConfigWindowSidebar.qml:89
+#, kde-format
+msgid ""
+"The desktop settings application does not support key navigation, a mouse "
+"may be required. However, it contains extra settings that may be useful."
 msgstr ""

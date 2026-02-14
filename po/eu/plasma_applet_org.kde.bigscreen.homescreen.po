@@ -1,16 +1,16 @@
 # Translation for plasma_applet_org.kde.mycroft.bigscreen.homescreen.po to Euskara/Basque (eu).
-# Copyright (C) 2020-2025 This file is copyright:
+# Copyright (C) 2020-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# SPDX-FileCopyrightText: 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2021, 2022, 2024, 2025.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2021, 2022, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-05 00:45+0000\n"
-"PO-Revision-Date: 2025-08-14 11:46+0200\n"
+"PO-Revision-Date: 2026-02-13 22:43+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -38,7 +38,7 @@ msgstr "Urrutiko Gogokoak"
 #: contents/ui/homeoverlay/MainColumn.qml:114
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "Harrera"
 
 #: contents/ui/homeoverlay/MainColumn.qml:127
 #: contents/ui/indicators/Search.qml:16
@@ -54,22 +54,22 @@ msgstr "Atazak"
 #: contents/ui/homeoverlay/MainColumn.qml:165
 #, kde-format
 msgid "Controller"
-msgstr ""
+msgstr "Kontrolatzailea"
 
 #: contents/ui/homeoverlay/MainColumn.qml:166
 #, kde-format
 msgid "Currently capturing keys…"
-msgstr ""
+msgstr "Teklak atzematen…"
 
 #: contents/ui/homeoverlay/MainColumn.qml:166
 #, kde-format
 msgid "Key capture off"
-msgstr ""
+msgstr "Teklak atzematea desaktibatuta"
 
 #: contents/ui/homeoverlay/MainColumn.qml:186
 #, kde-format
 msgid "On-screen Keyboard"
-msgstr ""
+msgstr "Pantailako teklatua"
 
 #: contents/ui/homeoverlay/MainColumn.qml:200
 #: contents/ui/indicators/Settings.qml:18
@@ -80,18 +80,17 @@ msgstr "Ezarpenak"
 #: contents/ui/homeoverlay/TaskDelegate.qml:122
 #, kde-format
 msgid "Hold to close…"
-msgstr ""
+msgstr "Eutsi ixteko…"
 
 #: contents/ui/homeoverlay/TasksView.qml:111
-#, fuzzy, kde-format
-#| msgid "Voice Apps"
+#, kde-format
 msgid "Open Apps"
-msgstr "Ahots aplikazioak"
+msgstr "Ireki aplikazioak"
 
 #: contents/ui/homeoverlay/TasksView.qml:162
 #, kde-format
 msgid "Close all apps"
-msgstr ""
+msgstr "Itxi aplikazio guztiak"
 
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
@@ -166,45 +165,44 @@ msgstr "Jokoak"
 #: contents/ui/main.qml:101
 #, kde-format
 msgid "Controller added: %1"
-msgstr ""
+msgstr "Kontrolatzailea gehitu da: %1"
 
 #: contents/ui/main.qml:105
 #, kde-format
 msgid "Controller removed: %1"
-msgstr ""
+msgstr "Kontrolatzailea kendu da: %1"
 
 #: contents/ui/main.qml:109
 #, kde-format
 msgid "Remote added: %1"
-msgstr ""
+msgstr "Urruneko agintea gehitu da: %1"
 
 #: contents/ui/main.qml:113
 #, kde-format
 msgid "Remote removed: %1"
-msgstr ""
+msgstr "Urruneko agintea kendu da: %1"
 
 #: contents/ui/main.qml:117
 #, kde-format
 msgid "System taking over controller input"
-msgstr ""
+msgstr "Sistemak kontrolatzailearen sarrera bere gain hartzen du"
 
 #: contents/ui/main.qml:120
 #, kde-format
 msgid "Application taking over controller input"
-msgstr ""
+msgstr "Aplikazioak kontrolatzailearen sarrera bere gain hartzen du"
 
 #: contents/ui/PowerManagementItem.qml:24
-#, fuzzy, kde-format
-#| msgid "Bigscreen has enabled system-wide inhibition"
+#, kde-format
 msgctxt "@info"
 msgid "Plasma Bigscreen has enabled system-wide inhibition"
-msgstr "Bigscreen-ek sistema osoan inhibizioa gaitu du"
+msgstr "Plasma Bigscreen-ek sistema osoko inhibizioa gaitu du"
 
 #: contents/ui/search/SearchTextField.qml:24
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr "Bilatu..."
+msgstr "Bilatu…"
 
 #~ msgid "Voice Applications"
 #~ msgstr "Ahots-aplikazioak"

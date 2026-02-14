@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:46+0000\n"
+"POT-Creation-Date: 2026-02-14 00:45+0000\n"
 "PO-Revision-Date: 2025-07-28 19:40\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -28,6 +28,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "tds00@qq.com"
 
+#: kcmslistmodel.cpp:112
+#, fuzzy, kde-format
+#| msgid "Settings"
+msgid "Desktop Settings"
+msgstr "设置"
+
 #: main.cpp:34
 #, kde-format
 msgid "Bigscreen Settings"
@@ -48,7 +54,19 @@ msgstr "Copyright 2025 Plasma developers"
 msgid "Settings module to open"
 msgstr "要打开的设置模块"
 
-#: qml/ConfigWindowSidebar.qml:41
+#: qml/ConfigWindowSidebar.qml:43
 #, kde-format
 msgid "Settings"
 msgstr "设置"
+
+#: qml/ConfigWindowSidebar.qml:84
+#, kde-format
+msgid "Open desktop settings?"
+msgstr ""
+
+#: qml/ConfigWindowSidebar.qml:89
+#, kde-format
+msgid ""
+"The desktop settings application does not support key navigation, a mouse "
+"may be required. However, it contains extra settings that may be useful."
+msgstr ""

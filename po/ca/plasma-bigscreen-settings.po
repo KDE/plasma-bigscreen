@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:46+0000\n"
+"POT-Creation-Date: 2026-02-14 00:45+0000\n"
 "PO-Revision-Date: 2025-07-27 11:51+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -28,6 +28,12 @@ msgstr "Josep M. Ferrer"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "txemaq@gmail.com"
+
+#: kcmslistmodel.cpp:112
+#, fuzzy, kde-format
+#| msgid "Settings"
+msgid "Desktop Settings"
+msgstr "Configuració"
 
 #: main.cpp:34
 #, kde-format
@@ -49,7 +55,19 @@ msgstr "Copyright 2025 Plasma developers"
 msgid "Settings module to open"
 msgstr "Mòdul de configuració a obrir"
 
-#: qml/ConfigWindowSidebar.qml:41
+#: qml/ConfigWindowSidebar.qml:43
 #, kde-format
 msgid "Settings"
 msgstr "Configuració"
+
+#: qml/ConfigWindowSidebar.qml:84
+#, kde-format
+msgid "Open desktop settings?"
+msgstr ""
+
+#: qml/ConfigWindowSidebar.qml:89
+#, kde-format
+msgid ""
+"The desktop settings application does not support key navigation, a mouse "
+"may be required. However, it contains extra settings that may be useful."
+msgstr ""
