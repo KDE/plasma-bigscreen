@@ -1,16 +1,16 @@
 # Translation for plasma-bigscreen-settings.po to Euskara/Basque (eu).
-# Copyright (C) 2025 This file is copyright:
+# Copyright (C) 2025-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# SPDX-FileCopyrightText: 2025 Iñigo Salvador Azurmendi <xalba@ni.eus>
+# SPDX-FileCopyrightText: Iñigo Salvador Azurmendi <xalba@ni.eus>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-14 00:45+0000\n"
-"PO-Revision-Date: 2025-07-28 14:24+0200\n"
+"PO-Revision-Date: 2026-02-14 09:13+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,10 +31,9 @@ msgid "Your emails"
 msgstr "xalba@ni.eus"
 
 #: kcmslistmodel.cpp:112
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgid "Desktop Settings"
-msgstr "Ezarpenak"
+msgstr "Mahaigaineko ezarpenak"
 
 #: main.cpp:34
 #, kde-format
@@ -64,7 +63,7 @@ msgstr "Ezarpenak"
 #: qml/ConfigWindowSidebar.qml:84
 #, kde-format
 msgid "Open desktop settings?"
-msgstr ""
+msgstr "Mahaigaineko ezarpenak ireki?"
 
 #: qml/ConfigWindowSidebar.qml:89
 #, kde-format
@@ -72,3 +71,6 @@ msgid ""
 "The desktop settings application does not support key navigation, a mouse "
 "may be required. However, it contains extra settings that may be useful."
 msgstr ""
+"Mahaigaineko ezarpenen aplikazioak ez du tekla bidezko nabigazioa onartzen, "
+"baliteke sagua behar izatea. Hala ere, erabilgarriak izan daitezkeen "
+"aparteko ezarpenak ditu."

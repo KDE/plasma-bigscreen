@@ -29,10 +29,9 @@ msgid "Your emails"
 msgstr "tds00@qq.com"
 
 #: kcmslistmodel.cpp:112
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgid "Desktop Settings"
-msgstr "设置"
+msgstr ""
 
 #: main.cpp:34
 #, kde-format
