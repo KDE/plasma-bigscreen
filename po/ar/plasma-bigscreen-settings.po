@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# SPDX-FileCopyrightText: 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-14 00:45+0000\n"
-"PO-Revision-Date: 2025-08-03 10:52+0400\n"
+"PO-Revision-Date: 2026-02-15 20:49+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -29,10 +29,9 @@ msgid "Your emails"
 msgstr "zayed.alsaidi@gmail.com"
 
 #: kcmslistmodel.cpp:112
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgid "Desktop Settings"
-msgstr "إعدادات"
+msgstr "إعدادات سطح المكتب"
 
 #: main.cpp:34
 #, kde-format
@@ -62,7 +61,7 @@ msgstr "إعدادات"
 #: qml/ConfigWindowSidebar.qml:84
 #, kde-format
 msgid "Open desktop settings?"
-msgstr ""
+msgstr "هل تفتح إعدادات سطح المكتب؟"
 
 #: qml/ConfigWindowSidebar.qml:89
 #, kde-format
@@ -70,3 +69,5 @@ msgid ""
 "The desktop settings application does not support key navigation, a mouse "
 "may be required. However, it contains extra settings that may be useful."
 msgstr ""
+"لا يدعم تطبيق إعدادات سطح المكتب التنقل باستخدام المفاتيح، وقد يلزم استخدام "
+"الفأرة. ومع ذلك، فإنه يحتوي على إعدادات إضافية قد تكون مفيدة."

@@ -31,7 +31,7 @@ msgstr "tds00@qq.com"
 #: kcmslistmodel.cpp:112
 #, kde-format
 msgid "Desktop Settings"
-msgstr ""
+msgstr "桌面设置"
 
 #: main.cpp:34
 #, kde-format
@@ -61,7 +61,7 @@ msgstr "设置"
 #: qml/ConfigWindowSidebar.qml:84
 #, kde-format
 msgid "Open desktop settings?"
-msgstr ""
+msgstr "打开桌面设置？"
 
 #: qml/ConfigWindowSidebar.qml:89
 #, kde-format
@@ -69,3 +69,5 @@ msgid ""
 "The desktop settings application does not support key navigation, a mouse "
 "may be required. However, it contains extra settings that may be useful."
 msgstr ""
+"桌面设置应用程序不支持按键导航，可能需要通过鼠标操作。它包含可能有用的额外设"
+"置。"
