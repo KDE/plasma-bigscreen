@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-05 00:45+0000\n"
-"PO-Revision-Date: 2026-01-13 19:50+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2026-02-17 20:54+0200\n"
+"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -17,27 +17,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
 msgid "Favorites Manager"
-msgstr ""
+msgstr "Управление избранным"
 
 #: contents/ui/FavoritesManager.qml:54
 #, kde-format
 msgid "Add Favorites"
-msgstr ""
+msgstr "Добавить в избранное"
 
 #: contents/ui/FavoritesManager.qml:119
 #, kde-format
 msgid "Remove Favorites"
-msgstr ""
+msgstr "Удалить из избранного"
 
 #: contents/ui/homeoverlay/MainColumn.qml:114
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "Домашняя страница"
 
 #: contents/ui/homeoverlay/MainColumn.qml:127
 #: contents/ui/indicators/Search.qml:16
@@ -53,22 +53,22 @@ msgstr "Приложения"
 #: contents/ui/homeoverlay/MainColumn.qml:165
 #, kde-format
 msgid "Controller"
-msgstr ""
+msgstr "Контроллер"
 
 #: contents/ui/homeoverlay/MainColumn.qml:166
 #, kde-format
 msgid "Currently capturing keys…"
-msgstr ""
+msgstr "Идёт захват клавиш…"
 
 #: contents/ui/homeoverlay/MainColumn.qml:166
 #, kde-format
 msgid "Key capture off"
-msgstr ""
+msgstr "Захват клавиш выключен"
 
 #: contents/ui/homeoverlay/MainColumn.qml:186
 #, kde-format
 msgid "On-screen Keyboard"
-msgstr ""
+msgstr "Экранная клавиатура"
 
 #: contents/ui/homeoverlay/MainColumn.qml:200
 #: contents/ui/indicators/Settings.qml:18
@@ -79,28 +79,27 @@ msgstr "Параметры"
 #: contents/ui/homeoverlay/TaskDelegate.qml:122
 #, kde-format
 msgid "Hold to close…"
-msgstr ""
+msgstr "Удерживайте для закрытия…"
 
 #: contents/ui/homeoverlay/TasksView.qml:111
-#, fuzzy, kde-format
-#| msgid "Voice Apps"
+#, kde-format
 msgid "Open Apps"
-msgstr "Приложения с управлением голосом"
+msgstr "Открыть приложения"
 
 #: contents/ui/homeoverlay/TasksView.qml:162
 #, kde-format
 msgid "Close all apps"
-msgstr ""
+msgstr "Закрыть все приложения"
 
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
 msgid "Battery: %1%"
-msgstr ""
+msgstr "Заряд батареи: %1%"
 
 #: contents/ui/indicators/Favorites.qml:17
 #, kde-format
 msgid "Customize Favorites"
-msgstr ""
+msgstr "Настройка избранного"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -125,7 +124,7 @@ msgstr "Отмена"
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Exit Bigscreen"
-msgstr ""
+msgstr "Выйти из Bigscreen"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
@@ -165,39 +164,38 @@ msgstr "Игры"
 #: contents/ui/main.qml:101
 #, kde-format
 msgid "Controller added: %1"
-msgstr ""
+msgstr "Контроллер добавлен: %1"
 
 #: contents/ui/main.qml:105
 #, kde-format
 msgid "Controller removed: %1"
-msgstr ""
+msgstr "Контроллер удалён : %1"
 
 #: contents/ui/main.qml:109
 #, kde-format
 msgid "Remote added: %1"
-msgstr ""
+msgstr "Пульт добавлен: %1"
 
 #: contents/ui/main.qml:113
 #, kde-format
 msgid "Remote removed: %1"
-msgstr ""
+msgstr "Пульт удалён: %1"
 
 #: contents/ui/main.qml:117
 #, kde-format
 msgid "System taking over controller input"
-msgstr ""
+msgstr "Управление вводом с контроллера перехвачено системой"
 
 #: contents/ui/main.qml:120
 #, kde-format
 msgid "Application taking over controller input"
-msgstr ""
+msgstr "Приложение, перехватывающее управление с контроллера"
 
 #: contents/ui/PowerManagementItem.qml:24
-#, fuzzy, kde-format
-#| msgid "Bigscreen has enabled system-wide inhibition"
+#, kde-format
 msgctxt "@info"
 msgid "Plasma Bigscreen has enabled system-wide inhibition"
-msgstr "Bigscreen было включено общесистемное состояние блокировки"
+msgstr "В Plasma Bigscreen включено общесистемное состояние блокировки"
 
 #: contents/ui/search/SearchTextField.qml:24
 #, kde-format
