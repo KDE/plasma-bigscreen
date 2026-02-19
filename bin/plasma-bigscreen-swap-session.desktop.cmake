@@ -67,6 +67,7 @@ Comment[nl]=Omschakelen in een Plasma Bigscreen-sessie
 Comment[pl]=Przełącz na posiedzenie Dużego Ekranu Plazmy
 Comment[pt]=Mudar para uma sessão do Plasma Bigscreen
 Comment[pt_BR]=Mudar para uma sessão de Plasma na Tela Grande
+Comment[ru]=Переключиться в сеанс Plasma Bigscreen
 Comment[sl]=Preklopi na sejo na velikega zaslona Plasme
 Comment[sv]=Byt till en Plasma storbildsskärm-session
 Comment[tr]=Bir Plasma Büyük Ekran oturumuna geçiş yapın

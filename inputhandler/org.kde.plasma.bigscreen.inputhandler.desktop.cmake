@@ -16,6 +16,7 @@ Name[ko]=Plasma 큰 화면 입력 처리기
 Name[nl]=Plasma Bigscreen behandelaar van invoer
 Name[pt]=Gestor de entrada do Plasma Bigscreen
 Name[pt_BR]=Manipulador de entrada do Plasma Bigscreen
+Name[ru]=Обработчик ввода Plasma Bigscreen
 Name[sl]=Upravljalnik vhoda za veliki zaslon Plasma
 Name[sv]=Plasma storbildsskärm inmatningshantering
 Name[tr]=Plasma Büyük Ekran Giriş İşleyicisi
