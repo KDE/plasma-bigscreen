@@ -13,9 +13,17 @@ import org.kde.bigscreen as Bigscreen
 import org.kde.kirigami as Kirigami
 
 Item {
-    id: notReachableDevice
+    id: root
     Layout.fillWidth: true
     Layout.fillHeight: true
+
+    signal unpairRequested()
+
+    onActiveFocusChanged: {
+        if (activeFocus) {
+            unpairBtn.forceActiveFocus();
+        }
+    }
 
     ColumnLayout {
         anchors.fill: parent
@@ -25,6 +33,14 @@ Item {
             text: i18n("This device is not reachable")
             raisedBackground: false
         }
+
+        Bigscreen.ButtonDelegate {
+            id: unpairBtn
+            onClicked: root.unpairRequested()
+            text: i18n("Unpair")
+            icon.name: 'network-disconnect'
+        }
+
         Item { Layout.fillHeight: true }
     }
 }

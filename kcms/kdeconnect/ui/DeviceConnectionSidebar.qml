@@ -39,18 +39,12 @@ Bigscreen.SidebarOverlay {
     onIsReachableChanged: checkCurrentStatus()
 
     function checkCurrentStatus() {
-        // if (currentDevice.isPairRequested) {
-        //     deviceStackLayout.currentIndex = 1;
-        // } else
-        // disable pairing request handler in kcm as indicator handles pairing in bigscreen
-
         if (currentDevice.isReachable) {
             if (currentDevice.isPaired) {
-                deviceIconStatus.source = currentDevice.statusIconName
                 deviceStackLayout.currentIndex = 2
-
+            } else if (currentDevice.isPairRequested) {
+                deviceStackLayout.currentIndex = 1;
             } else {
-                deviceIconStatus.source = currentDevice.iconName
                 deviceStackLayout.currentIndex = 0
             }
 
@@ -99,10 +93,21 @@ Bigscreen.SidebarOverlay {
 
             Delegates.PairedView {
                 id: pairedView
-                onUnpairRequested: root.currentDevice.unpair()
+                onUnpairRequested: {
+                    root.currentDevice.unpair()
+                    root.close()
+                    connectionView.forceActiveFocus();
+                }
             }
 
-            Delegates.Unreachable { id: unreachableView }
+            Delegates.Unreachable { 
+                id: unreachableView
+                onUnpairRequested: {
+                    root.currentDevice.unpair()
+                    root.close()
+                    connectionView.forceActiveFocus();
+                }   
+            }
         }
     }
 }
