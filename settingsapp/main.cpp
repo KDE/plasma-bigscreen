@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
                          QStringLiteral("0.1"),
                          i18n("Plasma Bigscreen Settings"),
                          KAboutLicense::GPL,
-                         i18n("Copyright 2025 Plasma developers"));
+                         i18n("© 2025 Plasma developers"));
 
     QCommandLineOption moduleOption{QStringLiteral("m"), QStringLiteral("module"), i18n("Settings module to open"), QString()};
     QCommandLineParser parser;

@@ -43,7 +43,7 @@
                 "Name[zh_TW]": "Marco Martin"
             }
         ],
-        "Description": "Plasma Plasma Big Screen look and feel",
+        "Description": "Plasma Bigscreen look and feel",
         "Description[ar]": "مظهر  وشكل بلازما الشاشة الكبيرة",
         "Description[bg]": "Външен изглед на Plasma Big Screen",
         "Description[ca@valencia]": "Aparença i comportament de la Big Screen de Plasma",
@@ -78,7 +78,7 @@
         "Description[zh_TW]": "Plasma Plasma 大螢幕外觀及感覺",
         "Id": "org.kde.plasma.bigscreen",
         "License": "GPLv2+",
-        "Name": "Plasma Big Screen",
+        "Name": "Plasma Bigscreen",
         "Name[ar]": "بلازما الشاشة الكبيرة",
         "Name[az]": "Plasma Böyük Ekran",
         "Name[bg]": "Plasma Big Screen",

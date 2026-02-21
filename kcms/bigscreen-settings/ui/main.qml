@@ -119,7 +119,7 @@ Kirigami.ScrollablePage {
             KeyNavigation.down: settingsShortcutDelegate
 
             icon.name: "preferences-system-time"
-            text: i18n("Adjust date & time")
+            text: i18n("Adjust date and time")
 
             onClicked: deviceTimeSettings.open()
         }

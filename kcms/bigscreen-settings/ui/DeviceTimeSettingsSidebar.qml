@@ -43,7 +43,7 @@ Bigscreen.SidebarOverlay {
 
     header: Bigscreen.SidebarOverlayHeader {
         iconSource: "preferences-system-time"
-        title: i18n("Adjust Date & Time Settings")
+        title: i18n("Adjust Date and Time Settings")
     }
 
     content: ColumnLayout {

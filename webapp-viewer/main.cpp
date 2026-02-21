@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
                          QStringLiteral("0.1"),
                          i18n("Plasma Bigscreen Webapp runtime"),
                          KAboutLicense::GPL,
-                         i18n("Copyright 2025 Plasma developers"));
+                         i18n("© 2025 Plasma developers"));
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral()));
 
     KAboutData::setApplicationData(aboutData);
