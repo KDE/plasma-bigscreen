@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-02-21 00:47+0000\n"
 "PO-Revision-Date: 2021-01-23 21:40+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "This device is paired"
 msgstr "Bu cihaz birləşdirildi"
 
-#: ui/delegates/PairedView.qml:43
+#: ui/delegates/PairedView.qml:43 ui/delegates/Unreachable.qml:40
 #, kde-format
 msgid "Unpair"
 msgstr "Ayırmaq"
@@ -58,7 +58,7 @@ msgstr "Birləşmə sorğusu cihaza göndərildi"
 msgid "Pair"
 msgstr "Birləşmə"
 
-#: ui/delegates/Unreachable.qml:25
+#: ui/delegates/Unreachable.qml:33
 #, kde-format
 msgid "This device is not reachable"
 msgstr "Bu cihaz əlçatmazdır"

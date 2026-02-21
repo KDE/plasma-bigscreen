@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-02-21 00:47+0000\n"
 "PO-Revision-Date: 2020-04-04 12:32+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "This device is paired"
 msgstr "See seade on paaristatud"
 
-#: ui/delegates/PairedView.qml:43
+#: ui/delegates/PairedView.qml:43 ui/delegates/Unreachable.qml:40
 #, kde-format
 msgid "Unpair"
 msgstr "Lahuta paaristus"
@@ -58,7 +58,7 @@ msgstr "Seadmele saadeti paaristamissoov"
 msgid "Pair"
 msgstr "Paarista"
 
-#: ui/delegates/Unreachable.qml:25
+#: ui/delegates/Unreachable.qml:33
 #, kde-format
 msgid "This device is not reachable"
 msgstr "See seade ei ole kättesaadav"

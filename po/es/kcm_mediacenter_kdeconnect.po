@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_kdeconnect\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-02-21 00:47+0000\n"
 "PO-Revision-Date: 2025-08-30 19:23+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "This device is paired"
 msgstr "Este dispositivo está vinculado"
 
-#: ui/delegates/PairedView.qml:43
+#: ui/delegates/PairedView.qml:43 ui/delegates/Unreachable.qml:40
 #, kde-format
 msgid "Unpair"
 msgstr "Desvincular"
@@ -59,7 +59,7 @@ msgstr "Petición de vinculación enviada"
 msgid "Pair"
 msgstr "Vincular"
 
-#: ui/delegates/Unreachable.qml:25
+#: ui/delegates/Unreachable.qml:33
 #, kde-format
 msgid "This device is not reachable"
 msgstr "Este dispositivo no está presente"

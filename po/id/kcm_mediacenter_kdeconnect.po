@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-02-21 00:47+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "This device is paired"
 msgstr "Perangkat ini sudah disandingkan"
 
-#: ui/delegates/PairedView.qml:43
+#: ui/delegates/PairedView.qml:43 ui/delegates/Unreachable.qml:40
 #, kde-format
 msgid "Unpair"
 msgstr "Leraikan"
@@ -58,7 +58,7 @@ msgstr "Permintaan penyandingan dikirim ke peranti"
 msgid "Pair"
 msgstr "Sandingkan"
 
-#: ui/delegates/Unreachable.qml:25
+#: ui/delegates/Unreachable.qml:33
 #, kde-format
 msgid "This device is not reachable"
 msgstr "Perangkat ini belum bisa diraih"
