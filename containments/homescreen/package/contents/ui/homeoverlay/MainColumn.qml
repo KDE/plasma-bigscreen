@@ -141,7 +141,7 @@ ColumnLayout {
                 KeyNavigation.up: searchButton
 
                 visible: showTasksButton
-                text: i18n("Tasks")
+                text: i18nc("@action:button Opens an overview of all currently running apps", "Tasks")
                 icon.name: "transform-shear-up"
 
                 onClicked: {

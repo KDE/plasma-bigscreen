@@ -108,7 +108,7 @@ Rectangle {
             Layout.margins: Kirigami.Units.gridUnit
             Layout.topMargin: Kirigami.Units.gridUnit * 2
 
-            text: i18n("Open Apps")
+            text: i18nc("As in: These apps are currently opened", "Open Apps")
             font.pixelSize: 32
             font.weight: Font.Light
 

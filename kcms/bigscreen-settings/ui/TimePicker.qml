@@ -69,7 +69,7 @@ Item {
 
             Label {
                 anchors.fill: parent
-                text: i18n("Second")
+                text: i18nc("unit of time", "Second")
                 color: Kirigami.Theme.textColor
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter

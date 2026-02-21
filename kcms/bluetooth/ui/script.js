@@ -24,7 +24,7 @@ function deviceTypeToString(device) {
         case BluezQt.Device.AudioVideo:
             return i18nc("This device is an Audio/Video device", "Multimedia");
         case BluezQt.Device.Keyboard:
-            return i18nc("This device is a Keyboard", "Keyboard");
+            return i18nc("This device is a Keyboard (not the music instrument)", "Keyboard");
         case BluezQt.Device.Mouse:
             return i18nc("This device is a Mouse", "Mouse");
         case BluezQt.Device.Joypad:
