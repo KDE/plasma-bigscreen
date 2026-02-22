@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# SPDX-FileCopyrightText: 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-14 00:45+0000\n"
-"PO-Revision-Date: 2025-08-30 08:24+0200\n"
+"PO-Revision-Date: 2026-02-21 09:05+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -29,10 +29,9 @@ msgid "Your emails"
 msgstr "lukasz.wojnilowicz@gmail.com"
 
 #: kcmslistmodel.cpp:112
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgid "Desktop Settings"
-msgstr "Ustawienia"
+msgstr "Ustawienia pulpitu"
 
 #: main.cpp:34
 #, kde-format
@@ -62,7 +61,7 @@ msgstr "Ustawienia"
 #: qml/ConfigWindowSidebar.qml:84
 #, kde-format
 msgid "Open desktop settings?"
-msgstr ""
+msgstr "Czy otworzyć ustawienia pulpitu?"
 
 #: qml/ConfigWindowSidebar.qml:89
 #, kde-format
@@ -70,3 +69,6 @@ msgid ""
 "The desktop settings application does not support key navigation, a mouse "
 "may be required. However, it contains extra settings that may be useful."
 msgstr ""
+"Aplikacja ustawień pulpitu nie obsługuje poruszania się z klawiatury. "
+"Wymagana jest mysz. Jednakże zawiera ona dodatkowe ustawienia, które mogą "
+"okazać się użyteczne."
