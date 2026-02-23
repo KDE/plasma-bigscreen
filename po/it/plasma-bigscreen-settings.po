@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# SPDX-FileCopyrightText: 2025 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-14 00:45+0000\n"
-"PO-Revision-Date: 2025-07-27 20:08+0200\n"
+"PO-Revision-Date: 2026-02-14 12:33+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.11.70\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,10 +28,9 @@ msgid "Your emails"
 msgstr "smart2128vr@gmail.com"
 
 #: kcmslistmodel.cpp:112
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgid "Desktop Settings"
-msgstr "Impostazioni"
+msgstr "Impostazioni del desktop"
 
 #: main.cpp:34
 #, kde-format
@@ -61,7 +60,7 @@ msgstr "Impostazioni"
 #: qml/ConfigWindowSidebar.qml:84
 #, kde-format
 msgid "Open desktop settings?"
-msgstr ""
+msgstr "Vuoi aprire le impostazioni del desktop?"
 
 #: qml/ConfigWindowSidebar.qml:89
 #, kde-format
@@ -69,3 +68,6 @@ msgid ""
 "The desktop settings application does not support key navigation, a mouse "
 "may be required. However, it contains extra settings that may be useful."
 msgstr ""
+"L'applicazione delle impostazioni del desktop non supporta la navigazione "
+"tramite tasti, potrebbe essere necessario un mouse. Tuttavia, contiene "
+"impostazioni aggiuntive che potrebbero essere utili."
