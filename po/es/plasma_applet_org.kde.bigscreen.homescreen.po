@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-05 00:45+0000\n"
+"POT-Creation-Date: 2026-02-28 00:46+0000\n"
 "PO-Revision-Date: 2026-02-01 00:26+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -45,7 +45,9 @@ msgid "Search"
 msgstr "Buscar"
 
 #: contents/ui/homeoverlay/MainColumn.qml:144
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tasks"
+msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "Tareas"
 
@@ -81,7 +83,9 @@ msgid "Hold to close…"
 msgstr "Mantener para cerrar…"
 
 #: contents/ui/homeoverlay/TasksView.qml:111
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Apps"
+msgctxt "As in: These apps are currently opened"
 msgid "Open Apps"
 msgstr "Abrir aplicaciones"
 

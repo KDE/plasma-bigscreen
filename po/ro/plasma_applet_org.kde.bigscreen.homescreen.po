@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-05 00:45+0000\n"
+"POT-Creation-Date: 2026-02-28 00:46+0000\n"
 "PO-Revision-Date: 2026-02-04 14:52+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -45,7 +45,9 @@ msgid "Search"
 msgstr "Căutare"
 
 #: contents/ui/homeoverlay/MainColumn.qml:144
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tasks"
+msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "Sarcini"
 
@@ -81,7 +83,9 @@ msgid "Hold to close…"
 msgstr "Țineți pentru a închide…"
 
 #: contents/ui/homeoverlay/TasksView.qml:111
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Apps"
+msgctxt "As in: These apps are currently opened"
 msgid "Open Apps"
 msgstr "Aplicații deschise"
 

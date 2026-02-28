@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-24 00:45+0000\n"
+"POT-Creation-Date: 2026-02-28 00:46+0000\n"
 "PO-Revision-Date: 2025-08-30 08:19+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -151,8 +151,10 @@ msgid "Multimedia"
 msgstr "Multimedia"
 
 #: ui/script.js:27
-#, kde-format
-msgctxt "This device is a Keyboard"
+#, fuzzy, kde-format
+#| msgctxt "This device is a Keyboard"
+#| msgid "Keyboard"
+msgctxt "This device is a Keyboard (not the music instrument)"
 msgid "Keyboard"
 msgstr "Klawiatura"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-07 00:45+0000\n"
+"POT-Creation-Date: 2026-02-28 00:46+0000\n"
 "PO-Revision-Date: 2021-08-12 22:31-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -41,7 +41,7 @@ msgstr ""
 
 #: ui/DeviceTimeSettingsSidebar.qml:46
 #, kde-format
-msgid "Adjust Date & Time Settings"
+msgid "Adjust Date and Time Settings"
 msgstr ""
 
 #: ui/DeviceTimeSettingsSidebar.qml:55
@@ -137,7 +137,7 @@ msgstr ""
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Adjust date & time"
+msgid "Adjust date and time"
 msgstr ""
 
 #: ui/main.qml:128
@@ -187,6 +187,7 @@ msgstr ""
 
 #: ui/TimePicker.qml:72
 #, kde-format
+msgctxt "unit of time"
 msgid "Second"
 msgstr ""
 

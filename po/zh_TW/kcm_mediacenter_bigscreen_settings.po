@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-07 00:45+0000\n"
+"POT-Creation-Date: 2026-02-28 00:46+0000\n"
 "PO-Revision-Date: 2026-01-28 21:30+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -46,8 +46,9 @@ msgid "Day"
 msgstr "日"
 
 #: ui/DeviceTimeSettingsSidebar.qml:46
-#, kde-format
-msgid "Adjust Date & Time Settings"
+#, fuzzy, kde-format
+#| msgid "Adjust Date & Time Settings"
+msgid "Adjust Date and Time Settings"
 msgstr "調整日期和時間設定值"
 
 #: ui/DeviceTimeSettingsSidebar.qml:55
@@ -144,8 +145,9 @@ msgid "Power inhibition"
 msgstr "電源阻擋"
 
 #: ui/main.qml:122
-#, kde-format
-msgid "Adjust date & time"
+#, fuzzy, kde-format
+#| msgid "Adjust date & time"
+msgid "Adjust date and time"
 msgstr "調整日期和時間"
 
 #: ui/main.qml:128
@@ -194,7 +196,9 @@ msgid "Minute"
 msgstr "分"
 
 #: ui/TimePicker.qml:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Second"
+msgctxt "unit of time"
 msgid "Second"
 msgstr "秒"
 

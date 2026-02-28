@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-02-28 00:46+0000\n"
 "PO-Revision-Date: 2025-08-12 11:11+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -53,8 +53,9 @@ msgid "Plasma Bigscreen Webapp runtime"
 msgstr "Plasma Bigscreen runtime van webtoepassing"
 
 #: main.cpp:61
-#, kde-format
-msgid "Copyright 2025 Plasma developers"
+#, fuzzy, kde-format
+#| msgid "Copyright 2025 Plasma developers"
+msgid "© 2025 Plasma developers"
 msgstr "Copyright 2025, de ontwikkelaars van Plasma"
 
 #: qml/WebView.qml:192

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-14 00:45+0000\n"
+"POT-Creation-Date: 2026-02-28 00:46+0000\n"
 "PO-Revision-Date: 2025-08-29 23:35+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -44,8 +44,9 @@ msgid "Plasma Bigscreen Settings"
 msgstr "Plasma 大螢幕設定值"
 
 #: main.cpp:38
-#, kde-format
-msgid "Copyright 2025 Plasma developers"
+#, fuzzy, kde-format
+#| msgid "Copyright 2025 Plasma developers"
+msgid "© 2025 Plasma developers"
 msgstr "版權所有 2025 Plasma 開發團隊"
 
 #: main.cpp:40

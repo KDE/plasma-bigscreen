@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-05 00:45+0000\n"
+"POT-Creation-Date: 2026-02-28 00:46+0000\n"
 "PO-Revision-Date: 2025-08-30 08:23+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -45,7 +45,9 @@ msgid "Search"
 msgstr "Poszukaj"
 
 #: contents/ui/homeoverlay/MainColumn.qml:144
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tasks"
+msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "Zadania"
 
@@ -83,6 +85,7 @@ msgstr ""
 #: contents/ui/homeoverlay/TasksView.qml:111
 #, fuzzy, kde-format
 #| msgid "Voice Apps"
+msgctxt "As in: These apps are currently opened"
 msgid "Open Apps"
 msgstr "Programy z głosem"
 

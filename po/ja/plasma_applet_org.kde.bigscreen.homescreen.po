@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-05 00:45+0000\n"
+"POT-Creation-Date: 2026-02-28 00:46+0000\n"
 "PO-Revision-Date: 2020-03-08 22:07-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -42,6 +42,7 @@ msgstr ""
 
 #: contents/ui/homeoverlay/MainColumn.qml:144
 #, kde-format
+msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr ""
 
@@ -78,6 +79,7 @@ msgstr ""
 
 #: contents/ui/homeoverlay/TasksView.qml:111
 #, kde-format
+msgctxt "As in: These apps are currently opened"
 msgid "Open Apps"
 msgstr ""
 

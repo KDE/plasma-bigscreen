@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-05 00:45+0000\n"
+"POT-Creation-Date: 2026-02-28 00:46+0000\n"
 "PO-Revision-Date: 2026-02-13 22:43+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -47,7 +47,9 @@ msgid "Search"
 msgstr "Bilatu"
 
 #: contents/ui/homeoverlay/MainColumn.qml:144
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tasks"
+msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "Atazak"
 
@@ -83,7 +85,9 @@ msgid "Hold to close…"
 msgstr "Eutsi ixteko…"
 
 #: contents/ui/homeoverlay/TasksView.qml:111
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Apps"
+msgctxt "As in: These apps are currently opened"
 msgid "Open Apps"
 msgstr "Ireki aplikazioak"
 

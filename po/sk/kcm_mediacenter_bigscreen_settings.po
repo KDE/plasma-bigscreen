@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-07 00:45+0000\n"
+"POT-Creation-Date: 2026-02-28 00:46+0000\n"
 "PO-Revision-Date: 2022-01-07 14:57+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -44,7 +44,7 @@ msgstr "Máj"
 
 #: ui/DeviceTimeSettingsSidebar.qml:46
 #, kde-format
-msgid "Adjust Date & Time Settings"
+msgid "Adjust Date and Time Settings"
 msgstr ""
 
 #: ui/DeviceTimeSettingsSidebar.qml:55
@@ -143,7 +143,7 @@ msgstr ""
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Adjust date & time"
+msgid "Adjust date and time"
 msgstr ""
 
 #: ui/main.qml:128
@@ -193,6 +193,7 @@ msgstr ""
 
 #: ui/TimePicker.qml:72
 #, kde-format
+msgctxt "unit of time"
 msgid "Second"
 msgstr ""
 

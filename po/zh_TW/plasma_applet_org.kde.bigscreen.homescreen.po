@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-05 00:45+0000\n"
+"POT-Creation-Date: 2026-02-28 00:46+0000\n"
 "PO-Revision-Date: 2026-01-28 21:29+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -48,7 +48,9 @@ msgid "Search"
 msgstr "搜尋"
 
 #: contents/ui/homeoverlay/MainColumn.qml:144
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tasks"
+msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "工作項目"
 
@@ -84,7 +86,9 @@ msgid "Hold to close…"
 msgstr "按住以關閉…"
 
 #: contents/ui/homeoverlay/TasksView.qml:111
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Apps"
+msgctxt "As in: These apps are currently opened"
 msgid "Open Apps"
 msgstr "開啟應用程式"
 
