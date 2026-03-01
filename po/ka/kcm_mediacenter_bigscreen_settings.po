@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-28 00:46+0000\n"
-"PO-Revision-Date: 2026-01-25 04:05+0100\n"
+"PO-Revision-Date: 2026-02-28 08:00+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -44,8 +44,7 @@ msgid "Day"
 msgstr "დღე"
 
 #: ui/DeviceTimeSettingsSidebar.qml:46
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time Settings"
+#, kde-format
 msgid "Adjust Date and Time Settings"
 msgstr "დროისა და თარიღის პარამეტრების გასწორება"
 
@@ -141,8 +140,7 @@ msgid "Power inhibition"
 msgstr "კვების ინჰიბიცია"
 
 #: ui/main.qml:122
-#, fuzzy, kde-format
-#| msgid "Adjust date & time"
+#, kde-format
 msgid "Adjust date and time"
 msgstr "დროისა და თარიღის გასწორება"
 
@@ -192,8 +190,7 @@ msgid "Minute"
 msgstr "წუთი"
 
 #: ui/TimePicker.qml:72
-#, fuzzy, kde-format
-#| msgid "Second"
+#, kde-format
 msgctxt "unit of time"
 msgid "Second"
 msgstr "წამი"

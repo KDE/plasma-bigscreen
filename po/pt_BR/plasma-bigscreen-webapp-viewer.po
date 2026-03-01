@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-28 00:46+0000\n"
-"PO-Revision-Date: 2025-09-14 08:46-0300\n"
+"PO-Revision-Date: 2026-02-28 06:45-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -53,10 +53,9 @@ msgid "Plasma Bigscreen Webapp runtime"
 msgstr "runtime de aplicativo Web do Plasma Bigscreen"
 
 #: main.cpp:61
-#, fuzzy, kde-format
-#| msgid "Copyright 2025 Plasma developers"
+#, kde-format
 msgid "© 2025 Plasma developers"
-msgstr "Copyright 2025 Desenvolvedores do Plasma"
+msgstr "© 2025 Desenvolvedores do Plasma"
 
 #: qml/WebView.qml:192
 #, kde-format

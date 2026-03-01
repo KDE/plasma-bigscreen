@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-28 00:46+0000\n"
-"PO-Revision-Date: 2026-01-26 06:21+0100\n"
+"PO-Revision-Date: 2026-02-28 08:00+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -45,8 +45,7 @@ msgid "Search"
 msgstr "ძებნა"
 
 #: contents/ui/homeoverlay/MainColumn.qml:144
-#, fuzzy, kde-format
-#| msgid "Tasks"
+#, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "ამოცანები"
@@ -83,8 +82,7 @@ msgid "Hold to close…"
 msgstr "გეჭიროთ დასახურად…"
 
 #: contents/ui/homeoverlay/TasksView.qml:111
-#, fuzzy, kde-format
-#| msgid "Open Apps"
+#, kde-format
 msgctxt "As in: These apps are currently opened"
 msgid "Open Apps"
 msgstr "ღია აპები"

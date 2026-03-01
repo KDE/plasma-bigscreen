@@ -54,10 +54,9 @@ msgid "Plasma Bigscreen Webapp runtime"
 msgstr "Plasma 大屏幕网页应用运行时组件"
 
 #: main.cpp:61
-#, fuzzy, kde-format
-#| msgid "Copyright 2025 Plasma developers"
+#, kde-format
 msgid "© 2025 Plasma developers"
-msgstr "Copyright 2025 Plasma developers"
+msgstr ""
 
 #: qml/WebView.qml:192
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-28 00:46+0000\n"
-"PO-Revision-Date: 2026-01-25 14:43+0100\n"
+"PO-Revision-Date: 2026-02-28 12:39+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -43,10 +43,9 @@ msgid "Day"
 msgstr "Dag"
 
 #: ui/DeviceTimeSettingsSidebar.qml:46
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time Settings"
+#, kde-format
 msgid "Adjust Date and Time Settings"
-msgstr "Instellingen van datum & tijd aanpassen"
+msgstr "Instellingen van datum en tijd aanpassen"
 
 #: ui/DeviceTimeSettingsSidebar.qml:55
 #, kde-format
@@ -143,10 +142,9 @@ msgid "Power inhibition"
 msgstr "Energie remmen"
 
 #: ui/main.qml:122
-#, fuzzy, kde-format
-#| msgid "Adjust date & time"
+#, kde-format
 msgid "Adjust date and time"
-msgstr "Datum & tijd aanpassen"
+msgstr "Datum en tijd aanpassen"
 
 #: ui/main.qml:128
 #, kde-format
@@ -194,11 +192,10 @@ msgid "Minute"
 msgstr "Minuut"
 
 #: ui/TimePicker.qml:72
-#, fuzzy, kde-format
-#| msgid "Second"
+#, kde-format
 msgctxt "unit of time"
 msgid "Second"
-msgstr "Tweede"
+msgstr "Seconde"
 
 #: ui/TimePicker.qml:89
 #, kde-format

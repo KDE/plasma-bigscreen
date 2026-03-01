@@ -44,10 +44,9 @@ msgid "Day"
 msgstr "日"
 
 #: ui/DeviceTimeSettingsSidebar.qml:46
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time Settings"
+#, kde-format
 msgid "Adjust Date and Time Settings"
-msgstr "调整日期和时间设置"
+msgstr ""
 
 #: ui/DeviceTimeSettingsSidebar.qml:55
 #, kde-format
@@ -141,10 +140,9 @@ msgid "Power inhibition"
 msgstr "阻止电源管理"
 
 #: ui/main.qml:122
-#, fuzzy, kde-format
-#| msgid "Adjust date & time"
+#, kde-format
 msgid "Adjust date and time"
-msgstr "调整日期和时间"
+msgstr ""
 
 #: ui/main.qml:128
 #, kde-format
@@ -192,11 +190,10 @@ msgid "Minute"
 msgstr "分钟"
 
 #: ui/TimePicker.qml:72
-#, fuzzy, kde-format
-#| msgid "Second"
+#, kde-format
 msgctxt "unit of time"
 msgid "Second"
-msgstr "秒"
+msgstr ""
 
 #: ui/TimePicker.qml:89
 #, kde-format

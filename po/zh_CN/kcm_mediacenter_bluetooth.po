@@ -151,12 +151,10 @@ msgid "Multimedia"
 msgstr "多媒体"
 
 #: ui/script.js:27
-#, fuzzy, kde-format
-#| msgctxt "This device is a Keyboard"
-#| msgid "Keyboard"
+#, kde-format
 msgctxt "This device is a Keyboard (not the music instrument)"
 msgid "Keyboard"
-msgstr "键盘"
+msgstr ""
 
 #: ui/script.js:29
 #, kde-format

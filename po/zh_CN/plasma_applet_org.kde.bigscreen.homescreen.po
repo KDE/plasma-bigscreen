@@ -45,11 +45,10 @@ msgid "Search"
 msgstr "搜索"
 
 #: contents/ui/homeoverlay/MainColumn.qml:144
-#, fuzzy, kde-format
-#| msgid "Tasks"
+#, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
-msgstr "任务"
+msgstr ""
 
 #: contents/ui/homeoverlay/MainColumn.qml:165
 #, kde-format
@@ -83,11 +82,10 @@ msgid "Hold to close…"
 msgstr "按住以关闭…"
 
 #: contents/ui/homeoverlay/TasksView.qml:111
-#, fuzzy, kde-format
-#| msgid "Open Apps"
+#, kde-format
 msgctxt "As in: These apps are currently opened"
 msgid "Open Apps"
-msgstr "打开应用"
+msgstr ""
 
 #: contents/ui/homeoverlay/TasksView.qml:162
 #, kde-format
