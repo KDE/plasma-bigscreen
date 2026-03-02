@@ -46,7 +46,7 @@ msgstr "Plasma 大屏幕设置"
 #: main.cpp:38
 #, kde-format
 msgid "© 2025 Plasma developers"
-msgstr ""
+msgstr "© 2025 Plasma developers"
 
 #: main.cpp:40
 #, kde-format

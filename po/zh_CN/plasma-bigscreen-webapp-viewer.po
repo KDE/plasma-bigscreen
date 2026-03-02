@@ -56,7 +56,7 @@ msgstr "Plasma 大屏幕网页应用运行时组件"
 #: main.cpp:61
 #, kde-format
 msgid "© 2025 Plasma developers"
-msgstr ""
+msgstr "© 2025 Plasma developers"
 
 #: qml/WebView.qml:192
 #, kde-format

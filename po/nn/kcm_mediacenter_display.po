@@ -1,11 +1,13 @@
-# Translation of kcm_audiodevice to Norwegian Nynorsk
+# Translation of kcm_mediacenter_display to Norwegian Nynorsk
+#
+# SPDX-FileCopyrightText: 2026 Karl Ove Hufthammer <karl@huftis.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-24 00:45+0000\n"
-"PO-Revision-Date: 2026-03-01 20:15+0100\n"
+"PO-Revision-Date: 2026-03-01 19:49+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -18,33 +20,32 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: ui/AudioDelegateSidebar.qml:49
+#: ui/main.qml:22
 #, kde-format
-msgid "Set as default device"
-msgstr "Bruk som standardeining"
+msgid "Display Configuration"
+msgstr "Skjerm­oppsett"
 
-#: ui/delegates/VolumeObject.qml:53
+#: ui/main.qml:42
 #, kde-format
-msgid "Adjust Volume"
-msgstr "Juster lydstyrke"
+msgid "Selected display"
+msgstr "Vald skjerm"
 
-#: ui/delegates/VolumeObject.qml:140
+#: ui/main.qml:74
 #, kde-format
-msgctxt "volume percentage"
-msgid "%1%"
-msgstr "%1 %"
+msgid "Display %1"
+msgstr "Skjerm %1"
 
-#: ui/main.qml:21
+#: ui/main.qml:82
 #, kde-format
-msgid "Audio Devices"
-msgstr "Lydeiningar"
+msgid "Enabled"
+msgstr "På"
 
-#: ui/main.qml:50
+#: ui/main.qml:97
 #, kde-format
-msgid "Playback Devices"
-msgstr "Avspelingseiningar"
+msgid "Screen mode (Resolution & Refresh Rate)"
+msgstr "Skjermmodus (oppløysing og oppfriskingsrate)"
 
-#: ui/main.qml:80
+#: ui/main.qml:126 ui/ScaleDialog.qml:21
 #, kde-format
-msgid "Recording Devices"
-msgstr "Opptakseiningar"
+msgid "Scale"
+msgstr "Skaler"

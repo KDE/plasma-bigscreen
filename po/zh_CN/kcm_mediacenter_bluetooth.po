@@ -154,7 +154,7 @@ msgstr "多媒体"
 #, kde-format
 msgctxt "This device is a Keyboard (not the music instrument)"
 msgid "Keyboard"
-msgstr ""
+msgstr "键盘"
 
 #: ui/script.js:29
 #, kde-format

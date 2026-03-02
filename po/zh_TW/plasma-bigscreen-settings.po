@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2025, 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-28 00:46+0000\n"
-"PO-Revision-Date: 2025-08-29 23:35+0900\n"
+"PO-Revision-Date: 2026-03-02 05:19+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -28,10 +28,9 @@ msgid "Your emails"
 msgstr "mail@kisaragi-hiu.com"
 
 #: kcmslistmodel.cpp:112
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgid "Desktop Settings"
-msgstr "設定"
+msgstr "桌面設定"
 
 #: main.cpp:34
 #, kde-format
@@ -44,10 +43,9 @@ msgid "Plasma Bigscreen Settings"
 msgstr "Plasma 大螢幕設定值"
 
 #: main.cpp:38
-#, fuzzy, kde-format
-#| msgid "Copyright 2025 Plasma developers"
+#, kde-format
 msgid "© 2025 Plasma developers"
-msgstr "版權所有 2025 Plasma 開發團隊"
+msgstr "© 2025 Plasma 開發團隊"
 
 #: main.cpp:40
 #, kde-format
@@ -62,7 +60,7 @@ msgstr "設定"
 #: qml/ConfigWindowSidebar.qml:84
 #, kde-format
 msgid "Open desktop settings?"
-msgstr ""
+msgstr "開啟桌面設定？"
 
 #: qml/ConfigWindowSidebar.qml:89
 #, kde-format
@@ -70,3 +68,5 @@ msgid ""
 "The desktop settings application does not support key navigation, a mouse "
 "may be required. However, it contains extra settings that may be useful."
 msgstr ""
+"桌面設定應用程式不支援按鍵瀏覽而可能會需要滑鼠，但它包含更多有可能有用的設"
+"定。"

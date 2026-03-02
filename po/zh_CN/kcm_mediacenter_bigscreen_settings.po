@@ -46,7 +46,7 @@ msgstr "日"
 #: ui/DeviceTimeSettingsSidebar.qml:46
 #, kde-format
 msgid "Adjust Date and Time Settings"
-msgstr ""
+msgstr "调整日期和时间设置"
 
 #: ui/DeviceTimeSettingsSidebar.qml:55
 #, kde-format
@@ -142,7 +142,7 @@ msgstr "阻止电源管理"
 #: ui/main.qml:122
 #, kde-format
 msgid "Adjust date and time"
-msgstr ""
+msgstr "调整日期和时间"
 
 #: ui/main.qml:128
 #, kde-format
@@ -193,7 +193,7 @@ msgstr "分钟"
 #, kde-format
 msgctxt "unit of time"
 msgid "Second"
-msgstr ""
+msgstr "秒"
 
 #: ui/TimePicker.qml:89
 #, kde-format
