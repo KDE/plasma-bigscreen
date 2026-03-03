@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-28 00:46+0000\n"
-"PO-Revision-Date: 2026-02-13 22:19+0100\n"
+"PO-Revision-Date: 2026-03-02 22:19+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -46,8 +46,7 @@ msgid "Day"
 msgstr "Eguna"
 
 #: ui/DeviceTimeSettingsSidebar.qml:46
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time Settings"
+#, kde-format
 msgid "Adjust Date and Time Settings"
 msgstr "Doitu data eta ordu ezarpenak"
 
@@ -144,8 +143,7 @@ msgid "Power inhibition"
 msgstr "Energia-inhibizioa"
 
 #: ui/main.qml:122
-#, fuzzy, kde-format
-#| msgid "Adjust date & time"
+#, kde-format
 msgid "Adjust date and time"
 msgstr "Doitu data eta ordua"
 
@@ -187,19 +185,18 @@ msgstr "Ezarri Lasterbidea"
 #: ui/TimePicker.qml:40
 #, kde-format
 msgid "Hour"
-msgstr "Ordua"
+msgstr "Ordu"
 
 #: ui/TimePicker.qml:56
 #, kde-format
 msgid "Minute"
-msgstr "Minutua"
+msgstr "Minutu"
 
 #: ui/TimePicker.qml:72
-#, fuzzy, kde-format
-#| msgid "Second"
+#, kde-format
 msgctxt "unit of time"
 msgid "Second"
-msgstr "Segundoa"
+msgstr "Segundo"
 
 #: ui/TimePicker.qml:89
 #, kde-format

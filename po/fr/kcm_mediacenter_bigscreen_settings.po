@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-28 00:46+0000\n"
-"PO-Revision-Date: 2026-01-26 10:29+0100\n"
+"PO-Revision-Date: 2026-03-01 10:20+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,8 +41,7 @@ msgid "Day"
 msgstr "Jour"
 
 #: ui/DeviceTimeSettingsSidebar.qml:46
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time Settings"
+#, kde-format
 msgid "Adjust Date and Time Settings"
 msgstr "Ajuster les paramètres de date et d'heure"
 
@@ -140,10 +139,9 @@ msgid "Power inhibition"
 msgstr "Restriction d'alimentation"
 
 #: ui/main.qml:122
-#, fuzzy, kde-format
-#| msgid "Adjust date & time"
+#, kde-format
 msgid "Adjust date and time"
-msgstr "Régler la date et l'heure"
+msgstr "Ajuster la date et l'heure"
 
 #: ui/main.qml:128
 #, kde-format
@@ -191,8 +189,7 @@ msgid "Minute"
 msgstr "Minute"
 
 #: ui/TimePicker.qml:72
-#, fuzzy, kde-format
-#| msgid "Second"
+#, kde-format
 msgctxt "unit of time"
 msgid "Second"
 msgstr "Seconde"

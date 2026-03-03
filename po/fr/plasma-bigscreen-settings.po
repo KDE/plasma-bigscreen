@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-28 00:46+0000\n"
-"PO-Revision-Date: 2026-02-20 17:14+0100\n"
+"PO-Revision-Date: 2026-03-01 10:19+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -41,10 +41,9 @@ msgid "Plasma Bigscreen Settings"
 msgstr "Configuration de Plasma Bigscreen"
 
 #: main.cpp:38
-#, fuzzy, kde-format
-#| msgid "Copyright 2025 Plasma developers"
+#, kde-format
 msgid "© 2025 Plasma developers"
-msgstr "Copyright 2025, l'équipe de développement de Plasma"
+msgstr "© 2025, l'équipe de développement de Plasma"
 
 #: main.cpp:40
 #, kde-format
