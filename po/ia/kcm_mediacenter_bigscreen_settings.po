@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-28 00:46+0000\n"
-"PO-Revision-Date: 2026-01-27 12:24+0100\n"
+"PO-Revision-Date: 2026-03-03 17:11+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -43,10 +43,9 @@ msgid "Day"
 msgstr "Die"
 
 #: ui/DeviceTimeSettingsSidebar.qml:46
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time Settings"
+#, kde-format
 msgid "Adjust Date and Time Settings"
-msgstr "Adjusta Preferentias de  data & tempore"
+msgstr "Adjusta Preferentias de  data e tempore"
 
 #: ui/DeviceTimeSettingsSidebar.qml:55
 #, kde-format
@@ -142,10 +141,9 @@ msgid "Power inhibition"
 msgstr "Inhibition de Potentia"
 
 #: ui/main.qml:122
-#, fuzzy, kde-format
-#| msgid "Adjust date & time"
+#, kde-format
 msgid "Adjust date and time"
-msgstr "Adjusta data & tempore"
+msgstr "Adjusta data e tempore"
 
 #: ui/main.qml:128
 #, kde-format
@@ -193,8 +191,7 @@ msgid "Minute"
 msgstr "Minuta"
 
 #: ui/TimePicker.qml:72
-#, fuzzy, kde-format
-#| msgid "Second"
+#, kde-format
 msgctxt "unit of time"
 msgid "Second"
 msgstr " Secunda"
