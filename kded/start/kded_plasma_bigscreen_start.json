@@ -21,7 +21,7 @@
         "Description[ru]": "Запуск начальных задач для Plasma Bigscreen при старте сеанса",
         "Description[sl]": "Zaženi začetna opravila za veliki zaslon Plasma med zagonom seje",
         "Description[sv]": "Utför inledande uppgifter för Plasma storbildsskärm när sessionen startas",
-        "Description[tr]": "Oturum başlangıcı sırasında Plasma Büyük Ekran başlangıç görevlerini çalıştırın",
+        "Description[tr]": "Oturum başlangıcı sırasında Plasma BüyükEkran başlangıç görevlerini çalıştırın",
         "Description[uk]": "Запуск початкових завдань для Plasma Bigscreen під час запуску сеансу",
         "Description[zh_CN]": "会话启动时为 Plasma 大屏幕运行初始任务",
         "Description[zh_TW]": "在工作階段啟動時為 Plasma 大螢幕執行初始工作",
@@ -46,7 +46,7 @@
         "Name[ru]": "Запуск Plasma Bigscreen",
         "Name[sl]": "Zagon velikega zaslona Plasma",
         "Name[sv]": "Plasma storbildsskärm start",
-        "Name[tr]": "Plasma Büyük Ekran Başlangıç",
+        "Name[tr]": "Plasma BüyükEkran Başlangıç",
         "Name[uk]": "Запуск Plasma Bigscreen",
         "Name[zh_CN]": "Plasma 大屏幕开始",
         "Name[zh_TW]": "Plasma 大螢幕啟動"
