@@ -14,6 +14,7 @@ Name[ia]=MAneator de ingresso de Plasma Bigscreen
 Name[it]=Gestore di input di Plasma Bigscreen
 Name[ka]=Plasma Bigscreen-ის შეყვანის დამმუშავებელი
 Name[ko]=Plasma 큰 화면 입력 처리기
+Name[lv]=„Plasma Bigscreen“ ievades apstrādātājs
 Name[nl]=Plasma Bigscreen behandelaar van invoer
 Name[pl]=Obsługa wejścia Dużego Ekranu Plazmy
 Name[pt]=Gestor de entrada do Plasma Bigscreen
