@@ -1,14 +1,14 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2025 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2025, 2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-28 00:46+0000\n"
-"PO-Revision-Date: 2025-08-22 16:42+0300\n"
-"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2026-03-03 11:14+0200\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -29,10 +29,9 @@ msgid "Your emails"
 msgstr "toms.trasuns@posteo.net"
 
 #: kcmslistmodel.cpp:112
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgid "Desktop Settings"
-msgstr "Iestatījumi"
+msgstr "Darbvirsmas iestatījumi"
 
 #: main.cpp:34
 #, kde-format
@@ -45,10 +44,9 @@ msgid "Plasma Bigscreen Settings"
 msgstr "„Plasma“ lielā ekrāna iestatījumi"
 
 #: main.cpp:38
-#, fuzzy, kde-format
-#| msgid "Copyright 2025 Plasma developers"
+#, kde-format
 msgid "© 2025 Plasma developers"
-msgstr "Autortiesības 2025 „Plasma“ izstrādātāji"
+msgstr "© 2025 „Plasma“ izstrādātāji"
 
 #: main.cpp:40
 #, kde-format
@@ -63,7 +61,7 @@ msgstr "Iestatījumi"
 #: qml/ConfigWindowSidebar.qml:84
 #, kde-format
 msgid "Open desktop settings?"
-msgstr ""
+msgstr "Vai atvērt darbvirsmas iestatījumus?"
 
 #: qml/ConfigWindowSidebar.qml:89
 #, kde-format
@@ -71,3 +69,6 @@ msgid ""
 "The desktop settings application does not support key navigation, a mouse "
 "may be required. However, it contains extra settings that may be useful."
 msgstr ""
+"Darbvirsmas iestatījumu lietotne neatbalsta navigāciju ar taustiņiem — var "
+"būt nepieciešama pele. Tomēr šī lietotne satur papildu iestatījumus, kas var "
+"būt noderīgi."
