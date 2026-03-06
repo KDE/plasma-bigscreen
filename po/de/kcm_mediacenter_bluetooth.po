@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-28 00:46+0000\n"
-"PO-Revision-Date: 2026-01-25 20:45+0100\n"
+"PO-Revision-Date: 2026-03-02 19:12+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: ui/DeviceConnectionSidebar.qml:37
 #, kde-format
@@ -151,9 +151,7 @@ msgid "Multimedia"
 msgstr "Multimedia"
 
 #: ui/script.js:27
-#, fuzzy, kde-format
-#| msgctxt "This device is a Keyboard"
-#| msgid "Keyboard"
+#, kde-format
 msgctxt "This device is a Keyboard (not the music instrument)"
 msgid "Keyboard"
 msgstr "Tastatur"
