@@ -10,7 +10,7 @@ import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Window 2.2
 
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami as Kirigami
 
 MouseArea {
     id: delegate

@@ -9,7 +9,7 @@ import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Layouts 1.0
 import QtQuick.Window 2.2
 
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.configuration 2.0
 import org.kde.kitemmodels as KItemModels
@@ -21,7 +21,7 @@ Rectangle {
     id: root
     Layout.minimumWidth:  plasmoid.availableScreenRect.width
     Layout.minimumHeight: plasmoid.availableScreenRect.height
-    
+
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -45,7 +45,7 @@ Rectangle {
         sourceModel: configDialog.configModel
         filterRoleName: "visible"
         filterRowCallback: function(source_row, source_parent) {
-            let value = sourceModel.data(sourceModel.index(source_row, 0, source_parent), filterRoleName)         
+            let value = sourceModel.data(sourceModel.index(source_row, 0, source_parent), filterRoleName)
             return value;
         }
     }

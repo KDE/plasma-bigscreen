@@ -16,7 +16,7 @@ import org.kde.plasma.configuration 2.0
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.kquickcontrolsaddons 2.0 as Addons
 import org.kde.kcmutils as KCM
-import org.kde.kirigami 2.11 as Kirigami
+import org.kde.kirigami as Kirigami
 
 AppletConfiguration {
     id: root
