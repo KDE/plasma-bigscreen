@@ -30,6 +30,8 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.biglauncher.xml DESTINATION ${
 kcoreaddons_add_plugin(org.kde.bigscreen.homescreen INSTALL_NAMESPACE "plasma/applets")
 target_sources(org.kde.bigscreen.homescreen PRIVATE ${homescreen_SRCS})
 
+find_package(LibTaskManager REQUIRED)
+
 target_link_libraries(org.kde.bigscreen.homescreen
     Qt::Gui
     Qt::Core
@@ -45,6 +47,7 @@ target_link_libraries(org.kde.bigscreen.homescreen
     KF6::KCMUtilsQuick
     KF6::GlobalAccel
     Plasma::Activities
+    PW::LibTaskManager
     PW::KWorkspace
     Plasma::ActivitiesStats
 )

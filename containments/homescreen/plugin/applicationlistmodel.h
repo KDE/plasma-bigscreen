@@ -16,6 +16,11 @@
 QStringList applicationsBlacklist();
 bool isApplicationBlacklisted(const KService::Ptr &service, const QStringList &blacklist);
 
+namespace TaskManager
+{
+class TasksModel;
+}
+
 struct ApplicationData {
     QString name;
     QString comment;
@@ -79,5 +84,10 @@ public:
 
     Q_INVOKABLE void runApplication(const QString &storageId);
     Q_INVOKABLE bool isApplicationBlocklisted(const QString &storageId) const;
+    Q_INVOKABLE bool isApplicationRunning(const QString &storageId) const;
+    Q_INVOKABLE void maximizeApplication(const QString &storageId);
     Q_INVOKABLE QVariantMap itemMap(int index);
+
+private:
+    TaskManager::TasksModel *m_tasksModel = nullptr;
 };

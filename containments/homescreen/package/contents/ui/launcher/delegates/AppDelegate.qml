@@ -20,8 +20,12 @@ IconDelegate {
     useIconColors: Plasmoid.configuration.coloredTiles
 
     onClicked: {
-        Bigscreen.NavigationSoundEffects.playClickedSound()
-        Plasmoid.showAppLaunchScreen(delegate.text, delegate.icon.name.length > 0 ? delegate.icon.name : model.decoration);
-        Plasmoid.applicationListModel.runApplication(modelData.ApplicationStorageIdRole)
+        Bigscreen.NavigationSoundEffects.playClickedSound();
+        if (Plasmoid.applicationListModel.isApplicationRunning(modelData.ApplicationStorageIdRole)) {
+            Plasmoid.applicationListModel.maximizeApplication(modelData.ApplicationStorageIdRole);
+        } else {
+            Plasmoid.showAppLaunchScreen(delegate.text, delegate.icon.name.length > 0 ? delegate.icon.name : model.decoration);
+            Plasmoid.applicationListModel.runApplication(modelData.ApplicationStorageIdRole);
+        }
     }
 }
