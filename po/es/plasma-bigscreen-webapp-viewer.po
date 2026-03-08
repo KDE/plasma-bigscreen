@@ -1,16 +1,16 @@
 # Spanish translations for plasma-bigscreen-webapp-viewer.po package.
-# Copyright (C) 2025 This file is copyright:
+# Copyright (C) 2025-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 # Automatically generated, 2025.
 #
 # SPDX-FileCopyrightText: 2025 Eloy Cuadra <ecuadra@eloihr.net>
-# SPDX-FileCopyrightText: 2025 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen-webapp-viewer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-28 00:46+0000\n"
-"PO-Revision-Date: 2025-09-07 00:53+0100\n"
+"PO-Revision-Date: 2026-03-08 00:06+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -56,10 +56,9 @@ msgid "Plasma Bigscreen Webapp runtime"
 msgstr "Motor de aplicaciones web de Plasma Bigscreen"
 
 #: main.cpp:61
-#, fuzzy, kde-format
-#| msgid "Copyright 2025 Plasma developers"
+#, kde-format
 msgid "© 2025 Plasma developers"
-msgstr "Copyright 2025 Los desarrolladores de Plasma"
+msgstr "© 2025 Los desarrolladores de Plasma"
 
 #: qml/WebView.qml:192
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-28 00:46+0000\n"
-"PO-Revision-Date: 2026-02-01 00:26+0100\n"
+"PO-Revision-Date: 2026-03-08 00:06+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -44,10 +44,9 @@ msgid "Day"
 msgstr "Día"
 
 #: ui/DeviceTimeSettingsSidebar.qml:46
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time Settings"
+#, kde-format
 msgid "Adjust Date and Time Settings"
-msgstr "Preferencias de ajuste de fecha y hora"
+msgstr "Ajustar preferencias de fecha y hora"
 
 #: ui/DeviceTimeSettingsSidebar.qml:55
 #, kde-format
@@ -142,8 +141,7 @@ msgid "Power inhibition"
 msgstr "Inhibición de apagado"
 
 #: ui/main.qml:122
-#, fuzzy, kde-format
-#| msgid "Adjust date & time"
+#, kde-format
 msgid "Adjust date and time"
 msgstr "Ajuste de fecha y hora"
 
@@ -193,8 +191,7 @@ msgid "Minute"
 msgstr "Minuto"
 
 #: ui/TimePicker.qml:72
-#, fuzzy, kde-format
-#| msgid "Second"
+#, kde-format
 msgctxt "unit of time"
 msgid "Second"
 msgstr "Segundo"
