@@ -26,6 +26,8 @@
 #include <KSycoca>
 #include <KSycocaEntry>
 #include <PlasmaActivities/ResourceInstance>
+#include <taskmanager/abstracttasksmodel.h>
+#include <taskmanager/tasksmodel.h>
 
 QStringList applicationsBlacklist()
 {
@@ -212,6 +214,7 @@ int ApplicationListModel::rowCount(const QModelIndex &parent) const
 
 ApplicationListSearchModel::ApplicationListSearchModel(QObject *parent, ApplicationListModel *model)
     : QSortFilterProxyModel(parent)
+    , m_tasksModel(new TaskManager::TasksModel(this))
 {
     setSourceModel(model);
 
@@ -266,4 +269,43 @@ bool ApplicationListSearchModel::isApplicationBlocklisted(const QString &storage
     }
 
     return isApplicationBlacklisted(KService::serviceByStorageId(storageId), applicationsBlacklist());
+}
+
+bool ApplicationListSearchModel::isApplicationRunning(const QString &storageId) const
+{
+    if (storageId.isEmpty()) {
+        return false;
+    }
+
+    const QString appIdWithoutDesktopSuffix = storageId.endsWith(QLatin1String(".desktop")) ? storageId.chopped(8) : storageId;
+
+    for (int i = 0; i < m_tasksModel->rowCount(); ++i) {
+        const QModelIndex idx = m_tasksModel->index(i, 0);
+        const QString appId = m_tasksModel->data(idx, TaskManager::AbstractTasksModel::AppId).toString();
+        if (appId == storageId || appId == appIdWithoutDesktopSuffix) {
+            return true;
+        }
+    }
+    return false;
+}
+
+void ApplicationListSearchModel::maximizeApplication(const QString &storageId)
+{
+    if (storageId.isEmpty()) {
+        return;
+    }
+
+    const QString appIdWithoutDesktopSuffix = storageId.endsWith(QLatin1String(".desktop")) ? storageId.chopped(8) : storageId;
+
+    for (int i = 0; i < m_tasksModel->rowCount(); ++i) {
+        const QModelIndex idx = m_tasksModel->index(i, 0);
+        const QString appId = m_tasksModel->data(idx, TaskManager::AbstractTasksModel::AppId).toString();
+        if (appId == storageId || appId == appIdWithoutDesktopSuffix) {
+            m_tasksModel->requestActivate(idx);
+            if (!m_tasksModel->data(idx, TaskManager::AbstractTasksModel::IsMaximized).toBool()) {
+                m_tasksModel->requestToggleMaximized(idx);
+            }
+            return;
+        }
+    }
 }
