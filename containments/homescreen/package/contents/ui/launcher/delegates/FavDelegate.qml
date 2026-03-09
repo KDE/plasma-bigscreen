@@ -14,7 +14,6 @@ import org.kde.plasma.plasmoid
 
 IconDelegate {
     id: delegate
-    readonly property var appStorageIdRole: modelData.ApplicationStorageIdRole
     useIconColors: Plasmoid.configuration.coloredTiles
 
     icon.name: modelData.ApplicationIconRole
