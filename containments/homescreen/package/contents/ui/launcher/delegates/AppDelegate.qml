@@ -13,7 +13,10 @@ import org.kde.plasma.plasmoid
 
 IconDelegate {
     id: delegate
-    readonly property var appStorageIdRole: modelData.ApplicationStorageIdRole
+    property string applicationStorageId: modelData ? modelData.ApplicationStorageIdRole : ""
+    property var launchApplication: function() {
+        Plasmoid.applicationListModel.runApplication(delegate.applicationStorageId);
+    }
 
     icon.name: modelData ? modelData.ApplicationIconRole : ""
     text: modelData ? modelData.ApplicationNameRole : ""
@@ -21,11 +24,11 @@ IconDelegate {
 
     onClicked: {
         Bigscreen.NavigationSoundEffects.playClickedSound();
-        if (Plasmoid.applicationListModel.isApplicationRunning(modelData.ApplicationStorageIdRole)) {
-            Plasmoid.applicationListModel.maximizeApplication(modelData.ApplicationStorageIdRole);
+        if (Plasmoid.applicationListModel.isApplicationRunning(delegate.applicationStorageId)) {
+            Plasmoid.applicationListModel.maximizeApplication(delegate.applicationStorageId);
         } else {
             Plasmoid.showAppLaunchScreen(delegate.text, delegate.icon.name.length > 0 ? delegate.icon.name : model.decoration);
-            Plasmoid.applicationListModel.runApplication(modelData.ApplicationStorageIdRole);
+            delegate.launchApplication();
         }
     }
 }

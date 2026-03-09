@@ -32,7 +32,7 @@ FocusScope {
 
     function activateAppView() {
         if (favAppsView.visible) {
-            favAppsView.forceActiveFocus()
+            favAppsView.forceActiveFocus();
         } else if (recentView.visible) {
             recentView.forceActiveFocus();
         } else {
@@ -58,7 +58,7 @@ FocusScope {
             } else if (firstSection == currentSection) {
                 return startY;
             }
-            return Math.round(-currentSection.y + startY - currentSection.height/2);
+            return Math.round(-currentSection.y + startY - currentSection.height / 2);
         }
 
         onCurrentSectionChanged: {
@@ -70,11 +70,12 @@ FocusScope {
 
         NumberAnimation on y {
             id: yAnim
-            duration: Kirigami.Units.veryLongDuration; easing.type: Easing.OutCubic
+            duration: Kirigami.Units.veryLongDuration
+            easing.type: Easing.OutCubic
 
             // Set binding so that screen resizes affect Y
             onFinished: {
-                launcherHomeColumn.y = Qt.binding(() => launcherHomeColumn.intendedY())
+                launcherHomeColumn.y = Qt.binding(() => launcherHomeColumn.intendedY());
             }
         }
 
@@ -91,7 +92,8 @@ FocusScope {
             visible: count > 0
             currentIndex: 0
             focus: visible
-            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = favAppsView
+            onActiveFocusChanged: if (activeFocus)
+                launcherHomeColumn.currentSection = favAppsView
             delegate: Delegates.FavDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
             }
@@ -105,6 +107,14 @@ FocusScope {
             property var currentViewUpwards: visible ? recentView : favAppsView.currentViewUpwards
             property var currentViewDownwards: visible ? recentView : appsView.currentViewDownwards
             readonly property int favoriteIdRole: Qt.UserRole + 3
+
+            function sourceIndex(row) {
+                return recentView.model.mapToSource(recentView.model.index(row, 0));
+            }
+
+            function storageId(row) {
+                return sourceIndex(row).data(favoriteIdRole);
+            }
 
             title: i18n("Recent")
             model: KItemModels.KSortFilterProxyModel {
@@ -121,17 +131,18 @@ FocusScope {
             visible: count > 0
             currentIndex: 0
             focus: visible && (favAppsView.currentViewUpwards === root.navigationUp)
-            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = recentView
+            onActiveFocusChanged: if (activeFocus)
+                launcherHomeColumn.currentSection = recentView
 
             delegate: Delegates.AppDelegate {
                 property real sectionOpacity: 1.0
                 property var modelData: typeof model !== "undefined" ? model : null
+                applicationStorageId: recentView.storageId(index)
+                launchApplication: function() {
+                    recentView.model.sourceModel.trigger(recentView.sourceIndex(index).row, "", null);
+                }
                 iconImage: model.decoration
                 text: model.display
-                onClicked: (mouse) => {
-                    const sourceIndex = recentView.model.mapToSource(recentView.model.index(index, 0));
-                    recentView.model.sourceModel.trigger(sourceIndex.row, "", null);
-                }
             }
 
             navigationUp: favAppsView.currentViewUpwards
@@ -149,7 +160,7 @@ FocusScope {
             model: KItemModels.KSortFilterProxyModel {
                 sourceModel: Plasmoid.applicationListModel
                 filterRoleName: "ApplicationCategoriesRole"
-                filterRowCallback: function(source_row, source_parent) {
+                filterRowCallback: function (source_row, source_parent) {
                     var cats = sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole);
                     return cats.indexOf("Game") === -1;
                 }
@@ -157,7 +168,8 @@ FocusScope {
 
             currentIndex: 0
             focus: visible && (recentView.currentViewUpwards === root.navigationUp)
-            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = appsView
+            onActiveFocusChanged: if (activeFocus)
+                launcherHomeColumn.currentSection = appsView
             delegate: Delegates.AppDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
             }
@@ -177,14 +189,15 @@ FocusScope {
             model: KItemModels.KSortFilterProxyModel {
                 sourceModel: Plasmoid.applicationListModel
                 filterRoleName: "ApplicationCategoriesRole"
-                filterRowCallback: function(source_row, source_parent) {
+                filterRowCallback: function (source_row, source_parent) {
                     return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("Game") !== -1;
                 }
             }
 
             currentIndex: 0
             focus: visible && (appsView.currentViewUpwards === root.navigationUp)
-            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = gamesView
+            onActiveFocusChanged: if (activeFocus)
+                launcherHomeColumn.currentSection = gamesView
             delegate: Delegates.AppDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
             }
