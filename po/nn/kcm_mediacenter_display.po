@@ -1,6 +1,5 @@
 # Translation of kcm_mediacenter_display to Norwegian Nynorsk
 #
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
