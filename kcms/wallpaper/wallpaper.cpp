@@ -20,7 +20,7 @@ public:
 
     Q_INVOKABLE void activateWallpaperSelector()
     {
-        QDBusInterface("org.kde.biglauncher", "/BigLauncher", "org.kde.biglauncher", QDBusConnection::sessionBus()).call("activateWallpaperSelector");
+        QDBusInterface("org.kde.biglauncher", "/BigLauncher", "org.kde.biglauncher", QDBusConnection::sessionBus()).asyncCall("activateWallpaperSelector");
     }
 };
 
