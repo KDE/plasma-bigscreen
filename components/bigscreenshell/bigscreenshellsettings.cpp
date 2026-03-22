@@ -3,6 +3,8 @@
 
 #include "bigscreenshellsettings.h"
 
+#include <KIO/CommandLauncherJob>
+#include <KNotificationJobUiDelegate>
 #include <QDebug>
 
 const QString CONFIG_FILE = QStringLiteral("plasmabigscreenrc");
@@ -18,6 +20,7 @@ BigscreenShellSettings::BigscreenShellSettings(QObject *parent)
         if (group.name() == GENERAL_CONFIG_GROUP) {
             Q_EMIT pmInhibitionEnabledChanged();
             Q_EMIT navigationSoundEnabledChanged();
+            Q_EMIT windowDecorationsEnabledChanged();
         }
     });
 }
@@ -46,4 +49,23 @@ void BigscreenShellSettings::setNavigationSoundEnabled(bool navigationSoundEnabl
     auto group = KConfigGroup{m_config, GENERAL_CONFIG_GROUP};
     group.writeEntry("navigationSoundEnabled", navigationSoundEnabled, KConfigGroup::Notify);
     m_config->sync();
+}
+
+bool BigscreenShellSettings::windowDecorationsEnabled() const
+{
+    auto group = KConfigGroup{m_config, GENERAL_CONFIG_GROUP};
+    return group.readEntry("windowDecorationsEnabled", false);
+}
+
+void BigscreenShellSettings::setWindowDecorationsEnabled(bool windowDecorationsEnabled)
+{
+    auto group = KConfigGroup{m_config, GENERAL_CONFIG_GROUP};
+    group.writeEntry("windowDecorationsEnabled", windowDecorationsEnabled, KConfigGroup::Notify);
+    m_config->sync();
+
+    // Update environment settings
+    auto *job = new KIO::CommandLauncherJob(QStringLiteral("plasma-bigscreen-envmanager --apply-settings"), {});
+    job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
+    job->setDesktopName(QStringLiteral("org.kde.plasma-bigscreen-envmanager"));
+    job->start();
 }

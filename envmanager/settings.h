@@ -32,4 +32,6 @@ private:
 
     // whether this is Plasma Bigscreen
     bool m_isMediacenterPlatform;
+
+    KSharedConfig::Ptr m_bigscreenConfig;
 };

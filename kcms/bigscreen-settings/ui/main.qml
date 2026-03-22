@@ -79,7 +79,7 @@ Kirigami.ScrollablePage {
             id: desktopThemeButton
             raisedBackground: true
 
-            KeyNavigation.down: navigationSoundDelegate
+            KeyNavigation.down: windowDecorationsDelegate
 
             text: i18n("Global theme")
             description: i18n("Set the system theme")
@@ -96,10 +96,21 @@ Kirigami.ScrollablePage {
         }
 
         Bigscreen.SwitchDelegate {
+            id: windowDecorationsDelegate
+            KeyNavigation.down: navigationSoundDelegate
+
+            text: i18n("Window decorations")
+            description: i18n("Have a window frame (minimize, maximize, close), for apps that request it")
+            checked: BigscreenShell.Settings.windowDecorationsEnabled ? true : false
+            onCheckedChanged: BigscreenShell.Settings.windowDecorationsEnabled = checked
+        }
+
+        Bigscreen.SwitchDelegate {
             id: navigationSoundDelegate
             KeyNavigation.down: pmInhibitionDelegate
 
             text: i18n("Navigation sounds")
+            description: i18n("Play a sound when the selected item changes in system apps")
             checked: BigscreenShell.Settings.navigationSoundEnabled ? true : false
             onCheckedChanged: BigscreenShell.Settings.navigationSoundEnabled = checked
         }
@@ -110,6 +121,7 @@ Kirigami.ScrollablePage {
             KeyNavigation.down: timeDateDelegate
 
             text: i18n("Power inhibition")
+            description: i18n("Prevent the system from automatically sleeping")
             checked: BigscreenShell.Settings.pmInhibitionActive ? true : false
             onCheckedChanged: BigscreenShell.Settings.pmInhibitionActive = checked
         }

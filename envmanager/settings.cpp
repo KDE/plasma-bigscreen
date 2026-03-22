@@ -16,6 +16,8 @@
 
 using namespace Qt::Literals::StringLiterals;
 
+const QString CONFIG_FILE = u"plasmabigscreenrc"_s;
+
 // In bin/startplasma-bigscreen, we add `~/.config/plasma-bigscreen` to XDG_CONFIG_DIRS to overlay our own configs
 const QString BIGSCREEN_KWINRC_FILE = u"plasma-bigscreen/kwinrc"_s;
 const QString BIGSCREEN_KSMSERVERRC_FILE = u"plasma-bigscreen/ksmserverrc"_s;
@@ -25,6 +27,7 @@ const QString BIGSCREEN_PLASMAKEYBOARDRC_FILE = u"plasma-bigscreen/plasmakeyboar
 Settings::Settings(QObject *parent)
     : QObject{parent}
     , m_isMediacenterPlatform{KRuntimePlatform::runtimePlatform().contains(u"mediacenter"_s)}
+    , m_bigscreenConfig{KSharedConfig::openConfig(CONFIG_FILE, KConfig::SimpleConfig)}
 {
 }
 
@@ -49,15 +52,15 @@ void Settings::applyBigscreenConfiguration()
 {
     // kwinrc
     {
-        setOptionsImmutable(false, BIGSCREEN_KWINRC_FILE, KWINRC_SETTINGS);
+        setOptionsImmutable(false, BIGSCREEN_KWINRC_FILE, getKwinrcSettings(m_bigscreenConfig));
 
         auto kwinrc = kwinrcConfig();
         writeKeys(BIGSCREEN_KWINRC_FILE, kwinrc, KWINRC_DEFAULT_SETTINGS); // don't make immutable
-        writeKeys(BIGSCREEN_KWINRC_FILE, kwinrc, KWINRC_SETTINGS);
+        writeKeys(BIGSCREEN_KWINRC_FILE, kwinrc, getKwinrcSettings(m_bigscreenConfig));
         kwinrc->sync();
         reloadKWinConfig();
 
-        setOptionsImmutable(true, BIGSCREEN_KWINRC_FILE, KWINRC_SETTINGS);
+        setOptionsImmutable(true, BIGSCREEN_KWINRC_FILE, getKwinrcSettings(m_bigscreenConfig));
     }
 
     // kdeglobals

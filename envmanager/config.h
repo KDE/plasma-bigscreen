@@ -26,20 +26,27 @@ const QMap<QString, QMap<QString, QVariant>> PLASMAKEYBOARDRC_SETTINGS = {{"Gene
 // plasma-bigscreen/kwinrc
 const QMap<QString, QMap<QString, QVariant>> KWINRC_DEFAULT_SETTINGS = {
     {"Wayland", {{"InputMethod", "/usr/share/applications/org.kde.plasma.keyboard.desktop"}}}};
-const QMap<QString, QMap<QString, QVariant>> KWINRC_SETTINGS = {
-    {"Windows",
-     {{"Placement", "Maximizing"}, // maximize all windows by
-      {"InteractiveWindowMoveEnabled", false}}},
-    {"Plugins",
-     {
-         {"blurEnabled", false}, // disable blur plugin for performance
-         {"gamecontrollerEnabled", false} // disable gamecontroller plugin to do our own handling
-     }},
-    {"org.kde.kdecoration2",
-     {
-         {"NoPlugin", false} // leave window decorations plugin enabled for now, we don't have an easy way of exiting apps
-     }},
-    {"Input", {{"TabletMode", "off"}}}};
+
+QMap<QString, QMap<QString, QVariant>> getKwinrcSettings(KSharedConfig::Ptr m_bigscreenConfig)
+{
+    auto group = KConfigGroup{m_bigscreenConfig, QStringLiteral("General")};
+    bool windowDecorationsEnabled = group.readEntry("windowDecorationsEnabled", false);
+
+    return {{"Windows",
+             {{"BorderlessMaximizedWindows", !windowDecorationsEnabled}, // whether to turn off window decorations
+              {"Placement", "Maximizing"}, // maximize all windows
+              {"InteractiveWindowMoveEnabled", false}}},
+            {"Plugins",
+             {
+                 {"blurEnabled", false}, // disable blur plugin for performance
+                 {"gamecontrollerEnabled", false} // disable gamecontroller plugin to do our own handling
+             }},
+            {"org.kde.kdecoration2",
+             {
+                 {"NoPlugin", false} // ensure that the window decoration plugin is always enabled, otherwise we get Qt default window decorations
+             }},
+            {"Input", {{"TabletMode", "off"}}}};
+}
 
 // Have a separate list here because we need to trigger DBus calls to load/unload each effect/script.
 // Make sure that the effect/script is added to the kwinrc "Plugins" section above!
