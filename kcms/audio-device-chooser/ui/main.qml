@@ -16,7 +16,7 @@ import org.kde.bigscreen as Bigscreen
 
 import "delegates" as Delegates
 
-Kirigami.ScrollablePage {
+Bigscreen.ScrollablePage {
     id: root
     title: i18n("Audio Devices")
 

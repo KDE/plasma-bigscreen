@@ -19,7 +19,7 @@ import org.kde.bigscreen as Bigscreen
 
 import org.kde.plasma.bigscreen.bluetooth
 
-Kirigami.ScrollablePage {
+Bigscreen.ScrollablePage {
     id: bluetoothView
 
     title: i18n("Bluetooth")

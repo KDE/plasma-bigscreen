@@ -16,7 +16,7 @@ import org.kde.kcmutils as KCM
 import org.kde.bigscreen as Bigscreen
 import org.kde.kitemmodels as KItemModels
 
-Kirigami.ScrollablePage {
+Bigscreen.ScrollablePage {
     id: root
 
     title: i18n("Display Configuration")

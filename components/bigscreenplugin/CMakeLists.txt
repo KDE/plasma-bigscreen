@@ -27,6 +27,7 @@ ecm_target_qml_sources(bigscreenplugin SOURCES
     qml/controls/DialogButtonBox.qml
     qml/controls/ItemDelegate.qml
     qml/controls/PopupBackground.qml
+    qml/controls/ScrollablePage.qml
     qml/controls/SidebarOverlay.qml
     qml/controls/SidebarOverlayHeader.qml
     qml/controls/SwitchDelegate.qml

@@ -12,7 +12,7 @@ import org.kde.kcmutils as KCM
 import org.kde.kirigami as Kirigami
 import org.kde.bigscreen as Bigscreen
 
-Kirigami.ScrollablePage {
+Bigscreen.ScrollablePage {
     id: root
 
     title: i18n("Wallpaper")

@@ -17,7 +17,7 @@ import org.kde.kcmutils as KCM
 import org.kde.bigscreen as Bigscreen
 import org.kde.bigscreen.shell as BigscreenShell
 
-Kirigami.ScrollablePage {
+Bigscreen.ScrollablePage {
     id: root
 
     title: i18n("System")

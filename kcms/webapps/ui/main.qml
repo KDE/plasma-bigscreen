@@ -10,7 +10,7 @@ import org.kde.kcmutils as KCM
 import org.kde.bigscreen as Bigscreen
 import org.kde.bigscreen.webappskcm as WebAppsKCM
 
-Kirigami.ScrollablePage {
+Bigscreen.ScrollablePage {
     id: root
 
     title: i18n("Web Apps")
