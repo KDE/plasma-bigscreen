@@ -25,8 +25,6 @@
 
 using namespace CEC;
 
-QHash<int, int> CECController::s_keyMap;
-
 QDBusArgument &operator<<(QDBusArgument &arg, const cec_logical_address &address)
 {
     arg.beginStructure();
@@ -59,7 +57,7 @@ CECController::CECController(QObject *parent)
         return std::make_pair<int, int>(group.readEntry(QString("Button") + name, cecKey), group.readEntry(QString("Key") + name, evKey));
     };
 
-    s_keyMap = {
+    m_keyMap = {
         map("Play", CEC_USER_CONTROL_CODE_PLAY, KEY_PLAY),
         map("Stop", CEC_USER_CONTROL_CODE_STOP, KEY_STOP),
         map("Pause", CEC_USER_CONTROL_CODE_PAUSE, KEY_PAUSE),
@@ -87,7 +85,7 @@ CECController::CECController(QObject *parent)
         map("ChannelUp", CEC_USER_CONTROL_CODE_CHANNEL_UP, KEY_CHANNELUP),
         map("ChannelDown", CEC_USER_CONTROL_CODE_CHANNEL_DOWN, KEY_CHANNELDOWN),
         map("Exit", CEC_USER_CONTROL_CODE_EXIT, KEY_EXIT),
-        map("Back", CEC_USER_CONTROL_CODE_AN_RETURN, KEY_BACK),
+        map("Back", CEC_USER_CONTROL_CODE_AN_RETURN, KEY_ESC),
         map("Home", CEC_USER_CONTROL_CODE_ROOT_MENU, KEY_HOMEPAGE),
         map("Subtitle", CEC_USER_CONTROL_CODE_SUB_PICTURE, KEY_SUBTITLE),
         map("Info", CEC_USER_CONTROL_CODE_DISPLAY_INFORMATION, KEY_INFO),
@@ -111,6 +109,8 @@ CECController::CECController(QObject *parent)
 
     connect(m_worker, &CECWorker::initialized, this, &CECController::onWorkerInitialized);
     connect(m_worker, &CECWorker::deviceDiscovered, this, &CECController::onDeviceDiscovered);
+    connect(m_worker, &CECWorker::deviceOpened, this, &CECController::onDeviceOpened);
+    connect(m_worker, &CECWorker::deviceOpenFailed, this, &CECController::onDeviceOpenFailed);
     connect(m_worker, &CECWorker::cecKeyPressed, this, &CECController::onCecKeyPressed);
     connect(m_worker, &CECWorker::cecStandbyReceived, this, &CECController::enterStandby);
     connect(m_worker, &CECWorker::cecSourceActivated, this, &CECController::sourceActivated);
@@ -161,15 +161,28 @@ void CECController::onDeviceDiscovered(const QString &comName)
         m_connectedDevices.insert(comName);
         return;
     }
+}
+
+void CECController::onDeviceOpened(const QString &comName)
+{
+    qDebug() << "CECController: Adapter opened at" << comName;
 
     auto *device = new Device(DeviceCEC, QStringLiteral("CEC Controller"), comName);
-    device->setUsedKeys(QSet<int>(s_keyMap.cbegin(), s_keyMap.cend()));
+
+    QList<int> keyValues = m_keyMap.values();
+    device->setUsedKeys(QSet<int>(keyValues.cbegin(), keyValues.cend()));
+
     ControllerManager::instance().newDevice(device);
 
     m_connectedDevices.insert(comName);
     m_adapterCount++;
     qDebug() << "CECController: Successfully registered device" << comName << "- total adapters:" << m_adapterCount;
     Q_EMIT controllerAdded(QStringLiteral("CEC Controller"));
+}
+
+void CECController::onDeviceOpenFailed(const QString &comName, const QString &error)
+{
+    qWarning() << "CECController: Failed to open adapter at" << comName << "-" << error;
 }
 
 void CECController::onHotplugTimeout()
@@ -214,7 +227,12 @@ void CECController::onCecKeyPressed(int keycode, int opcode)
         return;
     }
 
-    int nativeKey = s_keyMap.value(keycode, -1);
+    // Only act on key press, ignore key release
+    if (opcode != CEC_OPCODE_USER_CONTROL_PRESSED) {
+        return;
+    }
+
+    int nativeKey = m_keyMap.value(keycode, -1);
     if (nativeKey < 0) {
         qDebug() << "CECController: No mapping found for CEC keycode" << keycode;
         return;
@@ -228,10 +246,6 @@ void CECController::onCecKeyPressed(int keycode, int opcode)
         return;
     }
 
-    if (opcode == CEC_OPCODE_USER_CONTROL_PRESSED) {
-        ControllerManager::instance().emitKey(nativeKey, 1);
-        ControllerManager::instance().emitKey(nativeKey, 0);
-    } else if (opcode == CEC_OPCODE_USER_CONTROL_RELEASE) {
-        ControllerManager::instance().emitKey(nativeKey, 0);
-    }
+    ControllerManager::instance().emitKey(nativeKey, 1);
+    ControllerManager::instance().emitKey(nativeKey, 0);
 }

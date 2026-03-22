@@ -31,6 +31,22 @@ Plasma Bigscreen is a user-friendly, open-source, Wayland desktop environment de
 
 <img src="/screenshots/homescreen.png" width=500px/>
 
+### CEC and controller support
+
+The `plasma-bigscreen-inputhandler` utility daemon handles CEC and game controller support. You can manually run it with:
+
+```bash
+PLASMA_PLATFORM=mediacenter plasma-bigscreen-inputhandler
+```
+
+For CEC support, ensure that your user has permission to access the device:
+
+```bash
+ls -l /dev/ttyACM* # Find the group the cec device belongs to
+
+usermod -aG dialout $USER # Replace dialout with the group that the cec device belongs to
+```
+
 ### Test on a development machine
 
 It is recommended to use `kde-builder` to build this from source.

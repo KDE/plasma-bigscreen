@@ -45,6 +45,8 @@ Q_SIGNALS:
 private Q_SLOTS:
     void onWorkerInitialized(bool success);
     void onDeviceDiscovered(const QString &comName);
+    void onDeviceOpened(const QString &comName);
+    void onDeviceOpenFailed(const QString &comName, const QString &error);
     void onHotplugTimeout();
     void onNextKeyTimeout();
     void onCecKeyPressed(int keycode, int opcode);
@@ -55,7 +57,7 @@ private:
     QTimer m_hotplugTimer;
     QTimer m_nextKeyTimer;
 
-    static QHash<int, int> s_keyMap;
+    QHash<int, int> m_keyMap;
     QSet<QString> m_connectedDevices;
     int m_adapterCount = 0;
     bool m_initialized = false;

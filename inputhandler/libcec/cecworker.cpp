@@ -69,8 +69,21 @@ void CECWorker::discoverDevices()
     qDebug() << "CECWorker: Detected" << count << "CEC adapter(s)";
 
     for (int8_t i = 0; i < count; i++) {
-        qDebug() << "CECWorker: Found adapter" << i << "at" << devices[i].strComName;
-        Q_EMIT deviceDiscovered(QString::fromLatin1(devices[i].strComName));
+        QString comName = QString::fromLatin1(devices[i].strComName);
+        qDebug() << "CECWorker: Found adapter" << i << "at" << comName;
+        Q_EMIT deviceDiscovered(comName);
+
+        // Actually open the adapter so we receive CEC events
+        if (!m_cecAdapter->Open(devices[i].strComName)) {
+            qWarning() << "CECWorker: Failed to open CEC adapter at" << comName
+                       << "- check device permissions (user may need to be in 'dialout' or 'video' group)";
+            Q_EMIT deviceOpenFailed(comName, QStringLiteral("Failed to open adapter - check device permissions"));
+        } else {
+            qDebug() << "CECWorker: Successfully opened CEC adapter at" << comName;
+            Q_EMIT deviceOpened(comName);
+            // Only open the first adapter
+            break;
+        }
     }
 }
 
@@ -85,28 +98,34 @@ void CECWorker::cleanup()
     qDebug() << "CECWorker: Cleanup completed";
 }
 
+// NOTE: These static callbacks are invoked from libcec's internal thread,
+// NOT from the Qt worker thread.
+
 void CECWorker::handleCecKeypress(void *param, const cec_keypress *key)
 {
     auto *self = static_cast<CECWorker *>(param);
-    qDebug() << "CECWorker: Key pressed - keycode:" << key->keycode << "duration:" << key->duration << "lastOpcode:" << self->m_lastOpcode;
-    Q_EMIT self->cecKeyPressed(key->keycode, self->m_lastOpcode);
+    int keycode = key->keycode;
+    int opcode = self->m_lastOpcode.load(std::memory_order_acquire);
+    qDebug() << "CECWorker: Key pressed - keycode:" << keycode << "duration:" << key->duration << "lastOpcode:" << opcode;
+    QMetaObject::invokeMethod(self, "cecKeyPressed", Qt::QueuedConnection, Q_ARG(int, keycode), Q_ARG(int, opcode));
 }
 
 void CECWorker::handleCommandReceived(void *param, const cec_command *command)
 {
     auto *self = static_cast<CECWorker *>(param);
     qDebug() << "CECWorker: Command received - opcode:" << command->opcode;
-    self->m_lastOpcode = command->opcode;
+    self->m_lastOpcode.store(command->opcode, std::memory_order_release);
 
     if (command->opcode == CEC_OPCODE_STANDBY) {
         qDebug() << "CECWorker: Standby command received";
-        Q_EMIT self->cecStandbyReceived();
+        QMetaObject::invokeMethod(self, "cecStandbyReceived", Qt::QueuedConnection);
     }
 }
 
 void CECWorker::handleSourceActivated(void *param, const cec_logical_address, uint8_t activated)
 {
     auto *self = static_cast<CECWorker *>(param);
-    qDebug() << "CECWorker: Source activation changed - activated:" << (activated != 0);
-    Q_EMIT self->cecSourceActivated(activated != 0);
+    bool isActivated = activated != 0;
+    qDebug() << "CECWorker: Source activation changed - activated:" << isActivated;
+    QMetaObject::invokeMethod(self, "cecSourceActivated", Qt::QueuedConnection, Q_ARG(bool, isActivated));
 }

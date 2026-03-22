@@ -73,11 +73,12 @@ int main(int argc, char *argv[])
 
     // Create SDL controller
     SdlController *sdlController = new SdlController();
+    sdlController->setParent(&app);
     dbusInterface->setSdlController(sdlController);
 
 #ifdef HAS_LIBCEC
     // Create CEC controller
-    CECController *cecController = new CECController();
+    CECController *cecController = new CECController(&app);
     dbusInterface->setCecController(cecController);
 #endif
 
