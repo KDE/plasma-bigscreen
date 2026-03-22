@@ -59,60 +59,44 @@ void Shortcuts::initializeShortcuts()
     });
 }
 
-QKeySequence Shortcuts::activateSettingsShortcut() const
+QList<QKeySequence> Shortcuts::activateSettingsShortcut() const
 {
-    const QList<QKeySequence> shortcuts = KGlobalAccel::self()->shortcut(toggleActivateSettingsAction);
-    if (shortcuts.count() > 0) {
-        return shortcuts.first();
-    }
-    return QKeySequence();
+    return KGlobalAccel::self()->shortcut(toggleActivateSettingsAction);
 }
 
-QKeySequence Shortcuts::activateTasksShortcut() const
+QList<QKeySequence> Shortcuts::activateTasksShortcut() const
 {
-    const QList<QKeySequence> shortcuts = KGlobalAccel::self()->shortcut(toggleActivateTasksAction);
-    if (shortcuts.count() > 0) {
-        return shortcuts.first();
-    }
-    return QKeySequence();
+    return KGlobalAccel::self()->shortcut(toggleActivateTasksAction);
 }
 
-QKeySequence Shortcuts::displayHomeScreenShortcut() const
+QList<QKeySequence> Shortcuts::displayHomeScreenShortcut() const
 {
-    const QList<QKeySequence> shortcuts = KGlobalAccel::self()->shortcut(toggleDisplayHomeScreenAction);
-    if (shortcuts.count() > 0) {
-        return shortcuts.first();
-    }
-    return QKeySequence();
+    return KGlobalAccel::self()->shortcut(toggleDisplayHomeScreenAction);
 }
 
-QKeySequence Shortcuts::displayHomeOverlayShortcut() const
+QList<QKeySequence> Shortcuts::displayHomeOverlayShortcut() const
 {
-    const QList<QKeySequence> shortcuts = KGlobalAccel::self()->shortcut(toggleDisplayHomeOverlayAction);
-    if (shortcuts.count() > 0) {
-        return shortcuts.first();
-    }
-    return QKeySequence();
+    return KGlobalAccel::self()->shortcut(toggleDisplayHomeOverlayAction);
 }
 
-void Shortcuts::setActivateSettingsShortcut(const QKeySequence &shortcut)
+bool Shortcuts::setActivateSettingsShortcut(const QKeySequence &shortcut)
 {
-    KGlobalAccel::self()->setGlobalShortcut(toggleActivateSettingsAction, shortcut);
+    return KGlobalAccel::self()->setShortcut(toggleActivateSettingsAction, {shortcut}, KGlobalAccel::NoAutoloading);
 }
 
-void Shortcuts::setActivateTasksShortcut(const QKeySequence &shortcut)
+bool Shortcuts::setActivateTasksShortcut(const QKeySequence &shortcut)
 {
-    KGlobalAccel::self()->setGlobalShortcut(toggleActivateTasksAction, shortcut);
+    return KGlobalAccel::self()->setShortcut(toggleActivateTasksAction, {shortcut}, KGlobalAccel::NoAutoloading);
 }
 
-void Shortcuts::setDisplayHomeScreenShortcut(const QKeySequence &shortcut)
+bool Shortcuts::setDisplayHomeScreenShortcut(const QKeySequence &shortcut)
 {
-    KGlobalAccel::self()->setGlobalShortcut(toggleDisplayHomeScreenAction, shortcut);
+    return KGlobalAccel::self()->setShortcut(toggleDisplayHomeScreenAction, {shortcut}, KGlobalAccel::NoAutoloading);
 }
 
-void Shortcuts::setDisplayHomeOverlayShortcut(const QKeySequence &shortcut)
+bool Shortcuts::setDisplayHomeOverlayShortcut(const QKeySequence &shortcut)
 {
-    KGlobalAccel::self()->setGlobalShortcut(toggleDisplayHomeOverlayAction, shortcut);
+    return KGlobalAccel::self()->setShortcut(toggleDisplayHomeOverlayAction, {shortcut}, KGlobalAccel::NoAutoloading);
 }
 
 void Shortcuts::resetActivateSettingsShortcut()
@@ -127,7 +111,7 @@ void Shortcuts::resetActivateTasksShortcut()
 {
     auto defaultShortcuts = KGlobalAccel::self()->defaultShortcut(toggleActivateTasksAction);
     for (const auto &shortcut : defaultShortcuts) {
-        setActivateSettingsShortcut(shortcut);
+        setActivateTasksShortcut(shortcut);
     }
 }
 
@@ -135,7 +119,7 @@ void Shortcuts::resetDisplayHomeScreenShortcut()
 {
     auto defaultShortcuts = KGlobalAccel::self()->defaultShortcut(toggleDisplayHomeScreenAction);
     for (const auto &shortcut : defaultShortcuts) {
-        setActivateSettingsShortcut(shortcut);
+        setDisplayHomeScreenShortcut(shortcut);
     }
 }
 
@@ -143,6 +127,6 @@ void Shortcuts::resetDisplayHomeOverlayShortcut()
 {
     auto defaultShortcuts = KGlobalAccel::self()->defaultShortcut(toggleDisplayHomeOverlayAction);
     for (const auto &shortcut : defaultShortcuts) {
-        setActivateSettingsShortcut(shortcut);
+        setDisplayHomeOverlayShortcut(shortcut);
     }
 }

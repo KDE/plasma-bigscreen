@@ -128,7 +128,7 @@ Bigscreen.ScrollablePage {
 
         Bigscreen.ButtonDelegate {
             id: timeDateDelegate
-            KeyNavigation.down: settingsShortcutDelegate
+            KeyNavigation.down: homeOverlayShortcut
 
             icon.name: "preferences-system-time"
             text: i18n("Adjust date and time")
@@ -142,6 +142,46 @@ Bigscreen.ScrollablePage {
 
             Layout.topMargin: Kirigami.Units.gridUnit
             Layout.bottomMargin: Kirigami.Units.gridUnit
+        }
+
+        Bigscreen.ButtonDelegate {
+            id: homeOverlayShortcut
+            KeyNavigation.down: homescreenShortcutDelegate
+            Layout.bottomMargin: Kirigami.Units.smallSpacing
+            text: i18n("Open home overlay shortcut")
+            icon.name: 'preferences-desktop-keyboard-symbolic'
+
+            property string getActionPath: "displayHomeOverlayShortcut"
+            property string setActionPath: "setDisplayHomeOverlayShortcut"
+            property string resetActionPath: "resetDisplayHomeOverlayShortcut"
+            onClicked: {
+                shortcutsPicker.title = text;
+                shortcutsPicker.currentShortcut = kcm.getShortcut(getActionPath);
+                shortcutsPicker.getActionPath = getActionPath;
+                shortcutsPicker.setActionPath = setActionPath;
+                shortcutsPicker.resetActionPath = resetActionPath;
+                shortcutsPicker.open();
+            }
+        }
+
+        Bigscreen.ButtonDelegate {
+            id: homescreenShortcutDelegate
+            KeyNavigation.down: settingsShortcutDelegate
+            Layout.bottomMargin: Kirigami.Units.smallSpacing
+            text: i18n("Open homescreen shortcut")
+            icon.name: 'preferences-desktop-keyboard-symbolic'
+
+            property string getActionPath: "displayHomeScreenShortcut"
+            property string setActionPath: "setDisplayHomeScreenShortcut"
+            property string resetActionPath: "resetDisplayHomeScreenShortcut"
+            onClicked: {
+                shortcutsPicker.title = text;
+                shortcutsPicker.currentShortcut = kcm.getShortcut(getActionPath);
+                shortcutsPicker.getActionPath = getActionPath;
+                shortcutsPicker.setActionPath = setActionPath;
+                shortcutsPicker.resetActionPath = resetActionPath;
+                shortcutsPicker.open();
+            }
         }
 
         Bigscreen.ButtonDelegate {
@@ -166,7 +206,6 @@ Bigscreen.ScrollablePage {
 
         Bigscreen.ButtonDelegate {
             id: tasksShortcutDelegate
-            KeyNavigation.down: homescreenShortcutDelegate
             Layout.bottomMargin: Kirigami.Units.smallSpacing
             text: i18n("Open tasks shortcut")
             icon.name: 'preferences-desktop-keyboard-symbolic'
@@ -174,25 +213,6 @@ Bigscreen.ScrollablePage {
             property string getActionPath: "activateTasksShortcut"
             property string setActionPath: "setActivateTasksShortcut"
             property string resetActionPath: "resetActivateTasksShortcut"
-            onClicked: {
-                shortcutsPicker.title = text;
-                shortcutsPicker.currentShortcut = kcm.getShortcut(getActionPath);
-                shortcutsPicker.getActionPath = getActionPath;
-                shortcutsPicker.setActionPath = setActionPath;
-                shortcutsPicker.resetActionPath = resetActionPath;
-                shortcutsPicker.open();
-            }
-        }
-
-        Bigscreen.ButtonDelegate {
-            id: homescreenShortcutDelegate
-            Layout.bottomMargin: Kirigami.Units.smallSpacing
-            text: i18n("Open homescreen shortcut")
-            icon.name: 'preferences-desktop-keyboard-symbolic'
-
-            property string getActionPath: "displayHomeScreenShortcut"
-            property string setActionPath: "setDisplayHomeScreenShortcut"
-            property string resetActionPath: "resetDisplayHomeScreenShortcut"
             onClicked: {
                 shortcutsPicker.title = text;
                 shortcutsPicker.currentShortcut = kcm.getShortcut(getActionPath);

@@ -19,15 +19,15 @@ public:
 
     void initializeShortcuts();
 
-    QKeySequence activateSettingsShortcut() const;
-    QKeySequence activateTasksShortcut() const;
-    QKeySequence displayHomeScreenShortcut() const;
-    QKeySequence displayHomeOverlayShortcut() const;
+    QList<QKeySequence> activateSettingsShortcut() const;
+    QList<QKeySequence> activateTasksShortcut() const;
+    QList<QKeySequence> displayHomeScreenShortcut() const;
+    QList<QKeySequence> displayHomeOverlayShortcut() const;
 
-    void setActivateSettingsShortcut(const QKeySequence &shortcut);
-    void setActivateTasksShortcut(const QKeySequence &shortcut);
-    void setDisplayHomeScreenShortcut(const QKeySequence &shortcut);
-    void setDisplayHomeOverlayShortcut(const QKeySequence &shortcut);
+    bool setActivateSettingsShortcut(const QKeySequence &shortcut);
+    bool setActivateTasksShortcut(const QKeySequence &shortcut);
+    bool setDisplayHomeScreenShortcut(const QKeySequence &shortcut);
+    bool setDisplayHomeOverlayShortcut(const QKeySequence &shortcut);
 
     void resetActivateSettingsShortcut();
     void resetActivateTasksShortcut();

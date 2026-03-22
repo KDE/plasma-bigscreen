@@ -41,14 +41,17 @@ public Q_SLOTS: // METHODS
     Q_SCRIPTABLE QString activateSettingsShortcut();
     Q_SCRIPTABLE QString activateTasksShortcut();
     Q_SCRIPTABLE QString displayHomeScreenShortcut();
+    Q_SCRIPTABLE QString displayHomeOverlayShortcut();
 
-    Q_SCRIPTABLE void setActivateSettingsShortcut(const QString &shortcut);
-    Q_SCRIPTABLE void setActivateTasksShortcut(const QString &shortcut);
-    Q_SCRIPTABLE void setDisplayHomeScreenShortcut(const QString &shortcut);
+    Q_SCRIPTABLE bool setActivateSettingsShortcut(const QString &shortcut);
+    Q_SCRIPTABLE bool setActivateTasksShortcut(const QString &shortcut);
+    Q_SCRIPTABLE bool setDisplayHomeScreenShortcut(const QString &shortcut);
+    Q_SCRIPTABLE bool setDisplayHomeOverlayShortcut(const QString &shortcut);
 
     Q_SCRIPTABLE void resetActivateSettingsShortcut();
     Q_SCRIPTABLE void resetActivateTasksShortcut();
     Q_SCRIPTABLE void resetDisplayHomeScreenShortcut();
+    Q_SCRIPTABLE void resetDisplayHomeOverlayShortcut();
 
 Q_SIGNALS: // SIGNALS
     Q_SCRIPTABLE void useColoredTilesChanged(const bool &msgUseColoredTiles);

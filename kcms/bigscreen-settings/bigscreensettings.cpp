@@ -186,11 +186,21 @@ QString BigscreenSettings::getShortcut(const QString &action)
     return responseArg.at(0).toString();
 }
 
-void BigscreenSettings::setShortcut(const QString &action, const QKeySequence &shortcut)
+bool BigscreenSettings::setShortcut(const QString &action, const QKeySequence &shortcut)
 {
     QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.biglauncher", "/BigLauncher", "", action);
     msg << shortcut.toString();
-    QDBusConnection::sessionBus().send(msg);
+    QDBusMessage response = QDBusConnection::sessionBus().call(msg);
+    QList<QVariant> responseArg = response.arguments();
+    bool res = responseArg.at(0).toBool();
+
+    if (res) {
+        qDebug() << "Set shortcut" << action << shortcut;
+    } else {
+        qWarning() << "Set shortcut failed" << action << shortcut;
+    }
+
+    return res;
 }
 
 void BigscreenSettings::resetShortcut(const QString &action)

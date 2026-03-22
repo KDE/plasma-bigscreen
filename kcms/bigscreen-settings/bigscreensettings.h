@@ -62,7 +62,7 @@ public Q_SLOTS:
     bool saveTime();
 
     QString getShortcut(const QString &action);
-    void setShortcut(const QString &action, const QKeySequence &shortcut);
+    bool setShortcut(const QString &action, const QKeySequence &shortcut);
     void resetShortcut(const QString &action);
 
 Q_SIGNALS:
