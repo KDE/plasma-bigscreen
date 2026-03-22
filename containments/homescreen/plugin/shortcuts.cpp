@@ -35,7 +35,7 @@ void Shortcuts::initializeShortcuts()
     toggleDisplayHomeScreenAction = new QAction(this);
     toggleDisplayHomeScreenAction->setObjectName(QStringLiteral("Toggle Bigscreen Home Screen"));
     toggleDisplayHomeScreenAction->setText(i18n("Toggle Bigscreen Home Screen"));
-    KGlobalAccel::self()->setGlobalShortcut(toggleDisplayHomeScreenAction, Qt::Key_HomePage | Qt::Key_Back);
+    KGlobalAccel::self()->setGlobalShortcut(toggleDisplayHomeScreenAction, Qt::Key_HomePage);
 
     toggleDisplayHomeOverlayAction = new QAction(this);
     toggleDisplayHomeOverlayAction->setObjectName(QStringLiteral("Toggle Bigscreen Home Overlay"));

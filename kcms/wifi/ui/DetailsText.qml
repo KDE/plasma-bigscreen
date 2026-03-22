@@ -38,7 +38,7 @@ ColumnLayout {
     ColumnLayout {
         id: ipAddressBlockColumn
         Layout.fillWidth: true
-        Layout.topMargin: Kirigami.Units.largeSPacing
+        Layout.topMargin: Kirigami.Units.largeSpacing
         visible: ipDetails.length > 0 ? 1 : 0
         enabled: ipDetails.length > 0 ? 1 : 0
 

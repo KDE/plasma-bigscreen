@@ -41,7 +41,7 @@ AbstractIndicator {
                             }
                             return;
                         } else {
-                            window = component.createObject("root", {currentDevice: device})
+                            window = component.createObject(connectionIcon, {currentDevice: device})
                             window.show()
                             window.requestActivate()
                         }

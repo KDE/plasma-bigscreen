@@ -54,7 +54,7 @@ QHash<int, QByteArray> KcmsListModel::roleNames() const
     roles[KcmDescriptionRole] = "kcmDescription";
     roles[KcmNameRole] = "kcmName";
     roles[KcmRole] = "kcm";
-    roles[KcmPathRole] = "kcmMetaData";
+    roles[KcmPathRole] = "kcmPath";
     return roles;
 }
 

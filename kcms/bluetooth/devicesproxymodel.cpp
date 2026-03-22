@@ -127,7 +127,6 @@ bool DevicesProxyModel::filterAcceptsRow(int source_row, const QModelIndex &sour
     } else {
         return !(name == address) && !sourceModel()->data(index, BluezQt::DevicesModel::PairedRole).toBool();
     }
-    return !(name == address);
 }
 
 QString DevicesProxyModel::adapterHciString(const QString &ubi)

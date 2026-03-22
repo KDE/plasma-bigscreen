@@ -22,10 +22,10 @@ T.ItemDelegate {
 
     verticalPadding: Units.verticalPadding
     horizontalPadding: Units.horizontalPadding
-    leftPadding: verticalPadding
-    rightPadding: verticalPadding
-    topPadding: horizontalPadding
-    bottomPadding: horizontalPadding
+    leftPadding: horizontalPadding
+    rightPadding: horizontalPadding
+    topPadding: verticalPadding
+    bottomPadding: verticalPadding
 
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
                             implicitContentWidth + leftPadding + rightPadding)
