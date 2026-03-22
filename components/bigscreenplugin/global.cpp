@@ -38,13 +38,13 @@ QString Global::launchReason() const
 
 void Global::swapSession()
 {
-    QProcess *process = new QProcess();
+    QProcess process;
 
     const QString path = u"PATH="_s + qgetenv("PATH");
     const QString home = u"HOME="_s + qgetenv("HOME");
     const QString plasmaBigscreenLaunchReason = u"PLASMA_BIGSCREEN_LAUNCH_REASON="_s + launchReason();
     const QString xdgCurrentDesktop = u"XDG_CURRENT_DESKTOP=KDE"_s;
 
-    process->startDetached(u"env"_s,
-                           QStringList() << u"-i"_s << path << home << plasmaBigscreenLaunchReason << xdgCurrentDesktop << u"plasma-bigscreen-swap-session"_s);
+    process.startDetached(u"env"_s,
+                          QStringList() << u"-i"_s << path << home << plasmaBigscreenLaunchReason << xdgCurrentDesktop << u"plasma-bigscreen-swap-session"_s);
 }
