@@ -45,7 +45,7 @@ Bigscreen.SidebarOverlay {
         Bigscreen.ButtonDelegate {
             id: connectToggleButton
 
-            text: model ? (delegate.connecting ? i18n("Connecting…") : (delegate.disconnecting ? i18n("Disconnecting…") : (model.Connected ? i18n("Disconnect") : (!model.Paired ? i18n("Pair") : i18n("Connect"))))) : ""
+            text: model ? (root.connecting ? i18n("Connecting…") : (root.disconnecting ? i18n("Disconnecting…") : (model.Connected ? i18n("Disconnect") : (!model.Paired ? i18n("Pair") : i18n("Connect"))))) : ""
             icon.name: model ? (model.Connected ? "network-disconnect" : "network-connect") : ""
 
             KeyNavigation.down: forgetButton
@@ -53,27 +53,27 @@ Bigscreen.SidebarOverlay {
 
             onClicked: {
                 if (!model.Paired) {
-                    delegate.connecting = true;
+                    root.connecting = true;
                     Script.makeCall(model.Device.pair(), call => {
-                        delegate.connecting = false;
+                        root.connecting = false;
                         if (call.error) {
                             console.log("makeCall error when pairing: " + call.errorText)
                         }
                     });
                 } else if (model.Connected) {
-                    delegate.disconnecting = true;
+                    root.disconnecting = true;
                     Script.makeCall(model.Device.disconnectFromDevice(), call => {
-                        delegate.disconnecting = false;
+                        root.disconnecting = false;
                         if (call.error) {
                             console.log("makeCall error when disconnecting: " + call.errorText);
                         }
                     });
                 } else {
-                    delegate.connecting = true;
+                    root.connecting = true;
                     Script.makeCall(model.Device.connectToDevice(), call => {
-                        delegate.connecting = false;
+                        root.connecting = false;
                         if (call.error) {
-                            console.log("makeCall error when disconnecting: " + call.errorText);
+                            console.log("makeCall error when connecting: " + call.errorText);
                         }
                     });
                 }
@@ -97,7 +97,7 @@ Bigscreen.SidebarOverlay {
 
                 onAccepted: {
                     Script.makeCall(model.Device.adapter.removeDevice(model.Device), call => {
-                        delegate.connecting = false;
+                        root.connecting = false;
                         if (call.error) {
                             console.log("makeCall error when forgetting: " + call.errorText);
                         }
