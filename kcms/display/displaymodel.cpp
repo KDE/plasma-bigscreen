@@ -201,7 +201,7 @@ void DisplayModel::loadDisplayInformation()
         }
 
         // Check if selected display still exists
-        if (m_selectedDisplayId == -1) {
+        if (m_selectedDisplayId != -1) {
             bool found = false;
             for (KScreen::OutputPtr display : m_displays) {
                 if (display->id() == m_selectedDisplayId) {
