@@ -19,10 +19,11 @@ AbstractIndicator {
     id: paIcon
     text: i18n("Audio Settings")
 
-    property bool volumeFeedback: true
     readonly property string dummyOutputName: "auto_null"
-    icon.name: PreferredDevice.sink && !isDummyOutput(PreferredDevice.sink) ? AudioIcon.forVolume(volumePercent(PreferredDevice.sink.volume), PreferredDevice.sink.muted, "")
-                                                                                          : AudioIcon.forVolume(0, true, "")
+    icon.name: PreferredDevice.sink
+        && (!isDummyOutput(PreferredDevice.sink)
+            ? AudioIcon.forVolume(volumePercent(PreferredDevice.sink.volume), PreferredDevice.sink.muted, "")
+            : AudioIcon.forVolume(0, true, ""))
 
     function isDummyOutput(output) {
         return output && output.name === dummyOutputName;
@@ -30,20 +31,6 @@ AbstractIndicator {
 
     function volumePercent(volume) {
         return Math.round(volume / PulseAudio.NormalVolume * 100.0);
-    }
-
-    function playFeedback(sinkIndex) {
-        if (!volumeFeedback) {
-            return;
-        }
-        if (sinkIndex == undefined) {
-            sinkIndex = PreferredDevice.sink.index;
-        }
-        feedback.play(sinkIndex);
-    }
-
-    VolumeFeedback {
-        id: feedback
     }
 
     onClicked: {

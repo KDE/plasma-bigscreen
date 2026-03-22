@@ -14,6 +14,8 @@
 #include <QProcess>
 #include <qqmlregistration.h>
 
+#include "screenshot2interface.h"
+
 class Global : public QObject
 {
     Q_OBJECT
@@ -28,6 +30,12 @@ public:
 
     QString launchReason() const;
     Q_INVOKABLE void swapSession();
+    Q_INVOKABLE void takeScreenshot();
+
+private:
+    void handleScreenshotMetaDataReceived(const QVariantMap &metadata, int fd);
+
+    OrgKdeKWinScreenShot2Interface *m_screenshotInterface;
 };
 
 #endif // GLOBAL_H

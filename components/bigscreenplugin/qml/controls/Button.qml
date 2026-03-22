@@ -27,12 +27,19 @@ T.Button {
     Kirigami.MnemonicData.label: display !== T.AbstractButton.IconOnly ? text : ""
     Kirigami.MnemonicData.onActiveChanged: background?.updateItem()
 
+    icon.width: Kirigami.Units.iconSizes.medium
+    icon.height: Kirigami.Units.iconSizes.medium
+
     topPadding: Kirigami.Units.largeSpacing // Units.verticalPadding
     bottomPadding: Kirigami.Units.largeSpacing // Units.verticalPadding
     leftPadding: Units.horizontalPadding
     rightPadding: Units.horizontalPadding
 
-    background: DelegateBackground { control: root }
+    background: DelegateBackground {
+        control: root
+        raisedBackground: !root.flat
+        translucentHighlight: root.flat
+    }
 
     onPressed: root.forceActiveFocus()
     Keys.onReturnPressed: {
@@ -49,12 +56,12 @@ T.Button {
         spacing: 0
 
         Kirigami.Icon {
-            Layout.rightMargin: Kirigami.Units.gridUnit
+            Layout.rightMargin: internalTextItem.visible ? Kirigami.Units.gridUnit : 0
             Layout.alignment: Qt.AlignVCenter
 
             color: root.icon.color
-            implicitHeight: (root.icon.name !== "") ? Kirigami.Units.iconSizes.medium : 0
-            implicitWidth: (root.icon.name !== "") ? Kirigami.Units.iconSizes.medium : 0
+            implicitHeight: (root.icon.name !== "") ? root.icon.height : 0
+            implicitWidth: (root.icon.name !== "") ? root.icon.width : 0
             source: root.icon.name
             visible: root.icon.name != ''
         }

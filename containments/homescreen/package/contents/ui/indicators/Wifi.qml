@@ -28,18 +28,6 @@ AbstractIndicator {
         visible: running
     }
 
-    PlasmaNM.NetworkStatus {
-        id: networkStatus
-    }
-
-    PlasmaNM.NetworkModel {
-        id: connectionModel
-    }
-
-    PlasmaNM.Handler {
-        id: handler
-    }
-
     PlasmaNM.ConnectionIcon {
         id: connectionIconProvider
     }

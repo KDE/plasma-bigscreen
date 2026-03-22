@@ -24,6 +24,7 @@ ColumnLayout {
     signal settingsRequested()
 
     signal closeRequested()
+    signal screenshotRequested()
 
     function focusTasks() {
         tasksButton.forceActiveFocus();
@@ -51,7 +52,7 @@ ColumnLayout {
     QQC2.Control {
         id: headerControl
         topPadding: Kirigami.Units.gridUnit
-        bottomPadding: Kirigami.Units.gridUnit
+        bottomPadding: Kirigami.Units.smallSpacing
         leftPadding: Kirigami.Units.gridUnit
         rightPadding: Kirigami.Units.gridUnit
 
@@ -89,6 +90,17 @@ ColumnLayout {
                 font.pixelSize: Bigscreen.Units.defaultFontPixelSize
                 font.weight: Font.Light
             }
+
+            ColumnActionsRow {
+                id: actionsRow
+                onCloseRequested: root.closeRequested()
+                onScreenshotRequested: root.screenshotRequested()
+
+                Layout.fillWidth: true
+                Layout.topMargin: Kirigami.Units.largeSpacing
+
+                KeyNavigation.down: homeButton
+            }
         }
     }
 
@@ -109,6 +121,7 @@ ColumnLayout {
                 id: homeButton
                 Layout.fillWidth: true
 
+                KeyNavigation.up: actionsRow
                 KeyNavigation.down: searchButton
 
                 text: i18n("Home")

@@ -8,7 +8,6 @@ import QtQuick.Controls as QQC2
 
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.private.nanoshell as NanoShell
-import org.kde.plasma.plasma5support as P5Support
 import org.kde.private.biglauncher
 import org.kde.bigscreen as Bigscreen
 import org.kde.bigscreen.controllerhandler as ControllerHandler
@@ -25,6 +24,8 @@ Window {
     signal minimizeAllTasksRequested()
     signal searchRequested()
     signal settingsRequested()
+
+    property bool _pendingScreenshot: false
 
     Kirigami.Theme.inherit: false
     Kirigami.Theme.colorSet: Kirigami.Theme.View
@@ -49,6 +50,10 @@ Window {
             sidebar.open()
         } else {
             tasksView.visible = false;
+            if (_pendingScreenshot) {
+                _pendingScreenshot = false;
+                screenshotTimer.start();
+            }
         }
     }
     onActiveChanged: {
@@ -67,6 +72,13 @@ Window {
                 window.showFullScreen();
             }
         }
+    }
+
+    // Delay to ensure the compositor has fully removed the overlay from the screen
+    Timer {
+        id: screenshotTimer
+        interval: 500
+        onTriggered: Bigscreen.Global.takeScreenshot()
     }
 
     // Fallback in case the sidebar somehow gets stuck
@@ -113,6 +125,8 @@ Window {
                     window.settingsRequested();
                     window.hideOverlay();
                 }
+                onCloseRequested: sidebar.close()
+                onScreenshotRequested: window._pendingScreenshot = true
             }
 
             MouseArea {

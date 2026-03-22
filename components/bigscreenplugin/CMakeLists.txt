@@ -4,8 +4,11 @@
 
 ecm_add_qml_module(bigscreenplugin URI org.kde.bigscreen GENERATE_PLUGIN_SOURCE DEPENDENCIES QtQuick)
 
+qt_add_dbus_interfaces(DBUS_SRCS dbus/org.kde.KWin.ScreenShot2.xml)
+
 set(bigscreenplugin_SRCS
     global.cpp
+    ${DBUS_SRCS}
 )
 
 target_sources(bigscreenplugin PRIVATE ${bigscreenplugin_SRCS})
@@ -46,6 +49,8 @@ target_link_libraries(bigscreenplugin
         Qt::Qml
         Qt::Quick
         Qt::DBus
+        Qt::Concurrent
+        KF6::I18n
 )
 
 ecm_finalize_qml_module(bigscreenplugin)
