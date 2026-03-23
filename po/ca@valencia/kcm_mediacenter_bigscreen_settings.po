@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-03-23 00:45+0000\n"
 "PO-Revision-Date: 2026-02-28 08:26+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -133,38 +133,65 @@ msgstr "Establix el tema del sistema"
 
 #: ui/main.qml:102
 #, kde-format
+msgid "Window decorations"
+msgstr ""
+
+#: ui/main.qml:103
+#, kde-format
+msgid ""
+"Have a window frame (minimize, maximize, close), for apps that request it"
+msgstr ""
+
+#: ui/main.qml:112
+#, kde-format
 msgid "Navigation sounds"
 msgstr "Sons de navegació"
 
-#: ui/main.qml:112
+#: ui/main.qml:113
+#, kde-format
+msgid "Play a sound when the selected item changes in system apps"
+msgstr ""
+
+#: ui/main.qml:123
 #, kde-format
 msgid "Power inhibition"
 msgstr "Inhibició de l'energia"
 
-#: ui/main.qml:122
+#: ui/main.qml:124
+#, kde-format
+msgid "Prevent the system from automatically sleeping"
+msgstr ""
+
+#: ui/main.qml:134
 #, kde-format
 msgid "Adjust date and time"
 msgstr "Ajusta la data i l'hora"
 
-#: ui/main.qml:128
+#: ui/main.qml:140
 #, kde-format
 msgid "Shortcuts"
 msgstr "Dreceres"
 
-#: ui/main.qml:139
+#: ui/main.qml:151
+#, fuzzy, kde-format
+#| msgid "Open homescreen shortcut"
+msgid "Open home overlay shortcut"
+msgstr "Drecera d'obrir la pàgina d'inici"
+
+#: ui/main.qml:171
+#, kde-format
+msgid "Open homescreen shortcut"
+msgstr "Drecera d'obrir la pàgina d'inici"
+
+#: ui/main.qml:191
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "Drecera d'obrir la configuració"
 
-#: ui/main.qml:159
+#: ui/main.qml:210
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "Drecera d'obrir tasques"
-
-#: ui/main.qml:178
-#, kde-format
-msgid "Open homescreen shortcut"
-msgstr "Drecera d'obrir la pàgina d'inici"
 
 #: ui/ShortcutsPickerSidebar.qml:39
 #, kde-format

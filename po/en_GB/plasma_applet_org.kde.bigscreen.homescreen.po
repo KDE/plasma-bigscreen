@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-03-23 00:45+0000\n"
 "PO-Revision-Date: 2024-10-18 16:54+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -32,45 +32,65 @@ msgstr "Add Favourites"
 msgid "Remove Favorites"
 msgstr "Remove Favourites"
 
-#: contents/ui/homeoverlay/MainColumn.qml:114
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:36
+#, kde-format
+msgid "Screenshot"
+msgstr ""
+
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:50
+#, kde-format
+msgid "Audio"
+msgstr "Audio"
+
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:78
+#, kde-format
+msgid "Wi-Fi"
+msgstr ""
+
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:93
+#, kde-format
+msgid "Shutdown"
+msgstr ""
+
+#: contents/ui/homeoverlay/MainColumn.qml:127
 #, kde-format
 msgid "Home"
 msgstr ""
 
-#: contents/ui/homeoverlay/MainColumn.qml:127
+#: contents/ui/homeoverlay/MainColumn.qml:140
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr ""
 
-#: contents/ui/homeoverlay/MainColumn.qml:144
+#: contents/ui/homeoverlay/MainColumn.qml:157
 #, fuzzy, kde-format
 #| msgid "Clear Tasks"
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "Clear Tasks"
 
-#: contents/ui/homeoverlay/MainColumn.qml:165
+#: contents/ui/homeoverlay/MainColumn.qml:178
 #, kde-format
 msgid "Controller"
 msgstr ""
 
-#: contents/ui/homeoverlay/MainColumn.qml:166
+#: contents/ui/homeoverlay/MainColumn.qml:179
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr ""
 
-#: contents/ui/homeoverlay/MainColumn.qml:166
+#: contents/ui/homeoverlay/MainColumn.qml:179
 #, kde-format
 msgid "Key capture off"
 msgstr ""
 
-#: contents/ui/homeoverlay/MainColumn.qml:186
+#: contents/ui/homeoverlay/MainColumn.qml:199
 #, kde-format
 msgid "On-screen Keyboard"
 msgstr ""
 
-#: contents/ui/homeoverlay/MainColumn.qml:200
+#: contents/ui/homeoverlay/MainColumn.qml:213
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
@@ -109,20 +129,11 @@ msgstr "Remove Favourites"
 msgid "KDE Connect"
 msgstr "KDE Connect"
 
-#: contents/ui/indicators/PairWindow.qml:48
-#, kde-format
-msgid "Pairing Request From %1"
+#: contents/ui/indicators/PairWindow.qml:40
+#, fuzzy, kde-format
+#| msgid "Pairing Request From %1"
+msgid "Accept Pairing Request From %1?"
 msgstr "Pairing Request From %1"
-
-#: contents/ui/indicators/PairWindow.qml:83
-#, kde-format
-msgid "Accept"
-msgstr "Accept"
-
-#: contents/ui/indicators/PairWindow.qml:127
-#, kde-format
-msgid "Cancel"
-msgstr "Cancel"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
@@ -209,6 +220,12 @@ msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr ""
 
+#~ msgid "Accept"
+#~ msgstr "Accept"
+
+#~ msgid "Cancel"
+#~ msgstr "Cancel"
+
 #~ msgid "Voice Applications"
 #~ msgstr "Voice Applications"
 
@@ -265,9 +282,6 @@ msgstr ""
 
 #~ msgid "Getting Ready... Please Wait"
 #~ msgstr "Getting Ready... Please Wait"
-
-#~ msgid "Audio"
-#~ msgstr "Audio"
 
 #~ msgid "Bigscreen Settings"
 #~ msgstr "Bigscreen Settings"

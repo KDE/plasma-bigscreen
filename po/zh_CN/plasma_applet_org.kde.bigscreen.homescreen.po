@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-03-23 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -33,44 +33,64 @@ msgstr "添加收藏"
 msgid "Remove Favorites"
 msgstr "移除收藏"
 
-#: contents/ui/homeoverlay/MainColumn.qml:114
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:36
+#, kde-format
+msgid "Screenshot"
+msgstr ""
+
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:50
+#, kde-format
+msgid "Audio"
+msgstr ""
+
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:78
+#, kde-format
+msgid "Wi-Fi"
+msgstr ""
+
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:93
+#, kde-format
+msgid "Shutdown"
+msgstr ""
+
+#: contents/ui/homeoverlay/MainColumn.qml:127
 #, kde-format
 msgid "Home"
 msgstr "主页"
 
-#: contents/ui/homeoverlay/MainColumn.qml:127
+#: contents/ui/homeoverlay/MainColumn.qml:140
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr "搜索"
 
-#: contents/ui/homeoverlay/MainColumn.qml:144
+#: contents/ui/homeoverlay/MainColumn.qml:157
 #, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "任务管理"
 
-#: contents/ui/homeoverlay/MainColumn.qml:165
+#: contents/ui/homeoverlay/MainColumn.qml:178
 #, kde-format
 msgid "Controller"
 msgstr "控制器"
 
-#: contents/ui/homeoverlay/MainColumn.qml:166
+#: contents/ui/homeoverlay/MainColumn.qml:179
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "当前正在捕获按键…"
 
-#: contents/ui/homeoverlay/MainColumn.qml:166
+#: contents/ui/homeoverlay/MainColumn.qml:179
 #, kde-format
 msgid "Key capture off"
 msgstr "按键捕获关闭"
 
-#: contents/ui/homeoverlay/MainColumn.qml:186
+#: contents/ui/homeoverlay/MainColumn.qml:199
 #, kde-format
 msgid "On-screen Keyboard"
 msgstr "屏幕键盘"
 
-#: contents/ui/homeoverlay/MainColumn.qml:200
+#: contents/ui/homeoverlay/MainColumn.qml:213
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
@@ -107,20 +127,11 @@ msgstr "自定义收藏夹"
 msgid "KDE Connect"
 msgstr "KDE Connect"
 
-#: contents/ui/indicators/PairWindow.qml:48
-#, kde-format
-msgid "Pairing Request From %1"
+#: contents/ui/indicators/PairWindow.qml:40
+#, fuzzy, kde-format
+#| msgid "Pairing Request From %1"
+msgid "Accept Pairing Request From %1?"
 msgstr "来自 %1 的配对请求"
-
-#: contents/ui/indicators/PairWindow.qml:83
-#, kde-format
-msgid "Accept"
-msgstr "接受"
-
-#: contents/ui/indicators/PairWindow.qml:127
-#, kde-format
-msgid "Cancel"
-msgstr "取消"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
@@ -203,3 +214,9 @@ msgstr "Plasma 大屏幕已启用系统全局阻止电源管理"
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "搜索…"
+
+#~ msgid "Accept"
+#~ msgstr "接受"
+
+#~ msgid "Cancel"
+#~ msgstr "取消"

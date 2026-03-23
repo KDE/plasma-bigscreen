@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-03-23 00:45+0000\n"
 "PO-Revision-Date: 2026-02-28 06:45-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -36,44 +36,64 @@ msgstr "Adicionar favoritos"
 msgid "Remove Favorites"
 msgstr "Remover favoritos"
 
-#: contents/ui/homeoverlay/MainColumn.qml:114
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:36
+#, kde-format
+msgid "Screenshot"
+msgstr ""
+
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:50
+#, kde-format
+msgid "Audio"
+msgstr "Áudio"
+
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:78
+#, kde-format
+msgid "Wi-Fi"
+msgstr ""
+
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:93
+#, kde-format
+msgid "Shutdown"
+msgstr ""
+
+#: contents/ui/homeoverlay/MainColumn.qml:127
 #, kde-format
 msgid "Home"
 msgstr "Início"
 
-#: contents/ui/homeoverlay/MainColumn.qml:127
+#: contents/ui/homeoverlay/MainColumn.qml:140
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr "Pesquisar"
 
-#: contents/ui/homeoverlay/MainColumn.qml:144
+#: contents/ui/homeoverlay/MainColumn.qml:157
 #, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "Tarefas"
 
-#: contents/ui/homeoverlay/MainColumn.qml:165
+#: contents/ui/homeoverlay/MainColumn.qml:178
 #, kde-format
 msgid "Controller"
 msgstr "Controlador"
 
-#: contents/ui/homeoverlay/MainColumn.qml:166
+#: contents/ui/homeoverlay/MainColumn.qml:179
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "Capturando teclas atualmente…"
 
-#: contents/ui/homeoverlay/MainColumn.qml:166
+#: contents/ui/homeoverlay/MainColumn.qml:179
 #, kde-format
 msgid "Key capture off"
 msgstr "Captura de tecla desligada"
 
-#: contents/ui/homeoverlay/MainColumn.qml:186
+#: contents/ui/homeoverlay/MainColumn.qml:199
 #, kde-format
 msgid "On-screen Keyboard"
 msgstr "Teclado virtual"
 
-#: contents/ui/homeoverlay/MainColumn.qml:200
+#: contents/ui/homeoverlay/MainColumn.qml:213
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
@@ -110,20 +130,11 @@ msgstr "Personalizar favoritos"
 msgid "KDE Connect"
 msgstr "KDE Connect"
 
-#: contents/ui/indicators/PairWindow.qml:48
-#, kde-format
-msgid "Pairing Request From %1"
+#: contents/ui/indicators/PairWindow.qml:40
+#, fuzzy, kde-format
+#| msgid "Pairing Request From %1"
+msgid "Accept Pairing Request From %1?"
 msgstr "Solicitação de emparelhamento de %1"
-
-#: contents/ui/indicators/PairWindow.qml:83
-#, kde-format
-msgid "Accept"
-msgstr "Aceitar"
-
-#: contents/ui/indicators/PairWindow.qml:127
-#, kde-format
-msgid "Cancel"
-msgstr "Cancelar"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
@@ -207,6 +218,12 @@ msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Pesquisar…"
 
+#~ msgid "Accept"
+#~ msgstr "Aceitar"
+
+#~ msgid "Cancel"
+#~ msgstr "Cancelar"
+
 #~ msgid "Voice Applications"
 #~ msgstr "Aplicativos de voz"
 
@@ -263,9 +280,6 @@ msgstr "Pesquisar…"
 
 #~ msgid "Getting Ready... Please Wait"
 #~ msgstr "Preparando, favor aguardar"
-
-#~ msgid "Audio"
-#~ msgstr "Áudio"
 
 #~ msgid "Bigscreen Settings"
 #~ msgstr "Configurações da tela grande"

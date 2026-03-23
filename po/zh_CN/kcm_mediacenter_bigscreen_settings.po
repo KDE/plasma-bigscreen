@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-03-23 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -131,38 +131,65 @@ msgstr "设置系统主题"
 
 #: ui/main.qml:102
 #, kde-format
+msgid "Window decorations"
+msgstr ""
+
+#: ui/main.qml:103
+#, kde-format
+msgid ""
+"Have a window frame (minimize, maximize, close), for apps that request it"
+msgstr ""
+
+#: ui/main.qml:112
+#, kde-format
 msgid "Navigation sounds"
 msgstr "导航声音"
 
-#: ui/main.qml:112
+#: ui/main.qml:113
+#, kde-format
+msgid "Play a sound when the selected item changes in system apps"
+msgstr ""
+
+#: ui/main.qml:123
 #, kde-format
 msgid "Power inhibition"
 msgstr "阻止电源管理"
 
-#: ui/main.qml:122
+#: ui/main.qml:124
+#, kde-format
+msgid "Prevent the system from automatically sleeping"
+msgstr ""
+
+#: ui/main.qml:134
 #, kde-format
 msgid "Adjust date and time"
 msgstr "调整日期和时间"
 
-#: ui/main.qml:128
+#: ui/main.qml:140
 #, kde-format
 msgid "Shortcuts"
 msgstr "快捷键"
 
-#: ui/main.qml:139
+#: ui/main.qml:151
+#, fuzzy, kde-format
+#| msgid "Open homescreen shortcut"
+msgid "Open home overlay shortcut"
+msgstr "打开主屏幕快捷键"
+
+#: ui/main.qml:171
+#, kde-format
+msgid "Open homescreen shortcut"
+msgstr "打开主屏幕快捷键"
+
+#: ui/main.qml:191
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "打开设置快捷键"
 
-#: ui/main.qml:159
+#: ui/main.qml:210
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "打开任务快捷键"
-
-#: ui/main.qml:178
-#, kde-format
-msgid "Open homescreen shortcut"
-msgstr "打开主屏幕快捷键"
 
 #: ui/ShortcutsPickerSidebar.qml:39
 #, kde-format

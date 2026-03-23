@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-03-23 00:45+0000\n"
 "PO-Revision-Date: 2026-02-28 08:27+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -35,44 +35,64 @@ msgstr "Afig als preferits"
 msgid "Remove Favorites"
 msgstr "Elimina dels preferits"
 
-#: contents/ui/homeoverlay/MainColumn.qml:114
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:36
+#, kde-format
+msgid "Screenshot"
+msgstr ""
+
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:50
+#, kde-format
+msgid "Audio"
+msgstr ""
+
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:78
+#, kde-format
+msgid "Wi-Fi"
+msgstr ""
+
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:93
+#, kde-format
+msgid "Shutdown"
+msgstr ""
+
+#: contents/ui/homeoverlay/MainColumn.qml:127
 #, kde-format
 msgid "Home"
 msgstr "Inici"
 
-#: contents/ui/homeoverlay/MainColumn.qml:127
+#: contents/ui/homeoverlay/MainColumn.qml:140
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr "Busca"
 
-#: contents/ui/homeoverlay/MainColumn.qml:144
+#: contents/ui/homeoverlay/MainColumn.qml:157
 #, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "Tasques"
 
-#: contents/ui/homeoverlay/MainColumn.qml:165
+#: contents/ui/homeoverlay/MainColumn.qml:178
 #, kde-format
 msgid "Controller"
 msgstr "Controlador"
 
-#: contents/ui/homeoverlay/MainColumn.qml:166
+#: contents/ui/homeoverlay/MainColumn.qml:179
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "Actualment s'estan capturant tecles…"
 
-#: contents/ui/homeoverlay/MainColumn.qml:166
+#: contents/ui/homeoverlay/MainColumn.qml:179
 #, kde-format
 msgid "Key capture off"
 msgstr "Captura de tecles desactivada"
 
-#: contents/ui/homeoverlay/MainColumn.qml:186
+#: contents/ui/homeoverlay/MainColumn.qml:199
 #, kde-format
 msgid "On-screen Keyboard"
 msgstr "Teclat en pantalla"
 
-#: contents/ui/homeoverlay/MainColumn.qml:200
+#: contents/ui/homeoverlay/MainColumn.qml:213
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
@@ -109,20 +129,11 @@ msgstr "Personalitza els preferits"
 msgid "KDE Connect"
 msgstr "KDE Connect"
 
-#: contents/ui/indicators/PairWindow.qml:48
-#, kde-format
-msgid "Pairing Request From %1"
+#: contents/ui/indicators/PairWindow.qml:40
+#, fuzzy, kde-format
+#| msgid "Pairing Request From %1"
+msgid "Accept Pairing Request From %1?"
 msgstr "S'ha demanat aparellar des de %1"
-
-#: contents/ui/indicators/PairWindow.qml:83
-#, kde-format
-msgid "Accept"
-msgstr "Accepta"
-
-#: contents/ui/indicators/PairWindow.qml:127
-#, kde-format
-msgid "Cancel"
-msgstr "Cancel·la"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
@@ -205,3 +216,9 @@ msgstr "Plasma Bigscreen ha activat la inhibició global del sistema"
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Busca…"
+
+#~ msgid "Accept"
+#~ msgstr "Accepta"
+
+#~ msgid "Cancel"
+#~ msgstr "Cancel·la"

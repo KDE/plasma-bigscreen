@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-03-23 00:45+0000\n"
 "PO-Revision-Date: 2026-03-01 10:20+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
@@ -130,38 +130,65 @@ msgstr "Définir le thème du système"
 
 #: ui/main.qml:102
 #, kde-format
+msgid "Window decorations"
+msgstr ""
+
+#: ui/main.qml:103
+#, kde-format
+msgid ""
+"Have a window frame (minimize, maximize, close), for apps that request it"
+msgstr ""
+
+#: ui/main.qml:112
+#, kde-format
 msgid "Navigation sounds"
 msgstr "Sons pour la navigation"
 
-#: ui/main.qml:112
+#: ui/main.qml:113
+#, kde-format
+msgid "Play a sound when the selected item changes in system apps"
+msgstr ""
+
+#: ui/main.qml:123
 #, kde-format
 msgid "Power inhibition"
 msgstr "Restriction d'alimentation"
 
-#: ui/main.qml:122
+#: ui/main.qml:124
+#, kde-format
+msgid "Prevent the system from automatically sleeping"
+msgstr ""
+
+#: ui/main.qml:134
 #, kde-format
 msgid "Adjust date and time"
 msgstr "Ajuster la date et l'heure"
 
-#: ui/main.qml:128
+#: ui/main.qml:140
 #, kde-format
 msgid "Shortcuts"
 msgstr "Raccourcis"
 
-#: ui/main.qml:139
+#: ui/main.qml:151
+#, fuzzy, kde-format
+#| msgid "Open homescreen shortcut"
+msgid "Open home overlay shortcut"
+msgstr "Ouvrir le raccourci vers l'écran d'accueil"
+
+#: ui/main.qml:171
+#, kde-format
+msgid "Open homescreen shortcut"
+msgstr "Ouvrir le raccourci vers l'écran d'accueil"
+
+#: ui/main.qml:191
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "Ouvrir le raccourci de configuration"
 
-#: ui/main.qml:159
+#: ui/main.qml:210
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "Ouvrir le raccourci vers les tâches"
-
-#: ui/main.qml:178
-#, kde-format
-msgid "Open homescreen shortcut"
-msgstr "Ouvrir le raccourci vers l'écran d'accueil"
 
 #: ui/ShortcutsPickerSidebar.qml:39
 #, kde-format

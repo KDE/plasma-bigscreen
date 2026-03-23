@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.mycroft.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-03-23 00:45+0000\n"
 "PO-Revision-Date: 2026-02-28 16:56+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -35,44 +35,64 @@ msgstr "Додати до улюбленого"
 msgid "Remove Favorites"
 msgstr "Вилучити з улюбленого"
 
-#: contents/ui/homeoverlay/MainColumn.qml:114
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:36
+#, kde-format
+msgid "Screenshot"
+msgstr ""
+
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:50
+#, kde-format
+msgid "Audio"
+msgstr "Звук"
+
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:78
+#, kde-format
+msgid "Wi-Fi"
+msgstr ""
+
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:93
+#, kde-format
+msgid "Shutdown"
+msgstr ""
+
+#: contents/ui/homeoverlay/MainColumn.qml:127
 #, kde-format
 msgid "Home"
 msgstr "Домівка"
 
-#: contents/ui/homeoverlay/MainColumn.qml:127
+#: contents/ui/homeoverlay/MainColumn.qml:140
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr "Пошук"
 
-#: contents/ui/homeoverlay/MainColumn.qml:144
+#: contents/ui/homeoverlay/MainColumn.qml:157
 #, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "Завдання"
 
-#: contents/ui/homeoverlay/MainColumn.qml:165
+#: contents/ui/homeoverlay/MainColumn.qml:178
 #, kde-format
 msgid "Controller"
 msgstr "Контролер"
 
-#: contents/ui/homeoverlay/MainColumn.qml:166
+#: contents/ui/homeoverlay/MainColumn.qml:179
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "Захоплюємо натискання клавіш…"
 
-#: contents/ui/homeoverlay/MainColumn.qml:166
+#: contents/ui/homeoverlay/MainColumn.qml:179
 #, kde-format
 msgid "Key capture off"
 msgstr "Захоплення клавіш вимкнено"
 
-#: contents/ui/homeoverlay/MainColumn.qml:186
+#: contents/ui/homeoverlay/MainColumn.qml:199
 #, kde-format
 msgid "On-screen Keyboard"
 msgstr "Екранна клавіатура"
 
-#: contents/ui/homeoverlay/MainColumn.qml:200
+#: contents/ui/homeoverlay/MainColumn.qml:213
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
@@ -109,20 +129,11 @@ msgstr "Налаштовування улюбленого"
 msgid "KDE Connect"
 msgstr "KDE Connect"
 
-#: contents/ui/indicators/PairWindow.qml:48
-#, kde-format
-msgid "Pairing Request From %1"
+#: contents/ui/indicators/PairWindow.qml:40
+#, fuzzy, kde-format
+#| msgid "Pairing Request From %1"
+msgid "Accept Pairing Request From %1?"
 msgstr "Запити щодо пов'язування від %1"
-
-#: contents/ui/indicators/PairWindow.qml:83
-#, kde-format
-msgid "Accept"
-msgstr "Прийняти"
-
-#: contents/ui/indicators/PairWindow.qml:127
-#, kde-format
-msgid "Cancel"
-msgstr "Скасувати"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
@@ -206,6 +217,12 @@ msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Шукати…"
 
+#~ msgid "Accept"
+#~ msgstr "Прийняти"
+
+#~ msgid "Cancel"
+#~ msgstr "Скасувати"
+
 #~ msgid "Voice Applications"
 #~ msgstr "Голосові програми"
 
@@ -262,9 +279,6 @@ msgstr "Шукати…"
 
 #~ msgid "Getting Ready... Please Wait"
 #~ msgstr "Готуємо… Будь ласка, зачекайте"
-
-#~ msgid "Audio"
-#~ msgstr "Звук"
 
 #~ msgid "Bigscreen Settings"
 #~ msgstr "Параметри для великих екранів"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-03-23 00:45+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -136,44 +136,71 @@ msgstr ""
 
 #: ui/main.qml:102
 #, kde-format
-msgid "Navigation sounds"
+msgid "Window decorations"
+msgstr ""
+
+#: ui/main.qml:103
+#, kde-format
+msgid ""
+"Have a window frame (minimize, maximize, close), for apps that request it"
 msgstr ""
 
 #: ui/main.qml:112
+#, kde-format
+msgid "Navigation sounds"
+msgstr ""
+
+#: ui/main.qml:113
+#, kde-format
+msgid "Play a sound when the selected item changes in system apps"
+msgstr ""
+
+#: ui/main.qml:123
 #, fuzzy, kde-format
 #| msgid "Power Inhibition"
 msgid "Power inhibition"
 msgstr "शक्तिनिरोधः"
 
-#: ui/main.qml:122
+#: ui/main.qml:124
+#, kde-format
+msgid "Prevent the system from automatically sleeping"
+msgstr ""
+
+#: ui/main.qml:134
 #, fuzzy, kde-format
 #| msgid "Adjust Date & Time"
 msgid "Adjust date and time"
 msgstr "तिथि एवं समय समायोजित करें"
 
-#: ui/main.qml:128
+#: ui/main.qml:140
 #, fuzzy, kde-format
 #| msgid "Set Shortcut"
 msgid "Shortcuts"
 msgstr "शॉर्टकट् सेट् कुर्वन्तु"
 
-#: ui/main.qml:139
+#: ui/main.qml:151
+#, fuzzy, kde-format
+#| msgid "Bigscreen Display Homescreen Shortcut"
+msgid "Open home overlay shortcut"
+msgstr "Bigscreen Display होमस्क्रीन् शॉर्टकट"
+
+#: ui/main.qml:171
+#, fuzzy, kde-format
+#| msgid "Bigscreen Display Homescreen Shortcut"
+msgid "Open homescreen shortcut"
+msgstr "Bigscreen Display होमस्क्रीन् शॉर्टकट"
+
+#: ui/main.qml:191
 #, fuzzy, kde-format
 #| msgid "Bigscreen Settings Shortcut"
 msgid "Open settings shortcut"
 msgstr "बिगस्क्रीन् सेटिंग्स् शॉर्टकट्"
 
-#: ui/main.qml:159
+#: ui/main.qml:210
 #, fuzzy, kde-format
 #| msgid "Bigscreen Tasks Shortcut"
 msgid "Open tasks shortcut"
 msgstr "बिगस्क्रीन् कार्य शॉर्टकट"
-
-#: ui/main.qml:178
-#, fuzzy, kde-format
-#| msgid "Bigscreen Display Homescreen Shortcut"
-msgid "Open homescreen shortcut"
-msgstr "Bigscreen Display होमस्क्रीन् शॉर्टकट"
 
 #: ui/ShortcutsPickerSidebar.qml:39
 #, kde-format

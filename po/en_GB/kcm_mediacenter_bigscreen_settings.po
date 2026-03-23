@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-03-23 00:45+0000\n"
 "PO-Revision-Date: 2024-10-18 16:54+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -134,44 +134,71 @@ msgstr ""
 
 #: ui/main.qml:102
 #, kde-format
-msgid "Navigation sounds"
+msgid "Window decorations"
+msgstr ""
+
+#: ui/main.qml:103
+#, kde-format
+msgid ""
+"Have a window frame (minimize, maximize, close), for apps that request it"
 msgstr ""
 
 #: ui/main.qml:112
+#, kde-format
+msgid "Navigation sounds"
+msgstr ""
+
+#: ui/main.qml:113
+#, kde-format
+msgid "Play a sound when the selected item changes in system apps"
+msgstr ""
+
+#: ui/main.qml:123
 #, fuzzy, kde-format
 #| msgid "Power Inhibition"
 msgid "Power inhibition"
 msgstr "Power Inhibition"
 
-#: ui/main.qml:122
+#: ui/main.qml:124
+#, kde-format
+msgid "Prevent the system from automatically sleeping"
+msgstr ""
+
+#: ui/main.qml:134
 #, fuzzy, kde-format
 #| msgid "Adjust Date & Time"
 msgid "Adjust date and time"
 msgstr "Adjust Date & Time"
 
-#: ui/main.qml:128
+#: ui/main.qml:140
 #, fuzzy, kde-format
 #| msgid "Set Shortcut"
 msgid "Shortcuts"
 msgstr "Set Shortcut"
 
-#: ui/main.qml:139
+#: ui/main.qml:151
+#, fuzzy, kde-format
+#| msgid "Bigscreen Display Homescreen Shortcut"
+msgid "Open home overlay shortcut"
+msgstr "Bigscreen Display Homescreen Shortcut"
+
+#: ui/main.qml:171
+#, fuzzy, kde-format
+#| msgid "Bigscreen Display Homescreen Shortcut"
+msgid "Open homescreen shortcut"
+msgstr "Bigscreen Display Homescreen Shortcut"
+
+#: ui/main.qml:191
 #, fuzzy, kde-format
 #| msgid "Bigscreen Settings Shortcut"
 msgid "Open settings shortcut"
 msgstr "Bigscreen Settings Shortcut"
 
-#: ui/main.qml:159
+#: ui/main.qml:210
 #, fuzzy, kde-format
 #| msgid "Bigscreen Tasks Shortcut"
 msgid "Open tasks shortcut"
 msgstr "Bigscreen Tasks Shortcut"
-
-#: ui/main.qml:178
-#, fuzzy, kde-format
-#| msgid "Bigscreen Display Homescreen Shortcut"
-msgid "Open homescreen shortcut"
-msgstr "Bigscreen Display Homescreen Shortcut"
 
 #: ui/ShortcutsPickerSidebar.qml:39
 #, kde-format
