@@ -35,7 +35,8 @@ msgid "Screenshot"
 msgstr ""
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:50
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Audio"
 msgid "Audio"
 msgstr "Audio"
 

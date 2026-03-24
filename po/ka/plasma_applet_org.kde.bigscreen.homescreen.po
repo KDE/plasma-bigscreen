@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-23 00:45+0000\n"
-"PO-Revision-Date: 2026-02-28 08:00+0100\n"
+"PO-Revision-Date: 2026-03-23 03:11+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -36,22 +36,22 @@ msgstr "რჩეულების წაშლა"
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:36
 #, kde-format
 msgid "Screenshot"
-msgstr ""
+msgstr "ეკრანის ანაბეჭდი"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:50
 #, kde-format
 msgid "Audio"
-msgstr ""
+msgstr "აუდიო"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:78
 #, kde-format
 msgid "Wi-Fi"
-msgstr ""
+msgstr "Wi-Fi"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:93
 #, kde-format
 msgid "Shutdown"
-msgstr ""
+msgstr "გამორთვა"
 
 #: contents/ui/homeoverlay/MainColumn.qml:127
 #, kde-format
@@ -128,10 +128,9 @@ msgid "KDE Connect"
 msgstr "KDE Connect"
 
 #: contents/ui/indicators/PairWindow.qml:40
-#, fuzzy, kde-format
-#| msgid "Pairing Request From %1"
+#, kde-format
 msgid "Accept Pairing Request From %1?"
-msgstr "დაწყვილების მოთხოვნა %1-დან"
+msgstr "მიიღებთ დაწყვილების მოთხოვნას %1-დან?"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format

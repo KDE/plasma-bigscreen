@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-23 00:45+0000\n"
-"PO-Revision-Date: 2026-02-28 11:00+0300\n"
+"PO-Revision-Date: 2026-03-24 02:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -122,7 +122,7 @@ msgstr "Ana ekrandaki duvar kâğıdına bir bulanıklık efekti ekleyin"
 #: ui/main.qml:84 ui/ThemeSidebar.qml:23
 #, kde-format
 msgid "Global theme"
-msgstr "Global Tema"
+msgstr "Global tema"
 
 #: ui/main.qml:85
 #, kde-format
@@ -132,13 +132,15 @@ msgstr "Sistem temasını ayarlayın"
 #: ui/main.qml:102
 #, kde-format
 msgid "Window decorations"
-msgstr ""
+msgstr "Pencere dekorasyonları"
 
 #: ui/main.qml:103
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
 msgstr ""
+"İsteyen uygulamalar için bir pencere kenarlığı kullanın (küçült, büyüt, "
+"kapat)"
 
 #: ui/main.qml:112
 #, kde-format
@@ -148,7 +150,7 @@ msgstr "Dolaşma sesleri"
 #: ui/main.qml:113
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
-msgstr ""
+msgstr "Sistem uygulamalarındaki seçili ögeler değiştiğinde ses çalın"
 
 #: ui/main.qml:123
 #, kde-format
@@ -158,7 +160,7 @@ msgstr "Güç Engellemeleri"
 #: ui/main.qml:124
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
-msgstr ""
+msgstr "Sistemin kendiliğinden uykuya geçmesini engelleyin"
 
 #: ui/main.qml:134
 #, kde-format
@@ -171,10 +173,9 @@ msgid "Shortcuts"
 msgstr "Kısayollar"
 
 #: ui/main.qml:151
-#, fuzzy, kde-format
-#| msgid "Open homescreen shortcut"
+#, kde-format
 msgid "Open home overlay shortcut"
-msgstr "Ana Ekran Kısayolunu Aç"
+msgstr "Ana Ekran Kaplaması Kısayolunu Aç"
 
 #: ui/main.qml:171
 #, kde-format

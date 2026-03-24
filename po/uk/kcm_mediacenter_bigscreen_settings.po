@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-23 00:45+0000\n"
-"PO-Revision-Date: 2026-02-28 16:56+0200\n"
+"PO-Revision-Date: 2026-03-23 21:44+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -133,13 +133,15 @@ msgstr "Встановити загальносистемну тему"
 #: ui/main.qml:102
 #, kde-format
 msgid "Window decorations"
-msgstr ""
+msgstr "Обрамлення вікон"
 
 #: ui/main.qml:103
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
 msgstr ""
+"Обрамлення вікон (мінімізація, максимізація, закриття) для програм, які "
+"надсилаються запит щодо нього"
 
 #: ui/main.qml:112
 #, kde-format
@@ -149,7 +151,7 @@ msgstr "Звуки навігації"
 #: ui/main.qml:113
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
-msgstr ""
+msgstr "Відтворювати звук при зміні позначеного запису у системних програмах"
 
 #: ui/main.qml:123
 #, kde-format
@@ -159,7 +161,7 @@ msgstr "Придушення живлення"
 #: ui/main.qml:124
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
-msgstr ""
+msgstr "Запобігати автоматичному присиплянню системи"
 
 #: ui/main.qml:134
 #, kde-format
@@ -172,10 +174,9 @@ msgid "Shortcuts"
 msgstr "Скорочення"
 
 #: ui/main.qml:151
-#, fuzzy, kde-format
-#| msgid "Open homescreen shortcut"
+#, kde-format
 msgid "Open home overlay shortcut"
-msgstr "Скорочення «Відкрити домашню сторінку»"
+msgstr "Скорочення «Відкрити домашню накладку»"
 
 #: ui/main.qml:171
 #, kde-format

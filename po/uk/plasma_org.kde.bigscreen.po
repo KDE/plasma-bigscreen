@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2025.
+# Yuri Chornoivan <yurchor@ukr.net>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-23 00:45+0000\n"
-"PO-Revision-Date: 2025-08-12 09:59+0300\n"
+"PO-Revision-Date: 2026-03-23 21:41+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: global.cpp:162
 #, kde-format
 msgid "Screenshot saved to %1"
-msgstr ""
+msgstr "Знімок вікна збережено до %1"
 
 #: qml/FullScreenOverlay.qml:164
 #, kde-format

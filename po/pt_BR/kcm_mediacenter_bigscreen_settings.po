@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-23 00:45+0000\n"
-"PO-Revision-Date: 2026-02-28 06:45-0300\n"
+"PO-Revision-Date: 2026-03-23 09:42-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -133,13 +133,15 @@ msgstr "Define o tema do sistema"
 #: ui/main.qml:102
 #, kde-format
 msgid "Window decorations"
-msgstr ""
+msgstr "Decorações da janela"
 
 #: ui/main.qml:103
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
 msgstr ""
+"Ter uma moldura de janela (minimizar, maximizar, fechar) para aplicativos "
+"que a solicitam"
 
 #: ui/main.qml:112
 #, kde-format
@@ -150,6 +152,8 @@ msgstr "Sons de navegação"
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
 msgstr ""
+"Reproduzir um som quando o item selecionado for alterado nos aplicativos do "
+"sistema"
 
 #: ui/main.qml:123
 #, kde-format
@@ -159,7 +163,7 @@ msgstr "Inibição de energia"
 #: ui/main.qml:124
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
-msgstr ""
+msgstr "Impedir o sistema de entrar em modo de suspensão automaticamente"
 
 #: ui/main.qml:134
 #, kde-format
@@ -172,25 +176,24 @@ msgid "Shortcuts"
 msgstr "Atalhos"
 
 #: ui/main.qml:151
-#, fuzzy, kde-format
-#| msgid "Open homescreen shortcut"
+#, kde-format
 msgid "Open home overlay shortcut"
-msgstr "Abrir atalhos para a tela inicial"
+msgstr "Atalho para abrir a sobreposição da página inicial"
 
 #: ui/main.qml:171
 #, kde-format
 msgid "Open homescreen shortcut"
-msgstr "Abrir atalhos para a tela inicial"
+msgstr "Atalho para abrir a tela inicial"
 
 #: ui/main.qml:191
 #, kde-format
 msgid "Open settings shortcut"
-msgstr "Abrir as configurações de atalhos"
+msgstr "Atalho para abrir as configurações"
 
 #: ui/main.qml:210
 #, kde-format
 msgid "Open tasks shortcut"
-msgstr "Abrir atalhos para tarefas"
+msgstr "Atalho para abrir tarefas"
 
 #: ui/ShortcutsPickerSidebar.qml:39
 #, kde-format
