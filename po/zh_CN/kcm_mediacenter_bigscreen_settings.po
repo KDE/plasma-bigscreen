@@ -171,10 +171,9 @@ msgid "Shortcuts"
 msgstr "快捷键"
 
 #: ui/main.qml:151
-#, fuzzy, kde-format
-#| msgid "Open homescreen shortcut"
+#, kde-format
 msgid "Open home overlay shortcut"
-msgstr "打开主屏幕快捷键"
+msgstr ""
 
 #: ui/main.qml:171
 #, kde-format

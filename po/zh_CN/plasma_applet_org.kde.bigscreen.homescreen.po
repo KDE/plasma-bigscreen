@@ -128,10 +128,9 @@ msgid "KDE Connect"
 msgstr "KDE Connect"
 
 #: contents/ui/indicators/PairWindow.qml:40
-#, fuzzy, kde-format
-#| msgid "Pairing Request From %1"
+#, kde-format
 msgid "Accept Pairing Request From %1?"
-msgstr "来自 %1 的配对请求"
+msgstr ""
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
@@ -214,9 +213,3 @@ msgstr "Plasma 大屏幕已启用系统全局阻止电源管理"
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "搜索…"
-
-#~ msgid "Accept"
-#~ msgstr "接受"
-
-#~ msgid "Cancel"
-#~ msgstr "取消"

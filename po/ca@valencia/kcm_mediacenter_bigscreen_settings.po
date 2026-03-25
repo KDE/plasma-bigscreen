@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-23 00:45+0000\n"
-"PO-Revision-Date: 2026-02-28 08:26+0100\n"
+"PO-Revision-Date: 2026-03-23 10:37+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -134,13 +134,15 @@ msgstr "Establix el tema del sistema"
 #: ui/main.qml:102
 #, kde-format
 msgid "Window decorations"
-msgstr ""
+msgstr "Decoració de les finestres"
 
 #: ui/main.qml:103
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
 msgstr ""
+"Té un marc de finestra (minimitzar, maximitzar, tancar), per a les "
+"aplicacions que el sol·liciten"
 
 #: ui/main.qml:112
 #, kde-format
@@ -151,6 +153,8 @@ msgstr "Sons de navegació"
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
 msgstr ""
+"Reproduïx un so quan l'element seleccionat canvie a les aplicacions del "
+"sistema"
 
 #: ui/main.qml:123
 #, kde-format
@@ -160,7 +164,7 @@ msgstr "Inhibició de l'energia"
 #: ui/main.qml:124
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
-msgstr ""
+msgstr "Evita que el sistema s'adorma automàticament"
 
 #: ui/main.qml:134
 #, kde-format
@@ -173,10 +177,9 @@ msgid "Shortcuts"
 msgstr "Dreceres"
 
 #: ui/main.qml:151
-#, fuzzy, kde-format
-#| msgid "Open homescreen shortcut"
+#, kde-format
 msgid "Open home overlay shortcut"
-msgstr "Drecera d'obrir la pàgina d'inici"
+msgstr "Obri la drecera de disposició d'inici"
 
 #: ui/main.qml:171
 #, kde-format
