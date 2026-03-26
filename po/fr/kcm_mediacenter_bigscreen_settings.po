@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-23 00:45+0000\n"
-"PO-Revision-Date: 2026-03-01 10:20+0100\n"
+"PO-Revision-Date: 2026-03-24 12:47+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -131,13 +131,15 @@ msgstr "Définir le thème du système"
 #: ui/main.qml:102
 #, kde-format
 msgid "Window decorations"
-msgstr ""
+msgstr "Décorations de fenêtres"
 
 #: ui/main.qml:103
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
 msgstr ""
+"Avoir un cadre de fenêtre (Minimiser, maximiser, fermer) pour les "
+"applications le demandant"
 
 #: ui/main.qml:112
 #, kde-format
@@ -148,6 +150,8 @@ msgstr "Sons pour la navigation"
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
 msgstr ""
+"Jouer un son lors d'une modification de l'élément sélectionné dans les "
+"applications du système"
 
 #: ui/main.qml:123
 #, kde-format
@@ -157,7 +161,7 @@ msgstr "Restriction d'alimentation"
 #: ui/main.qml:124
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
-msgstr ""
+msgstr "Empêcher le système de basculer automatiquement en veille"
 
 #: ui/main.qml:134
 #, kde-format
@@ -170,8 +174,7 @@ msgid "Shortcuts"
 msgstr "Raccourcis"
 
 #: ui/main.qml:151
-#, fuzzy, kde-format
-#| msgid "Open homescreen shortcut"
+#, kde-format
 msgid "Open home overlay shortcut"
 msgstr "Ouvrir le raccourci vers l'écran d'accueil"
 

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-23 00:45+0000\n"
-"PO-Revision-Date: 2026-03-01 08:04+0100\n"
+"PO-Revision-Date: 2026-03-23 14:21+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
@@ -35,7 +35,7 @@ msgstr "Rimuovi preferiti"
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:36
 #, kde-format
 msgid "Screenshot"
-msgstr ""
+msgstr "Schermata"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:50
 #, kde-format
@@ -45,12 +45,12 @@ msgstr "Audio"
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:78
 #, kde-format
 msgid "Wi-Fi"
-msgstr ""
+msgstr "Wi-Fi"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:93
 #, kde-format
 msgid "Shutdown"
-msgstr ""
+msgstr "Spegni"
 
 #: contents/ui/homeoverlay/MainColumn.qml:127
 #, kde-format
@@ -127,10 +127,9 @@ msgid "KDE Connect"
 msgstr "KDE Connect"
 
 #: contents/ui/indicators/PairWindow.qml:40
-#, fuzzy, kde-format
-#| msgid "Pairing Request From %1"
+#, kde-format
 msgid "Accept Pairing Request From %1?"
-msgstr "Richiesta di associazione da %1"
+msgstr "Vuoi accettare la richiesta di associazione da %1?"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
