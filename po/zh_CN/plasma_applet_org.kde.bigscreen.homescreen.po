@@ -36,22 +36,22 @@ msgstr "移除收藏"
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:36
 #, kde-format
 msgid "Screenshot"
-msgstr ""
+msgstr "屏幕截图"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:50
 #, kde-format
 msgid "Audio"
-msgstr ""
+msgstr "音频"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:78
 #, kde-format
 msgid "Wi-Fi"
-msgstr ""
+msgstr "无线网络"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:93
 #, kde-format
 msgid "Shutdown"
-msgstr ""
+msgstr "关机"
 
 #: contents/ui/homeoverlay/MainColumn.qml:127
 #, kde-format
@@ -130,7 +130,7 @@ msgstr "KDE Connect"
 #: contents/ui/indicators/PairWindow.qml:40
 #, kde-format
 msgid "Accept Pairing Request From %1?"
-msgstr ""
+msgstr "接受来自 %1 的配对请求吗？"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format

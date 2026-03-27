@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-23 00:45+0000\n"
-"PO-Revision-Date: 2026-01-23 16:26+0100\n"
+"PO-Revision-Date: 2026-03-26 10:12+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: global.cpp:162
 #, kde-format
 msgid "Screenshot saved to %1"
-msgstr ""
+msgstr "Captura de schermo salveguardate a %1"
 
 #: qml/FullScreenOverlay.qml:164
 #, kde-format

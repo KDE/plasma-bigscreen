@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-23 00:45+0000\n"
-"PO-Revision-Date: 2026-03-03 17:11+0100\n"
+"PO-Revision-Date: 2026-03-26 10:10+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -133,13 +133,14 @@ msgstr "Assigna le thema de systema"
 #: ui/main.qml:102
 #, kde-format
 msgid "Window decorations"
-msgstr ""
+msgstr "Decorationes de fenestra"
 
 #: ui/main.qml:103
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
 msgstr ""
+"Ha un quadro de fenestra (minimiza, maximiza, claude),per appe que lo require"
 
 #: ui/main.qml:112
 #, kde-format
@@ -150,6 +151,7 @@ msgstr "Sonos de navigation"
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
 msgstr ""
+"Reproduce un sono quando le elemento selectionate cambia in apps de systema"
 
 #: ui/main.qml:123
 #, kde-format
@@ -159,7 +161,7 @@ msgstr "Inhibition de Potentia"
 #: ui/main.qml:124
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
-msgstr ""
+msgstr "Preveni le systema ab automaticamente dormir"
 
 #: ui/main.qml:134
 #, kde-format
@@ -172,10 +174,9 @@ msgid "Shortcuts"
 msgstr "Vias breve"
 
 #: ui/main.qml:151
-#, fuzzy, kde-format
-#| msgid "Open homescreen shortcut"
+#, kde-format
 msgid "Open home overlay shortcut"
-msgstr "Aperi Via breve de schermo initial (Domo o Principal)"
+msgstr "Aperi Via breve de superposition initial (Domo o Principal)"
 
 #: ui/main.qml:171
 #, kde-format
