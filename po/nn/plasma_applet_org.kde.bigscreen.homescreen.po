@@ -42,7 +42,7 @@ msgstr ""
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:50
 #, kde-format
 msgid "Audio"
-msgstr ""
+msgstr "Lyd"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:78
 #, kde-format
@@ -216,6 +216,3 @@ msgstr "Bigscreen har slått på hindring for heila systemet"
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr ""
-
-#~ msgid "Accept"
-#~ msgstr "Godta"

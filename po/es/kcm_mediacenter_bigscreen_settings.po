@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-23 00:45+0000\n"
-"PO-Revision-Date: 2026-03-08 00:06+0100\n"
+"PO-Revision-Date: 2026-03-29 01:47+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -133,13 +133,15 @@ msgstr "Establecer el tema del sistema"
 #: ui/main.qml:102
 #, kde-format
 msgid "Window decorations"
-msgstr ""
+msgstr "Decoraciones de ventana"
 
 #: ui/main.qml:103
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
 msgstr ""
+"Desplegar un marco de ventana (minimizar, maximizar, cerrar), para "
+"aplicaciones que lo requieran"
 
 #: ui/main.qml:112
 #, kde-format
@@ -150,6 +152,8 @@ msgstr "Sonidos de navegación"
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
 msgstr ""
+"Reproducir un sonido cuando el elemento seleccionado cambia en las "
+"aplicaciones del sistema"
 
 #: ui/main.qml:123
 #, kde-format
@@ -159,7 +163,7 @@ msgstr "Inhibición de apagado"
 #: ui/main.qml:124
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
-msgstr ""
+msgstr "Prevenir que el sistema se vaya a dormir automáticamente"
 
 #: ui/main.qml:134
 #, kde-format
@@ -172,10 +176,9 @@ msgid "Shortcuts"
 msgstr "Accesos rápidos"
 
 #: ui/main.qml:151
-#, fuzzy, kde-format
-#| msgid "Open homescreen shortcut"
+#, kde-format
 msgid "Open home overlay shortcut"
-msgstr "Acceso rápido a la pantalla de inicio"
+msgstr "Abrir el acceso rápido a la pantalla de inicio"
 
 #: ui/main.qml:171
 #, kde-format

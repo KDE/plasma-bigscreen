@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-23 00:45+0000\n"
-"PO-Revision-Date: 2026-03-08 00:06+0100\n"
+"PO-Revision-Date: 2026-03-29 01:47+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -36,22 +36,22 @@ msgstr "Eliminar favoritos"
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:36
 #, kde-format
 msgid "Screenshot"
-msgstr ""
+msgstr "Captura de pantalla"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:50
 #, kde-format
 msgid "Audio"
-msgstr ""
+msgstr "Audio"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:78
 #, kde-format
 msgid "Wi-Fi"
-msgstr ""
+msgstr "Wi-Fi"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:93
 #, kde-format
 msgid "Shutdown"
-msgstr ""
+msgstr "Apagar"
 
 #: contents/ui/homeoverlay/MainColumn.qml:127
 #, kde-format
@@ -128,10 +128,9 @@ msgid "KDE Connect"
 msgstr "KDE Connect"
 
 #: contents/ui/indicators/PairWindow.qml:40
-#, fuzzy, kde-format
-#| msgid "Pairing Request From %1"
+#, kde-format
 msgid "Accept Pairing Request From %1?"
-msgstr "Petición de vinculación desde %1"
+msgstr "¿Aceptar petición de vinculación desde %1?"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
@@ -214,9 +213,3 @@ msgstr "Plasma Bigscreen ha activado la inhibición de todo el sistema"
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Buscar…"
-
-#~ msgid "Accept"
-#~ msgstr "Aceptar"
-
-#~ msgid "Cancel"
-#~ msgstr "Cancelar"
