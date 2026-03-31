@@ -1,21 +1,21 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# Vit Pelcak <vit@pelcak.org>, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2026 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2022-01-17 14:34+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-30 11:43+0200\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: contents/config/config.qml:11
 #, kde-format
@@ -25,12 +25,12 @@ msgstr "Obecné"
 #: contents/ui/ConfigWindow.qml:31
 #, kde-format
 msgid "Use Colored Tiles"
-msgstr ""
+msgstr "Použít barevné dlaždice"
 
 #: contents/ui/ConfigWindow.qml:41
 #, kde-format
 msgid "Use Expanding Tiles"
-msgstr ""
+msgstr "Použít rozšiřující dlaždice"
 
 #: contents/ui/ConfigWindow.qml:57
 #, kde-format
@@ -75,7 +75,7 @@ msgstr "Ztlumit"
 #: contents/ui/indicators/Volume.qml:146
 #, kde-format
 msgid "Audio Device chooser"
-msgstr ""
+msgstr "Výběr zvukového zařízení"
 
 #: contents/ui/indicators/Wifi.qml:47
 #, kde-format
@@ -115,7 +115,7 @@ msgstr "Nedávné"
 #: contents/ui/launcher/LauncherHome.qml:91
 #, kde-format
 msgid "Voice Apps"
-msgstr ""
+msgstr "Hlasové aplikace"
 
 #: contents/ui/launcher/LauncherHome.qml:116
 #, kde-format
@@ -135,7 +135,7 @@ msgstr "Nastavení"
 #: contents/ui/MycroftIndicator.qml:57 contents/ui/MycroftIndicator.qml:66
 #, kde-format
 msgid "Getting Ready... Please Wait"
-msgstr ""
+msgstr "Připravuje se... Čekejte prosím"
 
 #: contents/ui/PowerManagementItem.qml:41
 #, kde-format
