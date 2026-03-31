@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-28 00:46+0000\n"
-"PO-Revision-Date: 2026-03-17 10:02+0100\n"
+"PO-Revision-Date: 2026-03-30 11:44+0200\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -20,27 +20,27 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Vít Pelčák"
+msgstr "Vít Pelčák,Libor Filípek"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "vit@pelcak.org"
+msgstr "vit@pelcak.org,libor.filipek@gmail.com"
 
 #: kcmslistmodel.cpp:112
 #, kde-format
 msgid "Desktop Settings"
-msgstr ""
+msgstr "Nastavení plochy"
 
 #: main.cpp:34
 #, kde-format
 msgid "Bigscreen Settings"
-msgstr ""
+msgstr "Nastavení Bigscreen"
 
 #: main.cpp:36
 #, kde-format
 msgid "Plasma Bigscreen Settings"
-msgstr ""
+msgstr "Nastavení Plasma Bigscreen"
 
 #: main.cpp:38
 #, kde-format
@@ -60,7 +60,7 @@ msgstr "Nastavení"
 #: qml/ConfigWindowSidebar.qml:84
 #, kde-format
 msgid "Open desktop settings?"
-msgstr ""
+msgstr "Otevřít nastavení plochy?"
 
 #: qml/ConfigWindowSidebar.qml:89
 #, kde-format
@@ -68,3 +68,5 @@ msgid ""
 "The desktop settings application does not support key navigation, a mouse "
 "may be required. However, it contains extra settings that may be useful."
 msgstr ""
+"Aplikace pro nastavení plochy nepodporuje ovládání pomocí kláves, může být "
+"tedy nutné použít myš. Obsahuje však další nastavení, která se mohou hodit."

@@ -1,36 +1,36 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# Vit Pelcak <vit@pelcak.org>, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2026 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-23 00:45+0000\n"
-"PO-Revision-Date: 2022-01-17 14:34+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-30 11:43+0200\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: contents/ui/FavoritesManager.qml:21
 #, kde-format
 msgid "Favorites Manager"
-msgstr ""
+msgstr "Správce oblíbených"
 
 #: contents/ui/FavoritesManager.qml:54
 #, kde-format
 msgid "Add Favorites"
-msgstr ""
+msgstr "Přidat oblíbené"
 
 #: contents/ui/FavoritesManager.qml:119
 #, kde-format
 msgid "Remove Favorites"
-msgstr ""
+msgstr "Odstranit oblíbené"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:36
 #, kde-format
@@ -64,8 +64,7 @@ msgid "Search"
 msgstr "Hledat"
 
 #: contents/ui/homeoverlay/MainColumn.qml:157
-#, fuzzy, kde-format
-#| msgid "Tasks"
+#, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "Úlohy"
@@ -73,22 +72,22 @@ msgstr "Úlohy"
 #: contents/ui/homeoverlay/MainColumn.qml:178
 #, kde-format
 msgid "Controller"
-msgstr ""
+msgstr "Ovladač"
 
 #: contents/ui/homeoverlay/MainColumn.qml:179
 #, kde-format
 msgid "Currently capturing keys…"
-msgstr ""
+msgstr "Probíhá snímání tlačítek…"
 
 #: contents/ui/homeoverlay/MainColumn.qml:179
 #, kde-format
 msgid "Key capture off"
-msgstr ""
+msgstr "Záznam tlačítek vypnutý"
 
 #: contents/ui/homeoverlay/MainColumn.qml:199
 #, kde-format
 msgid "On-screen Keyboard"
-msgstr ""
+msgstr "Virtuální klávesnice"
 
 #: contents/ui/homeoverlay/MainColumn.qml:213
 #: contents/ui/indicators/Settings.qml:18
@@ -99,18 +98,18 @@ msgstr "Nastavení"
 #: contents/ui/homeoverlay/TaskDelegate.qml:122
 #, kde-format
 msgid "Hold to close…"
-msgstr ""
+msgstr "Stisknutím uzavřít..."
 
 #: contents/ui/homeoverlay/TasksView.qml:111
 #, kde-format
 msgctxt "As in: These apps are currently opened"
 msgid "Open Apps"
-msgstr ""
+msgstr "Otevřené aplikace"
 
 #: contents/ui/homeoverlay/TasksView.qml:162
 #, kde-format
 msgid "Close all apps"
-msgstr ""
+msgstr "Zavřít všechny aplikace"
 
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
@@ -120,7 +119,7 @@ msgstr "Baterie: %1%"
 #: contents/ui/indicators/Favorites.qml:17
 #, kde-format
 msgid "Customize Favorites"
-msgstr ""
+msgstr "Přizpůsobit oblíbené"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -128,15 +127,14 @@ msgid "KDE Connect"
 msgstr "KDE Connect"
 
 #: contents/ui/indicators/PairWindow.qml:40
-#, fuzzy, kde-format
-#| msgid "Pairing Request From %1"
+#, kde-format
 msgid "Accept Pairing Request From %1?"
-msgstr "Požadavek na párování od %1"
+msgstr "Přijmout žádost o spárování od %1?"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Exit Bigscreen"
-msgstr ""
+msgstr "Ukončit Bigscreen"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
@@ -151,7 +149,7 @@ msgstr "Nastavení audio"
 #: contents/ui/indicators/Wifi.qml:19
 #, kde-format
 msgid "Internet Settings"
-msgstr ""
+msgstr "Nastavení internetu"
 
 #: contents/ui/launcher/LauncherHome.qml:89
 #, kde-format
@@ -176,39 +174,38 @@ msgstr "Hry"
 #: contents/ui/main.qml:101
 #, kde-format
 msgid "Controller added: %1"
-msgstr ""
+msgstr "Přidán ovladač: %1"
 
 #: contents/ui/main.qml:105
 #, kde-format
 msgid "Controller removed: %1"
-msgstr ""
+msgstr "Odebrán ovladač: %1"
 
 #: contents/ui/main.qml:109
 #, kde-format
 msgid "Remote added: %1"
-msgstr ""
+msgstr "Přidáno ovládání: %1"
 
 #: contents/ui/main.qml:113
 #, kde-format
 msgid "Remote removed: %1"
-msgstr ""
+msgstr "Odebráno ovládání: %1"
 
 #: contents/ui/main.qml:117
 #, kde-format
 msgid "System taking over controller input"
-msgstr ""
+msgstr "Systém přebírá vstup z ovladače"
 
 #: contents/ui/main.qml:120
 #, kde-format
 msgid "Application taking over controller input"
-msgstr ""
+msgstr "Aplikace přebírá vstup z ovladače"
 
 #: contents/ui/PowerManagementItem.qml:24
-#, fuzzy, kde-format
-#| msgid "Bigscreen has enabled system-wide inhibition"
+#, kde-format
 msgctxt "@info"
 msgid "Plasma Bigscreen has enabled system-wide inhibition"
-msgstr "Bigscreen povolil pozastavení systému"
+msgstr "Plasma Bigscreen povolil pozastavení systému"
 
 #: contents/ui/search/SearchTextField.qml:24
 #, kde-format

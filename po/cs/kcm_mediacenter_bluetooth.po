@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-28 00:46+0000\n"
-"PO-Revision-Date: 2026-03-17 10:03+0100\n"
+"PO-Revision-Date: 2026-03-30 11:41+0200\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: ui/DeviceConnectionSidebar.qml:37
 #, kde-format
 msgid "Device information"
-msgstr ""
+msgstr "Informace o zařízení"
 
 #: ui/DeviceConnectionSidebar.qml:48
 #, kde-format
@@ -55,12 +55,12 @@ msgstr "Zapomenout zařízení"
 #: ui/DeviceConnectionSidebar.qml:96
 #, kde-format
 msgid "Are you sure you want to forget the device %1?"
-msgstr ""
+msgstr "Opravdu chcete zařízení %1 odstranit?"
 
 #: ui/DeviceConnectionSidebar.qml:121
 #, kde-format
 msgid "Device details"
-msgstr ""
+msgstr "Podrobnosti o zařízení"
 
 #: ui/DeviceConnectionSidebar.qml:131
 #, kde-format
@@ -100,7 +100,7 @@ msgstr "Povolit Bluetooth"
 #: ui/main.qml:88
 #, kde-format
 msgid "Paired devices"
-msgstr ""
+msgstr "Spárovaná zařízení"
 
 #: ui/main.qml:121
 #, kde-format
@@ -250,4 +250,4 @@ msgstr "Jiné"
 #, kde-format
 msgctxt "List separator"
 msgid ", "
-msgstr ""
+msgstr ", "

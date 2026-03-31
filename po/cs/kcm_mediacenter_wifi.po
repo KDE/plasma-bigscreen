@@ -1,21 +1,21 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# Vit Pelcak <vit@pelcak.org>, 2021, 2023.
+# SPDX-FileCopyrightText: 2021, 2023, 2026 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2023-06-14 15:01+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-30 11:42+0200\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ui/delegates/NetworkDelegate.qml:65 ui/DeviceConnectionSidebar.qml:72
 #, kde-format
@@ -25,7 +25,7 @@ msgstr "Připojen"
 #: ui/DetailsText.qml:33
 #, kde-format
 msgid "IP Address Details"
-msgstr ""
+msgstr "Podrobnosti IP adresy"
 
 #: ui/DeviceConnectionSidebar.qml:138
 #, kde-format
@@ -45,7 +45,7 @@ msgstr "Odpojit"
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
 msgid "Forget network"
-msgstr ""
+msgstr "Zapomenout na síť"
 
 #: ui/DeviceConnectionSidebar.qml:190
 #, kde-format
@@ -55,7 +55,7 @@ msgstr "Opravdu si přejete zapomenou síť %1?"
 #: ui/DeviceConnectionSidebar.qml:213
 #, kde-format
 msgid "Network details"
-msgstr ""
+msgstr "Podrobnosti o síti"
 
 #: ui/DeviceConnectionSidebar.qml:242
 #, kde-format

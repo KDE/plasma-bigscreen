@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-24 00:45+0000\n"
-"PO-Revision-Date: 2026-03-17 10:03+0100\n"
+"PO-Revision-Date: 2026-03-30 11:42+0200\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -25,12 +25,12 @@ msgstr "Webové aplikace"
 #: ui/main.qml:43
 #, kde-format
 msgid "Add Web App"
-msgstr ""
+msgstr "Přidat webovou aplikaci"
 
 #: ui/main.qml:50
 #, kde-format
 msgid "Installed web apps"
-msgstr ""
+msgstr "Nainstalované webové aplikace"
 
 #: ui/main.qml:89
 #, kde-format
@@ -50,7 +50,7 @@ msgstr "URL"
 #: ui/main.qml:119
 #, kde-format
 msgid "User agent (empty for default)"
-msgstr ""
+msgstr "Uživatelský agent (výchozí jako prázdné)"
 
 #: ui/WebAppInfoSidebar.qml:68
 #, kde-format
@@ -70,4 +70,4 @@ msgstr "Smazat"
 #: ui/WebAppInfoSidebar.qml:86
 #, kde-format
 msgid "Delete web app %1?"
-msgstr ""
+msgstr "Smazat webovou aplikaci %1?"
