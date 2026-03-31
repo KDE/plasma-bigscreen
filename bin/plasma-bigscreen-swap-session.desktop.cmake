@@ -53,6 +53,7 @@ Comment[ar]=بدّل إلى جلسة بلازما الشاشة الكبيرة
 Comment[bg]=Превключване към сесия на Plasma Bigscreen
 Comment[ca]=Canvia a una sessió del Plasma Bigscreen
 Comment[ca@valencia]=Canvia a una sessió de Plasma Bigscreen
+Comment[cs]=Přepnout do sezení Plasma Bigscreen
 Comment[de]=In eine „Plasma Bigscreen“-Sitzung wechseln
 Comment[es]=Cambiar a una sesión Plasma Bigscreen
 Comment[eu]=Aldatu Plasma Bigscreen saio batera
