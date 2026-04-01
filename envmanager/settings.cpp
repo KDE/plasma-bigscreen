@@ -23,6 +23,7 @@ const QString BIGSCREEN_KWINRC_FILE = u"plasma-bigscreen/kwinrc"_s;
 const QString BIGSCREEN_KSMSERVERRC_FILE = u"plasma-bigscreen/ksmserverrc"_s;
 const QString BIGSCREEN_KDEGLOBALS_FILE = u"plasma-bigscreen/kdeglobals"_s;
 const QString BIGSCREEN_PLASMAKEYBOARDRC_FILE = u"plasma-bigscreen/plasmakeyboardrc"_s;
+const QString BIGSCREEN_APPLICATIONS_BLACKLIST_FILE = u"plasma-bigscreen/applications-blacklistrc"_s;
 
 Settings::Settings(QObject *parent)
     : QObject{parent}
@@ -61,6 +62,14 @@ void Settings::applyBigscreenConfiguration()
         reloadKWinConfig();
 
         setOptionsImmutable(true, BIGSCREEN_KWINRC_FILE, getKwinrcSettings(m_bigscreenConfig));
+    }
+
+    // applications-blacklistrc
+    {
+        // We don't set these options as immutable
+        auto appBlacklistConfig = KSharedConfig::openConfig(BIGSCREEN_APPLICATIONS_BLACKLIST_FILE, KConfig::SimpleConfig);
+        writeKeys(BIGSCREEN_APPLICATIONS_BLACKLIST_FILE, appBlacklistConfig, APPLICATIONS_BLACKLIST_DEFAULT_SETTINGS);
+        appBlacklistConfig->sync();
     }
 
     // kdeglobals
