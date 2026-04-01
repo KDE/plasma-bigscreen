@@ -42,9 +42,7 @@ PLASMA_PLATFORM=mediacenter plasma-bigscreen-inputhandler
 For CEC support, ensure that your user has permission to access the device:
 
 ```bash
-ls -l /dev/ttyACM* # Find the group the cec device belongs to
-
-usermod -aG dialout $USER # Replace dialout with the group that the cec device belongs to
+usermod -aG input $USER
 ```
 
 ### Test on a development machine
