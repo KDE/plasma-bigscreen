@@ -84,7 +84,7 @@ CECController::CECController(QObject *parent)
         map("Yellow", CEC_USER_CONTROL_CODE_F4_YELLOW, KEY_YELLOW),
         map("ChannelUp", CEC_USER_CONTROL_CODE_CHANNEL_UP, KEY_CHANNELUP),
         map("ChannelDown", CEC_USER_CONTROL_CODE_CHANNEL_DOWN, KEY_CHANNELDOWN),
-        map("Exit", CEC_USER_CONTROL_CODE_EXIT, KEY_EXIT),
+        map("Exit", CEC_USER_CONTROL_CODE_EXIT, KEY_ESC),
         map("Back", CEC_USER_CONTROL_CODE_AN_RETURN, KEY_ESC),
         map("Home", CEC_USER_CONTROL_CODE_ROOT_MENU, KEY_HOMEPAGE),
         map("Subtitle", CEC_USER_CONTROL_CODE_SUB_PICTURE, KEY_SUBTITLE),
