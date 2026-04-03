@@ -3,35 +3,6 @@
 
 [Desktop Entry]
 Name=UVC Viewer
-Name[ar]=عارض UVC لبلازما الشاشة الكبيرة
-Name[bg]=Преглед на  UVC за Plasma Bigscreen
-Name[ca]=Visualitzador d'UVC del Plasma Bigscreen
-Name[ca@valencia]=Visor d'UVC de Plasma Bigscreen
-Name[cs]=UVC prohlížeč Plasma Bigscreen
-Name[de]=UVC-Viewer für Plasma Bigscreen
-Name[es]=Visor UVC de Plasma Bigscreen
-Name[eu]=Plasma Bigscreen UVC Ikustailea
-Name[fi]=Plasma Bigscreen -UVC-katselin
-Name[fr]=Afficheur « UVC » de Plasma Bigscreen
-Name[gl]=Visor de UVC de Plasma Bigscreen
-Name[he]=מציג UVC (מחלקת וידאו USB) של פלזמה למסכים גדולים
-Name[ia]=Visor de UVC de Plasma Bigscreen
-Name[it]=Visore UVC di Plasma Bigscreen
-Name[ka]=Plasma Bigscreen UVC Viewer
-Name[ko]=Plasma 큰 화면 UVC 뷰어
-Name[lv]=„Plasma Bigscreen“ UVC skatītājs
-Name[nl]=Plasma Bigscreen UVC-viewer
-Name[pl]=Przeglądarka UVC Dużego Ekranu Plazmy
-Name[pt]=Visualizador UVC do Plasma Bigscreen
-Name[pt_BR]=Visualizador UVC da Plasma Bigscreen
-Name[ro]=Vizualizor UVC pentru Plasma Bigscreen
-Name[ru]=Просмотр UVC в полноэкранном режиме
-Name[sl]=Vpogledovalnik UVC na velikem zaslonu Plasme
-Name[sv]=Plasma storbildsskärm UVC-visning
-Name[tr]=Plasma BüyükEkran UVC Görüntüleyicisi
-Name[uk]=Переглядач UVC для Плазми для великих екранів
-Name[zh_CN]=Plasma 大屏幕 UVC 查看器
-Name[zh_TW]=Plasma 大螢幕 UVC 檢視器
 Exec=plasma-bigscreen-uvcviewer
 Icon=video-display
 Type=Application
