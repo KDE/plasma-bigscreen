@@ -58,6 +58,10 @@ QMap<QString, QMap<QString, QVariant>> getKwinrcSettings(KSharedConfig::Ptr m_bi
              {
                  {"NoPlugin", false} // ensure that the window decoration plugin is always enabled, otherwise we get Qt default window decorations
              }},
+            {"Wayland",
+             {
+                 {"VirtualKeyboardEnabled", true} // enable vkbd
+             }},
             {"Input", {{"TabletMode", "off"}}}};
 }
 
