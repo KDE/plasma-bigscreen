@@ -3,6 +3,16 @@
 
 [Desktop Entry]
 Name=UVC Viewer
+Name[ca]=Visualitzador UVC
+Name[ca@valencia]=Visor UVC
+Name[cs]=Prohlížeč UVC
+Name[ka]=UVC-ის დამთვალიერებელი
+Name[nl]=UVC-viewer
+Name[pt_BR]=Visualizador UVC
+Name[ru]=Просмотр UVC
+Name[sl]=UVC Viewer
+Name[tr]=UVC Görüntüleyicisi
+Name[uk]=Переглядач UVC
 Exec=plasma-bigscreen-uvcviewer
 Icon=video-display
 Type=Application
