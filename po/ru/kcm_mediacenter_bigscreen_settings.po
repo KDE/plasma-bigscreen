@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-23 00:45+0000\n"
-"PO-Revision-Date: 2026-03-06 20:30+0200\n"
+"PO-Revision-Date: 2026-04-03 22:19+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -132,13 +132,15 @@ msgstr "Изменить оформление системы"
 #: ui/main.qml:102
 #, kde-format
 msgid "Window decorations"
-msgstr ""
+msgstr "Оформление окон"
 
 #: ui/main.qml:103
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
 msgstr ""
+"Отображать рамку окна (свернуть, развернуть, закрыть) для приложений, "
+"которые её запрашивают."
 
 #: ui/main.qml:112
 #, kde-format
@@ -149,6 +151,7 @@ msgstr "Звуки навигации"
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
 msgstr ""
+"Воспроизводить звук при изменении выбранного элемента в системных приложениях"
 
 #: ui/main.qml:123
 #, kde-format
@@ -158,7 +161,7 @@ msgstr "Отключение питания"
 #: ui/main.qml:124
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
-msgstr ""
+msgstr "Запретить автоматический переход системы в спящий режим"
 
 #: ui/main.qml:134
 #, kde-format
@@ -171,8 +174,7 @@ msgid "Shortcuts"
 msgstr "Комбинации клавиш"
 
 #: ui/main.qml:151
-#, fuzzy, kde-format
-#| msgid "Open homescreen shortcut"
+#, kde-format
 msgid "Open home overlay shortcut"
 msgstr "Комбинация клавиш для открытия домашнего экрана"
 
