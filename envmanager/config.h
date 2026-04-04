@@ -53,7 +53,8 @@ QMap<QString, QMap<QString, QVariant>> getKwinrcSettings(KSharedConfig::Ptr m_bi
             {"Plugins",
              {
                  {"blurEnabled", false}, // disable blur plugin for performance
-                 {"gamecontrollerEnabled", false} // disable gamecontroller plugin to do our own handling
+                 {"gamecontrollerEnabled", false}, // disable gamecontroller plugin to do our own handling
+                 {"hidecursorEnabled", true} // enable hidecursor plugin to hide cursor automatically (settings below)
              }},
             {"org.kde.kdecoration2",
              {
@@ -63,7 +64,12 @@ QMap<QString, QMap<QString, QVariant>> getKwinrcSettings(KSharedConfig::Ptr m_bi
              {
                  {"VirtualKeyboardEnabled", true} // enable vkbd
              }},
-            {"Input", {{"TabletMode", "off"}}}};
+            {"Input", {{"TabletMode", "off"}}},
+            {"Effect-hidecursor",
+             {
+                 {"HideOnTyping", true}, // hide cursor when typing
+                 {"InactivityDuration", 5} // hide cursor after 5 seconds of inactivity
+             }}};
 }
 
 // Have a separate list here because we need to trigger DBus calls to load/unload each effect/script.
