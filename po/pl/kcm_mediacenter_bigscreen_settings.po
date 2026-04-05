@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-23 00:45+0000\n"
-"PO-Revision-Date: 2026-03-14 07:18+0100\n"
+"PO-Revision-Date: 2026-04-04 19:29+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -132,13 +132,15 @@ msgstr "Ustaw wygląd systemu"
 #: ui/main.qml:102
 #, kde-format
 msgid "Window decorations"
-msgstr ""
+msgstr "Ozdoby okien"
 
 #: ui/main.qml:103
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
 msgstr ""
+"Dodaj ramkę okna (minimalizacja, maksymalizacja, zamknięcie) aplikacjom, "
+"które o nią poprosiły"
 
 #: ui/main.qml:112
 #, kde-format
@@ -149,6 +151,7 @@ msgstr "Dźwięki przy poruszaniu się"
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
 msgstr ""
+"Odtwórz dźwięk, gdy zaznaczona rzecz zmieni się w aplikacjach systemowych"
 
 #: ui/main.qml:123
 #, kde-format
@@ -158,7 +161,7 @@ msgstr "Zapobieganie usypianiu"
 #: ui/main.qml:124
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
-msgstr ""
+msgstr "Nie pozwalaj systemowi na samodzielne uśpienie się"
 
 #: ui/main.qml:134
 #, kde-format
@@ -171,10 +174,9 @@ msgid "Shortcuts"
 msgstr "Skróty"
 
 #: ui/main.qml:151
-#, fuzzy, kde-format
-#| msgid "Open homescreen shortcut"
+#, kde-format
 msgid "Open home overlay shortcut"
-msgstr "Skrót otwierania ekranu domowego"
+msgstr "Skrót otwierania nakładki domowej"
 
 #: ui/main.qml:171
 #, kde-format
