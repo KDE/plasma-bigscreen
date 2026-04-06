@@ -19,7 +19,7 @@ msgstr ""
 
 #: contents/splash/Splash.qml:70
 msgid "Welcome"
-msgstr "مرحباً"
+msgstr "مرحبًا"
 
 #: contents/splash/Splash.qml:116
 msgctxt ""
