@@ -22,6 +22,7 @@ Name[pt]=Gestor de entrada do Plasma Bigscreen
 Name[pt_BR]=Manipulador de entrada do Plasma Bigscreen
 Name[ro]=Manipulant de intrări Plasma Bigscreen
 Name[ru]=Обработчик ввода Plasma Bigscreen
+Name[sk]=Plasma Bigscreen
 Name[sl]=Upravljalnik vhoda za veliki zaslon Plasma
 Name[sv]=Plasma storbildsskärm inmatningshantering
 Name[tr]=Plasma BüyükEkran Giriş İşleyicisi
