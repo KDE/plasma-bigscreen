@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-23 00:45+0000\n"
-"PO-Revision-Date: 2026-02-03 21:25+0100\n"
+"PO-Revision-Date: 2026-04-08 19:37+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -35,7 +35,7 @@ msgstr "책갈피 삭제"
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:36
 #, kde-format
 msgid "Screenshot"
-msgstr ""
+msgstr "스크린샷"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:50
 #, kde-format
@@ -45,12 +45,12 @@ msgstr "오디오"
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:78
 #, kde-format
 msgid "Wi-Fi"
-msgstr ""
+msgstr "Wi-Fi"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:93
 #, kde-format
 msgid "Shutdown"
-msgstr ""
+msgstr "컴퓨터 끄기"
 
 #: contents/ui/homeoverlay/MainColumn.qml:127
 #, kde-format
@@ -64,8 +64,7 @@ msgid "Search"
 msgstr "검색"
 
 #: contents/ui/homeoverlay/MainColumn.qml:157
-#, fuzzy, kde-format
-#| msgid "Tasks"
+#, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "할 일"
@@ -88,7 +87,7 @@ msgstr "키 캡처 꺼짐"
 #: contents/ui/homeoverlay/MainColumn.qml:199
 #, kde-format
 msgid "On-screen Keyboard"
-msgstr "가상 키보드"
+msgstr "온스크린 키보드"
 
 #: contents/ui/homeoverlay/MainColumn.qml:213
 #: contents/ui/indicators/Settings.qml:18
@@ -102,8 +101,7 @@ msgid "Hold to close…"
 msgstr "닫으려면 누르기…"
 
 #: contents/ui/homeoverlay/TasksView.qml:111
-#, fuzzy, kde-format
-#| msgid "Open Apps"
+#, kde-format
 msgctxt "As in: These apps are currently opened"
 msgid "Open Apps"
 msgstr "앱 열기"

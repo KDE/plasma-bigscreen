@@ -12,8 +12,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.08.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.08.2\n"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:49
 msgid "Layout cannot be changed while widgets are locked"
@@ -33,8 +33,8 @@ msgstr "Prezentácia"
 
 #: contents/lockscreen/PasswordDialog.qml:46
 msgid "Password"
-msgstr ""
+msgstr "Heslo"
 
 #: contents/lockscreen/PasswordDialog.qml:76
 msgid "Unlock Screen"
-msgstr ""
+msgstr "Odomknúť obrazovku"
