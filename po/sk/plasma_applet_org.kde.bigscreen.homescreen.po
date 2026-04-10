@@ -76,17 +76,17 @@ msgstr "Ovládač"
 #: contents/ui/homeoverlay/MainColumn.qml:179
 #, kde-format
 msgid "Currently capturing keys…"
-msgstr ""
+msgstr "Momentálne sa zachytávajú klávesy…"
 
 #: contents/ui/homeoverlay/MainColumn.qml:179
 #, kde-format
 msgid "Key capture off"
-msgstr ""
+msgstr "Zachytávanie kláves vypnuté"
 
 #: contents/ui/homeoverlay/MainColumn.qml:199
 #, kde-format
 msgid "On-screen Keyboard"
-msgstr ""
+msgstr "Klávesnica na obrazovke"
 
 #: contents/ui/homeoverlay/MainColumn.qml:213
 #: contents/ui/indicators/Settings.qml:18
@@ -97,7 +97,7 @@ msgstr "Nastavenia"
 #: contents/ui/homeoverlay/TaskDelegate.qml:122
 #, kde-format
 msgid "Hold to close…"
-msgstr ""
+msgstr "Podržte na zatvorenie…"
 
 #: contents/ui/homeoverlay/TasksView.qml:111
 #, kde-format
@@ -108,7 +108,7 @@ msgstr "Hlasové aplikácie"
 #: contents/ui/homeoverlay/TasksView.qml:162
 #, kde-format
 msgid "Close all apps"
-msgstr ""
+msgstr "Zavrieť všetky aplikácie"
 
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
@@ -128,7 +128,7 @@ msgstr "KDE Connect"
 #: contents/ui/indicators/PairWindow.qml:40
 #, kde-format
 msgid "Accept Pairing Request From %1?"
-msgstr ""
+msgstr "Prijať žiadosť o párovanie od %1?"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
@@ -173,38 +173,38 @@ msgstr "Hry"
 #: contents/ui/main.qml:101
 #, kde-format
 msgid "Controller added: %1"
-msgstr ""
+msgstr "Ovládač pridaný: %1"
 
 #: contents/ui/main.qml:105
 #, kde-format
 msgid "Controller removed: %1"
-msgstr ""
+msgstr "Ovládač odstránený: %1"
 
 #: contents/ui/main.qml:109
 #, kde-format
 msgid "Remote added: %1"
-msgstr ""
+msgstr "Diaľkový ovládač pridaný: %1"
 
 #: contents/ui/main.qml:113
 #, kde-format
 msgid "Remote removed: %1"
-msgstr ""
+msgstr "Diaľkový ovládač odstránený: %1"
 
 #: contents/ui/main.qml:117
 #, kde-format
 msgid "System taking over controller input"
-msgstr ""
+msgstr "Systém preberá vstup z ovládača"
 
 #: contents/ui/main.qml:120
 #, kde-format
 msgid "Application taking over controller input"
-msgstr ""
+msgstr "Aplikácia preberá vstup z ovládača"
 
 #: contents/ui/PowerManagementItem.qml:24
 #, kde-format
 msgctxt "@info"
 msgid "Plasma Bigscreen has enabled system-wide inhibition"
-msgstr ""
+msgstr "Plasma Bigscreen povolil celosystémové zabránenie uspaniu"
 
 #: contents/ui/search/SearchTextField.qml:24
 #, kde-format

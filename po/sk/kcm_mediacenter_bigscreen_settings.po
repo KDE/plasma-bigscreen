@@ -44,7 +44,7 @@ msgstr "Deň"
 #: ui/DeviceTimeSettingsSidebar.qml:46
 #, kde-format
 msgid "Adjust Date and Time Settings"
-msgstr ""
+msgstr "Upraviť nastavenia dátumu a času"
 
 #: ui/DeviceTimeSettingsSidebar.qml:55
 #, kde-format
@@ -75,7 +75,7 @@ msgstr "Späť"
 #: ui/DeviceTimeSettingsSidebar.qml:146
 #, kde-format
 msgid "Search City / Region"
-msgstr ""
+msgstr "Hľadať mesto/región"
 
 #: ui/DeviceTimeSettingsSidebar.qml:166
 #, kde-format
@@ -100,22 +100,22 @@ msgstr "Vzhľad"
 #: ui/main.qml:56
 #, kde-format
 msgid "Colored tiles"
-msgstr ""
+msgstr "Farebné dlaždice"
 
 #: ui/main.qml:57
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
-msgstr ""
+msgstr "Pozadia dlaždíc budú zafarbené podľa ikony aplikácie"
 
 #: ui/main.qml:70
 #, kde-format
 msgid "Wallpaper blur"
-msgstr ""
+msgstr "Rozmazanie tapety"
 
 #: ui/main.qml:71
 #, kde-format
 msgid "Apply a blur effect to the wallpaper on the homescreen"
-msgstr ""
+msgstr "Použiť efekt rozmazania na tapetu na domovskej obrazovke"
 
 #: ui/main.qml:84 ui/ThemeSidebar.qml:23
 #, kde-format
@@ -125,43 +125,45 @@ msgstr "Globálna téma"
 #: ui/main.qml:85
 #, kde-format
 msgid "Set the system theme"
-msgstr ""
+msgstr "Nastaviť systémovú tému"
 
 #: ui/main.qml:102
 #, kde-format
 msgid "Window decorations"
-msgstr ""
+msgstr "Dekorácie okien"
 
 #: ui/main.qml:103
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
 msgstr ""
+"Mať rám okna (minimalizovať, maximalizovať, zavrieť) pre aplikácie, ktoré to "
+"vyžadujú"
 
 #: ui/main.qml:112
 #, kde-format
 msgid "Navigation sounds"
-msgstr ""
+msgstr "Navigačné zvuky"
 
 #: ui/main.qml:113
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
-msgstr ""
+msgstr "Prehrať zvuk pri zmene vybranej položky v systémových aplikáciách"
 
 #: ui/main.qml:123
 #, kde-format
 msgid "Power inhibition"
-msgstr ""
+msgstr "Zabránenie uspaniu"
 
 #: ui/main.qml:124
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
-msgstr ""
+msgstr "Zabrániť automatickému uspaniu systému"
 
 #: ui/main.qml:134
 #, kde-format
 msgid "Adjust date and time"
-msgstr ""
+msgstr "Upraviť dátum a čas"
 
 #: ui/main.qml:140
 #, kde-format
@@ -171,12 +173,12 @@ msgstr "Skratky"
 #: ui/main.qml:151
 #, kde-format
 msgid "Open home overlay shortcut"
-msgstr ""
+msgstr "Skratka na otvorenie domovského prekrytia"
 
 #: ui/main.qml:171
 #, kde-format
 msgid "Open homescreen shortcut"
-msgstr ""
+msgstr "Skratka na otvorenie domovskej obrazovky"
 
 #: ui/main.qml:191
 #, kde-format
@@ -191,7 +193,7 @@ msgstr "Otvoriť úlohy skratka"
 #: ui/ShortcutsPickerSidebar.qml:39
 #, kde-format
 msgid "Shortcut currently set to"
-msgstr ""
+msgstr "Skratka je momentálne nastavená na"
 
 #: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format

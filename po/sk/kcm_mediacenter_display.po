@@ -28,7 +28,7 @@ msgstr "Vybrané displej"
 #: ui/main.qml:74
 #, kde-format
 msgid "Display %1"
-msgstr ""
+msgstr "Displej %1"
 
 #: ui/main.qml:82
 #, kde-format
@@ -38,7 +38,7 @@ msgstr "Zapnuté"
 #: ui/main.qml:97
 #, kde-format
 msgid "Screen mode (Resolution & Refresh Rate)"
-msgstr ""
+msgstr "Režim obrazovky (rozlíšenie a obnovovacia frekvencia)"
 
 #: ui/main.qml:126 ui/ScaleDialog.qml:21
 #, kde-format
