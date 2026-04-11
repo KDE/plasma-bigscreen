@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-23 00:45+0000\n"
-"PO-Revision-Date: 2026-01-28 17:10+0100\n"
+"PO-Revision-Date: 2026-04-02 14:41+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -46,8 +46,7 @@ msgid "Day"
 msgstr "Tag"
 
 #: ui/DeviceTimeSettingsSidebar.qml:46
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time Settings"
+#, kde-format
 msgid "Adjust Date and Time Settings"
 msgstr "Einstellungen zu Datum und Uhrzeit anpassen"
 
@@ -138,7 +137,7 @@ msgstr "Das Systemdesign festlegen"
 #: ui/main.qml:102
 #, kde-format
 msgid "Window decorations"
-msgstr ""
+msgstr "Fensterdekoration"
 
 #: ui/main.qml:103
 #, kde-format
@@ -155,6 +154,8 @@ msgstr "Navigationsklänge"
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
 msgstr ""
+"Einen Klang abspielen, wenn sich das ausgewählte Element in "
+"Systemanwendungen ändert"
 
 #: ui/main.qml:123
 #, kde-format
@@ -164,11 +165,10 @@ msgstr ""
 #: ui/main.qml:124
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
-msgstr ""
+msgstr "Den automatischen Standby-Modus des Systems verhindern"
 
 #: ui/main.qml:134
-#, fuzzy, kde-format
-#| msgid "Adjust date & time"
+#, kde-format
 msgid "Adjust date and time"
 msgstr "Datum und Uhrzeit anpassen"
 
@@ -223,8 +223,7 @@ msgid "Minute"
 msgstr "Minute"
 
 #: ui/TimePicker.qml:72
-#, fuzzy, kde-format
-#| msgid "Second"
+#, kde-format
 msgctxt "unit of time"
 msgid "Second"
 msgstr "Sekunde"
