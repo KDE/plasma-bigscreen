@@ -17,14 +17,14 @@ Bigscreen.SidebarOverlay {
     id: root
     openFocusItem: deviceInfoButton
 
-    property var model: null
+    property var device: null
 
     property bool connecting: false
     property bool disconnecting: false
 
     header: Bigscreen.SidebarOverlayHeader {
-        iconSource: model.Icon
-        title: model ? model.Name : ""
+        iconSource: device ? device.icon : ""
+        title: device ? device.name : ""
     }
 
     content: ColumnLayout {
@@ -45,24 +45,24 @@ Bigscreen.SidebarOverlay {
         Bigscreen.ButtonDelegate {
             id: connectToggleButton
 
-            text: model ? (root.connecting ? i18n("Connecting…") : (root.disconnecting ? i18n("Disconnecting…") : (model.Connected ? i18n("Disconnect") : (!model.Paired ? i18n("Pair") : i18n("Connect"))))) : ""
-            icon.name: model ? (model.Connected ? "network-disconnect" : "network-connect") : ""
+            text: device ? (root.connecting ? i18n("Connecting…") : (root.disconnecting ? i18n("Disconnecting…") : (device.connected ? i18n("Disconnect") : (!device.paired ? i18n("Pair") : i18n("Connect"))))) : ""
+            icon.name: device ? (device.connected ? "network-disconnect" : "network-connect") : ""
 
             KeyNavigation.down: forgetButton
             Keys.onLeftPressed: root.close()
 
             onClicked: {
-                if (!model.Paired) {
+                if (!device.paired) {
                     root.connecting = true;
-                    Script.makeCall(model.Device.pair(), call => {
+                    Script.makeCall(device.pair(), call => {
                         root.connecting = false;
                         if (call.error) {
                             console.log("makeCall error when pairing: " + call.errorText)
                         }
                     });
-                } else if (model.Connected) {
+                } else if (device.connected) {
                     root.disconnecting = true;
-                    Script.makeCall(model.Device.disconnectFromDevice(), call => {
+                    Script.makeCall(device.disconnectFromDevice(), call => {
                         root.disconnecting = false;
                         if (call.error) {
                             console.log("makeCall error when disconnecting: " + call.errorText);
@@ -70,7 +70,7 @@ Bigscreen.SidebarOverlay {
                     });
                 } else {
                     root.connecting = true;
-                    Script.makeCall(model.Device.connectToDevice(), call => {
+                    Script.makeCall(device.connectToDevice(), call => {
                         root.connecting = false;
                         if (call.error) {
                             console.log("makeCall error when connecting: " + call.errorText);
@@ -82,10 +82,11 @@ Bigscreen.SidebarOverlay {
 
         Bigscreen.ButtonDelegate {
             id: forgetButton
-            visible: model && model.Paired
+            visible: device && device.paired
             text: i18n("Forget device")
             icon.name: "delete"
 
+            KeyNavigation.down: trustedToggle
             Keys.onLeftPressed: root.close()
 
             onClicked: forgetDialog.open()
@@ -93,10 +94,10 @@ Bigscreen.SidebarOverlay {
             Bigscreen.Dialog {
                 id: forgetDialog
                 standardButtons: Bigscreen.Dialog.Ok | Bigscreen.Dialog.Cancel
-                title: i18n("Are you sure you want to forget the device %1?", model ? model.Name : '')
+                title: i18n("Are you sure you want to forget the device %1?", device ? device.name : '')
 
                 onAccepted: {
-                    Script.makeCall(model.Device.adapter.removeDevice(model.Device), call => {
+                    Script.makeCall(device.adapter.removeDevice(device), call => {
                         root.connecting = false;
                         if (call.error) {
                             console.log("makeCall error when forgetting: " + call.errorText);
@@ -109,6 +110,35 @@ Bigscreen.SidebarOverlay {
                     forgetDialog.close();
                     forgetButton.forceActiveFocus();
                 }
+            }
+        }
+
+        Bigscreen.SwitchDelegate {
+            id: trustedToggle
+            visible: device && device.paired
+            text: i18n("Trusted")
+            description: i18n("Auto-accept incoming connections")
+            checked: device && device.trusted
+
+            KeyNavigation.down: blockedToggle
+            Keys.onLeftPressed: root.close()
+
+            onToggled: {
+                device.trusted = checked;
+            }
+        }
+
+        Bigscreen.SwitchDelegate {
+            id: blockedToggle
+            visible: device && device.paired
+            text: i18n("Blocked")
+            description: i18n("Reject all connections from this device")
+            checked: device && device.blocked
+
+            Keys.onLeftPressed: root.close()
+
+            onToggled: {
+                device.blocked = checked;
             }
         }
 
@@ -128,21 +158,27 @@ Bigscreen.SidebarOverlay {
 
                 QQC2.Label {
                     id: typeLabel
-                    text: i18n("Type: " + Script.deviceTypeToString(model.Device))
+                    text: i18n("Type: " + Script.deviceTypeToString(device))
                 }
 
                 QQC2.Label {
                     id: addressLabel
-                    text: i18n("Address: ") + model.Address
+                    text: i18n("Address: ") + (device ? device.address : "")
+                }
+
+                QQC2.Label {
+                    id: batteryLabel
+                    visible: device && device.battery
+                    text: i18n("Battery: ") + (device && device.battery ? device.battery.percentage + "%" : "")
                 }
 
                 Bigscreen.ButtonDelegate {
                     id: changeNameButton
                     text: i18n("Change name")
                     icon.name: "document-edit-symbolic"
-                    visible : model.Paired
+                    visible: device && device.paired
                     onClicked: changeNameDialog.open()
-                    
+
                     Bigscreen.Dialog {
                         id: changeNameDialog
                         title: i18n("Change name")
@@ -151,7 +187,7 @@ Bigscreen.SidebarOverlay {
                         onOpened: nameTextField.forceActiveFocus()
                         onClosed: changeNameButton.forceActiveFocus()
                         onAccepted: {
-                            model.Device.name = nameTextField.text
+                            device.name = nameTextField.text
                             changeNameDialog.close()
                         }
 
@@ -160,9 +196,10 @@ Bigscreen.SidebarOverlay {
 
                             Bigscreen.TextField {
                                 id: nameTextField
-                                text: model.Name
-                                placeholderText: model.Name
+                                text: device ? device.name : ""
+                                placeholderText: device ? device.name : ""
                                 Keys.onReturnPressed: changeNameDialog.accept()
+                                KeyNavigation.down: changeNameDialog.footer
                                 Layout.fillWidth: true
                             }
                         }

@@ -110,7 +110,7 @@ Bigscreen.ScrollablePage {
 
                 onClicked: {
                     sidebarOverlay.delegate = pairedDelegate;
-                    sidebarOverlay.model = model;
+                    sidebarOverlay.device = model.Device;
                     sidebarOverlay.open();
                 }
             }
@@ -143,7 +143,7 @@ Bigscreen.ScrollablePage {
 
                 onClicked: {
                     sidebarOverlay.delegate = unpairedDelegate;
-                    sidebarOverlay.model = model;
+                    sidebarOverlay.device = model.Device;
                     sidebarOverlay.open();
                 }
             }
@@ -153,7 +153,13 @@ Bigscreen.ScrollablePage {
             id: sidebarOverlay
 
             property var delegate
-            onClosed: delegate.forceActiveFocus()
+            onClosed: {
+                if (delegate) {
+                    delegate.forceActiveFocus();
+                } else {
+                    pairedDevicesModel.forceActiveFocus();
+                }
+            }
         }
     }
 }
