@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-04-17 00:46+0000\n"
 "PO-Revision-Date: 2026-02-28 08:00+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -53,27 +53,53 @@ msgstr "დაკავშირება"
 msgid "Forget device"
 msgstr "მოწყობილობის დავიწყება"
 
-#: ui/DeviceConnectionSidebar.qml:96
+#: ui/DeviceConnectionSidebar.qml:97
 #, kde-format
 msgid "Are you sure you want to forget the device %1?"
 msgstr "მართლა გსურთ, დაივიწყოთ მოწყობილობა %1?"
 
-#: ui/DeviceConnectionSidebar.qml:121
+#: ui/DeviceConnectionSidebar.qml:119
+#, kde-format
+msgid "Trusted"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:120
+#, kde-format
+msgid "Auto-accept incoming connections"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:134
+#, kde-format
+msgid "Blocked"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:135
+#, kde-format
+msgid "Reject all connections from this device"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:151
 #, kde-format
 msgid "Device details"
 msgstr "მოწყობილობის დეტალები"
 
-#: ui/DeviceConnectionSidebar.qml:131
+#: ui/DeviceConnectionSidebar.qml:161
 #, kde-format
 msgid "Type: "
 msgstr "ტიპი: "
 
-#: ui/DeviceConnectionSidebar.qml:136
+#: ui/DeviceConnectionSidebar.qml:166
 #, kde-format
 msgid "Address: "
 msgstr "მისამართი: "
 
-#: ui/DeviceConnectionSidebar.qml:141 ui/DeviceConnectionSidebar.qml:148
+#: ui/DeviceConnectionSidebar.qml:172
+#, fuzzy, kde-format
+#| msgid "%1% Battery"
+msgid "Battery: "
+msgstr "%1% ელემენტი"
+
+#: ui/DeviceConnectionSidebar.qml:177 ui/DeviceConnectionSidebar.qml:184
 #, kde-format
 msgid "Change name"
 msgstr "სახელის შეცვლა"
