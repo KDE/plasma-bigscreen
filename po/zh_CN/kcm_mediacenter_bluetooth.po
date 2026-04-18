@@ -94,10 +94,9 @@ msgid "Address: "
 msgstr "地址："
 
 #: ui/DeviceConnectionSidebar.qml:172
-#, fuzzy, kde-format
-#| msgid "%1% Battery"
+#, kde-format
 msgid "Battery: "
-msgstr "%1% 电量"
+msgstr ""
 
 #: ui/DeviceConnectionSidebar.qml:177 ui/DeviceConnectionSidebar.qml:184
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-17 00:46+0000\n"
-"PO-Revision-Date: 2026-03-01 18:53+0200\n"
+"PO-Revision-Date: 2026-04-17 15:52+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ui/DeviceConnectionSidebar.qml:37
 #, kde-format
@@ -61,22 +61,22 @@ msgstr "לשכוח את ההתקן %1?"
 #: ui/DeviceConnectionSidebar.qml:119
 #, kde-format
 msgid "Trusted"
-msgstr ""
+msgstr "מהימן"
 
 #: ui/DeviceConnectionSidebar.qml:120
 #, kde-format
 msgid "Auto-accept incoming connections"
-msgstr ""
+msgstr "לקבל חיבור נכנסים אוטומטית"
 
 #: ui/DeviceConnectionSidebar.qml:134
 #, kde-format
 msgid "Blocked"
-msgstr ""
+msgstr "חסום"
 
 #: ui/DeviceConnectionSidebar.qml:135
 #, kde-format
 msgid "Reject all connections from this device"
-msgstr ""
+msgstr "לדחות חיבורים מהמכשיר הזה"
 
 #: ui/DeviceConnectionSidebar.qml:151
 #, kde-format
@@ -94,10 +94,9 @@ msgid "Address: "
 msgstr "כתובת: "
 
 #: ui/DeviceConnectionSidebar.qml:172
-#, fuzzy, kde-format
-#| msgid "%1% Battery"
+#, kde-format
 msgid "Battery: "
-msgstr "%1% סוללה"
+msgstr "סוללה: "
 
 #: ui/DeviceConnectionSidebar.qml:177 ui/DeviceConnectionSidebar.qml:184
 #, kde-format

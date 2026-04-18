@@ -60,7 +60,7 @@ msgstr "Opravdu chcete zařízení %1 odstranit?"
 #: ui/DeviceConnectionSidebar.qml:119
 #, kde-format
 msgid "Trusted"
-msgstr ""
+msgstr "Důvěryhodný"
 
 #: ui/DeviceConnectionSidebar.qml:120
 #, kde-format
@@ -70,7 +70,7 @@ msgstr ""
 #: ui/DeviceConnectionSidebar.qml:134
 #, kde-format
 msgid "Blocked"
-msgstr ""
+msgstr "Blokován"
 
 #: ui/DeviceConnectionSidebar.qml:135
 #, kde-format

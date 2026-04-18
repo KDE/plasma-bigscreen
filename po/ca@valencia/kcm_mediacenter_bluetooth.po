@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-17 00:46+0000\n"
-"PO-Revision-Date: 2026-02-28 08:26+0100\n"
+"PO-Revision-Date: 2026-04-17 08:59+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -62,22 +62,22 @@ msgstr "Segur que voleu oblidar el dispositiu %1?"
 #: ui/DeviceConnectionSidebar.qml:119
 #, kde-format
 msgid "Trusted"
-msgstr ""
+msgstr "De confiança"
 
 #: ui/DeviceConnectionSidebar.qml:120
 #, kde-format
 msgid "Auto-accept incoming connections"
-msgstr ""
+msgstr "Accepta automàticament les connexions entrants"
 
 #: ui/DeviceConnectionSidebar.qml:134
 #, kde-format
 msgid "Blocked"
-msgstr ""
+msgstr "Bloquejat"
 
 #: ui/DeviceConnectionSidebar.qml:135
 #, kde-format
 msgid "Reject all connections from this device"
-msgstr ""
+msgstr "Rebutja totes les connexions d'este dispositiu"
 
 #: ui/DeviceConnectionSidebar.qml:151
 #, kde-format
@@ -95,10 +95,9 @@ msgid "Address: "
 msgstr "Adreça: "
 
 #: ui/DeviceConnectionSidebar.qml:172
-#, fuzzy, kde-format
-#| msgid "%1% Battery"
+#, kde-format
 msgid "Battery: "
-msgstr "Bateria %1%"
+msgstr "Bateria: "
 
 #: ui/DeviceConnectionSidebar.qml:177 ui/DeviceConnectionSidebar.qml:184
 #, kde-format

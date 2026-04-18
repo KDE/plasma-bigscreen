@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-17 00:46+0000\n"
-"PO-Revision-Date: 2026-02-28 08:00+0100\n"
+"PO-Revision-Date: 2026-04-17 09:38+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: ui/DeviceConnectionSidebar.qml:37
 #, kde-format
@@ -61,22 +61,22 @@ msgstr "მართლა გსურთ, დაივიწყოთ მო�
 #: ui/DeviceConnectionSidebar.qml:119
 #, kde-format
 msgid "Trusted"
-msgstr ""
+msgstr "სანდო"
 
 #: ui/DeviceConnectionSidebar.qml:120
 #, kde-format
 msgid "Auto-accept incoming connections"
-msgstr ""
+msgstr "შემომავალი კავშირების ავტოდასტური"
 
 #: ui/DeviceConnectionSidebar.qml:134
 #, kde-format
 msgid "Blocked"
-msgstr ""
+msgstr "დაბლოკილია"
 
 #: ui/DeviceConnectionSidebar.qml:135
 #, kde-format
 msgid "Reject all connections from this device"
-msgstr ""
+msgstr "ყველა კავშირის უარყოფა ამ მოწყობილობიდან"
 
 #: ui/DeviceConnectionSidebar.qml:151
 #, kde-format
@@ -94,10 +94,9 @@ msgid "Address: "
 msgstr "მისამართი: "
 
 #: ui/DeviceConnectionSidebar.qml:172
-#, fuzzy, kde-format
-#| msgid "%1% Battery"
+#, kde-format
 msgid "Battery: "
-msgstr "%1% ელემენტი"
+msgstr "ელემენტი: "
 
 #: ui/DeviceConnectionSidebar.qml:177 ui/DeviceConnectionSidebar.qml:184
 #, kde-format
