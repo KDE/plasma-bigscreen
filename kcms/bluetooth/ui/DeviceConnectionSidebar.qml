@@ -158,18 +158,18 @@ Bigscreen.SidebarOverlay {
 
                 QQC2.Label {
                     id: typeLabel
-                    text: i18n("Type: " + Script.deviceTypeToString(device))
+                    text: i18n("Type: %1", Script.deviceTypeToString(device))
                 }
 
                 QQC2.Label {
                     id: addressLabel
-                    text: i18n("Address: ") + (device ? device.address : "")
+                    text: i18n("Address: %1", device ? device.address : "")
                 }
 
                 QQC2.Label {
                     id: batteryLabel
                     visible: device && device.battery
-                    text: i18n("Battery: ") + (device && device.battery ? device.battery.percentage + "%" : "")
+                    text: i18n("Battery: %1", device && device.battery ? device.battery.percentage + "%" : "")
                 }
 
                 Bigscreen.ButtonDelegate {
