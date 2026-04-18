@@ -169,7 +169,9 @@ Bigscreen.SidebarOverlay {
                 QQC2.Label {
                     id: batteryLabel
                     visible: device && device.battery
-                    text: i18n("Battery: %1", device && device.battery ? device.battery.percentage + "%" : "")
+                    text: i18n("Battery: %1", device && device.battery
+                        ? i18nc("Battery percentage level", "%1%", device.battery.percentage)
+                        : "")
                 }
 
                 Bigscreen.ButtonDelegate {

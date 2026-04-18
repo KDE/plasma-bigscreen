@@ -124,7 +124,7 @@ Bigscreen.ScrollablePage {
         Bigscreen.ButtonDelegate {
             id: scaleDelegate
             text: i18n("Scale")
-            description: Math.round(kcm.displayModel.selectedDisplayScale * 100) + "%"
+            description: i18nc("Scale percentage", "%1%", Math.round(kcm.displayModel.selectedDisplayScale * 100))
             enabled: kcm.displayModel.selectedDisplayEnabled
 
             onClicked: {

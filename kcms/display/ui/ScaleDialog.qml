@@ -51,7 +51,7 @@ Bigscreen.Dialog {
 
             QQC2.Label {
                 id: sliderPercentageValue
-                text: Math.round(displayScale * 100) + "%"
+                text: i18nc("Scale percentage", "%1%", Math.round(displayScale * 100))
                 font.pixelSize: Bigscreen.Units.defaultFontPixelSize
             }
         }
