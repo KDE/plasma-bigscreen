@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_display\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-24 00:45+0000\n"
+"POT-Creation-Date: 2026-04-19 00:46+0000\n"
 "PO-Revision-Date: 2024-11-11 17:57+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -44,6 +44,12 @@ msgstr "Režim obrazovky (rozlíšenie a obnovovacia frekvencia)"
 #, kde-format
 msgid "Scale"
 msgstr "Mierka"
+
+#: ui/main.qml:127 ui/ScaleDialog.qml:54
+#, kde-format
+msgctxt "Scale percentage"
+msgid "%1%"
+msgstr ""
 
 #~ msgid "New Resolution"
 #~ msgstr "Nové rozlíšenie"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-17 00:46+0000\n"
+"POT-Creation-Date: 2026-04-19 00:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
@@ -85,20 +85,26 @@ msgstr ""
 
 #: ui/DeviceConnectionSidebar.qml:161
 #, kde-format
-msgid "Type: "
+msgid "Type: %1"
 msgstr ""
 
 #: ui/DeviceConnectionSidebar.qml:166
 #, kde-format
-msgid "Address: "
+msgid "Address: %1"
 msgstr ""
 
 #: ui/DeviceConnectionSidebar.qml:172
 #, kde-format
-msgid "Battery: "
+msgid "Battery: %1"
 msgstr ""
 
-#: ui/DeviceConnectionSidebar.qml:177 ui/DeviceConnectionSidebar.qml:184
+#: ui/DeviceConnectionSidebar.qml:173
+#, kde-format
+msgctxt "Battery percentage level"
+msgid "%1%"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:179 ui/DeviceConnectionSidebar.qml:186
 #, kde-format
 msgid "Change name"
 msgstr ""

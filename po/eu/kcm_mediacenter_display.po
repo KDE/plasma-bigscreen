@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-24 00:45+0000\n"
+"POT-Creation-Date: 2026-04-19 00:46+0000\n"
 "PO-Revision-Date: 2025-08-14 11:32+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -49,6 +49,12 @@ msgstr "Pantailaren modua (bereizmena eta freskatze-tasa)"
 #, kde-format
 msgid "Scale"
 msgstr "Eskala"
+
+#: ui/main.qml:127 ui/ScaleDialog.qml:54
+#, kde-format
+msgctxt "Scale percentage"
+msgid "%1%"
+msgstr ""
 
 #~ msgid "New Resolution"
 #~ msgstr "Bereizmen berria"

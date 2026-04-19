@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-24 00:45+0000\n"
+"POT-Creation-Date: 2026-04-19 00:46+0000\n"
 "PO-Revision-Date: 2026-01-27 12:27+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -46,6 +46,12 @@ msgstr "Modo de schermo (Resolution & Frequentia de Refrescamento)"
 #, kde-format
 msgid "Scale"
 msgstr "Scala"
+
+#: ui/main.qml:127 ui/ScaleDialog.qml:54
+#, kde-format
+msgctxt "Scale percentage"
+msgid "%1%"
+msgstr ""
 
 #~ msgid "New Resolution"
 #~ msgstr "Nove Resolution"

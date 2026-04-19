@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_bluetooth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-17 00:46+0000\n"
-"PO-Revision-Date: 2026-03-08 00:06+0100\n"
+"POT-Creation-Date: 2026-04-19 00:46+0000\n"
+"PO-Revision-Date: 2026-04-18 18:13+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -63,22 +63,22 @@ msgstr "¿Está seguro de querer olvidar el dispositivo %1?"
 #: ui/DeviceConnectionSidebar.qml:119
 #, kde-format
 msgid "Trusted"
-msgstr ""
+msgstr "Confiable"
 
 #: ui/DeviceConnectionSidebar.qml:120
 #, kde-format
 msgid "Auto-accept incoming connections"
-msgstr ""
+msgstr "Aceptar automáticamente conexiones entrantes"
 
 #: ui/DeviceConnectionSidebar.qml:134
 #, kde-format
 msgid "Blocked"
-msgstr ""
+msgstr "Bloqueado"
 
 #: ui/DeviceConnectionSidebar.qml:135
 #, kde-format
 msgid "Reject all connections from this device"
-msgstr ""
+msgstr "Rechazar todas las conexiones desde este dispositivo"
 
 #: ui/DeviceConnectionSidebar.qml:151
 #, kde-format
@@ -86,22 +86,30 @@ msgid "Device details"
 msgstr "Detalles del dispositivo"
 
 #: ui/DeviceConnectionSidebar.qml:161
-#, kde-format
-msgid "Type: "
+#, fuzzy, kde-format
+#| msgid "Type: "
+msgid "Type: %1"
 msgstr "Tipo:"
 
 #: ui/DeviceConnectionSidebar.qml:166
-#, kde-format
-msgid "Address: "
+#, fuzzy, kde-format
+#| msgid "Address: "
+msgid "Address: %1"
 msgstr "Dirección:"
 
 #: ui/DeviceConnectionSidebar.qml:172
 #, fuzzy, kde-format
-#| msgid "%1% Battery"
-msgid "Battery: "
-msgstr "%1 % de batería"
+#| msgid "Battery: "
+msgid "Battery: %1"
+msgstr "Batería:"
 
-#: ui/DeviceConnectionSidebar.qml:177 ui/DeviceConnectionSidebar.qml:184
+#: ui/DeviceConnectionSidebar.qml:173
+#, kde-format
+msgctxt "Battery percentage level"
+msgid "%1%"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:179 ui/DeviceConnectionSidebar.qml:186
 #, kde-format
 msgid "Change name"
 msgstr "Cambiar nombre"

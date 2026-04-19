@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-17 00:46+0000\n"
+"POT-Creation-Date: 2026-04-19 00:46+0000\n"
 "PO-Revision-Date: 2025-08-13 19:35\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -61,22 +61,22 @@ msgstr "您确定要忘记设备 %1 吗？"
 #: ui/DeviceConnectionSidebar.qml:119
 #, kde-format
 msgid "Trusted"
-msgstr ""
+msgstr "已信任"
 
 #: ui/DeviceConnectionSidebar.qml:120
 #, kde-format
 msgid "Auto-accept incoming connections"
-msgstr ""
+msgstr "自动接受传入的连接"
 
 #: ui/DeviceConnectionSidebar.qml:134
 #, kde-format
 msgid "Blocked"
-msgstr ""
+msgstr "已屏蔽"
 
 #: ui/DeviceConnectionSidebar.qml:135
 #, kde-format
 msgid "Reject all connections from this device"
-msgstr ""
+msgstr "拒绝此设备上的所有连接"
 
 #: ui/DeviceConnectionSidebar.qml:151
 #, kde-format
@@ -84,21 +84,30 @@ msgid "Device details"
 msgstr "设备详细信息"
 
 #: ui/DeviceConnectionSidebar.qml:161
-#, kde-format
-msgid "Type: "
+#, fuzzy, kde-format
+#| msgid "Type: "
+msgid "Type: %1"
 msgstr "类型："
 
 #: ui/DeviceConnectionSidebar.qml:166
-#, kde-format
-msgid "Address: "
+#, fuzzy, kde-format
+#| msgid "Address: "
+msgid "Address: %1"
 msgstr "地址："
 
 #: ui/DeviceConnectionSidebar.qml:172
+#, fuzzy, kde-format
+#| msgid "Battery: "
+msgid "Battery: %1"
+msgstr "电池："
+
+#: ui/DeviceConnectionSidebar.qml:173
 #, kde-format
-msgid "Battery: "
+msgctxt "Battery percentage level"
+msgid "%1%"
 msgstr ""
 
-#: ui/DeviceConnectionSidebar.qml:177 ui/DeviceConnectionSidebar.qml:184
+#: ui/DeviceConnectionSidebar.qml:179 ui/DeviceConnectionSidebar.qml:186
 #, kde-format
 msgid "Change name"
 msgstr "更改名称"
