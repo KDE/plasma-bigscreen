@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
 # SPDX-FileCopyrightText: 2025 Geraldo Simiao <geraldosimiao@fedoraproject.org>
-# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-19 00:46+0000\n"
-"PO-Revision-Date: 2025-08-25 19:13-0300\n"
+"PO-Revision-Date: 2026-04-19 07:53-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ui/main.qml:22
 #, kde-format
@@ -52,7 +52,7 @@ msgstr "Escala"
 #, kde-format
 msgctxt "Scale percentage"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #~ msgid "New Resolution"
 #~ msgstr "Nova resolução"

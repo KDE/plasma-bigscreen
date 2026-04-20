@@ -1,21 +1,22 @@
 # Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 # SPDX-FileCopyrightText: 2026 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2026 Libor Filípek <filipek.libor@protonmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-19 00:46+0000\n"
-"PO-Revision-Date: 2026-03-30 11:41+0200\n"
-"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
-"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-04-19 12:31+0200\n"
+"Last-Translator: Libor Filípek <filipek.libor@protonmail.com>\n"
+"Language-Team: \n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: ui/DeviceConnectionSidebar.qml:37
 #, kde-format
@@ -65,7 +66,7 @@ msgstr "Důvěryhodný"
 #: ui/DeviceConnectionSidebar.qml:120
 #, kde-format
 msgid "Auto-accept incoming connections"
-msgstr ""
+msgstr "Automaticky přijímat příchozí připojení"
 
 #: ui/DeviceConnectionSidebar.qml:134
 #, kde-format
@@ -75,7 +76,7 @@ msgstr "Blokován"
 #: ui/DeviceConnectionSidebar.qml:135
 #, kde-format
 msgid "Reject all connections from this device"
-msgstr ""
+msgstr "Odmítnout všechna připojení z tohoto zařízení"
 
 #: ui/DeviceConnectionSidebar.qml:151
 #, kde-format
@@ -83,28 +84,25 @@ msgid "Device details"
 msgstr "Podrobnosti o zařízení"
 
 #: ui/DeviceConnectionSidebar.qml:161
-#, fuzzy, kde-format
-#| msgid "Type: "
+#, kde-format
 msgid "Type: %1"
-msgstr "Typ: "
+msgstr "Druh: %1"
 
 #: ui/DeviceConnectionSidebar.qml:166
-#, fuzzy, kde-format
-#| msgid "Address: "
+#, kde-format
 msgid "Address: %1"
-msgstr "Adresa: "
+msgstr "Adresa: %1"
 
 #: ui/DeviceConnectionSidebar.qml:172
-#, fuzzy, kde-format
-#| msgid "%1% Battery"
+#, kde-format
 msgid "Battery: %1"
-msgstr "%1% Baterie"
+msgstr "Baterie: %1%"
 
 #: ui/DeviceConnectionSidebar.qml:173
 #, kde-format
 msgctxt "Battery percentage level"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/DeviceConnectionSidebar.qml:179 ui/DeviceConnectionSidebar.qml:186
 #, kde-format

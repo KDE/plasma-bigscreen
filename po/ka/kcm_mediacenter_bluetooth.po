@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-19 00:46+0000\n"
-"PO-Revision-Date: 2026-04-17 09:38+0200\n"
+"PO-Revision-Date: 2026-04-19 03:48+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -84,28 +84,25 @@ msgid "Device details"
 msgstr "მოწყობილობის დეტალები"
 
 #: ui/DeviceConnectionSidebar.qml:161
-#, fuzzy, kde-format
-#| msgid "Type: "
+#, kde-format
 msgid "Type: %1"
-msgstr "ტიპი: "
+msgstr "ტიპი: %1"
 
 #: ui/DeviceConnectionSidebar.qml:166
-#, fuzzy, kde-format
-#| msgid "Address: "
+#, kde-format
 msgid "Address: %1"
-msgstr "მისამართი: "
+msgstr "მისამართი: %1"
 
 #: ui/DeviceConnectionSidebar.qml:172
-#, fuzzy, kde-format
-#| msgid "Battery: "
+#, kde-format
 msgid "Battery: %1"
-msgstr "ელემენტი: "
+msgstr "ელემენტი: %1"
 
 #: ui/DeviceConnectionSidebar.qml:173
 #, kde-format
 msgctxt "Battery percentage level"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/DeviceConnectionSidebar.qml:179 ui/DeviceConnectionSidebar.qml:186
 #, kde-format

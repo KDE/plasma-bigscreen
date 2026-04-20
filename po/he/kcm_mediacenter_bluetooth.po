@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-19 00:46+0000\n"
-"PO-Revision-Date: 2026-04-17 15:52+0300\n"
+"PO-Revision-Date: 2026-04-19 08:36+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -84,28 +84,25 @@ msgid "Device details"
 msgstr "פרטי התקן"
 
 #: ui/DeviceConnectionSidebar.qml:161
-#, fuzzy, kde-format
-#| msgid "Type: "
+#, kde-format
 msgid "Type: %1"
-msgstr "סוג: "
+msgstr "סוג: %1"
 
 #: ui/DeviceConnectionSidebar.qml:166
-#, fuzzy, kde-format
-#| msgid "Address: "
+#, kde-format
 msgid "Address: %1"
-msgstr "כתובת: "
+msgstr "כתובת: %1"
 
 #: ui/DeviceConnectionSidebar.qml:172
-#, fuzzy, kde-format
-#| msgid "Battery: "
+#, kde-format
 msgid "Battery: %1"
-msgstr "סוללה: "
+msgstr "סוללה: %1"
 
 #: ui/DeviceConnectionSidebar.qml:173
 #, kde-format
 msgctxt "Battery percentage level"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/DeviceConnectionSidebar.qml:179 ui/DeviceConnectionSidebar.qml:186
 #, kde-format

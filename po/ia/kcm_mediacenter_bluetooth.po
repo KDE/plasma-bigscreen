@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-19 00:46+0000\n"
-"PO-Revision-Date: 2026-03-03 17:11+0100\n"
+"PO-Revision-Date: 2026-04-19 17:29+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: ui/DeviceConnectionSidebar.qml:37
 #, kde-format
@@ -60,22 +60,22 @@ msgstr "Tu es secur que tu vole oblidar le dispositivo %1?"
 #: ui/DeviceConnectionSidebar.qml:119
 #, kde-format
 msgid "Trusted"
-msgstr ""
+msgstr "Es credibile"
 
 #: ui/DeviceConnectionSidebar.qml:120
 #, kde-format
 msgid "Auto-accept incoming connections"
-msgstr ""
+msgstr "Auto-accepta connexiones in arrivata"
 
 #: ui/DeviceConnectionSidebar.qml:134
 #, kde-format
 msgid "Blocked"
-msgstr ""
+msgstr "Blocate"
 
 #: ui/DeviceConnectionSidebar.qml:135
 #, kde-format
 msgid "Reject all connections from this device"
-msgstr ""
+msgstr "Rejecta tote le connexiones ex iste dispositivo"
 
 #: ui/DeviceConnectionSidebar.qml:151
 #, kde-format
@@ -83,28 +83,25 @@ msgid "Device details"
 msgstr "Detalios de dispositivo"
 
 #: ui/DeviceConnectionSidebar.qml:161
-#, fuzzy, kde-format
-#| msgid "Type: "
+#, kde-format
 msgid "Type: %1"
-msgstr "Typo"
+msgstr "Typo: %1"
 
 #: ui/DeviceConnectionSidebar.qml:166
-#, fuzzy, kde-format
-#| msgid "Address: "
+#, kde-format
 msgid "Address: %1"
-msgstr "Adresse"
+msgstr "Adresse: %1"
 
 #: ui/DeviceConnectionSidebar.qml:172
-#, fuzzy, kde-format
-#| msgid "%1% Battery"
+#, kde-format
 msgid "Battery: %1"
-msgstr "%1% Batteria"
+msgstr "Batteria: %1"
 
 #: ui/DeviceConnectionSidebar.qml:173
 #, kde-format
 msgctxt "Battery percentage level"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/DeviceConnectionSidebar.qml:179 ui/DeviceConnectionSidebar.qml:186
 #, kde-format
