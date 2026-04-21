@@ -49,7 +49,7 @@ msgstr "Mierka"
 #, kde-format
 msgctxt "Scale percentage"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #~ msgid "New Resolution"
 #~ msgstr "Nové rozlíšenie"
