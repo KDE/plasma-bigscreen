@@ -52,4 +52,4 @@ msgstr "缩放"
 #, kde-format
 msgctxt "Scale percentage"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"

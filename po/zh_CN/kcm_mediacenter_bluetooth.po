@@ -86,23 +86,23 @@ msgstr "设备详细信息"
 #: ui/DeviceConnectionSidebar.qml:161
 #, kde-format
 msgid "Type: %1"
-msgstr ""
+msgstr "类型：%1"
 
 #: ui/DeviceConnectionSidebar.qml:166
 #, kde-format
 msgid "Address: %1"
-msgstr ""
+msgstr "地址：%1"
 
 #: ui/DeviceConnectionSidebar.qml:172
 #, kde-format
 msgid "Battery: %1"
-msgstr ""
+msgstr "电量：%1"
 
 #: ui/DeviceConnectionSidebar.qml:173
 #, kde-format
 msgctxt "Battery percentage level"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/DeviceConnectionSidebar.qml:179 ui/DeviceConnectionSidebar.qml:186
 #, kde-format
