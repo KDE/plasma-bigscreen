@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# SPDX-FileCopyrightText: 2025 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2025, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-28 00:46+0000\n"
-"PO-Revision-Date: 2025-10-12 12:54+0200\n"
+"PO-Revision-Date: 2026-04-26 21:09+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,10 +28,9 @@ msgid "Your emails"
 msgstr "kde@peremen.name"
 
 #: kcmslistmodel.cpp:112
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgid "Desktop Settings"
-msgstr "설정"
+msgstr "바탕 화면 설정"
 
 #: main.cpp:34
 #, kde-format
@@ -44,10 +43,9 @@ msgid "Plasma Bigscreen Settings"
 msgstr "Plasma 큰 화면 설정"
 
 #: main.cpp:38
-#, fuzzy, kde-format
-#| msgid "Copyright 2025 Plasma developers"
+#, kde-format
 msgid "© 2025 Plasma developers"
-msgstr "Copyright 2025 Plasma developers"
+msgstr "© 2025 Plasma developers"
 
 #: main.cpp:40
 #, kde-format
@@ -62,7 +60,7 @@ msgstr "설정"
 #: qml/ConfigWindowSidebar.qml:84
 #, kde-format
 msgid "Open desktop settings?"
-msgstr ""
+msgstr "바탕 화면 설정을 여시겠습니까?"
 
 #: qml/ConfigWindowSidebar.qml:89
 #, kde-format
@@ -70,3 +68,5 @@ msgid ""
 "The desktop settings application does not support key navigation, a mouse "
 "may be required. However, it contains extra settings that may be useful."
 msgstr ""
+"바탕 화면 설정 앱은 현재 키보드 탐색을 지원하지 않아서 마우스가 필요할 수도 "
+"있습니다. 유용할 수도 있는 설정을 포함하고 있습니다."

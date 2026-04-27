@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-23 00:45+0000\n"
-"PO-Revision-Date: 2026-02-03 21:24+0100\n"
+"PO-Revision-Date: 2026-04-26 21:07+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -43,10 +43,9 @@ msgid "Day"
 msgstr "일"
 
 #: ui/DeviceTimeSettingsSidebar.qml:46
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time Settings"
+#, kde-format
 msgid "Adjust Date and Time Settings"
-msgstr "날짜와 시간 조정"
+msgstr "날짜와 시간 설정 조정"
 
 #: ui/DeviceTimeSettingsSidebar.qml:55
 #, kde-format
@@ -132,13 +131,13 @@ msgstr "시스템 테마 설정"
 #: ui/main.qml:102
 #, kde-format
 msgid "Window decorations"
-msgstr ""
+msgstr "창 장식"
 
 #: ui/main.qml:103
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
-msgstr ""
+msgstr "앱에서 요청할 때 창 프레임(최소화, 최대화, 닫기 단추) 표시"
 
 #: ui/main.qml:112
 #, kde-format
@@ -148,7 +147,7 @@ msgstr "탐색 소리"
 #: ui/main.qml:113
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
-msgstr ""
+msgstr "선택한 항목이 시스템 앱에서 변경될 때 소리 재생"
 
 #: ui/main.qml:123
 #, kde-format
@@ -158,11 +157,10 @@ msgstr "전원 상태 변경 방지"
 #: ui/main.qml:124
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
-msgstr ""
+msgstr "시스템이 자동으로 절전 모드로 진입하는 것 방지"
 
 #: ui/main.qml:134
-#, fuzzy, kde-format
-#| msgid "Adjust date & time"
+#, kde-format
 msgid "Adjust date and time"
 msgstr "날짜와 시간 조정"
 
@@ -172,10 +170,9 @@ msgid "Shortcuts"
 msgstr "단축키"
 
 #: ui/main.qml:151
-#, fuzzy, kde-format
-#| msgid "Open homescreen shortcut"
+#, kde-format
 msgid "Open home overlay shortcut"
-msgstr "홈 화면 열기 단축키"
+msgstr "홈 오버레이 열기 단축키"
 
 #: ui/main.qml:171
 #, kde-format
@@ -218,8 +215,7 @@ msgid "Minute"
 msgstr "분"
 
 #: ui/TimePicker.qml:72
-#, fuzzy, kde-format
-#| msgid "Second"
+#, kde-format
 msgctxt "unit of time"
 msgid "Second"
 msgstr "초"
