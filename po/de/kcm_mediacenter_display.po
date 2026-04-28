@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: kcm_mediacenter_display\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-19 00:46+0000\n"
-"PO-Revision-Date: 2026-01-24 14:21+0100\n"
+"PO-Revision-Date: 2026-04-23 18:48+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ui/main.qml:22
 #, kde-format
@@ -48,4 +48,4 @@ msgstr "Skalierung"
 #, kde-format
 msgctxt "Scale percentage"
 msgid "%1%"
-msgstr ""
+msgstr "%1 %"

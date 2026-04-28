@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-23 00:45+0000\n"
-"PO-Revision-Date: 2026-04-02 14:41+0200\n"
+"PO-Revision-Date: 2026-04-23 18:45+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -160,7 +160,7 @@ msgstr ""
 #: ui/main.qml:123
 #, kde-format
 msgid "Power inhibition"
-msgstr ""
+msgstr "Leistungsbegrenzung"
 
 #: ui/main.qml:124
 #, kde-format
@@ -185,17 +185,17 @@ msgstr ""
 #: ui/main.qml:171
 #, kde-format
 msgid "Open homescreen shortcut"
-msgstr ""
+msgstr "„Startbildschirm öffnen“-Kurzbefehl"
 
 #: ui/main.qml:191
 #, kde-format
 msgid "Open settings shortcut"
-msgstr ""
+msgstr "„Einstellungen öffnen“-Kurzbefehl"
 
 #: ui/main.qml:210
 #, kde-format
 msgid "Open tasks shortcut"
-msgstr ""
+msgstr "„Anwendungen öffnen“-Kurzbefehl"
 
 #: ui/ShortcutsPickerSidebar.qml:39
 #, kde-format
