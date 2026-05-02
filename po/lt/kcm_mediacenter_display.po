@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-19 00:46+0000\n"
-"PO-Revision-Date: 2025-08-13 00:44+0000\n"
+"PO-Revision-Date: 2026-05-01 13:46+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,39 +17,40 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.8\n"
 
 #: ui/main.qml:22
 #, kde-format
 msgid "Display Configuration"
-msgstr ""
+msgstr "Ekrano konfigūracija"
 
 #: ui/main.qml:42
 #, kde-format
 msgid "Selected display"
-msgstr ""
+msgstr "Pasirinktas ekranas"
 
 #: ui/main.qml:74
 #, kde-format
 msgid "Display %1"
-msgstr ""
+msgstr "Ekranas %1"
 
 #: ui/main.qml:82
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Įjungtas"
 
 #: ui/main.qml:97
 #, kde-format
 msgid "Screen mode (Resolution & Refresh Rate)"
-msgstr ""
+msgstr "Ekrano veiksena (Raiška ir atnaujinimo dažnis)"
 
 #: ui/main.qml:126 ui/ScaleDialog.qml:21
 #, kde-format
 msgid "Scale"
-msgstr ""
+msgstr "Mastelis"
 
 #: ui/main.qml:127 ui/ScaleDialog.qml:54
 #, kde-format
 msgctxt "Scale percentage"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcm_mediacenter_bluetooth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-19 00:46+0000\n"
-"PO-Revision-Date: 2026-04-18 18:13+0100\n"
+"PO-Revision-Date: 2026-05-01 13:43+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -86,28 +86,25 @@ msgid "Device details"
 msgstr "Detalles del dispositivo"
 
 #: ui/DeviceConnectionSidebar.qml:161
-#, fuzzy, kde-format
-#| msgid "Type: "
+#, kde-format
 msgid "Type: %1"
-msgstr "Tipo:"
+msgstr "Tipo: %1"
 
 #: ui/DeviceConnectionSidebar.qml:166
-#, fuzzy, kde-format
-#| msgid "Address: "
+#, kde-format
 msgid "Address: %1"
-msgstr "Dirección:"
+msgstr "Dirección: %1"
 
 #: ui/DeviceConnectionSidebar.qml:172
-#, fuzzy, kde-format
-#| msgid "Battery: "
+#, kde-format
 msgid "Battery: %1"
-msgstr "Batería:"
+msgstr "Batería: %1"
 
 #: ui/DeviceConnectionSidebar.qml:173
 #, kde-format
 msgctxt "Battery percentage level"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/DeviceConnectionSidebar.qml:179 ui/DeviceConnectionSidebar.qml:186
 #, kde-format

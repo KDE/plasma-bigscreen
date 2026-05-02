@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2025-08-13 00:44+0000\n"
+"PO-Revision-Date: 2026-05-01 13:40+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,78 +17,79 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.8\n"
 
 #: ui/delegates/NetworkDelegate.qml:65 ui/DeviceConnectionSidebar.qml:72
 #, kde-format
 msgid "Connected"
-msgstr ""
+msgstr "Prisijungta"
 
 #: ui/DetailsText.qml:33
 #, kde-format
 msgid "IP Address Details"
-msgstr ""
+msgstr "Išsamiau apie IP adresą"
 
 #: ui/DeviceConnectionSidebar.qml:138
 #, kde-format
 msgid "Network information"
-msgstr ""
+msgstr "Tinklo informacija"
 
 #: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
 #, kde-format
 msgid "Connect"
-msgstr ""
+msgstr "Prisijungti"
 
 #: ui/DeviceConnectionSidebar.qml:149
 #, kde-format
 msgid "Disconnect"
-msgstr ""
+msgstr "Atsijungti"
 
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
 msgid "Forget network"
-msgstr ""
+msgstr "Pamiršti tinklą"
 
 #: ui/DeviceConnectionSidebar.qml:190
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
-msgstr ""
+msgstr "Ar tikrai norite pamiršti tinklą %1?"
 
 #: ui/DeviceConnectionSidebar.qml:213
 #, kde-format
 msgid "Network details"
-msgstr ""
+msgstr "Išsamiau apie tinklą"
 
 #: ui/DeviceConnectionSidebar.qml:242
 #, kde-format
 msgid "Speed"
-msgstr ""
+msgstr "Greitis"
 
 #: ui/main.qml:26
 #, kde-format
 msgid "Network"
-msgstr ""
+msgstr "Tinklas"
 
 #: ui/main.qml:103
 #, kde-format
 msgid "Refresh"
-msgstr ""
+msgstr "Atnaujinti"
 
 #: ui/main.qml:114
 #, kde-format
 msgid "Connections"
-msgstr ""
+msgstr "Ryšiai"
 
 #: ui/PasswordDialog.qml:22
 #, kde-format
 msgid "Enter Password For %1"
-msgstr ""
+msgstr "Įveskite slaptažodį, skirtą %1"
 
 #: ui/PasswordDialog.qml:34
 #, kde-format
 msgid "Password…"
-msgstr ""
+msgstr "Slaptažodis…"
 
 #: ui/PasswordDialog.qml:59
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Atsisakyti"

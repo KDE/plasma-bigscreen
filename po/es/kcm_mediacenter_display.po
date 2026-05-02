@@ -1,14 +1,14 @@
 # Spanish translations for kcm_mediacenter_display.po package.
-# Copyright (C) 2024-2025 This file is copyright:
+# Copyright (C) 2024-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2024, 2025 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_display\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-19 00:46+0000\n"
-"PO-Revision-Date: 2025-08-30 19:23+0100\n"
+"PO-Revision-Date: 2026-05-01 13:43+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -52,4 +52,4 @@ msgstr "Escala"
 #, kde-format
 msgctxt "Scale percentage"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
