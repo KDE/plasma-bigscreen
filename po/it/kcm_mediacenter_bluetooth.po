@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# SPDX-FileCopyrightText: 2025, 2026 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2025-2026 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-19 00:46+0000\n"
-"PO-Revision-Date: 2026-03-01 08:02+0100\n"
+"PO-Revision-Date: 2026-04-19 17:06+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: ui/DeviceConnectionSidebar.qml:37
 #, kde-format
@@ -60,22 +60,22 @@ msgstr "Sei sicuro di voler dimenticare il dispositivo %1?"
 #: ui/DeviceConnectionSidebar.qml:119
 #, kde-format
 msgid "Trusted"
-msgstr ""
+msgstr "Di fiducia"
 
 #: ui/DeviceConnectionSidebar.qml:120
 #, kde-format
 msgid "Auto-accept incoming connections"
-msgstr ""
+msgstr "Accetta automaticamente le connessioni in entrata"
 
 #: ui/DeviceConnectionSidebar.qml:134
 #, kde-format
 msgid "Blocked"
-msgstr ""
+msgstr "Bloccato"
 
 #: ui/DeviceConnectionSidebar.qml:135
 #, kde-format
 msgid "Reject all connections from this device"
-msgstr ""
+msgstr "Rifiuta tutte le connessioni provenienti da questo dispositivo"
 
 #: ui/DeviceConnectionSidebar.qml:151
 #, kde-format
@@ -83,28 +83,25 @@ msgid "Device details"
 msgstr "Dettagli del dispositivo"
 
 #: ui/DeviceConnectionSidebar.qml:161
-#, fuzzy, kde-format
-#| msgid "Type: "
+#, kde-format
 msgid "Type: %1"
-msgstr "Tipo: "
+msgstr "Tipo: %1"
 
 #: ui/DeviceConnectionSidebar.qml:166
-#, fuzzy, kde-format
-#| msgid "Address: "
+#, kde-format
 msgid "Address: %1"
-msgstr "Indirizzo: "
+msgstr "Indirizzo: %1"
 
 #: ui/DeviceConnectionSidebar.qml:172
-#, fuzzy, kde-format
-#| msgid "%1% Battery"
+#, kde-format
 msgid "Battery: %1"
-msgstr "%1% batteria"
+msgstr "Batteria: %1"
 
 #: ui/DeviceConnectionSidebar.qml:173
 #, kde-format
 msgctxt "Battery percentage level"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/DeviceConnectionSidebar.qml:179 ui/DeviceConnectionSidebar.qml:186
 #, kde-format
