@@ -15,6 +15,8 @@ set(QCORO_MIN_VERSION "0.7.0")
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(PROJECT_DEP_VERSION "6.5.90")
+
 # Use Extra CMake Modules (ECM) for common functionality.
 # See http://api.kde.org/ecm/manual/ecm.7.html
 # and http://api.kde.org/ecm/manual/ecm-kde-modules.7.html
@@ -51,11 +53,11 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
 )
 
 find_package(KF6Screen CONFIG REQUIRED)
-find_package(Plasma ${PROJECT_VERSION} REQUIRED)
-find_package(PlasmaActivities ${PROJECT_VERSION} REQUIRED)
-find_package(PlasmaActivitiesStats ${PROJECT_VERSION} REQUIRED)
+find_package(Plasma ${PROJECT_DEP_VERSION} REQUIRED)
+find_package(PlasmaActivities ${PROJECT_DEP_VERSION} REQUIRED)
+find_package(PlasmaActivitiesStats ${PROJECT_DEP_VERSION} REQUIRED)
 
-find_package(LibKWorkspace 5.19 CONFIG REQUIRED)
+find_package(LibKWorkspace ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
 
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Quick
