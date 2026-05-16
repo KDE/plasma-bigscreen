@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-bigscreen/"
+"X-Crowdin-File: /kf6-stable/messages/plasma-bigscreen/"
 "kcm_mediacenter_bluetooth.pot\n"
-"X-Crowdin-File-ID: 58456\n"
+"X-Crowdin-File-ID: 60169\n"
 
 #: ui/DeviceConnectionSidebar.qml:37
 #, kde-format
