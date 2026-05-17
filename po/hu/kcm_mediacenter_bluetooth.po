@@ -1,102 +1,101 @@
-# Copyright (C) 2025 This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# SPDX-FileCopyrightText: 2025-2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
+# SPDX-FileCopyrightText: 2026 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-19 00:46+0000\n"
-"PO-Revision-Date: 2026-05-16 12:20+0200\n"
-"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
-"Language-Team: pl\n"
-"Language: pl\n"
+"PO-Revision-Date: 2026-05-16 22:36+0200\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 26.04.0\n"
 
 #: ui/DeviceConnectionSidebar.qml:37
 #, kde-format
 msgid "Device information"
-msgstr "Szczegóły o urządzeniu"
+msgstr "Eszközjellemzők"
 
 #: ui/DeviceConnectionSidebar.qml:48
 #, kde-format
 msgid "Connecting…"
-msgstr "Łączenie…"
+msgstr "Kapcsolódás…"
 
 #: ui/DeviceConnectionSidebar.qml:48
 #, kde-format
 msgid "Disconnecting…"
-msgstr "Rozłączanie…"
+msgstr "Kapcsolat bontása…"
 
 #: ui/DeviceConnectionSidebar.qml:48
 #, kde-format
 msgid "Disconnect"
-msgstr "Rozłącz"
+msgstr "Kapcsolat bontása"
 
 #: ui/DeviceConnectionSidebar.qml:48
 #, kde-format
 msgid "Pair"
-msgstr "Sparuj"
+msgstr "Párosítás"
 
 #: ui/DeviceConnectionSidebar.qml:48
 #, kde-format
 msgid "Connect"
-msgstr "Połącz"
+msgstr "Kapcsolódás"
 
 #: ui/DeviceConnectionSidebar.qml:86
 #, kde-format
 msgid "Forget device"
-msgstr "Zapomnij urządzenie"
+msgstr "Eszköz elfelejtése"
 
 #: ui/DeviceConnectionSidebar.qml:97
 #, kde-format
 msgid "Are you sure you want to forget the device %1?"
-msgstr "Czy na pewno zapomnieć o urządzeniu %1?"
+msgstr "Biztosan el szeretni felejteni a(z) %1 eszközt?"
 
 #: ui/DeviceConnectionSidebar.qml:119
 #, kde-format
 msgid "Trusted"
-msgstr "Zaufane"
+msgstr "Megbízható"
 
 #: ui/DeviceConnectionSidebar.qml:120
 #, kde-format
 msgid "Auto-accept incoming connections"
-msgstr "Sam przyjmuj połączenia przychodzące"
+msgstr "A bejövő kapcsolatok automatikus elfogadása"
 
 #: ui/DeviceConnectionSidebar.qml:134
 #, kde-format
 msgid "Blocked"
-msgstr "Zablokowane"
+msgstr "Blokkolt"
 
 #: ui/DeviceConnectionSidebar.qml:135
 #, kde-format
 msgid "Reject all connections from this device"
-msgstr "Odrzucaj wszystkie połączenia od tego urządzenia"
+msgstr "Az eszközről érkező összes kapcsolat elutasítása"
 
 #: ui/DeviceConnectionSidebar.qml:151
 #, kde-format
 msgid "Device details"
-msgstr "Szczegóły o urządzeniu"
+msgstr "Eszköz részletei"
 
 #: ui/DeviceConnectionSidebar.qml:161
 #, kde-format
 msgid "Type: %1"
-msgstr "Rodzaj: %1"
+msgstr "Típus: %1"
 
 #: ui/DeviceConnectionSidebar.qml:166
 #, kde-format
 msgid "Address: %1"
-msgstr "Adres: %1"
+msgstr "Cím: %1"
 
 #: ui/DeviceConnectionSidebar.qml:172
 #, kde-format
 msgid "Battery: %1"
-msgstr "Bateria: %1"
+msgstr "Akkumulátor: %1"
 
 #: ui/DeviceConnectionSidebar.qml:173
 #, kde-format
@@ -107,17 +106,17 @@ msgstr "%1%"
 #: ui/DeviceConnectionSidebar.qml:179 ui/DeviceConnectionSidebar.qml:186
 #, kde-format
 msgid "Change name"
-msgstr "Zmień nazwę"
+msgstr "Név megváltoztatása"
 
 #: ui/DeviceDelegate.qml:33
 #, kde-format
 msgid "Connected"
-msgstr "Podłączone"
+msgstr "Kapcsolódva"
 
 #: ui/DeviceDelegate.qml:39
 #, kde-format
 msgid "%1% Battery"
-msgstr "%1% Bateria"
+msgstr "%1% akkumulátor"
 
 #: ui/main.qml:25
 #, kde-format
@@ -127,17 +126,17 @@ msgstr "Bluetooth"
 #: ui/main.qml:69
 #, kde-format
 msgid "Enable Bluetooth"
-msgstr "Włącz Bluetooth"
+msgstr "Bluetooth bekapcsolása"
 
 #: ui/main.qml:88
 #, kde-format
 msgid "Paired devices"
-msgstr "Sparowane urządzenia"
+msgstr "Párosított eszközök"
 
 #: ui/main.qml:121
 #, kde-format
 msgid "Available devices"
-msgstr "Dostępne urządzenia"
+msgstr "Elérhető eszközök"
 
 #: ui/script.js:13
 #, kde-format
@@ -155,128 +154,128 @@ msgstr "Modem"
 #, kde-format
 msgctxt "This device is a Computer"
 msgid "Computer"
-msgstr "Komputer"
+msgstr "Számítógép"
 
 #: ui/script.js:19
 #, kde-format
 msgctxt "This device is of type Network"
 msgid "Network"
-msgstr "Sieć"
+msgstr "Hálózat"
 
 #: ui/script.js:21
 #, kde-format
 msgctxt "This device is a Headset"
 msgid "Headset"
-msgstr "Zestaw słuchawkowy"
+msgstr "Fejhallgató"
 
 #: ui/script.js:23
 #, kde-format
 msgctxt "This device is a Headphones"
 msgid "Headphones"
-msgstr "Słuchawki"
+msgstr "Fülhallgatók"
 
 #: ui/script.js:25
 #, kde-format
 msgctxt "This device is an Audio/Video device"
 msgid "Multimedia"
-msgstr "Multimedia"
+msgstr "Multimédia"
 
 #: ui/script.js:27
 #, kde-format
 msgctxt "This device is a Keyboard (not the music instrument)"
 msgid "Keyboard"
-msgstr "Klawiatura"
+msgstr "Billentyűzet"
 
 #: ui/script.js:29
 #, kde-format
 msgctxt "This device is a Mouse"
 msgid "Mouse"
-msgstr "Mysz"
+msgstr "Egér"
 
 #: ui/script.js:31
 #, kde-format
 msgctxt "This device is a Game controller"
 msgid "Game controller"
-msgstr "Pad do gier"
+msgstr "Játékvezérlők"
 
 #: ui/script.js:33
 #, kde-format
 msgctxt "This device is a Graphics Tablet (input device)"
 msgid "Tablet"
-msgstr "Tablet"
+msgstr "Rajztábla"
 
 #: ui/script.js:35
 #, kde-format
 msgctxt "This device is a Peripheral device"
 msgid "Peripheral"
-msgstr "Peryferia"
+msgstr "Periféria"
 
 #: ui/script.js:37
 #, kde-format
 msgctxt "This device is a Camera"
 msgid "Camera"
-msgstr "Aparat"
+msgstr "Fényképezőgép"
 
 #: ui/script.js:39
 #, kde-format
 msgctxt "This device is a Printer"
 msgid "Printer"
-msgstr "Drukarka"
+msgstr "Nyomtató"
 
 #: ui/script.js:41
 #, kde-format
 msgctxt ""
 "This device is an Imaging device (printer, scanner, camera, display, …)"
 msgid "Imaging"
-msgstr "Urządzenie obrazujące"
+msgstr "Képkezelés"
 
 #: ui/script.js:43
 #, kde-format
 msgctxt "This device is a Wearable"
 msgid "Wearable"
-msgstr "Urządzenie do noszenia"
+msgstr "Viselhető"
 
 #: ui/script.js:45
 #, kde-format
 msgctxt "This device is a Toy"
 msgid "Toy"
-msgstr "Zabawka"
+msgstr "Játék"
 
 #: ui/script.js:47
 #, kde-format
 msgctxt "This device is a Health device"
 msgid "Health"
-msgstr "Zdrowie"
+msgstr "Egészség"
 
 #: ui/script.js:53
 #, kde-format
 msgid "File transfer"
-msgstr "Przesyłanie plików"
+msgstr "Fájlátvitel"
 
 #: ui/script.js:56
 #, kde-format
 msgid "Send file"
-msgstr "Wyślij plik"
+msgstr "Fájl küldése"
 
 #: ui/script.js:59
 #, kde-format
 msgid "Input"
-msgstr "Wejście"
+msgstr "Bemenet"
 
 #: ui/script.js:62
 #, kde-format
 msgid "Audio"
-msgstr "Dźwięk"
+msgstr "Hang"
 
 #: ui/script.js:65
 #, kde-format
 msgid "Network"
-msgstr "Sieć"
+msgstr "Hálózat"
 
 #: ui/script.js:69
 #, kde-format
 msgid "Other"
-msgstr "Inne"
+msgstr "Egyéb"
 
 #: ui/script.js:72
 #, kde-format

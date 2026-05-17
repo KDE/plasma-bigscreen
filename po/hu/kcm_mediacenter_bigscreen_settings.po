@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
 # Kristóf Kiszel <kiszel.kristof@gmail.com>, 2021.
-# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2024, 2026 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-23 00:45+0000\n"
-"PO-Revision-Date: 2024-03-02 22:18+0100\n"
+"PO-Revision-Date: 2026-05-16 22:31+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,36 +31,32 @@ msgstr "ulysses@fsf.hu"
 #: ui/DatePicker.qml:38
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Év"
 
 #: ui/DatePicker.qml:54
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Hónap"
 
 #: ui/DatePicker.qml:70
-#, fuzzy, kde-format
-#| msgid "May"
+#, kde-format
 msgid "Day"
-msgstr "Máj"
+msgstr "Nap"
 
 #: ui/DeviceTimeSettingsSidebar.qml:46
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust Date and Time Settings"
-msgstr "Dátum és idő beállítása"
+msgstr "Dátum- és időbeállítások módosítása"
 
 #: ui/DeviceTimeSettingsSidebar.qml:55
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "Időzóna:"
+msgstr "Időzóna"
 
 #: ui/DeviceTimeSettingsSidebar.qml:67
-#, fuzzy, kde-format
-#| msgid "Set time automatically:"
+#, kde-format
 msgid "Set time automatically"
-msgstr "Idő beállítása automatikusan:"
+msgstr "Idő beállítása automatikusan"
 
 #: ui/DeviceTimeSettingsSidebar.qml:85
 #, kde-format
@@ -76,12 +72,12 @@ msgstr "Dátum"
 #: ui/DeviceTimeSettingsSidebar.qml:255
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Vissza"
 
 #: ui/DeviceTimeSettingsSidebar.qml:146
 #, kde-format
 msgid "Search City / Region"
-msgstr ""
+msgstr "Város / régió keresése"
 
 #: ui/DeviceTimeSettingsSidebar.qml:166
 #, kde-format
@@ -96,143 +92,143 @@ msgstr "%1, %2"
 #: ui/main.qml:23 ui/main.qml:91
 #, kde-format
 msgid "System"
-msgstr ""
+msgstr "Rendszer"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgid "General Appearance"
+#, kde-format
 msgid "Homescreen Appearance"
-msgstr "Általános megjelenés"
+msgstr "Kezdőképernyő megjelenése"
 
 #: ui/main.qml:56
-#, fuzzy, kde-format
-#| msgid "Colored Tiles"
+#, kde-format
 msgid "Colored tiles"
 msgstr "Színes csempék"
 
 #: ui/main.qml:57
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
-msgstr ""
+msgstr "A csempe háttérszíne az alkalmazás ikonja alapján változik"
 
 #: ui/main.qml:70
 #, kde-format
 msgid "Wallpaper blur"
-msgstr ""
+msgstr "Háttérkép elmosása"
 
 #: ui/main.qml:71
 #, kde-format
 msgid "Apply a blur effect to the wallpaper on the homescreen"
-msgstr ""
+msgstr "Elmosódás effektus alkalmazása a kezdőképernyő háttérképén"
 
 #: ui/main.qml:84 ui/ThemeSidebar.qml:23
 #, kde-format
 msgid "Global theme"
-msgstr ""
+msgstr "Globális téma"
 
 #: ui/main.qml:85
 #, kde-format
 msgid "Set the system theme"
-msgstr ""
+msgstr "A rendszer témájának beállítása"
 
 #: ui/main.qml:102
 #, kde-format
 msgid "Window decorations"
-msgstr ""
+msgstr "Ablakdekorációk"
 
 #: ui/main.qml:103
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
 msgstr ""
+"Ablakkeret (minimalizálás, maximalizálás, bezárás) rajzolása azon "
+"alkalmazásokhoz, amik kérik"
 
 #: ui/main.qml:112
 #, kde-format
 msgid "Navigation sounds"
-msgstr ""
+msgstr "Navigációs hangok"
 
 #: ui/main.qml:113
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
 msgstr ""
+"Hangjelzés lejátszása, amikor a rendszeralkalmazásokban a kijelölt elem "
+"megváltozik"
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "Power Inhibition"
+#, kde-format
 msgid "Power inhibition"
 msgstr "Teljesítménykorlátozás"
 
 #: ui/main.qml:124
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
-msgstr ""
+msgstr "A rendszer automatikus alvó üzemmódba váltásának megakadályozása"
 
 #: ui/main.qml:134
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust date and time"
 msgstr "Dátum és idő beállítása"
 
 #: ui/main.qml:140
 #, kde-format
 msgid "Shortcuts"
-msgstr ""
+msgstr "Gyorsbillentyűk"
 
 #: ui/main.qml:151
 #, kde-format
 msgid "Open home overlay shortcut"
-msgstr ""
+msgstr "Kezdőlap átfedés megnyitása gyorsbillentyű"
 
 #: ui/main.qml:171
 #, kde-format
 msgid "Open homescreen shortcut"
-msgstr ""
+msgstr "Kezdőképernyő megnyitása gyorsbillentyű"
 
 #: ui/main.qml:191
 #, kde-format
 msgid "Open settings shortcut"
-msgstr ""
+msgstr "Beállítások megnyitása gyorsbillentyű"
 
 #: ui/main.qml:210
 #, kde-format
 msgid "Open tasks shortcut"
-msgstr ""
+msgstr "Feladatok megnyitása gyorsbillentyű"
 
 #: ui/ShortcutsPickerSidebar.qml:39
 #, kde-format
 msgid "Shortcut currently set to"
-msgstr ""
+msgstr "A jelenlegi gyorsbillentyű a(z)"
 
 #: ui/ShortcutsPickerSidebar.qml:46
 #, kde-format
 msgid "Reset to default"
-msgstr ""
+msgstr "Alapértelmezések visszaállítása"
 
 #: ui/ShortcutsPickerSidebar.qml:60
 #, kde-format
 msgid "Set Shortcut"
-msgstr ""
+msgstr "Gyorsbillentyű beállítása"
 
 #: ui/TimePicker.qml:40
 #, kde-format
 msgid "Hour"
-msgstr ""
+msgstr "Óra"
 
 #: ui/TimePicker.qml:56
 #, kde-format
 msgid "Minute"
-msgstr ""
+msgstr "Perc"
 
 #: ui/TimePicker.qml:72
 #, kde-format
 msgctxt "unit of time"
 msgid "Second"
-msgstr ""
+msgstr "Másodperc"
 
 #: ui/TimePicker.qml:89
 #, kde-format
 msgid "AM/PM"
-msgstr ""
+msgstr "DE/DU"
 
 #~ msgid "Time Display"
 #~ msgstr "Időformátum"

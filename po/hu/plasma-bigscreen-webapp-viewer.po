@@ -1,0 +1,243 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# SPDX-FileCopyrightText: 2026 Kristof Kiszel <ulysses@fsf.hu>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"PO-Revision-Date: 2026-05-16 22:25+0200\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 26.04.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kiszel Kristóf"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ulysses@fsf.hu"
+
+#: main.cpp:38
+#, kde-format
+msgid "The user agent to browse with."
+msgstr "A használandó böngészőazonosító."
+
+#: main.cpp:40
+#, kde-format
+msgid "The name of the web app"
+msgstr "A webalkalmazás neve."
+
+#: main.cpp:43
+#, kde-format
+msgid "link of website to launch"
+msgstr "az elindítandó weboldal hivatkozása"
+
+#: main.cpp:57
+#, kde-format
+msgid "Webview"
+msgstr "Webnézet"
+
+#: main.cpp:59
+#, kde-format
+msgid "Plasma Bigscreen Webapp runtime"
+msgstr "Plasma Bigscreen webalkalmazás futtatókörnyezet"
+
+#: main.cpp:61
+#, kde-format
+msgid "© 2025 Plasma developers"
+msgstr "© A Plasma fejlesztői, 2025."
+
+#: qml/WebView.qml:192
+#, kde-format
+msgctxt "@info:status"
+msgid "Entered Full Screen mode"
+msgstr "Teljes képernyős mód"
+
+#: qml/WebView.qml:193
+#, kde-format
+msgctxt "@action:button"
+msgid "Exit Full Screen (Esc)"
+msgstr "Kilépés a teljes képernyős módból (Esc)"
+
+#: qml/WebView.qml:306
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Play"
+msgstr "Lejátszás"
+
+#: qml/WebView.qml:307
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Pause"
+msgstr "Szünet"
+
+#: qml/WebView.qml:314
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Unmute"
+msgstr "Visszahangosítás"
+
+#: qml/WebView.qml:315
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Mute"
+msgstr "Némítás"
+
+#: qml/WebView.qml:325
+#, kde-format
+msgctxt "@label"
+msgid "Speed"
+msgstr "Sebesség"
+
+#: qml/WebView.qml:348
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Loop"
+msgstr "Ismétlés"
+
+#: qml/WebView.qml:355
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Exit Fullscreen"
+msgstr "Kilépés teljes képernyőből"
+
+#: qml/WebView.qml:355
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Enter Fullscreen"
+msgstr "Belépés teljes képernyős módba"
+
+#: qml/WebView.qml:368
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Hide Controls"
+msgstr "Vezérlők elrejtése"
+
+#: qml/WebView.qml:369
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Show Controls"
+msgstr "Vezérlők megjelenítése"
+
+#: qml/WebView.qml:377
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Video"
+msgstr "Videó megnyitása"
+
+#: qml/WebView.qml:377
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Audio"
+msgstr "Hang megnyitása"
+
+#: qml/WebView.qml:378
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Video in New Tab"
+msgstr "Videó megnyitása új lapon"
+
+#: qml/WebView.qml:378
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Audio in New Tab"
+msgstr "Hang megnyitása új lapon"
+
+#: qml/WebView.qml:386
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Save Video"
+msgstr "Videó mentése"
+
+#: qml/WebView.qml:392
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Video Link"
+msgstr "Videó címének másolása"
+
+#: qml/WebView.qml:398
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Image"
+msgstr "Kép megnyitása"
+
+#: qml/WebView.qml:398
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Image in New Tab"
+msgstr "Kép megnyitása új lapon"
+
+#: qml/WebView.qml:406
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Save Image"
+msgstr "Kép mentése"
+
+#: qml/WebView.qml:412
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Image"
+msgstr "Kép másolása"
+
+#: qml/WebView.qml:418
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Image Link"
+msgstr "Kép címének másolása"
+
+#: qml/WebView.qml:424
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Link"
+msgstr "Hivatkozás megnyitása"
+
+#: qml/WebView.qml:424
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Link in New Window"
+msgstr "Hivatkozás megnyitása új ablakban"
+
+#: qml/WebView.qml:432
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Save Link"
+msgstr "Hivatkozás mentése"
+
+#: qml/WebView.qml:438
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Link"
+msgstr "Hivatkozás másolása"
+
+#: qml/WebView.qml:445
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy"
+msgstr "Másolás"
+
+#: qml/WebView.qml:451
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Cut"
+msgstr "Kivágás"
+
+#: qml/WebView.qml:457
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Paste"
+msgstr "Beillesztés"
+
+#: webprofile.cpp:48
+#, kde-format
+msgid "Open"
+msgstr "Megnyitás"
