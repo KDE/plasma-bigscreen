@@ -1,0 +1,54 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# SPDX-FileCopyrightText: 2026 Kristof Kiszel <ulysses@fsf.hu>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-04-19 00:46+0000\n"
+"PO-Revision-Date: 2026-05-16 22:37+0200\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 26.04.0\n"
+
+#: ui/main.qml:22
+#, kde-format
+msgid "Display Configuration"
+msgstr "Kijelzőbeállítás"
+
+#: ui/main.qml:42
+#, kde-format
+msgid "Selected display"
+msgstr "Kiválasztott kijelző"
+
+#: ui/main.qml:74
+#, kde-format
+msgid "Display %1"
+msgstr "%1. kijelző"
+
+#: ui/main.qml:82
+#, kde-format
+msgid "Enabled"
+msgstr "Bekapcsolva"
+
+#: ui/main.qml:97
+#, kde-format
+msgid "Screen mode (Resolution & Refresh Rate)"
+msgstr "Képernyőmód (felbontás és frissítési gyakoriság)"
+
+#: ui/main.qml:126 ui/ScaleDialog.qml:21
+#, kde-format
+msgid "Scale"
+msgstr "Méretezés"
+
+#: ui/main.qml:127 ui/ScaleDialog.qml:54
+#, kde-format
+msgctxt "Scale percentage"
+msgid "%1%"
+msgstr "%1%"
