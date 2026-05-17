@@ -61,6 +61,7 @@ Comment[fi]=Vaihda Plasma Bigscreen -istuntoon
 Comment[fr]=Basculer vers une session Bigscreen de Plasma
 Comment[gl]=Cambiar a unha sesión de Plasma Bigscreen
 Comment[he]=החלפה להפעלת פלזמה למסכים גדולים
+Comment[hu]=Váltás a Plasma Bigscreen munkamenetre
 Comment[ia]=Passa a un session de Plasma Bigscreen
 Comment[it]=Passa a una sessione di Plasma Bigscreen
 Comment[ka]=გადართვა Plasma Bigscreen-ის სესიაზე

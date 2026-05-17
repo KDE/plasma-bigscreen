@@ -11,6 +11,7 @@ Name[es]=Controlador de entrada de Plasma Bigscreen
 Name[eu]=Plasma Bigscreen sarrera maneiatzailea
 Name[fr]=Gestionnaire d'entrées pour Plasma Bigscreen
 Name[he]=מטפל הקלט לפלזמה למסכים גדולים
+Name[hu]=Plasma Bigscreen bevitelkezelő
 Name[ia]=MAneator de ingresso de Plasma Bigscreen
 Name[it]=Gestore di input di Plasma Bigscreen
 Name[ka]=Plasma Bigscreen-ის შეყვანის დამმუშავებელი
