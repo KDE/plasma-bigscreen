@@ -217,21 +217,3 @@ msgstr "BigScreen е активирал инхибирането на систе
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Търсене…"
-
-#~ msgid "Accept"
-#~ msgstr "Приемане"
-
-#~ msgid "Cancel"
-#~ msgstr "Отказ"
-
-#~ msgid "Voice Applications"
-#~ msgstr "Гласове приложения"
-
-#~ msgid "Clear Tasks"
-#~ msgstr "Изчистване на задачите"
-
-#~ msgid "Close"
-#~ msgstr "Затваряне"
-
-#~ msgid "Audio Volume"
-#~ msgstr "Сила на звука"
