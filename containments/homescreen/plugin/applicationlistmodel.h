@@ -13,6 +13,9 @@
 
 #include <KService>
 
+QStringList applicationsBlacklist();
+bool isApplicationBlacklisted(const KService::Ptr &service, const QStringList &blacklist);
+
 struct ApplicationData {
     QString name;
     QString comment;
@@ -75,5 +78,6 @@ public:
     ApplicationListSearchModel(QObject *parent = nullptr, ApplicationListModel *model = nullptr);
 
     Q_INVOKABLE void runApplication(const QString &storageId);
+    Q_INVOKABLE bool isApplicationBlocklisted(const QString &storageId) const;
     Q_INVOKABLE QVariantMap itemMap(int index);
 };
