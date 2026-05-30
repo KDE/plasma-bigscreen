@@ -104,10 +104,18 @@ FocusScope {
             id: recentView
             property var currentViewUpwards: visible ? recentView : favAppsView.currentViewUpwards
             property var currentViewDownwards: visible ? recentView : appsView.currentViewDownwards
+            readonly property int favoriteIdRole: Qt.UserRole + 3
 
             title: i18n("Recent")
-            model: Kicker.RecentUsageModel {
-                shownItems: Kicker.RecentUsageModel.OnlyApps
+            model: KItemModels.KSortFilterProxyModel {
+                sourceModel: Kicker.RecentUsageModel {
+                    shownItems: Kicker.RecentUsageModel.OnlyApps
+                }
+                filterRowCallback: function(sourceRow, sourceParent) {
+                    const sourceIndex = sourceModel.index(sourceRow, 0, sourceParent);
+                    const storageId = sourceIndex.data(recentView.favoriteIdRole);
+                    return !Plasmoid.applicationListModel.isApplicationBlocklisted(storageId);
+                }
             }
 
             visible: count > 0
@@ -121,7 +129,8 @@ FocusScope {
                 iconImage: model.decoration
                 text: model.display
                 onClicked: (mouse) => {
-                    recentView.model.trigger(index, "", null);
+                    const sourceIndex = recentView.model.mapToSource(recentView.model.index(index, 0));
+                    recentView.model.sourceModel.trigger(sourceIndex.row, "", null);
                 }
             }
 

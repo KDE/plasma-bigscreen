@@ -27,6 +27,19 @@
 #include <KSycocaEntry>
 #include <PlasmaActivities/ResourceInstance>
 
+QStringList applicationsBlacklist()
+{
+    auto cfg = KSharedConfig::openConfig(QStringLiteral("applications-blacklistrc"));
+    auto blgroup = KConfigGroup(cfg, QStringLiteral("Applications"));
+
+    return blgroup.readEntry("blacklist", QStringList());
+}
+
+bool isApplicationBlacklisted(const KService::Ptr &service, const QStringList &blacklist)
+{
+    return service && blacklist.contains(service->desktopEntryName());
+}
+
 ApplicationListModel::ApplicationListModel(QObject *parent)
     : QAbstractListModel(parent)
 {
@@ -59,10 +72,7 @@ void ApplicationListModel::sycocaDbChanged()
 
 KService::List ApplicationListModel::queryApplications()
 {
-    auto cfg = KSharedConfig::openConfig(QStringLiteral("applications-blacklistrc"));
-    auto blgroup = KConfigGroup(cfg, QStringLiteral("Applications"));
-
-    const QStringList blacklist = blgroup.readEntry("blacklist", QStringList());
+    const QStringList blacklist = applicationsBlacklist();
     auto filter = [blacklist](const KService::Ptr &service) -> bool {
         if (service->noDisplay()) {
             return false;
@@ -70,7 +80,7 @@ KService::List ApplicationListModel::queryApplications()
         if (!service->showOnCurrentPlatform()) {
             return false;
         }
-        if (blacklist.contains(service->desktopEntryName())) {
+        if (isApplicationBlacklisted(service, blacklist)) {
             return false;
         }
         if (service->property<bool>("Terminal")) {
@@ -247,4 +257,13 @@ void ApplicationListSearchModel::runApplication(const QString &storageId)
     job->start();
 
     KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()), QStringLiteral("org.kde.plasma.kicker"));
+}
+
+bool ApplicationListSearchModel::isApplicationBlocklisted(const QString &storageId) const
+{
+    if (storageId.isEmpty()) {
+        return false;
+    }
+
+    return isApplicationBlacklisted(KService::serviceByStorageId(storageId), applicationsBlacklist());
 }

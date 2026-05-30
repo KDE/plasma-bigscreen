@@ -14,7 +14,6 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
-// plasma-bigscreen/kdeglobals
 // NOTE: we only write these entries if they are not already defined in the config
 const QMap<QString, QMap<QString, QVariant>> APPLICATIONS_BLACKLIST_DEFAULT_SETTINGS = {
     {
@@ -30,6 +29,7 @@ const QMap<QString, QMap<QString, QVariant>> APPLICATIONS_BLACKLIST_DEFAULT_SETT
     }
 };
 
+// plasma-bigscreen/kdeglobals
 const QMap<QString, QMap<QString, QVariant>> KDEGLOBALS_DEFAULT_SETTINGS = {{"General", {{"BrowserApplication", "aura-browser"}}}};
 
 const QMap<QString, QMap<QString, QVariant>> KDEGLOBALS_SETTINGS = {{"KDE", {{"LookAndFeelPackage", "org.kde.plasma.bigscreen"}}}};
