@@ -15,11 +15,14 @@ pragma Singleton
 QtObject {
     id: navigationSoundEffects
 
-    property SoundEffect clickedSound: SoundEffect {
+    property SoundEffect clickedSound
+    property SoundEffect movingSound
+
+    readonly property Component clickedSoundComponent: SoundEffect {
         source: StandardPaths.locate(StandardPaths.GenericDataLocation, "sounds/plasma-bigscreen/clicked.wav")
     }
 
-    property SoundEffect movingSound: SoundEffect {
+    readonly property Component movingSoundComponent: SoundEffect {
         source: StandardPaths.locate(StandardPaths.GenericDataLocation, "sounds/plasma-bigscreen/moving.wav")
     }
 
@@ -27,10 +30,10 @@ QtObject {
         if (!BigscreenShell.Settings.navigationSoundEnabled) {
             return;
         }
-        if (clickedSound.playing) {
+        if (clickedSound && clickedSound.playing) {
             clickedSound.stop();
         }
-        if (movingSound.playing) {
+        if (movingSound && movingSound.playing) {
             movingSound.stop();
         }
     }
@@ -39,12 +42,18 @@ QtObject {
         if (!BigscreenShell.Settings.navigationSoundEnabled) {
             return;
         }
+        if (!clickedSound) {
+            clickedSound = clickedSoundComponent.createObject(navigationSoundEffects);
+        }
         clickedSound.play();
     }
 
     function playMovingSound() {
         if (!BigscreenShell.Settings.navigationSoundEnabled) {
             return;
+        }
+        if (!movingSound) {
+            movingSound = movingSoundComponent.createObject(navigationSoundEffects);
         }
         movingSound.play();
     }
