@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-23 00:45+0000\n"
+"POT-Creation-Date: 2026-05-31 00:46+0000\n"
 "PO-Revision-Date: 2026-03-29 01:47+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -157,17 +157,17 @@ msgstr "Preferencias de internet"
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: contents/ui/launcher/LauncherHome.qml:108
+#: contents/ui/launcher/LauncherHome.qml:109
 #, kde-format
 msgid "Recent"
 msgstr "Reciente"
 
-#: contents/ui/launcher/LauncherHome.qml:137
+#: contents/ui/launcher/LauncherHome.qml:146
 #, kde-format
 msgid "Applications"
 msgstr "Aplicaciones"
 
-#: contents/ui/launcher/LauncherHome.qml:165
+#: contents/ui/launcher/LauncherHome.qml:174
 #, kde-format
 msgid "Games"
 msgstr "Juegos"
