@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.mycroft.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-23 00:45+0000\n"
+"POT-Creation-Date: 2026-05-31 02:39+0000\n"
 "PO-Revision-Date: 2026-03-23 21:42+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -159,17 +159,17 @@ msgstr "Параметри інтернету"
 msgid "Favorites"
 msgstr "Улюблене"
 
-#: contents/ui/launcher/LauncherHome.qml:108
+#: contents/ui/launcher/LauncherHome.qml:109
 #, kde-format
 msgid "Recent"
 msgstr "Нещодавні"
 
-#: contents/ui/launcher/LauncherHome.qml:137
+#: contents/ui/launcher/LauncherHome.qml:146
 #, kde-format
 msgid "Applications"
 msgstr "Програми"
 
-#: contents/ui/launcher/LauncherHome.qml:165
+#: contents/ui/launcher/LauncherHome.qml:174
 #, kde-format
 msgid "Games"
 msgstr "Ігри"
