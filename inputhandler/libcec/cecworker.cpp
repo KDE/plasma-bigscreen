@@ -11,8 +11,7 @@
 #include <QDebug>
 
 #include <iostream>
-#include <libcec/cecloader.h>
-#include <libcec/cectypes.h>
+#include <libcec/cec.h>
 
 using namespace CEC;
 
@@ -43,7 +42,7 @@ void CECWorker::initialize(const QString &osdName)
     cecConfig.callbacks = &m_cecCallbacks;
     cecConfig.callbackParam = this;
 
-    m_cecAdapter = LibCecInitialise(&cecConfig);
+    m_cecAdapter = CECInitialise(&cecConfig);
 
     if (!m_cecAdapter) {
         qCritical() << "Could not create CEC adapter";
@@ -92,7 +91,6 @@ void CECWorker::cleanup()
     qDebug() << "CECWorker: Starting cleanup";
     if (m_cecAdapter) {
         m_cecAdapter->Close();
-        UnloadLibCec(m_cecAdapter);
         m_cecAdapter = nullptr;
     }
     qDebug() << "CECWorker: Cleanup completed";
