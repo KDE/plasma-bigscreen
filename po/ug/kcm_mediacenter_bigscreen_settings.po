@@ -1,0 +1,226 @@
+# Uyghur translation for kcm_mediacenter_bigscreen_settings.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-03-23 00:45+0000\n"
+"PO-Revision-Date: 2026-06-01 17:43-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sahranbay@gmail.com, gheyret@gmail.com"
+
+#: ui/DatePicker.qml:38
+#, kde-format
+msgid "Year"
+msgstr "يىل"
+
+#: ui/DatePicker.qml:54
+#, kde-format
+msgid "Month"
+msgstr "ئاي"
+
+#: ui/DatePicker.qml:70
+#, kde-format
+msgid "Day"
+msgstr "كۈن"
+
+#: ui/DeviceTimeSettingsSidebar.qml:46
+#, kde-format
+msgid "Adjust Date and Time Settings"
+msgstr ""
+
+#: ui/DeviceTimeSettingsSidebar.qml:55
+#, kde-format
+msgid "Timezone"
+msgstr "ۋاقىت رايونى"
+
+#: ui/DeviceTimeSettingsSidebar.qml:67
+#, kde-format
+msgid "Set time automatically"
+msgstr ""
+
+#: ui/DeviceTimeSettingsSidebar.qml:85
+#, kde-format
+msgid "Time"
+msgstr "ۋاقىت"
+
+#: ui/DeviceTimeSettingsSidebar.qml:98
+#, kde-format
+msgid "Date"
+msgstr "چېسلا"
+
+#: ui/DeviceTimeSettingsSidebar.qml:127 ui/DeviceTimeSettingsSidebar.qml:205
+#: ui/DeviceTimeSettingsSidebar.qml:255
+#, kde-format
+msgid "Back"
+msgstr "قايت"
+
+#: ui/DeviceTimeSettingsSidebar.qml:146
+#, kde-format
+msgid "Search City / Region"
+msgstr ""
+
+#: ui/DeviceTimeSettingsSidebar.qml:166
+#, kde-format
+msgid "Your local timezone is %1"
+msgstr ""
+
+#: ui/DeviceTimeSettingsSidebar.qml:167
+#, kde-format
+msgid "%1, %2"
+msgstr "%1، %2"
+
+#: ui/main.qml:23 ui/main.qml:91
+#, kde-format
+msgid "System"
+msgstr "سىستېما"
+
+#: ui/main.qml:43
+#, kde-format
+msgid "Homescreen Appearance"
+msgstr ""
+
+#: ui/main.qml:56
+#, kde-format
+msgid "Colored tiles"
+msgstr ""
+
+#: ui/main.qml:57
+#, kde-format
+msgid "Tile backgrounds will be colored based on the app's icon"
+msgstr ""
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Wallpaper blur"
+msgstr ""
+
+#: ui/main.qml:71
+#, kde-format
+msgid "Apply a blur effect to the wallpaper on the homescreen"
+msgstr ""
+
+#: ui/main.qml:84 ui/ThemeSidebar.qml:23
+#, kde-format
+msgid "Global theme"
+msgstr "ئومۇمىيەت ئۆرنەك"
+
+#: ui/main.qml:85
+#, kde-format
+msgid "Set the system theme"
+msgstr ""
+
+#: ui/main.qml:102
+#, kde-format
+msgid "Window decorations"
+msgstr ""
+
+#: ui/main.qml:103
+#, kde-format
+msgid ""
+"Have a window frame (minimize, maximize, close), for apps that request it"
+msgstr ""
+
+#: ui/main.qml:112
+#, kde-format
+msgid "Navigation sounds"
+msgstr ""
+
+#: ui/main.qml:113
+#, kde-format
+msgid "Play a sound when the selected item changes in system apps"
+msgstr ""
+
+#: ui/main.qml:123
+#, kde-format
+msgid "Power inhibition"
+msgstr ""
+
+#: ui/main.qml:124
+#, kde-format
+msgid "Prevent the system from automatically sleeping"
+msgstr ""
+
+#: ui/main.qml:134
+#, kde-format
+msgid "Adjust date and time"
+msgstr ""
+
+#: ui/main.qml:140
+#, kde-format
+msgid "Shortcuts"
+msgstr "تېزلەتمە"
+
+#: ui/main.qml:151
+#, kde-format
+msgid "Open home overlay shortcut"
+msgstr ""
+
+#: ui/main.qml:171
+#, kde-format
+msgid "Open homescreen shortcut"
+msgstr ""
+
+#: ui/main.qml:191
+#, kde-format
+msgid "Open settings shortcut"
+msgstr ""
+
+#: ui/main.qml:210
+#, kde-format
+msgid "Open tasks shortcut"
+msgstr ""
+
+#: ui/ShortcutsPickerSidebar.qml:39
+#, kde-format
+msgid "Shortcut currently set to"
+msgstr ""
+
+#: ui/ShortcutsPickerSidebar.qml:46
+#, kde-format
+msgid "Reset to default"
+msgstr ""
+
+#: ui/ShortcutsPickerSidebar.qml:60
+#, kde-format
+msgid "Set Shortcut"
+msgstr ""
+
+#: ui/TimePicker.qml:40
+#, kde-format
+msgid "Hour"
+msgstr "سائەت"
+
+#: ui/TimePicker.qml:56
+#, kde-format
+msgid "Minute"
+msgstr "مىنۇت"
+
+#: ui/TimePicker.qml:72
+#, kde-format
+msgctxt "unit of time"
+msgid "Second"
+msgstr "سېكۇنت"
+
+#: ui/TimePicker.qml:89
+#, kde-format
+msgid "AM/PM"
+msgstr "چ ب/چ ك"

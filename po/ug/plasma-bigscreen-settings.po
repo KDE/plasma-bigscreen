@@ -1,0 +1,70 @@
+# Uyghur translation for plasma-bigscreen-settings.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"PO-Revision-Date: 2026-06-01 17:44-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sahranbay@gmail.com, gheyret@gmail.com"
+
+#: kcmslistmodel.cpp:112
+#, kde-format
+msgid "Desktop Settings"
+msgstr "ئۈستەلئۈستى تەڭشىكى"
+
+#: main.cpp:34
+#, kde-format
+msgid "Bigscreen Settings"
+msgstr "چوڭ ئېكران تەڭشىكى"
+
+#: main.cpp:36
+#, kde-format
+msgid "Plasma Bigscreen Settings"
+msgstr "Plasma چوڭ ئېكران تەڭشىكى"
+
+#: main.cpp:38
+#, kde-format
+msgid "© 2025 Plasma developers"
+msgstr "© 2025 Plasma ئىجادكارلار"
+
+#: main.cpp:40
+#, kde-format
+msgid "Settings module to open"
+msgstr ""
+
+#: qml/ConfigWindowSidebar.qml:43
+#, kde-format
+msgid "Settings"
+msgstr "تەڭشەك"
+
+#: qml/ConfigWindowSidebar.qml:84
+#, kde-format
+msgid "Open desktop settings?"
+msgstr ""
+
+#: qml/ConfigWindowSidebar.qml:89
+#, kde-format
+msgid ""
+"The desktop settings application does not support key navigation, a mouse "
+"may be required. However, it contains extra settings that may be useful."
+msgstr ""

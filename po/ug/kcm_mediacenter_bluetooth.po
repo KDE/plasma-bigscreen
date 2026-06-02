@@ -1,0 +1,284 @@
+# Uyghur translation for kcm_mediacenter_bluetooth.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-04-19 00:46+0000\n"
+"PO-Revision-Date: 2026-06-01 17:43-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#: ui/DeviceConnectionSidebar.qml:37
+#, kde-format
+msgid "Device information"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Connecting…"
+msgstr "باغلىنىۋاتىدۇ..."
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Disconnecting…"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Disconnect"
+msgstr "ئۈز"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Pair"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Connect"
+msgstr "باغلان"
+
+#: ui/DeviceConnectionSidebar.qml:86
+#, kde-format
+msgid "Forget device"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:97
+#, kde-format
+msgid "Are you sure you want to forget the device %1?"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:119
+#, kde-format
+msgid "Trusted"
+msgstr "ئىشەنچلىك"
+
+#: ui/DeviceConnectionSidebar.qml:120
+#, kde-format
+msgid "Auto-accept incoming connections"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:134
+#, kde-format
+msgid "Blocked"
+msgstr "توسۇلدى"
+
+#: ui/DeviceConnectionSidebar.qml:135
+#, kde-format
+msgid "Reject all connections from this device"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:151
+#, kde-format
+msgid "Device details"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:161
+#, kde-format
+msgid "Type: %1"
+msgstr "تۈرى: %1"
+
+#: ui/DeviceConnectionSidebar.qml:166
+#, kde-format
+msgid "Address: %1"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:172
+#, kde-format
+msgid "Battery: %1"
+msgstr ""
+
+#: ui/DeviceConnectionSidebar.qml:173
+#, kde-format
+msgctxt "Battery percentage level"
+msgid "%1%"
+msgstr "%1%"
+
+#: ui/DeviceConnectionSidebar.qml:179 ui/DeviceConnectionSidebar.qml:186
+#, kde-format
+msgid "Change name"
+msgstr ""
+
+#: ui/DeviceDelegate.qml:33
+#, kde-format
+msgid "Connected"
+msgstr "باغلاندى"
+
+#: ui/DeviceDelegate.qml:39
+#, kde-format
+msgid "%1% Battery"
+msgstr ""
+
+#: ui/main.qml:25
+#, kde-format
+msgid "Bluetooth"
+msgstr "كۆكچىش"
+
+#: ui/main.qml:69
+#, kde-format
+msgid "Enable Bluetooth"
+msgstr ""
+
+#: ui/main.qml:88
+#, kde-format
+msgid "Paired devices"
+msgstr ""
+
+#: ui/main.qml:121
+#, kde-format
+msgid "Available devices"
+msgstr ""
+
+#: ui/script.js:13
+#, kde-format
+msgctxt "This device is a Phone"
+msgid "Phone"
+msgstr "تېلېفون"
+
+#: ui/script.js:15
+#, kde-format
+msgctxt "This device is a Modem"
+msgid "Modem"
+msgstr "مودېم"
+
+#: ui/script.js:17
+#, kde-format
+msgctxt "This device is a Computer"
+msgid "Computer"
+msgstr "كومپيۇتېر"
+
+#: ui/script.js:19
+#, kde-format
+msgctxt "This device is of type Network"
+msgid "Network"
+msgstr "تور"
+
+#: ui/script.js:21
+#, kde-format
+msgctxt "This device is a Headset"
+msgid "Headset"
+msgstr ""
+
+#: ui/script.js:23
+#, kde-format
+msgctxt "This device is a Headphones"
+msgid "Headphones"
+msgstr "تىڭشىغۇچ"
+
+#: ui/script.js:25
+#, kde-format
+msgctxt "This device is an Audio/Video device"
+msgid "Multimedia"
+msgstr "كۆپ ۋاسىتە"
+
+#: ui/script.js:27
+#, kde-format
+msgctxt "This device is a Keyboard (not the music instrument)"
+msgid "Keyboard"
+msgstr "ھەرپتاختا"
+
+#: ui/script.js:29
+#, kde-format
+msgctxt "This device is a Mouse"
+msgid "Mouse"
+msgstr "چاشقىنەك"
+
+#: ui/script.js:31
+#, kde-format
+msgctxt "This device is a Game controller"
+msgid "Game controller"
+msgstr ""
+
+#: ui/script.js:33
+#, kde-format
+msgctxt "This device is a Graphics Tablet (input device)"
+msgid "Tablet"
+msgstr "سەزگۈر تاختا"
+
+#: ui/script.js:35
+#, kde-format
+msgctxt "This device is a Peripheral device"
+msgid "Peripheral"
+msgstr ""
+
+#: ui/script.js:37
+#, kde-format
+msgctxt "This device is a Camera"
+msgid "Camera"
+msgstr "كامېرا"
+
+#: ui/script.js:39
+#, kde-format
+msgctxt "This device is a Printer"
+msgid "Printer"
+msgstr "باسقۇ"
+
+#: ui/script.js:41
+#, kde-format
+msgctxt ""
+"This device is an Imaging device (printer, scanner, camera, display, …)"
+msgid "Imaging"
+msgstr "سۈرەت ئۈسكۈنىسى"
+
+#: ui/script.js:43
+#, kde-format
+msgctxt "This device is a Wearable"
+msgid "Wearable"
+msgstr ""
+
+#: ui/script.js:45
+#, kde-format
+msgctxt "This device is a Toy"
+msgid "Toy"
+msgstr ""
+
+#: ui/script.js:47
+#, kde-format
+msgctxt "This device is a Health device"
+msgid "Health"
+msgstr "ساغلاملىق"
+
+#: ui/script.js:53
+#, kde-format
+msgid "File transfer"
+msgstr ""
+
+#: ui/script.js:56
+#, kde-format
+msgid "Send file"
+msgstr ""
+
+#: ui/script.js:59
+#, kde-format
+msgid "Input"
+msgstr "كىرگۈز"
+
+#: ui/script.js:62
+#, kde-format
+msgid "Audio"
+msgstr "ئۈن"
+
+#: ui/script.js:65
+#, kde-format
+msgid "Network"
+msgstr "تور"
+
+#: ui/script.js:69
+#, kde-format
+msgid "Other"
+msgstr "باشقا"
+
+#: ui/script.js:72
+#, kde-format
+msgctxt "List separator"
+msgid ", "
+msgstr "، "
