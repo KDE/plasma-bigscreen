@@ -41,6 +41,7 @@ Name[sk]=Plasma Bigscreen
 Name[sl]=Veliki zaslon Plasma
 Name[sv]=Plasma storbildsskärm
 Name[tr]=Plasma BüyükEkran
+Name[ug]=Plasma چوڭ ئېكران
 Name[uk]=Плазма для великих екранів
 Name[zh_CN]=Plasma 大屏幕
 Name[zh_TW]=Plasma 大螢幕
