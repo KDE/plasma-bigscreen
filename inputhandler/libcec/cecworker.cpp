@@ -91,6 +91,7 @@ void CECWorker::cleanup()
     qDebug() << "CECWorker: Starting cleanup";
     if (m_cecAdapter) {
         m_cecAdapter->Close();
+        CECDestroy(m_cecAdapter);
         m_cecAdapter = nullptr;
     }
     qDebug() << "CECWorker: Cleanup completed";
