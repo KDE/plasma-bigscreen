@@ -33,6 +33,7 @@
         "Description[sl]": "Nastavitve zaslona",
         "Description[sv]": "Skärminställningar",
         "Description[tr]": "Görüntü Ayarları",
+        "Description[ug]": "كۆرسىتىش تەڭشەك",
         "Description[uk]": "Параметри показу",
         "Description[zh_CN]": "显示设置",
         "Description[zh_TW]": "顯示器設定",
@@ -68,6 +69,7 @@
         "Name[sl]": "Zaslon",
         "Name[sv]": "Bildskärm",
         "Name[tr]": "Görüntü",
+        "Name[ug]": "كۆرسەتكۈچ",
         "Name[uk]": "Показ",
         "Name[zh_CN]": "显示",
         "Name[zh_TW]": "顯示器"
