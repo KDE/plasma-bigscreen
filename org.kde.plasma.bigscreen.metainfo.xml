@@ -42,6 +42,7 @@
   <name xml:lang="sl">KDE Plasma Bigscreen</name>
   <name xml:lang="sv">KDE Plasma storbildsskärm</name>
   <name xml:lang="tr">KDE Plasma BüyükEkran</name>
+  <name xml:lang="ug">KDE Plasma چوڭ ئېكران</name>
   <name xml:lang="uk">Плазма KDE для великих екранів</name>
   <name xml:lang="zh-CN">Plasma 大屏幕</name>
   <name xml:lang="zh-TW">KDE Plasma 大螢幕</name>
@@ -81,6 +82,7 @@
   <summary xml:lang="sl">Plasma Shell za TVs</summary>
   <summary xml:lang="sv">Plasma skal för tv-apparater</summary>
   <summary xml:lang="tr">TV’ler için Plasma Kabuğu</summary>
+  <summary xml:lang="ug">تېلېۋىزور ئۈچۈن Plasma Shell</summary>
   <summary xml:lang="uk">Оболонка Плазми для телевізорів</summary>
   <summary xml:lang="zh-CN">适配电视的 Plasma 外壳程序</summary>
   <summary xml:lang="zh-TW">電視用的 Plasma 殼層</summary>
@@ -175,6 +177,7 @@
       <caption xml:lang="sl">Plasma Bigscreen</caption>
       <caption xml:lang="sv">Plasma storbildsskärm</caption>
       <caption xml:lang="tr">Plasma BüyükEkran</caption>
+      <caption xml:lang="ug">Plasma چوڭ ئېكران</caption>
       <caption xml:lang="uk">Плазма для великих екранів</caption>
       <caption xml:lang="zh-CN">Plasma 大屏幕</caption>
       <caption xml:lang="zh-TW">Plasma 大螢幕</caption>
