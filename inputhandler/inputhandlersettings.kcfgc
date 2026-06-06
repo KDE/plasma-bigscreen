@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2026 Devin Lin <devin@kde.org>
+# SPDX-License-Identifier: GPL-2.0-or-later
+
+File=inputhandlersettings.kcfg
+ClassName=InputHandlerSettings
+Inherits=KCoreConfigSkeleton
+Mutators=true
+DefaultValueGetters=true
+GenerateProperties=true
+Singleton=true

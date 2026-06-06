@@ -6,6 +6,17 @@ if (Qt6_VERSION VERSION_GREATER_EQUAL "6.8.0")
     set(private_code_option  "PRIVATE_CODE")
 endif()
 
+qt_generate_dbus_interface(
+    ${CMAKE_CURRENT_SOURCE_DIR}/inputhandlerdbus.h
+    org.kde.plasma.bigscreen.inputhandler.xml
+    OPTIONS -s -m -P
+)
+qt_add_dbus_adaptor(inputhandler_dbus_SRCS
+    ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasma.bigscreen.inputhandler.xml
+    inputhandlerdbus.h
+    InputHandlerDBus
+)
+
 target_sources(plasma-bigscreen-inputhandler PRIVATE
     main.cpp
     controllermanager.cpp
@@ -14,7 +25,10 @@ target_sources(plasma-bigscreen-inputhandler PRIVATE
     device.cpp
     devicewatcher.cpp
     inputhandlerdbus.cpp
+    ${inputhandler_dbus_SRCS}
 )
+
+kconfig_add_kcfg_files(plasma-bigscreen-inputhandler GENERATE_MOC inputhandlersettings.kcfgc)
 
 target_link_libraries(plasma-bigscreen-inputhandler
     ${CMAKE_DL_LIBS}

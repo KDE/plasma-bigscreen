@@ -39,7 +39,7 @@ DeviceType Device::getDeviceType()
 
 QString Device::iconName() const
 {
-    return m_deviceType == DeviceCEC ? "" : "input-gamepad";
+    return m_deviceType == DeviceCEC ? QStringLiteral("video-television") : QStringLiteral("input-gamepad");
 }
 
 Device::~Device() = default;

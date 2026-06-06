@@ -17,6 +17,7 @@
 #include <libcec/cec.h>
 
 class CECWorker;
+class Device;
 
 class CECController : public QObject
 {
@@ -59,6 +60,7 @@ private:
 
     QHash<int, int> m_keyMap;
     QSet<QString> m_connectedDevices;
+    Device *m_device = nullptr;
     int m_adapterCount = 0;
     bool m_initialized = false;
     bool m_catchNextInput = false;

@@ -167,17 +167,20 @@ void CECController::onDeviceOpened(const QString &comName)
 {
     qDebug() << "CECController: Adapter opened at" << comName;
 
-    auto *device = new Device(DeviceCEC, QStringLiteral("CEC Controller"), comName);
+    if (!m_device) {
+        auto *device = new Device(DeviceCEC, QStringLiteral("CEC Controller"), QStringLiteral("cec"));
 
-    QList<int> keyValues = m_keyMap.values();
-    device->setUsedKeys(QSet<int>(keyValues.cbegin(), keyValues.cend()));
+        QList<int> keyValues = m_keyMap.values();
+        device->setUsedKeys(QSet<int>(keyValues.cbegin(), keyValues.cend()));
 
-    ControllerManager::instance().newDevice(device);
+        ControllerManager::instance().newDevice(device);
+        m_device = device;
+        Q_EMIT controllerAdded(QStringLiteral("CEC Controller"));
+    }
 
     m_connectedDevices.insert(comName);
     m_adapterCount++;
     qDebug() << "CECController: Successfully registered device" << comName << "- total adapters:" << m_adapterCount;
-    Q_EMIT controllerAdded(QStringLiteral("CEC Controller"));
 }
 
 void CECController::onDeviceOpenFailed(const QString &comName, const QString &error)
@@ -242,10 +245,10 @@ void CECController::onCecKeyPressed(int keycode, int opcode)
 
     if (nativeKey == KEY_HOMEPAGE) {
         qDebug() << "CECController: Home key detected, emitting home action";
-        ControllerManager::instance().emitHomeAction();
+        ControllerManager::instance().emitHomeAction(m_device);
         return;
     }
 
-    ControllerManager::instance().emitKey(nativeKey, 1);
-    ControllerManager::instance().emitKey(nativeKey, 0);
+    ControllerManager::instance().emitKey(m_device, nativeKey, 1);
+    ControllerManager::instance().emitKey(m_device, nativeKey, 0);
 }

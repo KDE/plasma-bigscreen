@@ -1,0 +1,13 @@
+{
+    "KPlugin": {
+        "Description": "Configure remote and game controller input",
+        "FormFactors": [
+            "mediacenter"
+        ],
+        "Icon": "input-gamepad-symbolic",
+        "Name": "Input"
+    },
+    "X-KDE-Keywords": "input,controller,gamepad,cec,remote",
+    "X-KDE-System-Settings-Parent-Category": "hardware",
+    "X-KDE-Weight": 40
+}

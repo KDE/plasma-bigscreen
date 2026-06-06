@@ -88,6 +88,11 @@ public:
     {
         return m_suppressInput;
     }
+    void setAutoSuppressInput(bool enabled);
+    bool autoSuppressInput() const
+    {
+        return m_autoSuppressInput;
+    }
     bool isManualSuppressInput() const
     {
         return m_manualSuppressInput;
@@ -97,6 +102,7 @@ Q_SIGNALS:
     void controllerAdded(const QString &name);
     void controllerRemoved(const QString &name);
     void isSuppressInputChanged(bool suppressed, bool automatic); // automatic - whether it was changed by the DeviceWatcher
+    void autoSuppressInputChanged(bool enabled);
 
 private Q_SLOTS:
     void poll();
@@ -104,10 +110,13 @@ private Q_SLOTS:
 private:
     void addDevice(SDL_JoystickID instanceId);
     void removeDevice(SDL_JoystickID instanceId);
+    void releasePressedInput();
+    void updateAutomaticSuppression();
 
     QMap<SDL_JoystickID, SdlDevice *> m_devices;
     QTimer *m_pollTimer = nullptr;
     bool m_suppressInput = false;
+    bool m_autoSuppressInput = true;
     bool m_manualSuppressInput = false; // Manually set via D-Bus
     DeviceWatcher *m_deviceWatcher = nullptr;
 
