@@ -4,8 +4,11 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+#include <qqml.h>
+
 #include <KPluginFactory>
 #include <KQuickConfigModule>
+
 #include "displaysettings.h"
 #include "displaymodel.h"
 

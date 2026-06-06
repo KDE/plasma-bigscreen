@@ -7,6 +7,8 @@
 #include "webappmanager.h"
 #include "webappmanagermodel.h"
 
+#include <qqml.h>
+
 WebAppsKCM::WebAppsKCM(QObject *parent, const KPluginMetaData &data)
     : KQuickConfigModule(parent, data)
 {

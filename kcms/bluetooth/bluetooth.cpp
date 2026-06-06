@@ -11,6 +11,7 @@
 #include <QRandomGenerator>
 #include <QStandardPaths>
 #include <QXmlStreamReader>
+#include <qqml.h>
 
 #include <BluezQt/Adapter>
 #include <BluezQt/PendingCall>
