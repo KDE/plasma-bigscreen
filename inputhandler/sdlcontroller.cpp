@@ -6,14 +6,76 @@
 
 #include "sdlcontroller.h"
 #include "controllermanager.h"
+#include "inputhandlersettings.h"
 
+#include <QByteArray>
+
+#include <fcntl.h>
 #include <linux/input-event-codes.h>
+#include <linux/input.h>
+#include <sys/ioctl.h>
+#include <unistd.h>
 
 static bool s_sdlInitialized = false;
+
+static QString gamepadPath(SDL_Gamepad *gamepad)
+{
+    auto path = SDL_GetGamepadPath(gamepad);
+    return path ? QString::fromUtf8(path) : QString();
+}
+
+static QString gamepadName(SDL_Gamepad *gamepad)
+{
+    auto name = SDL_GetGamepadName(gamepad);
+    QString deviceName = name ? QString::fromUtf8(name) : QString();
+    return deviceName.isEmpty() ? QStringLiteral("Game Controller") : deviceName;
+}
+
+static QString gamepadEvdevUniqueIdentifier(const QString &devicePath)
+{
+    if (devicePath.isEmpty()) {
+        return {};
+    }
+
+    int fd = open(qPrintable(devicePath), O_RDONLY | O_NONBLOCK | O_CLOEXEC);
+    if (fd < 0) {
+        return {};
+    }
+
+    QByteArray uniqueIdentifier(256, '\0');
+    int result = ioctl(fd, EVIOCGUNIQ(uniqueIdentifier.size()), uniqueIdentifier.data());
+    close(fd);
+    if (result < 0) {
+        return {};
+    }
+
+    uniqueIdentifier.truncate(qstrnlen(uniqueIdentifier.data(), uniqueIdentifier.size()));
+    return QString::fromUtf8(uniqueIdentifier);
+}
+
+static QString gamepadUniqueIdentifier(SDL_Gamepad *gamepad, SDL_JoystickID instanceId)
+{
+    auto serial = SDL_GetGamepadSerial(gamepad);
+    QString serialNumber = serial ? QString::fromUtf8(serial) : QString();
+    if (!serialNumber.isEmpty()) {
+        return QStringLiteral("serial:%1").arg(serialNumber);
+    }
+
+    QString evdevUniqueIdentifier = gamepadEvdevUniqueIdentifier(gamepadPath(gamepad));
+    if (!evdevUniqueIdentifier.isEmpty()) {
+        return QStringLiteral("evdev:%1").arg(evdevUniqueIdentifier);
+    }
+
+    SDL_GUID guid = SDL_GetGamepadGUIDForID(instanceId);
+    QString guidString = QString::fromLatin1(QByteArray(reinterpret_cast<const char *>(guid.data), sizeof(guid.data)).toHex());
+    return QStringLiteral("guid:%1").arg(guidString);
+}
 
 SdlController::SdlController()
     : QObject()
 {
+    m_autoSuppressInput = InputHandlerSettings::self()->autoSuppressInput();
+
     // Initialize SDL3 gamepad subsystem
     if (!s_sdlInitialized) {
         // Prevent SDL from installing signal handlers that would block SIGINT (Ctrl+C)
@@ -32,17 +94,7 @@ SdlController::SdlController()
     connect(m_deviceWatcher, &DeviceWatcher::otherProcessesChanged, this, [this](bool othersUsing) {
         qInfo() << "Other processes using device:" << othersUsing;
 
-        // Automatically suppress input if other apps are listening
-        // Manual suppression takes precedence
-        if (!m_manualSuppressInput) {
-            bool oldValue = m_suppressInput;
-            m_suppressInput = othersUsing;
-
-            if (m_suppressInput != oldValue) {
-                Q_EMIT isSuppressInputChanged(m_suppressInput, true);
-                qInfo() << "SDL input suppression (auto):" << (othersUsing ? "enabled" : "disabled");
-            }
-        }
+        updateAutomaticSuppression();
     });
 
     // Set up polling timer
@@ -127,7 +179,53 @@ void SdlController::setSuppressInput(bool suppress)
             << "-> effective:" << (m_suppressInput ? "suppressed" : "not suppressed");
 
     if (m_suppressInput != oldValue) {
+        if (m_suppressInput) {
+            releasePressedInput();
+        }
         Q_EMIT isSuppressInputChanged(m_suppressInput, false);
+    }
+}
+
+void SdlController::setAutoSuppressInput(bool enabled)
+{
+    if (m_autoSuppressInput == enabled) {
+        return;
+    }
+
+    m_autoSuppressInput = enabled;
+
+    auto *settings = InputHandlerSettings::self();
+    settings->setAutoSuppressInput(enabled);
+    settings->save();
+
+    updateAutomaticSuppression();
+    Q_EMIT autoSuppressInputChanged(enabled);
+}
+
+void SdlController::updateAutomaticSuppression()
+{
+    if (m_manualSuppressInput || !m_deviceWatcher) {
+        return;
+    }
+
+    bool oldValue = m_suppressInput;
+    m_suppressInput = m_autoSuppressInput && m_deviceWatcher->hasOtherProcesses();
+
+    if (m_suppressInput == oldValue) {
+        return;
+    }
+
+    if (m_suppressInput) {
+        releasePressedInput();
+    }
+    Q_EMIT isSuppressInputChanged(m_suppressInput, true);
+    qInfo() << "SDL input suppression (auto):" << (m_suppressInput ? "enabled" : "disabled");
+}
+
+void SdlController::releasePressedInput()
+{
+    for (SdlDevice *device : std::as_const(m_devices)) {
+        ControllerManager::instance().releasePressedInput(device);
     }
 }
 
@@ -144,22 +242,20 @@ void SdlController::addDevice(SDL_JoystickID instanceId)
         return;
     }
 
-    const char *name = SDL_GetGamepadName(gamepad);
-    QString deviceName = name ? QString::fromUtf8(name) : QStringLiteral("Unknown");
+    QString deviceName = gamepadName(gamepad);
     qInfo() << "Adding SDL gamepad:" << deviceName;
 
     auto device = new SdlDevice(gamepad, instanceId, this);
     m_devices.insert(instanceId, device);
 
     // Register the device path with the watcher
-    QString devicePath = device->getUniqueIdentifier();
+    QString devicePath = gamepadPath(gamepad);
     if (!devicePath.isEmpty()) {
         m_deviceWatcher->addDevicePath(devicePath);
     }
 
     ControllerManager::instance().newDevice(device);
 
-    // Emit signal for DBus
     Q_EMIT controllerAdded(deviceName);
 
     // Switch to faster polling when we have devices
@@ -178,7 +274,7 @@ void SdlController::removeDevice(SDL_JoystickID instanceId)
     qInfo() << "Removing SDL gamepad:" << deviceName;
 
     // Unregister the device path from the watcher
-    QString devicePath = device->getUniqueIdentifier();
+    QString devicePath = gamepadPath(device->gamepad());
     if (!devicePath.isEmpty()) {
         m_deviceWatcher->removeDevicePath(devicePath);
     }
@@ -186,7 +282,6 @@ void SdlController::removeDevice(SDL_JoystickID instanceId)
     ControllerManager::instance().deviceRemoved(device);
     delete device;
 
-    // Emit signal for DBus
     Q_EMIT controllerRemoved(deviceName);
 
     // Switch to slower polling if no devices
@@ -195,10 +290,8 @@ void SdlController::removeDevice(SDL_JoystickID instanceId)
     }
 }
 
-// SdlDevice implementation
-
 SdlDevice::SdlDevice(SDL_Gamepad *gamepad, SDL_JoystickID instanceId, SdlController *controller)
-    : Device(DeviceGamepad, QString::fromUtf8(SDL_GetGamepadName(gamepad)), QString::fromUtf8(SDL_GetGamepadPath(gamepad)))
+    : Device(DeviceGamepad, gamepadName(gamepad), gamepadUniqueIdentifier(gamepad, instanceId))
     , m_controller(controller)
     , m_gamepad(gamepad)
     , m_instanceId(instanceId)
@@ -223,7 +316,7 @@ SdlDevice::SdlDevice(SDL_Gamepad *gamepad, SDL_JoystickID instanceId, SdlControl
 {
     // Build set of used keys for ControllerManager
     QSet<int> keys;
-    for (const auto &keyCombination : m_buttons) {
+    for (auto keyCombination : m_buttons) {
         for (int key : keyCombination) {
             if (key != KEY_UNKNOWN) {
                 keys.insert(key);
@@ -247,7 +340,7 @@ SdlDevice::SdlDevice(SDL_Gamepad *gamepad, SDL_JoystickID instanceId, SdlControl
     m_mouseTimer->setInterval(16);
     connect(m_mouseTimer, &QTimer::timeout, this, &SdlDevice::updateMouseMovement);
 
-    qDebug() << "Created SdlDevice:" << m_name << "path:" << m_uniqueIdentifier;
+    qDebug() << "Created SdlDevice:" << m_name << "identifier:" << m_uniqueIdentifier;
 }
 
 SdlDevice::~SdlDevice()
@@ -285,7 +378,7 @@ void SdlDevice::updateMouseMovement()
         double deltaX = normalizedX * MOUSE_SENSITIVITY;
         double deltaY = normalizedY * MOUSE_SENSITIVITY;
 
-        ControllerManager::instance().emitPointerMotion(deltaX, deltaY);
+        ControllerManager::instance().emitPointerMotion(this, deltaX, deltaY);
     }
 }
 
@@ -305,45 +398,45 @@ void SdlDevice::setKey(int key, bool pressed)
         m_pressedKeys.remove(key);
     }
 
-    // When suppressed, only allow META key through
-    if (m_controller->isSuppressInput() && key != KEY_LEFTMETA) {
+    // When suppressed, only allow selected system keys through
+    if (m_controller->isSuppressInput() && (key != KEY_LEFTMETA || !ControllerManager::instance().startButtonEnabledWhenSuppressed(getUniqueIdentifier()))) {
         return;
     }
 
     // Turn left meta into home action directly
     if (key == KEY_LEFTMETA) {
         if (pressed) {
-            ControllerManager::instance().emitHomeAction();
+            ControllerManager::instance().emitHomeAction(this);
         }
         return;
     }
 
-    ControllerManager::instance().emitKey(key, pressed);
+    ControllerManager::instance().emitKey(this, key, pressed);
 }
 
 void SdlDevice::processButtonEvent(const SDL_GamepadButtonEvent &event)
 {
-    const bool pressed = (event.down != 0);
-    const auto button = static_cast<SDL_GamepadButton>(event.button);
+    bool pressed = (event.down != 0);
+    auto button = static_cast<SDL_GamepadButton>(event.button);
 
     qDebug() << "Button event:" << event.button << "pressed:" << pressed;
 
     // Right stick click -> left mouse button (suppressed when input suppressed)
     if (button == SDL_GAMEPAD_BUTTON_RIGHT_STICK) {
         if (!m_controller->isSuppressInput()) {
-            ControllerManager::instance().emitPointerButton(BTN_LEFT, pressed);
+            ControllerManager::instance().emitPointerButton(this, BTN_LEFT, pressed);
         }
         return;
     }
     // Left stick click -> right mouse button (suppressed when input suppressed)
     if (button == SDL_GAMEPAD_BUTTON_LEFT_STICK) {
         if (!m_controller->isSuppressInput()) {
-            ControllerManager::instance().emitPointerButton(BTN_RIGHT, pressed);
+            ControllerManager::instance().emitPointerButton(this, BTN_RIGHT, pressed);
         }
         return;
     }
 
-    const auto keyCodes = m_buttons.value(button);
+    auto keyCodes = m_buttons.value(button);
     if (!keyCodes.isEmpty()) {
         for (int key : keyCodes) {
             setKey(key, pressed);
@@ -353,8 +446,8 @@ void SdlDevice::processButtonEvent(const SDL_GamepadButtonEvent &event)
 
 void SdlDevice::processAxisEvent(const SDL_GamepadAxisEvent &event)
 {
-    const int value = event.value;
-    const auto axis = static_cast<SDL_GamepadAxis>(event.axis);
+    int value = event.value;
+    auto axis = static_cast<SDL_GamepadAxis>(event.axis);
 
     // Handle left stick X axis (left/right navigation)
     if (axis == SDL_GAMEPAD_AXIS_LEFTX) {
@@ -412,12 +505,12 @@ void SdlDevice::processAxisEvent(const SDL_GamepadAxisEvent &event)
     }
     // Handle left trigger (L2)
     else if (axis == SDL_GAMEPAD_AXIS_LEFT_TRIGGER) {
-        const bool pressed = (value > AXIS_THRESHOLD);
+        bool pressed = (value > AXIS_THRESHOLD);
         setKey(KEY_BACK, pressed);
     }
     // Handle right trigger (R2)
     else if (axis == SDL_GAMEPAD_AXIS_RIGHT_TRIGGER) {
-        const bool pressed = (value > AXIS_THRESHOLD);
+        bool pressed = (value > AXIS_THRESHOLD);
         setKey(KEY_FORWARD, pressed);
     }
     // Handle right stick X axis (mouse horizontal movement)

@@ -52,6 +52,8 @@ void ControllerHandlerStatus::connectToService()
     bus.connect(SERVICE, PATH, IFACE, QStringLiteral("cecControllerAdded"), this, SLOT(onCecControllerAdded(QString)));
     bus.connect(SERVICE, PATH, IFACE, QStringLiteral("cecControllerRemoved"), this, SLOT(onCecControllerRemoved(QString)));
     bus.connect(SERVICE, PATH, IFACE, QStringLiteral("inputSuppressedChanged"), this, SLOT(onInputSuppressedChanged(bool, bool)));
+    bus.connect(SERVICE, PATH, IFACE, QStringLiteral("enabledChanged"), this, SLOT(onEnabledChanged(bool)));
+    bus.connect(SERVICE, PATH, IFACE, QStringLiteral("gameControllerEnabledChanged"), this, SLOT(onGameControllerEnabledChanged(bool)));
     bus.connect(SERVICE, PATH, IFACE, QStringLiteral("homeActionRequested"), this, SIGNAL(homeActionRequested()));
 
     m_serviceAvailable = true;
@@ -69,6 +71,8 @@ void ControllerHandlerStatus::disconnectFromService()
         bus.disconnect(SERVICE, PATH, IFACE, QStringLiteral("cecControllerAdded"), this, SLOT(onCecControllerAdded(QString)));
         bus.disconnect(SERVICE, PATH, IFACE, QStringLiteral("cecControllerRemoved"), this, SLOT(onCecControllerRemoved(QString)));
         bus.disconnect(SERVICE, PATH, IFACE, QStringLiteral("inputSuppressedChanged"), this, SLOT(onInputSuppressedChanged(bool, bool)));
+        bus.disconnect(SERVICE, PATH, IFACE, QStringLiteral("enabledChanged"), this, SLOT(onEnabledChanged(bool)));
+        bus.disconnect(SERVICE, PATH, IFACE, QStringLiteral("gameControllerEnabledChanged"), this, SLOT(onGameControllerEnabledChanged(bool)));
         bus.disconnect(SERVICE, PATH, IFACE, QStringLiteral("homeActionRequested"), this, SIGNAL(homeActionRequested()));
 
         delete m_dbusInterface;
@@ -91,6 +95,8 @@ void ControllerHandlerStatus::updateConnectionStatus()
     bool newCecConnected = isCecControllerConnected();
     bool newInputSuppressed = m_dbusInterface->property("inputSuppressed").toBool();
     bool newInputManuallySuppressed = m_dbusInterface->property("inputManuallySuppressed").toBool();
+    bool newEnabled = m_dbusInterface->property("enabled").toBool();
+    bool newGameControllerEnabled = m_dbusInterface->property("gameControllerEnabled").toBool();
 
     if (newSdlConnected != m_sdlControllerConnected) {
         m_sdlControllerConnected = newSdlConnected;
@@ -106,6 +112,16 @@ void ControllerHandlerStatus::updateConnectionStatus()
         m_inputSuppressed = newInputSuppressed;
         m_inputManuallySuppressed = newInputManuallySuppressed;
         Q_EMIT inputSuppressedChanged(newInputSuppressed, !newInputManuallySuppressed);
+    }
+
+    if (newEnabled != m_enabled) {
+        m_enabled = newEnabled;
+        Q_EMIT enabledChanged();
+    }
+
+    if (newGameControllerEnabled != m_gameControllerEnabled) {
+        m_gameControllerEnabled = newGameControllerEnabled;
+        Q_EMIT gameControllerEnabledChanged();
     }
 }
 
@@ -129,6 +145,16 @@ bool ControllerHandlerStatus::inputSuppressed() const
 bool ControllerHandlerStatus::inputManuallySuppressed() const
 {
     return m_inputManuallySuppressed;
+}
+
+bool ControllerHandlerStatus::enabled() const
+{
+    return m_enabled;
+}
+
+bool ControllerHandlerStatus::gameControllerEnabled() const
+{
+    return m_gameControllerEnabled;
 }
 
 void ControllerHandlerStatus::setInputSuppressed(bool suppress)
@@ -194,6 +220,22 @@ void ControllerHandlerStatus::onInputSuppressedChanged(bool suppressed, bool aut
         m_inputSuppressed = suppressed;
         m_inputManuallySuppressed = newManuallySuppressed;
         Q_EMIT inputSuppressedChanged(suppressed, automatic);
+    }
+}
+
+void ControllerHandlerStatus::onEnabledChanged(bool enabled)
+{
+    if (m_enabled != enabled) {
+        m_enabled = enabled;
+        Q_EMIT enabledChanged();
+    }
+}
+
+void ControllerHandlerStatus::onGameControllerEnabledChanged(bool enabled)
+{
+    if (m_gameControllerEnabled != enabled) {
+        m_gameControllerEnabled = enabled;
+        Q_EMIT gameControllerEnabledChanged();
     }
 }
 

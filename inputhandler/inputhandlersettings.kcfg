@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    SPDX-FileCopyrightText: 2026 Devin Lin <devin@kde.org>
+    SPDX-License-Identifier: GPL-2.0-or-later
+-->
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+    <kcfgfile name="plasma-bigscreen-inputhandlerrc" />
+    <group name="General">
+        <entry name="enabled" key="Enabled" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="gameControllerEnabled" key="GameControllerEnabled" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="cecEnabled" key="CecEnabled" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="autoSuppressInput" key="AutoSuppressInput" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="disabledControllers" key="DisabledControllers" type="StringList">
+            <default></default>
+        </entry>
+        <entry name="startButtonDisabledWhenSuppressedControllers" key="StartButtonDisabledWhenSuppressedControllers" type="StringList">
+            <default></default>
+        </entry>
+    </group>
+</kcfg>

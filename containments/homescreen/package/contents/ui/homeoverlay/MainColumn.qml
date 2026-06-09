@@ -174,6 +174,8 @@ ColumnLayout {
                 KeyNavigation.down: keyboardButton.downItem
 
                 visible: ControllerHandler.ControllerHandlerStatus.sdlControllerConnected
+                    && ControllerHandler.ControllerHandlerStatus.enabled
+                    && ControllerHandler.ControllerHandlerStatus.gameControllerEnabled
                 icon.name: "input-gamepad-symbolic"
                 text: i18n("Controller")
                 description: checked ? i18n("Currently capturing keys…") : i18n("Key capture off")
