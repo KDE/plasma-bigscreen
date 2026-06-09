@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.mycroft.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-31 02:39+0000\n"
+"POT-Creation-Date: 2026-06-09 02:39+0000\n"
 "PO-Revision-Date: 2022-01-07 14:58+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -68,27 +68,27 @@ msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "Tasks"
 
-#: contents/ui/homeoverlay/MainColumn.qml:178
+#: contents/ui/homeoverlay/MainColumn.qml:180
 #, kde-format
 msgid "Controller"
 msgstr "Ovládač"
 
-#: contents/ui/homeoverlay/MainColumn.qml:179
+#: contents/ui/homeoverlay/MainColumn.qml:181
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "Momentálne sa zachytávajú klávesy…"
 
-#: contents/ui/homeoverlay/MainColumn.qml:179
+#: contents/ui/homeoverlay/MainColumn.qml:181
 #, kde-format
 msgid "Key capture off"
 msgstr "Zachytávanie kláves vypnuté"
 
-#: contents/ui/homeoverlay/MainColumn.qml:199
+#: contents/ui/homeoverlay/MainColumn.qml:201
 #, kde-format
 msgid "On-screen Keyboard"
 msgstr "Klávesnica na obrazovke"
 
-#: contents/ui/homeoverlay/MainColumn.qml:213
+#: contents/ui/homeoverlay/MainColumn.qml:215
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"

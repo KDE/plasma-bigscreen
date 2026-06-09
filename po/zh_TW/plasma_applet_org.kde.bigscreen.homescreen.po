@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-31 02:39+0000\n"
+"POT-Creation-Date: 2026-06-09 02:39+0000\n"
 "PO-Revision-Date: 2026-04-08 23:33+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -73,27 +73,27 @@ msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "工作項目"
 
-#: contents/ui/homeoverlay/MainColumn.qml:178
+#: contents/ui/homeoverlay/MainColumn.qml:180
 #, kde-format
 msgid "Controller"
 msgstr "控制器"
 
-#: contents/ui/homeoverlay/MainColumn.qml:179
+#: contents/ui/homeoverlay/MainColumn.qml:181
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "目前正擷取按鍵…"
 
-#: contents/ui/homeoverlay/MainColumn.qml:179
+#: contents/ui/homeoverlay/MainColumn.qml:181
 #, kde-format
 msgid "Key capture off"
 msgstr "按鍵擷取停用"
 
-#: contents/ui/homeoverlay/MainColumn.qml:199
+#: contents/ui/homeoverlay/MainColumn.qml:201
 #, kde-format
 msgid "On-screen Keyboard"
 msgstr "螢幕上的虛擬鍵盤"
 
-#: contents/ui/homeoverlay/MainColumn.qml:213
+#: contents/ui/homeoverlay/MainColumn.qml:215
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-31 02:39+0000\n"
+"POT-Creation-Date: 2026-06-09 02:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -70,27 +70,27 @@ msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "任务管理"
 
-#: contents/ui/homeoverlay/MainColumn.qml:178
+#: contents/ui/homeoverlay/MainColumn.qml:180
 #, kde-format
 msgid "Controller"
 msgstr "控制器"
 
-#: contents/ui/homeoverlay/MainColumn.qml:179
+#: contents/ui/homeoverlay/MainColumn.qml:181
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "当前正在捕获按键…"
 
-#: contents/ui/homeoverlay/MainColumn.qml:179
+#: contents/ui/homeoverlay/MainColumn.qml:181
 #, kde-format
 msgid "Key capture off"
 msgstr "按键捕获关闭"
 
-#: contents/ui/homeoverlay/MainColumn.qml:199
+#: contents/ui/homeoverlay/MainColumn.qml:201
 #, kde-format
 msgid "On-screen Keyboard"
 msgstr "屏幕键盘"
 
-#: contents/ui/homeoverlay/MainColumn.qml:213
+#: contents/ui/homeoverlay/MainColumn.qml:215
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
