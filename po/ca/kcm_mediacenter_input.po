@@ -1,0 +1,122 @@
+# Translation of kcm_mediacenter_input.po to Catalan
+# Copyright (C) 2026 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# SPDX-FileCopyrightText: 2026 Josep M. Ferrer <txemaq@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-06-08 00:47+0000\n"
+"PO-Revision-Date: 2026-06-08 08:39+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.04.0\n"
+
+#: ui/GameControllerSidebar.qml:37
+#, kde-format
+msgid "System navigation"
+msgstr "Navegació del sistema"
+
+#: ui/GameControllerSidebar.qml:52
+#, kde-format
+msgid "START button when suppressed"
+msgstr "Botó INICI quan s'ha suprimit"
+
+#: ui/GameControllerSidebar.qml:53
+#, kde-format
+msgid ""
+"Handle the START button even when input is suppressed (may conflict with "
+"some apps)"
+msgstr ""
+"Gestiona el botó d'INICI inclús quan s'ha suprimit l'entrada (pot entrar en "
+"conflicte amb algunes aplicacions)"
+
+#: ui/main.qml:17
+#, kde-format
+msgid "Input"
+msgstr "Entrada"
+
+#: ui/main.qml:105
+#, kde-format
+msgid "Input daemon is not running"
+msgstr "El dimoni d'entrada no està executant-se"
+
+#: ui/main.qml:106
+#, kde-format
+msgid ""
+"Controller and remote settings are only available when plasma-bigscreen-"
+"inputhandler is running"
+msgstr ""
+"La configuració del controlador i el control remot només estan disponibles "
+"quan s'està executant el «plasma-bigscreen-inputhandler»"
+
+#: ui/main.qml:112
+#, kde-format
+msgid "System Navigation"
+msgstr "Navegació del sistema"
+
+#: ui/main.qml:113
+#, kde-format
+msgid ""
+"Navigate the system interface with connected controllers/remotes (apps can "
+"always still use them directly)"
+msgstr ""
+"Navega per la interfície del sistema amb controladors/remots connectats (les "
+"aplicacions sempre poden utilitzar-los directament)"
+
+#: ui/main.qml:128
+#, kde-format
+msgid "TV remote"
+msgstr "Control remot de TV"
+
+#: ui/main.qml:129
+#, kde-format
+msgid "Navigate the system interface with the connected TV remote (CEC)"
+msgstr ""
+"Navega per la interfície del sistema amb el control remot de TV connectat "
+"(CEC)"
+
+#: ui/main.qml:145
+#, kde-format
+msgid "Game Controllers"
+msgstr "Controladors de jocs"
+
+#: ui/main.qml:155
+#, kde-format
+msgid "Game controllers"
+msgstr "Controladors de jocs"
+
+#: ui/main.qml:156
+#, kde-format
+msgid "Use connected game controllers for system navigation"
+msgstr "Usa controladors de joc connectats per a la navegació del sistema"
+
+#: ui/main.qml:172
+#, kde-format
+msgid "Automatic input suppression"
+msgstr "Supressió automàtica de l'entrada"
+
+#: ui/main.qml:173
+#, kde-format
+msgid "Stop controller navigation while another app is using a controller"
+msgstr ""
+"Atura la navegació del controlador mentre una altra aplicació utilitza un "
+"controlador"
+
+#: ui/main.qml:190
+#, kde-format
+msgid "No controllers connected"
+msgstr "Sense cap controlador connectat"
+
+#: ui/main.qml:191
+#, kde-format
+msgid "Connect a game controller or TV remote (over CEC)"
+msgstr ""
+"Connecteu un controlador de joc o un control remot de TV (mitjançant CEC)"

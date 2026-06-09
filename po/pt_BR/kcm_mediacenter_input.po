@@ -1,0 +1,118 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# SPDX-FileCopyrightText: 2026 Marcus Gama <marcus.gama@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-06-08 00:47+0000\n"
+"PO-Revision-Date: 2026-06-08 04:56-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 26.04.2\n"
+
+#: ui/GameControllerSidebar.qml:37
+#, kde-format
+msgid "System navigation"
+msgstr "Navegação do sistema"
+
+#: ui/GameControllerSidebar.qml:52
+#, kde-format
+msgid "START button when suppressed"
+msgstr "Botão INICIAR quando suprimido"
+
+#: ui/GameControllerSidebar.qml:53
+#, kde-format
+msgid ""
+"Handle the START button even when input is suppressed (may conflict with "
+"some apps)"
+msgstr ""
+"Manipular o botão INICIAR mesmo quando a entrada estiver suprimida (pode "
+"entrar em conflito com alguns aplicativos)"
+
+#: ui/main.qml:17
+#, kde-format
+msgid "Input"
+msgstr "Entrada"
+
+#: ui/main.qml:105
+#, kde-format
+msgid "Input daemon is not running"
+msgstr "O daemon de entrada não está em execução"
+
+#: ui/main.qml:106
+#, kde-format
+msgid ""
+"Controller and remote settings are only available when plasma-bigscreen-"
+"inputhandler is running"
+msgstr ""
+"As configurações do controlador e do controle remoto só estão disponíveis "
+"quando o plasma-bigscreen-inputhandler está em execução"
+
+#: ui/main.qml:112
+#, kde-format
+msgid "System Navigation"
+msgstr "Navegação do sistema"
+
+#: ui/main.qml:113
+#, kde-format
+msgid ""
+"Navigate the system interface with connected controllers/remotes (apps can "
+"always still use them directly)"
+msgstr ""
+"Navegue pela interface do sistema com controladores/controles remotos "
+"conectados (os aplicativos ainda poderão usá-los diretamente)"
+
+#: ui/main.qml:128
+#, kde-format
+msgid "TV remote"
+msgstr "Controle remoto da TV"
+
+#: ui/main.qml:129
+#, kde-format
+msgid "Navigate the system interface with the connected TV remote (CEC)"
+msgstr ""
+"Navegue pela interface do sistema com o controle remoto da TV conectada (CEC)"
+
+#: ui/main.qml:145
+#, kde-format
+msgid "Game Controllers"
+msgstr "Controladores de jogo"
+
+#: ui/main.qml:155
+#, kde-format
+msgid "Game controllers"
+msgstr "Controladores de jogo"
+
+#: ui/main.qml:156
+#, kde-format
+msgid "Use connected game controllers for system navigation"
+msgstr "Use os controladores de jogos conectados para navegar no sistema"
+
+#: ui/main.qml:172
+#, kde-format
+msgid "Automatic input suppression"
+msgstr "Supressão automática de entrada"
+
+#: ui/main.qml:173
+#, kde-format
+msgid "Stop controller navigation while another app is using a controller"
+msgstr ""
+"Interrompa a navegação do controlador enquanto outro aplicativo estiver "
+"usando o controlador"
+
+#: ui/main.qml:190
+#, kde-format
+msgid "No controllers connected"
+msgstr "Nenhum controlador conectado"
+
+#: ui/main.qml:191
+#, kde-format
+msgid "Connect a game controller or TV remote (over CEC)"
+msgstr "Conecte um controle de jogo ou um controle remoto de TV (via CEC)"
