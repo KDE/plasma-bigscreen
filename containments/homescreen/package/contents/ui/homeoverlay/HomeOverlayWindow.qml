@@ -84,7 +84,7 @@ Window {
     // Fallback in case the sidebar somehow gets stuck
     MouseArea {
         anchors.fill: parent
-        onClicked: window.close()
+        onClicked: window.hideOverlay()
     }
 
     HomeOverlaySidebar {
@@ -134,7 +134,7 @@ Window {
                 anchors.bottom: parent.bottom
                 anchors.left: mainColumn.right
                 anchors.right: parent.right
-                onClicked: window.close()
+                onClicked: window.hideOverlay()
             }
 
             TasksView {
