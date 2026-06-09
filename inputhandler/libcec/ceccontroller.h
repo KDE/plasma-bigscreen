@@ -50,7 +50,7 @@ private Q_SLOTS:
     void onDeviceOpenFailed(const QString &comName, const QString &error);
     void onHotplugTimeout();
     void onNextKeyTimeout();
-    void onCecKeyPressed(int keycode, int opcode);
+    void onCecKeyPressed(int keycode, int duration);
 
 private:
     QThread *m_workerThread = nullptr;
@@ -59,9 +59,11 @@ private:
     QTimer m_nextKeyTimer;
 
     QHash<int, int> m_keyMap;
+    QSet<int> m_homeActionKeys;
     QSet<QString> m_connectedDevices;
     Device *m_device = nullptr;
     int m_adapterCount = 0;
+    int m_lastHandledKeycode = -1;
     bool m_initialized = false;
     bool m_catchNextInput = false;
 };
