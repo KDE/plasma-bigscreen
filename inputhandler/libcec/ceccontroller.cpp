@@ -51,7 +51,7 @@ CECController::CECController(QObject *parent)
 
     // Load key mappings from config
     KSharedConfigPtr config = KSharedConfig::openConfig();
-    KConfigGroup group = config->group("General");
+    KConfigGroup group = config->group("CECRemote");
 
     auto map = [&group](const char *name, int cecKey, int evKey) {
         return std::make_pair<int, int>(group.readEntry(QString("Button") + name, cecKey), group.readEntry(QString("Key") + name, evKey));
@@ -89,6 +89,14 @@ CECController::CECController(QObject *parent)
         map("Home", CEC_USER_CONTROL_CODE_ROOT_MENU, KEY_HOMEPAGE),
         map("Subtitle", CEC_USER_CONTROL_CODE_SUB_PICTURE, KEY_SUBTITLE),
         map("Info", CEC_USER_CONTROL_CODE_DISPLAY_INFORMATION, KEY_INFO),
+    };
+
+    m_homeActionKeys = {
+        group.readEntry("ButtonSetupMenu", int(CEC_USER_CONTROL_CODE_SETUP_MENU)),
+        group.readEntry("ButtonContentsMenu", int(CEC_USER_CONTROL_CODE_CONTENTS_MENU)),
+        group.readEntry("ButtonFavoriteMenu", int(CEC_USER_CONTROL_CODE_FAVORITE_MENU)),
+        group.readEntry("ButtonTopMenu", int(CEC_USER_CONTROL_CODE_TOP_MENU)),
+        group.readEntry("ButtonDvdMenu", int(CEC_USER_CONTROL_CODE_DVD_MENU)),
     };
 
     // Hotplug debounce timer
@@ -218,9 +226,9 @@ void CECController::onNextKeyTimeout()
     }
 }
 
-void CECController::onCecKeyPressed(int keycode, int opcode)
+void CECController::onCecKeyPressed(int keycode, int duration)
 {
-    qDebug() << "CECController: CEC key received - keycode:" << keycode << "opcode:" << opcode;
+    qDebug() << "CECController: CEC key received - keycode:" << keycode << "duration:" << duration;
 
     if (m_catchNextInput) {
         qDebug() << "CECController: Catching next input mode active, returning keycode to requester";
@@ -230,8 +238,15 @@ void CECController::onCecKeyPressed(int keycode, int opcode)
         return;
     }
 
-    // Only act on key press, ignore key release
-    if (opcode != CEC_OPCODE_USER_CONTROL_PRESSED) {
+    if (duration > 0 && m_lastHandledKeycode == keycode) {
+        m_lastHandledKeycode = -1;
+        return;
+    }
+    m_lastHandledKeycode = keycode;
+
+    if (m_homeActionKeys.contains(keycode)) {
+        qDebug() << "CECController: Menu key detected, emitting home action";
+        ControllerManager::instance().emitHomeAction(m_device);
         return;
     }
 

@@ -104,16 +104,15 @@ void CECWorker::handleCecKeypress(void *param, const cec_keypress *key)
 {
     auto *self = static_cast<CECWorker *>(param);
     int keycode = key->keycode;
-    int opcode = self->m_lastOpcode.load(std::memory_order_acquire);
-    qDebug() << "CECWorker: Key pressed - keycode:" << keycode << "duration:" << key->duration << "lastOpcode:" << opcode;
-    QMetaObject::invokeMethod(self, "cecKeyPressed", Qt::QueuedConnection, Q_ARG(int, keycode), Q_ARG(int, opcode));
+    int duration = key->duration;
+    qDebug() << "CECWorker: Key pressed - keycode:" << keycode << "duration:" << duration;
+    QMetaObject::invokeMethod(self, "cecKeyPressed", Qt::QueuedConnection, Q_ARG(int, keycode), Q_ARG(int, duration));
 }
 
 void CECWorker::handleCommandReceived(void *param, const cec_command *command)
 {
     auto *self = static_cast<CECWorker *>(param);
     qDebug() << "CECWorker: Command received - opcode:" << command->opcode;
-    self->m_lastOpcode.store(command->opcode, std::memory_order_release);
 
     if (command->opcode == CEC_OPCODE_STANDBY) {
         qDebug() << "CECWorker: Standby command received";

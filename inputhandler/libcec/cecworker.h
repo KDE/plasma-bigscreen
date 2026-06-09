@@ -11,8 +11,6 @@
 #include <QObject>
 #include <libcec/cec.h>
 
-#include <atomic>
-
 /**
  * Worker that runs blocking libcec operations in a dedicated thread.
  */
@@ -36,14 +34,13 @@ Q_SIGNALS:
     void deviceOpenFailed(const QString &comName, const QString &error);
 
     // CEC events from callbacks
-    void cecKeyPressed(int keycode, int opcode);
+    void cecKeyPressed(int keycode, int duration);
     void cecStandbyReceived();
     void cecSourceActivated(bool activated);
 
 private:
     CEC::ICECAdapter *m_cecAdapter = nullptr;
     CEC::ICECCallbacks m_cecCallbacks;
-    std::atomic<int> m_lastOpcode{0};
 
     // static callbacks from libcec (in its internal thread)
     static void handleCecKeypress(void *param, const CEC::cec_keypress *key);
