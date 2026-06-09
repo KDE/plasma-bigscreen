@@ -114,7 +114,9 @@ Bigscreen.ScrollablePage {
             checked: kcm.enabled
             visible: kcm.serviceAvailable
 
-            KeyNavigation.down: cecDelegate.visible ? cecDelegate : gameControllerDelegate
+            property Item upDelegate: (visible && enabled) ? inputEnabledDelegate : null
+            property Item downDelegate: (visible && enabled) ? inputEnabledDelegate : cecDelegate.downDelegate
+            KeyNavigation.down: cecDelegate.downDelegate
 
             onCheckedChanged: {
                 if (kcm.enabled !== checked) {
@@ -127,12 +129,15 @@ Bigscreen.ScrollablePage {
             id: cecDelegate
             text: "TV remote"
             description: "Navigate the system interface with the connected TV remote (CEC)"
-            icon.name: "input-tvremote"
+            icon.name: "input-tvremote-symbolic"
             checked: kcm.cecEnabled
             enabled: kcm.enabled
             visible: kcm.serviceAvailable && root.tvRemoteConnected
 
-            KeyNavigation.down: gameControllerDelegate
+            property Item upDelegate: (visible && enabled) ? cecDelegate : inputEnabledDelegate.upDelegate
+            property Item downDelegate: (visible && enabled) ? cecDelegate : gameControllerDelegate.downDelegate
+            KeyNavigation.up: inputEnabledDelegate.upDelegate
+            KeyNavigation.down: gameControllerDelegate.downDelegate
 
             onCheckedChanged: {
                 if (kcm.cecEnabled !== checked) {
@@ -147,7 +152,7 @@ Bigscreen.ScrollablePage {
             Layout.fillWidth: true
             Layout.topMargin: Kirigami.Units.gridUnit
             Layout.bottomMargin: Kirigami.Units.gridUnit
-            visible: kcm.serviceAvailable && root.connectedGameControllers.length > 0
+            visible: kcm.serviceAvailable
         }
 
         Bigscreen.SwitchDelegate {
@@ -158,7 +163,10 @@ Bigscreen.ScrollablePage {
             enabled: kcm.enabled
             visible: kcm.serviceAvailable && root.connectedGameControllers.length > 0
 
-            KeyNavigation.down: autoSuppressDelegate
+            property Item upDelegate: (visible && enabled) ? gameControllerDelegate : cecDelegate.upDelegate
+            property Item downDelegate: (visible && enabled) ? gameControllerDelegate : autoSuppressDelegate.downDelegate
+            KeyNavigation.up: cecDelegate.upDelegate
+            KeyNavigation.down: autoSuppressDelegate.downDelegate
 
             onCheckedChanged: {
                 if (kcm.gameControllerEnabled !== checked) {
@@ -172,10 +180,13 @@ Bigscreen.ScrollablePage {
             text: "Automatic input suppression"
             description: "Stop controller navigation while another app is using a controller"
             checked: kcm.autoSuppressInput
-            enabled: kcm.enabled
-            visible: kcm.serviceAvailable
+            enabled: kcm.enabled && kcm.gameControllerEnabled
+            visible: kcm.serviceAvailable && root.connectedGameControllers.length > 0
 
-            KeyNavigation.down: gameControllersView
+            property Item upDelegate: (visible && enabled) ? autoSuppressDelegate : gameControllerDelegate.upDelegate
+            property Item downDelegate: (visible && enabled) ? autoSuppressDelegate : gameControllersView.downDelegate
+            KeyNavigation.up: gameControllerDelegate.upDelegate
+            KeyNavigation.down: gameControllersView.downDelegate
 
             onCheckedChanged: {
                 if (kcm.autoSuppressInput !== checked) {
@@ -186,9 +197,9 @@ Bigscreen.ScrollablePage {
 
         Bigscreen.TextDelegate {
             id: noControllersDelegate
-            visible: kcm.serviceAvailable && kcm.connectedControllers.length === 0
+            visible: kcm.serviceAvailable && root.connectedGameControllers.length === 0
             text: "No controllers connected"
-            description: "Connect a game controller or TV remote (over CEC)"
+            description: "Connect a game controller"
             icon.name: "input-gamepad-symbolic"
         }
 
@@ -199,6 +210,10 @@ Bigscreen.ScrollablePage {
             model: root.connectedGameControllers
             currentIndex: 0
             visible: count > 0
+
+            property Item upDelegate: (visible && enabled) ? gameControllersView : autoSuppressDelegate.upDelegate
+            property Item downDelegate: (visible && enabled) ? gameControllersView : null
+            KeyNavigation.up: autoSuppressDelegate.upDelegate
 
             delegate: controllerDelegate
         }
