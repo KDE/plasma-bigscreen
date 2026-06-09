@@ -124,6 +124,7 @@
     "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-ContainmentType": "Desktop",
     "X-Plasma-Provides": [
-        "org.kde.bigscreen.homescreen"
+        "org.kde.bigscreen.homescreen",
+        "org.kde.plasma.launchermenu"
     ]
 }
