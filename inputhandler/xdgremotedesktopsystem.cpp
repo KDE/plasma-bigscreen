@@ -17,6 +17,12 @@ constexpr uint DEVICE_KEYBOARD = 1;
 constexpr uint DEVICE_POINTER = 2;
 constexpr uint DEVICE_ALL = DEVICE_KEYBOARD | DEVICE_POINTER;
 
+static const QStringList s_appIds = {
+    QString(),
+    QStringLiteral("org.kde.plasma.bigscreen.inputhandler"),
+    QStringLiteral("plasma-bigscreen-inputhandler"),
+};
+
 XdgRemoteDesktopSystem::XdgRemoteDesktopSystem()
     : QObject()
 {
@@ -39,8 +45,7 @@ bool XdgRemoteDesktopSystem::init()
         return false;
     }
 
-    // Pre-authorize host applications for remote desktop access (no prompt)
-    // Note: This applies for all apps that aren't in a flatpak, not just the shell
+    // Pre-authorize this daemon for remote desktop access (no prompt).
     preAuthorize();
 
     createSession();
@@ -62,18 +67,21 @@ void XdgRemoteDesktopSystem::preAuthorize()
 
     permissionStore.setTimeout(1000);
 
-    QDBusReply<void> reply = permissionStore.call(QStringLiteral("SetPermission"),
-                                                  QStringLiteral("kde-authorized"), // table
-                                                  true, // create table if not exists
-                                                  QStringLiteral("remote-desktop"), // id
-                                                  QLatin1String(""), // app (empty for host applications)
-                                                  QStringList{QStringLiteral("yes")}); // permissions
+    for (const QString &appId : s_appIds) {
+        QDBusReply<void> reply = permissionStore.call(QStringLiteral("SetPermission"),
+                                                      QStringLiteral("kde-authorized"), // table
+                                                      true, // create table if not exists
+                                                      QStringLiteral("remote-desktop"), // id
+                                                      appId, // app
+                                                      QStringList{QStringLiteral("yes")}); // permissions
 
-    if (!reply.isValid()) {
-        qWarning() << "XDG Remote Desktop: Failed to set permission:" << reply.error().message();
-    } else {
-        qDebug() << "XDG Remote Desktop: Pre-authorized for remote desktop access";
+        if (!reply.isValid()) {
+            qWarning() << "XDG Remote Desktop: Failed to set permission:" << reply.error().message();
+            return;
+        }
     }
+
+    qDebug() << "XDG Remote Desktop: Pre-authorized for remote desktop access";
 }
 
 QString XdgRemoteDesktopSystem::getRequestPath(const QString &token)
