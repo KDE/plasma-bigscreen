@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-23 00:45+0000\n"
+"POT-Creation-Date: 2026-06-10 00:47+0000\n"
 "PO-Revision-Date: 2026-04-11 12:00+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@kde.org>\n"
@@ -22,7 +22,5 @@ msgstr ""
 msgid "Screenshot saved to %1"
 msgstr "Snímka obrazovky uložená do %1"
 
-#: qml/FullScreenOverlay.qml:164
-#, kde-format
-msgid "Close"
-msgstr "Zavrieť"
+#~ msgid "Close"
+#~ msgstr "Zavrieť"

@@ -72,20 +72,3 @@ msgstr "KDE Connect"
 #, kde-format
 msgid "Devices"
 msgstr "მოწყობილობები"
-
-#~ msgid "Press the [←] Back button to return to device selection"
-#~ msgstr "მოწყობილობის არჩევანზე დასაბრუნებლად დააწექით [←] უკან გასვლას"
-
-#~ msgid "Exit"
-#~ msgstr "გასვლა"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Temuri Doghonadze"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "Temuri.doghonadze@gmail.com"
-
-#~ msgid "Configure KDE Connect"
-#~ msgstr "KDE Connect-ის მორგება"

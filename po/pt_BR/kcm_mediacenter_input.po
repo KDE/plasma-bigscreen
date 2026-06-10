@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-08 00:47+0000\n"
+"POT-Creation-Date: 2026-06-10 00:47+0000\n"
 "PO-Revision-Date: 2026-06-08 04:56-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -69,50 +69,54 @@ msgstr ""
 "Navegue pela interface do sistema com controladores/controles remotos "
 "conectados (os aplicativos ainda poderão usá-los diretamente)"
 
-#: ui/main.qml:128
+#: ui/main.qml:130
 #, kde-format
 msgid "TV remote"
 msgstr "Controle remoto da TV"
 
-#: ui/main.qml:129
+#: ui/main.qml:131
 #, kde-format
 msgid "Navigate the system interface with the connected TV remote (CEC)"
 msgstr ""
 "Navegue pela interface do sistema com o controle remoto da TV conectada (CEC)"
 
-#: ui/main.qml:145
+#: ui/main.qml:150
 #, kde-format
 msgid "Game Controllers"
 msgstr "Controladores de jogo"
 
-#: ui/main.qml:155
+#: ui/main.qml:160
 #, kde-format
 msgid "Game controllers"
 msgstr "Controladores de jogo"
 
-#: ui/main.qml:156
+#: ui/main.qml:161
 #, kde-format
 msgid "Use connected game controllers for system navigation"
 msgstr "Use os controladores de jogos conectados para navegar no sistema"
 
-#: ui/main.qml:172
+#: ui/main.qml:180
 #, kde-format
 msgid "Automatic input suppression"
 msgstr "Supressão automática de entrada"
 
-#: ui/main.qml:173
+#: ui/main.qml:181
 #, kde-format
 msgid "Stop controller navigation while another app is using a controller"
 msgstr ""
 "Interrompa a navegação do controlador enquanto outro aplicativo estiver "
 "usando o controlador"
 
-#: ui/main.qml:190
+#: ui/main.qml:201
 #, kde-format
 msgid "No controllers connected"
 msgstr "Nenhum controlador conectado"
 
-#: ui/main.qml:191
-#, kde-format
-msgid "Connect a game controller or TV remote (over CEC)"
-msgstr "Conecte um controle de jogo ou um controle remoto de TV (via CEC)"
+#: ui/main.qml:202
+#, fuzzy, kde-format
+#| msgid "Game controllers"
+msgid "Connect a game controller"
+msgstr "Controladores de jogo"
+
+#~ msgid "Connect a game controller or TV remote (over CEC)"
+#~ msgstr "Conecte um controle de jogo ou um controle remoto de TV (via CEC)"

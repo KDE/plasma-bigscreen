@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-08 00:47+0000\n"
+"POT-Creation-Date: 2026-06-10 00:47+0000\n"
 "PO-Revision-Date: 2026-06-08 21:41+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -70,48 +70,52 @@ msgstr ""
 "تنقل في واجهة النظام باستخدام وحدات التحكم/أجهزة التحكم عن بُعد المتصلة (يمكن "
 "للتطبيقات دائمًا استخدامها مباشرةً)."
 
-#: ui/main.qml:128
+#: ui/main.qml:130
 #, kde-format
 msgid "TV remote"
 msgstr "متحكم التلفاز"
 
-#: ui/main.qml:129
+#: ui/main.qml:131
 #, kde-format
 msgid "Navigate the system interface with the connected TV remote (CEC)"
 msgstr ""
 "تنقل في واجهة النظام باستخدام جهاز التحكم عن بُعد المتصل بالتلفاز (CEC)."
 
-#: ui/main.qml:145
+#: ui/main.qml:150
 #, kde-format
 msgid "Game Controllers"
 msgstr "متحكمات الألعاب"
 
-#: ui/main.qml:155
+#: ui/main.qml:160
 #, kde-format
 msgid "Game controllers"
 msgstr "متحكمات الألعاب"
 
-#: ui/main.qml:156
+#: ui/main.qml:161
 #, kde-format
 msgid "Use connected game controllers for system navigation"
 msgstr "استخدم متحكمات ألعاب موصولة للتنقل في النظام."
 
-#: ui/main.qml:172
+#: ui/main.qml:180
 #, kde-format
 msgid "Automatic input suppression"
 msgstr "كبت الإدخال آليًا"
 
-#: ui/main.qml:173
+#: ui/main.qml:181
 #, kde-format
 msgid "Stop controller navigation while another app is using a controller"
 msgstr "أوقف التنقل بواسطة المتحكم أثناء استخدام تطبيق آخر لوحدة التحكم"
 
-#: ui/main.qml:190
+#: ui/main.qml:201
 #, kde-format
 msgid "No controllers connected"
 msgstr "لا توجد متحكمات متصلة."
 
-#: ui/main.qml:191
-#, kde-format
-msgid "Connect a game controller or TV remote (over CEC)"
-msgstr "صل متحكم ألعاب أو متحكم تلفاز عن بعد (عبر CEC)"
+#: ui/main.qml:202
+#, fuzzy, kde-format
+#| msgid "Game controllers"
+msgid "Connect a game controller"
+msgstr "متحكمات الألعاب"
+
+#~ msgid "Connect a game controller or TV remote (over CEC)"
+#~ msgstr "صل متحكم ألعاب أو متحكم تلفاز عن بعد (عبر CEC)"

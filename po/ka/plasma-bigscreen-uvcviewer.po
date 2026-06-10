@@ -39,7 +39,3 @@ msgstr "Plasma Bigscreen UVC-ის დამთვალიერებელ�
 msgctxt "@title:window"
 msgid "Bigscreen UVC Viewer"
 msgstr "Bigscreen UVC-ის დამთვალიერებელი"
-
-#~ msgctxt "@title"
-#~ msgid "Available Video Inputs"
-#~ msgstr "ხელმისაწვდომი ვიდეოს შეყვანები"

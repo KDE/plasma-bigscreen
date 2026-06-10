@@ -53,24 +53,3 @@ msgstr "მასშტაბი"
 msgctxt "Scale percentage"
 msgid "%1%"
 msgstr "%1%"
-
-#~ msgid "New Resolution"
-#~ msgstr "ახალი გარჩევადობა"
-
-#~ msgid "Accept"
-#~ msgstr "დასტური"
-
-#~ msgid "Cancel"
-#~ msgstr "გაუქმება"
-
-#~ msgid "Resolution: "
-#~ msgstr "გარჩევადობა: "
-
-#~ msgid "Refresh Rate: "
-#~ msgstr "განახლების _სიხშირე: "
-
-#~ msgid "Mode: "
-#~ msgstr "რეჟიმი: "
-
-#~ msgid "Available Resolutions"
-#~ msgstr "ხელმისაწვდომი გარჩევადობები"
