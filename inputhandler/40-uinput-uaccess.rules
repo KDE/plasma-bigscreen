@@ -1,0 +1,3 @@
+# SPDX-FileCopyrightText: 2025 Martin Sh <hemisputnik@proton.me>
+# SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+SUBSYSTEM=="misc", KERNEL=="uinput", TAG+="uaccess", OPTIONS+="static_node=uinput"

@@ -62,4 +62,9 @@ install(TARGETS plasma-bigscreen-inputhandler DESTINATION ${KDE_INSTALL_TARGETS_
 
 configure_file(org.kde.plasma.bigscreen.inputhandler.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasma.bigscreen.inputhandler.desktop @ONLY)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasma.bigscreen.inputhandler.desktop DESTINATION ${KDE_INSTALL_APPDIR})
-install(FILES 40-uinput.rules DESTINATION ${KDE_INSTALL_LIBDIR}/udev/rules.d)
+
+if (SYSTEMD_FOUND)
+    install(FILES 40-uinput-uaccess.rules DESTINATION ${KDE_INSTALL_LIBDIR}/udev/rules.d RENAME 40-uinput.rules)
+else()
+    install(FILES 40-uinput-input-group.rules DESTINATION ${KDE_INSTALL_LIBDIR}/udev/rules.d RENAME 40-uinput.rules)
+endif()
