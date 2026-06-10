@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 02:39+0000\n"
+"POT-Creation-Date: 2026-06-10 02:40+0000\n"
 "PO-Revision-Date: 2026-04-02 14:42+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -19,17 +19,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.12.3\n"
 
-#: contents/ui/FavoritesManager.qml:21
+#: contents/ui/FavoritesManager.qml:20
 #, kde-format
 msgid "Favorites Manager"
 msgstr "Favoritenverwaltung"
 
-#: contents/ui/FavoritesManager.qml:54
+#: contents/ui/FavoritesManager.qml:140
 #, kde-format
 msgid "Add Favorites"
 msgstr "Favoriten hinzufügen"
 
-#: contents/ui/FavoritesManager.qml:119
+#: contents/ui/FavoritesManager.qml:179
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Favoriten entfernen"

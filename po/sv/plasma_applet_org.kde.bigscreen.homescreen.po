@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 02:39+0000\n"
+"POT-Creation-Date: 2026-06-10 02:40+0000\n"
 "PO-Revision-Date: 2026-01-23 20:47+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.12.1\n"
 
-#: contents/ui/FavoritesManager.qml:21
+#: contents/ui/FavoritesManager.qml:20
 #, kde-format
 msgid "Favorites Manager"
 msgstr "Favorithanterare"
 
-#: contents/ui/FavoritesManager.qml:54
+#: contents/ui/FavoritesManager.qml:140
 #, kde-format
 msgid "Add Favorites"
 msgstr "Lägg till favoriter"
 
-#: contents/ui/FavoritesManager.qml:119
+#: contents/ui/FavoritesManager.qml:179
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Ta bort favoriter"

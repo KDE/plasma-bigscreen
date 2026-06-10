@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 02:39+0000\n"
+"POT-Creation-Date: 2026-06-10 02:40+0000\n"
 "PO-Revision-Date: 2026-03-23 06:36+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Poedit 3.9\n"
 
-#: contents/ui/FavoritesManager.qml:21
+#: contents/ui/FavoritesManager.qml:20
 #, kde-format
 msgid "Favorites Manager"
 msgstr "Upravljalnik priljubljenih"
 
-#: contents/ui/FavoritesManager.qml:54
+#: contents/ui/FavoritesManager.qml:140
 #, kde-format
 msgid "Add Favorites"
 msgstr "Dodaj priljubljene"
 
-#: contents/ui/FavoritesManager.qml:119
+#: contents/ui/FavoritesManager.qml:179
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Odstrani priljubljene"
