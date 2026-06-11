@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-10 00:47+0000\n"
-"PO-Revision-Date: 2026-06-08 21:41+0400\n"
+"PO-Revision-Date: 2026-06-10 19:02+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -112,10 +112,9 @@ msgid "No controllers connected"
 msgstr "لا توجد متحكمات متصلة."
 
 #: ui/main.qml:202
-#, fuzzy, kde-format
-#| msgid "Game controllers"
+#, kde-format
 msgid "Connect a game controller"
-msgstr "متحكمات الألعاب"
+msgstr "صِل متحكمات الألعاب"
 
 #~ msgid "Connect a game controller or TV remote (over CEC)"
 #~ msgstr "صل متحكم ألعاب أو متحكم تلفاز عن بعد (عبر CEC)"

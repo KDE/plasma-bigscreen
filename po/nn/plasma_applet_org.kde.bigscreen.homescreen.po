@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:47+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2023-01-15 12:14+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
@@ -154,22 +154,22 @@ msgstr ""
 msgid "Internet Settings"
 msgstr ""
 
-#: contents/ui/launcher/LauncherHome.qml:89
+#: contents/ui/launcher/LauncherHome.qml:90
 #, kde-format
 msgid "Favorites"
 msgstr ""
 
-#: contents/ui/launcher/LauncherHome.qml:109
+#: contents/ui/launcher/LauncherHome.qml:119
 #, kde-format
 msgid "Recent"
 msgstr "Nylege"
 
-#: contents/ui/launcher/LauncherHome.qml:146
+#: contents/ui/launcher/LauncherHome.qml:157
 #, kde-format
 msgid "Applications"
 msgstr "Program"
 
-#: contents/ui/launcher/LauncherHome.qml:174
+#: contents/ui/launcher/LauncherHome.qml:186
 #, kde-format
 msgid "Games"
 msgstr "Spel"

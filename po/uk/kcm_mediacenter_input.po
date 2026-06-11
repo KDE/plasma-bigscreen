@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-10 00:47+0000\n"
-"PO-Revision-Date: 2026-06-08 16:34+0300\n"
+"PO-Revision-Date: 2026-06-10 09:44+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -115,10 +115,9 @@ msgid "No controllers connected"
 msgstr "Не з'єднано жодного контролера"
 
 #: ui/main.qml:202
-#, fuzzy, kde-format
-#| msgid "Game controllers"
+#, kde-format
 msgid "Connect a game controller"
-msgstr "Ігрові контролери"
+msgstr "З'єднання з ігровим контролером"
 
 #~ msgid "Connect a game controller or TV remote (over CEC)"
 #~ msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:47+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2022-08-26 23:40+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -155,22 +155,22 @@ msgstr "Pengaturan Tambahan:"
 msgid "Internet Settings"
 msgstr "Pengaturan"
 
-#: contents/ui/launcher/LauncherHome.qml:89
+#: contents/ui/launcher/LauncherHome.qml:90
 #, kde-format
 msgid "Favorites"
 msgstr ""
 
-#: contents/ui/launcher/LauncherHome.qml:109
+#: contents/ui/launcher/LauncherHome.qml:119
 #, kde-format
 msgid "Recent"
 msgstr "Baru-baru ini"
 
-#: contents/ui/launcher/LauncherHome.qml:146
+#: contents/ui/launcher/LauncherHome.qml:157
 #, kde-format
 msgid "Applications"
 msgstr "Aplikasi"
 
-#: contents/ui/launcher/LauncherHome.qml:174
+#: contents/ui/launcher/LauncherHome.qml:186
 #, kde-format
 msgid "Games"
 msgstr "Permainan"

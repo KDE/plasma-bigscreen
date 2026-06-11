@@ -21,41 +21,41 @@ msgstr ""
 #: ui/GameControllerSidebar.qml:37
 #, kde-format
 msgid "System navigation"
-msgstr ""
+msgstr "系统导航"
 
 #: ui/GameControllerSidebar.qml:52
 #, kde-format
 msgid "START button when suppressed"
-msgstr ""
+msgstr "START 键在阻止输入时有效"
 
 #: ui/GameControllerSidebar.qml:53
 #, kde-format
 msgid ""
 "Handle the START button even when input is suppressed (may conflict with "
 "some apps)"
-msgstr ""
+msgstr "即使阻止了输入，也处理 START 按钮 (可能与某些应用冲突)"
 
 #: ui/main.qml:17
 #, kde-format
 msgid "Input"
-msgstr ""
+msgstr "输入"
 
 #: ui/main.qml:105
 #, kde-format
 msgid "Input daemon is not running"
-msgstr ""
+msgstr "输入守护进程没有运行"
 
 #: ui/main.qml:106
 #, kde-format
 msgid ""
 "Controller and remote settings are only available when plasma-bigscreen-"
 "inputhandler is running"
-msgstr ""
+msgstr "游戏控制器和遥控器仅在 plasma-bigscreen-inputhandler 运行时可用"
 
 #: ui/main.qml:112
 #, kde-format
 msgid "System Navigation"
-msgstr ""
+msgstr "系统导航"
 
 #: ui/main.qml:113
 #, kde-format
@@ -63,46 +63,47 @@ msgid ""
 "Navigate the system interface with connected controllers/remotes (apps can "
 "always still use them directly)"
 msgstr ""
+"使用连接的游戏控制器/遥控器进行系统界面导航 (应用仍然可以直接使用这些设备)"
 
 #: ui/main.qml:130
 #, kde-format
 msgid "TV remote"
-msgstr ""
+msgstr "电视遥控器"
 
 #: ui/main.qml:131
 #, kde-format
 msgid "Navigate the system interface with the connected TV remote (CEC)"
-msgstr ""
+msgstr "使用连接的电视遥控器进行系统界面导航 (CEC)"
 
 #: ui/main.qml:150
 #, kde-format
 msgid "Game Controllers"
-msgstr ""
+msgstr "游戏控制器"
 
 #: ui/main.qml:160
 #, kde-format
 msgid "Game controllers"
-msgstr ""
+msgstr "游戏控制器"
 
 #: ui/main.qml:161
 #, kde-format
 msgid "Use connected game controllers for system navigation"
-msgstr ""
+msgstr "使用连接的游戏控制器进行系统界面导航"
 
 #: ui/main.qml:180
 #, kde-format
 msgid "Automatic input suppression"
-msgstr ""
+msgstr "自动阻止输入"
 
 #: ui/main.qml:181
 #, kde-format
 msgid "Stop controller navigation while another app is using a controller"
-msgstr ""
+msgstr "在另一个应用正在使用控制器时停止游戏控制器导航操作"
 
 #: ui/main.qml:201
 #, kde-format
 msgid "No controllers connected"
-msgstr ""
+msgstr "没有连接游戏控制器"
 
 #: ui/main.qml:202
 #, kde-format

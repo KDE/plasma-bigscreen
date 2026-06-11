@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:47+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2024-02-07 21:19-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -155,22 +155,22 @@ msgstr "ਵਧੀਕ ਸੈਟਿੰਗਾਂ:"
 msgid "Internet Settings"
 msgstr "ਸੈਟਿੰਗਾਂ"
 
-#: contents/ui/launcher/LauncherHome.qml:89
+#: contents/ui/launcher/LauncherHome.qml:90
 #, kde-format
 msgid "Favorites"
 msgstr ""
 
-#: contents/ui/launcher/LauncherHome.qml:109
+#: contents/ui/launcher/LauncherHome.qml:119
 #, kde-format
 msgid "Recent"
 msgstr "ਤਾਜ਼ਾ"
 
-#: contents/ui/launcher/LauncherHome.qml:146
+#: contents/ui/launcher/LauncherHome.qml:157
 #, kde-format
 msgid "Applications"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ"
 
-#: contents/ui/launcher/LauncherHome.qml:174
+#: contents/ui/launcher/LauncherHome.qml:186
 #, kde-format
 msgid "Games"
 msgstr "ਖੇਡਾਂ"

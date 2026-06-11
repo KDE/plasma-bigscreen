@@ -1,26 +1,29 @@
+#
+# SPDX-FileCopyrightText: 2026 Xavier Besnard <xavier.besnard@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-10 00:47+0000\n"
-"PO-Revision-Date: 2026-06-09 05:32+0200\n"
-"Last-Translator: KDE Francophone <kde-francophone@kde.org>\n"
-"Language-Team: KDE Francophone <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2026-06-09 15:04+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: ui/GameControllerSidebar.qml:37
 #, kde-format
 msgid "System navigation"
-msgstr ""
+msgstr "Navigation du système"
 
 #: ui/GameControllerSidebar.qml:52
 #, kde-format
 msgid "START button when suppressed"
-msgstr ""
+msgstr "Bouton « START » lorsque supprimé"
 
 #: ui/GameControllerSidebar.qml:53
 #, kde-format
@@ -28,16 +31,18 @@ msgid ""
 "Handle the START button even when input is suppressed (may conflict with "
 "some apps)"
 msgstr ""
+"Gérer le bouton « START » même lorsque l'entrée est supprimée (Peut entrer "
+"en conflit avec certaines applications)"
 
 #: ui/main.qml:17
 #, kde-format
 msgid "Input"
-msgstr ""
+msgstr "Entrée"
 
 #: ui/main.qml:105
 #, kde-format
 msgid "Input daemon is not running"
-msgstr ""
+msgstr "Le démon d'entrée ne fonctionne pas"
 
 #: ui/main.qml:106
 #, kde-format
@@ -45,11 +50,14 @@ msgid ""
 "Controller and remote settings are only available when plasma-bigscreen-"
 "inputhandler is running"
 msgstr ""
+"Les configurations du contrôleur et de la télécommande ne sont disponibles "
+"que lorsque le module « plasma-bigscreen-inputhandler » est en cours "
+"d'exécution"
 
 #: ui/main.qml:112
 #, kde-format
 msgid "System Navigation"
-msgstr ""
+msgstr "Navigation du système"
 
 #: ui/main.qml:113
 #, kde-format
@@ -57,46 +65,51 @@ msgid ""
 "Navigate the system interface with connected controllers/remotes (apps can "
 "always still use them directly)"
 msgstr ""
+"Naviguez dans l'interface du système avec des manettes / télécommandes "
+"connectées (Les applications peuvent toujours les utiliser directement)"
 
 #: ui/main.qml:130
 #, kde-format
 msgid "TV remote"
-msgstr ""
+msgstr "Télécommande de télévision"
 
 #: ui/main.qml:131
 #, kde-format
 msgid "Navigate the system interface with the connected TV remote (CEC)"
 msgstr ""
+"Naviguez dans l'interface du système avec la télécommande TV connectée (CEC)"
 
 #: ui/main.qml:150
 #, kde-format
 msgid "Game Controllers"
-msgstr ""
+msgstr "Manettes de jeu"
 
 #: ui/main.qml:160
 #, kde-format
 msgid "Game controllers"
-msgstr ""
+msgstr "Manettes de jeu"
 
 #: ui/main.qml:161
 #, kde-format
 msgid "Use connected game controllers for system navigation"
-msgstr ""
+msgstr "Utilisez des manettes de jeu connectées pour la navigation du système"
 
 #: ui/main.qml:180
 #, kde-format
 msgid "Automatic input suppression"
-msgstr ""
+msgstr "Suppression automatique de l'entrée"
 
 #: ui/main.qml:181
 #, kde-format
 msgid "Stop controller navigation while another app is using a controller"
 msgstr ""
+"Arrêtez la navigation du contrôleur pendant qu'une autre application utilise "
+"un contrôleur"
 
 #: ui/main.qml:201
 #, kde-format
 msgid "No controllers connected"
-msgstr ""
+msgstr "Aucun contrôleur connecté"
 
 #: ui/main.qml:202
 #, kde-format
