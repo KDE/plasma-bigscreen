@@ -26,8 +26,8 @@
 #include <KSycoca>
 #include <KSycocaEntry>
 #include <PlasmaActivities/ResourceInstance>
-#include <taskmanager/abstracttasksmodel.h>
-#include <taskmanager/tasksmodel.h>
+#include <abstracttasksmodel.h>
+#include <tasksmodel.h>
 
 QStringList applicationsBlacklist()
 {
