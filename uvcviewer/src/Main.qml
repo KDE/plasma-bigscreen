@@ -1,7 +1,7 @@
 
 /*
     SPDX-FileCopyrightText: 2025 Seshan Ravikumar <seshan@sineware.ca>
-    SPDX-License-Identifier: LicenseRef-KDE-Accepted-GPL
+    SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 import QtQuick
 import QtQuick.Layouts
@@ -11,7 +11,7 @@ import org.kde.kirigami as Kirigami
 Kirigami.ApplicationWindow {
     id: root
 
-    width: 1280 
+    width: 1280
     height: 720
 
     title: i18nc("@title:window", "Bigscreen UVC Viewer")
