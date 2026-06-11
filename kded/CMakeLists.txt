@@ -1,4 +1,4 @@
 # SPDX-FileCopyrightText: 2026 Devin Lin <devin@kde.org>
-# SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
+# SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 add_subdirectory(start)
