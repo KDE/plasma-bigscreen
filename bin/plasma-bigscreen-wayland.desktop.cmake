@@ -90,3 +90,4 @@ Comment[uk]=Плазма для великих екранів від KDE
 Comment[zh_CN]=KDE Plasma 大屏幕
 Comment[zh_TW]=來自 KDE 的 Plasma 大螢幕
 X-KDE-PluginInfo-Version=${PROJECT_VERSION}
+OnlyShowIn=KDE
