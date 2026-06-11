@@ -7,31 +7,29 @@
  ***************************************************************************/
 
 #include "bigscreensettings.h"
-#include "globalthemelistmodel.h"
+#include "colorschemelistmodel.h"
 
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QQuickItem>
 
 #include <KAboutData>
+#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>
-
-#include <KSvg/Svg>
-#include <Plasma/Theme>
 
 #include "timedated_interface.h"
 
 BigscreenSettings::BigscreenSettings(QObject *parent, const KPluginMetaData &data)
     : KQuickConfigModule(parent, data)
-    , m_globalThemeListModel(new GlobalThemeListModel(this))
+    , m_config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")))
+    , m_colorSchemeListModel(new ColorSchemeListModel(this))
 {
     setButtons(Apply);
 
-    qmlRegisterAnonymousType<GlobalThemeListModel>("GlobalThemeListModel", 1);
-    m_theme = new Plasma::Theme(this);
-    m_theme->setUseGlobalSettings(true);
-    m_themeName = m_theme->themeName();
+    qmlRegisterAnonymousType<ColorSchemeListModel>("ColorSchemeListModel", 1);
+    loadColorSchemeName();
+    connect(m_colorSchemeListModel, &ColorSchemeListModel::colorSchemeChanged, this, &BigscreenSettings::loadColorSchemeName);
 
     OrgFreedesktopTimedate1Interface timedateIface(QStringLiteral("org.freedesktop.timedate1"),
                                                    QStringLiteral("/org/freedesktop/timedate1"),
@@ -41,22 +39,26 @@ BigscreenSettings::BigscreenSettings(QObject *parent, const KPluginMetaData &dat
 
 void BigscreenSettings::load()
 {
+    loadColorSchemeName();
 }
 
 BigscreenSettings::~BigscreenSettings() = default;
 
-void BigscreenSettings::setThemeName(const QString &theme)
+void BigscreenSettings::loadColorSchemeName()
 {
-    if (theme != m_themeName) {
-        m_themeName = theme;
-        m_theme->setThemeName(theme);
-        Q_EMIT themeNameChanged();
+    m_config->reparseConfiguration();
+    KConfigGroup generalGroup(m_config, QStringLiteral("General"));
+    const QString colorSchemeName = generalGroup.readEntry("ColorScheme", QStringLiteral("BreezeLight"));
+
+    if (colorSchemeName != m_colorSchemeName) {
+        m_colorSchemeName = colorSchemeName;
+        Q_EMIT colorSchemeNameChanged();
     }
 }
 
-QString BigscreenSettings::themeName() const
+QString BigscreenSettings::colorSchemeName() const
 {
-    return m_themeName;
+    return m_colorSchemeName;
 }
 
 bool BigscreenSettings::useColoredTiles()
@@ -209,9 +211,9 @@ void BigscreenSettings::resetShortcut(const QString &action)
     QDBusConnection::sessionBus().send(msg);
 }
 
-GlobalThemeListModel *BigscreenSettings::globalThemeListModel()
+ColorSchemeListModel *BigscreenSettings::colorSchemeListModel()
 {
-    return m_globalThemeListModel;
+    return m_colorSchemeListModel;
 }
 
 K_PLUGIN_CLASS_WITH_JSON(BigscreenSettings, "kcm_mediacenter_bigscreen_settings.json")

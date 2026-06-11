@@ -16,17 +16,17 @@ import org.kde.bigscreen as Bigscreen
 
 Bigscreen.SidebarOverlay {
     id: root
-    openFocusItem: desktopThemeView
+    openFocusItem: colorSchemeView
 
     header: Bigscreen.SidebarOverlayHeader {
-        iconSource: 'preferences-desktop-theme'
-        title: i18n("Global theme")
+        iconSource: 'preferences-desktop-color'
+        title: i18n("Color scheme")
     }
 
     content: ColumnLayout {
 
         GridView {
-            id: desktopThemeView
+            id: colorSchemeView
             Layout.fillWidth: true
             Layout.fillHeight: true
 
@@ -34,34 +34,45 @@ Bigscreen.SidebarOverlay {
             Keys.onBackPressed: root.close()
 
             clip: true
-            model: kcm.globalThemeListModel
+            model: kcm.colorSchemeListModel
             cacheBuffer: parent.width * 2
 
             cellWidth: width
-            cellHeight: Kirigami.Units.gridUnit * 16
+            cellHeight: Kirigami.Units.gridUnit * 8
 
             delegate: Bigscreen.ButtonDelegate {
                 id: delegate
-                width: desktopThemeView.cellWidth
-                height: desktopThemeView.cellHeight
+                width: colorSchemeView.cellWidth
+                height: colorSchemeView.cellHeight
 
-                onClicked: kcm.globalThemeListModel.setTheme(model.pluginIdRole)
+                onClicked: kcm.colorSchemeListModel.setColorScheme(model.schemeNameRole)
 
                 contentItem: Item {
-                    id: connectionItemLayout
+                    id: colorSchemeItemLayout
+                    property var swatchColors: [
+                        model.windowColorRole,
+                        model.textColorRole,
+                        model.buttonColorRole,
+                        model.highlightColorRole,
+                        model.highlightedTextColorRole
+                    ]
 
-                    Image {
+                    Rectangle {
                         id: preview
-                        anchors.fill: parent
-                        fillMode: Image.PreserveAspectFit
-                        source: Qt.resolvedUrl(model.previewPathRole)
+                        anchors.left: parent.left
+                        anchors.right: parent.right
+                        anchors.top: parent.top
+                        anchors.bottom: parent.bottom
+                        anchors.margins: Kirigami.Units.smallSpacing
+                        color: model.windowColorRole
+                        radius: Kirigami.Units.cornerRadius
 
                         Rectangle {
                             anchors.top: parent.top
                             anchors.left: parent.left
                             anchors.right: parent.right
                             height: Kirigami.Units.gridUnit * 3
-                            color: Kirigami.Theme.backgroundColor
+                            color: model.activeTitleBarBackgroundRole
                             opacity: 0.95
 
                             QQC2.Label {
@@ -73,9 +84,29 @@ Bigscreen.SidebarOverlay {
                                 maximumLineCount: 2
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignVCenter
-                                color: Kirigami.Theme.textColor
+                                color: model.activeTitleBarForegroundRole
                                 text: model.packageNameRole
                                 font.pixelSize: height * 0.4
+                            }
+                        }
+
+                        RowLayout {
+                            anchors.left: parent.left
+                            anchors.right: parent.right
+                            anchors.bottom: parent.bottom
+                            anchors.margins: Kirigami.Units.gridUnit
+                            spacing: Kirigami.Units.smallSpacing
+
+                            Repeater {
+                                model: colorSchemeItemLayout.swatchColors
+
+                                Rectangle {
+                                    Layout.fillWidth: true
+                                    Layout.preferredHeight: Kirigami.Units.gridUnit
+                                    color: modelData
+                                    border.width: 1
+                                    border.color: Qt.rgba(0, 0, 0, 0.25)
+                                }
                             }
                         }
                     }
@@ -89,7 +120,7 @@ Bigscreen.SidebarOverlay {
                         width: Kirigami.Units.iconSizes.smallMedium
                         height: width
                         source: 'dialog-positive'
-                        visible: kcm.themeName === model.packageNameRole
+                        visible: kcm.colorSchemeName === model.schemeNameRole
                     }
                 }
             }

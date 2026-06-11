@@ -70,21 +70,21 @@ Bigscreen.ScrollablePage {
             text: i18n("Wallpaper blur")
             description: i18n("Apply a blur effect to the wallpaper on the homescreen")
 
-            KeyNavigation.down: desktopThemeButton
+            KeyNavigation.down: colorSchemeButton
 
             onCheckedChanged: kcm.setUseWallpaperBlur(checked);
         }
 
         Bigscreen.ButtonDelegate {
-            id: desktopThemeButton
+            id: colorSchemeButton
             raisedBackground: true
 
             KeyNavigation.down: windowDecorationsDelegate
 
-            text: i18n("Global theme")
-            description: i18n("Set the system theme")
+            text: i18n("Color scheme")
+            description: i18n("Set the system colors")
 
-            onClicked: themeSidebar.open();
+            onClicked: colorSchemeSidebar.open();
         }
 
         QQC2.Label {
@@ -233,10 +233,9 @@ Bigscreen.ScrollablePage {
             onClosed: timeDateDelegate.forceActiveFocus()
         }
 
-        ThemeSidebar {
-            id: themeSidebar
-            onClosed: desktopThemeButton.forceActiveFocus()
+        ColorSchemeSidebar {
+            id: colorSchemeSidebar
+            onClosed: colorSchemeButton.forceActiveFocus()
         }
     }
 }
-

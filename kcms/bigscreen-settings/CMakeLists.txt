@@ -4,7 +4,7 @@
 
 set(bigscreensettings_SRCS
     bigscreensettings.cpp bigscreensettings.h
-    globalthemelistmodel.cpp globalthemelistmodel.h
+    colorschemelistmodel.cpp colorschemelistmodel.h
     timedated_interface.cpp timedated_interface.h
 )
 
@@ -20,7 +20,6 @@ target_link_libraries(kcm_mediacenter_bigscreen_settings
     Plasma::Plasma
     KF6::I18n
     KF6::KCMUtilsQuick
-    KF6::ConfigWidgets # KColorScheme
+    KF6::ColorScheme
     KF6::CoreAddons
-    KF6::Package
 )
