@@ -4,10 +4,13 @@
         "Description[ar]": "اضبط إدخال جهاز التحكم عن بُعد و متحكم ألعاب الفيديو",
         "Description[ca@valencia]": "Configura l'entrada del control remot i el controlador de joc",
         "Description[ca]": "Configura l'entrada del control remot i el controlador de joc",
+        "Description[fr]": "Configurer l'entrée à distance et du contrôleur de jeu",
         "Description[nl]": "Configureer de invoer voor de afstandsbediening en de spelcontroller",
         "Description[pt_BR]": "Configurar a entrada do controle remoto e do controlador de jogos",
+        "Description[sk]": "Nastaviť vstup diaľkového ovládača a herného ovládača",
         "Description[sl]": "Konfiguriraj vhod daljinskega upravljalnika in igralnega krmilnika",
         "Description[uk]": "Налаштувати введення з пульта керування та ігрового контролера",
+        "Description[zh_CN]": "配置遥控器和游戏控制器输入",
         "FormFactors": [
             "mediacenter"
         ],
@@ -16,19 +19,25 @@
         "Name[ar]": "الدّخل",
         "Name[ca@valencia]": "Entrada",
         "Name[ca]": "Entrada",
+        "Name[fr]": "Entrée",
         "Name[nl]": "Invoer",
         "Name[pt_BR]": "Entrada",
+        "Name[sk]": "Vstup",
         "Name[sl]": "Vhod",
-        "Name[uk]": "Введення"
+        "Name[uk]": "Введення",
+        "Name[zh_CN]": "输入"
     },
     "X-KDE-Keywords": "input,controller,gamepad,cec,remote",
     "X-KDE-Keywords[ar]": "إدخال,وحدة تحكم,مقبض ألعاب,سيك,جهاز تحكم عن بعد",
     "X-KDE-Keywords[ca@valencia]": "entrada,controlador,comandament de joc,control remot",
     "X-KDE-Keywords[ca]": "entrada,controlador,comandament de joc,control remot",
+    "X-KDE-Keywords[fr]": "entrée, contrôleur, manette, cec, télécommande",
     "X-KDE-Keywords[nl]": "invoer,controller,spelpad,cec,op afstand",
     "X-KDE-Keywords[pt_BR]": "entrada,controlador,gamepad,cec,remoto",
+    "X-KDE-Keywords[sk]": "vstup,ovládač,gamepad,cec,diaľkové ovládanie",
     "X-KDE-Keywords[sl]": "vhod,krmilnik,igralna ploščica,cec,oddaljeni",
     "X-KDE-Keywords[uk]": "input,controller,gamepad,cec,remote,введення,вхід,контролер,пульт,керування",
+    "X-KDE-Keywords[zh_CN]": "input,controller,gamepad,cec,remote,shuru,youxikongzhiqi,kongzhhiqi,shoubing,youxishoubing,yaokongqi,dianshiyaokongqi,输入,游戏控制器,控制器,手柄,游戏手柄,遥控器,电视遥控器",
     "X-KDE-System-Settings-Parent-Category": "hardware",
     "X-KDE-Weight": 40
 }
