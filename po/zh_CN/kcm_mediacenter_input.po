@@ -108,4 +108,4 @@ msgstr "没有连接游戏控制器"
 #: ui/main.qml:202
 #, kde-format
 msgid "Connect a game controller"
-msgstr ""
+msgstr "连接游戏控制器"
