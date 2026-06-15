@@ -173,7 +173,7 @@ msgstr "快捷键"
 #: ui/main.qml:151
 #, kde-format
 msgid "Open home overlay shortcut"
-msgstr "打开主文件夹覆盖快捷方式"
+msgstr "打开主页叠加显示层快捷键"
 
 #: ui/main.qml:171
 #, kde-format
