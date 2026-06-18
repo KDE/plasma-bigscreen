@@ -46,7 +46,11 @@ Window {
             opacityAnim.to = 1;
             opacityAnim.restart();
 
-            queryField.forceActiveFocus();
+            // Delay focus to ensure keyboard comes up
+            queryFieldFocusTimer.restart();
+        } else {
+            // Unfocus to ensure refocus brings up keyboard
+            queryField.focus = false;
         }
     }
 
@@ -57,6 +61,12 @@ Window {
             opacityAnim.to = 0;
             opacityAnim.restart();
         }
+    }
+
+    Timer {
+        id: queryFieldFocusTimer
+        interval: 100
+        onTriggered: queryField.forceActiveFocus();
     }
 
     // Search window contents
