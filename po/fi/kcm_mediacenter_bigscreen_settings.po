@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-23 00:45+0000\n"
+"POT-Creation-Date: 2026-06-19 00:45+0000\n"
 "PO-Revision-Date: 2025-09-03 18:42+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -26,6 +26,11 @@ msgstr "Tommi Nieminen"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "translator@legisign.org"
+
+#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
+#, kde-format
+msgid "Color scheme"
+msgstr ""
 
 #: ui/DatePicker.qml:38
 #, kde-format
@@ -119,14 +124,10 @@ msgstr ""
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr ""
 
-#: ui/main.qml:84 ui/ThemeSidebar.qml:23
-#, kde-format
-msgid "Global theme"
-msgstr "Yleisteema"
-
 #: ui/main.qml:85
-#, kde-format
-msgid "Set the system theme"
+#, fuzzy, kde-format
+#| msgid "Set the system theme"
+msgid "Set the system colors"
 msgstr "Aseta järjestelmäteemaksi"
 
 #: ui/main.qml:102
@@ -229,6 +230,9 @@ msgstr "Sekunti"
 #, kde-format
 msgid "AM/PM"
 msgstr "ap/ip"
+
+#~ msgid "Global theme"
+#~ msgstr "Yleisteema"
 
 #~ msgid "Time Display"
 #~ msgstr "Ajan näyttö"

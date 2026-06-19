@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-23 00:45+0000\n"
+"POT-Creation-Date: 2026-06-19 00:45+0000\n"
 "PO-Revision-Date: 2026-04-18 22:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -27,6 +27,11 @@ msgstr "Emir SARI"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "emir_sari@icloud.com"
+
+#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
+#, kde-format
+msgid "Color scheme"
+msgstr ""
 
 #: ui/DatePicker.qml:38
 #, kde-format
@@ -119,14 +124,10 @@ msgstr "Duvar kâğıdı bulanıklığı"
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr "Ana ekrandaki duvar kâğıdına bir bulanıklık efekti ekleyin"
 
-#: ui/main.qml:84 ui/ThemeSidebar.qml:23
-#, kde-format
-msgid "Global theme"
-msgstr "Global tema"
-
 #: ui/main.qml:85
-#, kde-format
-msgid "Set the system theme"
+#, fuzzy, kde-format
+#| msgid "Set the system theme"
+msgid "Set the system colors"
 msgstr "Sistem temasını ayarlayın"
 
 #: ui/main.qml:102
@@ -227,6 +228,9 @@ msgstr "Saniye"
 #, kde-format
 msgid "AM/PM"
 msgstr "ÖÖ/ÖS"
+
+#~ msgid "Global theme"
+#~ msgstr "Global tema"
 
 #~ msgid "Time Display"
 #~ msgstr "Zaman Görünümü"

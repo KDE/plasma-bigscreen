@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-23 00:45+0000\n"
+"POT-Creation-Date: 2026-06-19 00:45+0000\n"
 "PO-Revision-Date: 2026-03-30 11:41+0200\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -26,6 +26,11 @@ msgstr "Vít Pelčák,Libor Filípek"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "vit@pelcak.org,libor.filipek@gmail.com"
+
+#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
+#, kde-format
+msgid "Color scheme"
+msgstr ""
 
 #: ui/DatePicker.qml:38
 #, kde-format
@@ -118,14 +123,10 @@ msgstr "Rozostření tapety"
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr "Použít efekt rozostření na pozadí domovské obrazovky"
 
-#: ui/main.qml:84 ui/ThemeSidebar.qml:23
-#, kde-format
-msgid "Global theme"
-msgstr "Celkový motiv"
-
 #: ui/main.qml:85
-#, kde-format
-msgid "Set the system theme"
+#, fuzzy, kde-format
+#| msgid "Set the system theme"
+msgid "Set the system colors"
 msgstr "Nastavte motiv systému"
 
 #: ui/main.qml:102
@@ -226,3 +227,6 @@ msgstr "Sekunda"
 #, kde-format
 msgid "AM/PM"
 msgstr "ODP./DOP."
+
+#~ msgid "Global theme"
+#~ msgstr "Celkový motiv"

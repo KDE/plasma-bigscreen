@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-23 00:45+0000\n"
+"POT-Creation-Date: 2026-06-19 00:45+0000\n"
 "PO-Revision-Date: 2026-04-26 21:07+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -26,6 +26,11 @@ msgstr "박신조"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
+
+#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
+#, kde-format
+msgid "Color scheme"
+msgstr ""
 
 #: ui/DatePicker.qml:38
 #, kde-format
@@ -118,14 +123,10 @@ msgstr "배경 그림 흐리게"
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr "홈 화면 배경 그림에 흐림 효과 적용"
 
-#: ui/main.qml:84 ui/ThemeSidebar.qml:23
-#, kde-format
-msgid "Global theme"
-msgstr "전역 테마"
-
 #: ui/main.qml:85
-#, kde-format
-msgid "Set the system theme"
+#, fuzzy, kde-format
+#| msgid "Set the system theme"
+msgid "Set the system colors"
 msgstr "시스템 테마 설정"
 
 #: ui/main.qml:102
@@ -224,6 +225,9 @@ msgstr "초"
 #, kde-format
 msgid "AM/PM"
 msgstr "오전/오후"
+
+#~ msgid "Global theme"
+#~ msgstr "전역 테마"
 
 #~ msgid "Time Display"
 #~ msgstr "시간 표시"

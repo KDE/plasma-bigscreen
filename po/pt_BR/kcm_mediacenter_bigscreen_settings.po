@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-23 00:45+0000\n"
+"POT-Creation-Date: 2026-06-19 00:45+0000\n"
 "PO-Revision-Date: 2026-03-23 09:42-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -28,6 +28,11 @@ msgstr "Luiz Fernando Ranghetti, Geraldo Simião"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "elchevive@opensuse.org, geraldosimiao@fedoraproject.org"
+
+#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
+#, kde-format
+msgid "Color scheme"
+msgstr ""
 
 #: ui/DatePicker.qml:38
 #, kde-format
@@ -120,14 +125,10 @@ msgstr "Borrar papel de parede"
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr "Aplique um efeito de desfoque ao papel de parede na tela inicial"
 
-#: ui/main.qml:84 ui/ThemeSidebar.qml:23
-#, kde-format
-msgid "Global theme"
-msgstr "Tema global"
-
 #: ui/main.qml:85
-#, kde-format
-msgid "Set the system theme"
+#, fuzzy, kde-format
+#| msgid "Set the system theme"
+msgid "Set the system colors"
 msgstr "Define o tema do sistema"
 
 #: ui/main.qml:102
@@ -230,6 +231,9 @@ msgstr "Segundo"
 #, kde-format
 msgid "AM/PM"
 msgstr "AM/PM"
+
+#~ msgid "Global theme"
+#~ msgstr "Tema global"
 
 #~ msgid "Time Display"
 #~ msgstr "Exibição das horas"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-23 00:45+0000\n"
+"POT-Creation-Date: 2026-06-19 00:45+0000\n"
 "PO-Revision-Date: 2026-06-01 17:43-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -27,6 +27,11 @@ msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sahranbay@gmail.com, gheyret@gmail.com"
+
+#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
+#, kde-format
+msgid "Color scheme"
+msgstr ""
 
 #: ui/DatePicker.qml:38
 #, kde-format
@@ -119,14 +124,9 @@ msgstr ""
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr ""
 
-#: ui/main.qml:84 ui/ThemeSidebar.qml:23
-#, kde-format
-msgid "Global theme"
-msgstr "ئومۇمىيەت ئۆرنەك"
-
 #: ui/main.qml:85
 #, kde-format
-msgid "Set the system theme"
+msgid "Set the system colors"
 msgstr ""
 
 #: ui/main.qml:102
@@ -225,3 +225,6 @@ msgstr "سېكۇنت"
 #, kde-format
 msgid "AM/PM"
 msgstr "چ ب/چ ك"
+
+#~ msgid "Global theme"
+#~ msgstr "ئومۇمىيەت ئۆرنەك"

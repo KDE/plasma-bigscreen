@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-23 00:45+0000\n"
+"POT-Creation-Date: 2026-06-19 00:45+0000\n"
 "PO-Revision-Date: 2022-01-07 14:57+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -25,6 +25,11 @@ msgstr "Roman Paholík"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wizzardsk@gmail.com"
+
+#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
+#, kde-format
+msgid "Color scheme"
+msgstr ""
 
 #: ui/DatePicker.qml:38
 #, kde-format
@@ -117,14 +122,10 @@ msgstr "Rozmazanie tapety"
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr "Použiť efekt rozmazania na tapetu na domovskej obrazovke"
 
-#: ui/main.qml:84 ui/ThemeSidebar.qml:23
-#, kde-format
-msgid "Global theme"
-msgstr "Globálna téma"
-
 #: ui/main.qml:85
-#, kde-format
-msgid "Set the system theme"
+#, fuzzy, kde-format
+#| msgid "Set the system theme"
+msgid "Set the system colors"
 msgstr "Nastaviť systémovú tému"
 
 #: ui/main.qml:102
@@ -225,6 +226,9 @@ msgstr "Second"
 #, kde-format
 msgid "AM/PM"
 msgstr "AM/PM"
+
+#~ msgid "Global theme"
+#~ msgstr "Globálna téma"
 
 #~ msgid "Time Display"
 #~ msgstr "Zobrazenie času"

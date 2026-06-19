@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-23 00:45+0000\n"
+"POT-Creation-Date: 2026-06-19 00:45+0000\n"
 "PO-Revision-Date: 2026-03-23 06:41+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -27,6 +27,11 @@ msgstr "Matjaž Jeran"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "matjaz.jeran@amis.net"
+
+#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
+#, kde-format
+msgid "Color scheme"
+msgstr ""
 
 #: ui/DatePicker.qml:38
 #, kde-format
@@ -119,14 +124,10 @@ msgstr "Zameglitev ozadja"
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr "Uporabi učinek zameglitve ozadja na domačem zaslonu"
 
-#: ui/main.qml:84 ui/ThemeSidebar.qml:23
-#, kde-format
-msgid "Global theme"
-msgstr "Globalna tema"
-
 #: ui/main.qml:85
-#, kde-format
-msgid "Set the system theme"
+#, fuzzy, kde-format
+#| msgid "Set the system theme"
+msgid "Set the system colors"
 msgstr "Nastavi sistemsko temo"
 
 #: ui/main.qml:102
@@ -226,6 +227,9 @@ msgstr "Sekunda"
 #, kde-format
 msgid "AM/PM"
 msgstr "Dop/Pop"
+
+#~ msgid "Global theme"
+#~ msgstr "Globalna tema"
 
 #~ msgid "Time Display"
 #~ msgstr "Prikaz časa"

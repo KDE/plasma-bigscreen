@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-23 00:45+0000\n"
+"POT-Creation-Date: 2026-06-19 00:45+0000\n"
 "PO-Revision-Date: 2026-03-23 14:24+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -26,6 +26,11 @@ msgstr "Vincenzo Reale"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "smart2128vr@gmail.com"
+
+#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
+#, kde-format
+msgid "Color scheme"
+msgstr ""
 
 #: ui/DatePicker.qml:38
 #, kde-format
@@ -119,14 +124,10 @@ msgstr "Sfocatura dello sfondo"
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr "Applica un effetto di sfocatura allo sfondo della schermata iniziale"
 
-#: ui/main.qml:84 ui/ThemeSidebar.qml:23
-#, kde-format
-msgid "Global theme"
-msgstr "Tema globale"
-
 #: ui/main.qml:85
-#, kde-format
-msgid "Set the system theme"
+#, fuzzy, kde-format
+#| msgid "Set the system theme"
+msgid "Set the system colors"
 msgstr "Imposta il tema del sistema"
 
 #: ui/main.qml:102
@@ -228,6 +229,9 @@ msgstr "Secondo"
 #, kde-format
 msgid "AM/PM"
 msgstr "AM/PM"
+
+#~ msgid "Global theme"
+#~ msgstr "Tema globale"
 
 #~ msgid "Time Display"
 #~ msgstr "Visualizzazione dell'orario"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-23 00:45+0000\n"
+"POT-Creation-Date: 2026-06-19 00:45+0000\n"
 "PO-Revision-Date: 2026-03-24 11:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -27,6 +27,11 @@ msgstr "زايد السعيدي"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zayed.alsaidi@gmail.com"
+
+#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
+#, kde-format
+msgid "Color scheme"
+msgstr ""
 
 #: ui/DatePicker.qml:38
 #, kde-format
@@ -119,14 +124,10 @@ msgstr "طمس الخلفية"
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr "تطبيق تأثير الطمس على خلفية الشاشة الرئيسة"
 
-#: ui/main.qml:84 ui/ThemeSidebar.qml:23
-#, kde-format
-msgid "Global theme"
-msgstr "سمة عامة"
-
 #: ui/main.qml:85
-#, kde-format
-msgid "Set the system theme"
+#, fuzzy, kde-format
+#| msgid "Set the system theme"
+msgid "Set the system colors"
 msgstr "عيّن سمة النظام"
 
 #: ui/main.qml:102
@@ -225,6 +226,9 @@ msgstr "ثانية"
 #, kde-format
 msgid "AM/PM"
 msgstr "صباحا/مساءا"
+
+#~ msgid "Global theme"
+#~ msgstr "سمة عامة"
 
 #~ msgid "Time Display"
 #~ msgstr "عرض الوقت:"
