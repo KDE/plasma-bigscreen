@@ -45,6 +45,14 @@ For CEC support, ensure that your user has permission to access the device:
 usermod -aG input $USER
 ```
 
+If that doesn't work, the [udev rule](https://invent.kde.org/plasma/plasma-bigscreen/-/blob/master/inputhandler/40-uinput.rules) might not be working. Try this broader permission:
+
+```bash
+ls -l /dev/ttyACM* # Find the group the cec device belongs to
+
+usermod -aG dialout $USER # Replace dialout with the group that the cec device belongs to
+```
+
 ### Test on a development machine
 
 It is recommended to use `kde-builder` to build this from source.
