@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-19 00:45+0000\n"
-"PO-Revision-Date: 2026-03-29 13:09+0200\n"
+"PO-Revision-Date: 2026-06-19 08:59+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -32,7 +32,7 @@ msgstr "txemaq@gmail.com"
 #: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
 #, kde-format
 msgid "Color scheme"
-msgstr ""
+msgstr "Esquema de color"
 
 #: ui/DatePicker.qml:38
 #, kde-format
@@ -128,10 +128,9 @@ msgstr ""
 "Aplica un efecte de difuminat al fons de pantalla de la pantalla d'inici"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Set the system theme"
+#, kde-format
 msgid "Set the system colors"
-msgstr "Estableix el tema del sistema"
+msgstr "Estableix els colors del sistema"
 
 #: ui/main.qml:102
 #, kde-format

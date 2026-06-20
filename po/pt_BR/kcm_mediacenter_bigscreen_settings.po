@@ -3,13 +3,13 @@
 #
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2021, 2023.
 # SPDX-FileCopyrightText: 2025 Geraldo Simiao <geraldosimiao@fedoraproject.org>
-# SPDX-FileCopyrightText: 2025, 2026 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025-2026 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-19 00:45+0000\n"
-"PO-Revision-Date: 2026-03-23 09:42-0300\n"
+"PO-Revision-Date: 2026-06-19 06:09-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -32,7 +32,7 @@ msgstr "elchevive@opensuse.org, geraldosimiao@fedoraproject.org"
 #: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
 #, kde-format
 msgid "Color scheme"
-msgstr ""
+msgstr "Esquema de cores"
 
 #: ui/DatePicker.qml:38
 #, kde-format
@@ -126,10 +126,9 @@ msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr "Aplique um efeito de desfoque ao papel de parede na tela inicial"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Set the system theme"
+#, kde-format
 msgid "Set the system colors"
-msgstr "Define o tema do sistema"
+msgstr "Define as cores do sistema"
 
 #: ui/main.qml:102
 #, kde-format

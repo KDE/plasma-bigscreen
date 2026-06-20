@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2022.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022-2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-19 00:45+0000\n"
-"PO-Revision-Date: 2026-04-18 22:05+0300\n"
+"PO-Revision-Date: 2026-06-19 18:53+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,7 +31,7 @@ msgstr "emir_sari@icloud.com"
 #: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
 #, kde-format
 msgid "Color scheme"
-msgstr ""
+msgstr "Renk şeması"
 
 #: ui/DatePicker.qml:38
 #, kde-format
@@ -125,10 +125,9 @@ msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr "Ana ekrandaki duvar kâğıdına bir bulanıklık efekti ekleyin"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Set the system theme"
+#, kde-format
 msgid "Set the system colors"
-msgstr "Sistem temasını ayarlayın"
+msgstr "Sistem renklerini ayarlayın"
 
 #: ui/main.qml:102
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2021, 2025, 2026 Alexander Yavorsky <kekcuha@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2025-2026 Alexander Yavorsky <kekcuha@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-19 00:45+0000\n"
-"PO-Revision-Date: 2026-04-03 22:19+0200\n"
+"PO-Revision-Date: 2026-06-19 20:54+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,7 +31,7 @@ msgstr "kekcuha@gmail.com"
 #: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
 #, kde-format
 msgid "Color scheme"
-msgstr ""
+msgstr "Цветовая схема"
 
 #: ui/DatePicker.qml:38
 #, kde-format
@@ -125,10 +125,9 @@ msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr "Применить размытие к фоновому изображению на домашнем экране"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Set the system theme"
+#, kde-format
 msgid "Set the system colors"
-msgstr "Изменить оформление системы"
+msgstr "Изменить цветовую схему системы"
 
 #: ui/main.qml:102
 #, kde-format
