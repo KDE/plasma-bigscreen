@@ -9,7 +9,8 @@ This repository contains shell components for Plasma Bigscreen.
 
 * Project page: [plasma-bigscreen.org](https://plasma-bigscreen.org)
 * Repository: [invent.kde.org/plasma/plasma-bigscreen](https://invent.kde.org/plasma/plasma-bigscreen)
-* Documentation: [invent.kde.org/plasma/plasma-bigscreen/-/wikis/home](https://invent.kde.org/plasma/plasma-bigscreen/-/wikis/home)
+* Documentation: [plasma-bigscreen.org/docs](https://plasma-bigscreen.org/docs/)
+* Wiki: [userbase.kde.org/Plasma_Bigscreen](https://userbase.kde.org/Plasma_Bigscreen)
 * Development channel: [matrix.to/#/#plasma-bigscreen:kde.org](https://matrix.to/#/#plasma-bigscreen:kde.org)
 
 Plasma Bigscreen is a user-friendly, open-source, Wayland desktop environment designed for devices like HTPCs and SBCs connected to TVs and projectors. It provides an intuitive experience that allows for easy navigation from a distance using remote controls. Discover an engaging environment that adapts to your preferences, offering the safety and privacy protection that come with free and open source software!
