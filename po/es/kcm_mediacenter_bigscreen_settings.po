@@ -2,13 +2,13 @@
 # Copyright (C) 2021-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2021, 2023, 2024, 2025, 2026 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2023-2026 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-19 00:45+0000\n"
-"PO-Revision-Date: 2026-03-29 01:47+0100\n"
+"PO-Revision-Date: 2026-06-21 00:08+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -31,7 +31,7 @@ msgstr "vrcordoba@gmail.com"
 #: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
 #, kde-format
 msgid "Color scheme"
-msgstr ""
+msgstr "Esquema de color"
 
 #: ui/DatePicker.qml:38
 #, kde-format
@@ -126,10 +126,9 @@ msgstr ""
 "Aplica un efecto de difuminado al fondo de pantalla  en la ventana de inicio"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Set the system theme"
+#, kde-format
 msgid "Set the system colors"
-msgstr "Establecer el tema del sistema"
+msgstr "Establecer los colores del sistema"
 
 #: ui/main.qml:102
 #, kde-format
@@ -231,6 +230,3 @@ msgstr "Segundo"
 #, kde-format
 msgid "AM/PM"
 msgstr "AM/PM"
-
-#~ msgid "Global theme"
-#~ msgstr "Tema global"

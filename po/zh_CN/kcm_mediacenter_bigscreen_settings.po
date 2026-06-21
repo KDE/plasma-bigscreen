@@ -125,10 +125,9 @@ msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr "对主屏幕上的壁纸应用模糊效果"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Set the system theme"
+#, kde-format
 msgid "Set the system colors"
-msgstr "设置系统主题"
+msgstr ""
 
 #: ui/main.qml:102
 #, kde-format
@@ -226,6 +225,3 @@ msgstr "秒"
 #, kde-format
 msgid "AM/PM"
 msgstr "AM/PM"
-
-#~ msgid "Global theme"
-#~ msgstr "全局主题"
