@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-10 00:47+0000\n"
-"PO-Revision-Date: 2026-06-10 08:16+0200\n"
+"PO-Revision-Date: 2026-06-21 10:37+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -54,8 +54,8 @@ msgid ""
 "Controller and remote settings are only available when plasma-bigscreen-"
 "inputhandler is running"
 msgstr ""
-"La configuració del controlador i el control remot només estaran disponibles "
-"quan s'està executant «plasma-bigscreen-inputhandler»"
+"La configuració del controlador i el comandament a distància només estaran "
+"disponibles quan s'està executant «plasma-bigscreen-inputhandler»"
 
 #: ui/main.qml:112
 #, kde-format
@@ -68,20 +68,20 @@ msgid ""
 "Navigate the system interface with connected controllers/remotes (apps can "
 "always still use them directly)"
 msgstr ""
-"Navega per la interfície del sistema amb controladors/remots connectats (les "
-"aplicacions sempre poden utilitzar-los directament)"
+"Navega per la interfície del sistema amb controladors/comandaments a "
+"distància connectats (les aplicacions sempre poden utilitzar-los directament)"
 
 #: ui/main.qml:130
 #, kde-format
 msgid "TV remote"
-msgstr "Control remot de TV"
+msgstr "Comandament a distància de TV"
 
 #: ui/main.qml:131
 #, kde-format
 msgid "Navigate the system interface with the connected TV remote (CEC)"
 msgstr ""
-"Navega per la interfície del sistema amb el control remot de TV connectat "
-"(CEC)"
+"Navega per la interfície del sistema amb el comandament a distància de TV "
+"connectat (CEC)"
 
 #: ui/main.qml:150
 #, kde-format
