@@ -6,7 +6,7 @@
 cmake_minimum_required(VERSION 3.24)
 
 project(plasma-bigscreen)
-set(PROJECT_VERSION "6.7.1")
+set(PROJECT_VERSION "6.7.2")
 
 set(QT_MIN_VERSION "6.10.0")
 set(KF_MIN_VERSION "6.14.0")
