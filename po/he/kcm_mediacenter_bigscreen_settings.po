@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2024, 2025, 2026 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024-2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-19 00:45+0000\n"
-"PO-Revision-Date: 2026-03-23 16:28+0200\n"
+"PO-Revision-Date: 2026-06-23 08:44+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,7 +31,7 @@ msgstr "kde-l10n-he@kde.org"
 #: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
 #, kde-format
 msgid "Color scheme"
-msgstr ""
+msgstr "ערכת צבעים"
 
 #: ui/DatePicker.qml:38
 #, kde-format
@@ -125,10 +125,9 @@ msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr "החלת טשטוש על תמונת הרקע במסך הבית"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Set the system theme"
+#, kde-format
 msgid "Set the system colors"
-msgstr "הגדרת ערכת העיצוב"
+msgstr "הגדרת צבעי המערכת"
 
 #: ui/main.qml:102
 #, kde-format
