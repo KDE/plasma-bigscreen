@@ -1,12 +1,11 @@
 # Translation of kcm_mediacenter_wifi to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2022-01-15 18:20+0100\n"
+"PO-Revision-Date: 2026-06-24 21:02+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -14,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 26.07.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -27,12 +26,12 @@ msgstr "Tilkopla"
 #: ui/DetailsText.qml:33
 #, kde-format
 msgid "IP Address Details"
-msgstr ""
+msgstr "IP-adressedetaljar"
 
 #: ui/DeviceConnectionSidebar.qml:138
 #, kde-format
 msgid "Network information"
-msgstr ""
+msgstr "Nettverksinformasjon"
 
 #: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
 #, kde-format
@@ -40,15 +39,14 @@ msgid "Connect"
 msgstr "Kopla til"
 
 #: ui/DeviceConnectionSidebar.qml:149
-#, fuzzy, kde-format
-#| msgid "Connect"
+#, kde-format
 msgid "Disconnect"
-msgstr "Kopla til"
+msgstr "Kopla frå"
 
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
 msgid "Forget network"
-msgstr ""
+msgstr "Gløym nettverket"
 
 #: ui/DeviceConnectionSidebar.qml:190
 #, kde-format
@@ -56,10 +54,9 @@ msgid "Are you sure you want to forget the network %1?"
 msgstr "Er du sikker på at du vil gløyma nettverket %1?"
 
 #: ui/DeviceConnectionSidebar.qml:213
-#, fuzzy, kde-format
-#| msgid "Network"
+#, kde-format
 msgid "Network details"
-msgstr "Nettverk"
+msgstr "Nettverksdetaljar"
 
 #: ui/DeviceConnectionSidebar.qml:242
 #, kde-format
@@ -89,7 +86,7 @@ msgstr "Skriv inn passord for %1"
 #: ui/PasswordDialog.qml:34
 #, kde-format
 msgid "Password…"
-msgstr ""
+msgstr "Passord …"
 
 #: ui/PasswordDialog.qml:59
 #, kde-format
