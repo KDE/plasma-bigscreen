@@ -1,0 +1,112 @@
+# Translation of kcm_mediacenter_input to Norwegian Nynorsk
+#
+# SPDX-FileCopyrightText: 2026 Karl Ove Hufthammer <karl@huftis.org>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-06-10 00:47+0000\n"
+"PO-Revision-Date: 2026-06-24 21:01+0200\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.07.70\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: ui/GameControllerSidebar.qml:37
+#, kde-format
+msgid "System navigation"
+msgstr "Systemnavigering"
+
+#: ui/GameControllerSidebar.qml:52
+#, kde-format
+msgid "START button when suppressed"
+msgstr ""
+
+#: ui/GameControllerSidebar.qml:53
+#, kde-format
+msgid ""
+"Handle the START button even when input is suppressed (may conflict with "
+"some apps)"
+msgstr ""
+
+#: ui/main.qml:17
+#, kde-format
+msgid "Input"
+msgstr ""
+
+#: ui/main.qml:105
+#, kde-format
+msgid "Input daemon is not running"
+msgstr ""
+
+#: ui/main.qml:106
+#, kde-format
+msgid ""
+"Controller and remote settings are only available when plasma-bigscreen-"
+"inputhandler is running"
+msgstr ""
+
+#: ui/main.qml:112
+#, kde-format
+msgid "System Navigation"
+msgstr ""
+
+#: ui/main.qml:113
+#, kde-format
+msgid ""
+"Navigate the system interface with connected controllers/remotes (apps can "
+"always still use them directly)"
+msgstr ""
+
+#: ui/main.qml:130
+#, kde-format
+msgid "TV remote"
+msgstr "TV-fjernkontroll"
+
+#: ui/main.qml:131
+#, kde-format
+msgid "Navigate the system interface with the connected TV remote (CEC)"
+msgstr ""
+
+#: ui/main.qml:150
+#, kde-format
+msgid "Game Controllers"
+msgstr "Spelkontrollarar"
+
+#: ui/main.qml:160
+#, kde-format
+msgid "Game controllers"
+msgstr "Spelkontrollarar"
+
+#: ui/main.qml:161
+#, kde-format
+msgid "Use connected game controllers for system navigation"
+msgstr ""
+
+#: ui/main.qml:180
+#, kde-format
+msgid "Automatic input suppression"
+msgstr ""
+
+#: ui/main.qml:181
+#, kde-format
+msgid "Stop controller navigation while another app is using a controller"
+msgstr ""
+
+#: ui/main.qml:201
+#, kde-format
+msgid "No controllers connected"
+msgstr ""
+
+#: ui/main.qml:202
+#, kde-format
+msgid "Connect a game controller"
+msgstr "Kopla til spelkontrollar"

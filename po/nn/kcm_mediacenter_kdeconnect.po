@@ -1,12 +1,11 @@
 # Translation of kcm_mediacenter_kdeconnect to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-21 00:47+0000\n"
-"PO-Revision-Date: 2021-02-06 14:17+0100\n"
+"PO-Revision-Date: 2026-06-24 21:03+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -14,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.03.70\n"
+"X-Generator: Lokalize 26.07.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -52,7 +51,7 @@ msgstr "Eininga er ikkje para"
 #: ui/delegates/UnpairedView.qml:56
 #, kde-format
 msgid "Pairing request sent"
-msgstr ""
+msgstr "Paringsførespurnad send"
 
 #: ui/delegates/UnpairedView.qml:60
 #, kde-format
@@ -72,4 +71,4 @@ msgstr "KDE Connect"
 #: ui/main.qml:44
 #, kde-format
 msgid "Devices"
-msgstr ""
+msgstr "Einingar"

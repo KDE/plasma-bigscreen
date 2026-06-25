@@ -1,0 +1,287 @@
+# Translation of kcm_mediacenter_bluetooth to Norwegian Nynorsk
+#
+# SPDX-FileCopyrightText: 2026 Karl Ove Hufthammer <karl@huftis.org>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-04-19 00:46+0000\n"
+"PO-Revision-Date: 2026-06-24 21:00+0200\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.07.70\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: ui/DeviceConnectionSidebar.qml:37
+#, kde-format
+msgid "Device information"
+msgstr "Einingsinformasjon"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Connecting…"
+msgstr "Koplar til …"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Disconnecting…"
+msgstr "Koplar frå …"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Disconnect"
+msgstr "Kopla frå"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Pair"
+msgstr "Par"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Connect"
+msgstr "Kopla til"
+
+#: ui/DeviceConnectionSidebar.qml:86
+#, kde-format
+msgid "Forget device"
+msgstr "Gløym eininga"
+
+#: ui/DeviceConnectionSidebar.qml:97
+#, kde-format
+msgid "Are you sure you want to forget the device %1?"
+msgstr "Er du sikker på at du vil gløyma eininga «%1»?"
+
+#: ui/DeviceConnectionSidebar.qml:119
+#, kde-format
+msgid "Trusted"
+msgstr "Tiltrudd"
+
+#: ui/DeviceConnectionSidebar.qml:120
+#, kde-format
+msgid "Auto-accept incoming connections"
+msgstr "Godta automatisk innkommande tilkoplingar"
+
+#: ui/DeviceConnectionSidebar.qml:134
+#, kde-format
+msgid "Blocked"
+msgstr "Blokkert"
+
+#: ui/DeviceConnectionSidebar.qml:135
+#, kde-format
+msgid "Reject all connections from this device"
+msgstr "Avvis alle tilkoplingar frå eininga"
+
+#: ui/DeviceConnectionSidebar.qml:151
+#, kde-format
+msgid "Device details"
+msgstr "Einingsdetaljar"
+
+#: ui/DeviceConnectionSidebar.qml:161
+#, kde-format
+msgid "Type: %1"
+msgstr "Type: %1"
+
+#: ui/DeviceConnectionSidebar.qml:166
+#, kde-format
+msgid "Address: %1"
+msgstr "Adresse: %1"
+
+#: ui/DeviceConnectionSidebar.qml:172
+#, kde-format
+msgid "Battery: %1"
+msgstr "Batteri: %1"
+
+#: ui/DeviceConnectionSidebar.qml:173
+#, kde-format
+msgctxt "Battery percentage level"
+msgid "%1%"
+msgstr "%1 %"
+
+#: ui/DeviceConnectionSidebar.qml:179 ui/DeviceConnectionSidebar.qml:186
+#, kde-format
+msgid "Change name"
+msgstr "Endra namn"
+
+#: ui/DeviceDelegate.qml:33
+#, kde-format
+msgid "Connected"
+msgstr "Kopla til"
+
+#: ui/DeviceDelegate.qml:39
+#, kde-format
+msgid "%1% Battery"
+msgstr "%1 % batteri"
+
+#: ui/main.qml:25
+#, kde-format
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: ui/main.qml:69
+#, kde-format
+msgid "Enable Bluetooth"
+msgstr "Bruk Bluetooth"
+
+#: ui/main.qml:88
+#, kde-format
+msgid "Paired devices"
+msgstr "Para einingar"
+
+#: ui/main.qml:121
+#, kde-format
+msgid "Available devices"
+msgstr "Tilgjengelege einingar"
+
+#: ui/script.js:13
+#, kde-format
+msgctxt "This device is a Phone"
+msgid "Phone"
+msgstr "Telefon"
+
+#: ui/script.js:15
+#, kde-format
+msgctxt "This device is a Modem"
+msgid "Modem"
+msgstr "Modem"
+
+#: ui/script.js:17
+#, kde-format
+msgctxt "This device is a Computer"
+msgid "Computer"
+msgstr "Datamaskin"
+
+#: ui/script.js:19
+#, kde-format
+msgctxt "This device is of type Network"
+msgid "Network"
+msgstr "Nettverk"
+
+#: ui/script.js:21
+#, kde-format
+msgctxt "This device is a Headset"
+msgid "Headset"
+msgstr "Hovudsett"
+
+#: ui/script.js:23
+#, kde-format
+msgctxt "This device is a Headphones"
+msgid "Headphones"
+msgstr "Hovudtelefonar"
+
+#: ui/script.js:25
+#, kde-format
+msgctxt "This device is an Audio/Video device"
+msgid "Multimedia"
+msgstr "Multimedia"
+
+#: ui/script.js:27
+#, kde-format
+msgctxt "This device is a Keyboard (not the music instrument)"
+msgid "Keyboard"
+msgstr "Tastatur"
+
+#: ui/script.js:29
+#, kde-format
+msgctxt "This device is a Mouse"
+msgid "Mouse"
+msgstr "Mus"
+
+#: ui/script.js:31
+#, kde-format
+msgctxt "This device is a Game controller"
+msgid "Game controller"
+msgstr "Spelkontrollar"
+
+#: ui/script.js:33
+#, kde-format
+msgctxt "This device is a Graphics Tablet (input device)"
+msgid "Tablet"
+msgstr "Teikneplate"
+
+#: ui/script.js:35
+#, kde-format
+msgctxt "This device is a Peripheral device"
+msgid "Peripheral"
+msgstr "Tilleggseining"
+
+#: ui/script.js:37
+#, kde-format
+msgctxt "This device is a Camera"
+msgid "Camera"
+msgstr "Kamera"
+
+#: ui/script.js:39
+#, kde-format
+msgctxt "This device is a Printer"
+msgid "Printer"
+msgstr "Skrivar"
+
+#: ui/script.js:41
+#, kde-format
+msgctxt ""
+"This device is an Imaging device (printer, scanner, camera, display, …)"
+msgid "Imaging"
+msgstr "Bileteining"
+
+#: ui/script.js:43
+#, kde-format
+msgctxt "This device is a Wearable"
+msgid "Wearable"
+msgstr "Kroppsboren"
+
+#: ui/script.js:45
+#, kde-format
+msgctxt "This device is a Toy"
+msgid "Toy"
+msgstr "Leiketøy"
+
+#: ui/script.js:47
+#, kde-format
+msgctxt "This device is a Health device"
+msgid "Health"
+msgstr "Helse"
+
+#: ui/script.js:53
+#, kde-format
+msgid "File transfer"
+msgstr "Filoverføring"
+
+#: ui/script.js:56
+#, kde-format
+msgid "Send file"
+msgstr "Send fil"
+
+#: ui/script.js:59
+#, kde-format
+msgid "Input"
+msgstr "Inndata"
+
+#: ui/script.js:62
+#, kde-format
+msgid "Audio"
+msgstr "Lyd"
+
+#: ui/script.js:65
+#, kde-format
+msgid "Network"
+msgstr "Nettverk"
+
+#: ui/script.js:69
+#, kde-format
+msgid "Other"
+msgstr "Anna"
+
+#: ui/script.js:72
+#, kde-format
+msgctxt "List separator"
+msgid ", "
+msgstr ", "
