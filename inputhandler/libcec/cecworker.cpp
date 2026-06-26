@@ -97,6 +97,48 @@ void CECWorker::cleanup()
     qDebug() << "CECWorker: Cleanup completed";
 }
 
+bool CECWorker::sendStandby(int logicalAddress)
+{
+    if (!m_cecAdapter) {
+        qWarning() << "CECWorker: sendStandby called but no adapter available";
+        return false;
+    }
+    const auto la = static_cast<cec_logical_address>(logicalAddress);
+    qDebug() << "CECWorker: Sending standby to logical address" << logicalAddress;
+    return m_cecAdapter->StandbyDevices(la);
+}
+
+bool CECWorker::sendImageViewOn(int logicalAddress)
+{
+    if (!m_cecAdapter) {
+        qWarning() << "CECWorker: sendImageViewOn called but no adapter available";
+        return false;
+    }
+    const auto la = static_cast<cec_logical_address>(logicalAddress);
+    qDebug() << "CECWorker: Powering on logical address" << logicalAddress;
+    return m_cecAdapter->PowerOnDevices(la);
+}
+
+bool CECWorker::sendActiveSource()
+{
+    if (!m_cecAdapter) {
+        qWarning() << "CECWorker: sendActiveSource called but no adapter available";
+        return false;
+    }
+    qDebug() << "CECWorker: Claiming active source as Recording Device";
+    return m_cecAdapter->SetActiveSource(CEC_DEVICE_TYPE_RECORDING_DEVICE);
+}
+
+int CECWorker::queryDevicePowerStatus(int logicalAddress)
+{
+    if (!m_cecAdapter) {
+        qWarning() << "CECWorker: queryDevicePowerStatus called but no adapter available";
+        return CEC_POWER_STATUS_UNKNOWN;
+    }
+    const auto la = static_cast<cec_logical_address>(logicalAddress);
+    return static_cast<int>(m_cecAdapter->GetDevicePowerStatus(la));
+}
+
 // NOTE: These static callbacks are invoked from libcec's internal thread,
 // NOT from the Qt worker thread.
 

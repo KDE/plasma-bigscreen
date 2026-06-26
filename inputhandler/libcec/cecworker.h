@@ -27,6 +27,14 @@ public Q_SLOTS:
     void discoverDevices();
     void cleanup();
 
+    // Outbound CEC commands. Must be invoked on the worker thread
+    // (use QMetaObject::invokeMethod from CECController, typically with
+    // Qt::BlockingQueuedConnection to retrieve the return value).
+    bool sendStandby(int logicalAddress);
+    bool sendImageViewOn(int logicalAddress);
+    bool sendActiveSource();
+    int queryDevicePowerStatus(int logicalAddress);
+
 Q_SIGNALS:
     void initialized(bool success);
     void deviceDiscovered(const QString &comName);

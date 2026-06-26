@@ -32,6 +32,16 @@ public:
         return m_adapterCount > 0;
     }
 
+    // Outbound CEC commands. Synchronous: the call blocks the caller's
+    // thread until the worker thread has dispatched the request to libcec
+    // and returned its result. libcec calls themselves are fast (single
+    // CEC bus round-trip at most), so blocking the D-Bus caller is fine.
+    // logicalAddress defaults to 0 (TV).
+    bool sendStandby(int logicalAddress = 0);
+    bool sendImageViewOn(int logicalAddress = 0);
+    bool sendActiveSource();
+    int queryDevicePowerStatus(int logicalAddress = 0);
+
 public Q_SLOTS:
     void requestNextKey();
     void cancelNextKeyRequest();

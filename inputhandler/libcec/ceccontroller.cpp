@@ -204,6 +204,65 @@ void CECController::onHotplugTimeout()
     }
 }
 
+bool CECController::sendStandby(int logicalAddress)
+{
+    if (!m_initialized || !m_worker) {
+        qWarning() << "CECController: sendStandby called before worker initialised";
+        return false;
+    }
+    bool result = false;
+    QMetaObject::invokeMethod(m_worker,
+                              "sendStandby",
+                              Qt::BlockingQueuedConnection,
+                              Q_RETURN_ARG(bool, result),
+                              Q_ARG(int, logicalAddress));
+    return result;
+}
+
+bool CECController::sendImageViewOn(int logicalAddress)
+{
+    if (!m_initialized || !m_worker) {
+        qWarning() << "CECController: sendImageViewOn called before worker initialised";
+        return false;
+    }
+    bool result = false;
+    QMetaObject::invokeMethod(m_worker,
+                              "sendImageViewOn",
+                              Qt::BlockingQueuedConnection,
+                              Q_RETURN_ARG(bool, result),
+                              Q_ARG(int, logicalAddress));
+    return result;
+}
+
+bool CECController::sendActiveSource()
+{
+    if (!m_initialized || !m_worker) {
+        qWarning() << "CECController: sendActiveSource called before worker initialised";
+        return false;
+    }
+    bool result = false;
+    QMetaObject::invokeMethod(m_worker,
+                              "sendActiveSource",
+                              Qt::BlockingQueuedConnection,
+                              Q_RETURN_ARG(bool, result));
+    return result;
+}
+
+int CECController::queryDevicePowerStatus(int logicalAddress)
+{
+    if (!m_initialized || !m_worker) {
+        qWarning() << "CECController: queryDevicePowerStatus called before worker initialised";
+        return CEC_POWER_STATUS_UNKNOWN;
+    }
+    int result = CEC_POWER_STATUS_UNKNOWN;
+    QMetaObject::invokeMethod(m_worker,
+                              "queryDevicePowerStatus",
+                              Qt::BlockingQueuedConnection,
+                              Q_RETURN_ARG(int, result),
+                              Q_ARG(int, logicalAddress));
+    return result;
+}
+
 void CECController::requestNextKey()
 {
     m_catchNextInput = true;
