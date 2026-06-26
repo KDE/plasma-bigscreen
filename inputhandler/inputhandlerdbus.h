@@ -62,6 +62,16 @@ public Q_SLOTS:
     Q_SCRIPTABLE void setControllerEnabled(const QString &uniqueIdentifier, bool enabled);
     Q_SCRIPTABLE void setStartButtonEnabledWhenSuppressed(const QString &uniqueIdentifier, bool enabled);
 
+    // Outbound CEC commands. logicalAddress is the CEC logical address
+    // of the target device (0 = TV, see CEC spec table 10-6). Returns
+    // false (or CEC_POWER_STATUS_UNKNOWN for queryDevicePowerStatus) if
+    // libcec is not initialised, no adapter is open, or the build does
+    // not include libcec support.
+    Q_SCRIPTABLE bool sendStandby(int logicalAddress);
+    Q_SCRIPTABLE bool sendImageViewOn(int logicalAddress);
+    Q_SCRIPTABLE bool sendActiveSource();
+    Q_SCRIPTABLE int queryDevicePowerStatus(int logicalAddress);
+
 Q_SIGNALS:
     // DBus signals
     Q_SCRIPTABLE void sdlControllerAdded(const QString &name);

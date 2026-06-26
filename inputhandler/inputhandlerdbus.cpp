@@ -11,6 +11,7 @@
 
 #ifdef HAS_LIBCEC
 #include "libcec/ceccontroller.h"
+#include <libcec/cectypes.h>
 #endif
 
 #include <QDBusConnection>
@@ -175,6 +176,59 @@ void InputHandlerDBus::setInputSuppressed(bool suppress)
         return;
     }
     m_sdlController->setSuppressInput(suppress);
+}
+
+bool InputHandlerDBus::sendStandby(int logicalAddress)
+{
+#ifdef HAS_LIBCEC
+    if (!m_cecController) {
+        return false;
+    }
+    return m_cecController->sendStandby(logicalAddress);
+#else
+    Q_UNUSED(logicalAddress);
+    return false;
+#endif
+}
+
+bool InputHandlerDBus::sendImageViewOn(int logicalAddress)
+{
+#ifdef HAS_LIBCEC
+    if (!m_cecController) {
+        return false;
+    }
+    return m_cecController->sendImageViewOn(logicalAddress);
+#else
+    Q_UNUSED(logicalAddress);
+    return false;
+#endif
+}
+
+bool InputHandlerDBus::sendActiveSource()
+{
+#ifdef HAS_LIBCEC
+    if (!m_cecController) {
+        return false;
+    }
+    return m_cecController->sendActiveSource();
+#else
+    return false;
+#endif
+}
+
+int InputHandlerDBus::queryDevicePowerStatus(int logicalAddress)
+{
+#ifdef HAS_LIBCEC
+    if (!m_cecController) {
+        return CEC::CEC_POWER_STATUS_UNKNOWN;
+    }
+    return m_cecController->queryDevicePowerStatus(logicalAddress);
+#else
+    Q_UNUSED(logicalAddress);
+    // libcec's CEC_POWER_STATUS_UNKNOWN, hard-coded so we don't need
+    // the libcec headers in non-libcec builds.
+    return 0x99;
+#endif
 }
 
 #include "moc_inputhandlerdbus.cpp"
