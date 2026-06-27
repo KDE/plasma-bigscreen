@@ -8,6 +8,4 @@
 # Source Bigscreen common environment
 . plasma-bigscreen-common-env
 
-export EGL_PLATFORM=wayland
-
 startplasma-wayland --xwayland --libinput --exit-with-session=@KDE_INSTALL_FULL_LIBEXECDIR@/startplasma-waylandsession
