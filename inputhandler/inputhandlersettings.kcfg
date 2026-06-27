@@ -28,4 +28,9 @@
             <default></default>
         </entry>
     </group>
+    <group name="CEC">
+        <entry name="claimActiveSource" key="ClaimActiveSource" type="Bool">
+            <default>false</default>
+        </entry>
+    </group>
 </kcfg>

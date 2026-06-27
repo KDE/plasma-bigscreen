@@ -29,13 +29,14 @@ CECWorker::~CECWorker()
     cleanup();
 }
 
-void CECWorker::initialize(const QString &osdName)
+void CECWorker::initialize(const QString &osdName, bool claimActiveSource)
 {
-    qDebug() << "CECWorker: Initializing with OSD name:" << osdName;
+    qDebug() << "CECWorker: Initializing with OSD name:" << osdName
+             << "claim active source:" << claimActiveSource;
 
     libcec_configuration cecConfig;
     cecConfig.Clear();
-    cecConfig.bActivateSource = 0;
+    cecConfig.bActivateSource = claimActiveSource ? 1 : 0;
     snprintf(cecConfig.strDeviceName, LIBCEC_OSD_NAME_SIZE, "%s", qPrintable(osdName));
     cecConfig.clientVersion = LIBCEC_VERSION_CURRENT;
     cecConfig.deviceTypes.Add(CEC_DEVICE_TYPE_RECORDING_DEVICE);

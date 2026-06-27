@@ -24,7 +24,7 @@ public:
     ~CECWorker() override;
 
 public Q_SLOTS:
-    void initialize(const QString &osdName);
+    void initialize(const QString &osdName, bool claimActiveSource);
     void discoverDevices();
     void closeAdapter();
     void cleanup();
