@@ -7,6 +7,8 @@ ecm_add_qml_module(bigscreenplugin URI org.kde.bigscreen GENERATE_PLUGIN_SOURCE 
 qt_add_dbus_interfaces(DBUS_SRCS dbus/org.kde.KWin.ScreenShot2.xml)
 
 set(bigscreenplugin_SRCS
+    backhandler.cpp
+    backhandler.h
     global.cpp
     ${DBUS_SRCS}
 )

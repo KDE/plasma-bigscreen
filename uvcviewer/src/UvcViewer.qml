@@ -7,6 +7,7 @@ import QtQuick.Layouts
 import QtMultimedia
 import QtQuick.Controls as Controls
 import org.kde.kirigami as Kirigami
+import org.kde.bigscreen as Bigscreen
 
 Kirigami.Page {
     id: cameraViewer
@@ -42,11 +43,7 @@ Kirigami.Page {
         fillMode: VideoOutput.PreserveAspectCrop
     }
 
-    Keys.onPressed: function(event) {
-        if (event.key === Qt.Key_Escape) {
-            pageStack.layers.pop();
-        }
-    }
+    Bigscreen.BackHandler.onActivated: pageStack.layers.pop()
 
     Component.onCompleted: {
         // Ensure the page has focus for keyboard events

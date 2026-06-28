@@ -30,7 +30,6 @@ Bigscreen.SidebarOverlay {
         spacing: Kirigami.Units.smallSpacing
 
         Keys.onLeftPressed: root.close()
-        Keys.onBackPressed: root.close()
 
         Bigscreen.SwitchDelegate {
             id: enabledDelegate

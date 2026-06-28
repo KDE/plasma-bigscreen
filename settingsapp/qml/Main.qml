@@ -140,7 +140,7 @@ Window {
 
             KeyNavigation.right: loadedKCMPage
             KeyNavigation.tab: KeyNavigation.right
-            Keys.onEscapePressed: hideOverlay()
+            Bigscreen.BackHandler.onActivated: hideOverlay()
         }
 
         // Shadow
@@ -245,7 +245,7 @@ Window {
             KCMContainer {
                 KeyNavigation.left: root.settingsKCMMenu
                 KeyNavigation.backtab: KeyNavigation.left
-                Keys.onEscapePressed: root.settingsKCMMenu.forceActiveFocus()
+                Bigscreen.BackHandler.onActivated: root.settingsKCMMenu.forceActiveFocus()
 
                 onNewPageRequested: (page) => {
                     pageStack.push(kcmContainer.createObject(pageStack, {"internalPage": page}));

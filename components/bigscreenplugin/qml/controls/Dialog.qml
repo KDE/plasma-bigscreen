@@ -32,6 +32,8 @@ QQC2.Dialog {
 
     onOpened: openFocusItem.forceActiveFocus()
     onRejected: root.close()
+    BackHandler.enabled: root.visible
+    BackHandler.onActivated: root.reject()
 
     background: PopupBackground {}
 

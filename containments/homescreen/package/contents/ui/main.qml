@@ -16,6 +16,7 @@ import org.kde.kquickcontrolsaddons
 import org.kde.private.biglauncher
 import org.kde.bigscreen.controllerhandler as ControllerHandler
 import org.kde.bigscreen.shell as BigscreenShell
+import org.kde.bigscreen as Bigscreen
 
 import "launcher"
 import "homeoverlay"
@@ -125,8 +126,8 @@ ContainmentItem {
         }
     }
 
-    // Trigger home overlay for back and left action
-    Keys.onEscapePressed: {
+    // Trigger home overlay for back action
+    Bigscreen.BackHandler.onActivated: {
         homeOverlayWindow.showOverlay();
     }
 

@@ -13,6 +13,7 @@ import org.kde.kirigami as Kirigami
 import org.kde.plasma.components as PC3
 import org.kde.plasma.private.nanoshell as NanoShell
 import org.kde.plasma.plasmoid
+import org.kde.bigscreen as Bigscreen
 
 NanoShell.FullScreenOverlay {
     id: window
@@ -56,7 +57,7 @@ NanoShell.FullScreenOverlay {
         id: windowRoot
         anchors.fill: parent
 
-        Keys.onEscapePressed: {
+        Bigscreen.BackHandler.onActivated: {
             window.state = "closed";
             window.close();
         }
