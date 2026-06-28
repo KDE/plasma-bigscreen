@@ -82,8 +82,7 @@ Window {
             }
         }
 
-        // Hide window when Esc is pressed
-        Keys.onEscapePressed: root.hideOverlay()
+        Bigscreen.BackHandler.onActivated: root.hideOverlay()
 
         Kirigami.Theme.inherit: false
         Kirigami.Theme.colorSet: Kirigami.Theme.View

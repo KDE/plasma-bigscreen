@@ -10,6 +10,7 @@ import QtWebEngine
 import org.kde.kirigami as Kirigami
 
 import org.kde.bigscreen.webapp as WebApp
+import org.kde.bigscreen as Bigscreen
 
 WebEngineView {
     id: webEngineView
@@ -75,11 +76,8 @@ WebEngineView {
     property int printedPageOrientation: WebEngineView.Portrait
     property int printedPageSizeId: WebEngineView.A4
 
-    Shortcut {
-        enabled: webEngineView.isFullScreen
-        sequence: "Esc"
-        onActivated: webEngineView.fullScreenCancelled();
-    }
+    Bigscreen.BackHandler.enabled: webEngineView.isFullScreen
+    Bigscreen.BackHandler.onActivated: webEngineView.fullScreenCancelled()
 
     settings {
         autoLoadImages: true

@@ -48,7 +48,6 @@ Bigscreen.SidebarOverlay {
 
     content: ColumnLayout {
         Keys.onLeftPressed: root.close();
-        Keys.onBackPressed: root.close();
 
         Bigscreen.ButtonDelegate {
             id: tzDelegate

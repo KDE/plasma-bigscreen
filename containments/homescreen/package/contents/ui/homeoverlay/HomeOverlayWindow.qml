@@ -62,6 +62,8 @@ Window {
         }
     }
 
+    Bigscreen.BackHandler.onActivated: sidebar.close()
+
     Connections {
         target: Shortcuts
 

@@ -31,7 +31,6 @@ Bigscreen.SidebarOverlay {
             Layout.fillHeight: true
 
             Keys.onLeftPressed: root.close()
-            Keys.onBackPressed: root.close()
 
             clip: true
             model: kcm.globalThemeListModel

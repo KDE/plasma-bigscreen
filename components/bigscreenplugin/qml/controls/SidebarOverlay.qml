@@ -21,6 +21,8 @@ QQC2.Popup {
     property alias content: contentControl.contentItem
 
     modal: true
+    Bigscreen.BackHandler.enabled: root.visible
+    Bigscreen.BackHandler.onActivated: root.close()
 
     Kirigami.Theme.inherit: false
     Kirigami.Theme.colorSet: Kirigami.Theme.View

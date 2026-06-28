@@ -50,7 +50,7 @@ Rectangle {
         to: 1
     }
 
-    Keys.onEscapePressed: close()
+    Bigscreen.BackHandler.onActivated: close()
 
     onVisibleChanged: {
         if (visible) {

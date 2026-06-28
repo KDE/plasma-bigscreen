@@ -13,6 +13,7 @@ import org.kde.plasma.private.nanoshell as NanoShell
 import org.kde.milou as Milou
 import org.kde.kirigami as Kirigami
 import org.kde.layershell as LayerShell
+import org.kde.bigscreen as Bigscreen
 
 Window {
     id: root
@@ -89,8 +90,7 @@ Window {
             }
         }
 
-        // Hide search window when Esc is pressed
-        Keys.onEscapePressed: root.hideOverlay()
+        Bigscreen.BackHandler.onActivated: root.hideOverlay()
 
         // Forward key presses to text field, and focus
         Keys.onPressed: (event) => {
