@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-06-29 02:39+0000\n"
 "PO-Revision-Date: 2026-02-28 16:55+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -58,181 +58,181 @@ msgstr "Середовище виконання вебпрограм для Пл
 msgid "© 2025 Plasma developers"
 msgstr "© Розробники Плазми, 2025"
 
-#: qml/WebView.qml:192
+#: qml/WebView.qml:190
 #, kde-format
 msgctxt "@info:status"
 msgid "Entered Full Screen mode"
 msgstr "Перехід у повноекранний режим"
 
-#: qml/WebView.qml:193
+#: qml/WebView.qml:191
 #, kde-format
 msgctxt "@action:button"
 msgid "Exit Full Screen (Esc)"
 msgstr "Вийти з повноекранного режиму (Esc)"
 
-#: qml/WebView.qml:306
+#: qml/WebView.qml:304
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Play"
 msgstr "Відтворити"
 
-#: qml/WebView.qml:307
+#: qml/WebView.qml:305
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Pause"
 msgstr "Пауза"
 
-#: qml/WebView.qml:314
+#: qml/WebView.qml:312
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Unmute"
 msgstr "Увімкнути звук"
 
-#: qml/WebView.qml:315
+#: qml/WebView.qml:313
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Mute"
 msgstr "Вимкнути звук"
 
-#: qml/WebView.qml:325
+#: qml/WebView.qml:323
 #, kde-format
 msgctxt "@label"
 msgid "Speed"
 msgstr "Швидкість"
 
-#: qml/WebView.qml:348
+#: qml/WebView.qml:346
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Loop"
 msgstr "Зациклити"
 
-#: qml/WebView.qml:355
+#: qml/WebView.qml:353
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Exit Fullscreen"
 msgstr "Вийти з повноекранного режиму"
 
-#: qml/WebView.qml:355
+#: qml/WebView.qml:353
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Enter Fullscreen"
 msgstr "Повноекранний режим"
 
-#: qml/WebView.qml:368
+#: qml/WebView.qml:366
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Controls"
 msgstr "Приховати керування"
 
-#: qml/WebView.qml:369
+#: qml/WebView.qml:367
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Controls"
 msgstr "Показати керування"
 
-#: qml/WebView.qml:377
+#: qml/WebView.qml:375
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Video"
 msgstr "Відкрити відео"
 
-#: qml/WebView.qml:377
+#: qml/WebView.qml:375
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Audio"
 msgstr "Відкрити звукові дані"
 
-#: qml/WebView.qml:378
+#: qml/WebView.qml:376
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Video in New Tab"
 msgstr "Відкрити відео у новій вкладці"
 
-#: qml/WebView.qml:378
+#: qml/WebView.qml:376
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Audio in New Tab"
 msgstr "Відкрити звукові дані у новій вкладці"
 
-#: qml/WebView.qml:386
+#: qml/WebView.qml:384
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Save Video"
 msgstr "Зберегти відеодані"
 
-#: qml/WebView.qml:392
+#: qml/WebView.qml:390
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Video Link"
 msgstr "Копіювати посилання на відео"
 
-#: qml/WebView.qml:398
+#: qml/WebView.qml:396
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Image"
 msgstr "Відкрити зображення"
 
-#: qml/WebView.qml:398
+#: qml/WebView.qml:396
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Image in New Tab"
 msgstr "Відкрити зображення у новій вкладці"
 
-#: qml/WebView.qml:406
+#: qml/WebView.qml:404
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Save Image"
 msgstr "Зберегти зображення"
 
-#: qml/WebView.qml:412
+#: qml/WebView.qml:410
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Image"
 msgstr "Копіювати зображення"
 
-#: qml/WebView.qml:418
+#: qml/WebView.qml:416
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Image Link"
 msgstr "Копіювати посилання на зображення"
 
-#: qml/WebView.qml:424
+#: qml/WebView.qml:422
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Link"
 msgstr "Відкрити посилання"
 
-#: qml/WebView.qml:424
+#: qml/WebView.qml:422
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Link in New Window"
 msgstr "Відкрити посилання у новому вікні"
 
-#: qml/WebView.qml:432
+#: qml/WebView.qml:430
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Save Link"
 msgstr "Зберегти посилання"
 
-#: qml/WebView.qml:438
+#: qml/WebView.qml:436
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Link"
 msgstr "Копіювати посилання"
 
-#: qml/WebView.qml:445
+#: qml/WebView.qml:443
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy"
 msgstr "Копіювати"
 
-#: qml/WebView.qml:451
+#: qml/WebView.qml:449
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Cut"
 msgstr "Вирізати"
 
-#: qml/WebView.qml:457
+#: qml/WebView.qml:455
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Paste"

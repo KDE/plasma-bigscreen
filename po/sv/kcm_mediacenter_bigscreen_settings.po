@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-23 00:45+0000\n"
+"POT-Creation-Date: 2026-06-29 02:39+0000\n"
 "PO-Revision-Date: 2026-01-23 20:45+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -48,43 +48,43 @@ msgstr "Dag"
 msgid "Adjust Date and Time Settings"
 msgstr "Justera datum- och tidsinställningar"
 
-#: ui/DeviceTimeSettingsSidebar.qml:55
+#: ui/DeviceTimeSettingsSidebar.qml:54
 #, kde-format
 msgid "Timezone"
 msgstr "Tidszon"
 
-#: ui/DeviceTimeSettingsSidebar.qml:67
+#: ui/DeviceTimeSettingsSidebar.qml:66
 #, kde-format
 msgid "Set time automatically"
 msgstr "Ställ in tid automatiskt"
 
-#: ui/DeviceTimeSettingsSidebar.qml:85
+#: ui/DeviceTimeSettingsSidebar.qml:84
 #, kde-format
 msgid "Time"
 msgstr "Tid"
 
-#: ui/DeviceTimeSettingsSidebar.qml:98
+#: ui/DeviceTimeSettingsSidebar.qml:97
 #, kde-format
 msgid "Date"
 msgstr "Datum"
 
-#: ui/DeviceTimeSettingsSidebar.qml:127 ui/DeviceTimeSettingsSidebar.qml:205
-#: ui/DeviceTimeSettingsSidebar.qml:255
+#: ui/DeviceTimeSettingsSidebar.qml:126 ui/DeviceTimeSettingsSidebar.qml:204
+#: ui/DeviceTimeSettingsSidebar.qml:254
 #, kde-format
 msgid "Back"
 msgstr "Tillbaka"
 
-#: ui/DeviceTimeSettingsSidebar.qml:146
+#: ui/DeviceTimeSettingsSidebar.qml:145
 #, kde-format
 msgid "Search City / Region"
 msgstr "Sök efter stad eller område"
 
-#: ui/DeviceTimeSettingsSidebar.qml:166
+#: ui/DeviceTimeSettingsSidebar.qml:165
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "Din lokala tidszon är %1"
 
-#: ui/DeviceTimeSettingsSidebar.qml:167
+#: ui/DeviceTimeSettingsSidebar.qml:166
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
@@ -192,17 +192,17 @@ msgstr "Öppna inställningsgenväg"
 msgid "Open tasks shortcut"
 msgstr "Öppna uppgiftsgenväg"
 
-#: ui/ShortcutsPickerSidebar.qml:39
+#: ui/ShortcutsPickerSidebar.qml:38
 #, kde-format
 msgid "Shortcut currently set to"
 msgstr "Genväg för närvarande inställd till"
 
-#: ui/ShortcutsPickerSidebar.qml:46
+#: ui/ShortcutsPickerSidebar.qml:45
 #, kde-format
 msgid "Reset to default"
 msgstr "Återställ till standardvärde"
 
-#: ui/ShortcutsPickerSidebar.qml:60
+#: ui/ShortcutsPickerSidebar.qml:59
 #, kde-format
 msgid "Set Shortcut"
 msgstr "Ange genväg"

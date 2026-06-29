@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-11 02:35+0000\n"
+"POT-Creation-Date: 2026-06-29 02:39+0000\n"
 "PO-Revision-Date: 2026-03-26 10:11+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -22,12 +22,12 @@ msgstr ""
 msgid "Favorites Manager"
 msgstr "Gerente de favoritos"
 
-#: contents/ui/FavoritesManager.qml:140
+#: contents/ui/FavoritesManager.qml:139
 #, kde-format
 msgid "Add Favorites"
 msgstr "Adde Favoritos"
 
-#: contents/ui/FavoritesManager.qml:179
+#: contents/ui/FavoritesManager.qml:178
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Remove Favoritos"
@@ -171,32 +171,32 @@ msgstr "Applicationes"
 msgid "Games"
 msgstr "Jocos"
 
-#: contents/ui/main.qml:101
+#: contents/ui/main.qml:102
 #, kde-format
 msgid "Controller added: %1"
 msgstr "Controlator addite %1"
 
-#: contents/ui/main.qml:105
+#: contents/ui/main.qml:106
 #, kde-format
 msgid "Controller removed: %1"
 msgstr "Controlator removite : %1"
 
-#: contents/ui/main.qml:109
+#: contents/ui/main.qml:110
 #, kde-format
 msgid "Remote added: %1"
 msgstr "Remote addite : %1"
 
-#: contents/ui/main.qml:113
+#: contents/ui/main.qml:114
 #, kde-format
 msgid "Remote removed: %1"
 msgstr "Remote Removite: %1"
 
-#: contents/ui/main.qml:117
+#: contents/ui/main.qml:118
 #, kde-format
 msgid "System taking over controller input"
 msgstr "Systema prendente controlo del ingresso de controlator"
 
-#: contents/ui/main.qml:120
+#: contents/ui/main.qml:121
 #, kde-format
 msgid "Application taking over controller input"
 msgstr "Application prendente controlo del ingresso de controlator"

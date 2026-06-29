@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-23 00:45+0000\n"
+"POT-Creation-Date: 2026-06-29 02:39+0000\n"
 "PO-Revision-Date: 2022-01-07 14:57+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -46,43 +46,43 @@ msgstr "Deň"
 msgid "Adjust Date and Time Settings"
 msgstr "Upraviť nastavenia dátumu a času"
 
-#: ui/DeviceTimeSettingsSidebar.qml:55
+#: ui/DeviceTimeSettingsSidebar.qml:54
 #, kde-format
 msgid "Timezone"
 msgstr "Časové pásmo"
 
-#: ui/DeviceTimeSettingsSidebar.qml:67
+#: ui/DeviceTimeSettingsSidebar.qml:66
 #, kde-format
 msgid "Set time automatically"
 msgstr "Nastaviť čas automaticky"
 
-#: ui/DeviceTimeSettingsSidebar.qml:85
+#: ui/DeviceTimeSettingsSidebar.qml:84
 #, kde-format
 msgid "Time"
 msgstr "Čas"
 
-#: ui/DeviceTimeSettingsSidebar.qml:98
+#: ui/DeviceTimeSettingsSidebar.qml:97
 #, kde-format
 msgid "Date"
 msgstr "Dátum"
 
-#: ui/DeviceTimeSettingsSidebar.qml:127 ui/DeviceTimeSettingsSidebar.qml:205
-#: ui/DeviceTimeSettingsSidebar.qml:255
+#: ui/DeviceTimeSettingsSidebar.qml:126 ui/DeviceTimeSettingsSidebar.qml:204
+#: ui/DeviceTimeSettingsSidebar.qml:254
 #, kde-format
 msgid "Back"
 msgstr "Späť"
 
-#: ui/DeviceTimeSettingsSidebar.qml:146
+#: ui/DeviceTimeSettingsSidebar.qml:145
 #, kde-format
 msgid "Search City / Region"
 msgstr "Hľadať mesto/región"
 
-#: ui/DeviceTimeSettingsSidebar.qml:166
+#: ui/DeviceTimeSettingsSidebar.qml:165
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "Vaše miestne časové pásmo je %1"
 
-#: ui/DeviceTimeSettingsSidebar.qml:167
+#: ui/DeviceTimeSettingsSidebar.qml:166
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
@@ -190,17 +190,17 @@ msgstr "Otvoriť nastavenia skratka"
 msgid "Open tasks shortcut"
 msgstr "Otvoriť úlohy skratka"
 
-#: ui/ShortcutsPickerSidebar.qml:39
+#: ui/ShortcutsPickerSidebar.qml:38
 #, kde-format
 msgid "Shortcut currently set to"
 msgstr "Skratka je momentálne nastavená na"
 
-#: ui/ShortcutsPickerSidebar.qml:46
+#: ui/ShortcutsPickerSidebar.qml:45
 #, kde-format
 msgid "Reset to default"
 msgstr "Vrátiť na predvolené nastavenia"
 
-#: ui/ShortcutsPickerSidebar.qml:60
+#: ui/ShortcutsPickerSidebar.qml:59
 #, kde-format
 msgid "Set Shortcut"
 msgstr "Set Shortcut"
