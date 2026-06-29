@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-06-29 00:47+0000\n"
 "PO-Revision-Date: 2025-08-13 19:35\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -58,181 +58,181 @@ msgstr "Plasma 大屏幕网页应用运行时组件"
 msgid "© 2025 Plasma developers"
 msgstr "© 2025 Plasma developers"
 
-#: qml/WebView.qml:192
+#: qml/WebView.qml:190
 #, kde-format
 msgctxt "@info:status"
 msgid "Entered Full Screen mode"
 msgstr "进入全屏模式"
 
-#: qml/WebView.qml:193
+#: qml/WebView.qml:191
 #, kde-format
 msgctxt "@action:button"
 msgid "Exit Full Screen (Esc)"
 msgstr "退出全屏 (ESC)"
 
-#: qml/WebView.qml:306
+#: qml/WebView.qml:304
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Play"
 msgstr "播放"
 
-#: qml/WebView.qml:307
+#: qml/WebView.qml:305
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Pause"
 msgstr "暂停"
 
-#: qml/WebView.qml:314
+#: qml/WebView.qml:312
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Unmute"
 msgstr "取消静音"
 
-#: qml/WebView.qml:315
+#: qml/WebView.qml:313
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Mute"
 msgstr "静音"
 
-#: qml/WebView.qml:325
+#: qml/WebView.qml:323
 #, kde-format
 msgctxt "@label"
 msgid "Speed"
 msgstr "速度"
 
-#: qml/WebView.qml:348
+#: qml/WebView.qml:346
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Loop"
 msgstr "循环"
 
-#: qml/WebView.qml:355
+#: qml/WebView.qml:353
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Exit Fullscreen"
 msgstr "退出全屏"
 
-#: qml/WebView.qml:355
+#: qml/WebView.qml:353
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Enter Fullscreen"
 msgstr "进入全屏"
 
-#: qml/WebView.qml:368
+#: qml/WebView.qml:366
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Controls"
 msgstr "隐藏控件"
 
-#: qml/WebView.qml:369
+#: qml/WebView.qml:367
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Controls"
 msgstr "显示控件"
 
-#: qml/WebView.qml:377
+#: qml/WebView.qml:375
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Video"
 msgstr "打开视频"
 
-#: qml/WebView.qml:377
+#: qml/WebView.qml:375
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Audio"
 msgstr "打开音频"
 
-#: qml/WebView.qml:378
+#: qml/WebView.qml:376
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Video in New Tab"
 msgstr "在新标签页中打开视频"
 
-#: qml/WebView.qml:378
+#: qml/WebView.qml:376
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Audio in New Tab"
 msgstr "在新标签页中打开音频"
 
-#: qml/WebView.qml:386
+#: qml/WebView.qml:384
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Save Video"
 msgstr "保存视频"
 
-#: qml/WebView.qml:392
+#: qml/WebView.qml:390
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Video Link"
 msgstr "复制视频链接"
 
-#: qml/WebView.qml:398
+#: qml/WebView.qml:396
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Image"
 msgstr "打开图像"
 
-#: qml/WebView.qml:398
+#: qml/WebView.qml:396
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Image in New Tab"
 msgstr "在新标签页中打开图像"
 
-#: qml/WebView.qml:406
+#: qml/WebView.qml:404
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Save Image"
 msgstr "保存图像"
 
-#: qml/WebView.qml:412
+#: qml/WebView.qml:410
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Image"
 msgstr "复制图像"
 
-#: qml/WebView.qml:418
+#: qml/WebView.qml:416
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Image Link"
 msgstr "复制图像链接"
 
-#: qml/WebView.qml:424
+#: qml/WebView.qml:422
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Link"
 msgstr "打开链接"
 
-#: qml/WebView.qml:424
+#: qml/WebView.qml:422
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Link in New Window"
 msgstr "在新窗口中打开链接"
 
-#: qml/WebView.qml:432
+#: qml/WebView.qml:430
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Save Link"
 msgstr "保存链接"
 
-#: qml/WebView.qml:438
+#: qml/WebView.qml:436
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Link"
 msgstr "复制链接"
 
-#: qml/WebView.qml:445
+#: qml/WebView.qml:443
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy"
 msgstr "复制"
 
-#: qml/WebView.qml:451
+#: qml/WebView.qml:449
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Cut"
 msgstr "剪切"
 
-#: qml/WebView.qml:457
+#: qml/WebView.qml:455
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Paste"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-11 00:46+0000\n"
+"POT-Creation-Date: 2026-06-29 00:47+0000\n"
 "PO-Revision-Date: 2026-04-02 14:42+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -24,12 +24,12 @@ msgstr ""
 msgid "Favorites Manager"
 msgstr "Favoritenverwaltung"
 
-#: contents/ui/FavoritesManager.qml:140
+#: contents/ui/FavoritesManager.qml:139
 #, kde-format
 msgid "Add Favorites"
 msgstr "Favoriten hinzufügen"
 
-#: contents/ui/FavoritesManager.qml:179
+#: contents/ui/FavoritesManager.qml:178
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Favoriten entfernen"
@@ -173,32 +173,32 @@ msgstr "Anwendungen"
 msgid "Games"
 msgstr "Spiele"
 
-#: contents/ui/main.qml:101
+#: contents/ui/main.qml:102
 #, kde-format
 msgid "Controller added: %1"
 msgstr "Controller hinzugefügt: %1"
 
-#: contents/ui/main.qml:105
+#: contents/ui/main.qml:106
 #, kde-format
 msgid "Controller removed: %1"
 msgstr "Controller entfernt: %1"
 
-#: contents/ui/main.qml:109
+#: contents/ui/main.qml:110
 #, kde-format
 msgid "Remote added: %1"
 msgstr "Fernbedienung hinzugefügt: %1"
 
-#: contents/ui/main.qml:113
+#: contents/ui/main.qml:114
 #, kde-format
 msgid "Remote removed: %1"
 msgstr "Fernbedienung entfernt: %1"
 
-#: contents/ui/main.qml:117
+#: contents/ui/main.qml:118
 #, kde-format
 msgid "System taking over controller input"
 msgstr "System übernimmt Controllereingaben"
 
-#: contents/ui/main.qml:120
+#: contents/ui/main.qml:121
 #, kde-format
 msgid "Application taking over controller input"
 msgstr "Anwendung übernimmt Controllereingaben"

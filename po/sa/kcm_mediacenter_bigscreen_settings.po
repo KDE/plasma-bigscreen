@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-19 00:45+0000\n"
+"POT-Creation-Date: 2026-06-29 00:47+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -55,44 +55,44 @@ msgstr "दिनं"
 msgid "Adjust Date and Time Settings"
 msgstr "तिथि एवं समय समायोजित करें"
 
-#: ui/DeviceTimeSettingsSidebar.qml:55
+#: ui/DeviceTimeSettingsSidebar.qml:54
 #, fuzzy, kde-format
 #| msgid "Timezone:"
 msgid "Timezone"
 msgstr "समयक्षेत्रम् :"
 
-#: ui/DeviceTimeSettingsSidebar.qml:67
+#: ui/DeviceTimeSettingsSidebar.qml:66
 #, kde-format
 msgid "Set time automatically"
 msgstr "स्वयमेव समयं सेट् कुर्वन्तु"
 
-#: ui/DeviceTimeSettingsSidebar.qml:85
+#: ui/DeviceTimeSettingsSidebar.qml:84
 #, kde-format
 msgid "Time"
 msgstr "कालः"
 
-#: ui/DeviceTimeSettingsSidebar.qml:98
+#: ui/DeviceTimeSettingsSidebar.qml:97
 #, kde-format
 msgid "Date"
 msgstr "दिनाङ्कः"
 
-#: ui/DeviceTimeSettingsSidebar.qml:127 ui/DeviceTimeSettingsSidebar.qml:205
-#: ui/DeviceTimeSettingsSidebar.qml:255
+#: ui/DeviceTimeSettingsSidebar.qml:126 ui/DeviceTimeSettingsSidebar.qml:204
+#: ui/DeviceTimeSettingsSidebar.qml:254
 #, kde-format
 msgid "Back"
 msgstr ""
 
-#: ui/DeviceTimeSettingsSidebar.qml:146
+#: ui/DeviceTimeSettingsSidebar.qml:145
 #, kde-format
 msgid "Search City / Region"
 msgstr "नगरं / क्षेत्रं अन्वेष्टुम्"
 
-#: ui/DeviceTimeSettingsSidebar.qml:166
+#: ui/DeviceTimeSettingsSidebar.qml:165
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "भवतः स्थानीयसमयक्षेत्रं %1 अस्ति"
 
-#: ui/DeviceTimeSettingsSidebar.qml:167
+#: ui/DeviceTimeSettingsSidebar.qml:166
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
@@ -202,18 +202,18 @@ msgstr "बिगस्क्रीन् सेटिंग्स् शॉर�
 msgid "Open tasks shortcut"
 msgstr "बिगस्क्रीन् कार्य शॉर्टकट"
 
-#: ui/ShortcutsPickerSidebar.qml:39
+#: ui/ShortcutsPickerSidebar.qml:38
 #, kde-format
 msgid "Shortcut currently set to"
 msgstr ""
 
-#: ui/ShortcutsPickerSidebar.qml:46
+#: ui/ShortcutsPickerSidebar.qml:45
 #, fuzzy, kde-format
 #| msgid "Reset Default"
 msgid "Reset to default"
 msgstr "पूर्वनिर्धारितं पुनः सेट् कुर्वन्तु"
 
-#: ui/ShortcutsPickerSidebar.qml:60
+#: ui/ShortcutsPickerSidebar.qml:59
 #, kde-format
 msgid "Set Shortcut"
 msgstr "शॉर्टकट् सेट् कुर्वन्तु"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-11 00:46+0000\n"
+"POT-Creation-Date: 2026-06-29 00:47+0000\n"
 "PO-Revision-Date: 2026-04-08 23:33+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -26,12 +26,12 @@ msgstr ""
 msgid "Favorites Manager"
 msgstr "最愛管理"
 
-#: contents/ui/FavoritesManager.qml:140
+#: contents/ui/FavoritesManager.qml:139
 #, kde-format
 msgid "Add Favorites"
 msgstr "新增到最愛"
 
-#: contents/ui/FavoritesManager.qml:179
+#: contents/ui/FavoritesManager.qml:178
 #, kde-format
 msgid "Remove Favorites"
 msgstr "移除最愛"
@@ -175,32 +175,32 @@ msgstr "應用程式"
 msgid "Games"
 msgstr "遊戲"
 
-#: contents/ui/main.qml:101
+#: contents/ui/main.qml:102
 #, kde-format
 msgid "Controller added: %1"
 msgstr "已加入控制器：%1"
 
-#: contents/ui/main.qml:105
+#: contents/ui/main.qml:106
 #, kde-format
 msgid "Controller removed: %1"
 msgstr "已移除控制器：%1"
 
-#: contents/ui/main.qml:109
+#: contents/ui/main.qml:110
 #, kde-format
 msgid "Remote added: %1"
 msgstr "已加入遙控器：%1"
 
-#: contents/ui/main.qml:113
+#: contents/ui/main.qml:114
 #, kde-format
 msgid "Remote removed: %1"
 msgstr "已移除遙控器：%1"
 
-#: contents/ui/main.qml:117
+#: contents/ui/main.qml:118
 #, kde-format
 msgid "System taking over controller input"
 msgstr "系統接收控制器輸入"
 
-#: contents/ui/main.qml:120
+#: contents/ui/main.qml:121
 #, kde-format
 msgid "Application taking over controller input"
 msgstr "應用程式接收控制器輸入"

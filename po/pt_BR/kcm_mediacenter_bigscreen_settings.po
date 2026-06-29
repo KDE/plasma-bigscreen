@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-19 00:45+0000\n"
+"POT-Creation-Date: 2026-06-29 00:47+0000\n"
 "PO-Revision-Date: 2026-06-19 06:09-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -54,43 +54,43 @@ msgstr "Dia"
 msgid "Adjust Date and Time Settings"
 msgstr "Configurações de ajuste de data e hora"
 
-#: ui/DeviceTimeSettingsSidebar.qml:55
+#: ui/DeviceTimeSettingsSidebar.qml:54
 #, kde-format
 msgid "Timezone"
 msgstr "Fuso horário"
 
-#: ui/DeviceTimeSettingsSidebar.qml:67
+#: ui/DeviceTimeSettingsSidebar.qml:66
 #, kde-format
 msgid "Set time automatically"
 msgstr "Definir a hora automaticamente:"
 
-#: ui/DeviceTimeSettingsSidebar.qml:85
+#: ui/DeviceTimeSettingsSidebar.qml:84
 #, kde-format
 msgid "Time"
 msgstr "Hora"
 
-#: ui/DeviceTimeSettingsSidebar.qml:98
+#: ui/DeviceTimeSettingsSidebar.qml:97
 #, kde-format
 msgid "Date"
 msgstr "Data"
 
-#: ui/DeviceTimeSettingsSidebar.qml:127 ui/DeviceTimeSettingsSidebar.qml:205
-#: ui/DeviceTimeSettingsSidebar.qml:255
+#: ui/DeviceTimeSettingsSidebar.qml:126 ui/DeviceTimeSettingsSidebar.qml:204
+#: ui/DeviceTimeSettingsSidebar.qml:254
 #, kde-format
 msgid "Back"
 msgstr "Voltar"
 
-#: ui/DeviceTimeSettingsSidebar.qml:146
+#: ui/DeviceTimeSettingsSidebar.qml:145
 #, kde-format
 msgid "Search City / Region"
 msgstr "Pesquisar cidade/ região"
 
-#: ui/DeviceTimeSettingsSidebar.qml:166
+#: ui/DeviceTimeSettingsSidebar.qml:165
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "Seu fuso horário local é %1"
 
-#: ui/DeviceTimeSettingsSidebar.qml:167
+#: ui/DeviceTimeSettingsSidebar.qml:166
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
@@ -195,17 +195,17 @@ msgstr "Atalho para abrir as configurações"
 msgid "Open tasks shortcut"
 msgstr "Atalho para abrir tarefas"
 
-#: ui/ShortcutsPickerSidebar.qml:39
+#: ui/ShortcutsPickerSidebar.qml:38
 #, kde-format
 msgid "Shortcut currently set to"
 msgstr "Atalho atualmente definido para"
 
-#: ui/ShortcutsPickerSidebar.qml:46
+#: ui/ShortcutsPickerSidebar.qml:45
 #, kde-format
 msgid "Reset to default"
 msgstr "Redefinir para o padrão"
 
-#: ui/ShortcutsPickerSidebar.qml:60
+#: ui/ShortcutsPickerSidebar.qml:59
 #, kde-format
 msgid "Set Shortcut"
 msgstr "Definir atalho"

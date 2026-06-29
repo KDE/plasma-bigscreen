@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:47+0000\n"
+"POT-Creation-Date: 2026-06-29 00:47+0000\n"
 "PO-Revision-Date: 2026-06-10 09:44+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: ui/GameControllerSidebar.qml:37
+#: ui/GameControllerSidebar.qml:36
 #, kde-format
 msgid "System navigation"
 msgstr "Навігація системою"
 
-#: ui/GameControllerSidebar.qml:52
+#: ui/GameControllerSidebar.qml:51
 #, kde-format
 msgid "START button when suppressed"
 msgstr "Кнопку «ПУСК» буде придушено"
 
-#: ui/GameControllerSidebar.qml:53
+#: ui/GameControllerSidebar.qml:52
 #, kde-format
 msgid ""
 "Handle the START button even when input is suppressed (may conflict with "

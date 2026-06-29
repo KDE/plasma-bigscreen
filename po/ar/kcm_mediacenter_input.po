@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:47+0000\n"
+"POT-Creation-Date: 2026-06-29 00:47+0000\n"
 "PO-Revision-Date: 2026-06-10 19:02+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -18,17 +18,17 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: ui/GameControllerSidebar.qml:37
+#: ui/GameControllerSidebar.qml:36
 #, kde-format
 msgid "System navigation"
 msgstr "التنقل في النظام"
 
-#: ui/GameControllerSidebar.qml:52
+#: ui/GameControllerSidebar.qml:51
 #, kde-format
 msgid "START button when suppressed"
 msgstr "زر البداية START عند كبته"
 
-#: ui/GameControllerSidebar.qml:53
+#: ui/GameControllerSidebar.qml:52
 #, kde-format
 msgid ""
 "Handle the START button even when input is suppressed (may conflict with "

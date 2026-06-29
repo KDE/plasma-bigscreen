@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-19 00:45+0000\n"
+"POT-Creation-Date: 2026-06-29 00:47+0000\n"
 "PO-Revision-Date: 2026-06-19 10:07+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -52,43 +52,43 @@ msgstr "Dag"
 msgid "Adjust Date and Time Settings"
 msgstr "Instellingen van datum en tijd aanpassen"
 
-#: ui/DeviceTimeSettingsSidebar.qml:55
+#: ui/DeviceTimeSettingsSidebar.qml:54
 #, kde-format
 msgid "Timezone"
 msgstr "Tijdzone"
 
-#: ui/DeviceTimeSettingsSidebar.qml:67
+#: ui/DeviceTimeSettingsSidebar.qml:66
 #, kde-format
 msgid "Set time automatically"
 msgstr "Tijd automatisch instellen"
 
-#: ui/DeviceTimeSettingsSidebar.qml:85
+#: ui/DeviceTimeSettingsSidebar.qml:84
 #, kde-format
 msgid "Time"
 msgstr "Tijd"
 
-#: ui/DeviceTimeSettingsSidebar.qml:98
+#: ui/DeviceTimeSettingsSidebar.qml:97
 #, kde-format
 msgid "Date"
 msgstr "Datum"
 
-#: ui/DeviceTimeSettingsSidebar.qml:127 ui/DeviceTimeSettingsSidebar.qml:205
-#: ui/DeviceTimeSettingsSidebar.qml:255
+#: ui/DeviceTimeSettingsSidebar.qml:126 ui/DeviceTimeSettingsSidebar.qml:204
+#: ui/DeviceTimeSettingsSidebar.qml:254
 #, kde-format
 msgid "Back"
 msgstr "Terug"
 
-#: ui/DeviceTimeSettingsSidebar.qml:146
+#: ui/DeviceTimeSettingsSidebar.qml:145
 #, kde-format
 msgid "Search City / Region"
 msgstr "Plaats / regio zoeken"
 
-#: ui/DeviceTimeSettingsSidebar.qml:166
+#: ui/DeviceTimeSettingsSidebar.qml:165
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "Uw lokale tijdzone is %1"
 
-#: ui/DeviceTimeSettingsSidebar.qml:167
+#: ui/DeviceTimeSettingsSidebar.qml:166
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"
@@ -196,17 +196,17 @@ msgstr "Sneltoets voor instellingen openen"
 msgid "Open tasks shortcut"
 msgstr "Sneltoets voor taken openen"
 
-#: ui/ShortcutsPickerSidebar.qml:39
+#: ui/ShortcutsPickerSidebar.qml:38
 #, kde-format
 msgid "Shortcut currently set to"
 msgstr "Sneltoets nu ingesteld op"
 
-#: ui/ShortcutsPickerSidebar.qml:46
+#: ui/ShortcutsPickerSidebar.qml:45
 #, kde-format
 msgid "Reset to default"
 msgstr "Terugzetten naar standaard"
 
-#: ui/ShortcutsPickerSidebar.qml:60
+#: ui/ShortcutsPickerSidebar.qml:59
 #, kde-format
 msgid "Set Shortcut"
 msgstr "Sneltoets instellen"

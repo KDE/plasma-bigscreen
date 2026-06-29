@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:47+0000\n"
+"POT-Creation-Date: 2026-06-29 00:47+0000\n"
 "PO-Revision-Date: 2026-06-10 00:00+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -14,17 +14,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: ui/GameControllerSidebar.qml:37
+#: ui/GameControllerSidebar.qml:36
 #, kde-format
 msgid "System navigation"
 msgstr "Navigácia v systéme"
 
-#: ui/GameControllerSidebar.qml:52
+#: ui/GameControllerSidebar.qml:51
 #, kde-format
 msgid "START button when suppressed"
 msgstr "Tlačidlo START pri potlačení"
 
-#: ui/GameControllerSidebar.qml:53
+#: ui/GameControllerSidebar.qml:52
 #, kde-format
 msgid ""
 "Handle the START button even when input is suppressed (may conflict with "

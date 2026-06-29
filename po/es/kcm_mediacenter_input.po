@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_input\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:47+0000\n"
+"POT-Creation-Date: 2026-06-29 00:47+0000\n"
 "PO-Revision-Date: 2026-06-13 19:31+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -19,17 +19,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.04.0\n"
 
-#: ui/GameControllerSidebar.qml:37
+#: ui/GameControllerSidebar.qml:36
 #, kde-format
 msgid "System navigation"
 msgstr "Navegación del sistema"
 
-#: ui/GameControllerSidebar.qml:52
+#: ui/GameControllerSidebar.qml:51
 #, kde-format
 msgid "START button when suppressed"
 msgstr "Botón INICIO al suprimir"
 
-#: ui/GameControllerSidebar.qml:53
+#: ui/GameControllerSidebar.qml:52
 #, kde-format
 msgid ""
 "Handle the START button even when input is suppressed (may conflict with "
