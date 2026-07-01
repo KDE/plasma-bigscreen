@@ -23,11 +23,11 @@ msgstr "Disposition non pote esser modificate quando le widgets es blocate"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:60
 msgid "Wallpaper Type:"
-msgstr "Typo de Tapete de papiro:"
+msgstr "Typo de Fundo de schermo:"
 
 #: contents/configuration/ContainmentConfiguration.qml:41
 msgid "Wallpaper"
-msgstr "Tapete de papiro"
+msgstr "Fundo de schermo"
 
 #: contents/configuration/ContainmentConfiguration.qml:134
 msgid "Slideshow"

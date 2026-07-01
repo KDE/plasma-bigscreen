@@ -20,9 +20,9 @@ msgstr ""
 #: ui/main.qml:18
 #, kde-format
 msgid "Wallpaper"
-msgstr "Tapete de papiro"
+msgstr "Fundo de schermo"
 
 #: ui/main.qml:48
 #, kde-format
 msgid "Open wallpaper selector"
-msgstr "Aperi selector de tapete de papiro"
+msgstr "Aperi selector de fundo de schermo"

@@ -116,7 +116,7 @@ msgstr "Fundos de tegula (Tile) essera colorat ebasate sur le icone de app"
 #: ui/main.qml:70
 #, kde-format
 msgid "Wallpaper blur"
-msgstr "Tapete de papiro indistincte"
+msgstr "Fundo de schermo indistincte"
 
 #: ui/main.qml:71
 #, kde-format
