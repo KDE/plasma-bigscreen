@@ -59,6 +59,7 @@ private Q_SLOTS:
     void onDeviceOpened(const QString &comName);
     void onDeviceOpenFailed(const QString &comName, const QString &error);
     void onHotplugTimeout();
+    void onDeviceRemoved(const QString &udi);
     void onNextKeyTimeout();
     void onCecKeyPressed(int keycode, int duration);
 

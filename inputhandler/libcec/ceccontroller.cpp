@@ -12,6 +12,7 @@
 #include "cecworker.h"
 
 #include <QDebug>
+#include <QFile>
 
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -135,6 +136,7 @@ CECController::CECController(QObject *parent)
     connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded, this, [this] {
         m_hotplugTimer.start();
     });
+    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceRemoved, this, &CECController::onDeviceRemoved);
 }
 
 CECController::~CECController()
@@ -175,6 +177,11 @@ void CECController::onDeviceOpened(const QString &comName)
 {
     qDebug() << "CECController: Adapter opened at" << comName;
 
+    if (m_connectedDevices.contains(comName)) {
+        qDebug() << "CECController: Adapter at" << comName << "already registered, skipping";
+        return;
+    }
+
     if (!m_device) {
         auto *device = new Device(DeviceCEC, QStringLiteral("CEC Controller"), QStringLiteral("cec"));
 
@@ -196,12 +203,45 @@ void CECController::onDeviceOpenFailed(const QString &comName, const QString &er
     qWarning() << "CECController: Failed to open adapter at" << comName << "-" << error;
 }
 
+void CECController::onDeviceRemoved(const QString &udi)
+{
+    Q_UNUSED(udi);
+    // The pointer we get doesn't have the path. Instead, we iterate over
+    // the controllers we hold, and see if one vanished from the filesystem.
+    QMutableSetIterator<QString> it(m_connectedDevices);
+    bool removed = false;
+    while (it.hasNext()) {
+        const QString &comName = it.next();
+        if (!QFile::exists(comName)) {
+            qDebug() << "CECController: Adapter at" << comName << "removed";
+            it.remove();
+            m_adapterCount--;
+            removed = true;
+        }
+    }
+    if (removed) {
+        // Tidy up on libcec's side
+        QMetaObject::invokeMethod(m_worker, "closeAdapter", Qt::QueuedConnection);
+    }
+}
+
 void CECController::onHotplugTimeout()
 {
-    qDebug() << "CECController: Hotplug timeout - triggering device discovery";
-    if (m_initialized) {
-        QMetaObject::invokeMethod(m_worker, "discoverDevices", Qt::QueuedConnection);
+    if (!m_initialized) {
+        return;
     }
+    if (!m_connectedDevices.isEmpty()) {
+        // We already have an adapter open. Repeated rediscovery while an
+        // adapter is held causes libcec to re-Open() the same /dev/ttyACM*,
+        // which briefly drops athena's CEC logical address. Some TVs
+        // (Samsung Anynet+) stop forwarding remote keypresses to a device
+        // that flaps like this and don't reroute until the device clearly
+        // stabilises.
+        qDebug() << "CECController: Hotplug timeout - skipping (adapter already open)";
+        return;
+    }
+    qDebug() << "CECController: Hotplug timeout - triggering device discovery";
+    QMetaObject::invokeMethod(m_worker, "discoverDevices", Qt::QueuedConnection);
 }
 
 bool CECController::sendStandby(int logicalAddress)

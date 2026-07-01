@@ -25,6 +25,7 @@ public:
 public Q_SLOTS:
     void initialize(const QString &osdName);
     void discoverDevices();
+    void closeAdapter();
     void cleanup();
 
     // Outbound CEC commands. Must be invoked on the worker thread

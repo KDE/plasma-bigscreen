@@ -86,6 +86,15 @@ void CECWorker::discoverDevices()
     }
 }
 
+void CECWorker::closeAdapter()
+{
+    if (!m_cecAdapter) {
+        return;
+    }
+    qDebug() << "CECWorker: Closing CEC adapter";
+    m_cecAdapter->Close();
+}
+
 void CECWorker::cleanup()
 {
     qDebug() << "CECWorker: Starting cleanup";
