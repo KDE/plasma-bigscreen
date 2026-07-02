@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-29 00:47+0000\n"
-"PO-Revision-Date: 2024-05-17 01:59+0300\n"
+"PO-Revision-Date: 2026-07-01 16:31+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -32,41 +32,37 @@ msgstr "<>"
 #: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
 #, kde-format
 msgid "Color scheme"
-msgstr ""
+msgstr "Spalvų rinkinys"
 
 #: ui/DatePicker.qml:38
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Metai"
 
 #: ui/DatePicker.qml:54
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Mėnuo"
 
 #: ui/DatePicker.qml:70
-#, fuzzy, kde-format
-#| msgid "May"
+#, kde-format
 msgid "Day"
-msgstr "Geg"
+msgstr "Diena"
 
 #: ui/DeviceTimeSettingsSidebar.qml:46
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust Date and Time Settings"
-msgstr "Reguliuoti datą ir laiką"
+msgstr "Derinti datos ir laiko nuostatas"
 
 #: ui/DeviceTimeSettingsSidebar.qml:54
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "Laiko juosta:"
+msgstr "Laiko juosta"
 
 #: ui/DeviceTimeSettingsSidebar.qml:66
-#, fuzzy, kde-format
-#| msgid "Set time automatically:"
+#, kde-format
 msgid "Set time automatically"
-msgstr "Nustatyti laiką automatiškai:"
+msgstr "Nustatyti laiką automatiškai"
 
 #: ui/DeviceTimeSettingsSidebar.qml:84
 #, kde-format
@@ -82,12 +78,12 @@ msgstr "Data"
 #: ui/DeviceTimeSettingsSidebar.qml:254
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Atgal"
 
 #: ui/DeviceTimeSettingsSidebar.qml:145
 #, kde-format
 msgid "Search City / Region"
-msgstr ""
+msgstr "Ieškoti miesto / regiono"
 
 #: ui/DeviceTimeSettingsSidebar.qml:165
 #, kde-format
@@ -102,138 +98,136 @@ msgstr "%1, %2"
 #: ui/main.qml:23 ui/main.qml:91
 #, kde-format
 msgid "System"
-msgstr ""
+msgstr "Sistema"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgid "General Appearance"
+#, kde-format
 msgid "Homescreen Appearance"
-msgstr "Bendra išvaizda"
+msgstr "Pradžios lango išvaizda"
 
 #: ui/main.qml:56
-#, fuzzy, kde-format
-#| msgid "Colored Tiles"
+#, kde-format
 msgid "Colored tiles"
 msgstr "Spalvotos plytelės"
 
 #: ui/main.qml:57
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
-msgstr ""
+msgstr "Plytelių fonai bus nuspalvinti remiantis programos piktograma"
 
 #: ui/main.qml:70
 #, kde-format
 msgid "Wallpaper blur"
-msgstr ""
+msgstr "Darbalaukio fono suliejimas"
 
 #: ui/main.qml:71
 #, kde-format
 msgid "Apply a blur effect to the wallpaper on the homescreen"
-msgstr ""
+msgstr "Taikyti darbalaukio fonui pradžios lange suliejimo efektą"
 
 #: ui/main.qml:85
 #, kde-format
 msgid "Set the system colors"
-msgstr ""
+msgstr "Nustatyti sistemos spalvas"
 
 #: ui/main.qml:102
 #, kde-format
 msgid "Window decorations"
-msgstr ""
+msgstr "Langų dekoracijos"
 
 #: ui/main.qml:103
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
 msgstr ""
+"Rodyti lango rėmelį (suskleisti, išskleisti, užverti) programoms, kurios jo "
+"reikalauja"
 
 #: ui/main.qml:112
 #, kde-format
 msgid "Navigation sounds"
-msgstr ""
+msgstr "Naršymo garsai"
 
 #: ui/main.qml:113
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
-msgstr ""
+msgstr "Atkurti garsą, kai pažymėtas elementas keičiamas sistemos programose"
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "Power Inhibition"
+#, kde-format
 msgid "Power inhibition"
 msgstr "Maitinimo slopinimas"
 
 #: ui/main.qml:124
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
-msgstr ""
+msgstr "Neleisti sistemai automatiškai užmigti"
 
 #: ui/main.qml:134
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time"
+#, kde-format
 msgid "Adjust date and time"
 msgstr "Reguliuoti datą ir laiką"
 
 #: ui/main.qml:140
 #, kde-format
 msgid "Shortcuts"
-msgstr ""
+msgstr "Spartieji klavišai"
 
 #: ui/main.qml:151
 #, kde-format
 msgid "Open home overlay shortcut"
-msgstr ""
+msgstr "Pradžios perdangos atvėrimo spartusis klavišas"
 
 #: ui/main.qml:171
 #, kde-format
 msgid "Open homescreen shortcut"
-msgstr ""
+msgstr "Pradžios lango atvėrimo spartusis klavišas"
 
 #: ui/main.qml:191
 #, kde-format
 msgid "Open settings shortcut"
-msgstr ""
+msgstr "Nuostatų atvėrimo spartusis klavišas"
 
 #: ui/main.qml:210
 #, kde-format
 msgid "Open tasks shortcut"
-msgstr ""
+msgstr "Užduočių atvėrimo spartusis klavišas"
 
 #: ui/ShortcutsPickerSidebar.qml:38
 #, kde-format
 msgid "Shortcut currently set to"
-msgstr ""
+msgstr "Šiuo metu nustatytas spartusis klavišas"
 
 #: ui/ShortcutsPickerSidebar.qml:45
 #, kde-format
 msgid "Reset to default"
-msgstr ""
+msgstr "Atstatyti numatytąjį"
 
 #: ui/ShortcutsPickerSidebar.qml:59
 #, kde-format
 msgid "Set Shortcut"
-msgstr ""
+msgstr "Nustatyti spartųjį klavišą"
 
 #: ui/TimePicker.qml:40
 #, kde-format
 msgid "Hour"
-msgstr ""
+msgstr "Valandos"
 
 #: ui/TimePicker.qml:56
 #, kde-format
 msgid "Minute"
-msgstr ""
+msgstr "Minutės"
 
 #: ui/TimePicker.qml:72
 #, kde-format
 msgctxt "unit of time"
 msgid "Second"
-msgstr ""
+msgstr "Sekundės"
 
 #: ui/TimePicker.qml:89
 #, kde-format
 msgid "AM/PM"
-msgstr ""
+msgstr "AM/PM"
 
 #~ msgid "Time Display"
 #~ msgstr "Laiko atvaizdavimas"
