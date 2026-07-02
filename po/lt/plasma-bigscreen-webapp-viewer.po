@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-29 02:39+0000\n"
-"PO-Revision-Date: 2025-08-12 00:45+0000\n"
+"PO-Revision-Date: 2026-07-01 14:43+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,228 +17,229 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Moo"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "<>"
 
 #: main.cpp:38
 #, kde-format
 msgid "The user agent to browse with."
-msgstr ""
+msgstr "Naudotojo agentas, kurį naudojant bus naršoma."
 
 #: main.cpp:40
 #, kde-format
 msgid "The name of the web app"
-msgstr ""
+msgstr "Saityno programos pavadinimas"
 
 #: main.cpp:43
 #, kde-format
 msgid "link of website to launch"
-msgstr ""
+msgstr "internetinės svetainės, kurią paleisti, nuoroda"
 
 #: main.cpp:57
 #, kde-format
 msgid "Webview"
-msgstr ""
+msgstr "Saityno rodinys"
 
 #: main.cpp:59
 #, kde-format
 msgid "Plasma Bigscreen Webapp runtime"
-msgstr ""
+msgstr "Plasma Bigscreen saityno programos dinaminė programa"
 
 #: main.cpp:61
 #, kde-format
 msgid "© 2025 Plasma developers"
-msgstr ""
+msgstr "© 2025 Plasma plėtotojai"
 
 #: qml/WebView.qml:190
 #, kde-format
 msgctxt "@info:status"
 msgid "Entered Full Screen mode"
-msgstr ""
+msgstr "Įjungta viso ekrano veiksena"
 
 #: qml/WebView.qml:191
 #, kde-format
 msgctxt "@action:button"
 msgid "Exit Full Screen (Esc)"
-msgstr ""
+msgstr "Išjungti viso ekrano veikseną (Gr)"
 
 #: qml/WebView.qml:304
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Play"
-msgstr ""
+msgstr "Atkurti"
 
 #: qml/WebView.qml:305
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Pause"
-msgstr ""
+msgstr "Pristabdyti"
 
 #: qml/WebView.qml:312
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Unmute"
-msgstr ""
+msgstr "Įjungti garsą"
 
 #: qml/WebView.qml:313
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Mute"
-msgstr ""
+msgstr "Nutildyti"
 
 #: qml/WebView.qml:323
 #, kde-format
 msgctxt "@label"
 msgid "Speed"
-msgstr ""
+msgstr "Greitis"
 
 #: qml/WebView.qml:346
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Loop"
-msgstr ""
+msgstr "Rodyti ciklu"
 
 #: qml/WebView.qml:353
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Exit Fullscreen"
-msgstr ""
+msgstr "Išjungti viso ekrano veikseną"
 
 #: qml/WebView.qml:353
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Enter Fullscreen"
-msgstr ""
+msgstr "Įjungti viso ekrano veikseną"
 
 #: qml/WebView.qml:366
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Controls"
-msgstr ""
+msgstr "Slėpti valdiklius"
 
 #: qml/WebView.qml:367
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Controls"
-msgstr ""
+msgstr "Rodyti valdiklius"
 
 #: qml/WebView.qml:375
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Video"
-msgstr ""
+msgstr "Atverti vaizdo įrašą"
 
 #: qml/WebView.qml:375
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Audio"
-msgstr ""
+msgstr "Atverti garso įrašą"
 
 #: qml/WebView.qml:376
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Video in New Tab"
-msgstr ""
+msgstr "Atverti vaizdo įrašą naujoje kortelėje"
 
 #: qml/WebView.qml:376
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Audio in New Tab"
-msgstr ""
+msgstr "Atverti garso įrašą naujoje kortelėje"
 
 #: qml/WebView.qml:384
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Save Video"
-msgstr ""
+msgstr "Įrašyti vaizdo įrašą"
 
 #: qml/WebView.qml:390
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Video Link"
-msgstr ""
+msgstr "Kopijuoti vaizdo įrašo nuorodą"
 
 #: qml/WebView.qml:396
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Image"
-msgstr ""
+msgstr "Atverti paveikslą"
 
 #: qml/WebView.qml:396
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Image in New Tab"
-msgstr ""
+msgstr "Atverti paveikslą naujoje kortelėje"
 
 #: qml/WebView.qml:404
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Save Image"
-msgstr ""
+msgstr "Įrašyti paveikslą"
 
 #: qml/WebView.qml:410
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Image"
-msgstr ""
+msgstr "Kopijuoti paveikslą"
 
 #: qml/WebView.qml:416
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Image Link"
-msgstr ""
+msgstr "Kopijuoti paveikslo nuorodą"
 
 #: qml/WebView.qml:422
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Link"
-msgstr ""
+msgstr "Atverti nuorodą"
 
 #: qml/WebView.qml:422
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Link in New Window"
-msgstr ""
+msgstr "Atverti nuorodą naujame lange"
 
 #: qml/WebView.qml:430
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Save Link"
-msgstr ""
+msgstr "Įrašyti nuorodą"
 
 #: qml/WebView.qml:436
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Link"
-msgstr ""
+msgstr "Kopijuoti nuorodą"
 
 #: qml/WebView.qml:443
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy"
-msgstr ""
+msgstr "Kopijuoti"
 
 #: qml/WebView.qml:449
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Cut"
-msgstr ""
+msgstr "Iškirpti"
 
 #: qml/WebView.qml:455
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Paste"
-msgstr ""
+msgstr "Įdėti"
 
 #: webprofile.cpp:48
 #, kde-format
 msgid "Open"
-msgstr ""
+msgstr "Atverti"
