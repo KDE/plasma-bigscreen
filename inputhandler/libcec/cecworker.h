@@ -9,6 +9,7 @@
 #pragma once
 
 #include <QObject>
+#include <QString>
 #include <libcec/cec.h>
 
 /**
@@ -35,6 +36,9 @@ public Q_SLOTS:
     bool sendImageViewOn(int logicalAddress);
     bool sendActiveSource();
     int queryDevicePowerStatus(int logicalAddress);
+    int queryActiveSource();
+    bool isActiveSource();
+    QString queryDeviceOsdName(int logicalAddress);
 
 Q_SIGNALS:
     void initialized(bool success);

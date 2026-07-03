@@ -11,6 +11,7 @@
 #include <QHash>
 #include <QObject>
 #include <QSet>
+#include <QString>
 #include <QThread>
 #include <QTimer>
 
@@ -41,6 +42,9 @@ public:
     bool sendImageViewOn(int logicalAddress = 0);
     bool sendActiveSource();
     int queryDevicePowerStatus(int logicalAddress = 0);
+    int queryActiveSource();
+    bool isActiveSource();
+    QString queryDeviceOsdName(int logicalAddress);
 
 public Q_SLOTS:
     void requestNextKey();

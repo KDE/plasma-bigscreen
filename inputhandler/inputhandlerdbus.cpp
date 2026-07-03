@@ -231,4 +231,43 @@ int InputHandlerDBus::queryDevicePowerStatus(int logicalAddress)
 #endif
 }
 
+int InputHandlerDBus::queryActiveSource()
+{
+#ifdef HAS_LIBCEC
+    if (!m_cecController) {
+        return CEC::CECDEVICE_UNKNOWN;
+    }
+    return m_cecController->queryActiveSource();
+#else
+    // libcec's CECDEVICE_UNKNOWN, hard-coded so we don't need
+    // the libcec headers in non-libcec builds.
+    return -1;
+#endif
+}
+
+bool InputHandlerDBus::isActiveSource()
+{
+#ifdef HAS_LIBCEC
+    if (!m_cecController) {
+        return false;
+    }
+    return m_cecController->isActiveSource();
+#else
+    return false;
+#endif
+}
+
+QString InputHandlerDBus::queryDeviceOsdName(int logicalAddress)
+{
+#ifdef HAS_LIBCEC
+    if (!m_cecController) {
+        return {};
+    }
+    return m_cecController->queryDeviceOsdName(logicalAddress);
+#else
+    Q_UNUSED(logicalAddress);
+    return {};
+#endif
+}
+
 #include "moc_inputhandlerdbus.cpp"

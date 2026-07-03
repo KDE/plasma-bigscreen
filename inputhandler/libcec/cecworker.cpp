@@ -148,6 +148,34 @@ int CECWorker::queryDevicePowerStatus(int logicalAddress)
     return static_cast<int>(m_cecAdapter->GetDevicePowerStatus(la));
 }
 
+int CECWorker::queryActiveSource()
+{
+    if (!m_cecAdapter) {
+        qWarning() << "CECWorker: queryActiveSource called but no adapter available";
+        return CECDEVICE_UNKNOWN;
+    }
+    return static_cast<int>(m_cecAdapter->GetActiveSource());
+}
+
+bool CECWorker::isActiveSource()
+{
+    if (!m_cecAdapter) {
+        qWarning() << "CECWorker: isActiveSource called but no adapter available";
+        return false;
+    }
+    return m_cecAdapter->IsLibCECActiveSource();
+}
+
+QString CECWorker::queryDeviceOsdName(int logicalAddress)
+{
+    if (!m_cecAdapter) {
+        qWarning() << "CECWorker: queryDeviceOsdName called but no adapter available";
+        return {};
+    }
+    const auto la = static_cast<cec_logical_address>(logicalAddress);
+    return QString::fromStdString(m_cecAdapter->GetDeviceOSDName(la));
+}
+
 // NOTE: These static callbacks are invoked from libcec's internal thread,
 // NOT from the Qt worker thread.
 

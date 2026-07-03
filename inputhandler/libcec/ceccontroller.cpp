@@ -303,6 +303,49 @@ int CECController::queryDevicePowerStatus(int logicalAddress)
     return result;
 }
 
+int CECController::queryActiveSource()
+{
+    if (!m_initialized || !m_worker) {
+        qWarning() << "CECController: queryActiveSource called before worker initialised";
+        return CECDEVICE_UNKNOWN;
+    }
+    int result = CECDEVICE_UNKNOWN;
+    QMetaObject::invokeMethod(m_worker,
+                              "queryActiveSource",
+                              Qt::BlockingQueuedConnection,
+                              Q_RETURN_ARG(int, result));
+    return result;
+}
+
+bool CECController::isActiveSource()
+{
+    if (!m_initialized || !m_worker) {
+        qWarning() << "CECController: isActiveSource called before worker initialised";
+        return false;
+    }
+    bool result = false;
+    QMetaObject::invokeMethod(m_worker,
+                              "isActiveSource",
+                              Qt::BlockingQueuedConnection,
+                              Q_RETURN_ARG(bool, result));
+    return result;
+}
+
+QString CECController::queryDeviceOsdName(int logicalAddress)
+{
+    if (!m_initialized || !m_worker) {
+        qWarning() << "CECController: queryDeviceOsdName called before worker initialised";
+        return {};
+    }
+    QString result;
+    QMetaObject::invokeMethod(m_worker,
+                              "queryDeviceOsdName",
+                              Qt::BlockingQueuedConnection,
+                              Q_RETURN_ARG(QString, result),
+                              Q_ARG(int, logicalAddress));
+    return result;
+}
+
 void CECController::requestNextKey()
 {
     m_catchNextInput = true;
