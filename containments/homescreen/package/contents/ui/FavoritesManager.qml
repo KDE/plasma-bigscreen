@@ -17,7 +17,7 @@ import org.kde.plasma.plasmoid
 
 Window {
     id: root
-    title: i18n("Favorites Manager")
+    title: i18n("Edit Home Screen")
 
     LayerShell.Window.scope: "overlay"
     LayerShell.Window.anchors: LayerShell.Window.AnchorTop | LayerShell.Window.AnchorLeft | LayerShell.Window.AnchorRight | LayerShell.Window.AnchorBottom
@@ -26,6 +26,8 @@ Window {
 
     flags: Qt.FramelessWindowHint
     color: 'transparent'
+
+    property int currentPageIndex: 0
 
     function showOverlay() {
         favsContainerAddSection.positionViewAtBeginning();
@@ -44,17 +46,16 @@ Window {
     }
 
     onVisibleChanged: {
-        // Fade in when window is opening
         if (visible) {
             opacityAnim.to = 1;
             opacityAnim.restart();
 
-            favsContainerAddSection.forceActiveFocus();
+            pagePickerList.currentIndex = root.currentPageIndex;
+            pagePickerList.forceActiveFocus();
         }
     }
 
     onClosing: (close) => {
-        // Fade out before closing
         if (windowContents.opacity !== 0) {
             close.accepted = false;
             opacityAnim.to = 0;
@@ -62,12 +63,10 @@ Window {
         }
     }
 
-    // Search window contents
     Rectangle {
         id: windowContents
         anchors.fill: parent
 
-        // Background color
         color: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.8)
 
         opacity: 0
@@ -87,7 +86,6 @@ Window {
         Kirigami.Theme.inherit: false
         Kirigami.Theme.colorSet: Kirigami.Theme.View
 
-        // Background panel
         Rectangle {
             id: backgroundPanel
             anchors.left: parent.left
@@ -100,6 +98,7 @@ Window {
         ColumnLayout {
             id: column
             anchors.fill: parent
+
             Kirigami.Heading {
                 id: titleHeading
                 Layout.fillWidth: true
@@ -117,81 +116,158 @@ Window {
             RowLayout {
                 Layout.fillHeight: true
                 Layout.fillWidth: true
+                spacing: 0
 
-                ListView {
-                    id: favsContainerAddSection
-
-                    Layout.margins: Kirigami.Units.gridUnit
-                    Layout.fillWidth: true
+                // Left sidebar: page picker (settings-app style)
+                Rectangle {
+                    id: sidebar
                     Layout.fillHeight: true
-                    KeyNavigation.right: favsContainerRemoveSection
+                    Layout.preferredWidth: Math.max(Kirigami.Units.gridUnit * 20, root.width * 0.20)
 
-                    model: Plasmoid.applicationListModel
-                    clip: true
-                    keyNavigationEnabled: true
-                    snapMode: ListView.SnapOneItem
-                    spacing: Kirigami.Units.smallSpacing
+                    color: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.8)
 
-                    Kirigami.Theme.inherit: false
-                    Kirigami.Theme.colorSet: Kirigami.Theme.Window
+                    ListView {
+                        id: pagePickerList
+                        anchors.fill: parent
+                        leftMargin: Kirigami.Units.gridUnit + Kirigami.Units.largeSpacing
+                        rightMargin: Kirigami.Units.gridUnit + Kirigami.Units.largeSpacing
+                        topMargin: Kirigami.Units.largeSpacing
+                        bottomMargin: Kirigami.Units.largeSpacing
+                        spacing: Kirigami.Units.largeSpacing
+                        keyNavigationEnabled: true
 
-                    header: Controls.Label {
-                        text: i18n("Add Favorites")
-                        font.pixelSize: Bigscreen.Units.headingFontPixelSize
-                        elide: Text.ElideRight
-                        bottomPadding: Kirigami.Units.largeSpacing
-                    }
+                        KeyNavigation.right: favsContainerAddSection
 
-                    delegate: Bigscreen.ButtonDelegate {
-                        width: favsContainerAddSection.width
-                        text: model.ApplicationNameRole
-                        icon.name: model.ApplicationIconRole
-                        trailing: Kirigami.Icon {
-                            source: "list-add-symbolic"
-                            implicitWidth: Kirigami.Units.iconSizes.smallMedium
-                            implicitHeight: Kirigami.Units.iconSizes.smallMedium
+                        model: [i18n("Favorites")]
+
+                        onCurrentItemChanged: {
+                            if (currentItem) {
+                                currentItem.forceActiveFocus();
+                            }
                         }
-                        onClicked: {
-                            FavsManager.addFav(Plasmoid.applicationListModel.itemMap(index));
+
+                        delegate: Controls.Button {
+                            id: pageDelegate
+                            required property int index
+                            required property string modelData
+
+                            width: pagePickerList.width - pagePickerList.leftMargin - pagePickerList.rightMargin
+                            text: modelData
+
+                            leftPadding: Kirigami.Units.gridUnit * 2
+                            rightPadding: Kirigami.Units.gridUnit * 2
+                            topPadding: Kirigami.Units.largeSpacing
+                            bottomPadding: Kirigami.Units.largeSpacing
+
+                            readonly property bool selected: root.currentPageIndex === index
+
+                            onClicked: root.currentPageIndex = index
+                            Keys.onReturnPressed: root.currentPageIndex = index
+
+                            background: Bigscreen.DelegateBackground {
+                                control: pageDelegate
+                                raisedBackground: false
+                                translucentHighlight: true
+                                highlighted: pageDelegate.selected
+                                borderHighlighted: highlighted || (pageDelegate.ListView.isCurrentItem && pagePickerList.activeFocus)
+                            }
+
+                            contentItem: Kirigami.Heading {
+                                text: pageDelegate.text
+                                font.weight: Font.Medium
+                                elide: Text.ElideRight
+                            }
                         }
                     }
                 }
 
-                ListView {
-                    id: favsContainerRemoveSection
-
-                    Layout.margins: Kirigami.Units.gridUnit
-                    Layout.fillWidth: true
+                StackLayout {
+                    id: editStack
                     Layout.fillHeight: true
-                    KeyNavigation.left: favsContainerAddSection
+                    Layout.fillWidth: true
+                    currentIndex: root.currentPageIndex
 
-                    model: Plasmoid.favsListModel
-                    clip: true
-                    keyNavigationEnabled: true
-                    snapMode: ListView.SnapOneItem
-                    spacing: Kirigami.Units.smallSpacing
+                    RowLayout {
+                        Layout.fillHeight: true
+                        Layout.fillWidth: true
 
-                    Kirigami.Theme.inherit: false
-                    Kirigami.Theme.colorSet: Kirigami.Theme.Window
+                        ListView {
+                            id: favsContainerAddSection
 
-                    header: Controls.Label {
-                        text: i18n("Remove Favorites")
-                        font.pixelSize: Bigscreen.Units.headingFontPixelSize
-                        elide: Text.ElideRight
-                        bottomPadding: Kirigami.Units.largeSpacing
-                    }
+                            Layout.margins: Kirigami.Units.gridUnit
+                            Layout.fillWidth: true
+                            Layout.fillHeight: true
+                            KeyNavigation.right: favsContainerRemoveSection
+                            KeyNavigation.left: pagePickerList
 
-                    delegate: Bigscreen.ButtonDelegate {
-                        width: favsContainerRemoveSection.width
-                        text: model.ApplicationNameRole
-                        icon.name: model.ApplicationIconRole
-                        trailing: Kirigami.Icon {
-                            source: "list-remove-symbolic"
-                            implicitWidth: Kirigami.Units.iconSizes.smallMedium
-                            implicitHeight: Kirigami.Units.iconSizes.smallMedium
+                            model: Plasmoid.applicationListModel
+                            clip: true
+                            keyNavigationEnabled: true
+                            snapMode: ListView.SnapOneItem
+                            spacing: Kirigami.Units.smallSpacing
+
+                            Kirigami.Theme.inherit: false
+                            Kirigami.Theme.colorSet: Kirigami.Theme.Window
+
+                            header: Controls.Label {
+                                text: i18n("Add Favorites")
+                                font.pixelSize: Bigscreen.Units.headingFontPixelSize
+                                elide: Text.ElideRight
+                                bottomPadding: Kirigami.Units.largeSpacing
+                            }
+
+                            delegate: Bigscreen.ButtonDelegate {
+                                width: favsContainerAddSection.width
+                                text: model.ApplicationNameRole
+                                icon.name: model.ApplicationIconRole
+                                trailing: Kirigami.Icon {
+                                    source: "list-add-symbolic"
+                                    implicitWidth: Kirigami.Units.iconSizes.smallMedium
+                                    implicitHeight: Kirigami.Units.iconSizes.smallMedium
+                                }
+                                onClicked: {
+                                    FavsManager.addFav(Plasmoid.applicationListModel.itemMap(index));
+                                }
+                            }
                         }
-                        onClicked: {
-                            FavsManager.removeFav(Plasmoid.favsListModel.itemMap(index));
+
+                        ListView {
+                            id: favsContainerRemoveSection
+
+                            Layout.margins: Kirigami.Units.gridUnit
+                            Layout.fillWidth: true
+                            Layout.fillHeight: true
+                            KeyNavigation.left: favsContainerAddSection
+
+                            model: Plasmoid.favsListModel
+                            clip: true
+                            keyNavigationEnabled: true
+                            snapMode: ListView.SnapOneItem
+                            spacing: Kirigami.Units.smallSpacing
+
+                            Kirigami.Theme.inherit: false
+                            Kirigami.Theme.colorSet: Kirigami.Theme.Window
+
+                            header: Controls.Label {
+                                text: i18n("Remove Favorites")
+                                font.pixelSize: Bigscreen.Units.headingFontPixelSize
+                                elide: Text.ElideRight
+                                bottomPadding: Kirigami.Units.largeSpacing
+                            }
+
+                            delegate: Bigscreen.ButtonDelegate {
+                                width: favsContainerRemoveSection.width
+                                text: model.ApplicationNameRole
+                                icon.name: model.ApplicationIconRole
+                                trailing: Kirigami.Icon {
+                                    source: "list-remove-symbolic"
+                                    implicitWidth: Kirigami.Units.iconSizes.smallMedium
+                                    implicitHeight: Kirigami.Units.iconSizes.smallMedium
+                                }
+                                onClicked: {
+                                    FavsManager.removeFav(Plasmoid.favsListModel.itemMap(index));
+                                }
+                            }
                         }
                     }
                 }
