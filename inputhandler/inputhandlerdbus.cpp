@@ -270,4 +270,53 @@ QString InputHandlerDBus::queryDeviceOsdName(int logicalAddress)
 #endif
 }
 
+int InputHandlerDBus::sendVolumeUp()
+{
+#ifdef HAS_LIBCEC
+    if (!m_cecController) {
+        return CEC::CEC_AUDIO_VOLUME_STATUS_UNKNOWN;
+    }
+    return m_cecController->sendVolumeUp();
+#else
+    // libcec's CEC_AUDIO_VOLUME_STATUS_UNKNOWN.
+    return 0x7F;
+#endif
+}
+
+int InputHandlerDBus::sendVolumeDown()
+{
+#ifdef HAS_LIBCEC
+    if (!m_cecController) {
+        return CEC::CEC_AUDIO_VOLUME_STATUS_UNKNOWN;
+    }
+    return m_cecController->sendVolumeDown();
+#else
+    return 0x7F;
+#endif
+}
+
+int InputHandlerDBus::sendMuteToggle()
+{
+#ifdef HAS_LIBCEC
+    if (!m_cecController) {
+        return CEC::CEC_AUDIO_VOLUME_STATUS_UNKNOWN;
+    }
+    return m_cecController->sendMuteToggle();
+#else
+    return 0x7F;
+#endif
+}
+
+int InputHandlerDBus::queryAudioStatus()
+{
+#ifdef HAS_LIBCEC
+    if (!m_cecController) {
+        return CEC::CEC_AUDIO_VOLUME_STATUS_UNKNOWN;
+    }
+    return m_cecController->queryAudioStatus();
+#else
+    return 0x7F;
+#endif
+}
+
 #include "moc_inputhandlerdbus.cpp"

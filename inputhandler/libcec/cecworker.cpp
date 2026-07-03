@@ -177,6 +177,42 @@ QString CECWorker::queryDeviceOsdName(int logicalAddress)
     return QString::fromStdString(m_cecAdapter->GetDeviceOSDName(la));
 }
 
+int CECWorker::sendVolumeUp()
+{
+    if (!m_cecAdapter) {
+        qWarning() << "CECWorker: sendVolumeUp called but no adapter available";
+        return CEC_AUDIO_VOLUME_STATUS_UNKNOWN;
+    }
+    return static_cast<int>(m_cecAdapter->VolumeUp(true));
+}
+
+int CECWorker::sendVolumeDown()
+{
+    if (!m_cecAdapter) {
+        qWarning() << "CECWorker: sendVolumeDown called but no adapter available";
+        return CEC_AUDIO_VOLUME_STATUS_UNKNOWN;
+    }
+    return static_cast<int>(m_cecAdapter->VolumeDown(true));
+}
+
+int CECWorker::sendMuteToggle()
+{
+    if (!m_cecAdapter) {
+        qWarning() << "CECWorker: sendMuteToggle called but no adapter available";
+        return CEC_AUDIO_VOLUME_STATUS_UNKNOWN;
+    }
+    return static_cast<int>(m_cecAdapter->MuteAudio());
+}
+
+int CECWorker::queryAudioStatus()
+{
+    if (!m_cecAdapter) {
+        qWarning() << "CECWorker: queryAudioStatus called but no adapter available";
+        return CEC_AUDIO_VOLUME_STATUS_UNKNOWN;
+    }
+    return static_cast<int>(m_cecAdapter->AudioStatus());
+}
+
 // NOTE: These static callbacks are invoked from libcec's internal thread,
 // NOT from the Qt worker thread.
 

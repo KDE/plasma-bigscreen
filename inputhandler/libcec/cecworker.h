@@ -39,6 +39,10 @@ public Q_SLOTS:
     int queryActiveSource();
     bool isActiveSource();
     QString queryDeviceOsdName(int logicalAddress);
+    int sendVolumeUp();
+    int sendVolumeDown();
+    int sendMuteToggle();
+    int queryAudioStatus();
 
 Q_SIGNALS:
     void initialized(bool success);

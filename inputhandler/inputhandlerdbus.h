@@ -66,7 +66,8 @@ public Q_SLOTS:
     // of the target device (0 = TV, see CEC spec table 10-6). Returns
     // false (or CEC_POWER_STATUS_UNKNOWN for queryDevicePowerStatus,
     // CECDEVICE_UNKNOWN for queryActiveSource, an empty string for
-    // queryDeviceOsdName) if libcec is not initialised, no adapter is
+    // queryDeviceOsdName, CEC_AUDIO_VOLUME_STATUS_UNKNOWN (0x7F) for
+    // the volume methods) if libcec is not initialised, no adapter is
     // open, or the build does not include libcec support.
     Q_SCRIPTABLE bool sendStandby(int logicalAddress);
     Q_SCRIPTABLE bool sendImageViewOn(int logicalAddress);
@@ -75,6 +76,10 @@ public Q_SLOTS:
     Q_SCRIPTABLE int queryActiveSource();
     Q_SCRIPTABLE bool isActiveSource();
     Q_SCRIPTABLE QString queryDeviceOsdName(int logicalAddress);
+    Q_SCRIPTABLE int sendVolumeUp();
+    Q_SCRIPTABLE int sendVolumeDown();
+    Q_SCRIPTABLE int sendMuteToggle();
+    Q_SCRIPTABLE int queryAudioStatus();
 
 Q_SIGNALS:
     // DBus signals

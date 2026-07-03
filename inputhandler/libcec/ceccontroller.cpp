@@ -353,6 +353,62 @@ QString CECController::queryDeviceOsdName(int logicalAddress)
     return result;
 }
 
+int CECController::sendVolumeUp()
+{
+    if (!m_initialized || !m_worker) {
+        qWarning() << "CECController: sendVolumeUp called before worker initialised";
+        return CEC_AUDIO_VOLUME_STATUS_UNKNOWN;
+    }
+    int result = CEC_AUDIO_VOLUME_STATUS_UNKNOWN;
+    QMetaObject::invokeMethod(m_worker,
+                              "sendVolumeUp",
+                              Qt::BlockingQueuedConnection,
+                              Q_RETURN_ARG(int, result));
+    return result;
+}
+
+int CECController::sendVolumeDown()
+{
+    if (!m_initialized || !m_worker) {
+        qWarning() << "CECController: sendVolumeDown called before worker initialised";
+        return CEC_AUDIO_VOLUME_STATUS_UNKNOWN;
+    }
+    int result = CEC_AUDIO_VOLUME_STATUS_UNKNOWN;
+    QMetaObject::invokeMethod(m_worker,
+                              "sendVolumeDown",
+                              Qt::BlockingQueuedConnection,
+                              Q_RETURN_ARG(int, result));
+    return result;
+}
+
+int CECController::sendMuteToggle()
+{
+    if (!m_initialized || !m_worker) {
+        qWarning() << "CECController: sendMuteToggle called before worker initialised";
+        return CEC_AUDIO_VOLUME_STATUS_UNKNOWN;
+    }
+    int result = CEC_AUDIO_VOLUME_STATUS_UNKNOWN;
+    QMetaObject::invokeMethod(m_worker,
+                              "sendMuteToggle",
+                              Qt::BlockingQueuedConnection,
+                              Q_RETURN_ARG(int, result));
+    return result;
+}
+
+int CECController::queryAudioStatus()
+{
+    if (!m_initialized || !m_worker) {
+        qWarning() << "CECController: queryAudioStatus called before worker initialised";
+        return CEC_AUDIO_VOLUME_STATUS_UNKNOWN;
+    }
+    int result = CEC_AUDIO_VOLUME_STATUS_UNKNOWN;
+    QMetaObject::invokeMethod(m_worker,
+                              "queryAudioStatus",
+                              Qt::BlockingQueuedConnection,
+                              Q_RETURN_ARG(int, result));
+    return result;
+}
+
 void CECController::requestNextKey()
 {
     m_catchNextInput = true;
