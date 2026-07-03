@@ -17,5 +17,14 @@
     <entry name="wallpaperBlur" type="Bool">
         <default>false</default>
     </entry>
+    <entry name="showRecent" type="Bool">
+        <default>true</default>
+    </entry>
+    <entry name="showApplications" type="Bool">
+        <default>true</default>
+    </entry>
+    <entry name="showGames" type="Bool">
+        <default>true</default>
+    </entry>
 </group>
 </kcfg>

@@ -60,6 +60,15 @@ ContainmentItem {
         function onUseWallpaperBlurChanged(wallpaperBlur) {
             Plasmoid.configuration.wallpaperBlur = wallpaperBlur;
         }
+        function onShowRecentChanged(showRecent) {
+            Plasmoid.configuration.showRecent = showRecent;
+        }
+        function onShowApplicationsChanged(showApplications) {
+            Plasmoid.configuration.showApplications = showApplications;
+        }
+        function onShowGamesChanged(showGames) {
+            Plasmoid.configuration.showGames = showGames;
+        }
     }
 
     Connections {

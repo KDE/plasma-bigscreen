@@ -37,6 +37,15 @@ public Q_SLOTS: // METHODS
     Q_SCRIPTABLE void useWallpaperBlur(const bool &wallpaperBlur);
     Q_SCRIPTABLE bool wallpaperBlurActive();
 
+    Q_SCRIPTABLE void setShowRecent(const bool &showRecent);
+    Q_SCRIPTABLE bool showRecentActive();
+
+    Q_SCRIPTABLE void setShowApplications(const bool &showApplications);
+    Q_SCRIPTABLE bool showApplicationsActive();
+
+    Q_SCRIPTABLE void setShowGames(const bool &showGames);
+    Q_SCRIPTABLE bool showGamesActive();
+
     Q_SCRIPTABLE void activateWallpaperSelector();
     Q_SCRIPTABLE QString activateSettingsShortcut();
     Q_SCRIPTABLE QString activateTasksShortcut();
@@ -56,6 +65,9 @@ public Q_SLOTS: // METHODS
 Q_SIGNALS: // SIGNALS
     Q_SCRIPTABLE void useColoredTilesChanged(const bool &msgUseColoredTiles);
     Q_SCRIPTABLE void useWallpaperBlurChanged(const bool &msgUseWallpaperBlur);
+    Q_SCRIPTABLE void showRecentChanged(const bool &msgShowRecent);
+    Q_SCRIPTABLE void showApplicationsChanged(const bool &msgShowApplications);
+    Q_SCRIPTABLE void showGamesChanged(const bool &msgShowGames);
     void activateWallpaperSelectorRequested();
 
 private:

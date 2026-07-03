@@ -31,13 +31,7 @@ FocusScope {
     readonly property bool scrolledDown: launcherHomeColumn.currentSection && launcherHomeColumn.currentSection !== favAppsView.currentViewDownwards
 
     function activateAppView() {
-        if (favAppsView.visible) {
-            favAppsView.forceActiveFocus();
-        } else if (recentView.visible) {
-            recentView.forceActiveFocus();
-        } else {
-            appsView.forceActiveFocus();
-        }
+        favAppsView.currentViewDownwards?.forceActiveFocus();
     }
 
     Component.onCompleted: activateAppView()
@@ -128,7 +122,7 @@ FocusScope {
                 }
             }
 
-            visible: count > 0
+            visible: Plasmoid.configuration.showRecent && count > 0
             currentIndex: 0
             focus: visible && (favAppsView.currentViewUpwards === root.navigationUp)
             onActiveFocusChanged: if (activeFocus)
@@ -155,7 +149,7 @@ FocusScope {
             property var currentViewDownwards: visible ? appsView : gamesView.currentViewDownwards
 
             title: i18n("Applications")
-            visible: count > 0
+            visible: Plasmoid.configuration.showApplications && count > 0
             enabled: count > 0
             model: KItemModels.KSortFilterProxyModel {
                 sourceModel: Plasmoid.applicationListModel
@@ -184,7 +178,7 @@ FocusScope {
             property var currentViewDownwards: visible ? gamesView : null
 
             title: i18n("Games")
-            visible: count > 0
+            visible: Plasmoid.configuration.showGames && count > 0
             enabled: count > 0
             model: KItemModels.KSortFilterProxyModel {
                 sourceModel: Plasmoid.applicationListModel

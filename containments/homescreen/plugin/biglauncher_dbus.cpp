@@ -75,6 +75,42 @@ bool BigLauncherDbusAdapterInterface::wallpaperBlurActive()
     return m_config.readEntry("wallpaperBlur", false);
 }
 
+void BigLauncherDbusAdapterInterface::setShowRecent(const bool &showRecent)
+{
+    m_config.writeEntry("showRecent", showRecent);
+    m_config.sync();
+    Q_EMIT showRecentChanged(showRecent);
+}
+
+bool BigLauncherDbusAdapterInterface::showRecentActive()
+{
+    return m_config.readEntry("showRecent", true);
+}
+
+void BigLauncherDbusAdapterInterface::setShowApplications(const bool &showApplications)
+{
+    m_config.writeEntry("showApplications", showApplications);
+    m_config.sync();
+    Q_EMIT showApplicationsChanged(showApplications);
+}
+
+bool BigLauncherDbusAdapterInterface::showApplicationsActive()
+{
+    return m_config.readEntry("showApplications", true);
+}
+
+void BigLauncherDbusAdapterInterface::setShowGames(const bool &showGames)
+{
+    m_config.writeEntry("showGames", showGames);
+    m_config.sync();
+    Q_EMIT showGamesChanged(showGames);
+}
+
+bool BigLauncherDbusAdapterInterface::showGamesActive()
+{
+    return m_config.readEntry("showGames", true);
+}
+
 void BigLauncherDbusAdapterInterface::activateWallpaperSelector()
 {
     Q_EMIT activateWallpaperSelectorRequested();
