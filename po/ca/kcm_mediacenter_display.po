@@ -54,24 +54,3 @@ msgstr "Escala"
 msgctxt "Scale percentage"
 msgid "%1%"
 msgstr "%1%"
-
-#~ msgid "New Resolution"
-#~ msgstr "Resolució nova"
-
-#~ msgid "Accept"
-#~ msgstr "Accepta"
-
-#~ msgid "Cancel"
-#~ msgstr "Cancel·la"
-
-#~ msgid "Resolution: "
-#~ msgstr "Resolució: "
-
-#~ msgid "Refresh Rate: "
-#~ msgstr "Freqüència d'actualització: "
-
-#~ msgid "Mode: "
-#~ msgstr "Mode: "
-
-#~ msgid "Available Resolutions"
-#~ msgstr "Resolucions disponibles"

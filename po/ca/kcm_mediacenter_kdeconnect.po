@@ -73,9 +73,3 @@ msgstr "KDE Connect"
 #, kde-format
 msgid "Devices"
 msgstr "Dispositius"
-
-#~ msgid "Press the [←] Back button to return to device selection"
-#~ msgstr "Premeu el botó Enrere [←] per a tornar a la selecció de dispositius"
-
-#~ msgid "Exit"
-#~ msgstr "Surt"

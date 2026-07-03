@@ -23,6 +23,3 @@ msgstr ""
 #, kde-format
 msgid "Screenshot saved to %1"
 msgstr "La captura de pantalla s'ha guardat a %1"
-
-#~ msgid "Close"
-#~ msgstr "Tanca"
