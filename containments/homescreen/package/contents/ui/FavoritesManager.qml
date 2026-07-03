@@ -136,9 +136,9 @@ Window {
                         spacing: Kirigami.Units.largeSpacing
                         keyNavigationEnabled: true
 
-                        KeyNavigation.right: favsContainerAddSection
+                        KeyNavigation.right: root.currentPageIndex === 0 ? favsContainerAddSection : showRecentToggle
 
-                        model: [i18n("Favorites")]
+                        model: [i18n("Favorites"), i18n("Launcher Sections")]
 
                         onCurrentItemChanged: {
                             if (currentItem) {
@@ -269,6 +269,73 @@ Window {
                                 }
                             }
                         }
+                    }
+
+                    ColumnLayout {
+                        id: launcherSectionsPage
+                        Layout.fillHeight: true
+                        Layout.fillWidth: true
+                        spacing: Kirigami.Units.smallSpacing
+
+                        Controls.Label {
+                            text: i18n("Launcher Sections")
+                            font.pixelSize: Bigscreen.Units.headingFontPixelSize
+                            elide: Text.ElideRight
+                            Layout.leftMargin: Kirigami.Units.gridUnit
+                            Layout.topMargin: Kirigami.Units.gridUnit
+                            Layout.bottomMargin: Kirigami.Units.largeSpacing
+                        }
+
+                        Bigscreen.SwitchDelegate {
+                            id: showRecentToggle
+                            Layout.fillWidth: true
+                            Layout.leftMargin: Kirigami.Units.gridUnit
+                            Layout.rightMargin: Kirigami.Units.gridUnit
+
+                            text: i18n("Show Recent")
+                            description: i18n("Recently launched applications appear in a row on the home screen")
+                            checked: Plasmoid.configuration.showRecent
+
+                            KeyNavigation.left: pagePickerList
+                            KeyNavigation.down: showApplicationsToggle
+
+                            onToggled: BigLauncherDbusAdapterInterface.setShowRecent(checked)
+                        }
+
+                        Bigscreen.SwitchDelegate {
+                            id: showApplicationsToggle
+                            Layout.fillWidth: true
+                            Layout.leftMargin: Kirigami.Units.gridUnit
+                            Layout.rightMargin: Kirigami.Units.gridUnit
+
+                            text: i18n("Show Applications")
+                            description: i18n("Non-game applications appear in a row on the home screen")
+                            checked: Plasmoid.configuration.showApplications
+
+                            KeyNavigation.left: pagePickerList
+                            KeyNavigation.up: showRecentToggle
+                            KeyNavigation.down: showGamesToggle
+
+                            onToggled: BigLauncherDbusAdapterInterface.setShowApplications(checked)
+                        }
+
+                        Bigscreen.SwitchDelegate {
+                            id: showGamesToggle
+                            Layout.fillWidth: true
+                            Layout.leftMargin: Kirigami.Units.gridUnit
+                            Layout.rightMargin: Kirigami.Units.gridUnit
+
+                            text: i18n("Show Games")
+                            description: i18n("Applications in the Game category appear in a row on the home screen")
+                            checked: Plasmoid.configuration.showGames
+
+                            KeyNavigation.left: pagePickerList
+                            KeyNavigation.up: showApplicationsToggle
+
+                            onToggled: BigLauncherDbusAdapterInterface.setShowGames(checked)
+                        }
+
+                        Item { Layout.fillHeight: true }
                     }
                 }
             }
