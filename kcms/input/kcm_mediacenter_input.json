@@ -18,6 +18,7 @@
         "Description[ru]": "Настройка ввода с пультов дистанционного управления и игровых контроллеров",
         "Description[sk]": "Nastaviť vstup diaľkového ovládača a herného ovládača",
         "Description[sl]": "Konfiguriraj vhod daljinskega upravljalnika in igralnega krmilnika",
+        "Description[sv]": "Anpassa fjärrinmatning och spelkontrollinmatning",
         "Description[uk]": "Налаштувати введення з пульта керування та ігрового контролера",
         "Description[zh_CN]": "配置遥控器和游戏控制器输入",
         "FormFactors": [
@@ -42,6 +43,7 @@
         "Name[ru]": "Ввод",
         "Name[sk]": "Vstup",
         "Name[sl]": "Vhod",
+        "Name[sv]": "Inmatning",
         "Name[uk]": "Введення",
         "Name[zh_CN]": "输入"
     },
@@ -63,6 +65,7 @@
     "X-KDE-Keywords[ru]": "input,controller,gamepad,cec,remote,ввод,контроллер,геймпад,пульт",
     "X-KDE-Keywords[sk]": "vstup,ovládač,gamepad,cec,diaľkové ovládanie",
     "X-KDE-Keywords[sl]": "vhod,krmilnik,igralna ploščica,cec,oddaljeni",
+    "X-KDE-Keywords[sv]": "inmatning,kontroll,handkontroll,cec,fjärr",
     "X-KDE-Keywords[uk]": "input,controller,gamepad,cec,remote,введення,вхід,контролер,пульт,керування",
     "X-KDE-Keywords[zh_CN]": "input,controller,gamepad,cec,remote,shuru,youxikongzhiqi,kongzhhiqi,shoubing,youxishoubing,yaokongqi,dianshiyaokongqi,输入,游戏控制器,控制器,手柄,游戏手柄,遥控器,电视遥控器",
     "X-KDE-System-Settings-Parent-Category": "hardware",
