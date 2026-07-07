@@ -40,3 +40,4 @@ target_link_libraries(plasma-bigscreen-settings
 )
 
 install(TARGETS plasma-bigscreen-settings ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+install(PROGRAMS org.kde.plasma.bigscreen.settings.desktop DESTINATION ${KDE_INSTALL_APPDIR})

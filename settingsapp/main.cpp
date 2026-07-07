@@ -30,12 +30,13 @@ int main(int argc, char *argv[])
 
     QApplication app(argc, argv);
 
-    KAboutData aboutData(QStringLiteral("plasma-bigscreen-webapp"),
+    KAboutData aboutData(QStringLiteral("plasma-bigscreen-settings"),
                          i18n("Bigscreen Settings"),
                          QStringLiteral("0.1"),
                          i18n("Plasma Bigscreen Settings"),
                          KAboutLicense::GPL,
                          i18n("© 2025 Plasma developers"));
+    aboutData.setDesktopFileName(QStringLiteral("org.kde.plasma.bigscreen.settings"));
 
     QCommandLineOption moduleOption{QStringLiteral("m"), QStringLiteral("module"), i18n("Settings module to open"), QString()};
     QCommandLineParser parser;

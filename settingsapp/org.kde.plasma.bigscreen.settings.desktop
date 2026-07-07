@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2026 Achill Gilgenast <achill@achill.org>
+# SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+
+[Desktop Entry]
+Name=Settings
+Exec=plasma-bigscreen-settings
+Icon=preferences-system
+Type=Application
+Terminal=false
+Categories=Settings
+NoDisplay=true
+OnlyShowIn=KDE
