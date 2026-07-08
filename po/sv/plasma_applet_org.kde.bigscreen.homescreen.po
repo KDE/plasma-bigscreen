@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025, 2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2020-2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-29 00:47+0000\n"
-"PO-Revision-Date: 2026-01-23 20:47+0100\n"
+"PO-Revision-Date: 2026-07-07 18:29+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: contents/ui/FavoritesManager.qml:20
 #, kde-format
@@ -35,7 +35,7 @@ msgstr "Ta bort favoriter"
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:36
 #, kde-format
 msgid "Screenshot"
-msgstr ""
+msgstr "Skärmbild"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:50
 #, kde-format
@@ -45,12 +45,12 @@ msgstr "Ljud"
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:78
 #, kde-format
 msgid "Wi-Fi"
-msgstr ""
+msgstr "WIFI"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:93
 #, kde-format
 msgid "Shutdown"
-msgstr ""
+msgstr "Stäng av"
 
 #: contents/ui/homeoverlay/MainColumn.qml:127
 #, kde-format
@@ -64,8 +64,7 @@ msgid "Search"
 msgstr "Sök"
 
 #: contents/ui/homeoverlay/MainColumn.qml:157
-#, fuzzy, kde-format
-#| msgid "Tasks"
+#, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "Uppgifter"
@@ -88,7 +87,7 @@ msgstr "Tangentlagring av"
 #: contents/ui/homeoverlay/MainColumn.qml:201
 #, kde-format
 msgid "On-screen Keyboard"
-msgstr ""
+msgstr "Skärmtangentbord"
 
 #: contents/ui/homeoverlay/MainColumn.qml:215
 #: contents/ui/indicators/Settings.qml:18
@@ -99,19 +98,18 @@ msgstr "Inställningar"
 #: contents/ui/homeoverlay/TaskDelegate.qml:122
 #, kde-format
 msgid "Hold to close…"
-msgstr ""
+msgstr "Håll för att stänga…"
 
 #: contents/ui/homeoverlay/TasksView.qml:111
-#, fuzzy, kde-format
-#| msgid "Voice Apps"
+#, kde-format
 msgctxt "As in: These apps are currently opened"
 msgid "Open Apps"
-msgstr "Röstprogram"
+msgstr "Öppna program"
 
 #: contents/ui/homeoverlay/TasksView.qml:162
 #, kde-format
 msgid "Close all apps"
-msgstr ""
+msgstr "Stäng alla program"
 
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
@@ -129,10 +127,9 @@ msgid "KDE Connect"
 msgstr "KDE-anslut"
 
 #: contents/ui/indicators/PairWindow.qml:40
-#, fuzzy, kde-format
-#| msgid "Pairing Request From %1"
+#, kde-format
 msgid "Accept Pairing Request From %1?"
-msgstr "Begäran om ihopparning från %1"
+msgstr "Acceptera begäran om parkoppling från %1?"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
@@ -205,11 +202,10 @@ msgid "Application taking over controller input"
 msgstr "Program tar över kontrollens inmatning"
 
 #: contents/ui/PowerManagementItem.qml:24
-#, fuzzy, kde-format
-#| msgid "Bigscreen has enabled system-wide inhibition"
+#, kde-format
 msgctxt "@info"
 msgid "Plasma Bigscreen has enabled system-wide inhibition"
-msgstr "Storskärm har aktiverat systemövergripande inhibering"
+msgstr "Plasma Storskärm har aktiverat systemövergripande inhibering"
 
 #: contents/ui/search/SearchTextField.qml:24
 #, kde-format

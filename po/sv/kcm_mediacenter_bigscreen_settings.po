@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2021, 2023, 2024, 2025, 2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2023-2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-29 00:47+0000\n"
-"PO-Revision-Date: 2026-01-23 20:45+0100\n"
+"PO-Revision-Date: 2026-07-07 18:30+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -30,7 +30,7 @@ msgstr "stefan.asserhall@gmail.com"
 #: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
 #, kde-format
 msgid "Color scheme"
-msgstr ""
+msgstr "Färgschema"
 
 #: ui/DatePicker.qml:38
 #, kde-format
@@ -48,8 +48,7 @@ msgid "Day"
 msgstr "Dag"
 
 #: ui/DeviceTimeSettingsSidebar.qml:46
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time Settings"
+#, kde-format
 msgid "Adjust Date and Time Settings"
 msgstr "Justera datum- och tidsinställningar"
 
@@ -125,31 +124,31 @@ msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr "Använd en suddighetseffekt på hemskärmens skrivbordsunderlägg"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Set the system theme"
+#, kde-format
 msgid "Set the system colors"
-msgstr "Ställ in systemtema"
+msgstr "Ställ in systemfärger"
 
 #: ui/main.qml:102
 #, kde-format
 msgid "Window decorations"
-msgstr ""
+msgstr "Fönsterdekorationer"
 
 #: ui/main.qml:103
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
 msgstr ""
+"Använd en fönsterram (minimera, maximera, stäng) för program som begär det"
 
 #: ui/main.qml:112
 #, kde-format
 msgid "Navigation sounds"
-msgstr ""
+msgstr "Navigeringsljud"
 
 #: ui/main.qml:113
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
-msgstr ""
+msgstr "Spela upp ett ljud när det markerade objektet ändras i systemprogram"
 
 #: ui/main.qml:123
 #, kde-format
@@ -159,11 +158,10 @@ msgstr "Effektinhibering"
 #: ui/main.qml:124
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
-msgstr ""
+msgstr "Förhindra att systemet automatiskt försätts i viloläge"
 
 #: ui/main.qml:134
-#, fuzzy, kde-format
-#| msgid "Adjust date & time"
+#, kde-format
 msgid "Adjust date and time"
 msgstr "Justera datum och tid"
 
@@ -173,8 +171,7 @@ msgid "Shortcuts"
 msgstr "Genvägar"
 
 #: ui/main.qml:151
-#, fuzzy, kde-format
-#| msgid "Open homescreen shortcut"
+#, kde-format
 msgid "Open home overlay shortcut"
 msgstr "Öppna hemskärmsgenväg"
 
@@ -219,8 +216,7 @@ msgid "Minute"
 msgstr "Minut"
 
 #: ui/TimePicker.qml:72
-#, fuzzy, kde-format
-#| msgid "Second"
+#, kde-format
 msgctxt "unit of time"
 msgid "Second"
 msgstr "Sekund"
