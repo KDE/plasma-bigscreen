@@ -75,6 +75,9 @@ ContainmentItem {
         target: Shortcuts
 
         function onToggleHomeScreen() {
+            if (homeOverlayWindow.visible) {
+                homeOverlayWindow.hideOverlay();
+            }
             tasksModel.minimizeAllTasks();
         }
     }
