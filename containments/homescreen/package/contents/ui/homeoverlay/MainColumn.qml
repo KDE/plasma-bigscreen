@@ -27,7 +27,11 @@ ColumnLayout {
     signal screenshotRequested()
 
     function focusTasks() {
-        tasksButton.forceActiveFocus();
+        if (tasksButton.visible) {
+            tasksButton.forceActiveFocus();
+        } else {
+            searchButton.forceActiveFocus();
+        }
     }
 
     onVisibleChanged: {
