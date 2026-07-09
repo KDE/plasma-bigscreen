@@ -73,7 +73,7 @@ ColumnLayout {
         contentItem: ColumnLayout {
             QQC2.Label {
                 id: timeLabel
-                text: Qt.formatTime(timeSource.data["Local"]["DateTime"], "h:mm ap")
+                text: Qt.locale().toString(timeSource.data["Local"]["DateTime"], Qt.locale().timeFormat(Locale.ShortFormat))
 
                 Layout.fillWidth: true
                 horizontalAlignment: Text.AlignHCenter
@@ -83,7 +83,7 @@ ColumnLayout {
 
             QQC2.Label {
                 id: dateLabel
-                text: Qt.formatDate(timeSource.data["Local"]["DateTime"], "MMMM d, yyyy")
+                text: Qt.locale().toString(timeSource.data["Local"]["DateTime"], Qt.locale().dateFormat(Locale.LongFormat))
 
                 Layout.fillWidth: true
                 horizontalAlignment: Text.AlignHCenter
