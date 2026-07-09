@@ -11,6 +11,7 @@
 #include <KConfigGroup>
 #include <KDesktopFile>
 #include <KSandbox>
+#include <KShell>
 
 const QString USERAGENT_CFG_KEY = QStringLiteral("X-KDE-Bigscreen-Webapp-UserAgent");
 const QString ID_CFG_KEY = QStringLiteral("X-KDE-Bigscreen-Webapp-Id");
@@ -92,12 +93,11 @@ void WebAppManager::addApp(const QString &name, const QString &url, const QStrin
     KConfig desktopFile(desktopFileDirectory() % QDir::separator() % desktopFileName, KConfig::SimpleConfig);
 
     // TODO: maybe have program read options from .desktop file?
-    // Currently, the user can inject and break the launch command
-    QString exec = webAppCommand() + " --name \"" + name + "\"";
+    QString exec = webAppCommand() + " --name " + KShell::quoteArg(name);
     if (!userAgent.isEmpty()) {
-        exec += " --agent \"" + userAgent + "\"";
+        exec += " --agent " + KShell::quoteArg(userAgent);
     }
-    exec += " \"" + url + "\"";
+    exec += " " + KShell::quoteArg(url);
 
     auto desktopEntry = desktopFile.group(QStringLiteral("Desktop Entry"));
     desktopEntry.writeEntry(QStringLiteral("Type"), QStringLiteral("Application"));

@@ -33,6 +33,7 @@ target_link_libraries(plasma-bigscreen-webapp PRIVATE
     Qt::Widgets
     KF6::I18n
     KF6::CoreAddons
+    KF6::DBusAddons
     KF6::Notifications
 )
 
@@ -40,4 +41,3 @@ target_link_libraries(plasma-bigscreen-webapp PRIVATE Qt::WebEngineCore Qt::WebE
 
 target_include_directories(plasma-bigscreen-webapp PRIVATE ${CMAKE_BINARY_DIR})
 install(TARGETS plasma-bigscreen-webapp ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-
