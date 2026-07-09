@@ -22,7 +22,6 @@
 int main(int argc, char *argv[])
 {
     qputenv("PLASMA_PLATFORM", QByteArray("mediacenter"));
-    qputenv("QT_QUICK_CONTROLS_STYLE", QByteArray("org.kde.breeze"));
 
     QGuiApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
 

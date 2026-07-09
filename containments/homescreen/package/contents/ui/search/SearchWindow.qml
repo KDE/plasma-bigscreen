@@ -168,6 +168,9 @@ Window {
                 Layout.maximumWidth: column.columnContentWidth
                 Layout.alignment: Qt.AlignHCenter
 
+                QQC2.ScrollBar.vertical: null
+                QQC2.ScrollBar.horizontal: null
+
                 SearchListView {
                     id: listView
                     anchors.fill: parent

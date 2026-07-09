@@ -62,6 +62,15 @@ QQC2.Popup {
         }
     }
 
+    QQC2.Overlay.modal: Rectangle {
+        color: Qt.rgba(0,0,0,0.4)
+        Behavior on opacity {
+            OpacityAnimator {
+                duration: Kirigami.Units.longDuration
+            }
+        }
+    }
+
     background: Item {
         Rectangle {
             id: frame
