@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-29 02:39+0000\n"
+"POT-Creation-Date: 2026-07-10 02:39+0000\n"
 "PO-Revision-Date: 2025-08-14 18:34+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -27,32 +27,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "translator@legisign.org"
 
-#: main.cpp:38
+#: main.cpp:53
 #, kde-format
 msgid "The user agent to browse with."
 msgstr "Selaukseen käytettävä käyttäjäagentti."
 
-#: main.cpp:40
+#: main.cpp:55
 #, kde-format
 msgid "The name of the web app"
 msgstr "Verkkosovelluksen nimi"
 
-#: main.cpp:43
+#: main.cpp:58
 #, kde-format
 msgid "link of website to launch"
 msgstr "linkki käynnistettävään sivustoon"
 
-#: main.cpp:57
+#: main.cpp:75
 #, kde-format
 msgid "Webview"
 msgstr "Verkkonäkymä"
 
-#: main.cpp:59
+#: main.cpp:77
 #, kde-format
 msgid "Plasma Bigscreen Webapp runtime"
 msgstr "Plasma Bigscreenin ajonaikainen verkkosovellustuki"
 
-#: main.cpp:61
+#: main.cpp:79
 #, fuzzy, kde-format
 #| msgid "Copyright 2025 Plasma developers"
 msgid "© 2025 Plasma developers"
