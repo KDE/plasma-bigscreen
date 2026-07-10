@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-07-10 00:46+0000\n"
 "PO-Revision-Date: 2026-02-28 13:52+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -33,17 +33,17 @@ msgstr "zayed.alsaidi@gmail.com"
 msgid "Desktop Settings"
 msgstr "إعدادات سطح المكتب"
 
-#: main.cpp:34
+#: main.cpp:33
 #, kde-format
 msgid "Bigscreen Settings"
 msgstr "إعدادات الشاشة الكبيرة"
 
-#: main.cpp:36
+#: main.cpp:35
 #, kde-format
 msgid "Plasma Bigscreen Settings"
 msgstr "إعدادات بلازما الشاشة الكبيرة"
 
-#: main.cpp:38
+#: main.cpp:37
 #, kde-format
 msgid "© 2025 Plasma developers"
 msgstr "© 2025 مطوري بلازما"

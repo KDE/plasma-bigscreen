@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-07-10 00:46+0000\n"
 "PO-Revision-Date: 2026-03-14 07:18+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -33,17 +33,17 @@ msgstr "lukasz.wojnilowicz@gmail.com"
 msgid "Desktop Settings"
 msgstr "Ustawienia pulpitu"
 
-#: main.cpp:34
+#: main.cpp:33
 #, kde-format
 msgid "Bigscreen Settings"
 msgstr "Ustawienia Dużego Ekranu"
 
-#: main.cpp:36
+#: main.cpp:35
 #, kde-format
 msgid "Plasma Bigscreen Settings"
 msgstr "Ustawienia Dużego Ekranu Plazmy"
 
-#: main.cpp:38
+#: main.cpp:37
 #, kde-format
 msgid "© 2025 Plasma developers"
 msgstr "© 2025 Programiści Plazmy"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-07-10 00:46+0000\n"
 "PO-Revision-Date: 2026-06-01 17:44-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -33,17 +33,17 @@ msgstr "sahranbay@gmail.com, gheyret@gmail.com"
 msgid "Desktop Settings"
 msgstr "ئۈستەلئۈستى تەڭشىكى"
 
-#: main.cpp:34
+#: main.cpp:33
 #, kde-format
 msgid "Bigscreen Settings"
 msgstr "چوڭ ئېكران تەڭشىكى"
 
-#: main.cpp:36
+#: main.cpp:35
 #, kde-format
 msgid "Plasma Bigscreen Settings"
 msgstr "Plasma چوڭ ئېكران تەڭشىكى"
 
-#: main.cpp:38
+#: main.cpp:37
 #, kde-format
 msgid "© 2025 Plasma developers"
 msgstr "© 2025 Plasma ئىجادكارلار"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-29 00:47+0000\n"
+"POT-Creation-Date: 2026-07-10 00:46+0000\n"
 "PO-Revision-Date: 2026-05-16 22:25+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -27,32 +27,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ulysses@fsf.hu"
 
-#: main.cpp:38
+#: main.cpp:53
 #, kde-format
 msgid "The user agent to browse with."
 msgstr "A használandó böngészőazonosító."
 
-#: main.cpp:40
+#: main.cpp:55
 #, kde-format
 msgid "The name of the web app"
 msgstr "A webalkalmazás neve."
 
-#: main.cpp:43
+#: main.cpp:58
 #, kde-format
 msgid "link of website to launch"
 msgstr "az elindítandó weboldal hivatkozása"
 
-#: main.cpp:57
+#: main.cpp:75
 #, kde-format
 msgid "Webview"
 msgstr "Webnézet"
 
-#: main.cpp:59
+#: main.cpp:77
 #, kde-format
 msgid "Plasma Bigscreen Webapp runtime"
 msgstr "Plasma Bigscreen webalkalmazás futtatókörnyezet"
 
-#: main.cpp:61
+#: main.cpp:79
 #, kde-format
 msgid "© 2025 Plasma developers"
 msgstr "© A Plasma fejlesztői, 2025."

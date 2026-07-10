@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-07-10 00:46+0000\n"
 "PO-Revision-Date: 2026-03-03 11:14+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -33,17 +33,17 @@ msgstr "toms.trasuns@posteo.net"
 msgid "Desktop Settings"
 msgstr "Darbvirsmas iestatījumi"
 
-#: main.cpp:34
+#: main.cpp:33
 #, kde-format
 msgid "Bigscreen Settings"
 msgstr "Lielā ekrāna iestatījumi"
 
-#: main.cpp:36
+#: main.cpp:35
 #, kde-format
 msgid "Plasma Bigscreen Settings"
 msgstr "„Plasma“ lielā ekrāna iestatījumi"
 
-#: main.cpp:38
+#: main.cpp:37
 #, kde-format
 msgid "© 2025 Plasma developers"
 msgstr "© 2025 „Plasma“ izstrādātāji"

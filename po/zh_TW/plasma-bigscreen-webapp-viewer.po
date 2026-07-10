@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-29 00:47+0000\n"
+"POT-Creation-Date: 2026-07-10 00:46+0000\n"
 "PO-Revision-Date: 2026-03-02 05:19+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -27,32 +27,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mail@kisaragi-hiu.com"
 
-#: main.cpp:38
+#: main.cpp:53
 #, kde-format
 msgid "The user agent to browse with."
 msgstr "瀏覽時使用的使用者代理字串。"
 
-#: main.cpp:40
+#: main.cpp:55
 #, kde-format
 msgid "The name of the web app"
 msgstr "網頁應用程式的名稱"
 
-#: main.cpp:43
+#: main.cpp:58
 #, kde-format
 msgid "link of website to launch"
 msgstr "要啟動的網站的連結"
 
-#: main.cpp:57
+#: main.cpp:75
 #, kde-format
 msgid "Webview"
 msgstr "Webview"
 
-#: main.cpp:59
+#: main.cpp:77
 #, kde-format
 msgid "Plasma Bigscreen Webapp runtime"
 msgstr "Plasma 大螢幕 Webapp 執行環境"
 
-#: main.cpp:61
+#: main.cpp:79
 #, kde-format
 msgid "© 2025 Plasma developers"
 msgstr "© 2025 Plasma 開發團隊"
