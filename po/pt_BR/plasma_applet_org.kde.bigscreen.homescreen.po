@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-29 00:47+0000\n"
+"POT-Creation-Date: 2026-07-11 00:45+0000\n"
 "PO-Revision-Date: 2026-05-15 05:36-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -155,52 +155,52 @@ msgstr "Configurações de áudio"
 msgid "Internet Settings"
 msgstr "Configurações da Internet"
 
-#: contents/ui/launcher/LauncherHome.qml:90
+#: contents/ui/launcher/LauncherHome.qml:84
 #, kde-format
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: contents/ui/launcher/LauncherHome.qml:119
+#: contents/ui/launcher/LauncherHome.qml:113
 #, kde-format
 msgid "Recent"
 msgstr "Recentes"
 
-#: contents/ui/launcher/LauncherHome.qml:157
+#: contents/ui/launcher/LauncherHome.qml:151
 #, kde-format
 msgid "Applications"
 msgstr "Aplicativos"
 
-#: contents/ui/launcher/LauncherHome.qml:186
+#: contents/ui/launcher/LauncherHome.qml:180
 #, kde-format
 msgid "Games"
 msgstr "Jogos"
 
-#: contents/ui/main.qml:102
+#: contents/ui/main.qml:111
 #, kde-format
 msgid "Controller added: %1"
 msgstr "Controlador adicionado: %1"
 
-#: contents/ui/main.qml:106
+#: contents/ui/main.qml:115
 #, kde-format
 msgid "Controller removed: %1"
 msgstr "Controlador removido: %1"
 
-#: contents/ui/main.qml:110
+#: contents/ui/main.qml:119
 #, kde-format
 msgid "Remote added: %1"
 msgstr "Controle remoto adicionado: %1"
 
-#: contents/ui/main.qml:114
+#: contents/ui/main.qml:123
 #, kde-format
 msgid "Remote removed: %1"
 msgstr "Controle remoto removido: %1"
 
-#: contents/ui/main.qml:118
+#: contents/ui/main.qml:127
 #, kde-format
 msgid "System taking over controller input"
 msgstr "O sistema está assumindo a entrada do controlador"
 
-#: contents/ui/main.qml:121
+#: contents/ui/main.qml:130
 #, kde-format
 msgid "Application taking over controller input"
 msgstr "O aplicativo está assumindo a entrada do controlador"
