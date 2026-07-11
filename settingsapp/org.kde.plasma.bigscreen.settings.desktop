@@ -3,6 +3,17 @@
 
 [Desktop Entry]
 Name=Settings
+Name[ca]=Configuració
+Name[ca@valencia]=Configuració
+Name[cs]=Nastavení
+Name[he]=הגדרות
+Name[ka]=მორგება
+Name[nl]=Instellingen
+Name[pt_BR]=Configurações
+Name[sl]=Nastavitve
+Name[sv]=Inställningar
+Name[tr]=Ayarlar
+Name[uk]=Параметри
 Exec=plasma-bigscreen-settings
 Icon=preferences-system
 Type=Application
