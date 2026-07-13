@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-11 00:45+0000\n"
-"PO-Revision-Date: 2024-10-20 20:15+0300\n"
+"PO-Revision-Date: 2026-07-12 18:30+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:49
 msgid "Layout cannot be changed while widgets are locked"
@@ -45,42 +45,42 @@ msgstr "שחרור נעילת המסך"
 #: contents/logout/Logout.qml:152
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "התקנת עדכוני תוכנה והפעלה מחדש בעוד שנייה"
+msgstr[1] "התקנת עדכוני תוכנה והפעלה מחדש בעוד שתי שניות"
+msgstr[2] "התקנת עדכוני תוכנה והפעלה מחדש בעוד %1 שניות"
+msgstr[3] "התקנת עדכוני תוכנה והפעלה מחדש בעוד %1 שניות"
 
 #: contents/logout/Logout.qml:153
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "מופעל מחדש עוד שנייה"
+msgstr[1] "מופעל מחדש עוד שתי שניות"
+msgstr[2] "מופעל מחדש עוד %1 שניות"
+msgstr[3] "מופעל מחדש עוד %1 שניות"
 
 #: contents/logout/Logout.qml:155
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "יציאה מהפעלה עוד שנייה"
+msgstr[1] "יציאה מהפעלה עוד שתי שניות"
+msgstr[2] "יציאה מהפעלה עוד %1 שניות"
+msgstr[3] "יציאה מהפעלה עוד %1 שניות"
 
 #: contents/logout/Logout.qml:158
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "התקנת עדכוני תוכנה וכיבוי בעוד שנייה"
+msgstr[1] "התקנת עדכוני תוכנה וכיבוי בעוד שתי שניות"
+msgstr[2] "התקנת עדכוני תוכנה וכיבוי בעוד %1 שניות"
+msgstr[3] "התקנת עדכוני תוכנה וכיבוי בעוד %1 שניות"
 
 #: contents/logout/Logout.qml:159
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "נכבה עוד שנייה"
+msgstr[1] "נכבה עוד שתי שניות"
+msgstr[2] "נכבה עוד %1 שניות"
+msgstr[3] "נכבה עוד %1 שניות"
 
 #: contents/logout/Logout.qml:174
 msgid ""
@@ -90,79 +90,87 @@ msgid_plural ""
 "%1 other users are currently logged in. If the computer is shut down or "
 "restarted, those users may lose work."
 msgstr[0] ""
+"יש עוד משתמש במערכת. אם המחשב יכבה או יופעל מחדש זה עלול להוביל לאובדן מידע "
+"שלו."
 msgstr[1] ""
+"יש עוד שני משתמשים במערכת. אם המחשב יכבה או יופעל מחדש זה עלול להוביל לאובדן "
+"מידע שלהם."
 msgstr[2] ""
+"יש עוד %1 משתמשים במערכת. אם המחשב יכבה או יופעל מחדש זה עלול להוביל לאובדן "
+"מידע שלהם."
 msgstr[3] ""
+"יש עוד %1 משתמשים במערכת. אם המחשב יכבה או יופעל מחדש זה עלול להוביל לאובדן "
+"מידע שלהם."
 
 #: contents/logout/Logout.qml:191
 msgid "When restarted, the computer will enter UEFI firmware settings."
-msgstr ""
+msgstr "לאחר הפעלה מחדש, המחשב ייכנס להגדרות קושחת ה־UEFI."
 
 #: contents/logout/Logout.qml:193
 msgid "When restarted, the computer will enter the firmware setup screen."
-msgstr ""
+msgstr "לאחר הפעלה מחדש, המחשב ייכנס למסך הגדרת הקושחה."
 
 #: contents/logout/Logout.qml:208
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr ""
+msgstr "לאחר הפעלה מחדש, המחשב ייכנס לתפריט בחירת אמצעי טעינה."
 
 #: contents/logout/Logout.qml:221
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr ""
+msgstr "לאחר הפעלה מחדש, המחשב יעבור למצב %1."
 
 #: contents/logout/Logout.qml:243
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
-msgstr ""
+msgstr "&שינה"
 
 #: contents/logout/Logout.qml:244
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr ""
+msgstr "&שינה כעת"
 
 #: contents/logout/Logout.qml:253
 msgid "&Hibernate"
-msgstr ""
+msgstr "&תרדמת"
 
 #: contents/logout/Logout.qml:254
 msgid "&Hibernate Now"
-msgstr ""
+msgstr "&תרדמת כעת"
 
 #: contents/logout/Logout.qml:265
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
-msgstr ""
+msgstr "התקנת עדכונים והפעלה מחדש"
 
 #: contents/logout/Logout.qml:267 contents/logout/Logout.qml:286
 msgid "&Restart"
-msgstr ""
+msgstr "ה&פעלה מחדש"
 
 #: contents/logout/Logout.qml:268 contents/logout/Logout.qml:287
 msgid "&Restart Now"
-msgstr ""
+msgstr "ה&פעלה מחדש כעת"
 
 #: contents/logout/Logout.qml:300
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr ""
+msgstr "התקנת עדכונים וכיבוי"
 
 #: contents/logout/Logout.qml:302 contents/logout/Logout.qml:321
 msgid "&Shut Down"
-msgstr ""
+msgstr "&כיבוי"
 
 #: contents/logout/Logout.qml:303 contents/logout/Logout.qml:322
 msgid "&Shut Down Now"
-msgstr ""
+msgstr "&כיבוי כעת"
 
 #: contents/logout/Logout.qml:334
 msgid "&Log Out"
-msgstr ""
+msgstr "י&ציאה"
 
 #: contents/logout/Logout.qml:335
 msgid "&Log Out Now"
-msgstr ""
+msgstr "י&ציאה כעת"
 
 #: contents/logout/Logout.qml:345
 msgid "&Cancel"
-msgstr ""
+msgstr "&ביטול"
