@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-11 00:45+0000\n"
+"POT-Creation-Date: 2026-07-14 00:45+0000\n"
 "PO-Revision-Date: 2026-03-23 06:36+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -18,20 +18,65 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Poedit 3.9\n"
 
-#: contents/ui/FavoritesManager.qml:20
-#, kde-format
-msgid "Favorites Manager"
-msgstr "Upravljalnik priljubljenih"
+#: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
+#, fuzzy, kde-format
+#| msgid "Exit Bigscreen"
+msgid "Edit Home Screen"
+msgstr "Zapusti veliki zaslon"
 
-#: contents/ui/FavoritesManager.qml:139
+#: contents/ui/FavoritesManager.qml:141
+#: contents/ui/launcher/LauncherHome.qml:84
+#, kde-format
+msgid "Favorites"
+msgstr "Priljubljeni"
+
+#: contents/ui/FavoritesManager.qml:141 contents/ui/FavoritesManager.qml:281
+#, kde-format
+msgid "Launcher Sections"
+msgstr ""
+
+#: contents/ui/FavoritesManager.qml:213
 #, kde-format
 msgid "Add Favorites"
 msgstr "Dodaj priljubljene"
 
-#: contents/ui/FavoritesManager.qml:178
+#: contents/ui/FavoritesManager.qml:252
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Odstrani priljubljene"
+
+#: contents/ui/FavoritesManager.qml:295
+#, fuzzy, kde-format
+#| msgid "Recent"
+msgid "Show Recent"
+msgstr "Nedavni"
+
+#: contents/ui/FavoritesManager.qml:296
+#, kde-format
+msgid "Recently launched applications appear in a row on the home screen"
+msgstr ""
+
+#: contents/ui/FavoritesManager.qml:311
+#, fuzzy, kde-format
+#| msgid "Applications"
+msgid "Show Applications"
+msgstr "Aplikacije"
+
+#: contents/ui/FavoritesManager.qml:312
+#, kde-format
+msgid "Non-game applications appear in a row on the home screen"
+msgstr ""
+
+#: contents/ui/FavoritesManager.qml:328
+#, fuzzy, kde-format
+#| msgid "Games"
+msgid "Show Games"
+msgstr "Igre"
+
+#: contents/ui/FavoritesManager.qml:329
+#, kde-format
+msgid "Applications in the Game category appear in a row on the home screen"
+msgstr ""
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:36
 #, kde-format
@@ -53,44 +98,44 @@ msgstr "Wi-Fi"
 msgid "Shutdown"
 msgstr "Izklop"
 
-#: contents/ui/homeoverlay/MainColumn.qml:127
+#: contents/ui/homeoverlay/MainColumn.qml:131
 #, kde-format
 msgid "Home"
 msgstr "Domov"
 
-#: contents/ui/homeoverlay/MainColumn.qml:140
+#: contents/ui/homeoverlay/MainColumn.qml:144
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr "Išči"
 
-#: contents/ui/homeoverlay/MainColumn.qml:157
+#: contents/ui/homeoverlay/MainColumn.qml:161
 #, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "Opravila"
 
-#: contents/ui/homeoverlay/MainColumn.qml:180
+#: contents/ui/homeoverlay/MainColumn.qml:184
 #, kde-format
 msgid "Controller"
 msgstr "Krmilnik"
 
-#: contents/ui/homeoverlay/MainColumn.qml:181
+#: contents/ui/homeoverlay/MainColumn.qml:185
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "Trenutno zajemanje tipk…"
 
-#: contents/ui/homeoverlay/MainColumn.qml:181
+#: contents/ui/homeoverlay/MainColumn.qml:185
 #, kde-format
 msgid "Key capture off"
 msgstr "Zajemanje tipk izklopljeno"
 
-#: contents/ui/homeoverlay/MainColumn.qml:201
+#: contents/ui/homeoverlay/MainColumn.qml:205
 #, kde-format
 msgid "On-screen Keyboard"
 msgstr "Zaslonska tipkovnica"
 
-#: contents/ui/homeoverlay/MainColumn.qml:215
+#: contents/ui/homeoverlay/MainColumn.qml:219
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
@@ -116,11 +161,6 @@ msgstr "Zapri vse aplikacije"
 #, kde-format
 msgid "Battery: %1%"
 msgstr "Baterija: %1%"
-
-#: contents/ui/indicators/Favorites.qml:17
-#, kde-format
-msgid "Customize Favorites"
-msgstr "Prilagodi priljubljene"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -152,11 +192,6 @@ msgstr "Nastavitve zvoka"
 msgid "Internet Settings"
 msgstr "Nastavitve interneta"
 
-#: contents/ui/launcher/LauncherHome.qml:84
-#, kde-format
-msgid "Favorites"
-msgstr "Priljubljeni"
-
 #: contents/ui/launcher/LauncherHome.qml:113
 #, kde-format
 msgid "Recent"
@@ -172,32 +207,32 @@ msgstr "Aplikacije"
 msgid "Games"
 msgstr "Igre"
 
-#: contents/ui/main.qml:111
+#: contents/ui/main.qml:114
 #, kde-format
 msgid "Controller added: %1"
 msgstr "Dodan krmilnik: %1"
 
-#: contents/ui/main.qml:115
+#: contents/ui/main.qml:118
 #, kde-format
 msgid "Controller removed: %1"
 msgstr "Odstranjen krmilnik: %1"
 
-#: contents/ui/main.qml:119
+#: contents/ui/main.qml:122
 #, kde-format
 msgid "Remote added: %1"
 msgstr "Dodan daljinski: %1"
 
-#: contents/ui/main.qml:123
+#: contents/ui/main.qml:126
 #, kde-format
 msgid "Remote removed: %1"
 msgstr "Odstranjen daljinski: %1"
 
-#: contents/ui/main.qml:127
+#: contents/ui/main.qml:130
 #, kde-format
 msgid "System taking over controller input"
 msgstr "Sistem prevzema vhod krmilnika"
 
-#: contents/ui/main.qml:130
+#: contents/ui/main.qml:133
 #, kde-format
 msgid "Application taking over controller input"
 msgstr "Aplikacija prevzema vhod krmilnika"
@@ -213,6 +248,12 @@ msgstr "Plasma Bigscreen je omogočil sistemsko preprečevanje"
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Išči…"
+
+#~ msgid "Favorites Manager"
+#~ msgstr "Upravljalnik priljubljenih"
+
+#~ msgid "Customize Favorites"
+#~ msgstr "Prilagodi priljubljene"
 
 #~ msgid "Accept"
 #~ msgstr "Sprejmi"
