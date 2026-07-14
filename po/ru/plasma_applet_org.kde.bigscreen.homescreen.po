@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-29 02:39+0000\n"
+"POT-Creation-Date: 2026-07-14 02:40+0000\n"
 "PO-Revision-Date: 2026-04-03 22:19+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -173,32 +173,32 @@ msgstr "Приложения"
 msgid "Games"
 msgstr "Игры"
 
-#: contents/ui/main.qml:102
+#: contents/ui/main.qml:105
 #, kde-format
 msgid "Controller added: %1"
 msgstr "Контроллер добавлен: %1"
 
-#: contents/ui/main.qml:106
+#: contents/ui/main.qml:109
 #, kde-format
 msgid "Controller removed: %1"
 msgstr "Контроллер удалён : %1"
 
-#: contents/ui/main.qml:110
+#: contents/ui/main.qml:113
 #, kde-format
 msgid "Remote added: %1"
 msgstr "Пульт добавлен: %1"
 
-#: contents/ui/main.qml:114
+#: contents/ui/main.qml:117
 #, kde-format
 msgid "Remote removed: %1"
 msgstr "Пульт удалён: %1"
 
-#: contents/ui/main.qml:118
+#: contents/ui/main.qml:121
 #, kde-format
 msgid "System taking over controller input"
 msgstr "Управление вводом с контроллера перехвачено системой"
 
-#: contents/ui/main.qml:121
+#: contents/ui/main.qml:124
 #, kde-format
 msgid "Application taking over controller input"
 msgstr "Приложение, перехватывающее управление с контроллера"

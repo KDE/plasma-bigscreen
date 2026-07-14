@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-29 02:39+0000\n"
+"POT-Creation-Date: 2026-07-14 02:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -172,32 +172,32 @@ msgstr "应用"
 msgid "Games"
 msgstr "游戏"
 
-#: contents/ui/main.qml:102
+#: contents/ui/main.qml:105
 #, kde-format
 msgid "Controller added: %1"
 msgstr "已添加控制器：%1"
 
-#: contents/ui/main.qml:106
+#: contents/ui/main.qml:109
 #, kde-format
 msgid "Controller removed: %1"
 msgstr "已移除控制器：%1"
 
-#: contents/ui/main.qml:110
+#: contents/ui/main.qml:113
 #, kde-format
 msgid "Remote added: %1"
 msgstr "已添加遥控器：%1"
 
-#: contents/ui/main.qml:114
+#: contents/ui/main.qml:117
 #, kde-format
 msgid "Remote removed: %1"
 msgstr "已移除遥控器：%1"
 
-#: contents/ui/main.qml:118
+#: contents/ui/main.qml:121
 #, kde-format
 msgid "System taking over controller input"
 msgstr "系统正在接管控制器输入"
 
-#: contents/ui/main.qml:121
+#: contents/ui/main.qml:124
 #, kde-format
 msgid "Application taking over controller input"
 msgstr "应用程序正在接管控制器输入"
