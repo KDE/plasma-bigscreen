@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.mycroft.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-14 00:45+0000\n"
-"PO-Revision-Date: 2026-03-23 21:42+0200\n"
+"PO-Revision-Date: 2026-07-14 08:51+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -21,10 +21,9 @@ msgstr ""
 "X-Generator: Lokalize 23.04.3\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Home Screen"
+#, kde-format
 msgid "Edit Home Screen"
-msgstr "Домашня сторінка"
+msgstr "Редагувати домашню сторінку"
 
 #: contents/ui/FavoritesManager.qml:141
 #: contents/ui/launcher/LauncherHome.qml:84
@@ -35,7 +34,7 @@ msgstr "Улюблене"
 #: contents/ui/FavoritesManager.qml:141 contents/ui/FavoritesManager.qml:281
 #, kde-format
 msgid "Launcher Sections"
-msgstr ""
+msgstr "Розділи засобу запуску"
 
 #: contents/ui/FavoritesManager.qml:213
 #, kde-format
@@ -48,37 +47,34 @@ msgid "Remove Favorites"
 msgstr "Вилучити з улюбленого"
 
 #: contents/ui/FavoritesManager.qml:295
-#, fuzzy, kde-format
-#| msgid "Recent"
+#, kde-format
 msgid "Show Recent"
-msgstr "Нещодавні"
+msgstr "Показати нещодавні"
 
 #: contents/ui/FavoritesManager.qml:296
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
-msgstr ""
+msgstr "У рядку домашньої сторінки буде показано нещодавно запущені програми"
 
 #: contents/ui/FavoritesManager.qml:311
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Show Applications"
-msgstr "Програми"
+msgstr "Показати програми"
 
 #: contents/ui/FavoritesManager.qml:312
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
-msgstr ""
+msgstr "У рядку домашньої сторінки буде показано усі неігрові програми"
 
 #: contents/ui/FavoritesManager.qml:328
-#, fuzzy, kde-format
-#| msgid "Games"
+#, kde-format
 msgid "Show Games"
-msgstr "Ігри"
+msgstr "Показати ігри"
 
 #: contents/ui/FavoritesManager.qml:329
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
-msgstr ""
+msgstr "У рядку домашньої сторінки буде показано усі програми у категорії ігор"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:36
 #, kde-format

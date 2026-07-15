@@ -19,10 +19,9 @@ msgstr ""
 "X-Crowdin-File-ID: 56210\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Exit Bigscreen"
+#, kde-format
 msgid "Edit Home Screen"
-msgstr "退出大屏幕"
+msgstr ""
 
 #: contents/ui/FavoritesManager.qml:141
 #: contents/ui/launcher/LauncherHome.qml:84
@@ -46,10 +45,9 @@ msgid "Remove Favorites"
 msgstr "移除收藏"
 
 #: contents/ui/FavoritesManager.qml:295
-#, fuzzy, kde-format
-#| msgid "Recent"
+#, kde-format
 msgid "Show Recent"
-msgstr "最近"
+msgstr ""
 
 #: contents/ui/FavoritesManager.qml:296
 #, kde-format
@@ -57,10 +55,9 @@ msgid "Recently launched applications appear in a row on the home screen"
 msgstr ""
 
 #: contents/ui/FavoritesManager.qml:311
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Show Applications"
-msgstr "应用"
+msgstr ""
 
 #: contents/ui/FavoritesManager.qml:312
 #, kde-format
@@ -68,10 +65,9 @@ msgid "Non-game applications appear in a row on the home screen"
 msgstr ""
 
 #: contents/ui/FavoritesManager.qml:328
-#, fuzzy, kde-format
-#| msgid "Games"
+#, kde-format
 msgid "Show Games"
-msgstr "游戏"
+msgstr ""
 
 #: contents/ui/FavoritesManager.qml:329
 #, kde-format
@@ -248,9 +244,3 @@ msgstr "Plasma 大屏幕已启用系统全局阻止电源管理"
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "搜索…"
-
-#~ msgid "Favorites Manager"
-#~ msgstr "收藏管理器"
-
-#~ msgid "Customize Favorites"
-#~ msgstr "自定义收藏夹"

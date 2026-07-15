@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2022.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022-2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-14 00:45+0000\n"
-"PO-Revision-Date: 2026-03-24 02:06+0300\n"
+"PO-Revision-Date: 2026-07-14 20:26+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,13 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Exit Bigscreen"
+#, kde-format
 msgid "Edit Home Screen"
-msgstr "BüyükEkran’dan Çık"
+msgstr "Ana Ekranı Düzenle"
 
 #: contents/ui/FavoritesManager.qml:141
 #: contents/ui/launcher/LauncherHome.qml:84
@@ -33,7 +32,7 @@ msgstr "Sık Kullanılanlar"
 #: contents/ui/FavoritesManager.qml:141 contents/ui/FavoritesManager.qml:281
 #, kde-format
 msgid "Launcher Sections"
-msgstr ""
+msgstr "Başlatıcı Bölümleri"
 
 #: contents/ui/FavoritesManager.qml:213
 #, kde-format
@@ -46,37 +45,35 @@ msgid "Remove Favorites"
 msgstr "Sık Kullanılanlardan Kaldır"
 
 #: contents/ui/FavoritesManager.qml:295
-#, fuzzy, kde-format
-#| msgid "Recent"
+#, kde-format
 msgid "Show Recent"
-msgstr "Son Kullanılan"
+msgstr "Son Kullanılanları Göster"
 
 #: contents/ui/FavoritesManager.qml:296
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
-msgstr ""
+msgstr "En son başlatılan uygulamalar, ana ekranda ayrı bir satırda gösterilir"
 
 #: contents/ui/FavoritesManager.qml:311
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Show Applications"
-msgstr "Uygulamalar"
+msgstr "Uygulamaları Göster"
 
 #: contents/ui/FavoritesManager.qml:312
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
-msgstr ""
+msgstr "Oyun olmayan uygulamalar, ana ekranda ayrı bir satırda gösterilir"
 
 #: contents/ui/FavoritesManager.qml:328
-#, fuzzy, kde-format
-#| msgid "Games"
+#, kde-format
 msgid "Show Games"
-msgstr "Oyunlar"
+msgstr "Oyunları Göster"
 
 #: contents/ui/FavoritesManager.qml:329
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
 msgstr ""
+"Oyun kategorisindeki uygulamalar, ana ekranda ayrı bir satırda gösterilir"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:36
 #, kde-format

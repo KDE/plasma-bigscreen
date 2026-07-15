@@ -1,27 +1,27 @@
 # Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 # SPDX-FileCopyrightText: 2020, 2021, 2022, 2026 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2026 Libor Filípek <libor.filipek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-14 00:45+0000\n"
-"PO-Revision-Date: 2026-03-30 11:43+0200\n"
-"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-07-14 11:29+0200\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Exit Bigscreen"
+#, kde-format
 msgid "Edit Home Screen"
-msgstr "Ukončit Bigscreen"
+msgstr "Upravit domovskou obrazovku"
 
 #: contents/ui/FavoritesManager.qml:141
 #: contents/ui/launcher/LauncherHome.qml:84
@@ -32,7 +32,7 @@ msgstr "Oblíbené"
 #: contents/ui/FavoritesManager.qml:141 contents/ui/FavoritesManager.qml:281
 #, kde-format
 msgid "Launcher Sections"
-msgstr ""
+msgstr "Sekce spouštěče"
 
 #: contents/ui/FavoritesManager.qml:213
 #, kde-format
@@ -45,37 +45,34 @@ msgid "Remove Favorites"
 msgstr "Odstranit oblíbené"
 
 #: contents/ui/FavoritesManager.qml:295
-#, fuzzy, kde-format
-#| msgid "Recent"
+#, kde-format
 msgid "Show Recent"
-msgstr "Nedávné"
+msgstr "Zobrazit poslední"
 
 #: contents/ui/FavoritesManager.qml:296
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
-msgstr ""
+msgstr "Nedávno spuštěné aplikace se zobrazují v řadě na domovské obrazovce"
 
 #: contents/ui/FavoritesManager.qml:311
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Show Applications"
-msgstr "Aplikace"
+msgstr "Zobrazit aplikace"
 
 #: contents/ui/FavoritesManager.qml:312
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
-msgstr ""
+msgstr "Aplikace, které nejsou herní, se na úvodní obrazovce zobrazují v řadě"
 
 #: contents/ui/FavoritesManager.qml:328
-#, fuzzy, kde-format
-#| msgid "Games"
+#, kde-format
 msgid "Show Games"
-msgstr "Hry"
+msgstr "Zobrazit hry"
 
 #: contents/ui/FavoritesManager.qml:329
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
-msgstr ""
+msgstr "Aplikace v kategorii Hry se na úvodní obrazovce zobrazují v řadě"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:36
 #, kde-format
