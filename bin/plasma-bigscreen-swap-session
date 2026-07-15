@@ -21,6 +21,9 @@ swap_to_bigscreen() {
 
     export PLASMA_BIGSCREEN_LAUNCH_REASON=swap
 
+    # Start plasma-bigscreen-inputhandler
+    QT_QPA_PLATFORM=offscreen plasma-bigscreen-inputhandler &
+
     plasmashell --replace &
 }
 
@@ -31,6 +34,8 @@ swap_to_default() {
 
     unset PLASMA_BIGSCREEN_LAUNCH_REASON
 
+    # Kill plasma-bigscreen-inputhandler
+    pkill -f plasma-bigscreen-inputhandler
 
     plasmashell --replace &
 }
