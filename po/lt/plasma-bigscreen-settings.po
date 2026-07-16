@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-10 00:46+0000\n"
+"POT-Creation-Date: 2026-07-16 00:46+0000\n"
 "PO-Revision-Date: 2026-07-01 16:34+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -54,17 +54,17 @@ msgstr "© 2025 Plasma plėtotojai"
 msgid "Settings module to open"
 msgstr "Nuostatų modulis, kurį atverti"
 
-#: qml/ConfigWindowSidebar.qml:43
+#: qml/ConfigWindowSidebar.qml:45
 #, kde-format
 msgid "Settings"
 msgstr "Nuostatos"
 
-#: qml/ConfigWindowSidebar.qml:84
+#: qml/ConfigWindowSidebar.qml:88
 #, kde-format
 msgid "Open desktop settings?"
 msgstr "Atverti darbalaukio nuostatas?"
 
-#: qml/ConfigWindowSidebar.qml:89
+#: qml/ConfigWindowSidebar.qml:93
 #, kde-format
 msgid ""
 "The desktop settings application does not support key navigation, a mouse "
