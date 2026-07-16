@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-07-16 02:41+0000\n"
 "PO-Revision-Date: 2026-03-02 22:17+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -35,37 +35,37 @@ msgstr "xalba@ni.eus"
 msgid "Desktop Settings"
 msgstr "Mahaigaineko ezarpenak"
 
-#: main.cpp:34
+#: main.cpp:33
 #, kde-format
 msgid "Bigscreen Settings"
 msgstr "Bigscreen ezarpenak"
 
-#: main.cpp:36
+#: main.cpp:35
 #, kde-format
 msgid "Plasma Bigscreen Settings"
 msgstr "Plasma Bigscreen ezarpenak"
 
-#: main.cpp:38
+#: main.cpp:37
 #, kde-format
 msgid "© 2025 Plasma developers"
 msgstr "© 2025 Plasma garatzaileak"
 
-#: main.cpp:40
+#: main.cpp:39
 #, kde-format
 msgid "Settings module to open"
 msgstr "Ireki beharreko ezarpen-modulua"
 
-#: qml/ConfigWindowSidebar.qml:43
+#: qml/ConfigWindowSidebar.qml:45
 #, kde-format
 msgid "Settings"
 msgstr "Ezarpenak"
 
-#: qml/ConfigWindowSidebar.qml:84
+#: qml/ConfigWindowSidebar.qml:88
 #, kde-format
 msgid "Open desktop settings?"
 msgstr "Mahaigaineko ezarpenak ireki?"
 
-#: qml/ConfigWindowSidebar.qml:89
+#: qml/ConfigWindowSidebar.qml:93
 #, kde-format
 msgid ""
 "The desktop settings application does not support key navigation, a mouse "

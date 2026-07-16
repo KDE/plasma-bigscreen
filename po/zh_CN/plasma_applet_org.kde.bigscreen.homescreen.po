@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-14 02:40+0000\n"
+"POT-Creation-Date: 2026-07-16 02:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -53,44 +53,44 @@ msgstr "无线网络"
 msgid "Shutdown"
 msgstr "关机"
 
-#: contents/ui/homeoverlay/MainColumn.qml:127
+#: contents/ui/homeoverlay/MainColumn.qml:131
 #, kde-format
 msgid "Home"
 msgstr "主页"
 
-#: contents/ui/homeoverlay/MainColumn.qml:140
+#: contents/ui/homeoverlay/MainColumn.qml:144
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr "搜索"
 
-#: contents/ui/homeoverlay/MainColumn.qml:157
+#: contents/ui/homeoverlay/MainColumn.qml:161
 #, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "任务管理"
 
-#: contents/ui/homeoverlay/MainColumn.qml:180
+#: contents/ui/homeoverlay/MainColumn.qml:184
 #, kde-format
 msgid "Controller"
 msgstr "控制器"
 
-#: contents/ui/homeoverlay/MainColumn.qml:181
+#: contents/ui/homeoverlay/MainColumn.qml:185
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "当前正在捕获按键…"
 
-#: contents/ui/homeoverlay/MainColumn.qml:181
+#: contents/ui/homeoverlay/MainColumn.qml:185
 #, kde-format
 msgid "Key capture off"
 msgstr "按键捕获关闭"
 
-#: contents/ui/homeoverlay/MainColumn.qml:201
+#: contents/ui/homeoverlay/MainColumn.qml:205
 #, kde-format
 msgid "On-screen Keyboard"
 msgstr "屏幕键盘"
 
-#: contents/ui/homeoverlay/MainColumn.qml:215
+#: contents/ui/homeoverlay/MainColumn.qml:219
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"

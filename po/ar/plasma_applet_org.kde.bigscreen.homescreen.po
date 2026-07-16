@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-14 02:40+0000\n"
+"POT-Creation-Date: 2026-07-16 02:41+0000\n"
 "PO-Revision-Date: 2026-03-24 11:35+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: contents/ui/FavoritesManager.qml:20
 #, kde-format
@@ -53,44 +53,44 @@ msgstr "واي فاي"
 msgid "Shutdown"
 msgstr "أطفئ"
 
-#: contents/ui/homeoverlay/MainColumn.qml:127
+#: contents/ui/homeoverlay/MainColumn.qml:131
 #, kde-format
 msgid "Home"
 msgstr "المنزل"
 
-#: contents/ui/homeoverlay/MainColumn.qml:140
+#: contents/ui/homeoverlay/MainColumn.qml:144
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr "ابحث"
 
-#: contents/ui/homeoverlay/MainColumn.qml:157
+#: contents/ui/homeoverlay/MainColumn.qml:161
 #, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "المهام"
 
-#: contents/ui/homeoverlay/MainColumn.qml:180
+#: contents/ui/homeoverlay/MainColumn.qml:184
 #, kde-format
 msgid "Controller"
 msgstr "المتحكم"
 
-#: contents/ui/homeoverlay/MainColumn.qml:181
+#: contents/ui/homeoverlay/MainColumn.qml:185
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "يجري التقاط المفاتيح حاليًا…"
 
-#: contents/ui/homeoverlay/MainColumn.qml:181
+#: contents/ui/homeoverlay/MainColumn.qml:185
 #, kde-format
 msgid "Key capture off"
 msgstr "التقاط المفاتيح متوقف"
 
-#: contents/ui/homeoverlay/MainColumn.qml:201
+#: contents/ui/homeoverlay/MainColumn.qml:205
 #, kde-format
 msgid "On-screen Keyboard"
 msgstr "لوحة المفاتيح على الشّاشة"
 
-#: contents/ui/homeoverlay/MainColumn.qml:215
+#: contents/ui/homeoverlay/MainColumn.qml:219
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"

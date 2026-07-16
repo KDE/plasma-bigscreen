@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-07-16 02:41+0000\n"
 "PO-Revision-Date: 2026-02-28 06:45-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -32,37 +32,37 @@ msgstr "marcus.gama@gmail.com"
 msgid "Desktop Settings"
 msgstr "Configurações da área de trabalho"
 
-#: main.cpp:34
+#: main.cpp:33
 #, kde-format
 msgid "Bigscreen Settings"
 msgstr "Configurações da Tela Grande"
 
-#: main.cpp:36
+#: main.cpp:35
 #, kde-format
 msgid "Plasma Bigscreen Settings"
 msgstr "Configurações do Plasma Bigscreen"
 
-#: main.cpp:38
+#: main.cpp:37
 #, kde-format
 msgid "© 2025 Plasma developers"
 msgstr "© 2025 Desenvolvedores do Plasma"
 
-#: main.cpp:40
+#: main.cpp:39
 #, kde-format
 msgid "Settings module to open"
 msgstr "Módulo de configuração a abrir"
 
-#: qml/ConfigWindowSidebar.qml:43
+#: qml/ConfigWindowSidebar.qml:45
 #, kde-format
 msgid "Settings"
 msgstr "Configurações"
 
-#: qml/ConfigWindowSidebar.qml:84
+#: qml/ConfigWindowSidebar.qml:88
 #, kde-format
 msgid "Open desktop settings?"
 msgstr "Abrir as configurações da área de trabalho?"
 
-#: qml/ConfigWindowSidebar.qml:89
+#: qml/ConfigWindowSidebar.qml:93
 #, kde-format
 msgid ""
 "The desktop settings application does not support key navigation, a mouse "

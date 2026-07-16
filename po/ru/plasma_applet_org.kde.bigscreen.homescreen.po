@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-14 02:40+0000\n"
+"POT-Creation-Date: 2026-07-16 02:41+0000\n"
 "PO-Revision-Date: 2026-04-03 22:19+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -54,44 +54,44 @@ msgstr "Wi‑Fi"
 msgid "Shutdown"
 msgstr "Завершение работы"
 
-#: contents/ui/homeoverlay/MainColumn.qml:127
+#: contents/ui/homeoverlay/MainColumn.qml:131
 #, kde-format
 msgid "Home"
 msgstr "Домашняя страница"
 
-#: contents/ui/homeoverlay/MainColumn.qml:140
+#: contents/ui/homeoverlay/MainColumn.qml:144
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr "Поиск"
 
-#: contents/ui/homeoverlay/MainColumn.qml:157
+#: contents/ui/homeoverlay/MainColumn.qml:161
 #, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "Приложения"
 
-#: contents/ui/homeoverlay/MainColumn.qml:180
+#: contents/ui/homeoverlay/MainColumn.qml:184
 #, kde-format
 msgid "Controller"
 msgstr "Контроллер"
 
-#: contents/ui/homeoverlay/MainColumn.qml:181
+#: contents/ui/homeoverlay/MainColumn.qml:185
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "Идёт захват клавиш…"
 
-#: contents/ui/homeoverlay/MainColumn.qml:181
+#: contents/ui/homeoverlay/MainColumn.qml:185
 #, kde-format
 msgid "Key capture off"
 msgstr "Захват клавиш выключен"
 
-#: contents/ui/homeoverlay/MainColumn.qml:201
+#: contents/ui/homeoverlay/MainColumn.qml:205
 #, kde-format
 msgid "On-screen Keyboard"
 msgstr "Экранная клавиатура"
 
-#: contents/ui/homeoverlay/MainColumn.qml:215
+#: contents/ui/homeoverlay/MainColumn.qml:219
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
