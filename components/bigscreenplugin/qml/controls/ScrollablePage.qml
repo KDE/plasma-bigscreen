@@ -38,6 +38,12 @@ Kirigami.ScrollablePage {
         }
     }
 
+    Component.onDestruction: {
+        if (__window) {
+            __window.activeFocusItemChanged.disconnect(__onActiveFocusItemChanged);
+        }
+    }
+
     function __onActiveFocusItemChanged() {
         // If the active focused item is a child of this page, scroll to where it is
         let item = Window.activeFocusItem;

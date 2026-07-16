@@ -84,15 +84,38 @@ Window {
 
     // Open KCM with a given path
     function openModule(path) {
+        // Load the new module first so the previous KCM is deleted along with
+        // its pages, before their containers get destroyed below
         module.path = path;
-        while (pageStack.count >= 1) {
-            pageStack.clear();
+
+        // Collect the pages of the previously opened module, since the stack
+        // does not own pages that were pushed as items
+        const oldPages = [];
+        for (let i = 0; i < pageStack.depth; ++i) {
+            oldPages.push(pageStack.get(i));
         }
 
-        // Load page for KCM
+        // Load page for KCM, replacing all pages of the previous module
         loadedKCMPage = kcmContainer.createObject(pageStack, {"kcm": module.kcm, "internalPage": module.kcm.mainUi});
-        pageStack.push(loadedKCMPage);
+        pageStack.replace(null, loadedKCMPage);
         currentModuleName = module.name;
+
+        // Destroy the old pages after the replace transition has finished
+        for (const page of oldPages) {
+            page.destroy(500);
+        }
+    }
+
+    // Go up one page from the top of the KCM's page stack
+    function popPage() {
+        const page = pageStack.pop();
+        if (page && page !== loadedKCMPage) {
+            // Delay destruction so the pop transition can finish
+            page.destroy(500);
+        }
+        if (pageStack.currentItem) {
+            pageStack.currentItem.forceActiveFocus();
+        }
     }
 
     onVisibleChanged: {
@@ -137,8 +160,9 @@ Window {
             width: Math.max(root.minimumSidebarWidth, parent.width * 0.20)
 
             currentModuleName: root.currentModuleName
+            rightTarget: pageStack.currentItem
 
-            KeyNavigation.right: loadedKCMPage
+            KeyNavigation.right: pageStack.currentItem
             KeyNavigation.tab: KeyNavigation.right
             Bigscreen.BackHandler.onActivated: hideOverlay()
         }
@@ -189,8 +213,8 @@ Window {
                         // Snap to end when touch stops
                         if (kcmContainerHolder.xIncreasing) {
                             settingsKCMMenu.forceActiveFocus();
-                        } else {
-                            loadedKCMPage.forceActiveFocus();
+                        } else if (pageStack.currentItem) {
+                            pageStack.currentItem.forceActiveFocus();
                         }
                     }
                 }
@@ -211,7 +235,7 @@ Window {
 
             transitions: [
                 Transition {
-                    NumberAnimation { properties: 'x'; duration: Kirigami.Units.longDuration; easing.type: Easing.OutCubic }
+                    NumberAnimation { properties: 'x'; duration: Kirigami.Units.longDuration; easing.type: Easing.OutExpo }
                 }
             ]
 
@@ -220,8 +244,12 @@ Window {
                 opacity: root.dualPanel ? 1 : (settingsKCMMenu.activeFocus ? 0.5 : 1)
                 anchors.fill: parent
 
+                // New pages move in from the right while fading in, and move back out when popped
                 pushEnter: Transition {
-                    PropertyAnimation { property: "opacity"; from: 0; to: 1; duration: 100 }
+                    ParallelAnimation {
+                        PropertyAnimation { property: "opacity"; from: 0; to: 1; duration: Kirigami.Units.longDuration; easing.type: Easing.Linear }
+                        PropertyAnimation { property: "x"; from: Kirigami.Units.gridUnit * 4; to: 0; duration: Kirigami.Units.veryLongDuration; easing.type: Easing.OutExpo }
+                    }
                 }
                 pushExit: Transition {
                     PropertyAnimation { property: "opacity"; from: 1; to: 0; duration: 100 }
@@ -230,6 +258,15 @@ Window {
                     PropertyAnimation { property: "opacity"; from: 0; to: 1; duration: 100 }
                 }
                 popExit: Transition {
+                    ParallelAnimation {
+                        PropertyAnimation { property: "opacity"; from: 1; to: 0; duration: Kirigami.Units.longDuration; easing.type: Easing.Linear }
+                        PropertyAnimation { property: "x"; from: 0; to: Kirigami.Units.gridUnit * 4; duration: Kirigami.Units.veryLongDuration; easing.type: Easing.OutExpo }
+                    }
+                }
+                replaceEnter: Transition {
+                    PropertyAnimation { property: "opacity"; from: 0; to: 1; duration: 100 }
+                }
+                replaceExit: Transition {
                     PropertyAnimation { property: "opacity"; from: 1; to: 0; duration: 100 }
                 }
             }
@@ -245,10 +282,29 @@ Window {
             KCMContainer {
                 KeyNavigation.left: root.settingsKCMMenu
                 KeyNavigation.backtab: KeyNavigation.left
-                Bigscreen.BackHandler.onActivated: root.settingsKCMMenu.forceActiveFocus()
+
+                // Go up one page if we are on a subpage, otherwise return to the sidebar
+                Bigscreen.BackHandler.onActivated: {
+                    if (isSubPage) {
+                        goBack();
+                    } else {
+                        root.settingsKCMMenu.forceActiveFocus();
+                    }
+                }
 
                 onNewPageRequested: (page) => {
-                    pageStack.push(kcmContainer.createObject(pageStack, {"internalPage": page}));
+                    const subPage = kcmContainer.createObject(pageStack, {"kcm": module.kcm, "internalPage": page, "isSubPage": true});
+                    pageStack.push(subPage);
+                    subPage.forceActiveFocus();
+                }
+
+                onPagePopRequested: root.popPage()
+
+                onPageIndexChanged: (index) => {
+                    // The KCM may jump back multiple pages at once by changing its current index
+                    while (pageStack.depth > index + 1 && pageStack.depth > 1) {
+                        root.popPage();
+                    }
                 }
             }
         }
