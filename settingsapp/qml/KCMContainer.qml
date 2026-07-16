@@ -16,30 +16,68 @@ Kirigami.Page {
     required property QtObject kcm
     required property Item internalPage
 
-    signal newPageRequested(page: var)
+    // Whether this container holds a subpage pushed by the KCM, rather than the KCM's main page
+    property bool isSubPage: false
 
-    title: internalPage.title
+    signal newPageRequested(page: var)
+    signal pagePopRequested()
+    signal pageIndexChanged(index: int)
+
+    title: internalPage ? internalPage.title : ''
+
+    function goBack() {
+        if (isSubPage) {
+            kcm.pop();
+        }
+    }
 
     header: Item {
         id: headerAreaTop
         height: root.headerHeight
         width: parent.width
 
-        Kirigami.Heading {
-            id: settingsTitle
-            text: internalPage ? internalPage.title : ''
+        RowLayout {
             anchors.fill: parent
+            anchors.leftMargin: container.leftPadding
+            anchors.rightMargin: container.rightPadding
+            anchors.bottomMargin: container.leftPadding
+            spacing: Kirigami.Units.largeSpacing
 
-            padding: container.leftPadding
-            verticalAlignment: Text.AlignBottom
-            horizontalAlignment: Text.AlignLeft
+            Bigscreen.Button {
+                id: backButton
+                visible: container.isSubPage
+                icon.name: 'go-previous'
+                icon.width: Kirigami.Units.iconSizes.smallMedium
+                icon.height: Kirigami.Units.iconSizes.smallMedium
+                flat: true
 
-            font.weight: Font.Light
+                Layout.alignment: Qt.AlignBottom
 
-            color: Kirigami.Theme.textColor
-            fontSizeMode: Text.Fit
-            minimumPixelSize: 16
-            font.pixelSize: 32
+                onClicked: container.goBack()
+
+                // Only wire up navigation when visible, since KeyNavigation
+                // also creates implicit reverse mappings on the targets
+                KeyNavigation.down: container.isSubPage ? container.internalPage : null
+                KeyNavigation.left: container.isSubPage ? container.KeyNavigation.left : null
+            }
+
+            Kirigami.Heading {
+                id: settingsTitle
+                text: container.title
+
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+
+                verticalAlignment: Text.AlignBottom
+                horizontalAlignment: Text.AlignLeft
+
+                font.weight: Font.Light
+
+                color: Kirigami.Theme.textColor
+                fontSizeMode: Text.Fit
+                minimumPixelSize: 16
+                font.pixelSize: 32
+            }
         }
     }
 
@@ -73,7 +111,15 @@ Kirigami.Page {
                 actions.push(action);
             }
         }
-        if (kcm.load !== undefined) {
+
+        if (isSubPage) {
+            // Allow reaching the back button with key navigation
+            if (internalPage) {
+                internalPage.KeyNavigation.up = backButton;
+            }
+        } else if (kcm.load !== undefined) {
+            // Only load settings for the KCM's main page, otherwise opening
+            // a subpage would discard unsaved changes
             kcm.load();
         }
     }
@@ -91,25 +137,23 @@ Kirigami.Page {
         },
         Connections {
             target: kcm
+
+            // Only the KCM's main page manages the page stack, so that these
+            // signals aren't handled once per open page
+            enabled: !container.isSubPage
+
             function onPagePushed(page) {
                 container.newPageRequested(page);
             }
             function onPageRemoved() {
-                pageStack.pop();
-                hideOverlay();
+                container.pagePopRequested();
+            }
+            function onCurrentIndexChanged(index) {
+                container.pageIndexChanged(index);
             }
             function onNeedsSaveChanged() {
                 if (kcm.needsSave) {
                     kcm.save();
-                }
-            }
-        },
-        Connections {
-            target: kcm
-            function onCurrentIndexChanged(index) {
-                const index_with_offset = index + 1;
-                if (index_with_offset !== pageStack.currentIndex) {
-                    pageStack.currentIndex = index_with_offset;
                 }
             }
         }

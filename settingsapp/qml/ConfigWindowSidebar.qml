@@ -21,6 +21,8 @@ Rectangle {
 
     property var listView: settingsKCMMenu
 
+    property Item rightTarget
+
     readonly property real horizontalMargin: Kirigami.Units.gridUnit + Kirigami.Units.largeSpacing
 
     // Translucent background
@@ -70,6 +72,8 @@ Rectangle {
             model: KcmsListModel
             spacing: Kirigami.Units.largeSpacing
             keyNavigationEnabled: true
+
+            KeyNavigation.right: root.rightTarget
 
             onCurrentItemChanged: {
                 if (currentItem) {

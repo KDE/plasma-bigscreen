@@ -35,6 +35,12 @@ void Module::setPath(const QString &path)
     m_path = kcmMetaData.fileName();
     Q_EMIT pathChanged();
 
+    // Delete the previously loaded KCM, which also deletes its pages
+    if (m_kcm) {
+        m_kcm->deleteLater();
+        m_kcm = nullptr;
+    }
+
     m_kcm = KQuickConfigModuleLoader::loadModule(kcmMetaData, this).plugin;
     Q_EMIT kcmChanged();
     Q_EMIT nameChanged();
