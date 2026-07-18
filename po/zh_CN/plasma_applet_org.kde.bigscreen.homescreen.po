@@ -21,7 +21,7 @@ msgstr ""
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
 #, kde-format
 msgid "Edit Home Screen"
-msgstr ""
+msgstr "编辑主屏幕"
 
 #: contents/ui/FavoritesManager.qml:141
 #: contents/ui/launcher/LauncherHome.qml:84
@@ -32,7 +32,7 @@ msgstr "收藏"
 #: contents/ui/FavoritesManager.qml:141 contents/ui/FavoritesManager.qml:281
 #, kde-format
 msgid "Launcher Sections"
-msgstr ""
+msgstr "启动器分区"
 
 #: contents/ui/FavoritesManager.qml:213
 #, kde-format
@@ -47,32 +47,32 @@ msgstr "移除收藏"
 #: contents/ui/FavoritesManager.qml:295
 #, kde-format
 msgid "Show Recent"
-msgstr ""
+msgstr "显示最近应用"
 
 #: contents/ui/FavoritesManager.qml:296
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
-msgstr ""
+msgstr "在主屏幕的一行上显示最近启动的应用"
 
 #: contents/ui/FavoritesManager.qml:311
 #, kde-format
 msgid "Show Applications"
-msgstr ""
+msgstr "显示应用"
 
 #: contents/ui/FavoritesManager.qml:312
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
-msgstr ""
+msgstr "在主屏幕的一行上显示非游戏类应用"
 
 #: contents/ui/FavoritesManager.qml:328
 #, kde-format
 msgid "Show Games"
-msgstr ""
+msgstr "显示游戏"
 
 #: contents/ui/FavoritesManager.qml:329
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
-msgstr ""
+msgstr "在主屏幕的一行上显示游戏类应用"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:36
 #, kde-format
