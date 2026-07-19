@@ -19,19 +19,13 @@ import org.kde.plasma.plasmoid
 
 Controls.Control {
     id: root
-
-    property alias activeTabIndex: navPill.activeTabIndex
     
+    property alias focusTarget: searchIndicator
+    property Item downFocusItem
     readonly property real largeHeight: Math.min(parent.height / 2, Kirigami.Units.gridUnit * 15)
     readonly property real shrunkHeight: Kirigami.Units.gridUnit * 7
 
     state: "large"
-    // Forward focus to first item
-    onActiveFocusChanged: {
-        if (activeFocus)
-            searchIndicator.forceActiveFocus();
-
-    }
     topPadding: 0
     bottomPadding: 0
     leftPadding: 0
@@ -94,117 +88,55 @@ Controls.Control {
 
     }
 
-    contentItem: RowLayout {
-        id: rowLayout
+    contentItem: Item {
+        id: container
 
-        spacing: Kirigami.Units.largeSpacing
-        Kirigami.Theme.inherit: false
-        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-
+        // 1. LEFT: The Clock
         Indicators.Clock {
             id: clock
 
-            Layout.alignment: Qt.AlignTop | Qt.AlignLeft
+            anchors.left: parent.left
+            anchors.top: parent.top
         }
 
-        // spacer
-        Item {
-            Layout.fillWidth: true
-        }
 
-        // Center Navigation Pill
-        Rectangle {
-            id: navPill
-            
-            property int activeTabIndex: 1
 
-            Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
-            Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
-            
-            Layout.preferredWidth: innerLayout.implicitWidth + (Kirigami.Units.largeSpacing * 2) 
-            color: Qt.rgba(1, 1, 1, 0.2)
-            radius: height / 2
-
-            RowLayout {
-                id: innerLayout
-
-                anchors.centerIn: parent
-                spacing: Kirigami.Units.largeSpacing * 2
-
-                Controls.Label {
-                    text: "(L1)"
-                    font.weight: Font.Bold
-                    color: "white"
-                    opacity: 0.6
-                }
-
-                Repeater {
-                    model: ["HOME", "GAMES", "STORE"]
-
-                    delegate: Rectangle {
-                        property bool isSelected: index === navPill.activeTabIndex
-
-                        // FIX 4: Use implicitWidth/Height for items inside a RowLayout
-                        implicitWidth: tabText.implicitWidth + (Kirigami.Units.largeSpacing * 3)
-                        implicitHeight: navPill.height - (Kirigami.Units.smallSpacing * 2)
-                        radius: height / 2
-                        
-                        color: isSelected ? "white" : "transparent"
-
-                        Controls.Label {
-                            id: tabText
-                            anchors.centerIn: parent
-                            text: modelData
-                            font.weight: Font.Bold
-                            color: isSelected ? "black" : "white"
-                            opacity: isSelected ? 1 : 0.8
-                        }
-
-                        MouseArea {
-                            anchors.fill: parent
-                            onClicked: navPill.activeTabIndex = index
-                        }
-
-                        Behavior on color {
-                            ColorAnimation {
-                                duration: 150
-                            }
-                        }
-                    }
-                }
-
-                Controls.Label {
-                    text: "(R1)"
-                    font.weight: Font.Bold
-                    color: "white"
-                    opacity: 0.6
-                }
-            }
-        }
-
-        // spacer
-        Item {
-            Layout.fillWidth: true
-        }
-
+        // 3. RIGHT: The Indicator Icons
         RowLayout {
-            Layout.alignment: Qt.AlignTop | Qt.AlignRight
-            spacing: Kirigami.Units.gridUnit
+            anchors.right: parent.right
+            anchors.top: parent.top
+            spacing: Kirigami.Units.gridUnit * root.scaleFactor
 
             Indicators.Search {
                 id: searchIndicator
 
-                KeyNavigation.right: favsIndicator
-                KeyNavigation.tab: favsIndicator
-            }
-
-            Indicators.Favorites {
-                id: favsIndicator
-
-                KeyNavigation.left: searchIndicator
-                KeyNavigation.backtab: searchIndicator
+                Layout.preferredWidth: 32 * root.scaleFactor
+                Layout.preferredHeight: 32 * root.scaleFactor
                 KeyNavigation.right: settingsIndicator
                 KeyNavigation.tab: settingsIndicator
+                KeyNavigation.down: root.downFocusItem
+            }
+
+            Indicators.Settings {
+                id: settingsIndicator
+
+                Layout.preferredWidth: 32 * root.scaleFactor
+                Layout.preferredHeight: 32 * root.scaleFactor
+                KeyNavigation.left: searchIndicator
+                KeyNavigation.backtab: searchIndicator
+                KeyNavigation.right: shutdownIndicator
+                KeyNavigation.tab: shutdownIndicator
+                KeyNavigation.down: root.downFocusItem
+            }
+
+            Indicators.Shutdown {
+                id: shutdownIndicator
+
+                Layout.preferredWidth: 32 * root.scaleFactor
+                Layout.preferredHeight: 32 * root.scaleFactor
+                KeyNavigation.left: settingsIndicator
+                KeyNavigation.backtab: settingsIndicator
+                KeyNavigation.down: root.downFocusItem
             }
 
         }

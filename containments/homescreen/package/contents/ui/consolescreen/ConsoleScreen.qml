@@ -20,17 +20,12 @@ import "launcher"
 Item {
     id: root
 
+    property var header
+    property Item wallpaper
+    property real zoomScale: 1 
+
     readonly property real leftMargin: Kirigami.Units.gridUnit * 4
     readonly property real rightMargin: leftMargin
-
-    property Item header
-    readonly property bool scrolledDown: launcher.scrolledDown
-
-    // Whether to blur the wallpaper background
-    readonly property bool blurBackground: launcher.scrolledDown || root.Window.activeFocusItem === null
-    readonly property bool darkenBackground: launcher.scrolledDown
-
-    property real zoomScale: 1
 
     transform: Scale {
         origin.x: root.width / 2;
@@ -73,24 +68,20 @@ Item {
         Transition {
             to: "focused"
             ParallelAnimation {
-                OpacityAnimator { duration: 300 }
-                NumberAnimation { target: root; property: 'zoomScale'; duration: 600; easing.type: Easing.OutExpo }
+                OpacityAnimator { duration: Kirigami.Units.shortDuration }
+                NumberAnimation { target: root; property: 'zoomScale'; duration: Kirigami.Units.longDuration; easing.type: Easing.OutExpo }
             }
         }
     ]
 
-    // Applications horizontal list
-    ConsoleLauncherMenu {
+
+    // Games grid
+    LauncherMenu {
         id: launcher
         opacity: 0 // Displayed with launcherOpacityGradient below
-        startY: {
-            const minY = header ? header.largeHeight : 0;
-            const desiredY = (parent.height / 2);
-            return Math.round(Math.max(minY, desiredY) - (header ? header.shrunkHeight : 0));
-        }
         anchors {
             fill: parent
-            topMargin: header ? header.shrunkHeight : 0
+            topMargin: header.shrunkHeight
         }
 
         // Pass margins in so that we don't clip sides with opacity gradient

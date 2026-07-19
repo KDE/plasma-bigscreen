@@ -3,44 +3,41 @@
 // SPDX-FileCopyrightText: 2025 Devin Lin <devin@kde.org>
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-import QtQuick
-import QtQuick.Layouts
-import QtQuick.Controls as Controls
-import QtQuick.Window
 import Qt5Compat.GraphicalEffects
-import org.kde.taskmanager as TaskManager
+import QtQuick
+import QtQuick.Controls as Controls
+import QtQuick.Layouts
+import QtQuick.Window
 
-import org.kde.plasma.plasmoid
-import org.kde.plasma.core as PlasmaCore
-import org.kde.kquickcontrolsaddons
-import org.kde.private.biglauncher
+import org.kde.bigscreen as Bigscreen
+import org.kde.kirigami as Kirigami
 import org.kde.bigscreen.controllerhandler as ControllerHandler
 import org.kde.bigscreen.shell as BigscreenShell
-import org.kde.bigscreen as Bigscreen
+import org.kde.kquickcontrolsaddons
+import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.plasmoid
+import org.kde.private.biglauncher
+import org.kde.taskmanager as TaskManager
 
+import "consolescreen"
 import "homeoverlay"
-import "search" as Search
-import "consolescreen" as Console
-import "homescreen" as Home
+import "homescreen"
 import "navbar" as Navbar
+import "search" as Search
 
 ContainmentItem {
+    
+
     id: root
+
     Layout.minimumWidth: Screen.desktopAvailableWidth
     Layout.minimumHeight: Screen.desktopAvailableHeight * 0.6
 
-    property Item wallpaper
-
-    function configureWallpaper() {
-        Plasmoid.internalAction("configure").trigger();
-    }
-
     function activateHome() {
-        if (homeOverlayWindow.visible) {
+        if (homeOverlayWindow.visible)
             homeOverlayWindow.hideOverlay();
-        } else {
+        else
             homeOverlayWindow.showOverlay();
-        }
     }
 
     // Action for when Meta key is pressed
@@ -48,45 +45,28 @@ ContainmentItem {
         root.activateHome();
     }
 
-    Connections {
-        target: BigLauncherDbusAdapterInterface
+    // Trigger home overlay for back action
+    Bigscreen.BackHandler.onActivated: {
+        homeOverlayWindow.showOverlay();
+    }
 
-        function onActivateWallpaperSelectorRequested() {
-            root.configureWallpaper();
-        }
 
-        // Sync D-Bus configuration changes to Plasmoid.configuration
-        function onUseColoredTilesChanged(coloredTiles) {
-            Plasmoid.configuration.coloredTiles = coloredTiles;
-        }
-        function onUseWallpaperBlurChanged(wallpaperBlur) {
-            Plasmoid.configuration.wallpaperBlur = wallpaperBlur;
-        }
-        function onShowRecentChanged(showRecent) {
-            Plasmoid.configuration.showRecent = showRecent;
-        }
-        function onShowApplicationsChanged(showApplications) {
-            Plasmoid.configuration.showApplications = showApplications;
-        }
-        function onShowGamesChanged(showGames) {
-            Plasmoid.configuration.showGames = showGames;
-        }
+    Component.onCompleted: {
+        //add welcome things
     }
 
     Connections {
-        target: Shortcuts
-
         function onToggleHomeScreen() {
-            if (homeOverlayWindow.visible) {
+            if (homeOverlayWindow.visible)
                 homeOverlayWindow.hideOverlay();
-            }
+
             tasksModel.minimizeAllTasks();
         }
+
+        target: Shortcuts
     }
 
     Connections {
-        target: Plasmoid
-
         function onOpenTasksRequested() {
             homeOverlayWindow.showOverlay();
             homeOverlayWindow.openTasks();
@@ -103,11 +83,11 @@ ContainmentItem {
         function onMinimizeAllTasksRequested() {
             tasksModel.minimizeAllTasks();
         }
+
+        target: Plasmoid
     }
 
     Connections {
-        target: ControllerHandler.ControllerHandlerStatus
-
         function onHomeActionRequested() {
             root.activateHome();
         }
@@ -131,66 +111,24 @@ ContainmentItem {
         function onInputSuppressedChanged(suppressed, automatic) {
             const systemTakingOver = i18n("System taking over controller input");
             if (automatic) {
-                if (suppressed) {
+                if (suppressed)
                     Plasmoid.showOSD(i18n("Application taking over controller input"), "input-gamepad-symbolic");
-                } else {
+                else
                     Plasmoid.showOSD(systemTakingOver, "input-gamepad-symbolic");
-                }
             }
         }
-    }
 
-    // Trigger home overlay for back action
-    Bigscreen.BackHandler.onActivated: {
-        homeOverlayWindow.showOverlay();
-    }
-
-    Containment.onAppletAdded: (applet, x, y) => {
-        addApplet(applet, x, y);
+        target: ControllerHandler.ControllerHandlerStatus
     }
 
     PowerManagementItem {
         id: pmInhibitItem
+
         inhibit: BigscreenShell.Settings.pmInhibitionEnabled
-    }
-
-    Component.onCompleted: {
-        for (var i in Plasmoid.applets) {
-            root.addApplet(Plasmoid.applets[i], -1, -1)
-        }
-    }
-
-    function addApplet(applet, x, y) {
-        print("Applet added: " + applet + " " + applet.title)
-        var container = appletContainerComponent.createObject(appletsLayout)
-
-        const appletItem = root.itemFor(applet);
-        appletItem.parent = container;
-        container.applet = appletItem;
-        appletItem.anchors.fill = container;
-        appletItem.visible = true;
-        appletItem.expanded = false;
-    }
-
-    Component {
-        id: appletContainerComponent
-        Item {
-            property Item applet
-            visible: applet && applet.status !== PlasmaCore.Types.HiddenStatus && applet.status !== PlasmaCore.Types.PassiveStatus
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-        }
     }
 
     TaskManager.TasksModel {
         id: tasksModel
-        filterByVirtualDesktop: false
-        filterByActivity: false
-        filterNotMaximized: false
-        filterByScreen: false
-        filterHidden: true
-        groupMode: TaskManager.TasksModel.GroupDisabled
 
         function minimizeAllTasks() {
             for (var i = 0; i < tasksModel.count; i++) {
@@ -198,12 +136,14 @@ ContainmentItem {
                 tasksModel.requestToggleMinimized(idx);
             }
         }
-    }
 
-    // Shell windows
-    // StartupFeedbackWindow {
-    //     id: feedbackWindow
-    // }
+        filterByVirtualDesktop: false
+        filterByActivity: false
+        filterNotMaximized: false
+        filterByScreen: false
+        filterHidden: true
+        groupMode: TaskManager.TasksModel.GroupDisabled
+    }
 
     Search.SearchWindow {
         id: searchWindow
@@ -217,97 +157,61 @@ ContainmentItem {
         onSettingsRequested: Plasmoid.openSettings()
     }
 
-    
-
-    // Homescreen background - only loaded when wallpaperBlur setting is enabled
-    Loader {
-        id: wallpaperBlurLoader
-        anchors.fill: parent
-        active: Plasmoid.configuration.wallpaperBlur
-
-        sourceComponent: Item {
-            id: wallpaperBlur
-            anchors.fill: parent
-
-            // Only take samples from wallpaper when we need the blur for performance
-            ShaderEffectSource {
-                id: controlledWallpaperSource
-                anchors.fill: parent
-
-                sourceItem: Plasmoid.wallpaperGraphicsObject
-                live: blur.visible
-                hideSource: false
-                visible: false
-            }
-
-            // Wallpaper blur
-            // We attempted to use MultiEffect in the past, but it had very poor performance
-            FastBlur {
-                id: blur
-                radius: 50
-                cached: true
-                source: controlledWallpaperSource
-                anchors.fill: parent
-                visible: true // Don't load and unload, which is laggy
-                opacity: homeScreen.blurBackground ? 1 : 0
-
-                Behavior on opacity { NumberAnimation { duration: 500 } }
-            }
-        }
-    }
-
     // Background darken scrim
     Rectangle {
         anchors.fill: parent
         color: 'black'
         opacity: homeScreen.darkenBackground ? 0.7 : 0.4
-        Behavior on opacity { NumberAnimation { duration: 500 } }
+
+        Behavior on opacity {
+            NumberAnimation {
+                duration: Kirigami.Units.longDuration
+            }
+
+        }
+
     }
 
     // Shared Top Navigation Bar
     Navbar.Navbar {
         id: mainNavbar
+        downFocusItem: screenStack.children[screenStack.currentIndex]
+        state: (mainNavbar.activeTabIndex === 0 && !homeScreen.scrolledDown) ? "large" : "shrunk"
+        z: 99
         anchors {
             top: parent.top
             left: parent.left
             right: parent.right
-            leftMargin: activeScreen && activeScreen.leftMargin ? activeScreen.leftMargin : 0
-            rightMargin: activeScreen && activeScreen.rightMargin ? activeScreen.rightMargin : 0
+            leftMargin: Kirigami.Units.gridUnit * 2
+            rightMargin: Kirigami.Units.gridUnit * 2
         }
-        state: homeScreen.scrolledDown ? "shrunk" : "shrunk"
-        z: 99
     }
-    
+
     // The Screen Switcher
     StackLayout {
         id: screenStack
+
         anchors.fill: parent
-        
-        // This is the magic link! The StackLayout shows the screen that matches the Navbar's tab.
-        currentIndex: mainNavbar.activeTabIndex
+        currentIndex:  1//mainNavbar.activeTabIndex
 
         // INDEX 0: HOME SCREEN
-        Home.HomeScreen {
+        HomeScreen {
             id: homeScreen
-            // header: mainNavbar 
+
+            header: mainNavbar
+            KeyNavigation.up: mainNavbar.focusTarget
+            focus: true
         }
 
         // INDEX 1: GAMES SCREEN
-        Console.ConsoleScreen {
-            id: gamesScreen
-            // header: mainNavbar 
+        ConsoleScreen {
+            id: consoleScreen
+
+            header: mainNavbar
+            KeyNavigation.up: mainNavbar.focusTarget
+            focus: true
         }
 
-        // INDEX 2: STORE SCREEN (Placeholder)
-        Rectangle {
-            id: storeScreen
-            color: "transparent"
-            Controls.Label {
-                anchors.centerIn: parent
-                text: "Store Screen Coming Soon"
-                color: "white"
-                font.pointSize: 32
-            }
-        }
     }
+
 }

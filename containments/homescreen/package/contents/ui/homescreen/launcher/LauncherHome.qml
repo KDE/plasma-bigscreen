@@ -32,6 +32,7 @@ FocusScope {
 
     function activateAppView() {
         favAppsView.currentViewDownwards?.forceActiveFocus();
+        y = intendedY()
     }
 
     Component.onCompleted: activateAppView()

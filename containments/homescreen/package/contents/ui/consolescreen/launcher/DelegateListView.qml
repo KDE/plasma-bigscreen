@@ -27,20 +27,20 @@ FocusScope {
     property bool titleVisible: true
 
     Layout.fillWidth: true
-    implicitHeight: view.implicitHeight + header.implicitHeight
+    implicitHeight: view.implicitHeight
 
     property real columns: {
         if (view.Window && view.Window.window) {
-            var v = 5.5;
+            var v = 7;
             switch (true) {
                 case (view.Window.window.width <= 1280 && view.Window.window.width > 1024):
-                    v = 4.5;
+                    v = 7;
                     break;
                 case (view.Window.window.width <= 1024 && view.Window.window.width > 800):
-                    v = 3.5;
+                    v = 6;
                     break;
                 case (view.Window.window.width <= 800):
-                    v = 2.5;
+                    v = 5;
                     break;
             }
             return v;
@@ -59,23 +59,9 @@ FocusScope {
 
     onActiveFocusChanged: {
         if (!activeFocus) return;
-        view.currentIndexChanged();
+        xAnim.restart();
         if (!currentItem) return;
         currentItem.forceActiveFocus();
-    }
-
-    Kirigami.Heading {
-        id: header
-        anchors {
-            left: parent.left
-            right: parent.right
-            top: parent.top
-        }
-        text: title
-        font.pixelSize: 32
-        font.weight: Font.Light
-        color: 'white'
-        visible: root.titleVisible
     }
 
     ListView {
@@ -84,12 +70,12 @@ FocusScope {
         anchors {
             left: parent.left
             right: parent.right
-            top: header.baseline
+            // top: header.baseline
             bottom: parent.bottom
             topMargin: Kirigami.Units.largeSpacing * 2
         }
-        readonly property int cellWidth: root.width / columns + (Kirigami.Units.gridUnit / 1)
-        property int cellHeight: cellWidth * 0.75
+        readonly property int cellWidth: root.width / columns + (Kirigami.Units.gridUnit / 2)
+        property int cellHeight: cellWidth * 1.5
 
         implicitHeight: cellHeight
 
@@ -111,9 +97,9 @@ FocusScope {
 
         onCurrentIndexChanged: {
             var item = itemAtIndex(currentIndex);
-            if (item) { 
+            if (item) {
                 const maxContentX = Math.max(0, contentWidth - width);
-                xAnim.to = Math.max(0, Math.min(item.x - cellWidth, maxContentX));
+                xAnim.to = Math.max(0, Math.min(itemAtIndex(currentIndex).x - cellWidth, maxContentX));
                 xAnim.restart();
             }
         }
