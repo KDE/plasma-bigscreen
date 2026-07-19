@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-14 00:45+0000\n"
-"PO-Revision-Date: 2026-07-01 16:07+0300\n"
+"PO-Revision-Date: 2026-07-18 21:47+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -20,10 +20,9 @@ msgstr ""
 "X-Generator: Poedit 3.9\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Exit Bigscreen"
+#, kde-format
 msgid "Edit Home Screen"
-msgstr "Išeiti iš Bigscreen"
+msgstr "Taisyti pradžios langą"
 
 #: contents/ui/FavoritesManager.qml:141
 #: contents/ui/launcher/LauncherHome.qml:84
@@ -34,7 +33,7 @@ msgstr "Mėgstamos"
 #: contents/ui/FavoritesManager.qml:141 contents/ui/FavoritesManager.qml:281
 #, kde-format
 msgid "Launcher Sections"
-msgstr ""
+msgstr "Paleidyklės skyriai"
 
 #: contents/ui/FavoritesManager.qml:213
 #, kde-format
@@ -47,37 +46,34 @@ msgid "Remove Favorites"
 msgstr "Šalinti mėgstamas"
 
 #: contents/ui/FavoritesManager.qml:295
-#, fuzzy, kde-format
-#| msgid "Recent"
+#, kde-format
 msgid "Show Recent"
-msgstr "Paskiausiai naudotos"
+msgstr "Rodyti paskiausiai naudotas"
 
 #: contents/ui/FavoritesManager.qml:296
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
-msgstr ""
+msgstr "Paskiausiai paleistos programos atsiranda eilutėje pradžios lange"
 
 #: contents/ui/FavoritesManager.qml:311
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Show Applications"
-msgstr "Programos"
+msgstr "Rodyti programas"
 
 #: contents/ui/FavoritesManager.qml:312
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
-msgstr ""
+msgstr "Ne žaidimų programos atsiranda eilutėje pradžios lange"
 
 #: contents/ui/FavoritesManager.qml:328
-#, fuzzy, kde-format
-#| msgid "Games"
+#, kde-format
 msgid "Show Games"
-msgstr "Žaidimai"
+msgstr "Rodyti žaidimus"
 
 #: contents/ui/FavoritesManager.qml:329
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
-msgstr ""
+msgstr "Žaidimų kategorijos programos atsiranda eilutėje pradžios lange"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:36
 #, kde-format
