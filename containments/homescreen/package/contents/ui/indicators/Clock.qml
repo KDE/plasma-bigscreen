@@ -114,14 +114,6 @@ Item {
             text: root.timeString
         }
 
-        PC3.Label {
-            id: rowDateLabel
-            color: "white"
-            font.pointSize: 22
-
-            text: root.dateString
-        }
-
         Item {
             Layout.fillWidth: true
         }

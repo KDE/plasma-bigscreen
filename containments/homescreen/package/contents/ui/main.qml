@@ -18,9 +18,11 @@ import org.kde.bigscreen.controllerhandler as ControllerHandler
 import org.kde.bigscreen.shell as BigscreenShell
 import org.kde.bigscreen as Bigscreen
 
-import "launcher"
 import "homeoverlay"
 import "search" as Search
+import "consolescreen" as Console
+import "homescreen" as Home
+import "navbar" as Navbar
 
 ContainmentItem {
     id: root
@@ -199,16 +201,12 @@ ContainmentItem {
     }
 
     // Shell windows
-    StartupFeedbackWindow {
-        id: feedbackWindow
-    }
+    // StartupFeedbackWindow {
+    //     id: feedbackWindow
+    // }
 
     Search.SearchWindow {
         id: searchWindow
-    }
-
-    FavoritesManager {
-        id: favsManagerWindowView
     }
 
     HomeOverlayWindow {
@@ -218,6 +216,8 @@ ContainmentItem {
         onSearchRequested: Plasmoid.openSearch()
         onSettingsRequested: Plasmoid.openSettings()
     }
+
+    
 
     // Homescreen background - only loaded when wallpaperBlur setting is enabled
     Loader {
@@ -264,9 +264,50 @@ ContainmentItem {
         Behavior on opacity { NumberAnimation { duration: 500 } }
     }
 
-    // The homescreen's contents
-    HomeScreen {
-        id: homeScreen
+    // Shared Top Navigation Bar
+    Navbar.Navbar {
+        id: mainNavbar
+        anchors {
+            top: parent.top
+            left: parent.left
+            right: parent.right
+            leftMargin: activeScreen && activeScreen.leftMargin ? activeScreen.leftMargin : 0
+            rightMargin: activeScreen && activeScreen.rightMargin ? activeScreen.rightMargin : 0
+        }
+        state: homeScreen.scrolledDown ? "shrunk" : "shrunk"
+        z: 99
+    }
+    
+    // The Screen Switcher
+    StackLayout {
+        id: screenStack
         anchors.fill: parent
+        
+        // This is the magic link! The StackLayout shows the screen that matches the Navbar's tab.
+        currentIndex: mainNavbar.activeTabIndex
+
+        // INDEX 0: HOME SCREEN
+        Home.HomeScreen {
+            id: homeScreen
+            // header: mainNavbar 
+        }
+
+        // INDEX 1: GAMES SCREEN
+        Console.ConsoleScreen {
+            id: gamesScreen
+            // header: mainNavbar 
+        }
+
+        // INDEX 2: STORE SCREEN (Placeholder)
+        Rectangle {
+            id: storeScreen
+            color: "transparent"
+            Controls.Label {
+                anchors.centerIn: parent
+                text: "Store Screen Coming Soon"
+                color: "white"
+                font.pointSize: 32
+            }
+        }
     }
 }

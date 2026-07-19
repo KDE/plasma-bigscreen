@@ -23,6 +23,9 @@ Item {
     readonly property real leftMargin: Kirigami.Units.gridUnit * 4
     readonly property real rightMargin: leftMargin
 
+    property Item header
+    readonly property bool scrolledDown: launcher.scrolledDown
+
     // Whether to blur the wallpaper background
     readonly property bool blurBackground: launcher.scrolledDown || root.Window.activeFocusItem === null
     readonly property bool darkenBackground: launcher.scrolledDown
@@ -76,34 +79,18 @@ Item {
         }
     ]
 
-    HomeHeader {
-        id: header
-        anchors {
-            top: parent.top
-            left: parent.left
-            right: parent.right
-            leftMargin: root.leftMargin
-            rightMargin: root.rightMargin
-        }
-
-        state: launcher.scrolledDown ? "shrunk" : "large"
-
-        KeyNavigation.down: launcher
-        KeyNavigation.tab: launcher
-    }
-
-    // Applications grid
-    LauncherMenu {
+    // Applications horizontal list
+    ConsoleLauncherMenu {
         id: launcher
         opacity: 0 // Displayed with launcherOpacityGradient below
         startY: {
-            const minY = header.largeHeight; // Right after the HomeHeader at max height
+            const minY = header ? header.largeHeight : 0;
             const desiredY = (parent.height / 2);
-            return Math.round(Math.max(minY, desiredY) - header.shrunkHeight); // Adjust for anchors.topMargin
+            return Math.round(Math.max(minY, desiredY) - (header ? header.shrunkHeight : 0));
         }
         anchors {
             fill: parent
-            topMargin: header.shrunkHeight
+            topMargin: header ? header.shrunkHeight : 0
         }
 
         // Pass margins in so that we don't clip sides with opacity gradient

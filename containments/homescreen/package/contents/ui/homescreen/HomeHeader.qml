@@ -73,9 +73,70 @@ Controls.Control {
 
         Indicators.Clock {
             id: clock
-            Layout.fillWidth: true
             Layout.alignment: Qt.AlignTop | Qt.AlignLeft
         }
+
+        Item { Layout.fillWidth: true } // spacer
+
+        // Center Navigation Pill
+        Rectangle {
+            Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
+            Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
+            color: Qt.rgba(1, 1, 1, 0.2)
+            radius: height / 2
+            
+            RowLayout {
+                anchors.fill: parent
+                anchors.leftMargin: Kirigami.Units.largeSpacing
+                anchors.rightMargin: Kirigami.Units.largeSpacing
+                spacing: Kirigami.Units.largeSpacing * 2
+                
+                Controls.Label {
+                    text: "(L1)"
+                    font.weight: Font.Bold
+                    color: "white"
+                    opacity: 0.6
+                }
+                
+                Controls.Label {
+                    text: "HOME"
+                    font.weight: Font.Bold
+                    color: "white"
+                    opacity: 0.8
+                }
+                
+                Rectangle {
+                    width: gamesText.width + Kirigami.Units.largeSpacing * 3
+                    height: parent.height - Kirigami.Units.smallSpacing * 2
+                    radius: height / 2
+                    color: "white"
+                    
+                    Controls.Label {
+                        id: gamesText
+                        anchors.centerIn: parent
+                        text: "GAMES"
+                        font.weight: Font.Bold
+                        color: "black"
+                    }
+                }
+                
+                Controls.Label {
+                    text: "STORE"
+                    font.weight: Font.Bold
+                    color: "white"
+                    opacity: 0.8
+                }
+                
+                Controls.Label {
+                    text: "(R1)"
+                    font.weight: Font.Bold
+                    color: "white"
+                    opacity: 0.6
+                }
+            }
+        }
+
+        Item { Layout.fillWidth: true } // spacer
 
         RowLayout {
             Layout.alignment: Qt.AlignTop | Qt.AlignRight
