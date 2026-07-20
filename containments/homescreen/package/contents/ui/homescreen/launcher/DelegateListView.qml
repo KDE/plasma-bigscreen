@@ -32,9 +32,9 @@ FocusScope {
     // Responsive grid logic
     property real columns: {
         const windowWidth = root.Window.width || 0;
-        if (windowWidth > 1280) return 5.5;
-        if (windowWidth > 1024) return 4.5;
-        return 3.5;
+        if (windowWidth > 1280) return 5;
+        if (windowWidth > 1024) return 4;
+        return 3;
     }
 
     property alias cellWidth: view.cellWidth

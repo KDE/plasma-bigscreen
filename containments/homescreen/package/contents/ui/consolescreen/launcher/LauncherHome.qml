@@ -57,14 +57,14 @@ FocusScope {
                 source: gamesView.currentItem ? gamesView.currentItem.icon.name : ""
             }
             // Show the game Name
-            Controls.Label {
-                Layout.alignment: Qt.AlignLeft
-                // Grabs the text from the currently focused game delegate
-                text: gamesView.currentItem ? gamesView.currentItem.text : ""
-                font.pixelSize: 48
-                font.weight: Font.Bold
-                color: "white"
-            }
+            // Controls.Label {
+            //     Layout.alignment: Qt.AlignLeft
+            //     // Grabs the text from the currently focused game delegate
+            //     text: gamesView.currentItem ? gamesView.currentItem.text : ""
+            //     font.pixelSize: 48
+            //     font.weight: Font.Bold
+            //     color: "white"
+            // }
         }
 
 

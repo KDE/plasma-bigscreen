@@ -175,14 +175,15 @@ ContainmentItem {
         }
     }
     
-    Rectangle {
-        parent: root.Window.activeFocusItem
-        anchors.fill: parent
-        color: "transparent"
-        border.color: "red"
-        border.width: 4
-        z: 99999
-    }
+    //Testing focus
+    // Rectangle {
+    //     parent: root.Window.activeFocusItem
+    //     anchors.fill: parent
+    //     color: "transparent"
+    //     border.color: "red"
+    //     border.width: 4
+    //     z: 99999
+    // }
 
 
     // Shared Top Navigation Bar

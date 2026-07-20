@@ -23,10 +23,9 @@ Controls.Control {
     property alias focusTarget: searchIndicator
     property Item downFocusItem
     readonly property real largeHeight: Math.min(parent.height / 2, Kirigami.Units.gridUnit * 15)
-    readonly property real shrunkHeight: Kirigami.Units.gridUnit * 7
-
+    readonly property real shrunkHeight: Kirigami.Units.gridUnit * 4
     state: "large"
-    topPadding: Kirigami.Units.gridUnit * 1
+    topPadding: Kirigami.Units.gridUnit
     bottomPadding: 0
     leftPadding: 0
     rightPadding: 0
@@ -87,6 +86,7 @@ Controls.Control {
 
             anchors.left: parent.left
             anchors.top: parent.top
+
         }
 
 
@@ -102,30 +102,8 @@ Controls.Control {
 
                 Layout.preferredWidth: 32 * root.scaleFactor
                 Layout.preferredHeight: 32 * root.scaleFactor
-                KeyNavigation.right: settingsIndicator
-                KeyNavigation.tab: settingsIndicator
-                KeyNavigation.down: root.downFocusItem
-            }
-
-            Indicators.Settings {
-                id: settingsIndicator
-
-                Layout.preferredWidth: 32 * root.scaleFactor
-                Layout.preferredHeight: 32 * root.scaleFactor
-                KeyNavigation.left: searchIndicator
-                KeyNavigation.backtab: searchIndicator
-                KeyNavigation.right: shutdownIndicator
-                KeyNavigation.tab: shutdownIndicator
-                KeyNavigation.down: root.downFocusItem
-            }
-
-            Indicators.Shutdown {
-                id: shutdownIndicator
-
-                Layout.preferredWidth: 32 * root.scaleFactor
-                Layout.preferredHeight: 32 * root.scaleFactor
-                KeyNavigation.left: settingsIndicator
-                KeyNavigation.backtab: settingsIndicator
+                KeyNavigation.right: favsIndicator
+                KeyNavigation.tab: favsIndicator
                 KeyNavigation.down: root.downFocusItem
             }
 

@@ -146,7 +146,7 @@ FocusScope {
         DelegateListView {
             id: appsView
             property var currentViewUpwards: visible ? appsView : recentView.currentViewUpwards
-            property var currentViewDownwards: visible ? appsView : gamesView.currentViewDownwards
+            property var currentViewDownwards: visible ? appsView : null
 
             title: i18n("Applications")
             visible: Plasmoid.configuration.showApplications && count > 0
@@ -169,34 +169,6 @@ FocusScope {
             }
 
             navigationUp: recentView.currentViewUpwards
-            navigationDown: gamesView.currentViewDownwards
-        }
-
-        DelegateListView {
-            id: gamesView
-            property var currentViewUpwards: visible ? gamesView : appsView.currentViewUpwards
-            property var currentViewDownwards: visible ? gamesView : null
-
-            title: i18n("Games")
-            visible: Plasmoid.configuration.showGames && count > 0
-            enabled: count > 0
-            model: KItemModels.KSortFilterProxyModel {
-                sourceModel: Plasmoid.applicationListModel
-                filterRoleName: "ApplicationCategoriesRole"
-                filterRowCallback: function (source_row, source_parent) {
-                    return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("Game") !== -1;
-                }
-            }
-
-            currentIndex: 0
-            focus: visible && (appsView.currentViewUpwards === root.navigationUp)
-            onActiveFocusChanged: if (activeFocus)
-                launcherHomeColumn.currentSection = gamesView
-            delegate: Delegates.AppDelegate {
-                property var modelData: typeof model !== "undefined" ? model : null
-            }
-
-            navigationUp: appsView.currentViewUpwards
             navigationDown: null
         }
     }

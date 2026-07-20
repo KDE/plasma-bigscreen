@@ -174,31 +174,32 @@ FocusScope {
 
     }
 
+
     // Opacity "fade" effect at edges
-    OpacityMask {
-        id: launcherOpacityGradient
-        anchors.fill: launcher
+    // OpacityMask {
+    //     id: launcherOpacityGradient
+    //     anchors.fill: launcher
 
-        source: launcher
-        maskSource: Rectangle {
-            id: mask
-            width: launcher.width
-            height: launcher.height
+    //     source: launcher
+    //     maskSource: Rectangle {
+    //         id: mask
+    //         width: launcher.width
+    //         height: launcher.height
 
-            property real gradientPct: (Kirigami.Units.gridUnit * 2) / launcher.height
+    //         property real gradientPct: (Kirigami.Units.gridUnit * 2) / launcher.height
 
-            gradient: Gradient {
-                GradientStop { position: 0.0; color: 'transparent' }
-                GradientStop { position: mask.gradientPct; color: 'white' }
-                GradientStop { position: 1.0; color: 'white' }
-            }
-        }
-    }
+    //         gradient: Gradient {
+    //             GradientStop { position: 0.0; color: 'transparent' }
+    //             GradientStop { position: 0.1; color: 'white' }
+    //             GradientStop { position: 1.0; color: 'white' }
+    //         }
+    //     }
+    // }
 
     // Applications grid
     LauncherMenu {
         id: launcher
-        opacity: 0 // Displayed with launcherOpacityGradient below
+
         startY: {
             const minY = root.header ? root.header.largeHeight : 0; 
             const desiredY = (parent.height / 2);
@@ -206,8 +207,9 @@ FocusScope {
         }
         anchors {
             fill: parent
-            topMargin: root.header.shrunkHeight
+            topMargin: root.header ? root.header.shrunkHeight : 0
         }
+        clip: true
         focus: true
 
         // Pass margins in so that we don't clip sides with opacity gradient
