@@ -31,7 +31,11 @@ FocusScope {
 
     onFocusChanged: {
         if (focus) {
-            launcherHome.activateAppView();
+            Qt.callLater(function() {
+                if (launcherHome) {
+                    launcherHome.activateAppView();
+                }
+            });
         }
     }
 
@@ -48,7 +52,7 @@ FocusScope {
             leftMargin: root.leftMargin
             rightMargin: root.rightMargin
         }
-
+        focus: true
         navigationUp: root.KeyNavigation.up
         startY: root.startY
     }

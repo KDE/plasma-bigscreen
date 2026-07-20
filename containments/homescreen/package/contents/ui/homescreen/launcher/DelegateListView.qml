@@ -29,26 +29,13 @@ FocusScope {
     Layout.fillWidth: true
     implicitHeight: view.implicitHeight + header.implicitHeight
 
+    // Responsive grid logic
     property real columns: {
-        if (view.Window && view.Window.window) {
-            var v = 5.5;
-            switch (true) {
-                case (view.Window.window.width <= 1280 && view.Window.window.width > 1024):
-                    v = 4.5;
-                    break;
-                case (view.Window.window.width <= 1024 && view.Window.window.width > 800):
-                    v = 3.5;
-                    break;
-                case (view.Window.window.width <= 800):
-                    v = 2.5;
-                    break;
-            }
-            return v;
-        } else {
-            return 0; // or any default value you prefer
-        }
+        const windowWidth = root.Window.width || 0;
+        if (windowWidth > 1280) return 5.5;
+        if (windowWidth > 1024) return 4.5;
+        return 3.5;
     }
-
 
     property alias cellWidth: view.cellWidth
     property alias cellHeight: view.cellHeight
@@ -57,11 +44,11 @@ FocusScope {
     property Item navigationUp
     property Item navigationDown
 
+
     onActiveFocusChanged: {
-        if (!activeFocus) return;
-        view.currentIndexChanged();
-        if (!currentItem) return;
-        currentItem.forceActiveFocus();
+        if (activeFocus && currentItem) {
+            currentItem.forceActiveFocus();
+        }
     }
 
     Kirigami.Heading {
@@ -84,15 +71,15 @@ FocusScope {
         anchors {
             left: parent.left
             right: parent.right
-            top: header.baseline
+            top: header.bottom
             bottom: parent.bottom
             topMargin: Kirigami.Units.largeSpacing * 2
         }
-        readonly property int cellWidth: root.width / columns + (Kirigami.Units.gridUnit / 1)
+        readonly property int cellWidth: root.width / columns + Kirigami.Units.gridUnit
         property int cellHeight: cellWidth * 0.75
 
         implicitHeight: cellHeight
-
+        
         keyNavigationEnabled: true
         reuseItems: true
         focus: true
@@ -103,6 +90,7 @@ FocusScope {
 
         highlightMoveVelocity: -1
         highlightMoveDuration: Kirigami.Units.longDuration
+        // highlightRangeMode: ListView.ApplyRange
 
         preferredHighlightBegin: 0
         preferredHighlightEnd: cellWidth

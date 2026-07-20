@@ -1,9 +1,9 @@
- /*
-  * SPDX-FileCopyrightText: 2022 Aditya Mehra <aix.m@outlook.com>
-  * SPDX-FileCopyrightText: 2020 Marco Martin <mart@kde.org>
-  *
-  * SPDX-License-Identifier: GPL-2.0-or-later
-  */
+/*
+ * SPDX-FileCopyrightText: 2022 Aditya Mehra <aix.m@outlook.com>
+ * SPDX-FileCopyrightText: 2020 Marco Martin <mart@kde.org>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ */
 
 import QtQuick
 import QtQuick.Layouts
@@ -29,115 +29,79 @@ FocusScope {
     Layout.fillWidth: true
     implicitHeight: view.implicitHeight
 
+    // Responsive grid logic
     property real columns: {
-        if (view.Window && view.Window.window) {
-            var v = 7;
-            switch (true) {
-                case (view.Window.window.width <= 1280 && view.Window.window.width > 1024):
-                    v = 7;
-                    break;
-                case (view.Window.window.width <= 1024 && view.Window.window.width > 800):
-                    v = 6;
-                    break;
-                case (view.Window.window.width <= 800):
-                    v = 5;
-                    break;
-            }
-            return v;
-        } else {
-            return 0; // or any default value you prefer
-        }
+        const windowWidth = root.Window.width || 0;
+            if (windowWidth > 1280) return 6.5;
+            if (windowWidth > 1024) return 5.5;
+            return 4.5;
     }
 
 
     property alias cellWidth: view.cellWidth
     property alias cellHeight: view.cellHeight
-    readonly property real screenRatio: view.Window.window ? view.Window.window.width / view.Window.window.height : 1.6
-
+    
     property Item navigationUp
     property Item navigationDown
 
     onActiveFocusChanged: {
-        if (!activeFocus) return;
-        xAnim.restart();
-        if (!currentItem) return;
-        currentItem.forceActiveFocus();
+        if (activeFocus && currentItem) {
+            currentItem.forceActiveFocus();
+        }
     }
 
     ListView {
         id: view
-        property var listView: view
         anchors {
             left: parent.left
             right: parent.right
-            // top: header.baseline
             bottom: parent.bottom
             topMargin: Kirigami.Units.largeSpacing * 2
         }
-        readonly property int cellWidth: root.width / columns + (Kirigami.Units.gridUnit / 2)
-        property int cellHeight: cellWidth * 1.5
 
-        implicitHeight: cellHeight
-
+        // Layout settings
+        orientation: ListView.Horizontal
+        spacing: Kirigami.Units.largeSpacing * 3
+        snapMode: ListView.SnapOneItem
+        highlightRangeMode: ListView.StrictlyEnforceRange
+        
+        // Native Performance Settings
         keyNavigationEnabled: true
         reuseItems: true
         focus: true
-        snapMode: ListView.SnapOneItem
         cacheBuffer: width * 2
-        spacing: 0
-        orientation: ListView.Horizontal
-
-        highlightMoveVelocity: -1
         highlightMoveDuration: Kirigami.Units.longDuration
 
+        // Math: Total width minus total spacing divided by columns
+        readonly property int cellWidth: (root.width - ((columns - 1) * spacing)) / columns
+        readonly property int cellHeight: cellWidth * 1.5
+
+        implicitHeight: cellHeight
+
+        // Snap Logic: Setting preferredHighlight to cellWidth + spacing
+        // tells the ListView exactly where to center the item.
         preferredHighlightBegin: 0
-        preferredHighlightEnd: cellWidth
-        displayMarginBeginning: cellWidth
-        displayMarginEnd: cellWidth
-
-        onCurrentIndexChanged: {
-            var item = itemAtIndex(currentIndex);
-            if (item) {
-                const maxContentX = Math.max(0, contentWidth - width);
-                xAnim.to = Math.max(0, Math.min(itemAtIndex(currentIndex).x - cellWidth, maxContentX));
-                xAnim.restart();
-            }
-        }
-
-        NumberAnimation on contentX {
-            id: xAnim
-            easing.type: Easing.OutCubic
-            duration: Kirigami.Units.longDuration
-        }
-
-        onMovementEnded: flickEnded()
-
-        onFlickEnded: currentIndex = indexAt(mapToItem(contentItem, cellWidth, 0).x, 0)
-
-        move: Transition {
-            SmoothedAnimation {
-                property: "x"
-                duration: Kirigami.Units.longDuration
-            }
-        }
+        preferredHighlightEnd: 0 //cellWidth + spacing
 
         Keys.onLeftPressed: (event) => {
             if (currentIndex > 0) {
                 Bigscreen.NavigationSoundEffects.playMovingSound();
-                currentIndex = Math.max(0, currentIndex - 1);
+                currentIndex--;
                 event.accepted = true;
-            } else {
-                event.accepted = false;
             }
         }
 
         Keys.onRightPressed: (event) => {
             if (currentIndex < count - 1) {
                 Bigscreen.NavigationSoundEffects.playMovingSound();
-                currentIndex = Math.min(count - 1, currentIndex + 1);
+                currentIndex++;
                 event.accepted = true;
-            } else {
-                event.accepted = false;
+            }
+        }
+
+        onCurrentItemChanged: {
+            if (root.activeFocus && currentItem) {
+                currentItem.forceActiveFocus();
             }
         }
 
@@ -149,6 +113,7 @@ FocusScope {
 
         Keys.onUpPressed: {
             if (!root.navigationUp) return;
+            
             Bigscreen.NavigationSoundEffects.playMovingSound();
             root.navigationUp.forceActiveFocus();
         }

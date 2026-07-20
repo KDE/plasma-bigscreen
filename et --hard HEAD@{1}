@@ -1,0 +1,58 @@
+[33m7851a960[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mconsole_screen[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: reset: moving to HEAD
+[33m7851a960[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mconsole_screen[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{1}: reset: moving to origin/master
+[33m75c67c6f[m HEAD@{2}: checkout: moving from console_screen to console_screen
+[33m75c67c6f[m HEAD@{3}: reset: moving to HEAD
+[33m75c67c6f[m HEAD@{4}: pull --rebase (finish): returning to refs/heads/console_screen
+[33m75c67c6f[m HEAD@{5}: pull --rebase (pick): feat: implement tabbed navigation and add console screen for game launching
+[33m7851a960[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mconsole_screen[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{6}: pull --rebase (start): checkout 7851a960b6b4f4154b653eeb6e8a86e50fe14875
+[33maca66435[m HEAD@{7}: checkout: moving from Plasma/6.7 to console_screen
+[33m3ce29382[m[33m ([m[1;31morigin/Plasma/6.7[m[33m, [m[1;32mPlasma/6.7[m[33m)[m HEAD@{8}: checkout: moving from console_screen to Plasma/6.7
+[33maca66435[m HEAD@{9}: checkout: moving from console_screen to console_screen
+[33maca66435[m HEAD@{10}: commit: feat: implement tabbed navigation and add console screen for game launching
+[33m882cd984[m HEAD@{11}: Branch: renamed refs/heads/master to refs/heads/console_screen
+[33m882cd984[m HEAD@{13}: reset: moving to origin/master
+[33m882cd984[m HEAD@{14}: checkout: moving from master to master
+[33m882cd984[m HEAD@{15}: reset: moving to HEAD
+[33m882cd984[m HEAD@{16}: reset: moving to origin/master
+[33m882cd984[m HEAD@{17}: checkout: moving from master to master
+[33m882cd984[m HEAD@{18}: reset: moving to HEAD
+[33m882cd984[m HEAD@{19}: reset: moving to origin/master
+[33m882cd984[m HEAD@{20}: checkout: moving from master to master
+[33m882cd984[m HEAD@{21}: reset: moving to HEAD
+[33m882cd984[m HEAD@{22}: reset: moving to origin/master
+[33m882cd984[m HEAD@{23}: checkout: moving from master to master
+[33m882cd984[m HEAD@{24}: reset: moving to HEAD
+[33m882cd984[m HEAD@{25}: reset: moving to origin/master
+[33m882cd984[m HEAD@{26}: checkout: moving from master to master
+[33m882cd984[m HEAD@{27}: reset: moving to HEAD
+[33m882cd984[m HEAD@{28}: reset: moving to origin/master
+[33m882cd984[m HEAD@{29}: checkout: moving from master to master
+[33m882cd984[m HEAD@{30}: reset: moving to HEAD
+[33m882cd984[m HEAD@{31}: reset: moving to origin/master
+[33m882cd984[m HEAD@{32}: checkout: moving from master to master
+[33m882cd984[m HEAD@{33}: reset: moving to HEAD
+[33m882cd984[m HEAD@{34}: reset: moving to origin/master
+[33m882cd984[m HEAD@{35}: checkout: moving from master to master
+[33m882cd984[m HEAD@{36}: reset: moving to HEAD
+[33m882cd984[m HEAD@{37}: reset: moving to origin/master
+[33m882cd984[m HEAD@{38}: checkout: moving from master to master
+[33m882cd984[m HEAD@{39}: reset: moving to HEAD
+[33m882cd984[m HEAD@{40}: reset: moving to origin/master
+[33m882cd984[m HEAD@{41}: checkout: moving from master to master
+[33m882cd984[m HEAD@{42}: reset: moving to HEAD
+[33m882cd984[m HEAD@{43}: reset: moving to origin/master
+[33m882cd984[m HEAD@{44}: checkout: moving from master to master
+[33m882cd984[m HEAD@{45}: reset: moving to HEAD
+[33m882cd984[m HEAD@{46}: reset: moving to origin/master
+[33m882cd984[m HEAD@{47}: checkout: moving from master to master
+[33m882cd984[m HEAD@{48}: reset: moving to HEAD
+[33m882cd984[m HEAD@{49}: reset: moving to origin/master
+[33m882cd984[m HEAD@{50}: checkout: moving from master to master
+[33m882cd984[m HEAD@{51}: reset: moving to HEAD
+[33m882cd984[m HEAD@{52}: reset: moving to origin/master
+[33m882cd984[m HEAD@{53}: checkout: moving from master to master
+[33m882cd984[m HEAD@{54}: reset: moving to origin/master
+[33m3a76c067[m HEAD@{55}: checkout: moving from master to master
+[33m3a76c067[m HEAD@{56}: reset: moving to origin/master
+[33m3a76c067[m HEAD@{57}: checkout: moving from master to master
+[33m3a76c067[m HEAD@{58}: clone: from kde:plasma/plasma-bigscreen.git

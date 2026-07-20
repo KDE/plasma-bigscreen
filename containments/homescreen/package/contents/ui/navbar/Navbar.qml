@@ -26,7 +26,7 @@ Controls.Control {
     readonly property real shrunkHeight: Kirigami.Units.gridUnit * 7
 
     state: "large"
-    topPadding: 0
+    topPadding: Kirigami.Units.gridUnit * 1
     bottomPadding: 0
     leftPadding: 0
     rightPadding: 0
@@ -44,11 +44,6 @@ Controls.Control {
                 height: root.largeHeight
             }
 
-            PropertyChanges {
-                target: root
-                topPadding: Math.min(largeHeight - clock.clockBigHeight - Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 6)
-            }
-
         },
         State {
             name: "shrunk" // When the user scrolls down in the homescreen
@@ -63,11 +58,6 @@ Controls.Control {
                 height: root.shrunkHeight
             }
 
-            PropertyChanges {
-                target: root
-                topPadding: Kirigami.Units.gridUnit * 1
-            }
-
         }
     ]
 
@@ -75,14 +65,14 @@ Controls.Control {
         PropertyAnimation {
             target: root
             property: 'height'
-            duration: 200
+            duration: Kirigami.Units.shortDuration
             easing.type: Easing.InOutCubic
         }
 
         PropertyAnimation {
             target: root
             property: 'topPadding'
-            duration: 200
+            duration: Kirigami.Units.shortDuration
             easing.type: Easing.InOutCubic
         }
 

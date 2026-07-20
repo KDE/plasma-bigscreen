@@ -26,9 +26,9 @@ import "navbar" as Navbar
 import "search" as Search
 
 ContainmentItem {
-    
-
     id: root
+
+    property int activeTabIndex:0
 
     Layout.minimumWidth: Screen.desktopAvailableWidth
     Layout.minimumHeight: Screen.desktopAvailableHeight * 0.6
@@ -157,26 +157,39 @@ ContainmentItem {
         onSettingsRequested: Plasmoid.openSettings()
     }
 
-    // Background darken scrim
-    Rectangle {
-        anchors.fill: parent
-        color: 'black'
-        opacity: homeScreen.darkenBackground ? 0.7 : 0.4
-
-        Behavior on opacity {
-            NumberAnimation {
-                duration: Kirigami.Units.longDuration
-            }
-
+    Shortcut {
+        sequence: "q" 
+        onActivated: {
+            // If currently 1, switch to 0. 
+            // We use Math.max to cap it at 0.
+            root.activeTabIndex = Math.max(root.activeTabIndex - 1, 0);
         }
-
     }
+
+    Shortcut {
+        sequence: "e"
+        onActivated: {
+            // If currently 0, switch to 1. 
+            // We use Math.min to cap it at 1.
+            root.activeTabIndex = Math.min(root.activeTabIndex + 1, 1);
+        }
+    }
+    
+    Rectangle {
+        parent: root.Window.activeFocusItem
+        anchors.fill: parent
+        color: "transparent"
+        border.color: "red"
+        border.width: 4
+        z: 99999
+    }
+
 
     // Shared Top Navigation Bar
     Navbar.Navbar {
         id: mainNavbar
         downFocusItem: screenStack.children[screenStack.currentIndex]
-        state: (mainNavbar.activeTabIndex === 0 && !homeScreen.scrolledDown) ? "large" : "shrunk"
+        state: (root.activeTabIndex === 0 && !homeScreen.scrolledDown) ? "large" : "shrunk"
         z: 99
         anchors {
             top: parent.top
@@ -192,7 +205,14 @@ ContainmentItem {
         id: screenStack
 
         anchors.fill: parent
-        currentIndex:  1//mainNavbar.activeTabIndex
+        currentIndex:  root.activeTabIndex  
+
+        onCurrentIndexChanged: {
+            var currentScreen = children[currentIndex];
+            if (currentScreen) {
+                currentScreen.forceActiveFocus();
+            }
+        }
 
         // INDEX 0: HOME SCREEN
         HomeScreen {

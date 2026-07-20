@@ -17,7 +17,7 @@ import org.kde.bigscreen as Bigscreen
 
 import "launcher"
 
-Item {
+FocusScope {
     id: root
 
     property var header
@@ -37,21 +37,24 @@ Item {
     states: [
         State {
             name: "focused"
-            when: root.Window.activeFocusItem !== null
+            when: root.StackLayout.isCurrentItem && root.Window.activeFocusItem !== null
 
             PropertyChanges {
                 target: root
                 opacity: 1
                 zoomScale: 1
             }
-            StateChangeScript {
-                script: launcher.forceActiveFocus()
-            }
+            // StateChangeScript {
+            //     script: Qt.callLater(function() {
+            //         if (launcher) {
+            //             launcher.forceActiveFocus();
+            //         }
+            //     })
+            // }
         },
         State {
             name: "unfocused"
-            when: root.Window.activeFocusItem === null
-
+            when: !root.StackLayout.isCurrentItem || root.Window.activeFocusItem === null
             PropertyChanges {
                 target: root
                 opacity: 0
@@ -74,6 +77,9 @@ Item {
         }
     ]
 
+    StartupFeedbackWindow {
+        id: feedbackWindow
+    }
 
     // Games grid
     LauncherMenu {
@@ -81,15 +87,15 @@ Item {
         opacity: 0 // Displayed with launcherOpacityGradient below
         anchors {
             fill: parent
-            topMargin: header.shrunkHeight
+            topMargin: root.header ? root.header.shrunkHeight : 0
         }
-
+        focus: true
         // Pass margins in so that we don't clip sides with opacity gradient
         leftMargin: root.leftMargin
         rightMargin: root.rightMargin
 
-        KeyNavigation.backtab: header
-        KeyNavigation.up: header
+        KeyNavigation.backtab: root.header ? root.header.focusTarget : null
+        KeyNavigation.up: root.header ? root.header.focusTarget : null
     }
 
     // Opacity "fade" effect at edges

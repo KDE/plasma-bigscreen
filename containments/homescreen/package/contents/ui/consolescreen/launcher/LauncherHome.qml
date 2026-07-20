@@ -25,6 +25,7 @@ FocusScope {
 
     property Item navigationUp
 
+    
     function activateAppView() {
         gamesView.forceActiveFocus();
     }
@@ -38,10 +39,33 @@ FocusScope {
             right: parent.right
             bottom: parent.bottom
 
-            bottomMargin: Kirigami.Units.gridUnit * 4
+            bottomMargin: Kirigami.Units.gridUnit * 2
         }
 
         spacing: Kirigami.Units.largeSpacing * 3
+
+        ColumnLayout {
+            Layout.fillWidth: true
+            Layout.alignment: Qt.AlignLeft
+            spacing: Kirigami.Units.smallSpacing
+            // Show the game Icon/Poster
+            Kirigami.Icon {
+                Layout.alignment: Qt.AlignLeft
+                Layout.preferredWidth: Kirigami.Units.gridUnit * 8
+                Layout.preferredHeight: Kirigami.Units.gridUnit * 8
+                // Grabs the icon name from the currently focused game delegate
+                source: gamesView.currentItem ? gamesView.currentItem.icon.name : ""
+            }
+            // Show the game Name
+            Controls.Label {
+                Layout.alignment: Qt.AlignLeft
+                // Grabs the text from the currently focused game delegate
+                text: gamesView.currentItem ? gamesView.currentItem.text : ""
+                font.pixelSize: 48
+                font.weight: Font.Bold
+                color: "white"
+            }
+        }
 
 
         DelegateListView {
