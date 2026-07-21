@@ -19,19 +19,19 @@ T.Popup {
     Kirigami.Theme.colorSet: Kirigami.Theme.View
 
     parent: QQC2.Overlay.overlay
-    height: parent.height
+    height: parent.height - 30
     width: parent.width
 
     property real sidebarWidth: frame.width
 
-    topPadding: 0
+    topPadding: 30
     bottomPadding: 0
     leftPadding: 0
     rightPadding: 0
 
     readonly property real openFactor: 1 - Math.abs(x / sidebarWidth)
 
-    y: 0
+    y: 15
 
     enter: Transition {
         SequentialAnimation {
@@ -39,10 +39,10 @@ T.Popup {
                 property: "x"
                 duration: 400
                 easing.type: Easing.OutCubic
-                from: -root.sidebarWidth; to: 0
+                from: -root.sidebarWidth; to: 15
             }
             // Make sure it's anchored to the left of the screen
-            ScriptAction { script: root.x = Qt.binding(() => 0); }
+            ScriptAction { script: root.x = Qt.binding(() => 15); }
         }
     }
 
@@ -51,7 +51,7 @@ T.Popup {
             property: "x"
             duration: 400
             easing.type: Easing.OutCubic
-            to: -root.sidebarWidth; from: 0
+            to: -root.sidebarWidth; from: 15
         }
     }
 
@@ -63,6 +63,7 @@ T.Popup {
             anchors.bottom: parent.bottom
             width: Math.min(Kirigami.Units.gridUnit * 26, Math.max(Kirigami.Units.gridUnit * 20, Math.round(parent.width * 0.3)))
             color: Kirigami.Theme.backgroundColor
+            radius: 20
         }
 
         // Shadow
@@ -72,6 +73,7 @@ T.Popup {
             anchors.left: frame.right
             anchors.bottom: parent.bottom
             opacity: 0.1
+            radius: 20
 
             gradient: Gradient {
                 orientation: Gradient.Horizontal
