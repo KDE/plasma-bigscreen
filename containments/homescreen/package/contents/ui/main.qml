@@ -3,7 +3,6 @@
 // SPDX-FileCopyrightText: 2025 Devin Lin <devin@kde.org>
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-import Qt5Compat.GraphicalEffects
 import QtQuick
 import QtQuick.Controls as Controls
 import QtQuick.Layouts
@@ -156,7 +155,7 @@ ContainmentItem {
         onSearchRequested: Plasmoid.openSearch()
         onSettingsRequested: Plasmoid.openSettings()
     }
-
+    //TODO need to improve the switching
     Shortcut {
         sequence: "q" 
         onActivated: {
@@ -201,6 +200,7 @@ ContainmentItem {
         }
     }
 
+    //TODO need to find a way to add loader for memory efficient
     // The Screen Switcher
     StackLayout {
         id: screenStack

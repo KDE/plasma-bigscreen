@@ -99,13 +99,55 @@ Controls.Control {
 
             Indicators.Search {
                 id: searchIndicator
-
-                Layout.preferredWidth: 32 * root.scaleFactor
-                Layout.preferredHeight: 32 * root.scaleFactor
-                KeyNavigation.right: favsIndicator
-                KeyNavigation.tab: favsIndicator
+                KeyNavigation.right: volumeIndicator
+                KeyNavigation.tab: volumeIndicator
                 KeyNavigation.down: root.downFocusItem
             }
+
+            Indicators.Volume {
+                id: volumeIndicator
+                KeyNavigation.left: searchIndicator
+                KeyNavigation.backtab: searchIndicator
+                KeyNavigation.right: wifiIndicator
+                KeyNavigation.tab: wifiIndicator
+                KeyNavigation.down: root.downFocusItem
+                
+            }
+            
+            Indicators.Wifi {
+                id: wifiIndicator
+                KeyNavigation.left: volumeIndicator
+                KeyNavigation.backtab: volumeIndicator
+                KeyNavigation.right: bluetoothIndicator
+                KeyNavigation.tab: bluetoothIndicator
+                KeyNavigation.down: root.downFocusItem
+            }
+
+            Indicators.Bluetooth {
+                id: bluetoothIndicator
+                KeyNavigation.left: wifiIndicator
+                KeyNavigation.backtab: wifiIndicator
+                KeyNavigation.right: kdeConnectIndicator
+                KeyNavigation.tab: kdeConnectIndicator
+                KeyNavigation.down: root.downFocusItem
+            }
+
+            Indicators.KdeConnect {
+                id: kdeConnectIndicator
+                KeyNavigation.left: bluetoothIndicator
+                KeyNavigation.backtab: bluetoothIndicator
+                KeyNavigation.right: batteryIndicator
+                KeyNavigation.tab: batteryIndicator
+                KeyNavigation.down: root.downFocusItem
+            }
+
+            Indicators.Battery {
+                id: batteryIndicator
+                KeyNavigation.left: kdeConnectIndicator
+                KeyNavigation.backtab: kdeConnectIndicator
+                KeyNavigation.down: root.downFocusItem
+            }
+
 
         }
 
