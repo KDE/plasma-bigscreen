@@ -22,6 +22,7 @@ Name[sv]=Inställningar
 Name[tr]=Ayarlar
 Name[uk]=Параметри
 Name[zh_CN]=设置
+Name[zh_TW]=設定
 Exec=plasma-bigscreen-settings
 Icon=preferences-system
 Type=Application
