@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.mycroft.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-14 00:45+0000\n"
+"POT-Creation-Date: 2026-07-23 00:45+0000\n"
 "PO-Revision-Date: 2026-07-14 08:51+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -133,7 +133,7 @@ msgstr "Захоплення клавіш вимкнено"
 msgid "On-screen Keyboard"
 msgstr "Екранна клавіатура"
 
-#: contents/ui/homeoverlay/MainColumn.qml:219
+#: contents/ui/homeoverlay/MainColumn.qml:224
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"

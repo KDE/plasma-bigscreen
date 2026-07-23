@@ -204,10 +204,15 @@ ColumnLayout {
                 icon.name: "input-keyboard-virtual-symbolic"
                 text: i18n("On-screen Keyboard")
 
-                checked: Keyboards.KWinVirtualKeyboard.enabled
-                onCheckedChanged: {
-                    Keyboards.KWinVirtualKeyboard.enabled = checked;
-                    checked = Qt.binding(() => Keyboards.KWinVirtualKeyboard.enabled);
+                checked: Keyboards.KWinVirtualKeyboard.mode === Keyboards.KWinVirtualKeyboard.AnyInput
+                onToggled: {
+                    if (Keyboards.KWinVirtualKeyboard.mode === Keyboards.KWinVirtualKeyboard.AnyInput) {
+                        Keyboards.KWinVirtualKeyboard.mode = Keyboards.KWinVirtualKeyboard.Never;
+                    } else {
+                        Keyboards.KWinVirtualKeyboard.mode = Keyboards.KWinVirtualKeyboard.AnyInput;
+                    }
+
+                    checked = Qt.binding(() => (Keyboards.KWinVirtualKeyboard.mode === Keyboards.KWinVirtualKeyboard.AnyInput));
                 }
             }
 

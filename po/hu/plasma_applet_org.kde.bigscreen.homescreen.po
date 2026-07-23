@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-14 00:45+0000\n"
+"POT-Creation-Date: 2026-07-23 00:45+0000\n"
 "PO-Revision-Date: 2026-05-17 21:09+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -135,7 +135,7 @@ msgstr "Billentyűrögzítés ki"
 msgid "On-screen Keyboard"
 msgstr "Képernyő-billentyűzet"
 
-#: contents/ui/homeoverlay/MainColumn.qml:219
+#: contents/ui/homeoverlay/MainColumn.qml:224
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"

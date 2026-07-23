@@ -1,0 +1,110 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-06-29 00:47+0000\n"
+"PO-Revision-Date: 2026-07-22 01:42+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#: ui/GameControllerSidebar.qml:36
+#, kde-format
+msgid "System navigation"
+msgstr "系統導覽方式"
+
+#: ui/GameControllerSidebar.qml:51
+#, kde-format
+msgid "START button when suppressed"
+msgstr "抑制時也用 START 按鍵"
+
+#: ui/GameControllerSidebar.qml:52
+#, kde-format
+msgid ""
+"Handle the START button even when input is suppressed (may conflict with "
+"some apps)"
+msgstr "輸入已抑制時仍然處理 START 按鍵（可能會與某些應用程式衝突）"
+
+#: ui/main.qml:17
+#, kde-format
+msgid "Input"
+msgstr "輸入"
+
+#: ui/main.qml:105
+#, kde-format
+msgid "Input daemon is not running"
+msgstr "輸入守護程式未在執行"
+
+#: ui/main.qml:106
+#, kde-format
+msgid ""
+"Controller and remote settings are only available when plasma-bigscreen-"
+"inputhandler is running"
+msgstr ""
+"控制器與遙控器上的需要 plasma-bigscreen-inputhandler 有在執行時才可供使用"
+
+#: ui/main.qml:112
+#, kde-format
+msgid "System Navigation"
+msgstr "系統導覽方式"
+
+#: ui/main.qml:113
+#, kde-format
+msgid ""
+"Navigate the system interface with connected controllers/remotes (apps can "
+"always still use them directly)"
+msgstr "用已連線的控制器/遙控器來瀏覽系統介面（應用程式仍然可以直接使用它們）"
+
+#: ui/main.qml:130
+#, kde-format
+msgid "TV remote"
+msgstr "電視遙控器"
+
+#: ui/main.qml:131
+#, kde-format
+msgid "Navigate the system interface with the connected TV remote (CEC)"
+msgstr "使用已連線的電視遙控器來瀏覽系統介面 (CEC)"
+
+#: ui/main.qml:150
+#, kde-format
+msgid "Game Controllers"
+msgstr "遊戲控制器"
+
+#: ui/main.qml:160
+#, kde-format
+msgid "Game controllers"
+msgstr "遊戲控制器"
+
+#: ui/main.qml:161
+#, kde-format
+msgid "Use connected game controllers for system navigation"
+msgstr "使用已連線的遊戲控制器來瀏覽系統介面"
+
+#: ui/main.qml:180
+#, kde-format
+msgid "Automatic input suppression"
+msgstr "自動抑制輸入"
+
+#: ui/main.qml:181
+#, kde-format
+msgid "Stop controller navigation while another app is using a controller"
+msgstr "有另一個應用程式正在使用控制器時停止利用控制器進行瀏覽"
+
+#: ui/main.qml:201
+#, kde-format
+msgid "No controllers connected"
+msgstr "沒有連接控制器"
+
+#: ui/main.qml:202
+#, kde-format
+msgid "Connect a game controller"
+msgstr "連接遊戲控制器"
