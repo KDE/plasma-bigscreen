@@ -23,6 +23,7 @@
         "Description[tr]": "Uzaktan giriş ve oyun kolları ile girişi yapılandırın",
         "Description[uk]": "Налаштувати введення з пульта керування та ігрового контролера",
         "Description[zh_CN]": "配置遥控器和游戏控制器输入",
+        "Description[zh_TW]": "設定遙控器與遊戲控制器輸入",
         "FormFactors": [
             "mediacenter"
         ],
@@ -49,7 +50,8 @@
         "Name[sv]": "Inmatning",
         "Name[tr]": "Giriş",
         "Name[uk]": "Введення",
-        "Name[zh_CN]": "输入"
+        "Name[zh_CN]": "输入",
+        "Name[zh_TW]": "輸入"
     },
     "X-KDE-Keywords": "input,controller,gamepad,cec,remote",
     "X-KDE-Keywords[ar]": "إدخال,وحدة تحكم,مقبض ألعاب,سيك,جهاز تحكم عن بعد",
@@ -74,6 +76,7 @@
     "X-KDE-Keywords[tr]": "giriş,input,kol,kumanda,oyun pedi,cec,uzaktan kumanda,uzak,remote",
     "X-KDE-Keywords[uk]": "input,controller,gamepad,cec,remote,введення,вхід,контролер,пульт,керування",
     "X-KDE-Keywords[zh_CN]": "input,controller,gamepad,cec,remote,shuru,youxikongzhiqi,kongzhhiqi,shoubing,youxishoubing,yaokongqi,dianshiyaokongqi,输入,游戏控制器,控制器,手柄,游戏手柄,遥控器,电视遥控器",
+    "X-KDE-Keywords[zh_TW]": "輸入,控制器,手把,CEC,遙控器",
     "X-KDE-System-Settings-Parent-Category": "hardware",
     "X-KDE-Weight": 40
 }
