@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-14 00:45+0000\n"
+"POT-Creation-Date: 2026-07-23 00:45+0000\n"
 "PO-Revision-Date: 2026-07-17 19:37+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -139,7 +139,7 @@ msgstr "Tekla-atzematea desaktibatuta"
 msgid "On-screen Keyboard"
 msgstr "Pantailako teklatua"
 
-#: contents/ui/homeoverlay/MainColumn.qml:219
+#: contents/ui/homeoverlay/MainColumn.qml:224
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
