@@ -16,8 +16,6 @@ FocusScope {
     id: root
     signal activated
 
-    property string title
-
     property alias view: view
     property alias delegate: view.delegate
     property alias model: view.model
@@ -32,9 +30,9 @@ FocusScope {
     // Responsive grid logic
     property real columns: {
         const windowWidth = root.Window.width || 0;
-            if (windowWidth > 1280) return 6.5;
-            if (windowWidth > 1024) return 5.5;
-            return 4.5;
+            if (windowWidth > 1280) return 6;
+            if (windowWidth > 1024) return 5;
+            return 4;
     }
 
 
@@ -52,16 +50,11 @@ FocusScope {
 
     ListView {
         id: view
-        anchors {
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
-            topMargin: Kirigami.Units.largeSpacing * 2
-        }
+        anchors.fill:parent
 
         // Layout settings
         orientation: ListView.Horizontal
-        spacing: Kirigami.Units.largeSpacing * 3
+        spacing: Kirigami.Units.largeSpacing * 4
         snapMode: ListView.SnapOneItem
         highlightRangeMode: ListView.StrictlyEnforceRange
         
@@ -74,7 +67,7 @@ FocusScope {
 
         // Math: Total width minus total spacing divided by columns
         readonly property int cellWidth: (root.width - ((columns - 1) * spacing)) / columns
-        readonly property int cellHeight: cellWidth * 1.5
+        readonly property int cellHeight: cellWidth * 1.50
 
         implicitHeight: cellHeight
 

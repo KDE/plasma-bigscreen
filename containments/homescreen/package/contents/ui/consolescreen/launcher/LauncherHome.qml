@@ -15,17 +15,18 @@ import org.kde.kquickcontrolsaddons
 import org.kde.kirigami as Kirigami
 import org.kde.kitemmodels as KItemModels
 
-import "delegates" as Delegates
 import org.kde.bigscreen as Bigscreen
-import org.kde.private.biglauncher 1.0
-import org.kde.plasma.private.kicker 0.1 as Kicker
+import org.kde.private.biglauncher
+import org.kde.plasma.private.kicker as Kicker
+
+import "delegates" as Delegates
 
 FocusScope {
     id: root
-
     property Item navigationUp
 
-    
+    readonly property string activeHeroPath: gamesView.currentItem?.gameData?.hero_path ?? ""
+
     function activateAppView() {
         gamesView.forceActiveFocus();
     }
@@ -34,65 +35,43 @@ FocusScope {
 
     ColumnLayout {
         id: launcherHomeColumn
-        anchors {
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
+        anchors.fill:parent
+        anchors.bottomMargin: Kirigami.Units.largeSpacing * 4
+        spacing: Kirigami.Units.largeSpacing * 4
 
-            bottomMargin: Kirigami.Units.gridUnit * 2
-        }
-
-        spacing: Kirigami.Units.largeSpacing * 3
-
-        ColumnLayout {
+        Item {
             Layout.fillWidth: true
-            Layout.alignment: Qt.AlignLeft
-            spacing: Kirigami.Units.smallSpacing
-            // Show the game Icon/Poster
-            Kirigami.Icon {
-                Layout.alignment: Qt.AlignLeft
-                Layout.preferredWidth: Kirigami.Units.gridUnit * 8
-                Layout.preferredHeight: Kirigami.Units.gridUnit * 8
-                // Grabs the icon name from the currently focused game delegate
-                source: gamesView.currentItem ? gamesView.currentItem.icon.name : ""
-            }
-            // Show the game Name
-            // Controls.Label {
-            //     Layout.alignment: Qt.AlignLeft
-            //     // Grabs the text from the currently focused game delegate
-            //     text: gamesView.currentItem ? gamesView.currentItem.text : ""
-            //     font.pixelSize: 48
-            //     font.weight: Font.Bold
-            //     color: "white"
-            // }
+            Layout.fillHeight: true
         }
 
-
-        DelegateListView {
+        GameDelegateListView {
             id: gamesView
+    
             property var currentViewUpwards: root.navigationUp
             property var currentViewDownwards: null
 
-            title: i18n("Games")
-            visible: true
-            enabled: true
+            Layout.fillWidth: true
+            Layout.fillHeight: false
+
             focus: true
             currentIndex: 0
 
-            model: KItemModels.KSortFilterProxyModel {
-                sourceModel: Plasmoid.applicationListModel
-                filterRoleName: "ApplicationCategoriesRole"
-                filterRowCallback: function (source_row, source_parent) {
-                    return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("Game") !== -1;
-                }
-            }
-
-            delegate: Delegates.AppDelegate {
-                property var modelData: typeof model !== "undefined" ? model : null
-            }
+            //our game database
+            model:GameManager.getGames()
+            delegate: Delegates.GameDelegate {}
 
             navigationUp: root.navigationUp
             navigationDown: null
+        }
+
+        GamePanel {
+            Layout.fillWidth: true
+            Layout.fillHeight: false
+
+            Layout.preferredHeight: implicitHeight
+            Layout.minimumHeight: implicitHeight
+
+            modelData: gamesView.currentItem ? gamesView.currentItem.gameData : null
         }
     }
 }

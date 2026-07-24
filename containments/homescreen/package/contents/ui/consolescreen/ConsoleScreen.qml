@@ -7,7 +7,6 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as Controls
 import QtQuick.Window
-import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
@@ -21,7 +20,6 @@ FocusScope {
     id: root
 
     property var header
-    property Item wallpaper
     property real zoomScale: 1 
 
     readonly property real leftMargin: Kirigami.Units.gridUnit * 4
@@ -84,7 +82,6 @@ FocusScope {
     // Games grid
     LauncherMenu {
         id: launcher
-        opacity: 0 // Displayed with launcherOpacityGradient below
         anchors {
             fill: parent
             topMargin: root.header ? root.header.shrunkHeight : 0
@@ -98,24 +95,48 @@ FocusScope {
         KeyNavigation.up: root.header ? root.header.focusTarget : null
     }
 
-    // Opacity "fade" effect at edges
-    OpacityMask {
-        id: launcherOpacityGradient
-        anchors.fill: launcher
+    Rectangle {
+        anchors.fill: parent
+        color: Qt.rgba(0, 0, 0, 0.6) 
+        z: -1 
+    }
+    
+    Item {
+        id: heroWallpaperContainer
+        z: -2
+        anchors.fill: parent
 
-        source: launcher
-        maskSource: Rectangle {
-            id: mask
-            width: launcher.width
-            height: launcher.height
+        property string currentHero: launcher.activeHeroPath
 
-            property real gradientPct: (Kirigami.Units.gridUnit * 2) / launcher.height
+        onCurrentHeroChanged: {
+            if (frontImage.status === Image.Ready) {
+                backImage.source = frontImage.source;
+            }
+            frontImage.source = currentHero;
+        }
 
-            gradient: Gradient {
-                GradientStop { position: 0.0; color: 'transparent' }
-                GradientStop { position: mask.gradientPct; color: 'white' }
-                GradientStop { position: 1.0; color: 'white' }
+        Image {
+            id: backImage
+            anchors.fill: parent
+            fillMode: Image.PreserveAspectCrop
+            asynchronous: true
+        }
+
+        Image {
+            id: frontImage
+            anchors.fill: parent
+            fillMode: Image.PreserveAspectCrop
+            asynchronous: true
+            
+            opacity: status === Image.Ready ? 1 : 0
+
+            Behavior on opacity {
+                NumberAnimation { 
+                    duration: Kirigami.Units.longDuration 
+                    easing.type: Easing.OutCubic
+                }
             }
         }
     }
+
 }

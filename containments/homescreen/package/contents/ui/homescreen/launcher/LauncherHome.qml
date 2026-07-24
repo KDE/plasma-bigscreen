@@ -44,7 +44,7 @@ FocusScope {
         }
         property Item currentSection
         readonly property Item firstSection: favAppsView.currentViewDownwards
-
+        //binding loop
         y: root.startY
         function intendedY() {
             if (!currentSection) {

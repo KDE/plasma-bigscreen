@@ -23,7 +23,8 @@ FocusScope {
     property real leftMargin
     property real rightMargin
 
-    readonly property int reservedSpaceForLabel: metrics.height
+
+    readonly property string activeHeroPath: launcherHome ? launcherHome.activeHeroPath : ""
 
     onFocusChanged: {
         if (focus) {
@@ -35,11 +36,11 @@ FocusScope {
         }
     }
 
-    Controls.Label {
-        id: metrics
-        text: "M\nM"
-        visible: false
-    }
+    // Controls.Label {
+    //     id: metrics
+    //     text: "M\nM"
+    //     visible: false
+    // }
 
     LauncherHome {
         id: launcherHome
@@ -49,7 +50,6 @@ FocusScope {
             rightMargin: root.rightMargin
         }
         focus: true
-
         navigationUp: root.KeyNavigation.up
     }
 }
