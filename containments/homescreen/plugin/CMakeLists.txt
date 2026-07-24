@@ -12,6 +12,7 @@ set(homescreen_SRCS
     applicationlistmodel.cpp applicationlistmodel.h
     favslistmodel.cpp favslistmodel.h
     shortcuts.cpp shortcuts.h
+    gamemanager.cpp gamemanager.h
 )
 
 # DBus Interface
@@ -39,6 +40,7 @@ target_link_libraries(org.kde.bigscreen.homescreen
     Qt::DBus
     Qt::Network
     Qt::Quick
+    Qt::Sql
     Plasma::Plasma
     KF6::I18n
     KF6::Notifications

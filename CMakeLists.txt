@@ -71,6 +71,7 @@ find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     WebEngineCore
     WebEngineQuick
     WaylandClient
+    Sql
 )
 find_package(QCoro6 ${QCORO_MIN_VERSION} REQUIRED COMPONENTS Core Quick Qml)
 

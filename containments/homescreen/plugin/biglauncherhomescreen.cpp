@@ -8,11 +8,15 @@
 #include "biglauncherhomescreen.h"
 #include "applicationlistmodel.h"
 #include "favslistmodel.h"
+#include "gamemanager.h"
 #include "shortcuts.h"
 
 #include <QProcess>
-#include <QQmlEngine>
 #include <QQmlContext>
+#include <QQmlEngine>
+#include <qjsengine.h>
+#include <qobject.h>
+#include <qqmlengine.h>
 #include <sessionmanagement.h>
 
 #include <QDBusConnection>
@@ -44,6 +48,14 @@ static QObject *dbusSingletonProvider(QQmlEngine *engine, QJSEngine *scriptEngin
     return BigLauncherDbusAdapterInterface::instance();
 }
 
+static QObject *gameManagerSingletonProvider(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(scriptEngine);
+
+    engine->setObjectOwnership(GameManager::instance(), QQmlEngine::CppOwnership);
+    return GameManager::instance();
+}
+
 HomeScreen::HomeScreen(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : Plasma::Containment(parent, data, args)
     , m_applicationListModel(new ApplicationListSearchModel(this, new ApplicationListModel(this)))
@@ -58,6 +70,7 @@ HomeScreen::HomeScreen(QObject *parent, const KPluginMetaData &data, const QVari
     qmlRegisterSingletonType<FavsManager>(uri, 1, 0, "FavsManager", favsManagerSingletonProvider);
     qmlRegisterSingletonType<BigLauncherDbusAdapterInterface>(uri, 1, 0, "BigLauncherDbusAdapterInterface", dbusSingletonProvider);
     qmlRegisterUncreatableType<ApplicationListModel>(uri, 1, 0, "ApplicationListModel", QStringLiteral("Cannot create an item of type ApplicationListModel"));
+    qmlRegisterSingletonType<GameManager>(uri, 1, 0, "GameManager", gameManagerSingletonProvider);
     qmlRegisterUncreatableType<ApplicationListSearchModel>(uri,
                                                            1,
                                                            0,
