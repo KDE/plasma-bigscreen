@@ -122,8 +122,8 @@ Bigscreen.ScrollablePage {
 
             text: i18n("Power inhibition")
             description: i18n("Prevent the system from automatically sleeping")
-            checked: BigscreenShell.Settings.pmInhibitionActive ? true : false
-            onCheckedChanged: BigscreenShell.Settings.pmInhibitionActive = checked
+            checked: BigscreenShell.Settings.pmInhibitionEnabled ? true : false
+            onCheckedChanged: BigscreenShell.Settings.pmInhibitionEnabled = checked
         }
 
         Bigscreen.ButtonDelegate {
