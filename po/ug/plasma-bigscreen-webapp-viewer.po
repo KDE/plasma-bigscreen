@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-10 00:46+0000\n"
-"PO-Revision-Date: 2026-06-01 17:44-0400\n"
+"PO-Revision-Date: 2026-07-22 17:20-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,7 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,27 +30,27 @@ msgstr "sahranbay@gmail.com, gheyret@gmail.com"
 #: main.cpp:53
 #, kde-format
 msgid "The user agent to browse with."
-msgstr ""
+msgstr "تور كۆرۈشتە ئىشلىتىدىغان ئىشلەتكۈچى ۋاكالەتچىسى."
 
 #: main.cpp:55
 #, kde-format
 msgid "The name of the web app"
-msgstr ""
+msgstr "تور ئەپنىڭ ئىسمى"
 
 #: main.cpp:58
 #, kde-format
 msgid "link of website to launch"
-msgstr ""
+msgstr "قوزغىتىدىغان تور ئۇلانمىسى"
 
 #: main.cpp:75
 #, kde-format
 msgid "Webview"
-msgstr ""
+msgstr "Webview"
 
 #: main.cpp:77
 #, kde-format
 msgid "Plasma Bigscreen Webapp runtime"
-msgstr ""
+msgstr "Plasma چوڭ ئېكران تور ئەپ ئىجرا قىلىش مۇھىتى"
 
 #: main.cpp:79
 #, kde-format
@@ -62,13 +61,13 @@ msgstr "© 2025 Plasma ئىجادكارلار"
 #, kde-format
 msgctxt "@info:status"
 msgid "Entered Full Screen mode"
-msgstr ""
+msgstr "پۈتۈن ئېكران ھالىتىگە كىردى"
 
 #: qml/WebView.qml:191
 #, kde-format
 msgctxt "@action:button"
 msgid "Exit Full Screen (Esc)"
-msgstr ""
+msgstr "پۈتۈن ئېكراندىن چېكىن"
 
 #: qml/WebView.qml:304
 #, kde-format
@@ -122,13 +121,13 @@ msgstr "پۈتۈن ئېكرانغا كىر"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Controls"
-msgstr ""
+msgstr "تىزگىننى يوشۇر"
 
 #: qml/WebView.qml:367
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Controls"
-msgstr ""
+msgstr "تىزگىننى كۆرسەت"
 
 #: qml/WebView.qml:375
 #, kde-format
@@ -146,25 +145,25 @@ msgstr "ئۈن ئاچ"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Video in New Tab"
-msgstr ""
+msgstr "سىننى يېڭى بەتكۈچتە ئاچ"
 
 #: qml/WebView.qml:376
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Audio in New Tab"
-msgstr ""
+msgstr "ئۈننى يېڭى بەتكۈچتە ئاچ"
 
 #: qml/WebView.qml:384
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Save Video"
-msgstr ""
+msgstr "سىن ساقلا"
 
 #: qml/WebView.qml:390
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Video Link"
-msgstr ""
+msgstr "سىن ئۇلانمىسىنى كۆچۈر"
 
 #: qml/WebView.qml:396
 #, kde-format
@@ -176,7 +175,7 @@ msgstr "سۈرەت ئاچ"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Image in New Tab"
-msgstr ""
+msgstr "سۈرەتنى يېڭى بەتكۈچتە ئاچ"
 
 #: qml/WebView.qml:404
 #, kde-format
@@ -194,7 +193,7 @@ msgstr "سۈرەت كۆچۈر"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Image Link"
-msgstr ""
+msgstr "سۈرەت ئۇلانمىسىنى كۆچۈر"
 
 #: qml/WebView.qml:422
 #, kde-format
@@ -206,19 +205,19 @@ msgstr "ئۇلانما ئاچ"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Link in New Window"
-msgstr ""
+msgstr "ئۇلانمىنى يېڭى كۆزنەكتە ئاچ"
 
 #: qml/WebView.qml:430
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Save Link"
-msgstr ""
+msgstr "ئۇلانما ساقلا"
 
 #: qml/WebView.qml:436
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Link"
-msgstr ""
+msgstr "ئۇلانما كۆچۈر"
 
 #: qml/WebView.qml:443
 #, kde-format

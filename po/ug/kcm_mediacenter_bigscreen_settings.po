@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-29 00:47+0000\n"
-"PO-Revision-Date: 2026-06-01 17:43-0400\n"
+"PO-Revision-Date: 2026-07-22 17:17-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,7 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -51,7 +50,7 @@ msgstr "كۈن"
 #: ui/DeviceTimeSettingsSidebar.qml:46
 #, kde-format
 msgid "Adjust Date and Time Settings"
-msgstr ""
+msgstr "چېسلا ۋە ۋاقىت تەڭشىكىنى تەڭشەيدۇ"
 
 #: ui/DeviceTimeSettingsSidebar.qml:54
 #, kde-format
@@ -61,7 +60,7 @@ msgstr "ۋاقىت رايونى"
 #: ui/DeviceTimeSettingsSidebar.qml:66
 #, kde-format
 msgid "Set time automatically"
-msgstr ""
+msgstr "ۋاقىتنى ئۆزلۈكىدىن تەڭشەيدۇ"
 
 #: ui/DeviceTimeSettingsSidebar.qml:84
 #, kde-format
@@ -82,12 +81,12 @@ msgstr "قايت"
 #: ui/DeviceTimeSettingsSidebar.qml:145
 #, kde-format
 msgid "Search City / Region"
-msgstr ""
+msgstr "شەھەر/رايون ئىزدە"
 
 #: ui/DeviceTimeSettingsSidebar.qml:165
 #, kde-format
 msgid "Your local timezone is %1"
-msgstr ""
+msgstr "يەرلىك ۋاقىت رايونىڭىز %1"
 
 #: ui/DeviceTimeSettingsSidebar.qml:166
 #, kde-format
@@ -102,68 +101,70 @@ msgstr "سىستېما"
 #: ui/main.qml:43
 #, kde-format
 msgid "Homescreen Appearance"
-msgstr ""
+msgstr "باش ئېكران قىياپىتى"
 
 #: ui/main.qml:56
 #, kde-format
 msgid "Colored tiles"
-msgstr ""
+msgstr "رەڭلىك جىپسا"
 
 #: ui/main.qml:57
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
-msgstr ""
+msgstr "جىپسا تەگلىكىگە پىروگراممىنىڭ سىنبەلگىسىگە ئاساسەن رەڭ بېرىلىدۇ"
 
 #: ui/main.qml:70
 #, kde-format
 msgid "Wallpaper blur"
-msgstr ""
+msgstr "تام قەغەز غۇۋا"
 
 #: ui/main.qml:71
 #, kde-format
 msgid "Apply a blur effect to the wallpaper on the homescreen"
-msgstr ""
+msgstr "باش ئېكراندا تام قەغەزگە غۇۋا ئۈنۈم قوللىنىدۇ"
 
 #: ui/main.qml:85
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Set the system theme"
 msgid "Set the system colors"
-msgstr ""
+msgstr "سىستېما ئۆرنىكىنى تەڭشە"
 
 #: ui/main.qml:102
 #, kde-format
 msgid "Window decorations"
-msgstr ""
+msgstr "كۆزنەك بېزەك"
 
 #: ui/main.qml:103
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
 msgstr ""
+"ئىلتىماس قىلغان پىروگراممىنىڭ كۆزنەك كاندۇكى بار (كىچىكلەت، چوڭايت، ياپ)"
 
 #: ui/main.qml:112
 #, kde-format
 msgid "Navigation sounds"
-msgstr ""
+msgstr "يولباشچى ئاۋازى"
 
 #: ui/main.qml:113
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
-msgstr ""
+msgstr "تاللانغان تۈر سىستېما پىروگراممىسىدا ئۆزگەرگەندە ئاۋاز ياڭرىتىدۇ"
 
 #: ui/main.qml:123
 #, kde-format
 msgid "Power inhibition"
-msgstr ""
+msgstr "توك مەنبە چەكلىمىسى"
 
 #: ui/main.qml:124
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
-msgstr ""
+msgstr "سىستېمىنىڭ ئۆزلۈكىدىن ئۇيقۇ ھالىتىگە كىرىشىنىڭ ئالدىنى ئالىدۇ"
 
 #: ui/main.qml:134
 #, kde-format
 msgid "Adjust date and time"
-msgstr ""
+msgstr "چېسلا ۋە ۋاقىت تەڭشەش"
 
 #: ui/main.qml:140
 #, kde-format
@@ -173,37 +174,37 @@ msgstr "تېزلەتمە"
 #: ui/main.qml:151
 #, kde-format
 msgid "Open home overlay shortcut"
-msgstr ""
+msgstr "باش بەت قاپلاش تېزلەتمىسىنى ئاچ"
 
 #: ui/main.qml:171
 #, kde-format
 msgid "Open homescreen shortcut"
-msgstr ""
+msgstr "باش ئېكران تېزلەتمىسىنى ئاچ"
 
 #: ui/main.qml:191
 #, kde-format
 msgid "Open settings shortcut"
-msgstr ""
+msgstr "تەڭشەك تېزلەتمىسىنى ئاچ"
 
 #: ui/main.qml:210
 #, kde-format
 msgid "Open tasks shortcut"
-msgstr ""
+msgstr "ۋەزىپە تېزلەتمىسىنى ئاچ"
 
 #: ui/ShortcutsPickerSidebar.qml:38
 #, kde-format
 msgid "Shortcut currently set to"
-msgstr ""
+msgstr "نۆۋەتتە تەڭشەلگەن تېزلەتمە"
 
 #: ui/ShortcutsPickerSidebar.qml:45
 #, kde-format
 msgid "Reset to default"
-msgstr ""
+msgstr "كۆڭۈلدىكىگە قايتۇر"
 
 #: ui/ShortcutsPickerSidebar.qml:59
 #, kde-format
 msgid "Set Shortcut"
-msgstr ""
+msgstr "تېزلەتمە تەڭشەك"
 
 #: ui/TimePicker.qml:40
 #, kde-format

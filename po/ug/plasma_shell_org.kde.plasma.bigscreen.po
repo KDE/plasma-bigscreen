@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-11 00:45+0000\n"
-"PO-Revision-Date: 2026-06-01 17:44-0400\n"
+"PO-Revision-Date: 2026-07-22 17:20-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,15 +16,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:49
 msgid "Layout cannot be changed while widgets are locked"
-msgstr ""
+msgstr "ئەپچە قۇلۇپلانغاندا جايلاشتۇرۇشنى ئۆزگەرتكىلى بولمايدۇ"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:60
 msgid "Wallpaper Type:"
-msgstr ""
+msgstr "تام قەغەز تۈرى:"
 
 #: contents/configuration/ContainmentConfiguration.qml:41
 msgid "Wallpaper"
@@ -40,32 +39,37 @@ msgstr "ئىم"
 
 #: contents/lockscreen/PasswordDialog.qml:76
 msgid "Unlock Screen"
-msgstr ""
+msgstr "ئېكران قۇلۇپىنى ئاچ"
 
 #: contents/logout/Logout.qml:152
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
 msgstr[0] ""
+msgstr[1] ""
 
 #: contents/logout/Logout.qml:153
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
 msgstr[0] ""
+msgstr[1] ""
 
 #: contents/logout/Logout.qml:155
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
 msgstr[0] ""
+msgstr[1] ""
 
 #: contents/logout/Logout.qml:158
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
 msgstr[0] ""
+msgstr[1] ""
 
 #: contents/logout/Logout.qml:159
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
 msgstr[0] ""
+msgstr[1] ""
 
 #: contents/logout/Logout.qml:174
 msgid ""
@@ -75,6 +79,7 @@ msgid_plural ""
 "%1 other users are currently logged in. If the computer is shut down or "
 "restarted, those users may lose work."
 msgstr[0] ""
+msgstr[1] ""
 
 #: contents/logout/Logout.qml:191
 msgid "When restarted, the computer will enter UEFI firmware settings."

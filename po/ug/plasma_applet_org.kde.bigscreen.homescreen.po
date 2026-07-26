@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-23 00:45+0000\n"
-"PO-Revision-Date: 2026-06-01 17:44-0400\n"
+"PO-Revision-Date: 2026-07-22 17:19-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Exit Bigscreen"
 msgid "Edit Home Screen"
-msgstr ""
+msgstr "چوڭ ئېكراندىن چېكىن"
 
 #: contents/ui/FavoritesManager.qml:141
 #: contents/ui/launcher/LauncherHome.qml:84
@@ -37,12 +37,12 @@ msgstr ""
 #: contents/ui/FavoritesManager.qml:213
 #, kde-format
 msgid "Add Favorites"
-msgstr ""
+msgstr "يىغقۇچقا قوش"
 
 #: contents/ui/FavoritesManager.qml:252
 #, kde-format
 msgid "Remove Favorites"
-msgstr ""
+msgstr "يىغقۇچتىن چىقىرىۋەت"
 
 #: contents/ui/FavoritesManager.qml:295
 #, fuzzy, kde-format
@@ -122,17 +122,17 @@ msgstr "تىزگىنلىگۈچ"
 #: contents/ui/homeoverlay/MainColumn.qml:185
 #, kde-format
 msgid "Currently capturing keys…"
-msgstr ""
+msgstr "نۆۋەتتە كۇنۇپكا تۇتۇۋاتىدۇ…"
 
 #: contents/ui/homeoverlay/MainColumn.qml:185
 #, kde-format
 msgid "Key capture off"
-msgstr ""
+msgstr "كۇنۇپكا تۇتۇش تاقاق"
 
 #: contents/ui/homeoverlay/MainColumn.qml:205
 #, kde-format
 msgid "On-screen Keyboard"
-msgstr ""
+msgstr "ئېكران ھەرپتاختىسى"
 
 #: contents/ui/homeoverlay/MainColumn.qml:224
 #: contents/ui/indicators/Settings.qml:18
@@ -143,23 +143,23 @@ msgstr "تەڭشەك"
 #: contents/ui/homeoverlay/TaskDelegate.qml:122
 #, kde-format
 msgid "Hold to close…"
-msgstr ""
+msgstr "تۇتۇپ تۇرۇلسا ياپ…"
 
 #: contents/ui/homeoverlay/TasksView.qml:111
 #, kde-format
 msgctxt "As in: These apps are currently opened"
 msgid "Open Apps"
-msgstr ""
+msgstr "ئوچۇق ئەپ"
 
 #: contents/ui/homeoverlay/TasksView.qml:162
 #, kde-format
 msgid "Close all apps"
-msgstr ""
+msgstr "ھەممە ئەپنى ياپ"
 
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
 msgid "Battery: %1%"
-msgstr ""
+msgstr "توكدان: %1%"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -169,12 +169,12 @@ msgstr "KDE باغلىنىش"
 #: contents/ui/indicators/PairWindow.qml:40
 #, kde-format
 msgid "Accept Pairing Request From %1?"
-msgstr ""
+msgstr "%1 نىڭ جۈپلەش ئىلتىماسىغا قوشۇلامدۇ؟"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Exit Bigscreen"
-msgstr ""
+msgstr "چوڭ ئېكراندىن چېكىن"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
@@ -184,12 +184,12 @@ msgstr "توك مەنبە"
 #: contents/ui/indicators/Volume.qml:20
 #, kde-format
 msgid "Audio Settings"
-msgstr ""
+msgstr "ئۈن تەڭشىكى"
 
 #: contents/ui/indicators/Wifi.qml:19
 #, kde-format
 msgid "Internet Settings"
-msgstr ""
+msgstr "ئىنتېرنېت تەڭشىكى"
 
 #: contents/ui/launcher/LauncherHome.qml:113
 #, kde-format
@@ -209,41 +209,47 @@ msgstr "ئويۇن"
 #: contents/ui/main.qml:114
 #, kde-format
 msgid "Controller added: %1"
-msgstr ""
+msgstr "تىزگىنلىگۈچ قوشۇلدى: %1"
 
 #: contents/ui/main.qml:118
 #, kde-format
 msgid "Controller removed: %1"
-msgstr ""
+msgstr "تىزگىنلىگۈچ چىقىرىۋېتىلدى: %1"
 
 #: contents/ui/main.qml:122
 #, kde-format
 msgid "Remote added: %1"
-msgstr ""
+msgstr "تىزگىنەك قوشۇلدى: %1"
 
 #: contents/ui/main.qml:126
 #, kde-format
 msgid "Remote removed: %1"
-msgstr ""
+msgstr "تىزگىنەك چىقىرىۋېتىلدى: %1"
 
 #: contents/ui/main.qml:130
 #, kde-format
 msgid "System taking over controller input"
-msgstr ""
+msgstr "تىزگىنلىگۈچ كىرگۈزۈشنى قوللايدىغان سىستېما"
 
 #: contents/ui/main.qml:133
 #, kde-format
 msgid "Application taking over controller input"
-msgstr ""
+msgstr "تىزگىنلىگۈچ كىرگۈزۈشنى قوللايدىغان پىروگرامما"
 
 #: contents/ui/PowerManagementItem.qml:24
 #, kde-format
 msgctxt "@info"
 msgid "Plasma Bigscreen has enabled system-wide inhibition"
-msgstr ""
+msgstr "Plasma چوڭ ئېكرانى سىستېما دائىرىسىدە چەكلەشنى قوزغاتتى"
 
 #: contents/ui/search/SearchTextField.qml:24
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "ئىزدە…"
+
+#~ msgid "Favorites Manager"
+#~ msgstr "يىغقۇچ باشقۇرغۇچ"
+
+#~ msgid "Customize Favorites"
+#~ msgstr "يىغقۇچنى خاسلاشتۇر"

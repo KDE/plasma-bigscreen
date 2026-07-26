@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-24 00:45+0000\n"
-"PO-Revision-Date: 2026-06-01 17:42-0400\n"
+"PO-Revision-Date: 2026-07-22 17:17-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,17 +16,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ui/AudioDelegateSidebar.qml:49
 #, kde-format
 msgid "Set as default device"
-msgstr ""
+msgstr "كۆڭۈلدىكى ئۈسكۈنىگە تەڭشە"
 
 #: ui/delegates/VolumeObject.qml:53
 #, kde-format
 msgid "Adjust Volume"
-msgstr ""
+msgstr "ئاۋاز تەڭشىكى"
 
 #: ui/delegates/VolumeObject.qml:140
 #, kde-format
@@ -37,7 +36,7 @@ msgstr "%1%"
 #: ui/main.qml:21
 #, kde-format
 msgid "Audio Devices"
-msgstr ""
+msgstr "ئۈن ئۈسكۈنىسى"
 
 #: ui/main.qml:50
 #, kde-format

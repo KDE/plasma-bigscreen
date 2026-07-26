@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-21 00:47+0000\n"
-"PO-Revision-Date: 2026-06-01 17:43-0400\n"
+"PO-Revision-Date: 2026-07-22 17:18-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,22 +16,21 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ui/delegates/PairedView.qml:35
 #, kde-format
 msgid "This device is paired"
-msgstr ""
+msgstr "بۇ ئۈسكۈنە جۈپلەندى"
 
 #: ui/delegates/PairedView.qml:43 ui/delegates/Unreachable.qml:40
 #, kde-format
 msgid "Unpair"
-msgstr ""
+msgstr "جۈپلىمە"
 
 #: ui/delegates/PairRequest.qml:35
 #, kde-format
 msgid "This device is requesting to be paired"
-msgstr ""
+msgstr "بۇ ئۈسكۈنە جۈپلەشنى ئىلتىماس قىلدى"
 
 #: ui/delegates/PairRequest.qml:44
 #, kde-format
@@ -46,17 +45,17 @@ msgstr "رەت قىل"
 #: ui/delegates/UnpairedView.qml:47
 #, kde-format
 msgid "This device is not paired"
-msgstr ""
+msgstr "بۇ ئۈسكۈنە جۈپلەنمىدى"
 
 #: ui/delegates/UnpairedView.qml:56
 #, kde-format
 msgid "Pairing request sent"
-msgstr ""
+msgstr "جۈپلەش ئىلتىماسى يوللاندى"
 
 #: ui/delegates/UnpairedView.qml:60
 #, kde-format
 msgid "Pair"
-msgstr ""
+msgstr "جۈپلە"
 
 #: ui/delegates/Unreachable.qml:33
 #, kde-format

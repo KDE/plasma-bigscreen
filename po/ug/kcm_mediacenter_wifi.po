@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2026-06-01 17:43-0400\n"
+"PO-Revision-Date: 2026-07-22 17:19-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,7 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ui/delegates/NetworkDelegate.qml:65 ui/DeviceConnectionSidebar.qml:72
 #, kde-format
@@ -26,12 +25,12 @@ msgstr "باغلاندى"
 #: ui/DetailsText.qml:33
 #, kde-format
 msgid "IP Address Details"
-msgstr ""
+msgstr "IP ئادرېس تەپسىلاتى"
 
 #: ui/DeviceConnectionSidebar.qml:138
 #, kde-format
 msgid "Network information"
-msgstr ""
+msgstr "تور ئۇچۇرى"
 
 #: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
 #, kde-format
@@ -46,17 +45,17 @@ msgstr "ئۈز"
 #: ui/DeviceConnectionSidebar.qml:180
 #, kde-format
 msgid "Forget network"
-msgstr ""
+msgstr "تورنى ئۇنتۇ"
 
 #: ui/DeviceConnectionSidebar.qml:190
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
-msgstr ""
+msgstr "بۇ %1 تورنى راستتىنلا ئۇنتۇمدۇ؟"
 
 #: ui/DeviceConnectionSidebar.qml:213
 #, kde-format
 msgid "Network details"
-msgstr ""
+msgstr "تور تەپسىلاتى"
 
 #: ui/DeviceConnectionSidebar.qml:242
 #, kde-format
@@ -81,7 +80,7 @@ msgstr "باغلىنىشلار"
 #: ui/PasswordDialog.qml:22
 #, kde-format
 msgid "Enter Password For %1"
-msgstr ""
+msgstr "%1 غا ئىم كىرگۈزۈلىدۇ"
 
 #: ui/PasswordDialog.qml:34
 #, kde-format
