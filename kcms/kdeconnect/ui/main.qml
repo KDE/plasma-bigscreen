@@ -41,7 +41,7 @@ KCM.SimpleKCM {
         spacing: 0
 
         QQC2.Label {
-            text: i18n("Devices")
+            text: allDevicesModel.count == 0 ? i18n("No devices found") : i18n("Devices")
             font.pixelSize: Bigscreen.Units.headingFontPixelSize
             Layout.topMargin: Kirigami.Units.gridUnit
             Layout.bottomMargin: Kirigami.Units.gridUnit
