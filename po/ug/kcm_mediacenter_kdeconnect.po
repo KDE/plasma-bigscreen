@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-21 00:47+0000\n"
+"POT-Creation-Date: 2026-07-27 00:46+0000\n"
 "PO-Revision-Date: 2026-07-22 17:18-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ui/delegates/PairedView.qml:35
 #, kde-format
@@ -66,6 +67,11 @@ msgstr ""
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE باغلىنىش"
+
+#: ui/main.qml:44
+#, kde-format
+msgid "No devices found"
+msgstr ""
 
 #: ui/main.qml:44
 #, kde-format

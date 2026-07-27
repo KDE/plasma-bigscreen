@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_kdeconnect\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-21 00:47+0000\n"
+"POT-Creation-Date: 2026-07-27 00:46+0000\n"
 "PO-Revision-Date: 2025-08-30 19:23+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -68,6 +68,11 @@ msgstr "Este dispositivo no está presente"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
+
+#: ui/main.qml:44
+#, kde-format
+msgid "No devices found"
+msgstr ""
 
 #: ui/main.qml:44
 #, kde-format

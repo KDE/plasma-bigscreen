@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-21 00:47+0000\n"
+"POT-Creation-Date: 2026-07-27 00:46+0000\n"
 "PO-Revision-Date: 2025-09-06 17:46+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -68,6 +68,11 @@ msgstr "Това устройство не може да бъде достигн
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect"
+
+#: ui/main.qml:44
+#, kde-format
+msgid "No devices found"
+msgstr ""
 
 #: ui/main.qml:44
 #, kde-format

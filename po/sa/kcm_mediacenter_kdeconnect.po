@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-21 00:47+0000\n"
+"POT-Creation-Date: 2026-07-27 00:46+0000\n"
 "PO-Revision-Date: 2024-12-13 19:10+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -67,6 +67,11 @@ msgstr "एतत् यन्त्रं न प्राप्यते"
 #, kde-format
 msgid "KDE Connect"
 msgstr "KDE Connect इति"
+
+#: ui/main.qml:44
+#, kde-format
+msgid "No devices found"
+msgstr ""
 
 #: ui/main.qml:44
 #, kde-format

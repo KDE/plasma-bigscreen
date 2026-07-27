@@ -1,12 +1,11 @@
 # Translation of plasma_applet_org.kde.bigscreen.homescreen to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-23 00:45+0000\n"
-"PO-Revision-Date: 2023-01-15 12:14+0100\n"
+"PO-Revision-Date: 2026-07-26 12:37+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -14,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 26.11.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -22,66 +21,63 @@ msgstr ""
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
 #, kde-format
 msgid "Edit Home Screen"
-msgstr ""
+msgstr "Tilpass heimeskjermen"
 
 #: contents/ui/FavoritesManager.qml:141
 #: contents/ui/launcher/LauncherHome.qml:84
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Favorittar"
 
 #: contents/ui/FavoritesManager.qml:141 contents/ui/FavoritesManager.qml:281
 #, kde-format
 msgid "Launcher Sections"
-msgstr ""
+msgstr "Oppstartsinndelingar"
 
 #: contents/ui/FavoritesManager.qml:213
 #, kde-format
 msgid "Add Favorites"
-msgstr ""
+msgstr "Legg til favorittar"
 
 #: contents/ui/FavoritesManager.qml:252
 #, kde-format
 msgid "Remove Favorites"
-msgstr ""
+msgstr "Fjern frå favorittar"
 
 #: contents/ui/FavoritesManager.qml:295
-#, fuzzy, kde-format
-#| msgid "Recent"
+#, kde-format
 msgid "Show Recent"
-msgstr "Nylege"
+msgstr "Vis nyleg brukte"
 
 #: contents/ui/FavoritesManager.qml:296
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
-msgstr ""
+msgstr "Nyleg brukte program vert viste i ei rad på heimeskjermen"
 
 #: contents/ui/FavoritesManager.qml:311
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Show Applications"
-msgstr "Program"
+msgstr "Vis program"
 
 #: contents/ui/FavoritesManager.qml:312
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
-msgstr ""
+msgstr "Program som ikkje er spel, vert viste i ei rad på heimeskjermen"
 
 #: contents/ui/FavoritesManager.qml:328
-#, fuzzy, kde-format
-#| msgid "Games"
+#, kde-format
 msgid "Show Games"
-msgstr "Spel"
+msgstr "Vis spel"
 
 #: contents/ui/FavoritesManager.qml:329
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
-msgstr ""
+msgstr "Program i kategorien «spel» vert viste i ei rad på heimeskjermen"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:36
 #, kde-format
 msgid "Screenshot"
-msgstr ""
+msgstr "Skjermbilete"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:50
 #, kde-format
@@ -91,49 +87,49 @@ msgstr "Lyd"
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:78
 #, kde-format
 msgid "Wi-Fi"
-msgstr ""
+msgstr "Wi-Fi"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:93
 #, kde-format
 msgid "Shutdown"
-msgstr ""
+msgstr "Slå av maskina"
 
 #: contents/ui/homeoverlay/MainColumn.qml:131
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "Heim"
 
 #: contents/ui/homeoverlay/MainColumn.qml:144
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
-msgstr ""
+msgstr "Søk"
 
 #: contents/ui/homeoverlay/MainColumn.qml:161
 #, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
-msgstr ""
+msgstr "Oppgåver"
 
 #: contents/ui/homeoverlay/MainColumn.qml:184
 #, kde-format
 msgid "Controller"
-msgstr ""
+msgstr "Kontrollar"
 
 #: contents/ui/homeoverlay/MainColumn.qml:185
 #, kde-format
 msgid "Currently capturing keys…"
-msgstr ""
+msgstr "Registrerer tastar …"
 
 #: contents/ui/homeoverlay/MainColumn.qml:185
 #, kde-format
 msgid "Key capture off"
-msgstr ""
+msgstr "Tasteregistrering av"
 
 #: contents/ui/homeoverlay/MainColumn.qml:205
 #, kde-format
 msgid "On-screen Keyboard"
-msgstr ""
+msgstr "Skjermtastatur"
 
 #: contents/ui/homeoverlay/MainColumn.qml:224
 #: contents/ui/indicators/Settings.qml:18
@@ -144,23 +140,23 @@ msgstr "Innstillingar"
 #: contents/ui/homeoverlay/TaskDelegate.qml:122
 #, kde-format
 msgid "Hold to close…"
-msgstr ""
+msgstr "Hald inne for å lukka …"
 
 #: contents/ui/homeoverlay/TasksView.qml:111
 #, kde-format
 msgctxt "As in: These apps are currently opened"
 msgid "Open Apps"
-msgstr ""
+msgstr "Opne program"
 
 #: contents/ui/homeoverlay/TasksView.qml:162
 #, kde-format
 msgid "Close all apps"
-msgstr ""
+msgstr "Lukk alle programma"
 
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
 msgid "Battery: %1%"
-msgstr ""
+msgstr "Batteri: %1 %"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -168,30 +164,29 @@ msgid "KDE Connect"
 msgstr "KDE Connect"
 
 #: contents/ui/indicators/PairWindow.qml:40
-#, fuzzy, kde-format
-#| msgid "Pairing Request From %1"
+#, kde-format
 msgid "Accept Pairing Request From %1?"
-msgstr "Paringsførespurnad frå %1"
+msgstr "Godta paringsførespurnad frå %1?"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Exit Bigscreen"
-msgstr ""
+msgstr "Avslutt Bigscreen"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
 msgid "Power"
-msgstr ""
+msgstr "Straum"
 
 #: contents/ui/indicators/Volume.qml:20
 #, kde-format
 msgid "Audio Settings"
-msgstr ""
+msgstr "Lydinnstillingar"
 
 #: contents/ui/indicators/Wifi.qml:19
 #, kde-format
 msgid "Internet Settings"
-msgstr ""
+msgstr "Internett-innstillingar"
 
 #: contents/ui/launcher/LauncherHome.qml:113
 #, kde-format
@@ -211,42 +206,41 @@ msgstr "Spel"
 #: contents/ui/main.qml:114
 #, kde-format
 msgid "Controller added: %1"
-msgstr ""
+msgstr "Spelkontrollar kopla til: %1"
 
 #: contents/ui/main.qml:118
 #, kde-format
 msgid "Controller removed: %1"
-msgstr ""
+msgstr "Spelkontrollar kopla frå: %1"
 
 #: contents/ui/main.qml:122
 #, kde-format
 msgid "Remote added: %1"
-msgstr ""
+msgstr "Fjernkontroll kopla til: %1"
 
 #: contents/ui/main.qml:126
 #, kde-format
 msgid "Remote removed: %1"
-msgstr ""
+msgstr "Fjernkontroll kopla frå: %1"
 
 #: contents/ui/main.qml:130
 #, kde-format
 msgid "System taking over controller input"
-msgstr ""
+msgstr "Systemet tek over inndata frå spelkontrollar"
 
 #: contents/ui/main.qml:133
 #, kde-format
 msgid "Application taking over controller input"
-msgstr ""
+msgstr "Program tek over inndata frå spelkontrollar"
 
 #: contents/ui/PowerManagementItem.qml:24
-#, fuzzy, kde-format
-#| msgid "Bigscreen has enabled system-wide inhibition"
+#, kde-format
 msgctxt "@info"
 msgid "Plasma Bigscreen has enabled system-wide inhibition"
-msgstr "Bigscreen har slått på hindring for heila systemet"
+msgstr "Plasma Bigscreen har slått på hindring for heila systemet"
 
 #: contents/ui/search/SearchTextField.qml:24
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "Søk …"

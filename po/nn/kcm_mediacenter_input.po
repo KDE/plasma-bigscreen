@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-29 00:47+0000\n"
-"PO-Revision-Date: 2026-06-24 21:01+0200\n"
+"PO-Revision-Date: 2026-07-26 12:21+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.07.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -26,7 +26,7 @@ msgstr "Systemnavigering"
 #: ui/GameControllerSidebar.qml:51
 #, kde-format
 msgid "START button when suppressed"
-msgstr ""
+msgstr "START-knapp ved undertrykking av inndata"
 
 #: ui/GameControllerSidebar.qml:52
 #, kde-format
@@ -34,16 +34,18 @@ msgid ""
 "Handle the START button even when input is suppressed (may conflict with "
 "some apps)"
 msgstr ""
+"Ta omsyn til START-knappen sjølv når mottak av inndata er undertrykt (er "
+"ikkje kompatibelt med alle program)"
 
 #: ui/main.qml:17
 #, kde-format
 msgid "Input"
-msgstr ""
+msgstr "Inndata"
 
 #: ui/main.qml:105
 #, kde-format
 msgid "Input daemon is not running"
-msgstr ""
+msgstr "Inndata-tenesta køyrer ikkje"
 
 #: ui/main.qml:106
 #, kde-format
@@ -51,11 +53,13 @@ msgid ""
 "Controller and remote settings are only available when plasma-bigscreen-"
 "inputhandler is running"
 msgstr ""
+"Instillingarar for spelkontrollarar og fjernkontrollar er berre tilgjengeleg "
+"når plasma-bigscreen-inputhandler køyrer"
 
 #: ui/main.qml:112
 #, kde-format
 msgid "System Navigation"
-msgstr ""
+msgstr "Systemnavigering"
 
 #: ui/main.qml:113
 #, kde-format
@@ -63,6 +67,8 @@ msgid ""
 "Navigate the system interface with connected controllers/remotes (apps can "
 "always still use them directly)"
 msgstr ""
+"Naviger i system-brukarflata via tilkopla spelkontrollarar/fjernkontrollar "
+"(program kan alltid bruka dei direkte)"
 
 #: ui/main.qml:130
 #, kde-format
@@ -72,7 +78,7 @@ msgstr "TV-fjernkontroll"
 #: ui/main.qml:131
 #, kde-format
 msgid "Navigate the system interface with the connected TV remote (CEC)"
-msgstr ""
+msgstr "Naviger i system-brukarflata via tilkopla TV-fjernkontroll (CEC)"
 
 #: ui/main.qml:150
 #, kde-format
@@ -87,24 +93,25 @@ msgstr "Spelkontrollarar"
 #: ui/main.qml:161
 #, kde-format
 msgid "Use connected game controllers for system navigation"
-msgstr ""
+msgstr "Bruk tilkopla spelkontrollarar for systemnavigering"
 
 #: ui/main.qml:180
 #, kde-format
 msgid "Automatic input suppression"
-msgstr ""
+msgstr "Automatisk undertrykking av inndata"
 
 #: ui/main.qml:181
 #, kde-format
 msgid "Stop controller navigation while another app is using a controller"
 msgstr ""
+"Stopp navigering med spelkontrollar når andre program brukar kontrollaren"
 
 #: ui/main.qml:201
 #, kde-format
 msgid "No controllers connected"
-msgstr ""
+msgstr "Ingen spelkontrollarar er kopla til"
 
 #: ui/main.qml:202
 #, kde-format
 msgid "Connect a game controller"
-msgstr "Kopla til spelkontrollar"
+msgstr "Kopla til ein spelkontrollar"
