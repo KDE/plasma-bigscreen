@@ -19,6 +19,7 @@ Name[ko]=Plasma 큰 화면 입력 처리기
 Name[lt]=Plasma Bigscreen įvedimo doroklė
 Name[lv]=„Plasma Bigscreen“ ievades apstrādātājs
 Name[nl]=Plasma Bigscreen behandelaar van invoer
+Name[nn]=Plasma Bigscreen inndata-handsamar
 Name[pl]=Obsługa wejścia Dużego Ekranu Plazmy
 Name[pt]=Gestor de entrada do Plasma Bigscreen
 Name[pt_BR]=Manipulador de entrada do Plasma Bigscreen
