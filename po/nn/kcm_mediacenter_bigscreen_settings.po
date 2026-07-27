@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-29 02:39+0000\n"
-"PO-Revision-Date: 2026-06-24 21:01+0200\n"
+"PO-Revision-Date: 2026-07-26 12:28+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.07.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -77,7 +77,7 @@ msgstr "Tilbake"
 #: ui/DeviceTimeSettingsSidebar.qml:145
 #, kde-format
 msgid "Search City / Region"
-msgstr ""
+msgstr "Søk etter by/område"
 
 #: ui/DeviceTimeSettingsSidebar.qml:165
 #, kde-format
@@ -95,10 +95,9 @@ msgid "System"
 msgstr "System"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgid "General Appearance"
+#, kde-format
 msgid "Homescreen Appearance"
-msgstr "Generell utsjånad"
+msgstr "Utsjånad på heimeskjerm"
 
 #: ui/main.qml:56
 #, kde-format
@@ -108,17 +107,17 @@ msgstr "Farga fliser"
 #: ui/main.qml:57
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
-msgstr ""
+msgstr "Flisbakgrunnsfargen vert basert på programikonet"
 
 #: ui/main.qml:70
 #, kde-format
 msgid "Wallpaper blur"
-msgstr ""
+msgstr "Uklart bakgrunnsbilete"
 
 #: ui/main.qml:71
 #, kde-format
 msgid "Apply a blur effect to the wallpaper on the homescreen"
-msgstr ""
+msgstr "Legg ein sløringseffekt på bakgrunnsbiletet på heimeskjermen"
 
 #: ui/main.qml:84 ui/ThemeSidebar.qml:23
 #, kde-format
@@ -128,7 +127,7 @@ msgstr "Globalt tema"
 #: ui/main.qml:85
 #, kde-format
 msgid "Set the system theme"
-msgstr ""
+msgstr "Vel systemtema"
 
 #: ui/main.qml:102
 #, kde-format
@@ -140,16 +139,18 @@ msgstr "Vindaugspynt"
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
 msgstr ""
+"Ha ramme rundt vindauge (minimer-, maksimer og lukk-knappar) for program som "
+"ber om det"
 
 #: ui/main.qml:112
 #, kde-format
 msgid "Navigation sounds"
-msgstr ""
+msgstr "Navigasjonslydar"
 
 #: ui/main.qml:113
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
-msgstr ""
+msgstr "Spel av lyd ved byte mellom element i systemprogram"
 
 #: ui/main.qml:123
 #, kde-format
@@ -159,7 +160,7 @@ msgstr "Straumsparings­hindring"
 #: ui/main.qml:124
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
-msgstr ""
+msgstr "Hindra systemet å gå til kvile-/dvalemodus automatisk"
 
 #: ui/main.qml:134
 #, kde-format
@@ -169,60 +170,60 @@ msgstr "Still inn dato og klokkeslett"
 #: ui/main.qml:140
 #, kde-format
 msgid "Shortcuts"
-msgstr ""
+msgstr "Snøggtastar"
 
 #: ui/main.qml:151
 #, kde-format
 msgid "Open home overlay shortcut"
-msgstr ""
+msgstr "Snøggtast for opning av heime-overlag"
 
 #: ui/main.qml:171
 #, kde-format
 msgid "Open homescreen shortcut"
-msgstr ""
+msgstr "Snøggtast for opning av heimeskjermen"
 
 #: ui/main.qml:191
 #, kde-format
 msgid "Open settings shortcut"
-msgstr ""
+msgstr "Snøggtast for opning av innstillingar"
 
 #: ui/main.qml:210
 #, kde-format
 msgid "Open tasks shortcut"
-msgstr ""
+msgstr "Snøggtast for oppgåveopning"
 
 #: ui/ShortcutsPickerSidebar.qml:38
 #, kde-format
 msgid "Shortcut currently set to"
-msgstr ""
+msgstr "Snøggtasten er sett til"
 
 #: ui/ShortcutsPickerSidebar.qml:45
 #, kde-format
 msgid "Reset to default"
-msgstr ""
+msgstr "Tilbakestill til standard"
 
 #: ui/ShortcutsPickerSidebar.qml:59
 #, kde-format
 msgid "Set Shortcut"
-msgstr ""
+msgstr "Registrer snøggtast"
 
 #: ui/TimePicker.qml:40
 #, kde-format
 msgid "Hour"
-msgstr ""
+msgstr "Time"
 
 #: ui/TimePicker.qml:56
 #, kde-format
 msgid "Minute"
-msgstr ""
+msgstr "Minutt"
 
 #: ui/TimePicker.qml:72
 #, kde-format
 msgctxt "unit of time"
 msgid "Second"
-msgstr ""
+msgstr "Sekund"
 
 #: ui/TimePicker.qml:89
 #, kde-format
 msgid "AM/PM"
-msgstr ""
+msgstr "a.m./p.m."

@@ -1,0 +1,246 @@
+# Translation of plasma-bigscreen-webapp-viewer to Norwegian Nynorsk
+#
+# SPDX-FileCopyrightText: 2026 Karl Ove Hufthammer <karl@huftis.org>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-07-10 02:39+0000\n"
+"PO-Revision-Date: 2026-07-26 12:33+0200\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.11.70\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Karl Ove Hufthammer"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "karl@huftis.org"
+
+#: main.cpp:53
+#, kde-format
+msgid "The user agent to browse with."
+msgstr "Brukaragent for nettlesing."
+
+#: main.cpp:55
+#, kde-format
+msgid "The name of the web app"
+msgstr "Namnet på vev-appen"
+
+#: main.cpp:58
+#, kde-format
+msgid "link of website to launch"
+msgstr "Lenkje til nettstad å opna"
+
+#: main.cpp:75
+#, kde-format
+msgid "Webview"
+msgstr "Vevvising"
+
+#: main.cpp:77
+#, kde-format
+msgid "Plasma Bigscreen Webapp runtime"
+msgstr "Plasma Bigscreen-vevapp-køyreprogram"
+
+#: main.cpp:79
+#, kde-format
+msgid "© 2025 Plasma developers"
+msgstr "© 2025 Plasma-utviklarane"
+
+#: qml/WebView.qml:190
+#, kde-format
+msgctxt "@info:status"
+msgid "Entered Full Screen mode"
+msgstr "Gjekk inn i fullskjermsmodus"
+
+#: qml/WebView.qml:191
+#, kde-format
+msgctxt "@action:button"
+msgid "Exit Full Screen (Esc)"
+msgstr "Avslutt fullskjermsmodus (Esc)"
+
+#: qml/WebView.qml:304
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Play"
+msgstr "Spel av"
+
+#: qml/WebView.qml:305
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Pause"
+msgstr "Pause"
+
+#: qml/WebView.qml:312
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Unmute"
+msgstr "Opphev lyddemping"
+
+#: qml/WebView.qml:313
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Mute"
+msgstr "Demp lyden"
+
+#: qml/WebView.qml:323
+#, kde-format
+msgctxt "@label"
+msgid "Speed"
+msgstr "Fart"
+
+#: qml/WebView.qml:346
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Loop"
+msgstr "Gjenta"
+
+#: qml/WebView.qml:353
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Exit Fullscreen"
+msgstr "Avslutt fullskjermsmodus"
+
+#: qml/WebView.qml:353
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Enter Fullscreen"
+msgstr "Gå til fullskjermsmodus"
+
+#: qml/WebView.qml:366
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Hide Controls"
+msgstr "Gøym kontrollar"
+
+#: qml/WebView.qml:367
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Show Controls"
+msgstr "Vis kontrollar"
+
+#: qml/WebView.qml:375
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Video"
+msgstr "Opna video"
+
+#: qml/WebView.qml:375
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Audio"
+msgstr "Opna lyd"
+
+#: qml/WebView.qml:376
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Video in New Tab"
+msgstr "Opna video i ny fane"
+
+#: qml/WebView.qml:376
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Audio in New Tab"
+msgstr "Opna lyd i ny fane"
+
+#: qml/WebView.qml:384
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Save Video"
+msgstr "Lagra video"
+
+#: qml/WebView.qml:390
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Video Link"
+msgstr "Kopier videolenkje"
+
+#: qml/WebView.qml:396
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Image"
+msgstr "Opna bilete"
+
+#: qml/WebView.qml:396
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Image in New Tab"
+msgstr "Opna bilete i ny fane"
+
+#: qml/WebView.qml:404
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Save Image"
+msgstr "Lagra bilete"
+
+#: qml/WebView.qml:410
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Image"
+msgstr "Kopier bilete"
+
+#: qml/WebView.qml:416
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Image Link"
+msgstr "Kopier biletlenkje"
+
+#: qml/WebView.qml:422
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Link"
+msgstr "Opna lenkje"
+
+#: qml/WebView.qml:422
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Link in New Window"
+msgstr "Opna lenkje i nytt vindauge"
+
+#: qml/WebView.qml:430
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Save Link"
+msgstr "Lagra lenkje"
+
+#: qml/WebView.qml:436
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Link"
+msgstr "Kopier lenkje"
+
+#: qml/WebView.qml:443
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy"
+msgstr "Kopier"
+
+#: qml/WebView.qml:449
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Cut"
+msgstr "Klipp ut"
+
+#: qml/WebView.qml:455
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Paste"
+msgstr "Lim inn"
+
+#: webprofile.cpp:48
+#, kde-format
+msgid "Open"
+msgstr "Opna"
