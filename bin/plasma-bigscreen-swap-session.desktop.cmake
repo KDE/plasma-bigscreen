@@ -70,6 +70,7 @@ Comment[ko]=Plasma 큰 화면 세션으로 전환
 Comment[lt]=Perjungti į Plasma Bigscreen seansą
 Comment[lv]=Pārslēgties uz „Plasma Bigscreen“ sesiju
 Comment[nl]=Omschakelen in een Plasma Bigscreen-sessie
+Comment[nn]=Byt til ei Plasma Bigscreen-økt
 Comment[pl]=Przełącz na posiedzenie Dużego Ekranu Plazmy
 Comment[pt]=Mudar para uma sessão do Plasma Bigscreen
 Comment[pt_BR]=Mudar para uma sessão de Plasma na Tela Grande
