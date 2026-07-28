@@ -21,7 +21,7 @@ set(PROJECT_DEP_VERSION "6.6.90")
 # See http://api.kde.org/ecm/manual/ecm.7.html
 # and http://api.kde.org/ecm/manual/ecm-kde-modules.7.html
 find_package(ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
-set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_MODULE_PATH})
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 include(ECMFindQmlModule)
 include(KDEInstallDirs)

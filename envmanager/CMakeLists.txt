@@ -8,7 +8,7 @@ set(plasma-bigscreen-envmanager_SRCS
     config.h
 )
 
-add_executable(plasma-bigscreen-envmanager ${plasma-bigscreen-envmanager_SRCS} ${RESOURCES})
+add_executable(plasma-bigscreen-envmanager ${plasma-bigscreen-envmanager_SRCS})
 target_link_libraries(plasma-bigscreen-envmanager
     Qt::Qml
     Qt::Gui
