@@ -70,7 +70,7 @@ msgstr "KDE Connect"
 #: ui/main.qml:44
 #, kde-format
 msgid "No devices found"
-msgstr ""
+msgstr "Nebyla nalezena žádná zařízení"
 
 #: ui/main.qml:44
 #, kde-format
