@@ -58,7 +58,19 @@ Bigscreen.ScrollablePage {
         sourceModel: BluezQt.DevicesModel {}
     }
 
+    Kirigami.PlaceholderMessage {
+        id: noBluetoothMessage
+        // We cannot use the adapter count here because that can be zero when
+        // bluetooth is disabled even when there are physical devices
+        visible: BluezQt.Manager.rfkill.state === BluezQt.Rfkill.Unknown
+        icon.name: "edit-none"
+        text: i18n("No Bluetooth adapters found")
+        explanation: i18n("Connect an external Bluetooth adapter")
+        anchors.centerIn: parent
+    }
+
     ColumnLayout {
+        visible: !noBluetoothMessage.visible
         KeyNavigation.left: bluetoothView.KeyNavigation.left
         id: column
         spacing: 0
