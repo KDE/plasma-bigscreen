@@ -1,6 +1,5 @@
 # Translation of plasma-bigscreen-settings to Norwegian Nynorsk
 #
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
