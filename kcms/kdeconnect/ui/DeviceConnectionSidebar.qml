@@ -98,6 +98,10 @@ Bigscreen.SidebarOverlay {
                     root.close()
                     connectionView.forceActiveFocus();
                 }
+                onPluginsPage: {
+                    root.close()
+                    kcm.push("PluginsPage.qml", { currentDevice })
+                }
             }
 
             Delegates.Unreachable { 

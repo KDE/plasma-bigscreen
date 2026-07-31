@@ -20,6 +20,7 @@ Item {
     Layout.fillHeight: true
 
     signal unpairRequested()
+    signal pluginsPage()
 
     onActiveFocusChanged: {
         if (activeFocus) {
@@ -42,6 +43,15 @@ Item {
             onClicked: root.unpairRequested()
             text: i18n("Unpair")
             icon.name: 'network-disconnect'
+            KeyNavigation.down: pluginsBtn
+        }
+
+        Bigscreen.ButtonDelegate {
+            id: pluginsBtn
+            onClicked: root.pluginsPage()
+            text: i18n("Plugin Settings")
+            icon.name: 'settings-configure'
+            KeyNavigation.up: unpairBtn
         }
 
         Item { Layout.fillHeight: true }
