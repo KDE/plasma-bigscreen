@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-19 00:46+0000\n"
+"POT-Creation-Date: 2026-07-31 00:47+0000\n"
 "PO-Revision-Date: 2026-04-19 17:29+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -123,17 +123,27 @@ msgstr "%1% Batteria"
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: ui/main.qml:69
+#: ui/main.qml:67
+#, kde-format
+msgid "No Bluetooth adapters found"
+msgstr ""
+
+#: ui/main.qml:68
+#, kde-format
+msgid "Connect an external Bluetooth adapter"
+msgstr ""
+
+#: ui/main.qml:81
 #, kde-format
 msgid "Enable Bluetooth"
 msgstr "Activar Bluetooth"
 
-#: ui/main.qml:88
+#: ui/main.qml:100
 #, kde-format
 msgid "Paired devices"
 msgstr "Dispositivo associate"
 
-#: ui/main.qml:121
+#: ui/main.qml:133
 #, kde-format
 msgid "Available devices"
 msgstr "Dispositivos disponibile"

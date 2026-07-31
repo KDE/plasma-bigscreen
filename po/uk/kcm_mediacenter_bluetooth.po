@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-19 00:46+0000\n"
+"POT-Creation-Date: 2026-07-31 00:47+0000\n"
 "PO-Revision-Date: 2026-04-19 16:07+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -124,17 +124,27 @@ msgstr "%1% акумулятора"
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: ui/main.qml:69
+#: ui/main.qml:67
+#, kde-format
+msgid "No Bluetooth adapters found"
+msgstr ""
+
+#: ui/main.qml:68
+#, kde-format
+msgid "Connect an external Bluetooth adapter"
+msgstr ""
+
+#: ui/main.qml:81
 #, kde-format
 msgid "Enable Bluetooth"
 msgstr "Увімкнути Bluetooth"
 
-#: ui/main.qml:88
+#: ui/main.qml:100
 #, kde-format
 msgid "Paired devices"
 msgstr "Пов'язані пристрої"
 
-#: ui/main.qml:121
+#: ui/main.qml:133
 #, kde-format
 msgid "Available devices"
 msgstr "Доступні пристрої"
