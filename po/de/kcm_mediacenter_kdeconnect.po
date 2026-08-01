@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_kdeconnect\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-27 00:46+0000\n"
+"POT-Creation-Date: 2026-08-01 00:50+0000\n"
 "PO-Revision-Date: 2026-01-24 14:22+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -18,15 +18,20 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.12.1\n"
 
-#: ui/delegates/PairedView.qml:35
+#: ui/delegates/PairedView.qml:36
 #, kde-format
 msgid "This device is paired"
 msgstr "Dieses Gerät ist verbunden"
 
-#: ui/delegates/PairedView.qml:43 ui/delegates/Unreachable.qml:40
+#: ui/delegates/PairedView.qml:44 ui/delegates/Unreachable.qml:40
 #, kde-format
 msgid "Unpair"
 msgstr "Verbindung trennen"
+
+#: ui/delegates/PairedView.qml:52
+#, kde-format
+msgid "Plugin Settings"
+msgstr ""
 
 #: ui/delegates/PairRequest.qml:35
 #, kde-format
@@ -77,6 +82,12 @@ msgstr ""
 #, kde-format
 msgid "Devices"
 msgstr "Geräte"
+
+#: ui/PluginsPage.qml:21
+#, kde-format
+msgctxt "%1 is the device name"
+msgid "Plugin Settings for %1 "
+msgstr ""
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "Drücken Sie den Knopf  [←]  „Zurück“ bringt Sie zur Geräteauswahl"

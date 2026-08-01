@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-27 00:46+0000\n"
+"POT-Creation-Date: 2026-08-01 00:50+0000\n"
 "PO-Revision-Date: 2025-09-06 17:46+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -19,15 +19,20 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.07.70\n"
 
-#: ui/delegates/PairedView.qml:35
+#: ui/delegates/PairedView.qml:36
 #, kde-format
 msgid "This device is paired"
 msgstr "Устройството е сдвоено"
 
-#: ui/delegates/PairedView.qml:43 ui/delegates/Unreachable.qml:40
+#: ui/delegates/PairedView.qml:44 ui/delegates/Unreachable.qml:40
 #, kde-format
 msgid "Unpair"
 msgstr "Разделяне"
+
+#: ui/delegates/PairedView.qml:52
+#, kde-format
+msgid "Plugin Settings"
+msgstr ""
 
 #: ui/delegates/PairRequest.qml:35
 #, kde-format
@@ -78,3 +83,9 @@ msgstr ""
 #, kde-format
 msgid "Devices"
 msgstr "Устройства"
+
+#: ui/PluginsPage.qml:21
+#, kde-format
+msgctxt "%1 is the device name"
+msgid "Plugin Settings for %1 "
+msgstr ""

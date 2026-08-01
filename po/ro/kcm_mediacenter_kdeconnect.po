@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-27 00:46+0000\n"
+"POT-Creation-Date: 2026-08-01 00:50+0000\n"
 "PO-Revision-Date: 2025-11-28 13:22+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -18,15 +18,20 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 25.08.1\n"
 
-#: ui/delegates/PairedView.qml:35
+#: ui/delegates/PairedView.qml:36
 #, kde-format
 msgid "This device is paired"
 msgstr "Acest dispozitiv e asociat"
 
-#: ui/delegates/PairedView.qml:43 ui/delegates/Unreachable.qml:40
+#: ui/delegates/PairedView.qml:44 ui/delegates/Unreachable.qml:40
 #, kde-format
 msgid "Unpair"
 msgstr "Dezasociază"
+
+#: ui/delegates/PairedView.qml:52
+#, kde-format
+msgid "Plugin Settings"
+msgstr ""
 
 #: ui/delegates/PairRequest.qml:35
 #, kde-format
@@ -77,6 +82,12 @@ msgstr ""
 #, kde-format
 msgid "Devices"
 msgstr "Dispozitive"
+
+#: ui/PluginsPage.qml:21
+#, kde-format
+msgctxt "%1 is the device name"
+msgid "Plugin Settings for %1 "
+msgstr ""
 
 #~ msgid "Exit"
 #~ msgstr "Ieșire"

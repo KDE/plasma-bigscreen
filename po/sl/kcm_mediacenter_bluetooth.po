@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-31 00:47+0000\n"
-"PO-Revision-Date: 2026-04-19 16:18+0200\n"
+"PO-Revision-Date: 2026-07-31 07:17+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -127,12 +127,12 @@ msgstr "Bluetooth"
 #: ui/main.qml:67
 #, kde-format
 msgid "No Bluetooth adapters found"
-msgstr ""
+msgstr "Ni najdenih Bluetooth adapterjev"
 
 #: ui/main.qml:68
 #, kde-format
 msgid "Connect an external Bluetooth adapter"
-msgstr ""
+msgstr "Priključi zunanji Bluetooth adapter"
 
 #: ui/main.qml:81
 #, kde-format

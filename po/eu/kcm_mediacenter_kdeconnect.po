@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-27 00:46+0000\n"
+"POT-Creation-Date: 2026-08-01 00:50+0000\n"
 "PO-Revision-Date: 2025-08-14 11:33+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,15 +20,20 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.04.3\n"
 
-#: ui/delegates/PairedView.qml:35
+#: ui/delegates/PairedView.qml:36
 #, kde-format
 msgid "This device is paired"
 msgstr "Gailu hau parekatuta dago"
 
-#: ui/delegates/PairedView.qml:43 ui/delegates/Unreachable.qml:40
+#: ui/delegates/PairedView.qml:44 ui/delegates/Unreachable.qml:40
 #, kde-format
 msgid "Unpair"
 msgstr "Desparekatu"
+
+#: ui/delegates/PairedView.qml:52
+#, kde-format
+msgid "Plugin Settings"
+msgstr ""
 
 #: ui/delegates/PairRequest.qml:35
 #, kde-format
@@ -79,6 +84,12 @@ msgstr ""
 #, kde-format
 msgid "Devices"
 msgstr "Gailuak"
+
+#: ui/PluginsPage.qml:21
+#, kde-format
+msgctxt "%1 is the device name"
+msgid "Plugin Settings for %1 "
+msgstr ""
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "Sakatu [←] Atzera botoia gailuen hautapenera itzultzeko"

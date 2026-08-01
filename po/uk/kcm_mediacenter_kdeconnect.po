@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_kdeconnect\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-27 00:46+0000\n"
+"POT-Creation-Date: 2026-08-01 00:50+0000\n"
 "PO-Revision-Date: 2026-07-27 08:37+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -20,15 +20,20 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 25.12.1\n"
 
-#: ui/delegates/PairedView.qml:35
+#: ui/delegates/PairedView.qml:36
 #, kde-format
 msgid "This device is paired"
 msgstr "Цей пристрій пов'язано"
 
-#: ui/delegates/PairedView.qml:43 ui/delegates/Unreachable.qml:40
+#: ui/delegates/PairedView.qml:44 ui/delegates/Unreachable.qml:40
 #, kde-format
 msgid "Unpair"
 msgstr "Скасувати пов’язування"
+
+#: ui/delegates/PairedView.qml:52
+#, kde-format
+msgid "Plugin Settings"
+msgstr ""
 
 #: ui/delegates/PairRequest.qml:35
 #, kde-format
@@ -79,6 +84,12 @@ msgstr "Пристроїв не виявлено"
 #, kde-format
 msgid "Devices"
 msgstr "Пристрої"
+
+#: ui/PluginsPage.qml:21
+#, kde-format
+msgctxt "%1 is the device name"
+msgid "Plugin Settings for %1 "
+msgstr ""
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "Натисніть кнопку «[←] Назад», щоб повернутися до вибору пристрою"
