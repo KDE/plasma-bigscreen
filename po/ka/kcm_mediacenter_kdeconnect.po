@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-01 00:50+0000\n"
-"PO-Revision-Date: 2026-07-27 07:46+0200\n"
+"PO-Revision-Date: 2026-08-01 03:55+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -31,7 +31,7 @@ msgstr "დაწყვილების მოხსნა"
 #: ui/delegates/PairedView.qml:52
 #, kde-format
 msgid "Plugin Settings"
-msgstr ""
+msgstr "მოდულის პარამეტრები"
 
 #: ui/delegates/PairRequest.qml:35
 #, kde-format
@@ -87,4 +87,4 @@ msgstr "მოწყობილობები"
 #, kde-format
 msgctxt "%1 is the device name"
 msgid "Plugin Settings for %1 "
-msgstr ""
+msgstr "მოდულის პარამეტრები %1-ისთვის "

@@ -1,5 +1,6 @@
 # Translation of kcm_mediacenter_bluetooth to Norwegian Nynorsk
 #
+# Karl Ove Hufthammer <karl@huftis.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"

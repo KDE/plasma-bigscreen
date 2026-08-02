@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-01 00:50+0000\n"
-"PO-Revision-Date: 2026-07-27 06:56-0300\n"
+"PO-Revision-Date: 2026-08-01 08:18-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -31,7 +31,7 @@ msgstr "Desemparelhar"
 #: ui/delegates/PairedView.qml:52
 #, kde-format
 msgid "Plugin Settings"
-msgstr ""
+msgstr "Configuração do plugin"
 
 #: ui/delegates/PairRequest.qml:35
 #, kde-format
@@ -87,7 +87,7 @@ msgstr "Dispositivos"
 #, kde-format
 msgctxt "%1 is the device name"
 msgid "Plugin Settings for %1 "
-msgstr ""
+msgstr "Configuração do plugin para %1 "
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr ""

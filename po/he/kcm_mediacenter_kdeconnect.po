@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-01 00:50+0000\n"
-"PO-Revision-Date: 2026-07-28 08:45+0300\n"
+"PO-Revision-Date: 2026-08-01 14:53+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -31,7 +31,7 @@ msgstr "ניתוק צימוד"
 #: ui/delegates/PairedView.qml:52
 #, kde-format
 msgid "Plugin Settings"
-msgstr ""
+msgstr "הגדרות תוסף"
 
 #: ui/delegates/PairRequest.qml:35
 #, kde-format
@@ -87,7 +87,7 @@ msgstr "מכשירים"
 #, kde-format
 msgctxt "%1 is the device name"
 msgid "Plugin Settings for %1 "
-msgstr ""
+msgstr "הגדרות תוסף עבור %1 "
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "יש לחזור על כפתור החזרה [→] כדי לחזור לבחירת מכשירים"

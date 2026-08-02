@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-01 00:50+0000\n"
-"PO-Revision-Date: 2026-07-27 09:36+0200\n"
+"PO-Revision-Date: 2026-08-01 09:17+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -32,7 +32,7 @@ msgstr "Desaparella"
 #: ui/delegates/PairedView.qml:52
 #, kde-format
 msgid "Plugin Settings"
-msgstr ""
+msgstr "Configuració del connector"
 
 #: ui/delegates/PairRequest.qml:35
 #, kde-format
@@ -88,7 +88,7 @@ msgstr "Dispositius"
 #, kde-format
 msgctxt "%1 is the device name"
 msgid "Plugin Settings for %1 "
-msgstr ""
+msgstr "Configuració del connector de %1 "
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "Premeu el botó Enrere [←] per a tornar a la selecció de dispositius"

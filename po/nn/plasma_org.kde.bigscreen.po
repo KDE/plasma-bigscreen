@@ -1,5 +1,6 @@
 # Translation of plasma_org.kde.bigscreen to Norwegian Nynorsk
 #
+# Karl Ove Hufthammer <karl@huftis.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
