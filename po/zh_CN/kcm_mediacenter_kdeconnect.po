@@ -76,7 +76,7 @@ msgstr "KDE Connect"
 #: ui/main.qml:44
 #, kde-format
 msgid "No devices found"
-msgstr ""
+msgstr "没有找到设备"
 
 #: ui/main.qml:44
 #, kde-format
