@@ -1,5 +1,6 @@
 # Translation of plasma_applet_org.kde.bigscreen.homescreen to Norwegian Nynorsk
 #
+# Karl Ove Hufthammer <karl@huftis.org>, 2020, 2021, 2022, 2023, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
