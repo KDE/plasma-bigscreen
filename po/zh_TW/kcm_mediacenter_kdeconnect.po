@@ -4,13 +4,13 @@
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
 # Automatically generated, 2022.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023-2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-01 00:50+0000\n"
-"PO-Revision-Date: 2025-08-29 23:28+0900\n"
+"PO-Revision-Date: 2026-08-04 06:55+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.11.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 
 #: ui/delegates/PairedView.qml:36
 #, kde-format
@@ -33,7 +33,7 @@ msgstr "取消配對"
 #: ui/delegates/PairedView.qml:52
 #, kde-format
 msgid "Plugin Settings"
-msgstr ""
+msgstr "外掛程式設定"
 
 #: ui/delegates/PairRequest.qml:35
 #, kde-format
@@ -78,7 +78,7 @@ msgstr "KDE Connect"
 #: ui/main.qml:44
 #, kde-format
 msgid "No devices found"
-msgstr ""
+msgstr "找不到裝置"
 
 #: ui/main.qml:44
 #, kde-format
@@ -89,7 +89,7 @@ msgstr "裝置"
 #, kde-format
 msgctxt "%1 is the device name"
 msgid "Plugin Settings for %1 "
-msgstr ""
+msgstr "%1 的外掛程式設定"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "按下返回 [←] 回到裝置選擇區"
