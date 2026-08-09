@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-19 00:46+0000\n"
-"PO-Revision-Date: 2026-05-16 12:20+0200\n"
+"PO-Revision-Date: 2026-08-08 11:54+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: ui/DeviceConnectionSidebar.qml:37
 #, kde-format
 msgid "Device information"
-msgstr "Szczegóły o urządzeniu"
+msgstr "Szczegóły urządzenia"
 
 #: ui/DeviceConnectionSidebar.qml:48
 #, kde-format
@@ -66,7 +66,7 @@ msgstr "Zaufane"
 #: ui/DeviceConnectionSidebar.qml:120
 #, kde-format
 msgid "Auto-accept incoming connections"
-msgstr "Sam przyjmuj połączenia przychodzące"
+msgstr "Sam zatwierdzaj połączenia przychodzące"
 
 #: ui/DeviceConnectionSidebar.qml:134
 #, kde-format
@@ -81,7 +81,7 @@ msgstr "Odrzucaj wszystkie połączenia od tego urządzenia"
 #: ui/DeviceConnectionSidebar.qml:151
 #, kde-format
 msgid "Device details"
-msgstr "Szczegóły o urządzeniu"
+msgstr "Szczegóły urządzenia"
 
 #: ui/DeviceConnectionSidebar.qml:161
 #, kde-format
