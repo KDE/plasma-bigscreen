@@ -1,0 +1,118 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# SPDX-FileCopyrightText: 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-06-29 00:47+0000\n"
+"PO-Revision-Date: 2026-08-08 12:00+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: pl\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 26.04.2\n"
+
+#: ui/GameControllerSidebar.qml:36
+#, kde-format
+msgid "System navigation"
+msgstr "Przemieszczanie się po systemie"
+
+#: ui/GameControllerSidebar.qml:51
+#, kde-format
+msgid "START button when suppressed"
+msgstr "Przycisk START, gdy przygaszone"
+
+#: ui/GameControllerSidebar.qml:52
+#, kde-format
+msgid ""
+"Handle the START button even when input is suppressed (may conflict with "
+"some apps)"
+msgstr ""
+"Obsługuj przycisk START, nawet wtedy gdy urządzenie wejściowe jest "
+"przygaszone (może się to kłócić z niektórymi aplikacjami)"
+
+#: ui/main.qml:17
+#, kde-format
+msgid "Input"
+msgstr "Urządzenie wejściowe"
+
+#: ui/main.qml:105
+#, kde-format
+msgid "Input daemon is not running"
+msgstr "Usługa urządzeń wejściowych nie jest uruchomiona"
+
+#: ui/main.qml:106
+#, kde-format
+msgid ""
+"Controller and remote settings are only available when plasma-bigscreen-"
+"inputhandler is running"
+msgstr ""
+"Ustawienia padów i pilotów są dostępne tylko wtedy, gdy uruchomiona jest "
+"usługa plasma-bigscreen-inputhandler"
+
+#: ui/main.qml:112
+#, kde-format
+msgid "System Navigation"
+msgstr "Przemieszczanie się po systemie"
+
+#: ui/main.qml:113
+#, kde-format
+msgid ""
+"Navigate the system interface with connected controllers/remotes (apps can "
+"always still use them directly)"
+msgstr ""
+"Obsługuj interfejs systemu podłączonymi padami do gier lub pilotem od TV "
+"(aplikacje nadal będą mogły z nich korzystać bezpośrednio)"
+
+#: ui/main.qml:130
+#, kde-format
+msgid "TV remote"
+msgstr "Pilot do TV"
+
+#: ui/main.qml:131
+#, kde-format
+msgid "Navigate the system interface with the connected TV remote (CEC)"
+msgstr "Obsługuj interfejs systemu podłączonym pilotem od TV (CEC)"
+
+#: ui/main.qml:150
+#, kde-format
+msgid "Game Controllers"
+msgstr "Pady do gier"
+
+#: ui/main.qml:160
+#, kde-format
+msgid "Game controllers"
+msgstr "Pady do gier"
+
+#: ui/main.qml:161
+#, kde-format
+msgid "Use connected game controllers for system navigation"
+msgstr "Używaj podłączonych padów do gier do przemieszczania się po systemie"
+
+#: ui/main.qml:180
+#, kde-format
+msgid "Automatic input suppression"
+msgstr "Sam wygaszaj urządzenia wejściowe"
+
+#: ui/main.qml:181
+#, kde-format
+msgid "Stop controller navigation while another app is using a controller"
+msgstr ""
+"Zaprzestań przemieszczania się przy użyciu pada, gdy inna aplikacja z niego "
+"korzysta"
+
+#: ui/main.qml:201
+#, kde-format
+msgid "No controllers connected"
+msgstr "Nie podłączono żadnego pada"
+
+#: ui/main.qml:202
+#, kde-format
+msgid "Connect a game controller"
+msgstr "Podłącz pada do gier"

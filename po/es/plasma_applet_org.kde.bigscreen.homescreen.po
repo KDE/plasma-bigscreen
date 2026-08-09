@@ -2,13 +2,13 @@
 # Copyright (C) 2020-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024, 2025, 2026 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
+# SPDX-FileCopyrightText: 2020-2022, 2024-2026 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-23 00:45+0000\n"
-"PO-Revision-Date: 2026-03-29 01:47+0100\n"
+"PO-Revision-Date: 2026-08-08 17:22+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -19,10 +19,9 @@ msgstr ""
 "X-Generator: Lokalize 25.04.0\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Exit Bigscreen"
+#, kde-format
 msgid "Edit Home Screen"
-msgstr "Salir de Bigscreen"
+msgstr "Editar pantalla de inicio"
 
 #: contents/ui/FavoritesManager.qml:141
 #: contents/ui/launcher/LauncherHome.qml:84
@@ -33,7 +32,7 @@ msgstr "Favoritos"
 #: contents/ui/FavoritesManager.qml:141 contents/ui/FavoritesManager.qml:281
 #, kde-format
 msgid "Launcher Sections"
-msgstr ""
+msgstr "Secciones del lanzador"
 
 #: contents/ui/FavoritesManager.qml:213
 #, kde-format
@@ -46,37 +45,40 @@ msgid "Remove Favorites"
 msgstr "Eliminar favoritos"
 
 #: contents/ui/FavoritesManager.qml:295
-#, fuzzy, kde-format
-#| msgid "Recent"
+#, kde-format
 msgid "Show Recent"
-msgstr "Reciente"
+msgstr "Mostrar recientes"
 
 #: contents/ui/FavoritesManager.qml:296
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
 msgstr ""
+"Las aplicaciones lanzadas recientemente aparecen en una fila de la pantalla "
+"de inicio"
 
 #: contents/ui/FavoritesManager.qml:311
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Show Applications"
-msgstr "Aplicaciones"
+msgstr "Mostrar aplicaciones"
 
 #: contents/ui/FavoritesManager.qml:312
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
 msgstr ""
+"Las aplicaciones que no son juegos aparecen en una fila de la pantalla de "
+"inicio"
 
 #: contents/ui/FavoritesManager.qml:328
-#, fuzzy, kde-format
-#| msgid "Games"
+#, kde-format
 msgid "Show Games"
-msgstr "Juegos"
+msgstr "Mostrar juegos"
 
 #: contents/ui/FavoritesManager.qml:329
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
 msgstr ""
+"Las aplicaciones de la categoría Juegos aparecen en una fila de la pantalla "
+"de inicio"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:36
 #, kde-format
@@ -248,9 +250,3 @@ msgstr "Plasma Bigscreen ha activado la inhibición de todo el sistema"
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Buscar…"
-
-#~ msgid "Favorites Manager"
-#~ msgstr "Gestor de favoritos"
-
-#~ msgid "Customize Favorites"
-#~ msgstr "Personalizar favoritos"
