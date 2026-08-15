@@ -29,7 +29,7 @@ msgstr "Odpárovať"
 #: ui/delegates/PairedView.qml:52
 #, kde-format
 msgid "Plugin Settings"
-msgstr ""
+msgstr "Nastavenia doplnkov"
 
 #: ui/delegates/PairRequest.qml:35
 #, kde-format
@@ -74,7 +74,7 @@ msgstr "KDE Connect"
 #: ui/main.qml:44
 #, kde-format
 msgid "No devices found"
-msgstr ""
+msgstr "Nenašli sa žiadne zariadenia"
 
 #: ui/main.qml:44
 #, kde-format
@@ -85,7 +85,7 @@ msgstr "Zariadenia"
 #, kde-format
 msgctxt "%1 is the device name"
 msgid "Plugin Settings for %1 "
-msgstr ""
+msgstr "Nastavenie modulov pre %1"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "Stlačte tlačidlo [←] Späť pre návrat na výber zariadenia"

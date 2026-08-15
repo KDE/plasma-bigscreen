@@ -29,7 +29,7 @@ msgstr "wizzardsk@gmail.com"
 #: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
 #, kde-format
 msgid "Color scheme"
-msgstr ""
+msgstr "Farebná schéma"
 
 #: ui/DatePicker.qml:38
 #, kde-format
@@ -123,10 +123,9 @@ msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr "Použiť efekt rozmazania na tapetu na domovskej obrazovke"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Set the system theme"
+#, kde-format
 msgid "Set the system colors"
-msgstr "Nastaviť systémovú tému"
+msgstr "Nastaviť systémové farby"
 
 #: ui/main.qml:102
 #, kde-format
