@@ -231,6 +231,3 @@ msgstr "Секунда"
 #, kde-format
 msgid "AM/PM"
 msgstr "AM/PM"
-
-#~ msgid "Global theme"
-#~ msgstr "Глобална тема"

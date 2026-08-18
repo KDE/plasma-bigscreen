@@ -252,9 +252,3 @@ msgstr "BigScreen е активирал инхибирането на систе
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Търсене…"
-
-#~ msgid "Favorites Manager"
-#~ msgstr "Управление на Предпочитани"
-
-#~ msgid "Customize Favorites"
-#~ msgstr "Настройване на Предпочитани"
