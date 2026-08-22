@@ -6,6 +6,7 @@ Exec=@CMAKE_INSTALL_FULL_LIBEXECDIR@/plasma-dbus-run-session-if-needed ${CMAKE_I
 DesktopNames=KDE
 Name=Plasma Bigscreen (Development)
 Name[ar]=بلازما الشاشة الكبيرة (تطويرية)
+Name[bg]=Plasma Bigscreen (Разработка)
 Name[ca]=Plasma Bigscreen (Desenvolupament)
 Name[ca@valencia]=Plasma Bigscreen (desenvolupament)
 Name[cs]=Plasma Bigscreen (vývoj)
