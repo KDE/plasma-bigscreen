@@ -3,6 +3,7 @@
 [Desktop Entry]
 Name=Plasma Bigscreen Input Handler
 Name[ar]=معالج إدخال لبلازما الشاشة الكبيرة
+Name[bg]=Управление на входните устройства
 Name[ca]=Gestor d'entrada del Plasma Bigscreen
 Name[ca@valencia]=Gestor d'entrada de Plasma Bigscreen
 Name[cs]=Ovladač vstupů Plasma Bigscreen
