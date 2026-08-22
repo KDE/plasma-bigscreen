@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
 # Automatically generated, 2022.
-# SPDX-FileCopyrightText: 2022, 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2024-2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-23 00:45+0000\n"
-"PO-Revision-Date: 2025-09-06 17:56+0200\n"
+"PO-Revision-Date: 2026-08-21 17:56+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,13 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Exit Bigscreen"
+#, kde-format
 msgid "Edit Home Screen"
-msgstr "Излизане от Bigscreen"
+msgstr "Редактиране на началния екран"
 
 #: contents/ui/FavoritesManager.qml:141
 #: contents/ui/launcher/LauncherHome.qml:84
@@ -34,7 +33,7 @@ msgstr "Предпочитани"
 #: contents/ui/FavoritesManager.qml:141 contents/ui/FavoritesManager.qml:281
 #, kde-format
 msgid "Launcher Sections"
-msgstr ""
+msgstr "Секции на стартовото меню"
 
 #: contents/ui/FavoritesManager.qml:213
 #, kde-format
@@ -47,62 +46,65 @@ msgid "Remove Favorites"
 msgstr "Премахване от Предпочитани"
 
 #: contents/ui/FavoritesManager.qml:295
-#, fuzzy, kde-format
-#| msgid "Recent"
+#, kde-format
 msgid "Show Recent"
-msgstr "Скоро отваряни"
+msgstr "Показване на Скорошни"
 
 #: contents/ui/FavoritesManager.qml:296
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
 msgstr ""
+"Наскоро стартираните приложения се се подреждат в хоризонтален ред на "
+"началния екран"
 
 #: contents/ui/FavoritesManager.qml:311
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Show Applications"
-msgstr "Приложения"
+msgstr "Показване на приложенията"
 
 #: contents/ui/FavoritesManager.qml:312
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
 msgstr ""
+"Приложенията, които не са игри, се подреждат в хоризонтален ред на началния "
+"екран."
 
 #: contents/ui/FavoritesManager.qml:328
-#, fuzzy, kde-format
-#| msgid "Games"
+#, kde-format
 msgid "Show Games"
-msgstr "Игри"
+msgstr "Показване на игри"
 
 #: contents/ui/FavoritesManager.qml:329
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
 msgstr ""
+"Приложенията в категория „Игри“ се изобразяват се подреждат в хоризонтален "
+"ред на началния екран"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:36
 #, kde-format
 msgid "Screenshot"
-msgstr ""
+msgstr "Снимка на екрана"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:50
 #, kde-format
 msgid "Audio"
-msgstr ""
+msgstr "Аудио"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:78
 #, kde-format
 msgid "Wi-Fi"
-msgstr ""
+msgstr "Wi-Fi"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:93
 #, kde-format
 msgid "Shutdown"
-msgstr ""
+msgstr "Изключване"
 
 #: contents/ui/homeoverlay/MainColumn.qml:131
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "Начална страница"
 
 #: contents/ui/homeoverlay/MainColumn.qml:144
 #: contents/ui/indicators/Search.qml:16
@@ -111,8 +113,7 @@ msgid "Search"
 msgstr "Търсене"
 
 #: contents/ui/homeoverlay/MainColumn.qml:161
-#, fuzzy, kde-format
-#| msgid "Tasks"
+#, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "Задачи"
@@ -120,22 +121,22 @@ msgstr "Задачи"
 #: contents/ui/homeoverlay/MainColumn.qml:184
 #, kde-format
 msgid "Controller"
-msgstr ""
+msgstr "Контролер"
 
 #: contents/ui/homeoverlay/MainColumn.qml:185
 #, kde-format
 msgid "Currently capturing keys…"
-msgstr ""
+msgstr "Засичане на бутони…"
 
 #: contents/ui/homeoverlay/MainColumn.qml:185
 #, kde-format
 msgid "Key capture off"
-msgstr ""
+msgstr "Засичането на бутони е изключено"
 
 #: contents/ui/homeoverlay/MainColumn.qml:205
 #, kde-format
 msgid "On-screen Keyboard"
-msgstr ""
+msgstr "Екранна клавиатура"
 
 #: contents/ui/homeoverlay/MainColumn.qml:224
 #: contents/ui/indicators/Settings.qml:18
@@ -146,18 +147,18 @@ msgstr "Настройки"
 #: contents/ui/homeoverlay/TaskDelegate.qml:122
 #, kde-format
 msgid "Hold to close…"
-msgstr ""
+msgstr "Задръжте за затваряне…"
 
 #: contents/ui/homeoverlay/TasksView.qml:111
 #, kde-format
 msgctxt "As in: These apps are currently opened"
 msgid "Open Apps"
-msgstr ""
+msgstr "Отворени приложения"
 
 #: contents/ui/homeoverlay/TasksView.qml:162
 #, kde-format
 msgid "Close all apps"
-msgstr ""
+msgstr "Затваряне на всички приложения"
 
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
@@ -170,10 +171,9 @@ msgid "KDE Connect"
 msgstr "KDE Connect"
 
 #: contents/ui/indicators/PairWindow.qml:40
-#, fuzzy, kde-format
-#| msgid "Pairing Request From %1"
+#, kde-format
 msgid "Accept Pairing Request From %1?"
-msgstr "Заявка за сдвояване от %1"
+msgstr "Приемане на заявка за сдвояване от %1?"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
@@ -198,7 +198,7 @@ msgstr "Настройки за интернет"
 #: contents/ui/launcher/LauncherHome.qml:113
 #, kde-format
 msgid "Recent"
-msgstr "Скоро отваряни"
+msgstr "Скорошни"
 
 #: contents/ui/launcher/LauncherHome.qml:151
 #, kde-format
@@ -213,39 +213,38 @@ msgstr "Игри"
 #: contents/ui/main.qml:114
 #, kde-format
 msgid "Controller added: %1"
-msgstr ""
+msgstr "Добавен е контролер: %1"
 
 #: contents/ui/main.qml:118
 #, kde-format
 msgid "Controller removed: %1"
-msgstr ""
+msgstr "Премахнат е контролер: %1"
 
 #: contents/ui/main.qml:122
 #, kde-format
 msgid "Remote added: %1"
-msgstr ""
+msgstr "Добавено е дистанционно: %1"
 
 #: contents/ui/main.qml:126
 #, kde-format
 msgid "Remote removed: %1"
-msgstr ""
+msgstr "Премахнато е дистанционно: %1"
 
 #: contents/ui/main.qml:130
 #, kde-format
 msgid "System taking over controller input"
-msgstr ""
+msgstr "Системата поема управлението на контролера"
 
 #: contents/ui/main.qml:133
 #, kde-format
 msgid "Application taking over controller input"
-msgstr ""
+msgstr "Приложението поема управлението на контролера"
 
 #: contents/ui/PowerManagementItem.qml:24
-#, fuzzy, kde-format
-#| msgid "Bigscreen has enabled system-wide inhibition"
+#, kde-format
 msgctxt "@info"
 msgid "Plasma Bigscreen has enabled system-wide inhibition"
-msgstr "BigScreen е активирал инхибирането на системата"
+msgstr "Plasma Bigscreen активира системно блокиране на спящия режим"
 
 #: contents/ui/search/SearchTextField.qml:24
 #, kde-format
