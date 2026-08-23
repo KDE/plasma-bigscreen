@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Configure remote and game controller input",
         "Description[ar]": "اضبط إدخال جهاز التحكم عن بُعد و متحكم ألعاب الفيديو",
+        "Description[bg]": "Настройка на дистанционно и гейм контролер",
         "Description[ca@valencia]": "Configura l'entrada del comandament a distància i el controlador de joc",
         "Description[ca]": "Configura l'entrada del comandament a distància i el controlador de joc",
         "Description[cs]": "Nastavení vstupu ze vzdáleného zařízení a herního ovladače",
@@ -31,6 +32,7 @@
         "Icon": "input-gamepad-symbolic",
         "Name": "Input",
         "Name[ar]": "الدّخل",
+        "Name[bg]": "Входни устройства",
         "Name[ca@valencia]": "Entrada",
         "Name[ca]": "Entrada",
         "Name[cs]": "Vstup",
@@ -57,6 +59,7 @@
     },
     "X-KDE-Keywords": "input,controller,gamepad,cec,remote",
     "X-KDE-Keywords[ar]": "إدخال,وحدة تحكم,مقبض ألعاب,سيك,جهاز تحكم عن بعد",
+    "X-KDE-Keywords[bg]": "вход,контролер,геймпад,cec,дистанционно",
     "X-KDE-Keywords[ca@valencia]": "entrada,controlador,comandament de joc,comandament a distància,control remot",
     "X-KDE-Keywords[ca]": "entrada,controlador,comandament de joc,comandament a distància,control remot",
     "X-KDE-Keywords[cs]": "vstup,ovladač,gamepad,cec,vzdálené",

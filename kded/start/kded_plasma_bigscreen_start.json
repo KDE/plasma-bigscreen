@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Run initial tasks for Plasma Bigscreen during session startup",
         "Description[ar]": "تشغيل المهام الأولية لـبلازما الشاشة الكبيرة أثناء بدء تشغيل الجلسة",
+        "Description[bg]": "Изпълнение на началните задачи при стартиране на Plasma Bigscreen",
         "Description[ca@valencia]": "Executa les tasques inicials de Plasma Bigscreen durant l'inici de sessió",
         "Description[ca]": "Executa les tasques inicials del Plasma Bigscreen durant l'inici de sessió",
         "Description[cs]": "Spustit úvodní úlohy pro Plasma Bigscreen při spuštění sezení",
@@ -34,6 +35,7 @@
         "Description[zh_TW]": "在工作階段啟動時為 Plasma 大螢幕執行初始工作",
         "Name": "Plasma Bigscreen Start",
         "Name[ar]": "بدء بلازما الشاشة الكبيرة",
+        "Name[bg]": "Стартиране на Plasma Bigscreen",
         "Name[ca@valencia]": "Inici de Plasma Bigscreen",
         "Name[ca]": "Inici del Plasma Bigscreen",
         "Name[cs]": "Start Plasma Bigscreen",

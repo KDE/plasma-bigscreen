@@ -31,7 +31,7 @@ msgstr "取消配对"
 #: ui/delegates/PairedView.qml:52
 #, kde-format
 msgid "Plugin Settings"
-msgstr ""
+msgstr "插件设置"
 
 #: ui/delegates/PairRequest.qml:35
 #, kde-format
@@ -87,4 +87,4 @@ msgstr "设备"
 #, kde-format
 msgctxt "%1 is the device name"
 msgid "Plugin Settings for %1 "
-msgstr ""
+msgstr "%1 的插件设置 "

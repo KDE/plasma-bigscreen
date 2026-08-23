@@ -27,11 +27,7 @@ ColumnLayout {
     signal screenshotRequested()
 
     function focusTasks() {
-        if (tasksButton.visible) {
-            tasksButton.forceActiveFocus();
-        } else {
-            searchButton.forceActiveFocus();
-        }
+        tasksButton.forceActiveFocus();
     }
 
     onVisibleChanged: {
@@ -64,6 +60,11 @@ ColumnLayout {
 
         background: Rectangle {
             color: Kirigami.Theme.alternateBackgroundColor
+
+            topLeftRadius: Kirigami.Units.cornerRadius
+            topRightRadius: Kirigami.Units.cornerRadius
+            bottomLeftRadius: 0
+            bottomRightRadius: 0
         }
 
         P5Support.DataSource {
@@ -77,7 +78,7 @@ ColumnLayout {
         contentItem: ColumnLayout {
             QQC2.Label {
                 id: timeLabel
-                text: Qt.locale().toString(timeSource.data["Local"]["DateTime"], Qt.locale().timeFormat(Locale.ShortFormat))
+                text: Qt.formatTime(timeSource.data["Local"]["DateTime"], "h:mm ap")
 
                 Layout.fillWidth: true
                 horizontalAlignment: Text.AlignHCenter
@@ -87,7 +88,7 @@ ColumnLayout {
 
             QQC2.Label {
                 id: dateLabel
-                text: Qt.locale().toString(timeSource.data["Local"]["DateTime"], Qt.locale().dateFormat(Locale.LongFormat))
+                text: Qt.formatDate(timeSource.data["Local"]["DateTime"], "MMMM d, yyyy")
 
                 Layout.fillWidth: true
                 horizontalAlignment: Text.AlignHCenter
@@ -204,15 +205,10 @@ ColumnLayout {
                 icon.name: "input-keyboard-virtual-symbolic"
                 text: i18n("On-screen Keyboard")
 
-                checked: Keyboards.KWinVirtualKeyboard.mode === Keyboards.KWinVirtualKeyboard.AnyInput
-                onToggled: {
-                    if (Keyboards.KWinVirtualKeyboard.mode === Keyboards.KWinVirtualKeyboard.AnyInput) {
-                        Keyboards.KWinVirtualKeyboard.mode = Keyboards.KWinVirtualKeyboard.Never;
-                    } else {
-                        Keyboards.KWinVirtualKeyboard.mode = Keyboards.KWinVirtualKeyboard.AnyInput;
-                    }
-
-                    checked = Qt.binding(() => (Keyboards.KWinVirtualKeyboard.mode === Keyboards.KWinVirtualKeyboard.AnyInput));
+                checked: Keyboards.KWinVirtualKeyboard.enabled
+                onCheckedChanged: {
+                    Keyboards.KWinVirtualKeyboard.enabled = checked;
+                    checked = Qt.binding(() => Keyboards.KWinVirtualKeyboard.enabled);
                 }
             }
 
