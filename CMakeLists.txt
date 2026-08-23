@@ -81,6 +81,8 @@ find_package(PkgConfig REQUIRED)
 pkg_check_modules(SYSTEMD systemd)
 add_feature_info(Systemd SYSTEMD_FOUND "Use systemd-logind uaccess ACLs for uinput device access")
 
+ecm_find_qmlmodule(org.kde.kdeconnect REQUIRED)
+
 # libcec (TV Remote support)
 pkg_check_modules(Libcec IMPORTED_TARGET libcec>=6)
 add_feature_info(Libcec Libcec_FOUND "Adds support for CEC devices (ex. TV Remotes)")

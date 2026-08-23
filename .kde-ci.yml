@@ -30,6 +30,7 @@ Dependencies:
     'plasma/plasma-activities': '@latest-kf6' # Different versioning due to being a former Framework
     'plasma/plasma-activities-stats': '@latest-kf6' # Different versioning due to being a former Framework
     'plasma/plasma5support': '@same'
+    'network/kdeconnect-kde': 'master'
 
 Options:
  require-passing-tests-on: ['@all']
