@@ -80,6 +80,14 @@ ContainmentItem {
             }
             tasksModel.minimizeAllTasks();
         }
+
+        function onToggleSearch() {
+            if (searchWindow.visible) {
+                searchWindow.hideOverlay();
+            } else {
+                searchWindow.showOverlay();
+            }
+        }
     }
 
     Connections {

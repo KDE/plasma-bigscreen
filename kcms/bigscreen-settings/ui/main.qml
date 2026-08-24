@@ -185,6 +185,26 @@ Bigscreen.ScrollablePage {
         }
 
         Bigscreen.ButtonDelegate {
+            id: searchShortcutDelegate
+            KeyNavigation.down: tasksShortcutDelegate
+            Layout.bottomMargin: Kirigami.Units.smallSpacing
+            text: i18n("Open search shortcut")
+            icon.name: 'preferences-desktop-keyboard-symbolic'
+
+            property string getActionPath: "displaySearchShortcut"
+            property string setActionPath: "setDisplaySearchShortcut"
+            property string resetActionPath: "resetDisplaySearchShortcut"
+            onClicked: {
+                shortcutsPicker.title = text;
+                shortcutsPicker.currentShortcut = kcm.getShortcut(getActionPath);
+                shortcutsPicker.getActionPath = getActionPath;
+                shortcutsPicker.setActionPath = setActionPath;
+                shortcutsPicker.resetActionPath = resetActionPath;
+                shortcutsPicker.open();
+            }
+        }
+
+        Bigscreen.ButtonDelegate {
             id: settingsShortcutDelegate
             KeyNavigation.down: tasksShortcutDelegate
             Layout.bottomMargin: Kirigami.Units.smallSpacing

@@ -23,22 +23,26 @@ public:
     QList<QKeySequence> activateTasksShortcut() const;
     QList<QKeySequence> displayHomeScreenShortcut() const;
     QList<QKeySequence> displayHomeOverlayShortcut() const;
+    QList<QKeySequence> displaySearchShortcut() const;
 
     bool setActivateSettingsShortcut(const QKeySequence &shortcut);
     bool setActivateTasksShortcut(const QKeySequence &shortcut);
     bool setDisplayHomeScreenShortcut(const QKeySequence &shortcut);
     bool setDisplayHomeOverlayShortcut(const QKeySequence &shortcut);
+    bool setDisplaySearchShortcut(const QKeySequence &shortcut);
 
     void resetActivateSettingsShortcut();
     void resetActivateTasksShortcut();
     void resetDisplayHomeScreenShortcut();
     void resetDisplayHomeOverlayShortcut();
+    void resetDisplaySearchShortcut();
 
 Q_SIGNALS:
     void toggleSettingsOverlay();
     void toggleTasksOverlay();
     void toggleHomeScreen();
     void toggleHomeOverlay();
+    void toggleSearch();
 
 private:
     explicit Shortcuts(QObject *parent = nullptr);
@@ -46,6 +50,7 @@ private:
     QAction* toggleActivateTasksAction;
     QAction* toggleDisplayHomeScreenAction;
     QAction *toggleDisplayHomeOverlayAction;
+    QAction *toggleDisplaySearchAction;
 };
 
 #endif // SHORTCUTS_H

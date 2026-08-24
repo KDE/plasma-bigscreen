@@ -152,6 +152,16 @@ QString BigLauncherDbusAdapterInterface::displayHomeOverlayShortcut()
     return qs.join(", ");
 }
 
+QString BigLauncherDbusAdapterInterface::displaySearchShortcut()
+{
+    QStringList qs;
+    for (const QKeySequence &seq : m_shortcuts->displaySearchShortcut()) {
+        qs += seq.toString();
+    }
+    return qs.join(", ");
+}
+
+
 bool BigLauncherDbusAdapterInterface::setActivateSettingsShortcut(const QString &shortcut)
 {
     QKeySequence seq = QKeySequence::fromString(shortcut);
@@ -176,6 +186,12 @@ bool BigLauncherDbusAdapterInterface::setDisplayHomeOverlayShortcut(const QStrin
     return m_shortcuts->setDisplayHomeOverlayShortcut(seq);
 }
 
+bool BigLauncherDbusAdapterInterface::setDisplaySearchShortcut(const QString &shortcut)
+{
+    QKeySequence seq = QKeySequence::fromString(shortcut);
+    return m_shortcuts->setDisplaySearchShortcut(seq);
+}
+
 void BigLauncherDbusAdapterInterface::resetActivateSettingsShortcut()
 {
     m_shortcuts->resetActivateSettingsShortcut();
@@ -194,6 +210,11 @@ void BigLauncherDbusAdapterInterface::resetDisplayHomeScreenShortcut()
 void BigLauncherDbusAdapterInterface::resetDisplayHomeOverlayShortcut()
 {
     m_shortcuts->resetDisplayHomeOverlayShortcut();
+}
+
+void BigLauncherDbusAdapterInterface::resetDisplaySearchShortcut()
+{
+    m_shortcuts->resetDisplaySearchShortcut();
 }
 
 Q_INVOKABLE QString BigLauncherDbusAdapterInterface::getMethod(const QString &method)

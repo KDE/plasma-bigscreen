@@ -42,6 +42,11 @@ void Shortcuts::initializeShortcuts()
     toggleDisplayHomeOverlayAction->setText(i18n("Toggle Bigscreen Home Overlay"));
     KGlobalAccel::self()->setGlobalShortcut(toggleDisplayHomeOverlayAction, Qt::META | Qt::Key_O);
 
+    toggleDisplaySearchAction = new QAction(this);
+    toggleDisplaySearchAction->setObjectName(QStringLiteral("Toggle Bigscreen Search"));
+    toggleDisplaySearchAction->setText(i18n("Toggle Bigscreen Search"));
+    KGlobalAccel::self()->setGlobalShortcut(toggleDisplaySearchAction, Qt::META | Qt::Key_S);
+
     connect(toggleActivateSettingsAction, &QAction::triggered, this, [this]() {
         Q_EMIT toggleSettingsOverlay();
     });
@@ -56,6 +61,10 @@ void Shortcuts::initializeShortcuts()
 
     connect(toggleDisplayHomeOverlayAction, &QAction::triggered, this, [this]() {
         Q_EMIT toggleHomeOverlay();
+    });
+
+    connect(toggleDisplaySearchAction, &QAction::triggered, this, [this]() {
+        Q_EMIT toggleSearch();
     });
 }
 
@@ -79,6 +88,11 @@ QList<QKeySequence> Shortcuts::displayHomeOverlayShortcut() const
     return KGlobalAccel::self()->shortcut(toggleDisplayHomeOverlayAction);
 }
 
+QList<QKeySequence> Shortcuts::displaySearchShortcut() const
+{
+    return KGlobalAccel::self()->shortcut(toggleDisplaySearchAction);
+}
+
 bool Shortcuts::setActivateSettingsShortcut(const QKeySequence &shortcut)
 {
     return KGlobalAccel::self()->setShortcut(toggleActivateSettingsAction, {shortcut}, KGlobalAccel::NoAutoloading);
@@ -97,6 +111,11 @@ bool Shortcuts::setDisplayHomeScreenShortcut(const QKeySequence &shortcut)
 bool Shortcuts::setDisplayHomeOverlayShortcut(const QKeySequence &shortcut)
 {
     return KGlobalAccel::self()->setShortcut(toggleDisplayHomeOverlayAction, {shortcut}, KGlobalAccel::NoAutoloading);
+}
+
+bool Shortcuts::setDisplaySearchShortcut(const QKeySequence &shortcut)
+{
+    return KGlobalAccel::self()->setShortcut(toggleDisplaySearchAction, {shortcut}, KGlobalAccel::NoAutoloading);
 }
 
 void Shortcuts::resetActivateSettingsShortcut()
@@ -128,5 +147,13 @@ void Shortcuts::resetDisplayHomeOverlayShortcut()
     auto defaultShortcuts = KGlobalAccel::self()->defaultShortcut(toggleDisplayHomeOverlayAction);
     for (const auto &shortcut : defaultShortcuts) {
         setDisplayHomeOverlayShortcut(shortcut);
+    }
+}
+
+void Shortcuts::resetDisplaySearchShortcut()
+{
+    auto defaultShortcuts = KGlobalAccel::self()->defaultShortcut(toggleDisplaySearchAction);
+    for (const auto &shortcut : defaultShortcuts) {
+        setDisplaySearchShortcut(shortcut);
     }
 }
