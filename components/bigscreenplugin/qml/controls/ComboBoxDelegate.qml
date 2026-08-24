@@ -203,7 +203,9 @@ ItemDelegate {
         id: comboBoxDialog
         title: root.text
         onOpened: contentItem.forceActiveFocus()
-        onClosed: root.forceActiveFocus()
+
+        // Use aboutToHide() instead of close() because closing take a certain duration (this could steal focus from another opening dialog)
+        onAboutToHide: root.forceActiveFocus()
 
         contentItem: ListView {
             implicitHeight: contentHeight
@@ -212,6 +214,9 @@ ItemDelegate {
             model: root.model
             currentIndex: root.currentIndex
             keyNavigationEnabled: true
+
+            // For long lists, avoid looong scrolls, have instant feedback
+            highlightMoveDuration: 0
 
             delegate: ButtonDelegate {
                 width: ListView.view.width
