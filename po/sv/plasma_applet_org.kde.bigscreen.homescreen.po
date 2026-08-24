@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-23 00:45+0000\n"
+"POT-Creation-Date: 2026-08-24 00:47+0000\n"
 "PO-Revision-Date: 2026-07-14 07:30+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -93,44 +93,44 @@ msgstr "WIFI"
 msgid "Shutdown"
 msgstr "Stäng av"
 
-#: contents/ui/homeoverlay/MainColumn.qml:131
+#: contents/ui/homeoverlay/MainColumn.qml:132
 #, kde-format
 msgid "Home"
 msgstr "Hem"
 
-#: contents/ui/homeoverlay/MainColumn.qml:144
+#: contents/ui/homeoverlay/MainColumn.qml:145
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr "Sök"
 
-#: contents/ui/homeoverlay/MainColumn.qml:161
+#: contents/ui/homeoverlay/MainColumn.qml:162
 #, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "Uppgifter"
 
-#: contents/ui/homeoverlay/MainColumn.qml:184
+#: contents/ui/homeoverlay/MainColumn.qml:185
 #, kde-format
 msgid "Controller"
 msgstr "Kontroll"
 
-#: contents/ui/homeoverlay/MainColumn.qml:185
+#: contents/ui/homeoverlay/MainColumn.qml:186
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "Lagrar för närvarande tangenter…"
 
-#: contents/ui/homeoverlay/MainColumn.qml:185
+#: contents/ui/homeoverlay/MainColumn.qml:186
 #, kde-format
 msgid "Key capture off"
 msgstr "Tangentlagring av"
 
-#: contents/ui/homeoverlay/MainColumn.qml:205
+#: contents/ui/homeoverlay/MainColumn.qml:206
 #, kde-format
 msgid "On-screen Keyboard"
 msgstr "Skärmtangentbord"
 
-#: contents/ui/homeoverlay/MainColumn.qml:224
+#: contents/ui/homeoverlay/MainColumn.qml:220
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
