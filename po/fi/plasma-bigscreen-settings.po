@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# SPDX-FileCopyrightText: 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2025, 2026 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-16 02:41+0000\n"
-"PO-Revision-Date: 2025-07-31 09:55+0300\n"
+"PO-Revision-Date: 2026-02-25 16:32+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,10 +28,9 @@ msgid "Your emails"
 msgstr "translator@legisign.org"
 
 #: kcmslistmodel.cpp:112
-#, fuzzy, kde-format
-#| msgid "Settings"
+#, kde-format
 msgid "Desktop Settings"
-msgstr "Asetukset"
+msgstr "Työpöytäasetukset"
 
 #: main.cpp:33
 #, kde-format
@@ -62,7 +61,7 @@ msgstr "Asetukset"
 #: qml/ConfigWindowSidebar.qml:88
 #, kde-format
 msgid "Open desktop settings?"
-msgstr ""
+msgstr "Avataanko työpöytäasetukset?"
 
 #: qml/ConfigWindowSidebar.qml:93
 #, kde-format
@@ -70,3 +69,5 @@ msgid ""
 "The desktop settings application does not support key navigation, a mouse "
 "may be required. However, it contains extra settings that may be useful."
 msgstr ""
+"Työpöytäasetussovellus ei tue näppäinnavigointia: hiirtä saatetaan vaatia. "
+"Joistakin sen lisäasetuksista saattaa kuitenkin olla apua."
