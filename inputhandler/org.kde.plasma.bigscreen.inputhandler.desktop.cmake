@@ -10,6 +10,7 @@ Name[cs]=Ovladač vstupů Plasma Bigscreen
 Name[de]=Eingabeverarbeitung von Plasma Bigscreen
 Name[es]=Controlador de entrada de Plasma Bigscreen
 Name[eu]=Plasma Bigscreen sarrera-maneiatzailea
+Name[fi]=Plasma Bigscreenin syötekäsittelijä
 Name[fr]=Gestionnaire d'entrées pour Plasma Bigscreen
 Name[he]=מטפל הקלט לפלזמה למסכים גדולים
 Name[hu]=Plasma Bigscreen bevitelkezelő
