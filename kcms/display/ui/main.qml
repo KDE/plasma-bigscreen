@@ -21,6 +21,8 @@ Bigscreen.ScrollablePage {
 
     title: i18n("Display Configuration")
 
+    property int revertCountdown: 15
+
     background: null
     leftPadding: Kirigami.Units.smallSpacing
     topPadding: Kirigami.Units.smallSpacing
@@ -30,6 +32,19 @@ Bigscreen.ScrollablePage {
     onActiveFocusChanged: {
         if (activeFocus) {
             selectedDisplayDelegate.forceActiveFocus();
+        }
+    }
+
+    Timer {
+        id: revertTimer
+        interval: 1000
+        repeat: true
+
+        onTriggered: {
+            revertCountdown -= 1;
+            if (revertCountdown < 1) {
+                confirmDialog.reject();
+            }
         }
     }
 
@@ -96,7 +111,7 @@ Bigscreen.ScrollablePage {
             id: modeDelegate
             text: i18n("Screen mode (Resolution & Refresh Rate)")
             model: kcm.displayModel.selectedDisplayAvailableModes
-            enabled: kcm.displayModel.selectedDisplayEnabled
+            enabled: kcm.displayModel.selectedDisplayEnabled && model.length > 1
 
             function updateIndex() {
                 if (enabled) {
@@ -105,6 +120,7 @@ Bigscreen.ScrollablePage {
             }
 
             // Update the combobox value when the model updates or display changes
+            onCountChanged: updateIndex()
             Component.onCompleted: updateIndex()
             Connections {
                 target: kcm.displayModel
@@ -114,8 +130,30 @@ Bigscreen.ScrollablePage {
             }
 
             onActivated: {
+                confirmDialog.oldMode = kcm.displayModel.selectedDisplayMode
                 kcm.displayModel.selectedDisplayMode = currentValue;
                 updateIndex();
+                confirmDialog.open()
+            }
+
+            Bigscreen.Dialog {
+                id: confirmDialog
+                title: i18n("Keep display configuration?")
+                standardButtons: Bigscreen.Dialog.Ok | Bigscreen.Dialog.Cancel
+                onOpened: revertTimer.restart()
+                onRejected: {
+                    revertTimer.stop()
+                    revertCountdown = 15
+                    kcm.displayModel.selectedDisplayMode = oldMode
+                    modeDelegate.updateIndex()
+                }
+
+                property string oldMode
+
+                contentItem: QQC2.Label {
+                    text: i18np("Will revert to previous configuration in %1 second.", "Will revert to previous configuration in %1 seconds.", revertCountdown)
+                    font.pixelSize: Bigscreen.Units.defaultFontPixelSize
+                }
             }
 
             KeyNavigation.down: scaleDelegate
