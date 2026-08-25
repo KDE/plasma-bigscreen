@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-24 00:47+0000\n"
+"POT-Creation-Date: 2026-08-25 00:47+0000\n"
 "PO-Revision-Date: 2026-05-16 12:20+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -207,32 +207,32 @@ msgstr "Aplikacje"
 msgid "Games"
 msgstr "Gry"
 
-#: contents/ui/main.qml:114
+#: contents/ui/main.qml:122
 #, kde-format
 msgid "Controller added: %1"
 msgstr "Dodano kontroler: %1"
 
-#: contents/ui/main.qml:118
+#: contents/ui/main.qml:126
 #, kde-format
 msgid "Controller removed: %1"
 msgstr "Usunięto kontroler: %1"
 
-#: contents/ui/main.qml:122
+#: contents/ui/main.qml:130
 #, kde-format
 msgid "Remote added: %1"
 msgstr "Dodano pilota: %1"
 
-#: contents/ui/main.qml:126
+#: contents/ui/main.qml:134
 #, kde-format
 msgid "Remote removed: %1"
 msgstr "Usunięto pilota: %1"
 
-#: contents/ui/main.qml:130
+#: contents/ui/main.qml:138
 #, kde-format
 msgid "System taking over controller input"
 msgstr "System przejął obsługę kontrolera"
 
-#: contents/ui/main.qml:133
+#: contents/ui/main.qml:141
 #, kde-format
 msgid "Application taking over controller input"
 msgstr "Aplikacja przejęła obsługę kontrolera"

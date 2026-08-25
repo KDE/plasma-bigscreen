@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-24 00:47+0000\n"
+"POT-Creation-Date: 2026-08-25 00:47+0000\n"
 "PO-Revision-Date: 2026-08-08 17:22+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -209,32 +209,32 @@ msgstr "Aplicaciones"
 msgid "Games"
 msgstr "Juegos"
 
-#: contents/ui/main.qml:114
+#: contents/ui/main.qml:122
 #, kde-format
 msgid "Controller added: %1"
 msgstr "Mando añadido: %1"
 
-#: contents/ui/main.qml:118
+#: contents/ui/main.qml:126
 #, kde-format
 msgid "Controller removed: %1"
 msgstr "Mando eliminado: %1"
 
-#: contents/ui/main.qml:122
+#: contents/ui/main.qml:130
 #, kde-format
 msgid "Remote added: %1"
 msgstr "Control remoto añadido: %1"
 
-#: contents/ui/main.qml:126
+#: contents/ui/main.qml:134
 #, kde-format
 msgid "Remote removed: %1"
 msgstr "Control remoto eliminado: %1"
 
-#: contents/ui/main.qml:130
+#: contents/ui/main.qml:138
 #, kde-format
 msgid "System taking over controller input"
 msgstr "Sistema tomando control de la entrada del mando"
 
-#: contents/ui/main.qml:133
+#: contents/ui/main.qml:141
 #, kde-format
 msgid "Application taking over controller input"
 msgstr "Aplicación  tomando control de la entrada del mando"

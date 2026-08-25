@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-29 00:47+0000\n"
+"POT-Creation-Date: 2026-08-25 00:47+0000\n"
 "PO-Revision-Date: 2026-06-21 20:22+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -181,11 +181,17 @@ msgid "Open homescreen shortcut"
 msgstr "افتح اختصار الشاشة الرئيسة"
 
 #: ui/main.qml:191
+#, fuzzy, kde-format
+#| msgid "Open tasks shortcut"
+msgid "Open search shortcut"
+msgstr "افتح اختصار المهام"
+
+#: ui/main.qml:211
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "افتح اختصار الإعدادات"
 
-#: ui/main.qml:210
+#: ui/main.qml:230
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "افتح اختصار المهام"

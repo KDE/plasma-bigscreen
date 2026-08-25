@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-29 00:47+0000\n"
+"POT-Creation-Date: 2026-08-25 00:47+0000\n"
 "PO-Revision-Date: 2026-04-26 21:07+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -181,11 +181,17 @@ msgid "Open homescreen shortcut"
 msgstr "홈 화면 열기 단축키"
 
 #: ui/main.qml:191
+#, fuzzy, kde-format
+#| msgid "Open tasks shortcut"
+msgid "Open search shortcut"
+msgstr "할 일 열기 단축키"
+
+#: ui/main.qml:211
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "설정 열기 단축키"
 
-#: ui/main.qml:210
+#: ui/main.qml:230
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "할 일 열기 단축키"

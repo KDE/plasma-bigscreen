@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-24 00:47+0000\n"
+"POT-Creation-Date: 2026-08-25 00:47+0000\n"
 "PO-Revision-Date: 2026-05-17 21:09+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -207,32 +207,32 @@ msgstr "Alkalmazások"
 msgid "Games"
 msgstr "Játékok"
 
-#: contents/ui/main.qml:114
+#: contents/ui/main.qml:122
 #, kde-format
 msgid "Controller added: %1"
 msgstr "Vezérlő hozzáadva: %1"
 
-#: contents/ui/main.qml:118
+#: contents/ui/main.qml:126
 #, kde-format
 msgid "Controller removed: %1"
 msgstr "Vezérlő eltávolítva: %1"
 
-#: contents/ui/main.qml:122
+#: contents/ui/main.qml:130
 #, kde-format
 msgid "Remote added: %1"
 msgstr "Távirányító hozzáadva: %1"
 
-#: contents/ui/main.qml:126
+#: contents/ui/main.qml:134
 #, kde-format
 msgid "Remote removed: %1"
 msgstr "Távirányító eltávolítva: %1"
 
-#: contents/ui/main.qml:130
+#: contents/ui/main.qml:138
 #, kde-format
 msgid "System taking over controller input"
 msgstr "A rendszer átveszi a vezérlő bemenetét"
 
-#: contents/ui/main.qml:133
+#: contents/ui/main.qml:141
 #, kde-format
 msgid "Application taking over controller input"
 msgstr "Az alkalmazás átveszi a vezérlő bemenetét"

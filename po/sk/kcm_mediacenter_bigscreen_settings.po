@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-29 00:47+0000\n"
+"POT-Creation-Date: 2026-08-25 00:47+0000\n"
 "PO-Revision-Date: 2022-01-07 14:57+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -181,11 +181,17 @@ msgid "Open homescreen shortcut"
 msgstr "Skratka na otvorenie domovskej obrazovky"
 
 #: ui/main.qml:191
+#, fuzzy, kde-format
+#| msgid "Open tasks shortcut"
+msgid "Open search shortcut"
+msgstr "Otvoriť úlohy skratka"
+
+#: ui/main.qml:211
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "Otvoriť nastavenia skratka"
 
-#: ui/main.qml:210
+#: ui/main.qml:230
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "Otvoriť úlohy skratka"

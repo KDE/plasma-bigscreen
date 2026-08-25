@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025, 2026 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-24 00:47+0000\n"
-"PO-Revision-Date: 2025-09-03 18:43+0300\n"
+"POT-Creation-Date: 2026-08-25 00:47+0000\n"
+"PO-Revision-Date: 2026-03-01 20:32+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -83,7 +83,8 @@ msgid "Screenshot"
 msgstr ""
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:50
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Audio"
 msgid "Audio"
 msgstr "Ääni"
 
@@ -100,7 +101,7 @@ msgstr ""
 #: contents/ui/homeoverlay/MainColumn.qml:132
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "Koti"
 
 #: contents/ui/homeoverlay/MainColumn.qml:145
 #: contents/ui/indicators/Search.qml:16
@@ -118,22 +119,22 @@ msgstr "Tehtävät"
 #: contents/ui/homeoverlay/MainColumn.qml:185
 #, kde-format
 msgid "Controller"
-msgstr ""
+msgstr "Ohjain"
 
 #: contents/ui/homeoverlay/MainColumn.qml:186
 #, kde-format
 msgid "Currently capturing keys…"
-msgstr ""
+msgstr "Kaapataan näppäimiä…"
 
 #: contents/ui/homeoverlay/MainColumn.qml:186
 #, kde-format
 msgid "Key capture off"
-msgstr ""
+msgstr "Näppäinkaappaus ei käytössä"
 
 #: contents/ui/homeoverlay/MainColumn.qml:206
 #, kde-format
 msgid "On-screen Keyboard"
-msgstr ""
+msgstr "Näyttönäppäimistö"
 
 #: contents/ui/homeoverlay/MainColumn.qml:220
 #: contents/ui/indicators/Settings.qml:18
@@ -144,7 +145,7 @@ msgstr "Asetukset"
 #: contents/ui/homeoverlay/TaskDelegate.qml:122
 #, kde-format
 msgid "Hold to close…"
-msgstr ""
+msgstr "Sulje pitämällä…"
 
 #: contents/ui/homeoverlay/TasksView.qml:111
 #, fuzzy, kde-format
@@ -156,7 +157,7 @@ msgstr "Äänisovellukset"
 #: contents/ui/homeoverlay/TasksView.qml:162
 #, kde-format
 msgid "Close all apps"
-msgstr ""
+msgstr "Sulje kaikki sovellukset"
 
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
@@ -209,42 +210,41 @@ msgstr "Sovellukset"
 msgid "Games"
 msgstr "Pelit"
 
-#: contents/ui/main.qml:114
-#, kde-format
-msgid "Controller added: %1"
-msgstr ""
-
-#: contents/ui/main.qml:118
-#, kde-format
-msgid "Controller removed: %1"
-msgstr ""
-
 #: contents/ui/main.qml:122
 #, kde-format
-msgid "Remote added: %1"
-msgstr ""
+msgid "Controller added: %1"
+msgstr "Ohjain lisätty: %1"
 
 #: contents/ui/main.qml:126
 #, kde-format
-msgid "Remote removed: %1"
-msgstr ""
+msgid "Controller removed: %1"
+msgstr "Ohjain poistettu: %1"
 
 #: contents/ui/main.qml:130
 #, kde-format
-msgid "System taking over controller input"
-msgstr ""
+msgid "Remote added: %1"
+msgstr "Kaukosäädin lisätty: %1"
 
-#: contents/ui/main.qml:133
+#: contents/ui/main.qml:134
+#, kde-format
+msgid "Remote removed: %1"
+msgstr "Kaukosäädin poistettu: %1"
+
+#: contents/ui/main.qml:138
+#, kde-format
+msgid "System taking over controller input"
+msgstr "Järjestelmä ottaa vastaan ohjaimen syötteen"
+
+#: contents/ui/main.qml:141
 #, kde-format
 msgid "Application taking over controller input"
-msgstr ""
+msgstr "Sovellus ottaa vastaan ohjaimen syötteen"
 
 #: contents/ui/PowerManagementItem.qml:24
-#, fuzzy, kde-format
-#| msgid "Bigscreen has enabled system-wide inhibition"
+#, kde-format
 msgctxt "@info"
 msgid "Plasma Bigscreen has enabled system-wide inhibition"
-msgstr "Bigscreen on ottanut käyttöön virranhallinnan yleiseston"
+msgstr "Plasma Bigscreen on ottanut käyttöön järjestelmänlaajuisen eston"
 
 #: contents/ui/search/SearchTextField.qml:24
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-24 00:47+0000\n"
+"POT-Creation-Date: 2026-08-25 00:47+0000\n"
 "PO-Revision-Date: 2026-07-14 09:06+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -203,32 +203,32 @@ msgstr "יישומונים"
 msgid "Games"
 msgstr "משחקים"
 
-#: contents/ui/main.qml:114
+#: contents/ui/main.qml:122
 #, kde-format
 msgid "Controller added: %1"
 msgstr "נוסף בקר: %1"
 
-#: contents/ui/main.qml:118
+#: contents/ui/main.qml:126
 #, kde-format
 msgid "Controller removed: %1"
 msgstr "הוסר בקר: %1"
 
-#: contents/ui/main.qml:122
+#: contents/ui/main.qml:130
 #, kde-format
 msgid "Remote added: %1"
 msgstr "נוסף מרוחק: %1"
 
-#: contents/ui/main.qml:126
+#: contents/ui/main.qml:134
 #, kde-format
 msgid "Remote removed: %1"
 msgstr "הוסר מרוחק: %1"
 
-#: contents/ui/main.qml:130
+#: contents/ui/main.qml:138
 #, kde-format
 msgid "System taking over controller input"
 msgstr "המערכת משתלטת על קלט בקר"
 
-#: contents/ui/main.qml:133
+#: contents/ui/main.qml:141
 #, kde-format
 msgid "Application taking over controller input"
 msgstr "היישום משתלט על קלט בקר"

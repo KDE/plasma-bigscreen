@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-29 00:47+0000\n"
+"POT-Creation-Date: 2026-08-25 00:47+0000\n"
 "PO-Revision-Date: 2026-03-03 10:57+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -183,11 +183,17 @@ msgid "Open homescreen shortcut"
 msgstr "Atvērt mājas ekrāna saīsni"
 
 #: ui/main.qml:191
+#, fuzzy, kde-format
+#| msgid "Open tasks shortcut"
+msgid "Open search shortcut"
+msgstr "Atvērt uzdevumu saīsni"
+
+#: ui/main.qml:211
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "Atvērt iestatījumu saīsni"
 
-#: ui/main.qml:210
+#: ui/main.qml:230
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "Atvērt uzdevumu saīsni"

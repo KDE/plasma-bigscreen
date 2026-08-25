@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-29 00:47+0000\n"
+"POT-Creation-Date: 2026-08-25 00:47+0000\n"
 "PO-Revision-Date: 2026-06-21 00:08+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -186,11 +186,17 @@ msgid "Open homescreen shortcut"
 msgstr "Acceso rápido a la pantalla de inicio"
 
 #: ui/main.qml:191
+#, fuzzy, kde-format
+#| msgid "Open tasks shortcut"
+msgid "Open search shortcut"
+msgstr "Acceso rápido a tareas"
+
+#: ui/main.qml:211
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "Acceso rápido a preferencias"
 
-#: ui/main.qml:210
+#: ui/main.qml:230
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "Acceso rápido a tareas"

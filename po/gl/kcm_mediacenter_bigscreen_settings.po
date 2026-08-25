@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-29 00:47+0000\n"
+"POT-Creation-Date: 2026-08-25 00:47+0000\n"
 "PO-Revision-Date: 2025-06-19 10:01+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -190,11 +190,17 @@ msgstr "Atallo da páxina inicial de pantalla de Bigscreen"
 
 #: ui/main.qml:191
 #, fuzzy, kde-format
+#| msgid "Bigscreen Tasks Shortcut"
+msgid "Open search shortcut"
+msgstr "Atallo das tarefas de Bigscreen"
+
+#: ui/main.qml:211
+#, fuzzy, kde-format
 #| msgid "Bigscreen Settings Shortcut"
 msgid "Open settings shortcut"
 msgstr "Atallo da configuración de Bigscreen"
 
-#: ui/main.qml:210
+#: ui/main.qml:230
 #, fuzzy, kde-format
 #| msgid "Bigscreen Tasks Shortcut"
 msgid "Open tasks shortcut"
