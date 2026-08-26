@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-19 00:46+0000\n"
+"POT-Creation-Date: 2026-08-26 00:50+0000\n"
 "PO-Revision-Date: 2026-04-20 01:24+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -22,32 +22,44 @@ msgstr ""
 msgid "Display Configuration"
 msgstr "顯示器設定"
 
-#: ui/main.qml:42
+#: ui/main.qml:57
 #, kde-format
 msgid "Selected display"
 msgstr "已選的顯示器"
 
-#: ui/main.qml:74
+#: ui/main.qml:89
 #, kde-format
 msgid "Display %1"
 msgstr "顯示器 %1"
 
-#: ui/main.qml:82
+#: ui/main.qml:97
 #, kde-format
 msgid "Enabled"
 msgstr "已啟用"
 
-#: ui/main.qml:97
+#: ui/main.qml:112
 #, kde-format
 msgid "Screen mode (Resolution & Refresh Rate)"
 msgstr "螢幕模式（解析度與刷新頻率）"
 
-#: ui/main.qml:126 ui/ScaleDialog.qml:21
+#: ui/main.qml:141
+#, fuzzy, kde-format
+#| msgid "Display Configuration"
+msgid "Keep display configuration?"
+msgstr "顯示器設定"
+
+#: ui/main.qml:154
+#, kde-format
+msgid "Will revert to previous configuration in %1 second."
+msgid_plural "Will revert to previous configuration in %1 seconds."
+msgstr[0] ""
+
+#: ui/main.qml:164 ui/ScaleDialog.qml:21
 #, kde-format
 msgid "Scale"
 msgstr "縮放"
 
-#: ui/main.qml:127 ui/ScaleDialog.qml:54
+#: ui/main.qml:165 ui/ScaleDialog.qml:54
 #, kde-format
 msgctxt "Scale percentage"
 msgid "%1%"
