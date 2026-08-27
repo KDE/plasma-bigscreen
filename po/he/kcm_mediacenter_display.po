@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2024, 2025, 2026 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024-2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:50+0000\n"
-"PO-Revision-Date: 2026-04-19 08:36+0300\n"
+"PO-Revision-Date: 2026-08-26 08:37+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: ui/main.qml:22
 #, kde-format
@@ -44,19 +44,18 @@ msgid "Screen mode (Resolution & Refresh Rate)"
 msgstr "מצב מסך (רזולוציה וקצב ריענון)"
 
 #: ui/main.qml:141
-#, fuzzy, kde-format
-#| msgid "Display Configuration"
+#, kde-format
 msgid "Keep display configuration?"
-msgstr "הגדרות צד"
+msgstr "לשמור על הגדרות התצוגה?"
 
 #: ui/main.qml:154
 #, kde-format
 msgid "Will revert to previous configuration in %1 second."
 msgid_plural "Will revert to previous configuration in %1 seconds."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "ההגדרות הקודמות תשוחזרנה בעוד שנייה."
+msgstr[1] "ההגדרות הקודמות תשוחזרנה בעוד שתי שניות."
+msgstr[2] "ההגדרות הקודמות תשוחזרנה בעוד %1 שניות."
+msgstr[3] "ההגדרות הקודמות תשוחזרנה בעוד %1 שניות."
 
 #: ui/main.qml:164 ui/ScaleDialog.qml:21
 #, kde-format

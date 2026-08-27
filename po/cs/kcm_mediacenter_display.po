@@ -44,18 +44,17 @@ msgid "Screen mode (Resolution & Refresh Rate)"
 msgstr "Režim obrazovky (rozlišení a obnovovací frekvence)"
 
 #: ui/main.qml:141
-#, fuzzy, kde-format
-#| msgid "Display Configuration"
+#, kde-format
 msgid "Keep display configuration?"
-msgstr "Nastavení obrazovky"
+msgstr "Ponechat nastavení zobrazení?"
 
 #: ui/main.qml:154
 #, kde-format
 msgid "Will revert to previous configuration in %1 second."
 msgid_plural "Will revert to previous configuration in %1 seconds."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Vrátí se k předchozímu nastavení za %1 sekundu."
+msgstr[1] "Vrátí se k předchozímu nastavení za %1 sekundy."
+msgstr[2] "Vrátí se k předchozímu nastavení za %1 sekund."
 
 #: ui/main.qml:164 ui/ScaleDialog.qml:21
 #, kde-format

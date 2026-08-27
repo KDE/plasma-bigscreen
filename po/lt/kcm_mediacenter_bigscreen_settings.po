@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-25 00:47+0000\n"
-"PO-Revision-Date: 2026-07-01 16:31+0300\n"
+"PO-Revision-Date: 2026-08-26 12:18+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -184,10 +184,9 @@ msgid "Open homescreen shortcut"
 msgstr "Pradžios lango atvėrimo spartusis klavišas"
 
 #: ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "Open tasks shortcut"
+#, kde-format
 msgid "Open search shortcut"
-msgstr "Užduočių atvėrimo spartusis klavišas"
+msgstr "Paieškos atvėrimo spartusis klavišas"
 
 #: ui/main.qml:211
 #, kde-format

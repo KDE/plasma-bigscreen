@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:50+0000\n"
-"PO-Revision-Date: 2026-04-19 03:48+0200\n"
+"PO-Revision-Date: 2026-08-26 06:20+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -44,17 +44,16 @@ msgid "Screen mode (Resolution & Refresh Rate)"
 msgstr "ეკრანის რეჟიმი (გაფართოება და განახლების სიხშირე)"
 
 #: ui/main.qml:141
-#, fuzzy, kde-format
-#| msgid "Display Configuration"
+#, kde-format
 msgid "Keep display configuration?"
-msgstr "ეკრანის მორგება"
+msgstr "დაიტოვებთ ამ პარამეტრებს?"
 
 #: ui/main.qml:154
 #, kde-format
 msgid "Will revert to previous configuration in %1 second."
 msgid_plural "Will revert to previous configuration in %1 seconds."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "წინა კონფიგურაცია %1 წამში დაბრუნდება."
+msgstr[1] "წინა კონფიგურაცია %1 წამში დაბრუნდება."
 
 #: ui/main.qml:164 ui/ScaleDialog.qml:21
 #, kde-format

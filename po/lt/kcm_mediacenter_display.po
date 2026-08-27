@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:50+0000\n"
-"PO-Revision-Date: 2026-05-01 13:46+0300\n"
+"PO-Revision-Date: 2026-08-26 12:17+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: ui/main.qml:22
 #, kde-format
@@ -45,19 +45,18 @@ msgid "Screen mode (Resolution & Refresh Rate)"
 msgstr "Ekrano veiksena (Raiška ir atnaujinimo dažnis)"
 
 #: ui/main.qml:141
-#, fuzzy, kde-format
-#| msgid "Display Configuration"
+#, kde-format
 msgid "Keep display configuration?"
-msgstr "Ekrano konfigūracija"
+msgstr "Palikti ekrano konfigūraciją?"
 
 #: ui/main.qml:154
 #, kde-format
 msgid "Will revert to previous configuration in %1 second."
 msgid_plural "Will revert to previous configuration in %1 seconds."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Ankstesnė konfigūracija bus sugrąžinta po %1 sekundės."
+msgstr[1] "Ankstesnė konfigūracija bus sugrąžinta po %1 sekundžių."
+msgstr[2] "Ankstesnė konfigūracija bus sugrąžinta po %1 sekundžių."
+msgstr[3] "Ankstesnė konfigūracija bus sugrąžinta po %1 sekundės."
 
 #: ui/main.qml:164 ui/ScaleDialog.qml:21
 #, kde-format
