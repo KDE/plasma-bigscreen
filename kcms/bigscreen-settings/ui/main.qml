@@ -107,13 +107,47 @@ Bigscreen.ScrollablePage {
 
         Bigscreen.SwitchDelegate {
             id: navigationSoundDelegate
-            KeyNavigation.down: pmInhibitionDelegate
+            KeyNavigation.down: gameControllerRumbleIntensity
 
             text: i18n("Navigation sounds")
             description: i18n("Play a sound when the selected item changes in system apps")
             checked: BigscreenShell.Settings.navigationSoundEnabled ? true : false
             onCheckedChanged: BigscreenShell.Settings.navigationSoundEnabled = checked
         }
+
+
+        Bigscreen.ComboBoxDelegate {
+            id: gameControllerRumbleIntensity
+
+            property var strengths: [
+                i18n("Off"),
+                i18n("Weak"),
+                i18n("Medium"),
+                i18n("Strong")
+            ]
+
+            text: i18n("Navigation rumble")
+            model: strengths
+
+            KeyNavigation.down: pmInhibitionDelegate
+
+            function updateIndex() {
+                currentIndex = BigscreenShell.Settings.navigationRumbleIntensity;
+            }
+
+            Component.onCompleted: updateIndex()
+            Connections {
+                target: BigscreenShell.Settings
+                function onNavigationRumbleIntensityChanged() {
+                    gameControllerRumbleIntensity.updateIndex();
+                }
+            }
+
+            onActivated: {
+                BigscreenShell.Settings.navigationRumbleIntensity = currentIndex;
+            }
+        }
+
 
         Bigscreen.SwitchDelegate {
             id: pmInhibitionDelegate

@@ -109,11 +109,14 @@ T.SwitchDelegate {
     onPressed: root.forceActiveFocus()
     Keys.onReturnPressed: {
         click();
+        Bigscreen.NavigationRumble.playConfirmRumble();
     }
 
     onActiveFocusChanged: {
         if (activeFocus) {
             Bigscreen.NavigationSoundEffects.playMovingSound();
+            Bigscreen.NavigationRumble.playNavigationRumble();
+
         }
     }
 

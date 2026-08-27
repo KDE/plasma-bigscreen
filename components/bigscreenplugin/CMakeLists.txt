@@ -18,6 +18,7 @@ target_sources(bigscreenplugin PRIVATE ${bigscreenplugin_SRCS})
 # Singleton declarations
 set_source_files_properties(
     qml/NavigationSoundEffects.qml
+    qml/NavigationRumble.qml
     qml/controls/Units.qml
     PROPERTIES
     QT_QML_SINGLETON_TYPE TRUE
@@ -41,6 +42,8 @@ ecm_target_qml_sources(bigscreenplugin SOURCES
     qml/controls/Units.qml
     qml/AbstractDelegate.qml
     qml/NavigationSoundEffects.qml
+    qml/NavigationRumble.qml
+
 )
 
 target_link_libraries(bigscreenplugin

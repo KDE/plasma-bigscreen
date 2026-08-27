@@ -119,6 +119,7 @@ Window {
     }
 
     onVisibleChanged: {
+        Bigscreen.NavigationRumble.playCancelRumble();
         if (visible) {
             opacityAnim.to = 1;
             opacityAnim.restart();
@@ -130,6 +131,15 @@ Window {
             close.accepted = false;
             opacityAnim.to = 0;
             opacityAnim.restart();
+        }
+    }
+
+    Connections {
+        target: menu.listView
+        function onActiveFocusChanged() {
+            if (menu.listView.activeFocus) {
+                Bigscreen.NavigationRumble.playNavigationRumble();
+            }
         }
     }
 
@@ -163,8 +173,9 @@ Window {
             rightTarget: pageStack.currentItem
 
             KeyNavigation.right: pageStack.currentItem
-            KeyNavigation.tab: KeyNavigation.right
+            KeyNavigation.tab: pageStack.currentItem
             Bigscreen.BackHandler.onActivated: hideOverlay()
+            
         }
 
         // Shadow
@@ -285,6 +296,8 @@ Window {
 
                 // Go up one page if we are on a subpage, otherwise return to the sidebar
                 Bigscreen.BackHandler.onActivated: {
+                    Bigscreen.NavigationRumble.playCancelRumble();
+
                     if (isSubPage) {
                         goBack();
                     } else {

@@ -81,7 +81,10 @@ Window {
             }
         }
 
-        Bigscreen.BackHandler.onActivated: root.hideOverlay()
+        Bigscreen.BackHandler.onActivated: {
+            Bigscreen.NavigationRumble.playNavigationRumble();
+            root.hideOverlay()
+        }
 
         Kirigami.Theme.inherit: false
         Kirigami.Theme.colorSet: Kirigami.Theme.View
@@ -144,6 +147,7 @@ Window {
                             if (currentItem) {
                                 currentItem.forceActiveFocus();
                             }
+                            Bigscreen.NavigationRumble.playNavigationRumble();
                         }
 
                         delegate: Controls.Button {
@@ -161,8 +165,15 @@ Window {
 
                             readonly property bool selected: root.currentPageIndex === index
 
-                            onClicked: root.currentPageIndex = index
-                            Keys.onReturnPressed: root.currentPageIndex = index
+                            onClicked: {
+                                root.currentPageIndex = index;
+                                Bigscreen.NavigationRumble.playConfirmRumble();
+                            }
+
+                            Keys.onReturnPressed: {
+                                root.currentPageIndex = index;
+                                Bigscreen.NavigationRumble.playConfirmRumble();
+                            }
 
                             background: Bigscreen.DelegateBackground {
                                 control: pageDelegate
@@ -227,6 +238,7 @@ Window {
                                 }
                                 onClicked: {
                                     FavsManager.addFav(Plasmoid.applicationListModel.itemMap(index));
+                                    Bigscreen.NavigationRumble.playConfirmRumble();
                                 }
                             }
                         }
@@ -266,6 +278,7 @@ Window {
                                 }
                                 onClicked: {
                                     FavsManager.removeFav(Plasmoid.favsListModel.itemMap(index));
+                                    Bigscreen.NavigationRumble.playConfirmRumble()
                                 }
                             }
                         }

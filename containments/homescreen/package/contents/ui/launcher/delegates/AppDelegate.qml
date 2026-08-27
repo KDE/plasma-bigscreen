@@ -24,6 +24,7 @@ IconDelegate {
 
     onClicked: {
         Bigscreen.NavigationSoundEffects.playClickedSound();
+        Bigscreen.NavigationRumble.playConfirmRumble();
         if (Plasmoid.applicationListModel.isApplicationRunning(delegate.applicationStorageId)) {
             Plasmoid.applicationListModel.maximizeApplication(delegate.applicationStorageId);
         } else {

@@ -107,6 +107,7 @@ KCM.SimpleKCM {
 
             onClicked: {
                 networkSelectionView.refreshing = true;
+                Bigscreen.NavigationRumble.playLoadingRumble();
             }
         }
 

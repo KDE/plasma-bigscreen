@@ -20,6 +20,7 @@ class BigscreenShellSettings : public QObject
     Q_PROPERTY(bool pmInhibitionEnabled READ pmInhibitionEnabled WRITE setPmInhibitionEnabled NOTIFY pmInhibitionEnabledChanged)
     Q_PROPERTY(bool navigationSoundEnabled READ navigationSoundEnabled WRITE setNavigationSoundEnabled NOTIFY navigationSoundEnabledChanged)
     Q_PROPERTY(bool windowDecorationsEnabled READ windowDecorationsEnabled WRITE setWindowDecorationsEnabled NOTIFY windowDecorationsEnabledChanged)
+    Q_PROPERTY(int navigationRumbleIntensity READ navigationRumbleIntensity WRITE setNavigationRumbleIntensity NOTIFY navigationRumbleIntensityChanged)
 
 public:
     BigscreenShellSettings(QObject *parent = nullptr);
@@ -33,10 +34,14 @@ public:
     bool windowDecorationsEnabled() const;
     void setWindowDecorationsEnabled(bool windowDecorationsEnabled);
 
+    int navigationRumbleIntensity() const;
+    void setNavigationRumbleIntensity(int navigationRumbleIntensity);
+
 Q_SIGNALS:
     void pmInhibitionEnabledChanged();
     void navigationSoundEnabledChanged();
     void windowDecorationsEnabledChanged();
+    void navigationRumbleIntensityChanged();
 
 private:
     KConfigWatcher::Ptr m_configWatcher;

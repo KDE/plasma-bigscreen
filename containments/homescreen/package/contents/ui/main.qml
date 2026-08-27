@@ -148,6 +148,7 @@ ContainmentItem {
 
     // Trigger home overlay for back action
     Bigscreen.BackHandler.onActivated: {
+        Bigscreen.NavigationRumble.playNavigationRumble();
         homeOverlayWindow.showOverlay();
     }
 

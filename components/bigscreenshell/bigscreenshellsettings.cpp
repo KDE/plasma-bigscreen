@@ -21,6 +21,7 @@ BigscreenShellSettings::BigscreenShellSettings(QObject *parent)
             Q_EMIT pmInhibitionEnabledChanged();
             Q_EMIT navigationSoundEnabledChanged();
             Q_EMIT windowDecorationsEnabledChanged();
+            Q_EMIT navigationRumbleIntensityChanged();
         }
     });
 }
@@ -68,4 +69,18 @@ void BigscreenShellSettings::setWindowDecorationsEnabled(bool windowDecorationsE
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
     job->setDesktopName(QStringLiteral("org.kde.plasma-bigscreen-envmanager"));
     job->start();
+}
+
+int BigscreenShellSettings::navigationRumbleIntensity() const
+{
+    auto group = KConfigGroup{m_config, GENERAL_CONFIG_GROUP};
+    return group.readEntry("navigationRumbleIntensity", 0);
+}
+
+void BigscreenShellSettings::setNavigationRumbleIntensity(int navigationRumbleIntensity)
+{
+    auto group = KConfigGroup{m_config, GENERAL_CONFIG_GROUP};
+    static constexpr int NUM_SETTINGS = 4;
+    group.writeEntry("navigationRumbleIntensity", qBound(0, navigationRumbleIntensity, NUM_SETTINGS - 1), KConfigGroup::Notify);
+    m_config->sync();
 }

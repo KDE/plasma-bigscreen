@@ -49,6 +49,7 @@ T.Button {
     onActiveFocusChanged: {
         if (activeFocus) {
             Bigscreen.NavigationSoundEffects.playMovingSound();
+            Bigscreen.NavigationRumble.playNavigationRumble();
         }
     }
 

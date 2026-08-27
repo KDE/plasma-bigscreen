@@ -216,6 +216,18 @@ bool InputHandlerDBus::sendActiveSource()
 #endif
 }
 
+bool InputHandlerDBus::sendSdlControllerRumble(int lowFreq, int highFreq, int durationMs)
+{
+    if (!m_sdlController) {
+        return false;
+    }
+
+    uint16_t low = static_cast<uint16_t>(qBound(0, lowFreq, 65535));
+    uint16_t high = static_cast<uint16_t>(qBound(0, highFreq, 65535));
+    uint32_t duration = static_cast<uint32_t>(qBound(0, durationMs, 5000));
+    return m_sdlController->sendRumble(low, high, duration);
+}
+
 int InputHandlerDBus::queryDevicePowerStatus(int logicalAddress)
 {
 #ifdef HAS_LIBCEC

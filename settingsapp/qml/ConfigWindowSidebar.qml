@@ -81,6 +81,7 @@ Rectangle {
                 }
 
                 Bigscreen.NavigationSoundEffects.playMovingSound();
+                Bigscreen.NavigationRumble.playNavigationRumble();
             }
 
             Bigscreen.Dialog {
@@ -104,7 +105,10 @@ Rectangle {
                 width: settingsKCMMenu.width - settingsKCMMenu.leftMargin - settingsKCMMenu.rightMargin
 
                 onClicked: open()
-                Keys.onReturnPressed: open()
+                Keys.onReturnPressed: {
+                    open()
+                    Bigscreen.NavigationRumble.playConfirmRumble();
+                }
 
                 function open() {
                     if (modelData.kcmId === "open-desktop-settings") {

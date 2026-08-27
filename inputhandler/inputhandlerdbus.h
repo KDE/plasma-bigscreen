@@ -61,6 +61,7 @@ public Q_SLOTS:
     Q_SCRIPTABLE QVariantList connectedControllers() const;
     Q_SCRIPTABLE void setControllerEnabled(const QString &uniqueIdentifier, bool enabled);
     Q_SCRIPTABLE void setStartButtonEnabledWhenSuppressed(const QString &uniqueIdentifier, bool enabled);
+    Q_SCRIPTABLE bool sendSdlControllerRumble(int lowFreq, int highFreq, int durationMs);
 
     // Outbound CEC commands. logicalAddress is the CEC logical address
     // of the target device (0 = TV, see CEC spec table 10-6). Returns

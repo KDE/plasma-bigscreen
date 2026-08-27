@@ -30,11 +30,14 @@ Milou.ResultsView {
     Keys.onUpPressed: {
         currentIndex--;
         Bigscreen.NavigationSoundEffects.playMovingSound();
+        Bigscreen.NavigationRumble.playNavigationRumble();
+
     }
     Keys.onDownPressed: {
         if (currentIndex < (root.count - 1)) {
             currentIndex++;
             Bigscreen.NavigationSoundEffects.playMovingSound();
+            Bigscreen.NavigationRumble.playNavigationRumble();
         }
     }
 

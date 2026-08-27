@@ -47,7 +47,8 @@ PlasmaComponents.ToolButton {
     }
 
     onClicked: (event)=> {
-        Bigscreen.NavigationSoundEffects.playClickedSound()
+        Bigscreen.NavigationSoundEffects.playClickedSound();
+        Bigscreen.NavigationRumble.playNavigationRumble();
     }
 
     Keys.onPressed: (event)=> {
@@ -58,6 +59,7 @@ PlasmaComponents.ToolButton {
             case Qt.Key_Tab:
             case Qt.Key_Backtab:
                 Bigscreen.NavigationSoundEffects.playMovingSound();
+                Bigscreen.NavigationRumble.playNavigationRumble();
                 break;
             default:
                 break;

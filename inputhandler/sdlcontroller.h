@@ -98,6 +98,8 @@ public:
         return m_manualSuppressInput;
     }
 
+    bool sendRumble(uint16_t lowFreq, uint16_t highFreq, uint32_t durationMs);
+
 Q_SIGNALS:
     void controllerAdded(const QString &name);
     void controllerRemoved(const QString &name);
@@ -118,6 +120,7 @@ private:
     bool m_suppressInput = false;
     bool m_autoSuppressInput = true;
     bool m_manualSuppressInput = false; // Manually set via D-Bus
+    SDL_JoystickID m_lastActiveInstanceId = -1;
     DeviceWatcher *m_deviceWatcher = nullptr;
 
     // Polling intervals

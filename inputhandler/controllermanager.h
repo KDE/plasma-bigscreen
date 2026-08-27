@@ -7,6 +7,7 @@
 #pragma once
 
 #include "device.h"
+#include <QElapsedTimer>
 #include <QHash>
 #include <QObject>
 #include <QScopedPointer>
@@ -51,6 +52,9 @@ public:
     QVariantList connectedControllers() const;
     void releasePressedInput(Device *device);
 
+    qint64 msSinceLastGamepadInput() const;
+    void restartGamepadInputTimer();
+
 public Q_SLOTS:
     void emitKey(int key, bool pressed);
     void emitPointerMotion(double deltaX, double deltaY);
@@ -79,6 +83,7 @@ private:
 
     bool m_enabled = true;
     bool m_gameControllerEnabled = true;
+    QElapsedTimer m_lastGamepadInputTimer;
     bool m_cecEnabled = true;
     QSet<QString> m_disabledControllers;
     QSet<QString> m_startButtonDisabledWhenSuppressedControllers;

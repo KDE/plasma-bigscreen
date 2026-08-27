@@ -157,6 +157,10 @@ void ControllerManager::emitKey(Device *device, int key, bool pressed)
         }
     }
 
+    if (device->getDeviceType() == DeviceGamepad) {
+        restartGamepadInputTimer();
+    }
+
     m_inputSystem->emitKey(key, pressed);
 }
 
@@ -164,6 +168,10 @@ void ControllerManager::emitPointerMotion(Device *device, double deltaX, double 
 {
     if (!deviceAllowed(device) || !m_inputSystem) {
         return;
+    }
+
+    if (device->getDeviceType() == DeviceGamepad) {
+        restartGamepadInputTimer();
     }
 
     m_inputSystem->emitPointerMotion(deltaX, deltaY);
@@ -187,6 +195,10 @@ void ControllerManager::emitPointerButton(Device *device, int button, bool press
         }
     }
 
+    if (device->getDeviceType() == DeviceGamepad) {
+        restartGamepadInputTimer();
+    }
+
     m_inputSystem->emitPointerButton(button, pressed);
 }
 
@@ -200,6 +212,10 @@ void ControllerManager::emitHomeAction(Device *device)
 {
     if (!deviceAllowed(device)) {
         return;
+    }
+
+    if (device->getDeviceType() == DeviceGamepad) {
+        restartGamepadInputTimer();
     }
 
     emitHomeAction();
@@ -473,6 +489,19 @@ void ControllerManager::releasePressedInput(DeviceType type)
             releasePressedInput(device);
         }
     }
+}
+
+qint64 ControllerManager::msSinceLastGamepadInput() const
+{
+    if (!m_lastGamepadInputTimer.isValid()) {
+        return std::numeric_limits<qint64>::max();
+    }
+    return m_lastGamepadInputTimer.elapsed();
+}
+
+void ControllerManager::restartGamepadInputTimer()
+{
+    m_lastGamepadInputTimer.start();
 }
 
 #include "moc_controllermanager.cpp"

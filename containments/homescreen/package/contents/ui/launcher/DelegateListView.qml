@@ -135,6 +135,7 @@ FocusScope {
         Keys.onLeftPressed: (event) => {
             if (currentIndex > 0) {
                 Bigscreen.NavigationSoundEffects.playMovingSound();
+                Bigscreen.NavigationRumble.playNavigationRumble();
                 currentIndex = Math.max(0, currentIndex - 1);
                 event.accepted = true;
             } else {
@@ -145,6 +146,7 @@ FocusScope {
         Keys.onRightPressed: (event) => {
             if (currentIndex < count - 1) {
                 Bigscreen.NavigationSoundEffects.playMovingSound();
+                Bigscreen.NavigationRumble.playNavigationRumble();
                 currentIndex = Math.min(count - 1, currentIndex + 1);
                 event.accepted = true;
             } else {
@@ -155,12 +157,14 @@ FocusScope {
         Keys.onDownPressed: {
             if (!root.navigationDown) return;
             Bigscreen.NavigationSoundEffects.playMovingSound();
+            Bigscreen.NavigationRumble.playNavigationRumble();
             root.navigationDown.forceActiveFocus();
         }
 
         Keys.onUpPressed: {
             if (!root.navigationUp) return;
             Bigscreen.NavigationSoundEffects.playMovingSound();
+            Bigscreen.NavigationRumble.playNavigationRumble();
             root.navigationUp.forceActiveFocus();
         }
     }

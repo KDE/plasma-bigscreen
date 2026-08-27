@@ -37,11 +37,13 @@ Window {
     }
 
     function showOverlay() {
+        Bigscreen.NavigationRumble.playConfirmRumble();
         showMaximized();
     }
 
     function hideOverlay() {
         tasksView.visible = false;
+        Bigscreen.NavigationRumble.playCancelRumble();
         sidebar.close();
     }
 

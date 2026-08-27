@@ -150,12 +150,14 @@ void SdlController::poll()
         case SDL_EVENT_GAMEPAD_BUTTON_DOWN:
         case SDL_EVENT_GAMEPAD_BUTTON_UP:
             if (m_devices.contains(event.gbutton.which)) {
+                m_lastActiveInstanceId = event.gbutton.which;
                 m_devices.value(event.gbutton.which)->processButtonEvent(event.gbutton);
             }
             break;
 
         case SDL_EVENT_GAMEPAD_AXIS_MOTION:
             if (m_devices.contains(event.gaxis.which)) {
+                m_lastActiveInstanceId = event.gbutton.which;
                 m_devices.value(event.gaxis.which)->processAxisEvent(event.gaxis);
             }
             break;
@@ -283,6 +285,10 @@ void SdlController::removeDevice(SDL_JoystickID instanceId)
     delete device;
 
     Q_EMIT controllerRemoved(deviceName);
+
+    if (m_lastActiveInstanceId == instanceId) {
+        m_lastActiveInstanceId = -1;
+    }
 
     // Switch to slower polling if no devices
     if (m_devices.isEmpty()) {
@@ -442,6 +448,31 @@ void SdlDevice::processButtonEvent(const SDL_GamepadButtonEvent &event)
             setKey(key, pressed);
         }
     }
+}
+
+bool SdlController::sendRumble(uint16_t lowFreq, uint16_t highFreq, uint32_t durationMs)
+{
+    if (m_suppressInput) {
+        return false;
+    }
+
+    if (!ControllerManager::instance().gameControllerEnabled()) {
+        return false;
+    }
+
+    if (ControllerManager::instance().msSinceLastGamepadInput() > 3000) {
+        return false;
+    }
+
+    SdlDevice *device = m_devices.value(m_lastActiveInstanceId, nullptr);
+
+    if (!device && m_devices.size() == 1) {
+        device = m_devices.first();
+    }
+    if (!device || !device->gamepad()) {
+        return false;
+    }
+    return SDL_RumbleGamepad(device->gamepad(), lowFreq, highFreq, durationMs);
 }
 
 void SdlDevice::processAxisEvent(const SDL_GamepadAxisEvent &event)

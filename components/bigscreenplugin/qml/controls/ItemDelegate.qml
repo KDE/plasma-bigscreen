@@ -58,6 +58,7 @@ T.ItemDelegate {
     onActiveFocusChanged: {
         if (activeFocus) {
             Bigscreen.NavigationSoundEffects.playMovingSound();
+            Bigscreen.NavigationRumble.playNavigationRumble();            
         }
     }
 }

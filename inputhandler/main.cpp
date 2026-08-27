@@ -5,6 +5,7 @@
  */
 
 #include "inputhandlerdbus.h"
+#include <QtQml/qqml.h>
 
 #ifdef HAS_LIBCEC
 #include "libcec/ceccontroller.h"

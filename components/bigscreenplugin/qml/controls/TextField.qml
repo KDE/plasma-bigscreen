@@ -28,6 +28,7 @@ QQC2.TextField {
     onActiveFocusChanged: {
         if (activeFocus) {
             Bigscreen.NavigationSoundEffects.playMovingSound();
+            Bigscreen.NavigationRumble.playNavigationRumble();
         }
     }
 }
