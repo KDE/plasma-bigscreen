@@ -38,6 +38,7 @@ QQC2.Dialog {
     background: PopupBackground {}
 
     header: QQC2.Control {
+        visible: contentItem.text.length > 0
         topPadding: Kirigami.Units.gridUnit
         bottomPadding: Kirigami.Units.gridUnit
         leftPadding: Kirigami.Units.gridUnit
