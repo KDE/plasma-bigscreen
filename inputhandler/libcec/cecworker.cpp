@@ -70,7 +70,7 @@ void CECWorker::discoverDevices()
 
     for (int8_t i = 0; i < count; i++) {
         QString comName = QString::fromLatin1(devices[i].strComName);
-        QString comPath = QString::fromLatin1(devices[i].strComPath);
+        QString comPath = QFile::decodeName(devices[i].strComPath);
         qDebug() << "CECWorker: Found adapter" << i << "- com name:" << comName << "- com path:" << comPath;
 
         // Actually open the adapter so we receive CEC events
