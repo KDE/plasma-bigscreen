@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2025-08-14 15:01+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -72,7 +72,7 @@ msgstr "Netwerk"
 msgid "Refresh"
 msgstr "Vernieuwen"
 
-#: ui/main.qml:114
+#: ui/main.qml:115
 #, kde-format
 msgid "Connections"
 msgstr "Verbindingen"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-25 00:47+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2026-08-21 17:56+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -24,57 +24,57 @@ msgstr ""
 msgid "Edit Home Screen"
 msgstr "Редактиране на началния екран"
 
-#: contents/ui/FavoritesManager.qml:141
+#: contents/ui/FavoritesManager.qml:144
 #: contents/ui/launcher/LauncherHome.qml:84
 #, kde-format
 msgid "Favorites"
 msgstr "Предпочитани"
 
-#: contents/ui/FavoritesManager.qml:141 contents/ui/FavoritesManager.qml:281
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:294
 #, kde-format
 msgid "Launcher Sections"
 msgstr "Секции на стартовото меню"
 
-#: contents/ui/FavoritesManager.qml:213
+#: contents/ui/FavoritesManager.qml:224
 #, kde-format
 msgid "Add Favorites"
 msgstr "Добавяне в Предпочитани"
 
-#: contents/ui/FavoritesManager.qml:252
+#: contents/ui/FavoritesManager.qml:264
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Премахване от Предпочитани"
 
-#: contents/ui/FavoritesManager.qml:295
+#: contents/ui/FavoritesManager.qml:308
 #, kde-format
 msgid "Show Recent"
 msgstr "Показване на Скорошни"
 
-#: contents/ui/FavoritesManager.qml:296
+#: contents/ui/FavoritesManager.qml:309
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
 msgstr ""
 "Наскоро стартираните приложения се се подреждат в хоризонтален ред на "
 "началния екран"
 
-#: contents/ui/FavoritesManager.qml:311
+#: contents/ui/FavoritesManager.qml:324
 #, kde-format
 msgid "Show Applications"
 msgstr "Показване на приложенията"
 
-#: contents/ui/FavoritesManager.qml:312
+#: contents/ui/FavoritesManager.qml:325
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
 msgstr ""
 "Приложенията, които не са игри, се подреждат в хоризонтален ред на началния "
 "екран."
 
-#: contents/ui/FavoritesManager.qml:328
+#: contents/ui/FavoritesManager.qml:341
 #, kde-format
 msgid "Show Games"
 msgstr "Показване на игри"
 
-#: contents/ui/FavoritesManager.qml:329
+#: contents/ui/FavoritesManager.qml:342
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
 msgstr ""

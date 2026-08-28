@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-25 00:47+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2026-03-04 13:26+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -24,56 +24,56 @@ msgstr ""
 msgid "Edit Home Screen"
 msgstr "Închide Bigscreen"
 
-#: contents/ui/FavoritesManager.qml:141
+#: contents/ui/FavoritesManager.qml:144
 #: contents/ui/launcher/LauncherHome.qml:84
 #, kde-format
 msgid "Favorites"
 msgstr "Favorite"
 
-#: contents/ui/FavoritesManager.qml:141 contents/ui/FavoritesManager.qml:281
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:294
 #, kde-format
 msgid "Launcher Sections"
 msgstr ""
 
-#: contents/ui/FavoritesManager.qml:213
+#: contents/ui/FavoritesManager.qml:224
 #, kde-format
 msgid "Add Favorites"
 msgstr "Adaugă favorite"
 
-#: contents/ui/FavoritesManager.qml:252
+#: contents/ui/FavoritesManager.qml:264
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Elimină favorite"
 
-#: contents/ui/FavoritesManager.qml:295
+#: contents/ui/FavoritesManager.qml:308
 #, fuzzy, kde-format
 #| msgid "Recent"
 msgid "Show Recent"
 msgstr "Recente"
 
-#: contents/ui/FavoritesManager.qml:296
+#: contents/ui/FavoritesManager.qml:309
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
 msgstr ""
 
-#: contents/ui/FavoritesManager.qml:311
+#: contents/ui/FavoritesManager.qml:324
 #, fuzzy, kde-format
 #| msgid "Applications"
 msgid "Show Applications"
 msgstr "Aplicații"
 
-#: contents/ui/FavoritesManager.qml:312
+#: contents/ui/FavoritesManager.qml:325
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
 msgstr ""
 
-#: contents/ui/FavoritesManager.qml:328
+#: contents/ui/FavoritesManager.qml:341
 #, fuzzy, kde-format
 #| msgid "Games"
 msgid "Show Games"
 msgstr "Jocuri"
 
-#: contents/ui/FavoritesManager.qml:329
+#: contents/ui/FavoritesManager.qml:342
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
 msgstr ""

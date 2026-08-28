@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-25 00:47+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2026-07-01 15:54+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -155,46 +155,72 @@ msgstr ""
 
 #: ui/main.qml:123
 #, kde-format
+msgid "Off"
+msgstr ""
+
+#: ui/main.qml:124
+#, kde-format
+msgid "Weak"
+msgstr ""
+
+#: ui/main.qml:125
+#, kde-format
+msgid "Medium"
+msgstr ""
+
+#: ui/main.qml:126
+#, kde-format
+msgid "Strong"
+msgstr ""
+
+#: ui/main.qml:129
+#, fuzzy, kde-format
+#| msgid "Navigation sounds"
+msgid "Navigation rumble"
+msgstr "Sonos de navigation"
+
+#: ui/main.qml:157
+#, kde-format
 msgid "Power inhibition"
 msgstr "Inhibition de Potentia"
 
-#: ui/main.qml:124
+#: ui/main.qml:158
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
 msgstr "Preveni le systema ab automaticamente dormir"
 
-#: ui/main.qml:134
+#: ui/main.qml:168
 #, kde-format
 msgid "Adjust date and time"
 msgstr "Adjusta data e tempore"
 
-#: ui/main.qml:140
+#: ui/main.qml:174
 #, kde-format
 msgid "Shortcuts"
 msgstr "Vias breve"
 
-#: ui/main.qml:151
+#: ui/main.qml:185
 #, kde-format
 msgid "Open home overlay shortcut"
 msgstr "Aperi Via breve de superposition initial (Domo o Principal)"
 
-#: ui/main.qml:171
+#: ui/main.qml:205
 #, kde-format
 msgid "Open homescreen shortcut"
 msgstr "Aperi Via breve de schermo initial (Domo o Principal)"
 
-#: ui/main.qml:191
+#: ui/main.qml:225
 #, fuzzy, kde-format
 #| msgid "Open tasks shortcut"
 msgid "Open search shortcut"
 msgstr "Aperi Via breve de cargas "
 
-#: ui/main.qml:211
+#: ui/main.qml:245
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "Aperi Via breve de preferentias "
 
-#: ui/main.qml:230
+#: ui/main.qml:264
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "Aperi Via breve de cargas "

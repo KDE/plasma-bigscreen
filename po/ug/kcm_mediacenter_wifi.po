@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2026-07-22 17:19-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -73,7 +73,7 @@ msgstr "تور"
 msgid "Refresh"
 msgstr "يېڭىلا"
 
-#: ui/main.qml:114
+#: ui/main.qml:115
 #, kde-format
 msgid "Connections"
 msgstr "باغلىنىشلار"

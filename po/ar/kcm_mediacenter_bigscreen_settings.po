@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-25 00:47+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2026-06-21 20:22+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -152,46 +152,72 @@ msgstr "شغل صوتًا عند تغيير العنصر المحدد في تط�
 
 #: ui/main.qml:123
 #, kde-format
+msgid "Off"
+msgstr ""
+
+#: ui/main.qml:124
+#, kde-format
+msgid "Weak"
+msgstr ""
+
+#: ui/main.qml:125
+#, kde-format
+msgid "Medium"
+msgstr ""
+
+#: ui/main.qml:126
+#, kde-format
+msgid "Strong"
+msgstr ""
+
+#: ui/main.qml:129
+#, fuzzy, kde-format
+#| msgid "Navigation sounds"
+msgid "Navigation rumble"
+msgstr "أصوات التنقل"
+
+#: ui/main.qml:157
+#, kde-format
 msgid "Power inhibition"
 msgstr "تثبيط الطاقة"
 
-#: ui/main.qml:124
+#: ui/main.qml:158
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
 msgstr "امنع النظام من الدخول في وضع التعليق آليًا"
 
-#: ui/main.qml:134
+#: ui/main.qml:168
 #, kde-format
 msgid "Adjust date and time"
 msgstr "اضبط التّاريخ والوقت..."
 
-#: ui/main.qml:140
+#: ui/main.qml:174
 #, kde-format
 msgid "Shortcuts"
 msgstr "الاختصارات"
 
-#: ui/main.qml:151
+#: ui/main.qml:185
 #, kde-format
 msgid "Open home overlay shortcut"
 msgstr "اختصار لفتح نافذة ”الصفحة الرئيسة“"
 
-#: ui/main.qml:171
+#: ui/main.qml:205
 #, kde-format
 msgid "Open homescreen shortcut"
 msgstr "افتح اختصار الشاشة الرئيسة"
 
-#: ui/main.qml:191
+#: ui/main.qml:225
 #, fuzzy, kde-format
 #| msgid "Open tasks shortcut"
 msgid "Open search shortcut"
 msgstr "افتح اختصار المهام"
 
-#: ui/main.qml:211
+#: ui/main.qml:245
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "افتح اختصار الإعدادات"
 
-#: ui/main.qml:230
+#: ui/main.qml:264
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "افتح اختصار المهام"

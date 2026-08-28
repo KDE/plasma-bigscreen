@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-25 00:47+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2026-07-14 07:39-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -26,54 +26,54 @@ msgstr ""
 msgid "Edit Home Screen"
 msgstr "Editar Tela Inicial"
 
-#: contents/ui/FavoritesManager.qml:141
+#: contents/ui/FavoritesManager.qml:144
 #: contents/ui/launcher/LauncherHome.qml:84
 #, kde-format
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: contents/ui/FavoritesManager.qml:141 contents/ui/FavoritesManager.qml:281
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:294
 #, kde-format
 msgid "Launcher Sections"
 msgstr "Seções do lançador"
 
-#: contents/ui/FavoritesManager.qml:213
+#: contents/ui/FavoritesManager.qml:224
 #, kde-format
 msgid "Add Favorites"
 msgstr "Adicionar favoritos"
 
-#: contents/ui/FavoritesManager.qml:252
+#: contents/ui/FavoritesManager.qml:264
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Remover favoritos"
 
-#: contents/ui/FavoritesManager.qml:295
+#: contents/ui/FavoritesManager.qml:308
 #, kde-format
 msgid "Show Recent"
 msgstr "Mostrar recentes"
 
-#: contents/ui/FavoritesManager.qml:296
+#: contents/ui/FavoritesManager.qml:309
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
 msgstr ""
 "Aplicativos iniciados recentemente aparecem em uma linha na tela inicial"
 
-#: contents/ui/FavoritesManager.qml:311
+#: contents/ui/FavoritesManager.qml:324
 #, kde-format
 msgid "Show Applications"
 msgstr "Mostrar aplicativos"
 
-#: contents/ui/FavoritesManager.qml:312
+#: contents/ui/FavoritesManager.qml:325
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
 msgstr "Aplicativos que não são jogos aparecem em uma linha na tela inicial"
 
-#: contents/ui/FavoritesManager.qml:328
+#: contents/ui/FavoritesManager.qml:341
 #, kde-format
 msgid "Show Games"
 msgstr "Mostrar jogos"
 
-#: contents/ui/FavoritesManager.qml:329
+#: contents/ui/FavoritesManager.qml:342
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
 msgstr "Aplicativos da categoria Jogos aparecem em uma linha na tela inicial"

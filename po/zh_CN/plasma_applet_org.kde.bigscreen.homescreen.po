@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-25 00:47+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -23,53 +23,53 @@ msgstr ""
 msgid "Edit Home Screen"
 msgstr "编辑主屏幕"
 
-#: contents/ui/FavoritesManager.qml:141
+#: contents/ui/FavoritesManager.qml:144
 #: contents/ui/launcher/LauncherHome.qml:84
 #, kde-format
 msgid "Favorites"
 msgstr "收藏"
 
-#: contents/ui/FavoritesManager.qml:141 contents/ui/FavoritesManager.qml:281
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:294
 #, kde-format
 msgid "Launcher Sections"
 msgstr "启动器分区"
 
-#: contents/ui/FavoritesManager.qml:213
+#: contents/ui/FavoritesManager.qml:224
 #, kde-format
 msgid "Add Favorites"
 msgstr "添加收藏"
 
-#: contents/ui/FavoritesManager.qml:252
+#: contents/ui/FavoritesManager.qml:264
 #, kde-format
 msgid "Remove Favorites"
 msgstr "移除收藏"
 
-#: contents/ui/FavoritesManager.qml:295
+#: contents/ui/FavoritesManager.qml:308
 #, kde-format
 msgid "Show Recent"
 msgstr "显示最近应用"
 
-#: contents/ui/FavoritesManager.qml:296
+#: contents/ui/FavoritesManager.qml:309
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
 msgstr "在主屏幕的一行上显示最近启动的应用"
 
-#: contents/ui/FavoritesManager.qml:311
+#: contents/ui/FavoritesManager.qml:324
 #, kde-format
 msgid "Show Applications"
 msgstr "显示应用"
 
-#: contents/ui/FavoritesManager.qml:312
+#: contents/ui/FavoritesManager.qml:325
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
 msgstr "在主屏幕的一行上显示非游戏类应用"
 
-#: contents/ui/FavoritesManager.qml:328
+#: contents/ui/FavoritesManager.qml:341
 #, kde-format
 msgid "Show Games"
 msgstr "显示游戏"
 
-#: contents/ui/FavoritesManager.qml:329
+#: contents/ui/FavoritesManager.qml:342
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
 msgstr "在主屏幕的一行上显示游戏类应用"

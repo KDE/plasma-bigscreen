@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-25 00:47+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2026-08-25 11:06+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -154,45 +154,71 @@ msgstr "Přehrát zvuk při změně vybrané položky v systémových aplikacíc
 
 #: ui/main.qml:123
 #, kde-format
+msgid "Off"
+msgstr ""
+
+#: ui/main.qml:124
+#, kde-format
+msgid "Weak"
+msgstr ""
+
+#: ui/main.qml:125
+#, kde-format
+msgid "Medium"
+msgstr ""
+
+#: ui/main.qml:126
+#, kde-format
+msgid "Strong"
+msgstr ""
+
+#: ui/main.qml:129
+#, fuzzy, kde-format
+#| msgid "Navigation sounds"
+msgid "Navigation rumble"
+msgstr "Zvuky navigace"
+
+#: ui/main.qml:157
+#, kde-format
 msgid "Power inhibition"
 msgstr "Omezení výkonu"
 
-#: ui/main.qml:124
+#: ui/main.qml:158
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
 msgstr "Zabránit počítači v uspání"
 
-#: ui/main.qml:134
+#: ui/main.qml:168
 #, kde-format
 msgid "Adjust date and time"
 msgstr "Nastavení data a času"
 
-#: ui/main.qml:140
+#: ui/main.qml:174
 #, kde-format
 msgid "Shortcuts"
 msgstr "Zkratky"
 
-#: ui/main.qml:151
+#: ui/main.qml:185
 #, kde-format
 msgid "Open home overlay shortcut"
 msgstr "Zobrazit zástupce překryvného okna"
 
-#: ui/main.qml:171
+#: ui/main.qml:205
 #, kde-format
 msgid "Open homescreen shortcut"
 msgstr "Zkratka pro otevření domovské obrazovky"
 
-#: ui/main.qml:191
+#: ui/main.qml:225
 #, kde-format
 msgid "Open search shortcut"
 msgstr "Zkratka pro hledání"
 
-#: ui/main.qml:211
+#: ui/main.qml:245
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "Zkratka pro otevření nastavení"
 
-#: ui/main.qml:230
+#: ui/main.qml:264
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "Zkratka pro otevření úkolů"
