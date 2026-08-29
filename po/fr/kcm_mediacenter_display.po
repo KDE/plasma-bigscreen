@@ -1,10 +1,10 @@
-# SPDX-FileCopyrightText: 2024, 2025, 2026 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2024-2026 Xavier Besnard <xavier.besnard@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:50+0000\n"
-"PO-Revision-Date: 2026-04-20 11:10+0200\n"
+"PO-Revision-Date: 2026-08-27 19:13+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: ui/main.qml:22
 #, kde-format
@@ -40,17 +40,16 @@ msgid "Screen mode (Resolution & Refresh Rate)"
 msgstr "Mode d'écran (Résolution et fréquence de rafraîchissement)"
 
 #: ui/main.qml:141
-#, fuzzy, kde-format
-#| msgid "Display Configuration"
+#, kde-format
 msgid "Keep display configuration?"
-msgstr "Configuration d'affichage"
+msgstr "Conserver la configuration d'affichage ?"
 
 #: ui/main.qml:154
 #, kde-format
 msgid "Will revert to previous configuration in %1 second."
 msgid_plural "Will revert to previous configuration in %1 seconds."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Reviendra à la configuration précédente dans %1 seconde."
+msgstr[1] "Reviendra à la configuration précédente dans %1 secondes."
 
 #: ui/main.qml:164 ui/ScaleDialog.qml:21
 #, kde-format

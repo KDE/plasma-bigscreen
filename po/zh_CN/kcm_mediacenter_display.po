@@ -44,10 +44,9 @@ msgid "Screen mode (Resolution & Refresh Rate)"
 msgstr "屏幕模式 (分辨率和刷新率)"
 
 #: ui/main.qml:141
-#, fuzzy, kde-format
-#| msgid "Display Configuration"
+#, kde-format
 msgid "Keep display configuration?"
-msgstr "显示配置"
+msgstr ""
 
 #: ui/main.qml:154
 #, kde-format

@@ -171,10 +171,9 @@ msgid "Strong"
 msgstr ""
 
 #: ui/main.qml:129
-#, fuzzy, kde-format
-#| msgid "Navigation sounds"
+#, kde-format
 msgid "Navigation rumble"
-msgstr "导航声音"
+msgstr ""
 
 #: ui/main.qml:157
 #, kde-format
@@ -207,10 +206,9 @@ msgid "Open homescreen shortcut"
 msgstr "打开主屏幕快捷键"
 
 #: ui/main.qml:225
-#, fuzzy, kde-format
-#| msgid "Open tasks shortcut"
+#, kde-format
 msgid "Open search shortcut"
-msgstr "打开任务快捷键"
+msgstr ""
 
 #: ui/main.qml:245
 #, kde-format
