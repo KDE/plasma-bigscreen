@@ -2,13 +2,13 @@
 # Copyright (C) 2024-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2024, 2025, 2026 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
+# SPDX-FileCopyrightText: 2024-2026 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_display\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:50+0000\n"
-"PO-Revision-Date: 2026-05-01 13:43+0100\n"
+"PO-Revision-Date: 2026-08-29 17:27+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -44,17 +44,16 @@ msgid "Screen mode (Resolution & Refresh Rate)"
 msgstr "Modo de pantalla (Resolución y tasa de refresco)"
 
 #: ui/main.qml:141
-#, fuzzy, kde-format
-#| msgid "Display Configuration"
+#, kde-format
 msgid "Keep display configuration?"
-msgstr "Configuración de visualización"
+msgstr "¿Mantener configuración de visualización?"
 
 #: ui/main.qml:154
 #, kde-format
 msgid "Will revert to previous configuration in %1 second."
 msgid_plural "Will revert to previous configuration in %1 seconds."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Retornará a la configuración previa en %1 segundo."
+msgstr[1] "Retornará a la configuración previa en %1 segundos."
 
 #: ui/main.qml:164 ui/ScaleDialog.qml:21
 #, kde-format

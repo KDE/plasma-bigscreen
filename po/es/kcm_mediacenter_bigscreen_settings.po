@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 00:47+0000\n"
-"PO-Revision-Date: 2026-06-21 00:08+0100\n"
+"PO-Revision-Date: 2026-08-29 17:27+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -158,28 +158,27 @@ msgstr ""
 #: ui/main.qml:123
 #, kde-format
 msgid "Off"
-msgstr ""
+msgstr "Desactivado"
 
 #: ui/main.qml:124
 #, kde-format
 msgid "Weak"
-msgstr ""
+msgstr "Débil"
 
 #: ui/main.qml:125
 #, kde-format
 msgid "Medium"
-msgstr ""
+msgstr "Medio"
 
 #: ui/main.qml:126
 #, kde-format
 msgid "Strong"
-msgstr ""
+msgstr "Fuerte"
 
 #: ui/main.qml:129
-#, fuzzy, kde-format
-#| msgid "Navigation sounds"
+#, kde-format
 msgid "Navigation rumble"
-msgstr "Sonidos de navegación"
+msgstr "Ruido de navegación"
 
 #: ui/main.qml:157
 #, kde-format
@@ -212,10 +211,9 @@ msgid "Open homescreen shortcut"
 msgstr "Acceso rápido a la pantalla de inicio"
 
 #: ui/main.qml:225
-#, fuzzy, kde-format
-#| msgid "Open tasks shortcut"
+#, kde-format
 msgid "Open search shortcut"
-msgstr "Acceso rápido a tareas"
+msgstr "Acceso rápido de búsqueda"
 
 #: ui/main.qml:245
 #, kde-format
