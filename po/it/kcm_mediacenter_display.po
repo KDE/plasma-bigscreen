@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:50+0000\n"
-"PO-Revision-Date: 2026-04-19 17:06+0200\n"
+"PO-Revision-Date: 2026-08-26 15:17+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: ui/main.qml:22
 #, kde-format
@@ -43,17 +43,16 @@ msgid "Screen mode (Resolution & Refresh Rate)"
 msgstr "Modalità schermo (risoluzione e frequenza di aggiornamento)"
 
 #: ui/main.qml:141
-#, fuzzy, kde-format
-#| msgid "Display Configuration"
+#, kde-format
 msgid "Keep display configuration?"
-msgstr "Configurazione dello schermo"
+msgstr "Vuoi mantenere la configurazione dello schermo?"
 
 #: ui/main.qml:154
 #, kde-format
 msgid "Will revert to previous configuration in %1 second."
 msgid_plural "Will revert to previous configuration in %1 seconds."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "La configurazione precedente sarà ripristinata in %1 secondo."
+msgstr[1] "La configurazione precedente sarà ripristinata in %1 secondi."
 
 #: ui/main.qml:164 ui/ScaleDialog.qml:21
 #, kde-format
