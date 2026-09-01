@@ -21,6 +21,7 @@ Controls.Button {
     property bool selected
 
     width: settingsKCMMenu.width - settingsKCMMenu.leftMargin - settingsKCMMenu.rightMargin
+    height: Kirigami.Units.iconSizes.medium + Kirigami.Units.largeSpacing * 2
 
     leftPadding: Kirigami.Units.gridUnit * 2
     rightPadding: Kirigami.Units.gridUnit * 2
