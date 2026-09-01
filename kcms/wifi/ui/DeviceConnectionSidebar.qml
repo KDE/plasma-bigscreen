@@ -115,16 +115,7 @@ Bigscreen.SidebarOverlay {
     }
 
     header: Bigscreen.SidebarOverlayHeader {
-        iconSource: {
-            if (!model) return 'network-wired-activated';
-            switch(model.Type) {
-            case PlasmaNM.Enums.Wireless:
-                return itemSignalIcon(model.Signal)
-            case PlasmaNM.Enums.Wired:
-                return "network-wired-activated"
-            }
-        }
-
+        iconSource: model.ConnectionIcon
         title: model ? model.ItemUniqueName : ''
     }
 

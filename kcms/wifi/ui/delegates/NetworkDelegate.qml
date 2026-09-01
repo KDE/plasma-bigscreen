@@ -31,12 +31,7 @@ Bigscreen.ButtonDelegate {
     // itemTickSource: Qt.resolvedUrl("../images/green-tick-thick.svg")
     // itemTickOpacity: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0
 
-    icon.name: switch(model.Type) {
-        case PlasmaNM.Enums.Wireless:
-            return itemSignalIcon(model.Signal)
-        case PlasmaNM.Enums.Wired:
-            return "network-wired-activated"
-    }
+    icon.name: model.ConnectionIcon
 
     trailing: Kirigami.Icon {
         visible: model.ConnectionState == PlasmaNM.Enums.Activated
