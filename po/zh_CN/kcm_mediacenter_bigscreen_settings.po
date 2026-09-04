@@ -153,27 +153,27 @@ msgstr "在系统应用中，当所选项目发生变化时播放声音"
 #: ui/main.qml:123
 #, kde-format
 msgid "Off"
-msgstr ""
+msgstr "关闭"
 
 #: ui/main.qml:124
 #, kde-format
 msgid "Weak"
-msgstr ""
+msgstr "弱"
 
 #: ui/main.qml:125
 #, kde-format
 msgid "Medium"
-msgstr ""
+msgstr "中"
 
 #: ui/main.qml:126
 #, kde-format
 msgid "Strong"
-msgstr ""
+msgstr "强"
 
 #: ui/main.qml:129
 #, kde-format
 msgid "Navigation rumble"
-msgstr ""
+msgstr "导航震动"
 
 #: ui/main.qml:157
 #, kde-format
@@ -208,7 +208,7 @@ msgstr "打开主屏幕快捷键"
 #: ui/main.qml:225
 #, kde-format
 msgid "Open search shortcut"
-msgstr ""
+msgstr "打开搜索快捷键"
 
 #: ui/main.qml:245
 #, kde-format
