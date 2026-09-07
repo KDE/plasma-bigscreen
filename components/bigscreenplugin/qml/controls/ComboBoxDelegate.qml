@@ -18,6 +18,11 @@ ItemDelegate {
     signal activated(int index)
 
     /*!
+        \brief This signal is emitted when the dialog is opened.
+    */
+    signal dialogOpened
+
+    /*!
        \qmlproperty Label descriptionItem
        \brief This property allows for access to the description label item.
      */
@@ -202,7 +207,10 @@ ItemDelegate {
     Dialog {
         id: comboBoxDialog
         title: root.text
-        onOpened: contentItem.forceActiveFocus()
+        onOpened: {
+            contentItem.forceActiveFocus();
+            root.dialogOpened()
+        }
 
         // Use aboutToHide() instead of close() because closing take a certain duration (this could steal focus from another opening dialog)
         onAboutToHide: root.forceActiveFocus()
