@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-31 00:47+0000\n"
-"PO-Revision-Date: 2026-06-18 19:48+0200\n"
+"PO-Revision-Date: 2026-09-06 15:50+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: ui/DeviceConnectionSidebar.qml:37
 #, kde-format
@@ -127,12 +127,12 @@ msgstr "Bluetooth"
 #: ui/main.qml:67
 #, kde-format
 msgid "No Bluetooth adapters found"
-msgstr ""
+msgstr "Адаптеры Bluetooth не найдены."
 
 #: ui/main.qml:68
 #, kde-format
 msgid "Connect an external Bluetooth adapter"
-msgstr ""
+msgstr "Подключите внешний адаптер Bluetooth"
 
 #: ui/main.qml:81
 #, kde-format
