@@ -11,12 +11,17 @@ import org.kde.private.biglauncher
 import org.kde.bigscreen as Bigscreen
 import org.kde.bigscreen.controllerhandler as ControllerHandler
 import org.kde.plasma.workspace.keyboardlayout as Keyboards
+import org.kde.plasma.clock
 
 ColumnLayout {
     id: root
 
     property bool showTasksButton
     property bool closeControllerSuppressState
+
+    property string timeString
+    property string dateString
+    property var locale: Qt.locale()
 
     signal minimizeAllTasksRequested()
     signal searchRequested()
@@ -49,6 +54,46 @@ ColumnLayout {
     Kirigami.Theme.inherit: false
     Kirigami.Theme.colorSet: Kirigami.Theme.Button
 
+    Clock {
+        id: clock
+        trackSeconds: false
+    }
+
+    function updateClock ()
+    {
+        // Time only, locale-aware (24h vs am/pm, separators, etc.)
+        timeString = locale.toString(
+            clock.dateTime,
+            locale.timeFormat(Locale.ShortFormat)
+        )
+
+        // Date only, long form, fully translated
+        dateString = locale.toString(
+            clock.dateTime,
+            locale.dateFormat(Locale.LongFormat)
+        )
+    }
+
+    Component.onCompleted: updateClock();
+
+    // update clock when libclock ticks
+    Connections {
+        target: clock
+        function onDateTimeChanged() {
+            updateClock();
+        }
+    }
+
+    // update locale if needed
+    Connections {
+        target: Qt.application
+        function onLocaleChanged() {
+            locale = Qt.locale();
+            updateClock();
+        }
+    }
+
+
     QQC2.Control {
         id: headerControl
         topPadding: Kirigami.Units.gridUnit
@@ -67,18 +112,10 @@ ColumnLayout {
             bottomRightRadius: 0
         }
 
-        P5Support.DataSource {
-            id: timeSource
-            engine: "time"
-            connectedSources: ["Local"]
-            interval: 60000
-            intervalAlignment: P5Support.Types.AlignToMinute
-        }
-
         contentItem: ColumnLayout {
             QQC2.Label {
                 id: timeLabel
-                text: Qt.formatTime(timeSource.data["Local"]["DateTime"], "h:mm ap")
+                text: timeString
 
                 Layout.fillWidth: true
                 horizontalAlignment: Text.AlignHCenter
@@ -88,7 +125,7 @@ ColumnLayout {
 
             QQC2.Label {
                 id: dateLabel
-                text: Qt.formatDate(timeSource.data["Local"]["DateTime"], "MMMM d, yyyy")
+                text: dateString
 
                 Layout.fillWidth: true
                 horizontalAlignment: Text.AlignHCenter
