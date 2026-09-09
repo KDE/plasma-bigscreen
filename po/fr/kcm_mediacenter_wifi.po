@@ -67,7 +67,7 @@ msgstr "Réseau"
 #: ui/main.qml:103
 #, kde-format
 msgid "Refresh"
-msgstr "Rafraîchir"
+msgstr "Rafraichir"
 
 #: ui/main.qml:115
 #, kde-format

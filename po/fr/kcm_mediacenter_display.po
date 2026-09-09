@@ -37,7 +37,7 @@ msgstr "Activé"
 #: ui/main.qml:112
 #, kde-format
 msgid "Screen mode (Resolution & Refresh Rate)"
-msgstr "Mode d'écran (Résolution et fréquence de rafraîchissement)"
+msgstr "Mode d'écran (Résolution et fréquence de rafraichissement)"
 
 #: ui/main.qml:141
 #, kde-format
