@@ -6,7 +6,8 @@ kcmutils_add_qml_kcm(kcm_mediacenter_bluetooth SOURCES
     devicesproxymodel.cpp devicesproxymodel.h
 )
 
-target_link_libraries(kcm_mediacenter_bluetooth
+target_link_libraries(kcm_mediacenter_bluetooth PRIVATE
     KF6::KCMUtilsQuick
     KF6::BluezQt
+    Qt6::Qml
 )
