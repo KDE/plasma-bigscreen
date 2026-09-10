@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:50+0000\n"
-"PO-Revision-Date: 2026-08-21 19:26+0200\n"
+"PO-Revision-Date: 2026-09-09 16:33+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -43,17 +43,16 @@ msgid "Screen mode (Resolution & Refresh Rate)"
 msgstr "Екранен режим (разделителна способност и честота на опресняване)"
 
 #: ui/main.qml:141
-#, fuzzy, kde-format
-#| msgid "Display Configuration"
+#, kde-format
 msgid "Keep display configuration?"
-msgstr "Конфигурация на екрана"
+msgstr "Да се запази ли конфигурацията на екрана?"
 
 #: ui/main.qml:154
 #, kde-format
 msgid "Will revert to previous configuration in %1 second."
 msgid_plural "Will revert to previous configuration in %1 seconds."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Предишната конфигурация ще бъде възстановена след %1 секунда."
+msgstr[1] "Предишната конфигурация ще бъде възстановена след %1 секунди."
 
 #: ui/main.qml:164 ui/ScaleDialog.qml:21
 #, kde-format
