@@ -13,6 +13,7 @@
 #include "cecworker.h"
 
 #include <QDebug>
+#include <QDir>
 #include <QFile>
 
 #include <KConfigGroup>
@@ -119,7 +120,6 @@ CECController::CECController(QObject *parent)
     m_worker->moveToThread(m_workerThread);
 
     connect(m_worker, &CECWorker::initialized, this, &CECController::onWorkerInitialized);
-    connect(m_worker, &CECWorker::deviceDiscovered, this, &CECController::onDeviceDiscovered);
     connect(m_worker, &CECWorker::deviceOpened, this, &CECController::onDeviceOpened);
     connect(m_worker, &CECWorker::deviceOpenFailed, this, &CECController::onDeviceOpenFailed);
     connect(m_worker, &CECWorker::cecKeyPressed, this, &CECController::onCecKeyPressed);
@@ -165,23 +165,7 @@ void CECController::onWorkerInitialized(bool success)
     }
 }
 
-void CECController::onDeviceDiscovered(const QString &comName)
-{
-    qDebug() << "CECController: Device discovered at" << comName;
-
-    if (m_connectedDevices.contains(comName)) {
-        qDebug() << "CECController: Device" << comName << "already in connected devices set, skipping";
-        return;
-    }
-
-    if (ControllerManager::instance().isConnected(comName)) {
-        qDebug() << "CECController: Device" << comName << "already connected via ControllerManager, skipping";
-        m_connectedDevices.insert(comName);
-        return;
-    }
-}
-
-void CECController::onDeviceOpened(const QString &comName)
+void CECController::onDeviceOpened(const QString &comName, const QString &comPath)
 {
     qDebug() << "CECController: Adapter opened at" << comName;
 
@@ -201,7 +185,7 @@ void CECController::onDeviceOpened(const QString &comName)
         Q_EMIT controllerAdded(QStringLiteral("CEC Controller"));
     }
 
-    m_connectedDevices.insert(comName);
+    m_connectedDevices.insert(comName, comPath);
     m_adapterCount++;
     qDebug() << "CECController: Successfully registered device" << comName << "- total adapters:" << m_adapterCount;
 }
@@ -214,14 +198,15 @@ void CECController::onDeviceOpenFailed(const QString &comName, const QString &er
 void CECController::onDeviceRemoved(const QString &udi)
 {
     Q_UNUSED(udi);
-    // The pointer we get doesn't have the path. Instead, we iterate over
-    // the controllers we hold, and see if one vanished from the filesystem.
-    QMutableSetIterator<QString> it(m_connectedDevices);
+
+    // Search for connected devices with missing device path
+    QMutableHashIterator<QString, QString> it(m_connectedDevices);
     bool removed = false;
     while (it.hasNext()) {
-        const QString &comName = it.next();
-        if (!QFile::exists(comName)) {
-            qDebug() << "CECController: Adapter at" << comName << "removed";
+        it.next();
+        QString comPath = it.value();
+        if (QDir::isAbsolutePath(comPath) && !QFile::exists(comPath)) {
+            qDebug() << "CECController: Adapter at" << it.key() << "removed";
             it.remove();
             m_adapterCount--;
             removed = true;
