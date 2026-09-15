@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 00:47+0000\n"
-"PO-Revision-Date: 2022-01-07 14:57+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"PO-Revision-Date: 2026-09-14 20:10+0200\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -153,28 +153,27 @@ msgstr "Prehrať zvuk pri zmene vybranej položky v systémových aplikáciách"
 #: ui/main.qml:123
 #, kde-format
 msgid "Off"
-msgstr ""
+msgstr "Vypnuté"
 
 #: ui/main.qml:124
 #, kde-format
 msgid "Weak"
-msgstr ""
+msgstr "Slabá"
 
 #: ui/main.qml:125
 #, kde-format
 msgid "Medium"
-msgstr ""
+msgstr "Stredné"
 
 #: ui/main.qml:126
 #, kde-format
 msgid "Strong"
-msgstr ""
+msgstr "Silná"
 
 #: ui/main.qml:129
-#, fuzzy, kde-format
-#| msgid "Navigation sounds"
+#, kde-format
 msgid "Navigation rumble"
-msgstr "Navigačné zvuky"
+msgstr "Vibrácie pri navigácii"
 
 #: ui/main.qml:157
 #, kde-format
@@ -207,10 +206,9 @@ msgid "Open homescreen shortcut"
 msgstr "Skratka na otvorenie domovskej obrazovky"
 
 #: ui/main.qml:225
-#, fuzzy, kde-format
-#| msgid "Open tasks shortcut"
+#, kde-format
 msgid "Open search shortcut"
-msgstr "Otvoriť úlohy skratka"
+msgstr "Skratka na otvorenie hľadania"
 
 #: ui/main.qml:245
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 00:47+0000\n"
-"PO-Revision-Date: 2026-07-01 15:54+0200\n"
+"PO-Revision-Date: 2026-09-14 16:55+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -156,28 +156,27 @@ msgstr ""
 #: ui/main.qml:123
 #, kde-format
 msgid "Off"
-msgstr ""
+msgstr "De-Activate (Off)"
 
 #: ui/main.qml:124
 #, kde-format
 msgid "Weak"
-msgstr ""
+msgstr "Debile"
 
 #: ui/main.qml:125
 #, kde-format
 msgid "Medium"
-msgstr ""
+msgstr "Medie"
 
 #: ui/main.qml:126
 #, kde-format
 msgid "Strong"
-msgstr ""
+msgstr "Forte"
 
 #: ui/main.qml:129
-#, fuzzy, kde-format
-#| msgid "Navigation sounds"
+#, kde-format
 msgid "Navigation rumble"
-msgstr "Sonos de navigation"
+msgstr "Strepito de navigation"
 
 #: ui/main.qml:157
 #, kde-format
@@ -210,10 +209,9 @@ msgid "Open homescreen shortcut"
 msgstr "Aperi Via breve de schermo initial (Domo o Principal)"
 
 #: ui/main.qml:225
-#, fuzzy, kde-format
-#| msgid "Open tasks shortcut"
+#, kde-format
 msgid "Open search shortcut"
-msgstr "Aperi Via breve de cargas "
+msgstr "Aperi Via breve de cerca"
 
 #: ui/main.qml:245
 #, kde-format
