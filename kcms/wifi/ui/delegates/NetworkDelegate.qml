@@ -31,12 +31,7 @@ Bigscreen.ButtonDelegate {
     // itemTickSource: Qt.resolvedUrl("../images/green-tick-thick.svg")
     // itemTickOpacity: model.ConnectionState == PlasmaNM.Enums.Activated ? 1 : 0
 
-    icon.name: switch(model.Type) {
-        case PlasmaNM.Enums.Wireless:
-            return itemSignalIcon(model.Signal)
-        case PlasmaNM.Enums.Wired:
-            return "network-wired-activated"
-    }
+    icon.name: model.ConnectionIcon
 
     trailing: Kirigami.Icon {
         visible: model.ConnectionState == PlasmaNM.Enums.Activated
@@ -63,22 +58,6 @@ Bigscreen.ButtonDelegate {
             return result
         } else if (model.ConnectionState == PlasmaNM.Enums.Activated) {
             return i18n("Connected")
-        }
-    }
-
-    function itemSignalIcon(signalState) {
-        if (signalState <= 20){
-            return model.SecurityType > PlasmaNM.Enums.NoneSecurity ? "network-wireless-20-locked" : "network-wireless-20"
-        } else if (signalState <= 40){
-            return model.SecurityType > PlasmaNM.Enums.NoneSecurity ? "network-wireless-40-locked" : "network-wireless-40"
-        } else if (signalState <= 60){
-            return model.SecurityType > PlasmaNM.Enums.NoneSecurity ? "network-wireless-60-locked" : "network-wireless-60"
-        } else if (signalState <= 80){
-            return model.SecurityType > PlasmaNM.Enums.NoneSecurity ? "network-wireless-80-locked" : "network-wireless-80"
-        } else if (signalState <= 100){
-            return model.SecurityType > PlasmaNM.Enums.NoneSecurity ? "network-wireless-100-locked" : "network-wireless-100"
-        } else {
-            return "network-wireless-connected-00"
         }
     }
 }
