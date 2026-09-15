@@ -46,8 +46,7 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     void initialized(bool success);
-    void deviceDiscovered(const QString &comName);
-    void deviceOpened(const QString &comName);
+    void deviceOpened(const QString &comName, const QString &comPath);
     void deviceOpenFailed(const QString &comName, const QString &error);
 
     // CEC events from callbacks

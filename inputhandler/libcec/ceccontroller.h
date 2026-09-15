@@ -63,8 +63,7 @@ Q_SIGNALS:
 
 private Q_SLOTS:
     void onWorkerInitialized(bool success);
-    void onDeviceDiscovered(const QString &comName);
-    void onDeviceOpened(const QString &comName);
+    void onDeviceOpened(const QString &comName, const QString &comPath);
     void onDeviceOpenFailed(const QString &comName, const QString &error);
     void onHotplugTimeout();
     void onDeviceRemoved(const QString &udi);
@@ -79,7 +78,7 @@ private:
 
     QHash<int, int> m_keyMap;
     QSet<int> m_homeActionKeys;
-    QSet<QString> m_connectedDevices;
+    QHash<QString, QString> m_connectedDevices;
     Device *m_device = nullptr;
     int m_adapterCount = 0;
     int m_lastHandledKeycode = -1;

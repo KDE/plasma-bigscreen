@@ -9,6 +9,7 @@
 #include "cecworker.h"
 
 #include <QDebug>
+#include <QFile>
 
 #include <iostream>
 #include <libcec/cec.h>
@@ -70,8 +71,8 @@ void CECWorker::discoverDevices()
 
     for (int8_t i = 0; i < count; i++) {
         QString comName = QString::fromLatin1(devices[i].strComName);
-        qDebug() << "CECWorker: Found adapter" << i << "at" << comName;
-        Q_EMIT deviceDiscovered(comName);
+        QString comPath = QFile::decodeName(devices[i].strComPath);
+        qDebug() << "CECWorker: Found adapter" << i << "- com name:" << comName << "- com path:" << comPath;
 
         // Actually open the adapter so we receive CEC events
         if (!m_cecAdapter->Open(devices[i].strComName)) {
@@ -80,7 +81,7 @@ void CECWorker::discoverDevices()
             Q_EMIT deviceOpenFailed(comName, QStringLiteral("Failed to open adapter - check device permissions"));
         } else {
             qDebug() << "CECWorker: Successfully opened CEC adapter at" << comName;
-            Q_EMIT deviceOpened(comName);
+            Q_EMIT deviceOpened(comName, comPath);
             // Only open the first adapter
             break;
         }
