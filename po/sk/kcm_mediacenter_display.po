@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kcm_mediacenter_display\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:50+0000\n"
-"PO-Revision-Date: 2024-11-11 17:57+0100\n"
+"PO-Revision-Date: 2026-09-14 20:10+0200\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
@@ -41,18 +41,17 @@ msgid "Screen mode (Resolution & Refresh Rate)"
 msgstr "Režim obrazovky (rozlíšenie a obnovovacia frekvencia)"
 
 #: ui/main.qml:141
-#, fuzzy, kde-format
-#| msgid "Display Configuration"
+#, kde-format
 msgid "Keep display configuration?"
-msgstr "Nastavenie obrazovky"
+msgstr "Ponechať nastavenia obrazovky?"
 
 #: ui/main.qml:154
 #, kde-format
 msgid "Will revert to previous configuration in %1 second."
 msgid_plural "Will revert to previous configuration in %1 seconds."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Vráti predchádzajúcu konfiguráciu za %1 sekundu."
+msgstr[1] "Vráti predchádzajúcu konfiguráciu za %1 sekundy."
+msgstr[2] "Vráti predchádzajúcu konfiguráciu za %1 sekúnd."
 
 #: ui/main.qml:164 ui/ScaleDialog.qml:21
 #, kde-format
