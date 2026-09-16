@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:47+0000\n"
+"POT-Creation-Date: 2026-09-16 00:47+0000\n"
 "PO-Revision-Date: 2026-07-22 17:19-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Generator: Poedit 3.9\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ui/delegates/NetworkDelegate.qml:65 ui/DeviceConnectionSidebar.qml:72
+#: ui/delegates/NetworkDelegate.qml:60 ui/DeviceConnectionSidebar.qml:72
 #, kde-format
 msgid "Connected"
 msgstr "باغلاندى"
@@ -28,37 +28,37 @@ msgstr "باغلاندى"
 msgid "IP Address Details"
 msgstr "IP ئادرېس تەپسىلاتى"
 
-#: ui/DeviceConnectionSidebar.qml:138
+#: ui/DeviceConnectionSidebar.qml:113
 #, kde-format
 msgid "Network information"
 msgstr "تور ئۇچۇرى"
 
-#: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
+#: ui/DeviceConnectionSidebar.qml:124 ui/PasswordDialog.qml:54
 #, kde-format
 msgid "Connect"
 msgstr "باغلان"
 
-#: ui/DeviceConnectionSidebar.qml:149
+#: ui/DeviceConnectionSidebar.qml:124
 #, kde-format
 msgid "Disconnect"
 msgstr "ئۈز"
 
-#: ui/DeviceConnectionSidebar.qml:180
+#: ui/DeviceConnectionSidebar.qml:155
 #, kde-format
 msgid "Forget network"
 msgstr "تورنى ئۇنتۇ"
 
-#: ui/DeviceConnectionSidebar.qml:190
+#: ui/DeviceConnectionSidebar.qml:165
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
 msgstr "بۇ %1 تورنى راستتىنلا ئۇنتۇمدۇ؟"
 
-#: ui/DeviceConnectionSidebar.qml:213
+#: ui/DeviceConnectionSidebar.qml:188
 #, kde-format
 msgid "Network details"
 msgstr "تور تەپسىلاتى"
 
-#: ui/DeviceConnectionSidebar.qml:242
+#: ui/DeviceConnectionSidebar.qml:217
 #, kde-format
 msgid "Speed"
 msgstr "سۈرئىتى"

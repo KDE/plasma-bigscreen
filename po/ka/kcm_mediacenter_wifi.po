@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:47+0000\n"
+"POT-Creation-Date: 2026-09-16 00:47+0000\n"
 "PO-Revision-Date: 2025-08-13 06:22+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.6\n"
 
-#: ui/delegates/NetworkDelegate.qml:65 ui/DeviceConnectionSidebar.qml:72
+#: ui/delegates/NetworkDelegate.qml:60 ui/DeviceConnectionSidebar.qml:72
 #, kde-format
 msgid "Connected"
 msgstr "დაკავშირებულია"
@@ -28,37 +28,37 @@ msgstr "დაკავშირებულია"
 msgid "IP Address Details"
 msgstr "IP მისამართის დეტალები"
 
-#: ui/DeviceConnectionSidebar.qml:138
+#: ui/DeviceConnectionSidebar.qml:113
 #, kde-format
 msgid "Network information"
 msgstr "ქსელის ინფორმაცია"
 
-#: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
+#: ui/DeviceConnectionSidebar.qml:124 ui/PasswordDialog.qml:54
 #, kde-format
 msgid "Connect"
 msgstr "მიერთება"
 
-#: ui/DeviceConnectionSidebar.qml:149
+#: ui/DeviceConnectionSidebar.qml:124
 #, kde-format
 msgid "Disconnect"
 msgstr "გათიშვა"
 
-#: ui/DeviceConnectionSidebar.qml:180
+#: ui/DeviceConnectionSidebar.qml:155
 #, kde-format
 msgid "Forget network"
 msgstr "ქსელის დავიწყება"
 
-#: ui/DeviceConnectionSidebar.qml:190
+#: ui/DeviceConnectionSidebar.qml:165
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
 msgstr "დარწმუნებული ხართ, რომ გსურთ დაივიწყოთ ქსელი \"%1\"?"
 
-#: ui/DeviceConnectionSidebar.qml:213
+#: ui/DeviceConnectionSidebar.qml:188
 #, kde-format
 msgid "Network details"
 msgstr "ქსელის დეტალები"
 
-#: ui/DeviceConnectionSidebar.qml:242
+#: ui/DeviceConnectionSidebar.qml:217
 #, kde-format
 msgid "Speed"
 msgstr "სიჩქარე"

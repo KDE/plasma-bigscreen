@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:47+0000\n"
+"POT-Creation-Date: 2026-09-16 00:47+0000\n"
 "PO-Revision-Date: 2021-03-10 00:48+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ui/delegates/NetworkDelegate.qml:65 ui/DeviceConnectionSidebar.qml:72
+#: ui/delegates/NetworkDelegate.qml:60 ui/DeviceConnectionSidebar.qml:72
 #, kde-format
 msgid "Connected"
 msgstr "Terkoneksi"
@@ -26,37 +26,37 @@ msgstr "Terkoneksi"
 msgid "IP Address Details"
 msgstr ""
 
-#: ui/DeviceConnectionSidebar.qml:138
+#: ui/DeviceConnectionSidebar.qml:113
 #, kde-format
 msgid "Network information"
 msgstr ""
 
-#: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
+#: ui/DeviceConnectionSidebar.qml:124 ui/PasswordDialog.qml:54
 #, kde-format
 msgid "Connect"
 msgstr "Koneksikan"
 
-#: ui/DeviceConnectionSidebar.qml:149
+#: ui/DeviceConnectionSidebar.qml:124
 #, kde-format
 msgid "Disconnect"
 msgstr ""
 
-#: ui/DeviceConnectionSidebar.qml:180
+#: ui/DeviceConnectionSidebar.qml:155
 #, kde-format
 msgid "Forget network"
 msgstr ""
 
-#: ui/DeviceConnectionSidebar.qml:190
+#: ui/DeviceConnectionSidebar.qml:165
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
 msgstr "Apakah kamu yakin ingin melupakan jaringan %1?"
 
-#: ui/DeviceConnectionSidebar.qml:213
+#: ui/DeviceConnectionSidebar.qml:188
 #, kde-format
 msgid "Network details"
 msgstr ""
 
-#: ui/DeviceConnectionSidebar.qml:242
+#: ui/DeviceConnectionSidebar.qml:217
 #, kde-format
 msgid "Speed"
 msgstr "Kecepatan"

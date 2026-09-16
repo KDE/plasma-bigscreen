@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:47+0000\n"
+"POT-Creation-Date: 2026-09-16 00:47+0000\n"
 "PO-Revision-Date: 2025-10-12 12:53+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 24.12.3\n"
 
-#: ui/delegates/NetworkDelegate.qml:65 ui/DeviceConnectionSidebar.qml:72
+#: ui/delegates/NetworkDelegate.qml:60 ui/DeviceConnectionSidebar.qml:72
 #, kde-format
 msgid "Connected"
 msgstr "연결됨"
@@ -27,37 +27,37 @@ msgstr "연결됨"
 msgid "IP Address Details"
 msgstr "IP 주소 정보"
 
-#: ui/DeviceConnectionSidebar.qml:138
+#: ui/DeviceConnectionSidebar.qml:113
 #, kde-format
 msgid "Network information"
 msgstr "네트워크 정보"
 
-#: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
+#: ui/DeviceConnectionSidebar.qml:124 ui/PasswordDialog.qml:54
 #, kde-format
 msgid "Connect"
 msgstr "연결"
 
-#: ui/DeviceConnectionSidebar.qml:149
+#: ui/DeviceConnectionSidebar.qml:124
 #, kde-format
 msgid "Disconnect"
 msgstr "연결 끊기"
 
-#: ui/DeviceConnectionSidebar.qml:180
+#: ui/DeviceConnectionSidebar.qml:155
 #, kde-format
 msgid "Forget network"
 msgstr "네트워크 삭제"
 
-#: ui/DeviceConnectionSidebar.qml:190
+#: ui/DeviceConnectionSidebar.qml:165
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
 msgstr "%1 네트워크를 삭제하시겠습니까?"
 
-#: ui/DeviceConnectionSidebar.qml:213
+#: ui/DeviceConnectionSidebar.qml:188
 #, kde-format
 msgid "Network details"
 msgstr "네트워크 자세한 정보"
 
-#: ui/DeviceConnectionSidebar.qml:242
+#: ui/DeviceConnectionSidebar.qml:217
 #, kde-format
 msgid "Speed"
 msgstr "속도"

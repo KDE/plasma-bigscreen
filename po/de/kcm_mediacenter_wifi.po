@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_wifi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:47+0000\n"
+"POT-Creation-Date: 2026-09-16 00:47+0000\n"
 "PO-Revision-Date: 2026-01-28 17:03+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.12.1\n"
 
-#: ui/delegates/NetworkDelegate.qml:65 ui/DeviceConnectionSidebar.qml:72
+#: ui/delegates/NetworkDelegate.qml:60 ui/DeviceConnectionSidebar.qml:72
 #, kde-format
 msgid "Connected"
 msgstr "Verbunden"
@@ -28,37 +28,37 @@ msgstr "Verbunden"
 msgid "IP Address Details"
 msgstr "Details zur IP-Adresse"
 
-#: ui/DeviceConnectionSidebar.qml:138
+#: ui/DeviceConnectionSidebar.qml:113
 #, kde-format
 msgid "Network information"
 msgstr "Netzwerkinformationen"
 
-#: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
+#: ui/DeviceConnectionSidebar.qml:124 ui/PasswordDialog.qml:54
 #, kde-format
 msgid "Connect"
 msgstr "Verbinden"
 
-#: ui/DeviceConnectionSidebar.qml:149
+#: ui/DeviceConnectionSidebar.qml:124
 #, kde-format
 msgid "Disconnect"
 msgstr "Verbindung trennen"
 
-#: ui/DeviceConnectionSidebar.qml:180
+#: ui/DeviceConnectionSidebar.qml:155
 #, kde-format
 msgid "Forget network"
 msgstr "Netzwerk vergessen"
 
-#: ui/DeviceConnectionSidebar.qml:190
+#: ui/DeviceConnectionSidebar.qml:165
 #, kde-format
 msgid "Are you sure you want to forget the network %1?"
 msgstr "Möchten Sie das Netzwerk „%1“ wirklich vergessen?"
 
-#: ui/DeviceConnectionSidebar.qml:213
+#: ui/DeviceConnectionSidebar.qml:188
 #, kde-format
 msgid "Network details"
 msgstr "Netzwerkdetails"
 
-#: ui/DeviceConnectionSidebar.qml:242
+#: ui/DeviceConnectionSidebar.qml:217
 #, kde-format
 msgid "Speed"
 msgstr "Geschwindigkeit"
