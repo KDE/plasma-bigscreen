@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 00:47+0000\n"
-"PO-Revision-Date: 2026-07-22 01:45+0900\n"
+"PO-Revision-Date: 2026-09-15 16:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -157,28 +157,27 @@ msgstr "系統應用程式中變更目前所選項目時播放音效"
 #: ui/main.qml:123
 #, kde-format
 msgid "Off"
-msgstr ""
+msgstr "關"
 
 #: ui/main.qml:124
 #, kde-format
 msgid "Weak"
-msgstr ""
+msgstr "弱"
 
 #: ui/main.qml:125
 #, kde-format
 msgid "Medium"
-msgstr ""
+msgstr "中"
 
 #: ui/main.qml:126
 #, kde-format
 msgid "Strong"
-msgstr ""
+msgstr "強"
 
 #: ui/main.qml:129
-#, fuzzy, kde-format
-#| msgid "Navigation sounds"
+#, kde-format
 msgid "Navigation rumble"
-msgstr "導覽音效"
+msgstr "導覽震動"
 
 #: ui/main.qml:157
 #, kde-format
@@ -211,10 +210,9 @@ msgid "Open homescreen shortcut"
 msgstr "開啟主畫面快捷鍵"
 
 #: ui/main.qml:225
-#, fuzzy, kde-format
-#| msgid "Open tasks shortcut"
+#, kde-format
 msgid "Open search shortcut"
-msgstr "開啟工作快捷鍵"
+msgstr "開啟搜尋快捷鍵"
 
 #: ui/main.qml:245
 #, kde-format
