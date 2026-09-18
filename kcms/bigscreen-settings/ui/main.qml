@@ -28,9 +28,12 @@ Bigscreen.ScrollablePage {
     rightPadding: Kirigami.Units.smallSpacing
     bottomPadding: Kirigami.Units.smallSpacing
 
+    property Item openOnFocusChanged: coloredTileDelegate
+
     onActiveFocusChanged: {
         if (activeFocus) {
-            coloredTileDelegate.forceActiveFocus();
+            openOnFocusChanged.forceActiveFocus();
+            openOnFocusChanged = coloredTileDelegate
         }
     }
 
@@ -84,7 +87,10 @@ Bigscreen.ScrollablePage {
             text: i18n("Color scheme")
             description: i18n("Set the system colors")
 
-            onClicked: colorSchemeSidebar.open();
+            onClicked: {
+                colorSchemeSidebar.open();
+                openOnFocusChanged = colorSchemeButton;
+            }
         }
 
         QQC2.Label {
@@ -146,6 +152,10 @@ Bigscreen.ScrollablePage {
             onActivated: {
                 BigscreenShell.Settings.navigationRumbleIntensity = currentIndex;
             }
+
+            onDialogOpened: {
+                openOnFocusChanged = gameControllerRumbleIntensity;
+            }
         }
 
 
@@ -167,7 +177,10 @@ Bigscreen.ScrollablePage {
             icon.name: "preferences-system-time"
             text: i18n("Adjust date and time")
 
-            onClicked: deviceTimeSettings.open()
+            onClicked: {
+                deviceTimeSettings.open();
+                openOnFocusChanged = timeDateDelegate;
+            }
         }
 
         QQC2.Label {
@@ -194,13 +207,14 @@ Bigscreen.ScrollablePage {
                 shortcutsPicker.getActionPath = getActionPath;
                 shortcutsPicker.setActionPath = setActionPath;
                 shortcutsPicker.resetActionPath = resetActionPath;
+                openOnFocusChanged = homeOverlayShortcut;
                 shortcutsPicker.open();
             }
         }
 
         Bigscreen.ButtonDelegate {
             id: homescreenShortcutDelegate
-            KeyNavigation.down: settingsShortcutDelegate
+            KeyNavigation.down: searchShortcutDelegate
             Layout.bottomMargin: Kirigami.Units.smallSpacing
             text: i18n("Open homescreen shortcut")
             icon.name: 'preferences-desktop-keyboard-symbolic'
@@ -214,13 +228,14 @@ Bigscreen.ScrollablePage {
                 shortcutsPicker.getActionPath = getActionPath;
                 shortcutsPicker.setActionPath = setActionPath;
                 shortcutsPicker.resetActionPath = resetActionPath;
+                openOnFocusChanged = homescreenShortcutDelegate;
                 shortcutsPicker.open();
             }
         }
 
         Bigscreen.ButtonDelegate {
             id: searchShortcutDelegate
-            KeyNavigation.down: tasksShortcutDelegate
+            KeyNavigation.down: settingsShortcutDelegate
             Layout.bottomMargin: Kirigami.Units.smallSpacing
             text: i18n("Open search shortcut")
             icon.name: 'preferences-desktop-keyboard-symbolic'
@@ -234,6 +249,7 @@ Bigscreen.ScrollablePage {
                 shortcutsPicker.getActionPath = getActionPath;
                 shortcutsPicker.setActionPath = setActionPath;
                 shortcutsPicker.resetActionPath = resetActionPath;
+                openOnFocusChanged = searchShortcutDelegate;
                 shortcutsPicker.open();
             }
         }
@@ -254,6 +270,7 @@ Bigscreen.ScrollablePage {
                 shortcutsPicker.getActionPath = getActionPath;
                 shortcutsPicker.setActionPath = setActionPath;
                 shortcutsPicker.resetActionPath = resetActionPath;
+                openOnFocusChanged = settingsShortcutDelegate;
                 shortcutsPicker.open();
             }
         }
@@ -273,23 +290,21 @@ Bigscreen.ScrollablePage {
                 shortcutsPicker.getActionPath = getActionPath;
                 shortcutsPicker.setActionPath = setActionPath;
                 shortcutsPicker.resetActionPath = resetActionPath;
+                openOnFocusChanged = tasksShortcutDelegate;
                 shortcutsPicker.open();
             }
         }
 
         ShortcutsPickerSidebar {
             id: shortcutsPicker
-            onClosed: settingsShortcutDelegate.forceActiveFocus()
         }
 
         DeviceTimeSettingsSidebar {
             id: deviceTimeSettings
-            onClosed: timeDateDelegate.forceActiveFocus()
         }
 
         ColorSchemeSidebar {
             id: colorSchemeSidebar
-            onClosed: colorSchemeButton.forceActiveFocus()
         }
     }
 }
