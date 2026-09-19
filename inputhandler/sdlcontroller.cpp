@@ -157,7 +157,7 @@ void SdlController::poll()
 
         case SDL_EVENT_GAMEPAD_AXIS_MOTION:
             if (m_devices.contains(event.gaxis.which)) {
-                m_lastActiveInstanceId = event.gbutton.which;
+                m_lastActiveInstanceId = event.gaxis.which;
                 m_devices.value(event.gaxis.which)->processAxisEvent(event.gaxis);
             }
             break;
