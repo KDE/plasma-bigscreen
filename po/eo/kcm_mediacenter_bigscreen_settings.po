@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:47+0000\n"
+"POT-Creation-Date: 2026-09-19 02:42+0000\n"
 "PO-Revision-Date: 2024-12-27 17:40+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "olivermkellogg@gmail.com"
 
-#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
+#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:87
 #, kde-format
 msgid "Color scheme"
 msgstr ""
@@ -96,137 +96,137 @@ msgstr "Via loka horzono estas %1"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: ui/main.qml:23 ui/main.qml:91
+#: ui/main.qml:23 ui/main.qml:97
 #, kde-format
 msgid "System"
 msgstr ""
 
-#: ui/main.qml:43
+#: ui/main.qml:46
 #, fuzzy, kde-format
 #| msgid "General Appearance"
 msgid "Homescreen Appearance"
 msgstr "Ĝenerala Apero"
 
-#: ui/main.qml:56
+#: ui/main.qml:59
 #, fuzzy, kde-format
 #| msgid "Colored Tiles"
 msgid "Colored tiles"
 msgstr "Koloritaj Kaheloj"
 
-#: ui/main.qml:57
+#: ui/main.qml:60
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr ""
 
-#: ui/main.qml:70
+#: ui/main.qml:73
 #, kde-format
 msgid "Wallpaper blur"
 msgstr ""
 
-#: ui/main.qml:71
+#: ui/main.qml:74
 #, kde-format
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr ""
 
-#: ui/main.qml:85
+#: ui/main.qml:88
 #, kde-format
 msgid "Set the system colors"
 msgstr ""
 
-#: ui/main.qml:102
+#: ui/main.qml:108
 #, kde-format
 msgid "Window decorations"
 msgstr ""
 
-#: ui/main.qml:103
+#: ui/main.qml:109
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
 msgstr ""
 
-#: ui/main.qml:112
+#: ui/main.qml:118
 #, kde-format
 msgid "Navigation sounds"
 msgstr ""
 
-#: ui/main.qml:113
+#: ui/main.qml:119
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
 msgstr ""
 
-#: ui/main.qml:123
+#: ui/main.qml:129
 #, kde-format
 msgid "Off"
 msgstr ""
 
-#: ui/main.qml:124
+#: ui/main.qml:130
 #, kde-format
 msgid "Weak"
 msgstr ""
 
-#: ui/main.qml:125
+#: ui/main.qml:131
 #, kde-format
 msgid "Medium"
 msgstr ""
 
-#: ui/main.qml:126
+#: ui/main.qml:132
 #, kde-format
 msgid "Strong"
 msgstr ""
 
-#: ui/main.qml:129
+#: ui/main.qml:135
 #, kde-format
 msgid "Navigation rumble"
 msgstr ""
 
-#: ui/main.qml:157
+#: ui/main.qml:167
 #, fuzzy, kde-format
 #| msgid "Power Inhibition"
 msgid "Power inhibition"
 msgstr "Inhibicio de Potenco"
 
-#: ui/main.qml:158
+#: ui/main.qml:168
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
 msgstr ""
 
-#: ui/main.qml:168
+#: ui/main.qml:178
 #, fuzzy, kde-format
 #| msgid "Adjust Date & Time"
 msgid "Adjust date and time"
 msgstr "Alĝustigi Daton & Horon"
 
-#: ui/main.qml:174
+#: ui/main.qml:187
 #, fuzzy, kde-format
 #| msgid "Bigscreen Shortcuts"
 msgid "Shortcuts"
 msgstr "Grandekranaj Ŝparvojoj"
 
-#: ui/main.qml:185
+#: ui/main.qml:198
 #, fuzzy, kde-format
 #| msgid "Bigscreen Display Homescreen Shortcut"
 msgid "Open home overlay shortcut"
 msgstr "Ŝparvojo de Grandekrana Komencbildo"
 
-#: ui/main.qml:205
+#: ui/main.qml:219
 #, fuzzy, kde-format
 #| msgid "Bigscreen Display Homescreen Shortcut"
 msgid "Open homescreen shortcut"
 msgstr "Ŝparvojo de Grandekrana Komencbildo"
 
-#: ui/main.qml:225
+#: ui/main.qml:240
 #, fuzzy, kde-format
 #| msgid "Bigscreen Tasks Shortcut"
 msgid "Open search shortcut"
 msgstr "Ŝparvojo de Grandekranaj Taskoj"
 
-#: ui/main.qml:245
+#: ui/main.qml:261
 #, fuzzy, kde-format
 #| msgid "Bigscreen Settings Shortcut"
 msgid "Open settings shortcut"
 msgstr "Grandekran-Agorda Ŝparvojo"
 
-#: ui/main.qml:264
+#: ui/main.qml:281
 #, fuzzy, kde-format
 #| msgid "Bigscreen Tasks Shortcut"
 msgid "Open tasks shortcut"

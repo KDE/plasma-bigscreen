@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:47+0000\n"
+"POT-Creation-Date: 2026-09-19 02:42+0000\n"
 "PO-Revision-Date: 2026-05-16 22:31+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ulysses@fsf.hu"
 
-#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
+#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:87
 #, kde-format
 msgid "Color scheme"
 msgstr ""
@@ -94,48 +94,48 @@ msgstr "A helyi időzóna: %1"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: ui/main.qml:23 ui/main.qml:91
+#: ui/main.qml:23 ui/main.qml:97
 #, kde-format
 msgid "System"
 msgstr "Rendszer"
 
-#: ui/main.qml:43
+#: ui/main.qml:46
 #, kde-format
 msgid "Homescreen Appearance"
 msgstr "Kezdőképernyő megjelenése"
 
-#: ui/main.qml:56
+#: ui/main.qml:59
 #, kde-format
 msgid "Colored tiles"
 msgstr "Színes csempék"
 
-#: ui/main.qml:57
+#: ui/main.qml:60
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "A csempe háttérszíne az alkalmazás ikonja alapján változik"
 
-#: ui/main.qml:70
+#: ui/main.qml:73
 #, kde-format
 msgid "Wallpaper blur"
 msgstr "Háttérkép elmosása"
 
-#: ui/main.qml:71
+#: ui/main.qml:74
 #, kde-format
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr "Elmosódás effektus alkalmazása a kezdőképernyő háttérképén"
 
-#: ui/main.qml:85
+#: ui/main.qml:88
 #, fuzzy, kde-format
 #| msgid "Set the system theme"
 msgid "Set the system colors"
 msgstr "A rendszer témájának beállítása"
 
-#: ui/main.qml:102
+#: ui/main.qml:108
 #, kde-format
 msgid "Window decorations"
 msgstr "Ablakdekorációk"
 
-#: ui/main.qml:103
+#: ui/main.qml:109
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
@@ -143,86 +143,86 @@ msgstr ""
 "Ablakkeret (minimalizálás, maximalizálás, bezárás) rajzolása azon "
 "alkalmazásokhoz, amik kérik"
 
-#: ui/main.qml:112
+#: ui/main.qml:118
 #, kde-format
 msgid "Navigation sounds"
 msgstr "Navigációs hangok"
 
-#: ui/main.qml:113
+#: ui/main.qml:119
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
 msgstr ""
 "Hangjelzés lejátszása, amikor a rendszeralkalmazásokban a kijelölt elem "
 "megváltozik"
 
-#: ui/main.qml:123
+#: ui/main.qml:129
 #, kde-format
 msgid "Off"
 msgstr ""
 
-#: ui/main.qml:124
+#: ui/main.qml:130
 #, kde-format
 msgid "Weak"
 msgstr ""
 
-#: ui/main.qml:125
+#: ui/main.qml:131
 #, kde-format
 msgid "Medium"
 msgstr ""
 
-#: ui/main.qml:126
+#: ui/main.qml:132
 #, kde-format
 msgid "Strong"
 msgstr ""
 
-#: ui/main.qml:129
+#: ui/main.qml:135
 #, fuzzy, kde-format
 #| msgid "Navigation sounds"
 msgid "Navigation rumble"
 msgstr "Navigációs hangok"
 
-#: ui/main.qml:157
+#: ui/main.qml:167
 #, kde-format
 msgid "Power inhibition"
 msgstr "Teljesítménykorlátozás"
 
-#: ui/main.qml:158
+#: ui/main.qml:168
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
 msgstr "A rendszer automatikus alvó üzemmódba váltásának megakadályozása"
 
-#: ui/main.qml:168
+#: ui/main.qml:178
 #, kde-format
 msgid "Adjust date and time"
 msgstr "Dátum és idő beállítása"
 
-#: ui/main.qml:174
+#: ui/main.qml:187
 #, kde-format
 msgid "Shortcuts"
 msgstr "Gyorsbillentyűk"
 
-#: ui/main.qml:185
+#: ui/main.qml:198
 #, kde-format
 msgid "Open home overlay shortcut"
 msgstr "Kezdőlap átfedés megnyitása gyorsbillentyű"
 
-#: ui/main.qml:205
+#: ui/main.qml:219
 #, kde-format
 msgid "Open homescreen shortcut"
 msgstr "Kezdőképernyő megnyitása gyorsbillentyű"
 
-#: ui/main.qml:225
+#: ui/main.qml:240
 #, fuzzy, kde-format
 #| msgid "Open tasks shortcut"
 msgid "Open search shortcut"
 msgstr "Feladatok megnyitása gyorsbillentyű"
 
-#: ui/main.qml:245
+#: ui/main.qml:261
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "Beállítások megnyitása gyorsbillentyű"
 
-#: ui/main.qml:264
+#: ui/main.qml:281
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "Feladatok megnyitása gyorsbillentyű"
