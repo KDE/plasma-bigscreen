@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:47+0000\n"
+"POT-Creation-Date: 2026-09-19 00:47+0000\n"
 "PO-Revision-Date: 2026-08-29 17:27+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "vrcordoba@gmail.com"
 
-#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
+#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:87
 #, kde-format
 msgid "Color scheme"
 msgstr "Esquema de color"
@@ -94,48 +94,48 @@ msgstr "Su zona horaria local es %1"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: ui/main.qml:23 ui/main.qml:91
+#: ui/main.qml:23 ui/main.qml:97
 #, kde-format
 msgid "System"
 msgstr "Sistema"
 
-#: ui/main.qml:43
+#: ui/main.qml:46
 #, kde-format
 msgid "Homescreen Appearance"
 msgstr "Apariencia de la pantalla de inicio"
 
-#: ui/main.qml:56
+#: ui/main.qml:59
 #, kde-format
 msgid "Colored tiles"
 msgstr "Mosaicos coloreados"
 
-#: ui/main.qml:57
+#: ui/main.qml:60
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "El mosaico del fondo tomará el color del icono de la aplicación"
 
-#: ui/main.qml:70
+#: ui/main.qml:73
 #, kde-format
 msgid "Wallpaper blur"
 msgstr "Difuminado del fondo de pantalla"
 
-#: ui/main.qml:71
+#: ui/main.qml:74
 #, kde-format
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr ""
 "Aplica un efecto de difuminado al fondo de pantalla  en la ventana de inicio"
 
-#: ui/main.qml:85
+#: ui/main.qml:88
 #, kde-format
 msgid "Set the system colors"
 msgstr "Establecer los colores del sistema"
 
-#: ui/main.qml:102
+#: ui/main.qml:108
 #, kde-format
 msgid "Window decorations"
 msgstr "Decoraciones de ventana"
 
-#: ui/main.qml:103
+#: ui/main.qml:109
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
@@ -143,84 +143,84 @@ msgstr ""
 "Desplegar un marco de ventana (minimizar, maximizar, cerrar), para "
 "aplicaciones que lo requieran"
 
-#: ui/main.qml:112
+#: ui/main.qml:118
 #, kde-format
 msgid "Navigation sounds"
 msgstr "Sonidos de navegación"
 
-#: ui/main.qml:113
+#: ui/main.qml:119
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
 msgstr ""
 "Reproducir un sonido cuando el elemento seleccionado cambia en las "
 "aplicaciones del sistema"
 
-#: ui/main.qml:123
+#: ui/main.qml:129
 #, kde-format
 msgid "Off"
 msgstr "Desactivado"
 
-#: ui/main.qml:124
+#: ui/main.qml:130
 #, kde-format
 msgid "Weak"
 msgstr "Débil"
 
-#: ui/main.qml:125
+#: ui/main.qml:131
 #, kde-format
 msgid "Medium"
 msgstr "Medio"
 
-#: ui/main.qml:126
+#: ui/main.qml:132
 #, kde-format
 msgid "Strong"
 msgstr "Fuerte"
 
-#: ui/main.qml:129
+#: ui/main.qml:135
 #, kde-format
 msgid "Navigation rumble"
 msgstr "Ruido de navegación"
 
-#: ui/main.qml:157
+#: ui/main.qml:167
 #, kde-format
 msgid "Power inhibition"
 msgstr "Inhibición de apagado"
 
-#: ui/main.qml:158
+#: ui/main.qml:168
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
 msgstr "Prevenir que el sistema se vaya a dormir automáticamente"
 
-#: ui/main.qml:168
+#: ui/main.qml:178
 #, kde-format
 msgid "Adjust date and time"
 msgstr "Ajuste de fecha y hora"
 
-#: ui/main.qml:174
+#: ui/main.qml:187
 #, kde-format
 msgid "Shortcuts"
 msgstr "Accesos rápidos"
 
-#: ui/main.qml:185
+#: ui/main.qml:198
 #, kde-format
 msgid "Open home overlay shortcut"
 msgstr "Abrir el acceso rápido a la pantalla de inicio"
 
-#: ui/main.qml:205
+#: ui/main.qml:219
 #, kde-format
 msgid "Open homescreen shortcut"
 msgstr "Acceso rápido a la pantalla de inicio"
 
-#: ui/main.qml:225
+#: ui/main.qml:240
 #, kde-format
 msgid "Open search shortcut"
 msgstr "Acceso rápido de búsqueda"
 
-#: ui/main.qml:245
+#: ui/main.qml:261
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "Acceso rápido a preferencias"
 
-#: ui/main.qml:264
+#: ui/main.qml:281
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "Acceso rápido a tareas"

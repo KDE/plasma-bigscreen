@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:47+0000\n"
+"POT-Creation-Date: 2026-09-19 00:47+0000\n"
 "PO-Revision-Date: 2026-09-14 20:10+0200\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -26,7 +26,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wizzardsk@gmail.com"
 
-#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:84
+#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:87
 #, kde-format
 msgid "Color scheme"
 msgstr "Farebná schéma"
@@ -92,47 +92,47 @@ msgstr "Vaše miestne časové pásmo je %1"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: ui/main.qml:23 ui/main.qml:91
+#: ui/main.qml:23 ui/main.qml:97
 #, kde-format
 msgid "System"
 msgstr "Systém"
 
-#: ui/main.qml:43
+#: ui/main.qml:46
 #, kde-format
 msgid "Homescreen Appearance"
 msgstr "Vzhľad"
 
-#: ui/main.qml:56
+#: ui/main.qml:59
 #, kde-format
 msgid "Colored tiles"
 msgstr "Farebné dlaždice"
 
-#: ui/main.qml:57
+#: ui/main.qml:60
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "Pozadia dlaždíc budú zafarbené podľa ikony aplikácie"
 
-#: ui/main.qml:70
+#: ui/main.qml:73
 #, kde-format
 msgid "Wallpaper blur"
 msgstr "Rozmazanie tapety"
 
-#: ui/main.qml:71
+#: ui/main.qml:74
 #, kde-format
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr "Použiť efekt rozmazania na tapetu na domovskej obrazovke"
 
-#: ui/main.qml:85
+#: ui/main.qml:88
 #, kde-format
 msgid "Set the system colors"
 msgstr "Nastaviť systémové farby"
 
-#: ui/main.qml:102
+#: ui/main.qml:108
 #, kde-format
 msgid "Window decorations"
 msgstr "Dekorácie okien"
 
-#: ui/main.qml:103
+#: ui/main.qml:109
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
@@ -140,82 +140,82 @@ msgstr ""
 "Mať rám okna (minimalizovať, maximalizovať, zavrieť) pre aplikácie, ktoré to "
 "vyžadujú"
 
-#: ui/main.qml:112
+#: ui/main.qml:118
 #, kde-format
 msgid "Navigation sounds"
 msgstr "Navigačné zvuky"
 
-#: ui/main.qml:113
+#: ui/main.qml:119
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
 msgstr "Prehrať zvuk pri zmene vybranej položky v systémových aplikáciách"
 
-#: ui/main.qml:123
+#: ui/main.qml:129
 #, kde-format
 msgid "Off"
 msgstr "Vypnuté"
 
-#: ui/main.qml:124
+#: ui/main.qml:130
 #, kde-format
 msgid "Weak"
 msgstr "Slabá"
 
-#: ui/main.qml:125
+#: ui/main.qml:131
 #, kde-format
 msgid "Medium"
 msgstr "Stredné"
 
-#: ui/main.qml:126
+#: ui/main.qml:132
 #, kde-format
 msgid "Strong"
 msgstr "Silná"
 
-#: ui/main.qml:129
+#: ui/main.qml:135
 #, kde-format
 msgid "Navigation rumble"
 msgstr "Vibrácie pri navigácii"
 
-#: ui/main.qml:157
+#: ui/main.qml:167
 #, kde-format
 msgid "Power inhibition"
 msgstr "Zabránenie uspaniu"
 
-#: ui/main.qml:158
+#: ui/main.qml:168
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
 msgstr "Zabrániť automatickému uspaniu systému"
 
-#: ui/main.qml:168
+#: ui/main.qml:178
 #, kde-format
 msgid "Adjust date and time"
 msgstr "Upraviť dátum a čas"
 
-#: ui/main.qml:174
+#: ui/main.qml:187
 #, kde-format
 msgid "Shortcuts"
 msgstr "Skratky"
 
-#: ui/main.qml:185
+#: ui/main.qml:198
 #, kde-format
 msgid "Open home overlay shortcut"
 msgstr "Skratka na otvorenie domovského prekrytia"
 
-#: ui/main.qml:205
+#: ui/main.qml:219
 #, kde-format
 msgid "Open homescreen shortcut"
 msgstr "Skratka na otvorenie domovskej obrazovky"
 
-#: ui/main.qml:225
+#: ui/main.qml:240
 #, kde-format
 msgid "Open search shortcut"
 msgstr "Skratka na otvorenie hľadania"
 
-#: ui/main.qml:245
+#: ui/main.qml:261
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "Otvoriť nastavenia skratka"
 
-#: ui/main.qml:264
+#: ui/main.qml:281
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "Otvoriť úlohy skratka"
