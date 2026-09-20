@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-24 00:45+0000\n"
+"POT-Creation-Date: 2026-09-20 12:55+0000\n"
 "PO-Revision-Date: 2025-08-13 06:29+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -23,32 +23,32 @@ msgstr ""
 msgid "Web Apps"
 msgstr "ვებაპები"
 
-#: ui/main.qml:43
+#: ui/main.qml:42
 #, kde-format
 msgid "Add Web App"
 msgstr "ვებაპის დამატება"
 
-#: ui/main.qml:50
+#: ui/main.qml:49
 #, kde-format
 msgid "Installed web apps"
 msgstr "დაყენებული ვებაპები"
 
-#: ui/main.qml:89
+#: ui/main.qml:87
 #, kde-format
 msgid "Add Web Application"
 msgstr "ვებაპის დამატება"
 
-#: ui/main.qml:105 ui/WebAppInfoSidebar.qml:52
+#: ui/main.qml:103 ui/WebAppInfoSidebar.qml:52
 #, kde-format
 msgid "Name"
 msgstr "სახელი"
 
-#: ui/main.qml:112 ui/WebAppInfoSidebar.qml:60
+#: ui/main.qml:110 ui/WebAppInfoSidebar.qml:60
 #, kde-format
 msgid "URL"
 msgstr "URL"
 
-#: ui/main.qml:119
+#: ui/main.qml:117
 #, kde-format
 msgid "User agent (empty for default)"
 msgstr "მომხმარებლის აგენტი (დატოვეთ ცარიელი ნაგულისხმევისთვის)"

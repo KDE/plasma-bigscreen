@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-16 00:47+0000\n"
+"POT-Creation-Date: 2026-09-20 12:55+0000\n"
 "PO-Revision-Date: 2026-01-27 15:55+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -67,12 +67,12 @@ msgstr "Velocitate"
 msgid "Network"
 msgstr "Rete"
 
-#: ui/main.qml:103
+#: ui/main.qml:102
 #, kde-format
 msgid "Refresh"
 msgstr "Refresca"
 
-#: ui/main.qml:115
+#: ui/main.qml:114
 #, kde-format
 msgid "Connections"
 msgstr "Connexiones"

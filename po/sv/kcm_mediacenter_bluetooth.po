@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-31 00:47+0000\n"
+"POT-Creation-Date: 2026-09-20 12:55+0000\n"
 "PO-Revision-Date: 2026-07-31 08:39+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -133,17 +133,17 @@ msgstr "Inga Blåtandsanslutningar hittades"
 msgid "Connect an external Bluetooth adapter"
 msgstr "Anslut en extern Blåtandsanslutning"
 
-#: ui/main.qml:81
+#: ui/main.qml:80
 #, kde-format
 msgid "Enable Bluetooth"
 msgstr "Aktivera Blåtand"
 
-#: ui/main.qml:100
+#: ui/main.qml:99
 #, kde-format
 msgid "Paired devices"
 msgstr "Parkopplade enheter"
 
-#: ui/main.qml:133
+#: ui/main.qml:130
 #, kde-format
 msgid "Available devices"
 msgstr "Tillgängliga enheter"

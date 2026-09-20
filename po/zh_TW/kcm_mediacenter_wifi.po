@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-16 00:47+0000\n"
+"POT-Creation-Date: 2026-09-20 12:55+0000\n"
 "PO-Revision-Date: 2025-08-29 23:32+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -67,12 +67,12 @@ msgstr "速度"
 msgid "Network"
 msgstr "網路"
 
-#: ui/main.qml:103
+#: ui/main.qml:102
 #, kde-format
 msgid "Refresh"
 msgstr "重新整理"
 
-#: ui/main.qml:115
+#: ui/main.qml:114
 #, kde-format
 msgid "Connections"
 msgstr "連線"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-24 00:45+0000\n"
+"POT-Creation-Date: 2026-09-20 12:55+0000\n"
 "PO-Revision-Date: 2026-05-16 22:38+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -22,32 +22,32 @@ msgstr ""
 msgid "Web Apps"
 msgstr "Webalkalmazások"
 
-#: ui/main.qml:43
+#: ui/main.qml:42
 #, kde-format
 msgid "Add Web App"
 msgstr "Hozzáadás"
 
-#: ui/main.qml:50
+#: ui/main.qml:49
 #, kde-format
 msgid "Installed web apps"
 msgstr "Telepített webalkalmazások"
 
-#: ui/main.qml:89
+#: ui/main.qml:87
 #, kde-format
 msgid "Add Web Application"
 msgstr "Webalkalmazás hozzáadása"
 
-#: ui/main.qml:105 ui/WebAppInfoSidebar.qml:52
+#: ui/main.qml:103 ui/WebAppInfoSidebar.qml:52
 #, kde-format
 msgid "Name"
 msgstr "Név"
 
-#: ui/main.qml:112 ui/WebAppInfoSidebar.qml:60
+#: ui/main.qml:110 ui/WebAppInfoSidebar.qml:60
 #, kde-format
 msgid "URL"
 msgstr "URL"
 
-#: ui/main.qml:119
+#: ui/main.qml:117
 #, kde-format
 msgid "User agent (empty for default)"
 msgstr "Böngészőazonosító (üres az alapértelmezetthez)"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-16 00:47+0000\n"
+"POT-Creation-Date: 2026-09-20 12:55+0000\n"
 "PO-Revision-Date: 2025-08-13 20:01+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -69,12 +69,12 @@ msgstr "Velocitat"
 msgid "Network"
 msgstr "Xarxa"
 
-#: ui/main.qml:103
+#: ui/main.qml:102
 #, kde-format
 msgid "Refresh"
 msgstr "Actualitza"
 
-#: ui/main.qml:115
+#: ui/main.qml:114
 #, kde-format
 msgid "Connections"
 msgstr "Connexions"

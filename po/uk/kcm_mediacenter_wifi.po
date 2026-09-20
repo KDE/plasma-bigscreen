@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-16 00:47+0000\n"
+"POT-Creation-Date: 2026-09-20 12:55+0000\n"
 "PO-Revision-Date: 2025-08-13 21:49+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -68,12 +68,12 @@ msgstr "Швидкість"
 msgid "Network"
 msgstr "Мережа"
 
-#: ui/main.qml:103
+#: ui/main.qml:102
 #, kde-format
 msgid "Refresh"
 msgstr "Освіжити"
 
-#: ui/main.qml:115
+#: ui/main.qml:114
 #, kde-format
 msgid "Connections"
 msgstr "З'єднання"

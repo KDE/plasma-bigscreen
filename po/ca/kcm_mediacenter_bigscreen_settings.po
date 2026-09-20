@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-19 00:47+0000\n"
+"POT-Creation-Date: 2026-09-20 12:55+0000\n"
 "PO-Revision-Date: 2026-08-28 10:49+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -29,7 +29,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "txemaq@gmail.com"
 
-#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:87
+#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:85
 #, kde-format
 msgid "Color scheme"
 msgstr "Esquema de color"
@@ -95,7 +95,7 @@ msgstr "El vostre fus horari local és %1"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: ui/main.qml:23 ui/main.qml:97
+#: ui/main.qml:23 ui/main.qml:95
 #, kde-format
 msgid "System"
 msgstr "Sistema"
@@ -105,39 +105,39 @@ msgstr "Sistema"
 msgid "Homescreen Appearance"
 msgstr "Aparença de la pantalla inicial"
 
-#: ui/main.qml:59
+#: ui/main.qml:58
 #, kde-format
 msgid "Colored tiles"
 msgstr "Fitxes de colors"
 
-#: ui/main.qml:60
+#: ui/main.qml:59
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr ""
 "Els fons de les fitxes s'acoloriran en funció de la icona de l'aplicació"
 
-#: ui/main.qml:73
+#: ui/main.qml:71
 #, kde-format
 msgid "Wallpaper blur"
 msgstr "Difuminat del fons de pantalla"
 
-#: ui/main.qml:74
+#: ui/main.qml:72
 #, kde-format
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr ""
 "Aplica un efecte de difuminat al fons de pantalla de la pantalla d'inici"
 
-#: ui/main.qml:88
+#: ui/main.qml:86
 #, kde-format
 msgid "Set the system colors"
 msgstr "Estableix els colors del sistema"
 
-#: ui/main.qml:108
+#: ui/main.qml:106
 #, kde-format
 msgid "Window decorations"
 msgstr "Decoració de les finestres"
 
-#: ui/main.qml:109
+#: ui/main.qml:107
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
@@ -145,84 +145,84 @@ msgstr ""
 "Té un marc de finestra (minimitzar, maximitzar, tancar), per a les "
 "aplicacions que el sol·liciten"
 
-#: ui/main.qml:118
+#: ui/main.qml:116
 #, kde-format
 msgid "Navigation sounds"
 msgstr "Sons de navegació"
 
-#: ui/main.qml:119
+#: ui/main.qml:117
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
 msgstr ""
 "Reprodueix un so quan l'element seleccionat canviï a les aplicacions del "
 "sistema"
 
-#: ui/main.qml:129
+#: ui/main.qml:127
 #, kde-format
 msgid "Off"
 msgstr "Apagat"
 
-#: ui/main.qml:130
+#: ui/main.qml:128
 #, kde-format
 msgid "Weak"
 msgstr "Fluix"
 
-#: ui/main.qml:131
+#: ui/main.qml:129
 #, kde-format
 msgid "Medium"
 msgstr "Mitjà"
 
-#: ui/main.qml:132
+#: ui/main.qml:130
 #, kde-format
 msgid "Strong"
 msgstr "Fort"
 
-#: ui/main.qml:135
+#: ui/main.qml:133
 #, kde-format
 msgid "Navigation rumble"
 msgstr "Remor de navegació"
 
-#: ui/main.qml:167
+#: ui/main.qml:164
 #, kde-format
 msgid "Power inhibition"
 msgstr "Inhibició d'energia"
 
-#: ui/main.qml:168
+#: ui/main.qml:165
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
 msgstr "Evita que el sistema s'adormi automàticament"
 
-#: ui/main.qml:178
+#: ui/main.qml:175
 #, kde-format
 msgid "Adjust date and time"
 msgstr "Ajusta la data i l'hora"
 
-#: ui/main.qml:187
+#: ui/main.qml:184
 #, kde-format
 msgid "Shortcuts"
 msgstr "Dreceres"
 
-#: ui/main.qml:198
+#: ui/main.qml:194
 #, kde-format
 msgid "Open home overlay shortcut"
 msgstr "Drecera d'obrir la disposició d'inici"
 
-#: ui/main.qml:219
+#: ui/main.qml:214
 #, kde-format
 msgid "Open homescreen shortcut"
 msgstr "Drecera d'obrir la pàgina d'inici"
 
-#: ui/main.qml:240
+#: ui/main.qml:234
 #, kde-format
 msgid "Open search shortcut"
 msgstr "Drecera d'obrir cerques"
 
-#: ui/main.qml:261
+#: ui/main.qml:254
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "Drecera d'obrir la configuració"
 
-#: ui/main.qml:281
+#: ui/main.qml:273
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "Drecera d'obrir tasques"

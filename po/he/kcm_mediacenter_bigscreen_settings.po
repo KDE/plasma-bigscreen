@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-19 00:47+0000\n"
+"POT-Creation-Date: 2026-09-20 12:55+0000\n"
 "PO-Revision-Date: 2026-08-30 21:48+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-l10n-he@kde.org"
 
-#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:87
+#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:85
 #, kde-format
 msgid "Color scheme"
 msgstr "ערכת צבעים"
@@ -94,7 +94,7 @@ msgstr "אזור הזמן המקומי שלך הוא %1"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: ui/main.qml:23 ui/main.qml:97
+#: ui/main.qml:23 ui/main.qml:95
 #, kde-format
 msgid "System"
 msgstr "מערכת"
@@ -104,118 +104,118 @@ msgstr "מערכת"
 msgid "Homescreen Appearance"
 msgstr "מראה מסך הבית"
 
-#: ui/main.qml:59
+#: ui/main.qml:58
 #, kde-format
 msgid "Colored tiles"
 msgstr "אריחים צבעוניים"
 
-#: ui/main.qml:60
+#: ui/main.qml:59
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "הרקע הזה ייצבע לפי סמל היישומון"
 
-#: ui/main.qml:73
+#: ui/main.qml:71
 #, kde-format
 msgid "Wallpaper blur"
 msgstr "טשטוש רקע"
 
-#: ui/main.qml:74
+#: ui/main.qml:72
 #, kde-format
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr "החלת טשטוש על תמונת הרקע במסך הבית"
 
-#: ui/main.qml:88
+#: ui/main.qml:86
 #, kde-format
 msgid "Set the system colors"
 msgstr "הגדרת צבעי המערכת"
 
-#: ui/main.qml:108
+#: ui/main.qml:106
 #, kde-format
 msgid "Window decorations"
 msgstr "עיטורי חלון"
 
-#: ui/main.qml:109
+#: ui/main.qml:107
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
 msgstr "להציג מסגרת לחלון (הגדלה, הקטנה, סגירה), ליישומים שדורשים את זה"
 
-#: ui/main.qml:118
+#: ui/main.qml:116
 #, kde-format
 msgid "Navigation sounds"
 msgstr "צלילי ניווט"
 
-#: ui/main.qml:119
+#: ui/main.qml:117
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
 msgstr "להשמיע צליל כשהפריט הנבחר משתנה ביישומי המערכת"
 
-#: ui/main.qml:129
+#: ui/main.qml:127
 #, kde-format
 msgid "Off"
 msgstr "כבויה"
 
-#: ui/main.qml:130
+#: ui/main.qml:128
 #, kde-format
 msgid "Weak"
 msgstr "חלשה"
 
-#: ui/main.qml:131
+#: ui/main.qml:129
 #, kde-format
 msgid "Medium"
 msgstr "בינונית"
 
-#: ui/main.qml:132
+#: ui/main.qml:130
 #, kde-format
 msgid "Strong"
 msgstr "חזקה"
 
-#: ui/main.qml:135
+#: ui/main.qml:133
 #, kde-format
 msgid "Navigation rumble"
 msgstr "רטט בניווט"
 
-#: ui/main.qml:167
+#: ui/main.qml:164
 #, kde-format
 msgid "Power inhibition"
 msgstr "מניעת צריכת חשמל"
 
-#: ui/main.qml:168
+#: ui/main.qml:165
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
 msgstr "למנוע מהמערכת לישון אוטומטית"
 
-#: ui/main.qml:178
+#: ui/main.qml:175
 #, kde-format
 msgid "Adjust date and time"
 msgstr "כיוון התאריך והשעה"
 
-#: ui/main.qml:187
+#: ui/main.qml:184
 #, kde-format
 msgid "Shortcuts"
 msgstr "מקשי קיצור"
 
-#: ui/main.qml:198
+#: ui/main.qml:194
 #, kde-format
 msgid "Open home overlay shortcut"
 msgstr "קיצור דרך לפתיחת מסך בית צף"
 
-#: ui/main.qml:219
+#: ui/main.qml:214
 #, kde-format
 msgid "Open homescreen shortcut"
 msgstr "קיצור דרך לפתיחת מסך הבית"
 
-#: ui/main.qml:240
+#: ui/main.qml:234
 #, kde-format
 msgid "Open search shortcut"
 msgstr "קיצור דרך לפתיחת חיפוש"
 
-#: ui/main.qml:261
+#: ui/main.qml:254
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "קיצור דרך לפתיחת הגדרות"
 
-#: ui/main.qml:281
+#: ui/main.qml:273
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "קיצור דרך לפתיחת משימות"

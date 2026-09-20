@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-31 00:47+0000\n"
+"POT-Creation-Date: 2026-09-20 12:55+0000\n"
 "PO-Revision-Date: 2026-08-01 16:44+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -135,17 +135,17 @@ msgstr "Nerasta jokių Bluetooth adapterių"
 msgid "Connect an external Bluetooth adapter"
 msgstr "Prijunkite išorinį Bluetooth adapterį"
 
-#: ui/main.qml:81
+#: ui/main.qml:80
 #, kde-format
 msgid "Enable Bluetooth"
 msgstr "Įjungti Bluetooth"
 
-#: ui/main.qml:100
+#: ui/main.qml:99
 #, kde-format
 msgid "Paired devices"
 msgstr "Suporuoti įrenginiai"
 
-#: ui/main.qml:133
+#: ui/main.qml:130
 #, kde-format
 msgid "Available devices"
 msgstr "Prieinami įrenginiai"

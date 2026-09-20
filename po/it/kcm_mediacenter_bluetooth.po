@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-31 00:47+0000\n"
+"POT-Creation-Date: 2026-09-20 12:55+0000\n"
 "PO-Revision-Date: 2026-08-01 07:06+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -133,17 +133,17 @@ msgstr "Nessun adattatore Bluetooth trovato"
 msgid "Connect an external Bluetooth adapter"
 msgstr "Collega un adattatore Bluetooth esterno"
 
-#: ui/main.qml:81
+#: ui/main.qml:80
 #, kde-format
 msgid "Enable Bluetooth"
 msgstr "Abilita Bluetooth"
 
-#: ui/main.qml:100
+#: ui/main.qml:99
 #, kde-format
 msgid "Paired devices"
 msgstr "Dispositivi associati"
 
-#: ui/main.qml:133
+#: ui/main.qml:130
 #, kde-format
 msgid "Available devices"
 msgstr "Dispositivi disponibili"

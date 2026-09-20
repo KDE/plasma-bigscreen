@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-19 00:47+0000\n"
+"POT-Creation-Date: 2026-09-20 12:55+0000\n"
 "PO-Revision-Date: 2026-08-31 18:33+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "stefan.asserhall@gmail.com"
 
-#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:87
+#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:85
 #, kde-format
 msgid "Color scheme"
 msgstr "Färgschema"
@@ -93,7 +93,7 @@ msgstr "Din lokala tidszon är %1"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: ui/main.qml:23 ui/main.qml:97
+#: ui/main.qml:23 ui/main.qml:95
 #, kde-format
 msgid "System"
 msgstr "System"
@@ -103,119 +103,119 @@ msgstr "System"
 msgid "Homescreen Appearance"
 msgstr "Hemskärmens utseende"
 
-#: ui/main.qml:59
+#: ui/main.qml:58
 #, kde-format
 msgid "Colored tiles"
 msgstr "Färgade rutor"
 
-#: ui/main.qml:60
+#: ui/main.qml:59
 #, kde-format
 msgid "Tile backgrounds will be colored based on the app's icon"
 msgstr "Rutbakgrunder färgläggs baserat på programmets ikon"
 
-#: ui/main.qml:73
+#: ui/main.qml:71
 #, kde-format
 msgid "Wallpaper blur"
 msgstr "Suddigt skrivbordsunderlägg"
 
-#: ui/main.qml:74
+#: ui/main.qml:72
 #, kde-format
 msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr "Använd en suddighetseffekt på hemskärmens skrivbordsunderlägg"
 
-#: ui/main.qml:88
+#: ui/main.qml:86
 #, kde-format
 msgid "Set the system colors"
 msgstr "Ställ in systemfärger"
 
-#: ui/main.qml:108
+#: ui/main.qml:106
 #, kde-format
 msgid "Window decorations"
 msgstr "Fönsterdekorationer"
 
-#: ui/main.qml:109
+#: ui/main.qml:107
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
 msgstr ""
 "Använd en fönsterram (minimera, maximera, stäng) för program som begär det"
 
-#: ui/main.qml:118
+#: ui/main.qml:116
 #, kde-format
 msgid "Navigation sounds"
 msgstr "Navigeringsljud"
 
-#: ui/main.qml:119
+#: ui/main.qml:117
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
 msgstr "Spela upp ett ljud när det markerade objektet ändras i systemprogram"
 
-#: ui/main.qml:129
+#: ui/main.qml:127
 #, kde-format
 msgid "Off"
 msgstr "Av"
 
-#: ui/main.qml:130
+#: ui/main.qml:128
 #, kde-format
 msgid "Weak"
 msgstr "Svagt"
 
-#: ui/main.qml:131
+#: ui/main.qml:129
 #, kde-format
 msgid "Medium"
 msgstr "Medium"
 
-#: ui/main.qml:132
+#: ui/main.qml:130
 #, kde-format
 msgid "Strong"
 msgstr "Starkt"
 
-#: ui/main.qml:135
+#: ui/main.qml:133
 #, kde-format
 msgid "Navigation rumble"
 msgstr "Navigeringsmuller"
 
-#: ui/main.qml:167
+#: ui/main.qml:164
 #, kde-format
 msgid "Power inhibition"
 msgstr "Effektinhibering"
 
-#: ui/main.qml:168
+#: ui/main.qml:165
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
 msgstr "Förhindra att systemet automatiskt försätts i viloläge"
 
-#: ui/main.qml:178
+#: ui/main.qml:175
 #, kde-format
 msgid "Adjust date and time"
 msgstr "Justera datum och tid"
 
-#: ui/main.qml:187
+#: ui/main.qml:184
 #, kde-format
 msgid "Shortcuts"
 msgstr "Genvägar"
 
-#: ui/main.qml:198
+#: ui/main.qml:194
 #, kde-format
 msgid "Open home overlay shortcut"
 msgstr "Öppna hemskärmsgenväg"
 
-#: ui/main.qml:219
+#: ui/main.qml:214
 #, kde-format
 msgid "Open homescreen shortcut"
 msgstr "Öppna hemskärmsgenväg"
 
-#: ui/main.qml:240
+#: ui/main.qml:234
 #, kde-format
 msgid "Open search shortcut"
 msgstr "Öppna sökgenväg"
 
-#: ui/main.qml:261
+#: ui/main.qml:254
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "Öppna inställningsgenväg"
 
-#: ui/main.qml:281
+#: ui/main.qml:273
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "Öppna uppgiftsgenväg"

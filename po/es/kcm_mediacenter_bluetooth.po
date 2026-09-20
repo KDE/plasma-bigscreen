@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_bluetooth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-31 00:47+0000\n"
+"POT-Creation-Date: 2026-09-20 12:55+0000\n"
 "PO-Revision-Date: 2026-08-08 17:22+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -136,17 +136,17 @@ msgstr "No se encontró ningún adaptador Bluetooth"
 msgid "Connect an external Bluetooth adapter"
 msgstr "Conecte un adaptador Bluetooth externo"
 
-#: ui/main.qml:81
+#: ui/main.qml:80
 #, kde-format
 msgid "Enable Bluetooth"
 msgstr "Activar Bluetooth"
 
-#: ui/main.qml:100
+#: ui/main.qml:99
 #, kde-format
 msgid "Paired devices"
 msgstr "Dispositivos enlazados"
 
-#: ui/main.qml:133
+#: ui/main.qml:130
 #, kde-format
 msgid "Available devices"
 msgstr "Dispositivos disponibles"

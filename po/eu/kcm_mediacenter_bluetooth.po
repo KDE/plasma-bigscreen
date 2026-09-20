@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-31 00:47+0000\n"
+"POT-Creation-Date: 2026-09-20 12:55+0000\n"
 "PO-Revision-Date: 2026-08-02 22:57+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -136,17 +136,17 @@ msgstr "Ez da Bluetooth moldagailurik aurkitu"
 msgid "Connect an external Bluetooth adapter"
 msgstr "Kanpoko Bluetooth egokigailu bat konektatu"
 
-#: ui/main.qml:81
+#: ui/main.qml:80
 #, kde-format
 msgid "Enable Bluetooth"
 msgstr "Gaitu Bluetooth"
 
-#: ui/main.qml:100
+#: ui/main.qml:99
 #, kde-format
 msgid "Paired devices"
 msgstr "Parekatutako gailuak"
 
-#: ui/main.qml:133
+#: ui/main.qml:130
 #, kde-format
 msgid "Available devices"
 msgstr "Gailu erabilgarriak"

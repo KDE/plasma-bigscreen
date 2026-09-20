@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-16 00:47+0000\n"
+"POT-Creation-Date: 2026-09-20 12:55+0000\n"
 "PO-Revision-Date: 2026-03-04 13:35+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -68,12 +68,12 @@ msgstr "Viteză"
 msgid "Network"
 msgstr "Rețea"
 
-#: ui/main.qml:103
+#: ui/main.qml:102
 #, kde-format
 msgid "Refresh"
 msgstr "Împrospătează"
 
-#: ui/main.qml:115
+#: ui/main.qml:114
 #, kde-format
 msgid "Connections"
 msgstr "Conexiuni"
