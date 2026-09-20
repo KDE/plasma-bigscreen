@@ -51,7 +51,6 @@ KCM.SimpleKCM {
             id: connectionView
             model: allDevicesModel
             clip: true
-            spacing: Kirigami.Units.smallSpacing
 
             Layout.fillWidth: true
             Layout.fillHeight: true

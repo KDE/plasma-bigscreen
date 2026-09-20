@@ -99,7 +99,6 @@ KCM.SimpleKCM {
 
         Bigscreen.ButtonDelegate {
             id: refreshButton
-            raisedBackground: false
             text: i18n("Refresh")
             icon.name: "view-refresh"
 
@@ -125,13 +124,11 @@ KCM.SimpleKCM {
 
             clip: true
             model: appletProxyModel
-            spacing: Kirigami.Units.smallSpacing
 
             delegate: Delegates.NetworkDelegate {
                 id: delegate
                 width: networkDelegateList.width
                 smallDescription: true
-                raisedBackground: false
 
                 // Update sidebar overlay with correct delegate when there is model changes/reordering
                 onTextChanged: {

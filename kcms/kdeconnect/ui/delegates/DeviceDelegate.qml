@@ -13,7 +13,6 @@ import org.kde.bigscreen as Bigscreen
 
 Bigscreen.ButtonDelegate {
     id: delegate
-    raisedBackground: false
 
     property QtObject deviceObj: model.device
 

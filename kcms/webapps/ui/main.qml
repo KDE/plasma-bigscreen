@@ -33,7 +33,6 @@ Bigscreen.ScrollablePage {
 
         Bigscreen.ButtonDelegate {
             id: addWebApp
-            raisedBackground: false
 
             onClicked: {
                 addWebAppDialog.open()
@@ -65,7 +64,6 @@ Bigscreen.ScrollablePage {
 
             delegate: Bigscreen.ButtonDelegate {
                 id: delegate
-                raisedBackground: false
 
                 icon.name: model.desktopIcon
                 text: model.name

@@ -77,7 +77,6 @@ Bigscreen.ScrollablePage {
 
         Bigscreen.SwitchDelegate {
             id: bluetoothToggle
-            raisedBackground: false
             text: i18n("Enable Bluetooth")
             icon.name: "network-bluetooth"
             checked: BluezQt.Manager.bluetoothOperational
@@ -101,14 +100,13 @@ Bigscreen.ScrollablePage {
             visible: BluezQt.Manager.bluetoothOperational
             font.pixelSize: Bigscreen.Units.headingFontPixelSize
             Layout.topMargin: Kirigami.Units.gridUnit
-            Layout.bottomMargin: Kirigami.Units.smallSpacing
+            Layout.bottomMargin: Kirigami.Units.gridUnit
         }
 
         ListView {
             id: pairedDelegateList
             Layout.fillWidth: true
             implicitHeight: contentHeight
-            spacing: Kirigami.Units.smallSpacing
             visible: BluezQt.Manager.bluetoothOperational
             KeyNavigation.down: unpairedDelegateList
 
@@ -118,7 +116,6 @@ Bigscreen.ScrollablePage {
                 id: pairedDelegate
                 width: pairedDelegateList.width
                 smallDescription: true
-                raisedBackground: false
 
                 onClicked: {
                     sidebarOverlay.delegate = pairedDelegate;
@@ -134,14 +131,13 @@ Bigscreen.ScrollablePage {
             visible: BluezQt.Manager.bluetoothOperational
             font.pixelSize: Bigscreen.Units.headingFontPixelSize
             Layout.topMargin: Kirigami.Units.gridUnit
-            Layout.bottomMargin: Kirigami.Units.smallSpacing
+            Layout.bottomMargin: Kirigami.Units.gridUnit
         }
 
         ListView {
             id: unpairedDelegateList
             Layout.fillWidth: true
             implicitHeight: contentHeight
-            spacing: Kirigami.Units.smallSpacing
             visible: BluezQt.Manager.bluetoothOperational
             KeyNavigation.up: pairedDelegateList
 
@@ -151,7 +147,6 @@ Bigscreen.ScrollablePage {
                 id: unpairedDelegate
                 width: pairedDelegateList.width
                 smallDescription: true
-                raisedBackground: false
 
                 onClicked: {
                     sidebarOverlay.delegate = unpairedDelegate;

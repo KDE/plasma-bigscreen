@@ -52,7 +52,6 @@ Bigscreen.ScrollablePage {
 
         Bigscreen.SwitchDelegate {
             id: coloredTileDelegate
-            Layout.bottomMargin: Kirigami.Units.smallSpacing
 
             raisedBackground: true
             checked: kcm.useColoredTiles() ? 1 : 0
@@ -66,7 +65,6 @@ Bigscreen.ScrollablePage {
 
         Bigscreen.SwitchDelegate {
             id: wallpaperBlurDelegate
-            Layout.bottomMargin: Kirigami.Units.smallSpacing
 
             raisedBackground: true
             checked: kcm.useWallpaperBlur() ? 1 : 0
@@ -161,7 +159,6 @@ Bigscreen.ScrollablePage {
 
         Bigscreen.SwitchDelegate {
             id: pmInhibitionDelegate
-            Layout.bottomMargin: Kirigami.Units.smallSpacing
             KeyNavigation.down: timeDateDelegate
 
             text: i18n("Power inhibition")
@@ -194,7 +191,6 @@ Bigscreen.ScrollablePage {
         Bigscreen.ButtonDelegate {
             id: homeOverlayShortcut
             KeyNavigation.down: homescreenShortcutDelegate
-            Layout.bottomMargin: Kirigami.Units.smallSpacing
             text: i18n("Open home overlay shortcut")
             icon.name: 'preferences-desktop-keyboard-symbolic'
 
@@ -215,7 +211,6 @@ Bigscreen.ScrollablePage {
         Bigscreen.ButtonDelegate {
             id: homescreenShortcutDelegate
             KeyNavigation.down: searchShortcutDelegate
-            Layout.bottomMargin: Kirigami.Units.smallSpacing
             text: i18n("Open homescreen shortcut")
             icon.name: 'preferences-desktop-keyboard-symbolic'
 
@@ -236,7 +231,6 @@ Bigscreen.ScrollablePage {
         Bigscreen.ButtonDelegate {
             id: searchShortcutDelegate
             KeyNavigation.down: settingsShortcutDelegate
-            Layout.bottomMargin: Kirigami.Units.smallSpacing
             text: i18n("Open search shortcut")
             icon.name: 'preferences-desktop-keyboard-symbolic'
 
@@ -257,7 +251,6 @@ Bigscreen.ScrollablePage {
         Bigscreen.ButtonDelegate {
             id: settingsShortcutDelegate
             KeyNavigation.down: tasksShortcutDelegate
-            Layout.bottomMargin: Kirigami.Units.smallSpacing
             text: i18n("Open settings shortcut")
             icon.name: 'preferences-desktop-keyboard-symbolic'
 
@@ -277,7 +270,6 @@ Bigscreen.ScrollablePage {
 
         Bigscreen.ButtonDelegate {
             id: tasksShortcutDelegate
-            Layout.bottomMargin: Kirigami.Units.smallSpacing
             text: i18n("Open tasks shortcut")
             icon.name: 'preferences-desktop-keyboard-symbolic'
 

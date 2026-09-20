@@ -17,7 +17,6 @@ import "../code/icon.js" as Icon
 
 Bigscreen.ButtonDelegate {
     id: delegate
-    raisedBackground: false
 
     required property var model
 
