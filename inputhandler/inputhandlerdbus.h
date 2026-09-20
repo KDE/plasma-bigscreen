@@ -30,6 +30,7 @@ class InputHandlerDBus : public QObject, protected QDBusContext
     Q_PROPERTY(bool enabled READ isEnabled WRITE setEnabled NOTIFY enabledChanged)
     Q_PROPERTY(bool gameControllerEnabled READ isGameControllerEnabled WRITE setGameControllerEnabled NOTIFY gameControllerEnabledChanged)
     Q_PROPERTY(bool cecEnabled READ isCecEnabled WRITE setCecEnabled NOTIFY cecEnabledChanged)
+    Q_PROPERTY(int hdmiPort READ hdmiPort WRITE setHdmiPort NOTIFY hdmiPortChanged)
 
 public:
     explicit InputHandlerDBus(QObject *parent = nullptr);
@@ -55,6 +56,9 @@ public:
 
     bool isCecEnabled() const;
     void setCecEnabled(bool enabled);
+
+    int hdmiPort() const;
+    void setHdmiPort(int port);
 
 public Q_SLOTS:
     // DBus methods
@@ -100,6 +104,7 @@ Q_SIGNALS:
     Q_SCRIPTABLE void enabledChanged(bool enabled);
     Q_SCRIPTABLE void gameControllerEnabledChanged(bool enabled);
     Q_SCRIPTABLE void cecEnabledChanged(bool enabled);
+    Q_SCRIPTABLE void hdmiPortChanged(int port);
     Q_SCRIPTABLE void connectedControllersChanged();
 
 private:

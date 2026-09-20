@@ -30,7 +30,7 @@ CECWorker::~CECWorker()
     cleanup();
 }
 
-void CECWorker::initialize(const QString &osdName, bool claimActiveSource)
+void CECWorker::initialize(const QString &osdName, bool claimActiveSource, int hdmiPort)
 {
     qDebug() << "CECWorker: Initializing with OSD name:" << osdName
              << "claim active source:" << claimActiveSource;
@@ -43,6 +43,14 @@ void CECWorker::initialize(const QString &osdName, bool claimActiveSource)
     cecConfig.deviceTypes.Add(CEC_DEVICE_TYPE_RECORDING_DEVICE);
     cecConfig.callbacks = &m_cecCallbacks;
     cecConfig.callbackParam = this;
+
+    if (hdmiPort >= CEC_MIN_HDMI_PORTNUMBER && hdmiPort <= CEC_MAX_HDMI_PORTNUMBER) {
+        cecConfig.iPhysicalAddress = static_cast<uint16_t>(hdmiPort << 12);
+        cecConfig.bAutodetectAddress = 0;
+        qDebug() << "CECWorker: Forcing TV HDMI port:" << hdmiPort;
+    } else if (hdmiPort != 0) {
+        qWarning() << "CECWorker: Invalid HDMI port:" << hdmiPort << "- using automatic detection";
+    }
 
     m_cecAdapter = CECInitialise(&cecConfig);
 

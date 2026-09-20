@@ -135,15 +135,41 @@ Bigscreen.ScrollablePage {
             visible: kcm.serviceAvailable && root.tvRemoteConnected
 
             property Item upDelegate: (visible && enabled) ? cecDelegate : inputEnabledDelegate.upDelegate
-            property Item downDelegate: (visible && enabled) ? cecDelegate : gameControllerDelegate.downDelegate
+            property Item downDelegate: (visible && enabled) ? cecDelegate : hdmiPortDelegate.downDelegate
             KeyNavigation.up: inputEnabledDelegate.upDelegate
-            KeyNavigation.down: gameControllerDelegate.downDelegate
+            KeyNavigation.down: hdmiPortDelegate.downDelegate
 
             onCheckedChanged: {
                 if (kcm.cecEnabled !== checked) {
                     kcm.cecEnabled = checked;
                 }
             }
+        }
+
+        Bigscreen.ComboBoxDelegate {
+            id: hdmiPortDelegate
+            text: i18n("TV HDMI port (CEC)")
+            icon.name: "video-television"
+            visible: kcm.serviceAvailable
+
+            model: {
+                let ports = [i18n("Automatic")];
+                for (let port = 1; port <= 15; ++port) {
+                    ports.push(i18n("HDMI %1", port));
+                }
+                return ports;
+            }
+            currentIndex: kcm.hdmiPort
+
+            onActivated: index => {
+                kcm.hdmiPort = index;
+                currentIndex = Qt.binding(() => kcm.hdmiPort);
+            }
+
+            property Item upDelegate: (visible && enabled) ? hdmiPortDelegate : cecDelegate.upDelegate
+            property Item downDelegate: (visible && enabled) ? hdmiPortDelegate : gameControllerDelegate.downDelegate
+            KeyNavigation.up: cecDelegate.upDelegate
+            KeyNavigation.down: gameControllerDelegate.downDelegate
         }
 
         QQC2.Label {
@@ -163,9 +189,9 @@ Bigscreen.ScrollablePage {
             enabled: kcm.enabled
             visible: kcm.serviceAvailable && root.connectedGameControllers.length > 0
 
-            property Item upDelegate: (visible && enabled) ? gameControllerDelegate : cecDelegate.upDelegate
+            property Item upDelegate: (visible && enabled) ? gameControllerDelegate : hdmiPortDelegate.upDelegate
             property Item downDelegate: (visible && enabled) ? gameControllerDelegate : autoSuppressDelegate.downDelegate
-            KeyNavigation.up: cecDelegate.upDelegate
+            KeyNavigation.up: hdmiPortDelegate.upDelegate
             KeyNavigation.down: autoSuppressDelegate.downDelegate
 
             onCheckedChanged: {

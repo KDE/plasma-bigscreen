@@ -129,6 +129,21 @@ void InputSettings::setCecEnabled(bool enabled)
     updateFromService();
 }
 
+int InputSettings::hdmiPort() const
+{
+    return m_hdmiPort;
+}
+
+void InputSettings::setHdmiPort(int port)
+{
+    if (!m_interface) {
+        return;
+    }
+
+    m_interface->setHdmiPort(port);
+    updateFromService();
+}
+
 bool InputSettings::autoSuppressInput() const
 {
     return m_autoSuppressInput;
@@ -190,6 +205,7 @@ void InputSettings::connectToService()
     connect(m_interface, &OrgKdePlasmaBigscreenInputhandlerInterface::enabledChanged, this, &InputSettings::scheduleUpdateFromService);
     connect(m_interface, &OrgKdePlasmaBigscreenInputhandlerInterface::gameControllerEnabledChanged, this, &InputSettings::scheduleUpdateFromService);
     connect(m_interface, &OrgKdePlasmaBigscreenInputhandlerInterface::cecEnabledChanged, this, &InputSettings::scheduleUpdateFromService);
+    connect(m_interface, &OrgKdePlasmaBigscreenInputhandlerInterface::hdmiPortChanged, this, &InputSettings::scheduleUpdateFromService);
     connect(m_interface, &OrgKdePlasmaBigscreenInputhandlerInterface::autoSuppressInputChanged, this, &InputSettings::scheduleUpdateFromService);
     connect(m_interface, &OrgKdePlasmaBigscreenInputhandlerInterface::connectedControllersChanged, this, &InputSettings::scheduleUpdateFromService);
 
@@ -254,6 +270,12 @@ void InputSettings::updateFromService()
     if (m_cecEnabled != cecEnabled) {
         m_cecEnabled = cecEnabled;
         Q_EMIT cecEnabledChanged();
+    }
+
+    int hdmiPort = m_interface->hdmiPort();
+    if (m_hdmiPort != hdmiPort) {
+        m_hdmiPort = hdmiPort;
+        Q_EMIT hdmiPortChanged();
     }
 
     bool autoSuppressInput = m_interface->autoSuppressInput();

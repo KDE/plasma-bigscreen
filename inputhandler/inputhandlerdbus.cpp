@@ -7,6 +7,7 @@
 #include "inputhandlerdbus.h"
 #include "controllermanager.h"
 #include "inputhandleradaptor.h"
+#include "inputhandlersettings.h"
 #include "sdlcontroller.h"
 
 #ifdef HAS_LIBCEC
@@ -154,6 +155,23 @@ bool InputHandlerDBus::isCecEnabled() const
 void InputHandlerDBus::setCecEnabled(bool enabled)
 {
     ControllerManager::instance().setCecEnabled(enabled);
+}
+
+int InputHandlerDBus::hdmiPort() const
+{
+    return InputHandlerSettings::self()->hdmiPort();
+}
+
+void InputHandlerDBus::setHdmiPort(int port)
+{
+    if (port < 0 || port > 15 || port == hdmiPort()) {
+        return;
+    }
+
+    auto *settings = InputHandlerSettings::self();
+    settings->setHdmiPort(port);
+    settings->save();
+    Q_EMIT hdmiPortChanged(port);
 }
 
 QVariantList InputHandlerDBus::connectedControllers() const

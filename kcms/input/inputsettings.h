@@ -19,6 +19,7 @@ class InputSettings : public KQuickConfigModule
     Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
     Q_PROPERTY(bool gameControllerEnabled READ gameControllerEnabled WRITE setGameControllerEnabled NOTIFY gameControllerEnabledChanged)
     Q_PROPERTY(bool cecEnabled READ cecEnabled WRITE setCecEnabled NOTIFY cecEnabledChanged)
+    Q_PROPERTY(int hdmiPort READ hdmiPort WRITE setHdmiPort NOTIFY hdmiPortChanged)
     Q_PROPERTY(bool autoSuppressInput READ autoSuppressInput WRITE setAutoSuppressInput NOTIFY autoSuppressInputChanged)
     Q_PROPERTY(QVariantList connectedControllers READ connectedControllers NOTIFY connectedControllersChanged)
 
@@ -36,6 +37,9 @@ public:
     bool cecEnabled() const;
     void setCecEnabled(bool enabled);
 
+    int hdmiPort() const;
+    void setHdmiPort(int port);
+
     bool autoSuppressInput() const;
     void setAutoSuppressInput(bool enabled);
 
@@ -50,6 +54,7 @@ Q_SIGNALS:
     void enabledChanged();
     void gameControllerEnabledChanged();
     void cecEnabledChanged();
+    void hdmiPortChanged();
     void autoSuppressInputChanged();
     void connectedControllersChanged();
 
@@ -67,6 +72,7 @@ private:
     bool m_enabled = true;
     bool m_gameControllerEnabled = true;
     bool m_cecEnabled = true;
+    int m_hdmiPort = 0;
     bool m_autoSuppressInput = true;
     bool m_updateScheduled = false;
     QVariantList m_connectedControllers;

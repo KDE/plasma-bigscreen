@@ -132,13 +132,10 @@ CECController::CECController(QObject *parent)
     // Initialize asynchronously
     QString osdName = group.readEntry("OSDName", i18n("KDE Plasma"));
     bool claimActiveSource = InputHandlerSettings::self()->claimActiveSource();
+    int hdmiPort = InputHandlerSettings::self()->hdmiPort();
     qDebug() << "CECController: Using OSD name from config:" << osdName
              << "claim active source:" << claimActiveSource;
-    QMetaObject::invokeMethod(m_worker,
-                              "initialize",
-                              Qt::QueuedConnection,
-                              Q_ARG(QString, osdName),
-                              Q_ARG(bool, claimActiveSource));
+    QMetaObject::invokeMethod(m_worker, "initialize", Qt::QueuedConnection, Q_ARG(QString, osdName), Q_ARG(bool, claimActiveSource), Q_ARG(int, hdmiPort));
 
     // Listen for device hotplug
     connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded, this, [this] {

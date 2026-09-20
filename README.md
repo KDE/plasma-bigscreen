@@ -54,6 +54,14 @@ ls -l /dev/ttyACM* # Find the group the cec device belongs to
 usermod -aG dialout $USER # Replace dialout with the group that the cec device belongs to
 ```
 
+If CEC address detection fails, you can force the HDMI input used on the TV in
+`~/.config/plasma-bigscreen-inputhandlerrc`. For example:
+
+```ini
+[CEC]
+HDMIPort=2 # Default: 0 for automatic detection
+```
+
 ### Test on a development machine
 
 It is recommended to use `kde-builder` to build this from source.

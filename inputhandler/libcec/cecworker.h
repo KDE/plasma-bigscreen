@@ -24,7 +24,7 @@ public:
     ~CECWorker() override;
 
 public Q_SLOTS:
-    void initialize(const QString &osdName, bool claimActiveSource);
+    void initialize(const QString &osdName, bool claimActiveSource, int hdmiPort);
     void discoverDevices();
     void closeAdapter();
     void cleanup();
