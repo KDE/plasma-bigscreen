@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-19 00:47+0000\n"
-"PO-Revision-Date: 2026-06-19 20:54+0200\n"
+"PO-Revision-Date: 2026-09-19 22:14+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -156,28 +156,27 @@ msgstr ""
 #: ui/main.qml:129
 #, kde-format
 msgid "Off"
-msgstr ""
+msgstr "Выключено"
 
 #: ui/main.qml:130
 #, kde-format
 msgid "Weak"
-msgstr ""
+msgstr "Слабый"
 
 #: ui/main.qml:131
 #, kde-format
 msgid "Medium"
-msgstr ""
+msgstr "Средний"
 
 #: ui/main.qml:132
 #, kde-format
 msgid "Strong"
-msgstr ""
+msgstr "Сильный"
 
 #: ui/main.qml:135
-#, fuzzy, kde-format
-#| msgid "Navigation sounds"
+#, kde-format
 msgid "Navigation rumble"
-msgstr "Звуки навигации"
+msgstr "Вибрация навигации"
 
 #: ui/main.qml:167
 #, kde-format
@@ -210,10 +209,9 @@ msgid "Open homescreen shortcut"
 msgstr "Комбинация клавиш для открытия домашнего экрана"
 
 #: ui/main.qml:240
-#, fuzzy, kde-format
-#| msgid "Open tasks shortcut"
+#, kde-format
 msgid "Open search shortcut"
-msgstr "Комбинация клавиш для открытых задач"
+msgstr "Комбинация клавиш для открытия поиска"
 
 #: ui/main.qml:261
 #, kde-format

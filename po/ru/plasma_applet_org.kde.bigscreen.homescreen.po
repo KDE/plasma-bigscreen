@@ -1,14 +1,14 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2025, 2026 Alexander Yavorsky <kekcuha@gmail.com>
+# SPDX-FileCopyrightText: 2021-2023, 2025-2026 Alexander Yavorsky <kekcuha@gmail.com>
 # Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:47+0000\n"
-"PO-Revision-Date: 2026-04-03 22:19+0200\n"
+"POT-Creation-Date: 2026-09-20 00:47+0000\n"
+"PO-Revision-Date: 2026-09-19 22:16+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -17,13 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Exit Bigscreen"
+#, kde-format
 msgid "Edit Home Screen"
-msgstr "Выйти из Bigscreen"
+msgstr "Редактировать главный экран"
 
 #: contents/ui/FavoritesManager.qml:144
 #: contents/ui/launcher/LauncherHome.qml:84
@@ -34,7 +33,7 @@ msgstr "Избранное"
 #: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:294
 #, kde-format
 msgid "Launcher Sections"
-msgstr ""
+msgstr "Разделы меню приложений"
 
 #: contents/ui/FavoritesManager.qml:224
 #, kde-format
@@ -47,37 +46,34 @@ msgid "Remove Favorites"
 msgstr "Удалить из избранного"
 
 #: contents/ui/FavoritesManager.qml:308
-#, fuzzy, kde-format
-#| msgid "Recent"
+#, kde-format
 msgid "Show Recent"
 msgstr "Недавние"
 
 #: contents/ui/FavoritesManager.qml:309
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
-msgstr ""
+msgstr "Недавно запущенные приложения показываются в ряд на главном экране."
 
 #: contents/ui/FavoritesManager.qml:324
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Show Applications"
 msgstr "Приложения"
 
 #: contents/ui/FavoritesManager.qml:325
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
-msgstr ""
+msgstr "Неигровые приложения показываются в ряд на главном экране"
 
 #: contents/ui/FavoritesManager.qml:341
-#, fuzzy, kde-format
-#| msgid "Games"
+#, kde-format
 msgid "Show Games"
-msgstr "Игры"
+msgstr "Показывать игры"
 
 #: contents/ui/FavoritesManager.qml:342
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
-msgstr ""
+msgstr "Приложения в категории «Игры» будут показаны на главном экране"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:36
 #, kde-format
@@ -99,44 +95,44 @@ msgstr "Wi‑Fi"
 msgid "Shutdown"
 msgstr "Завершение работы"
 
-#: contents/ui/homeoverlay/MainColumn.qml:132
+#: contents/ui/homeoverlay/MainColumn.qml:169
 #, kde-format
 msgid "Home"
 msgstr "Домашняя страница"
 
-#: contents/ui/homeoverlay/MainColumn.qml:145
+#: contents/ui/homeoverlay/MainColumn.qml:182
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr "Поиск"
 
-#: contents/ui/homeoverlay/MainColumn.qml:162
+#: contents/ui/homeoverlay/MainColumn.qml:199
 #, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "Приложения"
 
-#: contents/ui/homeoverlay/MainColumn.qml:185
+#: contents/ui/homeoverlay/MainColumn.qml:222
 #, kde-format
 msgid "Controller"
 msgstr "Контроллер"
 
-#: contents/ui/homeoverlay/MainColumn.qml:186
+#: contents/ui/homeoverlay/MainColumn.qml:223
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "Идёт захват клавиш…"
 
-#: contents/ui/homeoverlay/MainColumn.qml:186
+#: contents/ui/homeoverlay/MainColumn.qml:223
 #, kde-format
 msgid "Key capture off"
 msgstr "Захват клавиш выключен"
 
-#: contents/ui/homeoverlay/MainColumn.qml:206
+#: contents/ui/homeoverlay/MainColumn.qml:243
 #, kde-format
 msgid "On-screen Keyboard"
 msgstr "Экранная клавиатура"
 
-#: contents/ui/homeoverlay/MainColumn.qml:220
+#: contents/ui/homeoverlay/MainColumn.qml:257
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
@@ -186,12 +182,12 @@ msgstr "Управление питанием"
 #: contents/ui/indicators/Volume.qml:20
 #, kde-format
 msgid "Audio Settings"
-msgstr "Настройки звука"
+msgstr "Параметры звука"
 
 #: contents/ui/indicators/Wifi.qml:19
 #, kde-format
 msgid "Internet Settings"
-msgstr "Настройки подключения к интернету"
+msgstr "Параметры подключения к Интернету"
 
 #: contents/ui/launcher/LauncherHome.qml:113
 #, kde-format

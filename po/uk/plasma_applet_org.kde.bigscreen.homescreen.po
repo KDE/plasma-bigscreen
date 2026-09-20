@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.mycroft.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:47+0000\n"
+"POT-Creation-Date: 2026-09-20 00:47+0000\n"
 "PO-Revision-Date: 2026-07-14 08:51+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -96,44 +96,44 @@ msgstr "Wi-Fi"
 msgid "Shutdown"
 msgstr "Вимкнути"
 
-#: contents/ui/homeoverlay/MainColumn.qml:132
+#: contents/ui/homeoverlay/MainColumn.qml:169
 #, kde-format
 msgid "Home"
 msgstr "Домівка"
 
-#: contents/ui/homeoverlay/MainColumn.qml:145
+#: contents/ui/homeoverlay/MainColumn.qml:182
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr "Пошук"
 
-#: contents/ui/homeoverlay/MainColumn.qml:162
+#: contents/ui/homeoverlay/MainColumn.qml:199
 #, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "Завдання"
 
-#: contents/ui/homeoverlay/MainColumn.qml:185
+#: contents/ui/homeoverlay/MainColumn.qml:222
 #, kde-format
 msgid "Controller"
 msgstr "Контролер"
 
-#: contents/ui/homeoverlay/MainColumn.qml:186
+#: contents/ui/homeoverlay/MainColumn.qml:223
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "Захоплюємо натискання клавіш…"
 
-#: contents/ui/homeoverlay/MainColumn.qml:186
+#: contents/ui/homeoverlay/MainColumn.qml:223
 #, kde-format
 msgid "Key capture off"
 msgstr "Захоплення клавіш вимкнено"
 
-#: contents/ui/homeoverlay/MainColumn.qml:206
+#: contents/ui/homeoverlay/MainColumn.qml:243
 #, kde-format
 msgid "On-screen Keyboard"
 msgstr "Екранна клавіатура"
 
-#: contents/ui/homeoverlay/MainColumn.qml:220
+#: contents/ui/homeoverlay/MainColumn.qml:257
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:47+0000\n"
+"POT-Creation-Date: 2026-09-20 00:47+0000\n"
 "PO-Revision-Date: 2026-09-08 13:06+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -96,44 +96,44 @@ msgstr "WLAN"
 msgid "Shutdown"
 msgstr "Herunterfahren"
 
-#: contents/ui/homeoverlay/MainColumn.qml:132
+#: contents/ui/homeoverlay/MainColumn.qml:169
 #, kde-format
 msgid "Home"
 msgstr "Startseite"
 
-#: contents/ui/homeoverlay/MainColumn.qml:145
+#: contents/ui/homeoverlay/MainColumn.qml:182
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr "Suche"
 
-#: contents/ui/homeoverlay/MainColumn.qml:162
+#: contents/ui/homeoverlay/MainColumn.qml:199
 #, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "Anwendungen"
 
-#: contents/ui/homeoverlay/MainColumn.qml:185
+#: contents/ui/homeoverlay/MainColumn.qml:222
 #, kde-format
 msgid "Controller"
 msgstr "Controller"
 
-#: contents/ui/homeoverlay/MainColumn.qml:186
+#: contents/ui/homeoverlay/MainColumn.qml:223
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr ""
 
-#: contents/ui/homeoverlay/MainColumn.qml:186
+#: contents/ui/homeoverlay/MainColumn.qml:223
 #, kde-format
 msgid "Key capture off"
 msgstr ""
 
-#: contents/ui/homeoverlay/MainColumn.qml:206
+#: contents/ui/homeoverlay/MainColumn.qml:243
 #, kde-format
 msgid "On-screen Keyboard"
 msgstr "Bildschirmtastatur"
 
-#: contents/ui/homeoverlay/MainColumn.qml:220
+#: contents/ui/homeoverlay/MainColumn.qml:257
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
