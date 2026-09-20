@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-19 02:42+0000\n"
-"PO-Revision-Date: 2026-07-26 12:28+0200\n"
+"PO-Revision-Date: 2026-09-19 17:12+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.11.70\n"
+"X-Generator: Lokalize 26.08.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -156,28 +156,27 @@ msgstr "Spel av lyd ved byte mellom element i systemprogram"
 #: ui/main.qml:129
 #, kde-format
 msgid "Off"
-msgstr ""
+msgstr "Av"
 
 #: ui/main.qml:130
 #, kde-format
 msgid "Weak"
-msgstr ""
+msgstr "Svak"
 
 #: ui/main.qml:131
 #, kde-format
 msgid "Medium"
-msgstr ""
+msgstr "Middels"
 
 #: ui/main.qml:132
 #, kde-format
 msgid "Strong"
-msgstr ""
+msgstr "Sterk"
 
 #: ui/main.qml:135
-#, fuzzy, kde-format
-#| msgid "Navigation sounds"
+#, kde-format
 msgid "Navigation rumble"
-msgstr "Navigasjonslydar"
+msgstr "Vibrering ved navigering"
 
 #: ui/main.qml:167
 #, kde-format
@@ -210,10 +209,9 @@ msgid "Open homescreen shortcut"
 msgstr "Snøggtast for opning av heimeskjermen"
 
 #: ui/main.qml:240
-#, fuzzy, kde-format
-#| msgid "Open tasks shortcut"
+#, kde-format
 msgid "Open search shortcut"
-msgstr "Snøggtast for oppgåveopning"
+msgstr "Snøggtast for å opna søk"
 
 #: ui/main.qml:261
 #, kde-format

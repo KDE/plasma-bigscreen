@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2025 Alexander Yavorsky <kekcuha@gmail.com>
+# SPDX-FileCopyrightText: 2020-2021, 2025-2026 Alexander Yavorsky <kekcuha@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-01 00:50+0000\n"
-"PO-Revision-Date: 2025-10-12 20:13+0200\n"
+"PO-Revision-Date: 2026-09-19 22:12+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: ui/delegates/PairedView.qml:36
 #, kde-format
@@ -31,7 +31,7 @@ msgstr "Снять сопряжение"
 #: ui/delegates/PairedView.qml:52
 #, kde-format
 msgid "Plugin Settings"
-msgstr ""
+msgstr "Параметры модулей"
 
 #: ui/delegates/PairRequest.qml:35
 #, kde-format
@@ -76,7 +76,7 @@ msgstr "KDE Connect"
 #: ui/main.qml:44
 #, kde-format
 msgid "No devices found"
-msgstr ""
+msgstr "Не найдено ни одного устройства"
 
 #: ui/main.qml:44
 #, kde-format
@@ -87,7 +87,7 @@ msgstr "Устройства"
 #, kde-format
 msgctxt "%1 is the device name"
 msgid "Plugin Settings for %1 "
-msgstr ""
+msgstr "Параметры модуля %1"
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "Нажмите [←] чтобы вернуться к выбору устройства"
