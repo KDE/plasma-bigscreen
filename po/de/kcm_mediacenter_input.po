@@ -2,24 +2,26 @@
 # German translation for plasma-bigscreen.
 # Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
+# SPDX-FileCopyrightText: 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-29 00:47+0000\n"
-"PO-Revision-Date: 2026-06-08 08:38+0200\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-09-19 20:30+0200\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: ui/GameControllerSidebar.qml:36
 #, kde-format
 msgid "System navigation"
-msgstr ""
+msgstr "Systemnavigation"
 
 #: ui/GameControllerSidebar.qml:51
 #, kde-format
@@ -36,12 +38,12 @@ msgstr ""
 #: ui/main.qml:17
 #, kde-format
 msgid "Input"
-msgstr ""
+msgstr "Eingabe"
 
 #: ui/main.qml:105
 #, kde-format
 msgid "Input daemon is not running"
-msgstr ""
+msgstr "Eingabedienst wird nicht ausgeführt"
 
 #: ui/main.qml:106
 #, kde-format
@@ -49,11 +51,13 @@ msgid ""
 "Controller and remote settings are only available when plasma-bigscreen-"
 "inputhandler is running"
 msgstr ""
+"Die Einstellungen für Controller und Fernbedienung sind nur verfügbar, wenn "
+"„plasma-bigscreen-inputhandler“ ausgeführt wird"
 
 #: ui/main.qml:112
 #, kde-format
 msgid "System Navigation"
-msgstr ""
+msgstr "Systemnavigation"
 
 #: ui/main.qml:113
 #, kde-format
@@ -61,48 +65,54 @@ msgid ""
 "Navigate the system interface with connected controllers/remotes (apps can "
 "always still use them directly)"
 msgstr ""
+"Navigieren Sie mit verbundenen Controllern/Fernbedienungen durch die "
+"Systemoberfläche (Anwendungen können diese weiterhin direkt nutzen)"
 
 #: ui/main.qml:130
 #, kde-format
 msgid "TV remote"
-msgstr ""
+msgstr "TV-Fernbedienung"
 
 #: ui/main.qml:131
 #, kde-format
 msgid "Navigate the system interface with the connected TV remote (CEC)"
 msgstr ""
+"Navigieren Sie mit der verbundenen TV-Fernbedienung (CEC) durch die "
+"Systemoberfläche"
 
 #: ui/main.qml:150
 #, kde-format
 msgid "Game Controllers"
-msgstr ""
+msgstr "Controller"
 
 #: ui/main.qml:160
 #, kde-format
 msgid "Game controllers"
-msgstr ""
+msgstr "Controller"
 
 #: ui/main.qml:161
 #, kde-format
 msgid "Use connected game controllers for system navigation"
-msgstr ""
+msgstr "Verwenden Sie verbundene Controller für die Systemnavigation"
 
 #: ui/main.qml:180
 #, kde-format
 msgid "Automatic input suppression"
-msgstr ""
+msgstr "Automatische Eingabeunterdrückung"
 
 #: ui/main.qml:181
 #, kde-format
 msgid "Stop controller navigation while another app is using a controller"
 msgstr ""
+"Controller-Navigation unterbrechen, während eine andere Anwendung einen "
+"Controller verwendet"
 
 #: ui/main.qml:201
 #, kde-format
 msgid "No controllers connected"
-msgstr ""
+msgstr "Keine Controller verbunden"
 
 #: ui/main.qml:202
 #, kde-format
 msgid "Connect a game controller"
-msgstr ""
+msgstr "Verbinden Sie einen Controller"

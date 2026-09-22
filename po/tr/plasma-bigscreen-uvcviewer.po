@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2025, 2026 Emir SARI <emir_sari@îcloud.com>
+# SPDX-FileCopyrightText: 2025-2026 Emir SARI <emir_sari@îcloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2026-03-02 11:42+0300\n"
+"PO-Revision-Date: 2026-09-21 19:29+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: CameraHomePage.qml:15
 #, kde-format
@@ -31,13 +31,13 @@ msgstr "Bulunan video aygıtı yok"
 #: CameraHomePage.qml:66
 #, kde-format
 msgid "Plasma Bigscreen UVC Viewer"
-msgstr "Plasma BüyükEkran UVC Görüntüleyicisi"
+msgstr "Plasma Büyükekran UVC Görüntüleyicisi"
 
 #: Main.qml:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Bigscreen UVC Viewer"
-msgstr "BüyükEkran UVC Görüntüleyicisi"
+msgstr "Büyükekran UVC Görüntüleyicisi"
 
 #~ msgctxt "@title"
 #~ msgid "Available Video Inputs"

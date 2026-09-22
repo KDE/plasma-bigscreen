@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2025, 2026 Emir SARI <emir_sari@îcloud.com>
+# SPDX-FileCopyrightText: 2025-2026 Emir SARI <emir_sari@îcloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 00:47+0000\n"
-"PO-Revision-Date: 2026-03-02 11:42+0300\n"
+"PO-Revision-Date: 2026-09-21 19:29+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -35,12 +35,12 @@ msgstr "Masaüstü Ayarları"
 #: main.cpp:33
 #, kde-format
 msgid "Bigscreen Settings"
-msgstr "BüyükEkran Ayarları"
+msgstr "Büyükekran Ayarları"
 
 #: main.cpp:35
 #, kde-format
 msgid "Plasma Bigscreen Settings"
-msgstr "Plasma BüyükEkran Ayarları"
+msgstr "Plasma Büyükekran Ayarları"
 
 #: main.cpp:37
 #, kde-format

@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: kcm_mediacenter_display\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:50+0000\n"
-"PO-Revision-Date: 2026-04-23 18:48+0200\n"
+"PO-Revision-Date: 2026-09-19 20:19+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: ui/main.qml:22
 #, kde-format
@@ -40,17 +40,18 @@ msgid "Screen mode (Resolution & Refresh Rate)"
 msgstr "Bildschirmmodus (Auflösung und Bildwiederholrate)"
 
 #: ui/main.qml:141
-#, fuzzy, kde-format
-#| msgid "Display Configuration"
+#, kde-format
 msgid "Keep display configuration?"
-msgstr "Anzeigeeinrichtung"
+msgstr "Anzeigeeinstellungen beibehalten?"
 
 #: ui/main.qml:154
 #, kde-format
 msgid "Will revert to previous configuration in %1 second."
 msgid_plural "Will revert to previous configuration in %1 seconds."
 msgstr[0] ""
+"In %1 Sekunde werden die vorherigen Einstellungen wiederhergestellt."
 msgstr[1] ""
+"In %1 Sekunden werden die vorherigen Einstellungen wiederhergestellt."
 
 #: ui/main.qml:164 ui/ScaleDialog.qml:21
 #, kde-format
