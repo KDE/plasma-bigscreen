@@ -219,11 +219,8 @@ ColumnLayout {
                 description: checked ? i18n("Currently capturing keys…") : i18n("Key capture off")
 
                 checked: !ControllerHandler.ControllerHandlerStatus.inputManuallySuppressed
-                onCheckedChanged: {
-                    // Takes effect when the overlay stops ignoring suppression on close.
-                    ControllerHandler.ControllerHandlerStatus.inputSuppressed = !checked;
-                    checked = Qt.binding(() => !ControllerHandler.ControllerHandlerStatus.inputManuallySuppressed)
-                }
+                // Takes effect when the overlay stops ignoring suppression on close.
+                onToggled: ControllerHandler.ControllerHandlerStatus.inputSuppressed = !checked
             }
 
             Bigscreen.SwitchDelegate {
