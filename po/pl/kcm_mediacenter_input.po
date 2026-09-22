@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-29 00:47+0000\n"
+"POT-Creation-Date: 2026-09-22 16:02+0000\n"
 "PO-Revision-Date: 2026-08-08 12:00+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -80,39 +80,54 @@ msgstr "Pilot do TV"
 msgid "Navigate the system interface with the connected TV remote (CEC)"
 msgstr "Obsługuj interfejs systemu podłączonym pilotem od TV (CEC)"
 
-#: ui/main.qml:150
+#: ui/main.qml:151
+#, kde-format
+msgid "TV HDMI port (CEC)"
+msgstr ""
+
+#: ui/main.qml:156
+#, kde-format
+msgid "Automatic"
+msgstr ""
+
+#: ui/main.qml:158
+#, kde-format
+msgid "HDMI %1"
+msgstr ""
+
+#: ui/main.qml:176
 #, kde-format
 msgid "Game Controllers"
 msgstr "Pady do gier"
 
-#: ui/main.qml:160
+#: ui/main.qml:186
 #, kde-format
 msgid "Game controllers"
 msgstr "Pady do gier"
 
-#: ui/main.qml:161
+#: ui/main.qml:187
 #, kde-format
 msgid "Use connected game controllers for system navigation"
 msgstr "Używaj podłączonych padów do gier do przemieszczania się po systemie"
 
-#: ui/main.qml:180
+#: ui/main.qml:206
 #, kde-format
 msgid "Automatic input suppression"
 msgstr "Sam wygaszaj urządzenia wejściowe"
 
-#: ui/main.qml:181
+#: ui/main.qml:207
 #, kde-format
 msgid "Stop controller navigation while another app is using a controller"
 msgstr ""
 "Zaprzestań przemieszczania się przy użyciu pada, gdy inna aplikacja z niego "
 "korzysta"
 
-#: ui/main.qml:201
+#: ui/main.qml:227
 #, kde-format
 msgid "No controllers connected"
 msgstr "Nie podłączono żadnego pada"
 
-#: ui/main.qml:202
+#: ui/main.qml:228
 #, kde-format
 msgid "Connect a game controller"
 msgstr "Podłącz pada do gier"

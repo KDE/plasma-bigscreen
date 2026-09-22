@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-29 00:47+0000\n"
+"POT-Creation-Date: 2026-09-22 16:02+0000\n"
 "PO-Revision-Date: 2026-06-10 06:52+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <kde-i18n-doc@kde.org>\n"
@@ -83,37 +83,52 @@ msgstr ""
 "Navigacija po sistemskem vmesniku s priključenim daljinskim upravljalnikom "
 "televizorja (CEC)"
 
-#: ui/main.qml:150
+#: ui/main.qml:151
+#, kde-format
+msgid "TV HDMI port (CEC)"
+msgstr ""
+
+#: ui/main.qml:156
+#, kde-format
+msgid "Automatic"
+msgstr ""
+
+#: ui/main.qml:158
+#, kde-format
+msgid "HDMI %1"
+msgstr ""
+
+#: ui/main.qml:176
 #, kde-format
 msgid "Game Controllers"
 msgstr "Krmilniki iger"
 
-#: ui/main.qml:160
+#: ui/main.qml:186
 #, kde-format
 msgid "Game controllers"
 msgstr "Krmilniki iger"
 
-#: ui/main.qml:161
+#: ui/main.qml:187
 #, kde-format
 msgid "Use connected game controllers for system navigation"
 msgstr "Uporabi povezane igralne krmilnike za navigacijo po sistemu"
 
-#: ui/main.qml:180
+#: ui/main.qml:206
 #, kde-format
 msgid "Automatic input suppression"
 msgstr "Samodejno zatiranje vhoda"
 
-#: ui/main.qml:181
+#: ui/main.qml:207
 #, kde-format
 msgid "Stop controller navigation while another app is using a controller"
 msgstr "Ustavi navigacije krmilnika kadar druga aplikacija uporablja krmilnik"
 
-#: ui/main.qml:201
+#: ui/main.qml:227
 #, kde-format
 msgid "No controllers connected"
 msgstr "Ni priključenih krmilnikov"
 
-#: ui/main.qml:202
+#: ui/main.qml:228
 #, kde-format
 msgid "Connect a game controller"
 msgstr "Priklopi krmilnik iger"

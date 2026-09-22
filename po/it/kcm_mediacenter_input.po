@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-29 00:47+0000\n"
+"POT-Creation-Date: 2026-09-22 16:02+0000\n"
 "PO-Revision-Date: 2026-06-11 10:23+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -81,40 +81,55 @@ msgstr ""
 "Naviga nell'interfaccia di sistema con il telecomando del televisore "
 "connesso (CEC)"
 
-#: ui/main.qml:150
+#: ui/main.qml:151
+#, kde-format
+msgid "TV HDMI port (CEC)"
+msgstr ""
+
+#: ui/main.qml:156
+#, kde-format
+msgid "Automatic"
+msgstr ""
+
+#: ui/main.qml:158
+#, kde-format
+msgid "HDMI %1"
+msgstr ""
+
+#: ui/main.qml:176
 #, kde-format
 msgid "Game Controllers"
 msgstr "Controller di gioco"
 
-#: ui/main.qml:160
+#: ui/main.qml:186
 #, kde-format
 msgid "Game controllers"
 msgstr "Controller di gioco"
 
-#: ui/main.qml:161
+#: ui/main.qml:187
 #, kde-format
 msgid "Use connected game controllers for system navigation"
 msgstr ""
 "Utilizza i controller di gioco collegati per la navigazione nel sistema."
 
-#: ui/main.qml:180
+#: ui/main.qml:206
 #, kde-format
 msgid "Automatic input suppression"
 msgstr "Soppressione automatica dell'input"
 
-#: ui/main.qml:181
+#: ui/main.qml:207
 #, kde-format
 msgid "Stop controller navigation while another app is using a controller"
 msgstr ""
 "Interrompi la navigazione del controller mentre un'altra applicazione lo sta "
 "utilizzando"
 
-#: ui/main.qml:201
+#: ui/main.qml:227
 #, kde-format
 msgid "No controllers connected"
 msgstr "Nessun controller collegato"
 
-#: ui/main.qml:202
+#: ui/main.qml:228
 #, kde-format
 msgid "Connect a game controller"
 msgstr "Collega un controller di gioco"

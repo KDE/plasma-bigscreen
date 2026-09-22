@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-20 00:47+0000\n"
-"PO-Revision-Date: 2026-07-22 17:19-0400\n"
+"POT-Creation-Date: 2026-09-22 16:02+0000\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -19,10 +19,9 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Exit Bigscreen"
+#, kde-format
 msgid "Edit Home Screen"
-msgstr "چوڭ ئېكراندىن چېكىن"
+msgstr ""
 
 #: contents/ui/FavoritesManager.qml:144
 #: contents/ui/launcher/LauncherHome.qml:84
@@ -46,10 +45,9 @@ msgid "Remove Favorites"
 msgstr "يىغقۇچتىن چىقىرىۋەت"
 
 #: contents/ui/FavoritesManager.qml:308
-#, fuzzy, kde-format
-#| msgid "Recent"
+#, kde-format
 msgid "Show Recent"
-msgstr "يېقىنقى"
+msgstr ""
 
 #: contents/ui/FavoritesManager.qml:309
 #, kde-format
@@ -57,10 +55,9 @@ msgid "Recently launched applications appear in a row on the home screen"
 msgstr ""
 
 #: contents/ui/FavoritesManager.qml:324
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Show Applications"
-msgstr "پىروگرامما"
+msgstr ""
 
 #: contents/ui/FavoritesManager.qml:325
 #, kde-format
@@ -68,10 +65,9 @@ msgid "Non-game applications appear in a row on the home screen"
 msgstr ""
 
 #: contents/ui/FavoritesManager.qml:341
-#, fuzzy, kde-format
-#| msgid "Games"
+#, kde-format
 msgid "Show Games"
-msgstr "ئويۇن"
+msgstr ""
 
 #: contents/ui/FavoritesManager.qml:342
 #, kde-format
@@ -91,51 +87,51 @@ msgstr "ئۈن"
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:78
 #, kde-format
 msgid "Wi-Fi"
-msgstr "Wi-Fi"
+msgstr ""
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:93
 #, kde-format
 msgid "Shutdown"
 msgstr "تاقا"
 
-#: contents/ui/homeoverlay/MainColumn.qml:169
+#: contents/ui/homeoverlay/MainColumn.qml:165
 #, kde-format
 msgid "Home"
 msgstr "باش بەت"
 
-#: contents/ui/homeoverlay/MainColumn.qml:182
+#: contents/ui/homeoverlay/MainColumn.qml:178
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr "ئىزدە"
 
-#: contents/ui/homeoverlay/MainColumn.qml:199
+#: contents/ui/homeoverlay/MainColumn.qml:195
 #, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "ۋەزىپە"
 
-#: contents/ui/homeoverlay/MainColumn.qml:222
+#: contents/ui/homeoverlay/MainColumn.qml:218
 #, kde-format
 msgid "Controller"
 msgstr "تىزگىنلىگۈچ"
 
-#: contents/ui/homeoverlay/MainColumn.qml:223
+#: contents/ui/homeoverlay/MainColumn.qml:219
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "نۆۋەتتە كۇنۇپكا تۇتۇۋاتىدۇ…"
 
-#: contents/ui/homeoverlay/MainColumn.qml:223
+#: contents/ui/homeoverlay/MainColumn.qml:219
 #, kde-format
 msgid "Key capture off"
 msgstr "كۇنۇپكا تۇتۇش تاقاق"
 
-#: contents/ui/homeoverlay/MainColumn.qml:243
+#: contents/ui/homeoverlay/MainColumn.qml:237
 #, kde-format
 msgid "On-screen Keyboard"
 msgstr "ئېكران ھەرپتاختىسى"
 
-#: contents/ui/homeoverlay/MainColumn.qml:257
+#: contents/ui/homeoverlay/MainColumn.qml:251
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"

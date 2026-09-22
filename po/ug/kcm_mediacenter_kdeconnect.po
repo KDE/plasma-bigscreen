@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-01 00:50+0000\n"
-"PO-Revision-Date: 2026-07-22 17:18-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -31,7 +31,7 @@ msgstr "جۈپلىمە"
 #: ui/delegates/PairedView.qml:52
 #, kde-format
 msgid "Plugin Settings"
-msgstr ""
+msgstr "قىستۇرما تەڭشىكى"
 
 #: ui/delegates/PairRequest.qml:35
 #, kde-format
@@ -76,7 +76,7 @@ msgstr "KDE باغلىنىش"
 #: ui/main.qml:44
 #, kde-format
 msgid "No devices found"
-msgstr ""
+msgstr "ھېچقانداق ئۈسكۈنە تېپىلمىدى"
 
 #: ui/main.qml:44
 #, kde-format

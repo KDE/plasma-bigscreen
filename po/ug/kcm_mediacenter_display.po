@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:50+0000\n"
-"PO-Revision-Date: 2026-07-22 17:18-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -44,10 +44,9 @@ msgid "Screen mode (Resolution & Refresh Rate)"
 msgstr "ئېكران ھالىتى (ئېنىقلىقى ۋە يېڭىلاش نىسبىتى)"
 
 #: ui/main.qml:141
-#, fuzzy, kde-format
-#| msgid "Display Configuration"
+#, kde-format
 msgid "Keep display configuration?"
-msgstr "كۆرسەتكۈچ سەپلىمىسى"
+msgstr ""
 
 #: ui/main.qml:154
 #, kde-format
@@ -64,4 +63,4 @@ msgstr "نىسبەت"
 #, kde-format
 msgctxt "Scale percentage"
 msgid "%1%"
-msgstr "%1%"
+msgstr ""
