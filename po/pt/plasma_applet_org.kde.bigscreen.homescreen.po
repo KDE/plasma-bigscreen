@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-20 02:45+0000\n"
+"POT-Creation-Date: 2026-09-22 02:51+0000\n"
 "PO-Revision-Date: 2026-02-04 01:07+0000\n"
 "Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
 "Language-Team: pt\n"
@@ -95,45 +95,45 @@ msgstr ""
 msgid "Shutdown"
 msgstr ""
 
-#: contents/ui/homeoverlay/MainColumn.qml:169
+#: contents/ui/homeoverlay/MainColumn.qml:165
 #, kde-format
 msgid "Home"
 msgstr "Início"
 
-#: contents/ui/homeoverlay/MainColumn.qml:182
+#: contents/ui/homeoverlay/MainColumn.qml:178
 #: contents/ui/indicators/Search.qml:16
 #, kde-format
 msgid "Search"
 msgstr "Pesquisar"
 
-#: contents/ui/homeoverlay/MainColumn.qml:199
+#: contents/ui/homeoverlay/MainColumn.qml:195
 #, fuzzy, kde-format
 #| msgid "Tasks"
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "Tarefas"
 
-#: contents/ui/homeoverlay/MainColumn.qml:222
+#: contents/ui/homeoverlay/MainColumn.qml:218
 #, kde-format
 msgid "Controller"
 msgstr "Comando"
 
-#: contents/ui/homeoverlay/MainColumn.qml:223
+#: contents/ui/homeoverlay/MainColumn.qml:219
 #, kde-format
 msgid "Currently capturing keys…"
 msgstr "A capturar teclas…"
 
-#: contents/ui/homeoverlay/MainColumn.qml:223
+#: contents/ui/homeoverlay/MainColumn.qml:219
 #, kde-format
 msgid "Key capture off"
 msgstr "Captura de teclas desligada"
 
-#: contents/ui/homeoverlay/MainColumn.qml:243
+#: contents/ui/homeoverlay/MainColumn.qml:237
 #, kde-format
 msgid "On-screen Keyboard"
 msgstr "Teclado no ecrã"
 
-#: contents/ui/homeoverlay/MainColumn.qml:257
+#: contents/ui/homeoverlay/MainColumn.qml:251
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
