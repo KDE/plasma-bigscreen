@@ -16,6 +16,7 @@
 
 #include <QDBusConnection>
 #include <QDBusError>
+#include <QDBusServiceWatcher>
 #include <QDebug>
 
 InputHandlerDBus::InputHandlerDBus(QObject *parent)
@@ -176,6 +177,43 @@ void InputHandlerDBus::setInputSuppressed(bool suppress)
         return;
     }
     m_sdlController->setSuppressInput(suppress);
+}
+
+void InputHandlerDBus::beginIgnoreSuppression()
+{
+    if (!m_sdlController) {
+        return;
+    }
+
+    // Release the request if the client holding it drops off the bus, so a
+    // crashed shell cannot leave suppression ignored indefinitely.
+    if (calledFromDBus()) {
+        if (!m_ignoreOwnerWatcher) {
+            m_ignoreOwnerWatcher =
+                new QDBusServiceWatcher(QString(), QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForUnregistration, this);
+            connect(m_ignoreOwnerWatcher, &QDBusServiceWatcher::serviceUnregistered, this, [this]() {
+                m_ignoreOwnerWatcher->setWatchedServices({});
+                if (m_sdlController) {
+                    qInfo() << "Ignore-suppression owner left the bus, releasing";
+                    m_sdlController->endIgnoreSuppression();
+                }
+            });
+        }
+        m_ignoreOwnerWatcher->setWatchedServices({message().service()});
+    }
+
+    m_sdlController->beginIgnoreSuppression();
+}
+
+void InputHandlerDBus::endIgnoreSuppression()
+{
+    if (!m_sdlController) {
+        return;
+    }
+    if (m_ignoreOwnerWatcher) {
+        m_ignoreOwnerWatcher->setWatchedServices({});
+    }
+    m_sdlController->endIgnoreSuppression();
 }
 
 bool InputHandlerDBus::sendStandby(int logicalAddress)

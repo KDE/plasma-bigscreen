@@ -159,8 +159,24 @@ bool ControllerHandlerStatus::gameControllerEnabled() const
 
 void ControllerHandlerStatus::setInputSuppressed(bool suppress)
 {
-    if (m_dbusInterface && m_inputSuppressed != suppress) {
+    // No m_inputSuppressed guard: the cache tracks the effective state, which can
+    // differ from the manual layer this writes while suppression is being ignored.
+    if (m_dbusInterface) {
         m_dbusInterface->setProperty("inputSuppressed", suppress);
+    }
+}
+
+void ControllerHandlerStatus::beginIgnoreSuppression()
+{
+    if (m_dbusInterface) {
+        m_dbusInterface->asyncCall(QStringLiteral("beginIgnoreSuppression"));
+    }
+}
+
+void ControllerHandlerStatus::endIgnoreSuppression()
+{
+    if (m_dbusInterface) {
+        m_dbusInterface->asyncCall(QStringLiteral("endIgnoreSuppression"));
     }
 }
 

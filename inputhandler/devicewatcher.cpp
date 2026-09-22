@@ -105,6 +105,11 @@ void DeviceWatcher::onInotifyEvent()
     checkDeviceAccess();
 }
 
+void DeviceWatcher::recheck()
+{
+    checkDeviceAccess();
+}
+
 void DeviceWatcher::checkDeviceAccess()
 {
     bool othersFound = isDeviceOpenByOthers();

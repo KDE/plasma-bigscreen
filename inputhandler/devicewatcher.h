@@ -29,6 +29,9 @@ public:
         return m_othersUsingDevice;
     }
 
+    // Rescan now; the cached answer is otherwise only refreshed on an inotify edge.
+    void recheck();
+
 Q_SIGNALS:
     void otherProcessesChanged(bool othersUsingDevice);
 

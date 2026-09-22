@@ -6,19 +6,21 @@
 
 #pragma once
 
+#include <QDBusContext>
 #include <QList>
 #include <QObject>
 #include <QString>
 #include <QVariantList>
 #include <QVariantMap>
 
+class QDBusServiceWatcher;
 class SdlController;
 
 #ifdef HAS_LIBCEC
 class CECController;
 #endif
 
-class InputHandlerDBus : public QObject
+class InputHandlerDBus : public QObject, protected QDBusContext
 {
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.kde.plasma.bigscreen.inputhandler")
@@ -59,6 +61,10 @@ public Q_SLOTS:
     Q_SCRIPTABLE bool isSdlControllerConnected() const;
     Q_SCRIPTABLE bool isCecControllerConnected() const;
     Q_SCRIPTABLE QVariantList connectedControllers() const;
+    // Scoped request to ignore suppression and take input; ending it restores
+    // whatever the manual and automatic layers resolve to.
+    Q_SCRIPTABLE void beginIgnoreSuppression();
+    Q_SCRIPTABLE void endIgnoreSuppression();
     Q_SCRIPTABLE void setControllerEnabled(const QString &uniqueIdentifier, bool enabled);
     Q_SCRIPTABLE void setStartButtonEnabledWhenSuppressed(const QString &uniqueIdentifier, bool enabled);
     Q_SCRIPTABLE bool sendSdlControllerRumble(int lowFreq, int highFreq, int durationMs);
@@ -98,6 +104,7 @@ Q_SIGNALS:
 
 private:
     SdlController *m_sdlController = nullptr;
+    QDBusServiceWatcher *m_ignoreOwnerWatcher = nullptr;
 
 #ifdef HAS_LIBCEC
     CECController *m_cecController = nullptr;
