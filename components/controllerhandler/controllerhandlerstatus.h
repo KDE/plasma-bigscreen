@@ -36,8 +36,6 @@ public:
 
     void setInputSuppressed(bool suppress);
 
-    // Scoped request to ignore suppression and take input; ending it restores
-    // whatever the manual and automatic layers resolve to.
     Q_INVOKABLE void beginIgnoreSuppression();
     Q_INVOKABLE void endIgnoreSuppression();
 
