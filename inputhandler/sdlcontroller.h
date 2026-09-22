@@ -83,7 +83,16 @@ public:
 
     bool hasConnectedControllers() const;
 
+    // Force suppression on (true) or hand control back to automatic (false).
     void setSuppressInput(bool suppress);
+
+    // Scoped request from transient UI (e.g. the home overlay) to ignore
+    // suppression and take input. Sits above the manual and automatic layers;
+    // ending it restores whatever they resolve to, so callers never save and
+    // reapply a borrowed value.
+    void beginIgnoreSuppression();
+    void endIgnoreSuppression();
+
     bool isSuppressInput() const
     {
         return m_suppressInput;
@@ -114,12 +123,15 @@ private:
     void removeDevice(SDL_JoystickID instanceId);
     void releasePressedInput();
     void updateAutomaticSuppression();
+    // Resolve the layers - ignore-suppression, manual, automatic - and apply the result.
+    void applySuppressionState(bool automatic);
 
     QMap<SDL_JoystickID, SdlDevice *> m_devices;
     QTimer *m_pollTimer = nullptr;
     bool m_suppressInput = false;
     bool m_autoSuppressInput = true;
     bool m_manualSuppressInput = false; // Manually set via D-Bus
+    bool m_ignoreSuppression = false; // Scoped request to ignore suppression, outranks manual and automatic
     SDL_JoystickID m_lastActiveInstanceId = -1;
     DeviceWatcher *m_deviceWatcher = nullptr;
 

@@ -170,22 +170,67 @@ bool SdlController::hasConnectedControllers() const
     return !m_devices.isEmpty();
 }
 
+void SdlController::applySuppressionState(bool automatic)
+{
+    bool effective;
+    if (m_ignoreSuppression) {
+        effective = false;
+    } else if (m_manualSuppressInput) {
+        // Manual mode only ever means "forced on"; setSuppressInput(false) clears it.
+        effective = true;
+    } else {
+        effective = m_autoSuppressInput && m_deviceWatcher && m_deviceWatcher->hasOtherProcesses();
+    }
+
+    if (effective == m_suppressInput) {
+        return;
+    }
+
+    m_suppressInput = effective;
+    if (m_suppressInput) {
+        releasePressedInput();
+    }
+    Q_EMIT isSuppressInputChanged(m_suppressInput, automatic);
+    qInfo() << (automatic ? "SDL input suppression (auto):" : "SDL input suppression (manual):")
+            << (m_suppressInput ? "enabled" : "disabled");
+}
+
 void SdlController::setSuppressInput(bool suppress)
 {
-    bool oldValue = m_suppressInput;
-
+    if (m_manualSuppressInput == suppress) {
+        return;
+    }
     m_manualSuppressInput = suppress;
-    m_suppressInput = suppress;
 
-    qInfo() << "SDL input suppression (manual):" << (suppress ? "enabled" : "disabled")
-            << "-> effective:" << (m_suppressInput ? "suppressed" : "not suppressed");
-
-    if (m_suppressInput != oldValue) {
-        if (m_suppressInput) {
-            releasePressedInput();
-        }
+    const bool oldEffective = m_suppressInput;
+    applySuppressionState(false);
+    if (m_suppressInput == oldEffective) {
+        // The manual layer changed without changing the effective state (e.g. while
+        // suppression is ignored); still notify, isManualSuppressInput() shares this signal.
         Q_EMIT isSuppressInputChanged(m_suppressInput, false);
     }
+}
+
+void SdlController::beginIgnoreSuppression()
+{
+    m_ignoreSuppression = true;
+    applySuppressionState(false);
+}
+
+void SdlController::endIgnoreSuppression()
+{
+    if (!m_ignoreSuppression) {
+        return;
+    }
+
+    m_ignoreSuppression = false;
+
+    // An inotify edge may have been missed while suppression was ignored.
+    if (m_deviceWatcher) {
+        m_deviceWatcher->recheck();
+    }
+
+    applySuppressionState(false);
 }
 
 void SdlController::setAutoSuppressInput(bool enabled)
@@ -206,22 +251,7 @@ void SdlController::setAutoSuppressInput(bool enabled)
 
 void SdlController::updateAutomaticSuppression()
 {
-    if (m_manualSuppressInput || !m_deviceWatcher) {
-        return;
-    }
-
-    bool oldValue = m_suppressInput;
-    m_suppressInput = m_autoSuppressInput && m_deviceWatcher->hasOtherProcesses();
-
-    if (m_suppressInput == oldValue) {
-        return;
-    }
-
-    if (m_suppressInput) {
-        releasePressedInput();
-    }
-    Q_EMIT isSuppressInputChanged(m_suppressInput, true);
-    qInfo() << "SDL input suppression (auto):" << (m_suppressInput ? "enabled" : "disabled");
+    applySuppressionState(true);
 }
 
 void SdlController::releasePressedInput()
