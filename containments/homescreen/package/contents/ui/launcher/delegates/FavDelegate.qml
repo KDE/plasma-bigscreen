@@ -16,17 +16,17 @@ IconDelegate {
     id: delegate
     useIconColors: Plasmoid.configuration.coloredTiles
 
-    icon.name: modelData.ApplicationIconRole
-    text: modelData ? modelData.ApplicationNameRole : ""
+    icon.name: parent.modelData.ApplicationIconRole
+    text: parent.modelData ? parent.modelData.ApplicationNameRole : ""
 
     onClicked: {
         Bigscreen.NavigationSoundEffects.playClickedSound();
         Bigscreen.NavigationRumble.playConfirmRumble();
-        if (Plasmoid.applicationListModel.isApplicationRunning(modelData.ApplicationStorageIdRole)) {
-            Plasmoid.applicationListModel.maximizeApplication(modelData.ApplicationStorageIdRole);
+        if (Plasmoid.applicationListModel.isApplicationRunning(parent.modelData.ApplicationStorageIdRole)) {
+            Plasmoid.applicationListModel.maximizeApplication(parent.modelData.ApplicationStorageIdRole);
         } else {
             Plasmoid.showAppLaunchScreen(delegate.text, delegate.icon.name.length > 0 ? delegate.icon.name : model.decoration);
-            Plasmoid.applicationListModel.runApplication(modelData.ApplicationStorageIdRole);
+            Plasmoid.applicationListModel.runApplication(parent.modelData.ApplicationStorageIdRole);
         }
     }
 }

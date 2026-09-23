@@ -15,9 +15,12 @@ import org.kde.bigscreen as Bigscreen
 Bigscreen.AbstractDelegate {
     id: delegate
 
+    signal longClick
+
     implicitWidth: listView ? listView.cellWidth : null
     implicitHeight: listView ? listView.height : null
     baseRadius: Kirigami.Units.gridUnit
+    handleKeyReturnAsClick: false
 
     property var iconImage
     property bool useIconColors: true
@@ -33,6 +36,60 @@ Bigscreen.AbstractDelegate {
         property color backgroundColor: useColors ? dominantContrast : Kirigami.Theme.backgroundColor
         property color accentColor: useColors ? highlight : Kirigami.Theme.highlightColor
         property color textColor: useColors ? (Kirigami.ColorUtils.brightnessForColor(dominantContrast) === Kirigami.ColorUtils.Light ? imagePalette.closestToBlack : imagePalette.closestToWhite) : Kirigami.Theme.textColor
+    }
+
+    property real pressedFactor: 0
+    property bool appPressed: false
+    onAppPressedChanged: {
+        if (appPressed){
+            pressedAnim.restart();
+        } else{
+            pressedAnim.stop();
+            pressedFactor = 0;
+        }
+    }
+    onPressedChanged: {
+        appPressed = pressed;
+    }
+
+    NumberAnimation on pressedFactor {
+        id: pressedAnim
+        from: 0
+        to: 1
+        running: false
+        duration: 1000
+        onFinished: {
+            delegate.longClick();
+            appPressed = false
+        }
+    }
+
+    Keys.onPressed: (event) => {
+        if (event.isAutoRepeat){
+            return;
+        }
+        if (event.key == Qt.Key_Return){
+            event.accepted = true;
+            appPressed = true;
+        } else{
+            event.accepted = false;
+        }
+    }
+    Keys.onReleased: (event) => {
+        if (event.isAutoRepeat){
+            return;
+        }
+        if (appPressed && event.key == Qt.Key_Return){
+            event.accepted = true;
+
+            // Don't "click" unless the user just pressed
+            if (pressedFactor < 0.2){
+                click();
+            }
+            appPressed = false;
+        } else{
+            event.accepted = false;
+        }
     }
 
     contentItem: Item {

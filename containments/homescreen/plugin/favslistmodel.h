@@ -27,14 +27,14 @@ public Q_SLOTS:
     void clearFavs();
 
 Q_SIGNALS:
-    void favOrderChanged();
+    void favOrderChanged(int originalIndex, int destinationIndex);
     void favsCleared();
-    void favsListChanged();
+    void favsListChanged(bool resetModel);
 
 private:
     explicit FavsManager(QObject *parent = nullptr);
     QList<QVariantMap> m_favsList;
-    void saveFavsList();
+    void saveFavsList(bool resetModel);
     void loadFavsList();
 };
 
@@ -53,7 +53,8 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     Qt::ItemFlags flags(const QModelIndex &index) const override;
     QHash<int, QByteArray> roleNames() const override;
-    void resetModel();
+    void resetModel(bool reset);
+    void syncMovedRow(int originalIndex, int destinationIndex);
     Q_INVOKABLE QVariantMap itemMap(int index);
 
     enum Roles {

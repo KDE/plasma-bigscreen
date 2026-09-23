@@ -109,28 +109,25 @@ FocusScope {
         displayMarginBeginning: cellWidth
         displayMarginEnd: cellWidth
 
-        onCurrentIndexChanged: {
+        function contentXAnimation(){
             const maxContentX = Math.max(0, contentWidth - width);
-            xAnim.to = Math.max(0, Math.min(itemAtIndex(currentIndex).x - cellWidth, maxContentX));
-            xAnim.restart();
+            xAnim.to = Math.max(0, Math.min((currentIndex - 1) * cellWidth, maxContentX)) + itemAtIndex(0).x;
+            if (xAnim.to != contentX) xAnim.restart();
         }
+
+        onCurrentIndexChanged: contentXAnimation()
 
         NumberAnimation on contentX {
             id: xAnim
             easing.type: Easing.OutCubic
             duration: Kirigami.Units.longDuration
+            // When the x property of the item at index 0 changes during the animation, the animation must be re-run
+            onFinished: view.contentXAnimation()
         }
 
         onMovementEnded: flickEnded()
 
         onFlickEnded: currentIndex = indexAt(mapToItem(contentItem, cellWidth, 0).x, 0)
-
-        move: Transition {
-            SmoothedAnimation {
-                property: "x"
-                duration: Kirigami.Units.longDuration
-            }
-        }
 
         Keys.onLeftPressed: (event) => {
             if (currentIndex > 0) {

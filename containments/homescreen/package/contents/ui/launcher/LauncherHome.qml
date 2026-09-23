@@ -88,8 +88,8 @@ FocusScope {
             focus: visible
             onActiveFocusChanged: if (activeFocus)
                 launcherHomeColumn.currentSection = favAppsView
-            delegate: Delegates.FavDelegate {
-                property var modelData: typeof model !== "undefined" ? model : null
+            delegate: Delegates.FavsMover {
+                modelData: typeof model !== "undefined" ? model : null
             }
 
             navigationUp: root.navigationUp

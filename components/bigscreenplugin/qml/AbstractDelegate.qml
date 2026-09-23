@@ -27,14 +27,16 @@ QQC2.ItemDelegate {
         }
         return null;
     }
+    property bool forceCurrent: false
     readonly property bool isCurrent: {//print(text+index+" "+listView.currentIndex+activeFocus+" "+listView.moving)
-        listView && listView.currentIndex == index && activeFocus && !listView.moving
+        (listView && listView.currentIndex == index && activeFocus && !listView.moving) || forceCurrent
     }
 
     highlighted: isCurrent
     property int shadowSize: 16
     property int borderSize: Kirigami.Units.smallSpacing
     property int baseRadius: Kirigami.Units.cornerRadius
+    property bool handleKeyReturnAsClick: true
 
     z: isCurrent ? 2 : 0
 
@@ -56,8 +58,13 @@ QQC2.ItemDelegate {
     bottomInset: Kirigami.Units.largeSpacing
 
 
-    Keys.onReturnPressed: {
-        clicked();
+    Keys.onReturnPressed: function(event){
+        if (handleKeyReturnAsClick){
+            clicked();
+            event.accepted = true;
+        } else {
+            event.accepted = false;
+        }
     }
 
     contentItem: Item {}

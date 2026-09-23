@@ -8,6 +8,7 @@
 #include <KSharedConfig>
 #include <QVariantMap>
 
+static QStringList sortStringifiedInt(QStringList items);
 
 FavsManager *FavsManager::instance()
 {
@@ -51,7 +52,7 @@ void FavsManager::addFav(QVariantMap fav)
     }
 
     m_favsList.append(fav);
-    saveFavsList();
+    saveFavsList(true);
 }
 
 void FavsManager::removeFav(QVariantMap fav)
@@ -60,7 +61,7 @@ void FavsManager::removeFav(QVariantMap fav)
         const QVariantMap &favMap = m_favsList.at(i);
         if (favMap.value(QLatin1String("storageId")) == fav.value(QLatin1String("storageId")) && favMap.value(QLatin1String("entryPath")) == fav.value(QLatin1String("entryPath"))) {
             m_favsList.removeAt(i);
-            saveFavsList();
+            saveFavsList(true);
             return;
         }
     }
@@ -72,20 +73,21 @@ void FavsManager::moveFav(QVariantMap fav, int destinationIndex)
         return;
     }
 
+    int index = m_favsList.indexOf(fav);
     m_favsList.removeOne(fav);
     m_favsList.insert(destinationIndex, fav);
-    saveFavsList();
-    Q_EMIT favOrderChanged();
+    saveFavsList(false);
+    Q_EMIT favOrderChanged(index, destinationIndex);
 }
 
 void FavsManager::clearFavs()
 {
     m_favsList.clear();
-    saveFavsList();
+    saveFavsList(true);
     Q_EMIT favsCleared();
 }
 
-void FavsManager::saveFavsList()
+void FavsManager::saveFavsList(bool resetModel)
 {
     static KSharedConfigPtr config = KSharedConfig::openConfig(QLatin1String("bigscreen-favs"));
     static KConfigGroup grp(config, QLatin1String("Favs"));
@@ -110,7 +112,7 @@ void FavsManager::saveFavsList()
     }
     
     grp.sync();
-    Q_EMIT favsListChanged();
+    Q_EMIT favsListChanged(resetModel);
 }
 
 void FavsManager::loadFavsList()
@@ -123,7 +125,8 @@ void FavsManager::loadFavsList()
     }
 
     m_favsList.clear();
-    const QStringList favs = grp.groupList();
+    QStringList favs_unsorted = grp.groupList();
+    const QStringList favs = sortStringifiedInt(favs_unsorted);
 
     for (const QString &fav : favs) {
         KConfigGroup favGrp = grp.group(fav);
@@ -147,7 +150,8 @@ FavsListModel::FavsListModel(FavsManager *favsManager, QObject *parent)
 {
     m_favsManager = favsManager;
     QObject::connect(m_favsManager, &FavsManager::favsListChanged, this, &FavsListModel::resetModel);
-    resetModel();
+    QObject::connect(m_favsManager, &FavsManager::favOrderChanged, this, &FavsListModel::syncMovedRow);
+    resetModel(true);
 }
 
 FavsListModel::~FavsListModel()
@@ -233,11 +237,21 @@ QHash<int, QByteArray> FavsListModel::roleNames() const
     return roles;
 }
 
-void FavsListModel::resetModel()
+void FavsListModel::resetModel(bool reset)
 {
+    if (!reset)
+        return;
     beginResetModel();
     endResetModel();
     Q_EMIT countChanged();
+}
+
+void FavsListModel::syncMovedRow(int originalIndex, int destinationIndex)
+{
+    beginRemoveRows({}, destinationIndex, destinationIndex);
+    endRemoveRows();
+    beginInsertRows({}, originalIndex, originalIndex);
+    endInsertRows();
 }
 
 QVariantMap FavsListModel::itemMap(int index)
@@ -252,4 +266,29 @@ QVariantMap FavsListModel::itemMap(int index)
     map[QLatin1String("desktopPath")] = data(createIndex(index, 0), ApplicationDesktopRole);
     map[QLatin1String("startupNotify")] = data(createIndex(index, 0), ApplicationStartupNotifyRole);
     return map;
+}
+
+static QStringList sortStringifiedInt(QStringList items)
+{
+    bool swapped;
+    bool err_given = false;
+    do {
+        swapped = false;
+        for (uint32_t i = 0; i < items.size() - 1; i++) {
+            bool ok_a, ok_b;
+            const int a = items.at(i).toInt(&ok_a, 10);
+            const int b = items.at(i + 1).toInt(&ok_b, 10);
+            if ((!ok_a || !ok_b) && !err_given) {
+                qWarning() << "Couldn't convert QString to int. "
+                              "Favorites sorting might be incorrect.";
+                err_given = true;
+            }
+            if (b < a) {
+                swapped = true;
+                items.swapItemsAt(i, i + 1);
+            }
+        }
+    } while (swapped);
+
+    return items;
 }
