@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 16:02+0000\n"
-"PO-Revision-Date: 2026-06-10 05:53+0200\n"
+"PO-Revision-Date: 2026-09-23 07:41+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -83,17 +83,17 @@ msgstr "სისტემის ინტერფეისში ნავი�
 #: ui/main.qml:151
 #, kde-format
 msgid "TV HDMI port (CEC)"
-msgstr ""
+msgstr "ტელევიზორის HDMI პორტი (CEC)"
 
 #: ui/main.qml:156
 #, kde-format
 msgid "Automatic"
-msgstr ""
+msgstr "ავტომატური"
 
 #: ui/main.qml:158
 #, kde-format
 msgid "HDMI %1"
-msgstr ""
+msgstr "HDMI %1"
 
 #: ui/main.qml:176
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 16:02+0000\n"
-"PO-Revision-Date: 2026-06-10 11:26+0300\n"
+"PO-Revision-Date: 2026-09-23 09:45+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: ui/GameControllerSidebar.qml:36
 #, kde-format
@@ -82,17 +82,17 @@ msgstr "Sistem arayüzünde bağlı TV uzaktan kumandası ile geçinin (CEC)"
 #: ui/main.qml:151
 #, kde-format
 msgid "TV HDMI port (CEC)"
-msgstr ""
+msgstr "TV HDMI kapısı (CEC)"
 
 #: ui/main.qml:156
 #, kde-format
 msgid "Automatic"
-msgstr ""
+msgstr "Otomatik"
 
 #: ui/main.qml:158
 #, kde-format
 msgid "HDMI %1"
-msgstr ""
+msgstr "HDMI %1"
 
 #: ui/main.qml:176
 #, kde-format

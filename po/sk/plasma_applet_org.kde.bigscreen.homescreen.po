@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.mycroft.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-22 16:02+0000\n"
+"POT-Creation-Date: 2026-09-24 00:47+0000\n"
 "PO-Revision-Date: 2022-01-07 14:58+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -27,47 +27,60 @@ msgstr "Upraviť domovskú obrazovku"
 msgid "Favorites"
 msgstr "Obľúbené"
 
-#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:294
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:315
 #, kde-format
 msgid "Launcher Sections"
 msgstr "Sekcie spúšťača"
 
-#: contents/ui/FavoritesManager.qml:224
+#: contents/ui/FavoritesManager.qml:206
+#, fuzzy, kde-format
+#| msgid "Favorites Manager"
+msgid "Change Favorites Order"
+msgstr "Favorites Manager"
+
+#: contents/ui/FavoritesManager.qml:214
+#, kde-format
+msgid ""
+"To change the order of the favorites, open the launcher and tap and hold an "
+"app in the favorites list."
+msgstr ""
+
+#: contents/ui/FavoritesManager.qml:244
 #, kde-format
 msgid "Add Favorites"
 msgstr "Add Favorites"
 
-#: contents/ui/FavoritesManager.qml:264
+#: contents/ui/FavoritesManager.qml:284
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Remove Favorites"
 
-#: contents/ui/FavoritesManager.qml:308
+#: contents/ui/FavoritesManager.qml:329
 #, kde-format
 msgid "Show Recent"
 msgstr "Zobraziť nedávne"
 
-#: contents/ui/FavoritesManager.qml:309
+#: contents/ui/FavoritesManager.qml:330
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
 msgstr "Nedávno spustené aplikácie sa zobrazia v rade na domovskej obrazovke"
 
-#: contents/ui/FavoritesManager.qml:324
+#: contents/ui/FavoritesManager.qml:345
 #, kde-format
 msgid "Show Applications"
 msgstr "Zobraziť aplikácie"
 
-#: contents/ui/FavoritesManager.qml:325
+#: contents/ui/FavoritesManager.qml:346
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
 msgstr "Nehrové aplikácie sa zobrazia v rade na domovskej obrazovke"
 
-#: contents/ui/FavoritesManager.qml:341
+#: contents/ui/FavoritesManager.qml:362
 #, kde-format
 msgid "Show Games"
 msgstr "Zobraziť hry"
 
-#: contents/ui/FavoritesManager.qml:342
+#: contents/ui/FavoritesManager.qml:363
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
 msgstr "Aplikácie v kategórii Hry sa zobrazia v rade na domovskej obrazovke"
@@ -242,9 +255,6 @@ msgstr "Plasma Bigscreen povolil celosystémové zabránenie uspaniu"
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Hľadať…"
-
-#~ msgid "Favorites Manager"
-#~ msgstr "Favorites Manager"
 
 #~ msgid "Customize Favorites"
 #~ msgstr "Customize Favorites"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-22 16:02+0000\n"
+"POT-Creation-Date: 2026-09-24 00:47+0000\n"
 "PO-Revision-Date: 2026-07-14 07:43+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -29,47 +29,60 @@ msgstr "Uredi domači zaslon"
 msgid "Favorites"
 msgstr "Priljubljeni"
 
-#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:294
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:315
 #, kde-format
 msgid "Launcher Sections"
 msgstr "Oddelki zaganjalnika"
 
-#: contents/ui/FavoritesManager.qml:224
+#: contents/ui/FavoritesManager.qml:206
+#, fuzzy, kde-format
+#| msgid "Manage Favorites"
+msgid "Change Favorites Order"
+msgstr "Upravljaj priljubljene"
+
+#: contents/ui/FavoritesManager.qml:214
+#, kde-format
+msgid ""
+"To change the order of the favorites, open the launcher and tap and hold an "
+"app in the favorites list."
+msgstr ""
+
+#: contents/ui/FavoritesManager.qml:244
 #, kde-format
 msgid "Add Favorites"
 msgstr "Dodaj priljubljene"
 
-#: contents/ui/FavoritesManager.qml:264
+#: contents/ui/FavoritesManager.qml:284
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Odstrani priljubljene"
 
-#: contents/ui/FavoritesManager.qml:308
+#: contents/ui/FavoritesManager.qml:329
 #, kde-format
 msgid "Show Recent"
 msgstr "Prikaži nedavne"
 
-#: contents/ui/FavoritesManager.qml:309
+#: contents/ui/FavoritesManager.qml:330
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
 msgstr "Nedavno zagnane aplikacije se prikažejo v vrstici na domačem zaslonu"
 
-#: contents/ui/FavoritesManager.qml:324
+#: contents/ui/FavoritesManager.qml:345
 #, kde-format
 msgid "Show Applications"
 msgstr "Pokaži aplikacije"
 
-#: contents/ui/FavoritesManager.qml:325
+#: contents/ui/FavoritesManager.qml:346
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
 msgstr "Aplikacije, ki niso igre, se prikažejo v vrstici na domačem zaslonu"
 
-#: contents/ui/FavoritesManager.qml:341
+#: contents/ui/FavoritesManager.qml:362
 #, kde-format
 msgid "Show Games"
 msgstr "Prikaži igre"
 
-#: contents/ui/FavoritesManager.qml:342
+#: contents/ui/FavoritesManager.qml:363
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
 msgstr "Aplikacije v kategoriji Igre se prikažejo v vrstici na domačem zaslonu"
@@ -283,6 +296,3 @@ msgstr "Išči…"
 
 #~ msgid "Enable Remote STT"
 #~ msgstr "Omogoči oddaljeno STT"
-
-#~ msgid "Manage Favorites"
-#~ msgstr "Upravljaj priljubljene"

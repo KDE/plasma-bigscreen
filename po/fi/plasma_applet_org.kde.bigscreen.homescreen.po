@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-22 16:02+0000\n"
+"POT-Creation-Date: 2026-09-24 00:47+0000\n"
 "PO-Revision-Date: 2026-03-01 20:32+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -29,50 +29,63 @@ msgstr "Poistu BigScreenistä"
 msgid "Favorites"
 msgstr "Suosikit"
 
-#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:294
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:315
 #, kde-format
 msgid "Launcher Sections"
 msgstr ""
 
-#: contents/ui/FavoritesManager.qml:224
+#: contents/ui/FavoritesManager.qml:206
+#, fuzzy, kde-format
+#| msgid "Manage Favorites"
+msgid "Change Favorites Order"
+msgstr "Hallitse suosikkeja"
+
+#: contents/ui/FavoritesManager.qml:214
+#, kde-format
+msgid ""
+"To change the order of the favorites, open the launcher and tap and hold an "
+"app in the favorites list."
+msgstr ""
+
+#: contents/ui/FavoritesManager.qml:244
 #, kde-format
 msgid "Add Favorites"
 msgstr "Lisää suosikkeihin"
 
-#: contents/ui/FavoritesManager.qml:264
+#: contents/ui/FavoritesManager.qml:284
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Poista suosikeista"
 
-#: contents/ui/FavoritesManager.qml:308
+#: contents/ui/FavoritesManager.qml:329
 #, fuzzy, kde-format
 #| msgid "Recent"
 msgid "Show Recent"
 msgstr "Viimeaikainen"
 
-#: contents/ui/FavoritesManager.qml:309
+#: contents/ui/FavoritesManager.qml:330
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
 msgstr ""
 
-#: contents/ui/FavoritesManager.qml:324
+#: contents/ui/FavoritesManager.qml:345
 #, fuzzy, kde-format
 #| msgid "Applications"
 msgid "Show Applications"
 msgstr "Sovellukset"
 
-#: contents/ui/FavoritesManager.qml:325
+#: contents/ui/FavoritesManager.qml:346
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
 msgstr ""
 
-#: contents/ui/FavoritesManager.qml:341
+#: contents/ui/FavoritesManager.qml:362
 #, fuzzy, kde-format
 #| msgid "Games"
 msgid "Show Games"
 msgstr "Pelit"
 
-#: contents/ui/FavoritesManager.qml:342
+#: contents/ui/FavoritesManager.qml:363
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
 msgstr ""
@@ -290,9 +303,6 @@ msgstr "Etsi…"
 
 #~ msgid "Enable Remote STT"
 #~ msgstr "Ota käyttöön etä-STT"
-
-#~ msgid "Manage Favorites"
-#~ msgstr "Hallitse suosikkeja"
 
 #~ msgid "Use Colored Tiles"
 #~ msgstr "Käytä värillisiä tiiliä"
