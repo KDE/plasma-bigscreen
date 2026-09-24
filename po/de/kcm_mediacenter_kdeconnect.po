@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_mediacenter_kdeconnect\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-01 00:50+0000\n"
-"PO-Revision-Date: 2026-09-19 20:20+0200\n"
+"PO-Revision-Date: 2026-09-21 22:37+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -21,12 +21,12 @@ msgstr ""
 #: ui/delegates/PairedView.qml:36
 #, kde-format
 msgid "This device is paired"
-msgstr "Dieses Gerät ist verbunden"
+msgstr "Dieses Gerät ist gekoppelt"
 
 #: ui/delegates/PairedView.qml:44 ui/delegates/Unreachable.qml:40
 #, kde-format
 msgid "Unpair"
-msgstr "Verbindung trennen"
+msgstr "Entkoppeln"
 
 #: ui/delegates/PairedView.qml:52
 #, kde-format
@@ -36,7 +36,7 @@ msgstr "Moduleinstellungen"
 #: ui/delegates/PairRequest.qml:35
 #, kde-format
 msgid "This device is requesting to be paired"
-msgstr "Dieses Gerät möchte sich verbinden"
+msgstr "Dieses Gerät sendet eine Kopplungsanfrage"
 
 #: ui/delegates/PairRequest.qml:44
 #, kde-format
@@ -51,7 +51,7 @@ msgstr "Ablehnen"
 #: ui/delegates/UnpairedView.qml:47
 #, kde-format
 msgid "This device is not paired"
-msgstr "Dieses Gerät ist nicht verbunden"
+msgstr "Dieses Gerät ist nicht gekoppelt"
 
 #: ui/delegates/UnpairedView.qml:56
 #, kde-format
@@ -61,7 +61,7 @@ msgstr "Kopplungsanfrage gesendet"
 #: ui/delegates/UnpairedView.qml:60
 #, kde-format
 msgid "Pair"
-msgstr "Verbinden"
+msgstr "Koppeln"
 
 #: ui/delegates/Unreachable.qml:33
 #, kde-format
