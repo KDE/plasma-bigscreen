@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: kcm_mediacenter_kdeconnect\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2021-04-17 10:08+0200\n"
-"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"PO-Revision-Date: 2026-09-21 22:37+0200\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -36,17 +36,17 @@ msgstr "KDE Connect einrichten"
 #: package/contents/ui/delegates/PairedView.qml:29
 #, kde-format
 msgid "This device is paired"
-msgstr "Dieses Gerät ist verbunden"
+msgstr "Dieses Gerät ist gekoppelt"
 
 #: package/contents/ui/delegates/PairedView.qml:62
 #, kde-format
 msgid "Unpair"
-msgstr "Verbindung trennen"
+msgstr "Entkoppeln"
 
 #: package/contents/ui/delegates/PairRequest.qml:29
 #, kde-format
 msgid "This device is requesting to be paired"
-msgstr "Dieses Gerät möchte sich verbinden"
+msgstr "Dieses Gerät sendet eine Kopplungsanfrage"
 
 #: package/contents/ui/delegates/PairRequest.qml:63
 #, kde-format
@@ -61,17 +61,17 @@ msgstr "Ablehnen"
 #: package/contents/ui/delegates/UnpairedView.qml:40
 #, kde-format
 msgid "This device is not paired"
-msgstr "Dieses Gerät ist nicht verbunden"
+msgstr "Dieses Gerät ist nicht gekoppelt"
 
 #: package/contents/ui/delegates/UnpairedView.qml:80
 #, kde-format
 msgid "Pair"
-msgstr "Verbinden"
+msgstr "Koppeln"
 
 #: package/contents/ui/delegates/UnpairedView.qml:91
 #, kde-format
 msgid "Pairing request sent to device"
-msgstr "Verbindungsanfrage an Gerät gesendet"
+msgstr "Kopplungsanfrage an Gerät gesendet"
 
 #: package/contents/ui/delegates/Unreachable.qml:19
 #, kde-format
@@ -81,7 +81,8 @@ msgstr "Dieses Gerät ist nicht erreichbar"
 #: package/contents/ui/DeviceConnectionView.qml:196
 #, kde-format
 msgid "Press the [←] Back button to return to device selection"
-msgstr "Drücken Sie den Knopf  [←]  „Zurück“ bringt Sie zur Geräteauswahl"
+msgstr ""
+"Drücken Sie [←] (den „Zurück“-Knopf), um zur Geräteauswahl zurückzukehren"
 
 #: package/contents/ui/main.qml:23
 #, kde-format
