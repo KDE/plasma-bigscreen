@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-24 00:47+0000\n"
-"PO-Revision-Date: 2026-07-14 13:30+0200\n"
+"PO-Revision-Date: 2026-09-24 08:43+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
 #, kde-format
@@ -29,7 +29,7 @@ msgstr "Edita la pantalla d'inici"
 #: contents/ui/launcher/LauncherHome.qml:84
 #, kde-format
 msgid "Favorites"
-msgstr "Preferits"
+msgstr "Preferides"
 
 #: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:315
 #, kde-format
@@ -39,7 +39,7 @@ msgstr "Seccions de l'iniciador"
 #: contents/ui/FavoritesManager.qml:206
 #, kde-format
 msgid "Change Favorites Order"
-msgstr ""
+msgstr "Canvia l'ordre de les preferides"
 
 #: contents/ui/FavoritesManager.qml:214
 #, kde-format
@@ -47,16 +47,18 @@ msgid ""
 "To change the order of the favorites, open the launcher and tap and hold an "
 "app in the favorites list."
 msgstr ""
+"Per a canviar l'ordre de les preferides obriu l'iniciador i toqueu i "
+"manteniu premuda una aplicació a la llista de preferides."
 
 #: contents/ui/FavoritesManager.qml:244
 #, kde-format
 msgid "Add Favorites"
-msgstr "Afig als preferits"
+msgstr "Afig a les preferides"
 
 #: contents/ui/FavoritesManager.qml:284
 #, kde-format
 msgid "Remove Favorites"
-msgstr "Elimina dels preferits"
+msgstr "Elimina de les preferides"
 
 #: contents/ui/FavoritesManager.qml:329
 #, kde-format

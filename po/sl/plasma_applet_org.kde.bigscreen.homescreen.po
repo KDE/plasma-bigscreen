@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-24 00:47+0000\n"
-"PO-Revision-Date: 2026-07-14 07:43+0200\n"
+"PO-Revision-Date: 2026-09-24 11:23+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -35,10 +35,9 @@ msgid "Launcher Sections"
 msgstr "Oddelki zaganjalnika"
 
 #: contents/ui/FavoritesManager.qml:206
-#, fuzzy, kde-format
-#| msgid "Manage Favorites"
+#, kde-format
 msgid "Change Favorites Order"
-msgstr "Upravljaj priljubljene"
+msgstr "Spremeni vrstni red priljubljenih"
 
 #: contents/ui/FavoritesManager.qml:214
 #, kde-format
@@ -46,6 +45,8 @@ msgid ""
 "To change the order of the favorites, open the launcher and tap and hold an "
 "app in the favorites list."
 msgstr ""
+"Če želite spremeniti vrstni red priljubljenih elementov, odprite zaganjalnik "
+"ter se dotaknite aplikacije na seznamu priljubljenih in jo pridržite."
 
 #: contents/ui/FavoritesManager.qml:244
 #, kde-format

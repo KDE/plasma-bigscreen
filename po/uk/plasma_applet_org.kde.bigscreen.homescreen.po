@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2021, 2022, 2024, 2025, 2026.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024, 2025, 2026 Yuri Chornoivan <yurchor@ukr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.mycroft.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-24 00:47+0000\n"
-"PO-Revision-Date: 2026-07-14 08:51+0300\n"
+"PO-Revision-Date: 2026-09-24 09:22+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
 #, kde-format
@@ -37,10 +37,9 @@ msgid "Launcher Sections"
 msgstr "Розділи засобу запуску"
 
 #: contents/ui/FavoritesManager.qml:206
-#, fuzzy, kde-format
-#| msgid "Manage Favorites"
+#, kde-format
 msgid "Change Favorites Order"
-msgstr "Керування улюбленим"
+msgstr "Змінити впорядкування улюбленого"
 
 #: contents/ui/FavoritesManager.qml:214
 #, kde-format
@@ -48,6 +47,8 @@ msgid ""
 "To change the order of the favorites, open the launcher and tap and hold an "
 "app in the favorites list."
 msgstr ""
+"Щоб змінити порядок записів у списку улюбленого, відкрийте засіб запуску і "
+"торкніться і утримуйте пункт програми у списку улюблених записів."
 
 #: contents/ui/FavoritesManager.qml:244
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-24 00:47+0000\n"
-"PO-Revision-Date: 2026-07-14 05:08+0200\n"
+"PO-Revision-Date: 2026-09-24 03:57+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -35,10 +35,9 @@ msgid "Launcher Sections"
 msgstr "გამშვების სექციები"
 
 #: contents/ui/FavoritesManager.qml:206
-#, fuzzy, kde-format
-#| msgid "Favorites Manager"
+#, kde-format
 msgid "Change Favorites Order"
-msgstr "რჩეულების მმართველი"
+msgstr "რჩეულების მიმდევრობის შეცვლა"
 
 #: contents/ui/FavoritesManager.qml:214
 #, kde-format
@@ -46,6 +45,8 @@ msgid ""
 "To change the order of the favorites, open the launcher and tap and hold an "
 "app in the favorites list."
 msgstr ""
+"რჩეულების მიმდევრობის შესაცვლელად გახსენით გამშვები და დაატყაპუნეთ და "
+"გეჭიროთ აპზე რჩეულების სიაში."
 
 #: contents/ui/FavoritesManager.qml:244
 #, kde-format
