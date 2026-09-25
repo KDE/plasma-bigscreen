@@ -4,6 +4,7 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Window
+import QtQuick.Templates as T
 import QtQuick.Controls as QQC2
 
 import org.kde.kirigami as Kirigami
@@ -96,6 +97,10 @@ Window {
 
         onAboutToHide: tasksView.close()
         onClosed: window.close();
+
+        T.Overlay.modal: Rectangle {
+            color: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, tasksView.visible ? (tasksView.opacity * 0.8) : 0)
+        }
 
         contentItem: Item {
             MainColumn {
