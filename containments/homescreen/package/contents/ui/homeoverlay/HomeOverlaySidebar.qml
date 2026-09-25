@@ -12,26 +12,29 @@ import org.kde.bigscreen as Bigscreen
 T.Popup {
     id: root
 
-    dim: false
+    dim: true
     modal: true
 
     Kirigami.Theme.inherit: false
     Kirigami.Theme.colorSet: Kirigami.Theme.View
 
     parent: QQC2.Overlay.overlay
-    height: parent.height - 30
+    height: parent.height
     width: parent.width
 
     property real sidebarWidth: frame.width
 
-    topPadding: 0
-    bottomPadding: 0
-    leftPadding: 0
-    rightPadding: 0
+    topPadding: Kirigami.Units.gridUnit
+    bottomPadding: Kirigami.Units.gridUnit
+    leftPadding: Kirigami.Units.gridUnit
+    rightPadding: Kirigami.Units.gridUnit
+
+    topInset: topPadding
+    bottomInset: bottomPadding
+    leftInset: leftPadding
+    rightInset: rightPadding
 
     readonly property real openFactor: 1 - Math.abs(x / sidebarWidth)
-
-    y: 15
 
     enter: Transition {
         SequentialAnimation {
@@ -39,10 +42,10 @@ T.Popup {
                 property: "x"
                 duration: 400
                 easing.type: Easing.OutCubic
-                from: -root.sidebarWidth; to: 15
+                from: -root.sidebarWidth - root.leftPadding - root.rightPadding; to: 0
             }
             // Make sure it's anchored to the left of the screen
-            ScriptAction { script: root.x = Qt.binding(() => 15); }
+            ScriptAction { script: root.x = Qt.binding(() => 0); }
         }
     }
 
@@ -51,7 +54,7 @@ T.Popup {
             property: "x"
             duration: 400
             easing.type: Easing.OutCubic
-            to: -root.sidebarWidth; from: 15
+            to: -root.sidebarWidth - root.leftPadding - root.rightPadding; from: 0
         }
     }
 
