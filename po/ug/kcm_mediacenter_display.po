@@ -1,22 +1,22 @@
 # Uyghur translation for kcm_mediacenter_display.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:50+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 19:51-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.9\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
 
 #: ui/main.qml:22
 #, kde-format
@@ -46,13 +46,13 @@ msgstr "ئېكران ھالىتى (ئېنىقلىقى ۋە يېڭىلاش نىس
 #: ui/main.qml:141
 #, kde-format
 msgid "Keep display configuration?"
-msgstr ""
+msgstr "كۆرسەتكۈچ سەپلىمىسىنى ساقلاپ قالامدۇ؟"
 
 #: ui/main.qml:154
 #, kde-format
 msgid "Will revert to previous configuration in %1 second."
 msgid_plural "Will revert to previous configuration in %1 seconds."
-msgstr[0] ""
+msgstr[0] "%1 سېكۇنتتا ئالدىنقى سەپلىمىگە ياندۇرىدۇ."
 
 #: ui/main.qml:164 ui/ScaleDialog.qml:21
 #, kde-format
@@ -63,4 +63,4 @@ msgstr "نىسبەت"
 #, kde-format
 msgctxt "Scale percentage"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"

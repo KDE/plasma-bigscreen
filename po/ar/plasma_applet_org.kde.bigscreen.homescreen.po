@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-24 00:47+0000\n"
-"PO-Revision-Date: 2026-07-15 19:51+0400\n"
+"POT-Creation-Date: 2026-09-26 00:47+0000\n"
+"PO-Revision-Date: 2026-09-25 16:45+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -35,10 +35,9 @@ msgid "Launcher Sections"
 msgstr "أقسام المُطلق"
 
 #: contents/ui/FavoritesManager.qml:206
-#, fuzzy, kde-format
-#| msgid "Manage Favorites"
+#, kde-format
 msgid "Change Favorites Order"
-msgstr "أدر المفضلات"
+msgstr "غيّر ترتيب المفضلة"
 
 #: contents/ui/FavoritesManager.qml:214
 #, kde-format
@@ -46,6 +45,8 @@ msgid ""
 "To change the order of the favorites, open the launcher and tap and hold an "
 "app in the favorites list."
 msgstr ""
+"لتغيير ترتيب المفضلة، افتح المشغل واضغط مع الاستمرار على أحد التطبيقات في "
+"قائمة المفضلة."
 
 #: contents/ui/FavoritesManager.qml:244
 #, kde-format
@@ -155,13 +156,13 @@ msgstr "إعدادات"
 msgid "Hold to close…"
 msgstr "امسك لإغلاق..."
 
-#: contents/ui/homeoverlay/TasksView.qml:111
+#: contents/ui/homeoverlay/TasksView.qml:109
 #, kde-format
 msgctxt "As in: These apps are currently opened"
 msgid "Open Apps"
 msgstr "افتح تطبيقات"
 
-#: contents/ui/homeoverlay/TasksView.qml:162
+#: contents/ui/homeoverlay/TasksView.qml:160
 #, kde-format
 msgid "Close all apps"
 msgstr "أغلق كل التطبيقات"

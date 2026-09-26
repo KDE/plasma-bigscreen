@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-24 00:47+0000\n"
+"POT-Creation-Date: 2026-09-26 00:47+0000\n"
 "PO-Revision-Date: 2026-09-24 19:28+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -157,13 +157,13 @@ msgstr "Ayarlar"
 msgid "Hold to close…"
 msgstr "Kapatmak için tutun…"
 
-#: contents/ui/homeoverlay/TasksView.qml:111
+#: contents/ui/homeoverlay/TasksView.qml:109
 #, kde-format
 msgctxt "As in: These apps are currently opened"
 msgid "Open Apps"
 msgstr "Açık Uygulamalar"
 
-#: contents/ui/homeoverlay/TasksView.qml:162
+#: contents/ui/homeoverlay/TasksView.qml:160
 #, kde-format
 msgid "Close all apps"
 msgstr "Tüm Uygulamaları Kapat"

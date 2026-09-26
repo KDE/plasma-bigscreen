@@ -1,31 +1,31 @@
-# Copyright (C) 2026 This file is copyright:
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# SPDX-FileCopyrightText: 2026 Vincenzo Reale <smart2128vr@gmail.com>
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 16:02+0000\n"
-"PO-Revision-Date: 2026-09-23 09:31+0200\n"
-"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
-"Language-Team: Italian <kde-i18n-it@kde.org>\n"
-"Language: it\n"
+"PO-Revision-Date: 2026-09-24 19:52-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Poedit 3.9\n"
 
 #: ui/GameControllerSidebar.qml:36
 #, kde-format
 msgid "System navigation"
-msgstr "Navigazione del sistema"
+msgstr "سىستېما يولباشچى"
 
 #: ui/GameControllerSidebar.qml:51
 #, kde-format
 msgid "START button when suppressed"
-msgstr "pulsante START quando soppresso"
+msgstr "چەكلەنگەندە باشلا توپچە ئىشلەت"
 
 #: ui/GameControllerSidebar.qml:52
 #, kde-format
@@ -33,18 +33,18 @@ msgid ""
 "Handle the START button even when input is suppressed (may conflict with "
 "some apps)"
 msgstr ""
-"Gestisci il pulsante START anche quando l'input è disabilitato (potrebbe "
-"entrare in conflitto con alcune applicazioni)."
+"كىرگۈزۈش چەكلەنگەن ئەھۋالدىمۇ باشلا توپچىنى بىر تەرەپ قىلىدۇ (بەزى "
+"پىروگراممىدا توقۇنۇش كۆرۈلۈشى مۇمكىن)"
 
 #: ui/main.qml:17
 #, kde-format
 msgid "Input"
-msgstr "Input"
+msgstr "كىرگۈز"
 
 #: ui/main.qml:105
 #, kde-format
 msgid "Input daemon is not running"
-msgstr "Il demone di input non è in esecuzione"
+msgstr "كىرگۈزۈش نازارەتچى ئىجرا قىلىنمايۋاتىدۇ"
 
 #: ui/main.qml:106
 #, kde-format
@@ -52,13 +52,13 @@ msgid ""
 "Controller and remote settings are only available when plasma-bigscreen-"
 "inputhandler is running"
 msgstr ""
-"Le impostazioni del controller e del telecomando sono disponibili solo "
-"quando è in esecuzione plasma-bigscreen-inputhandler."
+"تىزگىنلىگۈچ ۋە تىزگىنەك تەڭشىكى plasma-bigscreen-inputhandler ئىجرا "
+"قىلىنغاندىلا ئاندىن ئىشلەتكىلى بولىدۇ"
 
 #: ui/main.qml:112
 #, kde-format
 msgid "System Navigation"
-msgstr "Navigazione del sistema"
+msgstr "سىستېما يولباشچى"
 
 #: ui/main.qml:113
 #, kde-format
@@ -66,70 +66,67 @@ msgid ""
 "Navigate the system interface with connected controllers/remotes (apps can "
 "always still use them directly)"
 msgstr ""
-"Naviga nell'interfaccia di sistema utilizzando i controller/telecomandi "
-"collegati (le applicazioni possono comunque utilizzarli direttamente)."
+"باغلانغان تىزگىنلىگۈچ/تىزگىنەك ئارقىلىق سىستېما ئارايۈزىگە يول باشلايدۇ "
+"(پىروگرامما ھەمىشە ئۇلارنى بىۋاسىتە ئىشلىتەلەيدۇ)"
 
 #: ui/main.qml:130
 #, kde-format
 msgid "TV remote"
-msgstr "Telecomando TV"
+msgstr "تېلېۋىزور تىزگىنەك"
 
 #: ui/main.qml:131
 #, kde-format
 msgid "Navigate the system interface with the connected TV remote (CEC)"
 msgstr ""
-"Naviga nell'interfaccia di sistema con il telecomando del televisore "
-"connesso (CEC)"
+"باغلانغان تېلېۋىزور تىزگىنەك ئارقىلىق سىستېما ئارايۈزىگە يول باشلايدۇ (CEC)"
 
 #: ui/main.qml:151
 #, kde-format
 msgid "TV HDMI port (CEC)"
-msgstr "Porta TV HDMI (CEC)"
+msgstr ""
 
 #: ui/main.qml:156
 #, kde-format
 msgid "Automatic"
-msgstr "Automatico"
+msgstr ""
 
 #: ui/main.qml:158
 #, kde-format
 msgid "HDMI %1"
-msgstr "HDMI %1"
+msgstr ""
 
 #: ui/main.qml:176
 #, kde-format
 msgid "Game Controllers"
-msgstr "Controller di gioco"
+msgstr "ئويۇن تىزگىنلىگۈچ"
 
 #: ui/main.qml:186
 #, kde-format
 msgid "Game controllers"
-msgstr "Controller di gioco"
+msgstr "ئويۇن تىزگىنلىگۈچ"
 
 #: ui/main.qml:187
 #, kde-format
 msgid "Use connected game controllers for system navigation"
-msgstr ""
-"Utilizza i controller di gioco collegati per la navigazione nel sistema."
+msgstr "باغلانغان ئويۇن تىزگىنلىگۈچ ئارقىلىق سىستېما ئارايۈزىگە يول باشلايدۇ"
 
 #: ui/main.qml:206
 #, kde-format
 msgid "Automatic input suppression"
-msgstr "Soppressione automatica dell'input"
+msgstr "ئۆزلۈكىدىن كىرگۈزۈش چەكلىمىسى"
 
 #: ui/main.qml:207
 #, kde-format
 msgid "Stop controller navigation while another app is using a controller"
 msgstr ""
-"Interrompi la navigazione del controller mentre un'altra applicazione lo sta "
-"utilizzando"
+"باشقا ئەپ تىزگىنلىگۈچنى ئىشلىتىۋاتقاندا تىزگىنلىگۈچ يولباشچىنى توختىتىدۇ"
 
 #: ui/main.qml:227
 #, kde-format
 msgid "No controllers connected"
-msgstr "Nessun controller collegato"
+msgstr "ھېچقانداق تىزگىنلىگۈچ باغلانمىغان"
 
 #: ui/main.qml:228
 #, kde-format
 msgid "Connect a game controller"
-msgstr "Collega un controller di gioco"
+msgstr "ئويۇن تىزگىنلىگۈچنى باغلا"

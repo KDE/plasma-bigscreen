@@ -1,27 +1,27 @@
 # Uyghur translation for plasma_applet_org.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-24 00:47+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"POT-Creation-Date: 2026-09-26 00:47+0000\n"
+"PO-Revision-Date: 2026-09-24 19:53-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.9\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
 #, kde-format
 msgid "Edit Home Screen"
-msgstr ""
+msgstr "باش ئېكراننى تەھرىرلە"
 
 #: contents/ui/FavoritesManager.qml:144
 #: contents/ui/launcher/LauncherHome.qml:84
@@ -32,7 +32,7 @@ msgstr "يىغقۇچ"
 #: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:315
 #, kde-format
 msgid "Launcher Sections"
-msgstr ""
+msgstr "قوزغاتقۇچ بۆلىكى"
 
 #: contents/ui/FavoritesManager.qml:206
 #, fuzzy, kde-format
@@ -60,32 +60,32 @@ msgstr "يىغقۇچتىن چىقىرىۋەت"
 #: contents/ui/FavoritesManager.qml:329
 #, kde-format
 msgid "Show Recent"
-msgstr ""
+msgstr "يېقىنقىنى كۆرسەت"
 
 #: contents/ui/FavoritesManager.qml:330
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
-msgstr ""
+msgstr "يېقىندا ئىجرا قىلىنغان پىروگرامما باش ئېكراندىكى قۇردا كۆرۈنىدۇ"
 
 #: contents/ui/FavoritesManager.qml:345
 #, kde-format
 msgid "Show Applications"
-msgstr ""
+msgstr "پىروگراممىنى كۆرسەت"
 
 #: contents/ui/FavoritesManager.qml:346
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
-msgstr ""
+msgstr "ئويۇن ئەمەس پىروگرامما باش ئېكراندىكى قۇردا كۆرۈنىدۇ"
 
 #: contents/ui/FavoritesManager.qml:362
 #, kde-format
 msgid "Show Games"
-msgstr ""
+msgstr "ئويۇننى كۆرسەت"
 
 #: contents/ui/FavoritesManager.qml:363
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
-msgstr ""
+msgstr "ئويۇن سەھىپىسىدىكى پىروگرامما باش ئېكراندىكى قۇردا كۆرۈنىدۇ"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:36
 #, kde-format
@@ -100,7 +100,7 @@ msgstr "ئۈن"
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:78
 #, kde-format
 msgid "Wi-Fi"
-msgstr ""
+msgstr "Wi-Fi"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:93
 #, kde-format
@@ -155,13 +155,13 @@ msgstr "تەڭشەك"
 msgid "Hold to close…"
 msgstr "تۇتۇپ تۇرۇلسا ياپ…"
 
-#: contents/ui/homeoverlay/TasksView.qml:111
+#: contents/ui/homeoverlay/TasksView.qml:109
 #, kde-format
 msgctxt "As in: These apps are currently opened"
 msgid "Open Apps"
 msgstr "ئوچۇق ئەپ"
 
-#: contents/ui/homeoverlay/TasksView.qml:162
+#: contents/ui/homeoverlay/TasksView.qml:160
 #, kde-format
 msgid "Close all apps"
 msgstr "ھەممە ئەپنى ياپ"

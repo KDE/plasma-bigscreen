@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-24 00:47+0000\n"
-"PO-Revision-Date: 2026-09-19 22:16+0200\n"
-"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
+"POT-Creation-Date: 2026-09-26 00:47+0000\n"
+"PO-Revision-Date: 2026-09-25 21:10+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -36,10 +36,9 @@ msgid "Launcher Sections"
 msgstr "Разделы меню приложений"
 
 #: contents/ui/FavoritesManager.qml:206
-#, fuzzy, kde-format
-#| msgid "Favorites Manager"
+#, kde-format
 msgid "Change Favorites Order"
-msgstr "Управление избранным"
+msgstr "Изменение порядка избранного"
 
 #: contents/ui/FavoritesManager.qml:214
 #, kde-format
@@ -47,6 +46,8 @@ msgid ""
 "To change the order of the favorites, open the launcher and tap and hold an "
 "app in the favorites list."
 msgstr ""
+"Чтобы изменить порядок избранного, откройте меню запуска приложений, а затем "
+"нажмите и удерживайте приложение в списке избранного."
 
 #: contents/ui/FavoritesManager.qml:244
 #, kde-format
@@ -156,13 +157,13 @@ msgstr "Параметры"
 msgid "Hold to close…"
 msgstr "Удерживайте для закрытия…"
 
-#: contents/ui/homeoverlay/TasksView.qml:111
+#: contents/ui/homeoverlay/TasksView.qml:109
 #, kde-format
 msgctxt "As in: These apps are currently opened"
 msgid "Open Apps"
 msgstr "Открытые приложения"
 
-#: contents/ui/homeoverlay/TasksView.qml:162
+#: contents/ui/homeoverlay/TasksView.qml:160
 #, kde-format
 msgid "Close all apps"
 msgstr "Закрыть все приложения"

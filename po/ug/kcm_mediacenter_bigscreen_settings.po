@@ -1,22 +1,22 @@
 # Uyghur translation for kcm_mediacenter_bigscreen_settings.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-20 12:55+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 19:51-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.9\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,7 +31,7 @@ msgstr "sahranbay@gmail.com, gheyret@gmail.com"
 #: ui/ColorSchemeSidebar.qml:23 ui/main.qml:85
 #, kde-format
 msgid "Color scheme"
-msgstr ""
+msgstr "رەڭ لايىھەسى"
 
 #: ui/DatePicker.qml:38
 #, kde-format
@@ -127,7 +127,7 @@ msgstr "باش ئېكراندا تام قەغەزگە غۇۋا ئۈنۈم قول
 #: ui/main.qml:86
 #, kde-format
 msgid "Set the system colors"
-msgstr ""
+msgstr "سىستېما رەڭگىنى تەڭشە"
 
 #: ui/main.qml:106
 #, kde-format
@@ -164,7 +164,7 @@ msgstr "ئاجىز"
 #: ui/main.qml:129
 #, kde-format
 msgid "Medium"
-msgstr "ئوتتۇراھال"
+msgstr "ئوتتۇرا ھال"
 
 #: ui/main.qml:130
 #, kde-format
@@ -174,7 +174,7 @@ msgstr "كۈچلۈك"
 #: ui/main.qml:133
 #, kde-format
 msgid "Navigation rumble"
-msgstr ""
+msgstr "يولباشچى ئاۋازى"
 
 #: ui/main.qml:164
 #, kde-format
@@ -209,7 +209,7 @@ msgstr "باش ئېكران تېزلەتمىسىنى ئاچ"
 #: ui/main.qml:234
 #, kde-format
 msgid "Open search shortcut"
-msgstr ""
+msgstr "ئىزدەش تېزلەتمىسىنى ئاچ"
 
 #: ui/main.qml:254
 #, kde-format

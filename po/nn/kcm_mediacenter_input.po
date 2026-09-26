@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 16:02+0000\n"
-"PO-Revision-Date: 2026-07-26 12:21+0200\n"
+"PO-Revision-Date: 2026-09-25 17:51+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.11.70\n"
+"X-Generator: Lokalize 26.08.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -84,17 +84,17 @@ msgstr "Naviger i system-brukarflata via tilkopla TV-fjernkontroll (CEC)"
 #: ui/main.qml:151
 #, kde-format
 msgid "TV HDMI port (CEC)"
-msgstr ""
+msgstr "TV HDMI-port (CEC)"
 
 #: ui/main.qml:156
 #, kde-format
 msgid "Automatic"
-msgstr ""
+msgstr "Automatisk"
 
 #: ui/main.qml:158
 #, kde-format
 msgid "HDMI %1"
-msgstr ""
+msgstr "HDMI %1"
 
 #: ui/main.qml:176
 #, kde-format
