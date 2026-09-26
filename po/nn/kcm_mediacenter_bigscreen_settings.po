@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-19 02:42+0000\n"
-"PO-Revision-Date: 2026-09-19 17:12+0200\n"
+"PO-Revision-Date: 2026-09-25 17:23+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -32,7 +32,7 @@ msgstr "karl@huftis.org"
 #: ui/ColorSchemeSidebar.qml:23 ui/main.qml:87
 #, kde-format
 msgid "Color scheme"
-msgstr "Fargeoppsett"
+msgstr "Fargetema"
 
 #: ui/DatePicker.qml:38
 #, kde-format

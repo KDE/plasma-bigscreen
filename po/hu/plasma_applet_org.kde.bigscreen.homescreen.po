@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-22 02:51+0000\n"
+"POT-Creation-Date: 2026-09-26 03:01+0000\n"
 "PO-Revision-Date: 2026-05-17 21:09+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -146,13 +146,13 @@ msgstr "Beállítások"
 msgid "Hold to close…"
 msgstr "Tartsa lenyomva a bezáráshoz…"
 
-#: contents/ui/homeoverlay/TasksView.qml:111
+#: contents/ui/homeoverlay/TasksView.qml:109
 #, kde-format
 msgctxt "As in: These apps are currently opened"
 msgid "Open Apps"
 msgstr "Megnyitott alkalmazások"
 
-#: contents/ui/homeoverlay/TasksView.qml:162
+#: contents/ui/homeoverlay/TasksView.qml:160
 #, kde-format
 msgid "Close all apps"
 msgstr "Összes alkalmazás bezárása"
