@@ -89,6 +89,7 @@ Comment[sk]=Plasma Bigscreen od KDE
 Comment[sl]=Veliki zaslon Plasma v KDE
 Comment[sv]=Plasma storbildsskärm av KDE
 Comment[tr]=KDE tarafından yapılan Plasma Büyükekran
+Comment[ug]=KDE Plasma چوڭ ئېكرانى
 Comment[uk]=Плазма для великих екранів від KDE
 Comment[zh_CN]=KDE Plasma 大屏幕
 Comment[zh_TW]=來自 KDE 的 Plasma 大螢幕

@@ -81,6 +81,7 @@ Comment[sk]=Prepnúť do relácie Plasma Bigscreen
 Comment[sl]=Preklopi na sejo na velikega zaslona Plasme
 Comment[sv]=Byt till en Plasma storbildsskärm-session
 Comment[tr]=Bir Plasma Büyükekran oturumuna geçiş yapın
+Comment[ug]=Plasma چوڭ ئېكران جەريانچاققا ئالماشتۇرىدۇ
 Comment[uk]=Перемкнутися на сеанс Плазми для великих екранів
 Comment[zh_CN]=切换到 Plasma 大屏幕会话
 Comment[zh_TW]=切換到 Plasma 大螢幕工作階段

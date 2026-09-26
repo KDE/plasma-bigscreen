@@ -31,6 +31,7 @@ Name[sk]=Plasma Bigscreen
 Name[sl]=Upravljalnik vhoda za veliki zaslon Plasma
 Name[sv]=Plasma storbildsskärm inmatningshantering
 Name[tr]=Plasma Büyükekran Giriş İşleyicisi
+Name[ug]=Plasma چوڭ ئېكران كىرگۈزۈش تۇتقۇچ
 Name[uk]=Обробник вхідних даних Plasma Bigscreen
 Name[zh_CN]=Plasma 大屏幕输入处理程序
 Name[zh_TW]=Plasma 大螢幕輸入處理程式
