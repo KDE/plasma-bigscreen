@@ -9,7 +9,7 @@
 #include <BluezQt/DevicesModel>
 #include <QSortFilterProxyModel>
 
-#include <qqmlregistration.h>
+#include <QtQml/qqmlregistration.h>
 
 class DevicesProxyModel : public QSortFilterProxyModel
 {

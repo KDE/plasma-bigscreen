@@ -9,5 +9,7 @@ kcmutils_add_qml_kcm(kcm_mediacenter_bluetooth SOURCES
 target_link_libraries(kcm_mediacenter_bluetooth
     KF6::KCMUtilsQuick
     KF6::BluezQt
-    Qt::Qml
+    Qt6::Core
+    Qt6::Qml
+    Qt6::Quick
 )
