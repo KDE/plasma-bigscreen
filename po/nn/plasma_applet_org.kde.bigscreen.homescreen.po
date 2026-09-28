@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-26 00:47+0000\n"
-"PO-Revision-Date: 2026-07-26 12:37+0200\n"
+"PO-Revision-Date: 2026-09-27 21:39+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.11.70\n"
+"X-Generator: Lokalize 26.08.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -38,7 +38,7 @@ msgstr "Oppstartsinndelingar"
 #: contents/ui/FavoritesManager.qml:206
 #, kde-format
 msgid "Change Favorites Order"
-msgstr ""
+msgstr "Byt rekkjefølgja på favorittane"
 
 #: contents/ui/FavoritesManager.qml:214
 #, kde-format
@@ -46,6 +46,8 @@ msgid ""
 "To change the order of the favorites, open the launcher and tap and hold an "
 "app in the favorites list."
 msgstr ""
+"For å endra rekkjefølgja på favorittane kan du opna program­startaren og "
+"trykkja og halda inne på ein app i favorittlista."
 
 #: contents/ui/FavoritesManager.qml:244
 #, kde-format

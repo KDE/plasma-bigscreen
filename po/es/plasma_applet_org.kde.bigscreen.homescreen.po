@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-26 00:47+0000\n"
-"PO-Revision-Date: 2026-08-08 17:22+0100\n"
+"PO-Revision-Date: 2026-09-26 17:38+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -37,7 +37,7 @@ msgstr "Secciones del lanzador"
 #: contents/ui/FavoritesManager.qml:206
 #, kde-format
 msgid "Change Favorites Order"
-msgstr ""
+msgstr "Cambiar orden de favoritos"
 
 #: contents/ui/FavoritesManager.qml:214
 #, kde-format
@@ -45,6 +45,8 @@ msgid ""
 "To change the order of the favorites, open the launcher and tap and hold an "
 "app in the favorites list."
 msgstr ""
+"Para cambiar el orden de favoritos, abra el lanzador y pulse y mantenga una "
+"aplicación en la lista de favoritos."
 
 #: contents/ui/FavoritesManager.qml:244
 #, kde-format

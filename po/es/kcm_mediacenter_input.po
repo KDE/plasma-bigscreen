@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_mediacenter_input\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 16:02+0000\n"
-"PO-Revision-Date: 2026-06-13 19:31+0100\n"
+"PO-Revision-Date: 2026-09-26 17:38+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -84,17 +84,17 @@ msgstr "Navegar la interfaz del sistema con un mando de TV conectado (CEC)"
 #: ui/main.qml:151
 #, kde-format
 msgid "TV HDMI port (CEC)"
-msgstr ""
+msgstr "Puerto TV HDMI (CEC)"
 
 #: ui/main.qml:156
 #, kde-format
 msgid "Automatic"
-msgstr ""
+msgstr "Automático"
 
 #: ui/main.qml:158
 #, kde-format
 msgid "HDMI %1"
-msgstr ""
+msgstr "HDMI %1"
 
 #: ui/main.qml:176
 #, kde-format

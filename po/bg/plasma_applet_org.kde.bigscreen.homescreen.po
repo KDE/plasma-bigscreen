@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-26 00:47+0000\n"
-"PO-Revision-Date: 2026-08-21 17:56+0200\n"
+"PO-Revision-Date: 2026-09-27 23:54+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
 #, kde-format
@@ -38,7 +38,7 @@ msgstr "Секции на стартовото меню"
 #: contents/ui/FavoritesManager.qml:206
 #, kde-format
 msgid "Change Favorites Order"
-msgstr ""
+msgstr "Промяна на реда на Предпочитани"
 
 #: contents/ui/FavoritesManager.qml:214
 #, kde-format
@@ -46,6 +46,8 @@ msgid ""
 "To change the order of the favorites, open the launcher and tap and hold an "
 "app in the favorites list."
 msgstr ""
+"За промяна на реда на Предпочитани елементи отворете стартиращия панел и "
+"задръжте приложение от списъка с Предпочитани."
 
 #: contents/ui/FavoritesManager.qml:244
 #, kde-format

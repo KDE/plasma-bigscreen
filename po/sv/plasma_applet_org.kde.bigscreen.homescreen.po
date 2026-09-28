@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-26 00:47+0000\n"
-"PO-Revision-Date: 2026-07-14 07:30+0200\n"
+"PO-Revision-Date: 2026-09-27 15:01+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
 #, kde-format
@@ -34,10 +34,9 @@ msgid "Launcher Sections"
 msgstr "Startsektioner"
 
 #: contents/ui/FavoritesManager.qml:206
-#, fuzzy, kde-format
-#| msgid "Manage Favorites"
+#, kde-format
 msgid "Change Favorites Order"
-msgstr "Hantera favoriter"
+msgstr "Ändra favoritordning"
 
 #: contents/ui/FavoritesManager.qml:214
 #, kde-format
@@ -45,6 +44,8 @@ msgid ""
 "To change the order of the favorites, open the launcher and tap and hold an "
 "app in the favorites list."
 msgstr ""
+"För att ändra ordningen på favoriterna, öppna startprogrammet, tryck  och "
+"håll på ett program i favoritlistan."
 
 #: contents/ui/FavoritesManager.qml:244
 #, kde-format
