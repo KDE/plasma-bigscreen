@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-26 00:47+0000\n"
-"PO-Revision-Date: 2026-04-26 21:08+0200\n"
+"PO-Revision-Date: 2026-09-29 00:22+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,13 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Exit Bigscreen"
+#, kde-format
 msgid "Edit Home Screen"
-msgstr "큰 화면 끝내기"
+msgstr "홈 화면 편집"
 
 #: contents/ui/FavoritesManager.qml:144
 #: contents/ui/launcher/LauncherHome.qml:84
@@ -32,13 +31,12 @@ msgstr "책갈피"
 #: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:315
 #, kde-format
 msgid "Launcher Sections"
-msgstr ""
+msgstr "실행기 섹션"
 
 #: contents/ui/FavoritesManager.qml:206
-#, fuzzy, kde-format
-#| msgid "Manage Favorites"
+#, kde-format
 msgid "Change Favorites Order"
-msgstr "책갈피 관리"
+msgstr "책갈피 순서 편집"
 
 #: contents/ui/FavoritesManager.qml:214
 #, kde-format
@@ -46,6 +44,8 @@ msgid ""
 "To change the order of the favorites, open the launcher and tap and hold an "
 "app in the favorites list."
 msgstr ""
+"책갈피 순서를 편집하려면, 실행기를 연 다음 책갈피 목록에 있는 앱 아이콘을 탭"
+"한 채로 누르고 있으십시오."
 
 #: contents/ui/FavoritesManager.qml:244
 #, kde-format
@@ -58,37 +58,34 @@ msgid "Remove Favorites"
 msgstr "책갈피 삭제"
 
 #: contents/ui/FavoritesManager.qml:329
-#, fuzzy, kde-format
-#| msgid "Recent"
+#, kde-format
 msgid "Show Recent"
-msgstr "최근"
+msgstr "최근 항목 표시"
 
 #: contents/ui/FavoritesManager.qml:330
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
-msgstr ""
+msgstr "최근에 실행한 앱을 홈 화면의 별도의 줄로 표시"
 
 #: contents/ui/FavoritesManager.qml:345
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Show Applications"
-msgstr "앱"
+msgstr "앱 표시"
 
 #: contents/ui/FavoritesManager.qml:346
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
-msgstr ""
+msgstr "게임이 아닌 앱을 홈 화면의 별도의 줄로 표시"
 
 #: contents/ui/FavoritesManager.qml:362
-#, fuzzy, kde-format
-#| msgid "Games"
+#, kde-format
 msgid "Show Games"
-msgstr "게임"
+msgstr "게임 표시"
 
 #: contents/ui/FavoritesManager.qml:363
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
-msgstr ""
+msgstr "게임 분류에 있는 앱을 홈 화면의 별도의 줄로 표시"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:36
 #, kde-format
@@ -125,7 +122,7 @@ msgstr "검색"
 #, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
-msgstr "할 일"
+msgstr "작업"
 
 #: contents/ui/homeoverlay/MainColumn.qml:218
 #, kde-format

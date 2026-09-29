@@ -1,50 +1,48 @@
 # Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
+# SPDX-FileCopyrightText: 2026 Shinjo Park <kde@peremen.name>
 #
-# SPDX-FileCopyrightText: 2026 giovanni <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 16:02+0000\n"
-"PO-Revision-Date: 2026-09-28 11:47+0200\n"
-"Last-Translator: giovanni <g.sora@tiscali.it>\n"
-"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
-"Language: ia\n"
+"PO-Revision-Date: 2026-09-29 01:00+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ui/GameControllerSidebar.qml:36
 #, kde-format
 msgid "System navigation"
-msgstr "Navigation de systema"
+msgstr "시스템 탐색"
 
 #: ui/GameControllerSidebar.qml:51
 #, kde-format
 msgid "START button when suppressed"
-msgstr "Button de START quando supprimite"
+msgstr "차단되었을 때 시작 버트"
 
 #: ui/GameControllerSidebar.qml:52
 #, kde-format
 msgid ""
 "Handle the START button even when input is suppressed (may conflict with "
 "some apps)"
-msgstr ""
-"Manea le button de START anque quando le ingresso es supprimite (il pote "
-"confliger con alcun applicationes)"
+msgstr "입력이 차단되었을 때에도 시작 버튼 처리(일부 앱과 충돌할 수 있음)"
 
 #: ui/main.qml:17
 #, kde-format
 msgid "Input"
-msgstr "Ingresso"
+msgstr "입력"
 
 #: ui/main.qml:105
 #, kde-format
 msgid "Input daemon is not running"
-msgstr "Demone de ingresso non es executante"
+msgstr "입력 데몬이 실행 중이 아님"
 
 #: ui/main.qml:106
 #, kde-format
@@ -52,13 +50,13 @@ msgid ""
 "Controller and remote settings are only available when plasma-bigscreen-"
 "inputhandler is running"
 msgstr ""
-"Controlator e preferentias remote (telecomando) es solmente disponibile "
-"quando  plasma-bigscreen-inputhandler es executante"
+"컨트롤러와 리모콘 설정은 plasma-bigstreen-inputhandler가 실행 중일 때에만 사"
+"용할 수 있습니다."
 
 #: ui/main.qml:112
 #, kde-format
 msgid "System Navigation"
-msgstr "Systema de Navigation"
+msgstr "시스템 탐색"
 
 #: ui/main.qml:113
 #, kde-format
@@ -66,29 +64,27 @@ msgid ""
 "Navigate the system interface with connected controllers/remotes (apps can "
 "always still use them directly)"
 msgstr ""
-"Naviga le interfacie de systema con controlatores/remotes (telecomandos) "
-"connectite (apps pote sempre ancora usar los directemente)"
+"연결된 컨트롤러/리모콘으로 시스템 인터페이스 탐색(앱에서 직접 사용도 가능함)"
 
 #: ui/main.qml:130
 #, kde-format
 msgid "TV remote"
-msgstr "TV remote (telecomando de TV)"
+msgstr "TV 리모콘"
 
 #: ui/main.qml:131
 #, kde-format
 msgid "Navigate the system interface with the connected TV remote (CEC)"
-msgstr ""
-"Naviga le  interfacie de systema con le telecomando de TV connectite (CEC)"
+msgstr "연결된 TV 리모콘(CEC)으로 시스템 인터페이스 탐색"
 
 #: ui/main.qml:151
 #, kde-format
 msgid "TV HDMI port (CEC)"
-msgstr "TV HDMI porto (CEC)"
+msgstr "TV HDMI 포트(CEC)"
 
 #: ui/main.qml:156
 #, kde-format
 msgid "Automatic"
-msgstr "Automatic"
+msgstr "자동"
 
 #: ui/main.qml:158
 #, kde-format
@@ -98,36 +94,34 @@ msgstr "HDMI %1"
 #: ui/main.qml:176
 #, kde-format
 msgid "Game Controllers"
-msgstr "Controlatores de joco"
+msgstr "게임 컨트롤러"
 
 #: ui/main.qml:186
 #, kde-format
 msgid "Game controllers"
-msgstr "Controlatores de joco"
+msgstr "게임 컨트롤러"
 
 #: ui/main.qml:187
 #, kde-format
 msgid "Use connected game controllers for system navigation"
-msgstr "Usa controlatores de joco connectite per navigation de systema"
+msgstr "연결된 게임 컨트롤러로 시스템 탐색"
 
 #: ui/main.qml:206
 #, kde-format
 msgid "Automatic input suppression"
-msgstr "Suppression deingresso automatic"
+msgstr "자동 입력 차단"
 
 #: ui/main.qml:207
 #, kde-format
 msgid "Stop controller navigation while another app is using a controller"
-msgstr ""
-"Stoppa navigation de controlator durante que un altere appes usnte le "
-"controlator"
+msgstr "다른 앱에서 컨트롤러를 사용 중일 때 컨트롤러 탐색 중단"
 
 #: ui/main.qml:227
 #, kde-format
 msgid "No controllers connected"
-msgstr "Nulle controlatores connectite"
+msgstr "연결된 컨트롤러 없음"
 
 #: ui/main.qml:228
 #, kde-format
 msgid "Connect a game controller"
-msgstr "Connecte un controlator de joco"
+msgstr "게임 컨트롤러를 연결하십시오"
