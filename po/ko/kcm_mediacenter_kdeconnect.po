@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# SPDX-FileCopyrightText: 2020, 2021, 2025 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2020, 2021, 2025, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-01 00:50+0000\n"
-"PO-Revision-Date: 2025-10-12 12:54+0200\n"
+"PO-Revision-Date: 2026-09-29 00:22+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ui/delegates/PairedView.qml:36
 #, kde-format
@@ -30,7 +30,7 @@ msgstr "페어링 해제"
 #: ui/delegates/PairedView.qml:52
 #, kde-format
 msgid "Plugin Settings"
-msgstr ""
+msgstr "플러그인 설정"
 
 #: ui/delegates/PairRequest.qml:35
 #, kde-format
@@ -75,7 +75,7 @@ msgstr "KDE Connect"
 #: ui/main.qml:44
 #, kde-format
 msgid "No devices found"
-msgstr ""
+msgstr "장치를 찾을 수 없음"
 
 #: ui/main.qml:44
 #, kde-format
@@ -86,7 +86,7 @@ msgstr "장치"
 #, kde-format
 msgctxt "%1 is the device name"
 msgid "Plugin Settings for %1 "
-msgstr ""
+msgstr "%1의 플러그인 설정 "
 
 #~ msgid "Press the [←] Back button to return to device selection"
 #~ msgstr "[←] 뒤로 단추를 누르면 장치 선택으로 돌아갑니다"

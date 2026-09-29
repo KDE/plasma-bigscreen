@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:50+0000\n"
-"PO-Revision-Date: 2026-04-26 21:08+0200\n"
+"PO-Revision-Date: 2026-09-29 00:22+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ui/main.qml:22
 #, kde-format
@@ -43,16 +43,15 @@ msgid "Screen mode (Resolution & Refresh Rate)"
 msgstr "화면 모드(해상도와 화면 주사율)"
 
 #: ui/main.qml:141
-#, fuzzy, kde-format
-#| msgid "Display Configuration"
+#, kde-format
 msgid "Keep display configuration?"
-msgstr "디스플레이 설정"
+msgstr "디스플레이 설정을 유지하시겠습니까?"
 
 #: ui/main.qml:154
 #, kde-format
 msgid "Will revert to previous configuration in %1 second."
 msgid_plural "Will revert to previous configuration in %1 seconds."
-msgstr[0] ""
+msgstr[0] "%1초 후 기존 설정으로 되돌립니다."
 
 #: ui/main.qml:164 ui/ScaleDialog.qml:21
 #, kde-format
