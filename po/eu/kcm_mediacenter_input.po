@@ -1,7 +1,7 @@
 # Translation for kcm_mediacenter_input.po to Euskara/Basque (eu).
 # Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
+# KDE euskaratzeko proiektuako arduraduna <xalba@ni.eus>.
 #
 # Translators:
 # SPDX-FileCopyrightText: 2026 Iñigo Salvador Azurmendi <xalba@ni.eus>
