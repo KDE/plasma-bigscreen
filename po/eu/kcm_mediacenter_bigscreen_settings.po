@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-20 12:55+0000\n"
-"PO-Revision-Date: 2026-07-17 17:22+0200\n"
+"PO-Revision-Date: 2026-09-29 23:16+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -158,28 +158,27 @@ msgstr ""
 #: ui/main.qml:127
 #, kde-format
 msgid "Off"
-msgstr ""
+msgstr "Itzalita"
 
 #: ui/main.qml:128
 #, kde-format
 msgid "Weak"
-msgstr ""
+msgstr "Ahula"
 
 #: ui/main.qml:129
 #, kde-format
 msgid "Medium"
-msgstr ""
+msgstr "Ertaina"
 
 #: ui/main.qml:130
 #, kde-format
 msgid "Strong"
-msgstr ""
+msgstr "Sendoa"
 
 #: ui/main.qml:133
-#, fuzzy, kde-format
-#| msgid "Navigation sounds"
+#, kde-format
 msgid "Navigation rumble"
-msgstr "Nabigazio-soinuak"
+msgstr "Nabigazio-hotsa"
 
 #: ui/main.qml:164
 #, kde-format
@@ -209,13 +208,12 @@ msgstr "Harrerako gainjartzearen lasterbidea ireki"
 #: ui/main.qml:214
 #, kde-format
 msgid "Open homescreen shortcut"
-msgstr "Ireki harrerako pantailaren lasterbidea"
+msgstr "Harrerako pantailaren lasterbidea ireki"
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgid "Open tasks shortcut"
+#, kde-format
 msgid "Open search shortcut"
-msgstr "Ireki atazen lasterbidea"
+msgstr "Bilaketa lasterbidea ireki"
 
 #: ui/main.qml:254
 #, kde-format
