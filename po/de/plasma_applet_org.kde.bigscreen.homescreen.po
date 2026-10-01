@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-26 00:47+0000\n"
-"PO-Revision-Date: 2026-09-19 20:23+0200\n"
+"PO-Revision-Date: 2026-09-29 11:49+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -33,7 +33,7 @@ msgstr "Favoriten"
 #: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:315
 #, kde-format
 msgid "Launcher Sections"
-msgstr ""
+msgstr "Starter-Abschnitte"
 
 #: contents/ui/FavoritesManager.qml:206
 #, fuzzy, kde-format
@@ -79,6 +79,8 @@ msgstr "Anwendungen anzeigen"
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
 msgstr ""
+"Anwendungen, die keine Spiele sind, erscheinen in einer Zeile auf dem "
+"Startbildschirm"
 
 #: contents/ui/FavoritesManager.qml:362
 #, kde-format
@@ -89,6 +91,8 @@ msgstr "Spiele anzeigen"
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
 msgstr ""
+"Anwendungen der Kategorie „Spiele“ erscheinen in einer Zeile auf dem "
+"Startbildschirm"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:36
 #, kde-format
@@ -135,12 +139,12 @@ msgstr "Controller"
 #: contents/ui/homeoverlay/MainColumn.qml:219
 #, kde-format
 msgid "Currently capturing keys…"
-msgstr ""
+msgstr "Tasteneingaben werden zurzeit erfasst …"
 
 #: contents/ui/homeoverlay/MainColumn.qml:219
 #, kde-format
 msgid "Key capture off"
-msgstr ""
+msgstr "Tasteneingabeerfassung aus"
 
 #: contents/ui/homeoverlay/MainColumn.qml:237
 #, kde-format
