@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-26 00:47+0000\n"
-"PO-Revision-Date: 2026-07-22 01:44+0900\n"
+"PO-Revision-Date: 2026-10-01 01:19+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -38,10 +38,9 @@ msgid "Launcher Sections"
 msgstr "啟動器區塊"
 
 #: contents/ui/FavoritesManager.qml:206
-#, fuzzy, kde-format
-#| msgid "Manage Favorites"
+#, kde-format
 msgid "Change Favorites Order"
-msgstr "管理最愛"
+msgstr "變更最愛順序"
 
 #: contents/ui/FavoritesManager.qml:214
 #, kde-format
@@ -49,6 +48,7 @@ msgid ""
 "To change the order of the favorites, open the launcher and tap and hold an "
 "app in the favorites list."
 msgstr ""
+"要變更最愛項目的順序，請開啟啟動器然後輕觸後按住最愛清單當中的應用程式。"
 
 #: contents/ui/FavoritesManager.qml:244
 #, kde-format
