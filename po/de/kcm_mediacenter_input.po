@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-29 00:47+0000\n"
-"PO-Revision-Date: 2026-09-19 20:30+0200\n"
+"PO-Revision-Date: 2026-09-30 21:53+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -26,7 +26,7 @@ msgstr "Systemnavigation"
 #: ui/GameControllerSidebar.qml:51
 #, kde-format
 msgid "START button when suppressed"
-msgstr ""
+msgstr "START-Taste bei Eingabeunterdrückung"
 
 #: ui/GameControllerSidebar.qml:52
 #, kde-format
@@ -34,6 +34,8 @@ msgid ""
 "Handle the START button even when input is suppressed (may conflict with "
 "some apps)"
 msgstr ""
+"Das Drücken der START-Taste auch dann verarbeiten, wenn die Eingabe "
+"unterdrückt wird (kann bei einigen Anwendungen zu Konflikten führen)"
 
 #: ui/main.qml:17
 #, kde-format
