@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-26 03:01+0000\n"
-"PO-Revision-Date: 2026-03-01 20:32+0200\n"
+"PO-Revision-Date: 2026-09-02 17:22+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -18,10 +18,9 @@ msgstr ""
 "X-Generator: Lokalize 25.04.0\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
-#, fuzzy, kde-format
-#| msgid "Exit Bigscreen"
+#, kde-format
 msgid "Edit Home Screen"
-msgstr "Poistu BigScreenistä"
+msgstr "Muokkaa kotinäyttöä"
 
 #: contents/ui/FavoritesManager.qml:144
 #: contents/ui/launcher/LauncherHome.qml:84
@@ -32,7 +31,7 @@ msgstr "Suosikit"
 #: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:294
 #, kde-format
 msgid "Launcher Sections"
-msgstr ""
+msgstr "Käynnistinosiot"
 
 #: contents/ui/FavoritesManager.qml:224
 #, kde-format
@@ -45,58 +44,54 @@ msgid "Remove Favorites"
 msgstr "Poista suosikeista"
 
 #: contents/ui/FavoritesManager.qml:308
-#, fuzzy, kde-format
-#| msgid "Recent"
+#, kde-format
 msgid "Show Recent"
-msgstr "Viimeaikainen"
+msgstr "Näytä viimeaikaiset"
 
 #: contents/ui/FavoritesManager.qml:309
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
-msgstr ""
+msgstr "Viimeaikaiset sovellukset ilmestyvät kotinäytön riviksi"
 
 #: contents/ui/FavoritesManager.qml:324
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Show Applications"
-msgstr "Sovellukset"
+msgstr "Näytä sovellukset"
 
 #: contents/ui/FavoritesManager.qml:325
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
-msgstr ""
+msgstr "Ei-pelisovellukset ilmestyvät kotinäytön riviksi"
 
 #: contents/ui/FavoritesManager.qml:341
-#, fuzzy, kde-format
-#| msgid "Games"
+#, kde-format
 msgid "Show Games"
-msgstr "Pelit"
+msgstr "Näytä pelit"
 
 #: contents/ui/FavoritesManager.qml:342
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
-msgstr ""
+msgstr "Peli-luokan sovellukset ilmestyvät kotinäytön riviksi"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:36
 #, kde-format
 msgid "Screenshot"
-msgstr ""
+msgstr "Kuvakaappaus"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:50
-#, fuzzy, kde-format
-#| msgid "Audio"
+#, kde-format
 msgid "Audio"
 msgstr "Ääni"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:78
 #, kde-format
 msgid "Wi-Fi"
-msgstr ""
+msgstr "Langaton verkko"
 
 #: contents/ui/homeoverlay/ColumnActionsRow.qml:93
 #, kde-format
 msgid "Shutdown"
-msgstr ""
+msgstr "Sammuta"
 
 #: contents/ui/homeoverlay/MainColumn.qml:165
 #, kde-format
@@ -110,8 +105,7 @@ msgid "Search"
 msgstr "Etsi"
 
 #: contents/ui/homeoverlay/MainColumn.qml:195
-#, fuzzy, kde-format
-#| msgid "Tasks"
+#, kde-format
 msgctxt "@action:button Opens an overview of all currently running apps"
 msgid "Tasks"
 msgstr "Tehtävät"
@@ -148,11 +142,10 @@ msgid "Hold to close…"
 msgstr "Sulje pitämällä…"
 
 #: contents/ui/homeoverlay/TasksView.qml:109
-#, fuzzy, kde-format
-#| msgid "Voice Apps"
+#, kde-format
 msgctxt "As in: These apps are currently opened"
 msgid "Open Apps"
-msgstr "Äänisovellukset"
+msgstr "Avoimet sovellukset"
 
 #: contents/ui/homeoverlay/TasksView.qml:160
 #, kde-format
@@ -170,10 +163,9 @@ msgid "KDE Connect"
 msgstr "KDE Connect"
 
 #: contents/ui/indicators/PairWindow.qml:40
-#, fuzzy, kde-format
-#| msgid "Pairing Request From %1"
+#, kde-format
 msgid "Accept Pairing Request From %1?"
-msgstr "Paripyyntö laitteesta %1"
+msgstr "Hyväksytäänkö parituspyyntö laitteelta %1?"
 
 #: contents/ui/indicators/Shutdown.qml:15
 #, kde-format
