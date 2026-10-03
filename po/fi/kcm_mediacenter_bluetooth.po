@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# SPDX-FileCopyrightText: 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2025, 2026 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-20 12:55+0000\n"
-"PO-Revision-Date: 2025-08-20 17:36+0300\n"
+"PO-Revision-Date: 2026-09-02 17:20+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -61,22 +61,22 @@ msgstr "Haluatko varmasti unohtaa laitteen %1?"
 #: ui/DeviceConnectionSidebar.qml:119
 #, kde-format
 msgid "Trusted"
-msgstr ""
+msgstr "Luotettu"
 
 #: ui/DeviceConnectionSidebar.qml:120
 #, kde-format
 msgid "Auto-accept incoming connections"
-msgstr ""
+msgstr "Hyväksy saapuvat yhteydet automaattisesti"
 
 #: ui/DeviceConnectionSidebar.qml:134
 #, kde-format
 msgid "Blocked"
-msgstr ""
+msgstr "Estetty"
 
 #: ui/DeviceConnectionSidebar.qml:135
 #, kde-format
 msgid "Reject all connections from this device"
-msgstr ""
+msgstr "Hylkää tältä laitteelta kaikki yhteydet"
 
 #: ui/DeviceConnectionSidebar.qml:151
 #, kde-format
@@ -84,28 +84,25 @@ msgid "Device details"
 msgstr "Laitteen tiedot"
 
 #: ui/DeviceConnectionSidebar.qml:161
-#, fuzzy, kde-format
-#| msgid "Type: "
+#, kde-format
 msgid "Type: %1"
-msgstr "Tyyppi: "
+msgstr "Tyyppi: %1"
 
 #: ui/DeviceConnectionSidebar.qml:166
-#, fuzzy, kde-format
-#| msgid "Address: "
+#, kde-format
 msgid "Address: %1"
-msgstr "Osoite: "
+msgstr "Osoite: %1"
 
 #: ui/DeviceConnectionSidebar.qml:172
-#, fuzzy, kde-format
-#| msgid "%1% Battery"
+#, kde-format
 msgid "Battery: %1"
-msgstr "%1 % akkua"
+msgstr "Akku: %1"
 
 #: ui/DeviceConnectionSidebar.qml:173
 #, kde-format
 msgctxt "Battery percentage level"
 msgid "%1%"
-msgstr ""
+msgstr "%1 %"
 
 #: ui/DeviceConnectionSidebar.qml:179 ui/DeviceConnectionSidebar.qml:186
 #, kde-format
@@ -130,12 +127,12 @@ msgstr "Bluetooth"
 #: ui/main.qml:67
 #, kde-format
 msgid "No Bluetooth adapters found"
-msgstr ""
+msgstr "Bluetooth-sovittimia ei löytynyt"
 
 #: ui/main.qml:68
 #, kde-format
 msgid "Connect an external Bluetooth adapter"
-msgstr ""
+msgstr "Yhdistä ulkoiseen Bluetooth-sovittimeen"
 
 #: ui/main.qml:80
 #, kde-format
@@ -195,9 +192,7 @@ msgid "Multimedia"
 msgstr "Multimedia"
 
 #: ui/script.js:27
-#, fuzzy, kde-format
-#| msgctxt "This device is a Keyboard"
-#| msgid "Keyboard"
+#, kde-format
 msgctxt "This device is a Keyboard (not the music instrument)"
 msgid "Keyboard"
 msgstr "Näppäimistö"

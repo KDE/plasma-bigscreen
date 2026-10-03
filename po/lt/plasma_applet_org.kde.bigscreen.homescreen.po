@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-26 00:47+0000\n"
-"PO-Revision-Date: 2026-07-18 21:47+0300\n"
+"PO-Revision-Date: 2026-10-02 15:25+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -36,10 +36,9 @@ msgid "Launcher Sections"
 msgstr "Paleidyklės skyriai"
 
 #: contents/ui/FavoritesManager.qml:206
-#, fuzzy, kde-format
-#| msgid "Favorites Manager"
+#, kde-format
 msgid "Change Favorites Order"
-msgstr "Mėgstamų tvarkytuvė"
+msgstr "Keisti mėgstamų tvarką"
 
 #: contents/ui/FavoritesManager.qml:214
 #, kde-format
@@ -47,6 +46,8 @@ msgid ""
 "To change the order of the favorites, open the launcher and tap and hold an "
 "app in the favorites list."
 msgstr ""
+"Norėdami keisti mėgstamų tvarką, atverkite paleidyklę ir mėgstamų programų "
+"sąraše bakstelėję palaikykite ant programos."
 
 #: contents/ui/FavoritesManager.qml:244
 #, kde-format

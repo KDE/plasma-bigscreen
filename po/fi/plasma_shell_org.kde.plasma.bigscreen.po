@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
-# SPDX-FileCopyrightText: 2021, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2021, 2024, 2026 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-11 00:45+0000\n"
-"PO-Revision-Date: 2024-11-07 17:23+0200\n"
+"PO-Revision-Date: 2026-09-02 17:29+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:49
 msgid "Layout cannot be changed while widgets are locked"
@@ -45,31 +45,33 @@ msgstr "Poista näytön lukitus"
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
 msgstr[0] ""
+"Asennetaan ohjelmistopäivityksiä ja käynnistetään uudelleen 1 sekunnissa"
 msgstr[1] ""
+"Asennetaan ohjelmistopäivityksiä ja käynnistetään uudelleen %1 sekunnissa"
 
 #: contents/logout/Logout.qml:153
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Käynnistetään uudelleen 1 sekunnissa"
+msgstr[1] "Käynnistetään uudelleen %1 sekunnissa"
 
 #: contents/logout/Logout.qml:155
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Kirjaudutaan ulos 1 sekunnissa"
+msgstr[1] "Kirjaudutaan ulos %1 sekunnissa"
 
 #: contents/logout/Logout.qml:158
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Asennetaan ohjelmistopäivityksiä ja sammutetaan 1 sekunnissa"
+msgstr[1] "Asennetaan ohjelmistopäivityksiä ja sammutetaan %1 sekunnissa"
 
 #: contents/logout/Logout.qml:159
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Sammutetaan 1 sekunnissa"
+msgstr[1] "Sammutetaan %1 sekunnissa"
 
 #: contents/logout/Logout.qml:174
 msgid ""
@@ -79,77 +81,81 @@ msgid_plural ""
 "%1 other users are currently logged in. If the computer is shut down or "
 "restarted, those users may lose work."
 msgstr[0] ""
+"Kirjautuneena on yksi käyttäjä. Jos kone sammutetaan tai käynnistetään "
+"uudelleen, hän voi menettää työnsä."
 msgstr[1] ""
+"Kirjautuneena on %1 käyttäjää. Jos kone sammutetaan tai käynnistetään "
+"uudelleen, he voivat menettää työnsä."
 
 #: contents/logout/Logout.qml:191
 msgid "When restarted, the computer will enter UEFI firmware settings."
-msgstr ""
+msgstr "Uudelleenkäynnistettäessä siirrytään UEFI-laiteohjelmistoasetuksiin."
 
 #: contents/logout/Logout.qml:193
 msgid "When restarted, the computer will enter the firmware setup screen."
-msgstr ""
+msgstr "Uudelleenkäynnistettäessä siirrytään laiteohjelmistonäytölle."
 
 #: contents/logout/Logout.qml:208
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr ""
+msgstr "Uudelleenkäynnistettäessä siirrytään käynnistyslatainvalikkoon."
 
 #: contents/logout/Logout.qml:221
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr ""
+msgstr "Uudelleenkäynnistettäessä käynnistetään %1."
 
 #: contents/logout/Logout.qml:243
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
-msgstr ""
+msgstr "&Valmiustila"
 
 #: contents/logout/Logout.qml:244
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr ""
+msgstr "&Valmiustila nyt"
 
 #: contents/logout/Logout.qml:253
 msgid "&Hibernate"
-msgstr ""
+msgstr "&Lepotila"
 
 #: contents/logout/Logout.qml:254
 msgid "&Hibernate Now"
-msgstr ""
+msgstr "&Lepotila nyt"
 
 #: contents/logout/Logout.qml:265
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
-msgstr ""
+msgstr "Asenna päivitykset ja käynnistä uudelleen"
 
 #: contents/logout/Logout.qml:267 contents/logout/Logout.qml:286
 msgid "&Restart"
-msgstr ""
+msgstr "&Käynnistä uudelleen"
 
 #: contents/logout/Logout.qml:268 contents/logout/Logout.qml:287
 msgid "&Restart Now"
-msgstr ""
+msgstr "&Käynnistä uudelleen nyt"
 
 #: contents/logout/Logout.qml:300
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr ""
+msgstr "Asenna päivitykset ja sammuta"
 
 #: contents/logout/Logout.qml:302 contents/logout/Logout.qml:321
 msgid "&Shut Down"
-msgstr ""
+msgstr "&Sammuta"
 
 #: contents/logout/Logout.qml:303 contents/logout/Logout.qml:322
 msgid "&Shut Down Now"
-msgstr ""
+msgstr "&Sammuta nyt"
 
 #: contents/logout/Logout.qml:334
 msgid "&Log Out"
-msgstr ""
+msgstr "Kirjaudu &ulos"
 
 #: contents/logout/Logout.qml:335
 msgid "&Log Out Now"
-msgstr ""
+msgstr "Kirjaudu &ulos nyt"
 
 #: contents/logout/Logout.qml:345
 msgid "&Cancel"
-msgstr ""
+msgstr "&Peru"

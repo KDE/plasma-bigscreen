@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-20 12:55+0000\n"
-"PO-Revision-Date: 2026-02-25 16:29+0200\n"
+"PO-Revision-Date: 2026-09-02 17:32+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -30,7 +30,7 @@ msgstr "translator@legisign.org"
 #: ui/ColorSchemeSidebar.qml:23 ui/main.qml:85
 #, kde-format
 msgid "Color scheme"
-msgstr ""
+msgstr "Väriteema"
 
 #: ui/DatePicker.qml:38
 #, kde-format
@@ -48,10 +48,9 @@ msgid "Day"
 msgstr "Päivä"
 
 #: ui/DeviceTimeSettingsSidebar.qml:46
-#, fuzzy, kde-format
-#| msgid "Adjust Date & Time Settings"
+#, kde-format
 msgid "Adjust Date and Time Settings"
-msgstr "Säädä päiväystä ja kellonaikaa"
+msgstr "Päiväyksen ja kellonajan asetukset"
 
 #: ui/DeviceTimeSettingsSidebar.qml:54
 #, kde-format
@@ -125,21 +124,21 @@ msgid "Apply a blur effect to the wallpaper on the homescreen"
 msgstr "Käytä kotinäytön taustakuvaan sumennustehostetta"
 
 #: ui/main.qml:86
-#, fuzzy, kde-format
-#| msgid "Set the system theme"
+#, kde-format
 msgid "Set the system colors"
-msgstr "Aseta järjestelmäteemaksi"
+msgstr "Aseta järjestelmävärit"
 
 #: ui/main.qml:106
 #, kde-format
 msgid "Window decorations"
-msgstr ""
+msgstr "Ikkunakoristelu"
 
 #: ui/main.qml:107
 #, kde-format
 msgid ""
 "Have a window frame (minimize, maximize, close), for apps that request it"
 msgstr ""
+"Näytä ikkunakehys (pienennä, suurenna, sulje) sitä pyytäville sovelluksille"
 
 #: ui/main.qml:116
 #, kde-format
@@ -149,7 +148,7 @@ msgstr "Navigointiäänet"
 #: ui/main.qml:117
 #, kde-format
 msgid "Play a sound when the selected item changes in system apps"
-msgstr ""
+msgstr "Toista ääni valitun kohteen muuttuessa järjestelmäsovelluksissa"
 
 #: ui/main.qml:127
 #, kde-format
@@ -186,11 +185,10 @@ msgstr "Sammutuksen estäminen"
 #: ui/main.qml:165
 #, kde-format
 msgid "Prevent the system from automatically sleeping"
-msgstr ""
+msgstr "Estä järjestelmää siirtymästä valmiustilaan automaattisesti"
 
 #: ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Adjust date & time"
+#, kde-format
 msgid "Adjust date and time"
 msgstr "Säädä päiväystä ja kellonaikaa"
 
@@ -200,10 +198,9 @@ msgid "Shortcuts"
 msgstr "Pikanäppäimet"
 
 #: ui/main.qml:194
-#, fuzzy, kde-format
-#| msgid "Open homescreen shortcut"
+#, kde-format
 msgid "Open home overlay shortcut"
-msgstr "Avaa kotinäyttö -pikanäppäin"
+msgstr "Avaa kotipeittonäkymän pikakuvake"
 
 #: ui/main.qml:214
 #, kde-format
@@ -252,8 +249,7 @@ msgid "Minute"
 msgstr "Minuutti"
 
 #: ui/TimePicker.qml:72
-#, fuzzy, kde-format
-#| msgid "Second"
+#, kde-format
 msgctxt "unit of time"
 msgid "Second"
 msgstr "Sekunti"
