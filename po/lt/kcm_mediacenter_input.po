@@ -1,0 +1,134 @@
+# Lithuanian translations for plasma-bigscreen package.
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-09-22 16:02+0000\n"
+"PO-Revision-Date: 2026-10-04 00:05+0300\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && (n%100<11 || n%100>19) ? 0 : n"
+"%10>=2 && n%10<=9 && (n%100<11 || n%100>19) ? 1 : 2);\n"
+"X-Generator: Poedit 3.9\n"
+
+#: ui/GameControllerSidebar.qml:36
+#, kde-format
+msgid "System navigation"
+msgstr "Naršymas sistemoje"
+
+#: ui/GameControllerSidebar.qml:51
+#, kde-format
+msgid "START button when suppressed"
+msgstr "„START“ mygtukas, kai nuslopintas"
+
+#: ui/GameControllerSidebar.qml:52
+#, kde-format
+msgid ""
+"Handle the START button even when input is suppressed (may conflict with "
+"some apps)"
+msgstr ""
+"Apdoroti „START“ mygtuką net tada, kai įvedimas nuslopintas (gali "
+"konfliktuoti su tam tikromis programomis)"
+
+#: ui/main.qml:17
+#, kde-format
+msgid "Input"
+msgstr "Įvedimas"
+
+#: ui/main.qml:105
+#, kde-format
+msgid "Input daemon is not running"
+msgstr "Įvedimo tarnyba neveikia"
+
+#: ui/main.qml:106
+#, kde-format
+msgid ""
+"Controller and remote settings are only available when plasma-bigscreen-"
+"inputhandler is running"
+msgstr ""
+"Valdiklio ir nuotolinio valdymo pulto nuostatos yra prieinamos tik tada, kai "
+"veikia plasma-bigscreen-inputhandler"
+
+#: ui/main.qml:112
+#, kde-format
+msgid "System Navigation"
+msgstr "Naršymas sistemoje"
+
+#: ui/main.qml:113
+#, kde-format
+msgid ""
+"Navigate the system interface with connected controllers/remotes (apps can "
+"always still use them directly)"
+msgstr ""
+"Naršyti sistemos sąsajoje naudojant prijungtus valdiklius/nuotolinio valdymo "
+"pultus (programos vis tiek visada gali juos naudoti tiesiogiai)"
+
+#: ui/main.qml:130
+#, kde-format
+msgid "TV remote"
+msgstr "Televizoriaus pultas"
+
+#: ui/main.qml:131
+#, kde-format
+msgid "Navigate the system interface with the connected TV remote (CEC)"
+msgstr ""
+"Naršyti sistemos sąsają naudojant prijungtą televizoriaus nuotolinio valdymo "
+"pultą (CEC)"
+
+#: ui/main.qml:151
+#, kde-format
+msgid "TV HDMI port (CEC)"
+msgstr "TV HDMI jungtis (CEC)"
+
+#: ui/main.qml:156
+#, kde-format
+msgid "Automatic"
+msgstr "Automatinė"
+
+#: ui/main.qml:158
+#, kde-format
+msgid "HDMI %1"
+msgstr "HDMI %1"
+
+#: ui/main.qml:176
+#, kde-format
+msgid "Game Controllers"
+msgstr "Žaidimų valdikliai"
+
+#: ui/main.qml:186
+#, kde-format
+msgid "Game controllers"
+msgstr "Žaidimų valdikliai"
+
+#: ui/main.qml:187
+#, kde-format
+msgid "Use connected game controllers for system navigation"
+msgstr "Naršymui sistemoje naudoti prijungtus žaidimų valdiklius"
+
+#: ui/main.qml:206
+#, kde-format
+msgid "Automatic input suppression"
+msgstr "Automatinis įvedimo slopinimas"
+
+#: ui/main.qml:207
+#, kde-format
+msgid "Stop controller navigation while another app is using a controller"
+msgstr "Stabdyti naršymą valdikliu, kol valdiklį naudoja kita programa"
+
+#: ui/main.qml:227
+#, kde-format
+msgid "No controllers connected"
+msgstr "Nėra prijungtų vadiklių"
+
+#: ui/main.qml:228
+#, kde-format
+msgid "Connect a game controller"
+msgstr "Prijunkite žaidimų valdiklį"
