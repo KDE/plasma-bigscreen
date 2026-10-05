@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-26 00:47+0000\n"
-"PO-Revision-Date: 2026-09-24 19:53-0400\n"
+"PO-Revision-Date: 2026-10-03 18:54-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -35,10 +35,9 @@ msgid "Launcher Sections"
 msgstr "قوزغاتقۇچ بۆلىكى"
 
 #: contents/ui/FavoritesManager.qml:206
-#, fuzzy, kde-format
-#| msgid "Favorites Manager"
+#, kde-format
 msgid "Change Favorites Order"
-msgstr "يىغقۇچ باشقۇرغۇچ"
+msgstr "مايىللىق تەرتىپىنى ئۆزگەرت"
 
 #: contents/ui/FavoritesManager.qml:214
 #, kde-format
@@ -46,6 +45,8 @@ msgid ""
 "To change the order of the favorites, open the launcher and tap and hold an "
 "app in the favorites list."
 msgstr ""
+"مايىللىق تەرتىپىنى ئۆزگەرتىشتە، قوزغاتقۇچنى ئېچىپ، يىغقۇچ تىزىمىدا ئەپنى "
+"چېكىپ ۋە بېسىپ تۇرسا بولىدۇ."
 
 #: contents/ui/FavoritesManager.qml:244
 #, kde-format

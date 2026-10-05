@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-11 00:45+0000\n"
-"PO-Revision-Date: 2026-09-19 22:49+0200\n"
+"PO-Revision-Date: 2026-10-04 09:32+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -108,9 +108,7 @@ msgstr "После перезагрузки компьютер перейдёт 
 
 #: contents/logout/Logout.qml:193
 msgid "When restarted, the computer will enter the firmware setup screen."
-msgstr ""
-"После перезагрузки будет открыт экран настройки встроенной микропрограммы "
-"компьютера."
+msgstr "После перезагрузки будет открыт экран настройки прошивки компьютера."
 
 #: contents/logout/Logout.qml:208
 msgid "When restarted, the computer will enter the boot loader menu."
