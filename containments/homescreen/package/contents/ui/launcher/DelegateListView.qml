@@ -111,8 +111,9 @@ FocusScope {
 
         onCurrentIndexChanged: {
             const maxContentX = Math.max(0, contentWidth - width);
-            xAnim.to = Math.max(0, Math.min(itemAtIndex(currentIndex).x - cellWidth, maxContentX));
-            xAnim.restart();
+            const currentItemX = itemAtIndex(currentIndex)?.x ?? (originX + currentIndex * cellWidth);
+            xAnim.to = Math.max(0, Math.min(currentItemX - cellWidth, maxContentX));
+            if (xAnim.to != contentX) xAnim.restart();
         }
 
         NumberAnimation on contentX {
