@@ -168,8 +168,8 @@ Window {
                 Layout.maximumWidth: column.columnContentWidth
                 Layout.alignment: Qt.AlignHCenter
 
-                QQC2.ScrollBar.vertical: null
-                QQC2.ScrollBar.horizontal: null
+                QQC2.ScrollBar.vertical.policy: QQC2.ScrollBar.AlwaysOff
+                QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
 
                 SearchListView {
                     id: listView

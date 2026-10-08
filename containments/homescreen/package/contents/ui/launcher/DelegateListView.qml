@@ -111,7 +111,8 @@ FocusScope {
 
         function contentXAnimation(){
             const maxContentX = Math.max(0, contentWidth - width);
-            xAnim.to = Math.max(0, Math.min((currentIndex - 1) * cellWidth, maxContentX)) + itemAtIndex(0).x;
+            const firstItemX = itemAtIndex(0)?.x ?? originX;
+            xAnim.to = Math.max(0, Math.min((currentIndex - 1) * cellWidth, maxContentX)) + firstItemX;
             if (xAnim.to != contentX) xAnim.restart();
         }
 

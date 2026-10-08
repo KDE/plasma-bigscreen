@@ -29,8 +29,8 @@ FocusScope {
     // Whether the view has scrolled down at least one row
     readonly property bool scrolledDown: launcherHome.scrolledDown
 
-    onFocusChanged: {
-        if (focus) {
+    onActiveFocusChanged: {
+        if (activeFocus && !launcherHome.activeFocus) {
             launcherHome.activateAppView();
         }
     }
