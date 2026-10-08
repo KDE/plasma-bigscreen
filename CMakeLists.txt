@@ -15,7 +15,7 @@ set(QCORO_MIN_VERSION "0.7.0")
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(PROJECT_DEP_VERSION "6.7.91")
+set(PROJECT_DEP_VERSION "6.8.0")
 
 # Use Extra CMake Modules (ECM) for common functionality.
 # See http://api.kde.org/ecm/manual/ecm.7.html
