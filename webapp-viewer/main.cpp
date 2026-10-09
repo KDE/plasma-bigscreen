@@ -16,7 +16,6 @@
 #include <KAboutData>
 #include <KDBusService>
 #include <KLocalizedContext>
-#include <KLocalizedQmlContext>
 #include <KLocalizedString>
 
 #include "browsermanager.h"
