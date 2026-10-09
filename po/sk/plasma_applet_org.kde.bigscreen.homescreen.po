@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.mycroft.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-26 00:47+0000\n"
+"POT-Creation-Date: 2026-10-09 00:49+0000\n"
 "PO-Revision-Date: 2022-01-07 14:58+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -199,17 +199,17 @@ msgstr "Nastavenia zvuku"
 msgid "Internet Settings"
 msgstr "Nastavenia"
 
-#: contents/ui/launcher/LauncherHome.qml:113
+#: contents/ui/launcher/LauncherHome.qml:109
 #, kde-format
 msgid "Recent"
 msgstr "Nedávne"
 
-#: contents/ui/launcher/LauncherHome.qml:151
+#: contents/ui/launcher/LauncherHome.qml:147
 #, kde-format
 msgid "Applications"
 msgstr "Aplikácie"
 
-#: contents/ui/launcher/LauncherHome.qml:180
+#: contents/ui/launcher/LauncherHome.qml:176
 #, kde-format
 msgid "Games"
 msgstr "Hry"

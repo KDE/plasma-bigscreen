@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-26 00:47+0000\n"
+"POT-Creation-Date: 2026-10-09 00:49+0000\n"
 "PO-Revision-Date: 2026-10-03 18:54-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -202,17 +202,17 @@ msgstr "ئۈن تەڭشىكى"
 msgid "Internet Settings"
 msgstr "ئىنتېرنېت تەڭشىكى"
 
-#: contents/ui/launcher/LauncherHome.qml:113
+#: contents/ui/launcher/LauncherHome.qml:109
 #, kde-format
 msgid "Recent"
 msgstr "يېقىنقى"
 
-#: contents/ui/launcher/LauncherHome.qml:151
+#: contents/ui/launcher/LauncherHome.qml:147
 #, kde-format
 msgid "Applications"
 msgstr "پىروگرامما"
 
-#: contents/ui/launcher/LauncherHome.qml:180
+#: contents/ui/launcher/LauncherHome.qml:176
 #, kde-format
 msgid "Games"
 msgstr "ئويۇن"
