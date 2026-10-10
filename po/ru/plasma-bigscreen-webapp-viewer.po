@@ -1,243 +1,243 @@
-# Copyright (C) 2025 This file is copyright:
+# Translation of plasma-bigscreen-webapp-viewer into Russian.
 # This file is distributed under the same license as the plasma-bigscreen package.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2026.
 #
-# SPDX-FileCopyrightText: 2025, 2026 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma-bigscreen\n"
+"Project-Id-Version: plasma-bigscreen-webapp-viewer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-10 00:48+0000\n"
-"PO-Revision-Date: 2026-02-28 06:45-0300\n"
-"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
-"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
-"Language: pt_BR\n"
+"PO-Revision-Date: 2026-10-09 19:38+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Marcus Gama"
+msgstr "Александр Яворский"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "marcus.gama@gmail.com"
+msgstr "kekcuha@gmail.com"
 
 #: main.cpp:52
 #, kde-format
 msgid "The user agent to browse with."
-msgstr "A identificação do navegador a usar."
+msgstr "Агент пользователя для просмотра веб-страниц."
 
 #: main.cpp:54
 #, kde-format
 msgid "The name of the web app"
-msgstr "O nome do aplicativo Web"
+msgstr "Название веб-приложения"
 
 #: main.cpp:57
 #, kde-format
 msgid "link of website to launch"
-msgstr "link da página Web a abrir"
+msgstr "Адрес веб-сайта для запуска"
 
 #: main.cpp:74
 #, kde-format
 msgid "Webview"
-msgstr "Visão Web"
+msgstr "Веб-представление"
 
 #: main.cpp:76
 #, kde-format
 msgid "Plasma Bigscreen Webapp runtime"
-msgstr "runtime de aplicativo Web do Plasma Bigscreen"
+msgstr "Среда выполнения веб-приложений Plasma Bigscreen"
 
 #: main.cpp:78
 #, kde-format
 msgid "© 2025 Plasma developers"
-msgstr "© 2025 Desenvolvedores do Plasma"
+msgstr "© 2025 Разработчики Plasma"
 
 #: qml/WebView.qml:190
 #, kde-format
 msgctxt "@info:status"
 msgid "Entered Full Screen mode"
-msgstr "Entrou no modo de tela cheia"
+msgstr "Выполнен переход в полноэкранный режим"
 
 #: qml/WebView.qml:191
 #, kde-format
 msgctxt "@action:button"
 msgid "Exit Full Screen (Esc)"
-msgstr "Sair da tela cheia (Esc)"
+msgstr "Выйти из полноэкранного режима (Esc)"
 
 #: qml/WebView.qml:304
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Play"
-msgstr "Reproduzir"
+msgstr "Воспроизвести"
 
 #: qml/WebView.qml:305
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Pause"
-msgstr "Pausar"
+msgstr "Приостановить"
 
 #: qml/WebView.qml:312
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Unmute"
-msgstr "Ativar o som"
+msgstr "Включить звук"
 
 #: qml/WebView.qml:313
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Mute"
-msgstr "Mudo"
+msgstr "Выключить звук"
 
 #: qml/WebView.qml:323
 #, kde-format
 msgctxt "@label"
 msgid "Speed"
-msgstr "Velocidade"
+msgstr "Скорость"
 
 #: qml/WebView.qml:346
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Loop"
-msgstr "Repetição"
+msgstr "Повторять"
 
 #: qml/WebView.qml:353
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Exit Fullscreen"
-msgstr "Sair da tela cheia"
+msgstr "Выйти из полноэкранного режима"
 
 #: qml/WebView.qml:353
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Enter Fullscreen"
-msgstr "Entrar em tela cheia"
+msgstr "Перейти в полноэкранный режим"
 
 #: qml/WebView.qml:366
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Controls"
-msgstr "Ocultar controles"
+msgstr "Скрыть элементы управления"
 
 #: qml/WebView.qml:367
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Controls"
-msgstr "Mostrar controles"
+msgstr "Показать элементы управления"
 
 #: qml/WebView.qml:375
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Video"
-msgstr "Abrir vídeo"
+msgstr "Открыть видео"
 
 #: qml/WebView.qml:375
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Audio"
-msgstr "Abrir áudio"
+msgstr "Открыть аудио"
 
 #: qml/WebView.qml:376
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Video in New Tab"
-msgstr "Abrir vídeo em nova aba"
+msgstr "Открыть видео в новой вкладке"
 
 #: qml/WebView.qml:376
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Audio in New Tab"
-msgstr "Abrir áudio em nova aba"
+msgstr "Открыть аудио в новой вкладке"
 
 #: qml/WebView.qml:384
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Save Video"
-msgstr "Salvar vídeo"
+msgstr "Сохранить видео"
 
 #: qml/WebView.qml:390
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Video Link"
-msgstr "Copiar link do vídeo"
+msgstr "Копировать ссылку на видео"
 
 #: qml/WebView.qml:396
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Image"
-msgstr "Abrir imagem"
+msgstr "Открыть изображение"
 
 #: qml/WebView.qml:396
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Image in New Tab"
-msgstr "Abrir imagem em nova aba"
+msgstr "Открыть изображение в новой вкладке"
 
 #: qml/WebView.qml:404
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Save Image"
-msgstr "Salvar imagem"
+msgstr "Сохранить изображение"
 
 #: qml/WebView.qml:410
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Image"
-msgstr "Copiar imagem"
+msgstr "Копировать изображение"
 
 #: qml/WebView.qml:416
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Image Link"
-msgstr "Copiar link da imagem"
+msgstr "Копировать ссылку на изображение"
 
 #: qml/WebView.qml:422
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Link"
-msgstr "Abrir link"
+msgstr "Открыть ссылку"
 
 #: qml/WebView.qml:422
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Link in New Window"
-msgstr "Abrir link em nova janela"
+msgstr "Открыть ссылку в новом окне"
 
 #: qml/WebView.qml:430
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Save Link"
-msgstr "Salvar link"
+msgstr "Сохранить ссылку"
 
 #: qml/WebView.qml:436
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Link"
-msgstr "Copiar link"
+msgstr "Копировать ссылку"
 
 #: qml/WebView.qml:443
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy"
-msgstr "Copiar"
+msgstr "Копировать"
 
 #: qml/WebView.qml:449
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Cut"
-msgstr "Recortar"
+msgstr "Вырезать"
 
 #: qml/WebView.qml:455
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Paste"
-msgstr "Colar"
+msgstr "Вставить"
 
 #: webprofile.cpp:48
 #, kde-format
 msgid "Open"
-msgstr "Abrir"
+msgstr "Открыть"
