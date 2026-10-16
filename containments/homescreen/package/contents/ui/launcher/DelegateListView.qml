@@ -45,7 +45,7 @@ FocusScope {
             }
             return v;
         } else {
-            return 0; // or any default value you prefer
+            return 1; // or any default value you prefer ( != 0 )
         }
     }
 

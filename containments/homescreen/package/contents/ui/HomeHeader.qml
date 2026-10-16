@@ -26,6 +26,8 @@ Controls.Control {
     readonly property real largeHeight: Math.min(parent.height / 2, Kirigami.Units.gridUnit * 15)
     readonly property real shrunkHeight: Kirigami.Units.gridUnit * 7
 
+    property int currentLauncherView
+
     state: "large"
     states: [
         State {
@@ -83,14 +85,23 @@ Controls.Control {
 
             Indicators.Search {
                 id: searchIndicator
+                KeyNavigation.right: gridViewIndicator
+                KeyNavigation.tab: gridViewIndicator
+            }
+
+            Indicators.GridView {
+                id: gridViewIndicator
+                currentLauncherView: root.currentLauncherView
+                KeyNavigation.left: searchIndicator
+                KeyNavigation.backtab: searchIndicator
                 KeyNavigation.right: favsIndicator
                 KeyNavigation.tab: favsIndicator
             }
 
             Indicators.Favorites {
                 id: favsIndicator
-                KeyNavigation.left: searchIndicator
-                KeyNavigation.backtab: searchIndicator
+                KeyNavigation.left: gridViewIndicator
+                KeyNavigation.backtab: gridViewIndicator
                 KeyNavigation.right: settingsIndicator
                 KeyNavigation.tab: settingsIndicator
             }

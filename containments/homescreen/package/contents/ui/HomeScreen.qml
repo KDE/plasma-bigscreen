@@ -87,6 +87,7 @@ Item {
         }
 
         state: launcher.scrolledDown ? "shrunk" : "large"
+        currentLauncherView: launcher.currentView
 
         KeyNavigation.down: launcher
         KeyNavigation.tab: launcher

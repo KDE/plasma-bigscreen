@@ -18,7 +18,7 @@ Bigscreen.AbstractDelegate {
     signal longClick
 
     implicitWidth: listView ? listView.cellWidth : null
-    implicitHeight: listView ? listView.height : null
+    implicitHeight: listView ? listView.cellHeight : null
     baseRadius: Kirigami.Units.gridUnit
     handleKeyReturnAsClick: false
 

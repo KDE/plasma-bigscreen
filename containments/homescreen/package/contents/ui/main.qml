@@ -260,7 +260,7 @@ ContainmentItem {
                 visible: true // Don't load and unload, which is laggy
                 opacity: homeScreen.blurBackground ? 1 : 0
 
-                Behavior on opacity { NumberAnimation { duration: 500 } }
+                Behavior on opacity { NumberAnimation { duration: 500; easing.type: Easing.OutCubic; } }
             }
         }
     }
@@ -270,7 +270,7 @@ ContainmentItem {
         anchors.fill: parent
         color: 'black'
         opacity: homeScreen.darkenBackground ? 0.7 : 0.4
-        Behavior on opacity { NumberAnimation { duration: 500 } }
+        Behavior on opacity { NumberAnimation { duration: 500; easing.type: Easing.OutCubic; } }
     }
 
     // The homescreen's contents
