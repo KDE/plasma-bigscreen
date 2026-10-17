@@ -105,6 +105,7 @@ void WebAppManager::addApp(const QString &name, const QString &url, const QStrin
     desktopEntry.writeEntry(QStringLiteral("Name"), name);
     desktopEntry.writeEntry(QStringLiteral("Exec"), exec);
     desktopEntry.writeEntry(QStringLiteral("Icon"), iconFileName);
+    desktopEntry.writeEntry(QStringLiteral("X-KDE-FormFactors"), QStringLiteral("mediacenter"));
     desktopEntry.writeEntry(USERAGENT_CFG_KEY, userAgent);
     desktopEntry.writeEntry(ID_CFG_KEY, uuid);
 

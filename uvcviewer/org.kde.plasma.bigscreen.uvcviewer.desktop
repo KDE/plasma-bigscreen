@@ -39,3 +39,4 @@ Type=Application
 Terminal=false
 Categories=AudioVideo
 OnlyShowIn=KDE
+X-KDE-FormFactors=mediacenter

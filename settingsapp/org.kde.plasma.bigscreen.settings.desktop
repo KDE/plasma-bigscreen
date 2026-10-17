@@ -38,3 +38,4 @@ Terminal=false
 Categories=Settings
 NoDisplay=true
 OnlyShowIn=KDE
+X-KDE-FormFactors=mediacenter
