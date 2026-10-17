@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-09 00:49+0000\n"
+"POT-Creation-Date: 2026-10-17 00:51+0000\n"
 "PO-Revision-Date: 2020-03-08 22:07-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -164,6 +164,16 @@ msgstr ""
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
 msgid "Battery: %1%"
+msgstr ""
+
+#: contents/ui/indicators/GridView.qml:14
+#, kde-format
+msgid "Show app grid"
+msgstr ""
+
+#: contents/ui/indicators/GridView.qml:14
+#, kde-format
+msgid "Hide app grid"
 msgstr ""
 
 #: contents/ui/indicators/KdeConnect.qml:20

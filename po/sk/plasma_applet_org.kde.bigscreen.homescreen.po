@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.mycroft.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-09 00:49+0000\n"
+"POT-Creation-Date: 2026-10-17 00:51+0000\n"
 "PO-Revision-Date: 2022-01-07 14:58+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -168,6 +168,16 @@ msgstr "Zavrieť všetky aplikácie"
 #, kde-format
 msgid "Battery: %1%"
 msgstr "Batéria: %1%"
+
+#: contents/ui/indicators/GridView.qml:14
+#, kde-format
+msgid "Show app grid"
+msgstr ""
+
+#: contents/ui/indicators/GridView.qml:14
+#, kde-format
+msgid "Hide app grid"
+msgstr ""
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format

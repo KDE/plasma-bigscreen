@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-09 00:49+0000\n"
+"POT-Creation-Date: 2026-10-17 00:51+0000\n"
 "PO-Revision-Date: 2026-10-12 11:53+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -178,6 +178,16 @@ msgstr "Alle Anwendungen schließen"
 #, kde-format
 msgid "Battery: %1%"
 msgstr "Akku: %1 %"
+
+#: contents/ui/indicators/GridView.qml:14
+#, kde-format
+msgid "Show app grid"
+msgstr ""
+
+#: contents/ui/indicators/GridView.qml:14
+#, kde-format
+msgid "Hide app grid"
+msgstr ""
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format

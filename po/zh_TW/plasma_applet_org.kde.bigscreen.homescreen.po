@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-09 00:49+0000\n"
+"POT-Creation-Date: 2026-10-17 00:51+0000\n"
 "PO-Revision-Date: 2026-10-01 01:19+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -173,6 +173,16 @@ msgstr "關閉所有應用程式"
 #, kde-format
 msgid "Battery: %1%"
 msgstr "電池：%1%"
+
+#: contents/ui/indicators/GridView.qml:14
+#, kde-format
+msgid "Show app grid"
+msgstr ""
+
+#: contents/ui/indicators/GridView.qml:14
+#, kde-format
+msgid "Hide app grid"
+msgstr ""
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
