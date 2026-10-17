@@ -20,7 +20,6 @@ import org.kde.kirigami as Kirigami
 FocusScope {
     id: root
 
-    property real startY
     property real leftMargin
     property real rightMargin
 
@@ -75,7 +74,7 @@ FocusScope {
             rightMargin: root.rightMargin
         }
         navigationUp: root.KeyNavigation.up
-        startY: root.startY
+        bottomMargin: root.leftMargin
 
         Behavior on opacity {
             OpacityAnimator {

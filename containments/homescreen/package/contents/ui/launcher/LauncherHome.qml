@@ -25,10 +25,18 @@ FocusScope {
 
     property Item navigationUp
 
-    property real startY
+    property real bottomMargin
 
     // Whether the view has scrolled down at least one row
     readonly property bool scrolledDown: launcherHomeColumn.currentSection && launcherHomeColumn.currentSection !== favAppsView.currentViewDownwards
+
+    readonly property int amountOfVisibleRows: {
+        let amountVisible = 0;
+        for (var i = 0; i < listsContainer.children.length; i++) {
+            if (listsContainer.children[i].visible) amountVisible++;
+        }
+        return amountVisible;
+    }
 
     function activateAppView() {
         favAppsView.currentViewDownwards?.forceActiveFocus();
@@ -45,14 +53,20 @@ FocusScope {
         property Item currentSection
         readonly property Item firstSection: favAppsView.currentViewDownwards
 
-        y: root.startY
+        y: parent.y + parent.height;
         function intendedY() {
             if (!currentSection) {
-                return startY;
-            } else if (firstSection == currentSection) {
-                return startY;
+                return parent.y + parent.height;
             }
-            return Math.round(-currentSection.y + startY - currentSection.height / 2);
+            if (amountOfVisibleRows == 1) {
+                return parent.y + parent.height - currentSection.height - root.bottomMargin;
+            }
+            return Math.round(Math.max(
+                // note that there isn't a full half of the next row visible because the
+                // header isn't accounted for
+                -currentSection.y + parent.y + parent.height - currentSection.height * (3/2) - listsContainer.spacing,
+                parent.y + parent.height - height - root.bottomMargin
+            ));
         }
 
         onCurrentSectionChanged: {
@@ -73,127 +87,134 @@ FocusScope {
             }
         }
 
-        spacing: Kirigami.Units.largeSpacing * 3
+        ColumnLayout {
+            id: listsContainer
+            spacing: Kirigami.Units.largeSpacing * 3
 
-        DelegateListView {
-            id: favAppsView
-            // Recursively get the next visible view
-            property var currentViewUpwards: visible ? favAppsView : root.navigationUp
-            property var currentViewDownwards: visible ? favAppsView : recentView.currentViewDownwards
+            DelegateListView {
+                id: favAppsView
+                // Recursively get the next visible view
+                property var currentViewUpwards: visible ? favAppsView : root.navigationUp
+                property var currentViewDownwards: visible ? favAppsView : recentView.currentViewDownwards
 
-            title: i18n("Favorites")
-            model: Plasmoid.favsListModel
-            visible: count > 0
-            currentIndex: 0
-            focus: visible
-            onActiveFocusChanged: if (activeFocus)
-                launcherHomeColumn.currentSection = favAppsView
-            delegate: Delegates.FavsMover {
-                modelData: typeof model !== "undefined" ? model : null
-            }
-
-            navigationUp: root.navigationUp
-            navigationDown: recentView.currentViewDownwards
-        }
-
-        DelegateListView {
-            id: recentView
-            property var currentViewUpwards: visible ? recentView : favAppsView.currentViewUpwards
-            property var currentViewDownwards: visible ? recentView : appsView.currentViewDownwards
-            readonly property int favoriteIdRole: Qt.UserRole + 3
-
-            function sourceIndex(row) {
-                return recentView.model.mapToSource(recentView.model.index(row, 0));
-            }
-
-            title: i18n("Recent")
-            model: KItemModels.KSortFilterProxyModel {
-                sourceModel: Kicker.RecentUsageModel {
-                    shownItems: Kicker.RecentUsageModel.OnlyApps
+                title: i18n("Favorites")
+                titleVisible: root.amountOfVisibleRows == 1 ? false : true
+                model: Plasmoid.favsListModel
+                visible: count > 0
+                currentIndex: 0
+                focus: visible
+                onActiveFocusChanged: if (activeFocus)
+                    launcherHomeColumn.currentSection = favAppsView
+                delegate: Delegates.FavsMover {
+                    modelData: typeof model !== "undefined" ? model : null
                 }
-                filterRowCallback: function(sourceRow, sourceParent) {
-                    const sourceIndex = sourceModel.index(sourceRow, 0, sourceParent);
-                    const storageId = sourceIndex.data(recentView.favoriteIdRole);
-                    return !Plasmoid.applicationListModel.isApplicationBlocklisted(storageId);
+
+                navigationUp: root.navigationUp
+                navigationDown: recentView.currentViewDownwards
+            }
+
+            DelegateListView {
+                id: recentView
+                property var currentViewUpwards: visible ? recentView : favAppsView.currentViewUpwards
+                property var currentViewDownwards: visible ? recentView : appsView.currentViewDownwards
+                readonly property int favoriteIdRole: Qt.UserRole + 3
+
+                function sourceIndex(row) {
+                    return recentView.model.mapToSource(recentView.model.index(row, 0));
                 }
-            }
 
-            visible: Plasmoid.configuration.showRecent && count > 0
-            currentIndex: 0
-            focus: visible && (favAppsView.currentViewUpwards === root.navigationUp)
-            onActiveFocusChanged: if (activeFocus)
-                launcherHomeColumn.currentSection = recentView
-
-            delegate: Delegates.AppDelegate {
-                property real sectionOpacity: 1.0
-                property var modelData: typeof model !== "undefined" ? model : null
-                applicationStorageId: modelData ? (modelData.favoriteId ?? "") : ""
-                launchApplication: function() {
-                    recentView.model.sourceModel.trigger(recentView.sourceIndex(index).row, "", null);
+                title: i18n("Recent")
+                titleVisible: root.amountOfVisibleRows == 1 ? false : true
+                model: KItemModels.KSortFilterProxyModel {
+                    sourceModel: Kicker.RecentUsageModel {
+                        shownItems: Kicker.RecentUsageModel.OnlyApps
+                    }
+                    filterRowCallback: function(sourceRow, sourceParent) {
+                        const sourceIndex = sourceModel.index(sourceRow, 0, sourceParent);
+                        const storageId = sourceIndex.data(recentView.favoriteIdRole);
+                        return !Plasmoid.applicationListModel.isApplicationBlocklisted(storageId);
+                    }
                 }
-                iconImage: model.decoration
-                text: model.display
-            }
 
-            navigationUp: favAppsView.currentViewUpwards
-            navigationDown: appsView.currentViewDownwards
-        }
+                visible: Plasmoid.configuration.showRecent && count > 0
+                currentIndex: 0
+                focus: visible && (favAppsView.currentViewUpwards === root.navigationUp)
+                onActiveFocusChanged: if (activeFocus)
+                    launcherHomeColumn.currentSection = recentView
 
-        DelegateListView {
-            id: appsView
-            property var currentViewUpwards: visible ? appsView : recentView.currentViewUpwards
-            property var currentViewDownwards: visible ? appsView : gamesView.currentViewDownwards
-
-            title: i18n("Applications")
-            visible: Plasmoid.configuration.showApplications && count > 0
-            enabled: count > 0
-            model: KItemModels.KSortFilterProxyModel {
-                sourceModel: Plasmoid.applicationListModel
-                filterRoleName: "ApplicationCategoriesRole"
-                filterRowCallback: function (source_row, source_parent) {
-                    var cats = sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole);
-                    return cats.indexOf("Game") === -1;
+                delegate: Delegates.AppDelegate {
+                    property real sectionOpacity: 1.0
+                    property var modelData: typeof model !== "undefined" ? model : null
+                    applicationStorageId: modelData ? (modelData.favoriteId ?? "") : ""
+                    launchApplication: function() {
+                        recentView.model.sourceModel.trigger(recentView.sourceIndex(index).row, "", null);
+                    }
+                    iconImage: model.decoration
+                    text: model.display
                 }
+
+                navigationUp: favAppsView.currentViewUpwards
+                navigationDown: appsView.currentViewDownwards
             }
 
-            currentIndex: 0
-            focus: visible && (recentView.currentViewUpwards === root.navigationUp)
-            onActiveFocusChanged: if (activeFocus)
-                launcherHomeColumn.currentSection = appsView
-            delegate: Delegates.AppDelegate {
-                property var modelData: typeof model !== "undefined" ? model : null
-            }
+            DelegateListView {
+                id: appsView
+                property var currentViewUpwards: visible ? appsView : recentView.currentViewUpwards
+                property var currentViewDownwards: visible ? appsView : gamesView.currentViewDownwards
 
-            navigationUp: recentView.currentViewUpwards
-            navigationDown: gamesView.currentViewDownwards
-        }
-
-        DelegateListView {
-            id: gamesView
-            property var currentViewUpwards: visible ? gamesView : appsView.currentViewUpwards
-            property var currentViewDownwards: visible ? gamesView : null
-
-            title: i18n("Games")
-            visible: Plasmoid.configuration.showGames && count > 0
-            enabled: count > 0
-            model: KItemModels.KSortFilterProxyModel {
-                sourceModel: Plasmoid.applicationListModel
-                filterRoleName: "ApplicationCategoriesRole"
-                filterRowCallback: function (source_row, source_parent) {
-                    return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("Game") !== -1;
+                title: i18n("Applications")
+                titleVisible: root.amountOfVisibleRows == 1 ? false : true
+                visible: Plasmoid.configuration.showApplications && count > 0
+                enabled: count > 0
+                model: KItemModels.KSortFilterProxyModel {
+                    sourceModel: Plasmoid.applicationListModel
+                    filterRoleName: "ApplicationCategoriesRole"
+                    filterRowCallback: function (source_row, source_parent) {
+                        var cats = sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole);
+                        return cats.indexOf("Game") === -1;
+                    }
                 }
+
+                currentIndex: 0
+                focus: visible && (recentView.currentViewUpwards === root.navigationUp)
+                onActiveFocusChanged: if (activeFocus)
+                    launcherHomeColumn.currentSection = appsView
+                delegate: Delegates.AppDelegate {
+                    property var modelData: typeof model !== "undefined" ? model : null
+                }
+
+                navigationUp: recentView.currentViewUpwards
+                navigationDown: gamesView.currentViewDownwards
             }
 
-            currentIndex: 0
-            focus: visible && (appsView.currentViewUpwards === root.navigationUp)
-            onActiveFocusChanged: if (activeFocus)
-                launcherHomeColumn.currentSection = gamesView
-            delegate: Delegates.AppDelegate {
-                property var modelData: typeof model !== "undefined" ? model : null
-            }
+            DelegateListView {
+                id: gamesView
+                property var currentViewUpwards: visible ? gamesView : appsView.currentViewUpwards
+                property var currentViewDownwards: visible ? gamesView : null
 
-            navigationUp: appsView.currentViewUpwards
-            navigationDown: null
+                title: i18n("Games")
+                titleVisible: root.amountOfVisibleRows == 1 ? false : true
+                visible: Plasmoid.configuration.showGames && count > 0
+                enabled: count > 0
+                model: KItemModels.KSortFilterProxyModel {
+                    sourceModel: Plasmoid.applicationListModel
+                    filterRoleName: "ApplicationCategoriesRole"
+                    filterRowCallback: function (source_row, source_parent) {
+                        return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("Game") !== -1;
+                    }
+                }
+
+                currentIndex: 0
+                focus: visible && (appsView.currentViewUpwards === root.navigationUp)
+                onActiveFocusChanged: if (activeFocus)
+                    launcherHomeColumn.currentSection = gamesView
+                delegate: Delegates.AppDelegate {
+                    property var modelData: typeof model !== "undefined" ? model : null
+                }
+
+                navigationUp: appsView.currentViewUpwards
+                navigationDown: null
+            }
         }
     }
 }
