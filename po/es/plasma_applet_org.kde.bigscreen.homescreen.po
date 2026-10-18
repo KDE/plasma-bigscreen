@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-17 00:51+0000\n"
-"PO-Revision-Date: 2026-09-26 17:38+0100\n"
+"POT-Creation-Date: 2026-10-18 00:51+0000\n"
+"PO-Revision-Date: 2026-10-17 23:39+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -24,7 +24,7 @@ msgid "Edit Home Screen"
 msgstr "Editar pantalla de inicio"
 
 #: contents/ui/FavoritesManager.qml:144
-#: contents/ui/launcher/LauncherHome.qml:84
+#: contents/ui/launcher/LauncherHome.qml:100
 #, kde-format
 msgid "Favorites"
 msgstr "Favoritos"
@@ -181,12 +181,12 @@ msgstr "Batería: %1 %"
 #: contents/ui/indicators/GridView.qml:14
 #, kde-format
 msgid "Show app grid"
-msgstr ""
+msgstr "Mostrar rejilla de aplicaciones"
 
 #: contents/ui/indicators/GridView.qml:14
 #, kde-format
 msgid "Hide app grid"
-msgstr ""
+msgstr "Ocultar rejilla de aplicaciones"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -218,17 +218,17 @@ msgstr "Preferencias de audio"
 msgid "Internet Settings"
 msgstr "Preferencias de internet"
 
-#: contents/ui/launcher/LauncherHome.qml:109
+#: contents/ui/launcher/LauncherHome.qml:126
 #, kde-format
 msgid "Recent"
 msgstr "Reciente"
 
-#: contents/ui/launcher/LauncherHome.qml:147
+#: contents/ui/launcher/LauncherHome.qml:165
 #, kde-format
 msgid "Applications"
 msgstr "Aplicaciones"
 
-#: contents/ui/launcher/LauncherHome.qml:176
+#: contents/ui/launcher/LauncherHome.qml:195
 #, kde-format
 msgid "Games"
 msgstr "Juegos"

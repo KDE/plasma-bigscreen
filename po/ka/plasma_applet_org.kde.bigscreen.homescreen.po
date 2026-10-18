@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-17 00:51+0000\n"
-"PO-Revision-Date: 2026-09-24 03:57+0200\n"
+"POT-Creation-Date: 2026-10-18 00:51+0000\n"
+"PO-Revision-Date: 2026-10-17 04:50+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
 #, kde-format
@@ -24,7 +24,7 @@ msgid "Edit Home Screen"
 msgstr "საწყისი ეკრანის ჩასწორება"
 
 #: contents/ui/FavoritesManager.qml:144
-#: contents/ui/launcher/LauncherHome.qml:84
+#: contents/ui/launcher/LauncherHome.qml:100
 #, kde-format
 msgid "Favorites"
 msgstr "რჩეულები"
@@ -176,12 +176,12 @@ msgstr "ელემენტი: %1%"
 #: contents/ui/indicators/GridView.qml:14
 #, kde-format
 msgid "Show app grid"
-msgstr ""
+msgstr "აპლიკაციის ბადის ჩვენება"
 
 #: contents/ui/indicators/GridView.qml:14
 #, kde-format
 msgid "Hide app grid"
-msgstr ""
+msgstr "აპლიკაციის ბადის დამალვა"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -213,17 +213,17 @@ msgstr "აუდიოს პარამეტრები"
 msgid "Internet Settings"
 msgstr "ინტერნეტის მორგება"
 
-#: contents/ui/launcher/LauncherHome.qml:109
+#: contents/ui/launcher/LauncherHome.qml:126
 #, kde-format
 msgid "Recent"
 msgstr "უახლესი"
 
-#: contents/ui/launcher/LauncherHome.qml:147
+#: contents/ui/launcher/LauncherHome.qml:165
 #, kde-format
 msgid "Applications"
 msgstr "აპლიკაციები"
 
-#: contents/ui/launcher/LauncherHome.qml:176
+#: contents/ui/launcher/LauncherHome.qml:195
 #, kde-format
 msgid "Games"
 msgstr "თამაშები"

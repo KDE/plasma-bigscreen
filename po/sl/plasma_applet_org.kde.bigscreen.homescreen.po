@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-17 00:51+0000\n"
-"PO-Revision-Date: 2026-09-24 11:23+0200\n"
+"POT-Creation-Date: 2026-10-18 00:51+0000\n"
+"PO-Revision-Date: 2026-10-17 21:05+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -24,7 +24,7 @@ msgid "Edit Home Screen"
 msgstr "Uredi domači zaslon"
 
 #: contents/ui/FavoritesManager.qml:144
-#: contents/ui/launcher/LauncherHome.qml:84
+#: contents/ui/launcher/LauncherHome.qml:100
 #, kde-format
 msgid "Favorites"
 msgstr "Priljubljeni"
@@ -175,12 +175,12 @@ msgstr "Baterija: %1%"
 #: contents/ui/indicators/GridView.qml:14
 #, kde-format
 msgid "Show app grid"
-msgstr ""
+msgstr "Pokaži mrežo aplikacije"
 
 #: contents/ui/indicators/GridView.qml:14
 #, kde-format
 msgid "Hide app grid"
-msgstr ""
+msgstr "Skrij mrežo aplikacije"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -212,17 +212,17 @@ msgstr "Nastavitve zvoka"
 msgid "Internet Settings"
 msgstr "Nastavitve interneta"
 
-#: contents/ui/launcher/LauncherHome.qml:109
+#: contents/ui/launcher/LauncherHome.qml:126
 #, kde-format
 msgid "Recent"
 msgstr "Nedavni"
 
-#: contents/ui/launcher/LauncherHome.qml:147
+#: contents/ui/launcher/LauncherHome.qml:165
 #, kde-format
 msgid "Applications"
 msgstr "Aplikacije"
 
-#: contents/ui/launcher/LauncherHome.qml:176
+#: contents/ui/launcher/LauncherHome.qml:195
 #, kde-format
 msgid "Games"
 msgstr "Igre"

@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-17 00:51+0000\n"
-"PO-Revision-Date: 2026-09-29 23:27+0200\n"
+"POT-Creation-Date: 2026-10-18 00:51+0000\n"
+"PO-Revision-Date: 2026-10-18 00:34+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
 #, kde-format
@@ -26,7 +26,7 @@ msgid "Edit Home Screen"
 msgstr "Harrerako pantaila editatu"
 
 #: contents/ui/FavoritesManager.qml:144
-#: contents/ui/launcher/LauncherHome.qml:84
+#: contents/ui/launcher/LauncherHome.qml:100
 #, kde-format
 msgid "Favorites"
 msgstr "Gogokoak"
@@ -183,12 +183,12 @@ msgstr "Bateria: %%1"
 #: contents/ui/indicators/GridView.qml:14
 #, kde-format
 msgid "Show app grid"
-msgstr ""
+msgstr "Aplikazio-sareta erakutsi"
 
 #: contents/ui/indicators/GridView.qml:14
 #, kde-format
 msgid "Hide app grid"
-msgstr ""
+msgstr "Aplikazio-sareta ezkutatu"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -220,17 +220,17 @@ msgstr "Audio-ezarpenak"
 msgid "Internet Settings"
 msgstr "Internet-ezarpenak"
 
-#: contents/ui/launcher/LauncherHome.qml:109
+#: contents/ui/launcher/LauncherHome.qml:126
 #, kde-format
 msgid "Recent"
 msgstr "Azkenaldikoak"
 
-#: contents/ui/launcher/LauncherHome.qml:147
+#: contents/ui/launcher/LauncherHome.qml:165
 #, kde-format
 msgid "Applications"
 msgstr "Aplikazioak"
 
-#: contents/ui/launcher/LauncherHome.qml:176
+#: contents/ui/launcher/LauncherHome.qml:195
 #, kde-format
 msgid "Games"
 msgstr "Jokoak"

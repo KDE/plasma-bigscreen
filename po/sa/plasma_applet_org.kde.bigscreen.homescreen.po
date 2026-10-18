@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-17 00:51+0000\n"
+"POT-Creation-Date: 2026-10-18 00:51+0000\n"
 "PO-Revision-Date: 2024-12-20 21:53+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -25,7 +25,7 @@ msgid "Edit Home Screen"
 msgstr ""
 
 #: contents/ui/FavoritesManager.qml:144
-#: contents/ui/launcher/LauncherHome.qml:84
+#: contents/ui/launcher/LauncherHome.qml:100
 #, kde-format
 msgid "Favorites"
 msgstr "प्रियाः"
@@ -219,17 +219,17 @@ msgstr "अतिरिक्तसेटिंग्स् :"
 msgid "Internet Settings"
 msgstr "सेटिंग्स्"
 
-#: contents/ui/launcher/LauncherHome.qml:109
+#: contents/ui/launcher/LauncherHome.qml:126
 #, kde-format
 msgid "Recent"
 msgstr "सद्यस्क"
 
-#: contents/ui/launcher/LauncherHome.qml:147
+#: contents/ui/launcher/LauncherHome.qml:165
 #, kde-format
 msgid "Applications"
 msgstr "अनुप्रयोगाः"
 
-#: contents/ui/launcher/LauncherHome.qml:176
+#: contents/ui/launcher/LauncherHome.qml:195
 #, kde-format
 msgid "Games"
 msgstr "क्रीडाः"
