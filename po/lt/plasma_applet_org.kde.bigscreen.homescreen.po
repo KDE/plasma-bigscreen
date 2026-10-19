@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-18 00:51+0000\n"
-"PO-Revision-Date: 2026-10-02 15:25+0300\n"
+"PO-Revision-Date: 2026-10-18 19:21+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -176,12 +176,12 @@ msgstr "Akumuliatorius: %1%"
 #: contents/ui/indicators/GridView.qml:14
 #, kde-format
 msgid "Show app grid"
-msgstr ""
+msgstr "Rodyti programų tinklelį"
 
 #: contents/ui/indicators/GridView.qml:14
 #, kde-format
 msgid "Hide app grid"
-msgstr ""
+msgstr "Slėpti programų tinklelį"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
