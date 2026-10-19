@@ -39,7 +39,6 @@ include(ECMQmlModule)
 remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 
 find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
-    BluezQt
     Config
     ColorScheme
     I18n

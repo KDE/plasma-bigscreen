@@ -84,7 +84,6 @@ See [this wiki page](https://invent.kde.org/plasma/plasma-bigscreen/-/wikis/Buil
 - Activities
 - ActivitiesStats
 - Plasma
-- BluezQt
 - I18n
 - [Kirigami](https://invent.kde.org/frameworks/kirigami)
 - KCMUtils
