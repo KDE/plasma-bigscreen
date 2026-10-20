@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-18 00:51+0000\n"
-"PO-Revision-Date: 2026-09-24 08:43+0200\n"
+"PO-Revision-Date: 2026-10-17 08:10+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -183,12 +183,12 @@ msgstr "Bateria: %1%"
 #: contents/ui/indicators/GridView.qml:14
 #, kde-format
 msgid "Show app grid"
-msgstr ""
+msgstr "Mostra la quadrícula d'aplicacions"
 
 #: contents/ui/indicators/GridView.qml:14
 #, kde-format
 msgid "Hide app grid"
-msgstr ""
+msgstr "Oculta la quadrícula d'aplicacions"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
