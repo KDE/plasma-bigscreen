@@ -238,13 +238,17 @@ ContainmentItem {
             id: wallpaperBlur
             anchors.fill: parent
 
+            readonly property real downscale: 4
+
             // Only take samples from wallpaper when we need the blur for performance
             ShaderEffectSource {
                 id: controlledWallpaperSource
-                anchors.fill: parent
+                width: blur.width
+                height: blur.height
+                textureSize: Qt.size(width, height)
 
                 sourceItem: Plasmoid.wallpaperGraphicsObject
-                live: blur.visible
+                live: homeScreen.blurBackground
                 hideSource: false
                 visible: false
             }
@@ -253,10 +257,13 @@ ContainmentItem {
             // We attempted to use MultiEffect in the past, but it had very poor performance
             FastBlur {
                 id: blur
-                radius: 50
+                radius: 50 / wallpaperBlur.downscale
                 cached: true
                 source: controlledWallpaperSource
-                anchors.fill: parent
+                width: Math.ceil(parent.width / wallpaperBlur.downscale)
+                height: Math.ceil(parent.height / wallpaperBlur.downscale)
+                transformOrigin: Item.TopLeft
+                scale: wallpaperBlur.downscale
                 visible: true // Don't load and unload, which is laggy
                 opacity: homeScreen.blurBackground ? 1 : 0
 
