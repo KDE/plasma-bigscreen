@@ -13,21 +13,35 @@ Item {
     id: root
     property alias notification: messageDialog.text
     readonly property bool canBeUnlocked: authenticator.unlocked
-    property string password: ""
+    property string pendingPassword: ""
+    property bool awaitingSecret: false
 
     Kirigami.Theme.inherit: false
     Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
 
-    onPasswordChanged: {
-        if (password.length > 0) {
+    function submitPassword(password) {
+        if (awaitingSecret) {
+            awaitingSecret = false;
+            authenticator.respond(password);
+        } else {
+            pendingPassword = password;
             authenticator.startAuthenticating();
         }
+    }
+
+    function showPasswordDialog() {
+        if (authenticator.unlocked) {
+            Qt.quit();
+            return;
+        }
+        passwordDialog.open();
+        authenticator.startAuthenticating();
     }
 
     Component.onCompleted: {
         root.forceActiveFocus();
     }
-    
+
     Connections {
         target: authenticator
 
@@ -35,9 +49,16 @@ Item {
             if (kind != 0) {
                 return;
             }
+            root.awaitingSecret = false;
+            root.notification = i18n("Unlocking failed");
+            if (root.pendingPassword.length === 0) {
+                passwordDialog.clear();
+            }
+            authenticator.startAuthenticating();
         }
 
         function onSucceeded() {
+            authenticator.stopAuthenticating();
             passwordDialog.close();
             Qt.quit();
         }
@@ -49,8 +70,26 @@ Item {
             root.notification = Qt.binding(() => authenticator.errorMessage);
         }
         function onPromptForSecretChanged() {
-            authenticator.respond(root.password);
+            if (authenticator.promptForSecret.length === 0) {
+                return;
+            }
+            if (root.pendingPassword.length > 0) {
+                Qt.callLater(() => {
+                    authenticator.respond(root.pendingPassword);
+                    root.pendingPassword = "";
+                });
+            } else {
+                root.awaitingSecret = true;
+            }
         }
+    }
+
+    // Keep the PAM backend active while the password dialog is shown
+    Timer {
+        interval: 1000
+        repeat: true
+        running: passwordDialog.opened && !authenticator.unlocked
+        onTriggered: authenticator.startAuthenticating()
     }
 
     WallpaperFader {
@@ -103,13 +142,24 @@ Item {
         id: footer
     }
 
+    TapHandler {
+        enabled: !passwordDialog.opened
+        onTapped: root.showPasswordDialog()
+    }
+
     Keys.onPressed: (event) => {
-        if (event.key === Qt.Key_Up || event.key === Qt.Key_Down || event.key === Qt.Key_Left || event.key === Qt.Key_Right || event.key === Qt.Key_Return) {
-            if (authenticator.unlocked) {
-                Qt.quit();
-            } else {
-                passwordDialog.open();
-            }
+        switch (event.key) {
+        case Qt.Key_Up:
+        case Qt.Key_Down:
+        case Qt.Key_Left:
+        case Qt.Key_Right:
+        case Qt.Key_Return:
+        case Qt.Key_Enter:
+        case Qt.Key_Select:
+        case Qt.Key_Space:
+            root.showPasswordDialog();
+            event.accepted = true;
+            break;
         }
     }
 }
