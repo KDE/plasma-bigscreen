@@ -26,6 +26,11 @@ Item {
         opened = false
     }
 
+    function clear() {
+        passwordInput.text = ""
+        passwordInput.forceActiveFocus()
+    }
+
     Behavior on opacity {
         NumberAnimation {
             property: "opacity"
@@ -67,7 +72,7 @@ Item {
             }
 
             onAccepted: {
-                root.password = passwordInput.text
+                root.submitPassword(passwordInput.text)
             }
         }
 
@@ -93,7 +98,7 @@ Item {
             }
 
             onClicked: {
-                root.password = passwordInput.text
+                root.submitPassword(passwordInput.text)
             }
             Keys.onReturnPressed: clicked()
         }
