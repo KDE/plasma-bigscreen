@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-09 03:00+0000\n"
+"POT-Creation-Date: 2026-10-22 02:47+0000\n"
 "PO-Revision-Date: 2026-03-04 13:26+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -238,7 +238,7 @@ msgstr "Sistemul ia controlul asupra introducerii de la controlor"
 msgid "Application taking over controller input"
 msgstr "Aplicația ia controlul asupra introducerii de la controlor"
 
-#: contents/ui/PowerManagementItem.qml:24
+#: contents/ui/PowerManagementItem.qml:37
 #, kde-format
 msgctxt "@info"
 msgid "Plasma Bigscreen has enabled system-wide inhibition"

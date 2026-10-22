@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-11 00:45+0000\n"
+"POT-Creation-Date: 2026-10-22 02:47+0000\n"
 "PO-Revision-Date: 2024-12-20 21:53+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -35,11 +35,15 @@ msgstr "वॉलपेपर"
 msgid "Slideshow"
 msgstr "स्लाइड शो"
 
-#: contents/lockscreen/PasswordDialog.qml:46
+#: contents/lockscreen/LockScreen.qml:53
+msgid "Unlocking failed"
+msgstr ""
+
+#: contents/lockscreen/PasswordDialog.qml:51
 msgid "Password"
 msgstr "समाभाष्"
 
-#: contents/lockscreen/PasswordDialog.qml:76
+#: contents/lockscreen/PasswordDialog.qml:81
 msgid "Unlock Screen"
 msgstr "स्क्रीन अनलॉक करें"
 

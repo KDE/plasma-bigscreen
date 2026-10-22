@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-11 00:45+0000\n"
+"POT-Creation-Date: 2026-10-22 02:47+0000\n"
 "PO-Revision-Date: 2026-07-17 16:05+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -33,11 +33,15 @@ msgstr "Fundo de schermo"
 msgid "Slideshow"
 msgstr "Slideshow (Sequentia de diapositivas)"
 
-#: contents/lockscreen/PasswordDialog.qml:46
+#: contents/lockscreen/LockScreen.qml:53
+msgid "Unlocking failed"
+msgstr ""
+
+#: contents/lockscreen/PasswordDialog.qml:51
 msgid "Password"
 msgstr "Contrasigno"
 
-#: contents/lockscreen/PasswordDialog.qml:76
+#: contents/lockscreen/PasswordDialog.qml:81
 msgid "Unlock Screen"
 msgstr "Disbloca schermo"
 
