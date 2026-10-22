@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-18 00:51+0000\n"
+"POT-Creation-Date: 2026-10-22 00:52+0000\n"
 "PO-Revision-Date: 2026-10-17 12:18+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -257,7 +257,7 @@ msgstr "Systém přebírá vstup z ovladače"
 msgid "Application taking over controller input"
 msgstr "Aplikace přebírá vstup z ovladače"
 
-#: contents/ui/PowerManagementItem.qml:24
+#: contents/ui/PowerManagementItem.qml:37
 #, kde-format
 msgctxt "@info"
 msgid "Plasma Bigscreen has enabled system-wide inhibition"

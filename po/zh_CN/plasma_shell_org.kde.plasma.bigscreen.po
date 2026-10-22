@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-11 00:45+0000\n"
+"POT-Creation-Date: 2026-10-22 00:52+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -34,11 +34,15 @@ msgstr "壁纸"
 msgid "Slideshow"
 msgstr "幻灯片"
 
-#: contents/lockscreen/PasswordDialog.qml:46
+#: contents/lockscreen/LockScreen.qml:53
+msgid "Unlocking failed"
+msgstr ""
+
+#: contents/lockscreen/PasswordDialog.qml:51
 msgid "Password"
 msgstr "密码"
 
-#: contents/lockscreen/PasswordDialog.qml:76
+#: contents/lockscreen/PasswordDialog.qml:81
 msgid "Unlock Screen"
 msgstr "解锁屏幕"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-18 00:51+0000\n"
+"POT-Creation-Date: 2026-10-22 00:52+0000\n"
 "PO-Revision-Date: 2026-09-27 09:20+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -257,7 +257,7 @@ msgstr "המערכת משתלטת על קלט בקר"
 msgid "Application taking over controller input"
 msgstr "היישום משתלט על קלט בקר"
 
-#: contents/ui/PowerManagementItem.qml:24
+#: contents/ui/PowerManagementItem.qml:37
 #, kde-format
 msgctxt "@info"
 msgid "Plasma Bigscreen has enabled system-wide inhibition"

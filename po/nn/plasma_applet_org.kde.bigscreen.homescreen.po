@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-18 00:51+0000\n"
+"POT-Creation-Date: 2026-10-22 00:52+0000\n"
 "PO-Revision-Date: 2026-09-27 21:39+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
@@ -258,7 +258,7 @@ msgstr "Systemet tek over inndata frå spelkontrollar"
 msgid "Application taking over controller input"
 msgstr "Program tek over inndata frå spelkontrollar"
 
-#: contents/ui/PowerManagementItem.qml:24
+#: contents/ui/PowerManagementItem.qml:37
 #, kde-format
 msgctxt "@info"
 msgid "Plasma Bigscreen has enabled system-wide inhibition"

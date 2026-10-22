@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-11 00:45+0000\n"
+"POT-Creation-Date: 2026-10-22 00:52+0000\n"
 "PO-Revision-Date: 2026-07-11 12:51+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -34,11 +34,15 @@ msgstr "Ozadje"
 msgid "Slideshow"
 msgstr "Predstavitev slik"
 
-#: contents/lockscreen/PasswordDialog.qml:46
+#: contents/lockscreen/LockScreen.qml:53
+msgid "Unlocking failed"
+msgstr ""
+
+#: contents/lockscreen/PasswordDialog.qml:51
 msgid "Password"
 msgstr "Geslo"
 
-#: contents/lockscreen/PasswordDialog.qml:76
+#: contents/lockscreen/PasswordDialog.qml:81
 msgid "Unlock Screen"
 msgstr "Odkleni zaslon"
 
