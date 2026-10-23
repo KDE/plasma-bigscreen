@@ -36,7 +36,7 @@ msgstr "Promítání"
 
 #: contents/lockscreen/LockScreen.qml:53
 msgid "Unlocking failed"
-msgstr ""
+msgstr "Odemčení selhalo"
 
 #: contents/lockscreen/PasswordDialog.qml:51
 msgid "Password"

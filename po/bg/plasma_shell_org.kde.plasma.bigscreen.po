@@ -36,8 +36,9 @@ msgid "Slideshow"
 msgstr "Прожекция"
 
 #: contents/lockscreen/LockScreen.qml:53
+#, fuzzy
 msgid "Unlocking failed"
-msgstr ""
+msgstr "Неуспешно отключване"
 
 #: contents/lockscreen/PasswordDialog.qml:51
 msgid "Password"
