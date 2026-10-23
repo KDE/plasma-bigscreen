@@ -33,10 +33,9 @@ msgid "Launcher Sections"
 msgstr "Sekcie spúšťača"
 
 #: contents/ui/FavoritesManager.qml:206
-#, fuzzy, kde-format
-#| msgid "Favorites Manager"
+#, kde-format
 msgid "Change Favorites Order"
-msgstr "Favorites Manager"
+msgstr "Zmeniť poradie obľúbených"
 
 #: contents/ui/FavoritesManager.qml:214
 #, kde-format
@@ -44,6 +43,8 @@ msgid ""
 "To change the order of the favorites, open the launcher and tap and hold an "
 "app in the favorites list."
 msgstr ""
+"Ak chcete zmeniť poradie obľúbených, otvorte spúšťač a ťuknite a podržte "
+"aplikáciu v zozname obľúbených."
 
 #: contents/ui/FavoritesManager.qml:244
 #, kde-format
@@ -172,12 +173,12 @@ msgstr "Batéria: %1%"
 #: contents/ui/indicators/GridView.qml:14
 #, kde-format
 msgid "Show app grid"
-msgstr ""
+msgstr "Zobraziť mriežku aplikácií"
 
 #: contents/ui/indicators/GridView.qml:14
 #, kde-format
 msgid "Hide app grid"
-msgstr ""
+msgstr "Skryť mriežku aplikácií"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format

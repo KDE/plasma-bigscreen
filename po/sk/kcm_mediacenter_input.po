@@ -79,17 +79,17 @@ msgstr "Navigovať v systémovom rozhraní pomocou pripojeného ovládača TV (C
 #: ui/main.qml:151
 #, kde-format
 msgid "TV HDMI port (CEC)"
-msgstr ""
+msgstr "Port HDMI televízora (CEC)"
 
 #: ui/main.qml:156
 #, kde-format
 msgid "Automatic"
-msgstr ""
+msgstr "Automaticky"
 
 #: ui/main.qml:158
 #, kde-format
 msgid "HDMI %1"
-msgstr ""
+msgstr "HDMI %1"
 
 #: ui/main.qml:176
 #, kde-format

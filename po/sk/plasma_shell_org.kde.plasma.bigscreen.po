@@ -33,7 +33,7 @@ msgstr "Prezentácia"
 
 #: contents/lockscreen/LockScreen.qml:53
 msgid "Unlocking failed"
-msgstr ""
+msgstr "Odomknutie zlyhalo"
 
 #: contents/lockscreen/PasswordDialog.qml:51
 msgid "Password"

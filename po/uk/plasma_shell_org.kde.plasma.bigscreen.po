@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2021, 2024, 2026.
+# SPDX-FileCopyrightText: 2021, 2024, 2026 Yuri Chornoivan <yurchor@ukr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.mycroft.bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-22 00:52+0000\n"
-"PO-Revision-Date: 2026-07-11 10:48+0300\n"
+"PO-Revision-Date: 2026-10-22 13:41+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:49
 msgid "Layout cannot be changed while widgets are locked"
@@ -38,7 +38,7 @@ msgstr "Показ слайдів"
 
 #: contents/lockscreen/LockScreen.qml:53
 msgid "Unlocking failed"
-msgstr ""
+msgstr "Помилка розблокування"
 
 #: contents/lockscreen/PasswordDialog.qml:51
 msgid "Password"
