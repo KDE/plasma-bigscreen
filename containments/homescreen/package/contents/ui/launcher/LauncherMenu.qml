@@ -23,6 +23,9 @@ FocusScope {
     property real leftMargin
     property real rightMargin
 
+    // Space at the top covered by the header
+    property real topReservedHeight
+
     readonly property int reservedSpaceForLabel: metrics.height
 
     // Whether the view has scrolled down at least one row
@@ -34,6 +37,10 @@ FocusScope {
         Grid = 1
     }
     property int currentView: LauncherMenu.CurrentView.Home;
+
+    function showOptions(app, mover) {
+        // TODO: show options
+    }
 
     onActiveFocusChanged: {
         if (activeFocus) {
@@ -76,6 +83,10 @@ FocusScope {
         navigationUp: root.KeyNavigation.up
         bottomMargin: root.leftMargin
 
+        topReservedHeight: root.topReservedHeight
+
+        onOptionsRequested: (app, mover) => root.showOptions(app, mover)
+
         Behavior on opacity {
             OpacityAnimator {
                 // Set shorter animation speed to disappear
@@ -92,12 +103,15 @@ FocusScope {
     LauncherGridView {
         id: launcherGridView
         opacity: currentView == LauncherMenu.CurrentView.Grid ? 1 : 0
+        visible: opacity > 0
         anchors {
             fill: parent
             leftMargin: root.leftMargin
             rightMargin: root.rightMargin
             topMargin: currentView == LauncherMenu.CurrentView.Grid ? 0 : height/4
         }
+
+        onOptionsRequested: (app) => root.showOptions(app, null)
 
         Behavior on opacity {
             OpacityAnimator {

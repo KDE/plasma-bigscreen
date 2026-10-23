@@ -15,6 +15,8 @@ import org.kde.bigscreen as Bigscreen
 FocusScope {
     id: root
 
+    signal optionsRequested(var app)
+
     onFocusChanged: {
         if (focus) view.forceActiveFocus();
     }
@@ -46,6 +48,7 @@ FocusScope {
         anchors.fill: parent
         anchors.topMargin: Kirigami.Units.gridUnit * 2
 
+        clip: true
         keyNavigationEnabled: true
         keyNavigationWraps: false
 
@@ -59,9 +62,21 @@ FocusScope {
         snapMode: GridView.SnapOneRow
 
         cellWidth: root.width / root.columns
-        cellHeight: cellWidth * 0.75
+        cellHeight: cardHeight + Kirigami.Units.gridUnit * 3 + Kirigami.Units.largeSpacing * 2
+
+        // Cards with title and subtitle underneath
+        readonly property int cardWidth: cellWidth - Kirigami.Units.gridUnit
+        readonly property int cardHeight: Math.round(cardWidth * 0.625)
         delegate: Delegates.AppDelegate {
             property var modelData: typeof model !== "undefined" ? model : null
+            onLongClick: root.optionsRequested({
+                storageId: applicationStorageId,
+                name: text,
+                iconName: icon.name,
+                description: subtitle,
+                running: Plasmoid.applicationListModel.isApplicationRunning(applicationStorageId),
+                canMove: false
+            })
         }
 
         onCurrentIndexChanged: {
