@@ -17,10 +17,10 @@ class DisplayModel : public QAbstractListModel
     Q_OBJECT
     Q_PROPERTY(int selectedDisplayId READ selectedDisplayId WRITE setSelectedDisplayId NOTIFY selectedDisplayChanged)
     Q_PROPERTY(QString selectedDisplayName READ selectedDisplayName NOTIFY selectedDisplayChanged)
-    Q_PROPERTY(bool selectedDisplayEnabled READ selectedDisplayEnabled WRITE setSelectedDisplayEnabled NOTIFY selectedDisplayChanged)
-    Q_PROPERTY(double selectedDisplayScale READ selectedDisplayScale WRITE setSelectedDisplayScale NOTIFY selectedDisplayChanged)
+    Q_PROPERTY(bool selectedDisplayEnabled READ selectedDisplayEnabled WRITE setSelectedDisplayEnabled NOTIFY selectedDisplayEnabledChanged)
+    Q_PROPERTY(double selectedDisplayScale READ selectedDisplayScale WRITE setSelectedDisplayScale NOTIFY selectedDisplayScaleChanged)
     Q_PROPERTY(QStringList selectedDisplayAvailableModes READ selectedDisplayAvailableModes NOTIFY selectedDisplayChanged)
-    Q_PROPERTY(QString selectedDisplayMode READ selectedDisplayMode WRITE setSelectedDisplayMode NOTIFY selectedDisplayChanged)
+    Q_PROPERTY(QString selectedDisplayMode READ selectedDisplayMode WRITE setSelectedDisplayMode NOTIFY selectedDisplayModeChanged)
 
 public:
     enum DisplayRoles {
@@ -61,6 +61,9 @@ Q_SIGNALS:
     void displayConfigurationChanged();
     void displayScaleChanged();
     void selectedDisplayChanged();
+    void selectedDisplayEnabledChanged();
+    void selectedDisplayScaleChanged();
+    void selectedDisplayModeChanged();
 
 private:
     void loadDisplayInformation();

@@ -21,8 +21,6 @@ Bigscreen.ScrollablePage {
 
     title: i18n("Display Configuration")
 
-    property int revertCountdown: 15
-
     background: null
     leftPadding: Kirigami.Units.smallSpacing
     topPadding: Kirigami.Units.smallSpacing
@@ -32,19 +30,6 @@ Bigscreen.ScrollablePage {
     onActiveFocusChanged: {
         if (activeFocus) {
             selectedDisplayDelegate.forceActiveFocus();
-        }
-    }
-
-    Timer {
-        id: revertTimer
-        interval: 1000
-        repeat: true
-
-        onTriggered: {
-            revertCountdown -= 1;
-            if (revertCountdown < 1) {
-                confirmDialog.reject();
-            }
         }
     }
 
@@ -72,7 +57,7 @@ Bigscreen.ScrollablePage {
             Component.onCompleted: updateIndex()
             Connections {
                 target: kcm.displayModel
-                function onSelectedDisplayIdChanged() {
+                function onSelectedDisplayChanged() {
                     selectedDisplayDelegate.updateIndex();
                 }
             }
@@ -114,46 +99,34 @@ Bigscreen.ScrollablePage {
             enabled: kcm.displayModel.selectedDisplayEnabled && model.length > 1
 
             function updateIndex() {
-                if (enabled) {
-                    currentIndex = indexOfValue(kcm.displayModel.selectedDisplayMode);
-                }
+                currentIndex = indexOfValue(kcm.displayModel.selectedDisplayMode);
             }
 
             // Update the combobox value when the model updates or display changes
             onCountChanged: updateIndex()
+            onModelChanged: updateIndex()
             Component.onCompleted: updateIndex()
             Connections {
                 target: kcm.displayModel
-                function onSelectedDisplayIdChanged() {
+                function onSelectedDisplayModeChanged() {
                     modeDelegate.updateIndex();
                 }
             }
 
             onActivated: {
-                confirmDialog.oldMode = kcm.displayModel.selectedDisplayMode
+                const oldMode = kcm.displayModel.selectedDisplayMode;
+                if (currentValue === oldMode) {
+                    return;
+                }
                 kcm.displayModel.selectedDisplayMode = currentValue;
+                kcm.displayModel.syncDisplayOptions();
                 updateIndex();
-                confirmDialog.open()
-            }
 
-            Bigscreen.Dialog {
-                id: confirmDialog
-                title: i18n("Keep display configuration?")
-                standardButtons: Bigscreen.Dialog.Ok | Bigscreen.Dialog.Cancel
-                onOpened: revertTimer.restart()
-                onRejected: {
-                    revertTimer.stop()
-                    revertCountdown = 15
-                    kcm.displayModel.selectedDisplayMode = oldMode
-                    modeDelegate.updateIndex()
-                }
-
-                property string oldMode
-
-                contentItem: QQC2.Label {
-                    text: i18np("Will revert to previous configuration in %1 second.", "Will revert to previous configuration in %1 seconds.", revertCountdown)
-                    font.pixelSize: Bigscreen.Units.defaultFontPixelSize
-                }
+                confirmDialog.confirm(modeDelegate, () => {
+                    kcm.displayModel.selectedDisplayMode = oldMode;
+                    kcm.displayModel.syncDisplayOptions();
+                    modeDelegate.updateIndex();
+                });
             }
 
             KeyNavigation.down: scaleDelegate
@@ -172,15 +145,46 @@ Bigscreen.ScrollablePage {
 
             ScaleDialog {
                 id: scaleDialog
-                onClosed: scaleDelegate.forceActiveFocus()
+
+                property real oldScale
+                property bool pendingConfirm: false
+
+                onOpened: {
+                    oldScale = kcm.displayModel.selectedDisplayScale;
+                    pendingConfirm = false;
+                }
 
                 onAccepted: {
+                    if (Math.abs(scaleDialog.displayScale - oldScale) < 0.001) { // if scale hasn't changed
+                        return;
+                    }
                     kcm.displayModel.selectedDisplayScale = scaleDialog.displayScale;
                     kcm.displayModel.syncDisplayOptions();
+                    pendingConfirm = true;
+                }
+
+                // Open the confirmation once this dialog is fully closed, so it doesn't steal focus from it
+                onClosed: {
+                    if (!pendingConfirm) {
+                        scaleDelegate.forceActiveFocus();
+                        return;
+                    }
+                    pendingConfirm = false;
+
+                    const revertScale = oldScale;
+                    confirmDialog.confirm(scaleDelegate, () => {
+                        kcm.displayModel.selectedDisplayScale = revertScale;
+                        kcm.displayModel.syncDisplayOptions();
+                    });
                 }
             }
         }
 
         Item { Layout.fillHeight: true }
+
+        // Must be inside contentItem, page-level children have no window and can't open
+        ConfirmDialog {
+            id: confirmDialog
+        }
     }
 }

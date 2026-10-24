@@ -4,11 +4,15 @@
 
 #include "displaymodel.h"
 
-#include <QDBusMessage>
-#include <QDBusConnection>
 #include <QDBusArgument>
+#include <QDBusConnection>
+#include <QDBusMessage>
+#include <QDebug>
 #include <QProcess>
 
+#include <algorithm>
+
+#include <kscreen/config.h>
 #include <kscreen/configmonitor.h>
 #include <kscreen/getconfigoperation.h>
 #include <kscreen/mode.h>
@@ -18,6 +22,14 @@
 DisplayModel::DisplayModel(QObject *parent)
     : QAbstractListModel(parent)
 {
+    // Switching or reloading the selected display changes all of its properties
+    connect(this, &DisplayModel::selectedDisplayChanged, this, [this]() {
+        Q_EMIT selectedDisplayEnabledChanged();
+        Q_EMIT selectedDisplayScaleChanged();
+        Q_EMIT selectedDisplayModeChanged();
+    });
+
+    connect(KScreen::ConfigMonitor::instance(), &KScreen::ConfigMonitor::configurationChanged, this, &DisplayModel::loadDisplayInformation);
     loadDisplayInformation();
 }
 
@@ -80,10 +92,15 @@ int DisplayModel::selectedDisplayId() const
 
 void DisplayModel::setSelectedDisplayId(int id)
 {
+    if (m_selectedDisplayId == id) {
+        return;
+    }
+
     for (KScreen::OutputPtr display : m_displays) {
         if (display->id() == id) {
             m_selectedDisplayId = id;
             Q_EMIT selectedDisplayChanged();
+            return;
         }
     }
 }
@@ -109,10 +126,25 @@ bool DisplayModel::selectedDisplayEnabled() const
 void DisplayModel::setSelectedDisplayEnabled(bool enabled)
 {
     auto display = selectedDisplay();
-    if (!display) {
+    if (!display || display->isEnabled() == enabled) {
         return;
     }
+
+    if (!enabled) {
+        // Don't allow disabling the last enabled display, we would be left with no screen
+        bool otherEnabled = std::any_of(m_displays.cbegin(), m_displays.cend(), [&display](const KScreen::OutputPtr &output) {
+            return output != display && output->isEnabled();
+        });
+        if (!otherEnabled) {
+            return;
+        }
+    }
+    if (!display->currentMode()) {
+        display->setCurrentModeId(display->preferredModeId());
+    }
+
     display->setEnabled(enabled);
+    Q_EMIT selectedDisplayEnabledChanged();
 }
 
 double DisplayModel::selectedDisplayScale() const
@@ -131,6 +163,7 @@ void DisplayModel::setSelectedDisplayScale(double scale)
         return;
     }
     display->setScale(scale);
+    Q_EMIT selectedDisplayScaleChanged();
 }
 
 QStringList DisplayModel::selectedDisplayAvailableModes() const
@@ -175,26 +208,49 @@ void DisplayModel::setSelectedDisplayMode(const QString &modeName)
     for (const auto &mode : display->modes()) {
         if (mode->name() == modeName) {
             display->setCurrentModeId(mode->id());
+            Q_EMIT selectedDisplayModeChanged();
+            return;
         }
     }
 }
 
 void DisplayModel::syncDisplayOptions()
 {
-    auto setop = new KScreen::SetConfigOperation(m_config, this);
-    setop->exec();
+    if (!m_config) {
+        return;
+    }
 
-    // Reload options
-    loadDisplayInformation();
+    if (!KScreen::Config::canBeApplied(m_config)) {
+        qWarning() << "Display configuration can't be applied, reverting";
+        loadDisplayInformation();
+        return;
+    }
+
+    // Reload options once applied
+    connect(new KScreen::SetConfigOperation(m_config), &KScreen::ConfigOperation::finished, this, [this](KScreen::ConfigOperation *op) {
+        if (op->hasError()) {
+            qWarning() << "Failed to apply display configuration:" << op->errorString();
+        }
+        loadDisplayInformation();
+    });
 }
 
 void DisplayModel::loadDisplayInformation()
 {
-    connect(new KScreen::GetConfigOperation(), &KScreen::GetConfigOperation::finished, this, [this](auto *op) {
+    connect(new KScreen::GetConfigOperation(), &KScreen::GetConfigOperation::finished, this, [this](KScreen::ConfigOperation *op) {
+        if (op->hasError()) {
+            qWarning() << "Failed to load display configuration:" << op->errorString();
+            return;
+        }
+
         beginResetModel();
         m_displays.clear();
 
+        if (m_config) {
+            KScreen::ConfigMonitor::instance()->removeConfig(m_config);
+        }
         m_config = qobject_cast<KScreen::GetConfigOperation *>(op)->config();
+        KScreen::ConfigMonitor::instance()->addConfig(m_config);
 
         for (KScreen::OutputPtr output : m_config->outputs()) {
             m_displays.append(output);
@@ -219,10 +275,9 @@ void DisplayModel::loadDisplayInformation()
             // Select first display
             m_selectedDisplayId = m_displays[0]->id();
         }
-        // Always trigger property updates
-        Q_EMIT selectedDisplayChanged();
-
         endResetModel();
+
         Q_EMIT countChanged();
+        Q_EMIT selectedDisplayChanged();
     });
 }
