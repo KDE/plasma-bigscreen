@@ -12,12 +12,18 @@
 #include <QQmlEngine>
 #include <QQuickImageProvider>
 #include <QStandardPaths>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
+#include <QUrlQuery>
+#include <QIcon>
 
 #include <KConfigGroup>
 #include <KDesktopFile>
 
 #include <QCoroSignal>
 #include <QCoroTask>
+
+#define FAVICON_API_URL "https://icons.duckduckgo.com/ip3/"
 
 WebAppCreator::WebAppCreator(QObject *parent)
     : QObject(parent)
@@ -43,16 +49,17 @@ void WebAppCreator::setWebsiteName(const QString &websiteName)
     Q_EMIT websiteNameChanged();
 }
 
-QCoro::Task<> WebAppCreator::addEntry(const QString name, const QString url, const QString iconUrl, const QString &userAgent)
+QCoro::Task<> WebAppCreator::addEntry(const QString name, const QString url, const QString &userAgent)
 {
-    // QPointer self = this;
-    // auto image = co_await fetchIcon(iconUrl);
-    // if (!self) {
-    //     co_return;
-    // }
+    QPointer self = this;
+    QUrl fixedUrl = QUrl::fromUserInput(url);
+    fixedUrl.setScheme("https");
+    auto image = co_await fetchIcon(fixedUrl.toString());
+    if (!self) {
+        co_return;
+    }
 
-    // m_webAppMngr.addApp(name, url, image, userAgent);
-    m_webAppMngr.addApp(name, url, iconUrl, userAgent);
+    m_webAppMngr.addApp(name, fixedUrl.toString(), image, userAgent);;
 
     // Refresh homescreen entries
     QProcess buildsycoca;
@@ -61,42 +68,28 @@ QCoro::Task<> WebAppCreator::addEntry(const QString name, const QString url, con
     co_return;
 }
 
-QCoro::QmlTask WebAppCreator::createDesktopFile(const QString name, QString url, QString icon, const QString &userAgent)
-{
-    return addEntry(name, url, icon, userAgent);
-}
-
 QCoro::Task<QImage> WebAppCreator::fetchIcon(const QString &url)
-{
-    auto *provider = static_cast<QQuickAsyncImageProvider *>(qmlEngine(this)->imageProvider(QStringLiteral("favicon")));
-    if (!provider) {
-        qDebug() << "Failed to access favicon provider";
-        co_return QImage();
+{ 
+    QNetworkAccessManager manager;
+    QImage image;
+    QEventLoop loop;
+    
+    QUrl iconUrl(FAVICON_API_URL + (new QUrl(url))->authority() + ".ico"); // chop off the http:// so that DDG can understand the url
+
+    QNetworkRequest request(iconUrl);
+    QNetworkReply *reply = manager.get(request);
+
+    connect(reply, &QNetworkReply::finished, &loop, &QEventLoop::quit);
+    loop.exec();
+    
+    if (reply->error() == QNetworkReply::NoError) {
+        image.loadFromData(reply->readAll());
+    } else {
+        qWarning() << reply->errorString();
+        image = QIcon::fromTheme(QStringLiteral("internet-web-browser")).pixmap(QSize(32, 32)).toImage();
     }
 
-    const QStringView prefixFavicon = QStringView(u"image://favicon/");
-    const QString providerIconName = url.mid(prefixFavicon.size());
+    reply->deleteLater();
 
-    const QSize szRequested;
-
-    switch (provider->imageType()) {
-    case QQmlImageProviderBase::Image: {
-        co_return provider->requestImage(providerIconName, nullptr, szRequested);
-    }
-    case QQmlImageProviderBase::Pixmap: {
-        co_return provider->requestPixmap(providerIconName, nullptr, szRequested).toImage();
-    }
-    case QQmlImageProviderBase::Texture: {
-        co_return provider->requestTexture(providerIconName, nullptr, szRequested)->image();
-    }
-    case QQmlImageProviderBase::ImageResponse: {
-        auto response = provider->requestImageResponse(providerIconName, szRequested);
-        co_await qCoro(response, &QQuickImageResponse::finished);
-        co_return response->textureFactory()->image();
-    }
-    default:
-        qDebug() << "Failed to save unhandled image type";
-    }
-
-    co_return QImage();
+    co_return image;
 }

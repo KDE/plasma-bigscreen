@@ -12,7 +12,7 @@ import org.kde.bigscreen.webappskcm as WebAppsKCM
 
 Bigscreen.SidebarOverlay {
     id: root
-    openFocusItem: nameButtonDelegate
+    openFocusItem: editButtonDelegate
 
     property string webAppId
     property string icon
@@ -47,30 +47,79 @@ Bigscreen.SidebarOverlay {
         spacing: Kirigami.Units.largeSpacing
         Keys.onLeftPressed: root.close()
 
-        Bigscreen.ButtonDelegate {
+        Bigscreen.TextDelegate {
             id: nameButtonDelegate
             text: i18n("Name")
             description: root.name
-
-            KeyNavigation.down: urlButtonDelegate
+            raisedBackground: false
         }
 
-        Bigscreen.ButtonDelegate {
+        Bigscreen.TextDelegate {
             id: urlButtonDelegate
             text: i18n("URL")
             description: root.url
-
-            KeyNavigation.down: descriptionButtonDelegate
+            raisedBackground: false
         }
 
-        Bigscreen.ButtonDelegate {
+        Bigscreen.TextDelegate {
             id: descriptionButtonDelegate
             text: i18n("User Agent")
             description: root.userAgent.length > 0 ? root.userAgent : i18n("Default user agent")
-
-            KeyNavigation.down: deleteButtonDelegate
+            raisedBackground: false
         }
+
         Item { Layout.fillHeight: true }
+
+        Bigscreen.ButtonDelegate {
+            id: editButtonDelegate
+            icon.name: 'edit-entry'
+            text: i18n("Edit")
+            KeyNavigation.down: deleteButtonDelegate
+
+            onClicked: editDialog.open()
+
+            Bigscreen.Dialog {
+                id: editDialog
+                title: i18n("Edit web app %1", root.name)
+                standardButtons: Bigscreen.Dialog.Save | Bigscreen.Dialog.Cancel
+                openFocusItem: appNameField
+
+                onRejected: editButtonDelegate.forceActiveFocus()
+
+                onAccepted: {
+                    if (appNameField.text == "") {
+                        appNameField.text = root.name
+                    }
+                    WebAppsKCM.WebAppManagerModel.editApp(root.webAppId, appNameField.text, userAgentField.text)
+                    root.name = appNameField.text
+                    root.userAgent = userAgentField.text
+                    editDialog.close()
+                    editButtonDelegate.forceActiveFocus()
+                }
+
+                contentItem: ColumnLayout {
+                    spacing: Kirigami.Units.largeSpacing
+
+                    Bigscreen.TextField {
+                        id: appNameField
+                        Layout.fillWidth: true
+                        placeholderText: i18nc("%1 is the current name of the web app", "Name (leave blank for current)", root.name)
+                        text: root.name
+
+                        KeyNavigation.down: userAgentField
+                    }
+
+                    Bigscreen.TextField {
+                        id: userAgentField
+                        Layout.fillWidth: true
+                        placeholderText: i18nc("%1 is the user agent of the current web app", "User Agent (leave blank for default)", root.userAgent)
+                        text: root.userAgent
+
+                        KeyNavigation.down: editDialog.footer
+                    }
+                }
+            }
+        }
 
         Bigscreen.ButtonDelegate {
             id: deleteButtonDelegate

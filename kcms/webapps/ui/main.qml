@@ -42,7 +42,7 @@ Bigscreen.ScrollablePage {
             text: i18n("Add Web App")
             icon.name: 'list-add'
 
-            KeyNavigation.down: webAppListView
+            KeyNavigation.down: webAppListView.count > 0 ? webAppListView : null
         }
 
         QQC2.Label {
@@ -84,13 +84,50 @@ Bigscreen.ScrollablePage {
 
         Bigscreen.Dialog {
             id: addWebAppDialog
-            title: i18n("Add Web Application")
-            standardButtons: Bigscreen.Dialog.Ok | Bigscreen.Dialog.Cancel
+            title: i18n("Add Web App")
             openFocusItem: nameTextField
 
-            onClosed: addWebApp.forceActiveFocus()
+            footer: Bigscreen.DialogButtonBox {
+                id: dialogButtonBox
+                dialog: parent
+
+                Connections {
+                    target: dialogButtonBox.contentItem // the ListView inside the DialogButtonBox
+
+                    function onCurrentItemChanged() {
+                        var listView = dialogButtonBox.contentItem
+                        if (!listView.currentItem.enabled) listView.currentIndex = 1 // do not let the ok button get focus if it's disabled
+                    }
+                }
+
+                Bigscreen.Button {
+                    id: okButton
+                    icon.name: "checkbox"
+                    text: i18n("OK")
+                    Bigscreen.DialogButtonBox.buttonRole: Bigscreen.DialogButtonBox.AcceptRole
+                    enabled: nameTextField.text.length > 0 && urlTextField.text.length > 0
+                }
+
+                Bigscreen.Button {
+                    id: cancelButton
+                    icon.name: "dialog-cancel"
+                    text: i18n("Cancel")
+                    Bigscreen.DialogButtonBox.buttonRole: Bigscreen.DialogButtonBox.RejectRole
+                }
+            }
+
+            onClosed: {
+                nameTextField.clear()
+                urlTextField.clear()
+                userAgentTextField.clear()
+                addWebApp.forceActiveFocus()
+            }
+
             onAccepted: {
-                WebAppsKCM.WebAppManagerModel.addEntry(nameTextField.text, urlTextField.text, 'internet-web-browser', userAgentTextField.text);
+                WebAppsKCM.WebAppManagerModel.addEntry(nameTextField.text, urlTextField.text, userAgentTextField.text);
+                nameTextField.clear()
+                urlTextField.clear()
+                userAgentTextField.clear()
                 close();
             }
 
@@ -104,6 +141,7 @@ Bigscreen.ScrollablePage {
 
                     KeyNavigation.down: urlTextField
                 }
+                
                 Bigscreen.TextField {
                     id: urlTextField
                     Layout.fillWidth: true
@@ -111,6 +149,7 @@ Bigscreen.ScrollablePage {
 
                     KeyNavigation.down: userAgentTextField
                 }
+
                 Bigscreen.TextField {
                     id: userAgentTextField
                     Layout.fillWidth: true

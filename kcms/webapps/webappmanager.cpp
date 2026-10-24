@@ -140,6 +140,44 @@ bool WebAppManager::removeApp(const QString &id)
     return success;
 }
 
+void WebAppManager::editApp(const QString &id, const QString &newName, const QString &newUserAgent)
+{
+    const QString location = desktopFileDirectory();
+    const QString filename = generateDesktopFileName(id);
+
+    KConfig desktopFile(desktopFileDirectory() % QDir::separator() % filename, KConfig::SimpleConfig);
+    auto desktopEntry = desktopFile.group(QStringLiteral("Desktop Entry"));
+    QString exec = desktopEntry.readEntry(QStringLiteral("Exec"));
+
+    QString oldName = desktopEntry.readEntry(QStringLiteral("Name"));
+    exec.replace(oldName, newName);
+    desktopEntry.writeEntry(QStringLiteral("Name"), newName);
+
+    QString oldUserAgent = desktopEntry.readEntry(USERAGENT_CFG_KEY);
+    if (newUserAgent.isEmpty()) {
+        exec.replace((" --agent " + KShell::quoteArg(oldUserAgent)), ""); // reset to default
+    } else {
+        if (oldUserAgent.isEmpty()) {
+            exec += " --agent " + KShell::quoteArg(newUserAgent);
+        } else {
+            exec.replace(oldUserAgent, newUserAgent);
+        }
+    }
+    desktopEntry.writeEntry(USERAGENT_CFG_KEY, newUserAgent);
+    desktopEntry.writeEntry(QStringLiteral("Exec"), exec);
+
+    desktopFile.sync();
+
+    auto it = std::remove_if(m_webApps.begin(), m_webApps.end(), [&id](const WebApp &app) {
+        return app.id == id;
+    });
+
+    it->name = newName;
+    it->userAgent = newUserAgent;
+
+    Q_EMIT applicationsChanged();
+}
+
 WebAppManager &WebAppManager::instance()
 {
     static WebAppManager instance;

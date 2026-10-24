@@ -37,6 +37,7 @@ public:
                 const QString &uuid = QUuid::createUuid().toString(QUuid::WithoutBraces));
     bool exists(const QString &id);
     bool removeApp(const QString &id);
+    void editApp(const QString &id, const QString &newName, const QString &userAgent);
 
     static WebAppManager &instance();
 

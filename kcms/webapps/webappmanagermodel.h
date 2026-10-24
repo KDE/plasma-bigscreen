@@ -35,11 +35,12 @@ public:
     QVariant data(const QModelIndex &index, int role) const override;
     QHash<int, QByteArray> roleNames() const override;
 
-    Q_INVOKABLE QCoro::QmlTask addEntry(const QString &name, const QString &url, const QString &iconUrl, const QString &userAgent);
+    Q_INVOKABLE QCoro::QmlTask addEntry(const QString &name, const QString &url, const QString &userAgent);
     Q_INVOKABLE void removeApp(const QString &id);
+    Q_INVOKABLE void editApp(const QString &id, const QString &newName, const QString &newUserAgent);
 
 private:
-    QCoro::Task<> addEntryInternal(const QString &name, const QString &url, const QString &iconUrl, const QString &userAgent);
+    QCoro::Task<> addEntryInternal(const QString &name, const QString &url, const QString &userAgent);
 
     WebAppManager &m_webAppMngr;
     WebAppCreator m_webAppCreator;

@@ -51,9 +51,9 @@ QHash<int, QByteArray> WebAppManagerModel::roleNames() const
     };
 }
 
-QCoro::QmlTask WebAppManagerModel::addEntry(const QString &name, const QString &url, const QString &iconUrl, const QString &userAgent)
+QCoro::QmlTask WebAppManagerModel::addEntry(const QString &name, const QString &url, const QString &userAgent)
 {
-    return addEntryInternal(name, url, iconUrl, userAgent);
+    return addEntryInternal(name, url, userAgent);
 }
 
 void WebAppManagerModel::removeApp(const QString &id)
@@ -73,10 +73,17 @@ void WebAppManagerModel::removeApp(const QString &id)
     }
 }
 
-QCoro::Task<> WebAppManagerModel::addEntryInternal(const QString &name, const QString &url, const QString &iconUrl, const QString &userAgent)
+QCoro::Task<> WebAppManagerModel::addEntryInternal(const QString &name, const QString &url, const QString &userAgent)
 {
     beginResetModel();
-    co_await m_webAppCreator.addEntry(name, url, iconUrl, userAgent);
+    co_await m_webAppCreator.addEntry(name, url, userAgent);
+    endResetModel();
+}
+
+void WebAppManagerModel::editApp(const QString &id, const QString &newName, const QString &userAgent)
+{
+    beginResetModel();
+    m_webAppMngr.editApp(id, newName, userAgent);
     endResetModel();
 }
 

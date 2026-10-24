@@ -30,8 +30,7 @@ public:
     bool exists() const;
     Q_SIGNAL void existsChanged();
 
-    Q_INVOKABLE QCoro::Task<> addEntry(const QString name, const QString url, const QString icon, const QString &userAgent);
-    Q_INVOKABLE QCoro::QmlTask createDesktopFile(const QString name, QString url, QString icon, const QString &userAgent);
+    Q_INVOKABLE QCoro::Task<> addEntry(const QString name, const QString url, const QString &userAgent);
 
 private:
     QString m_websiteName;
