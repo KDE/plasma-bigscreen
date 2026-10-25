@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:50+0000\n"
+"POT-Creation-Date: 2026-10-25 00:52+0000\n"
 "PO-Revision-Date: 2025-08-22 16:36+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -18,38 +18,13 @@ msgstr ""
 "2);\n"
 "X-Generator: Lokalize 25.08.0\n"
 
-#: ui/main.qml:22
-#, kde-format
-msgid "Display Configuration"
-msgstr "Displeja konfigurācija"
-
-#: ui/main.qml:57
-#, kde-format
-msgid "Selected display"
-msgstr "Atlasītais displejs"
-
-#: ui/main.qml:89
-#, kde-format
-msgid "Display %1"
-msgstr "Displejs „%1“"
-
-#: ui/main.qml:97
-#, kde-format
-msgid "Enabled"
-msgstr "Ieslēgts"
-
-#: ui/main.qml:112
-#, kde-format
-msgid "Screen mode (Resolution & Refresh Rate)"
-msgstr "Ekrāna režīms (izšķirtspēja un atsvaidzināšanas ātrums)"
-
-#: ui/main.qml:141
+#: ui/ConfirmDialog.qml:16
 #, fuzzy, kde-format
 #| msgid "Display Configuration"
 msgid "Keep display configuration?"
 msgstr "Displeja konfigurācija"
 
-#: ui/main.qml:154
+#: ui/ConfirmDialog.qml:62
 #, kde-format
 msgid "Will revert to previous configuration in %1 second."
 msgid_plural "Will revert to previous configuration in %1 seconds."
@@ -57,12 +32,37 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: ui/main.qml:164 ui/ScaleDialog.qml:21
+#: ui/main.qml:22
+#, kde-format
+msgid "Display Configuration"
+msgstr "Displeja konfigurācija"
+
+#: ui/main.qml:42
+#, kde-format
+msgid "Selected display"
+msgstr "Atlasītais displejs"
+
+#: ui/main.qml:74
+#, kde-format
+msgid "Display %1"
+msgstr "Displejs „%1“"
+
+#: ui/main.qml:82
+#, kde-format
+msgid "Enabled"
+msgstr "Ieslēgts"
+
+#: ui/main.qml:97
+#, kde-format
+msgid "Screen mode (Resolution & Refresh Rate)"
+msgstr "Ekrāna režīms (izšķirtspēja un atsvaidzināšanas ātrums)"
+
+#: ui/main.qml:137 ui/ScaleDialog.qml:21
 #, kde-format
 msgid "Scale"
 msgstr "Mērogs"
 
-#: ui/main.qml:165 ui/ScaleDialog.qml:54
+#: ui/main.qml:138 ui/ScaleDialog.qml:54
 #, kde-format
 msgctxt "Scale percentage"
 msgid "%1%"

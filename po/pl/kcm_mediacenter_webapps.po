@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-20 12:55+0000\n"
+"POT-Creation-Date: 2026-10-25 00:52+0000\n"
 "PO-Revision-Date: 2025-08-30 08:22+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "Web Apps"
 msgstr "Aplikacje sieciowe"
 
-#: ui/main.qml:42
+#: ui/main.qml:42 ui/main.qml:87
 #, kde-format
 msgid "Add Web App"
 msgstr "Dodaj aplikację sieciową"
@@ -33,42 +33,74 @@ msgstr "Dodaj aplikację sieciową"
 msgid "Installed web apps"
 msgstr "Wgrane aplikacje sieciowe"
 
-#: ui/main.qml:87
+#: ui/main.qml:106
 #, kde-format
-msgid "Add Web Application"
-msgstr "Dodaj aplikację sieciową"
+msgid "OK"
+msgstr ""
 
-#: ui/main.qml:103 ui/WebAppInfoSidebar.qml:52
+#: ui/main.qml:114
+#, kde-format
+msgid "Cancel"
+msgstr ""
+
+#: ui/main.qml:140 ui/WebAppInfoSidebar.qml:52
 #, kde-format
 msgid "Name"
 msgstr "Nazwa"
 
-#: ui/main.qml:110 ui/WebAppInfoSidebar.qml:60
+#: ui/main.qml:148 ui/WebAppInfoSidebar.qml:59
 #, kde-format
 msgid "URL"
 msgstr "Adres URL"
 
-#: ui/main.qml:117
+#: ui/main.qml:156
 #, kde-format
 msgid "User agent (empty for default)"
 msgstr "User Agent (domyślnie pusty)"
 
-#: ui/WebAppInfoSidebar.qml:68
+#: ui/WebAppInfoSidebar.qml:66
 #, kde-format
 msgid "User Agent"
 msgstr "User Agent"
 
-#: ui/WebAppInfoSidebar.qml:69
+#: ui/WebAppInfoSidebar.qml:67
 #, kde-format
 msgid "Default user agent"
 msgstr "Domyślny user agent"
 
-#: ui/WebAppInfoSidebar.qml:78
+#: ui/WebAppInfoSidebar.qml:76
+#, kde-format
+msgid "Edit"
+msgstr ""
+
+#: ui/WebAppInfoSidebar.qml:83
+#, fuzzy, kde-format
+#| msgid "Delete web app %1?"
+msgid "Edit web app %1"
+msgstr "Czy usunąć aplikację sieciową %1?"
+
+#: ui/WebAppInfoSidebar.qml:106
+#, kde-format
+msgctxt "%1 is the current name of the web app"
+msgid "Name (leave blank for current)"
+msgstr ""
+
+#: ui/WebAppInfoSidebar.qml:115
+#, fuzzy, kde-format
+#| msgid "User agent (empty for default)"
+msgctxt "%1 is the user agent of the current web app"
+msgid "User Agent (leave blank for default)"
+msgstr "User Agent (domyślnie pusty)"
+
+#: ui/WebAppInfoSidebar.qml:127
 #, kde-format
 msgid "Delete"
 msgstr "Usuń"
 
-#: ui/WebAppInfoSidebar.qml:86
+#: ui/WebAppInfoSidebar.qml:135
 #, kde-format
 msgid "Delete web app %1?"
 msgstr "Czy usunąć aplikację sieciową %1?"
+
+#~ msgid "Add Web Application"
+#~ msgstr "Dodaj aplikację sieciową"

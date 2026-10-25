@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-22 00:52+0000\n"
-"PO-Revision-Date: 2026-07-13 00:12+0100\n"
+"PO-Revision-Date: 2026-10-25 00:38+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -38,7 +38,7 @@ msgstr "Presentación de diapositivas"
 
 #: contents/lockscreen/LockScreen.qml:53
 msgid "Unlocking failed"
-msgstr ""
+msgstr "Desbloqueo fallido"
 
 #: contents/lockscreen/PasswordDialog.qml:51
 msgid "Password"

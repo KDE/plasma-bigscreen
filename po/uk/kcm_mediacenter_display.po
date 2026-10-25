@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:50+0000\n"
+"POT-Creation-Date: 2026-10-25 00:52+0000\n"
 "PO-Revision-Date: 2026-08-26 08:28+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -18,37 +18,12 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 25.12.1\n"
 
-#: ui/main.qml:22
-#, kde-format
-msgid "Display Configuration"
-msgstr "Налаштування дисплея"
-
-#: ui/main.qml:57
-#, kde-format
-msgid "Selected display"
-msgstr "Вибраний дисплей"
-
-#: ui/main.qml:89
-#, kde-format
-msgid "Display %1"
-msgstr "Дисплей %1"
-
-#: ui/main.qml:97
-#, kde-format
-msgid "Enabled"
-msgstr "Увімкнено"
-
-#: ui/main.qml:112
-#, kde-format
-msgid "Screen mode (Resolution & Refresh Rate)"
-msgstr "Режим екрана (роздільність і частота оновлення)"
-
-#: ui/main.qml:141
+#: ui/ConfirmDialog.qml:16
 #, kde-format
 msgid "Keep display configuration?"
 msgstr "Залишити такі налаштування дисплея?"
 
-#: ui/main.qml:154
+#: ui/ConfirmDialog.qml:62
 #, kde-format
 msgid "Will revert to previous configuration in %1 second."
 msgid_plural "Will revert to previous configuration in %1 seconds."
@@ -57,12 +32,37 @@ msgstr[1] "За %1 секунди буде виконано повернення
 msgstr[2] "За %1 секунд буде виконано повернення до попередніх налаштувань."
 msgstr[3] "За секунду буде виконано повернення до попередніх налаштувань."
 
-#: ui/main.qml:164 ui/ScaleDialog.qml:21
+#: ui/main.qml:22
+#, kde-format
+msgid "Display Configuration"
+msgstr "Налаштування дисплея"
+
+#: ui/main.qml:42
+#, kde-format
+msgid "Selected display"
+msgstr "Вибраний дисплей"
+
+#: ui/main.qml:74
+#, kde-format
+msgid "Display %1"
+msgstr "Дисплей %1"
+
+#: ui/main.qml:82
+#, kde-format
+msgid "Enabled"
+msgstr "Увімкнено"
+
+#: ui/main.qml:97
+#, kde-format
+msgid "Screen mode (Resolution & Refresh Rate)"
+msgstr "Режим екрана (роздільність і частота оновлення)"
+
+#: ui/main.qml:137 ui/ScaleDialog.qml:21
 #, kde-format
 msgid "Scale"
 msgstr "Масштаб"
 
-#: ui/main.qml:165 ui/ScaleDialog.qml:54
+#: ui/main.qml:138 ui/ScaleDialog.qml:54
 #, kde-format
 msgctxt "Scale percentage"
 msgid "%1%"
