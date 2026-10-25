@@ -34,7 +34,7 @@ const QMap<QString, QMap<QString, QVariant>> PLASMAKEYBOARDRC_SETTINGS = {{"Gene
 
 // plasma-bigscreen/kwinrc
 const QMap<QString, QMap<QString, QVariant>> KWINRC_DEFAULT_SETTINGS = {
-    {"Wayland", {{"InputMethod", "/usr/share/applications/org.kde.plasma.keyboard.desktop"}}}};
+    {"Wayland", {{"InputMethod", "/usr/share/applications/org.kde.plasma.keyboard.desktop"}, {"VirtualKeyboardMode", "2"}}}};
 
 QMap<QString, QMap<QString, QVariant>> getKwinrcSettings(KSharedConfig::Ptr m_bigscreenConfig)
 {
