@@ -1,7 +1,10 @@
-# Copyright (C) 2025 This file is copyright:
+# Translation for kcm_mediacenter_webapps.po to Euskara/Basque (eu).
+# Copyright (C) 2025-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
+# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
 #
-# SPDX-FileCopyrightText: 2025 Iñigo Salvador Azurmendi <xalba@ni.eus>
+# Translators:
+# SPDX-FileCopyrightText: Iñigo Salvador Azurmendi <xalba@ni.eus>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"

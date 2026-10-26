@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:50+0000\n"
+"POT-Creation-Date: 2026-10-26 02:59+0000\n"
 "PO-Revision-Date: 2026-07-22 17:18-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -18,49 +18,49 @@ msgstr ""
 "X-Generator: Poedit 3.9\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ui/main.qml:22
-#, kde-format
-msgid "Display Configuration"
-msgstr "كۆرسەتكۈچ سەپلىمىسى"
-
-#: ui/main.qml:57
-#, kde-format
-msgid "Selected display"
-msgstr "تاللانغان كۆرسەتكۈچ"
-
-#: ui/main.qml:89
-#, kde-format
-msgid "Display %1"
-msgstr "%1-ئېكران"
-
-#: ui/main.qml:97
-#, kde-format
-msgid "Enabled"
-msgstr "قوزغىتىلغان"
-
-#: ui/main.qml:112
-#, kde-format
-msgid "Screen mode (Resolution & Refresh Rate)"
-msgstr "ئېكران ھالىتى (ئېنىقلىقى ۋە يېڭىلاش نىسبىتى)"
-
-#: ui/main.qml:141
+#: ui/ConfirmDialog.qml:16
 #, fuzzy, kde-format
 #| msgid "Display Configuration"
 msgid "Keep display configuration?"
 msgstr "كۆرسەتكۈچ سەپلىمىسى"
 
-#: ui/main.qml:154
+#: ui/ConfirmDialog.qml:62
 #, kde-format
 msgid "Will revert to previous configuration in %1 second."
 msgid_plural "Will revert to previous configuration in %1 seconds."
 msgstr[0] ""
 
-#: ui/main.qml:164 ui/ScaleDialog.qml:21
+#: ui/main.qml:22
+#, kde-format
+msgid "Display Configuration"
+msgstr "كۆرسەتكۈچ سەپلىمىسى"
+
+#: ui/main.qml:42
+#, kde-format
+msgid "Selected display"
+msgstr "تاللانغان كۆرسەتكۈچ"
+
+#: ui/main.qml:74
+#, kde-format
+msgid "Display %1"
+msgstr "%1-ئېكران"
+
+#: ui/main.qml:82
+#, kde-format
+msgid "Enabled"
+msgstr "قوزغىتىلغان"
+
+#: ui/main.qml:97
+#, kde-format
+msgid "Screen mode (Resolution & Refresh Rate)"
+msgstr "ئېكران ھالىتى (ئېنىقلىقى ۋە يېڭىلاش نىسبىتى)"
+
+#: ui/main.qml:137 ui/ScaleDialog.qml:21
 #, kde-format
 msgid "Scale"
 msgstr "نىسبەت"
 
-#: ui/main.qml:165 ui/ScaleDialog.qml:54
+#: ui/main.qml:138 ui/ScaleDialog.qml:54
 #, kde-format
 msgctxt "Scale percentage"
 msgid "%1%"
