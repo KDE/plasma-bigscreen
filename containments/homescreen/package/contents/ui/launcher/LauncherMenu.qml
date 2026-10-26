@@ -23,6 +23,9 @@ FocusScope {
     property real leftMargin
     property real rightMargin
 
+    // Space at the top covered by the header
+    property real topReservedHeight
+
     readonly property int reservedSpaceForLabel: metrics.height
 
     // Whether the view has scrolled down at least one row
@@ -34,6 +37,10 @@ FocusScope {
         Grid = 1
     }
     property int currentView: LauncherMenu.CurrentView.Home;
+
+    function showOptions(app, mover) {
+        // TODO: show options
+    }
 
     onActiveFocusChanged: {
         if (activeFocus) {
@@ -51,10 +58,8 @@ FocusScope {
         function onToggleLauncherGridRequested() {
             if (currentView == LauncherMenu.CurrentView.Home){
                 currentView = LauncherMenu.CurrentView.Grid
-                launcherGridView.visible = true
             } else{
                 currentView = LauncherMenu.CurrentView.Home
-                launcherHome.visible = true
             }
         }
     }
@@ -68,6 +73,8 @@ FocusScope {
     LauncherHome {
         id: launcherHome
         opacity: currentView == LauncherMenu.CurrentView.Home ? 1 : 0
+        visible: opacity > 0
+        enabled: currentView == LauncherMenu.CurrentView.Home
         anchors {
             fill: parent
             leftMargin: root.leftMargin
@@ -76,15 +83,15 @@ FocusScope {
         navigationUp: root.KeyNavigation.up
         bottomMargin: root.leftMargin
 
+        topReservedHeight: root.topReservedHeight
+
+        onOptionsRequested: (app, mover) => root.showOptions(app, mover)
+
         Behavior on opacity {
-            OpacityAnimator {
+            NumberAnimation {
                 // Set shorter animation speed to disappear
                 duration: currentView == LauncherMenu.CurrentView.Home ? 300 : 500
                 easing.type: Easing.OutCubic
-                onFinished: {
-                    if (currentView == LauncherMenu.CurrentView.Grid)
-                        launcherHome.visible = false;
-                }
             }
         }
     }
@@ -92,15 +99,19 @@ FocusScope {
     LauncherGridView {
         id: launcherGridView
         opacity: currentView == LauncherMenu.CurrentView.Grid ? 1 : 0
+        visible: opacity > 0
+        enabled: currentView == LauncherMenu.CurrentView.Grid
         anchors {
             fill: parent
             leftMargin: root.leftMargin
             rightMargin: root.rightMargin
-            topMargin: currentView == LauncherMenu.CurrentView.Grid ? 0 : height/4
+            topMargin: currentView == LauncherMenu.CurrentView.Grid ? 0 : root.height / 4
         }
 
+        onOptionsRequested: (app) => root.showOptions(app, null)
+
         Behavior on opacity {
-            OpacityAnimator {
+            NumberAnimation {
                 // Set shorter animation speed to disappear
                 duration: currentView == LauncherMenu.CurrentView.Grid ? 300 : 500
                 easing.type: Easing.OutCubic
@@ -111,10 +122,6 @@ FocusScope {
             NumberAnimation {
                 duration: 500
                 easing.type: Easing.OutCubic
-                onFinished: {
-                    if (currentView == LauncherMenu.CurrentView.Home)
-                        launcherGridView.visible = false;
-                }
             }
         }
     }

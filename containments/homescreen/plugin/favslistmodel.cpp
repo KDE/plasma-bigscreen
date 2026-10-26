@@ -248,10 +248,11 @@ void FavsListModel::resetModel(bool reset)
 
 void FavsListModel::syncMovedRow(int originalIndex, int destinationIndex)
 {
-    beginRemoveRows({}, destinationIndex, destinationIndex);
-    endRemoveRows();
-    beginInsertRows({}, originalIndex, originalIndex);
-    endInsertRows();
+    // beginMoveRows() expects the row before which the moved row is inserted
+    const int destinationChild = destinationIndex > originalIndex ? destinationIndex + 1 : destinationIndex;
+    if (beginMoveRows({}, originalIndex, originalIndex, {}, destinationChild)) {
+        endMoveRows();
+    }
 }
 
 QVariantMap FavsListModel::itemMap(int index)

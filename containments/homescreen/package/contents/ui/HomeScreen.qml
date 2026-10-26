@@ -86,7 +86,9 @@ Item {
             rightMargin: root.rightMargin
         }
 
-        state: launcher.scrolledDown ? "shrunk" : "large"
+        // Short screens don't have room for the large clock above the first row
+        readonly property bool forceShrunk: (root.height < Kirigami.Units.gridUnit) * 40 || (root.width < Kirigami.Units.gridUnit * 50)
+        state: (launcher.scrolledDown || forceShrunk) ? "shrunk" : "large"
         currentLauncherView: launcher.currentView
 
         KeyNavigation.down: launcher
@@ -96,38 +98,16 @@ Item {
     // Applications grid
     LauncherMenu {
         id: launcher
-        opacity: 0 // Displayed with launcherOpacityGradient below
         anchors {
             fill: parent
             topMargin: header.shrunkHeight
         }
 
-        // Pass margins in so that we don't clip sides with opacity gradient
         leftMargin: root.leftMargin
         rightMargin: root.rightMargin
+        topReservedHeight: header.height - header.shrunkHeight
 
         KeyNavigation.backtab: header
         KeyNavigation.up: header
-    }
-
-    // Opacity "fade" effect at edges
-    OpacityMask {
-        id: launcherOpacityGradient
-        anchors.fill: launcher
-
-        source: launcher
-        maskSource: Rectangle {
-            id: mask
-            width: launcher.width
-            height: launcher.height
-
-            property real gradientPct: (Kirigami.Units.gridUnit * 2) / launcher.height
-
-            gradient: Gradient {
-                GradientStop { position: 0.0; color: 'transparent' }
-                GradientStop { position: mask.gradientPct; color: 'white' }
-                GradientStop { position: 1.0; color: 'white' }
-            }
-        }
     }
 }

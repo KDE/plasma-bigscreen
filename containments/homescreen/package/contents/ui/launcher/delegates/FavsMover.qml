@@ -12,10 +12,20 @@ import org.kde.kirigami as Kirigami
 import org.kde.plasma.plasmoid
 import org.kde.private.biglauncher
 
-RowLayout {
+Item {
     id: root
 
     property var modelData
+
+    // Whether the application has an open window
+    property bool running: false
+
+    readonly property Item tile: delegate
+
+    readonly property bool moving: local.moverMode
+
+    signal optionsRequested()
+
     readonly property Flickable listView: {
         var candidate = parent;
         while (candidate){
@@ -27,11 +37,17 @@ RowLayout {
         return null;
     }
 
-    implicitWidth: listView ? listView.cellWidth : null
-    implicitHeight: listView ? listView.height : null
+    implicitWidth: listView ? listView.cellWidth : 0
+    implicitHeight: listView ? listView.cellHeight : 0
+
+    z: local.moverMode ? 3 : 0
+
     onActiveFocusChanged: {
         if (activeFocus && !local.moverMode){
             delegate.forceActiveFocus();
+        } else if (!activeFocus && local.moverMode) {
+            local.moverMode = false;
+            local.allowClose = false;
         }
     }
 
@@ -39,20 +55,50 @@ RowLayout {
         id: local
         property bool allowClose: false
         property bool moverMode: false
+        property int originalIndex: -1
+    }
+
+    function startMoving() {
+        local.moverMode = true;
+        local.allowClose = false;
+        local.originalIndex = listView.currentIndex;
+        root.forceActiveFocus();
+        listView.contentXAnimation();
+    }
+
+    function finishMoving() {
+        local.moverMode = false;
+        local.allowClose = false;
+        delegate.forceActiveFocus();
+    }
+
+    // Puts the favorite back where it was
+    function cancelMoving() {
+        const current = listView.currentIndex;
+        if (local.originalIndex >= 0 && current !== local.originalIndex) {
+            FavsManager.moveFav(Plasmoid.favsListModel.itemMap(current), local.originalIndex);
+            listView.currentIndex = local.originalIndex;
+        }
+        finishMoving();
+    }
+
+    Bigscreen.BackHandler.enabled: local.moverMode
+    Bigscreen.BackHandler.onActivated: {
+        Bigscreen.NavigationRumble.playCancelRumble();
+        root.cancelMoving();
     }
 
     function closeMover(event){
         if (local.moverMode && local.allowClose){
-            local.moverMode = false
-            local.allowClose = false
-            delegate.forceActiveFocus()
+            Bigscreen.NavigationRumble.playConfirmRumble();
+            finishMoving();
             event.accepted = true
         } else{
             event.accepted = false
         }
     }
-    Keys.onReturnPressed: closeMover(event)
-    Keys.onLeftPressed: function(event){
+    Keys.onReturnPressed: (event) => closeMover(event)
+    Keys.onLeftPressed: (event) => {
         if (!local.moverMode){
             event.accepted = false;
             return;
@@ -61,11 +107,10 @@ RowLayout {
         if (listView.currentIndex > 0){
             Bigscreen.NavigationSoundEffects.playMovingSound();
             Bigscreen.NavigationRumble.playNavigationRumble();
-            listView.decrementCurrentIndex();
-            FavsManager.moveFav(Plasmoid.favsListModel.itemMap(listView.currentIndex+1), listView.currentIndex, false);
+            FavsManager.moveFav(Plasmoid.favsListModel.itemMap(listView.currentIndex), listView.currentIndex - 1);
         }
     }
-    Keys.onRightPressed: function(event){
+    Keys.onRightPressed: (event) => {
         if (!local.moverMode){
             event.accepted = false;
             return;
@@ -78,12 +123,11 @@ RowLayout {
         }
     }
 
-    // prevent navigation when editing the favs order
-    Keys.onPressed: function(event){
+    Keys.onPressed: (event) => {
         if (local.moverMode) event.accepted = true
         else event.accepted = false
     }
-    Keys.onReleased: function(event){
+    Keys.onReleased: (event) => {
         if (local.moverMode){
             event.accepted = true
             if (event.key == Qt.Key_Return && !event.isAutoRepeat){
@@ -93,40 +137,35 @@ RowLayout {
         else event.accepted = false
     }
 
-    Kirigami.Icon {
-        id: "iconMoveLeft"
-        visible: local.moverMode && listView.currentIndex != 0
-        source: "arrow-left"
-
-        Kirigami.Theme.inherit: false
-        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-
-        Layout.preferredWidth: listView.cellWidth * 0.3
-        Layout.preferredHeight: width
-        Layout.alignment: Qt.AlignVCenter
-    }
-
-    FavDelegate{
+    FavDelegate {
         id: delegate
-        onLongClick: {
-            local.moverMode = true
-            local.allowClose = false
-            root.forceActiveFocus()
-            listView.contentXAnimation()
-        }
+        anchors.fill: parent
+        onLongClick: root.startMoving()
         forceCurrent: local.moverMode
+        lifted: local.moverMode
+        running: root.running
     }
 
-    Kirigami.Icon {
-        id: "iconMoveRight"
-        visible: local.moverMode && listView.currentIndex != listView.count - 1
-        source: "arrow-right"
-
+    component MoveArrow: Kirigami.Icon {
+        z: 3
+        width: Kirigami.Units.iconSizes.large
+        height: width
+        y: Math.round(delegate.cardHeight / 2 - height / 2 - Kirigami.Units.gridUnit)
+        color: Kirigami.Theme.highlightColor
+        isMask: true
         Kirigami.Theme.inherit: false
         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+    }
 
-        Layout.preferredWidth: listView.cellWidth * 0.3
-        Layout.preferredHeight: width
-        Layout.alignment: Qt.AlignVCenter
+    MoveArrow {
+        visible: local.moverMode && listView.currentIndex > 0
+        source: "go-previous-symbolic"
+        x: Math.round((root.width - delegate.cardWidth * 1.1) / 2) - width - Kirigami.Units.smallSpacing
+    }
+
+    MoveArrow {
+        visible: local.moverMode && listView.currentIndex < listView.count - 1
+        source: "go-next-symbolic"
+        x: Math.round((root.width + delegate.cardWidth * 1.1) / 2) + Kirigami.Units.smallSpacing
     }
 }

@@ -29,6 +29,11 @@ FocusScope {
     Layout.fillWidth: true
     implicitHeight: view.implicitHeight + header.implicitHeight
 
+    // Proportionally increase or decrease the # of columns
+    property real columnOffset: 0
+
+    property real cardAspectRatio: 0.625
+
     property real columns: {
         if (view.Window && view.Window.window) {
             var v = 5.5;
@@ -43,7 +48,7 @@ FocusScope {
                     v = 2.5;
                     break;
             }
-            return v;
+            return Math.max(1.5, v + columnOffset);
         } else {
             return 1; // or any default value you prefer ( != 0 )
         }
@@ -52,6 +57,8 @@ FocusScope {
 
     property alias cellWidth: view.cellWidth
     property alias cellHeight: view.cellHeight
+    property alias cardWidth: view.cardWidth
+    property alias cardHeight: view.cardHeight
     readonly property real screenRatio: view.Window.window ? view.Window.window.width / view.Window.window.height : 1.6
 
     property Item navigationUp
@@ -72,7 +79,7 @@ FocusScope {
             top: parent.top
         }
         text: title
-        font.pixelSize: 32
+        font.pixelSize: 30
         font.weight: Font.Light
         color: 'white'
         visible: root.titleVisible
@@ -88,8 +95,12 @@ FocusScope {
             bottom: parent.bottom
             topMargin: Kirigami.Units.largeSpacing * 2
         }
-        readonly property int cellWidth: root.width / columns + (Kirigami.Units.gridUnit / 1)
-        property int cellHeight: cellWidth * 0.75
+
+        // The title and subtitle go underneath the card
+        readonly property int cellWidth: Math.round(root.width / columns)
+        readonly property int cardWidth: cellWidth - Kirigami.Units.gridUnit
+        readonly property int cardHeight: Math.round(cardWidth * root.cardAspectRatio)
+        readonly property int cellHeight: cardHeight + Kirigami.Units.gridUnit * 3 + Kirigami.Units.largeSpacing
 
         implicitHeight: cellHeight
 
