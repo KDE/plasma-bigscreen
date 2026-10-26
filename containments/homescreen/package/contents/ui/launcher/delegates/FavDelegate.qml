@@ -18,6 +18,7 @@ IconDelegate {
 
     icon.name: modelData.ApplicationIconRole
     text: modelData ? modelData.ApplicationNameRole : ""
+    subtitle: modelData ? (modelData.ApplicationCommentRole ?? "") : ""
 
     onClicked: {
         Bigscreen.NavigationSoundEffects.playClickedSound();

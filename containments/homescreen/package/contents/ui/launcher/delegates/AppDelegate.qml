@@ -20,6 +20,7 @@ IconDelegate {
 
     icon.name: modelData ? modelData.ApplicationIconRole : ""
     text: modelData ? modelData.ApplicationNameRole : ""
+    subtitle: modelData ? (modelData.ApplicationCommentRole ?? "") : ""
     useIconColors: Plasmoid.configuration.coloredTiles
 
     onClicked: {

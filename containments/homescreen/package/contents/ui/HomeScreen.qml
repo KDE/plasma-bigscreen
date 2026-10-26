@@ -7,7 +7,6 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as Controls
 import QtQuick.Window
-import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
@@ -86,52 +85,31 @@ Item {
             rightMargin: root.rightMargin
         }
 
-        state: launcher.scrolledDown ? "shrunk" : "large"
+        // Short screens don't have room for the large clock above the first row
+        readonly property bool forceShrunk: (root.height < Kirigami.Units.gridUnit * 40) || (root.width < Kirigami.Units.gridUnit * 50)
+        state: (launcher.scrolledDown || forceShrunk) ? "shrunk" : "large"
 
         KeyNavigation.down: launcher
         KeyNavigation.tab: launcher
     }
 
-    // Applications grid
+    // Application rows
     LauncherMenu {
         id: launcher
-        opacity: 0 // Displayed with launcherOpacityGradient below
-        startY: {
-            const minY = header.largeHeight; // Right after the HomeHeader at max height
-            const desiredY = (parent.height / 2);
-            return Math.round(Math.max(minY, desiredY) - header.shrunkHeight); // Adjust for anchors.topMargin
-        }
         anchors {
             fill: parent
             topMargin: header.shrunkHeight
         }
 
-        // Pass margins in so that we don't clip sides with opacity gradient
         leftMargin: root.leftMargin
         rightMargin: root.rightMargin
+        startY: {
+            const minY = header.forceShrunk ? header.shrunkHeight : header.largeHeight;
+            const desiredY = parent.height / 2;
+            return Math.round(Math.max(minY, desiredY) - header.shrunkHeight);
+        }
 
         KeyNavigation.backtab: header
         KeyNavigation.up: header
-    }
-
-    // Opacity "fade" effect at edges
-    OpacityMask {
-        id: launcherOpacityGradient
-        anchors.fill: launcher
-
-        source: launcher
-        maskSource: Rectangle {
-            id: mask
-            width: launcher.width
-            height: launcher.height
-
-            property real gradientPct: (Kirigami.Units.gridUnit * 2) / launcher.height
-
-            gradient: Gradient {
-                GradientStop { position: 0.0; color: 'transparent' }
-                GradientStop { position: mask.gradientPct; color: 'white' }
-                GradientStop { position: 1.0; color: 'white' }
-            }
-        }
     }
 }

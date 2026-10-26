@@ -5,6 +5,7 @@
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
+import QtQuick.Window
 import QtQml
 
 import org.kde.kirigami as Kirigami
@@ -18,6 +19,9 @@ Item {
 
     // Expose value that doesn't animate
     readonly property real clockBigHeight: clockColumn.implicitHeight
+
+    // Narrow screens don't have room for the date next to the header's indicators
+    readonly property bool showDateWhenShrunk: Window.width >= Kirigami.Units.gridUnit * 55
 
     // TODO whether to show am/pm from locale?
     property var locale: Qt.locale()
@@ -107,17 +111,17 @@ Item {
         PC3.Label {
             id: rowTimeLabel
             color: "white"
-            renderType: Text.NativeRendering
-            font.weight: Font.ExtraBold
-            font.pointSize: 24
+            font.weight: Font.Light
+            font.pixelSize: 30
 
             text: root.timeString
         }
 
         PC3.Label {
             id: rowDateLabel
-            color: "white"
-            font.pointSize: 22
+            visible: root.showDateWhenShrunk
+            color: Qt.rgba(1, 1, 1, 0.7)
+            font.pixelSize: 22
 
             text: root.dateString
         }
@@ -129,7 +133,7 @@ Item {
 
     ColumnLayout {
         id: clockColumn
-        spacing: Kirigami.Units.largeSpacing
+        spacing: 0
         visible: opacity > 0
 
         anchors.top: parent.top
@@ -139,11 +143,8 @@ Item {
         PC3.Label {
             id: columnTimeLabel
             color: "white"
-            renderType: Text.NativeRendering
-            font.weight: Font.ExtraLight
-            font.pointSize: 72
-            font.kerning: false
-            font.letterSpacing: 3
+            font.weight: Font.Light
+            font.pixelSize: 72
             horizontalAlignment: Text.AlignLeft
 
             text: root.timeString
@@ -152,9 +153,7 @@ Item {
         PC3.Label {
             id: columnDateLabel
             color: "white"
-            renderType: Text.NativeRendering
-            font.weight: Font.ExtraBold
-            font.pointSize: 22
+            font.pixelSize: 22
             horizontalAlignment: Text.AlignLeft
 
             // HACK: columnTimeLabel is of a large font size, so the internal font padding with thin

@@ -29,6 +29,10 @@ FocusScope {
     // Whether the view has scrolled down at least one row
     readonly property bool scrolledDown: launcherHome.scrolledDown
 
+    function showOptions(app, mover) {
+        // TODO: show options
+    }
+
     onActiveFocusChanged: {
         if (activeFocus && !launcherHome.activeFocus) {
             launcherHome.activateAppView();
@@ -51,5 +55,6 @@ FocusScope {
 
         navigationUp: root.KeyNavigation.up
         startY: root.startY
+        onOptionsRequested: (app, mover) => root.showOptions(app, mover)
     }
 }

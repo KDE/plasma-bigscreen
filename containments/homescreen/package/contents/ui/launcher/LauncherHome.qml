@@ -19,6 +19,7 @@ import "delegates" as Delegates
 import org.kde.bigscreen as Bigscreen
 import org.kde.private.biglauncher 1.0
 import org.kde.plasma.private.kicker 0.1 as Kicker
+import org.kde.taskmanager as TaskManager
 
 FocusScope {
     id: root
@@ -27,14 +28,93 @@ FocusScope {
 
     property real startY
 
+    // Emitted when an app's card is held
+    signal optionsRequested(var app, Item mover)
+
     // Whether the view has scrolled down at least one row
     readonly property bool scrolledDown: launcherHomeColumn.currentSection && launcherHomeColumn.currentSection !== favAppsView.currentViewDownwards
+
+    function requestOptions(storageId: string, name: string, iconName: string, description: string, mover: Item) {
+        if (!storageId) {
+            return;
+        }
+        root.optionsRequested({
+            storageId: storageId,
+            name: name,
+            iconName: iconName,
+            description: description,
+            running: root.isRunning(storageId),
+            canMove: mover !== null
+        }, mover);
+    }
+
+    // Back goes to the first row before it opens the home overlay
+    Bigscreen.BackHandler.enabled: root.scrolledDown
+    Bigscreen.BackHandler.onActivated: {
+        Bigscreen.NavigationRumble.playNavigationRumble();
+        root.activateAppView();
+    }
 
     function activateAppView() {
         favAppsView.currentViewDownwards?.forceActiveFocus();
     }
 
+    // Rows above the focused row fade out, rows below are dimmed
+    function sectionOpacity(section: Item): real {
+        const current = launcherHomeColumn.currentSection;
+        if (!current || section === current) {
+            return 1;
+        }
+        return section.y < current.y ? 0 : 0.5;
+    }
+
     Component.onCompleted: activateAppView()
+
+    TaskManager.TasksModel {
+        id: tasksModel
+        filterByVirtualDesktop: false
+        filterByActivity: false
+        filterNotMaximized: false
+        filterByScreen: false
+        filterHidden: true
+        groupMode: TaskManager.TasksModel.GroupDisabled
+    }
+
+    Instantiator {
+        id: runningApps
+        model: tasksModel
+        delegate: QtObject {
+            required property var model
+            readonly property string appId: model.AppId ?? ""
+        }
+    }
+
+    readonly property var runningAppIds: {
+        const ids = [];
+        for (let i = 0; i < runningApps.count; ++i) {
+            const obj = runningApps.objectAt(i);
+            if (obj && obj.appId.length > 0) {
+                ids.push(obj.appId);
+            }
+        }
+        return ids;
+    }
+
+    function isRunning(storageId: string): bool {
+        if (!storageId) {
+            return false;
+        }
+        const appId = storageId.endsWith(".desktop") ? storageId.slice(0, -8) : storageId;
+        return runningAppIds.includes(storageId) || runningAppIds.includes(appId);
+    }
+
+    Connections {
+        target: Plasmoid.applicationListModel
+
+        function onBlocklistChanged() {
+            recentModel.invalidateFilter();
+        }
+    }
 
     ColumnLayout {
         id: launcherHomeColumn
@@ -82,6 +162,8 @@ FocusScope {
             property var currentViewDownwards: visible ? favAppsView : recentView.currentViewDownwards
 
             title: i18n("Favorites")
+            opacity: root.sectionOpacity(favAppsView)
+            Behavior on opacity { OpacityAnimator { duration: Kirigami.Units.longDuration } }
             model: Plasmoid.favsListModel
             visible: count > 0
             currentIndex: 0
@@ -90,6 +172,8 @@ FocusScope {
                 launcherHomeColumn.currentSection = favAppsView
             delegate: Delegates.FavDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
+                running: modelData ? root.isRunning(modelData.ApplicationStorageIdRole) : false
+                onLongClick: root.requestOptions(modelData.ApplicationStorageIdRole, text, icon.name, subtitle, null)
             }
 
             navigationUp: root.navigationUp
@@ -107,7 +191,10 @@ FocusScope {
             }
 
             title: i18n("Recent")
+            opacity: root.sectionOpacity(recentView)
+            Behavior on opacity { OpacityAnimator { duration: Kirigami.Units.longDuration } }
             model: KItemModels.KSortFilterProxyModel {
+                id: recentModel
                 sourceModel: Kicker.RecentUsageModel {
                     shownItems: Kicker.RecentUsageModel.OnlyApps
                 }
@@ -133,6 +220,9 @@ FocusScope {
                 }
                 iconImage: model.decoration
                 text: model.display
+                subtitle: model.description ?? ""
+                running: root.isRunning(applicationStorageId)
+                onLongClick: root.requestOptions(applicationStorageId, text, "", subtitle, null)
             }
 
             navigationUp: favAppsView.currentViewUpwards
@@ -145,6 +235,8 @@ FocusScope {
             property var currentViewDownwards: visible ? appsView : gamesView.currentViewDownwards
 
             title: i18n("Applications")
+            opacity: root.sectionOpacity(appsView)
+            Behavior on opacity { OpacityAnimator { duration: Kirigami.Units.longDuration } }
             visible: Plasmoid.configuration.showApplications && count > 0
             enabled: count > 0
             model: KItemModels.KSortFilterProxyModel {
@@ -162,6 +254,8 @@ FocusScope {
                 launcherHomeColumn.currentSection = appsView
             delegate: Delegates.AppDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
+                running: root.isRunning(applicationStorageId)
+                onLongClick: root.requestOptions(applicationStorageId, text, icon.name, subtitle, null)
             }
 
             navigationUp: recentView.currentViewUpwards
@@ -174,6 +268,10 @@ FocusScope {
             property var currentViewDownwards: visible ? gamesView : null
 
             title: i18n("Games")
+            opacity: root.sectionOpacity(gamesView)
+            Behavior on opacity { OpacityAnimator { duration: Kirigami.Units.longDuration } }
+            columnOffset: -1
+            cardAspectRatio: 215 / 460 // Wider cards for games
             visible: Plasmoid.configuration.showGames && count > 0
             enabled: count > 0
             model: KItemModels.KSortFilterProxyModel {
@@ -190,6 +288,8 @@ FocusScope {
                 launcherHomeColumn.currentSection = gamesView
             delegate: Delegates.AppDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
+                running: root.isRunning(applicationStorageId)
+                onLongClick: root.requestOptions(applicationStorageId, text, icon.name, subtitle, null)
             }
 
             navigationUp: appsView.currentViewUpwards

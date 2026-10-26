@@ -275,9 +275,14 @@ ContainmentItem {
     // Background darken scrim
     Rectangle {
         anchors.fill: parent
-        color: 'black'
-        opacity: homeScreen.darkenBackground ? 0.7 : 0.4
-        Behavior on opacity { NumberAnimation { duration: 500 } }
+        opacity: homeScreen.darkenBackground ? 1 : 0.75
+        Behavior on opacity { NumberAnimation { duration: 500; easing.type: Easing.OutCubic; } }
+
+        gradient: Gradient {
+            GradientStop { position: 0; color: Qt.rgba(0, 0, 0, 0.45) }
+            GradientStop { position: 0.4; color: Qt.rgba(0, 0, 0, 0.55) }
+            GradientStop { position: 1; color: Qt.rgba(0, 0, 0, 0.85) }
+        }
     }
 
     // The homescreen's contents
