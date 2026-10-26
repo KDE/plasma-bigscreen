@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kcm_mediacenter_webapps\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-25 00:52+0000\n"
-"PO-Revision-Date: 2026-10-09 19:38+0200\n"
+"PO-Revision-Date: 2026-10-25 07:45+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -35,12 +35,12 @@ msgstr "Установленные веб-приложения"
 #: ui/main.qml:106
 #, kde-format
 msgid "OK"
-msgstr ""
+msgstr "ОК"
 
 #: ui/main.qml:114
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Отмена"
 
 #: ui/main.qml:140 ui/WebAppInfoSidebar.qml:52
 #, kde-format
@@ -70,26 +70,24 @@ msgstr "Агент пользователя по умолчанию"
 #: ui/WebAppInfoSidebar.qml:76
 #, kde-format
 msgid "Edit"
-msgstr ""
+msgstr "Изменить"
 
 #: ui/WebAppInfoSidebar.qml:83
-#, fuzzy, kde-format
-#| msgid "Delete web app %1?"
+#, kde-format
 msgid "Edit web app %1"
-msgstr "Удалить веб-приложение «%1»?"
+msgstr "Изменение веб-приложения «%1»"
 
 #: ui/WebAppInfoSidebar.qml:106
 #, kde-format
 msgctxt "%1 is the current name of the web app"
 msgid "Name (leave blank for current)"
-msgstr ""
+msgstr "Название (оставьте пустым, чтобы не менять)"
 
 #: ui/WebAppInfoSidebar.qml:115
-#, fuzzy, kde-format
-#| msgid "User agent (empty for default)"
+#, kde-format
 msgctxt "%1 is the user agent of the current web app"
 msgid "User Agent (leave blank for default)"
-msgstr "Агент пользователя (пусто — по умолчанию)"
+msgstr "Агент пользователя (оставьте пустым для значения по умолчанию)"
 
 #: ui/WebAppInfoSidebar.qml:127
 #, kde-format

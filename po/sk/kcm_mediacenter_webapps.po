@@ -35,12 +35,12 @@ msgstr "Nainštalované webové aplikácie"
 #: ui/main.qml:106
 #, kde-format
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: ui/main.qml:114
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušiť"
 
 #: ui/main.qml:140 ui/WebAppInfoSidebar.qml:52
 #, kde-format
@@ -70,26 +70,24 @@ msgstr "Predvolená identifikácia prehliadača"
 #: ui/WebAppInfoSidebar.qml:76
 #, kde-format
 msgid "Edit"
-msgstr ""
+msgstr "Upraviť"
 
 #: ui/WebAppInfoSidebar.qml:83
-#, fuzzy, kde-format
-#| msgid "Delete web app %1?"
+#, kde-format
 msgid "Edit web app %1"
-msgstr "Odstrániť webovú aplikáciu %1?"
+msgstr "Upraviť webovú aplikáciu %1"
 
 #: ui/WebAppInfoSidebar.qml:106
 #, kde-format
 msgctxt "%1 is the current name of the web app"
 msgid "Name (leave blank for current)"
-msgstr ""
+msgstr "Názov (ponechajte prázdne pre aktuálny)"
 
 #: ui/WebAppInfoSidebar.qml:115
-#, fuzzy, kde-format
-#| msgid "User agent (empty for default)"
+#, kde-format
 msgctxt "%1 is the user agent of the current web app"
 msgid "User Agent (leave blank for default)"
-msgstr "Identifikácia prehliadača (prázdne pre predvolený)"
+msgstr "Identifikácia prehliadača (ponechajte prázdne pre predvolenú)"
 
 #: ui/WebAppInfoSidebar.qml:127
 #, kde-format

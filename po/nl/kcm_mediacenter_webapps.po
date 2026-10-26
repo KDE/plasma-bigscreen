@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
-# SPDX-FileCopyrightText: 2025 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2025-2026 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-25 00:52+0000\n"
-"PO-Revision-Date: 2025-08-14 15:02+0200\n"
+"PO-Revision-Date: 2026-10-25 17:13+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: ui/main.qml:16
 #, kde-format
@@ -35,12 +35,12 @@ msgstr "Geïnstalleerde webtoepassingen"
 #: ui/main.qml:106
 #, kde-format
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: ui/main.qml:114
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Annuleren"
 
 #: ui/main.qml:140 ui/WebAppInfoSidebar.qml:52
 #, kde-format
@@ -70,26 +70,24 @@ msgstr "Standaard gebruikersagent"
 #: ui/WebAppInfoSidebar.qml:76
 #, kde-format
 msgid "Edit"
-msgstr ""
+msgstr "Bewerken"
 
 #: ui/WebAppInfoSidebar.qml:83
-#, fuzzy, kde-format
-#| msgid "Delete web app %1?"
+#, kde-format
 msgid "Edit web app %1"
-msgstr "Webtoepassing %1 verwijderen?"
+msgstr "Webtoepassing %1 bewerken"
 
 #: ui/WebAppInfoSidebar.qml:106
 #, kde-format
 msgctxt "%1 is the current name of the web app"
 msgid "Name (leave blank for current)"
-msgstr ""
+msgstr "Naam (leeg laten voor huidige)"
 
 #: ui/WebAppInfoSidebar.qml:115
-#, fuzzy, kde-format
-#| msgid "User agent (empty for default)"
+#, kde-format
 msgctxt "%1 is the user agent of the current web app"
 msgid "User Agent (leave blank for default)"
-msgstr "Gebruikersagent (leeg als standaard)"
+msgstr "Gebruikersagent (leeg laten voor standaard)"
 
 #: ui/WebAppInfoSidebar.qml:127
 #, kde-format
