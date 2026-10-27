@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.mycroft.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-22 02:47+0000\n"
+"POT-Creation-Date: 2026-10-27 03:19+0000\n"
 "PO-Revision-Date: 2022-01-07 14:58+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -22,7 +22,7 @@ msgid "Edit Home Screen"
 msgstr "Upraviť domovskú obrazovku"
 
 #: contents/ui/FavoritesManager.qml:144
-#: contents/ui/launcher/LauncherHome.qml:84
+#: contents/ui/launcher/LauncherHome.qml:164
 #, kde-format
 msgid "Favorites"
 msgstr "Obľúbené"
@@ -186,17 +186,22 @@ msgstr "Nastavenia zvuku"
 msgid "Internet Settings"
 msgstr "Nastavenia"
 
-#: contents/ui/launcher/LauncherHome.qml:109
+#: contents/ui/launcher/delegates/IconDelegate.qml:275
+#, kde-format
+msgid "Running"
+msgstr ""
+
+#: contents/ui/launcher/LauncherHome.qml:193
 #, kde-format
 msgid "Recent"
 msgstr "Nedávne"
 
-#: contents/ui/launcher/LauncherHome.qml:147
+#: contents/ui/launcher/LauncherHome.qml:237
 #, kde-format
 msgid "Applications"
 msgstr "Aplikácie"
 
-#: contents/ui/launcher/LauncherHome.qml:176
+#: contents/ui/launcher/LauncherHome.qml:270
 #, kde-format
 msgid "Games"
 msgstr "Hry"

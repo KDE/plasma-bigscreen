@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-22 02:47+0000\n"
-"PO-Revision-Date: 2026-07-17 16:05+0200\n"
+"PO-Revision-Date: 2026-10-26 16:32+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -35,7 +35,7 @@ msgstr "Slideshow (Sequentia de diapositivas)"
 
 #: contents/lockscreen/LockScreen.qml:53
 msgid "Unlocking failed"
-msgstr ""
+msgstr "Il falleva disblocar"
 
 #: contents/lockscreen/PasswordDialog.qml:51
 msgid "Password"
@@ -48,7 +48,7 @@ msgstr "Disbloca schermo"
 #: contents/logout/Logout.qml:152
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
+msgstr[0] "Installante actualisationes de software e reinitiante in 1 secunda"
 msgstr[1] ""
 "Installante actualisationes de software e reinitiante in %1 secundas"
 

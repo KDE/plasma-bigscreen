@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-22 02:47+0000\n"
+"POT-Creation-Date: 2026-10-27 03:19+0000\n"
 "PO-Revision-Date: 2026-05-16 12:20+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -25,7 +25,7 @@ msgid "Edit Home Screen"
 msgstr "Wyjdź z Dużego Ekranu"
 
 #: contents/ui/FavoritesManager.qml:144
-#: contents/ui/launcher/LauncherHome.qml:84
+#: contents/ui/launcher/LauncherHome.qml:164
 #, kde-format
 msgid "Favorites"
 msgstr "Ulubione"
@@ -192,17 +192,22 @@ msgstr "Ustawienia dźwięku"
 msgid "Internet Settings"
 msgstr "Ustawienia internetowe"
 
-#: contents/ui/launcher/LauncherHome.qml:109
+#: contents/ui/launcher/delegates/IconDelegate.qml:275
+#, kde-format
+msgid "Running"
+msgstr ""
+
+#: contents/ui/launcher/LauncherHome.qml:193
 #, kde-format
 msgid "Recent"
 msgstr "Ostatnie"
 
-#: contents/ui/launcher/LauncherHome.qml:147
+#: contents/ui/launcher/LauncherHome.qml:237
 #, kde-format
 msgid "Applications"
 msgstr "Aplikacje"
 
-#: contents/ui/launcher/LauncherHome.qml:176
+#: contents/ui/launcher/LauncherHome.qml:270
 #, kde-format
 msgid "Games"
 msgstr "Gry"

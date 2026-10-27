@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-22 02:47+0000\n"
+"POT-Creation-Date: 2026-10-27 03:19+0000\n"
 "PO-Revision-Date: 2026-07-22 17:19-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -25,7 +25,7 @@ msgid "Edit Home Screen"
 msgstr "چوڭ ئېكراندىن چېكىن"
 
 #: contents/ui/FavoritesManager.qml:144
-#: contents/ui/launcher/LauncherHome.qml:84
+#: contents/ui/launcher/LauncherHome.qml:164
 #, kde-format
 msgid "Favorites"
 msgstr "يىغقۇچ"
@@ -192,17 +192,22 @@ msgstr "ئۈن تەڭشىكى"
 msgid "Internet Settings"
 msgstr "ئىنتېرنېت تەڭشىكى"
 
-#: contents/ui/launcher/LauncherHome.qml:109
+#: contents/ui/launcher/delegates/IconDelegate.qml:275
+#, kde-format
+msgid "Running"
+msgstr ""
+
+#: contents/ui/launcher/LauncherHome.qml:193
 #, kde-format
 msgid "Recent"
 msgstr "يېقىنقى"
 
-#: contents/ui/launcher/LauncherHome.qml:147
+#: contents/ui/launcher/LauncherHome.qml:237
 #, kde-format
 msgid "Applications"
 msgstr "پىروگرامما"
 
-#: contents/ui/launcher/LauncherHome.qml:176
+#: contents/ui/launcher/LauncherHome.qml:270
 #, kde-format
 msgid "Games"
 msgstr "ئويۇن"
