@@ -65,7 +65,10 @@ int main(int argc, char *argv[])
     QQuickWindow *mainWindow = qobject_cast<QQuickWindow *>(engine.rootObjects().first());
     Q_ASSERT(mainWindow);
 
-    QObject::connect(service, &KDBusService::activateRequested, &app, [mainWindow](const QStringList & /*arguments*/, const QString & /*workingDirectory*/) {
+    QObject::connect(service, &KDBusService::activateRequested, &app, [mainWindow, settingsApp](const QStringList &arguments, const QString & /*workingDirectory*/) {
+        // Only set a new module if the argument count is 3 (command, "-m", module)
+        if (arguments.count() == 3) settingsApp->setLaunchModule(arguments[2]);
+
         // HACK: raise window when module is requested;
         // requestActivate() by itself doesn't seem to work
         mainWindow->hide();

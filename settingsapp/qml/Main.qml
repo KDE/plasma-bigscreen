@@ -34,12 +34,12 @@ Window {
 
     Component.onCompleted: {
         KcmsListModel.loadKcms();
+        showOverlay();
+    }
 
-        if (SettingsApp.launchModule.length === 0) {
-            showOverlay();
-        } else {
-            showOverlay(SettingsApp.launchModule);
-        }
+    Connections {
+        target: SettingsApp
+        function onLaunchModuleChanged() { showOverlay(); }
     }
 
     // Timer utility with callback
@@ -57,22 +57,22 @@ Window {
         }
     }
 
-    function showOverlay(moduleName=undefined) {
+    function showOverlay() {
         root.showFullScreen();
 
         timer.setTimeout(function () {
             // Force active focus on either the sidebar or content
-            if ((moduleName === undefined) || (root.loadedKCMPage === null)) {
+            if ((SettingsApp.launchModule.length === 0) || (root.loadedKCMPage === null)) {
                 root.settingsKCMMenu.forceActiveFocus();
             } else {
                 root.loadedKCMPage.forceActiveFocus();
             }
         }, 100);
 
-        if (moduleName === undefined) {
+        if (SettingsApp.launchModule.length === 0) {
             openModule(KcmsListModel.get(0).kcmId);
         } else {
-            openModule(moduleName);
+            openModule(SettingsApp.launchModule);
         }
     }
 
