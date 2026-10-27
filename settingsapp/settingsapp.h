@@ -14,7 +14,7 @@ class SettingsApp : public QObject
     QML_ELEMENT
     QML_SINGLETON
 
-    Q_PROPERTY(QString launchModule READ launchModule CONSTANT)
+    Q_PROPERTY(QString launchModule READ launchModule NOTIFY launchModuleChanged)
 
 public:
     SettingsApp(QObject *parent = nullptr);
@@ -26,6 +26,9 @@ public:
     void setLaunchModule(QString launchModule);
 
     Q_INVOKABLE void openDesktopSettings();
+
+Q_SIGNALS:
+    void launchModuleChanged();
 
 private:
     QString m_launchModule;

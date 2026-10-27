@@ -34,6 +34,7 @@ QString SettingsApp::launchModule() const
 void SettingsApp::setLaunchModule(QString launchModule)
 {
     m_launchModule = launchModule;
+    Q_EMIT launchModuleChanged();
 }
 
 void SettingsApp::openDesktopSettings()
