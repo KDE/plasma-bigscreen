@@ -102,6 +102,3 @@ msgstr "Slett"
 #, kde-format
 msgid "Delete web app %1?"
 msgstr "Vil du sletta vev-appen %1?"
-
-#~ msgid "Add Web Application"
-#~ msgstr "Legg til vev-app"

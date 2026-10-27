@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-22 00:52+0000\n"
+"POT-Creation-Date: 2026-10-27 01:01+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -24,7 +24,7 @@ msgid "Edit Home Screen"
 msgstr "编辑主屏幕"
 
 #: contents/ui/FavoritesManager.qml:144
-#: contents/ui/launcher/LauncherHome.qml:100
+#: contents/ui/launcher/LauncherHome.qml:189
 #, kde-format
 msgid "Favorites"
 msgstr "收藏"
@@ -210,17 +210,22 @@ msgstr "音频设置"
 msgid "Internet Settings"
 msgstr "互联网设置"
 
-#: contents/ui/launcher/LauncherHome.qml:126
+#: contents/ui/launcher/delegates/IconDelegate.qml:275
+#, kde-format
+msgid "Running"
+msgstr ""
+
+#: contents/ui/launcher/LauncherHome.qml:227
 #, kde-format
 msgid "Recent"
 msgstr "最近"
 
-#: contents/ui/launcher/LauncherHome.qml:165
+#: contents/ui/launcher/LauncherHome.qml:275
 #, kde-format
 msgid "Applications"
 msgstr "应用"
 
-#: contents/ui/launcher/LauncherHome.qml:195
+#: contents/ui/launcher/LauncherHome.qml:311
 #, kde-format
 msgid "Games"
 msgstr "游戏"

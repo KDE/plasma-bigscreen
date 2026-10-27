@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-22 00:52+0000\n"
+"POT-Creation-Date: 2026-10-27 01:01+0000\n"
 "PO-Revision-Date: 2026-10-01 01:19+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -27,7 +27,7 @@ msgid "Edit Home Screen"
 msgstr "編輯主畫面"
 
 #: contents/ui/FavoritesManager.qml:144
-#: contents/ui/launcher/LauncherHome.qml:100
+#: contents/ui/launcher/LauncherHome.qml:189
 #, kde-format
 msgid "Favorites"
 msgstr "最愛"
@@ -214,17 +214,22 @@ msgstr "音效設定"
 msgid "Internet Settings"
 msgstr "網際網路設定"
 
-#: contents/ui/launcher/LauncherHome.qml:126
+#: contents/ui/launcher/delegates/IconDelegate.qml:275
+#, kde-format
+msgid "Running"
+msgstr ""
+
+#: contents/ui/launcher/LauncherHome.qml:227
 #, kde-format
 msgid "Recent"
 msgstr "最近"
 
-#: contents/ui/launcher/LauncherHome.qml:165
+#: contents/ui/launcher/LauncherHome.qml:275
 #, kde-format
 msgid "Applications"
 msgstr "應用程式"
 
-#: contents/ui/launcher/LauncherHome.qml:195
+#: contents/ui/launcher/LauncherHome.qml:311
 #, kde-format
 msgid "Games"
 msgstr "遊戲"
