@@ -309,3 +309,61 @@ void ApplicationListSearchModel::maximizeApplication(const QString &storageId)
         }
     }
 }
+
+QVariantMap ApplicationListSearchModel::itemMapForStorageId(const QString &storageId)
+{
+    for (int row = 0; row < rowCount(); ++row) {
+        if (data(index(row, 0), ApplicationListModel::ApplicationStorageIdRole).toString() == storageId) {
+            return itemMap(row);
+        }
+    }
+    return {};
+}
+
+void ApplicationListSearchModel::setApplicationBlocklisted(const QString &storageId, bool blocklisted)
+{
+    KService::Ptr service = KService::serviceByStorageId(storageId);
+    if (!service) {
+        return;
+    }
+
+    QStringList blacklist = applicationsBlacklist();
+    const QString name = service->desktopEntryName();
+    if (blocklisted == blacklist.contains(name)) {
+        return;
+    }
+
+    if (blocklisted) {
+        blacklist.append(name);
+    } else {
+        blacklist.removeAll(name);
+    }
+
+    auto cfg = KSharedConfig::openConfig(QStringLiteral("applications-blacklistrc"));
+    KConfigGroup group(cfg, QStringLiteral("Applications"));
+    group.writeEntry("blacklist", blacklist);
+    cfg->sync();
+
+    if (auto model = qobject_cast<ApplicationListModel *>(sourceModel())) {
+        model->loadApplications();
+    }
+    Q_EMIT blocklistChanged();
+}
+
+QVariantList ApplicationListSearchModel::blocklistedApplications() const
+{
+    QVariantList list;
+    const QStringList blacklist = applicationsBlacklist();
+    for (const QString &name : blacklist) {
+        const KService::Ptr service = KService::serviceByDesktopName(name);
+        if (!service || service->noDisplay()) {
+            continue;
+        }
+        QVariantMap map;
+        map[QStringLiteral("storageId")] = service->storageId();
+        map[QStringLiteral("name")] = service->name();
+        map[QStringLiteral("icon")] = service->icon();
+        list.append(map);
+    }
+    return list;
+}

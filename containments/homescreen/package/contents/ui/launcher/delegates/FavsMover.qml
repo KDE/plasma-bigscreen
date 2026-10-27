@@ -140,7 +140,7 @@ Item {
     FavDelegate {
         id: delegate
         anchors.fill: parent
-        onLongClick: root.startMoving()
+        onLongClick: root.optionsRequested()
         forceCurrent: local.moverMode
         lifted: local.moverMode
         running: root.running

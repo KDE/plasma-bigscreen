@@ -86,7 +86,15 @@ public:
     Q_INVOKABLE bool isApplicationBlocklisted(const QString &storageId) const;
     Q_INVOKABLE bool isApplicationRunning(const QString &storageId) const;
     Q_INVOKABLE void maximizeApplication(const QString &storageId);
+
     Q_INVOKABLE QVariantMap itemMap(int index);
+    Q_INVOKABLE QVariantMap itemMapForStorageId(const QString &storageId);
+
+    Q_INVOKABLE void setApplicationBlocklisted(const QString &storageId, bool blocklisted);
+    Q_INVOKABLE QVariantList blocklistedApplications() const;
+
+Q_SIGNALS:
+    void blocklistChanged();
 
 private:
     TaskManager::TasksModel *m_tasksModel = nullptr;

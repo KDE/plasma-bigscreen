@@ -139,9 +139,9 @@ Window {
                         spacing: Kirigami.Units.largeSpacing
                         keyNavigationEnabled: true
 
-                        KeyNavigation.right: root.currentPageIndex === 0 ? favsContainerAddSection : showRecentToggle
+                        KeyNavigation.right: [favsContainerAddSection, showRecentToggle, hiddenAppsList][root.currentPageIndex]
 
-                        model: [i18n("Favorites"), i18n("Launcher Sections")]
+                        model: [i18n("Favorites"), i18n("Launcher Sections"), i18n("Hidden Apps")]
 
                         onCurrentItemChanged: {
                             if (currentItem) {
@@ -197,7 +197,7 @@ Window {
                     Layout.fillHeight: true
                     Layout.fillWidth: true
                     currentIndex: root.currentPageIndex
-                    
+
                     ColumnLayout {
                         Layout.fillHeight: true
                         Layout.fillWidth: true
@@ -207,13 +207,17 @@ Window {
                             font.pixelSize: Bigscreen.Units.headingFontPixelSize
                             elide: Text.ElideRight
                             Layout.leftMargin: Kirigami.Units.gridUnit
+                            Layout.rightMargin: Kirigami.Units.gridUnit
                             Layout.topMargin: Kirigami.Units.gridUnit
                             Layout.bottomMargin: Kirigami.Units.largeSpacing
+                            Layout.fillWidth: true
                         }
                         Controls.Label {
-                            text: i18n("To change the order of the favorites, open the launcher and tap and hold an app in the favorites list.")
+                            text: i18n("To change the order of the favorites, hold the select button on a favorite on the home screen and choose Move.")
                             wrapMode: Text.WordWrap
+                            Layout.fillWidth: true
                             Layout.leftMargin: Kirigami.Units.gridUnit
+                            Layout.rightMargin: Kirigami.Units.gridUnit
                             font.pixelSize: Bigscreen.Units.defaultFontPixelSize
                             color: Kirigami.Theme.disabledTextColor
                         }
@@ -370,6 +374,80 @@ Window {
                         }
 
                         Item { Layout.fillHeight: true }
+                    }
+
+                    ColumnLayout {
+                        id: hiddenAppsPage
+                        Layout.fillHeight: true
+                        Layout.fillWidth: true
+                        spacing: Kirigami.Units.smallSpacing
+
+                        property var hiddenApps: []
+
+                        function reload() {
+                            hiddenApps = Plasmoid.applicationListModel.blocklistedApplications();
+                        }
+
+                        Component.onCompleted: reload()
+
+                        Connections {
+                            target: root
+                            function onVisibleChanged() {
+                                if (root.visible) {
+                                    hiddenAppsPage.reload();
+                                }
+                            }
+                        }
+
+                        Connections {
+                            target: Plasmoid.applicationListModel
+                            function onBlocklistChanged() {
+                                hiddenAppsPage.reload();
+                            }
+                        }
+
+                        Controls.Label {
+                            text: i18n("Hidden Apps")
+                            font.pixelSize: Bigscreen.Units.headingFontPixelSize
+                            elide: Text.ElideRight
+                            Layout.leftMargin: Kirigami.Units.gridUnit
+                            Layout.topMargin: Kirigami.Units.gridUnit
+                            Layout.bottomMargin: Kirigami.Units.largeSpacing
+                        }
+
+                        ListView {
+                            id: hiddenAppsList
+
+                            Layout.margins: Kirigami.Units.gridUnit
+                            Layout.fillWidth: true
+                            Layout.fillHeight: true
+                            KeyNavigation.left: pagePickerList
+
+                            model: hiddenAppsPage.hiddenApps
+                            clip: true
+                            keyNavigationEnabled: true
+                            spacing: Kirigami.Units.smallSpacing
+
+                            Kirigami.Theme.inherit: false
+                            Kirigami.Theme.colorSet: Kirigami.Theme.Window
+
+                            delegate: Bigscreen.ButtonDelegate {
+                                required property var modelData
+
+                                width: hiddenAppsList.width
+                                text: modelData.name
+                                icon.name: modelData.icon
+                                trailing: Kirigami.Icon {
+                                    source: "view-visible-symbolic"
+                                    implicitWidth: Kirigami.Units.iconSizes.smallMedium
+                                    implicitHeight: Kirigami.Units.iconSizes.smallMedium
+                                }
+                                onClicked: {
+                                    Plasmoid.applicationListModel.setApplicationBlocklisted(modelData.storageId, false);
+                                    Bigscreen.NavigationRumble.playConfirmRumble();
+                                }
+                            }
+                        }
                     }
                 }
             }

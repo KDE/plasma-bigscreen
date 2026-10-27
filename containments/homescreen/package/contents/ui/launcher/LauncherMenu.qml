@@ -39,7 +39,24 @@ FocusScope {
     property int currentView: LauncherMenu.CurrentView.Home;
 
     function showOptions(app, mover) {
-        // TODO: show options
+        optionsDrawer.mover = mover;
+        optionsDrawer.openFor(app, root.Window.activeFocusItem);
+    }
+
+    readonly property Item windowOverlay: Controls.Overlay.overlay
+
+    AppOptionsDrawer {
+        id: optionsDrawer
+        parent: root.windowOverlay
+
+        // Favorite card to move with the "Move" action
+        property Item mover
+
+        onMoveRequested: {
+            if (mover) {
+                mover.startMoving();
+            }
+        }
     }
 
     onActiveFocusChanged: {
