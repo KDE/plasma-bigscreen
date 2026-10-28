@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-27 01:01+0000\n"
-"PO-Revision-Date: 2026-10-17 21:05+0200\n"
+"POT-Creation-Date: 2026-10-28 01:02+0000\n"
+"PO-Revision-Date: 2026-10-27 16:57+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
 #, kde-format
@@ -29,61 +29,71 @@ msgstr "Uredi domači zaslon"
 msgid "Favorites"
 msgstr "Priljubljeni"
 
-#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:315
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:319
 #, kde-format
 msgid "Launcher Sections"
 msgstr "Oddelki zaganjalnika"
+
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:410
+#, fuzzy, kde-format
+#| msgctxt "As in: These apps are currently opened"
+#| msgid "Open Apps"
+msgid "Hidden Apps"
+msgstr "Odpri aplikacije"
 
 #: contents/ui/FavoritesManager.qml:206
 #, kde-format
 msgid "Change Favorites Order"
 msgstr "Spremeni vrstni red priljubljenih"
 
-#: contents/ui/FavoritesManager.qml:214
-#, kde-format
+#: contents/ui/FavoritesManager.qml:216
+#, fuzzy, kde-format
+#| msgid ""
+#| "To change the order of the favorites, open the launcher and tap and hold "
+#| "an app in the favorites list."
 msgid ""
-"To change the order of the favorites, open the launcher and tap and hold an "
-"app in the favorites list."
+"To change the order of the favorites, hold the select button on a favorite "
+"on the home screen and choose Move."
 msgstr ""
 "Če želite spremeniti vrstni red priljubljenih elementov, odprite zaganjalnik "
 "ter se dotaknite aplikacije na seznamu priljubljenih in jo pridržite."
 
-#: contents/ui/FavoritesManager.qml:244
+#: contents/ui/FavoritesManager.qml:248
 #, kde-format
 msgid "Add Favorites"
 msgstr "Dodaj priljubljene"
 
-#: contents/ui/FavoritesManager.qml:284
+#: contents/ui/FavoritesManager.qml:288
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Odstrani priljubljene"
 
-#: contents/ui/FavoritesManager.qml:329
+#: contents/ui/FavoritesManager.qml:333
 #, kde-format
 msgid "Show Recent"
 msgstr "Prikaži nedavne"
 
-#: contents/ui/FavoritesManager.qml:330
+#: contents/ui/FavoritesManager.qml:334
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
 msgstr "Nedavno zagnane aplikacije se prikažejo v vrstici na domačem zaslonu"
 
-#: contents/ui/FavoritesManager.qml:345
+#: contents/ui/FavoritesManager.qml:349
 #, kde-format
 msgid "Show Applications"
 msgstr "Pokaži aplikacije"
 
-#: contents/ui/FavoritesManager.qml:346
+#: contents/ui/FavoritesManager.qml:350
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
 msgstr "Aplikacije, ki niso igre, se prikažejo v vrstici na domačem zaslonu"
 
-#: contents/ui/FavoritesManager.qml:362
+#: contents/ui/FavoritesManager.qml:366
 #, kde-format
 msgid "Show Games"
 msgstr "Prikaži igre"
 
-#: contents/ui/FavoritesManager.qml:363
+#: contents/ui/FavoritesManager.qml:367
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
 msgstr "Aplikacije v kategoriji Igre se prikažejo v vrstici na domačem zaslonu"
@@ -212,10 +222,51 @@ msgstr "Nastavitve zvoka"
 msgid "Internet Settings"
 msgstr "Nastavitve interneta"
 
+#: contents/ui/launcher/AppOptionsDrawer.qml:83
+#, fuzzy, kde-format
+#| msgid "Add Favorites"
+msgid "Added %1 to Favorites"
+msgstr "Dodaj priljubljene"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:87
+#, fuzzy, kde-format
+#| msgid "Remove Favorites"
+msgid "Removed %1 from Favorites"
+msgstr "Odstrani priljubljene"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:92
+#, kde-format
+msgid "%1 hidden. Show it again from Edit Home Screen."
+msgstr ""
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:111
+#, kde-format
+msgid "Move"
+msgstr ""
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:114
+#, fuzzy, kde-format
+#| msgid "Remove Favorites"
+msgid "Remove from Favorites"
+msgstr "Odstrani priljubljene"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:115
+#, fuzzy, kde-format
+#| msgid "Add Favorites"
+msgid "Add to Favorites"
+msgstr "Dodaj priljubljene"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:116
+#, fuzzy, kde-format
+#| msgid "Edit Home Screen"
+msgid "Hide from Homescreen"
+msgstr "Uredi domači zaslon"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:131
 #: contents/ui/launcher/delegates/IconDelegate.qml:275
 #, kde-format
 msgid "Running"
-msgstr ""
+msgstr "V teku"
 
 #: contents/ui/launcher/LauncherHome.qml:227
 #, kde-format

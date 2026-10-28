@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-27 01:01+0000\n"
+"POT-Creation-Date: 2026-10-28 01:02+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -29,59 +29,66 @@ msgstr "编辑主屏幕"
 msgid "Favorites"
 msgstr "收藏"
 
-#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:315
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:319
 #, kde-format
 msgid "Launcher Sections"
 msgstr "启动器分区"
+
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:410
+#, fuzzy, kde-format
+#| msgctxt "As in: These apps are currently opened"
+#| msgid "Open Apps"
+msgid "Hidden Apps"
+msgstr "打开应用"
 
 #: contents/ui/FavoritesManager.qml:206
 #, kde-format
 msgid "Change Favorites Order"
 msgstr ""
 
-#: contents/ui/FavoritesManager.qml:214
+#: contents/ui/FavoritesManager.qml:216
 #, kde-format
 msgid ""
-"To change the order of the favorites, open the launcher and tap and hold an "
-"app in the favorites list."
+"To change the order of the favorites, hold the select button on a favorite "
+"on the home screen and choose Move."
 msgstr ""
 
-#: contents/ui/FavoritesManager.qml:244
+#: contents/ui/FavoritesManager.qml:248
 #, kde-format
 msgid "Add Favorites"
 msgstr "添加收藏"
 
-#: contents/ui/FavoritesManager.qml:284
+#: contents/ui/FavoritesManager.qml:288
 #, kde-format
 msgid "Remove Favorites"
 msgstr "移除收藏"
 
-#: contents/ui/FavoritesManager.qml:329
+#: contents/ui/FavoritesManager.qml:333
 #, kde-format
 msgid "Show Recent"
 msgstr "显示最近应用"
 
-#: contents/ui/FavoritesManager.qml:330
+#: contents/ui/FavoritesManager.qml:334
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
 msgstr "在主屏幕的一行上显示最近启动的应用"
 
-#: contents/ui/FavoritesManager.qml:345
+#: contents/ui/FavoritesManager.qml:349
 #, kde-format
 msgid "Show Applications"
 msgstr "显示应用"
 
-#: contents/ui/FavoritesManager.qml:346
+#: contents/ui/FavoritesManager.qml:350
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
 msgstr "在主屏幕的一行上显示非游戏类应用"
 
-#: contents/ui/FavoritesManager.qml:362
+#: contents/ui/FavoritesManager.qml:366
 #, kde-format
 msgid "Show Games"
 msgstr "显示游戏"
 
-#: contents/ui/FavoritesManager.qml:363
+#: contents/ui/FavoritesManager.qml:367
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
 msgstr "在主屏幕的一行上显示游戏类应用"
@@ -210,6 +217,47 @@ msgstr "音频设置"
 msgid "Internet Settings"
 msgstr "互联网设置"
 
+#: contents/ui/launcher/AppOptionsDrawer.qml:83
+#, fuzzy, kde-format
+#| msgid "Add Favorites"
+msgid "Added %1 to Favorites"
+msgstr "添加收藏"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:87
+#, fuzzy, kde-format
+#| msgid "Remove Favorites"
+msgid "Removed %1 from Favorites"
+msgstr "移除收藏"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:92
+#, kde-format
+msgid "%1 hidden. Show it again from Edit Home Screen."
+msgstr ""
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:111
+#, kde-format
+msgid "Move"
+msgstr ""
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:114
+#, fuzzy, kde-format
+#| msgid "Remove Favorites"
+msgid "Remove from Favorites"
+msgstr "移除收藏"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:115
+#, fuzzy, kde-format
+#| msgid "Add Favorites"
+msgid "Add to Favorites"
+msgstr "添加收藏"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:116
+#, fuzzy, kde-format
+#| msgid "Edit Home Screen"
+msgid "Hide from Homescreen"
+msgstr "编辑主屏幕"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:131
 #: contents/ui/launcher/delegates/IconDelegate.qml:275
 #, kde-format
 msgid "Running"

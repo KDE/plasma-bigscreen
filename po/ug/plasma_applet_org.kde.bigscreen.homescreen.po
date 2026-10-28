@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-27 01:01+0000\n"
+"POT-Creation-Date: 2026-10-28 01:02+0000\n"
 "PO-Revision-Date: 2026-10-03 18:54-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -29,61 +29,71 @@ msgstr "باش ئېكراننى تەھرىرلە"
 msgid "Favorites"
 msgstr "يىغقۇچ"
 
-#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:315
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:319
 #, kde-format
 msgid "Launcher Sections"
 msgstr "قوزغاتقۇچ بۆلىكى"
+
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:410
+#, fuzzy, kde-format
+#| msgctxt "As in: These apps are currently opened"
+#| msgid "Open Apps"
+msgid "Hidden Apps"
+msgstr "ئوچۇق ئەپ"
 
 #: contents/ui/FavoritesManager.qml:206
 #, kde-format
 msgid "Change Favorites Order"
 msgstr "مايىللىق تەرتىپىنى ئۆزگەرت"
 
-#: contents/ui/FavoritesManager.qml:214
-#, kde-format
+#: contents/ui/FavoritesManager.qml:216
+#, fuzzy, kde-format
+#| msgid ""
+#| "To change the order of the favorites, open the launcher and tap and hold "
+#| "an app in the favorites list."
 msgid ""
-"To change the order of the favorites, open the launcher and tap and hold an "
-"app in the favorites list."
+"To change the order of the favorites, hold the select button on a favorite "
+"on the home screen and choose Move."
 msgstr ""
 "مايىللىق تەرتىپىنى ئۆزگەرتىشتە، قوزغاتقۇچنى ئېچىپ، يىغقۇچ تىزىمىدا ئەپنى "
 "چېكىپ ۋە بېسىپ تۇرسا بولىدۇ."
 
-#: contents/ui/FavoritesManager.qml:244
+#: contents/ui/FavoritesManager.qml:248
 #, kde-format
 msgid "Add Favorites"
 msgstr "يىغقۇچقا قوش"
 
-#: contents/ui/FavoritesManager.qml:284
+#: contents/ui/FavoritesManager.qml:288
 #, kde-format
 msgid "Remove Favorites"
 msgstr "يىغقۇچتىن چىقىرىۋەت"
 
-#: contents/ui/FavoritesManager.qml:329
+#: contents/ui/FavoritesManager.qml:333
 #, kde-format
 msgid "Show Recent"
 msgstr "يېقىنقىنى كۆرسەت"
 
-#: contents/ui/FavoritesManager.qml:330
+#: contents/ui/FavoritesManager.qml:334
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
 msgstr "يېقىندا ئىجرا قىلىنغان پىروگرامما باش ئېكراندىكى قۇردا كۆرۈنىدۇ"
 
-#: contents/ui/FavoritesManager.qml:345
+#: contents/ui/FavoritesManager.qml:349
 #, kde-format
 msgid "Show Applications"
 msgstr "پىروگراممىنى كۆرسەت"
 
-#: contents/ui/FavoritesManager.qml:346
+#: contents/ui/FavoritesManager.qml:350
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
 msgstr "ئويۇن ئەمەس پىروگرامما باش ئېكراندىكى قۇردا كۆرۈنىدۇ"
 
-#: contents/ui/FavoritesManager.qml:362
+#: contents/ui/FavoritesManager.qml:366
 #, kde-format
 msgid "Show Games"
 msgstr "ئويۇننى كۆرسەت"
 
-#: contents/ui/FavoritesManager.qml:363
+#: contents/ui/FavoritesManager.qml:367
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
 msgstr "ئويۇن سەھىپىسىدىكى پىروگرامما باش ئېكراندىكى قۇردا كۆرۈنىدۇ"
@@ -212,6 +222,47 @@ msgstr "ئۈن تەڭشىكى"
 msgid "Internet Settings"
 msgstr "ئىنتېرنېت تەڭشىكى"
 
+#: contents/ui/launcher/AppOptionsDrawer.qml:83
+#, fuzzy, kde-format
+#| msgid "Add Favorites"
+msgid "Added %1 to Favorites"
+msgstr "يىغقۇچقا قوش"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:87
+#, fuzzy, kde-format
+#| msgid "Remove Favorites"
+msgid "Removed %1 from Favorites"
+msgstr "يىغقۇچتىن چىقىرىۋەت"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:92
+#, kde-format
+msgid "%1 hidden. Show it again from Edit Home Screen."
+msgstr ""
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:111
+#, kde-format
+msgid "Move"
+msgstr ""
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:114
+#, fuzzy, kde-format
+#| msgid "Remove Favorites"
+msgid "Remove from Favorites"
+msgstr "يىغقۇچتىن چىقىرىۋەت"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:115
+#, fuzzy, kde-format
+#| msgid "Add Favorites"
+msgid "Add to Favorites"
+msgstr "يىغقۇچقا قوش"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:116
+#, fuzzy, kde-format
+#| msgid "Edit Home Screen"
+msgid "Hide from Homescreen"
+msgstr "باش ئېكراننى تەھرىرلە"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:131
 #: contents/ui/launcher/delegates/IconDelegate.qml:275
 #, kde-format
 msgid "Running"

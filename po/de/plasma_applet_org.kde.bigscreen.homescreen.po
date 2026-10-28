@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.bigscreen.homescreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-27 01:01+0000\n"
+"POT-Creation-Date: 2026-10-28 01:02+0000\n"
 "PO-Revision-Date: 2026-10-12 11:53+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -30,65 +30,75 @@ msgstr "Startbildschirm bearbeiten"
 msgid "Favorites"
 msgstr "Favoriten"
 
-#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:315
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:319
 #, kde-format
 msgid "Launcher Sections"
 msgstr "Starter-Abschnitte"
+
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:410
+#, fuzzy, kde-format
+#| msgctxt "As in: These apps are currently opened"
+#| msgid "Open Apps"
+msgid "Hidden Apps"
+msgstr "Offene Anwendungen"
 
 #: contents/ui/FavoritesManager.qml:206
 #, kde-format
 msgid "Change Favorites Order"
 msgstr "Reihenfolge der Favoriten ändern"
 
-#: contents/ui/FavoritesManager.qml:214
-#, kde-format
+#: contents/ui/FavoritesManager.qml:216
+#, fuzzy, kde-format
+#| msgid ""
+#| "To change the order of the favorites, open the launcher and tap and hold "
+#| "an app in the favorites list."
 msgid ""
-"To change the order of the favorites, open the launcher and tap and hold an "
-"app in the favorites list."
+"To change the order of the favorites, hold the select button on a favorite "
+"on the home screen and choose Move."
 msgstr ""
 "Die Reihenfolge der Favoriten im Starter kann durch Antippen, Halten und "
 "Verschieben der Anwendungssymbole in der Favoritenliste geändert werden."
 
-#: contents/ui/FavoritesManager.qml:244
+#: contents/ui/FavoritesManager.qml:248
 #, kde-format
 msgid "Add Favorites"
 msgstr "Favoriten hinzufügen"
 
-#: contents/ui/FavoritesManager.qml:284
+#: contents/ui/FavoritesManager.qml:288
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Favoriten entfernen"
 
-#: contents/ui/FavoritesManager.qml:329
+#: contents/ui/FavoritesManager.qml:333
 #, kde-format
 msgid "Show Recent"
 msgstr "Zuletzt verwendete anzeigen"
 
-#: contents/ui/FavoritesManager.qml:330
+#: contents/ui/FavoritesManager.qml:334
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
 msgstr ""
 "Kürzlich gestartete Anwendungen erscheinen in einer Zeile des "
 "Startbildschirms"
 
-#: contents/ui/FavoritesManager.qml:345
+#: contents/ui/FavoritesManager.qml:349
 #, kde-format
 msgid "Show Applications"
 msgstr "Anwendungen anzeigen"
 
-#: contents/ui/FavoritesManager.qml:346
+#: contents/ui/FavoritesManager.qml:350
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
 msgstr ""
 "Anwendungen, die keine Spiele sind, erscheinen in einer Zeile auf dem "
 "Startbildschirm"
 
-#: contents/ui/FavoritesManager.qml:362
+#: contents/ui/FavoritesManager.qml:366
 #, kde-format
 msgid "Show Games"
 msgstr "Spiele anzeigen"
 
-#: contents/ui/FavoritesManager.qml:363
+#: contents/ui/FavoritesManager.qml:367
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
 msgstr ""
@@ -219,6 +229,47 @@ msgstr "Audioeinstellungen"
 msgid "Internet Settings"
 msgstr "Interneteinstellungen"
 
+#: contents/ui/launcher/AppOptionsDrawer.qml:83
+#, fuzzy, kde-format
+#| msgid "Add Favorites"
+msgid "Added %1 to Favorites"
+msgstr "Favoriten hinzufügen"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:87
+#, fuzzy, kde-format
+#| msgid "Remove Favorites"
+msgid "Removed %1 from Favorites"
+msgstr "Favoriten entfernen"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:92
+#, kde-format
+msgid "%1 hidden. Show it again from Edit Home Screen."
+msgstr ""
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:111
+#, kde-format
+msgid "Move"
+msgstr ""
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:114
+#, fuzzy, kde-format
+#| msgid "Remove Favorites"
+msgid "Remove from Favorites"
+msgstr "Favoriten entfernen"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:115
+#, fuzzy, kde-format
+#| msgid "Add Favorites"
+msgid "Add to Favorites"
+msgstr "Favoriten hinzufügen"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:116
+#, fuzzy, kde-format
+#| msgid "Edit Home Screen"
+msgid "Hide from Homescreen"
+msgstr "Startbildschirm bearbeiten"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:131
 #: contents/ui/launcher/delegates/IconDelegate.qml:275
 #, kde-format
 msgid "Running"

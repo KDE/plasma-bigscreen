@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-27 01:01+0000\n"
-"PO-Revision-Date: 2026-09-27 21:39+0200\n"
+"POT-Creation-Date: 2026-10-28 01:02+0000\n"
+"PO-Revision-Date: 2026-10-27 20:05+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Lokalize 26.11.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -30,61 +30,71 @@ msgstr "Tilpass heimeskjermen"
 msgid "Favorites"
 msgstr "Favorittar"
 
-#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:315
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:319
 #, kde-format
 msgid "Launcher Sections"
 msgstr "Oppstartsinndelingar"
+
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:410
+#, fuzzy, kde-format
+#| msgctxt "As in: These apps are currently opened"
+#| msgid "Open Apps"
+msgid "Hidden Apps"
+msgstr "Opne program"
 
 #: contents/ui/FavoritesManager.qml:206
 #, kde-format
 msgid "Change Favorites Order"
 msgstr "Byt rekkjefølgja på favorittane"
 
-#: contents/ui/FavoritesManager.qml:214
-#, kde-format
+#: contents/ui/FavoritesManager.qml:216
+#, fuzzy, kde-format
+#| msgid ""
+#| "To change the order of the favorites, open the launcher and tap and hold "
+#| "an app in the favorites list."
 msgid ""
-"To change the order of the favorites, open the launcher and tap and hold an "
-"app in the favorites list."
+"To change the order of the favorites, hold the select button on a favorite "
+"on the home screen and choose Move."
 msgstr ""
 "For å endra rekkjefølgja på favorittane kan du opna program­startaren og "
 "trykkja og halda inne på ein app i favorittlista."
 
-#: contents/ui/FavoritesManager.qml:244
+#: contents/ui/FavoritesManager.qml:248
 #, kde-format
 msgid "Add Favorites"
 msgstr "Legg til favorittar"
 
-#: contents/ui/FavoritesManager.qml:284
+#: contents/ui/FavoritesManager.qml:288
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Fjern frå favorittar"
 
-#: contents/ui/FavoritesManager.qml:329
+#: contents/ui/FavoritesManager.qml:333
 #, kde-format
 msgid "Show Recent"
 msgstr "Vis nyleg brukte"
 
-#: contents/ui/FavoritesManager.qml:330
+#: contents/ui/FavoritesManager.qml:334
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
 msgstr "Nyleg brukte program vert viste i ei rad på heimeskjermen"
 
-#: contents/ui/FavoritesManager.qml:345
+#: contents/ui/FavoritesManager.qml:349
 #, kde-format
 msgid "Show Applications"
 msgstr "Vis program"
 
-#: contents/ui/FavoritesManager.qml:346
+#: contents/ui/FavoritesManager.qml:350
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
 msgstr "Program som ikkje er spel, vert viste i ei rad på heimeskjermen"
 
-#: contents/ui/FavoritesManager.qml:362
+#: contents/ui/FavoritesManager.qml:366
 #, kde-format
 msgid "Show Games"
 msgstr "Vis spel"
 
-#: contents/ui/FavoritesManager.qml:363
+#: contents/ui/FavoritesManager.qml:367
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
 msgstr "Program i kategorien «spel» vert viste i ei rad på heimeskjermen"
@@ -176,12 +186,12 @@ msgstr "Batteri: %1 %"
 #: contents/ui/indicators/GridView.qml:14
 #, kde-format
 msgid "Show app grid"
-msgstr ""
+msgstr "Vis apprutenett"
 
 #: contents/ui/indicators/GridView.qml:14
 #, kde-format
 msgid "Hide app grid"
-msgstr ""
+msgstr "Gøym apprutenett"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -213,6 +223,47 @@ msgstr "Lydinnstillingar"
 msgid "Internet Settings"
 msgstr "Internett-innstillingar"
 
+#: contents/ui/launcher/AppOptionsDrawer.qml:83
+#, fuzzy, kde-format
+#| msgid "Add Favorites"
+msgid "Added %1 to Favorites"
+msgstr "Legg til favorittar"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:87
+#, fuzzy, kde-format
+#| msgid "Remove Favorites"
+msgid "Removed %1 from Favorites"
+msgstr "Fjern frå favorittar"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:92
+#, kde-format
+msgid "%1 hidden. Show it again from Edit Home Screen."
+msgstr ""
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:111
+#, kde-format
+msgid "Move"
+msgstr ""
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:114
+#, fuzzy, kde-format
+#| msgid "Remove Favorites"
+msgid "Remove from Favorites"
+msgstr "Fjern frå favorittar"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:115
+#, fuzzy, kde-format
+#| msgid "Add Favorites"
+msgid "Add to Favorites"
+msgstr "Legg til favorittar"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:116
+#, fuzzy, kde-format
+#| msgid "Edit Home Screen"
+msgid "Hide from Homescreen"
+msgstr "Tilpass heimeskjermen"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:131
 #: contents/ui/launcher/delegates/IconDelegate.qml:275
 #, kde-format
 msgid "Running"
