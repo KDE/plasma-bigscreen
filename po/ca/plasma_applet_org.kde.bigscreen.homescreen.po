@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-27 03:19+0000\n"
-"PO-Revision-Date: 2026-09-24 08:43+0200\n"
+"PO-Revision-Date: 2026-10-27 09:38+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -199,7 +199,7 @@ msgstr "Configuració d'Internet"
 #: contents/ui/launcher/delegates/IconDelegate.qml:275
 #, kde-format
 msgid "Running"
-msgstr ""
+msgstr "En execució"
 
 #: contents/ui/launcher/LauncherHome.qml:193
 #, kde-format
