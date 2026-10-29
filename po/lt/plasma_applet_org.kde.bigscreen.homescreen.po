@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-28 01:02+0000\n"
-"PO-Revision-Date: 2026-10-18 19:21+0300\n"
+"PO-Revision-Date: 2026-10-28 20:47+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
 #, kde-format
@@ -36,11 +36,9 @@ msgid "Launcher Sections"
 msgstr "Paleidyklės skyriai"
 
 #: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:410
-#, fuzzy, kde-format
-#| msgctxt "As in: These apps are currently opened"
-#| msgid "Open Apps"
+#, kde-format
 msgid "Hidden Apps"
-msgstr "Atvertos programos"
+msgstr "Paslėptos programos"
 
 #: contents/ui/FavoritesManager.qml:206
 #, kde-format
@@ -48,16 +46,13 @@ msgid "Change Favorites Order"
 msgstr "Keisti mėgstamų tvarką"
 
 #: contents/ui/FavoritesManager.qml:216
-#, fuzzy, kde-format
-#| msgid ""
-#| "To change the order of the favorites, open the launcher and tap and hold "
-#| "an app in the favorites list."
+#, kde-format
 msgid ""
 "To change the order of the favorites, hold the select button on a favorite "
 "on the home screen and choose Move."
 msgstr ""
-"Norėdami keisti mėgstamų tvarką, atverkite paleidyklę ir mėgstamų programų "
-"sąraše bakstelėję palaikykite ant programos."
+"Norėdami keisti mėgstamų tvarką, pradžios lange laikykite nuspaudę "
+"pasirinkimo mygtuką ant mėgstamos programos ir pasirinkite „Perkelti“."
 
 #: contents/ui/FavoritesManager.qml:248
 #, kde-format
@@ -224,50 +219,45 @@ msgid "Internet Settings"
 msgstr "Interneto nuostatos"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:83
-#, fuzzy, kde-format
-#| msgid "Add Favorites"
+#, kde-format
 msgid "Added %1 to Favorites"
-msgstr "Pridėti mėgstamų"
+msgstr "%1 pridėta į mėgstamas"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:87
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Removed %1 from Favorites"
-msgstr "Šalinti mėgstamas"
+msgstr "%1 pašalinta iš mėgstamų"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:92
 #, kde-format
 msgid "%1 hidden. Show it again from Edit Home Screen."
-msgstr ""
+msgstr "%1 paslėpta. Rodykite ją vėl, pasirinkę taisyti pradžios langą."
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:111
 #, kde-format
 msgid "Move"
-msgstr ""
+msgstr "Perkelti"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:114
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Remove from Favorites"
-msgstr "Šalinti mėgstamas"
+msgstr "Šalinti iš mėgstamų"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Favorites"
+#, kde-format
 msgid "Add to Favorites"
-msgstr "Pridėti mėgstamų"
+msgstr "Pridėti į mėgstamas"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:116
-#, fuzzy, kde-format
-#| msgid "Edit Home Screen"
+#, kde-format
 msgid "Hide from Homescreen"
-msgstr "Taisyti pradžios langą"
+msgstr "Slėpti iš pradžios lango"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:131
 #: contents/ui/launcher/delegates/IconDelegate.qml:275
 #, kde-format
 msgid "Running"
-msgstr ""
+msgstr "Veikia"
 
 #: contents/ui/launcher/LauncherHome.qml:227
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-28 01:02+0000\n"
-"PO-Revision-Date: 2026-10-27 09:52+0100\n"
+"PO-Revision-Date: 2026-10-28 04:00+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -35,11 +35,9 @@ msgid "Launcher Sections"
 msgstr "გამშვების სექციები"
 
 #: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:410
-#, fuzzy, kde-format
-#| msgctxt "As in: These apps are currently opened"
-#| msgid "Open Apps"
+#, kde-format
 msgid "Hidden Apps"
-msgstr "ღია აპები"
+msgstr "დამალული აპები"
 
 #: contents/ui/FavoritesManager.qml:206
 #, kde-format
@@ -47,16 +45,13 @@ msgid "Change Favorites Order"
 msgstr "რჩეულების მიმდევრობის შეცვლა"
 
 #: contents/ui/FavoritesManager.qml:216
-#, fuzzy, kde-format
-#| msgid ""
-#| "To change the order of the favorites, open the launcher and tap and hold "
-#| "an app in the favorites list."
+#, kde-format
 msgid ""
 "To change the order of the favorites, hold the select button on a favorite "
 "on the home screen and choose Move."
 msgstr ""
-"რჩეულების მიმდევრობის შესაცვლელად გახსენით გამშვები და დაატყაპუნეთ და "
-"გეჭიროთ აპზე რჩეულების სიაში."
+"რჩეულების მიმდევრობის შესაცვლელად გეჭიროთ არჩევის ღილაკი რჩეულზე საწყის "
+"ეკრანზე და აირჩიეთ 'გადატანა'."
 
 #: contents/ui/FavoritesManager.qml:248
 #, kde-format
@@ -224,44 +219,40 @@ msgid "Internet Settings"
 msgstr "ინტერნეტის მორგება"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:83
-#, fuzzy, kde-format
-#| msgid "Add Favorites"
+#, kde-format
 msgid "Added %1 to Favorites"
-msgstr "რჩეულების დამატება"
+msgstr "%1 დაემატა რჩეულებში"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:87
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Removed %1 from Favorites"
-msgstr "რჩეულების წაშლა"
+msgstr "%1 წაიშალა რჩეულებიდან"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:92
 #, kde-format
 msgid "%1 hidden. Show it again from Edit Home Screen."
 msgstr ""
+"%1 დამალულია. მისი თავიდან ჩვენება 'საწყისი გვერდის ჩასწორებიდან' შეგიძლიათ."
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:111
 #, kde-format
 msgid "Move"
-msgstr ""
+msgstr "გადატანა"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:114
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Remove from Favorites"
-msgstr "რჩეულების წაშლა"
+msgstr "რჩეულებიდან წაშლა"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Favorites"
+#, kde-format
 msgid "Add to Favorites"
-msgstr "რჩეულების დამატება"
+msgstr "რჩეულებში ჩამატება"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:116
-#, fuzzy, kde-format
-#| msgid "Edit Home Screen"
+#, kde-format
 msgid "Hide from Homescreen"
-msgstr "საწყისი ეკრანის ჩასწორება"
+msgstr "დამალვა საწყისი ეკრანიდან"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:131
 #: contents/ui/launcher/delegates/IconDelegate.qml:275

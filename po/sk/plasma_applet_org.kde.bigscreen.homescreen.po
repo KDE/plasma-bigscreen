@@ -33,11 +33,9 @@ msgid "Launcher Sections"
 msgstr "Sekcie spúšťača"
 
 #: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:410
-#, fuzzy, kde-format
-#| msgctxt "As in: These apps are currently opened"
-#| msgid "Open Apps"
+#, kde-format
 msgid "Hidden Apps"
-msgstr "Hlasové aplikácie"
+msgstr "Skryté aplikácie"
 
 #: contents/ui/FavoritesManager.qml:206
 #, kde-format
@@ -45,16 +43,13 @@ msgid "Change Favorites Order"
 msgstr "Zmeniť poradie obľúbených"
 
 #: contents/ui/FavoritesManager.qml:216
-#, fuzzy, kde-format
-#| msgid ""
-#| "To change the order of the favorites, open the launcher and tap and hold "
-#| "an app in the favorites list."
+#, kde-format
 msgid ""
 "To change the order of the favorites, hold the select button on a favorite "
 "on the home screen and choose Move."
 msgstr ""
-"Ak chcete zmeniť poradie obľúbených, otvorte spúšťač a ťuknite a podržte "
-"aplikáciu v zozname obľúbených."
+"Ak chcete zmeniť poradie obľúbených, na domovskej obrazovke podržte na "
+"obľúbenej položke tlačidlo výberu a vyberte Presunúť."
 
 #: contents/ui/FavoritesManager.qml:248
 #, kde-format
@@ -221,50 +216,45 @@ msgid "Internet Settings"
 msgstr "Nastavenia"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:83
-#, fuzzy, kde-format
-#| msgid "Add Favorites"
+#, kde-format
 msgid "Added %1 to Favorites"
-msgstr "Add Favorites"
+msgstr "%1 pridané do obľúbených"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:87
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Removed %1 from Favorites"
-msgstr "Remove Favorites"
+msgstr "%1 odstránené z obľúbených"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:92
 #, kde-format
 msgid "%1 hidden. Show it again from Edit Home Screen."
-msgstr ""
+msgstr "%1 je skryté. Znova ho zobrazíte cez Upraviť domovskú obrazovku."
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:111
 #, kde-format
 msgid "Move"
-msgstr ""
+msgstr "Presunúť"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:114
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Remove from Favorites"
-msgstr "Remove Favorites"
+msgstr "Odstrániť z obľúbených"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Favorites"
+#, kde-format
 msgid "Add to Favorites"
-msgstr "Add Favorites"
+msgstr "Pridať do obľúbených"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:116
-#, fuzzy, kde-format
-#| msgid "Edit Home Screen"
+#, kde-format
 msgid "Hide from Homescreen"
-msgstr "Upraviť domovskú obrazovku"
+msgstr "Skryť z domovskej obrazovky"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:131
 #: contents/ui/launcher/delegates/IconDelegate.qml:275
 #, kde-format
 msgid "Running"
-msgstr ""
+msgstr "Spustené"
 
 #: contents/ui/launcher/LauncherHome.qml:227
 #, kde-format

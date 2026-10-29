@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-28 01:02+0000\n"
-"PO-Revision-Date: 2026-10-17 12:18+0200\n"
+"PO-Revision-Date: 2026-10-28 23:03+0100\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -35,11 +35,9 @@ msgid "Launcher Sections"
 msgstr "Sekce spouštěče"
 
 #: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:410
-#, fuzzy, kde-format
-#| msgctxt "As in: These apps are currently opened"
-#| msgid "Open Apps"
+#, kde-format
 msgid "Hidden Apps"
-msgstr "Otevřené aplikace"
+msgstr "Skryté aplikace"
 
 #: contents/ui/FavoritesManager.qml:206
 #, kde-format
@@ -47,16 +45,13 @@ msgid "Change Favorites Order"
 msgstr "Změnit pořadí oblíbených"
 
 #: contents/ui/FavoritesManager.qml:216
-#, fuzzy, kde-format
-#| msgid ""
-#| "To change the order of the favorites, open the launcher and tap and hold "
-#| "an app in the favorites list."
+#, kde-format
 msgid ""
 "To change the order of the favorites, hold the select button on a favorite "
 "on the home screen and choose Move."
 msgstr ""
-"Chcete-li změnit pořadí oblíbených položek, otevřete spouštěč a klepněte na "
-"aplikaci v seznamu oblíbených položek a podržte prst na ní."
+"Chcete-li změnit pořadí oblíbených položek, podržte tlačítko pro výběr na "
+"oblíbené položce na úvodní obrazovce a vyberte možnost Přesunout."
 
 #: contents/ui/FavoritesManager.qml:248
 #, kde-format
@@ -223,50 +218,45 @@ msgid "Internet Settings"
 msgstr "Nastavení internetu"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:83
-#, fuzzy, kde-format
-#| msgid "Add Favorites"
+#, kde-format
 msgid "Added %1 to Favorites"
-msgstr "Přidat oblíbené"
+msgstr "%1 přidáno do oblíbených"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:87
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Removed %1 from Favorites"
-msgstr "Odstranit oblíbené"
+msgstr "%1 odstraněno z oblíbených"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:92
 #, kde-format
 msgid "%1 hidden. Show it again from Edit Home Screen."
-msgstr ""
+msgstr "%1 skryté. Znovu se zobrazí pomocí volby Upravit domovskou obrazovku."
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:111
 #, kde-format
 msgid "Move"
-msgstr ""
+msgstr "Přesunout"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:114
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Remove from Favorites"
-msgstr "Odstranit oblíbené"
+msgstr "Odstranit z oblíbených"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Favorites"
+#, kde-format
 msgid "Add to Favorites"
-msgstr "Přidat oblíbené"
+msgstr "Přidat do oblíbených"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:116
-#, fuzzy, kde-format
-#| msgid "Edit Home Screen"
+#, kde-format
 msgid "Hide from Homescreen"
-msgstr "Upravit domovskou obrazovku"
+msgstr "Skrýt z domovské obrazovky"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:131
 #: contents/ui/launcher/delegates/IconDelegate.qml:275
 #, kde-format
 msgid "Running"
-msgstr ""
+msgstr "Spuštěno"
 
 #: contents/ui/launcher/LauncherHome.qml:227
 #, kde-format

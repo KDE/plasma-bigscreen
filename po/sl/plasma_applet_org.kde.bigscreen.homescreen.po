@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-28 01:02+0000\n"
-"PO-Revision-Date: 2026-10-27 16:57+0100\n"
+"PO-Revision-Date: 2026-10-28 07:24+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -35,11 +35,9 @@ msgid "Launcher Sections"
 msgstr "Oddelki zaganjalnika"
 
 #: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:410
-#, fuzzy, kde-format
-#| msgctxt "As in: These apps are currently opened"
-#| msgid "Open Apps"
+#, kde-format
 msgid "Hidden Apps"
-msgstr "Odpri aplikacije"
+msgstr "Skrite aplikacije"
 
 #: contents/ui/FavoritesManager.qml:206
 #, kde-format
@@ -47,16 +45,13 @@ msgid "Change Favorites Order"
 msgstr "Spremeni vrstni red priljubljenih"
 
 #: contents/ui/FavoritesManager.qml:216
-#, fuzzy, kde-format
-#| msgid ""
-#| "To change the order of the favorites, open the launcher and tap and hold "
-#| "an app in the favorites list."
+#, kde-format
 msgid ""
 "To change the order of the favorites, hold the select button on a favorite "
 "on the home screen and choose Move."
 msgstr ""
-"Če želite spremeniti vrstni red priljubljenih elementov, odprite zaganjalnik "
-"ter se dotaknite aplikacije na seznamu priljubljenih in jo pridržite."
+"Če želite spremeniti vrstni red priljubljenih elementov, na začetnem zaslonu "
+"pridržite gumb za izbiro na priljubljenem elementu in izberite Premakni."
 
 #: contents/ui/FavoritesManager.qml:248
 #, kde-format
@@ -223,44 +218,39 @@ msgid "Internet Settings"
 msgstr "Nastavitve interneta"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:83
-#, fuzzy, kde-format
-#| msgid "Add Favorites"
+#, kde-format
 msgid "Added %1 to Favorites"
-msgstr "Dodaj priljubljene"
+msgstr "Dodan %1 k priljubljenim"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:87
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Removed %1 from Favorites"
-msgstr "Odstrani priljubljene"
+msgstr "Odstranjen %1 iz priljubljenih"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:92
 #, kde-format
 msgid "%1 hidden. Show it again from Edit Home Screen."
-msgstr ""
+msgstr "%1 skrit. Znova ga prikažite v razdelku Uredi začetni zaslon."
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:111
 #, kde-format
 msgid "Move"
-msgstr ""
+msgstr "Premakni"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:114
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Remove from Favorites"
-msgstr "Odstrani priljubljene"
+msgstr "Odstrani iz priljubljenih"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Favorites"
+#, kde-format
 msgid "Add to Favorites"
-msgstr "Dodaj priljubljene"
+msgstr "Dodaj k priljubljenim"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:116
-#, fuzzy, kde-format
-#| msgid "Edit Home Screen"
+#, kde-format
 msgid "Hide from Homescreen"
-msgstr "Uredi domači zaslon"
+msgstr "Skrij iz domačega zaslona"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:131
 #: contents/ui/launcher/delegates/IconDelegate.qml:275

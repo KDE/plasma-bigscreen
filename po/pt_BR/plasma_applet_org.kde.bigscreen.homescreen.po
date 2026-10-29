@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-28 01:02+0000\n"
-"PO-Revision-Date: 2026-10-27 10:24-0300\n"
+"PO-Revision-Date: 2026-10-28 09:03-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -38,11 +38,9 @@ msgid "Launcher Sections"
 msgstr "Seções do lançador"
 
 #: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:410
-#, fuzzy, kde-format
-#| msgctxt "As in: These apps are currently opened"
-#| msgid "Open Apps"
+#, kde-format
 msgid "Hidden Apps"
-msgstr "Abrir aplicativos"
+msgstr "Aplicativos ocultos"
 
 #: contents/ui/FavoritesManager.qml:206
 #, kde-format
@@ -50,16 +48,13 @@ msgid "Change Favorites Order"
 msgstr "Alterar ordem dos favoritos"
 
 #: contents/ui/FavoritesManager.qml:216
-#, fuzzy, kde-format
-#| msgid ""
-#| "To change the order of the favorites, open the launcher and tap and hold "
-#| "an app in the favorites list."
+#, kde-format
 msgid ""
 "To change the order of the favorites, hold the select button on a favorite "
 "on the home screen and choose Move."
 msgstr ""
-"Para alterar a ordem dos favoritos, abra o lançador e mantenha pressionado "
-"um aplicativo na lista de favoritos."
+"Para alterar a ordem dos favoritos, mantenha pressionado o botão de seleção "
+"em um favorito na tela inicial e escolha Mover."
 
 #: contents/ui/FavoritesManager.qml:248
 #, kde-format
@@ -227,44 +222,39 @@ msgid "Internet Settings"
 msgstr "Configurações da Internet"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:83
-#, fuzzy, kde-format
-#| msgid "Add Favorites"
+#, kde-format
 msgid "Added %1 to Favorites"
-msgstr "Adicionar favoritos"
+msgstr "%1 adicionado aos favoritos"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:87
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Removed %1 from Favorites"
-msgstr "Remover favoritos"
+msgstr "%1 removido dos favoritos"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:92
 #, kde-format
 msgid "%1 hidden. Show it again from Edit Home Screen."
-msgstr ""
+msgstr "%1 oculto. Exiba-o novamente em Editar Tela Inicial."
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:111
 #, kde-format
 msgid "Move"
-msgstr ""
+msgstr "Mover"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:114
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Remove from Favorites"
-msgstr "Remover favoritos"
+msgstr "Remover dos favoritos"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Favorites"
+#, kde-format
 msgid "Add to Favorites"
-msgstr "Adicionar favoritos"
+msgstr "Adicionar aos favoritos"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:116
-#, fuzzy, kde-format
-#| msgid "Edit Home Screen"
+#, kde-format
 msgid "Hide from Homescreen"
-msgstr "Editar Tela Inicial"
+msgstr "Ocultar da Tela Inicial"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:131
 #: contents/ui/launcher/delegates/IconDelegate.qml:275

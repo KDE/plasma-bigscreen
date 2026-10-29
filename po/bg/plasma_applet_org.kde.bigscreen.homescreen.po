@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-28 01:02+0000\n"
-"PO-Revision-Date: 2026-10-19 15:17+0200\n"
+"PO-Revision-Date: 2026-10-28 16:59+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -36,11 +36,9 @@ msgid "Launcher Sections"
 msgstr "Секции на стартовото меню"
 
 #: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:410
-#, fuzzy, kde-format
-#| msgctxt "As in: These apps are currently opened"
-#| msgid "Open Apps"
+#, kde-format
 msgid "Hidden Apps"
-msgstr "Отворени приложения"
+msgstr "Скрити приложения"
 
 #: contents/ui/FavoritesManager.qml:206
 #, kde-format
@@ -48,16 +46,13 @@ msgid "Change Favorites Order"
 msgstr "Промяна на реда на Предпочитани"
 
 #: contents/ui/FavoritesManager.qml:216
-#, fuzzy, kde-format
-#| msgid ""
-#| "To change the order of the favorites, open the launcher and tap and hold "
-#| "an app in the favorites list."
+#, kde-format
 msgid ""
 "To change the order of the favorites, hold the select button on a favorite "
 "on the home screen and choose Move."
 msgstr ""
-"За промяна на реда на Предпочитани елементи отворете стартиращия панел и "
-"задръжте приложение от списъка с Предпочитани."
+"За промяна на реда на предпочитаните елементи, задръжте бутона за избор "
+"върху предпочитан елемент в началния екран и изберете Преместване."
 
 #: contents/ui/FavoritesManager.qml:248
 #, kde-format
@@ -230,50 +225,45 @@ msgid "Internet Settings"
 msgstr "Настройки за интернет"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:83
-#, fuzzy, kde-format
-#| msgid "Add Favorites"
+#, kde-format
 msgid "Added %1 to Favorites"
-msgstr "Добавяне в Предпочитани"
+msgstr "%1 е добавен в Предпочитани"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:87
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Removed %1 from Favorites"
-msgstr "Премахване от Предпочитани"
+msgstr "%1 е премахнат от Предпочитани"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:92
 #, kde-format
 msgid "%1 hidden. Show it again from Edit Home Screen."
-msgstr ""
+msgstr "%1 е скрит. Показване отново от Редактиране на началния екран."
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:111
 #, kde-format
 msgid "Move"
-msgstr ""
+msgstr "Преместване"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:114
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Remove from Favorites"
 msgstr "Премахване от Предпочитани"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Favorites"
+#, kde-format
 msgid "Add to Favorites"
 msgstr "Добавяне в Предпочитани"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:116
-#, fuzzy, kde-format
-#| msgid "Edit Home Screen"
+#, kde-format
 msgid "Hide from Homescreen"
-msgstr "Редактиране на началния екран"
+msgstr "Скриване от началния екран"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:131
 #: contents/ui/launcher/delegates/IconDelegate.qml:275
 #, kde-format
 msgid "Running"
-msgstr ""
+msgstr "Изпълнява се"
 
 #: contents/ui/launcher/LauncherHome.qml:227
 #, kde-format
