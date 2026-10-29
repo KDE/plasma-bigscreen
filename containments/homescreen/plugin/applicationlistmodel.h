@@ -13,8 +13,8 @@
 
 #include <KService>
 
-QStringList applicationsBlacklist();
-bool isApplicationBlacklisted(const KService::Ptr &service, const QStringList &blacklist);
+QStringList applicationsBlocklist();
+bool isApplicationBlocklisted(const KService::Ptr &service, const QStringList &blocklist);
 
 namespace TaskManager
 {

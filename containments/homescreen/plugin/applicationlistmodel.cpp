@@ -29,17 +29,17 @@
 #include <abstracttasksmodel.h>
 #include <tasksmodel.h>
 
-QStringList applicationsBlacklist()
+QStringList applicationsBlocklist()
 {
-    auto cfg = KSharedConfig::openConfig(QStringLiteral("applications-blacklistrc"));
-    auto blgroup = KConfigGroup(cfg, QStringLiteral("Applications"));
+    auto cfg = KSharedConfig::openConfig(QStringLiteral("applications-blocklistrc"));
+    auto group = KConfigGroup(cfg, QStringLiteral("Applications"));
 
-    return blgroup.readEntry("blacklist", QStringList());
+    return group.readEntry("blocklist", QStringList());
 }
 
-bool isApplicationBlacklisted(const KService::Ptr &service, const QStringList &blacklist)
+bool isApplicationBlocklisted(const KService::Ptr &service, const QStringList &blocklist)
 {
-    return service && blacklist.contains(service->desktopEntryName());
+    return service && blocklist.contains(service->desktopEntryName());
 }
 
 ApplicationListModel::ApplicationListModel(QObject *parent)
@@ -74,15 +74,15 @@ void ApplicationListModel::sycocaDbChanged()
 
 KService::List ApplicationListModel::queryApplications()
 {
-    const QStringList blacklist = applicationsBlacklist();
-    auto filter = [blacklist](const KService::Ptr &service) -> bool {
+    const QStringList blocklist = applicationsBlocklist();
+    auto filter = [blocklist](const KService::Ptr &service) -> bool {
         if (service->noDisplay()) {
             return false;
         }
         if (!service->showOnCurrentPlatform()) {
             return false;
         }
-        if (isApplicationBlacklisted(service, blacklist)) {
+        if (isApplicationBlocklisted(service, blocklist)) {
             return false;
         }
         if (service->property<bool>("Terminal")) {
@@ -268,7 +268,7 @@ bool ApplicationListSearchModel::isApplicationBlocklisted(const QString &storage
         return false;
     }
 
-    return isApplicationBlacklisted(KService::serviceByStorageId(storageId), applicationsBlacklist());
+    return ::isApplicationBlocklisted(KService::serviceByStorageId(storageId), applicationsBlocklist());
 }
 
 bool ApplicationListSearchModel::isApplicationRunning(const QString &storageId) const
@@ -327,21 +327,21 @@ void ApplicationListSearchModel::setApplicationBlocklisted(const QString &storag
         return;
     }
 
-    QStringList blacklist = applicationsBlacklist();
+    QStringList blocklist = applicationsBlocklist();
     const QString name = service->desktopEntryName();
-    if (blocklisted == blacklist.contains(name)) {
+    if (blocklisted == blocklist.contains(name)) {
         return;
     }
 
     if (blocklisted) {
-        blacklist.append(name);
+        blocklist.append(name);
     } else {
-        blacklist.removeAll(name);
+        blocklist.removeAll(name);
     }
 
-    auto cfg = KSharedConfig::openConfig(QStringLiteral("applications-blacklistrc"));
+    auto cfg = KSharedConfig::openConfig(QStringLiteral("applications-blocklistrc"));
     KConfigGroup group(cfg, QStringLiteral("Applications"));
-    group.writeEntry("blacklist", blacklist);
+    group.writeEntry("blocklist", blocklist);
     cfg->sync();
 
     if (auto model = qobject_cast<ApplicationListModel *>(sourceModel())) {
@@ -353,8 +353,8 @@ void ApplicationListSearchModel::setApplicationBlocklisted(const QString &storag
 QVariantList ApplicationListSearchModel::blocklistedApplications() const
 {
     QVariantList list;
-    const QStringList blacklist = applicationsBlacklist();
-    for (const QString &name : blacklist) {
+    const QStringList blocklist = applicationsBlocklist();
+    for (const QString &name : blocklist) {
         const KService::Ptr service = KService::serviceByDesktopName(name);
         if (!service || service->noDisplay()) {
             continue;
