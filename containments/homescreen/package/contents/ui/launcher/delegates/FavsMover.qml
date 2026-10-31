@@ -87,6 +87,14 @@ Item {
         Bigscreen.NavigationRumble.playCancelRumble();
         root.cancelMoving();
     }
+    Connections {
+        enabled: local.moverMode
+        target: Plasmoid
+
+        function onHomeOverlayOpened(){
+            root.cancelMoving();
+        }
+    }
 
     function closeMover(event){
         if (local.moverMode && local.allowClose){

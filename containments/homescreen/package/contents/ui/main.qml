@@ -223,6 +223,10 @@ ContainmentItem {
     HomeOverlayWindow {
         id: homeOverlayWindow
 
+        onShowLauncher: {
+            searchWindow.hideOverlay();
+            favsManagerWindowView.hideOverlay();
+        }
         onMinimizeAllTasksRequested: tasksModel.minimizeAllTasks()
         onSearchRequested: Plasmoid.openSearch()
         onSettingsRequested: Plasmoid.openSettings()

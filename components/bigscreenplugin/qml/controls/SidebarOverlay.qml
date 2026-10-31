@@ -7,6 +7,7 @@ import QtQuick.Controls as QQC2
 
 import org.kde.kirigami as Kirigami
 import org.kde.bigscreen as Bigscreen
+import org.kde.plasma.plasmoid
 
 QQC2.Popup {
     id: root
@@ -23,6 +24,14 @@ QQC2.Popup {
     modal: true
     Bigscreen.BackHandler.enabled: root.visible
     Bigscreen.BackHandler.onActivated: root.close()
+    Connections {
+        enabled: root.visible
+        target: Plasmoid
+
+        function onHomeOverlayOpened(){
+            root.close();
+        }
+    }
 
     Kirigami.Theme.inherit: false
     Kirigami.Theme.colorSet: Kirigami.Theme.View

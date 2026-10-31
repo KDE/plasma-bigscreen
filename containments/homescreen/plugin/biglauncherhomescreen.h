@@ -40,6 +40,7 @@ public:
     Q_INVOKABLE void toggleLauncherGrid();
     Q_INVOKABLE void showOSD(const QString &text, const QString &iconName);
     Q_INVOKABLE void showAppLaunchScreen(const QString &appName, const QString &icon);
+    Q_INVOKABLE void emitHomeOverlayOpenedSignal();
 
 Q_SIGNALS:
     void minimizeAllTasksRequested();
@@ -48,6 +49,7 @@ Q_SIGNALS:
     void openHomeOverlayRequested();
     void toggleLauncherGridRequested();
     void showAppLaunchScreenRequested(const QString &appName, const QString &icon);
+    void homeOverlayOpened();
 
 public Q_SLOTS:
     void executeCommand(const QString &command);

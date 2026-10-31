@@ -5,6 +5,7 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 import QtQuick.Effects
+import org.kde.plasma.plasmoid
 
 import org.kde.kirigami as Kirigami
 
@@ -34,6 +35,14 @@ QQC2.Dialog {
     onRejected: root.close()
     BackHandler.enabled: root.visible
     BackHandler.onActivated: root.reject()
+    Connections {
+        enabled: root.visible
+        target: Plasmoid
+
+        function onHomeOverlayOpened(){
+            root.reject();
+        }
+    }
 
     background: PopupBackground {}
 

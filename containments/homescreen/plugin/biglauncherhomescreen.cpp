@@ -113,6 +113,11 @@ void HomeScreen::toggleLauncherGrid()
     Q_EMIT toggleLauncherGridRequested();
 }
 
+void HomeScreen::emitHomeOverlayOpenedSignal()
+{
+    Q_EMIT homeOverlayOpened();
+}
+
 void HomeScreen::showOSD(const QString &text, const QString &iconName)
 {
     QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),

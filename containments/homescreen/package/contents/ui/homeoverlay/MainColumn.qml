@@ -22,6 +22,7 @@ ColumnLayout {
     property string dateString
     property var locale: Qt.locale()
 
+    signal showLauncher()
     signal minimizeAllTasksRequested()
     signal searchRequested()
     signal tasksRequested()
@@ -166,6 +167,7 @@ ColumnLayout {
                 icon.name: "go-home-symbolic"
                 onClicked: {
                     root.minimizeAllTasksRequested();
+                    root.showLauncher();
                 }
             }
 

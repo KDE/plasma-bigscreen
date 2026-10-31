@@ -9,6 +9,7 @@ import QtQuick.Controls as QQC2
 
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.private.nanoshell as NanoShell
+import org.kde.plasma.plasmoid
 import org.kde.private.biglauncher
 import org.kde.bigscreen as Bigscreen
 import org.kde.bigscreen.controllerhandler as ControllerHandler
@@ -22,6 +23,7 @@ Window {
     LayerShell.Window.layer: LayerShell.Window.LayerOverlay
     LayerShell.Window.exclusionZone: -1
 
+    signal showLauncher()
     signal minimizeAllTasksRequested()
     signal searchRequested()
     signal settingsRequested()
@@ -40,6 +42,7 @@ Window {
     function showOverlay() {
         Bigscreen.NavigationRumble.playConfirmRumble();
         showMaximized();
+        Plasmoid.emitHomeOverlayOpenedSignal();
     }
 
     function hideOverlay() {
@@ -118,6 +121,10 @@ Window {
                     }
                 }
 
+                onShowLauncher: {
+                    window.showLauncher();
+                    window.hideOverlay();
+                }
                 onMinimizeAllTasksRequested: {
                     window.minimizeAllTasksRequested();
                     window.hideOverlay();
