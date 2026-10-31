@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-25 00:52+0000\n"
-"PO-Revision-Date: 2026-01-27 15:54+0100\n"
+"PO-Revision-Date: 2026-10-30 12:03+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: ui/main.qml:16
 #, kde-format
@@ -35,12 +35,12 @@ msgstr "Installate apps de web"
 #: ui/main.qml:106
 #, kde-format
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: ui/main.qml:114
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Cancella"
 
 #: ui/main.qml:140 ui/WebAppInfoSidebar.qml:52
 #, kde-format
@@ -70,26 +70,24 @@ msgstr "Agente usator predefinite"
 #: ui/WebAppInfoSidebar.qml:76
 #, kde-format
 msgid "Edit"
-msgstr ""
+msgstr "Modifica"
 
 #: ui/WebAppInfoSidebar.qml:83
-#, fuzzy, kde-format
-#| msgid "Delete web app %1?"
+#, kde-format
 msgid "Edit web app %1"
-msgstr "Dele app de web %1?"
+msgstr "Modifica app de web %1"
 
 #: ui/WebAppInfoSidebar.qml:106
 #, kde-format
 msgctxt "%1 is the current name of the web app"
 msgid "Name (leave blank for current)"
-msgstr ""
+msgstr "Nomine (lassa vacue pe rcurrente)"
 
 #: ui/WebAppInfoSidebar.qml:115
-#, fuzzy, kde-format
-#| msgid "User agent (empty for default)"
+#, kde-format
 msgctxt "%1 is the user agent of the current web app"
 msgid "User Agent (leave blank for default)"
-msgstr "Agente Usator (vacue per definition)"
+msgstr "Agente Usator (lassa vacue per definition)"
 
 #: ui/WebAppInfoSidebar.qml:127
 #, kde-format
