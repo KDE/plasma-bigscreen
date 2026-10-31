@@ -262,6 +262,3 @@ msgstr "Segon"
 #, kde-format
 msgid "AM/PM"
 msgstr "AM/PM"
-
-#~ msgid "Global theme"
-#~ msgstr "Tema global"
