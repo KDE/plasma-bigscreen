@@ -258,8 +258,7 @@ msgid "Minute"
 msgstr "Minuto"
 
 #: ui/TimePicker.qml:72
-#, fuzzy, kde-format
-#| msgid "Second"
+#, kde-format
 msgctxt "unit of time"
 msgid "Second"
 msgstr "Segundo"
