@@ -67,6 +67,8 @@ private Q_SLOTS:
     void onDeviceOpenFailed(const QString &comName, const QString &error);
     void onHotplugTimeout();
     void onDeviceRemoved(const QString &udi);
+    void onConnectionLost();
+    void onReconnectTimeout();
     void onNextKeyTimeout();
     void onCecKeyPressed(int keycode, int duration);
 
@@ -75,6 +77,7 @@ private:
     CECWorker *m_worker = nullptr;
     QTimer m_hotplugTimer;
     QTimer m_nextKeyTimer;
+    QTimer m_reconnectTimer;
 
     QHash<int, int> m_keyMap;
     QSet<int> m_homeActionKeys;
@@ -84,6 +87,7 @@ private:
     int m_lastHandledKeycode = -1;
     bool m_initialized = false;
     bool m_catchNextInput = false;
+    bool m_reconnecting = false;
 };
 
 Q_DECLARE_METATYPE(CEC::cec_logical_address);

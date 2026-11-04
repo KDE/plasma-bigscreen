@@ -53,6 +53,8 @@ Q_SIGNALS:
     void cecKeyPressed(int keycode, int duration);
     void cecStandbyReceived();
     void cecSourceActivated(bool activated);
+    // libcec has stopped talking to the adapter and will not retry by itself.
+    void cecConnectionLost();
 
 private:
     CEC::ICECAdapter *m_cecAdapter = nullptr;
@@ -62,4 +64,6 @@ private:
     static void handleCecKeypress(void *param, const CEC::cec_keypress *key);
     static void handleCommandReceived(void *param, const CEC::cec_command *command);
     static void handleSourceActivated(void *param, const CEC::cec_logical_address address, uint8_t activated);
+    static void handleAlert(void *param, const CEC::libcec_alert alert, const CEC::libcec_parameter param2);
+    static void handleLogMessage(void *param, const CEC::cec_log_message *message);
 };
