@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-28 01:02+0000\n"
-"PO-Revision-Date: 2026-10-17 19:29+0300\n"
+"PO-Revision-Date: 2026-11-03 22:07+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -35,11 +35,9 @@ msgid "Launcher Sections"
 msgstr "Başlatıcı Bölümleri"
 
 #: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:410
-#, fuzzy, kde-format
-#| msgctxt "As in: These apps are currently opened"
-#| msgid "Open Apps"
+#, kde-format
 msgid "Hidden Apps"
-msgstr "Açık Uygulamalar"
+msgstr "Gizli Uygulamalar"
 
 #: contents/ui/FavoritesManager.qml:206
 #, kde-format
@@ -47,16 +45,13 @@ msgid "Change Favorites Order"
 msgstr "Sık Kullanılanlar Sırasını Değiştir"
 
 #: contents/ui/FavoritesManager.qml:216
-#, fuzzy, kde-format
-#| msgid ""
-#| "To change the order of the favorites, open the launcher and tap and hold "
-#| "an app in the favorites list."
+#, kde-format
 msgid ""
 "To change the order of the favorites, hold the select button on a favorite "
 "on the home screen and choose Move."
 msgstr ""
-"Sık kullanılanların sırasını değiştirmek için başlatıcıyı açın ve sık "
-"kullanılanlar listesindeki bir uygulamanın üzerine dokunup basılı tutun."
+"Sık kullanılanların sırasını değiştirmek için ana ekrandaki bir sık "
+"kullanılan üzerinde “Seç” düğmesini basılı tutun ve “Taşı”yı seçin."
 
 #: contents/ui/FavoritesManager.qml:248
 #, kde-format
@@ -224,50 +219,45 @@ msgid "Internet Settings"
 msgstr "İnternet Ayarları"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:83
-#, fuzzy, kde-format
-#| msgid "Add Favorites"
+#, kde-format
 msgid "Added %1 to Favorites"
-msgstr "Sık Kullanılanlara Ekle"
+msgstr "%1, Sık Kullanılanlara Eklendi"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:87
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Removed %1 from Favorites"
-msgstr "Sık Kullanılanlardan Kaldır"
+msgstr "%1, Sık Kullanılanlardan Kaldırıldı"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:92
 #, kde-format
 msgid "%1 hidden. Show it again from Edit Home Screen."
-msgstr ""
+msgstr "%1 gizlendi. “Ana Ekranı Düzenle” içinden yeniden gösterebilirsiniz."
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:111
 #, kde-format
 msgid "Move"
-msgstr ""
+msgstr "Taşı"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:114
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Remove from Favorites"
 msgstr "Sık Kullanılanlardan Kaldır"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Favorites"
+#, kde-format
 msgid "Add to Favorites"
 msgstr "Sık Kullanılanlara Ekle"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:116
-#, fuzzy, kde-format
-#| msgid "Edit Home Screen"
+#, kde-format
 msgid "Hide from Homescreen"
-msgstr "Ana Ekranı Düzenle"
+msgstr "Ana Ekrandan Gizle"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:131
 #: contents/ui/launcher/delegates/IconDelegate.qml:275
 #, kde-format
 msgid "Running"
-msgstr ""
+msgstr "Çalışıyor"
 
 #: contents/ui/launcher/LauncherHome.qml:227
 #, kde-format
