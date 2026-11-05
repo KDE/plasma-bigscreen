@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-31 00:47+0000\n"
-"PO-Revision-Date: 2026-05-16 22:36+0200\n"
+"PO-Revision-Date: 2026-11-04 22:17+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: ui/DeviceConnectionSidebar.qml:37
 #, kde-format
@@ -126,12 +126,12 @@ msgstr "Bluetooth"
 #: ui/main.qml:67
 #, kde-format
 msgid "No Bluetooth adapters found"
-msgstr ""
+msgstr "Nem található bluetooth adapter"
 
 #: ui/main.qml:68
 #, kde-format
 msgid "Connect an external Bluetooth adapter"
-msgstr ""
+msgstr "Csatlakoztasson egy külső Bluetooth-adaptert"
 
 #: ui/main.qml:81
 #, kde-format
