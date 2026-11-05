@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-25 00:52+0000\n"
-"PO-Revision-Date: 2026-05-16 22:37+0200\n"
+"PO-Revision-Date: 2026-11-04 22:17+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,20 +15,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: ui/ConfirmDialog.qml:16
-#, fuzzy, kde-format
-#| msgid "Display Configuration"
+#, kde-format
 msgid "Keep display configuration?"
-msgstr "Kijelzőbeállítás"
+msgstr "Megtartja a kijelzőbeállításokat?"
 
 #: ui/ConfirmDialog.qml:62
 #, kde-format
 msgid "Will revert to previous configuration in %1 second."
 msgid_plural "Will revert to previous configuration in %1 seconds."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Visszaállítás a korábbi beállításokra %1 másodperc múlva."
+msgstr[1] "Visszaállítás a korábbi beállításokra %1 másodperc múlva."
 
 #: ui/main.qml:22
 #, kde-format
