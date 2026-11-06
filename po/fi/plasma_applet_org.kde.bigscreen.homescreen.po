@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-05 00:57+0000\n"
-"PO-Revision-Date: 2026-09-02 17:22+0300\n"
+"PO-Revision-Date: 2026-10-05 15:25+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -41,10 +41,9 @@ msgid "Hidden Apps"
 msgstr "Avoimet sovellukset"
 
 #: contents/ui/FavoritesManager.qml:206
-#, fuzzy, kde-format
-#| msgid "Manage Favorites"
+#, kde-format
 msgid "Change Favorites Order"
-msgstr "Hallitse suosikkeja"
+msgstr "Muuta suosikkien järjestystä"
 
 #: contents/ui/FavoritesManager.qml:216
 #, kde-format

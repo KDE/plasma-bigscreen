@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-20 12:55+0000\n"
-"PO-Revision-Date: 2026-09-02 17:32+0300\n"
+"PO-Revision-Date: 2026-10-05 15:23+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -153,26 +153,25 @@ msgstr "Toista ääni valitun kohteen muuttuessa järjestelmäsovelluksissa"
 #: ui/main.qml:127
 #, kde-format
 msgid "Off"
-msgstr ""
+msgstr "Ei käytössä"
 
 #: ui/main.qml:128
 #, kde-format
 msgid "Weak"
-msgstr ""
+msgstr "Heikko"
 
 #: ui/main.qml:129
 #, kde-format
 msgid "Medium"
-msgstr ""
+msgstr "Keskinkertainen"
 
 #: ui/main.qml:130
 #, kde-format
 msgid "Strong"
-msgstr ""
+msgstr "Vahva"
 
 #: ui/main.qml:133
-#, fuzzy, kde-format
-#| msgid "Navigation sounds"
+#, kde-format
 msgid "Navigation rumble"
 msgstr "Navigointiäänet"
 
@@ -208,10 +207,9 @@ msgid "Open homescreen shortcut"
 msgstr "Avaa kotinäyttö -pikanäppäin"
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgid "Open tasks shortcut"
+#, kde-format
 msgid "Open search shortcut"
-msgstr "Avaa tehtävät -pikanäppäin"
+msgstr "Avaa haku -pikanäppäin"
 
 #: ui/main.qml:254
 #, kde-format
