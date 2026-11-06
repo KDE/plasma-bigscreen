@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-26 02:59+0000\n"
-"PO-Revision-Date: 2026-09-02 17:19+0300\n"
+"PO-Revision-Date: 2026-10-05 15:23+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -18,17 +18,16 @@ msgstr ""
 "X-Generator: Lokalize 25.04.0\n"
 
 #: ui/ConfirmDialog.qml:16
-#, fuzzy, kde-format
-#| msgid "Display Configuration"
+#, kde-format
 msgid "Keep display configuration?"
-msgstr "Näyttöasetukset"
+msgstr "Hyväksytäänkö näyttöasetukset?"
 
 #: ui/ConfirmDialog.qml:62
 #, kde-format
 msgid "Will revert to previous configuration in %1 second."
 msgid_plural "Will revert to previous configuration in %1 seconds."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Edellinen asetus palautetaan %1 sekunnissa."
+msgstr[1] "Edellinen asetus palautetaan %1 sekunnissa."
 
 #: ui/main.qml:22
 #, kde-format
