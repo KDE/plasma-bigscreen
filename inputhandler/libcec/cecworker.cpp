@@ -23,6 +23,8 @@ CECWorker::CECWorker(QObject *parent)
     m_cecCallbacks.keyPress = &CECWorker::handleCecKeypress;
     m_cecCallbacks.commandReceived = &CECWorker::handleCommandReceived;
     m_cecCallbacks.sourceActivated = &CECWorker::handleSourceActivated;
+    m_cecCallbacks.alert = &CECWorker::handleAlert;
+    m_cecCallbacks.logMessage = &CECWorker::handleLogMessage;
 }
 
 CECWorker::~CECWorker()
@@ -243,4 +245,31 @@ void CECWorker::handleSourceActivated(void *param, const cec_logical_address, ui
     bool isActivated = activated != 0;
     qDebug() << "CECWorker: Source activation changed - activated:" << isActivated;
     QMetaObject::invokeMethod(self, "cecSourceActivated", Qt::QueuedConnection, Q_ARG(bool, isActivated));
+}
+
+void CECWorker::handleAlert(void *param, const libcec_alert alert, const libcec_parameter)
+{
+    auto *self = static_cast<CECWorker *>(param);
+    qWarning() << "CECWorker: libcec alert" << static_cast<int>(alert);
+    if (alert == CEC_ALERT_CONNECTION_LOST) {
+        // libcec raises this after three unanswered adapter pings (or a read
+        // error) and has already shut its connection down. From here on every
+        // query answers from its cache and nothing is received from the bus,
+        // until the adapter is opened again.
+        QMetaObject::invokeMethod(self, "cecConnectionLost", Qt::QueuedConnection);
+    }
+}
+
+void CECWorker::handleLogMessage(void *, const cec_log_message *message)
+{
+    // Only what means something went wrong. libcec's notice, traffic and debug
+    // output is far too chatty for the journal.
+    switch (message->level) {
+    case CEC_LOG_ERROR:
+    case CEC_LOG_WARNING:
+        qWarning() << "libcec:" << message->message;
+        break;
+    default:
+        break;
+    }
 }

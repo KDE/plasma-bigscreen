@@ -108,6 +108,11 @@ CECController::CECController(QObject *parent)
     m_hotplugTimer.setInterval(500);
     connect(&m_hotplugTimer, &QTimer::timeout, this, &CECController::onHotplugTimeout);
 
+    // Retry interval after libcec has dropped the adapter
+    m_reconnectTimer.setSingleShot(true);
+    m_reconnectTimer.setInterval(5000);
+    connect(&m_reconnectTimer, &QTimer::timeout, this, &CECController::onReconnectTimeout);
+
     // Next key timeout
     m_nextKeyTimer.setSingleShot(true);
     m_nextKeyTimer.setInterval(30000);
@@ -125,6 +130,7 @@ CECController::CECController(QObject *parent)
     connect(m_worker, &CECWorker::cecKeyPressed, this, &CECController::onCecKeyPressed);
     connect(m_worker, &CECWorker::cecStandbyReceived, this, &CECController::enterStandby);
     connect(m_worker, &CECWorker::cecSourceActivated, this, &CECController::sourceActivated);
+    connect(m_worker, &CECWorker::cecConnectionLost, this, &CECController::onConnectionLost);
     connect(m_workerThread, &QThread::finished, m_worker, &QObject::deleteLater);
 
     m_workerThread->start();
@@ -168,6 +174,7 @@ void CECController::onWorkerInitialized(bool success)
 void CECController::onDeviceOpened(const QString &comName, const QString &comPath)
 {
     qDebug() << "CECController: Adapter opened at" << comName;
+    m_reconnecting = false;
 
     if (m_connectedDevices.contains(comName)) {
         qDebug() << "CECController: Adapter at" << comName << "already registered, skipping";
@@ -193,6 +200,36 @@ void CECController::onDeviceOpened(const QString &comName, const QString &comPat
 void CECController::onDeviceOpenFailed(const QString &comName, const QString &error)
 {
     qWarning() << "CECController: Failed to open adapter at" << comName << "-" << error;
+    if (m_reconnecting) {
+        // The adapter is still there but not answering yet: keep trying.
+        m_reconnectTimer.start();
+    }
+}
+
+void CECController::onConnectionLost()
+{
+    // libcec gave up on the adapter and does not retry on its own. Without
+    // this the handler keeps believing it has one: hotplug events are skipped
+    // because m_connectedDevices is not empty, every D-Bus query returns
+    // libcec's cached state, and the remote is dead until the process is
+    // restarted.
+    qWarning() << "CECController: Connection to the CEC adapter lost, reopening";
+    m_connectedDevices.clear();
+    m_adapterCount = 0;
+    m_reconnecting = true;
+    QMetaObject::invokeMethod(m_worker, "closeAdapter", Qt::QueuedConnection);
+    m_reconnectTimer.start();
+}
+
+void CECController::onReconnectTimeout()
+{
+    if (!m_initialized || !m_connectedDevices.isEmpty()) {
+        // Already back (a hotplug event may have beaten us to it).
+        m_reconnecting = false;
+        return;
+    }
+    qDebug() << "CECController: Reconnect - triggering device discovery";
+    QMetaObject::invokeMethod(m_worker, "discoverDevices", Qt::QueuedConnection);
 }
 
 void CECController::onDeviceRemoved(const QString &udi)
