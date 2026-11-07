@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:57+0000\n"
+"POT-Creation-Date: 2026-11-07 00:59+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -150,7 +150,7 @@ msgstr "按键捕获关闭"
 msgid "On-screen Keyboard"
 msgstr "屏幕键盘"
 
-#: contents/ui/homeoverlay/MainColumn.qml:253
+#: contents/ui/homeoverlay/MainColumn.qml:258
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"

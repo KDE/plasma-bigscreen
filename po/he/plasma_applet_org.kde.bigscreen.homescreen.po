@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:57+0000\n"
+"POT-Creation-Date: 2026-11-07 00:59+0000\n"
 "PO-Revision-Date: 2026-11-05 13:44+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -150,7 +150,7 @@ msgstr "לכידת מקשים כבויה"
 msgid "On-screen Keyboard"
 msgstr "מקלדת על המסך"
 
-#: contents/ui/homeoverlay/MainColumn.qml:253
+#: contents/ui/homeoverlay/MainColumn.qml:258
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"

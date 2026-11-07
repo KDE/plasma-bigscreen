@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:57+0000\n"
+"POT-Creation-Date: 2026-11-07 00:59+0000\n"
 "PO-Revision-Date: 2025-06-19 09:38+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -155,7 +155,7 @@ msgstr ""
 msgid "On-screen Keyboard"
 msgstr ""
 
-#: contents/ui/homeoverlay/MainColumn.qml:253
+#: contents/ui/homeoverlay/MainColumn.qml:258
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"

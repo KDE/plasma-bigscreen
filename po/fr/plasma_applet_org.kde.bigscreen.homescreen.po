@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:57+0000\n"
+"POT-Creation-Date: 2026-11-07 00:59+0000\n"
 "PO-Revision-Date: 2026-10-29 12:10+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -153,7 +153,7 @@ msgstr "Capture des touches désactivée"
 msgid "On-screen Keyboard"
 msgstr "Clavier sur l'écran"
 
-#: contents/ui/homeoverlay/MainColumn.qml:253
+#: contents/ui/homeoverlay/MainColumn.qml:258
 #: contents/ui/indicators/Settings.qml:18
 #, kde-format
 msgid "Settings"
