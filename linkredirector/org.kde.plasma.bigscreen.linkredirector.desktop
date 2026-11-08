@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2026 User8395 <therealuser8395@proton.me>
+# SPDX-License-Identifier: GPL-2.0-only
+
+[Desktop Entry]
+Name=Plasma Bigscreen Link Redirector
+Exec=plasma-bigscreen-linkredirector
+Icon=external-link-symbolic
+Type=Application
+Terminal=false
+Categories=System
+NoDisplay=true
+OnlyShowIn=KDE

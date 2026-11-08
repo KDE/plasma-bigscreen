@@ -21,6 +21,8 @@ class BigscreenShellSettings : public QObject
     Q_PROPERTY(bool navigationSoundEnabled READ navigationSoundEnabled WRITE setNavigationSoundEnabled NOTIFY navigationSoundEnabledChanged)
     Q_PROPERTY(bool windowDecorationsEnabled READ windowDecorationsEnabled WRITE setWindowDecorationsEnabled NOTIFY windowDecorationsEnabledChanged)
     Q_PROPERTY(int navigationRumbleIntensity READ navigationRumbleIntensity WRITE setNavigationRumbleIntensity NOTIFY navigationRumbleIntensityChanged)
+    Q_PROPERTY(bool useLinkRedirector READ useLinkRedirector WRITE setUseLinkRedirector NOTIFY useLinkRedirectorChanged)
+    Q_PROPERTY(QString defaultBrowser READ defaultBrowser WRITE setDefaultBrowser NOTIFY defaultBrowserChanged)
 
 public:
     BigscreenShellSettings(QObject *parent = nullptr);
@@ -37,11 +39,19 @@ public:
     int navigationRumbleIntensity() const;
     void setNavigationRumbleIntensity(int navigationRumbleIntensity);
 
+    bool useLinkRedirector() const;
+    void setUseLinkRedirector(const bool useLinkRedirector);
+
+    QString defaultBrowser() const;
+    void setDefaultBrowser(const QString defaultBrowser);
+
 Q_SIGNALS:
     void pmInhibitionEnabledChanged();
     void navigationSoundEnabledChanged();
     void windowDecorationsEnabledChanged();
     void navigationRumbleIntensityChanged();
+    void useLinkRedirectorChanged();
+    void defaultBrowserChanged();
 
 private:
     KConfigWatcher::Ptr m_configWatcher;

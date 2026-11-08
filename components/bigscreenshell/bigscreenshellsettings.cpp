@@ -22,6 +22,8 @@ BigscreenShellSettings::BigscreenShellSettings(QObject *parent)
             Q_EMIT navigationSoundEnabledChanged();
             Q_EMIT windowDecorationsEnabledChanged();
             Q_EMIT navigationRumbleIntensityChanged();
+            Q_EMIT useLinkRedirectorChanged();
+            Q_EMIT defaultBrowserChanged();
         }
     });
 }
@@ -83,4 +85,57 @@ void BigscreenShellSettings::setNavigationRumbleIntensity(int navigationRumbleIn
     static constexpr int NUM_SETTINGS = 4;
     group.writeEntry("navigationRumbleIntensity", qBound(0, navigationRumbleIntensity, NUM_SETTINGS - 1), KConfigGroup::Notify);
     m_config->sync();
+}
+
+bool BigscreenShellSettings::useLinkRedirector() const
+{
+    auto group = KConfigGroup{m_config, GENERAL_CONFIG_GROUP};
+    return group.readEntry("useLinkRedirector", false);
+}
+
+void BigscreenShellSettings::setUseLinkRedirector(const bool useLinkRedirector)
+{
+    KSharedConfig::Ptr mimeapps = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoCascade, QStandardPaths::GenericConfigLocation);
+    auto mimeappsGroup = KConfigGroup{mimeapps, QStringLiteral("Default Applications")};
+    auto bigscreenGroup = KConfigGroup{m_config, GENERAL_CONFIG_GROUP};
+    
+    if (useLinkRedirector) {
+        setDefaultBrowser(defaultBrowser());
+        mimeappsGroup.writeEntry("x-scheme-handler/http", QStringLiteral("org.kde.plasma.bigscreen.linkredirector"));
+        mimeappsGroup.writeEntry("x-scheme-handler/https", QStringLiteral("org.kde.plasma.bigscreen.linkredirector"));
+    } else {
+        QString browser = defaultBrowser(); 
+        mimeappsGroup.writeEntry("x-scheme-handler/http", browser);
+        mimeappsGroup.writeEntry("x-scheme-handler/https", browser);
+    }
+
+    bigscreenGroup.writeEntry("useLinkRedirector", useLinkRedirector, KConfigGroup::Notify);
+    m_config->sync();
+}
+
+QString BigscreenShellSettings::defaultBrowser() const
+{
+    if (useLinkRedirector()){
+        auto group = KConfigGroup{m_config, GENERAL_CONFIG_GROUP};
+        return group.readEntry("defaultBrowser", QStringLiteral("org.kde.aura-browser"));
+    } else {
+        KSharedConfig::Ptr mimeapps = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoCascade, QStandardPaths::GenericConfigLocation);
+        auto group = KConfigGroup{mimeapps, QStringLiteral("Default Applications")};
+        return group.readEntry("x-scheme-handler/https", group.readEntry("x-scheme-handler/http", QStringLiteral("org.kde.aura-browser")));
+    }
+}
+
+void BigscreenShellSettings::setDefaultBrowser(const QString defaultBrowser)
+{
+    if (useLinkRedirector()) {
+        auto group = KConfigGroup{m_config, GENERAL_CONFIG_GROUP};
+        group.writeEntry("defaultBrowser", defaultBrowser, KConfigGroup::Notify);
+        m_config->sync();
+    } else {
+        KSharedConfig::Ptr mimeapps = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoCascade, QStandardPaths::GenericConfigLocation);
+        auto group = KConfigGroup{mimeapps, QStringLiteral("Default Applications")};
+        group.writeEntry("x-scheme-handler/http", defaultBrowser, KConfigGroup::Notify);
+        group.writeEntry("x-scheme-handler/https", defaultBrowser, KConfigGroup::Notify);
+        mimeapps->sync();
+    }
 }

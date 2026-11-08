@@ -8,6 +8,7 @@
 
 #include "bigscreensettings.h"
 #include "colorschemelistmodel.h"
+#include "webbrowseroptionmodel.h"
 
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -24,6 +25,7 @@ BigscreenSettings::BigscreenSettings(QObject *parent, const KPluginMetaData &dat
     : KQuickConfigModule(parent, data)
     , m_config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")))
     , m_colorSchemeListModel(new ColorSchemeListModel(this))
+    , m_webBrowserOptionModel(new WebBrowserOptionModel(this))
 {
     setButtons(Apply);
 
@@ -214,6 +216,11 @@ void BigscreenSettings::resetShortcut(const QString &action)
 ColorSchemeListModel *BigscreenSettings::colorSchemeListModel()
 {
     return m_colorSchemeListModel;
+}
+
+WebBrowserOptionModel *BigscreenSettings::webBrowserOptionModel()
+{
+    return m_webBrowserOptionModel;
 }
 
 K_PLUGIN_CLASS_WITH_JSON(BigscreenSettings, "kcm_mediacenter_bigscreen_settings.json")

@@ -159,12 +159,36 @@ Bigscreen.ScrollablePage {
 
         Bigscreen.SwitchDelegate {
             id: pmInhibitionDelegate
-            KeyNavigation.down: timeDateDelegate
+            KeyNavigation.down: linkRedirectorDelegate
 
             text: i18n("Power inhibition")
             description: i18n("Prevent the system from automatically sleeping")
             checked: BigscreenShell.Settings.pmInhibitionEnabled ? true : false
             onCheckedChanged: BigscreenShell.Settings.pmInhibitionEnabled = checked
+        }
+
+        Bigscreen.SwitchDelegate {
+            id: linkRedirectorDelegate
+            KeyNavigation.down: defaultBrowserDelegate
+
+            text: i18nc("Clicking links will show a popup that allows sending the link to another device via KDE Connect or a QR code", "Enable Link Redirector")
+            description: i18n("Clicking links will show a popup that allows sending the link to another device via KDE Connect or a QR code")
+            checked: BigscreenShell.Settings.useLinkRedirector
+            onCheckedChanged: BigscreenShell.Settings.useLinkRedirector = checked
+        }
+
+        Bigscreen.ComboBoxDelegate {
+            id: defaultBrowserDelegate
+            KeyNavigation.down: timeDateDelegate
+            text: i18n("Default web browser")
+            displayText: currentIndex == -1 ? i18nc("When no default web browser is set", "Not set") : currentText
+
+            model: kcm.webBrowserOptionModel
+            textRole: "name"
+            valueRole: "storageId"
+            currentIndex: model.findByStorageId(BigscreenShell.Settings.defaultBrowser)
+            onActivated: BigscreenShell.Settings.defaultBrowser = currentValue
+            onDialogOpened: openOnFocusChanged = defaultBrowserDelegate
         }
 
         Bigscreen.ButtonDelegate {

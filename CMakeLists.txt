@@ -81,6 +81,7 @@ pkg_check_modules(SYSTEMD systemd)
 add_feature_info(Systemd SYSTEMD_FOUND "Use systemd-logind uaccess ACLs for uinput device access")
 
 ecm_find_qmlmodule(org.kde.kdeconnect REQUIRED)
+ecm_find_qmlmodule(org.kde.prison REQUIRED)
 
 # libcec (TV Remote support)
 pkg_check_modules(Libcec IMPORTED_TARGET libcec>=6)
@@ -108,6 +109,7 @@ add_subdirectory(settingsapp)
 add_subdirectory(webapp-viewer)
 add_subdirectory(inputhandler)
 add_subdirectory(kded)
+add_subdirectory(linkredirector)
 
 plasma_install_package(shell org.kde.plasma.bigscreen shells)
 plasma_install_package(lookandfeel org.kde.plasma.bigscreen look-and-feel lookandfeel)

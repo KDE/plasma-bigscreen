@@ -9,6 +9,7 @@
 #ifndef BIGSCREENSETTINGS_H
 #define BIGSCREENSETTINGS_H
 
+#include "webbrowseroptionmodel.h"
 #include <KQuickConfigModule>
 #include <KSharedConfig>
 #include <QObject>
@@ -25,6 +26,7 @@ class BigscreenSettings : public KQuickConfigModule
     Q_PROPERTY(QTime currentTime READ currentTime WRITE setCurrentTime NOTIFY currentTimeChanged)
     Q_PROPERTY(QDate currentDate READ currentDate WRITE setCurrentDate NOTIFY currentDateChanged)
     Q_PROPERTY(bool useNtp READ useNtp WRITE setUseNtp NOTIFY useNtpChanged)
+    Q_PROPERTY(WebBrowserOptionModel *webBrowserOptionModel READ webBrowserOptionModel CONSTANT)
 
 public:
     BigscreenSettings(QObject *parent, const KPluginMetaData &data);
@@ -34,6 +36,7 @@ public:
     void loadColorSchemeName();
 
     ColorSchemeListModel *colorSchemeListModel();
+    WebBrowserOptionModel *webBrowserOptionModel();
 
 public Q_SLOTS:
     void load() override;
@@ -77,6 +80,8 @@ private:
     QTime m_currentTime;
     QDate m_currentDate;
     bool m_useNtp;
+
+    WebBrowserOptionModel *m_webBrowserOptionModel;
 };
 
 #endif // BIGSCREENSETTINGS_H

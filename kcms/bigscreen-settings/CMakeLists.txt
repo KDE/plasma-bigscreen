@@ -6,6 +6,7 @@ set(bigscreensettings_SRCS
     bigscreensettings.cpp bigscreensettings.h
     colorschemelistmodel.cpp colorschemelistmodel.h
     timedated_interface.cpp timedated_interface.h
+    webbrowseroptionmodel.cpp webbrowseroptionmodel.h
 )
 
 kcmutils_add_qml_kcm(kcm_mediacenter_bigscreen_settings SOURCES ${bigscreensettings_SRCS})
@@ -22,4 +23,5 @@ target_link_libraries(kcm_mediacenter_bigscreen_settings
     KF6::KCMUtilsQuick
     KF6::ColorScheme
     KF6::CoreAddons
+    KF6::Service
 )
