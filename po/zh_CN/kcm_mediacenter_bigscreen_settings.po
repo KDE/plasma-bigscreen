@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-20 12:55+0000\n"
+"POT-Creation-Date: 2026-11-08 02:59+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -185,37 +185,63 @@ msgstr "阻止电源管理"
 msgid "Prevent the system from automatically sleeping"
 msgstr "防止系统自动休眠"
 
+#: ui/main.qml:174
+#, kde-format
+msgctxt ""
+"Clicking links will show a popup that allows sending the link to another "
+"device via KDE Connect or a QR code"
+msgid "Enable Link Redirector"
+msgstr ""
+
 #: ui/main.qml:175
+#, kde-format
+msgid ""
+"Clicking links will show a popup that allows sending the link to another "
+"device via KDE Connect or a QR code"
+msgstr ""
+
+#: ui/main.qml:183
+#, kde-format
+msgid "Default web browser"
+msgstr ""
+
+#: ui/main.qml:184
+#, kde-format
+msgctxt "When no default web browser is set"
+msgid "Not set"
+msgstr ""
+
+#: ui/main.qml:199
 #, kde-format
 msgid "Adjust date and time"
 msgstr "调整日期和时间"
 
-#: ui/main.qml:184
+#: ui/main.qml:208
 #, kde-format
 msgid "Shortcuts"
 msgstr "快捷键"
 
-#: ui/main.qml:194
+#: ui/main.qml:218
 #, kde-format
 msgid "Open home overlay shortcut"
 msgstr "打开主页叠加显示层快捷键"
 
-#: ui/main.qml:214
+#: ui/main.qml:238
 #, kde-format
 msgid "Open homescreen shortcut"
 msgstr "打开主屏幕快捷键"
 
-#: ui/main.qml:234
+#: ui/main.qml:258
 #, kde-format
 msgid "Open search shortcut"
 msgstr "打开搜索快捷键"
 
-#: ui/main.qml:254
+#: ui/main.qml:278
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "打开设置快捷键"
 
-#: ui/main.qml:273
+#: ui/main.qml:297
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "打开任务快捷键"

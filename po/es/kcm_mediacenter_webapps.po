@@ -1,16 +1,16 @@
 # Spanish translations for kcm_mediacenter_webapps.po package.
-# Copyright (C) 2025 This file is copyright:
+# Copyright (C) 2025-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 # Automatically generated, 2025.
 #
 # SPDX-FileCopyrightText: 2025 Eloy Cuadra <ecuadra@eloihr.net>
-# SPDX-FileCopyrightText: 2025 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
+# SPDX-FileCopyrightText: 2025-2026 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_webapps\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-25 00:52+0000\n"
-"PO-Revision-Date: 2025-09-07 00:52+0100\n"
+"PO-Revision-Date: 2026-11-07 22:57+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -38,12 +38,12 @@ msgstr "Aplicaciones web instaladas"
 #: ui/main.qml:106
 #, kde-format
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: ui/main.qml:114
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: ui/main.qml:140 ui/WebAppInfoSidebar.qml:52
 #, kde-format
@@ -73,26 +73,24 @@ msgstr "Agente de usuario predeterminado"
 #: ui/WebAppInfoSidebar.qml:76
 #, kde-format
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 #: ui/WebAppInfoSidebar.qml:83
-#, fuzzy, kde-format
-#| msgid "Delete web app %1?"
+#, kde-format
 msgid "Edit web app %1"
-msgstr "¿Borrar aplicación web %1?"
+msgstr "Editar aplicación web %1"
 
 #: ui/WebAppInfoSidebar.qml:106
 #, kde-format
 msgctxt "%1 is the current name of the web app"
 msgid "Name (leave blank for current)"
-msgstr ""
+msgstr "Nombre (dejar vacío para mantener el actual)"
 
 #: ui/WebAppInfoSidebar.qml:115
-#, fuzzy, kde-format
-#| msgid "User agent (empty for default)"
+#, kde-format
 msgctxt "%1 is the user agent of the current web app"
 msgid "User Agent (leave blank for default)"
-msgstr "Agente de usuario (vacío por omisión)"
+msgstr "Agente de usuario (dejar vacío por omisión)"
 
 #: ui/WebAppInfoSidebar.qml:127
 #, kde-format
@@ -103,6 +101,3 @@ msgstr "Borrar"
 #, kde-format
 msgid "Delete web app %1?"
 msgstr "¿Borrar aplicación web %1?"
-
-#~ msgid "Add Web Application"
-#~ msgstr "Añadir aplicación web"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-20 12:55+0000\n"
+"POT-Creation-Date: 2026-11-08 02:59+0000\n"
 "PO-Revision-Date: 2024-10-18 16:54+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -189,43 +189,69 @@ msgstr "Power Inhibition"
 msgid "Prevent the system from automatically sleeping"
 msgstr ""
 
+#: ui/main.qml:174
+#, kde-format
+msgctxt ""
+"Clicking links will show a popup that allows sending the link to another "
+"device via KDE Connect or a QR code"
+msgid "Enable Link Redirector"
+msgstr ""
+
 #: ui/main.qml:175
+#, kde-format
+msgid ""
+"Clicking links will show a popup that allows sending the link to another "
+"device via KDE Connect or a QR code"
+msgstr ""
+
+#: ui/main.qml:183
+#, kde-format
+msgid "Default web browser"
+msgstr ""
+
+#: ui/main.qml:184
+#, kde-format
+msgctxt "When no default web browser is set"
+msgid "Not set"
+msgstr ""
+
+#: ui/main.qml:199
 #, fuzzy, kde-format
 #| msgid "Adjust Date & Time"
 msgid "Adjust date and time"
 msgstr "Adjust Date & Time"
 
-#: ui/main.qml:184
+#: ui/main.qml:208
 #, fuzzy, kde-format
 #| msgid "Set Shortcut"
 msgid "Shortcuts"
 msgstr "Set Shortcut"
 
-#: ui/main.qml:194
+#: ui/main.qml:218
 #, fuzzy, kde-format
 #| msgid "Bigscreen Display Homescreen Shortcut"
 msgid "Open home overlay shortcut"
 msgstr "Bigscreen Display Homescreen Shortcut"
 
-#: ui/main.qml:214
+#: ui/main.qml:238
 #, fuzzy, kde-format
 #| msgid "Bigscreen Display Homescreen Shortcut"
 msgid "Open homescreen shortcut"
 msgstr "Bigscreen Display Homescreen Shortcut"
 
-#: ui/main.qml:234
+#: ui/main.qml:258
 #, fuzzy, kde-format
 #| msgid "Bigscreen Tasks Shortcut"
 msgid "Open search shortcut"
 msgstr "Bigscreen Tasks Shortcut"
 
-#: ui/main.qml:254
+#: ui/main.qml:278
 #, fuzzy, kde-format
 #| msgid "Bigscreen Settings Shortcut"
 msgid "Open settings shortcut"
 msgstr "Bigscreen Settings Shortcut"
 
-#: ui/main.qml:273
+#: ui/main.qml:297
 #, fuzzy, kde-format
 #| msgid "Bigscreen Tasks Shortcut"
 msgid "Open tasks shortcut"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-20 12:55+0000\n"
+"POT-Creation-Date: 2026-11-08 02:59+0000\n"
 "PO-Revision-Date: 2026-08-30 21:48+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -185,37 +185,63 @@ msgstr "מניעת צריכת חשמל"
 msgid "Prevent the system from automatically sleeping"
 msgstr "למנוע מהמערכת לישון אוטומטית"
 
+#: ui/main.qml:174
+#, kde-format
+msgctxt ""
+"Clicking links will show a popup that allows sending the link to another "
+"device via KDE Connect or a QR code"
+msgid "Enable Link Redirector"
+msgstr ""
+
 #: ui/main.qml:175
+#, kde-format
+msgid ""
+"Clicking links will show a popup that allows sending the link to another "
+"device via KDE Connect or a QR code"
+msgstr ""
+
+#: ui/main.qml:183
+#, kde-format
+msgid "Default web browser"
+msgstr ""
+
+#: ui/main.qml:184
+#, kde-format
+msgctxt "When no default web browser is set"
+msgid "Not set"
+msgstr ""
+
+#: ui/main.qml:199
 #, kde-format
 msgid "Adjust date and time"
 msgstr "כיוון התאריך והשעה"
 
-#: ui/main.qml:184
+#: ui/main.qml:208
 #, kde-format
 msgid "Shortcuts"
 msgstr "מקשי קיצור"
 
-#: ui/main.qml:194
+#: ui/main.qml:218
 #, kde-format
 msgid "Open home overlay shortcut"
 msgstr "קיצור דרך לפתיחת מסך בית צף"
 
-#: ui/main.qml:214
+#: ui/main.qml:238
 #, kde-format
 msgid "Open homescreen shortcut"
 msgstr "קיצור דרך לפתיחת מסך הבית"
 
-#: ui/main.qml:234
+#: ui/main.qml:258
 #, kde-format
 msgid "Open search shortcut"
 msgstr "קיצור דרך לפתיחת חיפוש"
 
-#: ui/main.qml:254
+#: ui/main.qml:278
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "קיצור דרך לפתיחת הגדרות"
 
-#: ui/main.qml:273
+#: ui/main.qml:297
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "קיצור דרך לפתיחת משימות"

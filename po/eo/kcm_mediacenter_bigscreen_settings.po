@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-20 12:55+0000\n"
+"POT-Creation-Date: 2026-11-08 02:59+0000\n"
 "PO-Revision-Date: 2024-12-27 17:40+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -190,43 +190,69 @@ msgstr "Inhibicio de Potenco"
 msgid "Prevent the system from automatically sleeping"
 msgstr ""
 
+#: ui/main.qml:174
+#, kde-format
+msgctxt ""
+"Clicking links will show a popup that allows sending the link to another "
+"device via KDE Connect or a QR code"
+msgid "Enable Link Redirector"
+msgstr ""
+
 #: ui/main.qml:175
+#, kde-format
+msgid ""
+"Clicking links will show a popup that allows sending the link to another "
+"device via KDE Connect or a QR code"
+msgstr ""
+
+#: ui/main.qml:183
+#, kde-format
+msgid "Default web browser"
+msgstr ""
+
+#: ui/main.qml:184
+#, kde-format
+msgctxt "When no default web browser is set"
+msgid "Not set"
+msgstr ""
+
+#: ui/main.qml:199
 #, fuzzy, kde-format
 #| msgid "Adjust Date & Time"
 msgid "Adjust date and time"
 msgstr "Alĝustigi Daton & Horon"
 
-#: ui/main.qml:184
+#: ui/main.qml:208
 #, fuzzy, kde-format
 #| msgid "Bigscreen Shortcuts"
 msgid "Shortcuts"
 msgstr "Grandekranaj Ŝparvojoj"
 
-#: ui/main.qml:194
+#: ui/main.qml:218
 #, fuzzy, kde-format
 #| msgid "Bigscreen Display Homescreen Shortcut"
 msgid "Open home overlay shortcut"
 msgstr "Ŝparvojo de Grandekrana Komencbildo"
 
-#: ui/main.qml:214
+#: ui/main.qml:238
 #, fuzzy, kde-format
 #| msgid "Bigscreen Display Homescreen Shortcut"
 msgid "Open homescreen shortcut"
 msgstr "Ŝparvojo de Grandekrana Komencbildo"
 
-#: ui/main.qml:234
+#: ui/main.qml:258
 #, fuzzy, kde-format
 #| msgid "Bigscreen Tasks Shortcut"
 msgid "Open search shortcut"
 msgstr "Ŝparvojo de Grandekranaj Taskoj"
 
-#: ui/main.qml:254
+#: ui/main.qml:278
 #, fuzzy, kde-format
 #| msgid "Bigscreen Settings Shortcut"
 msgid "Open settings shortcut"
 msgstr "Grandekran-Agorda Ŝparvojo"
 
-#: ui/main.qml:273
+#: ui/main.qml:297
 #, fuzzy, kde-format
 #| msgid "Bigscreen Tasks Shortcut"
 msgid "Open tasks shortcut"

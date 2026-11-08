@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-20 12:55+0000\n"
+"POT-Creation-Date: 2026-11-08 02:59+0000\n"
 "PO-Revision-Date: 2026-10-12 11:49+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -194,37 +194,63 @@ msgstr "Leistungsbegrenzung"
 msgid "Prevent the system from automatically sleeping"
 msgstr "Den automatischen Standby-Modus des Systems verhindern"
 
+#: ui/main.qml:174
+#, kde-format
+msgctxt ""
+"Clicking links will show a popup that allows sending the link to another "
+"device via KDE Connect or a QR code"
+msgid "Enable Link Redirector"
+msgstr ""
+
 #: ui/main.qml:175
+#, kde-format
+msgid ""
+"Clicking links will show a popup that allows sending the link to another "
+"device via KDE Connect or a QR code"
+msgstr ""
+
+#: ui/main.qml:183
+#, kde-format
+msgid "Default web browser"
+msgstr ""
+
+#: ui/main.qml:184
+#, kde-format
+msgctxt "When no default web browser is set"
+msgid "Not set"
+msgstr ""
+
+#: ui/main.qml:199
 #, kde-format
 msgid "Adjust date and time"
 msgstr "Datum und Uhrzeit anpassen"
 
-#: ui/main.qml:184
+#: ui/main.qml:208
 #, kde-format
 msgid "Shortcuts"
 msgstr "Kurzbefehle"
 
-#: ui/main.qml:194
+#: ui/main.qml:218
 #, kde-format
 msgid "Open home overlay shortcut"
 msgstr "Kurzbefehl für „Startbildschirm-Overlay öffnen“"
 
-#: ui/main.qml:214
+#: ui/main.qml:238
 #, kde-format
 msgid "Open homescreen shortcut"
 msgstr "Kurzbefehl für „Startbildschirm öffnen“"
 
-#: ui/main.qml:234
+#: ui/main.qml:258
 #, kde-format
 msgid "Open search shortcut"
 msgstr "Kurzbefehl für „Suche öffnen“"
 
-#: ui/main.qml:254
+#: ui/main.qml:278
 #, kde-format
 msgid "Open settings shortcut"
 msgstr "Kurzbefehl für „Einstellungen öffnen“"
 
-#: ui/main.qml:273
+#: ui/main.qml:297
 #, kde-format
 msgid "Open tasks shortcut"
 msgstr "Kurzbefehl für „Anwendungen öffnen“"
