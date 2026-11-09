@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-08 02:59+0000\n"
-"PO-Revision-Date: 2026-08-28 11:34+0200\n"
-"Last-Translator: Libor Filipek <libor.filipek@gmail.com>\n"
+"PO-Revision-Date: 2026-11-08 23:28+0100\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -193,7 +193,7 @@ msgctxt ""
 "Clicking links will show a popup that allows sending the link to another "
 "device via KDE Connect or a QR code"
 msgid "Enable Link Redirector"
-msgstr ""
+msgstr "Zapnout přesměrování odkazů"
 
 #: ui/main.qml:175
 #, kde-format
@@ -201,17 +201,20 @@ msgid ""
 "Clicking links will show a popup that allows sending the link to another "
 "device via KDE Connect or a QR code"
 msgstr ""
+"Po kliknutí na odkaz se zobrazí vyskakovací okno, které umožňuje odeslat "
+"odkaz na jiné zařízení prostřednictvím aplikace KDE Connect nebo pomocí QR "
+"kódu"
 
 #: ui/main.qml:183
 #, kde-format
 msgid "Default web browser"
-msgstr ""
+msgstr "Výchozí webový prohlížeč"
 
 #: ui/main.qml:184
 #, kde-format
 msgctxt "When no default web browser is set"
 msgid "Not set"
-msgstr ""
+msgstr "Nenastaveno"
 
 #: ui/main.qml:199
 #, kde-format

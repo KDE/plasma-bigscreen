@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-08 02:59+0000\n"
-"PO-Revision-Date: 2026-08-28 13:21+0300\n"
+"PO-Revision-Date: 2026-11-08 12:15+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -194,7 +194,7 @@ msgctxt ""
 "Clicking links will show a popup that allows sending the link to another "
 "device via KDE Connect or a QR code"
 msgid "Enable Link Redirector"
-msgstr ""
+msgstr "Увімкнути переспрямовувач посилань"
 
 #: ui/main.qml:175
 #, kde-format
@@ -202,17 +202,20 @@ msgid ""
 "Clicking links will show a popup that allows sending the link to another "
 "device via KDE Connect or a QR code"
 msgstr ""
+"Після натискання на посилання з’явиться контекстна панель, за допомогою якої "
+"можна надіслати посилання на інший пристрій за допомогою KDE Connect або QR-"
+"коду."
 
 #: ui/main.qml:183
 #, kde-format
 msgid "Default web browser"
-msgstr ""
+msgstr "Типова програма для перегляду інтернету"
 
 #: ui/main.qml:184
 #, kde-format
 msgctxt "When no default web browser is set"
 msgid "Not set"
-msgstr ""
+msgstr "Не встановлено"
 
 #: ui/main.qml:199
 #, kde-format
