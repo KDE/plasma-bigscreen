@@ -3,6 +3,15 @@
 
 [Desktop Entry]
 Name=Plasma Bigscreen Link Redirector
+Name[ca]=Redirector d'enllaços del Plasma Bigscreen
+Name[cs]=Přesměrování odkazů Plasma Bigscreen
+Name[ka]=Plasma Bigscreen-ის ბმულის გადამმისამართელი
+Name[nl]=Plasma Bigscreen Link Redirector
+Name[pt_BR]=Redirecionador de links do Plasma Bigscreen
+Name[ru]=Перенаправление ссылок Plasma Bigscreen
+Name[sl]=Plasma Bigscreen preusmerjevalnik povezav
+Name[tr]=Plasma Büyükekran Bağlantı Göndericisi
+Name[uk]=Переспрямовувач посилань Plasma Bigscreen
 Exec=plasma-bigscreen-linkredirector
 Icon=external-link-symbolic
 Type=Application
