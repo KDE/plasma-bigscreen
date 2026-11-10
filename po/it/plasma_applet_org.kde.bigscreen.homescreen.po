@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-07 03:02+0000\n"
-"PO-Revision-Date: 2026-07-14 15:27+0200\n"
+"PO-Revision-Date: 2026-10-28 23:58+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -124,7 +124,7 @@ msgstr "Controller"
 #: contents/ui/homeoverlay/MainColumn.qml:219
 #, kde-format
 msgid "Currently capturing keys…"
-msgstr "Acquisizione dei tasti in corso..."
+msgstr "Acquisizione dei tasti in corso…"
 
 #: contents/ui/homeoverlay/MainColumn.qml:219
 #, kde-format
@@ -196,7 +196,7 @@ msgstr "Impostazioni Internet"
 #: contents/ui/launcher/delegates/IconDelegate.qml:275
 #, kde-format
 msgid "Running"
-msgstr ""
+msgstr "In esecuzione"
 
 #: contents/ui/launcher/LauncherHome.qml:193
 #, kde-format
