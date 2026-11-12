@@ -106,6 +106,7 @@ Item {
         }
     }
     Keys.onReturnPressed: (event) => closeMover(event)
+    Keys.onEnterPressed: (event) => closeMover(event)
     Keys.onLeftPressed: (event) => {
         if (!local.moverMode){
             event.accepted = false;
@@ -138,7 +139,7 @@ Item {
     Keys.onReleased: (event) => {
         if (local.moverMode){
             event.accepted = true
-            if (event.key == Qt.Key_Return && !event.isAutoRepeat){
+            if ((event.key == Qt.Key_Return || event.key == Qt.Key_Enter) && !event.isAutoRepeat){
                 local.allowClose = true
             }
         }

@@ -45,6 +45,9 @@ PlasmaComponents.ToolButton {
     Keys.onReturnPressed: (event)=> {
         clicked();
     }
+    Keys.onEnterPressed: (event)=> {
+        clicked();
+    }
 
     onClicked: (event)=> {
         Bigscreen.NavigationSoundEffects.playClickedSound();

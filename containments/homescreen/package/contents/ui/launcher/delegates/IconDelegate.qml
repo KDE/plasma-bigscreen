@@ -127,7 +127,7 @@ QQC2.ItemDelegate {
         if (event.isAutoRepeat){
             return;
         }
-        if (event.key == Qt.Key_Return){
+        if (event.key == Qt.Key_Return || event.key == Qt.Key_Enter){
             event.accepted = true;
             keyPressed = true;
         } else{
@@ -138,7 +138,7 @@ QQC2.ItemDelegate {
         if (event.isAutoRepeat){
             return;
         }
-        if (keyPressed && event.key == Qt.Key_Return){
+        if (keyPressed && (event.key == Qt.Key_Return || event.key == Qt.Key_Enter)){
             event.accepted = true;
             keyPressed = false;
             click();

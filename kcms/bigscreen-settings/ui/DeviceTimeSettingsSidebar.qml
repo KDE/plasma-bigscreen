@@ -141,6 +141,7 @@ Bigscreen.SidebarOverlay {
                     KeyNavigation.up: backBtnTZPItem
                     KeyNavigation.down: listView
                     Keys.onReturnPressed: searchField.forceActiveFocus()
+                    Keys.onEnterPressed: searchField.forceActiveFocus()
 
                     placeholderText: i18n("Search City / Region")
                 }

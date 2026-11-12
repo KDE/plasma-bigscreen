@@ -109,6 +109,10 @@ Rectangle {
                     open()
                     Bigscreen.NavigationRumble.playConfirmRumble();
                 }
+                Keys.onEnterPressed: {
+                    open()
+                    Bigscreen.NavigationRumble.playConfirmRumble();
+                }
 
                 function open() {
                     if (modelData.kcmId === "open-desktop-settings") {

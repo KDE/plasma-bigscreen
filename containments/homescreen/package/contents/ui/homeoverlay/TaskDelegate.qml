@@ -53,7 +53,7 @@ Bigscreen.ItemDelegate {
         if (event.isAutoRepeat) {
             return;
         }
-        if (event.key === Qt.Key_Return) {
+        if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
             event.accepted = true;
             delegatePressed = true;
         } else {
@@ -64,7 +64,7 @@ Bigscreen.ItemDelegate {
         if (event.isAutoRepeat) {
             return;
         }
-        if (delegatePressed && event.key === Qt.Key_Return) {
+        if (delegatePressed && (event.key === Qt.Key_Return || event.key === Qt.Key_Enter)) {
             event.accepted = true;
 
             // Don't "click" unless the user just pressed state was very short

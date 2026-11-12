@@ -101,6 +101,7 @@ Item {
                 root.submitPassword(passwordInput.text)
             }
             Keys.onReturnPressed: clicked()
+            Keys.onEnterPressed: clicked()
         }
     }
 }

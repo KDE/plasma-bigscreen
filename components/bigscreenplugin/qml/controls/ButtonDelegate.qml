@@ -72,6 +72,9 @@ ItemDelegate {
     Keys.onReturnPressed: {
         click();
     }
+    Keys.onEnterPressed: {
+        click();
+    }
 
     contentItem: RowLayout {
         spacing: 0

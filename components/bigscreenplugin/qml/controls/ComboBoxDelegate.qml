@@ -134,6 +134,9 @@ ItemDelegate {
     Keys.onReturnPressed: {
         click();
     }
+    Keys.onEnterPressed: {
+        click();
+    }
     onClicked: comboBoxDialog.open()
 
     Accessible.onPressAction: root.clicked()

@@ -66,6 +66,14 @@ QQC2.ItemDelegate {
             event.accepted = false;
         }
     }
+    Keys.onEnterPressed: function(event){
+        if (handleKeyReturnAsClick){
+            clicked();
+            event.accepted = true;
+        } else {
+            event.accepted = false;
+        }
+    }
 
     contentItem: Item {}
 

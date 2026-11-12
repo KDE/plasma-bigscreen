@@ -111,6 +111,10 @@ T.SwitchDelegate {
         click();
         Bigscreen.NavigationRumble.playConfirmRumble();
     }
+    Keys.onEnterPressed: {
+        click();
+        Bigscreen.NavigationRumble.playConfirmRumble();
+    }
 
     onActiveFocusChanged: {
         if (activeFocus) {

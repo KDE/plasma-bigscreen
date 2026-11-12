@@ -119,6 +119,7 @@ AppletConfiguration {
                     configDialog.applyWallpaper();
                 }
                 Keys.onReturnPressed: clicked()
+                Keys.onEnterPressed: clicked()
 
                 contentItem: Image {
                     source: Qt.resolvedUrl("SlideshowThumbnail.png")
@@ -178,6 +179,9 @@ AppletConfiguration {
                     configDialog.applyWallpaper()
                 }
                 Keys.onReturnPressed: {
+                    clicked();
+                }
+                Keys.onEnterPressed: {
                     clicked();
                 }
             }

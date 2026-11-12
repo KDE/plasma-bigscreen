@@ -45,6 +45,9 @@ T.Button {
     Keys.onReturnPressed: {
         click();
     }
+    Keys.onEnterPressed: {
+        click();
+    }
 
     onActiveFocusChanged: {
         if (activeFocus) {

@@ -174,6 +174,10 @@ Window {
                                 root.currentPageIndex = index;
                                 Bigscreen.NavigationRumble.playConfirmRumble();
                             }
+                            Keys.onEnterPressed: {
+                                root.currentPageIndex = index;
+                                Bigscreen.NavigationRumble.playConfirmRumble();
+                            }
 
                             background: Bigscreen.DelegateBackground {
                                 control: pageDelegate
