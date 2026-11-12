@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-07 00:59+0000\n"
-"PO-Revision-Date: 2026-10-28 07:44+0200\n"
+"PO-Revision-Date: 2026-11-11 23:00+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -176,7 +176,7 @@ msgstr "Закрыть все приложения"
 #: contents/ui/indicators/Battery.qml:15
 #, kde-format
 msgid "Battery: %1%"
-msgstr "Заряд батареи: %1%"
+msgstr "Заряд батареи: %1 %"
 
 #: contents/ui/indicators/GridView.qml:14
 #, kde-format
