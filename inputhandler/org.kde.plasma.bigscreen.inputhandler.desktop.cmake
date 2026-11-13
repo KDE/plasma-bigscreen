@@ -8,6 +8,7 @@ Name[ca]=Gestor d'entrada del Plasma Bigscreen
 Name[ca@valencia]=Gestor d'entrada de Plasma Bigscreen
 Name[cs]=Ovladač vstupů Plasma Bigscreen
 Name[de]=Eingabeverarbeitung von Plasma Bigscreen
+Name[el]=Διαχειριστής εισόδου του Plasma Bigscreen
 Name[es]=Controlador de entrada de Plasma Bigscreen
 Name[eu]=Plasma Bigscreen sarrera-maneiatzailea
 Name[fi]=Plasma Bigscreenin syötekäsittelijä
