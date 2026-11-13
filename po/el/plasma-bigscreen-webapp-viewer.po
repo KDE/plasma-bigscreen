@@ -1,0 +1,243 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-10-10 03:19+0000\n"
+"PO-Revision-Date: 2026-11-12 23:23+0200\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Πέτρος Βιδάλης"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "pvidalis@gmail.com"
+
+#: main.cpp:52
+#, kde-format
+msgid "The user agent to browse with."
+msgstr "Ο πράκτορας χρήστη που θα χρησιμοποιηθεί για την περιήγηση."
+
+#: main.cpp:54
+#, kde-format
+msgid "The name of the web app"
+msgstr "Το όνομα της εφαρμογής ιστού"
+
+#: main.cpp:57
+#, kde-format
+msgid "link of website to launch"
+msgstr "Σύνδεσμος προς τον ιστότοπο που θα ανοίξει"
+
+#: main.cpp:74
+#, kde-format
+msgid "Webview"
+msgstr "Προβολή ιστού"
+
+#: main.cpp:76
+#, kde-format
+msgid "Plasma Bigscreen Webapp runtime"
+msgstr "Περιβάλλον εκτέλεσης εφαρμογών ιστού του Plasma Bigscreen"
+
+#: main.cpp:78
+#, kde-format
+msgid "© 2025 Plasma developers"
+msgstr "© 2025 Οι προγραμματιστές του Plasma"
+
+#: qml/WebView.qml:190
+#, kde-format
+msgctxt "@info:status"
+msgid "Entered Full Screen mode"
+msgstr "Ενεργοποιήθηκε η λειτουργία πλήρους οθόνης"
+
+#: qml/WebView.qml:191
+#, kde-format
+msgctxt "@action:button"
+msgid "Exit Full Screen (Esc)"
+msgstr "Έξοδος πλήρους οθόνης (Esc)"
+
+#: qml/WebView.qml:304
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Play"
+msgstr "Αναπαραγωγή"
+
+#: qml/WebView.qml:305
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Pause"
+msgstr "Παύση"
+
+#: qml/WebView.qml:312
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Unmute"
+msgstr "Αποσίγαση"
+
+#: qml/WebView.qml:313
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Mute"
+msgstr "Σίγαση"
+
+#: qml/WebView.qml:323
+#, kde-format
+msgctxt "@label"
+msgid "Speed"
+msgstr "Ταχύτητα"
+
+#: qml/WebView.qml:346
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Loop"
+msgstr "Επανάληψη"
+
+#: qml/WebView.qml:353
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Exit Fullscreen"
+msgstr "Έξοδος πλήρους οθόνης"
+
+#: qml/WebView.qml:353
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Enter Fullscreen"
+msgstr "Πλήρης οθόνη"
+
+#: qml/WebView.qml:366
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Hide Controls"
+msgstr "Απόκρυψη χειριστηρίων"
+
+#: qml/WebView.qml:367
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Show Controls"
+msgstr "Εμφάνιση χειριστηρίων"
+
+#: qml/WebView.qml:375
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Video"
+msgstr "Άνοιγμα βίντεο"
+
+#: qml/WebView.qml:375
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Audio"
+msgstr "Άνοιγμα ήχου"
+
+#: qml/WebView.qml:376
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Video in New Tab"
+msgstr "Άνοιγμα βίντεο σε νέα καρτέλα"
+
+#: qml/WebView.qml:376
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Audio in New Tab"
+msgstr "Άνοιγμα ήχου σε νέα καρτέλα"
+
+#: qml/WebView.qml:384
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Save Video"
+msgstr "Αποθήκευση βίντεο"
+
+#: qml/WebView.qml:390
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Video Link"
+msgstr "Αντιγραφή συνδέσμου βίντεο"
+
+#: qml/WebView.qml:396
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Image"
+msgstr "Άνοιγμα εικόνας"
+
+#: qml/WebView.qml:396
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Image in New Tab"
+msgstr "Άνοιγμα εικόνας σε νέα καρτέλα"
+
+#: qml/WebView.qml:404
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Save Image"
+msgstr "Αποθήκευση εικόνας"
+
+#: qml/WebView.qml:410
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Image"
+msgstr "Αντιγραφή εικόνας"
+
+#: qml/WebView.qml:416
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Image Link"
+msgstr "Αντιγραφή συνδέσμου εικόνας"
+
+#: qml/WebView.qml:422
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Link"
+msgstr "Άνοιγμα συνδέσμου"
+
+#: qml/WebView.qml:422
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Link in New Window"
+msgstr "Άνοιγμα συνδέσμου σε νέο παράθυρο"
+
+#: qml/WebView.qml:430
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Save Link"
+msgstr "Αποθήκευση συνδέσμου"
+
+#: qml/WebView.qml:436
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Link"
+msgstr "Αντιγραφή συνδέσμου"
+
+#: qml/WebView.qml:443
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy"
+msgstr "Αντιγραφή"
+
+#: qml/WebView.qml:449
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Cut"
+msgstr "Αποκοπή"
+
+#: qml/WebView.qml:455
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Paste"
+msgstr "Επικόλληση"
+
+#: webprofile.cpp:48
+#, kde-format
+msgid "Open"
+msgstr "Άνοιγμα"

@@ -1,0 +1,93 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
+"PO-Revision-Date: 2026-11-12 23:20+0200\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.12.3\n"
+
+#: ui/delegates/NetworkDelegate.qml:65 ui/DeviceConnectionSidebar.qml:72
+#, kde-format
+msgid "Connected"
+msgstr "Συνδεδεμένο"
+
+#: ui/DetailsText.qml:33
+#, kde-format
+msgid "IP Address Details"
+msgstr "Λεπτομέρειες διεύθυνσης IP"
+
+#: ui/DeviceConnectionSidebar.qml:138
+#, kde-format
+msgid "Network information"
+msgstr "Πληροφορίες δικτύου"
+
+#: ui/DeviceConnectionSidebar.qml:149 ui/PasswordDialog.qml:54
+#, kde-format
+msgid "Connect"
+msgstr "Σύνδεση"
+
+#: ui/DeviceConnectionSidebar.qml:149
+#, kde-format
+msgid "Disconnect"
+msgstr "Αποσύνδεση"
+
+#: ui/DeviceConnectionSidebar.qml:180
+#, kde-format
+msgid "Forget network"
+msgstr "Κατάργηση αποθηκευμένου δικτύου"
+
+#: ui/DeviceConnectionSidebar.qml:190
+#, kde-format
+msgid "Are you sure you want to forget the network %1?"
+msgstr "Θέλετε να καταργήσετε το αποθηκευμένο δίκτυο %1;"
+
+#: ui/DeviceConnectionSidebar.qml:213
+#, kde-format
+msgid "Network details"
+msgstr "Λεπτομέρειες δικτύου"
+
+#: ui/DeviceConnectionSidebar.qml:242
+#, kde-format
+msgid "Speed"
+msgstr "Ταχύτητα"
+
+#: ui/main.qml:26
+#, kde-format
+msgid "Network"
+msgstr "Δίκτυο"
+
+#: ui/main.qml:103
+#, kde-format
+msgid "Refresh"
+msgstr "Ανανέωση"
+
+#: ui/main.qml:115
+#, kde-format
+msgid "Connections"
+msgstr "Συνδέσεις"
+
+#: ui/PasswordDialog.qml:22
+#, kde-format
+msgid "Enter Password For %1"
+msgstr "Εισαγωγή κωδικού πρόσβασης για το %1"
+
+#: ui/PasswordDialog.qml:34
+#, kde-format
+msgid "Password…"
+msgstr "Κωδικός πρόσβασης…"
+
+#: ui/PasswordDialog.qml:59
+#, kde-format
+msgid "Cancel"
+msgstr "Ακύρωση"
