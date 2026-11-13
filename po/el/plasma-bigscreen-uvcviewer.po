@@ -1,0 +1,42 @@
+# Greek translations for plasma-bigscreen package.
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# Automatically generated, 2026.
+#
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"PO-Revision-Date: 2026-11-12 23:23+0200\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.12.3\n"
+
+#: CameraHomePage.qml:15
+#, kde-format
+msgctxt "@title"
+msgid "Select Media Device"
+msgstr "Επιλογή συσκευής πολυμέσων"
+
+#: CameraHomePage.qml:61
+#, kde-format
+msgid "No video devices found"
+msgstr "Δεν βρέθηκαν συσκευές βίντεο"
+
+#: CameraHomePage.qml:66
+#, kde-format
+msgid "Plasma Bigscreen UVC Viewer"
+msgstr "Προβολή κάμερας UVC του Plasma Bigscreen"
+
+#: Main.qml:17
+#, kde-format
+msgctxt "@title:window"
+msgid "Bigscreen UVC Viewer"
+msgstr "Προβολή κάμερας UVC του Bigscreen"

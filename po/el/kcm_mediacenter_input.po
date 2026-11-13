@@ -1,0 +1,136 @@
+# Greek translations for plasma-bigscreen package.
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# Automatically generated, 2026.
+#
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-09-22 16:02+0000\n"
+"PO-Revision-Date: 2026-11-12 22:58+0200\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.12.3\n"
+
+#: ui/GameControllerSidebar.qml:36
+#, kde-format
+msgid "System navigation"
+msgstr "Πλοήγηση στο σύστημα"
+
+#: ui/GameControllerSidebar.qml:51
+#, kde-format
+msgid "START button when suppressed"
+msgstr "Κουμπί START κατά την αναστολή εισόδου"
+
+#: ui/GameControllerSidebar.qml:52
+#, kde-format
+msgid ""
+"Handle the START button even when input is suppressed (may conflict with "
+"some apps)"
+msgstr ""
+"Χειρισμός του κουμπιού START ακόμη και όταν η είσοδος είναι σε αναστολή "
+"(ενδέχεται να προκαλέσει διένεξη με ορισμένες εφαρμογές)"
+
+#: ui/main.qml:17
+#, kde-format
+msgid "Input"
+msgstr "Είσοδος"
+
+#: ui/main.qml:105
+#, kde-format
+msgid "Input daemon is not running"
+msgstr "Η υπηρεσία εισόδου δεν εκτελείται"
+
+#: ui/main.qml:106
+#, kde-format
+msgid ""
+"Controller and remote settings are only available when plasma-bigscreen-"
+"inputhandler is running"
+msgstr ""
+"Οι ρυθμίσεις χειριστηρίων και τηλεχειριστηρίων είναι διαθέσιμες μόνο όταν "
+"εκτελείται το plasma-bigscreen-inputhandler"
+
+#: ui/main.qml:112
+#, kde-format
+msgid "System Navigation"
+msgstr "Πλοήγηση στο σύστημα"
+
+#: ui/main.qml:113
+#, kde-format
+msgid ""
+"Navigate the system interface with connected controllers/remotes (apps can "
+"always still use them directly)"
+msgstr ""
+"Πλοήγηση στο περιβάλλον του συστήματος με συνδεδεμένα χειριστήρια ή "
+"τηλεχειριστήρια (οι εφαρμογές μπορούν πάντα να τα χρησιμοποιούν απευθείας)"
+
+#: ui/main.qml:130
+#, kde-format
+msgid "TV remote"
+msgstr "Τηλεχειριστήριο τηλεόρασης"
+
+#: ui/main.qml:131
+#, kde-format
+msgid "Navigate the system interface with the connected TV remote (CEC)"
+msgstr ""
+"Πλοήγηση στο περιβάλλον του συστήματος με το συνδεδεμένο τηλεχειριστήριο της "
+"τηλεόρασης (CEC)"
+
+#: ui/main.qml:151
+#, kde-format
+msgid "TV HDMI port (CEC)"
+msgstr "Θύρα HDMI τηλεόρασης (CEC)"
+
+#: ui/main.qml:156
+#, kde-format
+msgid "Automatic"
+msgstr "Αυτόματα"
+
+#: ui/main.qml:158
+#, kde-format
+msgid "HDMI %1"
+msgstr "HDMI %1"
+
+#: ui/main.qml:176
+#, kde-format
+msgid "Game Controllers"
+msgstr "Χειριστήρια παιχνιδιών"
+
+#: ui/main.qml:186
+#, kde-format
+msgid "Game controllers"
+msgstr "Χειριστήρια παιχνιδιών"
+
+#: ui/main.qml:187
+#, kde-format
+msgid "Use connected game controllers for system navigation"
+msgstr "Χρήση συνδεδεμένων χειριστηρίων παιχνιδιών για πλοήγηση στο σύστημα"
+
+#: ui/main.qml:206
+#, kde-format
+msgid "Automatic input suppression"
+msgstr "Αυτόματη αναστολή εισόδου"
+
+#: ui/main.qml:207
+#, kde-format
+msgid "Stop controller navigation while another app is using a controller"
+msgstr ""
+"Διακοπή πλοήγησης με χειριστήριο όσο μια άλλη εφαρμογή χρησιμοποιεί "
+"χειριστήριο"
+
+#: ui/main.qml:227
+#, kde-format
+msgid "No controllers connected"
+msgstr "Κανένα συνδεδεμένο χειριστήριο"
+
+#: ui/main.qml:228
+#, kde-format
+msgid "Connect a game controller"
+msgstr "Συνδέστε ένα χειριστήριο παιχνιδιών"

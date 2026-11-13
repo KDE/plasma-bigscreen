@@ -1,52 +1,53 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-bigscreen package.
 #
 # Stelios <sstavra@gmail.com>, 2020.
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-24 00:45+0000\n"
-"PO-Revision-Date: 2020-10-07 09:16+0300\n"
-"Last-Translator: Stelios <sstavra@gmail.com>\n"
+"PO-Revision-Date: 2026-11-12 22:54+0200\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ui/AudioDelegateSidebar.qml:49
 #, kde-format
 msgid "Set as default device"
-msgstr ""
+msgstr "Ορισμός ως προεπιλεγμένη συσκευή"
 
 #: ui/delegates/VolumeObject.qml:53
 #, kde-format
 msgid "Adjust Volume"
-msgstr ""
+msgstr "Ρύθμιση έντασης"
 
 #: ui/delegates/VolumeObject.qml:140
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/main.qml:21
 #, kde-format
 msgid "Audio Devices"
-msgstr ""
+msgstr "Συσκευές ήχου"
 
 #: ui/main.qml:50
 #, kde-format
 msgid "Playback Devices"
-msgstr ""
+msgstr "Συσκευές αναπαραγωγής"
 
 #: ui/main.qml:80
 #, kde-format
 msgid "Recording Devices"
-msgstr ""
+msgstr "Συσκευές εγγραφής"
 
 #~ msgid "Exit"
 #~ msgstr "Έξοδος"

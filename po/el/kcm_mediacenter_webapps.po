@@ -1,0 +1,102 @@
+# Greek translations for plasma-bigscreen package.
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# Automatically generated, 2026.
+#
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-10-25 00:52+0000\n"
+"PO-Revision-Date: 2026-11-12 23:07+0200\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.12.3\n"
+
+#: ui/main.qml:16
+#, kde-format
+msgid "Web Apps"
+msgstr "Εφαρμογές ιστού"
+
+#: ui/main.qml:42 ui/main.qml:87
+#, kde-format
+msgid "Add Web App"
+msgstr "Προσθήκη εφαρμογής ιστού"
+
+#: ui/main.qml:49
+#, kde-format
+msgid "Installed web apps"
+msgstr "Εγκατεστημένες εφαρμογές ιστού"
+
+#: ui/main.qml:106
+#, kde-format
+msgid "OK"
+msgstr "Εντάξει"
+
+#: ui/main.qml:114
+#, kde-format
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: ui/main.qml:140 ui/WebAppInfoSidebar.qml:52
+#, kde-format
+msgid "Name"
+msgstr "Όνομα"
+
+#: ui/main.qml:148 ui/WebAppInfoSidebar.qml:59
+#, kde-format
+msgid "URL"
+msgstr "URL"
+
+#: ui/main.qml:156
+#, kde-format
+msgid "User agent (empty for default)"
+msgstr "Πράκτορας χρήστη (κενό για την προεπιλογή)"
+
+#: ui/WebAppInfoSidebar.qml:66
+#, kde-format
+msgid "User Agent"
+msgstr "Πράκτορας χρήστη"
+
+#: ui/WebAppInfoSidebar.qml:67
+#, kde-format
+msgid "Default user agent"
+msgstr "Προεπιλεγμένος πράκτορας χρήστη"
+
+#: ui/WebAppInfoSidebar.qml:76
+#, kde-format
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#: ui/WebAppInfoSidebar.qml:83
+#, kde-format
+msgid "Edit web app %1"
+msgstr "Επεξεργασία της εφαρμογής ιστού %1"
+
+#: ui/WebAppInfoSidebar.qml:106
+#, kde-format
+msgctxt "%1 is the current name of the web app"
+msgid "Name (leave blank for current)"
+msgstr "Όνομα (κενό για διατήρηση του τρέχοντος)"
+
+#: ui/WebAppInfoSidebar.qml:115
+#, kde-format
+msgctxt "%1 is the user agent of the current web app"
+msgid "User Agent (leave blank for default)"
+msgstr "Πράκτορας χρήστη (κενό για την προεπιλογή)"
+
+#: ui/WebAppInfoSidebar.qml:127
+#, kde-format
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: ui/WebAppInfoSidebar.qml:135
+#, kde-format
+msgid "Delete web app %1?"
+msgstr "Να διαγραφεί η εφαρμογή ιστού %1;"

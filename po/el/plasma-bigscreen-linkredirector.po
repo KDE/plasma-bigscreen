@@ -1,0 +1,78 @@
+# Greek translations for plasma-bigscreen package.
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# Automatically generated, 2026.
+#
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-08 02:59+0000\n"
+"PO-Revision-Date: 2026-11-12 23:23+0200\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Πέτρος Βιδάλης"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "pvidalis@gmail.com"
+
+#: main.cpp:27
+#, kde-format
+msgid "Plasma Bigscreen Link Redirector"
+msgstr "Ανακατεύθυνση συνδέσμων του Plasma Bigscreen"
+
+#: main.cpp:29
+#, kde-format
+msgid "Redirect links to QR codes or KDE Connect devices"
+msgstr "Ανακατεύθυνση συνδέσμων σε κωδικούς QR ή σε συσκευές KDE Connect"
+
+#: main.cpp:31
+#, kde-format
+msgid "© 2026 Plasma developers"
+msgstr "© 2026 Οι προγραμματιστές του Plasma"
+
+#: Main.qml:66
+#, kde-format
+msgid "Choose a device to send the URL to:"
+msgstr "Επιλέξτε συσκευή στην οποία θα σταλεί το URL:"
+
+#: Main.qml:103
+#, kde-format
+msgctxt "%1 is the device, %2 is the error message returned through dbus"
+msgid "Failed to send URL to %1: %2"
+msgstr "Αποτυχία αποστολής του URL στη συσκευή %1: %2"
+
+#: Main.qml:114
+#, kde-format
+msgctxt "Shown in placeholder message if no devices are reachable"
+msgid "No connected devices"
+msgstr "Καμία συνδεδεμένη συσκευή"
+
+#: Main.qml:115
+#, kde-format
+msgctxt "Explanation of \"No connected devices\" placeholder"
+msgid "Connect a device or check KDE Connect settings"
+msgstr "Συνδέστε μια συσκευή ή ελέγξτε τις ρυθμίσεις του KDE Connect"
+
+#: Main.qml:138
+#, kde-format
+msgid "Scan the QR code below with a supported device:"
+msgstr "Σαρώστε τον παρακάτω κωδικό QR με συμβατή συσκευή:"
+
+#: Main.qml:158
+#, kde-format
+msgid "Open in browser"
+msgstr "Άνοιγμα στον περιηγητή"
