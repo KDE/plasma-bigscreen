@@ -1,0 +1,294 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+#
+# SPDX-FileCopyrightText: 2026 Mincho Kondarev <mkondarev@yahoo.de>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-07-31 00:47+0000\n"
+"PO-Revision-Date: 2026-11-14 22:20+0100\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 26.08.3\n"
+
+#: ui/DeviceConnectionSidebar.qml:37
+#, kde-format
+msgid "Device information"
+msgstr "Данни за устройството"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Connecting…"
+msgstr "Свързване…"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Disconnecting…"
+msgstr "Прекъсване на връзката…"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Disconnect"
+msgstr "Прекъсване на връзката"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Pair"
+msgstr "Сдвояване"
+
+#: ui/DeviceConnectionSidebar.qml:48
+#, kde-format
+msgid "Connect"
+msgstr "Свързване"
+
+#: ui/DeviceConnectionSidebar.qml:86
+#, kde-format
+msgid "Forget device"
+msgstr "Забравяне на устройството"
+
+#: ui/DeviceConnectionSidebar.qml:97
+#, kde-format
+msgid "Are you sure you want to forget the device %1?"
+msgstr "Сигурни ли сте, че искате да забравите устройството %1?"
+
+#: ui/DeviceConnectionSidebar.qml:119
+#, kde-format
+msgid "Trusted"
+msgstr "Доверено"
+
+#: ui/DeviceConnectionSidebar.qml:120
+#, kde-format
+msgid "Auto-accept incoming connections"
+msgstr "Автоматично приемане на входящи връзки"
+
+#: ui/DeviceConnectionSidebar.qml:134
+#, kde-format
+msgid "Blocked"
+msgstr "Блокирано"
+
+#: ui/DeviceConnectionSidebar.qml:135
+#, kde-format
+msgid "Reject all connections from this device"
+msgstr "Отхвърляне на всички връзки от това устройство"
+
+#: ui/DeviceConnectionSidebar.qml:151
+#, kde-format
+msgid "Device details"
+msgstr "Подробности за устройството"
+
+#: ui/DeviceConnectionSidebar.qml:161
+#, kde-format
+msgid "Type: %1"
+msgstr "Вид: %1"
+
+#: ui/DeviceConnectionSidebar.qml:166
+#, kde-format
+msgid "Address: %1"
+msgstr "Адрес: %1"
+
+#: ui/DeviceConnectionSidebar.qml:172
+#, kde-format
+msgid "Battery: %1"
+msgstr "Батерия: %1"
+
+#: ui/DeviceConnectionSidebar.qml:173
+#, kde-format
+msgctxt "Battery percentage level"
+msgid "%1%"
+msgstr "%1%"
+
+#: ui/DeviceConnectionSidebar.qml:179 ui/DeviceConnectionSidebar.qml:186
+#, kde-format
+msgid "Change name"
+msgstr "Промяна на името"
+
+#: ui/DeviceDelegate.qml:33
+#, kde-format
+msgid "Connected"
+msgstr "Свързан"
+
+#: ui/DeviceDelegate.qml:39
+#, kde-format
+msgid "%1% Battery"
+msgstr "%1% Батерия"
+
+#: ui/main.qml:25
+#, kde-format
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: ui/main.qml:67
+#, kde-format
+msgid "No Bluetooth adapters found"
+msgstr "Няма намерени Bluetooth устройства"
+
+#: ui/main.qml:68
+#, kde-format
+msgid "Connect an external Bluetooth adapter"
+msgstr "Свързване на външен адаптер за Bluetooth"
+
+#: ui/main.qml:81
+#, kde-format
+msgid "Enable Bluetooth"
+msgstr "Активиране на Bluetooth"
+
+#: ui/main.qml:100
+#, kde-format
+msgid "Paired devices"
+msgstr "Сдвоени устройства"
+
+#: ui/main.qml:133
+#, kde-format
+msgid "Available devices"
+msgstr "Налични устройства"
+
+#: ui/script.js:13
+#, kde-format
+msgctxt "This device is a Phone"
+msgid "Phone"
+msgstr "Телефон"
+
+#: ui/script.js:15
+#, kde-format
+msgctxt "This device is a Modem"
+msgid "Modem"
+msgstr "Модем"
+
+#: ui/script.js:17
+#, kde-format
+msgctxt "This device is a Computer"
+msgid "Computer"
+msgstr "Компютър"
+
+#: ui/script.js:19
+#, kde-format
+msgctxt "This device is of type Network"
+msgid "Network"
+msgstr "Мрежа"
+
+#: ui/script.js:21
+#, kde-format
+msgctxt "This device is a Headset"
+msgid "Headset"
+msgstr "Слушалки с микрофон"
+
+#: ui/script.js:23
+#, kde-format
+msgctxt "This device is a Headphones"
+msgid "Headphones"
+msgstr "Слушалки"
+
+#: ui/script.js:25
+#, kde-format
+msgctxt "This device is an Audio/Video device"
+msgid "Multimedia"
+msgstr "Мултимедия"
+
+#: ui/script.js:27
+#, kde-format
+msgctxt "This device is a Keyboard (not the music instrument)"
+msgid "Keyboard"
+msgstr "Клавиатура"
+
+#: ui/script.js:29
+#, kde-format
+msgctxt "This device is a Mouse"
+msgid "Mouse"
+msgstr "Мишка"
+
+#: ui/script.js:31
+#, kde-format
+msgctxt "This device is a Game controller"
+msgid "Game controller"
+msgstr "Контролер за игри"
+
+#: ui/script.js:33
+#, kde-format
+msgctxt "This device is a Graphics Tablet (input device)"
+msgid "Tablet"
+msgstr "Таблет"
+
+#: ui/script.js:35
+#, kde-format
+msgctxt "This device is a Peripheral device"
+msgid "Peripheral"
+msgstr "Периферия"
+
+#: ui/script.js:37
+#, kde-format
+msgctxt "This device is a Camera"
+msgid "Camera"
+msgstr "Камера"
+
+#: ui/script.js:39
+#, kde-format
+msgctxt "This device is a Printer"
+msgid "Printer"
+msgstr "Принтер"
+
+#: ui/script.js:41
+#, kde-format
+msgctxt ""
+"This device is an Imaging device (printer, scanner, camera, display, …)"
+msgid "Imaging"
+msgstr "Графично устройство"
+
+#: ui/script.js:43
+#, kde-format
+msgctxt "This device is a Wearable"
+msgid "Wearable"
+msgstr "Аксесоар за носене"
+
+#: ui/script.js:45
+#, kde-format
+msgctxt "This device is a Toy"
+msgid "Toy"
+msgstr "Играчка"
+
+#: ui/script.js:47
+#, kde-format
+msgctxt "This device is a Health device"
+msgid "Health"
+msgstr "Медицинско устройство"
+
+#: ui/script.js:53
+#, kde-format
+msgid "File transfer"
+msgstr "Прехвърляне на файл"
+
+#: ui/script.js:56
+#, kde-format
+msgid "Send file"
+msgstr "Изпращане на файл"
+
+#: ui/script.js:59
+#, kde-format
+msgid "Input"
+msgstr "Входно устройство"
+
+#: ui/script.js:62
+#, kde-format
+msgid "Audio"
+msgstr "Аудио"
+
+#: ui/script.js:65
+#, kde-format
+msgid "Network"
+msgstr "Мрежа"
+
+#: ui/script.js:69
+#, kde-format
+msgid "Other"
+msgstr "Други"
+
+#: ui/script.js:72
+#, kde-format
+msgctxt "List separator"
+msgid ", "
+msgstr ", "
