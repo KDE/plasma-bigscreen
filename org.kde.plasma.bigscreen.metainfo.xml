@@ -42,6 +42,10 @@
   <name xml:lang="sa">केडीई प्लाज्मा बिगस्क्रीन</name>
   <name xml:lang="sk">KDE Plasma Bigscreen</name>
   <name xml:lang="sl">KDE Plasma Bigscreen</name>
+  <name xml:lang="sr">КДЕ Плазма за велики екран</name>
+  <name xml:lang="sr-Latn">KDE Plasma za veliki ekran</name>
+  <name xml:lang="sr-ijekavian">КДЕ Плазма за велики екран</name>
+  <name xml:lang="sr-ijekavianlatin">KDE Plasma za veliki ekran</name>
   <name xml:lang="sv">KDE Plasma storbildsskärm</name>
   <name xml:lang="tr">KDE Plasma BüyükEkran</name>
   <name xml:lang="ug">KDE Plasma چوڭ ئېكران</name>
@@ -84,6 +88,10 @@
   <summary xml:lang="sa">टीवी-कृते प्लाज्मा-शैलम्</summary>
   <summary xml:lang="sk">Plasma shell pre televízory</summary>
   <summary xml:lang="sl">Plasma Shell za TVs</summary>
+  <summary xml:lang="sr">плазма шкољка за телевизоре</summary>
+  <summary xml:lang="sr-Latn">plasma školjka za televizore</summary>
+  <summary xml:lang="sr-ijekavian">плазма шкољка за телевизоре</summary>
+  <summary xml:lang="sr-ijekavianlatin">plasma školjka za televizore</summary>
   <summary xml:lang="sv">Plasma skal för tv-apparater</summary>
   <summary xml:lang="tr">TV’ler için Plasma Kabuğu</summary>
   <summary xml:lang="ug">تېلېۋىزور ئۈچۈن Plasma Shell</summary>
@@ -136,6 +144,10 @@
     <p xml:lang="sa">प्लाज्मा बिगस्क्रीन् टीवी-इत्यस्य कृते मुक्त-स्रोत-उपयोक्तृ-अन्तरफलकम् अस्ति । Linux वितरणस्य उपरि चालयन् Plasma Bigscreen भवतः TV अथवा set-top box पूर्णतया हैक कर्तुं शक्यं उपकरणं परिणमयति । एकः विशालः प्रक्षेपकः यः भवन्तं कस्यापि संस्थापितस्य एप्स् कौशलस्य च सुलभं प्रवेशं ददाति। स्वरेण अथवा टीवी रिमोट् मार्गेण नियन्त्रणीयम्।</p>
     <p xml:lang="sk">Plasma Bigscreen je open-source používateľské rozhranie pre televízory. Bežiaci na distribúcii Linux, Plasma Bigscreen ponúka plne otvorenú a flexibilnú alternatívu.</p>
     <p xml:lang="sl">Plasma Bigscreen je odprtokodni uporabniški vmesnik za televizorje. Plasma Bigscreen, ki deluje na vrhu distribucije Linuxa, spremeni vaš TV ali sprejemnik v napravo, ki jo je mogoče popolnoma programirati. Velik zaganjalnik, ki vam omogoča enostaven dostop do vseh nameščenih aplikacij in veščin. Upravlja se z glasovnim ali TV daljinskim upravljalnikom.</p>
+    <p xml:lang="sr">Плазма за велики екран је корисничко сучеље отвореног кода за телевизоре. Покренута на некој дистрибуцији Линукса, Плазма за велики екран претвара ваш телевизор или сет‑топ бокс у уређај који можете у потпуности прилагодити. Велики покретач даје вам лак приступ свим инсталираним програмима и вештинама. Њоме се управља гласом или даљинским управљачем телевизора.</p>
+    <p xml:lang="sr-Latn">Plasma za veliki ekran je korisničko sučelje otvorenog koda za televizore. Pokrenuta na nekoj distribuciji Linuxa, Plasma za veliki ekran pretvara vaš televizor ili set‑top boks u uređaj koji možete u potpunosti prilagoditi. Veliki pokretač daje vam lak pristup svim instaliranim programima i veštinama. Njome se upravlja glasom ili daljinskim upravljačem televizora.</p>
+    <p xml:lang="sr-ijekavian">Плазма за велики екран је корисничко сучеље отвореног кода за телевизоре. Покренута на некој дистрибуцији Линукса, Плазма за велики екран претвара ваш телевизор или сет‑топ бокс у уређај који можете у потпуности прилагодити. Велики покретач даје вам лак приступ свим инсталираним програмима и вјештинама. Њоме се управља гласом или даљинским управљачем телевизора.</p>
+    <p xml:lang="sr-ijekavianlatin">Plasma za veliki ekran je korisničko sučelje otvorenog koda za televizore. Pokrenuta na nekoj distribuciji Linuxa, Plasma za veliki ekran pretvara vaš televizor ili set‑top boks u uređaj koji možete u potpunosti prilagoditi. Veliki pokretač daje vam lak pristup svim instaliranim programima i vještinama. Njome se upravlja glasom ili daljinskim upravljačem televizora.</p>
     <p xml:lang="sv">Plasma storbildsskärm är ett användargränssnitt för tv med öppen källkod Det kör med en Linux-distribution, och omvandlar din tv eller digitalbox till en fullständigt programmerbar apparat. Ett stort startprogram som gör att du enkelt kan komma åt alla installerade program och färdigheter. Går att styra med rösten eller tv-fjärrkontrollen.</p>
     <p xml:lang="tr">Plasma BüyükEkran, TV’ler için bir açık kaynaklı kullanıcı arayüzüdür. Bir Linux dağıtımı üzerinde çalışan Plasma BüyükEkran, televizyonunuzu veya ortam kutunuzu tümüyle üzerinde oynanabilir bir aygıta dönüştürür. Kocaman bir çalıştırıcı ile tüm kurulu uygulamalara ve yeteneklere ulaşabilirsiniz. Ses veya uzaktan kumanda ile denetlenebilirdir.</p>
     <p xml:lang="ug">Plasma چوڭ ئېكرانى تېلېۋىزور ئۈچۈن لايىھەلەنگەن ئوچۇق كودلۇق ئىشلەتكۈچى ئارايۈزى. ئۇ Linux تارقىتىش نەشرىدە ئىجرا قىلىنىدۇ، تېلېۋىزور ياكى تور تېلېۋىزورىنى پۈتۈنلەي خاسلاشتۇرغىلى بولىدىغان ئۈسكۈنىگە ئايلاندۇرىدۇ. Plasma چوڭ ئېكران قوزغاتقۇچ ئورنىتىلغان پىروگرامما ۋە ئىقتىدارنى زىيارەت قىلىشقا قولايلىق يارىتىدۇ. ئاۋاز ۋە تىزگىنەكتە تىزگىنلەشكە يول قويىدۇ.</p>
@@ -184,6 +196,10 @@
       <caption xml:lang="sa">प्लाज्मा बिगस्क्रीन्</caption>
       <caption xml:lang="sk">Plasma Bigscreen</caption>
       <caption xml:lang="sl">Plasma Bigscreen</caption>
+      <caption xml:lang="sr">Плазма за велики екран</caption>
+      <caption xml:lang="sr-Latn">Plasma za veliki ekran</caption>
+      <caption xml:lang="sr-ijekavian">Плазма за велики екран</caption>
+      <caption xml:lang="sr-ijekavianlatin">Plasma za veliki ekran</caption>
       <caption xml:lang="sv">Plasma storbildsskärm</caption>
       <caption xml:lang="tr">Plasma BüyükEkran</caption>
       <caption xml:lang="ug">Plasma چوڭ ئېكران</caption>
