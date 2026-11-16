@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 02:59+0000\n"
+"POT-Creation-Date: 2026-11-16 01:08+0000\n"
 "PO-Revision-Date: 2026-09-15 16:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -75,25 +75,25 @@ msgstr "時間"
 msgid "Date"
 msgstr "日期"
 
-#: ui/DeviceTimeSettingsSidebar.qml:126 ui/DeviceTimeSettingsSidebar.qml:204
-#: ui/DeviceTimeSettingsSidebar.qml:254
+#: ui/DeviceTimeSettingsSidebar.qml:126 ui/DeviceTimeSettingsSidebar.qml:205
+#: ui/DeviceTimeSettingsSidebar.qml:255
 #, kde-format
 msgid "Back"
 msgstr "返回"
 
-#: ui/DeviceTimeSettingsSidebar.qml:145
+#: ui/DeviceTimeSettingsSidebar.qml:146
 #, kde-format
 msgid "Search City / Region"
 msgstr "搜尋城市 / 區域"
 
 # %1 是譯文 (entry 23)
-#: ui/DeviceTimeSettingsSidebar.qml:165
+#: ui/DeviceTimeSettingsSidebar.qml:166
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "您的本地時區是%1"
 
 # %1 是 city，%2 是 region
-#: ui/DeviceTimeSettingsSidebar.qml:166
+#: ui/DeviceTimeSettingsSidebar.qml:167
 #, kde-format
 msgid "%1, %2"
 msgstr "%2，%1"

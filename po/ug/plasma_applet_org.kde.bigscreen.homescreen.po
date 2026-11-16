@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-07 00:59+0000\n"
+"POT-Creation-Date: 2026-11-15 04:13+0000\n"
 "PO-Revision-Date: 2026-10-03 18:54-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -29,24 +29,24 @@ msgstr "باش ئېكراننى تەھرىرلە"
 msgid "Favorites"
 msgstr "يىغقۇچ"
 
-#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:319
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:323
 #, kde-format
 msgid "Launcher Sections"
 msgstr "قوزغاتقۇچ بۆلىكى"
 
-#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:410
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:414
 #, fuzzy, kde-format
 #| msgctxt "As in: These apps are currently opened"
 #| msgid "Open Apps"
 msgid "Hidden Apps"
 msgstr "ئوچۇق ئەپ"
 
-#: contents/ui/FavoritesManager.qml:206
+#: contents/ui/FavoritesManager.qml:210
 #, kde-format
 msgid "Change Favorites Order"
 msgstr "مايىللىق تەرتىپىنى ئۆزگەرت"
 
-#: contents/ui/FavoritesManager.qml:216
+#: contents/ui/FavoritesManager.qml:220
 #, fuzzy, kde-format
 #| msgid ""
 #| "To change the order of the favorites, open the launcher and tap and hold "
@@ -58,42 +58,42 @@ msgstr ""
 "مايىللىق تەرتىپىنى ئۆزگەرتىشتە، قوزغاتقۇچنى ئېچىپ، يىغقۇچ تىزىمىدا ئەپنى "
 "چېكىپ ۋە بېسىپ تۇرسا بولىدۇ."
 
-#: contents/ui/FavoritesManager.qml:248
+#: contents/ui/FavoritesManager.qml:252
 #, kde-format
 msgid "Add Favorites"
 msgstr "يىغقۇچقا قوش"
 
-#: contents/ui/FavoritesManager.qml:288
+#: contents/ui/FavoritesManager.qml:292
 #, kde-format
 msgid "Remove Favorites"
 msgstr "يىغقۇچتىن چىقىرىۋەت"
 
-#: contents/ui/FavoritesManager.qml:333
+#: contents/ui/FavoritesManager.qml:337
 #, kde-format
 msgid "Show Recent"
 msgstr "يېقىنقىنى كۆرسەت"
 
-#: contents/ui/FavoritesManager.qml:334
+#: contents/ui/FavoritesManager.qml:338
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
 msgstr "يېقىندا ئىجرا قىلىنغان پىروگرامما باش ئېكراندىكى قۇردا كۆرۈنىدۇ"
 
-#: contents/ui/FavoritesManager.qml:349
+#: contents/ui/FavoritesManager.qml:353
 #, kde-format
 msgid "Show Applications"
 msgstr "پىروگراممىنى كۆرسەت"
 
-#: contents/ui/FavoritesManager.qml:350
+#: contents/ui/FavoritesManager.qml:354
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
 msgstr "ئويۇن ئەمەس پىروگرامما باش ئېكراندىكى قۇردا كۆرۈنىدۇ"
 
-#: contents/ui/FavoritesManager.qml:366
+#: contents/ui/FavoritesManager.qml:370
 #, kde-format
 msgid "Show Games"
 msgstr "ئويۇننى كۆرسەت"
 
-#: contents/ui/FavoritesManager.qml:367
+#: contents/ui/FavoritesManager.qml:371
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
 msgstr "ئويۇن سەھىپىسىدىكى پىروگرامما باش ئېكراندىكى قۇردا كۆرۈنىدۇ"

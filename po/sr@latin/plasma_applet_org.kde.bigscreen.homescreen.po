@@ -1,0 +1,315 @@
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-15 04:13+0000\n"
+"PO-Revision-Date: 2026-11-14 19:40+0100\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
+#, kde-format
+msgid "Edit Home Screen"
+msgstr "Uredi domaći ekran"
+
+#: contents/ui/FavoritesManager.qml:144
+#: contents/ui/launcher/LauncherHome.qml:189
+#, kde-format
+msgid "Favorites"
+msgstr "Omiljeno"
+
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:323
+#, kde-format
+msgid "Launcher Sections"
+msgstr "Odeljci pokretača"
+
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:414
+#, kde-format
+msgid "Hidden Apps"
+msgstr "Skriveni programi"
+
+#: contents/ui/FavoritesManager.qml:210
+#, kde-format
+msgid "Change Favorites Order"
+msgstr "Promena redosleda omiljenih"
+
+#: contents/ui/FavoritesManager.qml:220
+#, kde-format
+msgid ""
+"To change the order of the favorites, hold the select button on a favorite "
+"on the home screen and choose Move."
+msgstr ""
+"Da biste promenili redosled omiljenih, na domaćem ekranu zadržite dugme za "
+"izbor na omiljenom programu i izaberite „Premesti“."
+
+#: contents/ui/FavoritesManager.qml:252
+#, kde-format
+msgid "Add Favorites"
+msgstr "Dodaj omiljene"
+
+#: contents/ui/FavoritesManager.qml:292
+#, kde-format
+msgid "Remove Favorites"
+msgstr "Ukloni omiljene"
+
+#: contents/ui/FavoritesManager.qml:337
+#, kde-format
+msgid "Show Recent"
+msgstr "Prikaži nedavne"
+
+#: contents/ui/FavoritesManager.qml:338
+#, kde-format
+msgid "Recently launched applications appear in a row on the home screen"
+msgstr "Nedavno pokrenuti programi pojavljuju se u redu na domaćem ekranu"
+
+#: contents/ui/FavoritesManager.qml:353
+#, kde-format
+msgid "Show Applications"
+msgstr "Prikaži programe"
+
+#: contents/ui/FavoritesManager.qml:354
+#, kde-format
+msgid "Non-game applications appear in a row on the home screen"
+msgstr "Programi koji nisu igre pojavljuju se u redu na domaćem ekranu"
+
+#: contents/ui/FavoritesManager.qml:370
+#, kde-format
+msgid "Show Games"
+msgstr "Prikaži igre"
+
+#: contents/ui/FavoritesManager.qml:371
+#, kde-format
+msgid "Applications in the Game category appear in a row on the home screen"
+msgstr "Programi iz kategorije igara pojavljuju se u redu na domaćem ekranu"
+
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:36
+#, kde-format
+msgid "Screenshot"
+msgstr "Snimak ekrana"
+
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:50
+#, kde-format
+msgid "Audio"
+msgstr "Audio"
+
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:78
+#, kde-format
+msgid "Wi-Fi"
+msgstr "Wi‑Fi"
+
+#: contents/ui/homeoverlay/ColumnActionsRow.qml:93
+#, kde-format
+msgid "Shutdown"
+msgstr "Gašenje"
+
+#: contents/ui/homeoverlay/MainColumn.qml:166
+#, kde-format
+msgid "Home"
+msgstr "Domaći ekran"
+
+#: contents/ui/homeoverlay/MainColumn.qml:180
+#: contents/ui/indicators/Search.qml:16
+#, kde-format
+msgid "Search"
+msgstr "Traži"
+
+#: contents/ui/homeoverlay/MainColumn.qml:197
+#, kde-format
+msgctxt "@action:button Opens an overview of all currently running apps"
+msgid "Tasks"
+msgstr "Zadaci"
+
+#: contents/ui/homeoverlay/MainColumn.qml:220
+#, kde-format
+msgid "Controller"
+msgstr "Kontrolor"
+
+#: contents/ui/homeoverlay/MainColumn.qml:221
+#, kde-format
+msgid "Currently capturing keys…"
+msgstr "Trenutno hvata tastere…"
+
+#: contents/ui/homeoverlay/MainColumn.qml:221
+#, kde-format
+msgid "Key capture off"
+msgstr "Hvatanje tastera isključeno"
+
+#: contents/ui/homeoverlay/MainColumn.qml:239
+#, kde-format
+msgid "On-screen Keyboard"
+msgstr "Tastatura na ekranu"
+
+#: contents/ui/homeoverlay/MainColumn.qml:258
+#: contents/ui/indicators/Settings.qml:18
+#, kde-format
+msgid "Settings"
+msgstr "Postavke"
+
+#: contents/ui/homeoverlay/TaskDelegate.qml:122
+#, kde-format
+msgid "Hold to close…"
+msgstr "Zadržite da zatvorite…"
+
+#: contents/ui/homeoverlay/TasksView.qml:109
+#, kde-format
+msgctxt "As in: These apps are currently opened"
+msgid "Open Apps"
+msgstr "Otvoreni programi"
+
+#: contents/ui/homeoverlay/TasksView.qml:160
+#, kde-format
+msgid "Close all apps"
+msgstr "Zatvori sve programe"
+
+#: contents/ui/indicators/Battery.qml:15
+#, kde-format
+msgid "Battery: %1%"
+msgstr "Baterija: %1%"
+
+#: contents/ui/indicators/GridView.qml:14
+#, kde-format
+msgid "Show app grid"
+msgstr "Prikaži mrežu programa"
+
+#: contents/ui/indicators/GridView.qml:14
+#, kde-format
+msgid "Hide app grid"
+msgstr "Sakrij mrežu programa"
+
+#: contents/ui/indicators/KdeConnect.qml:20
+#, kde-format
+msgid "KDE Connect"
+msgstr "KDE‑konekcija"
+
+#: contents/ui/indicators/PairWindow.qml:40
+#, kde-format
+msgid "Accept Pairing Request From %1?"
+msgstr "Prihvatiti zahtev za uparivanje od %1?"
+
+#: contents/ui/indicators/Shutdown.qml:15
+#, kde-format
+msgid "Exit Bigscreen"
+msgstr "Napusti Plasmu za veliki ekran"
+
+#: contents/ui/indicators/Shutdown.qml:15
+#, kde-format
+msgid "Power"
+msgstr "Napajanje"
+
+#: contents/ui/indicators/Volume.qml:20
+#, kde-format
+msgid "Audio Settings"
+msgstr "Audio postavke"
+
+#: contents/ui/indicators/Wifi.qml:19
+#, kde-format
+msgid "Internet Settings"
+msgstr "Postavke interneta"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:83
+#, kde-format
+msgid "Added %1 to Favorites"
+msgstr "Dodato u omiljene: %1"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:87
+#, kde-format
+msgid "Removed %1 from Favorites"
+msgstr "Uklonjeno iz omiljenih: %1"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:92
+#, kde-format
+msgid "%1 hidden. Show it again from Edit Home Screen."
+msgstr "Skriveno: %1. Ponovo ga možete prikazati kroz „Uredi domaći ekran“."
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:111
+#, kde-format
+msgid "Move"
+msgstr "Premesti"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:114
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "Ukloni iz omiljenih"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:115
+#, kde-format
+msgid "Add to Favorites"
+msgstr "Dodaj u omiljene"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:116
+#, kde-format
+msgid "Hide from Homescreen"
+msgstr "Sakrij sa domaćeg ekrana"
+
+#: contents/ui/launcher/AppOptionsDrawer.qml:131
+#: contents/ui/launcher/delegates/IconDelegate.qml:275
+#, kde-format
+msgid "Running"
+msgstr "U pogonu"
+
+#: contents/ui/launcher/LauncherHome.qml:227
+#, kde-format
+msgid "Recent"
+msgstr "Nedavno"
+
+#: contents/ui/launcher/LauncherHome.qml:275
+#, kde-format
+msgid "Applications"
+msgstr "Programi"
+
+#: contents/ui/launcher/LauncherHome.qml:311
+#, kde-format
+msgid "Games"
+msgstr "Igre"
+
+#: contents/ui/main.qml:122
+#, kde-format
+msgid "Controller added: %1"
+msgstr "Kontrolor dodat: %1"
+
+#: contents/ui/main.qml:126
+#, kde-format
+msgid "Controller removed: %1"
+msgstr "Kontrolor uklonjen: %1"
+
+#: contents/ui/main.qml:130
+#, kde-format
+msgid "Remote added: %1"
+msgstr "Daljinski upravljač dodat: %1"
+
+#: contents/ui/main.qml:134
+#, kde-format
+msgid "Remote removed: %1"
+msgstr "Daljinski upravljač uklonjen: %1"
+
+#: contents/ui/main.qml:138
+#, kde-format
+msgid "System taking over controller input"
+msgstr "Sistem preuzima unos sa kontrolora"
+
+#: contents/ui/main.qml:141
+#, kde-format
+msgid "Application taking over controller input"
+msgstr "Program preuzima unos sa kontrolora"
+
+#: contents/ui/PowerManagementItem.qml:37
+#, kde-format
+msgctxt "@info"
+msgid "Plasma Bigscreen has enabled system-wide inhibition"
+msgstr "Plasma za veliki ekran je uključila sprečavanje spavanja širom sistema"
+
+#: contents/ui/search/SearchTextField.qml:24
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Search…"
+msgstr "Traži…"

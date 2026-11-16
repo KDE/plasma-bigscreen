@@ -1,0 +1,100 @@
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-10-25 00:52+0000\n"
+"PO-Revision-Date: 2026-11-14 19:40+0100\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavianlatin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: ui/main.qml:16
+#, kde-format
+msgid "Web Apps"
+msgstr "Veb programi"
+
+#: ui/main.qml:42 ui/main.qml:87
+#, kde-format
+msgid "Add Web App"
+msgstr "Dodaj veb program"
+
+#: ui/main.qml:49
+#, kde-format
+msgid "Installed web apps"
+msgstr "Instalirani veb programi"
+
+#: ui/main.qml:106
+#, kde-format
+msgid "OK"
+msgstr "U redu"
+
+#: ui/main.qml:114
+#, kde-format
+msgid "Cancel"
+msgstr "Odustani"
+
+#: ui/main.qml:140 ui/WebAppInfoSidebar.qml:52
+#, kde-format
+msgid "Name"
+msgstr "Ime"
+
+#: ui/main.qml:148 ui/WebAppInfoSidebar.qml:59
+#, kde-format
+msgid "URL"
+msgstr "URL"
+
+#: ui/main.qml:156
+#, kde-format
+msgid "User agent (empty for default)"
+msgstr "Korisnički agent (prazno za podrazumijevani)"
+
+#: ui/WebAppInfoSidebar.qml:66
+#, kde-format
+msgid "User Agent"
+msgstr "Korisnički agent"
+
+#: ui/WebAppInfoSidebar.qml:67
+#, kde-format
+msgid "Default user agent"
+msgstr "Podrazumijevani korisnički agent"
+
+#: ui/WebAppInfoSidebar.qml:76
+#, kde-format
+msgid "Edit"
+msgstr "Uredi"
+
+#: ui/WebAppInfoSidebar.qml:83
+#, kde-format
+msgid "Edit web app %1"
+msgstr "Uređivanje veb programa %1"
+
+#: ui/WebAppInfoSidebar.qml:106
+#, kde-format
+msgctxt "%1 is the current name of the web app"
+msgid "Name (leave blank for current)"
+msgstr "Ime (ostavite prazno za trenutno)"
+
+#: ui/WebAppInfoSidebar.qml:115
+#, kde-format
+msgctxt "%1 is the user agent of the current web app"
+msgid "User Agent (leave blank for default)"
+msgstr "Korisnički agent (ostavite prazno za podrazumijevani)"
+
+#: ui/WebAppInfoSidebar.qml:127
+#, kde-format
+msgid "Delete"
+msgstr "Obriši"
+
+#: ui/WebAppInfoSidebar.qml:135
+#, kde-format
+msgid "Delete web app %1?"
+msgstr "Obrisati veb program %1?"

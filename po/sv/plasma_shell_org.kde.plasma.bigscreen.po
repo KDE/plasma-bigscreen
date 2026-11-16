@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-22 00:52+0000\n"
+"POT-Creation-Date: 2026-11-15 04:13+0000\n"
 "PO-Revision-Date: 2026-07-11 07:14+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -29,7 +29,7 @@ msgstr "Typ av skrivbordsunderlägg:"
 msgid "Wallpaper"
 msgstr "Skrivbordsunderlägg"
 
-#: contents/configuration/ContainmentConfiguration.qml:134
+#: contents/configuration/ContainmentConfiguration.qml:135
 msgid "Slideshow"
 msgstr "Bildspel"
 

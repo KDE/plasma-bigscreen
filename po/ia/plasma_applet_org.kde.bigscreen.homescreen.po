@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-07 00:59+0000\n"
+"POT-Creation-Date: 2026-11-15 04:13+0000\n"
 "PO-Revision-Date: 2026-10-30 12:07+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -28,22 +28,22 @@ msgstr "Edita  le Schermo Domo o Initial"
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:319
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:323
 #, kde-format
 msgid "Launcher Sections"
 msgstr "Sectiones del lanceator"
 
-#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:410
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:414
 #, kde-format
 msgid "Hidden Apps"
 msgstr "Apps celate"
 
-#: contents/ui/FavoritesManager.qml:206
+#: contents/ui/FavoritesManager.qml:210
 #, kde-format
 msgid "Change Favorites Order"
 msgstr "Cambia ordine de Favoritos"
 
-#: contents/ui/FavoritesManager.qml:216
+#: contents/ui/FavoritesManager.qml:220
 #, kde-format
 msgid ""
 "To change the order of the favorites, hold the select button on a favorite "
@@ -52,45 +52,45 @@ msgstr ""
 "Pro cambiar le ordine del favoritos, mantene premite le button de  selection "
 "super un favorito in le ecran principal e elige Mover."
 
-#: contents/ui/FavoritesManager.qml:248
+#: contents/ui/FavoritesManager.qml:252
 #, kde-format
 msgid "Add Favorites"
 msgstr "Adde Favoritos"
 
-#: contents/ui/FavoritesManager.qml:288
+#: contents/ui/FavoritesManager.qml:292
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Remove Favoritos"
 
-#: contents/ui/FavoritesManager.qml:333
+#: contents/ui/FavoritesManager.qml:337
 #, kde-format
 msgid "Show Recent"
 msgstr "Monstra Recente"
 
-#: contents/ui/FavoritesManager.qml:334
+#: contents/ui/FavoritesManager.qml:338
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
 msgstr ""
 "Applicationes lanceate recentemente  appare in un rango sur le schermo  domo "
 "o initial"
 
-#: contents/ui/FavoritesManager.qml:349
+#: contents/ui/FavoritesManager.qml:353
 #, kde-format
 msgid "Show Applications"
 msgstr "Monstra Applicationes"
 
-#: contents/ui/FavoritesManager.qml:350
+#: contents/ui/FavoritesManager.qml:354
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
 msgstr ""
 "Applicationes non de joco appare in un rango sur le schermo  domo o initial"
 
-#: contents/ui/FavoritesManager.qml:366
+#: contents/ui/FavoritesManager.qml:370
 #, kde-format
 msgid "Show Games"
 msgstr "Monstra Jocos"
 
-#: contents/ui/FavoritesManager.qml:367
+#: contents/ui/FavoritesManager.qml:371
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
 msgstr ""

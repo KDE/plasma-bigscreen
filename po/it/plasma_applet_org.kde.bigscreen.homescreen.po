@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-07 00:59+0000\n"
+"POT-Creation-Date: 2026-11-15 04:13+0000\n"
 "PO-Revision-Date: 2026-10-28 23:58+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -28,22 +28,22 @@ msgstr "Modifica la schermata principale"
 msgid "Favorites"
 msgstr "Preferiti"
 
-#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:319
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:323
 #, kde-format
 msgid "Launcher Sections"
 msgstr "Sezioni dell'esecutore"
 
-#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:410
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:414
 #, kde-format
 msgid "Hidden Apps"
 msgstr "Applicazioni nascoste"
 
-#: contents/ui/FavoritesManager.qml:206
+#: contents/ui/FavoritesManager.qml:210
 #, kde-format
 msgid "Change Favorites Order"
 msgstr "Modifica ordine dei preferiti"
 
-#: contents/ui/FavoritesManager.qml:216
+#: contents/ui/FavoritesManager.qml:220
 #, kde-format
 msgid ""
 "To change the order of the favorites, hold the select button on a favorite "
@@ -53,46 +53,46 @@ msgstr ""
 "di selezione su un elemento preferito nella schermata iniziale e scegli "
 "Sposta."
 
-#: contents/ui/FavoritesManager.qml:248
+#: contents/ui/FavoritesManager.qml:252
 #, kde-format
 msgid "Add Favorites"
 msgstr "Aggiungi preferiti"
 
-#: contents/ui/FavoritesManager.qml:288
+#: contents/ui/FavoritesManager.qml:292
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Rimuovi preferiti"
 
-#: contents/ui/FavoritesManager.qml:333
+#: contents/ui/FavoritesManager.qml:337
 #, kde-format
 msgid "Show Recent"
 msgstr "Mostra Recenti"
 
-#: contents/ui/FavoritesManager.qml:334
+#: contents/ui/FavoritesManager.qml:338
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
 msgstr ""
 "Le applicazioni avviate di recente sono visualizzate in fila nella schermata "
 "principale"
 
-#: contents/ui/FavoritesManager.qml:349
+#: contents/ui/FavoritesManager.qml:353
 #, kde-format
 msgid "Show Applications"
 msgstr "Mostra Applicazioni"
 
-#: contents/ui/FavoritesManager.qml:350
+#: contents/ui/FavoritesManager.qml:354
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
 msgstr ""
 "Le applicazioni non di gioco sono visualizzate in fila nella schermata "
 "principale"
 
-#: contents/ui/FavoritesManager.qml:366
+#: contents/ui/FavoritesManager.qml:370
 #, kde-format
 msgid "Show Games"
 msgstr "Mostra Giochi"
 
-#: contents/ui/FavoritesManager.qml:367
+#: contents/ui/FavoritesManager.qml:371
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
 msgstr ""

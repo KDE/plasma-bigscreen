@@ -1,0 +1,285 @@
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-16 01:08+0000\n"
+"PO-Revision-Date: 2026-11-14 19:40+0100\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Немања Хиршл"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "nemhirsl@gmail.com"
+
+#: ui/ColorSchemeSidebar.qml:23 ui/main.qml:85
+#, kde-format
+msgid "Color scheme"
+msgstr "Шема боја"
+
+#: ui/DatePicker.qml:38
+#, kde-format
+msgid "Year"
+msgstr "Година"
+
+#: ui/DatePicker.qml:54
+#, kde-format
+msgid "Month"
+msgstr "Месец"
+
+#: ui/DatePicker.qml:70
+#, kde-format
+msgid "Day"
+msgstr "Дан"
+
+#: ui/DeviceTimeSettingsSidebar.qml:46
+#, kde-format
+msgid "Adjust Date and Time Settings"
+msgstr "Подешавање поставки датума и времена"
+
+#: ui/DeviceTimeSettingsSidebar.qml:54
+#, kde-format
+msgid "Timezone"
+msgstr "Временска зона"
+
+#: ui/DeviceTimeSettingsSidebar.qml:66
+#, kde-format
+msgid "Set time automatically"
+msgstr "Аутоматски постави време"
+
+#: ui/DeviceTimeSettingsSidebar.qml:84
+#, kde-format
+msgid "Time"
+msgstr "Време"
+
+#: ui/DeviceTimeSettingsSidebar.qml:97
+#, kde-format
+msgid "Date"
+msgstr "Датум"
+
+#: ui/DeviceTimeSettingsSidebar.qml:126 ui/DeviceTimeSettingsSidebar.qml:205
+#: ui/DeviceTimeSettingsSidebar.qml:255
+#, kde-format
+msgid "Back"
+msgstr "Назад"
+
+#: ui/DeviceTimeSettingsSidebar.qml:146
+#, kde-format
+msgid "Search City / Region"
+msgstr "Тражи град или област"
+
+#: ui/DeviceTimeSettingsSidebar.qml:166
+#, kde-format
+msgid "Your local timezone is %1"
+msgstr "Ваша локална временска зона је %1"
+
+#: ui/DeviceTimeSettingsSidebar.qml:167
+#, kde-format
+msgid "%1, %2"
+msgstr "%1, %2"
+
+#: ui/main.qml:23 ui/main.qml:95
+#, kde-format
+msgid "System"
+msgstr "Систем"
+
+#: ui/main.qml:46
+#, kde-format
+msgid "Homescreen Appearance"
+msgstr "Изглед домаћег екрана"
+
+#: ui/main.qml:58
+#, kde-format
+msgid "Colored tiles"
+msgstr "Обојене плочице"
+
+#: ui/main.qml:59
+#, kde-format
+msgid "Tile backgrounds will be colored based on the app's icon"
+msgstr "Позадине плочица биће обојене према иконици програма"
+
+#: ui/main.qml:71
+#, kde-format
+msgid "Wallpaper blur"
+msgstr "Замућење тапета"
+
+#: ui/main.qml:72
+#, kde-format
+msgid "Apply a blur effect to the wallpaper on the homescreen"
+msgstr "Примени ефекат замућења на тапет домаћег екрана"
+
+#: ui/main.qml:86
+#, kde-format
+msgid "Set the system colors"
+msgstr "Постави системске боје"
+
+#: ui/main.qml:106
+#, kde-format
+msgid "Window decorations"
+msgstr "Декорације прозора"
+
+#: ui/main.qml:107
+#, kde-format
+msgid ""
+"Have a window frame (minimize, maximize, close), for apps that request it"
+msgstr ""
+"Оквир прозора (минимизуј, максимизуј, затвори) за програме који га траже"
+
+#: ui/main.qml:116
+#, kde-format
+msgid "Navigation sounds"
+msgstr "Звуци навигације"
+
+#: ui/main.qml:117
+#, kde-format
+msgid "Play a sound when the selected item changes in system apps"
+msgstr "Пусти звук кад се изабрана ставка промени у системским програмима"
+
+#: ui/main.qml:127
+#, kde-format
+msgid "Off"
+msgstr "искључена"
+
+#: ui/main.qml:128
+#, kde-format
+msgid "Weak"
+msgstr "слаба"
+
+#: ui/main.qml:129
+#, kde-format
+msgid "Medium"
+msgstr "средња"
+
+#: ui/main.qml:130
+#, kde-format
+msgid "Strong"
+msgstr "јака"
+
+#: ui/main.qml:133
+#, kde-format
+msgid "Navigation rumble"
+msgstr "Вибрација при навигацији"
+
+#: ui/main.qml:164
+#, kde-format
+msgid "Power inhibition"
+msgstr "Спречавање спавања"
+
+#: ui/main.qml:165
+#, kde-format
+msgid "Prevent the system from automatically sleeping"
+msgstr "Спречи да систем аутоматски оде на спавање"
+
+#: ui/main.qml:174
+#, kde-format
+msgctxt ""
+"Clicking links will show a popup that allows sending the link to another "
+"device via KDE Connect or a QR code"
+msgid "Enable Link Redirector"
+msgstr "Укључи преусмеривач веза"
+
+#: ui/main.qml:175
+#, kde-format
+msgid ""
+"Clicking links will show a popup that allows sending the link to another "
+"device via KDE Connect or a QR code"
+msgstr ""
+"Клик на везу приказује искачући прозор из ког везу можете послати на други "
+"уређај преко КДЕ‑конекције или КуР кода"
+
+#: ui/main.qml:183
+#, kde-format
+msgid "Default web browser"
+msgstr "Подразумевани веб прегледач"
+
+#: ui/main.qml:184
+#, kde-format
+msgctxt "When no default web browser is set"
+msgid "Not set"
+msgstr "није постављен"
+
+#: ui/main.qml:199
+#, kde-format
+msgid "Adjust date and time"
+msgstr "Подеси датум и време"
+
+#: ui/main.qml:208
+#, kde-format
+msgid "Shortcuts"
+msgstr "Пречице"
+
+#: ui/main.qml:218
+#, kde-format
+msgid "Open home overlay shortcut"
+msgstr "Пречица за отварање домаћег слоја"
+
+#: ui/main.qml:238
+#, kde-format
+msgid "Open homescreen shortcut"
+msgstr "Пречица за отварање домаћег екрана"
+
+#: ui/main.qml:258
+#, kde-format
+msgid "Open search shortcut"
+msgstr "Пречица за отварање претраге"
+
+#: ui/main.qml:278
+#, kde-format
+msgid "Open settings shortcut"
+msgstr "Пречица за отварање поставки"
+
+#: ui/main.qml:297
+#, kde-format
+msgid "Open tasks shortcut"
+msgstr "Пречица за отварање задатака"
+
+#: ui/ShortcutsPickerSidebar.qml:38
+#, kde-format
+msgid "Shortcut currently set to"
+msgstr "Пречица је тренутно постављена на"
+
+#: ui/ShortcutsPickerSidebar.qml:45
+#, kde-format
+msgid "Reset to default"
+msgstr "Ресетуј на подразумевано"
+
+#: ui/ShortcutsPickerSidebar.qml:59
+#, kde-format
+msgid "Set Shortcut"
+msgstr "Постави пречицу"
+
+#: ui/TimePicker.qml:40
+#, kde-format
+msgid "Hour"
+msgstr "Сат"
+
+#: ui/TimePicker.qml:56
+#, kde-format
+msgid "Minute"
+msgstr "Минут"
+
+#: ui/TimePicker.qml:72
+#, kde-format
+msgctxt "unit of time"
+msgid "Second"
+msgstr "Секунда"
+
+#: ui/TimePicker.qml:89
+#, kde-format
+msgid "AM/PM"
+msgstr "AM/PM"

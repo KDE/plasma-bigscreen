@@ -1,0 +1,79 @@
+# Translation of plasma-bigscreen-linkredirector to Norwegian Nynorsk
+#
+# Karl Ove Hufthammer <karl@huftis.org>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-08 02:59+0000\n"
+"PO-Revision-Date: 2026-11-15 09:58+0100\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 27.03.70\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Karl Ove Hufthammer"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "karl@huftis.org"
+
+#: main.cpp:27
+#, kde-format
+msgid "Plasma Bigscreen Link Redirector"
+msgstr "Plasma Bigscreen lenkjeomdirigering"
+
+#: main.cpp:29
+#, kde-format
+msgid "Redirect links to QR codes or KDE Connect devices"
+msgstr "Omdiriger lenkjer til QR-kodar eller KDE Connect-einingar"
+
+#: main.cpp:31
+#, kde-format
+msgid "© 2026 Plasma developers"
+msgstr "© 2026 Plasma-utviklarane"
+
+#: Main.qml:66
+#, kde-format
+msgid "Choose a device to send the URL to:"
+msgstr "Vel eining å senda adressa til:"
+
+#: Main.qml:103
+#, kde-format
+msgctxt "%1 is the device, %2 is the error message returned through dbus"
+msgid "Failed to send URL to %1: %2"
+msgstr "Klarte ikkje senda adressa til %1: %2"
+
+#: Main.qml:114
+#, kde-format
+msgctxt "Shown in placeholder message if no devices are reachable"
+msgid "No connected devices"
+msgstr "Ingen tilkopla einingar"
+
+#: Main.qml:115
+#, kde-format
+msgctxt "Explanation of \"No connected devices\" placeholder"
+msgid "Connect a device or check KDE Connect settings"
+msgstr "Kopla til ei eining, eller kontroller innstillingane i KDE Connect"
+
+#: Main.qml:138
+#, kde-format
+msgid "Scan the QR code below with a supported device:"
+msgstr "Skann QR-koden nedanfor frå ei eining som er støtta:"
+
+#: Main.qml:158
+#, kde-format
+msgid "Open in browser"
+msgstr "Opna i nettlesar"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mediacenter_bigscreen_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 02:59+0000\n"
+"POT-Creation-Date: 2026-11-16 01:08+0000\n"
 "PO-Revision-Date: 2026-08-29 17:27+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -73,23 +73,23 @@ msgstr "Hora"
 msgid "Date"
 msgstr "Fecha"
 
-#: ui/DeviceTimeSettingsSidebar.qml:126 ui/DeviceTimeSettingsSidebar.qml:204
-#: ui/DeviceTimeSettingsSidebar.qml:254
+#: ui/DeviceTimeSettingsSidebar.qml:126 ui/DeviceTimeSettingsSidebar.qml:205
+#: ui/DeviceTimeSettingsSidebar.qml:255
 #, kde-format
 msgid "Back"
 msgstr "Atrás"
 
-#: ui/DeviceTimeSettingsSidebar.qml:145
+#: ui/DeviceTimeSettingsSidebar.qml:146
 #, kde-format
 msgid "Search City / Region"
 msgstr "Buscar ciudad / región"
 
-#: ui/DeviceTimeSettingsSidebar.qml:165
+#: ui/DeviceTimeSettingsSidebar.qml:166
 #, kde-format
 msgid "Your local timezone is %1"
 msgstr "Su zona horaria local es %1"
 
-#: ui/DeviceTimeSettingsSidebar.qml:166
+#: ui/DeviceTimeSettingsSidebar.qml:167
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

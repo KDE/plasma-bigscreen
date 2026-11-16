@@ -4,15 +4,15 @@
 # Blumen Herzenschein <herzenschein@gmail.com>, 2020.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2020, 2021, 2022.
 # SPDX-FileCopyrightText: 2025 Geraldo Simiao <geraldosimiao@fedoraproject.org>
-# SPDX-FileCopyrightText: 2025-2026 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025-2026 Marcus Gama <marcus.gama@kde.org>
 # SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-07 00:59+0000\n"
+"POT-Creation-Date: 2026-11-15 04:13+0000\n"
 "PO-Revision-Date: 2026-10-28 09:03-0300\n"
-"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"Last-Translator: Marcus Gama <marcus.gama@kde.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -32,22 +32,22 @@ msgstr "Editar Tela Inicial"
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:319
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:323
 #, kde-format
 msgid "Launcher Sections"
 msgstr "Seções do lançador"
 
-#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:410
+#: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:414
 #, kde-format
 msgid "Hidden Apps"
 msgstr "Aplicativos ocultos"
 
-#: contents/ui/FavoritesManager.qml:206
+#: contents/ui/FavoritesManager.qml:210
 #, kde-format
 msgid "Change Favorites Order"
 msgstr "Alterar ordem dos favoritos"
 
-#: contents/ui/FavoritesManager.qml:216
+#: contents/ui/FavoritesManager.qml:220
 #, kde-format
 msgid ""
 "To change the order of the favorites, hold the select button on a favorite "
@@ -56,43 +56,43 @@ msgstr ""
 "Para alterar a ordem dos favoritos, mantenha pressionado o botão de seleção "
 "em um favorito na tela inicial e escolha Mover."
 
-#: contents/ui/FavoritesManager.qml:248
+#: contents/ui/FavoritesManager.qml:252
 #, kde-format
 msgid "Add Favorites"
 msgstr "Adicionar favoritos"
 
-#: contents/ui/FavoritesManager.qml:288
+#: contents/ui/FavoritesManager.qml:292
 #, kde-format
 msgid "Remove Favorites"
 msgstr "Remover favoritos"
 
-#: contents/ui/FavoritesManager.qml:333
+#: contents/ui/FavoritesManager.qml:337
 #, kde-format
 msgid "Show Recent"
 msgstr "Mostrar recentes"
 
-#: contents/ui/FavoritesManager.qml:334
+#: contents/ui/FavoritesManager.qml:338
 #, kde-format
 msgid "Recently launched applications appear in a row on the home screen"
 msgstr ""
 "Aplicativos iniciados recentemente aparecem em uma linha na tela inicial"
 
-#: contents/ui/FavoritesManager.qml:349
+#: contents/ui/FavoritesManager.qml:353
 #, kde-format
 msgid "Show Applications"
 msgstr "Mostrar aplicativos"
 
-#: contents/ui/FavoritesManager.qml:350
+#: contents/ui/FavoritesManager.qml:354
 #, kde-format
 msgid "Non-game applications appear in a row on the home screen"
 msgstr "Aplicativos que não são jogos aparecem em uma linha na tela inicial"
 
-#: contents/ui/FavoritesManager.qml:366
+#: contents/ui/FavoritesManager.qml:370
 #, kde-format
 msgid "Show Games"
 msgstr "Mostrar jogos"
 
-#: contents/ui/FavoritesManager.qml:367
+#: contents/ui/FavoritesManager.qml:371
 #, kde-format
 msgid "Applications in the Game category appear in a row on the home screen"
 msgstr "Aplicativos da categoria Jogos aparecem em uma linha na tela inicial"

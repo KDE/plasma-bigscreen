@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-22 00:52+0000\n"
+"POT-Creation-Date: 2026-11-15 04:13+0000\n"
 "PO-Revision-Date: 2026-10-31 19:01+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -30,7 +30,7 @@ msgstr "نوع الخلفيّة:"
 msgid "Wallpaper"
 msgstr "الخلفيّة"
 
-#: contents/configuration/ContainmentConfiguration.qml:134
+#: contents/configuration/ContainmentConfiguration.qml:135
 msgid "Slideshow"
 msgstr "عرض شرائح"
 
