@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Lokalize 27.03.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -129,8 +129,7 @@ msgstr "Trykk «[←] Tilbake» for å gå tilbake til utsjånads­innstillingan
 #: package/contents/ui/DeviceTimeSettings.qml:599
 #, kde-format
 msgid "Press the [←] Back button to save configuration and return to settings"
-msgstr ""
-"Trykk «[←] Tilbake» for å lagra oppsettet og gå tilbake til innstillingane"
+msgstr "Trykk «[←] Tilbake» for å lagra oppsettet og gå tilbake til innstillingane"
 
 #: package/contents/ui/DeviceTimeSettings.qml:418
 #, kde-format
