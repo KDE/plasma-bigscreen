@@ -1,0 +1,179 @@
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-10-22 02:47+0000\n"
+"PO-Revision-Date: 2026-11-14 19:40+0100\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:49
+msgid "Layout cannot be changed while widgets are locked"
+msgstr "Распоред не може да се промени док су виџети закључани"
+
+#: contents/configuration/ConfigurationContainmentAppearance.qml:60
+msgid "Wallpaper Type:"
+msgstr "Тип тапета:"
+
+#: contents/configuration/ContainmentConfiguration.qml:41
+msgid "Wallpaper"
+msgstr "Тапет"
+
+#: contents/configuration/ContainmentConfiguration.qml:134
+msgid "Slideshow"
+msgstr "Слајд‑шоу"
+
+#: contents/lockscreen/LockScreen.qml:53
+msgid "Unlocking failed"
+msgstr "Откључавање пропало"
+
+#: contents/lockscreen/PasswordDialog.qml:51
+msgid "Password"
+msgstr "Лозинка"
+
+#: contents/lockscreen/PasswordDialog.qml:81
+msgid "Unlock Screen"
+msgstr "Откључај екран"
+
+#: contents/logout/Logout.qml:152
+msgid "Installing software updates and restarting in 1 second"
+msgid_plural "Installing software updates and restarting in %1 seconds"
+msgstr[0] "Инсталирање допуна софтвера и поновно покретање за %1 секунду"
+msgstr[1] "Инсталирање допуна софтвера и поновно покретање за %1 секунде"
+msgstr[2] "Инсталирање допуна софтвера и поновно покретање за %1 секунди"
+msgstr[3] "Инсталирање допуна софтвера и поновно покретање за 1 секунду"
+
+#: contents/logout/Logout.qml:153
+msgid "Restarting in 1 second"
+msgid_plural "Restarting in %1 seconds"
+msgstr[0] "Поновно покретање за %1 секунду"
+msgstr[1] "Поновно покретање за %1 секунде"
+msgstr[2] "Поновно покретање за %1 секунди"
+msgstr[3] "Поновно покретање за 1 секунду"
+
+#: contents/logout/Logout.qml:155
+msgid "Logging out in 1 second"
+msgid_plural "Logging out in %1 seconds"
+msgstr[0] "Одјављивање за %1 секунду"
+msgstr[1] "Одјављивање за %1 секунде"
+msgstr[2] "Одјављивање за %1 секунди"
+msgstr[3] "Одјављивање за 1 секунду"
+
+#: contents/logout/Logout.qml:158
+msgid "Installing software updates and shutting down in 1 second"
+msgid_plural "Installing software updates and shutting down in %1 seconds"
+msgstr[0] "Инсталирање допуна софтвера и гашење за %1 секунду"
+msgstr[1] "Инсталирање допуна софтвера и гашење за %1 секунде"
+msgstr[2] "Инсталирање допуна софтвера и гашење за %1 секунди"
+msgstr[3] "Инсталирање допуна софтвера и гашење за 1 секунду"
+
+#: contents/logout/Logout.qml:159
+msgid "Shutting down in 1 second"
+msgid_plural "Shutting down in %1 seconds"
+msgstr[0] "Гашење за %1 секунду"
+msgstr[1] "Гашење за %1 секунде"
+msgstr[2] "Гашење за %1 секунди"
+msgstr[3] "Гашење за 1 секунду"
+
+#: contents/logout/Logout.qml:174
+msgid ""
+"One other user is currently logged in. If the computer is shut down or "
+"restarted, that user may lose work."
+msgid_plural ""
+"%1 other users are currently logged in. If the computer is shut down or "
+"restarted, those users may lose work."
+msgstr[0] ""
+"Тренутно је пријављен још %1 корисник. Ако се рачунар угаси или поново "
+"покрене, они могу изгубити свој рад."
+msgstr[1] ""
+"Тренутно су пријављена још %1 корисника. Ако се рачунар угаси или поново "
+"покрене, они могу изгубити свој рад."
+msgstr[2] ""
+"Тренутно је пријављено још %1 корисника. Ако се рачунар угаси или поново "
+"покрене, они могу изгубити свој рад."
+msgstr[3] ""
+"Тренутно је пријављен још један корисник. Ако се рачунар угаси или поново "
+"покрене, тај корисник може изгубити свој рад."
+
+#: contents/logout/Logout.qml:191
+msgid "When restarted, the computer will enter UEFI firmware settings."
+msgstr "По поновном покретању, рачунар ће ући у поставке UEFI фирмвера."
+
+#: contents/logout/Logout.qml:193
+msgid "When restarted, the computer will enter the firmware setup screen."
+msgstr "По поновном покретању, рачунар ће ући у екран за подешавање фирмвера."
+
+#: contents/logout/Logout.qml:208
+msgid "When restarted, the computer will enter the boot loader menu."
+msgstr "По поновном покретању, рачунар ће ући у мени подизног учитавача."
+
+#: contents/logout/Logout.qml:221
+msgctxt "%1 is a boot loader entry"
+msgid "When restarted, the computer will switch to %1."
+msgstr "По поновном покретању, рачунар ће прећи на %1."
+
+#: contents/logout/Logout.qml:243
+msgctxt "Suspend to RAM"
+msgid "Slee&p"
+msgstr "На &спавање"
+
+#: contents/logout/Logout.qml:244
+msgctxt "Suspend to RAM"
+msgid "Slee&p Now"
+msgstr "На &спавање сада"
+
+#: contents/logout/Logout.qml:253
+msgid "&Hibernate"
+msgstr "У &хибернацију"
+
+#: contents/logout/Logout.qml:254
+msgid "&Hibernate Now"
+msgstr "У &хибернацију сада"
+
+#: contents/logout/Logout.qml:265
+msgctxt "@action:button Keep short"
+msgid "Install Updates and Restart"
+msgstr "Инсталирај допуне и поново покрени"
+
+#: contents/logout/Logout.qml:267 contents/logout/Logout.qml:286
+msgid "&Restart"
+msgstr "&Поново покрени"
+
+#: contents/logout/Logout.qml:268 contents/logout/Logout.qml:287
+msgid "&Restart Now"
+msgstr "&Поново покрени сада"
+
+#: contents/logout/Logout.qml:300
+msgctxt "@action:button Keep short"
+msgid "Install Updates and Shut Down"
+msgstr "Инсталирај допуне и угаси"
+
+#: contents/logout/Logout.qml:302 contents/logout/Logout.qml:321
+msgid "&Shut Down"
+msgstr "&Угаси"
+
+#: contents/logout/Logout.qml:303 contents/logout/Logout.qml:322
+msgid "&Shut Down Now"
+msgstr "&Угаси сада"
+
+#: contents/logout/Logout.qml:334
+msgid "&Log Out"
+msgstr "Од&јави ме"
+
+#: contents/logout/Logout.qml:335
+msgid "&Log Out Now"
+msgstr "Од&јави ме сада"
+
+#: contents/logout/Logout.qml:345
+msgid "&Cancel"
+msgstr "&Одустани"

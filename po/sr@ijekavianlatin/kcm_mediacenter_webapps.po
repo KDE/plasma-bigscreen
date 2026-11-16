@@ -1,0 +1,73 @@
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-01-24 00:45+0000\n"
+"PO-Revision-Date: 2026-11-14 19:40+0100\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavianlatin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: ui/main.qml:16
+#, kde-format
+msgid "Web Apps"
+msgstr "Veb programi"
+
+#: ui/main.qml:43
+#, kde-format
+msgid "Add Web App"
+msgstr "Dodaj veb program"
+
+#: ui/main.qml:50
+#, kde-format
+msgid "Installed web apps"
+msgstr "Instalirani veb programi"
+
+#: ui/main.qml:89
+#, kde-format
+msgid "Add Web Application"
+msgstr "Dodavanje veb programa"
+
+#: ui/main.qml:105 ui/WebAppInfoSidebar.qml:52
+#, kde-format
+msgid "Name"
+msgstr "Ime"
+
+#: ui/main.qml:112 ui/WebAppInfoSidebar.qml:60
+#, kde-format
+msgid "URL"
+msgstr "URL"
+
+#: ui/main.qml:119
+#, kde-format
+msgid "User agent (empty for default)"
+msgstr "Korisnički agent (prazno za podrazumijevani)"
+
+#: ui/WebAppInfoSidebar.qml:68
+#, kde-format
+msgid "User Agent"
+msgstr "Korisnički agent"
+
+#: ui/WebAppInfoSidebar.qml:69
+#, kde-format
+msgid "Default user agent"
+msgstr "Podrazumijevani korisnički agent"
+
+#: ui/WebAppInfoSidebar.qml:78
+#, kde-format
+msgid "Delete"
+msgstr "Obriši"
+
+#: ui/WebAppInfoSidebar.qml:86
+#, kde-format
+msgid "Delete web app %1?"
+msgstr "Obrisati veb program %1?"
