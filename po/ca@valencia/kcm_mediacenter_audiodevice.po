@@ -1,4 +1,4 @@
-# Translation of kcm_audiodevice.po to Catalan (Valencian)
+# Translation of kcm_mediacenter_audiodevice.po to Catalan (Valencian)
 # Copyright (C) 2020-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
@@ -34,7 +34,7 @@ msgstr "Ajusta el volum"
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: ui/main.qml:21
 #, kde-format
