@@ -42,12 +42,9 @@ msgstr "Ses Aygıtları"
 #: ui/main.qml:50
 #, kde-format
 msgid "Playback Devices"
-msgstr "Oynatma Aygıtları"
+msgstr "Çalma Aygıtları"
 
 #: ui/main.qml:80
 #, kde-format
 msgid "Recording Devices"
 msgstr "Kayıt Aygıtları"
-
-#~ msgid "Press the [←] Back button to return to device selection"
-#~ msgstr "Aygıt seçimine dönmek için [←] Geri düğmesine basın"
