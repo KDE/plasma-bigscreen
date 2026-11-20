@@ -191,7 +191,7 @@ msgctxt ""
 "Clicking links will show a popup that allows sending the link to another "
 "device via KDE Connect or a QR code"
 msgid "Enable Link Redirector"
-msgstr ""
+msgstr "Povoliť presmerovanie odkazov"
 
 #: ui/main.qml:175
 #, kde-format
@@ -199,17 +199,19 @@ msgid ""
 "Clicking links will show a popup that allows sending the link to another "
 "device via KDE Connect or a QR code"
 msgstr ""
+"Kliknutie na odkaz zobrazí vyskakovacie okno, ktoré umožní poslať odkaz do "
+"iného zariadenia cez KDE Connect alebo QR kód"
 
 #: ui/main.qml:183
 #, kde-format
 msgid "Default web browser"
-msgstr ""
+msgstr "Predvolený webový prehliadač"
 
 #: ui/main.qml:184
 #, kde-format
 msgctxt "When no default web browser is set"
 msgid "Not set"
-msgstr ""
+msgstr "Nenastavené"
 
 #: ui/main.qml:199
 #, kde-format
