@@ -189,7 +189,7 @@ msgstr "Nastavenia"
 #: contents/ui/launcher/delegates/IconDelegate.qml:275
 #, kde-format
 msgid "Running"
-msgstr ""
+msgstr "Spustené"
 
 #: contents/ui/launcher/LauncherHome.qml:193
 #, kde-format
