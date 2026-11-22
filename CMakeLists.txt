@@ -77,9 +77,6 @@ find_package(PlasmaWaylandProtocols REQUIRED)
 find_package(Wayland REQUIRED COMPONENTS Client)
 find_package(PkgConfig REQUIRED)
 
-pkg_check_modules(SYSTEMD systemd)
-add_feature_info(Systemd SYSTEMD_FOUND "Use systemd-logind uaccess ACLs for uinput device access")
-
 ecm_find_qmlmodule(org.kde.kdeconnect REQUIRED)
 ecm_find_qmlmodule(org.kde.prison REQUIRED)
 
