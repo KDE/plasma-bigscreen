@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-bigscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-15 04:13+0000\n"
-"PO-Revision-Date: 2026-09-29 00:22+0200\n"
+"PO-Revision-Date: 2026-11-21 22:36+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -34,11 +34,9 @@ msgid "Launcher Sections"
 msgstr "실행기 섹션"
 
 #: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:414
-#, fuzzy, kde-format
-#| msgctxt "As in: These apps are currently opened"
-#| msgid "Open Apps"
+#, kde-format
 msgid "Hidden Apps"
-msgstr "앱 열기"
+msgstr "숨겨진 앱"
 
 #: contents/ui/FavoritesManager.qml:210
 #, kde-format
@@ -46,16 +44,13 @@ msgid "Change Favorites Order"
 msgstr "책갈피 순서 편집"
 
 #: contents/ui/FavoritesManager.qml:220
-#, fuzzy, kde-format
-#| msgid ""
-#| "To change the order of the favorites, open the launcher and tap and hold "
-#| "an app in the favorites list."
+#, kde-format
 msgid ""
 "To change the order of the favorites, hold the select button on a favorite "
 "on the home screen and choose Move."
 msgstr ""
-"책갈피 순서를 편집하려면, 실행기를 연 다음 책갈피 목록에 있는 앱 아이콘을 탭"
-"한 채로 누르고 있으십시오."
+"책갈피 순서를 편집하려면 홈 화면의 책갈피 항목에서 선택 단추를 누르고 있으면"
+"서 이동을 선택하십시오."
 
 #: contents/ui/FavoritesManager.qml:252
 #, kde-format
@@ -184,12 +179,12 @@ msgstr "배터리: %1%"
 #: contents/ui/indicators/GridView.qml:14
 #, kde-format
 msgid "Show app grid"
-msgstr ""
+msgstr "앱 격자 표시"
 
 #: contents/ui/indicators/GridView.qml:14
 #, kde-format
 msgid "Hide app grid"
-msgstr ""
+msgstr "앱 격자 숨기기"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -222,50 +217,45 @@ msgid "Internet Settings"
 msgstr "인터넷 설정"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:83
-#, fuzzy, kde-format
-#| msgid "Add Favorites"
+#, kde-format
 msgid "Added %1 to Favorites"
-msgstr "책갈피 추가"
+msgstr "%1을(를) 책갈피에 추가함"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:87
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Removed %1 from Favorites"
-msgstr "책갈피 삭제"
+msgstr "책갈피에서 %1을(를) 삭제함"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:92
 #, kde-format
 msgid "%1 hidden. Show it again from Edit Home Screen."
-msgstr ""
+msgstr "%1이(가) 숨겨졌습니다. 홈 화면 편집에서 다시 표시할 수 있습니다."
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:111
 #, kde-format
 msgid "Move"
-msgstr ""
+msgstr "이동"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:114
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Remove from Favorites"
-msgstr "책갈피 삭제"
+msgstr "책갈피에서 삭제"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Favorites"
+#, kde-format
 msgid "Add to Favorites"
-msgstr "책갈피 추가"
+msgstr "책갈피에 추가"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:116
-#, fuzzy, kde-format
-#| msgid "Edit Home Screen"
+#, kde-format
 msgid "Hide from Homescreen"
-msgstr "홈 화면 편집"
+msgstr "홈 화면에서 숨기기"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:131
 #: contents/ui/launcher/delegates/IconDelegate.qml:275
 #, kde-format
 msgid "Running"
-msgstr ""
+msgstr "실행 중"
 
 #: contents/ui/launcher/LauncherHome.qml:227
 #, kde-format
