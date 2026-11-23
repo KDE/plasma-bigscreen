@@ -1,0 +1,78 @@
+# Bulgarian translations for plasma-bigscreen package.
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-bigscreen package.
+# Automatically generated, 2026.
+#
+# SPDX-FileCopyrightText: 2026 Mincho Kondarev <mkondarev@yahoo.de>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-bigscreen\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-08 02:59+0000\n"
+"PO-Revision-Date: 2026-11-22 17:43+0100\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.08.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Минчо Кондарев"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "mkondarev@yahoo.de"
+
+#: main.cpp:27
+#, kde-format
+msgid "Plasma Bigscreen Link Redirector"
+msgstr "Пренасочване на връзки в Plasma Bigscreen"
+
+#: main.cpp:29
+#, kde-format
+msgid "Redirect links to QR codes or KDE Connect devices"
+msgstr "Пренасочване на връзки към QR кодове или устройства KDE Connect"
+
+#: main.cpp:31
+#, kde-format
+msgid "© 2026 Plasma developers"
+msgstr "© 2026 Разработчиците на Plasma"
+
+#: Main.qml:66
+#, kde-format
+msgid "Choose a device to send the URL to:"
+msgstr "Избор на устройство за изпращане на URL адреса:"
+
+#: Main.qml:103
+#, kde-format
+msgctxt "%1 is the device, %2 is the error message returned through dbus"
+msgid "Failed to send URL to %1: %2"
+msgstr "Грешка при изпращане на URL до %1: %2"
+
+#: Main.qml:114
+#, kde-format
+msgctxt "Shown in placeholder message if no devices are reachable"
+msgid "No connected devices"
+msgstr "Няма свързани устройства"
+
+#: Main.qml:115
+#, kde-format
+msgctxt "Explanation of \"No connected devices\" placeholder"
+msgid "Connect a device or check KDE Connect settings"
+msgstr "Свързване на устройство или проверка на настройките на KDE Connect"
+
+#: Main.qml:138
+#, kde-format
+msgid "Scan the QR code below with a supported device:"
+msgstr "Сканиране на QR кода по-долу с поддържано устройство:"
+
+#: Main.qml:158
+#, kde-format
+msgid "Open in browser"
+msgstr "Отваряне в браузър"

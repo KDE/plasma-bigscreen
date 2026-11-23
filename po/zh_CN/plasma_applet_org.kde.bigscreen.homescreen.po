@@ -35,23 +35,21 @@ msgid "Launcher Sections"
 msgstr "启动器分区"
 
 #: contents/ui/FavoritesManager.qml:144 contents/ui/FavoritesManager.qml:414
-#, fuzzy, kde-format
-#| msgctxt "As in: These apps are currently opened"
-#| msgid "Open Apps"
+#, kde-format
 msgid "Hidden Apps"
-msgstr "打开应用"
+msgstr "隐藏的应用"
 
 #: contents/ui/FavoritesManager.qml:210
 #, kde-format
 msgid "Change Favorites Order"
-msgstr ""
+msgstr "更改收藏排序"
 
 #: contents/ui/FavoritesManager.qml:220
 #, kde-format
 msgid ""
 "To change the order of the favorites, hold the select button on a favorite "
 "on the home screen and choose Move."
-msgstr ""
+msgstr "要更改收藏项目的排序，请按住主屏幕上收藏的选择按钮，然后选择移动。"
 
 #: contents/ui/FavoritesManager.qml:252
 #, kde-format
@@ -180,12 +178,12 @@ msgstr "电量：%1%"
 #: contents/ui/indicators/GridView.qml:14
 #, kde-format
 msgid "Show app grid"
-msgstr ""
+msgstr "显示应用网格"
 
 #: contents/ui/indicators/GridView.qml:14
 #, kde-format
 msgid "Hide app grid"
-msgstr ""
+msgstr "隐藏应用网格"
 
 #: contents/ui/indicators/KdeConnect.qml:20
 #, kde-format
@@ -218,50 +216,45 @@ msgid "Internet Settings"
 msgstr "互联网设置"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:83
-#, fuzzy, kde-format
-#| msgid "Add Favorites"
+#, kde-format
 msgid "Added %1 to Favorites"
-msgstr "添加收藏"
+msgstr "已添加 %1 到收藏"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:87
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Removed %1 from Favorites"
-msgstr "移除收藏"
+msgstr "已移除收藏中的 %1"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:92
 #, kde-format
 msgid "%1 hidden. Show it again from Edit Home Screen."
-msgstr ""
+msgstr "%1 已隐藏。在\"编辑主屏幕\"再次显示。"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:111
 #, kde-format
 msgid "Move"
-msgstr ""
+msgstr "移动"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:114
-#, fuzzy, kde-format
-#| msgid "Remove Favorites"
+#, kde-format
 msgid "Remove from Favorites"
 msgstr "移除收藏"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Favorites"
+#, kde-format
 msgid "Add to Favorites"
 msgstr "添加收藏"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:116
-#, fuzzy, kde-format
-#| msgid "Edit Home Screen"
+#, kde-format
 msgid "Hide from Homescreen"
-msgstr "编辑主屏幕"
+msgstr "在主屏幕隐藏"
 
 #: contents/ui/launcher/AppOptionsDrawer.qml:131
 #: contents/ui/launcher/delegates/IconDelegate.qml:275
 #, kde-format
 msgid "Running"
-msgstr ""
+msgstr "正在运行"
 
 #: contents/ui/launcher/LauncherHome.qml:227
 #, kde-format

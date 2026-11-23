@@ -36,12 +36,12 @@ msgstr "已安装的网页应用"
 #: ui/main.qml:106
 #, kde-format
 msgid "OK"
-msgstr ""
+msgstr "确定"
 
 #: ui/main.qml:114
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: ui/main.qml:140 ui/WebAppInfoSidebar.qml:52
 #, kde-format
@@ -71,26 +71,24 @@ msgstr "默认用户代理"
 #: ui/WebAppInfoSidebar.qml:76
 #, kde-format
 msgid "Edit"
-msgstr ""
+msgstr "编辑"
 
 #: ui/WebAppInfoSidebar.qml:83
-#, fuzzy, kde-format
-#| msgid "Delete web app %1?"
+#, kde-format
 msgid "Edit web app %1"
-msgstr "删除网页应用 %1 吗？"
+msgstr "编辑网页应用 %1"
 
 #: ui/WebAppInfoSidebar.qml:106
 #, kde-format
 msgctxt "%1 is the current name of the web app"
 msgid "Name (leave blank for current)"
-msgstr ""
+msgstr "名称 (留空以使用当前值)"
 
 #: ui/WebAppInfoSidebar.qml:115
-#, fuzzy, kde-format
-#| msgid "User agent (empty for default)"
+#, kde-format
 msgctxt "%1 is the user agent of the current web app"
 msgid "User Agent (leave blank for default)"
-msgstr "用户代理 (留空将使用默认代理)"
+msgstr "用户代理 (留空以使用默认值)"
 
 #: ui/WebAppInfoSidebar.qml:127
 #, kde-format
@@ -101,6 +99,3 @@ msgstr "删除"
 #, kde-format
 msgid "Delete web app %1?"
 msgstr "删除网页应用 %1 吗？"
-
-#~ msgid "Add Web Application"
-#~ msgstr "添加网页应用"

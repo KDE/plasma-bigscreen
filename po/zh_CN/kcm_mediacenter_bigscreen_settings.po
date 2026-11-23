@@ -191,7 +191,7 @@ msgctxt ""
 "Clicking links will show a popup that allows sending the link to another "
 "device via KDE Connect or a QR code"
 msgid "Enable Link Redirector"
-msgstr ""
+msgstr "启用链接重定向程序"
 
 #: ui/main.qml:175
 #, kde-format
@@ -199,17 +199,18 @@ msgid ""
 "Clicking links will show a popup that allows sending the link to another "
 "device via KDE Connect or a QR code"
 msgstr ""
+"点击链接会显示一个弹窗，用于通过 KDE Connect 或二维码将链接发送到其他设备。"
 
 #: ui/main.qml:183
 #, kde-format
 msgid "Default web browser"
-msgstr ""
+msgstr "默认网页浏览器"
 
 #: ui/main.qml:184
 #, kde-format
 msgctxt "When no default web browser is set"
 msgid "Not set"
-msgstr ""
+msgstr "没有设置"
 
 #: ui/main.qml:199
 #, kde-format
