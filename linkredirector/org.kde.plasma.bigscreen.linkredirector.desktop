@@ -27,6 +27,7 @@ Name[sr@ijekavianlatin]=Preusmjerivač veza Plasme za veliki ekran
 Name[sr@latin]=Preusmerivač veza Plasme za veliki ekran
 Name[tr]=Plasma Büyükekran Bağlantı Göndericisi
 Name[uk]=Переспрямовувач посилань Plasma Bigscreen
+Name[zh_CN]=Plasma 大屏幕链接重定向程序
 Exec=plasma-bigscreen-linkredirector
 Icon=external-link-symbolic
 Type=Application
