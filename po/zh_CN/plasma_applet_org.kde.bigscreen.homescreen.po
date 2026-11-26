@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-bigscreen/plasma_applet_org.kde."
+"X-Crowdin-File: /kf6-stable/messages/plasma-bigscreen/plasma_applet_org.kde."
 "bigscreen.homescreen.pot\n"
-"X-Crowdin-File-ID: 56210\n"
+"X-Crowdin-File-ID: 60161\n"
 
 #: contents/ui/FavoritesManager.qml:20 contents/ui/indicators/Favorites.qml:17
 #, kde-format
@@ -191,7 +191,7 @@ msgstr "互联网设置"
 #: contents/ui/launcher/delegates/IconDelegate.qml:275
 #, kde-format
 msgid "Running"
-msgstr ""
+msgstr "正在运行"
 
 #: contents/ui/launcher/LauncherHome.qml:193
 #, kde-format
